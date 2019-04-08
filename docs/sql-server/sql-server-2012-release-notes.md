@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540556"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658314"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ Vor der Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]sollt
 **Problemumgehung:** Der Bericht der Systemkonfigurationsprüfung enthält weitere Einzelheiten zu den Setupregeln. Die Systemkonfigurationsprüfung generiert einen Bericht, der eine kurze Beschreibung für jede ausgeführte Regel sowie den Ausführungsstatus enthält. Der Bericht der Systemkonfigurationsprüfung befindet sich unter %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<JJJJMMTT_hhmm>\\.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 Das Hinzufügen eines lokalen Benutzerkontos für den Distributed Replay Controller-Dienst kann dazu führen, dass Setup unerwartet beendet wird  
-**Problem:** Beim Versuch, auf der Seite **Distributed Replay Controller** von SQL Server-Setup ein lokales Benutzerkonto für den Distributed Replay Controller-Dienst hinzuzufügen, wird Setup mit der Fehlermeldung „SQL Server-Setupfehler“ unerwartet beendet.  
+**Problem:** Beim Versuch, auf der Seite **Distributed Replay Controller** von SQL Server-Setup ein lokales Benutzerkonto für den Distributed Replay Controller-Dienst hinzuzufügen, wird das Setup mit der Fehlermeldung „SQL Server-Setupfehler“ unerwartet beendet.  
   
-**Problemumgehung:** Vermeiden Sie es beim Ausführen von SQL-Setup, lokale Benutzerkonten mit „Aktuellen Benutzer hinzufügen“ oder „Hinzufügen...“ hinzuzufügen. Fügen Sie ein lokales Benutzerkonto mithilfe folgender Schritte manuell hinzu, nachdem Setup ausgeführt wurde:  
+**Problemumgehung:** Fügen Sie während des SQL-Setups keine lokalen Benutzerkonten mit „Aktuellen Benutzer hinzufügen“ oder „Hinzufügen...“ hinzu. Fügen Sie ein lokales Benutzerkonto mithilfe folgender Schritte manuell hinzu, nachdem Setup ausgeführt wurde:  
   
 1.  Beenden Sie den SQL Server Distributed Replay Controller-Dienst.  
   
@@ -75,7 +75,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Ein Failoverclusterupgrade von SQL Server 2008 oder 2008 R2 Analysis Services auf SQL Server 2012 verursacht nach der Umbenennung des Netzwerks u. U. einen Fehler  
 **Problem:** Nachdem der Netzwerkname einer Microsoft SQL Server 2008- oder 2008 R2 Analysis Services-Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, verursacht der Upgradevorgang u. U. einen Fehler.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, aktualisieren Sie den ClusterName-Registrierungseintrag entsprechend den Anweisungen im Abschnitt zur Problemlösung [in diesem KB-Artikel](https://support.microsoft.com/kb/955784).  
+**Problemumgehung:** Aktualisieren Sie den ClusterName-Registrierungseintrag mithilfe der Anweisungen im Abschnitt „Resolution“ (Problemlösung) [dieses Knowledge Base-Artikels](https://support.microsoft.com/kb/955784), um das Problem zu lösen.  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 Installation von SQL Server 2012 unter Windows Server 2008 R2 Server Core Service Pack 1  
 Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1 sind folgende Einschränkungen zu beachten:  
@@ -95,7 +95,7 @@ Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1
   
 **Problemumgehung:** Führen Sie zum Einrichten der Semantic Language Statistics-Datenbank als erforderliche Komponente für die semantische Indizierung folgende Schritte aus:  
   
-1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (https://go.microsoft.com/fwlink/?LinkId=221787)) herunter, und führen Sie dann das Windows Installer-Paket aus.  
+1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)) herunter, und führen Sie dann das Windows Installer-Paket aus.  
   
 2.  Verschieben Sie die Datenbank in einen geeigneten Datenordner. Falls Sie die Datenbank im Standardverzeichnis belassen, müssen die Berechtigungen geändert werden, bevor sie erfolgreich angefügt werden kann.  
   
@@ -121,7 +121,7 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
         **Aktivieren Sie .NET Framework 3.5 SP1 unter Windows Server 2008 R2 SP1 mit einer der folgenden Methoden:**  
   
-        Methode 1: Server-Manager  
+        Methode 1: Verwenden von Server-Manager  
   
         1.  Klicken Sie im Server-Manager auf **Funktionen hinzufügen** , um eine Liste verfügbarer Funktionen anzuzeigen.  
   
@@ -133,7 +133,7 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
         5.  Warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann auf **Schließen**.  
   
-        Methode 2: Windows PowerShell  
+        Methode 2: Verwenden von Windows PowerShell  
   
         1.  Klicken Sie auf **Start** | **Alle Programme** | **Zubehör**.  
   
@@ -200,12 +200,12 @@ SQL Server 2012 wird unter den Betriebssystemen Windows Vista SP2, Windows Serve
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework ist nicht im Installationspaket enthalten  
 **Problem:** Sync Framework ist nicht im SQL Server 2012-Installationspaket enthalten.  
   
-**Problemumgehung:** Laden Sie die geeignete Sync Framework-Version von [dieser Microsoft Download Center-Seite](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)herunter.  
+**Problemumgehung:** Laden Sie die geeignete Sync Framework-Version von [dieser Microsoft Download Center-Seite](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217) herunter.  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Nachdem Visual Studio 2010 Service Pack 1 deinstalliert wurde, muss die SQL Server 2012-Instanz repariert werden, um bestimmte Komponenten wiederherzustellen  
 **Problem:** Die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Installation ist von einigen Komponenten aus Visual Studio 2010 Service Pack 1 abhängig. Wenn Sie Service Pack 1 deinstallieren, wird für einige freigegebene Komponenten ein Downgrade auf die ursprüngliche Version ausgeführt, während einige andere Komponenten vollständig vom Computer entfernt werden.  
   
-**Problemumgehung:** Reparieren Sie die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] -Instanz von den Originalmedien oder von einem Netzwerkinstallationspfad.  
+**Problemumgehung:** Reparieren Sie die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Instanz von den Originalmedien oder von einem Netzwerkinstallationspfad.  
   
 1.  Starten Sie das SQL Server-Setupprogramm (setup.exe) vom SQL Server-Installationsmedium.  
   
@@ -230,22 +230,22 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Problemumgehung:** Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](https://support.microsoft.com/kb/306160).  
+**Problemumgehung**: Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server-Editionsupgrade erfordert einen Neustart  
-**Problem:** Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
+**Problem:** Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
   
-**Problemumgehung:** Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+**Problemumgehung**: Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 Datenbanken mit schreibgeschützten Dateigruppen bzw. Dateien können nicht aktualisiert werden  
-**Problem:** Sie können eine Datenbank nicht aktualisieren, indem Sie die Datenbank entweder anfügen oder von einer Sicherung wiederherstellen, wenn die Datenbank bzw. die darin enthaltenen Dateien/Dateigruppen schreibgeschützt sind.  Fehler 3415 wird zurückgegeben.  Dieses Problem tritt auch bei einem direkten Upgrade einer SQL Server-Instanz auf. Das heißt, Sie versuchen, eine vorhandene SQL Server-Instanz zu ersetzen, indem Sie SQL Server 2012 installieren, und mindestens eine der vorhandenen Datenbanken ist auf schreibgeschützt festgelegt.  
+**Problem:**  Sie können eine Datenbank nicht aktualisieren, indem Sie die Datenbank anfügen oder aus einer Sicherung wiederherstellen, wenn die Datenbank bzw. die darin enthaltenen Dateien/Dateigruppen schreibgeschützt sind.  Fehler 3415 wird zurückgegeben.  Dieses Problem tritt auch bei einem direkten Upgrade einer SQL Server-Instanz auf. Das heißt, Sie versuchen, eine vorhandene SQL Server-Instanz zu ersetzen, indem Sie SQL Server 2012 installieren, und mindestens eine der vorhandenen Datenbanken ist auf schreibgeschützt festgelegt.  
   
 **Problemumgehung:** Stellen Sie vor dem Upgrade sicher, dass für die Datenbank sowie die zugehörigen Dateien/Dateigruppen der Lese-/Schreibzugriff aktiviert ist.  
   
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 Die Neuinstallation einer SQL Server-Failoverclusterinstanz verursacht einen Fehler, wenn dieselbe IP-Adresse verwendet wird  
-**Problem:** Wenn Sie während der Installation einer SQL Server-Failoverclusterinstanz eine falsche IP-Adresse angeben, tritt ein Fehler auf. Wenn Sie nach der Deinstallation der fehlerhaften Instanz versuchen, die SQL Server-Failoverclusterinstanz mit demselben Instanznamen und der richtigen IP-Adresse erneut zu installieren, schlägt die Installation fehl. Dies liegt daran, dass noch die doppelte Ressourcengruppe aus der vorherigen Installation vorhanden ist.  
+**Problem:** Wenn Sie bei der Installation einer SQL Server-Failoverclusterinstanz eine falsche IP-Adresse angeben, tritt ein Fehler auf. Wenn Sie nach der Deinstallation der fehlerhaften Instanz versuchen, die SQL Server-Failoverclusterinstanz mit demselben Instanznamen und der richtigen IP-Adresse erneut zu installieren, schlägt die Installation fehl. Dies liegt daran, dass noch die doppelte Ressourcengruppe aus der vorherigen Installation vorhanden ist.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen oder löschen die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen, oder löschen Sie die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
@@ -256,14 +256,14 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 Wenn bei Verwendung von SQL Server Management Studio 2012 (SSMS) eine SQL-Datei im Editor geöffnet ist und eine Verbindung mit einer SQL Server-Instanz besteht, kann von einer MDX- oder DMX-Datei keine Verbindung mit einer AS-Serverinstanz hergestellt werden, wenn die Datei in derselben SSMS-Instanz geöffnet wird. Auch wenn eine MDX- oder DMX-Datei bereits im Editor in SSMS geöffnet und mit einer AS-Serverinstanz verbunden ist, kann von einer SQL-Datei, die in derselben SSMS-Instanz geöffnet wird, keine Verbindung mit einer SQL Server-Instanz hergestellt werden.  
   
-**Problemumgehung:** Sie haben folgende Möglichkeiten, um das Problem zu beheben.  
+**Problemumgehung**:  Sie haben folgende Möglichkeiten, um das Problem zu beheben.  
   
 -   Starten Sie eine weitere SSMS-Instanz, um die MDX-/DMX-Datei zu öffnen.  
   
 -   Trennen Sie den SQL-Editor, und stellen Sie dann eine Verbindung zwischen dem MDX-/DMX-Editor und einem AS-Server her.  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 Projekte für tabellarische Modelle können nicht erstellt oder geöffnet werden, wenn der Name der Gruppe "BUILTIN\Administrators" nicht aufgelöst werden kann  
-**Problem:** Zum Erstellen oder Öffnen von Projekten für tabellarische Modelle müssen Sie Administrator eines Arbeitsbereichs-Datenbankservers sein. Ein Benutzer kann der Serveradministratorgruppe durch Hinzufügen des Benutzer- oder Gruppennamens hinzugefügt werden. Wenn Sie Mitglied der Gruppe BUILTIN\Administrators sind, können Sie nur dann BIM-Dateien erstellen oder bearbeiten, wenn der Arbeitsbereichsdatenbankserver mit der Domäne verbunden ist, von der er ursprünglich bereitgestellt wurde. Beim Öffnen oder Erstellen der BIM-Datei treten Fehler auf, und die folgende Fehlermeldung wird angezeigt:  
+**Problem:** Zum Erstellen oder Öffnen tabellarischer Projekte müssen Sie Administrator einer Arbeitsbereichsdatenbank sein. Ein Benutzer kann der Serveradministratorgruppe durch Hinzufügen des Benutzer- oder Gruppennamens hinzugefügt werden. Wenn Sie Mitglied der Gruppe BUILTIN\Administrators sind, können Sie nur dann BIM-Dateien erstellen oder bearbeiten, wenn der Arbeitsbereichsdatenbankserver mit der Domäne verbunden ist, von der er ursprünglich bereitgestellt wurde. Beim Öffnen oder Erstellen der BIM-Datei treten Fehler auf, und die folgende Fehlermeldung wird angezeigt:  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
@@ -282,31 +282,31 @@ SQL Server Integration Services (SSIS)-Komponenten für Analysis Services (AS) f
   
 Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask Probleme:  
   
-**Problem:** Anstelle von Datenbanken, Tabellen und Partitionen werden Cubes, Measuregruppen und Dimensionen angezeigt. Dies ist eine Einschränkung des Tasks.  
+**Problem:** Anstelle von Datenbanken, Tabellen und Partitionen sehen Sie Cubes, Measuregruppen und Dimensionen. Dies ist eine Einschränkung des Tasks.  
   
 **Problemumgehung:** Das tabellarische Modell kann weiterhin mit der aus Cubes/Measuregruppen/Dimensionen bestehenden Struktur verarbeitet werden.  
   
-**Problem:** Einige Verarbeitungsoptionen, die von AS im tabellarischen Modus unterstützt werden (z. B. Defragmentierung verarbeiten), werden im AS-Verarbeitungstask nicht verfügbar gemacht.  
+**Problem:** Einige Verarbeitungsoptionen, die von AS im tabellarischen Modus unterstützt werden (z. B. "Defragmentierung verarbeiten"), werden im AS-Verarbeitungstask nicht verfügbar gemacht.  
   
-**Problemumgehung:** Verwenden Sie stattdessen den Analysis Services-Task „DDL ausführen“ zum Ausführen eines XMLA-Skripts, das den ProcessDefrag-Befehl enthält.  
+**Problemumgehung:** Verwenden Sie stattdessen den Analysis Services-Task "DDL ausführen" zum Ausführen eines XMLA-Skripts, das den ProcessDefrag-Befehl enthält.  
   
-**Problem:** Einige Konfigurationsoptionen im Tool sind nicht anwendbar. Beispielsweise sollte Verbundene Objekte verarbeiten beim Verarbeiten von Partitionen nicht verwendet werden, und die Konfigurationsoption Parallelverarbeitung enthält eine ungültige Fehlermeldung, die angibt, dass die Parallelverarbeitung in der Standard-SKU nicht unterstützt wird.  
+**Problem:** Einige Konfigurationsoptionen im Tool treffen nicht zu. Beispielsweise sollte Verbundene Objekte verarbeiten beim Verarbeiten von Partitionen nicht verwendet werden, und die Konfigurationsoption Parallelverarbeitung enthält eine ungültige Fehlermeldung, die angibt, dass die Parallelverarbeitung in der Standard-SKU nicht unterstützt wird.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung:** None  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
 ## <a name="BOL"></a>3.0 Onlinedokumentation  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 Der Hilfe-Viewer für SQL Server stürzt in Umgebungen ab, die ausschließlich für die Ausführung von IPv6 konfiguriert sind  
-**Problem:** Wenn die Umgebung ausschließlich für die Ausführung von IPv6 konfiguriert ist, stürzt der Hilfe-Viewer von SQL Server 2012 ab, und Sie erhalten die folgende Fehlermeldung:  
+**Problem:** Wenn die Umgebung ausschließlich für die Ausführung von IPv6 konfiguriert ist, stürzt Help Viewer von SQL Server 2012 ab, und Sie erhalten die folgende Fehlermeldung:  
   
 `HelpLibAgent.exe has stopped working.`  
   
 > [!IMPORTANT]  
 > Dies gilt für alle Umgebungen, für die ausschließlich IPv6 aktiviert ist. Umgebungen mit IPv4 (bzw. einer Kombination von IPv4 und IPv6) sind nicht betroffen.  
   
-**Problemumgehung:** Zur Vermeidung des Problems aktivieren Sie IPv4, oder befolgen Sie die nachstehenden Anweisungen, um einen Registrierungseintrag hinzuzufügen und eine Zugriffssteuerungsliste (ACL) zu erstellen und den Hilfe-Viewer für IPv6 zu aktivieren:  
+**Problemumgehung**: Um das Problem zu vermeiden, aktivieren Sie IPv4, oder folgen Sie den nachfolgenden Anweisungen, um einen Registrierungseintrag und eine Zugriffssteuerungsliste (ACL) zu erstellen, um Help Viewer für IPv6 zu aktivieren:  
   
 1.  Erstellen Sie unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 einen Registrierungsschlüssel mit dem Namen „IPv6“ und dem Wert „1 (DWORD(32 Bit))“.  
   
@@ -326,27 +326,27 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 **Problemumgehung:** Installieren Sie das kumulative Update 1 für SQL Server 2012, um das Problem zu beheben. Anweisungen finden Sie unter [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Zur Neuinstallation der Data Quality Server-Instanz löschen Sie nach der Deinstallation der Data Quality Server-Instanz die DQS-Objekte  
-**Problem:** Beim Deinstallieren der Data Quality Server-Instanz werden die DQS-Objekte (DQS-Datenbanken, DQS-Anmeldungen und eine gespeicherte DQS-Prozedur) nicht aus der SQL Server-Instanz gelöscht.  
+**Problem:** Beim Deinstallieren des Data Quality-Servers werden die DQS-Objekte (DQS-Datenbanken, DQS-Anmeldungen und eine gespeicherte DQS-Prozedur) nicht aus der SQL Server-Instanz gelöscht.  
   
-**Problemumgehung:** Zur Neuinstallation der Data Quality Server-Instanz auf demselben Computer und in derselben SQL Server-Instanz müssen Sie die DQS-Objekte manuell aus der SQL Server-Instanz löschen. Außerdem müssen Sie die DQS-Datenbankdateien (DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA) aus dem Ordner C:\Programme\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA auf dem Computer löschen, bevor Sie den Data Quality-Server neu installieren. Andernfalls schlägt die Installation der Data Quality Server-Instanz fehl. Verschieben Sie die Datenbankdateien, statt sie zu löschen, wenn Daten wie Wissensdatenbanken oder Data Quality-Projekte beibehalten werden sollen. Weitere Informationen zum Entfernen von DQS-Objekten nach Abschluss der Deinstallation finden Sie unter [Entfernen von Data Quality Server-Objekten](https://msdn.microsoft.com/library/hh231667.aspx).  
+**Problemumgehung:** Zur Neuinstallation des Data Quality-Servers auf demselben Computer und in derselben SQL Server-Instanz müssen Sie die DQS-Objekte manuell aus der SQL Server-Instanz löschen. Außerdem müssen Sie die DQS-Datenbankdateien (DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA) aus dem Ordner C:\Programme\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA auf dem Computer löschen, bevor Sie den Data Quality-Server neu installieren. Andernfalls schlägt die Installation der Data Quality Server-Instanz fehl. Verschieben Sie die Datenbankdateien, statt sie zu löschen, wenn Daten wie Wissensdatenbanken oder Data Quality-Projekte beibehalten werden sollen. Weitere Informationen zum Entfernen von DQS-Objekten nach Abschluss der Deinstallation finden Sie unter [Entfernen von Data Quality Server-Objekten](https://msdn.microsoft.com/library/hh231667.aspx).  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Die Anzeige einer beendeten Wissensermittlung oder interaktiven Bereinigungsaktivität ist zeitverzögert  
-**Problem:** Beendet ein Administrator eine Aktivität im Bildschirm „Aktivitätsüberwachung“, wird das Ende der Aktivität einem interaktiven Benutzer, der die Wissensermittlung, Domänenverwaltung oder interaktive Bereinigungsaktivität ausführt, erst dann angezeigt, wenn er den nächsten Vorgang ausführt.  
+**Problem:** Beendet ein Administrator eine Aktivität im Bildschirm "Aktivitätsüberwachung", wird das Ende der Aktivität einem interaktiven Benutzer, der die Wissensermittlung, Domänenverwaltung oder interaktive Bereinigungsaktivität ausführt, erst dann angezeigt, wenn er den nächsten Vorgang ausführt.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung:** None  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 Bei einem Abbruchvorgang kann Arbeit aus mehreren Aktivitäten verworfen werden  
-**Problem:** Wenn Sie für eine ausgeführte Wissensermittlungs- oder Domänenverwaltungsaktivität, auf **Abbrechen** klicken, und andere Aktivitäten zuvor abgeschlossen wurden, ohne dass während der Aktivität ein Veröffentlichungsvorgang ausgeführt wurde, wird die Arbeit aus allen seit der letzten Veröffentlichung ausgeführten Aktivitäten verworfen, nicht nur die der aktuellen Aktivität.  
+**Problem:** Wenn Sie für eine ausgeführte Wissensermittlungs- oder Domänenverwaltungsaktivität auf **Abbrechen** klicken und andere Aktivitäten zuvor abgeschlossen wurden, ohne dass ein Veröffentlichungsvorgang während der Aktivität ausgeführt wurde, wird die Arbeit aus allen seit der letzten Veröffentlichung ausgeführten Aktivitäten verworfen, nicht nur die der aktuellen Aktivität.  
   
 **Problemumgehung:** Um dieses Problem zu vermeiden, veröffentlichen Sie persistent zu speichernde Daten in der Wissensdatenbank, bevor eine neue Aktivität gestartet wird.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Steuerelemente werden bei großen Schriftgraden nicht richtig skaliert  
-**Problem:** Wenn Sie die Textgröße auf „Größer – 150 %“ (in Windows Server 2008 oder Windows 7) ändern oder die Einstellung Benutzerdefinierte DPI-Auflösung auf 200 % (in Windows 7) festlegen, sind die Schaltflächen **Abbrechen** und **Erstellen** auf der Seite **Neue Wissensdatenbank** nicht verfügbar.  
+**Problem:** Wenn Sie die Textgröße auf „Größer – 150 %“ (in Windows Server 2008 oder Windows 7) ändern oder die benutzerdefinierte DPI-Einstellung auf 200 % (in Windows 7) festlegen, sind die Schaltflächen **Abbrechen** und **Erstellen** auf der Seite **Neue Wissensdatenbank** nicht verfügbar.  
   
 **Problemumgehung:** Um das Problem zu beheben, legen Sie einen kleineren Schriftgrad fest.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 Eine Bildschirmauflösung von 800 x 600 wird nicht unterstützt  
-**Problem:** Die Data Quality Client-Anwendung wird nicht richtig angezeigt, wenn die Bildschirmauflösung auf 800 x 600 festgelegt ist.  
+**Problem:** Die Data Quality-Clientanwendung wird nicht richtig angezeigt, wenn die Bildschirmauflösung auf 800 x 600 festgelegt ist.  
   
 **Problemumgehung:** Um das Problem zu beheben, legen Sie eine höhere Bildschirmauflösung fest.  
   
@@ -359,7 +359,7 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 **Problemumgehung:** Vor der Verarbeitung dieser Datenspalten mithilfe der Komponente zur DQS-Bereinigung müssen Sie sie mit der Transformation für Datenkonvertierung in den Datentyp **DT_STR** oder den Datentyp **DT_WSTR** konvertieren.  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 Das Element zum Ausführen von "DQSInstaller.exe" im Startmenü wird bei der Installation einer neuen SQL Server-Instanz überschrieben  
-**Problem:** Wenn Sie Data Quality Services in einer SQL Server-Instanz installieren, wird nach Abschluss des SQL Server-Setups im **Startmenü** unter der Programmgruppe **Data Quality Services** ein Eintrag mit dem Namen **Data Quality Server-Installationsprogramm** erstellt. Wenn Sie jedoch mehrere SQL Server-Instanzen auf demselben Computer installieren, befindet sich trotzdem nur ein Eintrag **Data Quality Server-Installationsprogramm** im **Startmenü** . Durch Klicken auf diesen Eintrag wird die Datei DQSInstaller.exe in der zuletzt installierten SQL Server-Instanz ausgeführt.  
+**Problem:** Wenn Sie Data Quality Services in einer SQL Server-Instanz installieren, wird nach Abschluss des SQL Server-Setups im **Startmenü** unter der Programmgruppe **Data Quality Services** ein Eintrag mit dem Namen **Data Quality-Server-Installationsprogramm** erstellt. Wenn Sie jedoch mehrere SQL Server-Instanzen auf demselben Computer installieren, befindet sich trotzdem nur ein Eintrag **Data Quality Server-Installationsprogramm** im **Startmenü** . Durch Klicken auf diesen Eintrag wird die Datei DQSInstaller.exe in der zuletzt installierten SQL Server-Instanz ausgeführt.  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 Bei der Aktivitätsüberwachung wird für fehlerhafte Bereinigungsaktivitäten von Integration Services ein falscher Status angezeigt  
 Im Bildschirm „Aktivitätsüberwachung“ wird selbst für Integration Services-basierte Bereinigungsaktivitäten, bei denen ein Fehler aufgetreten ist, in der Spalte **Aktueller Status** der Eintrag **Erfolgreich** angezeigt.  
@@ -371,12 +371,12 @@ Wenn in einer der DQS-Aktivitäten während der Zuordnungsphase im Data Quality-
 Wenn Sie in einem Data Quality-Bereinigungsprojekt ein Feld in den Quelldaten einer Verbunddomäne zugeordnet haben, die über eine untergeordnete Domäne vom Datentyp Date verfügt, weist die Ausgabe der untergeordneten Domäne im Bereinigungsergebnis ein falsches Datumsformat auf, sodass beim Export in die Datenbank ein Fehler verursacht wird.  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 Fehler beim Zuordnen zu einer Excel-Tabelle mit einem Semikolon (;) im Namen  
-**Problem:** Wenn Sie in Data Quality Client auf der Seite **Zuordnen** einer beliebigen DQS-Aktivität eine Zuordnung zur Excel-Quelltabelle vornehmen, in deren Name ein Semikolon (;) enthalten ist, wird eine Meldung zu einer unbehandelten Ausnahme angezeigt, sobald Sie auf der Seite **Zuordnen** auf **Weiter** klicken.  
+**Problem:** Wenn Sie im Data Quality-Client auf der Seite **Zuordnen** einer beliebigen DQS-Aktivität eine Zuordnung zur Excel-Quelltabelle vornehmen, in deren Name ein Semikolon (;) enthalten ist, wird eine Meldung zu einer unbehandelten Ausnahme angezeigt, sobald Sie auf der Seite **Zuordnen** auf **Weiter** klicken.  
   
 **Problemumgehung:** Entfernen Sie das Semikolon (;) aus dem Tabellennamen in der Excel-Datei, in der die zuzuordnenden Quelldaten enthalten sind, und wiederholen Sie den Vorgang.  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problem mit Date-Werten oder DateTime-Werten in nicht zugeordneten Quellfeldern in Excel bei der Bereinigung und beim Abgleich  
-**Problem:** Wenn die Quelldaten im Excel-Format vorliegen und Quellfelder mit Werten vom Datentyp **Date** oder **DateTime** nicht zugeordnet wurden, geschieht während Bereinigungs- und Abgleichsaktivitäten Folgendes:  
+**Problem:** Wenn die Quelldaten im Excel-Format vorliegen und Sie die Quellfelder mit Werten vom Datentyp **Date** oder **DateTime** nicht zugeordnet haben, geschieht während Bereinigungs- und Abgleichsaktivitäten Folgendes:  
   
 -   Die nicht zugeordneten **Date** -Werte werden im YYYYMMDD-Format angezeigt und exportiert.  
   
@@ -387,7 +387,7 @@ Wenn Sie in einem Data Quality-Bereinigungsprojekt ein Feld in den Quelldaten ei
 ### <a name="415-cannot-import-domain-values-from-an-excel-file-xls-containing-more-than-255-columns-of-data"></a>4.15 Aus einer Excel-Datei (.xls) mit mehr als 255 Datenspalten können keine Domänenwerte importiert werden  
 **Problem:** Wenn Sie aus einer in Excel 97-2003 erstellten Datei (.xls), die mehr als 255 Datenspalten enthält, Werte in eine Domäne importieren, wird eine Ausnahmemeldung angezeigt, und der Import verursacht einen Fehler.  
   
-**Problemumgehung:** Befolgen Sie einen der folgenden Schritte, um das Problem zu beheben:  
+**Problemumgehung:** Führen Sie einen der folgenden Schritte aus, um das Problem zu beheben:  
   
 -   Speichern Sie die XLS-Datei als XLSX-Datei, und importieren Sie dann die Werte aus der XLSX-Datei in eine Domäne.  
   
@@ -397,15 +397,15 @@ Wenn Sie in einem Data Quality-Bereinigungsprojekt ein Feld in den Quelldaten ei
 Die Funktion für die Aktivitätsüberwachung ist nur für Benutzer mit der Rolle dqs_administrator verfügbar. Wenn Ihrem Benutzerkonto die Rolle dqs_kb_editor oder dqs_kb_operator zugewiesen ist, ist die Funktion für die Aktivitätsüberwachung in der Data Quality-Clientanwendung nicht verfügbar.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 Wenn eine Wissensdatenbank für die Domänenverwaltung in der Liste "Zuletzt verwendete Wissensdatenbank" geöffnet wird, tritt ein Fehler auf  
-Problem: Wenn Sie eine Wissensdatenbank in der Liste **Zuletzt verwendete Wissensdatenbank** für die Domänenverwaltungsaktivität öffnen, kann auf dem Data Quality Client-Startbildschirm die folgende Fehlermeldung angezeigt werden:  
+Problem: Wenn Sie eine Wissensdatenbank aus der Liste **Zuletzt verwendete Wissensdatenbank** für die Domänenverwaltungsaktivität öffnen, kann die folgende Fehlermeldung auf dem Startbildschirm des Data Quality-Clients angezeigt werden:  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
 Das Problem tritt auf, weil Zeichenfolgen in der SQL Server-Datenbank und in C# von DQS auf unterschiedliche Weise verglichen werden. Beim Zeichenfolgenvergleich in der SQL Server-Datenbank wird die Groß-/Kleinschreibung nicht beachtet, während sie in C# beachtet wird.  
   
-Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user1" verwendet. Der Benutzer meldet sich unter Verwendung des Kontos „user1“ beim Data Quality-Client-Computer an und arbeitet mit einer Wissensdatenbank. DQS speichert die zuletzt verwendete Wissensdatenbank für jeden Benutzer als Datensatz in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank. In diesem Fall wird der Datensatz unter folgendem Namen gespeichert: RecentList:KB:Domain\user1. Später meldet sich der Benutzer als „User1“ (beachten Sie den Großbuchstaben U) beim Data Quality-Client-Computer an und versucht, die in der Liste **Zuletzt verwendete Wissensdatenbank** enthaltene Wissensdatenbank zu öffnen, um die Domänenverwaltungsaktivität auszuführen. Durch den DQS zugrunde liegenden Code werden die beiden Zeichenfolgen „RecentList:KB:DOMAIN\user1“ und „DOMAIN\User1“ verglichen. Da beim Zeichenfolgenvergleich in C# die Groß-/Kleinschreibung beachtet wird, stimmen die Zeichenfolgen nicht überein, sodass DQS versucht, einen neuen Datensatz für den Benutzer (User1) in die A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank einzufügen. Da die Groß-/Kleinschreibung beim Zeichenfolgenvergleich in der SQL-Datenbank jedoch nicht beachtet wird, ist die Zeichenfolge in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank folglich schon vorhanden, sodass der Einfügevorgang fehlschlägt.  
+Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user1" verwendet. Der Benutzer meldet sich unter Verwendung des Kontos „user1“ beim Data Quality-Client-Computer an und arbeitet mit einer Wissensdatenbank. DQS speichert die zuletzt verwendete Wissensdatenbank für jeden Benutzer als Datensatz in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank. In diesem Fall wird der Datensatz unter dem folgenden Namen gespeichert: RecentList:KB:Domain\user1. Später meldet sich der Benutzer als „User1“ (beachten Sie den Großbuchstaben U) beim Data Quality-Client-Computer an und versucht, die in der Liste **Zuletzt verwendete Wissensdatenbank** enthaltene Wissensdatenbank zu öffnen, um die Domänenverwaltungsaktivität auszuführen. Durch den DQS zugrunde liegenden Code werden die beiden Zeichenfolgen „RecentList:KB:DOMAIN\user1“ und „DOMAIN\User1“ verglichen. Da beim Zeichenfolgenvergleich in C# die Groß-/Kleinschreibung beachtet wird, stimmen die Zeichenfolgen nicht überein, sodass DQS versucht, einen neuen Datensatz für den Benutzer (User1) in die A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank einzufügen. Da die Groß-/Kleinschreibung beim Zeichenfolgenvergleich in der SQL-Datenbank jedoch nicht beachtet wird, ist die Zeichenfolge in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank folglich schon vorhanden, sodass der Einfügevorgang fehlschlägt.  
   
-**Problemumgehung:** Befolgen Sie einen der folgenden Schritte, um das Problem zu beheben:  
+**Problemumgehung:** Führen Sie einen der folgenden Schritte aus, um das Problem zu beheben:  
   
 -   Überprüfen Sie, ob doppelte Einträge vorhanden sind, indem Sie die folgende Anweisung ausführen:  
   
@@ -435,12 +435,12 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
 ## <a name="DE"></a>5.0 Database Engine (Datenbankmodul)  
   
 ### <a name="51-use-of-distributed-replay-controller-and-distributed-replay-client-features"></a>5.1 Verwenden der Funktion "Distributed Replay Controller" und "Distributed Replay Client"  
-**Problem:** Die Funktionen „Distributed Replay Controller“ und „Distributed Replay Client“ werden in der Server Core-SKU von Windows Server 2008, Windows Server 2008 R2 und Windows Server 7 zur Verfügung gestellt, obwohl die beiden Funktionen in der Server Core-SKU nicht unterstützt werden.  
+**Problem:** Die Funktionen "Distributed Replay Controller" und "Distributed Replay Client" werden in der Server Core-SKU von Windows Server 2008, Windows Server 2008 R2 und Windows Server 7 zur Verfügung gestellt, obwohl die beiden Funktionen in der Server Core-SKU nicht unterstützt werden.  
   
 **Problemumgehung:** Diese beiden Funktionen sollten in der Server Core-SKU von Windows Server 2008, Windows Server 2008 R2 und Windows Server 7 weder installiert noch verwendet werden.  
   
 ### <a name="52-sql-server-management-studio-depends-on-visual-studio-2010-sp1"></a>5.2 SQL Server Management Studio ist von Visual Studio 2010 SP1 abhängig  
-**Problem:** Zum ordnungsgemäßen Ausführen von SQL Server 2012 Management Studio ist Visual Studio 2010 SP1 erforderlich. Die Deinstallation von Visual Studio 2010 SP1 kann Funktionsverluste in SQL Server Management Studio verursachen und Management Studio in einen nicht unterstützten Status versetzen. In diesem Fall können folgende Probleme auftreten:  
+**Problem:**  Zum ordnungsgemäßen Ausführen von SQL Server 2012 Management Studio ist Visual Studio 2010 SP1 erforderlich. Die Deinstallation von Visual Studio 2010 SP1 kann Funktionsverluste in SQL Server Management Studio verursachen und Management Studio in einen nicht unterstützten Status versetzen. In diesem Fall können folgende Probleme auftreten:  
   
 -   Befehlszeilenparameter für ssms.exe funktionieren nicht ordnungsgemäß.  
   
@@ -450,7 +450,7 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
   
 -   Abfragen können im normalen Benutzermodus nicht debuggt werden.  
   
-**Problemumgehung:** Installieren Sie Visual Studio 2010 SP1 erneut, und starten Sie Management Studio neu.  
+**Problemumgehung**: Installieren Sie Visual Studio 2010 SP1 erneut, und starten Sie Management Studio neu.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 x64-Betriebssysteme benötigen die 64-Bit-Version von PowerShell 2.0  
 **Problem:** 32-Bit-Installationen von Windows PowerShell Extensions für SQL Server werden für SQL Server 2012-Instanzen unter 64-Bit-Betriebssystemen nicht unterstützt.  
@@ -462,19 +462,19 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
 -   Oder importieren Sie das SQLPS-Modul über eine Eingabeaufforderung der 32-Bit-Version von Windows PowerShell 2.0.  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 Beim Navigieren im Assistenten zum Generieren von Skripts kann ein Fehler auftreten  
-**Problem:** Nachdem Sie im Assistenten zum Generieren von Skripts ein Skript erstellt haben, indem Sie auf **Skripts speichern oder veröffentlichen**geklickt haben, und dann weiter navigieren, indem Sie auf **Optionen auswählen** oder **Skripterstellungsoptionen festlegen**und dann erneut auf **Skripts speichern oder veröffentlichen** klicken, kann folgender Fehler auftreten:  
+**Problem:** Nachdem Sie im Assistenten zum Generieren von Skripts ein Skript erstellt haben, indem Sie auf **Skripts speichern oder veröffentlichen** geklickt haben, und dann weiter navigieren, indem Sie auf **Optionen auswählen** oder **Skripterstellungsoptionen festlegen** und dann erneut auf **Skripts speichern oder veröffentlichen** klicken, kann folgender Fehler auftreten:  
   
 <a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ZUSÄTZLICHE INFORMATIONEN:  
-Ungültiger Objektname 'sys.federations'. (Microsoft SQL Server, Error: 208)</pre>  
+Ungültiger Objektname 'sys.federations'. (Microsoft SQL Server, Fehler: -2)" 208)</pre>  
   
 **Problemumgehung:** Schließen Sie den Assistenten zum Generieren von Skripts, und öffnen Sie ihn erneut.  
   
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Das neue Layout für Wartungspläne ist mit früheren SQL Server-Tools nicht kompatibel  
 **Problem:** Wenn Sie mit den SQL Server 2012-Verwaltungstools einen vorhandenen Wartungsplan aus einer vorherigen Version der SQL Server-Verwaltungstools (SQL Server 2008 R2, SQL Server 2008 oder SQL Server 2005) ändern, wird der Wartungsplan in einem neuen Format gespeichert. Frühere Versionen der SQL Server-Verwaltungstools unterstützen dieses neue Format nicht.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung**: None  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Die IntelliSense-Funktionalität ist nach der Anmeldung bei einer eigenständigen Datenbank eingeschränkt  
 Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQL Server Data Tools (SSDT) nicht erwartungsgemäß, wenn eigenständige Benutzer bei eigenständigen Datenbanken angemeldet sind. In diesen Fällen tritt das folgende Verhalten auf:  
@@ -485,13 +485,13 @@ Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQ
   
 3.  Die QuickInfo-Hilfe für integrierte Funktionen wird nicht ausgeführt.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung**:  None  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn-Verfügbarkeitsgruppen  
 Bevor Sie eine Verfügbarkeitsgruppe erstellen, lesen Sie den Abschnitt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753168) in der Onlinedokumentation. Eine Einführung in AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753166)in der Onlinedokumentation.  
   
 #### <a name="571-client-connectivity-for-alwayson-availability-groups"></a>5.7.1 Clientkonnektivität für AlwaysOn-Verfügbarkeitsgruppen  
-**Aktualisiert am:** 13 August 2012  
+**Aktualisiert am:** 13. August 2012  
   
 In diesem Abschnitt werden die Treiberunterstützung für AlwaysOn-Verfügbarkeitsgruppen und Problemumgehungen bei der Verwendung nicht unterstützter Treiber beschrieben.  
   
@@ -501,11 +501,11 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
   
 |Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|SQL Native Client 11.0 OLEDB|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Microsoft JDBC-Treiber 4.0 für SQL Server|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|SQL Native Client 11.0 ODBC|Ja|Ja|Ja|Ja|Ja|  
+|SQL Native Client 11.0 OLEDB|Nein|Ja|Ja|Nein|Nein|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Ja|Ja|Ja|Ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Ja|Ja|Ja|Ja|Ja|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|Ja|Ja|Ja|Ja|Ja|  
   
 **\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
@@ -527,9 +527,9 @@ MultiSubnetFailover ist ein neues Schlüsselwort für Verbindungszeichenfolgen, 
   
     -   Wird verwendet, um die Auflösung benannter Instanzen für AlwaysOn-Failoverclusterinstanzen mit mehreren Subnetzendpunkten zu unterstützen.  
   
-**MultiSubnetFailover=True wird von NET Framework 3.5 oder OLE DB nicht unterstützt**  
+**"MultiSubnetFailover=True" wird von NET Framework 3.5 oder OLE DB nicht unterstützt.**  
   
-**Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen verfügt (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet), der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
+**Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet) verfügt, der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
   
 **Problemumgehungen:** Eine der folgenden Lösungen wird empfohlen.  
   
@@ -537,13 +537,13 @@ MultiSubnetFailover ist ein neues Schlüsselwort für Verbindungszeichenfolgen, 
   
     **Vorteile:** Beim Eintreten eines subnetzübergreifenden Failovers ist die Clientwiederherstellungszeit nur kurz.  
   
-    **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
+    **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
   
 -   Wenn Sie über die notwendigen Berechtigungen zum Bearbeiten der Clusterressourcen verfügen, sollten Sie den Netzwerknamen des Verfügbarkeitsgruppenlisteners auf **RegisterAllProvidersIP**=0 festlegen. Weitere Informationen finden Sie unter "Beispiel-PowerShell-Skript zur Deaktivierung von RegisterAllProvidersIP und zur Reduzierung der Gültigkeitsdauer (TTL)" weiter unten in diesem Abschnitt.  
   
     **Vorteile:** Sie müssen den Clientverbindungs-Timeoutwert nicht erhöhen.  
   
-    **Nachteile:** Beim Auftreten eines subnetzübergreifenden Failovers kann die Clientwiederherstellung 15 Minuten oder länger dauern, je nach HostRecordTTL-Einstellung bzw. der Einstellung Ihres siteübergreifenden DNS/AD-Replikationszeitplans.  
+    **Nachteile:** Beim Auftreten eines subnetzübergreifenden Failovers kann die Clientwiederherstellungszeit 15 Minuten oder länger betragen, je nach Einstellung für HostRecordTTL bzw. den siteübergreifenden DNS/AD-Replikationszeitplan.  
   
 **Beispiel-PowerShell-Skript zur Deaktivierung von RegisterAllProvidersIP und zur Reduzierung der Gültigkeitsdauer (TTL)**  
   
@@ -567,10 +567,10 @@ Dies ist eine Einschränkung des CTP3-Builds. Diese Einschränkung wird in zukü
 #### <a name="575--timeouts-may-occur-when-using-multi-ips-in-the-same-subnet-with-alwayson"></a>5.7.5 Bei Verwendung mehrerer IPs mit AlwaysOn im selben Subnetz können Timeouts auftreten  
 **Problem:** Bei Verwendung mehrerer IPs mit AlwaysOn im selben Subnetz können Kunden zeitweise Timeoutfehler angezeigt werden. Dies geschieht, wenn die oberste IP in der Liste fehlerhaft ist.  
   
-**Problemumgehung:** Verwenden Sie „multisubnetfailover = true“ in der Verbindungszeichenfolge.  
+**Problemumgehung:** Verwenden Sie "multisubnetfailover = true" in der Verbindungszeichenfolge.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Fehler beim Erstellen neuer Verfügbarkeitsgruppenlistener aufgrund von Active Directory-Kontingenten  
-**Problem:** Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners kann einen Fehler verursachen, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben. Weitere Informationen finden Sie unter [Problembehandlung für das Clusterdienstkonto bei Änderung von Computerobjekten](https://support.microsoft.com/kb/307532) und [Active Directory-Kontingente](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
+**Problem:** Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners schlägt möglicherweise beim Erstellen fehl, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben. Weitere Informationen finden Sie unter [Problembehandlung für das Clusterdienstkonto bei Änderung von Computerobjekten](https://support.microsoft.com/kb/307532) und [Active Directory-Kontingente](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 NetBIOS-Konflikte, da Namen von Verfügbarkeitsgruppenlistenern ein identisches 15-Zeichen-Präfix verwenden  
 Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfixbenennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](https://technet.microsoft.com/library/cc731265(WS.10).aspx).  
@@ -585,10 +585,10 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
 #### <a name="611-install-the-cdc-service-for-oracle-and-the-cdc-designer-for-oracle"></a>6.1.1 Installieren von CDC Service für Oracle und CDC Designer für Oracle  
 **Problem:** CDC Service und CDC Designer werden nicht von SQL Server-Setup installiert. Sie müssen CDC Service oder CDC Designer manuell auf einem Computer installieren, der die in den aktualisierten Hilfedateien beschriebenen Anforderungen und Voraussetzungen erfüllt.  
   
-**Problemumgehung:** Führen Sie zum Installieren von CDC Service für Oracle AttunityOracleCdcService.msi manuell von den SQL Server-Installationsmedien aus. Führen Sie zum Installieren von CDC Designer Console AttunityOracleCdcDesigner.msi manuell von den SQL Server-Installationsmedien aus.  Installationspakete für x86 und x64 befinden sich auf den SQL Server-Installationsmedien unter \Tools\AttunityCDCOracle\.  
+**Problemumgehung:** Führen Sie zum Installieren des CDC Service for Oracle "AttunityOracleCdcService.msi" manuell von den SQL Server-Installationsmedien aus. Führen Sie zum Installieren von CDC Designer Console AttunityOracleCdcDesigner.msi manuell von den SQL Server-Installationsmedien aus.  Installationspakete für x86 und x64 befinden sich auf den SQL Server-Installationsmedien unter \Tools\AttunityCDCOracle\.  
   
 #### <a name="612-f1-help-functionality-points-to-incorrect-documentation-files"></a>6.1.2 Die F1-Hilfefunktion zeigt auf die falschen Dokumentationsdateien  
-**Problem:** Über die Dropdownliste der F1-Hilfe oder durch Klicken auf die Schaltfläche „?“ in Attunity Consoles kann nicht auf die richtige Hilfedokumentation zugegriffen werden. Diese Methoden zeigen auf die falschen CHM-Dateien.  
+**Problem:** Über die Dropdownliste der F1-Hilfe oder durch Klicken auf die Schaltfläche "?" in den Attunity Consoles kann nicht auf die richtige Hilfedokumentation zugegriffen werden. Diese Methoden zeigen auf die falschen CHM-Dateien.  
   
 **Problemumgehung:** Die richtigen CHM-Dateien werden zusammen mit CDC Service für Oracle und CDC Designer für Oracle installiert. Um die richtigen Hilfeinhalte anzuzeigen, starten Sie die CHM-Dateien direkt vom folgenden Ort: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
   
@@ -597,9 +597,9 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 Reparieren einer MDS-Installation in einem Cluster  
-**Problem:** Wenn Sie eine gruppierte Instanz der RTM-Version von SQL Server 2012 installieren, während das Kontrollkästchen **Master Data Services** aktiviert ist, werden MDS auf einem einzelnen Knoten installiert, sind jedoch auf zusätzlichen Knoten, die Sie dem Cluster hinzufügen, weder verfügbar noch funktionsfähig.  
+**Problem:** Wenn Sie eine gruppierte Instanz der RTM-Version von SQL Server 2012 installieren, während das Kontrollkästchen **Master Data Services aktiviert** ist, wird MDS auf einem einzelnen Knoten installiert, ist jedoch auf zusätzlichen Knoten, die Sie dem Cluster hinzufügen, weder verfügbar noch funktionsfähig.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, müssen Sie mithilfe der folgenden Schritte die kumulative Version 1 (CU1) für SQL Server 2012 installieren:  
+**Problemumgehung**: Um dieses Problem zu beheben, müssen Sie mithilfe der folgenden Schritte die kumulative Version 1 (CU1) für SQL Server 2012 installieren:  
   
 1.  Stellen Sie sicher, dass keine SQL-/MDS-Installation vorhanden ist.  
   
@@ -631,7 +631,7 @@ SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Mic
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 Link zur Installation von Upgrade Advisor ist auf chinesischen (HK) Betriebssystemen nicht aktiviert  
 Problem: Beim Versuch, Upgrade Advisor auf einer unterstützten Windows-Version unter chinesischen (Hongkong) Betriebssystemen zu installieren, ist der Link zur Installation von Upgrade Advisor möglicherweise nicht aktiviert.  
   
-**Problemumgehung:** Suchen Sie die Datei **SQLUA.msi** je nach Betriebssystemarchitektur auf den SQL Server 2012-Medien unter `\1028_CHT_LP\x64\redist\Upgrade Advisor` oder unter `\1028_CHT_LP\x86\redist\Upgrade Advisor`.  
+**Problemumgehung**: Suchen Sie die Datei **SQLUA.msi** auf den SQL Server 2012-Medien unter `\1028_CHT_LP\x64\redist\Upgrade Advisor` oder `\1028_CHT_LP\x86\redist\Upgrade Advisor`, je nach Architektur des Betriebssystems.  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   

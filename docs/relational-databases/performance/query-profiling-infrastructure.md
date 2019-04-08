@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889981"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645562"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] enthält eine neu überarbeitete Version der einfachen Profilerstellung, die Informationen zur Anzahl der Zeilen für alle Ausführungen erfasst. Einfache Profilerstellung ist für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig aktiviert, und das Ablaufverfolgungsflag 7412 besitzt keine Auswirkungen.
 
+Eine neue DMF ([sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)) wird eingeführt, um das Äquivalent des letzten bekannten, tatsächlichen Ausführungsplans für die meisten Abfragen zurückzugeben. Im Gegensatz zum Ereignis *query_post_execution_showplan*, das die Standardprofilerstellung nutzt, erfasst das neue erweiterte Ereignis *query_post_execution_plan_profile* das Äquivalent eines tatsächlichen Ausführungsplans mithilfe einfacher Profilerstellung. 
+
+Sie können eine Beispielsitzung wie im folgenden Beispiel mithilfe des erweiterten Ereignisses *query_post_execution_plan_profile* konfigurieren:
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 Beginnend mit der einfachen Profilerstellung v2 und ihrem geringen Mehraufwand kann jeder Server, der nicht bereits CPU-gebunden ist, einfache Profilerstellung **kontinuierlich** ausführen und es Datenbankexperten ermöglichen, jederzeit auf jede aktuell ausgeführte Ausführung zuzugreifen (z.B. mit dem Aktivitätsmonitor oder durch direktes Abfragen von `sys.dm_exec_query_profiles`) und den Abfrageplan mit Laufzeitstatistiken abzurufen.
 
-Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 
+Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) 
+
+> [!NOTE]
+> Erweiterte Ereignisse, die die einfache Profilerstellung nutzen, verwenden die Informationen der Standardprofilerstellung, wenn die Standardprofilerstellungsinfrastruktur bereits aktiviert ist. Dies tritt beispielsweise auf, wenn eine Sitzung mit dem erweiterten Ereignis `query_post_execution_showplan` ausgeführt und eine weitere Sitzung mit `query_post_execution_plan_profile` gestartet wird. Die zweite Sitzung verwendet weiterhin die Informationen der Standardprofilerstellung.
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung f
  [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Tatsächlicher Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

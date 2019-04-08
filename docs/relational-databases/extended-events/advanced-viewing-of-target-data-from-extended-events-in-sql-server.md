@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658879"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478165"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -101,17 +102,17 @@ Es gibt verschiedene Möglichkeiten event_file-Zieldaten in die SSMS-Benutzerobe
 
 SSMS kann Daten aus jedem Ziel anzeigen. Die Ansichten unterscheiden sich jedoch für die verschiedenen Ziele:
 
-- *event_file:* Daten aus einem event_file-Ziel werden gut lesbar angezeigt und bieten viele Funktionen.
+- *event_file:* Daten aus einem event_file-Ziel werden gut lesbar angezeigt und bieten umfangreiche Features.
 
 
-- *ring_buffer:* Daten aus einem Ringpufferziel werden als unformatiertes XML angezeigt.
+- *ring_buffer:* Daten aus einem Ringpufferziel werden in einem unformatierten XML-Format angezeigt.
 
 
 - Bei anderen Zielen liegt die Lesbarkeit der Anzeige zwischen event_file und ring_buffer.
   - Beispiele für andere Ziele: event_counter, histogram und pair_matching.
 
 
-- *etw_classic_sync_target:* SSMS kann Daten für den Zieltyp etw_classic_sync_target nicht anzeigen.
+- *etw_classic_sync_target:* SSMS kann Daten für den Zieltyp „etw_classic_sync_target“ nicht anzeigen.
 
 
 
@@ -260,7 +261,7 @@ Im Bereich der erweiterten Ereignisse gibt es zwei Hauptarten von Filtern, die S
 
 - *Filter vor Erfassen der Zieldaten:* Diese Filter reduzieren die Datenmenge, die von der Ereignis-Engine an Ihr Ziel gesendet werden.
 
-- *Filter nach Erfassen der Zieldaten* : Diese Filter können Sie in der SSMS-Benutzeroberfläche auswählen, um einige Zieldatensätze von der Anzeige auszuschließen.
+- *Filter nach Erfassen der Zieldaten:* Diese Filter können Sie in der SSMS-Benutzeroberfläche auswählen, um einige Zieldatensätze von der Anzeige auszuschließen.
 
 
 Folgende SSMS-Anzeigefilter stehen zur Verfügung:

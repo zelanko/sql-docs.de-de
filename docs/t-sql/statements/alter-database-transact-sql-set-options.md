@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft-Dokumentation
 description: Informationen zum Festlegen von Datenbankoptionen wie automatische Optimierung, Verschlüsselung und Abfragespeicher in SQL Server und Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356523"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494432"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -316,7 +316,7 @@ INCREMENTAL = ON | OFF Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL a
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON Die Datenbankdateien sind Kandidaten für das periodische Verkleinern.
 
-Sowohl Daten- als auch Protokolldateien können verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
+Sowohl Daten- als auch Protokolldateien können automatisch verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
 
 Durch die Option AUTO_SHRINK werden Dateien dann verkleinert, wenn mehr als 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen. Die Option bewirkt, dass die Datei, auf eine von zwei Größen verkleinert wird. Sie wird auf den jeweils größeren Wert verkleinert:
 
@@ -455,11 +455,13 @@ Die aktuelle Einstellung der Option kann mithilfe der Spalte is_date_correlation
 
 Steuert den Status der Datenbankverschlüsselung.
 
-ENCRYPTION {ON | OFF} Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Weitere Informationen finden Sie unter [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) und [Transparent Data Encryption in Azure SQL-Datenbank](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+Mit ENCRYPTION {ON | OFF | SUSPEND | RESUME} wird festgelegt, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) wird. Weitere Informationen finden Sie unter [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) und [Transparent Data Encryption in Azure SQL-Datenbank](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Optionen SUSPEND und RESUME verwendet werden, um den Verschlüsselungsscan anzuhalten oder fortzusetzen, nachdem TDE aktiviert oder deaktiviert wurde oder der Verschlüsselungsschlüssel geändert wurde.
 
 Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als **READ ONLY** festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
 
-Der Verschlüsselungsstatus der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.
+Sie können den sowohl den Verschlüsselungsstatus der Datenbank als auch den Status des Verschlüsselungsscans mithilfe der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) anzeigen.
 
 **\<db_state_option> ::=**
 
@@ -1312,7 +1314,7 @@ INCREMENTAL = ON | OFF Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL a
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON Die Datenbankdateien sind Kandidaten für das periodische Verkleinern.
 
-Sowohl Daten- als auch Protokolldateien können verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
+Sowohl Daten- als auch Protokolldateien können automatisch verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
 
 Durch die Option AUTO_SHRINK werden Dateien dann verkleinert, wenn mehr als 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen. Die Option bewirkt, dass die Datei, auf eine von zwei Größen verkleinert wird. Sie wird auf den jeweils größeren Wert verkleinert:
 
@@ -1980,7 +1982,7 @@ INCREMENTAL = ON | OFF Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL a
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON Die Datenbankdateien sind Kandidaten für das periodische Verkleinern.
 
-Sowohl Daten- als auch Protokolldateien können verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
+Sowohl Daten- als auch Protokolldateien können automatisch verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
 
 Durch die Option AUTO_SHRINK werden Dateien dann verkleinert, wenn mehr als 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen. Die Option bewirkt, dass die Datei, auf eine von zwei Größen verkleinert wird. Sie wird auf den jeweils größeren Wert verkleinert:
 

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421367"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872290"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ In diesem Artikel werden alle Aspekte von Transaktionen beschrieben, die für sp
   
 Die Transaktionsisolationsstufen in SQL Server werden auf speicheroptimierte Tabellen anders angewendet als auf datenträgerbasierte Tabellen, und zudem sind die zugrunde liegenden Mechanismen verschieden. Ein Überblick über die Unterschiede kann Programmierern dabei helfen, ein System mit hohem Durchsatz zu entwerfen. Das Ziel der Transaktionsintegrität wird in allen Fällen geteilt.  
 
-Informationen zu Fehlerbedingungen, die für Transaktionen in speicheroptimierten Tabellen spezifisch sind, finden Sie im Abschnitt [Konflikterkennung und Wiederholungslogik](#confdetretry34ni).
+Informationen zu Fehlerbedingungen, die für Transaktionen in speicheroptimierten Tabellen spezifisch sind, finden Sie im Abschnitt [Konflikterkennung und Wiederholungslogik](#conflict-detection-and-retry-logic).
   
 Allgemeine Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -97,7 +97,7 @@ Datenträgerbasierte Tabellen weisen indirekt ein System zur Zeilenversionsverwa
   
 ## <a name="isolation-levels"></a>Isolationsstufen 
   
-Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, wobei mit der niedrigsten Isolationsstufe begonnen wird. Informationen zu möglichen Konflikten und der Wiederholungslogik zum Beheben dieser Konflikte finden Sie unter [Konflikterkennung und Wiederholungslogik](#confdetretry34ni). 
+Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, wobei mit der niedrigsten Isolationsstufe begonnen wird. Informationen zu möglichen Konflikten und der Wiederholungslogik zum Beheben dieser Konflikte finden Sie unter [Konflikterkennung und Wiederholungslogik](#conflict-detection-and-retry-logic). 
   
 | Isolationsebene | und Beschreibung |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ Beschreibungen der Phasen folgen.
 #### <a name="validation-phase-2-of-3"></a>Überprüfung: Phase 2 (von 3)  
   
 - Die Überprüfungsphase beginnt durch Zuweisen der Beendigungszeit, wodurch die Transaktion als logisch abgeschlossen markiert wird. Mit dem Abschluss werden alle Änderungen an dieser Transaktion für andere Transaktionen, die von ihr abhängig sind, sichtbar. Für abhängige Transaktionen darf kein Commit ausgeführt werden, solange kein Commit erfolgreich für diese Transaktion ausgeführt wurde. Darüber hinaus dürfen Transaktionen, für die solche Abhängigkeiten bestehen, keine Resultsets an den Client zurückgeben, damit dem Client nur Daten angezeigt werden, für die ein erfolgreicher Commit in die Datenbank ausgeführt wurde.  
-- Diese Phase umfasst die REPEATABLE READ- und SERIALIZABLE-Überprüfung. Bei der REPEATABLE READ-Überprüfung wird geprüft, ob eine Zeile aktualisiert wurde, nachdem sie von der Transaktion gelesen wurde. Bei der SERIALIZABLE-Überprüfung wird geprüft, ob Zeilen in einen von dieser Transaktion gescannten Datenbereich eingefügt wurden. Gemäß der Tabelle im Abschnitt [Isolationsstufen und Konflikte](#confdegreeiso30ni) können sowohl die REPEATABLE READ- als auch die SERIALIZABLE-Überprüfung bei der SNAPSHOT-Isolation ausgewählt werden, um die Konsistenz von UNIQUE- und FOREIGN KEY-Einschränkungen zu überprüfen.  
+- Diese Phase umfasst die REPEATABLE READ- und SERIALIZABLE-Überprüfung. Bei der REPEATABLE READ-Überprüfung wird geprüft, ob eine Zeile aktualisiert wurde, nachdem sie von der Transaktion gelesen wurde. Bei der SERIALIZABLE-Überprüfung wird geprüft, ob Zeilen in einen von dieser Transaktion gescannten Datenbereich eingefügt wurden. Gemäß der Tabelle im Abschnitt [Isolationsstufen und Konflikte](#isolation-levels) können sowohl die REPEATABLE READ- als auch die SERIALIZABLE-Überprüfung bei der SNAPSHOT-Isolation ausgewählt werden, um die Konsistenz von UNIQUE- und FOREIGN KEY-Einschränkungen zu überprüfen.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Commitverarbeitung: Phase 3 (von 3)  
   

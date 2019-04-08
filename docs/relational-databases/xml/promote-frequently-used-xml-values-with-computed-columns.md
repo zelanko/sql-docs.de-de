@@ -11,15 +11,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665569"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510547"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51665569"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
  Eine berechnete Spalte kann mithilfe einer benutzerdefinierten Funktion erstellt werden, die **xml** -Datentypmethoden aufruft. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte auf der Basis der xml-Datentypmethode  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalten basierend auf der XML-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
   
 ```  
@@ -52,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  Die berechnete Spalte kann auf gewöhnliche Weise indiziert werden.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte auf der Basis der xml-Datentypmethoden  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte basierend auf XML-Datentypmethoden  
  So erhalten Sie das <`book`>-Element, dessen ISBN 0-7356-1588-2 ist:  
   
 ```  
@@ -157,7 +157,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Beispiel: Suchen nach XML-Instanzen, deren Autoren denselben Vornamen haben  
- Die Abfrage kann für die XML-Spalte geformt werden. Alternativ kann sie die Eigenschaftentabelle nach dem Vornamen "David" durchsuchen und einen Rückwärtsjoins mit der Basistabelle ausführen, um die XML-Instanz zurückzugeben: Zum Beispiel:  
+ Die Abfrage kann für die XML-Spalte geformt werden. Alternativ kann sie die Eigenschaftentabelle nach dem Vornamen "David" durchsuchen und einen Rückwärtsjoins mit der Basistabelle ausführen, um die XML-Instanz zurückzugeben: Beispiel:  
   
 ```  
 SELECT xCol   
@@ -165,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Projektmappe mit Verwendung der Streaming-Tabellenwertfunktion in CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung mit der Streaming-Tabellenwertfunktion in CLR  
  Diese Projektmappe umfasst die folgenden Schritte:  
   
 1.  Definieren Sie eine CLR-Klasse (SqlReaderBase), die ISqlReader implementiert und eine Tabellenwert-Streaming-Ausgabe generiert, indem ein Pfadausdruck auf eine XML-Instanz angewendet wird.  
@@ -255,7 +255,7 @@ as
   
  Der delete-Trigger ist identisch mit der Nicht-CLR-Version. Dagegen ist beim update-Trigger lediglich die Funktion udf_XML2Table() durch CLR_udf_XML2Table() ersetzt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von XML in berechneten Spalten](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

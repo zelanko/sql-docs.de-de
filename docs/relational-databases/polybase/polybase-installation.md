@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208799"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872300"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -77,7 +77,7 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
    
    > [!IMPORTANT] 
    >
-   >In einer PolyBase-Erweiterungsgruppe müssen die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst auf allen Knoten unter dem gleichen Domänenkonto ausgeführt werden. Weitere Informationen finden Sie unter [PolyBase scale-out groups (PolyBase-Erweiterungsgruppen)](#Enable).
+   >In einer PolyBase-Erweiterungsgruppe müssen die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst auf allen Knoten unter dem gleichen Domänenkonto ausgeführt werden. Weitere Informationen finden Sie unter [PolyBase scale-out groups (PolyBase-Erweiterungsgruppen)](#enable).
    
 5. Wählen Sie auf der PolyBase-Konfigurationsseite eine der beiden Optionen aus. Weitere Informationen finden Sie unter [PolyBase scale-out groups (PolyBase-Erweiterungsgruppen)](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -105,7 +105,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 |SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
+|SQL Server-Setupsteuerung|**Required**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Engine-Dienstkonto an.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für die PolyBase-Engine an: „Automatisch“ (Standard), „Deaktiviert“ und „Manuell“.|  
@@ -121,7 +121,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 |SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installiert Unterstützung für alle PolyBase-Features mit Ausnahme der Hadoop-Konnektivität. PolyBaseJava aktiviert die Hadoop-Konnektivität. PolyBase installiert beides. |  
+|SQL Server-Setupsteuerung|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installiert Unterstützung für alle PolyBase-Features mit Ausnahme der Hadoop-Konnektivität. PolyBaseJava aktiviert die Hadoop-Konnektivität. PolyBase installiert beides. |  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Engine-Dienstkonto an.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für die PolyBase-Engine an: „Automatisch“ (Standard), „Deaktiviert“ und „Manuell“.|  

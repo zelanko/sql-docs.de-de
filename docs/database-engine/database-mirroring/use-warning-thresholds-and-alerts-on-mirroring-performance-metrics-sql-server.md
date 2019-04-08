@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4272345c1da08b79ffd1d76438a88baa9ea581a
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526972"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788037"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,8 +107,6 @@ ms.locfileid: "52526972"
   
  Wenn Sie Warnmeldungen für Datenbank-Spiegelungsereignisse definieren, sollten Sie auf beiden Partnerserverinstanzen Warnungsschwellenwerte und Warnmeldungen definieren. Die einzelnen Ereignisse werden jeweils nur auf dem Prinzipalserver oder auf dem Spiegelserver generiert, aber jeder Partner kann dadurch zu jedem Zeitpunkt die Rolle des anderen Partners übernehmen. Soll sichergestellt sein, dass eine Warnmeldung auch nach einem Failover noch funktionsfähig ist, muss die Warnmeldung auf beiden Partnern definiert werden.  
   
- Weitere Informationen finden Sie im Whitepaper über das Ausgeben von Warnmeldungen bei Datenbank-Spiegelungsereignissen auf dieser [SQL Server-Website](https://go.microsoft.com/fwlink/?linkid=62373). Dieses Whitepaper enthält Informationen zum Konfigurieren von Warnmeldungen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, zu WMI-Ereignissen für die Datenbankspiegelung sowie Beispielskripts.  
-  
 > [!IMPORTANT]  
 >  Für alle Spiegelungssitzungen wird dringend empfohlen, die Datenbank so zu konfigurieren, dass bei jedem Statusänderungsereignis eine Warnmeldung gesendet wird. Sofern eine Statusänderung nicht als Ergebnis einer manuellen Konfigurationsänderung erwartet wird, muss davon ausgegangen werden, dass ein Ereignis aufgetreten ist, das Ihre Daten gefährden kann. Um den Schutz der Daten sicherzustellen, müssen Sie die Ursache einer unerwarteten Statusänderung herausfinden und beheben.  
   
@@ -141,7 +139,7 @@ ms.locfileid: "52526972"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699084"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510327"
 ---
 # <a name="example-retrieving-employee-information"></a>Beispiel: Abrufen von Informationen zu Mitarbeitern
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  Dies ist das Teilergebnis:  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  Die erste `SELECT` -Anweisung gibt die Spaltennamen des Rowsets des Ergebnisses an. Diese Namen bilden zwei Spaltengruppen. Die Gruppe mit dem `Tag`-Wert `1` im Spaltennamen identifiziert `Employee` als Element und `EmpID` als Attribut. Die andere Spaltengruppe besitzt den `Tag`-Wert `2` im Spaltennamen und identifiziert <`Name`> als Element und `FName` und `LName` als Attribute.  
   
  In der folgenden Tabelle wird das von der Abfrage generierte partielle Rowset gezeigt:  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+Tag | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+... | ... | ... | ... | ...
   
  Die Zeilen in der Universaltabelle werden auf folgende Weise verarbeitet, um die resultierende XML-Struktur zu erzeugen:  
   
@@ -131,7 +119,7 @@ FOR XML EXPLICIT;
   
  Dieser Prozess wird für die restlichen Zeilen des Rowsets wiederholt. Beachten Sie, dass die Anordnung der Zeilen in der Universaltabelle wichtig ist, damit FOR XML EXPLICIT das Rowset in der richtigen Reihenfolge verarbeitet und die erwünschte XML-Ausgabe generiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

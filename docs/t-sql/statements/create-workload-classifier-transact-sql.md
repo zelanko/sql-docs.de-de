@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 276ec101595da24dff7ee805a414455936595398
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538212"
 ---
 # <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL) (Vorschauversion)
 
@@ -38,12 +38,12 @@ Erstellt einen Arbeitsauslastungsverwaltungsklassifizierer.  Der Klassifizierer 
   
 ## <a name="syntax"></a>Syntax
 
-```sql
+```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     ( WORKLOAD_GROUP = 'name'  
      ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }])
+ [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
 [;]
 ```
 
@@ -79,6 +79,8 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } Gibt die rela
 
 Die Priorität beeinflusst die Reihenfolge, in der Anforderungen geplant werden und somit zuerst Zugriff auf Ressourcen und Sperren erhalten.
 
+Wenn ein Benutzer Mitglied mehrerer Rollen mit verschiedenen zugewiesenen Ressourcenklassen oder Übereinstimmungen in mehreren Klassifizierern ist, wird dem Benutzer die höchste Ressourcenklasse zugewiesen. Weitere Informationen finden Sie unter [workload classification (Workloadklassifizierung)](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+
 ## <a name="permissions"></a>Berechtigungen
 
  Erfordert die CONTROL DATABASE-Berechtigung.  
@@ -96,6 +98,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)  
-Katalogsicht [sys.workload_management_workload_classifiersSQL](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) Katalogsicht [sys.workload_management_workload_classifiersSQL](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
-[SQL Data Warehouse Workload Classification (SQL Data Warehouse Arbeitsauslastungsklassifikation)](/azure/sql-data-warehouse/classification)
+[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
+Katalogsicht [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
+Katalogsicht [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
+[SQL Data Warehouse Classification (SQL Data Warehouse-Klassifizierung)](/azure/sql-data-warehouse/classification)

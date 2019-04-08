@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e246624301cdc20fab58f8a59d72a2f8416bae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698488"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510616"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Standardmäßig wird beim Verwenden des AUTO-Modus zum Abrufen von Binärdaten statt der Binärdaten ein Verweis (eine relative URL auf das virtuelle Stammverzeichnis der Datenbank, in der die Abfrage ausgeführt wurde) zurückgegeben. Das geschieht, wenn die Option BINARY BASE64 nicht angegeben wurde.  
   
- Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Zum Beispiel:  
+ Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Beispiel:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -271,7 +271,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658349"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478235"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
+# <a name="quickstart-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriff
 
 | Begriff | und Beschreibung |
 | :--- | :---------- |
-| Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen werden im folgenden Abschnitt beschrieben: [Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen finden Sie unter: [SQL Server Extended Events Sessions (Erweiterte Ereignissitzungen in SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
 | target | Ein Element, das die Ausgabedaten eines erfassten Ereignisses empfängt. Das Ziel zeigt Ihnen die Daten an. <br/> <br/> Beispiele hierfür sind *event_file*und das verwandte kompakte Ereignis *ring_buffer*für den Speicher. Das ausgefallenere Ziel *histogram* verarbeitet Ihre Daten vor der Anzeige. <br/> <br/> Sie können für jede Ereignissitzung beliebige Ziele verwenden. Details finden Sie unter [Ziele für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Ein Feld, das dem Ereignis bekannt ist. Daten aus dem Feld werden an das Ziel gesendet. Das Aktionsfeld ist eng mit dem *Prädikatfilter*verknüpft. |
@@ -485,7 +486,7 @@ Eine weitere Option für die Suche ist die Verwendung der SSMS-Benutzeroberfläc
 #### <a name="sql-trace-event-classes-with-extended-events"></a>Ereignisklassen für die SQL-Ablaufverfolgung, mit erweiterten Ereignissen
 
 
-Eine Beschreibung der Verwendung von erweiterter Ereignissen mit Ereignisklassen und -spalten der SQL-Ablaufverfolgung finden Sie unter: [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+Informationen zur Verwendung erweiterter Ereignisse mit Ereignisklassen und -spalten der SQL-Ablaufverfolgung finden Sie unter: [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -649,7 +650,7 @@ Hier folgen Links zu Dokumentationen, die sich auf diese SELECT-Anweisungen und 
 - [GRANT (Serverberechtigungen) (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - Insbesondere für Azure SQL-Datenbank, [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effektive Datenbank-Engine-Berechtigungen](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- Blog: [Effective Database Engine Permissions (Effektive Datenbank-Engine-Berechtigungen)](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - Zoombare [Poster](https://aka.ms/sql-permissions-poster)als PDF-Datei, die die Hierarchie aller SQL Server-Berechtigungen anzeigt.
 
 

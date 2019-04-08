@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538662"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -405,7 +405,7 @@ Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gülti
 
 |**MAXSIZE**|**Grundlegend**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
-|100 MB|√|√|√|√|√|
+|100 MB|√|√|√|√|√|
 |250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
@@ -624,7 +624,15 @@ Stuft die sekundäre Datenbank db1 auf dem Server `secondaryserver` höher, dami
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Aktualisieren einer einzelnen Datenbank auf Dienstebene S0 (Standard Edition, Leistungsebene 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. Erzwingen eines Failovers für eine sekundäre Datenbank für eine Georeplikation mit Datenverlust
+
+Erzwingt die sekundäre Datenbank „db1“ auf dem Server `secondaryserver`, damit diese bei Ausführung die primäre Datenbank auf dem Server `secondaryserver` wird, wenn der primäre Server nicht mehr verfügbar ist. Diese Option kann zu Datenverlust führen. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Aktualisieren einer einzelnen Datenbank auf Dienstebene S0 (Standard Edition, Leistungsebene 0)
 Aktualisiert eine einzelne Datenbank auf Standard Edition (Dienstebene) mit einer Leistungsebene von S0 und einer maximalen Größe von 250 GB.
 
 ```sql

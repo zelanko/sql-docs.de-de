@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535852"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
   
 1.  Deaktivieren des automatischen Failovers für alle Replikate mit synchronem Commit  
   
-2.  Upgraden aller sekundären Remotereplikatinstanzen, auf denen sekundäre Replikate mit asynchronem Commit ausgeführt werden  
+2.  Durchführen von Upgrades für alle Instanzen von sekundären Replikaten mit asynchronem Commit 
   
-3.  Upgraden für alle lokalen sekundären Replikatinstanzen, auf denen das primäre Replikat derzeit nicht ausgeführt wird  
+3.  Durchführen von Upgrades für alle Remoteinstanzen von sekundären Replikaten mit synchronem Commits 
+
+4.  Durchführen von Upgrades für alle lokalen Instanzen von sekundären Replikaten mit synchronem Commits 
   
-4.  Ausführen eines manuellen Failovers der Verfügbarkeitsgruppe auf ein lokales sekundäres Replikat mit synchronem Commit  
+4.  Ausführen eines manuellen Failovers der Verfügbarkeitsgruppe auf ein (neu aktualisiertes) lokales sekundäres Replikat mit synchronem Commit  
   
-5.  Upgraden oder Aktualisieren der lokalen Replikatinstanz, von der das primäre Replikat zuvor gehostet wurde  
+5.  Durchführen eines Upgrades oder Updates der lokalen Replikatinstanz, in der zuvor das primäre Replikat gehostet wurde  
   
-6.  Konfigurieren automatischer Failoverpartner nach Bedarf  
+6.  Konfigurieren automatischer Failoverpartner nach Bedarf
   
  Bei Bedarf können Sie ein zusätzliches manuelles Failover ausführen, um die ursprüngliche Konfiguration der Verfügbarkeitsgruppe wiederherzustellen.  
+ 
+   > [!NOTE]
+   > - Wenn Sie ein Upgrade für ein Replikat mit synchronem Commit durchführen und es offline schalten, werden die Transaktionen des primären Replikats nicht verzögert. Sobald die Verbindung des sekundären Replikats getrennt wurde, werden die Transaktionen des primären Replikats committet, ohne dass darauf gewartet wird, dass die Protokolle des sekundären Replikats festgeschrieben werden. 
+   > - Wenn `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf `1` oder `2` festgelegt ist, ist das primäre Replikat möglicherweise nicht für Lese-/Schreibvorgänge verfügbar, wenn eine entsprechende Anzahl von sekundären Synchronisierungsreplikaten während des Updatevorgangs nicht verfügbar ist. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>Verfügbarkeitsgruppe mit einem sekundären Remotereplikat  
  Wenn Sie eine Verfügbarkeitsgruppe ausschließlich zur Notfallwiederherstellung bereitgestellt haben, müssen Sie für die Verfügbarkeitsgruppe möglicherweise ein Failover auf ein sekundäres Replikat mit asynchronem Commit ausführen. Diese Konfiguration wird in der folgenden Abbildung dargestellt:  

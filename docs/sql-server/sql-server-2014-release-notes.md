@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503495"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658274"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 |DROP DDL-Unterstützung für die Replikation|Ermöglicht das Löschen einer Tabelle aus der Datenbank und der Veröffentlichung, die als Artikel in der Veröffentlichung einer Transaktionsreplikation enthalten ist.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |IFI-Berechtigung für SQL-Dienstkonto|Bestimmt, ob die schnelle Dateiinitialisierung (Instant File Initialization, IFI) beim Starten des SQL Server-Dienstes aktiviert ist.|[Datenbankdatei-Initialisierung](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Arbeitsspeicherzuweisungen – Behandlung von Problemen|Sie können während der Ausführung von Abfragen Diagnosehinweise nutzen, indem Sie zur Vermeidung eines Speicherkonflikts die zugehörigen Speicherzuweisungen beschränken.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Lightweight-Profilerstellung für die Abfrageausführung pro Operator |Optimiert die Erfassung von Statistiken zur Abfrageausführung pro Operator, wie z.B. die tatsächliche Anzahl von Zeilen.|[Developers Choice: Query progress - anytime, anywhere (Wahl der Entwickler: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|Lightweight-Profilerstellung für die Abfrageausführung pro Operator |Optimiert die Erfassung von Statistiken zur Abfrageausführung pro Operator, wie z.B. die tatsächliche Anzahl von Zeilen.|[Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
 |Abfrageausführungsdiagnose|Tatsächlich gelesene Zeilen werden jetzt zur Verbesserung der Behebung von Abfrageleistungsproblemen in Abfrageausführungsplänen gemeldet.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Abfrageausführungsdiagnose bei tempdb spill|Hash Warning und Sort Warnings verfügen jetzt über zusätzliche Spalten zum Nachverfolgen von physischen E/A-Statistiken, verwendetem Speicher und betroffenen Zeilen. |[Verbesserte Diagnose von temptdb spill](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb-Unterstützbarkeit |Verwenden Sie beim Serverstart eine neue Errorlog-Nachricht für die Anzahl der tempdb-Dateien und tempdb-Datendateiänderungen.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +83,7 @@ SQL Server 2014 SP1 enthält in SQL Server 2014 CU 1 bis einschließlich CU 5 be
 
 - [Service Pack 1 für Microsoft SQL Server 2014 herunterladen](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 wurde freigegeben – aktualisiert](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -95,7 +95,7 @@ SQL Server 2014 SP1 enthält in SQL Server 2014 CU 1 bis einschließlich CU 5 be
 2.  Die parallele Installation von SQL Server 2014 CTP 1 und SQL Server 2014 RTM wird NICHT unterstützt.  
 3.  Das Anfügen einer SQL Server 2014 CTP 1-Datenbank an SQL Server 2014 RTM bzw. das Wiederherstellen einer solchen Datenbank in SQL Server 2014 RTM wird NICHT unterstützt.  
 
-**Problemumgehung:** Keine
+**Problemumgehung:** Keine.
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>Durchführen eines Upgrades von SQL Server 2014 CTP 2 auf SQL Server RTM
 Das Upgrade wird vollständig unterstützt. Sie haben insbesondere folgende Möglichkeiten:
@@ -114,13 +114,13 @@ Diese Aktion wird nicht unterstützt.
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Falsche Version von StreamInsight Client bei SQL Server 2014-Medien/ISO/CAB  
 Die falsche Version von StreamInsight.msi und StreamInsightClient.msi befindet sich unter folgendem Pfad auf SQL Server-Media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**Problemumgehung:** Laden Sie die richtige Version von der [SQL Server 2014 Feature Pack-Downloadseite](https://go.microsoft.com/fwlink/?LinkID=306709)herunter, und installieren Sie sie.  
+**Problemumgehung:** Laden Sie die korrekte Version von der [Downloadseite für das SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) herunter, und installieren Sie sie.  
   
 ### <a name="ProdDoc"></a>Produktdokumentation (RTM)
   
 Inhalte zum Berichts-Generator und PowerPivit sind nicht in allen Sprachen verfügbar. 
 
-**Problem**: In den folgenden Sprachen sind keine Inhalte zum Berichts-Generator verfügbar:  
+**Problem:** In den folgenden Sprachen sind keine Informationen zum Berichts-Generator verfügbar:  
   
 -   Griechisch (el-GR)  
 -   Norwegisch (Bokmal) (nb-NO)  
@@ -129,9 +129,9 @@ Inhalte zum Berichts-Generator und PowerPivit sind nicht in allen Sprachen verf�
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]waren die Inhalte in Form einer mit dem Produkt gelieferten CHM-Datei auch in diesen Sprachen verfügbar. Da die CHM-Dateien nicht mehr im Produktlieferumfang enthalten sind, stehen Inhalte zum Berichts-Generator nur auf MSDN zur Verfügung. Diese Sprachen werden von MSDN nicht unterstützt. Der Berichts-Generator wurde auch aus TechNet entfernt und ist in diesen unterstützten Sprachen nicht mehr verfügbar.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung:** Keine.  
   
-**Problem**: In den folgenden Sprachen sind keine Informationen zu Power Pivot verfügbar:
+**Problem:** In den folgenden Sprachen sind keine Informationen zu PowerPivot verfügbar:
   
 -   Griechisch (el-GR)  
 -   Norwegisch (Bokmal) (nb-NO)  
@@ -147,7 +147,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]waren die Inhalte in Form einer
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]waren diese Inhalte in TechNet in diesen Sprachen verfügbar. Die Inhalte wurden aus TechNet entfernt und sind in diesen unterstützten Sprachen nicht mehr verfügbar.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung:** Keine.  
   
 ### <a name="DBEngine"></a>Datenbank-Engine (RTM)
   
@@ -177,7 +177,7 @@ memory-optimized table DLLs.
 ```  
 Diese Meldung dient tatsächlich nur zu Informationszwecken und erfordert keine Benutzeraktion.  
   
-**Problemumgehung:** Keine Diese Meldung dient zu Informationszwecken.  
+**Problemumgehung:** Keine. Diese Meldung dient zu Informationszwecken.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>In den Details zu fehlenden Indizes sind fälschlicherweise eingeschlossene Spalten für eine speicheroptimierte Tabelle angegeben.  
 **Problem:** Wenn in SQL Server 2014 ein fehlender Index für eine Abfrage einer speicheroptimierten Tabelle erkannt wird, wird in SHOWPLAN_XML sowie in den DMVs zu fehlenden Indizes, z. B. sys.dm_db_missing_index_details, ein fehlender Index gemeldet. In einigen Fällen enthalten die Details zu fehlenden Indizes eingeschlossene Spalten. Da alle Spalten mit allen Indizes für speicheroptimierte Tabellen implizit eingeschlossen werden, ist es nicht zulässig, eingeschlossene Spalten mit speicheroptimierten Indizes explizit anzugeben.  
@@ -210,9 +210,9 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>In den Prozedur- und Abfrageausführungsstatistiken für nativ kompilierte gespeicherte Prozeduren wird die Workerzeit in Vielfachen von 1.000 aufgezeichnet.  
-**Problem:** Nachdem Sie die Sammlung von Prozedur- oder Abfrageausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren unter Verwendung von sp_xtp_control_proc_exec_stats oder sp_xtp_control_query_exec_stats aktiviert haben, stellen Sie fest, dass *_worker_time in den DMVs sys.dm_exec_procedure_stats und sys.dm_exec_query_stats in Vielfachen von 1000 angegeben wird. Für Abfrageausführungen, die unter 500 Mikrosekunden liegen, wird unter worker_time der Wert 0 angegeben.  
+**Problem:** Nachdem Sie die Sammlung von Prozedur- oder Abfrageausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren unter Verwendung von sp_xtp_control_proc_exec_stats oder sp_xtp_control_query_exec_stats aktiviert haben, stellen Sie fest, dass *_worker_time in den DMVs sys.dm_exec_procedure_stats und sys.dm_exec_query_stats in Vielfachen von 1.000 angegeben wird. Für Abfrageausführungen, die unter 500 Mikrosekunden liegen, wird unter worker_time der Wert 0 angegeben.  
   
-**Problemumgehung:** Keine Bei Abfragen in systemintern kompilierten gespeicherten Prozeduren, die über eine kurze Ausführungsdauer verfügen, sollten Sie sich nicht auf den in den DMVs zu Ausführungsstatistiken angegebenen worker_time-Wert verlassen.  
+**Problemumgehung:** Keine. Bei Abfragen in systemintern kompilierten gespeicherten Prozeduren, die über eine kurze Ausführungsdauer verfügen, sollten Sie sich nicht auf den in den DMVs zu Ausführungsstatistiken angegebenen worker_time-Wert verlassen.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>SHOWPLAN_XML-Fehler bei nativ kompilierten gespeicherten Prozeduren mit langen Ausdrücken  
 **Problem:** Wenn eine systemintern kompilierte gespeicherte Prozedur einen langen Ausdruck enthält und Sie die SHOWPLAN_XML für die Prozedur entweder mit der T-SQL-Option SET SHOWPLAN_XML ON oder mit der Option „Geschätzten Ausführungsplan anzeigen“ in Management Studio abrufen, kann folgender Fehler auftreten:  
@@ -255,7 +255,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>Die Verwendung eines Zeichenfolgenparameters oder einer Variablen mit DATEPART und zugehörigen Funktionen in einer nativ kompilierten gespeicherten Prozedur führt zu einem Fehler.  
 **Problem:** Wenn Sie eine nativ kompilierte gespeicherte Prozedur verwenden, die einen Zeichenfolgenparameter oder eine -variable mit den integrierten Funktionen DATEPART, DAY, MONTH und YEAR verwendet, wird eine Fehlermeldung mit dem Hinweis angezeigt, dass der Datentyp „datetimeoffset“ bei nativ kompilierten gespeicherten Prozeduren nicht unterstützt wird.  
   
-**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des datetime2-Typs zu, und verwenden Sie diese Variable in der Funktion DATEPART, DAY, MONTH oder YEAR. Zum Beispiel:  
+**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des datetime2-Typs zu, und verwenden Sie diese Variable in der Funktion DATEPART, DAY, MONTH oder YEAR. Beispiel:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -265,12 +265,12 @@ DATEPART(weekday, @d)
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>DELETE FROM-Klauseln werden vom Ratgeber für native Kompilierung falsch gekennzeichnet.  
 **Problem:** DELETE FROM-Klauseln innerhalb einer gespeicherten Prozedur werden vom Ratgeber für systeminterne Kompilierung fälschlicherweise als inkompatibel gekennzeichnet.  
   
-**Problemumgehung:** Keine  
+**Problemumgehung:** Keine.  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>Bei der Registrierung über SSMS werden DAC-Metadaten mit nicht übereinstimmenden Instanz-IDs hinzugefügt.  
 **Problem:** Beim Registrieren oder Löschen eines Datenschichtanwendungspakets (DACPAC) über SQL Server Management Studio werden die sysdac*-Tabellen nicht ordnungsgemäß aktualisiert, um einem Benutzer das Abfragen des DACPAC-Verlaufs für die Datenbank zu ermöglichen.  Die „instance_id“ für „sysdac_history_internal“ und „sysdac_instances_internal“ stimmen nicht überein und ermöglichen keinen JOIN-Vorgang.  
   
-**Problemumgehung:** Dieses Problem wird mit der Feature Pack-Umverteilung des [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295)behoben.  Nach dem Anwenden des Updates verwenden alle neuen Verlaufseinträge den in der Tabelle „sysdac_instances_internal“ für „instance_id“ aufgelisteten Wert.  
+**Problemumgehung:** Dieses Problem wird mit der Feature Pack-Umverteilung von [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295) behoben.  Nach dem Anwenden des Updates verwenden alle neuen Verlaufseinträge den in der Tabelle „sysdac_instances_internal“ für „instance_id“ aufgelisteten Wert.  
   
 Wenn das Problem mit nicht übereinstimmenden instance_id-Werten bei Ihnen bereits besteht, ist die einzige Möglichkeit zum Korrigieren der nicht übereinstimmenden Werte, als Benutzer mit Schreibberechtigungen eine Verbindung zur MSDB-Datenbank herzustellen und die instance_id-Werte so zu aktualisieren, dass sie übereinstimmen.  Wenn mehrere Registrierungs- und Deregistrierungsereignisse der gleichen Datenbank aufgetreten sind, müssen Sie möglicherweise die Uhrzeit bzw. das Datum überprüfen, um festzustellen, welche Datensätze mit dem aktuellen instance_id-Wert übereinstimmen.  
   
@@ -292,9 +292,9 @@ Wenn das Problem mit nicht übereinstimmenden instance_id-Werten bei Ihnen berei
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Der SQL Server 2012 Reporting Services-Berichtsserver im einheitlichen Modus kann nicht parallel mit SharePoint-Komponenten von SQL Server 2014 Reporting Services ausgeführt werden  
-**Problem:** Der Windows-Dienst [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus „SQL Server Reporting Services“ (ReportingServicesService.exe) kann nicht gestartet werden, wenn auf demselben Server SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert sind.  
+**Problem:** Der Windows-Dienst [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im nativen Modus „SQL Server Reporting Services“ (ReportingServicesService.exe) kann nicht gestartet werden, wenn auf demselben Server SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert sind.  
   
-**Problemumgehung:** Deinstallieren Sie SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , und starten Sie den Windows-Dienst "Microsoft SQL Server 2012 Reporting Services" neu.  
+**Problemumgehung:** Deinstallieren Sie SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], und starten Sie den Windows-Dienst „Microsoft SQL Server 2012 Reporting Services“ neu.  
   
 **Weitere Informationen**  
   
@@ -326,7 +326,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 Weitere Informationen finden Sie unter [Tipps &amp; Tricks und Problembehandlung für SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Für das Upgrade einer SharePoint-Farm mit mehreren Knoten auf SQL Server 2014 Reporting Services ist eine bestimmte Reihenfolge erforderlich.  
-**Problem:** Das Rendern von Berichten in einer Farm mit mehreren Knoten schlägt fehl, wenn Instanzen des gemeinsamen SharePoint-Diensts für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vor allen Instanzen des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte aktualisiert werden.  
+**Problem:** Das Rendern von Berichten in einer Farm mit mehreren Knoten schlägt fehl, wenn Instanzen des gemeinsamen SharePoint-Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] für vor allen Instanzen des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-Ins für SharePoint-Produkte aktualisiert werden.  
   
 **Problemumgehung:** In einer SharePoint-Farm mit mehreren Knoten:  
   
@@ -380,7 +380,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 **Weitere Informationen**  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält MSOLAP.6. PowerPivot-Arbeitsmappen aus SQL Server 2014 verwenden jedoch MSOLAP.5. Wenn MSOLAP.5 auf dem Computer, auf dem Excel Services ausgeführt werden, nicht installiert ist, können die Datenmodelle von Excel Services nicht geladen werden.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält MSOLAP.6. PowerPivot-Arbeitsmappen aus SQL Server 2014 verwenden jedoch MSOLAP.5. Wenn MSOLAP.5 auf dem Computer, auf dem Excel Services ausgeführt werden, nicht installiert ist, können die Datenmodelle von Excel Services nicht geladen werden.  
   
 #### <a name="corrupt-data-refresh-schedules-rtm"></a>Beschädigte Zeitpläne zur Datenaktualisierung (RTM)
 **Problem:**  
@@ -411,10 +411,10 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 Upgrade Advisor meldet irrelevante Upgradeprobleme für SQL Server Reporting Services.  
 **Problem:** Der im Lieferumfang von SQL Server 2014 enthaltene SQL Server Upgrade Advisor (SSUA) meldet bei der Analyse eines SQL Server Reporting Services-Servers fälschlicherweise mehrere Fehler.  
   
-**Problemumgehung:** Dieses Problem wurde im SQL Server Upgrade Advisor, der im [SQL Server 2014 Feature Pack für SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)verfügbar ist, behoben.  
+**Problemumgehung:** Dieses Problem wurde im Aktualisierungsratgeber für Microsoft SQL Server, der im [SQL Server 2014 Feature Pack für SSUA](https://go.microsoft.com/fwlink/?LinkID=306709) verfügbar ist, behoben.  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 Upgrade Advisor meldet bei der Analyse eines SQL Server Integration Services-Servers einen Fehler.  
-**Problem:** Der mit den SQL Server 2014-Medien ausgelieferte SQL Server Upgrade Advisor (SSUA) meldet einen Fehler beim Analysieren eines SQL Server Integration Services-Servers.  Fehler, der dem Benutzer angezeigt wird:  
+**Problem:** Der in den SQL Server 2014-Medien enthaltene Aktualisierungsratgeber für Microsoft SQL Server meldet einen Fehler beim Analysieren eines SQL Server Integration Services-Servers.  Fehler, der dem Benutzer angezeigt wird:  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Problemumgehung:** Dieses Problem wurde im SQL Server Upgrade Advisor, der im [SQL Server 2014 Feature Pack für SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)verfügbar ist, behoben.  
+**Problemumgehung:** Dieses Problem wurde im Aktualisierungsratgeber für Microsoft SQL Server, der im [SQL Server 2014 Feature Pack für SSUA](https://go.microsoft.com/fwlink/?LinkID=306709) verfügbar ist, behoben.  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

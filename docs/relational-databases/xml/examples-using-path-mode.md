@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53b6625786fda63e5616b83edd0c1915f49a67e3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 740ba790bfc261efad9d544668d339dd9e24fa46
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674449"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511087"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,16 @@ GO
   
  Das folgende Ergebnis ist elementzentrierter XML-Code, wobei jeder Spaltenwert des resultierenden Rowsets in ein Element eingebunden wird. Da die `SELECT`-Klausel keine Aliase für die Spaltennamen angibt, sind die Namen der generierten untergeordneten Elemente mit denen der entsprechenden Spalten in der `SELECT`-Klausel identisch. Für jede Zeile des Rowsets wird ein <`row`>-Tag hinzugefügt.  
   
- `<row>`  
-  
- `<ProductModelID>122</ProductModelID>`  
-  
- `<Name>All-Purpose Bike Stand</Name>`  
-  
- `</row>`  
-  
- `<row>`  
-  
- `<ProductModelID>119</ProductModelID>`  
-  
- `<Name>Bike Wash</Name>`  
-  
- `</row>`  
+ ```
+<row>  
+  <ProductModelID>122</ProductModelID>  
+  <Name>All-Purpose Bike Stand</Name>  
+</row>  
+<row>  
+  <ProductModelID>119</ProductModelID>
+  <Name>Bike Wash</Name>
+</row>
+```
   
  Das folgende Ergebnis ist mit dem der Abfrage im `RAW`-Modus mit angegebener Option `ELEMENTS` identisch. Es wird elementzentrierter XML-Code mit einem standardmäßigen <`row`>-Element für jede Zeile des Resultsets zurückgegeben.  
   
@@ -84,21 +79,16 @@ GO
   
  Das XML-Ergebnis weist den angegebenen Zeilenelementnamen auf.  
   
- `<ProductModel>`  
-  
- `<ProductModelID>122</ProductModelID>`  
-  
- `<Name>All-Purpose Bike Stand</Name>`  
-  
- `</ProductModel>`  
-  
- `<ProductModel>`  
-  
- `<ProductModelID>119</ProductModelID>`  
-  
- `<Name>Bike Wash</Name>`  
-  
- `</ProductModel>`  
+```
+<ProductModel>
+  <ProductModelID>122</ProductModelID>
+  <Name>All-Purpose Bike Stand</Name>
+</ProductModel>
+<ProductModel>
+  <ProductModelID>119</ProductModelID>
+  <Name>Bike Wash</Name>
+</ProductModel>
+```
   
  Wenn Sie eine leere Zeichenfolge angeben, wird das Wrapperelement nicht erstellt.  
   
@@ -115,13 +105,12 @@ GO
   
  Dies ist das Ergebnis:  
   
- `<ProductModelID>122</ProductModelID>`  
-  
- `<Name>All-Purpose Bike Stand</Name>`  
-  
- `<ProductModelID>119</ProductModelID>`  
-  
- `<Name>Bike Wash</Name>`  
+```
+<ProductModelID>122</ProductModelID>
+<Name>All-Purpose Bike Stand</Name>
+<ProductModelID>119</ProductModelID>
+<Name>Bike Wash</Name>
+```
   
 ## <a name="specifying-xpath-like-column-names"></a>Angeben von XPath-ähnlichen Spaltennamen  
  In der folgenden Abfrage beginnt der `ProductModelID`-Spaltenname mit dem Zeichen \@ und enthält keinen Schrägstrich (/). Daher wird im XML-Ergebnis für das <`row`>-Element mit dem entsprechenden Spaltenwert ein Attribut erstellt.  
@@ -139,17 +128,14 @@ GO
   
  Dies ist das Ergebnis:  
   
- `< ProductModelData id="122">`  
-  
- `<Name>All-Purpose Bike Stand</Name>`  
-  
- `</ ProductModelData >`  
-  
- `< ProductModelData id="119">`  
-  
- `<Name>Bike Wash</Name>`  
-  
- `</ ProductModelData >`  
+```
+<ProductModelData id="122">
+  <Name>All-Purpose Bike Stand</Name>
+</ProductModelData>
+<ProductModelData id="119">
+  <Name>Bike Wash</Name>
+</ProductModelData>
+```
   
  Sie können ein einzelnes Element auf höchster Ebene hinzufügen, indem Sie in `root` die Option `FOR XML`angeben.  
   
@@ -164,29 +150,20 @@ GO
   
  Um eine Hierarchie zu generieren, können Sie eine PATH-ähnliche Syntax einfügen. Wenn Sie beispielsweise den Spaltennamen für die `Name` -Spalte zu "SomeChild/ModelName" ändern, erhalten Sie ein hierarchisiertes XML-Ergebnis, wie im Folgenden gezeigt:  
   
- `<Root>`  
-  
- `<ProductModelData id="122">`  
-  
- `<SomeChild>`  
-  
- `<ModelName>All-Purpose Bike Stand</ModelName>`  
-  
- `</SomeChild>`  
-  
- `</ProductModelData>`  
-  
- `<ProductModelData id="119">`  
-  
- `<SomeChild>`  
-  
- `<ModelName>Bike Wash</ModelName>`  
-  
- `</SomeChild>`  
-  
- `</ProductModelData>`  
-  
- `</Root>`  
+```
+<Root>
+  <ProductModelData id="122">
+    <SomeChild>
+      <ModelName>All-Purpose Bike Stand</ModelName>
+    </SomeChild>
+  </ProductModelData>
+  <ProductModelData id="119">
+    <SomeChild>
+      <ModelName>Bike Wash</ModelName>
+    </SomeChild>
+  </ProductModelData>
+</Root>
+```
   
  Außer der ID und dem Namen des Produktmodells ruft die folgende Abfrage die Speicherorte der Fertigungsanweisungen dieses Produktmodells ab. Da die Spalte „Instructions“ den Typ **XML** aufweist, wird die **query()** -Methode des **XML** -Datentyps angegeben, um den Speicherort abzurufen.  
   
@@ -203,30 +180,22 @@ GO
 ```  
   
  Dies ist das Teilergebnis. Da die Abfrage als Spaltenname „ManuInstr“ angibt, wird der von der **query()**-Methode zurückgegebene XML-Code in ein <`ManuInstr`>-Tag eingebunden, wie im Folgenden gezeigt:  
-  
- `<Root>`  
-  
- `<ProductModelData id="7">`  
-  
- `<Name>HL Touring Frame</Name>`  
-  
- `<ManuInstr>`  
-  
- `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
-  
- `<MI:step>...</MI:step>...`  
-  
- `</MI:Location>`  
-  
- `...`  
-  
- `</ManuInstr>`  
-  
- `</ProductModelData>`  
-  
- `</Root>`  
-  
- In die vorherige FOR XML-Abfrage können Sie eventuell für das <`Root`>- und das <`ProductModelData`>-Element Namespaces einschließen. Dies erreichen Sie, indem Sie zunächst mithilfe von WITH XMLNAMESPACES das an den Namespace zu bindende Präfix definieren und das Präfix anschließend in der FOR XML-Abfrage verwenden. Weitere Informationen finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+
+```
+<Root>
+  <ProductModelData id="7">
+    <Name>HL Touring Frame</Name>
+    <ManuInstr>
+      <MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"
+        <MI:step>...</MI:step>...
+      </MI:Location>
+      ...
+    </ManuInstr>
+  </ProductModelData>
+</Root> 
+```
+
+In die vorherige FOR XML-Abfrage können Sie eventuell für das <`Root`>- und das <`ProductModelData`>-Element Namespaces einschließen. Dies erreichen Sie, indem Sie zunächst mithilfe von WITH XMLNAMESPACES das an den Namespace zu bindende Präfix definieren und das Präfix anschließend in der FOR XML-Abfrage verwenden. Weitere Informationen finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -248,48 +217,32 @@ GO
   
  Beachten Sie, dass das `MI` -Präfix auch in `WITH XMLNAMESPACES`definiert ist. Folglich definiert die **query()** -Methode des angegebenen **XML** -Typs das Präfix nicht im Abfrageprolog. Dies ist das Ergebnis:  
   
- `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
-  
- `<ns2:ProductInfo>`  
-  
- `<ns1:ProductModelID>7</ns1:ProductModelID>`  
-  
- `<ns1:Name>HL Touring Frame</ns1:Name>`  
-  
- `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
-  
- `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
-  
- `<MI:step>`  
-  
- `Insert <MI:material>aluminum sheet MS-2341</MI:material> into the <MI:tool>T-85A framing tool</MI:tool>.`  
-  
- `</MI:step>`  
-  
- `...`  
-  
- `</MI:Location>`  
-  
- `...`  
-  
- `</ns2:ProductInfo>`  
-  
- `</ns1:root>`  
+```
+<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">
+  <ns2:ProductInfo>
+    <ns1:ProductModelID>7</ns1:ProductModelID>
+    <ns1:Name>HL Touring Frame</ns1:Name>
+    <MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">
+    <MI:step>
+      Insert <MI:material>aluminum sheet MS-2341</MI:material> into the <MI:tool>T-85A framing tool</MI:tool>.
+    </MI:step>
+    ...
+    </MI:Location>
+    ...
+  </ns2:ProductInfo>
+</ns1:root>
+```
   
 ## <a name="generating-a-value-list-using-path-mode"></a>Generieren einer Wertliste mithilfe des PATH-Modus  
  Diese Abfrage konstruiert für jedes Produktmodell eine Wertliste mit Produkt-IDs. Außerdem konstruiert die Abfrage für jede Produkt-ID geschachtelte <`ProductName`>-Elemente, wie im folgenden XML-Fragment gezeigt:  
-  
- `<ProductModelData ProductModelID="7" ProductModelName="..."`  
-  
- `ProductIDs="product id list in the product model" >`  
-  
- `<ProductName>...</ProductName>`  
-  
- `<ProductName>...</ProductName>`  
-  
- `...`  
-  
- `</ProductModelData>`  
+
+```
+<ProductModelData ProductModelID="7" ProductModelName="..." ProductIDs="product id list in the product model">
+  <ProductName>...</ProductName>
+  <ProductName>...</ProductName>
+  ...
+</ProductModelData>
+```
   
  Im Folgenden wird die Abfrage gezeigt, die den gewünschten XML-Code erstellt:  
   
@@ -321,41 +274,23 @@ FOR XML PATH('ProductModelData');
   
  Dies ist das Teilergebnis:  
   
- `<ProductModelData PId="7"`  
-  
- `ProductModelName="HL Touring Frame"`  
-  
- `ProductIDs="885 887 ...">`  
-  
- `<ProductNames>`  
-  
- `<ProductName>HL Touring Frame - Yellow, 60</ProductName>`  
-  
- `<ProductName>HL Touring Frame - Yellow, 46</ProductName></ProductNames>`  
-  
- `...`  
-  
- `</ProductModelData>`  
-  
- `<ProductModelData PId="9"`  
-  
- `ProductModelName="LL Road Frame"`  
-  
- `ProductIDs="722 723 724 ...">`  
-  
- `<ProductNames>`  
-  
- `<ProductName>LL Road Frame - Black, 58</ProductName>`  
-  
- `<ProductName>LL Road Frame - Black, 60</ProductName>`  
-  
- `<ProductName>LL Road Frame - Black, 62</ProductName>`  
-  
- `...`  
-  
- `</ProductNames>`  
-  
- `</ProductModelData>`  
+```
+<ProductModelData PId="7" ProductModelName="HL Touring Frame" ProductIDs="885 887 ...">
+  <ProductNames>
+    <ProductName>HL Touring Frame - Yellow, 60</ProductName>
+    <ProductName>HL Touring Frame - Yellow, 46</ProductName>
+  </ProductNames>
+  ...
+</ProductModelData>
+<ProductModelData PId="9" ProductModelName="LL Road Frame" ProductIDs="722 723 724 ...">
+  <ProductNames>
+    <ProductName>LL Road Frame - Black, 58</ProductName>
+    <ProductName>LL Road Frame - Black, 60</ProductName>
+    <ProductName>LL Road Frame - Black, 62</ProductName>
+    ...
+  </ProductNames>
+</ProductModelData>
+```
   
  Die die Produktnamen konstruierende Unterabfrage gibt das Ergebnis als Zeichenfolge zurück, die in eine Entität geändert und anschließend dem XML-Code hinzugefügt wird. Wenn Sie die TYPE-Direktive `FOR XML PATH (''), type`hinzufügen, gibt die Unterabfrage das Ergebnis als **XML** -Typ zurück, und es erfolgt keine Änderung in Entitäten.  
   
@@ -398,14 +333,13 @@ GO
  Das dem <`English`>-Element hinzugefügte `@xml:lang`-Attribut ist im vordefinierten XML-Namespace definiert.  
   
  Dies ist das Ergebnis:  
-  
- `<Translation>`  
-  
- `<English xml:lang="en">food</English>`  
-  
- `<German xml:lang="ger">Essen</German>`  
-  
- `</Translation>`  
+
+```
+<Translation>
+  <English xml:lang="en">food</English>
+  <German xml:lang="ger">Essen</German>
+</Translation>
+```
   
  Die folgende Abfrage ist der in Beispiel C ähnlich, mit dem Unterschied, dass sie `WITH XMLNAMESPACES` verwendet, um Namespaces in das XML-Ergebnis einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
@@ -436,37 +370,26 @@ FOR XML PATH('ProductModelData'), root('root');
   
  Dies ist das Ergebnis:  
   
- `<root xmlns="uri2" xmlns:ns1="uri1">`  
+```
+<root xmlns="uri2" 
+  xmlns:ns1="uri1">
+  <ProductModelData ns1:ProductModelID="7" ns1:ProductModelName="HL Touring Frame" ns1:ProductIDs="885 887 888 889 890 891 892 893">
+    <ns1:ProductNames>
+      <row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="885" ns1:ProductName="HL Touring Frame - Yellow, 60" />
+      <row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="887" ns1:ProductName="HL Touring Frame - Yellow, 46" />
+      ...
+    </ns1:ProductNames>
+  </ProductModelData>
+  <ProductModelData ns1:ProductModelID="9" ns1:ProductModelName="LL Road Frame" ns1:ProductIDs="722 723 724 725 726 727 728 729 730 736 737 738">
+    <ns1:ProductNames>
+      <row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="722" ns1:ProductName="LL Road Frame - Black, 58" />
+      ...
+    </ns1:ProductNames>
+  </ProductModelData>
+</root>
+```
   
- `<ProductModelData ns1:ProductModelID="7" ns1:ProductModelName="HL Touring Frame" ns1:ProductIDs="885 887 888 889 890 891 892 893">`  
-  
- `<ns1:ProductNames>`  
-  
- `<row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="885" ns1:ProductName="HL Touring Frame - Yellow, 60" />`  
-  
- `<row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="887" ns1:ProductName="HL Touring Frame - Yellow, 46" />`  
-  
- `...`  
-  
- `</ns1:ProductNames>`  
-  
- `</ProductModelData>`  
-  
- `<ProductModelData ns1:ProductModelID="9" ns1:ProductModelName="LL Road Frame" ns1:ProductIDs="722 723 724 725 726 727 728 729 730 736 737 738">`  
-  
- `<ns1:ProductNames>`  
-  
- `<row xmlns="uri2" xmlns:ns1="uri1" ns1:ProductID="722" ns1:ProductName="LL Road Frame - Black, 58" />`  
-  
- `...`  
-  
- `</ns1:ProductNames>`  
-  
- `</ProductModelData>`  
-  
- `</root>`  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

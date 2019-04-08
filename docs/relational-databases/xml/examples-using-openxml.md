@@ -24,15 +24,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f1b27a3889928365f727f4f85cc945f3561d8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511267"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -444,7 +444,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Das Ergebnis wird in Form einer Rahmentabelle zurückgegeben. Informationen erhalten Sie durch Abfragen, die Sie für die Rahmentabelle schreiben. Zum Beispiel:  
+ Das Ergebnis wird in Form einer Rahmentabelle zurückgegeben. Informationen erhalten Sie durch Abfragen, die Sie für die Rahmentabelle schreiben. Beispiel:  
   
 -   Die folgende Abfrage gibt die Anzahl der **Customer** -Knoten im Dokument zurück. Da die WITH-Klausel nicht angegeben ist, gibt OPENXML eine Rahmentabelle zurück. Die SELECT-Anweisung fragt die Rahmentabelle ab.  
   
@@ -525,7 +525,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Angeben eines XML-Dokuments mit mehreren Textknoten  
- Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()**) nur den ersten anstelle aller Textknoten zurück. Zum Beispiel:  
+ Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()**) nur den ersten anstelle aller Textknoten zurück. Beispiel:  
   
 ```  
 DECLARE @h int  
@@ -802,7 +802,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: Hardware für SQL Server und In-Memory-OLTP | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087590"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645442"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Überlegungen zur Hardware für In-Memory-OLTP in SQL Server
 
 In-Memory-OLTP verwendet Arbeitsspeicher und Datenträger anders als herkömmliche datenträgerbasierte Tabellen. Die Leistungsverbesserung, die Sie mit In-Memory-OLTP erzielen können, hängt von der verwendeten Hardware ab. In diesem Blogbeitrag erörtern wir eine Reihe allgemeiner Hardware-Aspekte und bieten allgemeingültige Richtlinien für Hardware zur Verwendung mit In-Memory-OLTP.
 
 > [!NOTE]
-> Dieser Artikel war ein Blog, der am 1. August 2013 vom Microsoft SQL Server 2014-Team veröffentlicht wurde. Die Webseite des Blogs wird außer Betrieb genommen. Dieser Artikel ist eine grobe Zusammenfassung des Blogtexts. Dokumentationsartikel, die früher mit dem Blog verknüpft waren, sind nun mit diesem Artikel verknüpft. Dieser Artikel wird nicht gepflegt. Dieser Artikel kann aus dem Inhaltsverzeichnis ausgeschlossen werden.
-> 
+> Dieser Artikel war ein Blog, der am 1. August 2013 vom Microsoft SQL Server 2014-Team veröffentlicht wurde. Die Webseite des Blogs wird außer Betrieb gesetzt.
+>
 > [SQL Server In-Memory-OLTP](index.md)
 
 <!--
@@ -32,7 +32,7 @@ In-Memory-OLTP verwendet Arbeitsspeicher und Datenträger anders als herkömmlic
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +47,7 @@ Alle speicheroptimierten Tabellen befinden sich vollständig im Arbeitsspeicher.
 Um festzustellen, wie viel Arbeitsspeicher eine bestimmte speicheroptimierte Tabelle belegt, führen Sie die folgende Abfrage aus:
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 Die Ergebnisse zeigen den für speicheroptimierte Tabellen und deren Indizes belegten Arbeitsspeicher. Zu den Tabellendaten gehören die Benutzerdaten sowie alle älteren Zeilenversionen, die für laufende Transaktionen noch benötigt werden oder vom System noch nicht bereinigt wurden. Der von Hashindizes belegte Arbeitsspeicher ist konstant und hängt nicht von der Anzahl der Zeilen in der Tabelle ab.
@@ -74,3 +74,6 @@ Um strenge RTO-Anforderungen zu erfüllen, empfehlen wir, die Prüfpunktdateien 
 
 Hinsichtlich der Datenträgerkapazität empfehlen wir die zwei- bis dreifache Größe der speicheroptimierten Tabellen zur Verfügung zu haben.
 
+## <a name="see-also"></a>Siehe auch
+
+[Beispieldatenbank für In-Memory OLTP](sample-database-for-in-memory-oltp.md)

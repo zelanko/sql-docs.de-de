@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be1c2f24083d86ee03156617acaa8c18b903fed0
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670463"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510717"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,9 +155,9 @@ ms.locfileid: "51670463"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Clientseitiges Verarbeiten von XML-Dokument MyDataIsle  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales:** 1.500.000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue:** 150.000  
   
 -   **BankName:** Primary International  
   
@@ -165,9 +165,9 @@ ms.locfileid: "51670463"
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Specialty:** Straße  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet:** 38.000  
   
 -   **Brands:** 3  
   
@@ -294,7 +294,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** -Datentyp-Unterstützung, können Sie fordern, dass das Ergebnis einer FOR XML-Abfrage nicht als typisierte Zeichenfolgen- oder Imagedaten zurückgegeben wird, sondern als **xml** -Datentyp. Dazu müssen Sie die [TYPE-Direktive](../../relational-databases/xml/type-directive-in-for-xml-queries.md)angeben. Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](../../relational-databases/xml/use-xml-data-in-applications.md)gezeigt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

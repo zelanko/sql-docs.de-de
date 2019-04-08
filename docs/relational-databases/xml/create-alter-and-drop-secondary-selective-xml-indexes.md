@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c82c55eee8267c795ff664081c79f55a9cbd1173
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e3d9d40d12118e618bb5ae5ab45376c29e4f46e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513097"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47761751"
   
 ##  <a name="create"></a> Erstellen eines sekundären, selektiven XML-Indexes  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>Vorgehensweise: Erstellen eines sekundären, selektiven XML-Indexes  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>Gewusst wie: Erstellen eines sekundären, selektiven XML-Index  
  **Erstellen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
  Erstellen Sie einen sekundären, selektiven XML-Index, indem Sie die CREATE XML INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [CREATE XML INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
@@ -46,7 +46,7 @@ FOR
 ##  <a name="alter"></a> Ändern eines sekundären, selektiven XML-Indexes  
  Die ALTER-Anweisung wird für sekundäre, selektive XML-Indizes nicht unterstützt. Um einen sekundären, selektiven XML-Index zu ändern, löschen Sie den vorhandenen Index und erstellen ihn erneut.  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Vorgehensweise: Ändern eines sekundären, selektiven XML-Indexes  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Gewusst wie: Ändern eines sekundären, selektiven XML-Indexes  
  **Ändern eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
  1.  Löschen Sie den vorhandenen sekundären, selektiven XML-Index, indem Sie die DROP INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [DROP INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   
@@ -71,7 +71,7 @@ FOR
   
 ##  <a name="drop"></a> Löschen eines sekundären, selektiven XML-Indexes  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Vorgehensweise: Löschen eines sekundären, selektiven XML-Indexes  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Gewusst wie: Löschen eines sekundären, selektiven XML-Index  
  **Löschen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
  Löschen Sie einen sekundären, selektiven XML-Index, indem Sie die DROP INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [DROP INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   
@@ -85,7 +85,7 @@ ON tbl
 ```  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

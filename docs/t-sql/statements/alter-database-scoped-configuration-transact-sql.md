@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974389"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493782"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration 
 - Aktivieren oder Deaktivieren des Identitätscache auf Datenbankebene.
 - Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.
 - Aktivieren oder Deaktivieren von Sammlungen von Ausführungsstatistiken für nativ kompilierte T-SQL-Module.
-- Aktivieren oder Deaktivieren von „Online by default“-Optionen (Standardmäßig online) für DDL-Anweisungen, die ONLINE =-Syntax unterstützen.
-- Aktivieren oder Deaktivieren von „Resumable by default“-Optionen (Standardmäßig fortsetzbar) für DDL-Anweisungen, die RESUMABLE =-Syntax unterstützen.
-- Aktivieren oder Deaktivieren der Funktion für automatisches Löschen von globalen temporären Tabellen 
+- Aktivieren oder Deaktivieren von „online by default“-Optionen (Standardmäßig online) für DDL-Anweisungen, die die `ONLINE =`-Syntax unterstützen.
+- Aktivieren oder Deaktivieren von „resumable by default“-Optionen (Standardmäßig fortsetzbar) für DDL-Anweisungen, die die `RESUMABLE =`-Syntax unterstützen.
+- Aktivieren oder Deaktivieren der Funktion für automatisches Löschen von globalen temporären Tabellen
 - Aktivieren oder Deaktivieren der Features der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md)
 - Aktivieren oder Deaktivieren der [einfachen Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md)
+- Aktivieren oder Deaktivieren der neuen `String or binary data would be truncated`-Fehlermeldung
 
 ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchm
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Inlining benutzerdefinierter T-SQL-Skalarfunktionen im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Inlining von benutzerdefinierten T-SQL-Skalarfunktionen gehört zur Featurefamilie der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
 
-> [!NOTE] 
+> [!NOTE]
 > Für Datenbank-Kompatibilitätsgrade von 140 oder weniger hat diese datenbankbezogene Konfiguration keine Auswirkungen.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -291,6 +293,20 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 **Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Ermöglicht das Aktivieren oder Deaktivieren der [einfachen Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md) Die LWP-Abfrageinfrastruktur (Lightweight Profiling) stellt Abfrageleistungsdaten effizienter bereit als standardmäßige Profilerstellungsmechanismen. Sie ist standardmäßig aktiviert.
+
+VERBOSE_TRUNCATION_WARNINGS **=** {**ON** | OFF}
+
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+Ermöglicht Ihnen das Aktivieren oder Deaktivieren der neuen `String or binary data would be truncated`-Fehlermeldung. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine neue, spezifischere Fehlermeldung (2628) für dieses Szenario ein:  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+Wenn ON bei einem Datenbank-Kompatibilitätsgrad unter 150 festgelegt ist, lösen Kürzungsfehler die neue Fehlermeldung 2628 aus, um mehr Kontext bereitzustellen und die Problembehandlung zu vereinfachen.
+
+Wenn OFF bei einem Datenbank-Kompatibilitätsgrad unter 150 festgelegt ist, lösen Kürzungsfehler die alte Fehlermeldung 8152 aus.
+
+Bei einem Datenbank-Kompatibilitätsgrad von 140 oder niedriger ist die Fehlermeldung 2628 weiterhin eine optionale Fehlermeldung, für die das [Ablaufverfolgungsflag 460](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktiviert sein muss. Diese datenbankweite Konfiguration hat keine Auswirkungen.
 
 ## <a name="Permissions"></a> Berechtigungen
 

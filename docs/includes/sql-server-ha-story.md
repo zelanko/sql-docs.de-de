@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055647"
+---
 Dieser Artikel bietet eine Übersicht über Lösungen für Geschäftskontinuität für Hochverfügbarkeit und Notfallwiederherstellung in SQL Server. 
 
 Eine allgemeine Aufgabe, die jeder berücksichtigen sollte, der SQL Server bereitstellt, ist das Sicherstellen der Verfügbarkeit aller unternehmenskritischen SQL Server-Instanzen und der darin enthaltenen Datenbanken, wenn das Unternehmen oder die Benutzer diese benötigen, ob von 9 bis 17 Uhr oder rund um die Uhr. Das Ziel ist, das Unternehmen mit minimaler oder ohne Unterbrechung aufrechtzuerhalten. Dieses Konzept wird auch als Geschäftskontinuität bezeichnet.
@@ -128,9 +136,7 @@ Die folgende Liste hebt einige Unterschiede von FCIs zwischen Windows Server und
 * Der allgemeine Name, der von FCIs unter Linux verwendet wird, wird in DNS definiert und sollte mit dem der Ressource identisch sein, die für die FCI erstellt wurde.
 
 #### <a name="log-shipping"></a>Protokollversand
-Wenn die Ziele für den Wiederherstellungspunkt und die Wiederherstellungszeit flexibler sind, oder Datenbanken nicht als hoch unternehmenskritisch betrachtet werden, ist der Protokollversand eine weitere bewährte Verfügbarkeitsfunktion in SQL Server. Basierend auf den nativen Sicherungen von SQL Server generiert der Prozess für den Protokollversand automatisch Transaktionsprotokollsicherungen, kopiert diese auf eine oder mehrere Instanzen, die als betriebsbereit bekannt sind, und wendet sie auf diese Standbyinstanzen an. Der Protokollversand verwendet SQL Server-Agent-Aufträge, um den Sicherungs- und Kopiervorgang sowie den Anwendungsvorgang der Transaktionsprotokollsicherungen zu automatisieren. 
-> [!IMPORTANT] 
-> Unter Linux sind SQL Server-Agent-Aufträge nicht als Teil der Installation von SQL Server enthalten. Stattdessen sind diese im Paket „package mssql-server-Agent jobs“ verfügbar, das ebenfalls für das Verwenden des Protokollversands installiert werden muss.
+Wenn die Ziele für den Wiederherstellungspunkt und die Wiederherstellungszeit flexibler sind, oder Datenbanken nicht als hoch unternehmenskritisch betrachtet werden, ist der Protokollversand eine weitere bewährte Verfügbarkeitsfunktion in SQL Server. Basierend auf den nativen Sicherungen von SQL Server generiert der Prozess für den Protokollversand automatisch Transaktionsprotokollsicherungen, kopiert diese auf eine oder mehrere Instanzen, die als betriebsbereit bekannt sind, und wendet sie auf diese Standbyinstanzen an. Der Protokollversand verwendet SQL Server-Agent-Aufträge, um den Sicherungs- und Kopiervorgang sowie den Anwendungsvorgang der Transaktionsprotokollsicherungen zu automatisieren.
 
 ![Protokollversand](media/sql-server-ha-story/image5.png)
  

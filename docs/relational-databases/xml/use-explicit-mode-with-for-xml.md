@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36a775666da4905d4ccc9f11083470872b714804
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511597"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -151,25 +151,25 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Abrufen von Informationen zu Mitarbeitern](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Beispiel: Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Beispiel: Angeben der ELEMENTXSINIL-Anweisung](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Beispiel: Angeben der ID- und der IDREF-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREF-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Beispiel: Angeben der ID- und der IDREFS-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREFS-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Beispiel: Angeben der HIDE-Direktive](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Beispiel: Angeben der HIDE-Anweisung](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Beispiel: Angeben der CDATA-Direktive](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Beispiel: Angeben der CDATA-Anweisung](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Beispiel: Angeben der XMLTEXT-Direktive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Beispiel: Angeben der XMLTEXT-Anweisung](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215366"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566559"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Um eine verteilte Verfügbarkeitsgruppe zu erstellen, müssen Sie eine Verfügbarkeitsgruppe und einen Listener auf jedem Windows Server Failover Cluster (WSFC) erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab; vielmehr legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen. 
+Zum Erstellen einer verteilten Verfügbarkeitsgruppe müssen Sie zwei Verfügbarkeitsgruppen mit eigenen Listenern erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab, stattdessen legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen.
 
-Eine technische Übersicht über verteilte Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](distributed-availability-groups.md).   
+Eine technische Übersicht über verteilte Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](distributed-availability-groups.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Festlegen der Endpunktlistener zur Überwachung aller IP-Adressen
 
-Stellen Sie sicher, dass die Endpunkte zwischen den verschiedenen Verfügbarkeitsgruppen in der verteilten Verfügbarkeitsgruppe kommunizieren können. Wenn eine Verfügbarkeitsgruppe für ein bestimmtes Netzwerk auf den Endpunkt festgelegt ist, funktioniert die verteilte Verfügbarkeitsgruppe nicht richtig. Konfigurieren Sie auf jedem Server, der das Replikat in der verteilten Verfügbarkeitsgruppe hostet, den Listener auf `LISTENER_IP = ALL`. 
+Stellen Sie sicher, dass die Endpunkte zwischen den verschiedenen Verfügbarkeitsgruppen in der verteilten Verfügbarkeitsgruppe kommunizieren können. Wenn eine Verfügbarkeitsgruppe für ein bestimmtes Netzwerk auf den Endpunkt festgelegt ist, funktioniert die verteilte Verfügbarkeitsgruppe nicht richtig. Konfigurieren Sie den Listener aller Server, die ein Replikat in der verteilten Verfügbarkeitsgruppe hosten, so, dass er auf alle IP-Adressen lauscht (`LISTENER_IP = ALL`).
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Erstellen eines Listeners zur Überwachung aller IP-Adressen
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>Erstellen der ersten Verfügbarkeitsgruppe
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Erstellen der ersten Verfügbarkeitsgruppe auf dem ersten Cluster  
-Erstellen Sie eine Verfügbarkeitsgruppe auf dem ersten WSFC.   In diesem Beispiel heißt die Verfügbarkeitsgruppe `ag1` für die Datenbank `db1`. Das primäre Replikat der primären Verfügbarkeitsgruppe wird in einer verteilten Verfügbarkeitsgruppe als **globales primäres Replikat** bezeichnet. Server1 ist in diesem Beispiel das primäre Replikat.        
+Erstellen Sie eine Verfügbarkeitsgruppe für den ersten Windows Server-Failovercluster (WSFC).   In diesem Beispiel heißt die Verfügbarkeitsgruppe `ag1` für die Datenbank `db1`. Das primäre Replikat der primären Verfügbarkeitsgruppe wird in einer verteilten Verfügbarkeitsgruppe als **globales primäres Replikat** bezeichnet. Server1 ist in diesem Beispiel das primäre Replikat.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -205,15 +205,23 @@ GO
 ```  
 
 ## <a name="failover"></a> Verknüpfen der Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe
-Nachdem die Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe in einen Wiederherstellungsstatus gewechselt ist, müssen Sie sie manuell mit der Verfügbarkeitsgruppe verknüpfen.
+Nachdem die Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe in einen Wiederherstellungsstatus versetzt wurde, müssen Sie sie manuell mit der Verfügbarkeitsgruppe verknüpfen.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Failover auf eine sekundäre Verfügbarkeitsgruppe  
-Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anweisung führt ein Failover auf die verteilte Verfügbarkeitsgruppe mit dem Namen `distributedag` aus:  
 
+Zurzeit wird nur manuelles Failover unterstützt. So führen Sie ein manuelles Failover für eine verteilte Verfügbarkeitsgruppe aus:
+
+1. Legen Sie die verteilte Verfügbarkeitsgruppe auf synchrone Commits fest, um sicherzustellen, dass keine Daten verloren gehen.
+1. Warten Sie, bis die verteilte Verfügbarkeitsgruppe synchronisiert wurde.
+1. Legen Sie die Rolle der verteilten Verfügbarkeitsgruppe für das globale, primäre Replikat auf `SECONDARY` fest.
+1. Testen Sie die Failoverbereitschaft.
+1. Führen Sie ein Failover für die primäre Verfügbarkeitsgruppe aus.
+
+In den folgenden Transact-SQL-Beispielen werden die ausführlichen Schritte zum Ausführen eines Failover für die verteilte Verfügbarkeitsgruppe namens `distributedag` veranschaulicht:
 
 1. Legen Sie die verteilte Verfügbarkeitsgruppe auf einen synchronen Commit fest, indem Sie folgenden Code auf dem globalen primären Replikat *und* der Weiterleitung ausführen.   
     
@@ -242,8 +250,7 @@ Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anwe
 
       ```  
    >[!NOTE]
-   >Ähnlich wie bei normalen Verfügbarkeitsgruppen hängt der Synchronisierungsstatus zwischen zwei Replikatteilen der Verfügbarkeitsgruppen einer verteilten Verfügbarkeitsgruppe vom Verfügbarkeitsmodus beider Replikate ab. Damit beispielsweise ein synchroner Commit ausgeführt werden kann, müssen sowohl die aktuelle primäre Verfügbarkeitsgruppe als auch die sekundäre Verfügbarkeitsgruppe mit dem Verfügbarkeitsmodus „synchronous_commit“ konfiguriert sein.  
-
+   >In einer verteilten Verfügbarkeitsgruppe hängt der Synchronisierungsstatus der zwei Verfügbarkeitsgruppen vom Verfügbarkeitsmodus beider Replikate ab. Für den synchronen Commitmodus müssen sowohl die aktuell primäre Verfügbarkeitsgruppe als auch die aktuell sekundäre Verfügbarkeitsgruppe den Verfügbarkeitsmodus `SYNCHRONOUS_COMMIT` aufweisen. Aus diesem Grund müssen Sie das obige Skript auf dem globalen primären Replikat und der Weiterleitung ausführen.
 
 1. Warten Sie, bis sich der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED`geändert hat. Führen Sie die folgende Abfrage auf dem globalen primären Replikat aus, bei dem es sich um das primäre Replikat der primären Verfügbarkeitsgruppe handelt. 
     
