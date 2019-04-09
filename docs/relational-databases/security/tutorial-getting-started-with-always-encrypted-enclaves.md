@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417152"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042129"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,8 +36,16 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server-Computeranforderungen
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] oder höher
-- Windows 10 Enterprise Version 1809 oder Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] oder höher.
+- Windows 10 Enterprise, Version 1809, oder Windows Server 2019 Datacenter.
+- Wenn Ihr SQL Server-Computer ein physischer Computer ist, muss er die [Hardwareanforderungen für Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen:
+   - 64-Bit-Prozessor mit Second Level Address Translation (SLAT)
+   - CPU-Unterstützung für VM-Überwachungsmoduserweiterung (VT-c bei Intel-CPUs)
+   - Virtualisierungsunterstützung aktiviert (Intel VT-x- oder AMD-V)
+- Wenn Ihr SQL Server-Computer ein virtueller Computer ist, muss der virtuellen Computer so konfiguriert sein, dass er geschachtelte Virtualisierung zulässt.
+   - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) für den VM-Prozessor.
+   - In Azure stellen Sie sicher, dass Sie eine VM-Größe ausführen, die geschachtelten Virtualisierung unterstützt, z. B. VMs der Serien Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - Bei VMware vSphere 6.7 oder höher aktivieren Sie die Unterstützung für virtualisierungsbasierte Sicherheit für den virtuellen Computer, wie in der [VMware-Dokumentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) beschrieben.
 - [SQL Server Management Studio (SSMS) 18.0 oder höher](../../ssms/download-sql-server-management-studio-ssms.md)
 
 Alternativ können Sie SSMS auf einem anderen Computer installieren.
@@ -55,7 +63,7 @@ Alternativ können Sie SSMS auf einem anderen Computer installieren.
 >[!NOTE]
 >Der HGS-Computer sollte nicht mit einer Domäne verknüpft werden, bevor Sie beginnen.
 
-## <a name="step-1-configure-the-hgs-computer"></a>Schritt 1: Konfigurieren des HGS-Computers
+## <a name="step-1-configure-the-hgs-computer"></a>Schritt 1: Konfigurieren des HGS-Computers
 
 In diesem Schritt konfigurieren Sie den HGS-Computer zum Ausführen des Host-Überwachungsdiensts, der den Hostschlüsselnachweis unterstützt.
 
@@ -105,6 +113,21 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
    ```
 
 3. Starten Sie den SQL Server-Computer bei Aufforderung erneut, um die Installation von Hyper-V abzuschließen.
+
+4. Wenn Ihr SQL Server-Computers ein virtueller Computer ist, oder wenn es sich um einen älteren physischen Computer handelt, der keinen sicheren UEFI-Start unterstützt oder nicht mit IOMMU ausgestattet ist, müssen Sie die VBS-Anforderung für die Plattformsicherheitsfunktionen entfernen.
+    1. Entfernen Sie die Anforderung in der Windows-Registrierung.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Starten Sie den Computer neu, damit VBS mit den niedrigeren Anforderungen online geht.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Melden Sie sich erneut beim SQL Server-Computer als Administrator an, öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, generieren Sie einen eindeutigen Hostschlüssel, und exportieren Sie den resultierenden öffentlichen Schlüssel in eine Datei.
 
@@ -236,7 +259,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     3. Stellen Sie sicher, dass Sie entweder **Windows-Zertifikatspeicher (Aktueller Benutzer oder lokaler Computer)** oder **Azure Key Vault** auswählen.
     4. Wählen Sie **Enclave-Berechnungen zulassen**.
     5. Wenn Sie Azure Key Vault ausgewählt haben, melden Sie sich bei Azure an, und wählen Sie Ihren Schlüsseltresor. Weitere Informationen zum Erstellen eines Schlüsseltresors für Always Encrypted finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Wählen Sie Ihren Schlüssel aus, wenn er bereits vorhanden ist, oder folgen Sie den Anweisungen auf dem Formular, um einen neuen Schlüssel zu erstellen.
+    6. Wählen Sie Ihr Zertifikat oder Ihren Azure-Schlüsselwertschlüssel aus, wenn bereits vorhanden, oder klicken Sie auf die Schaltfläche **Zertifikat generieren**, um ein neues zu erstellen.
     7. Wählen Sie **OK**.
 
         ![Enclave-Berechnungen zulassen](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ In diesem Schritt verschlüsseln Sie die in den Spalten „SSN“ und „Salary�
     3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
     4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, wählen Sie **Enable Always Encrypted** (Always Encrypted aktivieren) aus, und geben Sie die Enclave-Nachweis-URL an, z. B. ht<span>tp://</span>hgs.bastion.local/Attestation.
     5. Wählen Sie **Verbinden**.
-    6. Stellen Sie den Datenbankkontext auf die ContosoHR-Datenbank um.
-1. Konfigurieren Sie in SSMS ein weiteres Abfragefenster mit deaktiviertem Always Encrypted für die Datenbankverbindung.
+    6. Wenn Sie aufgefordert werden, die Parametrisierung für Always Encrypted zu aktivieren, klicken Sie auf **Aktivieren**.
+2. Konfigurieren Sie in SSMS ein weiteres Abfragefenster mit deaktiviertem Always Encrypted für die Datenbankverbindung.
     1. Öffnen Sie in SSMS ein neues Abfragefenster.
     2. Klicken Sie im neuen Abfragefenster mit der rechten Maustaste auf eine beliebige Stelle.
     3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
@@ -296,12 +319,12 @@ In diesem Schritt verschlüsseln Sie die in den Spalten „SSN“ und „Salary�
 
 Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. Ein Teil der Abfrageverarbeitung wird in der serverseitigen Enclave ausgeführt. 
 
-1. Aktivieren Sie die Parametrisierung für Always Encrypted.
+1. Stellen Sie sicher, dass die Parametrisierung für Always Encrypted aktiviert ist.
     1. Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
     2. Wählen Sie **Abfrageoptionen...** aus.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
-    4. Wählen Sie **Parametrisierung für Always Encrypted aktivieren** aus.
-    5. Wählen Sie **OK**.
+    4. Stellen Sie sicher, dass „Parametrisierung für Always Encrypted aktivieren“ aktiviert ist.
+    5. Wählen Sie „OK“ aus.
 2. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgende Abfrage ein, und führen Sie sie aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
@@ -315,6 +338,6 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
 ## <a name="next-steps"></a>Next Steps
 Informationen zu weiteren Anwendungsfällen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Sie können auch Folgendes ausprobieren:
 
-- [Konfigurieren des TPM-Nachweises](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Konfigurieren von HTTPS für die HGS-Instanz](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [Konfigurieren des TPM-Nachweises.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [Konfigurieren von HTTPS für die HGS-Instanz.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Entwickeln von Anwendungen, die umfangreiche Abfragen für verschlüsselte Spalten ausgeben
