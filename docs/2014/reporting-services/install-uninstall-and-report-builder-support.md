@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241718"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installation, Deinstallation und Unterstützung des Berichts-Generators
   Der Berichts-Generator ist ein Berichterstellungstool, das Sie zum Erstellen, Aktualisieren und Freigeben von Berichten, Berichtsteilen und freigegebenen Datasets verwenden können. Der Berichts-Generator ist in zwei Versionen verfügbar: als eigenständige Version und als [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]-Version. Die eigenständige Version wird von Ihnen oder einem Administrator auf dem Computer installiert. Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version wird automatisch mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] installiert und vom Berichts-Manager oder von einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website auf den Computer heruntergeladen.  
@@ -59,7 +59,7 @@ ms.locfileid: "56298318"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installieren der ClickOnce-Version des Berichts-Generators auf dem Computer  
  Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version von Berichts-Generator wird mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert. Sie wird sowohl bei systemeigenen als auch integrierten SharePoint-Installationen von [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ist eine Microsoft-Technologie für die Bereitstellung von Windows-Anwendungen. Mit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] können Benutzer Windows-Anwendungen wie den Berichts-Generator installieren und ausführen, indem sie auf einen Link auf einer Webseite klicken. Weitere Informationen zum Bereitstellen von [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Anwendungen und Sicherheitsfunktionen für [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Anwendungen oder zum Ausführen von [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Anwendungen im Internet finden Sie in den Artikeln "ClickOnce-Bereitstellung für Windows Forms-Anwendungen", "Übersicht über die Sicherheit in Windows Forms" oder "Überblick über die Bereitstellung vertrauenswürdiger Anwendungen" auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network-Website unter [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ist eine Microsoft-Technologie für die Bereitstellung von Windows-Anwendungen. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] können Benutzer Windows-Anwendungen wie den Berichts-Generator installieren und ausführen, indem sie auf einen Link auf einer Webseite klicken. Weitere Informationen zum Bereitstellen von [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Anwendungen und [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Anwendung oder zum Ausführen [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Anwendungen in der Internetzone finden Sie unter der "ClickOnce-Bereitstellung für Windows Forms-Anwendungen", "Sicherheit in Windows Forms Overview"oder"Trusted Application Deployment Overview"auf die Artikel der [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network-Website unter [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version des Berichts-Generators befindet sich auf dem Berichtsserver und wird auf dem Computer installiert, wenn Sie im Berichts-Manager auf die **Berichts-Generator** -Schaltfläche oder in einer SharePoint-Bibliothek im Menü **Neues Dokument** auf **Berichts-Generator-Bericht** klicken.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298318"
 |1030|Dänisch|da-DK|  
 |1031|Deutsch|de-DE|  
 |1032|Griechisch|el-GR|  
-|1033|Englisch|en-US|  
+|1033|Englisch|de-DE|  
 |1035|Finnisch|fi-FI|  
 |1036|Französisch|fr-FR|  
 |1038|Ungarisch|hu-HU|  

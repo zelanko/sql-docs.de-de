@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241758"
 ---
 # <a name="reference-data-services-in-dqs"></a>Reference Data Services in DQS
   Verweisdaten beziehen sich auf einen genauen und vollständigen Satz verwandter oder kategorisierter globaler Daten (jenseits der Begrenzungen eines Unternehmens), die auf vertrauenswürdigen öffentlichen Domänen oder von erstklassigen kommerziellen Inhaltsanbietern verfügbar sind.  
@@ -31,7 +31,7 @@ ms.locfileid: "56038351"
 -   Unterstützt das Verwenden von Verweisdaten von Windows Azure Marketplace sowie direkt von Reference Data Service-Drittanbietern.  
   
 ##  <a name="Marketplace"></a> Verwenden von Verweisdaten von Windows Azure Marketplace  
- DQS unterstützt das Verwenden von Referenzdaten von Windows Azure Marketplace, um es Inhaltsanbietern zu ermöglichen, Verweisdatendienste durch Marketplace bereitzustellen. Marketplace ist ein Dienst von Microsoft, der einen Marketplace und einen Bereitstellungskanal für hochwertige Daten und Anwendungen als Clouddienste bereitstellt. Weitere Informationen zum Marketplace finden Sie unter [Learn About Windows Azure Marketplace (Informationen zum Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS unterstützt das Verwenden von Referenzdaten von Windows Azure Marketplace, um es Inhaltsanbietern zu ermöglichen, Verweisdatendienste durch Marketplace bereitzustellen. Marketplace ist ein Dienst von Microsoft, der einen Marketplace und einen Bereitstellungskanal für hochwertige Daten und Anwendungen als Clouddienste bereitstellt. Weitere Informationen zum Marketplace finden Sie unter [Informationen zum Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/).  
   
  Die nahtlose Integration zwischen Marketplace und DQS vereinfacht die Schritte, die für das Ermitteln, Untersuchen und Abrufen von Informationen für Data Quality-Projekte innerhalb von DQS erforderlich sind. Die Daten werden von DQS genutzt und helfen DQS-Benutzern dabei, eine hohe Datenqualität durch das Kombinieren von DQS, Marketplace und Verweisdaten-Dienstanbietern auf innovative Weise zu erreichen.  
   
@@ -53,17 +53,17 @@ ms.locfileid: "56038351"
 ##  <a name="HowToCleanse"></a> So bereinigen Sie Daten mithilfe der Verweisdaten  
  Das Bereinigen der Daten in DQS mithilfe von Verweisdaten umfasst die folgenden drei Schritte:  
   
-1.  **Konfigurieren der verweisdatenanbieterdetails in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie verweisdatendienstdetails in DQS konfigurieren.  
+1.  **Konfigurieren von Details der Verweisdatenanbieter in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie die Dienstdetails der Verweisdaten in DQS konfigurieren.  
   
-    1.  Wenn Sie Marketplace verwenden, stellen Sie einen gültigen Marketplace-Kontoschlüssel bereit, wechseln Sie im Marketplace zur Datenkategorie [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) , und abonnieren Sie die erforderlichen Anbieter.  
+    1.  Wenn Sie Marketplace verwenden, stellen Sie einen gültigen Marketplace-Kontoschlüssel bereit, wechseln Sie im Marketplace zur Datenkategorie [Data Quality Services](../data-quality-services/data-quality-services.md) , und abonnieren Sie die erforderlichen Anbieter.  
   
     2.  Wenn Sie einen direkten Onlineverweisdatenanbieter verwenden, müssen Sie direkte Verweisdatenanbieterdetails in DQS hinzufügen, bevor Sie den Anbieter verwenden können.  
   
      Das Konfigurieren der Verweisdatenanbieterdetails in DQS muss für jeden Datenanbieter nur ein Mal erfolgen. Nur DQS-Administratoren können Verweisdateneinstellungen in DQS konfigurieren.  
   
-2.  **Eine Domäne/verbunddomäne in einer Wissensdatenbank dem verweisdatendienst zuordnen**: Zuordnen einer Domäne/verbunddomäne dem entsprechenden verweisdatendienst, die in Schritt 1 abonniert/hinzugefügt.  
+2.  **Zuordnen einer Domäne/Verbunddomäne in einer Wissensdatenbank zum Verweisdatendienst**: Ordnen Sie dem entsprechenden Verweisdatendienst, den Sie in Schritt 1 abonniert/hinzugefügt haben, eine Domäne/Verbunddomäne zu.  
   
-3.  **Verwenden Sie die zugeordneten Domänen für die bereinigungsaktivität in einem Data Quality-Projekt**: Beim Erstellen eines Data Quality-Projekts für die **Bereinigung** , wählen Sie die Wissensdatenbank, die in Schritt 2 verweisdatendiensten zugeordnet Domänen/verbunddomänen enthält, und führen Sie die bereinigungsaktivität.  
+3.  **Verwenden der zugeordneten Domänen für die Bereinigungsaktivität in einem Data Quality-Projekt**: Wählen Sie während des Erstellens eines Data Quality-Projekts für die **Bereinigungsaktivität** die Wissensdatenbank aus, die Domänen/Verbunddomänen enthält, die in Schritt 2 Verweisdatendiensten zugeordnet wurden, und führen Sie die Bereinigungsaktivität aus.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -71,6 +71,6 @@ ms.locfileid: "56038351"
 |----------------------|-----------|  
 |Beschreibt, wie DQS zum Verwenden von Verweisdatendiensten vom Marketplace oder von direkten Reference Data Service-Onlinedrittanbietern konfiguriert wird.|[Konfigurieren von DQS zum Verwenden von Verweisdaten](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Beschreibt, wie einem Verweisdatendienst eine Domäne/Verbunddomäne in einer Wissensdatenbank zugeordnet wird.|[Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|Beschreibt, wie Daten mithilfe des Verweisdatendienstes bereinigt werden.|[Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Beschreibt, wie Daten mithilfe des Verweisdatendienstes bereinigt werden.|[Bereinigen von Daten mit &#40;externem&#41; Verweisdaten-Wissen](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241449"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
   In diesem Abschnitt sind die auf der Seite **Allgemein** des Dialogfelds **Volltextkatalog-Eigenschaften** verfügbaren Optionen und ihre Funktionen aufgeführt.  
@@ -34,7 +34,7 @@ ms.locfileid: "53353584"
  **Auffüllungsstatus**  
  Zeigt den Status des Katalogs an. Dabei sind folgende Werte möglich:  
   
--   **Im Leerlauf**  
+-   **Idle**  
   
 -   **Durchforstung wird ausgeführt**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "53353584"
   
 -   **Gedrosselt**  
   
--   **Wiederherstellen von**  
+-   **Wird wiederhergestellt**  
   
--   **Herunterfahren**  
+-   **Shutdown**  
   
 -   **Inkrementelles Auffüllen wird ausgeführt**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53353584"
   
 -   **Datenträger ist voll-angehalten**  
   
--   **Change tracking**  
+-   **Änderungsnachverfolgung**  
   
  **Elementanzahl**  
  Zeigt die Anzahl der Volltextelemente im Katalog an.  
@@ -68,9 +68,9 @@ ms.locfileid: "53353584"
   
 -   **Nein**  
   
--   **ja**  
+-   **Ja**  
   
--   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritisches](https://go.microsoft.com/fwlink/?LinkId=154091) in der MSN Encarta-Enzyklopädie.  
+-   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritischer](https://www.merriam-webster.com/dictionary/diacritic) im Nitsche-Webster Wörterbuch.  
   
  **Letzte Auffüllung am**  
  Zeigt das Datum an, an dem der Katalog zuletzt aufgefüllt wurde.  
@@ -85,7 +85,7 @@ ms.locfileid: "53353584"
   
 |||  
 |-|-|  
-|**Keine**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
+|**None**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
 |**Katalog optimieren**|Optimiert die Speicherplatzausnutzung des Katalogs und verbessert die Abfrageleistung. Erhöht außerdem die Genauigkeit der Relevanzbewertung von Suchergebnissen.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE aus.|  
 |**Katalog neu erstellen**|Löscht den Volltextkatalog und erstellt ihn neu. Dieser Vorgang muss bei der Änderung einer grundlegenden Katalogeigenschaft, z. B. der Akzentunterscheidung, ausgeführt werden.<br /><br /> Damit die Neuerstellung erfolgreich ist, muss die Dateigruppe, in der sich der Volltextkatalog befindet, online oder les- und beschreibbar sein. Nach der Neuerstellung wird der Volltextindex neu aufgefüllt.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REBUILD aus.|  
 |**Katalog neu auffüllen**|Aktualisiert den Katalog entsprechend den kürzlich vorgenommenen Datenänderungen. Diese Option hat keine Katalogausfallzeit zur Folge.|  

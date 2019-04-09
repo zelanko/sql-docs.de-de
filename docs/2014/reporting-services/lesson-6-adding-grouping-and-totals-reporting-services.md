@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services) | Microsoft-Dokumentation'
+title: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtergebnissen (Reporting Services) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,27 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241738"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
   Fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu, um Daten zu gruppieren und zusammenzufassen.  
   
- Informationen zum Hinzufügen laufender Summen zu Berichten finden Sie in dieser Kuratierung auf curah.microsoft.com: [Hinzufügen von Gesamtwerten zu Reporting Services (SSRS)-Berichte](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Informationen zum Hinzufügen laufender Gesamtwerte zu Berichten finden Sie unter: [Hinzufügen von Gesamtwerten zu Reporting Services (SSRS)-Berichte](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **In diesem Thema:**  
   
--   [Zum Gruppieren von Daten in einem Bericht](#bkmk_groupdata)  
+-   [So gruppieren Sie Daten in einem Bericht](#bkmk_groupdata)  
   
--   [Zum Hinzufügen von Gesamtwerten zu einem Bericht](#bkmk_addtotals)  
+-   [So fügen Sie einem Bericht Gesamtwerte hinzu](#bkmk_addtotals)  
   
--   [Ein Bericht einen tagesgesamtwert hinzu](#bkmk_adddailytotal)  
+-   [So fügen Sie einem Bericht einen Tagesgesamtwert hinzu](#bkmk_adddailytotal)  
   
--   [Ein Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
+-   [So fügen Sie einem Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
   
 -   [So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)](#bkmk_publishreport)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296898"
   
 6.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellgrau**und dann auf **OK**.  
   
-     ![Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
+     ![Designansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Designansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
   
 ##  <a name="bkmk_adddailytotal"></a> Ein Bericht einen tagesgesamtwert hinzu  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56296898"
   
 4.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellblau**und dann auf **OK**.  
   
-     ![Entwurfsansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Entwurfsansicht: Gesamtergebnis in einfacher Tabelle")  
+     ![Designansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Designansicht: Gesamtergebnis in einfacher Tabelle")  
   
 5.  Klicken Sie auf "Vorschau".  
   
      Die letzte Seite sollte etwa folgendermaßen aussehen:  
   
-     ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview: Einfache Tabelle mit Gesamtergebnis")  
+     ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vorschau: Einfache Tabelle mit Gesamtergebnis")  
   
 ##  <a name="bkmk_publishreport"></a> So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296898"
   
      Wenn Sie im Ausgabefenster eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:  
   
-    > ------ Build started: Projekt: Tutorial, Konfiguration: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: Projekt: Tutorial, Konfiguration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
+    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: Project: tutorial, Configuration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
   
      Wenn Sie eine Fehlermeldung wie die Folgende sehen, überprüfen Sie, ob Sie über Berechtigungen für den Berichtsserver verfügen und ob Sie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] mit Administratorrechten gestartet haben.  
   

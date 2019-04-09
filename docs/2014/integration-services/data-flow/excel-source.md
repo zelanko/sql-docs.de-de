@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242258"
 ---
 # <a name="excel-source"></a>Excel-Quelle
   Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -90,7 +90,7 @@ ms.locfileid: "58390933"
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Excel](excel-custom-properties.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58390933"
   
 -   Blogeintrag, [Excel in Integration Services, Teil 3 von 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), auf dougbert.com.  
   
--   Blogeintrag, [mithilfe von XLSX-Dateien in SSIS](https://go.microsoft.com/fwlink/?LinkId=233704), auf sqlservergeeks.com.  
+-   Blogeintrag, [Herstellen einer Verbindung zu Excel (XLSX) in SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242478"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
   In diesem Thema werden m:n-Dimensionen in Analysis Services erläutert. Zusätzlich wird beschrieben, in welchen Fällen sie verwendet und wie sie erstellt werden.  
@@ -61,7 +61,7 @@ ms.locfileid: "53354011"
   
  Zur Veranschaulichung der Schritte, die zum Erstellen einer m:n-Beziehung erforderlich sind, wird in diesem Verfahren eine der m:n-Beziehungen im Adventure Works-Beispielcube erneut erstellt. Wenn Sie die Quelldaten (d. h. das Data Warehouse-Beispiel für AdventureWorks) auf der Instanz einer relationalen Datenbank-Engine installiert haben, können Sie diesen Schritten folgen.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Schritt 1: Überprüfen Sie die DSV-Beziehungen  
+#### <a name="step-1-verify-dsv-relationships"></a>Schritt 1: Überprüfen Sie die DSV-Beziehungen  
   
 1.  Erstellen Sie in SQL Server Data Tools in einem mehrdimensionalen Projekt eine Datenquelle für das relationale Data Warehouse Adventure Works DW 2012, das auf einer SQL Server-Datenbank-Engine-Instanz gehostet wird.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "53354011"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Über die folgenden Links erhalten Sie zusätzliche Informationen, mit denen Sie Ihr Wissen vertiefen können.  
   
- [Wie definiere ich eine m: n Dimension in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Definieren einer m:n-Dimension in Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [Die m:n-Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

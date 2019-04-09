@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241151"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -71,7 +71,7 @@ ms.locfileid: "56010419"
 |`Language`|Eine Eigenschaft mit einem Textwert, der einen Sprach- und Kulturcode enthält, z. B. "en-us" für Englisch (USA). Der Wert muss entweder eine bestimmte Sprache oder eine neutrale Sprache angeben, für die eine Standardsprache in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]definiert ist.|  
 |`Name`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert Namen müssen innerhalb des Namespaces des Elements eindeutig sein. Ist der Namespace nicht angegeben, entspricht er dem innersten enthaltenden Objekt, das über einen Namen verfügt.|  
 |`NormalizedString`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert, der normalisiert wurde|  
-|`Size`|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> In RDL beträgt der maximale Wert für `Size` 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
+|`Size`|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](https://www.w3schools.com/CSSref/css_units.asp).<br /><br /> In RDL beträgt der maximale Wert für `Size` 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
 |`String`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert|  
 |`UnsignedInt`|Eine Eigenschaft mit einem ganzzahligen Wert (uint32) ohne Vorzeichen|  
 |`Variant`|Eine Eigenschaft mit einem beliebigen einfachen XML-Typ.|  
@@ -90,6 +90,6 @@ ms.locfileid: "56010419"
 ## <a name="see-also"></a>Siehe auch  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Benutzerdefinierte Berichtselemente](../custom-report-items/custom-report-items.md)  
+ [Custom Report Items](../custom-report-items/custom-report-items.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241648"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -25,7 +25,7 @@ ms.locfileid: "53377522"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|833|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -43,17 +43,17 @@ ms.locfileid: "53377522"
   
  Prüfen Sie mit dem Systemmonitor die folgenden Leistungsindikatoren:  
   
--   **Average Disk Sec/Transfer**  
+-   **Mittlere Sek./Übertragung**  
   
--   **Average Disk Queue Length**  
+-   **Durchschnittliche Warteschlangenlänge des Datenträgers**  
   
--   **Current Disk Queue Length**  
+-   **Aktuelle Warteschlangenlänge**  
   
  Beispielsweise beträgt die Zeit von **Average Disk Sec/Transfer** für einen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalerweise unter 15 Millisekunden. Wenn sich der Wert **Average Disk Sec/Transfer** erhöht, ist dies ein Hinweis darauf, dass das E/A-Subsystem den E/A-Bedarf nicht optimal erfüllt.  
   
 > [!NOTE]  
 >  Der Datenträgerzugriff wird möglicherweise durch ein Antivirenprogramm verzögert. Schließen Sie die in der Fehlermeldung angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendateien von aktiven Virenüberprüfungen aus, um die Zugriffsgeschwindigkeit zu erhöhen.  
   
- Weitere Informationen zu E/A-Fehlern finden Sie unter [Microsoft SQL Server I/O Basics, Chapter 2 (E/A-Grundlagen von Microsoft SQL Server, Kapitel 2)](https://go.microsoft.com/fwlink/?LinkId=69370) und im Knowledge Base-Artikel unter [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
+ Weitere Informationen zu E/A-Fehlern finden Sie unter [Microsoft SQL Server I/O Basics, Chapter 2 (E/A-Grundlagen von Microsoft SQL Server, Kapitel 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) und im Knowledge Base-Artikel unter [https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284).  
   
   

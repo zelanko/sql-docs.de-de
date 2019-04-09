@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242204"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
   Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verschlüsselung zu nutzen, den Azure Key Vault-Dienst als eine [Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md) Anbieter zum Schutz der Verschlüsselungsschlüssel.  
@@ -30,13 +30,13 @@ ms.locfileid: "53372762"
   
 -   [Verwendungsmöglichkeiten für erweiterbare Schlüsselverwaltung](#Uses)  
   
--   [Schritt 1: Einrichten von Key Vault für die Verwendung durch SQL Server](#Step1)  
+-   [Schritt 1: Einrichten des Schlüsseltresors für die Verwendung durch SQL Server](#Step1)  
   
 -   [Schritt 2: Installieren des SQL Server-Connectors](#Step2)  
   
--   [Schritt 3: Konfigurieren von SQL Server zur Verwendung von EKM-Anbieter für den Schlüsseltresor](#Step3)  
+-   [Schritt 3: Konfigurieren von SQL Server zur Verwendung eines Anbieters für erweiterbare Schlüsselverwaltung für den Schlüsseltresor](#Step3)  
   
--   [Beispiel A: Transparente datenverschlüsselung mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor](#ExampleA)  
+-   [Beispiel A: Transparente Datenverschlüsselung mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor](#ExampleA)  
   
 -   [Beispiel B: Verschlüsseln von Sicherungen mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor](#ExampleB)  
   
@@ -51,8 +51,8 @@ ms.locfileid: "53372762"
   
  ![SQL Server-EKM mit Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
   
-##  <a name="Step1"></a> Schritt 1: Einrichten des Schlüsseltresors für die Verwendung durch SQL Server  
- Führen Sie die folgenden Schritte aus, um einen Schlüsseltresor für die Verwendung mit der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] für den Schutz des Verschlüsselungsschlüssels einzurichten. Für die Organisation wird möglicherweise bereits ein Tresor verwendet. Wenn kein Tresor vorhanden ist, kann der Azure-Administrator in Ihrem Unternehmen, der die Verschlüsselungsschlüssel verwaltet, einen Tresor erstellen, einen asymmetrischen Schlüssel im Tresor generieren und dann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorisieren, den Schlüssel zu verwenden. Machen Sie sich unter [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)und der Referenz zu PowerShell- [Azure Key Vault-Cmdlets](https://go.microsoft.com/fwlink/?LinkId=521403) mit dem Schlüsseltresordienst vertraut.  
+##  <a name="Step1"></a>Schritt 1: Einrichten des Schlüsseltresors für die Verwendung durch SQL Server  
+ Führen Sie die folgenden Schritte aus, um einen Schlüsseltresor für die Verwendung mit der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] für den Schutz des Verschlüsselungsschlüssels einzurichten. Für die Organisation wird möglicherweise bereits ein Tresor verwendet. Wenn kein Tresor vorhanden ist, kann der Azure-Administrator in Ihrem Unternehmen, der die Verschlüsselungsschlüssel verwaltet, einen Tresor erstellen, einen asymmetrischen Schlüssel im Tresor generieren und dann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorisieren, den Schlüssel zu verwenden. Machen Sie sich unter [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)und der Referenz zu PowerShell- [Azure Key Vault-Cmdlets](/powershell/module/azurerm.keyvault/) mit dem Schlüsseltresordienst vertraut.  
   
 > [!IMPORTANT]  
 >  Wenn Sie über mehrere Azure-Abonnements verfügen, müssen Sie das Abonnement nehmen, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enthält.  
@@ -100,7 +100,7 @@ ms.locfileid: "53372762"
   
     -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://go.microsoft.com/fwlink/?LinkId=521403)  
   
-##  <a name="Step2"></a> Schritt 2: Installieren des SQL Server-Connectors  
+##  <a name="Step2"></a>Schritt 2: Installieren des SQL Server-Connectors  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector wird vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers heruntergeladen und installiert. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector steht im [Microsoft-Downloadcenter](https://go.microsoft.com/fwlink/p/?LinkId=521700)als Download zur Verfügung.  Suchen Sie nach **SQL Server-Connector für Microsoft Azure Key Vault**. Überprüfen Sie die Details, Systemanforderungen und Installationsanweisungen, wählen Sie den Download des Connectors, und starten Sie die Installation mit **Ausführen**. Lesen Sie die Lizenzbedingungen, stimmen Sie ihnen zu, und setzen Sie den Vorgang fort.  
   
  In der Standardeinstellung der Connector installiert ist, auf **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Dieser Speicherort kann während des Setups geändert werden. (Wenn Sie ihn ändern, passen Sie die unten angegebenen Skripts entsprechend an.)  
@@ -113,7 +113,7 @@ ms.locfileid: "53372762"
   
  Bei der Installation des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors können Sie optional auch Beispielskripts für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung herunterladen.  
   
-##  <a name="Step3"></a> Schritt 3: Konfigurieren von SQL Server zur Verwendung eines Anbieters für erweiterbare Schlüsselverwaltung für den Schlüsseltresor  
+##  <a name="Step3"></a>Schritt 3: Konfigurieren von SQL Server zur Verwendung eines Anbieters für erweiterbare Schlüsselverwaltung für den Schlüsseltresor  
   
 ###  <a name="Permissions"></a> Berechtigungen  
  Das gesamte Verfahren erfordert die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** . Bestimmte Aktionen erfordern die folgenden Berechtigungen:  
@@ -347,8 +347,8 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [Aktivieren von TDE unter Verwendung von EKM](enable-tde-on-sql-server-using-ekm.md)   
- [Verschlüsseln von Sicherungen](../../backup-restore/backup-encryption.md)   
+ [Aktivieren von TDE mit EKM](enable-tde-on-sql-server-using-ekm.md)   
+ [Verschlüsseln der Sicherung](../../backup-restore/backup-encryption.md)   
  [Erstellen einer verschlüsselten Sicherung](../../backup-restore/create-an-encrypted-backup.md)  
   
   

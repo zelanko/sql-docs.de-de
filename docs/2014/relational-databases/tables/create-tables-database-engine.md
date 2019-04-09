@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241668"
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbank-Engine)
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine neue Tabelle erstellen, diese benennen und einer vorhandenen Datenbank in [!INCLUDE[tsql](../../includes/tsql-md.md)]hinzufügen.  
   
 > [!NOTE]  
->  Wenn Sie mit einer SQL Azure-Datenbank verbunden sind, startet die neue Tabellenoption ein Vorlagenskript zum Erstellen einer Tabelle. Bearbeiten Sie die Parameter, und führen Sie dann das Skript aus, um eine neue Tabelle zu erstellen. Weitere Informationen finden Sie unter [SQL Azure-Übersicht](https://go.microsoft.com/fwlink/?LinkId=163948)(möglicherweise auf Englisch).  
+>  Wenn Sie mit einer SQL Azure-Datenbank verbunden sind, startet die neue Tabellenoption ein Vorlagenskript zum Erstellen einer Tabelle. Bearbeiten Sie die Parameter, und führen Sie dann das Skript aus, um eine neue Tabelle zu erstellen. Weitere Informationen finden Sie unter [SQL Azure-Übersicht](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)(möglicherweise auf Englisch).  
   
  **In diesem Thema**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53377432"
   
      [Sicherheit](#Security)  
   
--   **Erstellen Sie eine Tabelle mit:**  
+-   **So erstellen Sie eine Tabelle mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "53377432"
   
  Wenn einer Spalte in der CREATE TABLE-Anweisung eine XML-Schemaauflistung zugeordnet ist, ist entweder der Besitz der XML-Schemaauflistung oder die REFERENCES-Berechtigung für die Auflistung erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-table-with-table-designer"></a>So erstellen Sie eine Tabelle mit dem Tabellen-Designer  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53377432"
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>So erstellen Sie eine Tabelle im Abfrage-Editor  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

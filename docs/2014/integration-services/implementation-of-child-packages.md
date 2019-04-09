@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242168"
 ---
 # <a name="implementation-of-child-packages"></a>Implementierung von untergeordneten Paketen
   Wenn Sie mithilfe von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]den Lastenausgleich implementieren, werden die untergeordneten Pakete auf anderen Servern installiert, um die verfügbare CPU bzw. die Serverzeit zu nutzen. Für das Erstellen und Ausführen der untergeordneten Pakete sind die folgenden Schritte erforderlich:  
@@ -68,8 +68,8 @@ ms.locfileid: "58386767"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
+-   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog.  
   
--   Blogeintrag, [SSIS: Untergeordnete Pakete prozessintern oder Out-of-Process ausgeführt werden soll? ](https://go.microsoft.com/fwlink/?LinkId=220819), auf consultingblogs.emc.com.  
+-   Artikel [Task "Paket ausführen"](../integration-services/control-flow/execute-package-task.md).  
   
   

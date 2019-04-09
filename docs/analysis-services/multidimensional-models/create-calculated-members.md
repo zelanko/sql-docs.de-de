@@ -1,5 +1,5 @@
 ---
-title: Erstellen von berechneten Elementen | Microsoft Docs
+title: Erstellen von berechneten Elementen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241465"
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
   
- Definitionen berechneter Elemente werden zwar gespeichert, ihre Werte sind jedoch nur im Arbeitsspeicher vorhanden. Im vorherigen Beispiel werden die Werte für Euros für Endbenutzer angezeigt, aber nicht als Cubedaten gespeichert.  
+ Definitionen berechneter Elemente werden zwar gespeichert, ihre Werte sind jedoch nur im Arbeitsspeicher vorhanden. Im vorherigen Beispiel Werte in Euro für Endbenutzer angezeigt werden, jedoch werden nicht als Cubedaten gespeichert.  
   
  Sie können berechnete Elemente in Cubes erstellen. Um ein berechnetes Element zu erstellen, klicken Sie im Cube-Designer auf der Registerkarte **Berechnungen** auf der Symbolleiste auf das Symbol **Neues berechnetes Element** . Mit diesem Befehl wird ein Formular zum Angeben der folgenden Optionen für das berechnete Element angezeigt:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34023177"
  Formatzeichenfolge  
  Gibt das Format der Zellenwerte an, die auf dem berechneten Element basieren. Die Eigenschaft nimmt dieselben Werte an wie die **Display Format** -Eigenschaft für Measures. Weitere Informationen zu Anzeigeformaten finden Sie unter [Konfigurieren von Measureeigenschaften](../../analysis-services/multidimensional-models/configure-measure-properties.md).  
   
- Visible  
+ Sichtbar  
  Bestimmt, ob das berechnete Element beim Abrufen von Cubemetadaten sichtbar oder ausgeblendet ist. Wenn das berechnete Element ausgeblendet ist, kann es trotzdem in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden, aber es wird nicht als auswählbares Objekt in Clientbenutzeroberflächen angezeigt.  
   
  Verhalten für nicht leere Elemente  

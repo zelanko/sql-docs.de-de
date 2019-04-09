@@ -15,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240708"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
   Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
@@ -143,6 +143,6 @@ ms.locfileid: "53357837"
  [Verschieben von Datenbankdateien](move-database-files.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von tempdb in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Verwenden von tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

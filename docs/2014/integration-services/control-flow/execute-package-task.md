@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241248"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -97,7 +97,7 @@ ms.locfileid: "58387138"
  Weitere Informationen finden Sie unter [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Zugriff auf Variablen für übergeordnete Pakete  
- Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zu den Skripttask auf Variablen für übergeordnete Pakete verwenden, finden Sie unter diesem Blogeintrag [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
+ Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zu den Skripttask auf Variablen für übergeordnete Pakete verwenden, finden Sie unter diesem Blogeintrag [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Konfigurieren des Tasks Paket ausführen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
@@ -118,6 +118,6 @@ ms.locfileid: "58387138"
   
 -   Blogeintrag, [SSIS: Untergeordnete Pakete prozessintern oder Out-of-Process ausgeführt werden soll? ](https://go.microsoft.com/fwlink/?LinkId=220819), auf consultingblogs.emc.com.  
   
--   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
+-   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog. 
   
   

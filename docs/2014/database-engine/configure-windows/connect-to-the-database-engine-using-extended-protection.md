@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241430"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
@@ -55,7 +55,7 @@ ms.locfileid: "53366322"
   
 -   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Einstellungen  
  Es gibt drei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungseinstellungen, die sich auf die Dienstbindung und die Kanalbindung auswirken. Die Einstellungen können mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder der Windows-Verwaltungsinstrumentation konfiguriert und mithilfe des Facets **Serverprotokolleinstellung** der richtlinienbasierten Verwaltung angezeigt werden.  
@@ -64,7 +64,7 @@ ms.locfileid: "53366322"
   
      Mögliche Werte sind **Ein** und **Aus**. Zur Verwendung der Kanalbindung muss **Verschlüsselung erzwingen** auf **Ein**festgelegt werden, sodass die Verschlüsselung auf allen Clients erzwungen wird. Bei der Einstellung **Aus**wird nur die Dienstbindung gewährleistet. **Verschlüsselung erzwingen** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Flags“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Erweiterter Schutz**  
+-   **wird von**  
   
      Mögliche Werte sind **Aus**, **Zulässig**und **Erforderlich**. Mit der Variablen **Erweiterter Schutz** können Benutzer die Ebene für **Erweiterter Schutz** für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfigurieren. **Erweiterter Schutz** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Registerkarte „Erweitert“).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "53366322"
  [Server-Netzwerkkonfiguration](server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](client-network-configuration.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](https://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

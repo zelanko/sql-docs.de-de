@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240809"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
@@ -64,9 +64,9 @@ ms.locfileid: "58377308"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Webdienst“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task 'Webdienst' &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task „Webdienst“ &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor für den Task 'Webdienst' &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
   
 -   [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../web-service-task-editor-output-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "58377308"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video, [Vorgehensweise: Aufrufen eines Webdiensts mithilfe der Task ' Webdienst ' (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642), auf technet.microsoft.com.  
+ Video, [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task „Webdienst“ (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642) auf technet.microsoft.com.  
   
- Curated Answers, [Verarbeiten von Webdiensten in SSIS mit Skripts](https://go.microsoft.com/fwlink/?LinkId=321996)auf curatedviews.cloudapp.net.  
+ [Wie Sie SSIS-Paket-Webdiensts](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

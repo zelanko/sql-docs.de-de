@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240729"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Protokollservereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -88,9 +88,9 @@ ms.locfileid: "53374592"
  **ErrorLog\KeyErrorAction**  
  Gibt die Aktion an, die bei Auftreten eines `KeyNotFound`-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
--   `ConvertToUnknown` weist den Server an, den Fehlerschlüsselwert dem unbekannten Element zuzuordnen.  
+-   `ConvertToUnknown` weist den Server, den fehlerschlüsselwert dem unbekannten Element zuzuordnen.  
   
--   `DiscardRecord` weist den Server an, den Datensatz auszuschließen.  
+-   `DiscardRecord` weist den Server aus, um den Datensatz auszuschließen.  
   
  **ErrorLog\KeyErrorLogFile**  
  Dies ist ein benutzerdefinierter Dateiname, der über die Dateierweiterung .log verfügen und in einem Ordner gespeichert sein muss, für den das Dienstkonto Lese-/Schreibberechtigungen besitzt. Die Protokolldatei enthält nur Fehler, die während der Verarbeitung generiert wurden. Verwenden Sie Flight Recorder, wenn Sie ausführlichere Informationen benötigen.  
@@ -101,18 +101,18 @@ ms.locfileid: "53374592"
  **ErrorLog\KeyErrorLimitAction**  
  Gibt die Aktion an, die vom Server ausgeführt wird, nachdem die Obergrenze von Schlüsselfehlern erreicht wurde. Gültige Serverreaktionen auf diese Aktion sind:  
   
--   `StopProcessing` weist den Server an, die Verarbeitung zu beenden, sobald die Fehlergrenze erreicht ist.  
+-   `StopProcessing` weist den Server nicht mehr verarbeitet werden, wenn die Fehlergrenze erreicht ist.  
   
--   `StopLogging` weist den Server an, die Fehlerprotokollierung bei Erreichen der Fehlergrenze zu beenden, die Verarbeitung jedoch weiterhin zuzulassen.  
+-   `StopLogging` weist den Server zum Beenden der Protokollierung von Fehlern, wenn die Fehlergrenze erreicht ist, aber damit die Verarbeitung fortgesetzt.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Gibt die Aktion an, die bei Auftreten eines `KeyNotFound`-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
--   `IgnoreError` weist den Server an, die Verarbeitung fortzusetzen, ohne den Fehler zu protokollieren oder auf den Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz wird abhängig von der `KeyErrorAction`-Eigenschaft entweder verworfen oder dem unbekannten Element hinzugefügt.  
+-   `IgnoreError` weist den Server aus, um den Vorgang fortzusetzen Verarbeitung ohne Protokollieren des Fehlers oder der Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz wird abhängig von der `KeyErrorAction`-Eigenschaft entweder verworfen oder dem unbekannten Element hinzugefügt.  
   
--   `ReportAndContinue` weist den Server an, den Fehler zu protokollieren, auf den Grenzwert für Schlüsselfehler anzurechnen und die Verarbeitung fortzusetzen. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
+-   `ReportAndContinue` weist den Server an den Fehler zu protokollieren der Grenzwert für Schlüsselfehler angerechnet, und setzt die Verarbeitung fort. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
--   `ReportAndStop` weist den Server an, den Fehler zu protokollieren und die Verarbeitung unabhängig vom Grenzwert für Schlüsselfehler sofort zu beenden. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
+-   `ReportAndStop` weist den Server der Fehler wird protokolliert und Verarbeitung unabhängig vom Grenzwert für Schlüsselfehler sofort zu beenden. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein doppelter Schlüssel gefunden wird. Folgende Werte sind möglich: `IgnoreError` – die Verarbeitung wird fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` – der Fehler wird protokolliert und die Verarbeitung fortgesetzt; `ReportAndStop` – der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
@@ -199,7 +199,7 @@ ms.locfileid: "53374592"
  Der Standardwert für diese Eigenschaft ist FALSE. Dies bedeutet, dass der Server nicht automatisch die Protokolltabelle erstellt und keine Abfrageereignisse protokolliert.  
   
 > [!NOTE]  
->  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890)(Konfigurieren des Abfrageprotokolls von Analysis Services).  
+>  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Vorgänge in Analysis Services protokolliert](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Ablaufverfolgung  
  **Trace\TraceBackgroundDistributionPeriod**  

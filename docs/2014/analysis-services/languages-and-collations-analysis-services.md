@@ -19,19 +19,19 @@ ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 878b3a349f033464da07104d55e472b44324e941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241828"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. Die Eigenschaften `Language` und `Collation` werden bei der Installation auf Instanzebene festgelegt, können aber nachträglich auf anderen Ebenen der Objekthierarchie geändert werden.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. `Language` und `Collation` Eigenschaften werden zunächst auf Instanzebene festgelegt, während der Installation, jedoch nachträglich auf unterschiedlichen Ebenen der Objekthierarchie geändert werden können.  
   
  Klicken Sie in einem mehrdimensionalen Modell (nur) können Sie diese Eigenschaften für eine Datenbank oder den Cube festlegen - Sie können sie auch festlegen, Übersetzungen, die Sie für Objekte innerhalb eines Cubes erstellen.  
   
- Beim Festlegen von `Language` und `Collation` geben Sie entweder Einstellungen an, die während der Verarbeitung und Abfrageausführung vom Datenmodell verwendet werden, oder (nur für mehrdimensionale Modelle) Sie statten ein Modell mit mehreren Übersetzungen aus, sodass fremdsprachige Personen in ihrer Muttersprache mit dem Modell arbeiten können. Das explizite Festlegen von `Language`- und `Collation`-Eigenschaften für ein Objekt (Datenbank, Modell oder Cube) ist für Situationen sinnvoll, in denen die Entwicklungsumgebung und der Produktionsserver für verschiedene Gebietsschemas konfiguriert sind und Sie sicherstellen möchten, dass die Sprache und Sortierung mit der beabsichtigten Zielumgebung übereinstimmen.  
+ Beim Festlegen von `Language` und `Collation` geben Sie entweder Einstellungen an, die bei der Verarbeitung und Ausführung von Abfragen durch das Datenmodell verwendet werden, oder Sie versehen ein Modell mit mehreren Übersetzungen, sodass fremdsprachige Benutzer mit dem Modell in ihrer Muttersprache arbeiten können (nur für mehrdimensionale Modelle). Das explizite Festlegen von `Language`- und `Collation`-Eigenschaften für ein Objekt (Datenbank, Modell oder Cube) ist für Situationen sinnvoll, in denen die Entwicklungsumgebung und der Produktionsserver für verschiedene Gebietsschemas konfiguriert sind und Sie sicherstellen möchten, dass die Sprache und Sortierung mit der beabsichtigten Zielumgebung übereinstimmen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "53372462"
 ##  <a name="bkmk_object"></a> Objekte, die Sprach- und Sortierungseigenschaften unterstützen  
  `Language` und `Collation` Eigenschaften werden häufig zusammen – verfügbar gemacht, in dem Sie festlegen können `Language`, Sie können auch festlegen `Collation`.  
   
- Sie können `Language` und `Collation` für die folgenden Objekte festlegen:  
+ Sie können `Language` und `Collation` für diese Objekte festlegen:  
   
 -   **Instanz**. Alle Projekte, die für die Instanz bereitgestellt werden, übernehmen die Sprache und die Sortierung der Instanz, vorausgesetzt, Sprache und Sortierung sind nicht definiert. Standardmäßig lässt ein mehrdimensionales Modell die Sprache und Sortierung leer. Wenn das Projekt bereitgestellt wird, erhalten die resultierende Datenbank und die Cubes die Sprache und die Sortierung der Instanz.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53372462"
   
 -   **Datenbank**: Um die Vererbung zu unterbrechen, können Sie Sprache und Sortierung explizit auf der Projektebene festlegen, die von allen Cubes verwendet werden, die in der Datenbank enthalten sind. Sofern nicht anders angegeben, erhalten alle Cubes in der Datenbank die Sprache und die Sortierung, die Sie auf dieser Ebene angeben. Wenn Sie routinemäßig für verschiedene Gebietsschemas codieren und bereitstellen (z. B. die Lösung auf einem chinesischen Computer entwickeln, sie jedoch für einen Server bereitstellen, der im Besitz einer französischen Tochtergesellschaft ist), ist das Festlegen von Sprache und Sortierung auf Datenbankebene der erste und wichtigste Schritt um sicherzustellen, dass die Lösung in der Zielumgebung funktioniert. Der beste Ort zum Festlegen dieser Eigenschaften ist innerhalb des Projekts (über den Befehl **Datenbank bearbeiten** für das Projekt).  
   
--   **Datenbankdimension** Obwohl der Designer die Eigenschaften `Language` und `Collation` für eine Datenbankdimension verfügbar macht, ist das Festlegen von Eigenschaften für dieses Objekt nicht hilfreich. Datenbankdimensionen werden nicht als eigenständige Objekte verwendet, es ist also möglicherweise schwierig, wenn nicht sogar unmöglich, die von Ihnen definierten Eigenschaften zu nutzen. In einem erbt eine Dimension immer `Language` und `Collation` vom übergeordneten Cube. Alle Werte, die Sie ggf. für das eigenständige Datenbank-Dimensionsobjekt festgelegt haben, werden ignoriert.  
+-   **Datenbankdimension** Auch wenn der Designer die Eigenschaften `Language` und `Collation` für eine Datenbankdimension verfügbar macht, ist das Festlegen von Eigenschaften für dieses Objekt nicht hilfreich. Datenbankdimensionen werden nicht als eigenständige Objekte verwendet, es ist also möglicherweise schwierig, wenn nicht sogar unmöglich, die von Ihnen definierten Eigenschaften zu nutzen. Eine Dimension in einem Cube erbt die Eigenschaften `Language` und `Collation` immer vom übergeordneten Cube. Alle Werte, die Sie ggf. für das eigenständige Datenbank-Dimensionsobjekt festgelegt haben, werden ignoriert.  
   
 -   **Cube**: Als primäre Abfragestruktur können Sie die Sprache und Sortierung auf Cubeebene festlegen. Sie möchten beispielsweise mehrere Sprachversionen eines Cubes, wie z. B. eine englische und chinesische Version, innerhalb desselben Projekts erstellen, wobei jeder Cube eine eigene Sprache und Sortierung hat.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "53372462"
   
  Darüber hinaus können Sie festlegen `Language`, sich auf eine **Übersetzung** Objekt.  
   
- Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. `Language` ist Teil der Definition der Übersetzung. `Collation` hingegen wird auf der Cube- oder einer höheren Ebene festgelegt und von allen Übersetzungen gemeinsam verwendet. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird andernfalls `Language` alleine ohne begleitende `Collation` verwendet. Ausführlichere Informationen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. `Language` ist Teil der übersetzungsdefinition. `Collation`, auf der anderen Seite ist für den Cube oder höher festgelegt und von allen Übersetzungen gemeinsam verwendet werden. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird `Language` jedoch allein verwendet, ohne `Collation`. Ausführlichere Informationen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Sprachunterstützung in Analysis Services  
  Die `Language`-Eigenschaft legt das Gebietsschema eines Objekts fest, das während der Verarbeitung, Abfrage und mit `Captions` und `Translations` zur Unterstützung von mehrsprachigen Szenarios verwendet wird. Gebietsschemas basieren auf einem Sprachbezeichner, z. B. Englisch, und einem Gebiet, wie z. B. USA oder Australien, wodurch Datums- und Uhrzeitdarstellungen weiter verfeinert werden.  
   
  Auf Instanzebene wird die Eigenschaft während der Installation festgelegt und basiert auf der Sprache des Windows Server-Betriebssystems (eine von 37 Sprachen, vorausgesetzt, ein Sprachpaket ist installiert). Sie können die Sprache nicht beim Setup ändern.  
   
- Nach der Installation können Sie `Language` mithilfe der Servereigenschaftenseite in Management Studio oder in der Konfigurationsdatei „msmdsrv.ini“ überschreiben. Sie können unter vielen weiteren Sprachen wählen, darunter alle Sprachen, die vom Windows-Client unterstützt werden. Bei der Festlegung auf Instanzebene auf dem Server bestimmt `Language` das Gebietsschema aller Datenbanken, die später bereitgestellt werden. Wenn Sie beispielsweise `Language` auf Deutsch festlegen, haben alle Datenbanken, die für die Instanz bereitgestellt werden, die Spracheigenschaft 1031, die LCID für Deutsch.  
+ Nach der Installation können Sie `Language` mithilfe der Servereigenschaftenseite in Management Studio oder in der Konfigurationsdatei „msmdsrv.ini“ überschreiben. Sie können unter vielen weiteren Sprachen wählen, darunter alle Sprachen, die vom Windows-Client unterstützt werden. Bei Festlegung auf Instanzebene auf dem Server bestimmt `Language` das Gebietsschema aller Datenbanken, die später bereitgestellt werden. Wenn Sie beispielsweise `Language` auf Deutsch festlegen, haben alle Datenbanken, die für die Instanz bereitgestellt werden, die Spracheigenschaft 1031, die LCID für Deutsch.  
   
 ###  <a name="bkmk_lcid"></a> Wert der Spracheigenschaft ist ein Gebietsschemabezeichner (LCID, Locale Identifier)  
  Gültige Werte sind alle LCIDs, die in der Dropdownliste angezeigt werden. In Management Studio und SQL Server Data Tools werden LCIDs als Zeichenfolgenentsprechungen dargestellt. Unabhängig vom Tool werden überall da, wo die `Language`-Eigenschaft verfügbar gemacht wird, dieselben Sprachen angezeigt. Durch eine identische Liste der Sprachen wird sichergestellt, dass Sie Übersetzungen im gesamten Modell konsistent implementieren und testen können.  
@@ -94,13 +94,13 @@ ms.locfileid: "53372462"
   
 -   0x0416 oder 1046 für **Portugiesisch (Brasilien)**  
   
- Eine längere Liste finden Sie unter [Von Microsoft zugewiesene Gebietsschema-IDs](https://msdn.microsoft.com/goglobal/bb964664.aspx). Weitere Informationen finden Sie unter [Codierung und Codepages](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ Eine längere Liste finden Sie unter [Von Microsoft zugewiesene Gebietsschema-IDs](https://msdn.microsoft.com/goglobal/bb964664.aspx). Weitere Informationen finden Sie unter [Codepages](/windows/desktop/Intl/code-pages).  
   
 > [!NOTE]  
 >  Die `Language`-Eigenschaft bestimmt nicht die Sprache für die Rückgabe von Systemmeldungen oder die in der Benutzeroberfläche angezeigten Zeichenfolgen. Fehler, Warnungen und Meldungen sind in allen von Office und Office 365 unterstützten Sprachen lokalisiert und werden automatisch verwendet, wenn die Clientverbindung eines der unterstützten Gebietsschemas angibt.  
   
 ##  <a name="bkmk_collations"></a> Sortierungsunterstützung in Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows-Sortierungen und binäre Sortierungen. Ältere SQL Server-Sortierungen werden nicht verwendet. Innerhalb eines Cubes wird eine einzelne Sortierung verwendet, mit Ausnahme von Übersetzungen auf Attributebene. Weitere Informationen zum Definieren von Attributübersetzungen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows- und Binärsortierungen. Ältere SQL Server-Sortierungen werden nicht verwendet. Innerhalb eines Cubes wird eine einzelne Sortierung verwendet, mit Ausnahme von Übersetzungen auf Attributebene. Weitere Informationen zum Definieren von Attributübersetzungen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  Sortierungen steuern die Unterscheidung nach Groß-/Kleinschreibung aller Zeichenfolgen in einem „bikameralen“ Sprachskript, mit Ausnahme von Objektbezeichnern. Wenn Sie in einem Objektbezeichner Groß- und Kleinbuchstaben verwenden, beachten Sie, dass die Berücksichtigung der Groß- und Kleinschreibung von Objektbezeichnern nicht durch die Sortierung bestimmt wird, sondern durch [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Für Objektbezeichner, die im englischen Skript verfasst werden, wird die Groß-/Kleinschreibung unabhängig von der Sortierung nie unterschieden. Für Kyrillisch und andere „bikamerale“ Sprachen gilt das Gegenteil (immer Unterscheidung nach Groß-/Kleinschreibung). Einzelheiten dazu finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
@@ -166,7 +166,7 @@ ms.locfileid: "53372462"
 ##  <a name="bkmk_XMLA"></a> Ändern von Sprache und Sortierung innerhalb eines Datenmodells mithilfe von XMLA  
  Sprach- und Sortierungseinstellungen werden geerbt, nachdem das Objekt erstellt wurde. Nachfolgende Änderungen an diesen Eigenschaften müssen manuell erfolgen. Eine schnelle Möglichkeit zum Ändern der Sortierung mehrerer Objekte ist die Verwendung eines ALTER-Befehls in einem XMLA-Skript.  
   
- Standardmäßig wird die Sortierung ein Mal auf Datenbankebene festgelegt. Die Vererbung wird im weiteren Verlauf der Objekthierarchie impliziert. Wenn Sie `Collation` für Objekte innerhalb des Cubes explizit festlegen, was für einzelne Dimensionsattribute zulässig ist, wird die Einstellung in der XMLA-Definition angezeigt. Andernfalls existiert nur die Sortierungseigenschaft der obersten Ebene.  
+ Standardmäßig wird die Sortierung ein Mal auf Datenbankebene festgelegt. Die Vererbung wird im weiteren Verlauf der Objekthierarchie impliziert. Wenn Sie explizit die Eigenschaft `Collation` für Objekte innerhalb des Cubes festlegen, was für einzelne Dimensionsattribute zulässig ist, wird sie in die XMLA-Definition aufgenommen. Andernfalls existiert nur die Sortierungseigenschaft der obersten Ebene.  
   
  Vor der Verwendung von XMLA zum Ändern eine vorhandenen Datenbank müssen Sie sicherstellen, dass Sie keine Abweichungen zwischen der Datenbank und den Quelldateien einbringen, die zur Erstellung verwendet werden. Beispiel: Sie möchten XMLA verwenden, um schnell die Sprache oder die Sortierung für Tests von Machbarkeitsstudien zu ändern, nehmen dann aber Änderungen an der Quelldatei vor (siehe [Ändern von Sprache oder Sortierung für einen Cube](#bkmk_cube)) und stellen die Lösung mithilfe der bereits vorhandenen Betriebsverfahren erneut bereit.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "53372462"
  GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Die Datenbank-Engine unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalisierungsszenarien für Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

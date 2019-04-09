@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241030"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paket weitergegeben werden, konvertiert die Datenfluss-Engine alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  
@@ -53,9 +53,9 @@ ms.locfileid: "58378268"
   
  Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](equal-ssis-expression.md)  
+-   [== &#40;Gleich, SSIS-Ausdruck&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)  
+-   [!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378268"
   
 -   Argumente, die an mathematische Funktionen übergeben werden, müssen zu einem numerischen Datentyp ausgewertet werden. Je nach Funktion oder Operation kann ein bestimmter numerischer Datentyp erforderlich sein. Beispielsweise erfordert die HEX-Funktion eine ganze Zahl mit oder ohne Vorzeichen.  
   
--   Argumente, die an Zeichenfolgenfunktionen übergeben müssen zu einem Zeichendatentyp ausgewertet: DT_STR oder DT_WSTR. Beispiel: UPPER("flower"). Manche Zeichenfolgenfunktionen, wie z. B. SUBSTRING, erfordern zusätzliche ganzzahlige Argumente für die Startposition und die Länge der Zeichenfolge.  
+-   Argumente, die an Zeichenfolgenfunktionen übergeben werden, müssen zu einem Zeichendatentyp ausgewertet werden: DT_STR oder DT_WSTR. Beispiel: UPPER("flower"). Manche Zeichenfolgenfunktionen, wie z. B. SUBSTRING, erfordern zusätzliche ganzzahlige Argumente für die Startposition und die Länge der Zeichenfolge.  
   
 -   Argumente, die an Datums- und Zeitfunktionen übergeben werden, müssen zu einem gültigen Datum ausgewertet werden. Beispielsweise DAY(GETDATE()). Manche Funktionen, wie z. B. DATEADD, erfordern ein zusätzliches ganzzahliges Argument für die Anzahl von Tagen, die von der Funktion zu einem Datum addiert werden.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378268"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), auf pragmaticworks.com  
+-   Technischer Artikel, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3), auf pragmaticworks.com  
   
 -   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
