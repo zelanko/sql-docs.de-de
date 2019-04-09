@@ -24,12 +24,12 @@ ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07b0fb3630f0a46c43bd0d6551da4a7af651cb5e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 450a2d37d2a3ad7ef93f72366e9268ff84db70be
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037075"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872087"
 ---
 # <a name="monitor-disk-usage"></a>Überwachen der Datenträgerverwendung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,8 @@ ms.locfileid: "56037075"
   
 -   Isolieren der Datenträgeraktivitäten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Weitere Informationen finden Sie unter [Überwachen der Datenträgernutzung](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ Weitere Informationen finden Sie unter [Überwachen der Datenträgernutzung](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx). 
+ 
+ Weitere Informationen zur Behandlung von E/A-Problemen in SQL Server finden Sie unter [Langsame E/A – SQL-Server- und Datenträger-E/A-Leistung](https://techcommunity.microsoft.com/t5/SQL-Server-Support/Slow-I-O-SQL-Server-and-disk-I-O-performance/ba-p/333983).
   
   

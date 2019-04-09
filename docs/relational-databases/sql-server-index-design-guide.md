@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880543"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872330"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -225,7 +225,7 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
 |[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
 |[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
-|[sys.hash_indexes (Transact-SQL)](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ##  <a name="Clustered"></a> Richtlinien für den Entwurf gruppierter Indizes  
  Gruppierte Indizes sortieren und speichern die Datenzeilen in den Tabellen basierend auf ihren Schlüsselwerten. Pro Tabelle kann nur ein gruppierter Index vorhanden sein, da die Datenzeilen nur in einer Reihenfolge sortiert werden können. Mit wenigen Ausnahmen sollte für jede Tabelle ein gruppierter Index für die Spalte(n) definiert werden, auf die Folgendes zutrifft:  
@@ -277,7 +277,7 @@ Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, füg
     Eine Mitarbeiter-ID identifiziert einen Mitarbeiter z. B. eindeutig. Ein gruppierter Index oder eine [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung für die `EmployeeID`-Spalte verbessert die Leistung von Abfragen, durch die Mitarbeiterinformationen anhand der Mitarbeiter-ID gesucht werden. Alternativ kann ein gruppierter Index für `LastName`, `FirstName`und `MiddleName` erstellt werden, weil Mitarbeiterdatensätze häufig auf diese Weise gruppiert und abgefragt werden und die Kombination dieser Spalten jedoch trotzdem einen hohen Differenzierungsgrad bietet. 
 
     > [!TIP]
-    > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#clustered_index), um diese Einschränkung zu unterstützen.
+    > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#Clustered), um diese Einschränkung zu unterstützen.
     > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*-Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
     > Wenn Sie einen *uniqueidentifier*-Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
   
@@ -591,7 +591,7 @@ SELECT ComponentID, StartDate FROM Production.BillOfMaterials
 WHERE EndDate IS NOT NULL;   
 ```  
   
- Eine Spalte im gefilterten Indexausdruck sollte in der Definition des gefilterten Indexes eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
+ Eine Spalte im gefilterten Indexausdruck sollte in der gefilterten Indexdefinition eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -888,7 +888,7 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX (Transact-SQL)](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Neuorganisieren und Neuerstellen von Indizes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
@@ -896,9 +896,9 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [Erstellen eines Primärschlüssels](../relational-databases/tables/create-primary-keys.md)    
 [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Columnstore-Indizes: Übersicht](../relational-databases/indexes/columnstore-indexes-overview.md)  
-[Troubleshooting Hash Indexes for Memory-Optimized Tables (Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen)](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
-[Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
-[Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
+[Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[Dynamische Verwaltungssichten für speicheroptimierte Tabellen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
+[Indexbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indizes in berechneten Spalten](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indizes und ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
 [Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

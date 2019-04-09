@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685827"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872270"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Diese Option wird in FILESTREAM-Dateigruppencontainern nicht unterstützt.
 Wenn angegeben, versucht DBCC SHRINKFILE, die Datei auf *target_size* zu verkleinern. Verwendete Seiten im Bereich der freizugebenden Datei werden auf freien Speicherplatz in den beibehalten Bereichen der Datei verschoben. Beispielsweise verschiebt ein DBCC SHRINKFILE-Vorgang mit einer 8 *target_size* bei einer 10-MB-Datendatei alle verwendeten Seiten in den letzten 2 MB der Datei in alle nicht zugeordneten Seiten in den ersten 8 MB der Datei. DBCC SHRINKFILE verkleinert eine Datei nicht über die erforderliche Speichergröße hinaus. Werden beispielsweise 7 MB einer 10 MB großen Datendatei verwendet, verkleinert eine DBCC SHRINKFILE-Anweisung mit einem *target_size*-Wert von 6 die Datei lediglich auf 7 MB statt auf 6 MB.
   
 EMPTYFILE  
-Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. ENPTYFILE stellt sicher, dass keine neuen Daten zur Datei hinzugefügt werden, obwohl diese Datei nicht schreibgeschützt ist. Sie könne eine [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, um eine Datei zu entfernen. Wenn zum Ändern der Dateigröße die [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, wird das Flag „schreibgeschützt“ zurückgesetzt, und Daten können hinzugefügt werden.
+Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. EMPTYFILE stellt sicher, dass keine neuen Daten zur Datei hinzugefügt werden, obwohl diese Datei nicht schreibgeschützt ist. Sie könne eine [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, um eine Datei zu entfernen. Wenn zum Ändern der Dateigröße die [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, wird das Flag „schreibgeschützt“ zurückgesetzt, und Daten können hinzugefügt werden.
 
 Die Datei kann aus FILESTREAM-Dateigruppencontainern erst dann mit ALTER DATABASE entfernt werden, nachdem der FILESTREAM-Garbage Collector ausgeführt und alle nicht benötigten Dateigruppen-Containerdateien gelöscht wurden, die von EMPTYFILE in einen anderen Container kopiert wurden. Weitere Informationen finden Sie unter [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md).
   

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381031"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860741"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Informationen zum Konfigurieren einer verteilten Verfügbarkeitsgruppe finden Si
 
 Eine verteilte Verfügbarkeitsgruppe ist ein spezieller Typ einer Verfügbarkeitsgruppe, der zwei separate Verfügbarkeitsgruppen umfasst. Die Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, müssen sich nicht am selben Ort befinden. Sie können physisch, virtuell, lokal, in der öffentlichen Cloud oder an einem sonstigen Ort sein, der die Bereitstellung von Verfügbarkeitsgruppen unterstützt. Dazu zählen domänen- und sogar plattformübergreifende Orte, z.B. zwischen einer Verfügbarkeitsgruppe, die unter Linux gehostet wird, und einer anderen, die unter Windows gehostet wird. Solange zwei Verfügbarkeitsgruppen kommunizieren können, können Sie mit diesen eine verteilte Verfügbarkeitsgruppe konfigurieren.
 
-Die Ressourcen einer herkömmlichen Verfügbarkeitsgruppe werden in einem WSFC-Cluster konfiguriert. Eine verteilte Verfügbarkeitsgruppe kann keine Konfigurationen in einem WSFC-Cluster vornehmen. Sie wird vollständig in SQL Server verwaltet. Informationen zum Anzeigen der Informationen für eine verteilte Verfügungsgruppe finden Sie unter [Viewing distributed availability group information (Anzeigen der Informationen für eine verteilte Verfügbarkeitsgruppe)](#viewing-distributed-availability-group-information). 
+Die Ressourcen einer herkömmlichen Verfügbarkeitsgruppe werden in einem WSFC-Cluster konfiguriert. Eine verteilte Verfügbarkeitsgruppe kann keine Konfigurationen in einem WSFC-Cluster vornehmen. Sie wird vollständig in SQL Server verwaltet. Informationen zum Anzeigen der Informationen für eine verteilte Verfügungsgruppe finden Sie unter [Viewing distributed availability group information (Anzeigen der Informationen für eine verteilte Verfügbarkeitsgruppe)](#monitor-distributed-availability-group-health). 
 
 Bei einer verteilten Verfügbarkeitsgruppe ist erforderlich, dass die zugrunde liegenden Verfügbarkeitsgruppen über einen Listener verfügen. Anstatt den zugrundeliegenden Servernamen für eine eigenständige Instanz (oder bei einer SQL Server-Failoverclusterinstanz (FCI) den Wert, der der Netzwerknamenressource zugeordnet ist) bereitzustellen, wie es bei einer herkömmlichen Verfügbarkeitsgruppe üblich ist, geben Sie beim Erstellen den für die verteilte Verfügbarkeitsgruppe konfigurierten Listener mithilfe des Parameters „ENDPOINT_URL“ an. Obwohl jede zugrunde liegende Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe über einen Listener verfügt, besitzt eine verteilte Verfügbarkeitsgruppe nicht über einen Listener.
 
@@ -76,7 +76,7 @@ Da zwei separate Verfügbarkeitsgruppen vorliegen, weicht der Installationsproze
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Windows Server-Versionen und verteilte Verfügbarkeitsgruppen
 
-Eine verteilte Verfügbarkeitsgruppe umfasst mehrere Verfügbarkeitsgruppen, von denen jede ihren eigenen zugrunde liegenden WSFC-Cluster besitzt. Eine verteilte Verfügbarkeitsgruppe ist ein nur in SQL Server verfügbares Konstrukt.  Das bedeutet, dass die WSFC-Cluster, auf denen sich die einzelnen Verfügbarkeitsgruppen befinden, verschiedene Hauptversionen von Windows Server verwenden können. Die Hauptversionen von SQL müssen, wie im vorherigen Abschnitt erläutert wurde, identisch sein. Ähnlich wie bei [the initial figure (der ersten Abbildung)](#fig1) zeigt die folgende Abbildung AG 1 und AG 2 als Teil einer verteilten Verfügbarkeitsgruppe, aber jeder der WSFC-Cluster verwendet eine unterschiedliche Version von Windows Server.
+Eine verteilte Verfügbarkeitsgruppe umfasst mehrere Verfügbarkeitsgruppen, von denen jede ihren eigenen zugrunde liegenden WSFC-Cluster besitzt. Eine verteilte Verfügbarkeitsgruppe ist ein nur in SQL Server verfügbares Konstrukt.  Das bedeutet, dass die WSFC-Cluster, auf denen sich die einzelnen Verfügbarkeitsgruppen befinden, verschiedene Hauptversionen von Windows Server verwenden können. Die Hauptversionen von SQL müssen, wie im vorherigen Abschnitt erläutert wurde, identisch sein. Ähnlich wie bei der ersten Abbildung zeigt die folgende Abbildung AG 1 und AG 2 als Teil einer verteilten Verfügbarkeitsgruppe, aber jeder der WSFC-Cluster verwendet eine unterschiedliche Version von Windows Server.
 
 
 ![Verteilte Verfügbarkeitsgruppen mit WSFC-Clustern, die unterschiedliche Versionen von Windows Server verwenden](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -96,9 +96,9 @@ Bei einer verteilten Verfügbarkeitsgruppe müssen die primären Replikate in je
 
 Im Folgenden finden Sie die drei Hauptverwendungsszenarios für eine verteilte Verfügbarkeitsgruppe: 
 
-* [Disaster recovery and easier multi-site configurations (Notfallwiederherstellung und vereinfachte Konfigurationen für mehrere Standorte)](#disaster-recovery-and-multi-site-scenarios)
-* [Migration to new hardware or configurations, which might include using new hardware or changing the underlying operating systems (Migration zu neuer Hardware oder neuen Konfigurationen, die möglicherweise das Verwenden neuer Hardware oder das Ändern des zugrunde liegenden Betriebssystems erfordert)](#migration-using-a-distributed-availability-group)
-* [Increasing the number of readable replicas beyond eight in a single availability group by spanning multiple availability groups (Erhöhen der Anzahl der lesbaren Replikate auf mehr als acht in einer einzigen Verfügbarkeitsgruppe, indem mehrere Verfügbarkeitsgruppen umfasst werden)](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [Notfallwiederherstellung und vereinfachte Konfigurationen für mehrere Standorte](#disaster-recovery-and-multi-site-scenarios)
+* [Migration zu neuer Hardware oder neuen Konfigurationen, die möglicherweise das Verwenden neuer Hardware oder das Ändern des zugrunde liegenden Betriebssystems erfordert](#migrate-by-using-a-distributed-availability-group)
+* [Erhöhen der Anzahl der lesbaren Replikate auf mehr als acht in einer einzigen Verfügbarkeitsgruppe, indem mehrere Verfügbarkeitsgruppen umfasst werden](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Szenarios für Notfallwiederherstellung und mehrere Standorte
 
@@ -212,7 +212,7 @@ Wenn Sie jedoch mit der rechten Maustaste auf die verteilte Verfügbarkeitsgrupp
 
 ![Keine Optionen für eine Aktion verfügbar](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-Wie in der folgenden Abbildung dargestellt zeigen sekundäre Replikate in SQL Server Management Studio nichts an, das sich auf die verteilte Verfügbarkeitsgruppe bezieht. Die Namen dieser Verfügbarkeitsgruppen können den Rollen zugeordnet werden, die im vorherigen Bild ([CLUSTER_A – WSFC-Cluster)](#fig7) angezeigt wurden.
+Wie in der folgenden Abbildung dargestellt zeigen sekundäre Replikate in SQL Server Management Studio nichts an, das sich auf die verteilte Verfügbarkeitsgruppe bezieht. Die Namen dieser Verfügbarkeitsgruppen können den Rollen zugeordnet werden, die im vorherigen Bild (CLUSTER_A – WSFC-Cluster) angezeigt wurden.
 
 ![Ansicht eines sekundären Replikats in SQL Server Management Studio](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -412,5 +412,3 @@ Die folgende Abfrage zeigt Informationen zum aktuellen Seedingstatus an. Dies is
 * [Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Erstellen einer Verfügbarkeitsgruppe mit Transact-SQL](create-an-availability-group-transact-sql.md)
-
- 

@@ -10,18 +10,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492852"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860061"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Release Notes zu SQL Server 2019 (Vorschauversion)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) Releases. Verwandte Informationen finden Sie unter:
-- [Neues in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [Neuerungen in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 > [!NOTE]
 > Vorschauversionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden zur Verfügung gestellt, damit Sie die Funktionen des kommenden Release kennenlernen können. Sie werde nicht für die Produktion unterstützt oder lizenziert. Die folgenden Szenarien werden ausdrücklich nicht unterstützt:
@@ -29,7 +29,7 @@ Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLU
 > - Parallelinstallationen mit anderen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - Upgrades vorhandener SQL Server-Instanzen mit einer beliebigen Version
 
-**Versuchen Sie Folgendes[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]:**
+**Testen Sie [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
 - [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] für die Installation unter Windows](https://go.microsoft.com/fwlink/?LinkID=862101) herunter.
 - Installieren Sie die Version unter Linux für [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) und [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Führen Sie SQL Server 2019 unter Docker aus](../linux/quickstart-install-connect-docker.md).
@@ -37,15 +37,15 @@ Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLU
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 ist das neueste öffentliche Release von [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 steht nur als Evaluation Edition zur Verfügung. Es sind keine anderen Editionen verfügbar. Die Unterstützung für CTP-Releases wird in den Installationsmedien in `license_Eval.rtf` beschrieben.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 steht nur als Evaluation Edition zur Verfügung. Es sind keine anderen Editionen verfügbar. Die Unterstützung für CTP-Releases wird in den Installationsmedien in `license_Eval.rtf` beschrieben.
 
 Eingeschränkte Unterstützung finden Sie möglicherweise an folgenden Stellen:
 
 - Foren
-  - [SQL Server Feedback](https://aka.ms/sqlfeedback)
+  - [Feedback zu SQL Server](https://aka.ms/sqlfeedback)
   - [Erste Schritte mit SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server Documentation (SQL Server-Dokumentation)](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+  - [SQL Server-Dokumentation](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - Oder tweeten Sie [@SQLServer](https://twitter.com/SQLServer) mit [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 

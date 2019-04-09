@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: 'Lernprogramm: Zusätzliche Tipps und Tricks zur Verwendung von SQL Server Management Studio'
 description: 'Ein Tutorial, das einige zusätzliche Tipps und Tricks für die Verwendung von SSMS enthält. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663106"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872220"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Lernprogramm: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -216,7 +216,7 @@ Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurat
 Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Vor dem Herstellen einer Verbindung mit SQL Server
-1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#finding-your-error-log-if-you-cannot-connect-to-sql) aus. Ihr Pfad weicht möglicherweise vom Pfad im unten dargestellten Bild ab.
+1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#find-the-error-log-location-if-you-cant-connect-to-sql-server) aus. Ihr Pfad weicht möglicherweise vom Pfad im unten dargestellten Bild ab.
 2. Öffnen Sie die Datei „errorlog.log“ in Notepad.  
 3. Suchen Sie nach dem Text *Server name is* (Der Servername lautet).
     
@@ -253,5 +253,3 @@ Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sin
 4. Zeigen Sie die Ergebnisse der Abfrage an, um den Namen der SQL Server-Instanz zu ermitteln, mit der Sie verbunden sind: 
     
     ![Abfragen des Namens vom SQL-Server](media/ssms-tricks/queryservername.png)
-
-

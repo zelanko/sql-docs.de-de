@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557837"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872020"
 ---
 # <a name="rename-a-database"></a>Umbenennen einer Datenbank
 
@@ -41,7 +41,7 @@ ms.locfileid: "51557837"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Nachverfolgung:**  [Nach dem Umbenennen einer Datenbank](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Um eine Datenbank in Azure SQL Data Warehouse oder Parallel Data Warehouse umzubenennen, verwenden Sie die Anweisung [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
@@ -111,7 +111,7 @@ Verwenden Sie die folgenden Schritte zum Umbenennen einer Instanz von Azure SQL-
 
 Sichern Sie die `master`-Datenbank, nachdem Sie eine Datenbank in SQL Server umbenennen. Dies ist in Azure SQL-Datenbank nicht erforderlich, da Sicherungen automatisch erstellt werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)  

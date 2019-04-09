@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203350"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872320"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203350"
   
  Die folgenden Themen werden erörtert:  
   
--   [Datensynchronisierungsprozess](#BKMK_DATA_SYNC_PROCESS)  
+-   [Datensynchronisierungsprozess](#data-synchronization-process)  
   
--   [Flusssteuerungsgates](#BKMK_FLOW_CONTROL_GATES)  
+-   [Flusssteuerungsgates](#flow-control-gates)  
   
--   [Einschätzen der Failoverzeit (RTO)](#BKMK_RTO)  
+-   [Einschätzen der Failoverzeit (RTO)](#estimating-failover-time-rto)  
   
--   [Einschätzen des möglichen Datenverlusts (RPO)](#BKMK_RPO)  
+-   [Einschätzen des möglichen Datenverlusts (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Überwachen von RTO und RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Überwachen von RTO und RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Leistungsbezogene Problembehandlungsszenarien](#BKMK_SCENARIOS)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53203350"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**Anzahl der Gates**|**Anzahl der Nachrichten**|**Nützliche Metriken**|  
+|**Ebene**|**Anzahl der Gates**|**Anzahl der Nachrichten**|**Nützliche Metriken**|  
 |Transport|1 pro Verfügbarkeitsreplikat|8192|Erweiterte Ereignisse **database_transport_flow_control_action**|  
 |Datenbank|1 pro Verfügbarkeitsdatenbank|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Erweitertes Ereignis **hadron_database_flow_control_action**|  
   
@@ -331,7 +331,7 @@ Es ist möglich, die DMVs [sys.dm_hadr_database_replica_states](../../../relatio
 ##  <a name="monitoring-for-rto-and-rpo"></a>Überwachen von RTO und RPO  
  In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
- Elemente der Failoverzeit und Berechnungen des möglichen Datenverlusts unter [Einschätzen der Failoverzeit (RTO)](#BKMK_RTO) und [Einschätzen des möglichen Datenverlusts (RPO)](#BKMK_RPO) werden praktischerweise als Leistungsmetriken in der Richtlinienverwaltungsfacets **Datenbankreplikatszustand** bereitgestellt (siehe [Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Sie können diese beiden Metriken nach einem Zeitplan überwachen und werden benachrichtigt, wenn die Metriken Ihre RTO bzw. RPO überschreiten.  
+ Elemente der Failoverzeit und Berechnungen des möglichen Datenverlusts unter [Einschätzen der Failoverzeit (RTO)](#estimating-failover-time-rto) und [Einschätzen des möglichen Datenverlusts (RPO)](#estimating-potential-data-loss-rpo) werden praktischerweise als Leistungsmetriken in der Richtlinienverwaltungsfacets **Datenbankreplikatszustand** bereitgestellt (siehe [Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Sie können diese beiden Metriken nach einem Zeitplan überwachen und werden benachrichtigt, wenn die Metriken Ihre RTO bzw. RPO überschreiten.  
   
  Die angezeigten Skripts erstellen zwei Systemrichtlinien mit den folgenden Merkmalen, die basierend auf ihren jeweiligen Zeitplänen ausgeführt werden:  
   
@@ -361,7 +361,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
-    -   **Feld**: `Add(@EstimatedRecoveryTime, 60)`  
+    -   **Feld:** `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **Operator**: **<=**  
   
@@ -375,7 +375,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
-    -   **Feld**: `@EstimatedDataLoss`  
+    -   **Feld:** `@EstimatedDataLoss`  
   
     -   **Operator**: **<=**  
   
@@ -389,7 +389,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Verfügbarkeitsgruppe**  
   
-    -   **Feld**: `@LocalReplicaRole`  
+    -   **Feld:** `@LocalReplicaRole`  
   
     -   **Operator**: **=**  
   
@@ -474,5 +474,3 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
 |hadr_dump_primary_progress|`alwayson`|Debuggen|Primär|  
 |hadr_dump_log_progress|`alwayson`|Debuggen|Primär|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
-  
-  

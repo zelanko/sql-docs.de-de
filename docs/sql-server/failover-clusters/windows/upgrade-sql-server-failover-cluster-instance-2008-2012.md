@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017001"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872250"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
@@ -47,8 +47,8 @@ Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprüngl
 |                                   | Alle Serverobjekte und VNNs erforderlich | Alle Serverobjekte und VNNs erforderlich | Keine Serverobjekte und VNNs erforderlich\* | Keine Serverobjekte und VNNs erforderlich\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_Verfügbarkeitsgruppen? (J/N)_**                  | **_J_**                              | **_N_**                                                            | **_J_**    | **_N_**    |
-| **Der Cluster verwendet nur SQL FCI**         | [Szenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Szenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Szenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Szenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **Der Cluster verwendet eigenständige Instanzen** | [Szenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Szenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **Der Cluster verwendet nur SQL FCI**         | [Szenario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Szenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Szenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Szenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **Der Cluster verwendet eigenständige Instanzen** | [Szenario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Szenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Szenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Szenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* Dies schließt nicht den Listenernamen der Verfügbarkeitsgruppe ein.
 
@@ -247,7 +247,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
     Aus SQL-Sicht migriert der Datenbankspiegelungsendpunkt mit den Systemtabellen zur neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Stellen Sie vor der Migration sicher, dass die entsprechenden Regeln auf die Firewalls angewendet wurden und dass kein anderer Prozess auf dem gleichen Port lauscht.
 
--   **Availability Groups (Verfügbarkeitsgruppen)**
+-   **Verfügbarkeitsgruppen**
 
     Verfügbarkeitsgruppen und die dazugehörigen Listener können nicht zwischen Instanzen migrieren. Die Windows Server-Failoverclusterressourcen, die von der Verfügbarkeitsgruppe erstellt wurden, können nicht ohne Weiteres in der Zielumgebung neu erstellt werden. Statt Verfügbarkeitsgruppen zu migrieren, sollten diese gelöscht und dann auf dem Zielcluster neu erstellt werden.
 
@@ -321,6 +321,6 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 - [Abschließen des Datenbank-Engine-Upgrades](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Nutzen Sie die Vorteile der neuen Features von SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Upgraden einer SQL Server-Failoverclusterinstanz](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Add Features to an Instance of SQL Server 2016 (Setup) (Hinzufügen von Funktionen zu einer Instanz von SQL Server 2016 (Setup))](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421217"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042170"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "55421217"
 -   Benutzer auf Basis einer Windows-Gruppe ohne Anmeldenamen. `CREATE USER [Contoso\Sales];`  
 -   Benutzer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basierend auf einem Azure Active Directory-Benutzer. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Benutzer einer eigenständigen Datenbank mit Kennwort. (Nicht in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verfügbar.) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Benutzer einer eigenständigen Datenbank mit Kennwort. (Nicht mit [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verfügbar.) `CREATE USER Mary WITH PASSWORD = '********';`   
   
-**Benutzer auf Basis von Windows-Prinzipalen, die eine Verbindung über Windows-Gruppenanmeldenamen herstellen**  
+**Benutzer auf Basis von Windows-Prinzipalen, die über Windows-Gruppenanmeldenamen eine Verbindung herstellen**  
   
 -   Benutzer auf Basis eines Windows-Benutzers ohne Anmeldenamen, die über die Mitgliedschaft in einer Windows-Gruppe eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] herstellen können. `CREATE USER [Contoso\Fritz];`  
   
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Gibt den Azure Active Directory-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *Azure_Active_Directory_principal* kann ein Azure Active Directory-Benutzer, eine Azure Active Directory-Gruppe oder eine Azure Active Directory-Anwendung sein. (Azure Active Directory-Benutzer können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht über Windows-Authentifizierungsanmeldungen verfügen. Nur Datenbankbenutzer können dies tun.) Die Verbindungszeichenfolge muss die eigenständige Datenbank als den Anfangskatalog angeben.
 
- Verwenden Sie für Benutzer den vollständigen Alias ihres Domänenprinzipals.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Für Azure AD-Prinzipale erfordert die CREATE USER-Syntax:
 
- Verwenden Sie für Sicherheitsgruppen den *Anzeigenamen* der Sicherheitsgruppe. Für die Sicherheitsgruppe *Nurses* verwenden Sie also Folgendes:  
+- „UserPrincipalName“ des Azure AD-Objekts für Azure AD-Benutzer.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- „DisplayName“ des Azure AD-Objekts für Azure AD-Gruppen und Azure AD-Anwendungen. Für die fiktive Sicherheitsgruppe *Nurses* verwenden Sie also Folgendes:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -336,7 +337,7 @@ Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss
   
  In einer eigenständigen Datenbank hilft das Erstellen von Benutzern, eine Trennung zwischen der Datenbank und der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] herzustellen, damit die Datenbank leichter in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden kann. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Informationen zum Ändern eines Datenbankbenutzers von einem Benutzer mit Anmeldenamen auf Basis einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung in den Benutzer einer eigenständigen Datenbank mit Kennwort finden Sie unter [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master**-Datenbank verfügen. Administratoren von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master**-Datenbank verfügen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Administratoren sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Bei Verwendung der in Datenbanken enthaltenen Benutzern auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] konfigurieren Sie den Zugriff mithilfe einer Firewallregel auf Datenbankebene, anstatt einer Firewallregel auf Serverebene. Weitere Informationen finden Sie unter [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -468,7 +469,7 @@ WITH
 
  Verwenden Sie die folgende Syntax zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen.
 
- Melden Sie sich mit der Azure AD-Anmeldung, der die `sysadmin`-Rolle zugewiesen ist, bei der verwalteten Instanz an. Im Folgenden wird der Azure AD-Benutzer bob@contoso.com mit den Anmeldeinformationen bob@contoso.com erstellt. Diese Anmeldeinformationen wurde im [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account)-Beispiel erstellt.
+ Melden Sie sich mit der Azure AD-Anmeldung, der die `sysadmin`-Rolle zugewiesen ist, bei der verwalteten Instanz an. Im Folgenden wird der Azure AD-Benutzer bob@contoso.com mit den Anmeldeinformationen bob@contoso.com erstellt. Diese Anmeldeinformationen wurde im [CREATE LOGIN](create-login-transact-sql.md#examples)-Beispiel erstellt.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -515,7 +516,3 @@ Möglicherweise möchten Sie der Rolle [GRANT-Objektberechtigungen](../../t-sql/
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-
