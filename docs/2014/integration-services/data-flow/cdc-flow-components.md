@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241728"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
   Die Change Data Capture-Komponenten von Attunity für Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] unterstützen SSIS-Entwickler bei der Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
@@ -204,7 +204,7 @@ ms.locfileid: "58380718"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag zu [CDC in SSIS für SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543) auf mattmasson.com.  
+-   Blogeintrag zu [CDC in SSIS für SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)auf mattmasson.com.  
   
 -   Blogeintrag zum Einrichten des CDC-Diensts [CDC für Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)auf blogs.msdn.com.  
   

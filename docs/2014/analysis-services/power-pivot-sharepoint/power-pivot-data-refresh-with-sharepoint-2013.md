@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241938"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot-Datenaktualisierung mit SharePoint 2013
   Beim Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodellen in SharePoint 2013 wird standardmäßig Excel Services als Hauptkomponente zum Laden und Aktualisieren von Datenmodellen auf einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwendet, die im SharePoint-Modus ausgeführt wird. Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server wird außerhalb der SharePoint-Farm ausgeführt.  
@@ -27,11 +27,11 @@ ms.locfileid: "53352715"
   
  **In diesem Thema:**  
   
--   [Interactive Data Refresh](#bkmk_interactive_refresh)  
+-   [interaktive Datenaktualisierung](#bkmk_interactive_refresh)  
   
 -   [Windows-Authentifizierung mit Arbeitsmappen-Datenverbindungen und interaktiver Datenaktualisierung](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
+-   [planmäßige Datenaktualisierung](#bkmk_scheduled_refresh)  
   
 -   [Architektur der geplante Datenaktualisierung in SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "53352715"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- Weitere Informationen finden Sie unter [einsetzen als Teil des Betriebssystems](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (https://technet.microsoft.com/library/cc784323(WS.10).aspx).  
+ Weitere Informationen finden Sie unter [einsetzen als Teil des Betriebssystems](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Wichtige Punkte zur geplanten Datenaktualisierung:**  
@@ -233,10 +233,10 @@ ms.locfileid: "53352715"
 ##  <a name="bkmk_moreinformation"></a> Weitere Informationen  
  [Problembehandlung von PowerPivot-Daten](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services in SharePoint 2013](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)).  
+ [Excel Services in SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Arbeitsmappen und geplanter Datenaktualisierung &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot für SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

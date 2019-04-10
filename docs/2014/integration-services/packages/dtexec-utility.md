@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241892"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Die `dtexec` eingabeaufforderungs-Hilfsprogramm dient zum Konfigurieren und ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete. Das Hilfsprogramm `dtexec` ermöglicht den Zugriff auf alle Funktionen der Paketkonfiguration und -ausführung, z. B. auf Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Die `dtexec` -Dienstprogramm können Sie das Laden von Paketen aus diesen Quellen: die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server, einer ispac-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket Store und dem Dateisystem.  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die Option **xp_cmdshell** für neue Installationen standardmäßig deaktiviert. Die Option kann durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Option **xp_cmdshell** für neue Installationen standardmäßig deaktiviert. Die Option kann durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntax  
   
@@ -150,7 +150,7 @@ dtexec /option [value] [/option [value]]...
   
 ##  <a name="parameter"></a> Parameter  
   
--   **/?** [*option_name*]: Optional. Zeigt die Befehlszeilenoptionen oder die Hilfe zu der in *Optionsname* angegebenen Option an und beendet dann das Hilfsprogramm.  
+-   **/?** [*option_name*]: Dies ist optional. Zeigt die Befehlszeilenoptionen oder die Hilfe zu der in *Optionsname* angegebenen Option an und beendet dann das Hilfsprogramm.  
   
      Bei Angabe einer *Optionsname* Argument `dtexec` startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation und zeigt Sie an das Thema für Dtexec-Hilfsprogramm.  
   
@@ -158,10 +158,10 @@ dtexec /option [value] [/option [value]]...
                   Dies ist optional. Gibt weitere Informationen für eine Paketausführung an. Wenn Sie mit dem SQL Server-Agent ein Paket ausführen, legt der Agent dieses Argument fest, um anzuzeigen, dass die Paketausführung vom SQL Server-Agent aufgerufen wird. Dieser Parameter wird ignoriert, wenn das Hilfsprogramm `dtexec` in der Befehlszeile ausgeführt wird.  
   
 -   **/CheckF[ile]** _filespec_:   
-                  Dies ist optional. Legt die `CheckpointFileName` -Eigenschaft des Pakets auf den Pfad und Dateinamen bzw. in *Dateiangabe*. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die `CheckpointFileName`-Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
+                  Optional. Legt die `CheckpointFileName` -Eigenschaft des Pakets auf den Pfad und Dateinamen bzw. in *Dateiangabe*. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die `CheckpointFileName`-Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
   
 -   **/ CheckP [Ointing]** _{On\off}_:   
-                  Optional. Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet die Runtime-Engine die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
+                  Dies ist optional. Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet die Runtime-Engine die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
   
      Der Standardwert ist "on", wenn die Option ohne Angabe eines Wertes deklariert wird. Die Paketausführung erzeugt einen Fehler, wenn der Wert auf "on" festgelegt wurde und die Prüfpunktdatei nicht gefunden werden kann. Wenn diese Option nicht angegeben wird, wird der im Paket festgelegte Wert beibehalten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](restart-packages-by-using-checkpoints.md).  
   
@@ -175,7 +175,7 @@ dtexec /option [value] [/option [value]]...
      Sie können die Option **/ConfigFile** verwenden, um zur Laufzeit zusätzliche Konfigurationen zu laden, die Sie zur Entwurfszeit nicht angegeben haben. Sie können die Option **/ConfigFile** jedoch nicht verwenden, um konfigurierte Werte zu ersetzen, die Sie auch zur Entwurfszeit angegeben haben. Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](../package-configurations.md).  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_:   
-                  Optional. Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
+                  Dies ist optional. Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
   
      Wenn diese Option verwendet wird, müssen beide Parameter angegeben werden: Der Name oder die GUID des Verbindungs-Managers muss mit dem *ID_oder_Name*-Argument bereitgestellt werden, und mit dem *Verbindungszeichenfolge*-Argument muss eine gültige Verbindungszeichenfolge angegeben werden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md).  
   
@@ -229,7 +229,7 @@ dtexec /option [value] [/option [value]]...
   
      Die `/DTS`-Option kann nicht zusammen mit der `/File`- oder der `/SQL`-Option verwendet werden. Werden mehrere Optionen angegeben, erzeugt `dtexec` einen Fehler.  
   
--   **/De[crypt]**  _password_: Optional. Legt das Entschlüsselungskennwort fest, das beim Laden eines Pakets mit Kennwortverschlüsselung verwendet wird.  
+-   **/De[crypt]**  _password_: Dies ist optional. Legt das Entschlüsselungskennwort fest, das beim Laden eines Pakets mit Kennwortverschlüsselung verwendet wird.  
   
 -   **/Dump** _error code_:  
                   Optionale erstellt die debugdumpdateien mdmp und TMP, wenn ein oder mehrere angegebene Ereignisse auftreten, während der Ausführung des Pakets. Das Argument *Fehlercode* gibt den Typ des Ereigniscodes (Fehler, Warnung oder Information) an, der auslöst, dass das System die Debugdumpdateien erstellt. Trennen Sie die *Fehlercode* -Argumente durch ein Semikolon (;), um mehrere Ereigniscodes anzugeben. Schließen Sie keine Anführungszeichen in das *Fehlercode* -Argument ein.  
@@ -268,7 +268,7 @@ dtexec /option [value] [/option [value]]...
      Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   `/Env[Reference]` *Umgebung Verweis-ID*:   
-                  Dies ist optional. Gibt die Umgebungsverweis-ID an, die von der Paketausführung verwendet wird, für ein Paket an, das auf dem Server mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellt ist. Die Parameter, die konfiguriert wurden, um an Variablen gebunden zu sein, verwenden die Werte der Variablen, die in der Umgebung enthalten sind.  
+                  Optional. Gibt die Umgebungsverweis-ID an, die von der Paketausführung verwendet wird, für ein Paket an, das auf dem Server mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellt ist. Die Parameter, die konfiguriert wurden, um an Variablen gebunden zu sein, verwenden die Werte der Variablen, die in der Umgebung enthalten sind.  
   
      Sie können die Option `/Env[Reference]` zusammen mit den Optionen `/ISServer` und `/Server` verwenden.  
   
@@ -281,7 +281,7 @@ dtexec /option [value] [/option [value]]...
   
      Die `/File`-Option kann nicht zusammen mit der `/DTS`- oder der `/SQL`-Option verwendet werden. Werden mehrere Optionen angegeben, erzeugt `dtexec` einen Fehler.  
   
--   **/H[elp]** [*option_name*]: Dies ist optional. Zeigt die Hilfe zu den Optionen oder die Hilfe zu der mit *Optionsname* angegebenen Option an und beendet das Hilfsprogramm.  
+-   **/H[elp]** [*option_name*]: Optional. Zeigt die Hilfe zu den Optionen oder die Hilfe zu der mit *Optionsname* angegebenen Option an und beendet das Hilfsprogramm.  
   
      Bei Angabe einer *Optionsname* Argument `dtexec` startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation und zeigt Sie an das Thema für Dtexec-Hilfsprogramm.  
   
@@ -311,13 +311,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]decodiert werden:  
   
         -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]decodiert werden:  
   
         -   ProgID: DTS.LogProviderSQLServer.1  
   
@@ -347,7 +347,7 @@ dtexec /option [value] [/option [value]]...
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: Dies ist optional. Gibt Parameterwerte an. Es können mehrere **/Parameter** -Optionen angegeben werden. Die Datentypen sind CLR TypeCodes als Zeichenfolgen. Für einen Nicht-Zeichenfolge-Parameter wird der Datentyp in Klammern angegeben und folgt dem Parameternamen.  
+-   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: Optional. Gibt Parameterwerte an. Es können mehrere **/Parameter** -Optionen angegeben werden. Die Datentypen sind CLR TypeCodes als Zeichenfolgen. Für einen Nicht-Zeichenfolge-Parameter wird der Datentyp in Klammern angegeben und folgt dem Parameternamen.  
   
      Die **/Parameter** Option kann verwendet werden, nur mit der `/ISServer` Option.  
   
@@ -377,7 +377,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Rem** _comment_:  
                   Dies ist optional. Schließt einen Kommentar in die Befehlszeile oder in Befehlsdateien ein. Das Argument ist optional. Der Wert für *Kommentar* ist eine Zeichenfolge, die entweder in Anführungszeichen eingeschlossen werden muss oder keine Leerzeichen enthalten darf. Wird kein Argument angegeben, wird eine leere Zeile eingefügt. Während der Befehlsermittlungsphase werden*Kommentar* -Werte nicht berücksichtigt.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Optional. Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
+-   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Dies ist optional. Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
   
      **N** Keine Berichterstellung.  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      Sie müssen ein Ereignis nur ausschließen, wenn dieses standardmäßig protokolliert wird.  
   
--   **/Res[tart]** {*deny | force | ifPossible*}: Optional. Gibt einen neuen Wert für die <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> -Eigenschaft des Pakets an. Die Parameter haben folgende Bedeutung:  
+-   **/Res[tart]** {*deny | force | ifPossible*}: Dies ist optional. Gibt einen neuen Wert für die <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> -Eigenschaft des Pakets an. Die Parameter haben folgende Bedeutung:  
   
      *Deny* legt die <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> -Eigenschaft auf <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>.  
   
@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
      Der Standardwert **force** wird verwendet, wenn kein Wert angegeben wird.  
   
--   **/Set** [$Sensitive::]*propertyPath;value*: Dies ist optional. Überschreibt die Konfiguration eines Parameters, einer Variablen, einer Eigenschaft, eines Containers, eines Protokollanbieters, eines Foreach-Enumerators oder einer Verbindung innerhalb eines Pakets. Wenn diese Option verwendet wird, ändert **/Set** das *Eigenschaftspfad* -Argument in den angegebenen Wert. Es können mehrere **/Set** -Optionen angegeben werden.  
+-   **/Set** [$Sensitive::]*propertyPath;value*: Optional. Überschreibt die Konfiguration eines Parameters, einer Variablen, einer Eigenschaft, eines Containers, eines Protokollanbieters, eines Foreach-Enumerators oder einer Verbindung innerhalb eines Pakets. Wenn diese Option verwendet wird, ändert **/Set** das *Eigenschaftspfad* -Argument in den angegebenen Wert. Es können mehrere **/Set** -Optionen angegeben werden.  
   
      Zusätzlich zur Verwendung der **/Set** -Option mit der **/f [Ile]** auswählen, können Sie auch die **/Set** -Option mit der `/ISServer` Option oder die `/Project` Option. Bei Verwendung von **/Set** mit `/Project`, **/Set** legt die Parameterwerte fest. Bei Verwendung von **/Set** mit `/ISServer`, **/Set** legt die eigenschaftenüberschreibungen fest. Wenn Sie darüber hinaus verwenden **/Set** mit `/ISServer`, Sie können die optionale $Sensitive-Präfix verwenden, um anzugeben, dass auf die Eigenschaft als vertraulich behandelt werden soll die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server.  
   
@@ -474,10 +474,10 @@ dtexec /option [value] [/option [value]]...
     -   *Hauptversion*; *Nebenversion*; *Build*  
   
 -   **/VerifyP[ackageID]** _packageID_:  
-                  Optional. Überprüft die GUID des auszuführenden Pakets anhand des Werts, der im *Paket-ID* -Argument angegeben wurde.  
+                  Dies ist optional. Überprüft die GUID des auszuführenden Pakets anhand des Werts, der im *Paket-ID* -Argument angegeben wurde.  
   
 -   **/VerifyS[igned]**:  
-                  Optional. Veranlasst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu, die digitale Signatur des Pakets zu überprüfen. Wenn das Paket nicht signiert oder die Signatur nicht gültig ist, schlägt das Paket fehl. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](../security/identify-the-source-of-packages-with-digital-signatures.md).  
+                  Dies ist optional. Veranlasst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu, die digitale Signatur des Pakets zu überprüfen. Wenn das Paket nicht signiert oder die Signatur nicht gültig ist, schlägt das Paket fehl. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](../security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > [!IMPORTANT]  
     >  Wenn Sie die Überprüfung der Signatur des Pakets konfiguriert haben, prüft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lediglich, ob die digitale Signatur vorhanden und gültig ist und ob die Quelle vertrauenswürdig ist. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüft nicht, ob Änderungen am Paket vorgenommen wurden.  
@@ -492,7 +492,7 @@ dtexec /option [value] [/option [value]]...
      Wenn Sie den *Dateiangabe* -Parameter nicht einschließen, aktiviert Integration Services keinen Protokollanbieter für Textdateien. Integration Services schreibt dann Protokollereignisse nur an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden.  
   
 -   **/W[arnAsError]**:  
-                  Optional. Bewirkt, dass das Paket eine Warnung wie einen Fehler behandelt. Das Paket erzeugt daher einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird. Wenn während des Überprüfens keine Warnung ausgegeben wird und die Option **/Validate** nicht angegeben wurde, wird das Paket ausgeführt.  
+                  Dies ist optional. Bewirkt, dass das Paket eine Warnung wie einen Fehler behandelt. Das Paket erzeugt daher einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird. Wenn während des Überprüfens keine Warnung ausgegeben wird und die Option **/Validate** nicht angegeben wurde, wird das Paket ausgeführt.  
   
 -   **/X86**: Dies ist optional. Veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, das Paket im 32-Bit-Modus auf einem 64-Bit-Computer auszuführen. Diese Option wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent festgelegt, wenn die folgenden Bedingungen den Wert True haben:  
   
@@ -516,9 +516,9 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> Beispiele  
  Die folgenden Beispiele veranschaulichen, wie Sie mit der `dtexec` eingabeaufforderungs-Hilfsprogramm zum Konfigurieren und ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete.  
   
- **Ausgeführte Pakete**  
+ **Ausführen von Paketen**  
   
- Verwenden Sie folgenden Code, um ein in [!INCLUDE[ssIS](../../includes/ssis-md.md)] gespeichertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Paket auszuführen, das die Windows-Authentifizierung verwendet:  
+ Verwenden Sie folgenden Code, um ein in [!INCLUDE[ssIS](../../includes/ssis-md.md)] gespeichertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Paket auszuführen, das die Windows-Authentifizierung verwendet:  
   
 ```  
 dtexec /sq pkgOne /ser productionServer  
@@ -666,9 +666,9 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ausführen eines Pakets in SQL Server-Datentools](../run-a-package-in-sql-server-data-tools.md)  
+ [Ausführen eines Pakets in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](https://go.microsoft.com/fwlink/?LinkId=251523) auf www.mattmasson.com.  
+ Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/) auf www.mattmasson.com.  
   
   
