@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290256"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797010"
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 20
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
 - **Problem und Kundenbeeinträchtigung:**  Auf der Benutzerberechtigungsseite wird Ihnen der folgende Fehler angezeigt, wenn sie in der Strukturansicht auf Stammebene eine Berechtigung erteilen: `"The model permission cannot be saved. The object guid is not valid"`
 
-- **Problemumgehungen:** 
+- **Problemumgehung:** 
   - Grant permission on the sub nodes in the tree view instead of the root level (Erteilen Sie Berechtigung auf den vorhandenen Knoten in der Strukturansicht anstatt auf Stammebene).
-  - oder
-  - Führen Sie das Skript aus, das im MDS-Teamblogpost [error applying permission on entity level (Fehler bei der Erteilung von Berechtigungen auf Entitätsebene)](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx) beschrieben wird.
 
 ### <a name="analysis-services"></a>Analysis Services
 - **Problem und Kundenbeeinträchtigung:** Datenconnectors für die folgenden Quellen sind für tabellarische Modelle mit Kompatibilitätsgrad 1400 noch nicht verfügbar.

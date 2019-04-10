@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266081"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872310"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Die Neuigkeiten der anderen SQL Server-Komponenten finden Sie unter [Was ist neu
 > Die aktuellen Versionshinweise finden Sie unter [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` -Syntax ist jetzt für [Prozeduren](../t-sql/statements/create-procedure-transact-sql.md), [Ansichten](../t-sql/statements/create-view-transact-sql.md), [Funktionen](../t-sql/statements/create-function-transact-sql.md)und [Trigger](../t-sql/statements/create-trigger-transact-sql.md)verfügbar.
+-  `CREATE OR ALTER <object>` -Syntax ist jetzt für [Prozeduren](../t-sql/statements/create-procedure-transact-sql.md), [Ansichten](../t-sql/statements/create-view-transact-sql.md), [Funktionen](../t-sql/statements/create-function-transact-sql.md) und [Trigger](../t-sql/statements/create-trigger-transact-sql.md) verfügbar.
 -   Unterstützung für ein allgemeineres Modell für Abfragehinweise wurde hinzugefügt: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Weitere Informationen finden Sie unter [Abfragehinweise (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - Die [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) -DMV wurden den Listenhinweisen hinzugefügt.  
 - Die [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) -DMV wurde hinzugefügt und gibt Übergangsstatistiken zu Showplan-XML zurück.  
@@ -56,28 +56,28 @@ Die Neuigkeiten der anderen SQL Server-Komponenten finden Sie unter [Was ist neu
 ##  <a name="Feature"></a> SQL Server 2016 RTM
 Dieser Abschnitt enthält folgende Unterabschnitte:
 
--   [Columnstore-Indizes](#columnstore)
--   [Datenbankweit gültige Konfigurationen](#scopedconfiguration)
--   [In-Memory-OLTP](#InMemory)
--   [Abfrageoptimierer](#QueryOptimizer)
--   [Live-Abfragestatistik](#LiveStats)
--   [Abfragespeicher](#QueryStore)
--   [Temporale Tabellen](#TT)
--   [Stripesetsicherungen in Microsoft Azure-Blobspeicher](#StripedBackupToAzure)
--   [Dateimomentaufnahmesicherungen in Microsoft Azure-Blobspeicher](#FileSnapshotBackup)
--   [Verwaltete Sicherung](#ManagedBackup)
--   [tempdb-Datenbank](#multipleTempDB)
--   [Integrierte JSON-Unterstützung](#ForJson)
--   [PolyBase](#bkPolyBase)
--   [Stretch-Datenbank](#stretch)
--   [Unterstützung für UTF-8](#UTF8)
--   [Neue Standarddatenbankgröße und Werte für die automatische Vergrößerung](#DefaultDB)
--   [Transact-SQL-Erweiterungen](#TSQL)
--   [Systemsichterweiterungen](#SystemTable)
--   [Sicherheitserweiterungen](#Security)
--   [Verbesserungen im Hinblick auf hohe Verfügbarkeit](#HighAvailability)
--   [Verbesserte Replikation](#Repl)
--   [Toolverbesserungen](#Tools)
+-   [Columnstore-Indizes](#columnstore-indexes)
+-   [Datenbankweit gültige Konfigurationen](#database-scoped-configurations)
+-   [In-Memory OLTP](#in-memory-oltp)
+-   [Abfrageoptimierer](#query-optimizer)
+-   [Live-Abfragestatistik](#live-query-statistics)
+-   [Abfragespeicher](#query-store)
+-   [Temporale Tabellen](#temporal-tables)
+-   [Stripesetsicherungen in Microsoft Azure-Blobspeicher](#striped-backups-to-microsoft-azure-blob-storage)
+-   [Dateimomentaufnahmesicherungen in Microsoft Azure-Blobspeicher](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [Verwaltete Sicherung](#managed-backup)
+-   [TempDB-Datenbank](#tempdb-database)
+-   [Integrierte JSON-Unterstützung](#built-in-json-support)
+-   [PolyBase](#polybase)
+-   [Stretch Database](#stretch-database)
+-   [Unterstützung für UTF-8](#support-for-utf-8)
+-   [Neue Standarddatenbankgröße und Werte für die automatische Vergrößerung](#new-default-database-size-and-autogrow-values)
+-   [Transact-SQL-Erweiterungen](#transact-sql-enhancements)
+-   [Systemsichterweiterungen](#system-view-enhancements)
+-   [Sicherheitserweiterungen](#security-enhancements)
+-   [Verbesserungen im Hinblick auf hohe Verfügbarkeit](#high-availability-enhancements)
+-   [Verbesserte Replikation](#replication-enhancements)
+-   [Toolverbesserungen](#tools-enhancements)
 
 ## <a name="columnstore-indexes"></a>Columnstore-Indizes
 
@@ -113,14 +113,14 @@ Die neue Anweisung ist sowohl in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 
 
 
 
-## <a name="in-memory-oltp"></a>In-Memory OLTP
+## <a name="in-memory-oltp"></a>In-Memory-OLTP
 
 
 ### <a name="storage-format-change"></a>Speicherformatänderung
 
 Das Speicherformat für speicheroptimierte Tabellen wechselt von SQL Server 2014 zu SQL Server 2016. Für Upgrades und zum Anfügen/Wiederherstellen von SQL Server 2014 wird das neue Speicherformat serialisiert und die Datenbank während der Wiederherstellung der Datenbank einmal neu gestartet.
 
-- [Aktualisieren auf SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE ist für Protokolle optimiert und wird parallel ausgeführt.
@@ -361,7 +361,7 @@ Es gibt einige Transact-SQL-Elemente, die in SQL Server 2014 für systemintern k
 Allgemeine Informationen finden Sie unter:
 
 - [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Ändern von systemintern kompilierten T-SQL-Modulen](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [Ändern von nativ kompilierten T-SQL-Modulen](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>Systemsichterweiterungen
 - Zwei neue Ansichten unterstützen Sicherheit auf Zeilenebene. Weitere Informationen finden Sie unter [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) und [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md).
@@ -435,7 +435,7 @@ Durch direktes Seeding kann das Seeding eines sekundären Replikats automatisch 
 ## <a name="tools-enhancements"></a>Toolverbesserungen
 
 ### <a name="management-studio"></a>Management Studio
-Laden Sie das neueste [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)herunter
+Laden Sie das neueste [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) herunter
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] unterstützt die Active Directory Authentication Library (ADAL), die für die Verbindung mit Microsoft Azure entwickelt wird. Dies ersetzt die zertifikatbasierte Authentifizierung von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Eine neue Abfrageergebnis-Rasteroption unterstützt die Beibehaltung von Wagenrücklauf-/Zeilenvorschubzeichen (neue Zeilenumbruchzeichen) beim Kopieren oder Speichern von Text aus dem Ergebnisraster. Legen Sie dies im Menü „Extras/Optionen“ fest.
@@ -447,7 +447,7 @@ SQL Server 2016 Upgrade Advisor Preview ist ein eigenständiges Tool, mit dem Be
  Sie können Upgrade Advisor Preview [hier](https://www.microsoft.com/download/details.aspx?id=48119) herunterladen, oder Sie können es mit dem Webplattform-Installer installieren.
 
 ## <a name="see-also"></a>Weitere Informationen
-[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+[Was ist neu in SQLServer 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  

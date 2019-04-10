@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072206"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042189"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 <a name="min_server_memory"></a> Mithilfe der Konfigurationsoption **min_server_memory** wird sichergestellt, dass für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicher-Manager einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Mindestmenge an Arbeitsspeicher verfügbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Allerdings wird die unter **Min. Serverarbeitsspeicher** angegebene Arbeitsspeichermenge von nicht gleich beim Start zugeordnet. Sobald der Wert für die Speicherauslastung aufgrund der Clientauslastung erreicht ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur dann Arbeitsspeicher freigeben, wenn der Wert für **Min. Serverarbeitsspeicher** reduziert wird. Wenn beispielsweise mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig auf dem gleichen Host ausgeführt werden können, legen Sie den Parameter „min_server_memory“ anstelle von „max_server_memory“ fest, um Arbeitsspeicher für eine Instanz zu reservieren. Ferner ist das Festlegen eines Werts für „min_server_memory“ in einer virtualisierten Umgebung entscheidend, um sicherzustellen, dass Arbeitsspeichermangel beim zugrundeliegenden Host nicht zu dem Versuch führt, Arbeitsspeicher aus dem Pufferpool eines virtuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Gastcomputers jenseits dessen abzuzweigen, was für eine vertretbare Leistung erforderlich ist.
  
 > [!NOTE]  
-> Allerdings kann nicht sichergestellt werden, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die in **min server memory** angegebene Arbeitsspeichermenge zuordnet. Wenn die in **min server memory**angegebene Arbeitsspeichermenge aufgrund der Serverlast zu keinem Zeitpunkt zugeordnet werden muss, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit weniger Arbeitsspeicher ausgeführt.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Allerdings kann nicht sichergestellt werden, dass durch die in **min server memory**angegebene Arbeitsspeichermenge zugeordnet wird. Wenn die in **min server memory**angegebene Arbeitsspeichermenge aufgrund der Serverlast zu keinem Zeitpunkt zugeordnet werden muss, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit weniger Arbeitsspeicher ausgeführt.  
   
 <a name="max_server_memory"></a> Verwenden Sie **max_server_memory**, um sicherzustellen, dass beim Betriebssystem kein nachteiliger Arbeitsspeichermangel eintritt. Um den maximalen Serverarbeitsspeicher zu konfigurieren, überwachen Sie den Gesamtverbrauch des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses, um die Arbeitsspeicheranforderungen zu bestimmen. Hier folgen genauere Angaben für diese Berechnungen für eine Einzelinstanz:
  -  Reservieren Sie vom gesamten Arbeitsspeicher des Betriebssystems 1 GB–4 GB für das Betriebssystem selbst.
@@ -86,7 +86,8 @@ Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** fü
 Das Festlegen dieser Option wirkt sich nicht auf die [dynamische Arbeitsspeicherveraltung](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ermöglicht ein Anwachsen oder Schrumpfen aufgrund der Anforderungen anderer Arbeitsspeicherclerks. Bei der Verwendung des Benutzerrechts *Sperren von Seiten im Speicher* empfiehlt es sich, einen oberen Grenzwert für **Max. Serverarbeitsspeicher** festzulegen, wie [oben ausführlich beschrieben](#max_server_memory).
 
 > [!IMPORTANT]
-> Das Festlegen dieser Option sollte nur bei Bedarf erfolgen, nämlich wenn es Anzeichen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll der Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> Das Festlegen dieser Option sollte nur bei Bedarf erfolgen, nämlich wenn es Anzeichen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll der Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel:
+> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wird das [Ablaufverfolgungsflag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) nicht von der Standard Edition benötigt, um gesperrte Seiten zu verwenden. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Aktivieren des Sperrens von Seiten im Speicher  
@@ -120,7 +121,7 @@ So aktivieren Sie die Option "Sperren von Seiten im Speicher":
  Sie können diese Einstellungen ohne Neustart der Instanzen ändern. Dadurch können Sie problemlos mit verschiedenen Einstellungen experimentieren, um die für Ihr Nutzungsmuster am besten geeigneten Einstellungen herauszufinden.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für SQL Server  
-In allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der Arbeitsspeicher bis zum Speicherplatzlimit des virtuellen Adressraums des Prozesses konfiguriert werden. Weitere Informationen finden Sie unter [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
+In allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der Arbeitsspeicher bis zum Speicherplatzlimit des virtuellen Adressraums des Prozesses konfiguriert werden. Weitere Informationen finden Sie unter [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
 
 ## <a name="examples"></a>Beispiele
 
@@ -174,8 +175,7 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [Editionen und unterstützten Funktionen von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
+ [Editionen und unterstützte Funktionen von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Editionen und unterstützten Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
- 
+ [Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
