@@ -3345,7 +3345,7 @@ items:
       items:
       - name: Clientseitig und Serverseitig
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: Clientseitiger und Serverseitig
+      - name: Clientseitig vs. Serverseitig
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: Clientseitig
         href: ../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Rechenkapazitätsgrenzen nach Edition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Ergänzende Datenschutzbestimmungen zu
-      href: ../sql-server/sql-server-privacy.md
-    - name: Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Versionshinweise
     items:
     - name: Abwärtskompatibilität
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: Dateispeicherorte
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Nutzung und Diagnosedatensammlung
+      items:
+      - name: Ergänzende Datenschutzbestimmungen zu
+        href: ../sql-server/sql-server-privacy.md
+      - name: Konfigurieren von Nutzungs- und Diagnosedaten für SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Konfigurieren von Nutzungs- und Diagnosedaten für Tools
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Lokale Überwachung für SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Installieren von SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Mehrfach vernetzter Computer
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Lokale Überwachung zur Erfassung von Nutzungsfeedback
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Konfigurieren von Datenbank-Engine-Instanzen
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Standardspeicherorte für Datendateien
@@ -6971,7 +6973,7 @@ items:
         - name: Codebeispiele für In-Memory OLTP
           href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
           items:
-          - name: 'Dmeo: Leistungsverbesserungen von In-Memory OLTP'
+          - name: 'Demo: Leistungsverbesserungen von In-Memory OLTP'
             href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
           - name: Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
             href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
@@ -8640,7 +8642,7 @@ items:
         - name: Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors
           href: ../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
           items:
-          - name: 'Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren'
+          - name: 'Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken'
             href: ../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
           - name: 'Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Analyse des Bereitstellungsplans'
             href: ../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
@@ -8671,7 +8673,7 @@ items:
         href: ../ssms/install-other-languages.md
       - name: SSMS-Supportrichtlinie
         href: ../ssms/support-policy.md
-    - name: 'Lernprogramme: SQL Server Management Studio'
+    - name: 'Tutorials: SQL Server Management Studio'
       href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       items:
       - name: Herstellen einer Verbindung mit und Abfragen von SQL Server über SSMS
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Konfigurieren des persistenten Speichers PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Kundenfeedback
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Konfigurieren zum Senden von Nutzungs- und Diagnosedaten an Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Entwickeln
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Active Directory-Authentifizierung
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Beitreten zu einer AD-Domäne
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Verschlüsseln von Verbindungen
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: AD-Authentifizierung von Drittanbietern
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Leistung
       items:
       - name: Bewährte Methoden
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242358"
