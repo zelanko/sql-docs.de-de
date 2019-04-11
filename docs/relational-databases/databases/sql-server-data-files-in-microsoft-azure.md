@@ -147,7 +147,7 @@ ON
   
  **Authentifizierungsfehler**  
   
--   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.\*   
+-   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*   
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
 -   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*   
