@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685428"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476716"
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
 
@@ -33,7 +33,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Durchsuchen mit der Standardperspektive und der Internet Sales-Perspektive  
 
-In dieser ersten Aufgaben durchsuchen Sie Ihr Modell unter Verwendung der Standardperspektive, die alle Modellobjekte enthält, sowie mit der Internet Sales-Perspektive Sie vorher erstellt haben. Die Internet Sales-Perspektive enthält nicht das Customer-Tabellenobjekt.  
+Klicken Sie in diesen ersten Aufgaben durchsuchen Sie Ihr Modell mithilfe der Standardperspektive, die alle Modellobjekte enthält, und auch mit der Internet Sales-Perspektive Sie zuvor erstellt haben. Die Internet Sales-Perspektive enthält nicht das Customer-Tabellenobjekt.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>So durchsuchen Sie das Modell mit der Standardperspektive  
   
