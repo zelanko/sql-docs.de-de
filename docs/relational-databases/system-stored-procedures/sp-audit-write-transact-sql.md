@@ -18,12 +18,12 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732898"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542160"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,21 @@ ms.locfileid: "47732898"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  Ein vom Benutzer definierter und in der **user_defined_event_id** -Spalte des Überwachungsprotokolls aufgezeichneter Parameter. *@user_defined_event_id* Typ **Smallint**.  
   
- **@succeeded**  
- Ein vom Benutzer übergebener Parameter, mit dem angegeben wird, ob das Ereignis erfolgreich war. Dies wird in der Spalte Erfolgreich des Überwachungsprotokolls angezeigt. *@succeeded* ist **Bit**.  
+ `[ @succeeded = ] succeeded`  
+ Ein vom Benutzer übergebener Parameter, mit dem angegeben wird, ob das Ereignis erfolgreich war. Dies wird in der Spalte Erfolgreich des Überwachungsprotokolls angezeigt. `@succeeded` ist **Bit**.  
   
- **@user_defined_information**  
- Der vom Benutzer definierte und in der Spalte user_defined_event_id des Überwachungsprotokolls aufgezeichnete Text. *@user_defined_information* ist **nvarchar(4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Der vom Benutzer definierte und in der Spalte user_defined_event_id des Überwachungsprotokolls aufgezeichnete Text. `@user_defined_information` ist **nvarchar(4000)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

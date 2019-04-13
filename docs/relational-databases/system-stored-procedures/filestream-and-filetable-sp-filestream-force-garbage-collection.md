@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973679"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542210"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973679"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@dbname** = *Database_name* gibt den Namen der Datenbank, die der Garbage Collector ausgeführt.  
+ `[ @dbname = ]  'database_name'`  
+ Gibt den Namen der Datenbank an, für die der Garbage Collector ausgeführt werden soll.  
   
 > [!NOTE]  
->  *Dbname* ist **Sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
+> `@dbname` ist **Sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
   
- **@filename** = *logical_file_name*  
- Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. **@filename** ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
+ `[ @filename = ] 'logical_file_name'`  
+ Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. `@filename` ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
   

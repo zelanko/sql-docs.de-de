@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838108"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542190"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838108"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @rmtsrvname **=** ] **"***Rmtsrvname***"**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Der Name eines Verbindungsservers, für den die Anmeldenamenzuordnung gilt. *Rmtsrvname* ist **Sysname**, hat keinen Standardwert.  
   
- [ @useself **=** ] **"**" TRUE "**"** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Bestimmt, ob für die Verbindung *Rmtsrvname* Identität lokaler Anmeldenamen angenommen oder explizit Übermitteln von Anmeldenamen und ein Kennwort. Der Datentyp **Varchar (** 8 **)**, hat den Standardwert "true".  
   
  Der Wert TRUE gibt an, dass Anmeldungen ihre eigenen Anmeldeinformationen verwenden, um das Herstellen einer Verbindung mit *Rmtsrvname*, mit der *Rmtuser* und *Rmtpassword* Argumente ignoriert wird. FALSE gibt an, dass die *Rmtuser* und *Rmtpassword* Argumente werden verwendet, um das Herstellen einer Verbindung mit *Rmtsrvname* für den angegebenen *Locallogin* . Wenn *Rmtuser* und *Rmtpassword* sind auch auf NULL, kein Benutzername oder Kennwort wird für die Verbindung mit dem Verbindungsserver verwendet.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  Ein Anmeldename auf dem lokalen Server. *Locallogin* ist **Sysname**, hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldenamen gilt, die Verbindung mit *Rmtsrvname*. Falls ungleich NULL, *Locallogin* kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder ein Windows-Anmeldename. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  Der remoteanmeldename für die Verbindung *Rmtsrvname* beim @useself ist "false". Wenn der Remoteserver ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, die keine Windows-Authentifizierung, *Rmtuser* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *Rmtuser* ist **Sysname**, hat den Standardwert NULL.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  Das Kennwort zugeordnet ist *Rmtuser*. *Rmtpassword* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

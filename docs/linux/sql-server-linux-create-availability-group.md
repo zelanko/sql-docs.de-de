@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205749"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542230"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen Sie und konfigurieren Sie eine verfügbarkeitsgruppe für SQL Server unter Linux
 
@@ -243,7 +243,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-10.  Wiederherstellen Sie LinAGN1_Cert und LinAGN3_Cert auf LinAGN2. 
+10. Wiederherstellen Sie LinAGN1_Cert und LinAGN3_Cert auf LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Erteilen Sie die Anmeldungen bei der Herstellung einer Verbindung mit dem Endpunkt LinAGN2 LinAG1 und LinAGN3 berechtigt zugeordnet.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-12.  Erstellen Sie auf Instanzebene Anmeldungen und Benutzer mit LinAGN1 und LinAGN2 auf LinAGN3 verknüpft sind.
+12. Erstellen Sie auf Instanzebene Anmeldungen und Benutzer mit LinAGN1 und LinAGN2 auf LinAGN3 verknüpft sind.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-13.  Wiederherstellen Sie LinAGN1_Cert und LinAGN2_Cert auf LinAGN3. 
+13. Wiederherstellen Sie LinAGN1_Cert und LinAGN2_Cert auf LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Erteilen Sie die Anmeldungen bei der Herstellung einer Verbindung mit dem Endpunkt LinAGN3 LinAG1 und LinAGN2 berechtigt zugeordnet.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -416,7 +418,7 @@ Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstel
     GO
     ```
     
-3.  Fügen sie in einem Abfrage-Fenster, das mit dem reinen konfigurationsreplikat verbunden ist der Verfügbarkeitsgruppe.
+3. Fügen sie in einem Abfrage-Fenster, das mit dem reinen konfigurationsreplikat verbunden ist der Verfügbarkeitsgruppe.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Eine Pacemaker hochverfügbarkeit-Cluster zugrunde liegenden [!INCLUDE[ssnoversi
 1.  Führen Sie in einem Abfrage-Fenster, das mit dem ersten Replikat verbunden ist die folgenden Schritte aus:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

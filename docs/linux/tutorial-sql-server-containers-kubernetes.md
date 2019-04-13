@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626320"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516606"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 
@@ -57,7 +57,7 @@ Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fe
    >[!NOTE]
    >Zum Schutz gegen den Ausfall eines Knotens erfordert ein Kubernetes-Cluster mehr als einem Knoten.
 
-* **Azure-Befehlszeilenschnittstelle 2.0.23**
+* **Azure CLI 2.0.23**
    - Die Anweisungen in diesem Tutorial wurden für Azure-Befehlszeilenschnittstelle 2.0.23 überprüft.
 
 ## <a name="create-an-sa-password"></a>Erstellen Sie ein SA-Kennwort
@@ -155,7 +155,7 @@ Konfigurieren einer [persistentes Volume](https://kubernetes.io/docs/concepts/st
 
 In diesem Beispiel wird der Container, der SQL Server-Instanz als ein Objekt der Kubernetes-Bereitstellung beschrieben. Die Bereitstellung erstellt eine Replikatgruppe. Die Replikatgruppe erstellt den Pod. 
 
-In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem SQL Server beschreiben [Mssql-Server-Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker-Image. Das manifest verweisen die `mssql-server` permanenter volumeanspruch, und die `mssql` Geheimnis, das Sie bereits auf den Kubernetes-Cluster angewendet. Das Manifest beschreibt auch eine [Service](https://kubernetes.io/docs/concepts/services-networking/service/). Dieser Dienst ist ein Lastenausgleich. Der Load Balancer wird sichergestellt, dass die IP-Adresse erhalten bleibt, nachdem SQL Server-Instanz wiederhergestellt wird. 
+In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem SQL Server beschreiben [Mssql-Server-Linux](https://hub.docker.com/_/microsoft-mssql-server) Docker-Image. Das manifest verweisen die `mssql-server` permanenter volumeanspruch, und die `mssql` Geheimnis, das Sie bereits auf den Kubernetes-Cluster angewendet. Das Manifest beschreibt auch eine [Service](https://kubernetes.io/docs/concepts/services-networking/service/). Dieser Dienst ist ein Lastenausgleich. Der Load Balancer wird sichergestellt, dass die IP-Adresse erhalten bleibt, nachdem SQL Server-Instanz wiederhergestellt wird. 
 
 1. Erstellen Sie ein Manifest (eine YAML-Datei), um die Bereitstellung zu beschreiben. Im folgende Beispiel wird eine Bereitstellung, einschließlich eines Containers, der basierend auf dem SQL Server-Container-Image beschrieben.
 
@@ -253,7 +253,7 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem
    Weist den Status in der vorherigen Abbildung der Pod `Running`. Dieser Status gibt an, dass der Container bereit ist. Dies kann einige Minuten dauern.
 
    >[!NOTE]
-   >Nachdem die Bereitstellung erstellt wurde, dauert es einige Minuten, bevor Sie der Pod angezeigt wird. Die Verzögerung ist, da Sie der Cluster Ruft die [Mssql-Server-Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) -Image aus Docker Hub. Nach dem das Bild beim ersten abgerufen werden wird, möglicherweise nachfolgender Bereitstellungen schneller, wenn die Bereitstellung auf einen Knoten, die bereits für das Image darauf zwischengespeichert. 
+   >Nachdem die Bereitstellung erstellt wurde, dauert es einige Minuten, bevor Sie der Pod angezeigt wird. Die Verzögerung ist, da Sie der Cluster Ruft die [Mssql-Server-Linux](https://hub.docker.com/_/microsoft-mssql-server) -Image aus Docker Hub. Nach dem das Bild beim ersten abgerufen werden wird, möglicherweise nachfolgender Bereitstellungen schneller, wenn die Bereitstellung auf einen Knoten, die bereits für das Image darauf zwischengespeichert. 
 
 1. Stellen Sie sicher, dass die Dienste ausgeführt werden. Führen Sie den folgenden Befehl aus:
 

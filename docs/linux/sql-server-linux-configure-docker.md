@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566629"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516516"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Container-Images in Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel erläutert das Konfigurieren und Verwenden der [Mssql-Server-Linux-Container-Abbild](https://hub.docker.com/r/microsoft/mssql-server-linux/) mit Docker. Dieses Image enthält SQL Server für Linux (basierend auf Ubuntu 16.04). Es kann unter Linux mit der Docker-Engine 1.8 und höher und in Docker für Mac bzw. Windows verwendet werden.
+Dieser Artikel erläutert das Konfigurieren und Verwenden der [Mssql-Server-Linux-Container-Abbild](https://hub.docker.com/_/microsoft-mssql-server) mit Docker. Dieses Image enthält SQL Server für Linux (basierend auf Ubuntu 16.04). Es kann unter Linux mit der Docker-Engine 1.8 und höher und in Docker für Mac bzw. Windows verwendet werden.
 
 > [!NOTE]
 > In diesem Artikel wird speziell mit der Mssql-Server-Linux-Image. Das Windows-Abbild wird nicht behandelt, aber mehr darüber erfahren Sie auf die [Mssql-Server-Windows-Docker-Hubseite](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 Es gibt Szenarien, in denen Sie nicht das neueste containerimage von SQL Server verwenden sollten. Führen Sie eine bestimmte SQL Server-Container-Images verwenden Sie die folgenden Schritte aus:
 
-1. Identifizieren Sie die Docker **Tag** für die Version, die Sie verwenden möchten. Um die verfügbaren Tags anzuzeigen, finden Sie unter [der Mssql-Server-Linux-Docker-Hubseite](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+1. Identifizieren Sie die Docker **Tag** für die Version, die Sie verwenden möchten. Um die verfügbaren Tags anzuzeigen, finden Sie unter [der Mssql-Server-Linux-Docker-Hubseite](https://hub.docker.com/_/microsoft-mssql-server).
 
 2. Ziehen Sie das SQL Server-containerimage mit dem Tag. Um der RC1-Image per Pull abzurufen, ersetzen Sie z. B. `<image_tag>` in den folgenden Befehl mit `rc1`.
 

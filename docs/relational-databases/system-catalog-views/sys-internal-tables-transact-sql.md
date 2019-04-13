@@ -1,7 +1,7 @@
 ---
 title: Sys. internal_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2efa30de8307a33ea9d0f537f687b4f73c48ed1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845118"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516476"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47845118"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**internal_type**|**tinyint**|Der Typ der internen Tabelle:<br /><br /> 201 = **Queue_messages**<br /><br /> 202 = **Xml_index_nodes**<br /><br /> 203 = **Fulltext_catalog_freelist**<br /><br /> 205 = **Query_notification**<br /><br /> 206 = **Service_broker_map**<br /><br /> 207 = **Extended_indexes** (z. B. ein räumlicher Index)<br /><br /> 208 = **Filestream_tombstone**<br /><br /> 209 = **Change_tracking**<br /><br /> 210 = **Tracked_committed_transactions**<br /><br /> 236 = **Selective_xml_index_node_table**|  
-|**internal_type_desc**|**nvarchar(60)**|Die Beschreibung des Typs der internen Tabelle:<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE|  
-|**Parent_ID**|**int**|ID des übergeordneten Elements, unabhängig davon, ob es über einen Schemabereich verfügt oder nicht. Andernfalls 0, wenn es kein übergeordnetes Element gibt.<br /><br /> **Queue_messages** = **Object_id** der Warteschlange<br /><br /> **Xml_index_nodes** = **Object_id** des XML-Indexes<br /><br /> **Fulltext_catalog_freelist** = **Fulltext_catalog_id** des Volltext-Katalogs<br /><br /> **Fulltext_index_map** = **Object_id** des Volltext-Indexes<br /><br /> **Query_notification**, oder **Service_broker_map** = 0<br /><br /> **Extended_indexes** = **Object_id** eines erweiterten Indexes, z. B. ein räumlicher Index<br /><br /> **Object_id** der Tabelle, für welche Tabelle die änderungsnachverfolgung aktiviert ist = **Change_tracking**|  
+|**internal_type**|**tinyint**|Der Typ der internen Tabelle:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **Extended_indexes** (z. B. ein räumlicher Index)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
+|**internal_type_desc**|**nvarchar(60)**|Die Beschreibung des Typs der internen Tabelle:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**parent_id**|**int**|ID des übergeordneten Elements, unabhängig davon, ob es über einen Schemabereich verfügt oder nicht. Andernfalls 0, wenn es kein übergeordnetes Element gibt.<br /><br /> **Queue_messages** = **Object_id** der Warteschlange<br /><br /> **Xml_index_nodes** = **Object_id** des XML-Indexes<br /><br /> **Fulltext_catalog_freelist** = **Fulltext_catalog_id** des Volltext-Katalogs<br /><br /> **Fulltext_index_map** = **Object_id** des Volltext-Indexes<br /><br /> **Query_notification**, oder **Service_broker_map** = 0<br /><br /> **Extended_indexes** = **Object_id** eines erweiterten Indexes, z. B. ein räumlicher Index<br /><br /> **Object_id** der Tabelle, für welche Tabelle die änderungsnachverfolgung aktiviert ist = **Change_tracking**|  
 |**parent_minor_id**|**int**|Die Neben-ID des übergeordneten Elements.<br /><br /> **Xml_index_nodes** = **Index_id** des XML-Indexes<br /><br /> **Extended_indexes** = **Index_id** eines erweiterten Indexes, z. B. ein räumlicher Index<br /><br /> 0 = **Queue_messages**, **Fulltext_catalog_freelist**, **Fulltext_index_map**, **Query_notification**,  **Service_broker_map**, oder **Change_tracking**|  
 |**lob_data_space_id**|**int**|Ein Wert ungleich Null ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Daten (Large Object) für diese Tabelle enthält.|  
 |**filestream_data_space_id**|**int**|Zur künftigen Verwendung reserviert.|  
