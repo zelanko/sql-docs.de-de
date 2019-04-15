@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407866"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516586"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407866"
 ##  <a name="VisualElement"></a> SQL Server-Multisubnetz-Failovercluster (zwei Knoten, zwei Subnetze)  
  In der folgenden Abbildung wird eine Failoverclusterinstanz (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]mit zwei Knoten dargestellt.  
   
- ![Multisubnetzarchitektur mit MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
+ ![Multisubnetzarchitektur mit MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Multi-Subnet Architecture with MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Konfigurationen einer Multisubnetz-Failoverclusterinstanz  
@@ -50,7 +50,7 @@ ms.locfileid: "52407866"
 ##  <a name="ComponentsAndConcepts"></a> Überlegungen zu IP-Adressressourcen  
  Die IP-Adressen in einer Multisubnetz-Failoverclusterkonfiguration sind nicht im Besitz aller Knoten im Failovercluster und beim Start von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] möglicherweise nicht alle online. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie die IP-Adressabhängigkeit auf **OR**festlegen. Dadurch kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online sein, wenn mindestens eine gültige IP-Adresse vorhanden ist, mit der eine Bindung hergestellt werden kann.  
   
-> **HINWEIS:** In den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Versionen vor [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurde eine Stretch-V-LAN-Technologie in Clusterkonfigurationen mit mehreren Standorten verwendet, um eine einzelne IP-Adresse für standortübergreifende Failover verfügbar zu machen. Durch die neue Möglichkeit zur Gruppierung von Knoten in unterschiedlichen Subnetzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie jetzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster an mehreren Standorten ohne Stretch-V-LAN-Technologie konfigurieren.  
+> **HINWEIS:** In den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurde eine Stretch-V-LAN-Technologie in Clusterkonfigurationen mit mehreren Standorten verwendet, um eine einzelne IP-Adresse für standortübergreifende Failover verfügbar zu machen. Durch die neue Möglichkeit zur Gruppierung von Knoten in unterschiedlichen Subnetzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie jetzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster an mehreren Standorten ohne Stretch-V-LAN-Technologie konfigurieren.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Überlegungen zur IP-Adressabhängigkeit OR  
  Wenn Sie die IP-Adressabhängigkeit auf **OR**festlegen, können Sie das folgende Failoververhalten in Betracht ziehen:  

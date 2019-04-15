@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801915"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533338"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "56801915"
   
  Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss **über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der** -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Solche Probleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Sicherungstask angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und ein Ziel für das Skript auswählen.  
   
@@ -211,19 +211,19 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
 *
     5.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
 
-    6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
+   6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
 
-    7.  Klicken Sie auf **OK**.
+   7.  Klicken Sie auf **OK**.
 
-    8.  Wiederholen Sie die Schritte **4** und **5**.
+   8.  Wiederholen Sie die Schritte **4** und **5**.
 
-    9.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe2of2_20160601.bak`ein.
+   9.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe2of2_20160601.bak`ein.
 
-    10.  Klicken Sie auf **OK**.
+   10.  Klicken Sie auf **OK**.
 
-    11.   Klicken Sie auf **OK**.
+   11.   Klicken Sie auf **OK**.
 
-    **D2.  Eine Shared Access Signature ist vorhanden und eine SQL Server-Anmeldeinformation ist nicht vorhanden**
+   **D2.  Eine Shared Access Signature ist vorhanden und eine SQL Server-Anmeldeinformation ist nicht vorhanden**
   5.    Geben Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in das Textfeld **Azure-Speichercontainer:** ein
   
   6.    Geben Sie die SAS in das Textfeld **Shared Access Signature:** ein.

@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295668"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516556"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Workload womöglich zu Leistungseinbußen kommen. Dies ist in geringerem Ausmaß auch beim Upgrade von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] auf eine neuere Version möglich.
 
