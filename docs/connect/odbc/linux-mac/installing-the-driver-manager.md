@@ -1,7 +1,7 @@
 ---
 title: Installieren des Treiber-Managers (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305808"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041919"
 ---
 # <a name="installing-the-driver-manager"></a>Installieren des Treiber-Managers
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Installieren des Treiber-Managers:
   
 1.  Stellen Sie sicher, dass Sie die Root-Berechtigung besitzen.  
   
-2.  Wechseln Sie zu dem Verzeichnis, in dem der [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-ODBC Driver-Download die Datei `msodbcsql-11.0.2270.0.tar.gz` platziert hat. Stellen Sie sicher, dass Sie die zu Ihrer Linux-Version passende Datei „ \*.tar.g“ besitzen. Führen Sie den folgenden Befehl aus, um die Dateien zu extrahieren: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Wechseln Sie zu dem Verzeichnis, in dem der [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Treiber-Download die Datei `msodbcsql-11.0.2270.0.tar.gz` platziert hat. Stellen Sie sicher, dass Sie die zu Ihrer Linux-Version passende Datei „ \*.tar.g“ besitzen. Führen Sie den folgenden Befehl aus, um die Dateien zu extrahieren: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Wechseln Sie zum Verzeichnis `msodbcsql-11.0.2270.0`, das eine Datei namens `build_dm.sh` enthalten sollte. Sie können ausführen `build_dm.sh` um den UnixODBC Treiber-Manager zu installieren.
 
@@ -52,7 +52,7 @@ Installieren des Treiber-Managers:
   
 5.  Wenn Sie zur Installation bereit sind und Ihr Computer auf eine externe Website über FTP zugreifen kann, führen Sie den folgenden Befehl aus: **./build_dm.sh**.
 
-Wenn Ihr Computer auf keine externe Website über FTP zugreifen kann, laden Sie `unixODBC-2.3.0.tar.gz` herunter. Sie erhalten `unixODBC-2.3.0.tar.gz` aus [ http://www.unixodbc.org ](http://www.unixodbc.org/). Klicken Sie auf den Link **Herunterladen** links auf der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um unixODBC-2.3.0 (nicht unixODBC-2.3.1) herunterzuladen. unixODBC-2.3.1 wird von dieser Version des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht unterstützt. Führen Sie den folgenden Befehl aus, um den UnixODBC Treiber-Manager-Installation zu beginnen: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
+Wenn Ihr Computer auf keine externe Website über FTP zugreifen kann, laden Sie `unixODBC-2.3.0.tar.gz` herunter. Sie können `unixODBC-2.3.0.tar.gz` von [http://www.unixodbc.org](http://www.unixodbc.org/) abrufen. Klicken Sie auf den Link **Herunterladen** links auf der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um unixODBC-2.3.0 (nicht unixODBC-2.3.1) herunterzuladen. unixODBC-2.3.1 wird von dieser Version des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht unterstützt. Führen Sie den folgenden Befehl aus, um den UnixODBC Treiber-Manager-Installation zu beginnen: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Geben Sie **JA** ein, um mit dem Entpacken der Dateien fortzufahren. Dieser Teil des Prozesses kann bis zu fünf Minuten in Anspruch nehmen.  
 
@@ -84,9 +84,9 @@ Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigu
 
 Sie können nun den Treiber installieren. Weitere Informationen finden Sie unter [installieren Microsoft ODBC Driver for SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
-[Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+## <a name="see-also"></a>Weitere Informationen
+[Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Bekannte Probleme in dieser Version des Treibers](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
+[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
