@@ -14,12 +14,12 @@ ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dfc0bf1d77322bca3a95ec5d0ed49ab856ce9cf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f61990ae0eb35a399a1efca4a5a2cf754892e3d0
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125270"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582843"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>Entfernen von Anweisungen, die Berechtigungen auf Spaltenebene für Systemobjekte ändern
   Der Upgrade Advisor hat nicht dem Standard entsprechende Berechtigungen auf Spaltenebene für Systemobjekte erkannt. Diese Berechtigungsänderungen werden nicht beibehalten, wenn Sie aktualisieren. Darüber hinaus werden Berechtigungen auf Spaltenebene für Systemobjekte nicht mehr unterstützt. Entfernen Sie Anweisungen aus den Anwendungen, die Berechtigungen auf Spaltenebene für Systemobjekte festlegen.  
@@ -32,6 +32,6 @@ ms.locfileid: "48125270"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

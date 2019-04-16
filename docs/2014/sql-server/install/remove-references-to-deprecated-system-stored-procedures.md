@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183355"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582863"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Entfernen von Verweisen auf veraltete gespeicherte Systemprozeduren
   Upgrade Advisor hat Anweisungen erkannt, die auf nicht dokumentierte gespeicherte Systemprozeduren sowie erweiterte gespeicherte Prozeduren verweisen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr verfügbar sind. Anweisungen, die auf diese Objekte verweisen, schlagen fehl. Verwenden Sie keine nicht dokumentierten Systemobjekte oder APIs, da die Funktionalität in einer späteren Version möglicherweise ohne Vorankündigung geändert oder entfernt wird.  
@@ -104,6 +104,6 @@ ms.locfileid: "48183355"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

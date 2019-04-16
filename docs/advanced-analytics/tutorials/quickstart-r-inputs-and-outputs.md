@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046786"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582683"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Schnellstart: Verarbeiten von Eingaben und Ausgaben, die mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
     ```
 
     Beachten Sie, dass R Groß-/Kleinschreibung beachtet, sodass die Groß-/Kleinschreibung der Eingabe- und Variablen in `@input_data_1_name` und `@output_data_1_name` müssen übereinstimmen, das im R-Code in `@script`. 
-
-    Darüber hinaus ist die Reihenfolge der Parameter wichtig. Sie müssen die erforderlichen Parameter *@input_data_1* und *@output_data_1* zuerst angeben, bevor Sie die optionalen Parameter *@input_data_1_name* und *@output_data_1_name* verwenden können.
 
     Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres R-Codes aufrufen und Ausgaben und andere Typen zusätzlich zum Dataset zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird. 
 

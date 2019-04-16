@@ -1,9 +1,6 @@
 ---
 title: Aktualisieren und Migrieren von Reporting Services | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017181"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583073"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Optionen für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
+
+Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Optionen für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
   
 -   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie im Abschnitt "Einheitlichen Modus zum SharePoint-Migration" weiter unten in diesem Dokument und im verwandten Thema [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017181"
   
     3.  Andere Clienttools, wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und die Onlinedokumentation, werden nicht aktualisiert. Um neue Versionen der Tools zu erhalten, können Sie sie beim Ausführen des Setups hinzufügen. Die früheren Versionen bleiben neben den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Versionen bestehen. Wenn Sie Beispiele installiert haben, bleibt die frühere Version erhalten. Setup unterstützt nicht das Upgrade für die SQL Server-Beispiele.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist in einem separaten Download erhältlich. Weitere Informationen finden Sie unter [Microsoft SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist in einem separaten Download erhältlich. Weitere Informationen finden Sie unter [Microsoft SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 6.  Das Setup verwendet den Diensteintrag im Dienstkontroll-Manager für den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsserver-Dienst erneut. Dieser Diensteintrag enthält das Konto des Berichtserver-Windows-Diensts.  
   

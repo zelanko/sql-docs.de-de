@@ -1,33 +1,33 @@
 ---
 title: Reporting Services-Berichtsserver (SharePoint-Modus) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7af146e8b3323cd8634d9b995d103b6e92d591d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016251"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582206"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
-  Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver, der für den **SharePoint-Modus** konfiguriert ist, lässt sich innerhalb der Bereitstellung eines SharePoint-Produkts ausführen. Ein Berichtsserver im SharePoint-Modus kann die Funktionen für Zusammenarbeit und Verwaltung von SharePoint für Berichte und andere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypen verwenden. Der SharePoint-Modus erfordert die Installation der entsprechenden Version des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte auf den SharePoint-Web-Front-Ends.  
+
+Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver, der für den **SharePoint-Modus** konfiguriert ist, lässt sich innerhalb der Bereitstellung eines SharePoint-Produkts ausführen. Ein Berichtsserver im SharePoint-Modus kann die Funktionen für Zusammenarbeit und Verwaltung von SharePoint für Berichte und andere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypen verwenden. Der SharePoint-Modus erfordert die Installation der entsprechenden Version des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte auf den SharePoint-Web-Front-Ends.  
   
- Weitere Informationen zur Installation und Konfiguration finden Sie unter:  
+Weitere Informationen zur Installation und Konfiguration finden Sie unter:  
   
--   [Installieren von SharePoint-Modus von Reporting Services für SharePoint 2013](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
+- [Installieren von SharePoint-Modus von Reporting Services für SharePoint 2013](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
--   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+- [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
--   [Hinzufügen ein zusätzlichen Berichtsservers zu einer Farm &#40;SSRS Scale-Out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+- [Hinzufügen ein zusätzlichen Berichtsservers zu einer Farm &#40;SSRS Scale-Out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
  Informationen zu neuerungen in dieser Version finden Sie im Abschnitt "SharePoint" in [neues &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
@@ -47,7 +47,8 @@ ms.locfileid: "56016251"
   
 -   [Verwandte Aufgaben](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_featuresum"></a> Zusammenfassung der Funktionen  
+##  <a name="bkmk_featuresum"></a> Zusammenfassung der Funktionen
+
  Wenn Sie einen Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfigurieren, wird die folgende Funktionalität bereitgestellt, die nur verfügbar ist, wenn ein Berichtsserver in diesem Modus bereitgestellt wird.  
   
 -   Verwenden von SharePoint-Funktionen für Dokumentverwaltung und Zusammenarbeit, einschließlich Warnungen. Eine SharePoint-Website stellt ein einheitliches Portal für den zentralen Zugriff und die zentrale Verwaltung aller Berichtselemente bereit.  
@@ -74,14 +75,16 @@ ms.locfileid: "56016251"
   
 -   AAM-Zonen, Bereitstellungen mit Internetzugriff und SharePoint-Benutzertoken für SharePoint-Listen.  
   
-##  <a name="bkmk_connectedandlocal"></a> Verbundener Modus und lokaler Modus  
+##  <a name="bkmk_connectedandlocal"></a> Verbundener Modus und lokaler Modus
+
  Ab SQL Server 2008 R2 ist zum Anzeigen von Berichten von SharePoint 2010-Servern, auf denen das Microsoft SQL Server 2008 R2 Reporting Services-Add-In (oder höher) für SharePoint 2010-Produkte installiert ist, ein neuer *lokaler Modus* verfügbar.  
   
 -   *Im lokalen Modus*: Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek bereitgestellt werden, ohne das eine Integration in einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver erfolgen muss. Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Das Add-In lässt sich auf verschiedene Weise installieren, einschließlich mithilfe des Vorbereitungstools für SharePoint 2010-Produkte. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) und [, wo Sie das Reporting Services-add-in für SharePoint-Produkte finden](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Verbundener Modus*: Der verbundene Modus wird durch Integration eines [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtsservers mit der SharePoint-Zentraladministration in die SharePoint-Farm unterstützt. Die Integration mit einem Berichtsserver ermöglicht vollständige End-to-End-Berichterstellung, indem die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen eines Berichtservers bereitgestellt werden, dazu gehören: Abonnements, Momentaufnahmen und die serverbasierte Verarbeitung.  
   
-##  <a name="bkmk_unsupportedsharepoint"></a> Nicht unterstützte SharePoint-Funktionen  
+##  <a name="bkmk_unsupportedsharepoint"></a> Nicht unterstützte SharePoint-Funktionen
+
  Nicht alle SharePoint-Funktionen stehen für integrierte Vorgänge zur Verfügung. Im Folgenden finden Sie eine Liste der SharePoint-Funktionen, die keine direkte Integration in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aufweisen:  
   
 -   Secure Store Service.  
@@ -98,13 +101,15 @@ ms.locfileid: "56016251"
   
      Der Versionsverlauf von Dokumentbibliotheken wird unter „Bibliothekseinstellungen“ auf der Seite „Versionsverwaltungseinstellungen“ konfiguriert.  
   
-##  <a name="bkmk_supportedcombinations"></a> Unterstützte Kombinationen des SharePoint-Add-Ins und Berichtsservers  
+##  <a name="bkmk_supportedcombinations"></a> Unterstützte Kombinationen des SharePoint-Add-Ins und Berichtsservers
+
  Nicht alle Funktionen werden in allen Kombinationen von Berichtsserver, Reporting Services-Add-In für SharePoint und SharePoint-Produkten unterstützt. Weitere Informationen finden Sie unter [unterstützte Kombinationen von SharePoint- und Reporting Services-Server und -Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  Die richtige Version des Reporting Services-Add-Ins muss mit der entsprechenden Version von SharePoint-Produkten verwendet werden.  
   
-##  <a name="bkmk_components"></a> Komponenten, die die Integration ermöglichen  
+##  <a name="bkmk_components"></a> Komponenten, die die Integration ermöglichen
+
  Sie können die Server in einer einzelnen Bereitstellung kombinieren, indem Sie eine Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in eine Instanz von SharePoint-Produkten integrieren.  
   
  Die Integration wird durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte bereitgestellt. Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In ist eine kostenlos erhältliche Komponente, die Sie herunterladen und dann auf einem Server installieren können, auf dem die richtige Version von SharePoint ausgeführt wird.  
@@ -118,7 +123,8 @@ ms.locfileid: "56016251"
   
  Nachdem Sie das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In in SharePoint installiert und die beiden Server für die Integration konfiguriert haben, können Sie Berichtsserver-Inhaltstypen in eine SharePoint-Bibliothek hochladen und dort veröffentlichen und diese Dokumente anschließend von einer SharePoint-Website anzeigen und verwalten. Das Hochladen und Veröffentlichen von Berichtsserverinhalten ist ein wichtiger erster Schritt; der Webpart und die Anwendungsseiten werden verfügbar, wenn Sie Berichtsdefinitionen (RDL), Berichtsmodelle (SMDL) und freigegebene Datenquellen (RSDS) auf einer SharePoint-Website auswählen.  
   
-##  <a name="bkmk_language"></a> Sprachbezogene Aspekte  
+##  <a name="bkmk_language"></a> Sprachbezogene Aspekte
+
  [!INCLUDE[SPF2010](../includes/spf2010-md.md)] und [!INCLUDE[SPS2010](../includes/sps2010-md.md)] -Produkte sind in mehr Sprachen als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  Wenn Sie einen Berichtsserver für die Ausführung innerhalb einer Bereitstellung eines SharePoint-Produkts konfigurieren, wird möglicherweise eine Kombination von Sprachen angezeigt. Benutzeroberfläche, Dokumentation und Meldungen werden in den folgenden Sprachen angezeigt:  
@@ -131,7 +137,8 @@ ms.locfileid: "56016251"
   
  Wenn die Sprache Ihres SharePoint-Produkts oder der SharePoint-Technologie von der Berichtsserversprache abweicht, versucht [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , eine Sprache aus derselben Sprachfamilie zu verwenden, die der ursprünglichen Sprache am ähnlichsten ist. Falls keine geeignete Ersatzsprache verfügbar ist, verwendet der Berichtsserver Englisch.  
   
-##  <a name="bkmk_relatedtasks"></a> Verwandte Aufgaben  
+##  <a name="bkmk_relatedtasks"></a> Verwandte Aufgaben
+
  In der folgenden Tabelle sind die Aufgaben zusammengefasst, die sich auf einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver im SharePoint-Modus beziehen:  
   
 |**Task**|**Link**|  
@@ -143,9 +150,4 @@ ms.locfileid: "56016251"
 |Neueste Informationen für diese Version, siehe TechNet Wiki.|[SQL Server 2012 Reporting Services – Tipps, Tricks und Problembehandlung](https://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Hardware- und Softwareanforderungen für Reporting Services im SharePoint-Modus](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
- [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Konfigurieren von SSRS 2012 für die SharePoint-Integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
-  
-  
+ [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41; ](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md) [Hardware- und Softwareanforderungen für Reporting Services im SharePoint-Modus](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md) [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)

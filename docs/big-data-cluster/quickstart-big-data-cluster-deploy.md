@@ -5,17 +5,17 @@ description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860525"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582914"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -38,7 +38,7 @@ Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer In
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
-   - **Azure CLI**
+   - **Azure-Befehlszeilenschnittstelle**
 
 ## <a name="log-in-to-your-azure-account"></a>Melden Sie sich bei Ihrem Azure-Konto
 

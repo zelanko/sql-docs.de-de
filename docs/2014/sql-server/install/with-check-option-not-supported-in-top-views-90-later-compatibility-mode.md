@@ -14,12 +14,12 @@ ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eeead0e22e38338baf4c24510fba5fb21aad7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b91a4b5bb42ebc86e72d532b9f8d210fbba5506
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138742"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583213"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>WITH CHECK OPTION wird nicht in Sichten unterstützt, die die TOP-Klausel im Kompatibilitätsmodus 90 oder höher enthalten
   Der Upgrade Advisor hat eine Sicht erkannt, die WITH CHECK OPTION und eine TOP-Klausel in der SELECT-Anweisung der Sicht oder in einer Sicht verwendet, auf die verwiesen wird. Sichten, die auf diese Weise definiert werden, lassen es fälschlicherweise zu, dass Daten über die Sicht geändert werden, und können zu ungenauen Ergebnissen führen, wenn der Datenbank-Kompatibilitätsmodus auf 80 oder höher festgelegt ist. Daten können nicht über eine Sicht eingegeben oder aktualisiert werden, die WITH CHECK OPTION verwendet, wenn die Sicht oder eine Sicht, auf die verwiesen wird, die TOP-Klausel verwendet und der Datenbank-Kompatibilitätsmodus auf 90 oder höher festgelegt ist.  
@@ -32,6 +32,6 @@ ms.locfileid: "48138742"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

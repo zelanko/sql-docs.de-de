@@ -14,12 +14,12 @@ ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c656f11c212b703f6a9a71a1392b5d0685b4c179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c2c25120191b88abcf177723749aa5c46ba44ff
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158280"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582553"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Entfernen von Verweisen auf nicht dokumentierte Systemtabellen
   Viele Systemtabellen, die in früheren Versionen nicht dokumentiert waren, haben sich geändert oder sind nicht mehr vorhanden. Daher kann ihre Verwendung nach einem Upgrade zu Fehlern führen. Da der Upgrade Advisor nach Verweisen auf Systemtabellennamen sucht, enthält sein Bericht Verweise auf alle Benutzertabellen, die dieselben Namen wie Systemtabellen haben.  
@@ -76,7 +76,7 @@ ms.locfileid: "48158280"
   
 -   **syssegments**  
   
--   **sysusers**  
+-   **sysxlogins**  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Anwendungen entsprechend der folgenden Tabelle.  
@@ -86,11 +86,11 @@ ms.locfileid: "48158280"
 |**sysfulltextnotify**|**TableFulltextPendingChanges** Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
 |**syslocks**|**Sys. dm_tran_locks** dynamische verwaltungssicht oder Sp_lock, oder die **sys.syslockinfo** -kompatibilitätssicht angezeigt.|  
 |**sysproperties**|**Sys. extended_properties** -Katalogsicht oder der **Fn_listextendedproperty** Funktion|  
-|**sysusers**|**Sys. server_principals** Katalogsicht oder **Syslogins** -kompatibilitätssicht angezeigt.|  
+|**sysxlogins**|**Sys. server_principals** Katalogsicht oder **Syslogins** -kompatibilitätssicht angezeigt.|  
 |alle **Spt_** Tabellen|Kein Ersatz verfügbar|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

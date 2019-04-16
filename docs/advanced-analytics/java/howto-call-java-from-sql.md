@@ -3,18 +3,18 @@ title: 'Gewusst wie: Aufrufen von Java aus SQL – SQL Server Machine Learning S
 description: Erfahren Sie, wie Sie Java-Klassen von SQL Server gespeicherte Prozeduren, die mit der Programmiersprache Java programming Language-Erweiterung in SQL Server-2019 aufrufen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493002"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581575"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Gewusst wie: Aufrufen von Java aus SQL Server-2019 (Vorschau)
 
@@ -93,7 +93,7 @@ Ebenso, wie Sie eine Systemvariable für das JDK ausführbare Dateien erstellt h
 
 ## <a name="external-library"></a>Externe Bibliothek
 
-In SQL Server 2019 CTP 2.4 können Sie externe Bibliotheken für Java-Sprache unter Windows und Linux. Die gleiche Funktionalität wird unter Linux in einer zukünftigen CTP verfügbar sein. Sie können die Klassen in eine JAR-Datei zu kompilieren und Hochladen der JAR-Datei und andere Abhängigkeiten in der Datenbank mithilfe der [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 2.4 können Sie externe Bibliotheken für Java-Sprache unter Windows und Linux. Sie können die Klassen in eine JAR-Datei zu kompilieren und Hochladen der JAR-Datei und andere Abhängigkeiten in der Datenbank mithilfe der [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Beispiel für eine JAR-Datei mit externen Bibliothek hochladen:
 

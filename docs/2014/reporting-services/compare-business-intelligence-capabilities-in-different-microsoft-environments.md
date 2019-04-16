@@ -1,27 +1,27 @@
 ---
 title: Vergleichen von Business Intelligence-Funktionen In verschiedenen Microsoft-Umgebungen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/06/2017
+ms.openlocfilehash: 60ea737f20ba48c6ba8d441d389a124e90444a76
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241688"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582504"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Vergleichen von Business Intelligence-Funktionen in verschiedenen Microsoft-Umgebungen
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence kann in verschiedenen Umgebungen eingesetzt werden, einschließlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SharePoint Server, SharePoint Online und Power BI für Office 365. In diesem Thema werden die Komponenten und Funktionen, die in jeder Umgebung unterstützt werden, verglichen.  
+
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence kann in verschiedenen Umgebungen eingesetzt werden, einschließlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SharePoint Server, SharePoint Online und Power BI für Office 365. In diesem Thema werden die Komponenten und Funktionen, die in jeder Umgebung unterstützt werden, verglichen.  
   
- Weitere Informationen zum Vergleich von SharePoint Server und SharePoint Online finden Sie unter [Vergleichen von SharePoint-Plänen und -Optionen](http://products.office.com/SharePoint/compare-sharepoint-plans).  
+Weitere Informationen zum Vergleich von SharePoint Server und SharePoint Online finden Sie unter [Vergleichen von SharePoint-Plänen und -Optionen](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>Erstellen und Verwalten von BI-Berichten und Dashboards  
   
@@ -33,8 +33,8 @@ ms.locfileid: "59241688"
 |Planmäßige Datenaktualisierung|Ja, aber unterstützt keine Arbeitsmappen, die Power Query-Daten enthalten|Nein|Ja|  
 |Abfragen in natürlicher Sprache (Q & A)|Nein|Nein|Ja **<sup>2</sup>**|  
 |Prädiktive Prognose|Nein|Nein|Ja **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Integration|Ja|Nein|Nein|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Integration (mehrdimensional und tabellarisch)|Ja|Nein|Nein|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Integration|Ja|Nein|Nein|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Integration (mehrdimensional und tabellarisch)|Ja|Nein|Nein|  
 |Exportieren interaktiver Power View-Dashboards in PowerPoint-Präsentationen|Ja|Nein|Nein|  
 |Erstellen von Dashboards im Browser|Ja|Nein|Nein|  
 |Überwachung der Verwendung|Ja|Nein|Ja|  
@@ -42,7 +42,7 @@ ms.locfileid: "59241688"
   
  **<sup>1</sup>**[Grundlegendes zur Rolle von Data Stewards in der Datenverwaltung](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) und [Video: Power BI-Informationsverwaltung und Data Stewardship](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**[power BI F & A: Optimieren der Power BI-Arbeitsmappe (cloudmodellierung)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).  
+ **<sup>2</sup>**[power BI F & A: Optimieren der Power BI-Arbeitsmappe (cloudmodellierung)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
  **<sup>3</sup>**  [Einführung in neuer Prognosefunktionen in Power View für Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
@@ -64,21 +64,18 @@ ms.locfileid: "59241688"
   
 ## <a name="more-information"></a>Weitere Informationen  
   
--   [BI-Funktionen in Excel und Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
+- [BI-Funktionen in Excel und Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   Weitere Informationen zu den Voraussetzungen zum Verwenden von Synonymen finden Sie unter [Optimieren von Power BI Q & A mit der Synonyme & Formulierung](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) auf pragmaticworks.com.  
+- Weitere Informationen zu den Voraussetzungen zum Verwenden von Synonymen finden Sie unter [Optimieren von Power BI Q & A mit der Synonyme & Formulierung](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) auf pragmaticworks.com.  
   
--   [Office Online, wählen Sie Ihr soziales Unternehmensnetzwerk: Yammer oder Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online, wählen Sie Ihr soziales Unternehmensnetzwerk: Yammer oder Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
--   [Power BI für Office 365](https://www.microsoft.com/powerbi/default.aspx).  
+- [Power BI für Office 365](https://www.microsoft.com/powerbi/default.aspx).  
   
--   [Power BI-Preise](https://www.microsoft.com/powerBI/pricing.aspx).  
+- [Power BI-Preise](https://www.microsoft.com/powerBI/pricing.aspx).  
   
--   [Vergleich einer BI Center-Website mit Power BI für Office 365-Websites](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
+- [Analyse und berichterstellung mit Microsoft Business Intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
--   [Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
-  
-## <a name="community-content"></a>Community-Inhalt  
- [Microsoft Self-Service-BI: lokal versus Cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  
-  
-  
+## <a name="community-content"></a>Community-Inhalt
+
+[Microsoft Self-Service-BI: lokal versus Cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).

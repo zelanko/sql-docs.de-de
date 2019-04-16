@@ -1,27 +1,27 @@
 ---
 title: Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041031"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582533"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
-  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)-Add-In für SharePoint-Produkte und -Technologien (rsSharePoint.msi) ist ein Webdownload, der Funktionen zum Integrieren eines Berichtsservers in eine SharePoint-Bereitstellung bietet.  
+
+Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)-Add-In für SharePoint-Produkte und -Technologien (rsSharePoint.msi) ist ein Webdownload, der Funktionen zum Integrieren eines Berichtsservers in eine SharePoint-Bereitstellung bietet.  
   
 > [!IMPORTANT]  
 >  Eine Liste der unterstützten Kombinationen aus der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -add-in, Berichtsserver und SharePoint, finden Sie weitere Informationen finden Sie [unterstützte Kombinationen von SharePoint- und Reporting Services-Server und -Add-in &#40;SQL Server 2014&#41; ](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041031"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services Add-in für SharePoint 2007-Produkte und-Technologien  
  Das Microsoft SQL Server 2008 Reporting Services-Add-In für Microsoft SharePoint-Technologien bietet Funktionen zum Ausführen eines Berichtsservers innerhalb einer Bereitstellung von Windows SharePoint Services 3.0 oder Microsoft Office SharePoint Server 2007.  
   
- Die aktuelle Version dieser Datei steht online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft SQL Server 2008 Reporting Services-Add-In für Microsoft SharePoint-Technologien](https://go.microsoft.com/fwlink/?LinkID=204813)zur Verfügung.  
+ Die aktuelle Version dieser Datei steht online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft SQL Server 2008 Reporting Services-Add-In für Microsoft SharePoint-Technologien](https://www.microsoft.com/download/details.aspx?id=622)zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

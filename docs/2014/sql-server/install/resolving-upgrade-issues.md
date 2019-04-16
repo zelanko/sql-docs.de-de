@@ -31,12 +31,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125310"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582243"
 ---
 # <a name="resolving-upgrade-issues"></a>Beheben von Upgradeproblemen
   Die Themen in diesem Abschnitt beschreiben sowohl Upgradeprobleme, die erkannt werden können, als auch solche, die nicht erkannt werden können. Beide wirken sich möglicherweise beim Upgrade oder zu einem späteren Zeitpunkt aus. Die Probleme sind nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten organisiert.  
@@ -70,6 +70,6 @@ ms.locfileid: "48125310"
 -   [Verwenden von „sp_rename“ zum Umbenennen doppelter Indexnamen](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

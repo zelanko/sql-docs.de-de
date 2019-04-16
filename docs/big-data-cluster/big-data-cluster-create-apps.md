@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872000"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582445"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-big Data-Cluster (Vorschau)
 
@@ -111,7 +111,7 @@ Dabei wird davon ausgegangen, dass Sie Ihre Anwendung gespeichert, der `addpy` O
 
 Um diese app-Beispiel-app bereitzustellen, erstellen Sie die folgenden Dateien in einem Verzeichnis namens `addpy`:
 
-- `add.py`. Kopieren Sie den folgenden Python-Code in diese Datei ein:
+- `add.py`. installiert haben. Kopieren Sie den folgenden Python-Code in diese Datei ein:
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ Um diese app-Beispiel-app bereitzustellen, erstellen Sie die folgenden Dateien i
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. Kopieren Sie den folgenden Code in diese Datei ein:
+- `spec.yaml`. installiert haben. Kopieren Sie den folgenden Code in diese Datei ein:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
