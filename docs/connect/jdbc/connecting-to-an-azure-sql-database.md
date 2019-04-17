@@ -47,9 +47,9 @@ Um zu vermeiden, dass Verbindungen im Leerlauf durch eine Netzwerkkomponente get
   
 |Registrierungseinstellung|Empfohlener Wert|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveTime"|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveInterval"|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Starten Sie den Computer neu, damit die Registrierungseinstellungen wirksam werden.  
 
@@ -81,7 +81,7 @@ Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung "hostNameInCertificate" zur Verwendung der Verschlüsselung erforderlich
 
-Vor, Version 7.2 den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **verschlüsseln = True** (wenn der Servername in der Verbindung Zeichenfolge *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.). Diese Eigenschaft ist optional ab Version 7.2 des Treibers.
+Vor, Version 7.2 den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **encrypt=true** (wenn der Servername in der Verbindung Zeichenfolge *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.). Diese Eigenschaft ist optional ab Version 7.2 des Treibers.
 
 Zum Beispiel:
 

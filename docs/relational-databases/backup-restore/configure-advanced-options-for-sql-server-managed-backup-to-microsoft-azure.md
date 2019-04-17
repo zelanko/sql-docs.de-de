@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610178"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241748"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,10 @@ ms.locfileid: "47610178"
   
 ## <a name="configure-encryption"></a>Konfigurieren der Verschlüsselung  
  Die folgenden Schritte beschreiben, wie Sie die Einstellungen für die Verschlüsselung mithilfe der gespeicherten Prozedur [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) angegeben.  
-  
-1.  **Den Verschlüsselungsalgorithmus bestimmen:** Bestimmen Sie zunächst den Namen des Verschlüsselungsalgorithmus, der verwendet werden soll. Wählen Sie einen der folgenden Algorithmen aus:  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+1.  **Bestimmen Sie den Verschlüsselungsalgorithmus:** Bestimmen Sie zunächst den Namen des zu verwendenden Verschlüsselungsalgorithmus. Wählen Sie einen der folgenden Algorithmen aus:  
   
     -   AES_128  
   
@@ -44,7 +46,7 @@ ms.locfileid: "47610178"
   
     -   NO_ENCRYPTION  
   
-2.  **Erstellen Sie einen Datenbank-Hauptschlüssel:** Wählen Sie ein Kennwort zum Verschlüsseln der Kopie des Hauptschlüssels aus, der in der Datenbank gespeichert wird.  
+2.  **Erstellen Sie einen Datenbank-Hauptschlüssel:** Wählen Sie ein Kennwort aus, mit dem die in der Datenbank gespeicherte Kopie des Datenbank-Hauptschlüssels verschlüsselt wird.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +57,7 @@ ms.locfileid: "47610178"
     GO  
     ```  
   
-3.  **Ein Sicherungszertifikat oder einen asymmetrischen Schlüssel erstellen:** Sie können ein Zertifikat oder einen asymmetrischen Schlüssel mit der Verschlüsselung verwenden. Im folgenden Beispiel wird ein Sicherungszertifikat für die Verschlüsselung erstellt.  
+3.  **Erstellen Sie ein Sicherungszertifikat oder einen asymmetrischen Schlüssel:** Sie können ein Zertifikat oder einen asymmetrischen Schlüssel für die Verschlüsselung verwenden. Im folgenden Beispiel wird ein Sicherungszertifikat für die Verschlüsselung erstellt.  
   
     ```sql  
     USE Master;  
@@ -65,7 +67,7 @@ ms.locfileid: "47610178"
     GO  
     ```  
   
-4.  **Die Verschlüsselung für die verwaltete Sicherung festlegen:** Rufen Sie die gespeicherte Prozedur **managed_backup.sp_backup_config_advanced** mit den entsprechenden Werten auf. Im folgenden Beispiel wird z.B. die `MyDB` -Datenbank für die Verschlüsselung mit einem Zertifikat namens `MyTestDBBackupEncryptCert` und dem `AES_128` -Verschlüsselungsalgorithmus konfiguriert.  
+4.  **Legen Sie die Verschlüsselung für die verwaltete Sicherung fest:** Rufen Sie die gespeicherte Prozedur **managed_backup.sp_backup_config_advanced** mit den entsprechenden Werten auf. Im folgenden Beispiel wird z.B. die `MyDB` -Datenbank für die Verschlüsselung mit einem Zertifikat namens `MyTestDBBackupEncryptCert` und dem `AES_128` -Verschlüsselungsalgorithmus konfiguriert.  
   
     ```  
     USE msdb;  
@@ -84,17 +86,17 @@ ms.locfileid: "47610178"
 ## <a name="configure-a-custom-backup-schedule"></a>Konfigurieren eines benutzerdefinierten Sicherungszeitplans  
  Die folgenden Schritte beschreiben, wie Sie einen benutzerdefinierten Zeitplan mithilfe der gespeicherten Prozedur [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) angegeben.  
   
-1.  **Die Häufigkeit für vollständige Sicherungen ermitteln:** Bestimmen Sie, wie häufig vollständige Sicherungskopien der Datenbank erstellt werden sollen. Sie können für die vollständigen Sicherungen zwischen den Optionen „Täglich“ und „Wöchentlich“ wählen.  
+1.  **Ermitteln Sie die Häufigkeit für vollständige Sicherungen:** Bestimmen Sie, wie häufig die Datenbank vollständig gesichert werden soll. Sie können für die vollständigen Sicherungen zwischen den Optionen „Täglich“ und „Wöchentlich“ wählen.  
   
-2.  **Die Häufigkeit für Protokollsicherungen ermitteln:** Bestimmen Sie, wie häufig Protokollsicherungen erstellt werden sollen. Dieser Wert wird in Minuten oder Stunden angegeben.  
+2.  **Ermitteln Sie die Häufigkeit für Protokollsicherungen:** Bestimmen Sie, wie häufig Protokolle gesichert werden sollen. Dieser Wert wird in Minuten oder Stunden angegeben.  
   
-3.  **Den Wochentag für wöchentliche Sicherungen bestimmen:** Wenn die Sicherung wöchentlich durchgeführt wird, können Sie den Wochentag für die vollständige Sicherung auswählen.  
+3.  **Bestimmen Sie den Wochentag für wöchentliche Sicherungen:** Bei einer wöchentlichen Sicherung wählen Sie einen Wochentag für die vollständige Sicherung aus.  
   
-4.  **Die Startzeit für die Sicherung bestimmen:** Sie können die Startzeit für die Sicherung im 24-Stunden-Format angeben.  
+4.  **Bestimmen Sie die Startzeit der Sicherung:** Wählen Sie unter Verwendung des 24-Stunden-Formats eine Startzeit für die Sicherung aus.  
   
-5.  **Die Dauer der Sicherung bestimmen:** Sie können die Zeitspanne bestimmen, in der eine Sicherung abgeschlossen werden soll.  
+5.  **Bestimmen Sie die Dauer der Sicherung:** Hiermit wird die Zeitspanne angegeben, in der eine Sicherung abgeschlossen sein muss.  
   
-6.  **Den benutzerdefinierten Sicherungszeitplan festlegen:** Die folgende gespeicherte Prozedur definiert einen benutzerdefinierten Zeitplan für die `MyDB` -Datenbank. Vollständige Sicherungen werden wöchentlich am `Monday` um `17:30`durchgeführt. Protokollsicherungen werden alle `5` Minuten durchgeführt. Sicherungen müssen innerhalb von zwei Stunden abgeschlossen sein.  
+6.  **Legen Sie den benutzerdefinierten Sicherungszeitplan fest:** Die folgende gespeicherte Prozedur definiert einen benutzerdefinierten Zeitplan für die `MyDB`-Datenbank. Vollständige Sicherungen werden wöchentlich am `Monday` um `17:30`durchgeführt. Protokollsicherungen werden alle `5` Minuten durchgeführt. Sicherungen müssen innerhalb von zwei Stunden abgeschlossen sein.  
   
     ```  
     USE msdb;  
@@ -111,10 +113,10 @@ ms.locfileid: "47610178"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
  Nach dem Konfigurieren der erweiterten Optionen und der benutzerdefinierten Zeitpläne müssen Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf der Zieldatenbank oder der SQL Server-Instanz aktivieren. Weitere Informationen finden Sie unter [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

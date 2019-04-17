@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429356"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "53213709"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  Die Berechtigung **CONTROL SERVER** ist ähnlich, aber nicht identisch mit der festen Serverrolle **sysadmin** . Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. **CONTROL SERVER** impliziert nicht die Mitgliedschaft in der festen Serverrolle **sysadmin**. Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten **DBCC** -Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** . Eine Liste mit 171 im gespeicherter Systemprozeduren, die eine **sysadmin** -Mitgliedschaft erfordern, finden Sie im folgenden Blogbeitrag von Andreas Wolter: [CONTROL gegen sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Privilegienausweitung – Fallstricke](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Die Berechtigung **CONTROL SERVER** ist ähnlich, aber nicht identisch mit der festen Serverrolle **sysadmin** . Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. **CONTROL SERVER** impliziert nicht die Mitgliedschaft in der festen Serverrolle **sysadmin**. Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten **DBCC** -Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** . Eine Liste mit 171 im gespeicherter Systemprozeduren, die eine **sysadmin** -Mitgliedschaft erfordern, finden Sie im folgenden Blogbeitrag von Andreas Wolter: [CONTROL gegen sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Privilegienausweitung – Fallstricke](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Berechtigung auf Serverebene  
  Benutzerdefinierten Serverrollen können nur Berechtigungen auf Serverebene hinzugefügt werden. Führen Sie zum Auflisten der Berechtigungen auf Serverebene die folgende Anweisung aus. Folgende Berechtigungen gelten auf Serverebene:  
@@ -83,7 +83,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadaten|Gibt eine Liste von Rollen auf Serverebene zurück.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadaten|Gibt Informationen zu Mitgliedern einer Rolle auf Serverebene zurück.|  
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|Metadaten|Zeigt die Berechtigungen einer Rolle auf Serverebene an.|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Metadaten|Gibt an, ob eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung Mitglied der angegebenen Rolle auf Serverebene ist.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Metadaten|Gibt an, ob eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung Mitglied der angegebenen Rolle auf Serverebene ist.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|Metadaten|Gibt eine Zeile für jedes Mitglied jeder Rolle auf Serverebene zurück.|  
 |[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Befehl|Fügt einen Benutzernamen als Mitglied einer Rolle auf Serverebene hinzu. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
 |[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Befehl|Entfernt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen oder einen Windows-Benutzer bzw. eine -Gruppe aus einer Rolle auf Serverebene. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
@@ -94,7 +94,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Sicherheitskatalogsichten&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [GRANT (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

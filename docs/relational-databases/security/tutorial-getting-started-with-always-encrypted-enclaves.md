@@ -1,7 +1,7 @@
 ---
 title: 'Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241538"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
    - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) für den VM-Prozessor.
    - In Azure stellen Sie sicher, dass Sie eine VM-Größe ausführen, die geschachtelten Virtualisierung unterstützt, z. B. VMs der Serien Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - Bei VMware vSphere 6.7 oder höher aktivieren Sie die Unterstützung für virtualisierungsbasierte Sicherheit für den virtuellen Computer, wie in der [VMware-Dokumentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) beschrieben.
+   - Andere Hypervisoren und Public Clouds unterstützen möglicherweise die Verwendung von Always Encrypted mit Secure Enclaves auf einem virtuellen Computer, solange Virtualisierungserweiterungen (manchmal als „geschachtelte Virtualisierung“ bezeichnet) für den virtuellen Computer verfügbar gemacht werden. Informationen zur Kompatibilität und Konfigurationsanweisungen finden Sie in der Dokumentation zu Ihrer Virtualisierungslösung.
 - [SQL Server Management Studio (SSMS) 18.0 oder höher](../../ssms/download-sql-server-management-studio-ssms.md)
 
 Alternativ können Sie SSMS auf einem anderen Computer installieren.
@@ -324,7 +325,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     2. Wählen Sie **Abfrageoptionen...** aus.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
     4. Stellen Sie sicher, dass „Parametrisierung für Always Encrypted aktivieren“ aktiviert ist.
-    5. Wählen Sie „OK“ aus.
+    5. Wählen Sie „OK“.
 2. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgende Abfrage ein, und führen Sie sie aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
@@ -335,7 +336,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     ```
 3. Versuchen Sie dieselbe Abfrage erneut im Abfragefenster, in dem Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 Informationen zu weiteren Anwendungsfällen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Sie können auch Folgendes ausprobieren:
 
 - [Konfigurieren des TPM-Nachweises.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)

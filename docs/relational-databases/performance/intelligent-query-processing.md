@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042229"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533358"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -36,14 +36,14 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 In der folgenden Tabelle sind Details zu allen Features der intelligenten Abfrageverarbeitung dargestellt, sowie deren jeweiligen Anforderungen für den Datenbank-Kompatibilitätsgrad.
 
-| **IQP-Feature** | **Unterstützt in Azure SQL-Datenbank** | **Unterstützt in SQL Server** |**und Beschreibung** |
+| **IQP-Feature** | **Unterstützt in Azure SQL-Datenbank** | **Unterstützt in SQL Server** |**Beschreibung** |
 | --- | --- | --- |--- |
 | [Adaptive Joins (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Adaptive Joins wählen je nach tatsächlichen Eingabezeilen während der Laufzeit dynamisch einen Jointyp aus.|
 | [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Ja, öffentliche Vorschauversion| Ja, ab SQL Server 2019 CTP 2.0, öffentliche Vorschauversion|Stellt die geschätzte Abfrageverarbeitung für Big Data-Szenarios mit dem Vorteil einer hohen Leistung und einem niedrigen Speicherbedarf bereit. |
 | [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Stellt den Batchmodus für CPU-gebundene relationale Data Warehouse-Workloads bereit, ohne Columnstore-Indizes zu benötigen.  | 
 | [Verschachtelte Ausführung](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Verwendet die tatsächliche Kardinalität der Tabellenwertfunktion mit mehreren Anweisungen, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
-| [Feedback zur Speicherzuweisung (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Wenn es für eine Abfrage im Batchmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des Speichers benötigt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
-| [Feedback zur Speicherzuweisung (Zeilenmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Wenn es für eine Abfrage im Zeilenmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des Speichers benötigt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
+| [Feedback zur Speicherzuweisung (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Wenn es für eine Abfrage im Batchmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
+| [Feedback zur Speicherzuweisung (Zeilenmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Wenn es für eine Abfrage im Zeilenmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
 | [Inlining benutzerdefinierter Skalarfunktionen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Nein | Ja,ab SQL Server 2019 CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Benutzerdefinierte Skalarfunktionen werden in äquivalente relationale Ausdrücke transformiert, die per Inlining durch die aufrufende Abfrage ersetzt werden, was oft zu erheblichen Leistungssteigerungen führt.|
 | [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Verwendet die tatsächliche Kardinalität der Tabellenvariable, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
 
@@ -414,7 +414,7 @@ Batchmodus bei Rowstore ermöglicht die Ausführung im Batchmodus für Analysewo
 
 ### <a name="background"></a>Hintergrund
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat ein neues Feature zur Beschleunigung analytischer Workloads eingeführt: Columnstore-Indizes. Wir haben die Anwendungsfälle erweitert und die Leistung von Columnstore-Indizes in allen nachfolgenden Releases verbessert. Bisher wurden diese Funktionen so dargestellt und dokumentiert, als ob es sich um genau ein Feature handeln würde. Sie erstellen die Columnstore-Indizes in Ihren Tabellen. Und Ihre analytische Workload wird schneller ausgeführt. Es gibt jedoch zwei miteinander zusammenhängende, aber unterschiedliche Gruppen von Technologien:
+Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde ein neues Feature zur Beschleunigung analytischer Workloads eingeführt: Columnstore-Indizes. Wir haben die Anwendungsfälle erweitert und die Leistung von Columnstore-Indizes in allen nachfolgenden Releases verbessert. Bisher wurden diese Funktionen so dargestellt und dokumentiert, als ob es sich um genau ein Feature handeln würde. Sie erstellen die Columnstore-Indizes in Ihren Tabellen. Und Ihre analytische Workload wird schneller ausgeführt. Es gibt jedoch zwei miteinander zusammenhängende, aber unterschiedliche Gruppen von Technologien:
 - **Columnstore**-Indizes erlauben Analyseabfragen nur den Zugriff auf die Daten in den Spalten, die sie benötigen. Die Seitenkomprimierung im Spaltenspeicherformat ist ebenfalls effektiver als die Komprimierung in traditionellen **Rowstore**-Indizes. 
 - Mit der Verarbeitung im **Batchmodus** verarbeiten Abfrageoperatoren Daten effizienter. Die Verarbeitung erfolgt für ein Batch an Zeilen und nicht für jede Zeile einzeln. Zahlreiche weitere Verbesserungen der Skalierbarkeit sind an die Batchmodusverarbeitung gebunden. Weitere Informationen zum Batchmodus finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
@@ -498,9 +498,9 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)    
 [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    

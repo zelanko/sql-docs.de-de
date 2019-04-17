@@ -1,7 +1,7 @@
 ---
 title: 'Columnstore-Indizes: Leitfaden zum Datenladevorgang | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668929"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506497"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes: Leitfaden zum Datenladevorgang
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Optionen und Empfehlungen für das Laden von Daten mithilfe der Funktion zum SQL-Massenladen in einen Columnstore-Index und Einfügemethoden. Das Laden von Daten in einen Columnstore-Index ist ein wichtiger Teil des Warehousing-Prozesses, da Daten in den Index als Vorbereitung für die Analyse verschoben werden.
@@ -33,18 +34,18 @@ Um einen Massenladevorgang auszuführen, können Sie das [bcp-Hilfsprogramm](../
 
 ![Laden in einen geclusterten Columnstore-Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- Gemäß dem Diagramm gilt Folgendes für das Massenladen:  
+Gemäß dem Diagramm gilt Folgendes für das Massenladen:
   
-* Die Daten werden nicht vorab sortiert. Daten werden in der Reihenfolge in Zeilengruppen eingefügt, in der sie empfangen werden.
-* Wenn die Batchgröße >= 102.400 ist, werden die Zeilen direkt in die komprimierten Zeilengruppen eingefügt. Es wird empfohlen, dass Sie die Batchgröße >= 102400 für einen effizienten Massenimport auswählen, da Sie das Verschieben von Datenzeilen in eine Deltazeilengruppen vermeiden können, bevor die Zeilen von einem Hintergrundthread (Tupelverschiebungsvorgang) schließlich in komprimierte Zeilengruppen verschoben werden.
-* Wenn die Batchgröße < 102,400 ist oder die verbleibenden Zeilen < 102,400 sind, werden die Zeilen in Deltazeilengruppen geladen.
+- Die Daten werden nicht vorab sortiert. Daten werden in der Reihenfolge in Zeilengruppen eingefügt, in der sie empfangen werden.
+- Wenn die Batchgröße >= 102.400 ist, werden die Zeilen direkt in die komprimierten Zeilengruppen eingefügt. Es wird empfohlen, eine Batchgröße >= 102.400 für einen effizienten Massenimport auszuwählen, da Sie das Verschieben von Datenzeilen in eine Deltazeilengruppe vermeiden können, bevor die Zeilen von einem Hintergrundthread (Tupelverschiebungsvorgang) schließlich in komprimierte Zeilengruppen verschoben werden.
+- Wenn die Batchgröße < 102,400 ist oder die verbleibenden Zeilen < 102,400 sind, werden die Zeilen in Deltazeilengruppen geladen.
 
 > [!NOTE]
 > Für eine Rowstore-Tabelle mit nicht gruppierten Columnstore-Indexdaten fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten immer in die Basistabelle ein. Die Daten werden nie direkt in den Columnstore-Index eingefügt.  
 
 Das Massenladen verfügt über diese integrierten Leistungsoptimierungen:
 -   **Parallele Ladevorgänge:** Sie können mehrere Massenladevorgänge (bcp oder Masseneinfügung) ausführen, die jeweils eine separate Datendatei laden. Im Gegensatz zu Rowstore-Massenladevorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie `TABLOCK` nicht angeben, da jeder Massenimportthread Daten ausschließlich in separate Zeilengruppen lädt (komprimierte oder Deltazeilengruppen), die eine exklusive Sperre aufweisen. Die Verwendung von `TABLOCK` erzwingt eine exklusive Sperre für die Tabelle, und Sie sind dann nicht in der Lage, Daten parallel zu importieren.  
--   **Minimale Protokollierung:** Ein Massenladevorgang verwendet die minimale Protokollierung für Daten, die direkt in komprimierten Zeilengruppen verschoben werden. Alle Daten, die in eine Delta-Zeilengruppe gehen, werden vollständig protokolliert. Dies schließt alle Batchgrößen ein, die weniger als 102.400 Zeilen sind. Allerdings ist für das Massenladen das Ziel für die meisten Daten, Delta-Zeilengruppen zu umgehen.  
+-   **Minimale Protokollierung:** Eine Massenladungsvorgang verwendet die minimale Protokollierung für Daten, die direkt zu komprimierten Zeilengruppen verschoben werden. Alle Daten, die in eine Delta-Zeilengruppe gehen, werden vollständig protokolliert. Dies schließt alle Batchgrößen ein, die weniger als 102.400 Zeilen sind. Allerdings ist für das Massenladen das Ziel für die meisten Daten, Delta-Zeilengruppen zu umgehen.  
 -   **Sperrenoptimierung:** Beim Laden in komprimierte Zeilengruppen wird die X-Sperre für Zeilengruppen abgerufen. Beim Massenladen in Deltazeilengruppen wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
 Wenn Sie über einen nicht gruppierten B-Strukturindex auf einem Columnstore-Index verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Index selbst, sondern die zuvor beschriebenen Optimierungen für den gruppierten Columnstore-Index sind weiterhin vorhanden.  
@@ -57,9 +58,10 @@ Diese Szenarien beschreiben, in welchen Fällen geladene Zeilen direkt in den Co
 |Zeilen für Massenladevorgang|Zur komprimierten Zeilengruppe hinzugefügte Zeilen|Zur Delta-Zeilengruppe hinzugefügte Zeilen|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Zeilengruppengröße: 145.000.|0|  
-|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576.|1|  
-|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000.|0|  
+|145,000|145,000<br /><br /> Zeilengruppengröße: 145,000|0|  
+|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576|1|  
+|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  Im folgenden Beispiel werden die Ergebnisse des Ladens von 1.048.577 Zeilen in eine Tabelle angezeigt. Aus den Ergebnissen wird ersichtlich, dass eine COMPRESSED-Zeilengruppe im Columnstore (in Form von komprimierten Spaltensegmenten) und eine Zeile im Deltastore vorhanden sind.  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>So funktioniert das Laden in eine partitionierte Tabelle  
  Bei partitionierten Daten weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuerst jede Zeile einer Partition zu und führt dann Columnstore-Vorgänge für die Daten innerhalb der Partition aus. Jede Partition verfügt über eigene Zeilengruppen und mindestens eine Delta-Zeilengruppe.  
   
- ## <a name="next-steps"></a>Nächste Schritte
- Weitere Informationen zum Laden finden Sie in diesem [Blogbeitrag](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+## <a name="next-steps"></a>Nächste Schritte
+
+Blogbeitrag jetzt in der _Tech Community_, verfasst am 11.03.2015: [Überlegungen zur Leistung von Datenladevorgängen bei gruppierten Columnstore-Indizes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223).

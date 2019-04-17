@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420095"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516496"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 
@@ -58,7 +58,7 @@ Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle ver
   
  Feste Datenbankrollen werden auf der Datenbankebene definiert und sind in jeder Datenbank vorhanden. Mitglieder der Datenbankrolle **db_owner** können die Mitgliedschaft von festen Datenbankrollen ändern. In der msdb-Datenbank gibt es auch einige Datenbankrollen für spezielle Zwecke.  
   
- Sie können in Rollen auf Datenbankebene jedes Datenbankkonto und andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Rollen hinzufügen. Jedes Mitglied einer festen Datenbankrolle kann der betreffenden Rolle weitere Benutzer hinzufügen.  
+ Sie können in Rollen auf Datenbankebene jedes Datenbankkonto und andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Rollen hinzufügen.
   
 > [!TIP]  
 >  Fügen Sie keine benutzerdefinierten Datenbankrollen als Mitglieder fester Rollen hinzu. Dies könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.  
@@ -74,7 +74,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
 |Name der festen Datenbankrolle|und Beschreibung|  
 |-------------------------------|-----------------|  
 |**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und die Datenbank in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]auch löschen. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]sind für einige Wartungsaktivitäten Berechtigungen auf Serverebene erforderlich; sie können von **db_owners**nicht ausgeführt werden.)|  
-|**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft ändern und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  
+|**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft nur für benutzerdefinierte Rollen ändern, Benutzer ohne Anmeldungen erstellen und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  
 |**db_accessadmin**|Mitglieder der festen Datenbankrolle **db_accessadmin** können den Zugriff auf die Datenbank für Windows-Anmeldungen, Windows-Gruppen und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen hinzufügen oder entfernen.|  
 |**db_backupoperator**|Mitglieder der festen Datenbankrolle **db_backupoperator** können eine Sicherung der Datenbank durchführen.|  
 |**db_ddladmin**|Mitglieder der festen Datenbankrolle **db_ddladmin** können in einer Datenbank sämtliche DDL-Befehle (Data Definition Language) ausführen.|  
@@ -93,7 +93,7 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
 
 |Rollenname|und Beschreibung|  
 |--------------------|-----------------|
-|**dbmanager** | Kann Datenbanken erstellen und löschen. Ein Mitglied der dbmanager-Rolle, das eine Datenbank erstellt, wird zum Besitzer der betreffenden Datenbank, wodurch es diesem Benutzer möglich wird, eine Verbindung mit der Datenbank als dbo-Benutzer herzustellen. Der dbo-Benutzer verfügt über alle Datenbankberechtigungen in der Datenbank. Mitglieder der dbmanager-Rolle haben nicht unbedingt die Berechtigung zum Zugriff auf Datenbanken, die sie nicht besitzen.|
+|**dbmanager** | Kann Datenbanken erstellen und löschen. Ein Mitglied der dbmanager-Rolle, das eine Datenbank erstellt, wird zum Besitzer der betreffenden Datenbank. Dieser kann dann als dbo-Benutzer eine Verbindung mit der Datenbank herstellen. Der dbo-Benutzer verfügt über alle Datenbankberechtigungen in der Datenbank. Mitglieder der dbmanager-Rolle haben nicht unbedingt die Berechtigung zum Zugriff auf Datenbanken, die sie nicht besitzen.|
 |**loginmanager** | Kann Anmeldungen in der virtuellen Masterdatenbank erstellen und löschen.|
 
 > [!NOTE]

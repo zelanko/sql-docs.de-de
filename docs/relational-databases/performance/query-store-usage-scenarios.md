@@ -13,13 +13,13 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372482"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542040"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -131,6 +131,9 @@ Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind alle Änderungen des
     A.  Erzwingen Sie für alle Fälle, in denen Regressionen auftreten, den zuvor bekannten geeigneten Plan im Abfragespeicher.  
   
     B.  Falls Abfragepläne nicht erzwungen werden können oder die Leistung weiterhin unzureichend ist, ziehen Sie in Betracht, die vorherige Einstellung des [Datenbank-Kompatibilitätsgrads](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) wiederherzustellen und sich anschließend an den Microsoft-Kundensupport zu wenden.  
+    
+> [!TIP]
+> Verwenden Sie die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Aufgabe *Datenbank aktualisieren*, um den [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) der Datenbank zu aktualisieren. Ausführliche Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
 Einige Arbeitsauslastungen weisen keine dominierenden Abfragen auf, die sich optimieren lassen, um die Gesamtleistung der Anwendung zu verbessern. Diese Workloads zeichnen sich normalerweise durch eine relativ große Anzahl verschiedener Abfragen aus, von denen jede einen Teil der Systemressourcen beansprucht. Aufgrund ihrer Einzigartigkeit werden solche Abfragen nur sehr selten ausgeführt (normalerweise nur einmal, daher die Bezeichnung „ad-hoc“), daher ist ihr Ressourcenverbrauch zur Laufzeit nicht kritisch. Da andererseits die Anwendung unterm Strich ständig neue Abfragen generiert, wird ein erheblicher Teil der Systemressourcen für die Kompilierung von Abfragen aufgewendet, was nicht optimal ist. Das ist auch für den Abfragespeicher keine ideale Situation, da die große Anzahl an Abfragen und Plänen den vorgesehenen Speicherplatz schnell erschöpft und der Abfragespeicher so sehr bald in den schreibgeschützten Modus versetzt werden muss. Wenn Sie die **Richtlinie zur größenbasierten Bereinigung** ([dringend empfohlen](best-practice-with-the-query-store.md) , um den Abfragespeicher stets betriebsbereit zu halten) aktiviert haben, bereinigen Hintergrundprozesse während des größten Teils der Zeit die Strukturen des Abfragespeichers, was ebenfalls in erheblichem Maß Systemressourcen verbraucht.  
@@ -196,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Nach dem Ausführen eines dieser Schritte zeichnet **Abfragen mit höchstem Ressourcenverbrauch** ein anderes Bild Ihrer Arbeitsauslastung.  
   
-![Abfrage-Store-Verwendung – 8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![Abfrage-Store-Nutzung – 8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 In manchen Fällen generiert Ihre Anwendung möglicherweise viele verschiedene Abfragen, die keine geeigneten Kandidaten für automatische Parametrisierung darstellen. In diesem Fall findet sich eine große Anzahl Abfragen im System, das Verhältnis zwischen eindeutigen Abfragen und eindeutigem Abfragehash (`query_hash`) liegt aber wahrscheinlich nahe bei 1.  
   
@@ -217,6 +220,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   
   

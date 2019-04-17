@@ -1,7 +1,7 @@
 ---
 title: Anwenden von Transaktionsprotokollsicherungen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/13/2016
+ms.date: 08/14/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240590"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Anwenden von Transaktionsprotokollsicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,12 @@ ms.locfileid: "54242171"
 |20:00 Uhr|Sichern des Transaktionsprotokolls.|  
 |21:45 Uhr|Fehler tritt auf.|  
   
-> **HINWEIS:** Eine Erklärung dieser Beispielsequenz von Sicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> Eine Erklärung dieser Beispielsequenz von Sicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Zum Wiederherstellen des Datenbankzustands von 21:45 Uhr (Zeitpunkt des Fehlers) kann eines der folgenden Verfahren verwendet werden:  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Alternative 1: Wiederherstellen der Datenbank mithilfe der letzten vollständigen Datenbanksicherung**  
   
 1.  Erstellen Sie eine Sicherung des Protokollfragments des aktuell aktiven Transaktionsprotokolls zum Zeitpunkt des Fehlers.  
@@ -73,7 +75,7 @@ ms.locfileid: "54242171"
   
  **Alternative 2: Wiederherstellen der Datenbank mithilfe einer früheren vollständigen Datenbanksicherung**  
   
-> **HINWEIS:** Dieser alternative Vorgang ist nützlich, wenn Sie aufgrund eines Problems die vollständige Datenbanksicherung von 18:00 Uhr von 18:00 Uhr. Dieser Vorgang dauert länger als das Wiederherstellen der vollständigen Datenbanksicherung von 18:00 Uhr.  
+> Dieser alternative Vorgang ist nützlich, wenn Sie aufgrund eines Problems die vollständige Datenbanksicherung von 18:00 Uhr von 18:00 Uhr. Dieser Vorgang dauert länger als das Wiederherstellen der vollständigen Datenbanksicherung von 18:00 Uhr.  
   
 1.  Erstellen Sie eine Sicherung des Protokollfragments des aktuell aktiven Transaktionsprotokolls zum Zeitpunkt des Fehlers.  
   
@@ -81,9 +83,9 @@ ms.locfileid: "54242171"
   
      Diese Alternative verdeutlicht, welche redundante Sicherheit eine zwischen eine Folge vollständiger Datenbanksicherungen geschaltete Kette von Transaktionsprotokollsicherungen bietet.  
   
-> **HINWEIS:** In einigen Fällen können Sie auch mit Transaktionsprotokollen eine Datenbank zu einem bestimmten Zeitpunkt wiederherstellen. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)bezeichnet.  
+> In einigen Fällen können Sie auch mit Transaktionsprotokollen eine Datenbank zu einem bestimmten Zeitpunkt wiederherstellen. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)bezeichnet.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So wenden Sie eine Transaktionsprotokollsicherung an**  
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -104,7 +106,7 @@ ms.locfileid: "54242171"
   
 -   [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

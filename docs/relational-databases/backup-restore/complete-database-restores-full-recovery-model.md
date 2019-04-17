@@ -1,7 +1,7 @@
 ---
 title: Vollständige Datenbankwiederherstellungen (vollständiges Wiederherstellungsmodell) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242201"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Vollständige Datenbankwiederherstellungen (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,18 @@ ms.locfileid: "54241981"
   
  Beim Wiederherstellen einer Datenbank sollten Sie vor allem beim vollständigen und massenprotokollierten Wiederherstellungsmodell eine einzelne Wiederherstellungssequenz verwenden. Eine *Wiederherstellungssequenz* besteht aus mindestens einem Wiederherstellungsvorgang, mit dessen Hilfe Daten mindestens eine Wiederherstellungsphase durchlaufen.  
   
-> [!IMPORTANT]  
->  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Diese Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler durch Ändern des Schemas oder der physischen Datenbankstruktur erzeugt. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z.B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
-  
- **In diesem Thema:**  
-  
--   [Wiederherstellen einer Datenbank bis zum Zeitpunkt des Fehlers](#PointOfFailure)  
-  
--   [Wiederherstellen einer Datenbank bis zu einem Punkt in einer Protokollsicherung](#PointWithinBackup)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
-> [!NOTE]  
->  Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.  
+### <a name="untrusted-sources"></a>Nicht vertrauenswürdigen Quellen
+
+Vom Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird _abgeraten_. Diese Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler durch Ändern des Schemas oder der physischen Datenbankstruktur erzeugt. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie in der Datenbank auf einem Nichtproduktionsserver [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) aus. Überprüfen Sie auch manuell geschriebenen Code in der Datenbank, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.
+
+### <a name="backups-from-earlier-versions"></a>Sicherungen von früheren Versionen
+
+Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.
   
 ##  <a name="PointOfFailure"></a> Wiederherstellen einer Datenbank bis zum Zeitpunkt des Fehlers  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Zum Wiederherstellen einer Datenbank bis zum Zeitpunkt des Auftretens eines Fehlers werden in der Regel die folgenden grundlegenden Schritte ausgeführt:  
   
 1.  Sichern Sie das aktive Transaktionsprotokoll (das Protokollfragment). Dadurch wird eine Sicherung des Protokollfragments erstellt. Wenn das aktive Transaktionsprotokoll nicht verfügbar ist, gehen alle Transaktionen in diesem Teil des Protokolls verloren.  

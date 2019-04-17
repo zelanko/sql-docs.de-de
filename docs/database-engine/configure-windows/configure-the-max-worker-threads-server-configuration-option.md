@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429336"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "56230977"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So konfigurieren Sie die Option Maximale Anzahl von Arbeitsthreads mit:**  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230977"
     |\> 64 Prozessoren|256 + ((logische CPUs – 4) * 32)|512 + ((logische CPUs – 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht mehr unter einem 32-Bit-Betriebssystem installiert werden. Werte für 32-Bit-Computer sind zur Unterstützung von Kunden aufgeführt, die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher nutzen.   1024 ist der empfohlene Wert für die maximale Anzahl von Arbeitsthreads auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die auf einem 32-Bit-Computer ausgeführt wird.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht mehr unter einem 32-Bit-Betriebssystem installiert werden. Werte für 32-Bit-Computer sind zur Unterstützung von Kunden aufgeführt, die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher nutzen. Als maximale Anzahl von Arbeitsthreads auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die auf einem 32-Bit-Computer ausgeführt wird, wird der Wert 1.024 empfohlen.  
   
     > [!NOTE]  
-    >  Empfehlungen zur Verwendung von mehr als 64 CPUs finden Sie unter [Bewährte Methoden zum Ausführen von SQL Server auf Computern mit mehr als 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
+    > Empfehlungen zur Verwendung von mehr als 64 CPUs finden Sie unter [Bewährte Methoden zum Ausführen von SQL Server auf Computern mit mehr als 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Wenn alle Arbeitsthreads aktiviert sind, kann es sein, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Abfragen mit langer Ausführungszeit scheinbar nicht mehr reagiert, bis ein Arbeitsthread abgeschlossen wird und verfügbar ist. Dies ist zwar kein Fehler, aber in bestimmten Situationen unerwünscht. Wenn ein Prozess scheinbar nicht mehr reagiert und keine neuen Abfragen verarbeitet werden können, stellen Sie mithilfe der dedizierten Administratorverbindung (DAC) eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, und brechen Sie den Prozess ab. Um diese Situation zu verhindern, erhöhen Sie den Wert für die maximale Anzahl von Arbeitsthreads.  
   
- Die Serverkonfigurationsoption **Max. Anzahl von Arbeitsthreads** berücksichtigt keine Kontothreads, die für alle Systemtasks wie Verfügbarkeitsgruppen, Service Broker, Sperren-Manager und andere erforderlich sind. Wenn die Anzahl der konfigurierten Threads überschritten wird, stellt die folgende Abfrage Informationen zu den Systemtasks bereit, durch die die zusätzlichen Threads generiert wurden.  
+ Durch die Serverkonfigurationsoption **Max. Anzahl von Arbeitsthreads** werden nicht alle Threads begrenzt, die im System erzeugt werden können. Threads, die für Aufgaben wie Verfügbarkeitsgruppen, Service Broker, Sperren-Manager usw. erforderlich sind, gehen über dieses Limit hinaus. Wenn die Anzahl der konfigurierten Threads überschritten wird, bietet die folgende Abfrage Informationen zu den Systemtasks, durch die die zusätzlichen Threads erzeugt wurden.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -104,7 +104,7 @@ ms.locfileid: "56230977"
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
+ Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Um **sp_configure** mit beiden Parametern auszuführen und eine Konfigurationsoption zu ändern oder die `RECONFIGURE`-Anweisung auszuführen, benötigt ein Benutzer die `ALTER SETTINGS`-Berechtigung auf Serverebene. Die `ALTER SETTINGS`-Berechtigung ist implizit in den festen Serverrollen **sysadmin** und **serveradmin** enthalten.  
   
 ##  <a name="SSMSProcedure"></a> Bei Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -143,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option Max. Anzahl von Arbeitsthreads  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Max. Anzahl von Arbeitsthreads“  
  Die Änderung wird nach dem Ausführen von [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) sofort wirksam, ohne dass ein Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429386"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="arguments"></a>Argumente  
  **'**\<algorithm>**'**  
- Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gelten alle anderen Algorithmen als SHA2_256 und SHA2_512 als veraltet. Ältere Algorithmen (nicht empfohlen) funktionieren weiterhin, lösen jedoch ein Veraltungsereignis aus.  
+ Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gelten alle anderen Algorithmen als SHA2_256 und SHA2_512 als veraltet.  
   
  **@input**  
  Gibt eine Variable mit den Daten an, für die das Hashing ausgeführt werden soll. **@input** ist **varchar**, **nvarchar** oder **varbinary**.  
@@ -54,7 +54,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  Die Ausgabe entspricht dem Algorithmusstandard: 128 Bits (16 Bytes) für MD2, MD4 und MD5; 160 Bits (20 Bytes) für SHA und SHA1; 256 Bits (32 Bytes) für SHA2_256 und 512 Bits (64 Bytes) für SHA2_512.  
   
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Bei [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher sind zulässige Eingabewerte auf 8.000 Byte beschränkt.  
   
@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Remarks  
 Erwägen Sie die Verwendung von `CHECKSUM` oder `BINARY_CHECKSUM` als Alternativen zur Berechnung eines Hashwerts.
 
-Die MD2-, MD4-, MD5-, SHA- und SHA1-Algorithmen sind bei einem niedrigeren Kompatibilitätsgrad als 130 und darüber nicht verfügbar. Verwenden Sie stattdessen SHA2_256 oder SHA2_512.
+Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.
 
 ## <a name="examples"></a>Beispiele  
 ### <a name="return-the-hash-of-a-variable"></a>Zurückgeben des Hashcodes einer Variablen  

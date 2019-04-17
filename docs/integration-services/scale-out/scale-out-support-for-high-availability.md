@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241460"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -43,7 +43,7 @@ Dieses Konto sollte zukünftig Zugriff auf die SSISDB auf dem Sekundärknoten im
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Nehmen Sie den DNS-Hostnamen des Scale Out-Masterdiensts in den allgemeinen Namen des Scale Out-Masterzertifikats auf
 
-Dieser Hostname wird im Scale Out-Masterendpunkt verwendet. (Achten Sie darauf, einen DNS-Hostnamen anzugeben, keinen Servernamen.)
+Dieser Hostname entspricht dem Scale Out-Masterendpunkt, der als allgemeiner Clusterdienst im Failovercluster erstellt wird (siehe Schritt 7).   (Achten Sie darauf, einen DNS-Hostnamen anzugeben, keinen Servernamen.)
 
 ![Masterkonfiguration für Hochverfügbarkeit](media/ha-master-config.PNG)
 
@@ -112,5 +112,5 @@ Befolgen Sie für ein Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln:
--   [Scale Out-Master von Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Scale Out-Worker von Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Master für horizontales Hochskalieren von Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Worker für horizontales Hochskalieren von Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

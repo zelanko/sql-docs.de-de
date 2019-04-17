@@ -33,7 +33,7 @@ ms.locfileid: "56079456"
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Definiert eine Uhrzeit. Die Uhrzeit basiert auf einem 24-Stunden-Format und beachtet keine Zeitzonen.  
+  Definiert eine Uhrzeit. Die Uhrzeit basiert auf einem 24-Stunden-Format ohne Angabe der Zeitzone.  
   
   > [!NOTE]  
   > PDW-Benutzer, die den Informatica Connector verwenden, erhalten Informationen zu Informatica. 
@@ -42,15 +42,15 @@ ms.locfileid: "56079456"
   
 |Eigenschaft|value|  
 |--------------|-----------|  
-|Syntax|**time** [ (*fractional second scale*) ]|  
+|Syntax|**time** [ (*Sekundenbruchteil-Genauigkeit*) ]|  
 |Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Im Zusammenhang mit Informatica kann dies eine ganze Zahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Bruchteil beträgt 7 (100 ns).|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im Abschnitt [Abwärtskompatibilität für Downlevelclient](#BackwardCompatibilityforDownlevelClients).|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im Abschnitt [Abwärtskompatibilität für Downlevelclient](#BackwardCompatibilityforDownlevelClients).|  
 |Bereich|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
 |Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> Bei n\* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica umfasst n\* bis zu drei Ziffern im Bereich von 0 bis 999.|  
 |Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn). Für Informatica sind es höchstens 12 Positionen (hh:mm:ss.nnn).|  
 |Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Siehe Tabelle unten.|  
-|Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. In Informatica sind es standardmäßig 4 Byte (fest), wobei die Standardgenauigkeit in Sekundenbruchteilen 1 ms beträgt.|  
+|Speichergröße|Standardmäßig 5 Bytes fest bei der Standardgenauigkeit von 100 ns für die Sekundenbruchteile. In Informatica sind es standardmäßig 4 Byte (fest), wobei die Standardgenauigkeit in Sekundenbruchteilen 1 ms beträgt.|  
 |Genauigkeit|100 ns (1 ms in Informatica)|  
 |Standardwert|00:00:00<br /><br /> Dieser Wert wird für den angefügten Datumsteil für eine implizite Konvertierung von **date** in **datetime2** oder **datetimeoffset** verwendet.|  
 |Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Ja|  
@@ -59,7 +59,7 @@ ms.locfileid: "56079456"
   
 |Angegebene Dezimalstelle|Ergebnis (Genauigkeit, Dezimalstellen)|Spaltenlänge (in Bytes)|Bruchteil<br /><br /> Sekunden<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
-|**Uhrzeit**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
+|**time**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
 |**time(0)**|(8,0)|3|0–2|  
 |**time(1)**|(10,1)|3|0–2|  
 |**time(2)**|(11,2)|3|0–2|  
@@ -78,14 +78,14 @@ ms.locfileid: "56079456"
   
 |ISO 8601|Hinweise|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.Millisekunden]|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.Sekundenbruchteile]|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.|  
   
 |ODBC|Hinweise|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.Millisekunden]'}|ODBC-API-spezifisch|  
   
 ## <a name="compliance-with-ansi-and-iso-8601-standards"></a>Kompatibilität mit ANSI- und ISO 8601-Standards  
- Die Verwendung des Stundenwerts 24 zur Darstellung von Mitternacht sowie von Schaltsekunden größer als 59, gemäß ISO 8601 (5.3.2 und 5.3), sind nicht abwärtskompatibel und stimmen möglicherweise nicht mit den bestehenden Datums- und Uhrzeittypen überein.  
+ Die Verwendung des Stundenwerts 24 zur Darstellung von Mitternacht sowie von Schaltsekunden größer als 59 gemäß Definition in ISO 8601 (5.3.2 und 5.3) wird nicht unterstützt, um die Abwärtskompatibilität und die Konsistenzt mit bestehenden Datums- und Uhrzeittypen zu gewährleisten.  
   
  Das standardmäßige Format der Zeichenfolgenliterale (wird für Downlevelclients verwendet) entspricht dem SQL-Standard, der als hh:mm:ss[.nnnnnnn] definiert ist. Dieses Format ähnelt der ISO 8601-Definition für TIME unter Ausschluss der Sekundenbruchteile.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "56079456"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**Datum**|YYYY-MM-DD|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
@@ -242,7 +242,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. Einfügen von gültigen time-Zeichenfolgenliteralen in eine time(7)-Spalte  
+###  <a name="ExampleB"></a> B. Einfügen von gültigen Zeitzeichenfolgenliteralen in eine time(7)-Spalte  
  In der folgenden Tabelle werden neben den unterschiedlichen Zeichenfolgenliteralen, die in eine Spalte des Datentyps **time(7)** eingefügt werden können, auch die Werte aufgelistet, die anschließend in der entsprechenden Spalte gespeichert werden.  
   
 |Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|und Beschreibung|  
@@ -263,7 +263,7 @@ SELECT
 |Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|und Beschreibung|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
-|'2007-05-07'|**Datum**|NULL|Jeder time-Wert führt zu einer fehlerhaften INSERT-Anweisung.|  
+|'2007-05-07'|**Datum**|NULL|Uhrzeitangaben führen zu einem Fehlschlagen der INSERT-Anweisung.|  
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Jeder Wert für die Genauigkeit der Sekundenbruchteile führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Jede Sekundengenauigkeit, die mehr als 3 Stellen umfasst, führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  

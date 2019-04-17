@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421197"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516526"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Sie finden ein ausführliches Tutorial für RDBMS unter [Getting started with cross-database queries (vertical partitioning) (Erste Schritte mit datenbankübergreifenden Abfragen (vertikale Partitionierung))](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Dieser Typ wird nur bei Massenvorgängen verwendet, `LOCATION` muss die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein. `CREDENTIAL` ist erforderlich, wenn das Blob-Objekt nicht öffentlich ist. Zum Beispiel: 
+Dieser Typ wird nur bei Massenvorgängen verwendet, `LOCATION` muss die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein. `CREDENTIAL` ist erforderlich, wenn das Blob-Objekt nicht öffentlich ist. Beispiel: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -216,7 +216,7 @@ WITH (  TYPE = BLOB_STORAGE,
         CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
 );
 ```
-Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden, sie sollten kein führendes `?` im SAS-Token aufweisen, sie müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Zum Beispiel:
+Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden, sie sollten kein führendes `?` im SAS-Token aufweisen, sie müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Beispiel:
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -325,6 +325,10 @@ Für erfolgreiche PolyBase-Abfragen bei Hadoop-NameNode-Failovern sollten Sie in
  Alle Datenquellen, die auf dem gleichen Speicherort des Hadoop-Clusters definiert sind, müssen dieselbe Einstellung für RESOURCE_MANAGER_LOCATION oder JOB_TRACKER_LOCATION verwenden. Im Falle einer Inkonsistenz wird ein Laufzeitfehler auftreten.  
   
  Wenn der Hadoop-Cluster mit einem Namen eingerichtet ist, und die externen Datenquelle die IP-Adresse für den Clusterstandort verwendet, muss PolyBase immer noch den Clusternamen beheben können, wenn die Datenquelle verwendet wird. Sie müssen eine DNS-Weiterleitung aktivieren, um den Namen aufzulösen.  
+ 
+Ein SAS-Token mit dem Typ `hadoop` wird derzeit nicht unterstützt. Dieses Token wird nur mit einem Speicherkonto-Zugriffsschlüssel unterstützt. Beim Erstellen einer externen Datenquelle mit dem Typ `hadoop` und der Verwendung von SAS-Anmeldeinformationen kann folgender Fehler auftreten:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Sperren  
  Akzeptiert eine gemeinsame Sperre für das EXTERNAL DATA SOURCE-Objekt.  

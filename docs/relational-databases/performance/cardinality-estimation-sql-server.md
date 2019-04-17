@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828020"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516456"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arbeitet kostenorientiert. Das bedeutet, dass er die Abfragepläne zur Ausführung auswählt, die die niedrigsten geschätzten Verarbeitungskosten aufweisen. Der Abfrageoptimierer bestimmt die Kosten für die Ausführung eines Abfrageplans anhand zweier Hauptfaktoren:
@@ -53,9 +54,10 @@ Möglicherweise existiert in Ihrem Anwendungssystem eine wichtige Abfrage, deren
 - Eine OLTP-Abfrage (Onlinetransaktionsverarbeitung), die so häufig ausgeführt wird, dass oft mehrere Instanzen der Abfrage gleichzeitig ausgeführt werden.  
 - Eine SELECT-Anweisung mit erheblicher Aggregation, die während der OLTP-Betriebszeiten ausgeführt wird.  
   
-Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der neuen Kardinalitätsschätzung langsamer ausgeführt wird. Und Sie verfügen über Optionen, wie Sie das Leistungsproblem beheben.     
+Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der neuen Kardinalitätsschätzung langsamer ausgeführt wird. Und Sie verfügen über Optionen, wie Sie das Leistungsproblem beheben.
   
-## <a name="versions-of-the-ce"></a>Versionen der Kardinalitätsschätzung  
+## <a name="versions-of-the-ce"></a>Versionen der Kardinalitätsschätzung
+
 1998 war ein großes Update der Kardinalitätsschätzung Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, dessen Kompatibilitätsgrad 70 betrug. Diese Version des Modells der Kardinalitätsschätzung baut auf vier grundlegenden Annahmen auf:
 
 -  **Unabhängigkeit:** Es wird angenommen, dass Datenverteilungen in verschiedenen Spalten unabhängig voneinander sind, es sei denn, Korrelationsinformationen sind verfügbar und verwendbar.
@@ -106,7 +108,7 @@ Oder ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinwei
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)     
  [Abfragehinweise „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   
+ [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   
