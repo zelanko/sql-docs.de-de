@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375362"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671366"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
   In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]mit[!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in implementiert wird.  
@@ -118,7 +118,7 @@ ms.locfileid: "53375362"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Anzeigen eines Beispiels für einen benutzerdefinierten Konfliktlöser  
   
-1.  Ein Beispiel ist in SQL Server 2000-Beispieldateien verfügbar. Laden Sie **sql2000samples.cab** von [Aktualisierte Beispiele für SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560)herunter. Dadurch werden acht Dateien mit einer Gesamtkapazität von 6,9 MB heruntergeladen.  
+1.  Ein Beispiel ist in SQL Server 2000-Beispieldateien verfügbar. Herunterladen der [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Dadurch wird die 3 Dateien mit einer Gesamtkapazität von 6,9 MB heruntergeladen.  
   
 2.  Extrahieren Sie die Dateien aus der heruntergeladenen komprimierten CAB-Datei.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582413"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671376"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -120,6 +120,29 @@ Die Cluster-Konfiguration kann angepasst werden, mithilfe eines Satzes von Umgeb
 >1. Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Sie können die MSSQL_SA_PASSWORD beliebig festlegen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&` oder `'` Zeichen. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
 >1. Der Name Ihres Clusters muss nur Kleinbuchstaben alphanumerische Zeichen, keine Leerzeichen enthalten. Alle Kubernetes-Artefakte (Container, Pods, zustandsbehaftete Gruppen, Dienste) für den Cluster in einem Namespace mit demselben Namen wie der Cluster erstellt werden angegebenen Namen.
 >1. Die **SA** Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nachdem erstellen Ihre SQL Server-Container, die MSSQL_SA_PASSWORD-Umgebungsvariable, die Sie angegeben haben erkennbar ausgeführt ist echo $MSSQL_SA_PASSWORD im Container. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+
+Im folgenden Abschnitt werden auf der YARN-Konfigurationsoptionen. Hinweis: Hierbei handelt es sich um Experten Konfigurationen der Protokollierungsebene festlegen. Der Benutzer ist nicht erforderlich, um diese Werte anzugeben, und in diesem Fall werden die Standardwerte wirksam. Yarn ist die Ressourcen-Manager für Spark. Spark wird in den Speicher Pods und, die über CLUSTER_STORAGE_POOL_REPLICAS gesteuert werden können.
+
+| Yarn-Umgebungsvariable | Erforderlich | Standardwert | Description |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | Nein | 2048  | Die Heapgröße für HDFS und Knoten-Prozesse |
+| **YARN_HEAPSIZE**   | Nein | 2048  | Die Heapgröße für Yarn-RM und NM Prozesse |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | Nein | 18432  | Max. Gesamtspeicher kann Yarn pro K8 Container verwenden.  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | Nein | 6  | Maximale Anzahl virtueller Kerne kann Yarn auf einem Knoten verwenden.  |
+| **YARN_SCHEDULER_MAX_MEMORY** | Nein | 18432  | Maximaler Arbeitsspeicher kann auf einem Knoten ein Yarn-Container verwenden.  |
+| **YARN_SCHEDULER_MAX_VCORES** | Nein | 6  | Maximaler Arbeitsspeicher kann auf einen Knoten ein Yarn-Container verwenden.  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | Nein | 0.3  | Das Verhältnis des gesamten Arbeitsspeichers, die Anwendungsmaster verwenden können   |
+
+In diesem Abschnitt werden Optionen für die Spark-Konfigurationen aus. Hinweis: Hierbei handelt es sich um Experten Konfigurationen der Protokollierungsebene festlegen. Der Benutzer ist nicht erforderlich, um diese Werte anzugeben, und in diesem Fall werden die Standardwerte wirksam. Benutzer kann zur Laufzeit auf Basis der pro Anwendung über konfigurieren %% in den Spark-Notebooks konfigurieren.
+
+| Spark-Umgebungsvariable | Erforderlich | Standardwert | Description |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | Nein | 2048  | Verwendeter Arbeitsspeicher Spark-Treiber  |
+| **SPARK_DRIVER_CORES** | Nein | 1  | Anzahl von Kernen, die von Spark-Treiber verwendet  |
+| **SPARK_EXECUTOR_INSTANCES** | Nein | 3  | Verwendeter Arbeitsspeicher Spark-Treiber  |
+| **SPARK_EXECUTOR_MEMORY** | Nein | 1536  | Verwendeter Arbeitsspeicher Spark-Executors |
+| **SPARK_EXECUTOR_CORES** | Nein | 1  | Anzahl von Kernen, die von Spark-Executors verwendet  |
+
 
 Festlegen der Umgebungsvariablen, die für die Bereitstellung eines big Data-Clusters unterscheidet sich je nachdem, ob Sie Windows oder Linux-Client verwenden.  Wählen Sie die folgenden Schritte aus je nach verwendetem, die Betriebssystem Sie verwenden.
 

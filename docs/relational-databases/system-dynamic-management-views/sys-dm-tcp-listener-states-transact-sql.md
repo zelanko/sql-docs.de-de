@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409637"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671346"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52409637"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|Interne ID des Listeners Lässt keine NULL-Werte zu.<br /><br /> Der Primärschlüssel.|  
-|**ip_address**|**nvarchar48**|Die Listener-IP-Adresse, die online ist und an der gelauscht wird. Entweder ist IPv4 oder IPv6 zulässig. Wenn ein Listener beide Typen von Adressen besitzt, sind sie getrennt aufgeführt. Ein IPv4-Platzhalter wird als "0.0.0.0" angezeigt. Ein IPv6-Platzhalter wird als "::".<br /><br /> Lässt keine NULL-Werte zu.|  
+|**ip_address**|**nvarchar(48)**|Die Listener-IP-Adresse, die online ist und an der gelauscht wird. Entweder ist IPv4 oder IPv6 zulässig. Wenn ein Listener beide Typen von Adressen besitzt, sind sie getrennt aufgeführt. Ein IPv4-Platzhalter wird als "0.0.0.0" angezeigt. Ein IPv6-Platzhalter wird als "::".<br /><br /> Lässt keine NULL-Werte zu.|  
 |**is_ipv4**|**bit**|Der Typ der IP-Adresse.<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Die Nummer des Ports, an dem der Listener lauscht. Lässt keine NULL-Werte zu.|  
 |**type**|**tinyint**|Der Typ des Listeners. Folgende Werte sind möglich:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Datenbankspiegelung<br /><br /> Lässt keine NULL-Werte zu.|  

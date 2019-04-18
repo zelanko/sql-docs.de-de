@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 21ee0544a91199648f2d96a631c567dd9788bc2f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290776"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671406"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 
@@ -48,7 +48,8 @@ Die folgende Tabelle enthält die Versionsgeschichte für [!INCLUDE[ssSQL17](../
 
 | Release               | Version       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
-| [CU13](#CU13)         | 14.0.3048.4   | 2018-12 bis 18   |
+| [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
+| [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
@@ -59,12 +60,12 @@ Die folgende Tabelle enthält die Versionsgeschichte für [!INCLUDE[ssSQL17](../
 | [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
 | [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
-| [CU4](#CU4)           | 14.0.3022.28  | 2018-02: 20   |
+| [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
 | [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
 | [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
 | [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
-| [ALLGEMEIN VERFÜGBAR](#GA)             | 14.0.1000.169 | 2017-10-02   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
 ## <a id="cuinstall"></a> Installieren von updates
 
@@ -76,6 +77,20 @@ Wenn Sie vorhandene aktualisieren [!INCLUDE[ssNoVersion](../includes/ssnoversion
 - [Installationspaket für die Volltextsuche](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
 - [SQL Server-Agent aktivieren](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU14"></a> CU14 (März 2018)
+
+Dies ist das kumulative Update 14 (CU14)-Release von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Version für diese Version ist 14.0.3076.1. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4484710 ](https://support.microsoft.com/help/4484710).
+
+### <a name="package-details"></a>Paketdetails
+
+Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Debian-Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Package | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 14.0.3076.1-2 | [Engine-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES-RPM-Paket | 14.0.3076.1-2 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian-Paket | 14.0.3076.1-2 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU13"></a> CU13 (Dezember 2018)
 
@@ -119,7 +134,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 | SLES-RPM-Paket | 14.0.3038.14-2 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian-Paket | 14.0.3038.14-2 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3038.14-2_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3038.14-2_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU10"></a> CU10 (August 2018)
+## <a id="CU10"></a> CU10 (Aug 2018)
 
 Dies ist die Kumulatives Update 10 (CU10) Version des [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Version für diese Version ist 14.0.3037.1. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
 
@@ -133,7 +148,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 | SLES-RPM-Paket | 14.0.3037.1-2 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian-Paket | 14.0.3037.1-2 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU9-GDR2"></a> CU9-GDR2 (August 2018)
+## <a id="CU9-GDR2"></a> CU9-GDR2 (Aug 2018)
 
 Dies ist ein Sicherheitsupdate ausgeführt, die auch die zuvor veröffentlichte CU (CU9) enthält, für [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Version für diese Version ist 14.0.3035.2. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
@@ -147,7 +162,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 | SLES-RPM-Paket | 14.0.3035.2-1 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian-Paket | 14.0.3035.2-1 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
 
-## <a id="GDR2"></a> GDR2 (August 2018)
+## <a id="GDR2"></a> GDR2 (Aug 2018)
 
 Dies ist ein Sicherheitsupdate ausgeführt, die nur die GDR2 (und GDR1) Sicherheitsfixes für [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].  Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Version für diese Version ist 14.0.2002.14. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
 
@@ -161,7 +176,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 | SLES-RPM-Paket | 14.0.2002.14-1 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian-Paket | 14.0.2002.14-1 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9 (Juli 2018)
+## <a id="CU9"></a> CU9 (Jul 2018)
 
 Dies ist die kumulativen Update 9 (CU9) Version des [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Version für diese Version ist 14.0.3030.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
@@ -364,7 +379,7 @@ Die folgenden Features und Dienste sind zum Zeitpunkt der GA-Version nicht unter
 | &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Verwaltete Sicherung |
 | **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
-| **Sicherheit** | Erweiterbare Schlüsselverwaltung |
+| **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | AD-Authentifizierung für Verfügbarkeitsgruppen (Verfügbarkeitsgruppen) | 
 | &nbsp; | 3. Drittanbietertools AD zur Verfügung (Centrify, Vintela, Powerbroker) | 

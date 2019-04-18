@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On Availability Group-Bereitstellungsmuster | Microsoft-Dokumentation
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044933"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671176"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für die Konfigurationen von Verfügbarkeitsgruppen
 
@@ -62,7 +62,7 @@ Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte 
 | |read-scale|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. |
+|Ausfall des primären Replikats |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. |
 |Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. |
 
 <sup>\*</sup> Standardwert
@@ -71,7 +71,7 @@ Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte 
 
 ## <a name="two-synchronous-replicas"></a>Zwei synchrone Replikate
 
-Diese Konfiguration ermöglicht den Schutz von Daten. Wie die anderen Konfigurationen von Verfügbarkeitsgruppen können sie schreibgeschützte horizontale Skalierung aktivieren. Die Konfiguration von zwei synchronen Replikaten bietet keine automatische hochverfügbarkeit. 
+Diese Konfiguration ermöglicht den Schutz von Daten. Wie die anderen Konfigurationen von Verfügbarkeitsgruppen können sie schreibgeschützte horizontale Skalierung aktivieren. Die Konfiguration von zwei synchronen Replikaten bietet keine automatische hochverfügbarkeit. Konfiguration mit zwei Replikaten gilt nur für SQL Server 2017 RTM und nicht mehr unterstützt, auf denen höhere (CU1 und darüber hinaus) Versionen von SQL Server 2017...
 
 ![Zwei synchrone Replikate][1]
 
@@ -84,9 +84,6 @@ Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten enthält die schreibge
 |Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.|
 
 <sup>\*</sup> Standardwert
-
-> [!NOTE]
-> Das oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 

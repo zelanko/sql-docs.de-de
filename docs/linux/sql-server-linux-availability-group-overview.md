@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206619"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671286"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -57,7 +57,7 @@ Die Kombination von `required_synchronized_secondaries_to_commit` und die neue S
 
 Es gibt drei Werte, die für die festgelegt werden, können `required_synchronized_secondaries_to_commit`: 0, 1 oder 2. Sie steuern das Verhalten von Was geschieht, wenn ein Replikat nicht mehr verfügbar ist. Die Zahlen entsprechen der Anzahl von sekundären Replikaten, die mit dem primären Replikat synchronisiert werden müssen. Das Verhalten ist wie folgt unter Linux:
 
--   0 – ist kein automatisches Failover möglich, da kein sekundäres Replikat synchronisiert werden muss. Die primäre Datenbank ist immer verfügbar.
+-   0 – sekundäre Replikate müssen nicht im Status "synchronisiert" mit dem primären Replikat werden. Aber wenn die sekundären Datenbanken nicht synchronisiert werden, fallen kein automatisches Failover. 
 -   1 – ein sekundäres Replikat muss in einem synchronisierten Zustand befindet, mit dem primären Replikat liegen. Automatisches Failover ist möglich. Die primäre Datenbank ist nicht verfügbar, bis ein sekundäres synchronisiertes Replikat verfügbar ist.
 -   2 – beide sekundären Replikate in einer drei oder mehr Knoten AG-Konfiguration müssen mit dem primären Replikat synchronisiert werden; Automatisches Failover ist möglich.
 
@@ -95,7 +95,7 @@ Wenn diese Bedingungen erfüllt sind, und der Server, die das primäre Replikat 
 
 Ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ab CU1 ist ein reines konfigurationsreplikat Replikat. Da Pacemaker eines WSFC unterscheidet, insbesondere, wenn es um das Quorum und erfordern von STONITH, geht funktioniert mit nur einer Konfiguration mit zwei Knoten nicht bei einer Verfügbarkeitsgruppe. Für eine FCI können die Quorum-Mechanismen von Pacemaker in Ordnung, sein, da alle Vermittlung der FCI-Failover auf den Cluster-Ebene erfolgt. Für eine Verfügbarkeitsgruppe, erfolgt die Vermittlung unter Linux in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], wobei alle Metadaten gespeichert werden. Dies ist das reine konfigurationsreplikat kommt ins Spiel.
 
-Ohne etwas anderes wäre einem dritten Knoten und mindestens ein synchronisiertes Replikat erforderlich. Dies funktionierte nicht für [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], da es nur zwei Replikate, die Teil einer Verfügbarkeitsgruppe enthalten kann. Das reine konfigurationsreplikat speichert die Konfiguration der Verfügbarkeitsgruppe, in der master-Datenbank identisch mit den anderen Replikaten in der Konfiguration der Verfügbarkeitsgruppe. Das reine konfigurationsreplikat muss nicht die Benutzerdatenbanken, die in der Verfügbarkeitsgruppe teilnehmen. Die Konfigurationsdaten werden von der primären Datenbank synchron gesendet. Diese Konfigurationsdaten werden, ob sie automatische oder manuelle sind während eines Failovers verwendet.
+Ohne etwas anderes wäre einem dritten Knoten und mindestens ein synchronisiertes Replikat erforderlich. Das reine konfigurationsreplikat speichert die Konfiguration der Verfügbarkeitsgruppe, in der master-Datenbank identisch mit den anderen Replikaten in der Konfiguration der Verfügbarkeitsgruppe. Das reine konfigurationsreplikat muss nicht die Benutzerdatenbanken, die in der Verfügbarkeitsgruppe teilnehmen. Die Konfigurationsdaten werden von der primären Datenbank synchron gesendet. Diese Konfigurationsdaten werden, ob sie automatische oder manuelle sind während eines Failovers verwendet.
 
 Für eine Verfügbarkeitsgruppe Quorum beibehalten und automatische Failover mit einem externen Cluster aktivieren müssen sie entweder:
 
@@ -149,7 +149,7 @@ Eine Verfügbarkeitsgruppe mit dem Clustertyp None haben ihre Replikate OS-Grenz
 
 Eine verteilte Verfügbarkeitsgruppe kann auch OS-Grenzen überschreiten. Die zugrunde liegende Verfügbarkeitsgruppen anhand der Regeln gebunden sind, für deren, z. B. eine, bei denen externe Konfiguration nur-Linux-, aber die Verfügbarkeitsgruppe, die sie hinzugefügt wurde mit einem WSFC konfiguriert werden konnte. Betrachten Sie das folgende Beispiel:
 
-![Hybrid-Dist-Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
+![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
 <!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 

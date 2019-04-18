@@ -3,19 +3,19 @@ title: R-an-SQL-datentypkonvertierungen – SQL Server Machine Learning Services
 description: Überprüfen Sie die Converstions Typ implizite und explizite Daten zwischen R und SQL Server in Data Science und Machine learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511537"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671116"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>Zuordnungen BetweenR und SQL Server-Datentyp
+# <a name="data-type-mappings-between-r-and-sql-server"></a>Geben Sie datentypzuordnungen zwischen R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Überprüfen Sie für R-Lösungen, die auf die Funktion für die R-Integration in SQL Server-Machine Learning-Dienste ausgeführt werden die Liste der nicht unterstützten Datentypen und datentypkonvertierungen, die möglicherweise implizit durchgeführt werden, wenn Daten zwischen R-Bibliotheken und SQL Server übergeben werden.
