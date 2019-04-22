@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241608"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
@@ -38,11 +38,11 @@ ms.locfileid: "59241608"
 ##  <a name="Configurations"></a> Konfigurationen einer Multisubnetz-Failoverclusterinstanz  
  Im Folgenden finden Sie einige Beispiele für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCIs mit mehreren Subnetzen:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 verbunden. Node2 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR** fest.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 verbunden. Node2 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR** fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich lokale Hochverfügbarkeit.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich lokale Hochverfügbarkeit.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 befindet sich in Subnet1. Node2 befindet sich in Subnet1 und Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR** fest.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 befindet sich in Subnet1. Node2 befindet sich in Subnet1 und Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 und Subnet2 verbunden. Node2 ist auch mit Subnet1 und Subnet2 verbunden. Die IP-Adressabhängigkeit wird vom Setup von **auf** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] festgelegt.  
   

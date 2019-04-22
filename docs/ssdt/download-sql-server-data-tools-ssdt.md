@@ -15,10 +15,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243504"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio
@@ -52,7 +52,7 @@ Ab Visual Studio 2017 wurde die Funktionalität zum Erstellen von Datenbankproje
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Installieren von SSDT mit Visual Studio 2017
 
-Wählen Sie für die Installation von SSDT während der [Visual Studio-Installation](https://docs.microsoft.com/visualstudio/install/install-visual-studio) die Workload **Datenspeicherung und -verarbeitung** und anschließend **SQL Server Data Tools** aus. Wenn Visual Studio bereits installiert ist, können Sie [die Liste der Workloads bearbeiten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), um SSDT einzuschließen: ![Datenspeicher- und Verarbeitungsworkload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+Wählen Sie für die Installation von SSDT während der [Visual Studio-Installation](https://docs.microsoft.com/visualstudio/install/install-visual-studio) die Workload **Datenspeicherung und -verarbeitung** und anschließend **SQL Server Data Tools** aus. Wenn Visual Studio bereits installiert ist, können Sie [die Liste der Workloads bearbeiten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), um SSDT einzuschließen: ![Workload zur Datenspeicherung und Verarbeitung](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png).
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Installieren der Tools Analysis Services, Integration Services und Reporting Services
 
@@ -66,7 +66,7 @@ Der Installer listet verfügbare Visual Studio-Instanzen auf, auf denen die SSDT
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT für VS 2017 (eigenständiger Installer)
 
-[![download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.9.0) herunterladen](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.9.0) herunterladen](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.0) die Erweiterungen *Analysis Services-Projekte* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie sämtliche VS-Instanzen.
@@ -120,9 +120,9 @@ Nach Abschluss der vorherigen Schritte sind folgende Schritte offline möglich:
 1. Führen Sie `vs_setup.exe --NoWeb` aus, um die Visual Studio 2017-Shell sowie das SQL Server-Datenprojekt zu installieren.
 2. Führen Sie `SSDT-Setup-ENU.exe /install` aus dem Layoutordner aus, und wählen Sie SSIS/SSRS/SSAS aus.
 
-   - Führen Sie alternativ für eine unbeaufsichtigte Installation folgenden Befehl aus: `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - Führen Sie alternativ für eine unbeaufsichtigte Installation `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` aus.  
 
-Führen Sie für verfügbare Optionen folgenden Befehl aus: `SSDT-Setup-ENU.exe /help`
+Führen Sie für verfügbare Optionen `SSDT-Setup-ENU.exe /help` aus.
 
 > [!NOTE]
 > Wenn Sie eine Vollversion von Visual Studio 2017 verwenden, erstellen Sie offline einen Ordner nur für SSDT, und führen Sie über diesen `SSDT-Setup-ENU.exe` aus. (Fügen Sie SSDT nicht zu einem anderen Offlinelayout für Visual Studio 2017 hinzu.) Wenn Sie das SSDT-Layout zu einem bereits vorhandenen Offlinelayout für Visual Studio hinzufügen, werden nicht die benötigten Laufzeitkomponenten (EXE-Dateien) erstellt.

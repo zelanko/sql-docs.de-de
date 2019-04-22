@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242328"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
@@ -38,11 +38,11 @@ ms.locfileid: "59242328"
 |**database_name**|**sysname**|Der Name der Datenbank.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Zum Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|UTC-Datum und -Zeit des Endes des Aggregationsintervalls. **End_time** liegt immer genau 5 Minuten später als die entsprechende **Start_time** in derselben Zeile.|  
-|**success_count**|**ssNoversion**|Anzahl erfolgreicher Verbindungen.|  
-|**total_failure_count**|**ssNoversion**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe der **Connection_failure_count**, **Terminated_connection_count**, und **Throttled_connection_count**, und schließt keine Deadlockereignisse.|  
-|**connection_failure_count**|**ssNoversion**|Anzahl der Anmeldefehler.|  
-|**terminated_connection_count**|**ssNoversion**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
-|**throttled_connection_count**|**ssNoversion**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
+|**success_count**|**int**|Anzahl erfolgreicher Verbindungen.|  
+|**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe der **Connection_failure_count**, **Terminated_connection_count**, und **Throttled_connection_count**, und schließt keine Deadlockereignisse.|  
+|**connection_failure_count**|**int**|Anzahl der Anmeldefehler.|  
+|**terminated_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
+|**throttled_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
   

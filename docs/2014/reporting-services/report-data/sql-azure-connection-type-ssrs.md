@@ -12,14 +12,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 5a527e84535f62f9b0ef949a47001b85e71cbd2d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242240"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on ist eine cloudbasierte, gehostete relationale Datenbank, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Technologien basiert.sWenn Sie Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[ssSDS](../../includes/sssds-md.md)]" basiert.UDieser integrierte Datenquellentyp basiert auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenerweiterung.dVerwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herzustellen und Daten abzurufen.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist eine cloudbasierte, gehostete relationale Datenbank, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologien basiert. Wenn Sie Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[ssSDS](../../includes/sssds-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herzustellen und Daten abzurufen.  
   
  Diese Datenerweiterung unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.  
   
@@ -46,7 +46,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
  Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
- Die Windows-Authentifizierung (integrierte Sicherheit) wird nicht unterstützt. Wenn Sie versuchen, mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herzustellen, tritt ein Fehler auf. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nur die SQL Server-Authentifizierung (Benutzername und Kennwort). Benutzer müssen daher jedes Mal Anmeldeinformationen (Benutzername und Kennwort) eingeben, wenn sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herstellen.  
+ Die Windows-Authentifizierung (integrierte Sicherheit) wird nicht unterstützt. Wenn Sie versuchen, mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herzustellen, tritt ein Fehler auf. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nur die SQL Server-Authentifizierung (Benutzername und Kennwort). Benutzer müssen daher jedes Mal Anmeldeinformationen (Benutzername und Kennwort) eingeben, wenn sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herstellen.  
   
  Die Anmeldeinformationen müssen über Zugriffsberechtigungen für die Datenbank verfügen. Abhängig von der Abfrage benötigen Sie u. U. andere Berechtigungen, z. B. Berechtigungen für die Ausführung von gespeicherten Prozeduren und den Zugriff auf Tabellen und Sichten. Der Besitzer der externen Datenquelle muss entsprechende Anmeldeinformationen konfigurieren, die Lesezugriff auf die benötigten Datenbankobjekte gewähren.  
   
@@ -178,7 +178,7 @@ WHERE EmployeeID = (@EmpID)
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
  [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

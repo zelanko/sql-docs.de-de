@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e91217f725251b17dadbcdddeb04b4d06d82642
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476666"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
@@ -35,19 +35,19 @@ ms.locfileid: "59476666"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**wait_stats_id**|**BIGINT**|Der Bezeichner der Zeile, die Statistiken zu abfragewartevorgängen für ' plan_id ', Runtime_stats_interval_id, Execution_type und Wait_category darstellt. Es ist nur für die letzten Runtime Statistics Intervalle eindeutig. Für die aktuell aktiven Intervalls möglicherweise mehrere Zeilen, die Wartestatistiken für den Plan verweist ' plan_id ', mit den Ausführungstyp durch Execution_type und die Kategorie des Wartevorgangs Wait_category verhältnisschwellenwert dargestellt darstellt. In der Regel eine Zeile darstellt, der geleert werden Statistiken zu abfragewartevorgängen auf den Datenträger, während andere (s) im Speicher enthaltenen Status darstellen. Daher müssen zum Abrufen der tatsächlichen Status für jedes Intervall, Metriken zu aggregieren, Gruppieren nach ' plan_id ', Runtime_stats_interval_id, Execution_type und Wait_category. |  
-|**plan_id**|**BIGINT**|Fremdschlüssel. Verknüpft mit [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**BIGINT**|Fremdschlüssel. Verknüpft mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**wait_category**|**TINYINT**|Wartetypen kategorisiert werden, mithilfe der folgenden Tabelle aus, und klicken Sie dann die Wartezeit aggregiert wird, für diese Kategorien warten. Verschiedene wartekategorien erfordern eine andere weitere Analyse das Problem zu beheben, aber Wartetypen aus der gleichen Kategorie Lead, ähnlich wie bei der Problembehandlung Erlebnis und Wartevorgänge Bereitstellen der betroffenen Abfrage darüber hinaus ist genau das Ausführen der Großteil der problembehebungsvorgängen erfolgreich.|
+|**wait_stats_id**|**bigint**|Der Bezeichner der Zeile, die Statistiken zu abfragewartevorgängen für ' plan_id ', Runtime_stats_interval_id, Execution_type und Wait_category darstellt. Es ist nur für die letzten Runtime Statistics Intervalle eindeutig. Für die aktuell aktiven Intervalls möglicherweise mehrere Zeilen, die Wartestatistiken für den Plan verweist ' plan_id ', mit den Ausführungstyp durch Execution_type und die Kategorie des Wartevorgangs Wait_category verhältnisschwellenwert dargestellt darstellt. In der Regel eine Zeile darstellt, der geleert werden Statistiken zu abfragewartevorgängen auf den Datenträger, während andere (s) im Speicher enthaltenen Status darstellen. Daher müssen zum Abrufen der tatsächlichen Status für jedes Intervall, Metriken zu aggregieren, Gruppieren nach ' plan_id ', Runtime_stats_interval_id, Execution_type und Wait_category. |  
+|**plan_id**|**bigint**|Fremdschlüssel. Verknüpft mit [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**wait_category**|**tinyint**|Wartetypen kategorisiert werden, mithilfe der folgenden Tabelle aus, und klicken Sie dann die Wartezeit aggregiert wird, für diese Kategorien warten. Verschiedene wartekategorien erfordern eine andere weitere Analyse das Problem zu beheben, aber Wartetypen aus der gleichen Kategorie Lead, ähnlich wie bei der Problembehandlung Erlebnis und Wartevorgänge Bereitstellen der betroffenen Abfrage darüber hinaus ist genau das Ausführen der Großteil der problembehebungsvorgängen erfolgreich.|
 |**wait_category_desc**|**nvarchar(128)**|Die textbeschreibung des das Kategoriefeld warten finden Sie in der folgenden Tabelle.|
-|**execution_type**|**TINYINT**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3 – Client initiierter Abbruch der Ausführung<br /><br /> 4 - Ausnahme hat die Ausführung abgebrochen.|  
+|**execution_type**|**tinyint**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3 – Client initiierter Abbruch der Ausführung<br /><br /> 4 - Ausnahme hat die Ausführung abgebrochen.|  
 |**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Type-Feld Ausführung:<br /><br /> 0 – reguläre<br /><br /> 3: abgebrochen<br /><br /> 4 - Ausnahme|  
-|**total_query_wait_time_ms**|**BIGINT**|Insgesamt `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
-|**avg_query_wait_time_ms**|**FLOAT**|Durchschnittliche Wartezeit für den Abfrageplan pro Ausführung innerhalb der Aggregation Intervall und warten Sie, Kategorie (in Millisekunden gemeldet).|
-|**last_query_wait_time_ms**|**BIGINT**|Letzte Wartezeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
-|**min_query_wait_time_ms**|**BIGINT**|Minimale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
-|**max_query_wait_time_ms**|**BIGINT**|Maximale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
-|**stdev_query_wait_time_ms**|**FLOAT**|`Query wait` Standardabweichung der Dauer für die Abfrage innerhalb eines aggregationsintervalls planen und warte-Kategorie (in Millisekunden gemeldet).|
+|**total_query_wait_time_ms**|**bigint**|Insgesamt `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
+|**avg_query_wait_time_ms**|**float**|Durchschnittliche Wartezeit für den Abfrageplan pro Ausführung innerhalb der Aggregation Intervall und warten Sie, Kategorie (in Millisekunden gemeldet).|
+|**last_query_wait_time_ms**|**bigint**|Letzte Wartezeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
+|**min_query_wait_time_ms**|**bigint**|Minimale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
+|**max_query_wait_time_ms**|**bigint**|Maximale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` Standardabweichung der Dauer für die Abfrage innerhalb eines aggregationsintervalls planen und warte-Kategorie (in Millisekunden gemeldet).|
 
 ## <a name="wait-categories-mapping-table"></a>Wartekategorien Tabelle zuordnen
 
@@ -55,19 +55,19 @@ ms.locfileid: "59476666"
   
 |Integer-Wert|Wartekategorie|Wartetypen enthalten, in der Kategorie|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**Unbekannt**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Arbeitsthread**|THREADPOOL|
-|**3**|**Sperre**|LCK_M_%|
+|**3**|**Lock**|LCK_M_%|
 |**4**|**Latch**|LATCH_ %|
 |**5**|**Pufferlatch**|PAGELATCH_ %|
 |**6**|**E/a-Puffer**|PAGEIOLATCH_ %|
 |**7**|**Kompilierung***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
-|**9**|**Spiegelung**|DBMIRROR %|
+|**9**|**Datenbankspiegelung**|DBMIRROR %|
 |**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_ %, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ WARTESCHLANGE XE_TIMER_EVENT|
-|**12**|**Präemptiv**|PREEMPTIVE_ %|
+|**11**|**Im Leerlauf**|SLEEP_ %, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ WARTESCHLANGE XE_TIMER_EVENT|
+|**12**|**PreEmptive**|PREEMPTIVE_ %|
 |**13**|**Service Broker**|BROKER_ % **(aber nicht BROKER_RECEIVE_WAITFOR)**|
 |**14**|**TRAN Protokollvorgänge**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Netzwerk-e/a**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
@@ -96,4 +96,4 @@ ms.locfileid: "59476666"
 - [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
 - [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+- [Query Store gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

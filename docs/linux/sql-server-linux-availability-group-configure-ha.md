@@ -12,10 +12,10 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872200"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
@@ -72,7 +72,7 @@ In die Beispielen in diesem Abschnitt wird erläutert, wie die verfügbarkeitsgr
 
 Für eine Konfiguration mit hoher Verfügbarkeit, die automatische Failover wird sichergestellt, ist die Verfügbarkeitsgruppe über mindestens drei Replikate erforderlich. Eine der folgenden Konfigurationen kann es sich um hohe Verfügbarkeit unterstützen:
 
-- [Drei synchronen Replikaten](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Drei synchroner Replikate](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Zwei synchronen Replikaten sowie ein Replikat für die Konfiguration](sql-server-linux-availability-group-ha.md#twoSynch)
 

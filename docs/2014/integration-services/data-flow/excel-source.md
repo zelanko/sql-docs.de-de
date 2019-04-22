@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242258"
 ---
 # <a name="excel-source"></a>Excel-Quelle
@@ -90,7 +90,7 @@ ms.locfileid: "59242258"
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Excel](excel-custom-properties.md)  
   

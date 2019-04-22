@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860711"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -121,7 +121,7 @@ ms.locfileid: "58860711"
   
     -   [Verwenden des Tools "Netsh.exe" und Befehlszeilenoptionen](https://support.microsoft.com/kb/242468)  
   
-    -   [Gewusst wie: Verwenden des "Netsh Advfirewall Firewall"-Kontexts anstelle des "Netsh Firewall"-Kontexts zum Steuern des Verhaltens des Windows-Firewall in Windows Server 2008 und Windows Vista](https://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista (verwenden des Kontexts „netsh advfirewall firewall“ anstelle des Kontexts „netsh firewall“ zum Kontrollieren des Firewall-Verhaltens unter Windows Server 2008 und Windows Vista)](https://support.microsoft.com/kb/947709)  
   
     -   [Der "netsh firewall"-Befehl in Verbindung mit dem Parameter "profile=all" konfiguriert nicht das öffentliche Profil auf einem Windows Vista-Computer](https://support.microsoft.com/kb/947213)  
   

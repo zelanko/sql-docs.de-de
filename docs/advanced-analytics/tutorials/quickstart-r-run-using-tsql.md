@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240168"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Schnellstart: "Hello World"-R-Skript in SQL Server 
@@ -91,4 +91,4 @@ Eingaben für diese gespeicherte Prozedur gehören:
 Nun, dass Sie ein paar einfache R-Skripts ausgeführt haben, nehmen Sie einen genaueren Blick auf die Strukturierung von Eingaben und Ausgaben.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Arbeiten mit Eingaben und Ausgaben](quickstart-r-inputs-and-outputs.md)
+> [Schnellstart: Verarbeiten von Eingaben und Ausgaben](quickstart-r-inputs-and-outputs.md)

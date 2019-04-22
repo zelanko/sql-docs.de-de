@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcc5709a87939caf415f1b91b58e05a932aea14a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241868"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582904"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Lernprogramm: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016
 
@@ -104,20 +104,20 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
     $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -487,7 +487,7 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server-Sicherung in URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container (Erstellen von Containern)](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[Erstellen von Containern](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Abrufen der Container-ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
 [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  

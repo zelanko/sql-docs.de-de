@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860631"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
@@ -30,7 +30,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Erweiterte Ereignisse zum Debuggen](always-on-extended-events.md#BKMK_Debugging)  
   
- [Referenz zu erweiterten Ereignissen von Always On-Verfügbarkeitsgruppen](always-on-extended-events.md#BKMK_Reference)  
+ [Referenz zu erweiterten Ereignisse von Always On-Verfügbarkeitsgruppen](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health-Sitzung  
  Die alwayson_health-Sitzung mit den erweiterten Ereignissen wird automatisch beim Erstellen der Verfügbarkeitsgruppe erstellt und erfasst eine Teilmenge verwandter Ereignisse der Verfügbarkeitsgruppe. Diese Sitzung ist als nützliches und praktisches Tool vorkonfiguriert, mit dem Sie schnell die ersten Schritte bei der Behandlung von Problemen mit einer Verfügbarkeitsgruppe durchführen können. Der Assistent zum Erstellen von Verfügbarkeitsgruppen startet automatisch die Sitzung für jedes beteiligte Verfügbarkeitsreplikat, das im Assistenten konfiguriert ist.  
@@ -81,7 +81,7 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480): Änderung von Datenbankreplikatrollen](#BKMK_error_reported_1480)  
+ [error_reported (1480): Änderung von Datenbankreplikatsrollen](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Tritt auf, wenn der Status eines Verfügbarkeitsreplikats geändert wurde. Dieses Ereignis kann durch Erstellen einer Verfügbarkeitsgruppe oder Verknüpfen eines Verfügbarkeitsreplikats ausgelöst werden. Es eignet sich für die Diagnose eines fehlerhaften automatischen Failovers. Zudem können damit auch die Failoverschritte nachverfolgt werden.  

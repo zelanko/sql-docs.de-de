@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657804"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774545"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
   
 > [!IMPORTANT]  
->  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/kb/968389).  
+> **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## <a name="description-of-extended-protection"></a>Beschreibung von "Erweiterter Schutz"  
  **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z.B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensts) zu authentifizieren.  

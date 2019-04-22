@@ -17,10 +17,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59516456"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
@@ -297,4 +297,4 @@ WHERE s.ticket = r.ticket AND
  [Abfragehinweise „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   
+ [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   

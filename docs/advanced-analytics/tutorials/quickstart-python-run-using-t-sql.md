@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476635"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Schnellstart: "Hello World"-Python-Skript in SQL Server 
@@ -98,4 +98,4 @@ Eingaben für diese gespeicherte Prozedur gehören:
 Nun, dass Sie eine Reihe von einfachen Python-Skripts ausgeführt haben, nehmen Sie einen genaueren Blick auf die Strukturierung von Eingaben und Ausgaben.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Arbeiten mit Eingaben und Ausgaben](quickstart-python-inputs-and-outputs.md)
+> [Schnellstart: Verarbeiten von Eingaben und Ausgaben](quickstart-python-inputs-and-outputs.md)

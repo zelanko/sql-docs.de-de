@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506517"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "59506517"
     -   [Berichtsserververhalten, wenn ein Failover auftritt](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .NET Framework 4.0 und unterstützen die Verwendung der Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Datenquellen.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .Net Framework 4.0 und unterstützen die Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zur Verwendung mit Datenquellen.  
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 und früher zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59506517"
  Informationen zu anderen Anforderungen von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien wie **RSreportserver.config** werden nicht als Teil der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktionalität unterstützt. Wenn Sie manuelle Änderungen an einer Konfigurationsdatei auf einem der Berichtsserver vornehmen, müssen Sie die Replikate manuell aktualisieren.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Konfigurationsdateien wie **RSreportserver.config** werden nicht als Teil der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Funktion unterstützt. Wenn Sie manuelle Änderungen an einer Konfigurationsdatei auf einem der Berichtsserver vornehmen, müssen Sie die Replikate manuell aktualisieren.  
   
 ##  <a name="bkmk_reportdatasources"></a> Berichtsdatenquellen und Verfügbarkeitsgruppen  
  Das Verhalten von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen auf Grundlage von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] kann abhängig davon variieren, wie der Administrator die Verfügbarkeitsgruppenumgebung konfiguriert hat.  
@@ -193,10 +193,10 @@ ms.locfileid: "59506517"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Erste Schritte mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
- [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
+ [Erste Schritte mit Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
+ [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit dem nativen Client von SQL Server](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
 

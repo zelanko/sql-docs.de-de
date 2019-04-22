@@ -11,10 +11,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7561d2d22439112ea084f1f8a62c32aeb5591cfc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240758"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML ist in SQL Server nicht installiert
@@ -23,7 +23,7 @@ ms.locfileid: "59240758"
  Wenn eine Anwendung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und SQLXML 4.0 erfordert und auf dem Computer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] nicht installiert ist, müssen Sie SQLXML 4.0 SP1 herunterladen und installieren.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Verhalten von SQLXML 4.0 SP1 mit neuen Datentypen, die SQLOLEDB und SQL Server Native Client-OLE DB-Anbieter verwenden  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt die folgenden Datentypen, die die Entwicklern, die Verwendung von SQLXML verwenden möchten:  
+ Mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden die folgenden Datentypen eingeführt, die von SQLXML-Entwicklern verwendet werden können:  
   
 -   `Date`  
   

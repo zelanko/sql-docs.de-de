@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872260"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
@@ -25,7 +25,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
   
  ![Entscheidungsstruktur der Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
   
- **Herunterladen**  
+ **Download**  
   
 -   Navigieren Sie zum Herunterladen von [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   

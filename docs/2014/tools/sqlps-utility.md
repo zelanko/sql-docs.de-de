@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241510"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
   Das Hilfsprogramm `sqlps` startet eine Windows PowerShell 2.0-Sitzung mit geladenem und registriertem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-PowerShell-Anbieter sowie geladenen und registrierten Cmdlets. Sie können PowerShell-Befehle oder -Skripts eingeben, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Komponenten verwenden, sodass Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und ihre Objekte verwendet werden können.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden der `sqlps` PowerShell-Modul stattdessen. Weitere Informationen zu den `sqlps` -Modul finden Sie unter [Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen das `sqlps`-PowerShell-Modul. Weitere Informationen zu den `sqlps` -Modul finden Sie unter [Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241510"
  Die Version des Hilfsprogramms `sqlps` in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurde als Windows PowerShell 1.0-Mini-Shell implementiert. Mini-Shells weisen bestimmte Einschränkungen auf; Benutzer können beispielsweise keine anderen als die von der Mini-Shell geladenen Snap-Ins laden. Diese Einschränkungen gelten nicht für die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version und höhere Versionen des Hilfsprogramms, die dahingehend geändert wurden, dass sie das `sqlps`-Modul verwenden.  
   
 ## <a name="examples"></a>Beispiele  
- **A. Ausführen des Hilfsprogramms sqlps im interaktiven Standardmodus ohne Copyrightinformationen**  
+ **A. Ausführen des sqlps-Hilfsprogramms im interaktiven Standardmodus ohne Copyrightinformationen**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. Ausführen eines SQL Server PowerShell-Skripts von der Eingabeaufforderung**  
+ **B. Ausführen eines SQL Server PowerShell-Skripts über die Eingabeaufforderung**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Ausführen eines SQL Server PowerShell-Skripts von der Eingabeaufforderung und weitere Ausführung nach Abschluss des Skripts**  
+ **C. Ausführen eines SQL Server PowerShell-Skripts über die Eingabeaufforderung und weitere Ausführung nach Abschluss des Skripts**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
@@ -120,6 +120,6 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
+ [SQL Server-PowerShell](../powershell/sql-server-powershell.md)  
   
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240418"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können
@@ -84,7 +84,7 @@ ms.locfileid: "59240418"
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md)   
  [Allgemeine Eigenschaften](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
+ [Benutzerdefinierte Eigenschaften der Transformation](data-flow/transformations/transformation-custom-properties.md)   
  [Pfadeigenschaften](../../2014/integration-services/path-properties.md)  
   
   

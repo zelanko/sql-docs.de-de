@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860651"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl-App
@@ -26,14 +26,14 @@ Der folgende Artikel bietet Referenz für die **app** Befehle in der **Mssqlctl*
 
 |||
 |---|---|
-| [Erstellen](#create) | Erstellen Sie die Anwendung. |
-| [Löschen](#delete) | Löschen Sie die Anwendung. |
-| [Beschreiben](#describe) | Beschreiben Sie die Anwendung. |
-| [Init](#init) | KickStart neue Anwendung Gerüst. |
-| [Auflisten](#list) | Auflisten von Anwendungen. |
+| [create](#create) | Erstellen Sie die Anwendung. |
+| [delete](#delete) | Löschen Sie die Anwendung. |
+| [describe](#describe) | Beschreiben Sie die Anwendung. |
+| [init](#init) | KickStart neue Anwendung Gerüst. |
+| [list](#list) | Auflisten von Anwendungen. |
 | [run](#run) | Führen Sie die Anwendung. |
 | [update](#update) | Aktualisieren Sie die Anwendung. |
-| [Vorlage](reference-mssqlctl-app-template.md) | Vorlage-Befehle. |
+| [template](reference-mssqlctl-app-template.md) | Vorlage-Befehle. |
 
 ## <a id="create"></a> Mssqlctl-app erstellen
 
@@ -59,16 +59,16 @@ mssqlctl app create
 | Parameter | Description |
 |---|---|
 | **– Objekte – ein** | Liste der zusätzlichen Datei Anwendungsressourcen eingeschlossen werden sollen. |
-| **--code - C** | Pfad zum R oder Python-Codedatei. |
-| **--Description -d.** | Beschreibung der Anwendung. |
+| **--code -c** | Pfad zum R oder Python-Codedatei. |
+| **--description -d** | Beschreibung der Anwendung. |
 | **--entrypoint** |  |
-| **--Eingaben** | Schema für Eingabeparameter. |
-| **: Benennen von - n** | Anwendungsname |
+| **--inputs** | Schema für Eingabeparameter. |
+| **--name -n** | Anwendungsname |
 | **--outputs** | Schema der Ausgabe-Parameter. |
 | **--Common Language Runtime - r** | Laufzeit der Anwendung.  Zulässige Werte: Mleap, Python, R, SSIS. |
-| **---s-Spezifikation** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
+| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
 | **--Version - V** | Version der Anwendung. |
-| **– Ja -y** | Keine Aufforderung zur Bestätigung beim Erstellen einer Anwendung aus der CWD spec.yaml-Datei. |
+| **--yes -y** | Keine Aufforderung zur Bestätigung beim Erstellen einer Anwendung aus der CWD spec.yaml-Datei. |
 
 ### <a name="examples"></a>Beispiele
 
@@ -110,7 +110,7 @@ mssqlctl app delete
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Anwendungsname |
+| **--name -n** | Anwendungsname |
 | **--Version - V** | Version der Anwendung. |
 
 ### <a name="examples"></a>Beispiele
@@ -136,8 +136,8 @@ mssqlctl app describe
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Anwendungsname |
-| **---s-Spezifikation** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
+| **--name -n** | Anwendungsname |
+| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
 | **--Version - V** | Version der Anwendung. |
 
 ### <a name="examples"></a>Beispiele
@@ -167,9 +167,9 @@ mssqlctl app init
 | Parameter | Description |
 |---|---|
 | **--Destination -d.** | Die Position, um das Gerüst für die Anwendung zu platzieren. Standard: Aktuelles Arbeitsverzeichnis. |
-| **: Benennen von - n** | Anwendungsname |
-| **---s-Spezifikation** | Generieren Sie nur eine Anwendung spec.yaml. |
-| **--Vorlage -t** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
+| **--name -n** | Anwendungsname |
+| **--spec -s** | Generieren Sie nur eine Anwendung spec.yaml. |
+| **--template -t** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
 | **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/sql-server-samples.git. |
 | **--Version - V** | Version der Anwendung. |
 
@@ -213,7 +213,7 @@ mssqlctl app list
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Anwendungsname |
+| **--name -n** | Anwendungsname |
 | **--Version - V** | Version der Anwendung. |
 
 ### <a name="examples"></a>Beispiele
@@ -251,9 +251,9 @@ mssqlctl app run
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Anwendungsname |
+| **--name -n** | Anwendungsname |
 | **--Version - V** | Version der Anwendung. |
-| **--Eingaben** | Parameter in eine CSV-Datei der eingabeanwendung `name=value` Format. |
+| **--inputs** | Parameter in eine CSV-Datei der eingabeanwendung `name=value` Format. |
 
 ### <a name="examples"></a>Beispiele
 
@@ -289,8 +289,8 @@ mssqlctl app update
 
 | Parameter | Description |
 |---|---|
-| **---s-Spezifikation** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
-| **– Ja -y** | Keine Aufforderung zur Bestätigung bei der Aktualisierung einer Anwendung aus der CWD spec.yaml-Datei. |
+| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
+| **--yes -y** | Keine Aufforderung zur Bestätigung bei der Aktualisierung einer Anwendung aus der CWD spec.yaml-Datei. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

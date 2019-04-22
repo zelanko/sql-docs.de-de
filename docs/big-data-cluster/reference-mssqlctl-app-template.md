@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860101"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl-App-Vorlage
@@ -26,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **-app-Vorlage** Befehle in der **
 
 |||
 |---|---|
-| [Auflisten](#list) | Rufen Sie die unterstützte Vorlagen. |
-| [Pullabonnement](#pull) | Download unterstützt Vorlagen. |
+| [list](#list) | Rufen Sie die unterstützte Vorlagen. |
+| [pull](#pull) | Download unterstützt Vorlagen. |
 
 ## <a id="list"></a> Liste der Mssqlctl app-Vorlage
 
@@ -74,7 +74,7 @@ mssqlctl app template pull
 | Parameter | Description |
 |---|---|
 | **--Destination -d.** | Position, an die Skelett-Anwendungsvorlage platzieren.  Standardwert:. / Vorlagen. |
-| **: Benennen von - n** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
+| **--name -n** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
 | **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standard:
 https://github.com/Microsoft/sql-server-samples.git. installiert haben. |
 

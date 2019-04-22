@@ -21,10 +21,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429386"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -54,7 +54,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  Die Ausgabe entspricht dem Algorithmusstandard: 128 Bits (16 Bytes) für MD2, MD4 und MD5; 160 Bits (20 Bytes) für SHA und SHA1; 256 Bits (32 Bytes) für SHA2_256 und 512 Bits (64 Bytes) für SHA2_512.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Bei [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher sind zulässige Eingabewerte auf 8.000 Byte beschränkt.  
   

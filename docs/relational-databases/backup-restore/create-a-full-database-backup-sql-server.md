@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533338"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671326"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -232,7 +232,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
   8.    Klicken Sie auf **OK**.
 
-    **D3.  Es ist keine Shared Access Signature (SAS) vorhanden**
+   **D3.  Es ist keine Shared Access Signature (SAS) vorhanden**
   5.    Klicken Sie auf **Neuer Container** . Das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** wird geöffnet.  
   
   6.    Füllen Sie das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** aus, und klicken Sie anschließend auf **OK** um zum Dialogfeld **Sicherungsziel auswählen** zurückzukehren.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einen Microsoft Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .

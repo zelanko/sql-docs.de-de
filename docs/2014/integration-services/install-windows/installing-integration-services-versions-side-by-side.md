@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240668"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilität und Koexistenz (Integration Services)
@@ -28,7 +28,7 @@ ms.locfileid: "59240668"
   
 |Funktion|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Entwicklungsumgebung|[Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools – Business Intelligence für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools für Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools – Business Intelligence für Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Entwicklungsumgebung|[Frühere Versionen von SQL Server Data Tools (SSDT und SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools – Business Intelligence für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Datatools für Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools – Business Intelligence für Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |Verwaltungsumgebung|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Hauptsystemtabelle in msdb zum Speichern von Paketen|sysssispackages|sysssispackages|sysssispackages|  
 |Eingabeaufforderungs-Haupthilfsprogramm zum Ausführen von Paketen|**dtexec** (dtexec.exe), Version 2014|**dtexec** (dtexec.exe), Version 2012|**dtexec** (dtexec.exe), Version 2008|  
@@ -40,7 +40,7 @@ ms.locfileid: "59240668"
   
 -   **Entwerfen Sie Pakete in SQL Server-Datentools**. Entwickeln und verwalten Sie Pakete auf der Basis entsprechender Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit den folgenden Tools.  
   
-    -   Verwenden Sie die [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Version von Business Intelligence Development Studio zum Entwickeln und Verwalten von Paketen, die auf [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
+    -   Verwenden Sie die [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Version von Business Intelligence Development Studio zum Entwickeln und Verwalten von Paketen, die auf [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] basieren.  
   
     -   Entwickeln und verwalten Sie Pakete auf der Basis von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mit der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Version von [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   

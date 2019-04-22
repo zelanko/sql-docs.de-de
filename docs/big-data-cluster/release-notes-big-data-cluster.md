@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860526"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
@@ -33,12 +33,12 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 | Neues Feature oder aktualisieren | Details |
 |:---|:---|
-| Anleitung zur GPU unterstützt für die Ausführung von deep learning mit TensorFlow in Spark. | [Bereitstellen einen big Data-Cluster mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md). |
+| Anleitung für die GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark | [Bereitstellen einen big Data-Cluster mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** und **SqlStoragePool** Datenquellen werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese manuell nach Bedarf. Finden Sie unter den [bekannte Probleme](#externaltablesctp24). |
-| `INSERT INTO SELECT` Unterstützung für den Datenpool. | Ein Beispiel finden Sie unter [Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Unterstützung von `INSERT INTO SELECT` für den Datenpool | Ein Beispiel finden Sie unter [Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL](tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` Option. | Erzwingt, dass aktiviert oder deaktiviert die Verwendung des Pools für Compute in externen Tabellen Abfragen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. |
 | Aktualisierte Empfehlungen für die AKS-Bereitstellung. | Bei der Auswertung von big Data-Cluster in AKS nun empfohlen wird mit einem einzelnen Knoten der Größe **Standard_L8s**. |
-| Spark-Runtime-Upgrade für Spark 2.4. | |
+| Upgrade der Spark-Runtime auf Spark 2.4 | |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -176,7 +176,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 | VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem big Data-Cluster. | [Gewusst wie: Verwenden Sie Visual Studio Code zum Bereitstellen von Anwendungen auf SQL Server-big Data-Cluster](app-deployment-extension.md) |
 | Änderungen an der **Mssqlctl** tool zur Verwendung des Befehls. | Weitere Informationen finden Sie die [bekannte Probleme bei Mssqlctl](#mssqlctlctp23). |
 | Verwenden Sie Sparklyr in big Data-cluster | [Verwenden Sie Sparklyr in SQL Server-2019 big Data-cluster](sparklyr-from-RStudio.md) |
-| Binden Sie externe HDFS-kompatiblen Speicher in big Data-Cluster mit **HDFS tiering**. | Finden Sie unter [HDFS tiering](hdfs-tiering.md). |
+| Einbinden von externen HDFS-kompatiblen Speichern (Hadoop Distributed File System) in Big Data-Clustern mit dem **HDFS-Tiering** | Finden Sie unter [HDFS tiering](hdfs-tiering.md). |
 | Neue einheitliche Verbindungsschnittstelle für SQL Server-Instanz master und das HDFS/Spark-Gateway. | Finden Sie unter [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md). |
 | Löschen eines Clusters mit **Mssqlctl Cluster löschen** jetzt löscht nur die Objekte im Namespace, die Teil der big Data-Cluster waren. | Der Namespace wird nicht gelöscht werden. In früheren Versionen mit diesem Befehl jedoch den gesamten Namespace löschen. |
 | _Sicherheit_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Security-lb** und **Service-Sicherheit-Nodeport** wurden zusammengeführt, in der **endpunktsicherheit** Endpunkt. |

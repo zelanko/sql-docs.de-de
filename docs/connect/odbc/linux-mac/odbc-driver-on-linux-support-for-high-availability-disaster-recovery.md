@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042379"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung
@@ -27,9 +27,9 @@ Die ODBC-Treiber für Linux und macOS unterstützen Always On-Verfügbarkeitsgru
   
 -   [Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn eine ODBC-Anwendung unter Linux oder macOS mit einer Datenbank in einer Verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung herstellen, um die Arbeit nach dem Failover fortzusetzen.
 
@@ -97,7 +97,7 @@ Eine ODBC-Anwendung, die [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] verw
 |Funktion|und Beschreibung|  
 |------------|---------------|  
 |[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** unterstützt sowohl **ApplicationIntent** als auch **MultiSubnetFailover** über einen Datenquellennamen (DSN) oder Verbindungsattribute.|  
-|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** unterstützt **ApplicationIntent** und **MultiSubnetFailover** über DSN, Schlüsselwörter für Verbindungszeichenfolgen oder Verbindungsattribute.|
+|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** unterstützt **ApplicationIntent** und **MultiSubnetFailover** über DSN, Schlüsselwörter für Verbindungszeichenfolgen oder Verbindungsattribute.|
   
 ## <a name="see-also"></a>Weitere Informationen  
 

@@ -36,10 +36,10 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429366"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > Die Option REPAIR_ALLOW_DATA_LOSS ist ein unterstütztes Feature, stellt jedoch möglicherweise nicht immer die beste Option dar, um eine Datenbank in einen physisch konsistenten Zustand zu versetzen. Im Erfolgsfall kann die REPAIR_ALLOW_DATA_LOSS-Option zu Datenverlusten führen. Tatsächlich können dabei mehr Daten verloren gehen als bei einer Wiederherstellung der Datenbank aus der letzten als funktionierend bekannten Sicherung durch den Benutzer. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt immer eine Wiederherstellung durch den Benutzer aus der letzten als funktionierend bekannten Sicherung als primäre Methode zur Wiederherstellung nach Fehlern, die von DBCC CHECKDB gemeldet wurden. Die Option REPAIR_ALLOW_DATA_LOSS ist keine Alternative zur Wiederherstellung aus einer als funktionierend bekannten Sicherung. Diese Option ist nur für den Notfall als „letzte Option“ geeignet, wenn die Wiederherstellung aus einer Sicherung nicht möglich ist.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt immer eine Wiederherstellung durch den Benutzer aus der letzten als funktionierend bekannten Sicherung als primäre Methode zur Wiederherstellung nach Fehlern, die von DBCC CHECKDB gemeldet wurden. Die REPAIR_ALLOW_DATA_LOSS-Option ist keine Alternative zur Wiederherstellung aus einer als funktionierend bekannten Sicherung. Diese Option ist nur für den Notfall als „letzte Option“ geeignet, wenn die Wiederherstellung aus einer Sicherung nicht möglich ist.    
 >     
 > Für bestimmte Fehler, die nur mithilfe der REPAIR_ALLOW_DATA_LOSS-Option behoben werden können, muss möglicherweise die Zuordnung einer Zeile, Seite oder Reihe von Seiten aufgehoben werden, um die Fehler zu löschen. Daten, deren Zuordnung aufgehoben wurde, sind für den Benutzer nicht mehr verfügbar oder wiederherstellbar, und der genaue Inhalt dieser Daten kann nicht bestimmt werden. Aus diesem Grund ist die referentielle Integrität möglicherweise nicht genau, nachdem die Zuordnung von Zeilen oder Seiten aufgehoben wurde, da Einschränkungen für Fremdschlüssel nicht als Teil dieses Reparaturvorgangs geprüft oder gewartet werden. Der Benutzer muss die referentielle Integrität der Datenbank (mit DBCC CHECKCONSTRAINTS) überprüfen, nachdem er die REPAIR_ALLOW_DATA_LOSS-Option verwendet hat.    
 >     
@@ -189,7 +189,7 @@ Diese logischen Konsistenzprüfungen überprüfen die interne Indextabelle des I
 -   Wenn der Kompatibilitätsgrad 90 oder weniger beträgt, führt DBCC CHECKDB sowohl physische als auch logische Konsistenzprüfungen für eine einzelne Tabelle oder indizierte Sicht und für alle nicht gruppierten Indizes und XML-Indizes aus, sofern nicht `NOINDEX` angegeben wird. Räumliche Indizes werden nicht unterstützt.  
 - Ab SQL Server 2016 werden zusätzliche Überprüfungen von persistierten berechneten Spalten, UDT-Spalten und gefilterten Indizes nicht standardmäßig ausgeführt, um die teuren Auswertungen von Ausdrücken zu vermeiden. Durch diese Änderung wird die Dauer der Ausführung von CHECKDB für Datenbanken, die diese Objekte enthalten, stark reduziert. Jedoch werden die physischen Konsistenzprüfungen dieser Objekte stets abgeschlossen. Nur wenn die Option `EXTENDED_LOGICAL_CHECKS` angegeben wird, werden die Auswertungen von Ausdrücken zusätzlich zu bereits vorhandenen logischen Prüfungen (indizierte Sicht, XML-Indizes und räumliche Indizes) als Teil der Option `EXTENDED_LOGICAL_CHECKS` durchgeführt.   
     
-**So ermitteln Sie den Kompatibilitätsgrad einer Datenbank**
+**So erfahren Sie den Kompatibilitätsgrad einer Datenbank**
 -   [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Interne Datenbankmomentaufnahme    

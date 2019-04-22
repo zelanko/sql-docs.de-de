@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c32afdaf39f924c8c734c12df2991dd29fad75d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664919"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774595"
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "51664919"
 ## <a name="types-of-tables"></a>Typen von Tabellen  
  Neben der Standardrolle der grundlegenden benutzerdefinierten Tabellen bietet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden Typen von Tabellen, die innerhalb einer Datenbank speziellen Zwecken dienen:  
   
- Partitionierte Tabellen  
+### <a name="partitioned-tables"></a>Partitionierte Tabellen  
  Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung werden große Tabellen oder Indizes einfacher verwaltbar, da Sie schnell und effizient auf Datenteilmengen zugreifen können, während die Integrität der gesamten Auflistung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- Temporäre Tabellen  
+### <a name="temporary-tables"></a>Temporäre Tabellen  
  Temporäre Tabellen werden in **tempdb**gespeichert. Es gibt zwei Arten von temporären Tabellen: lokale und globale temporäre Tabellen. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Lokale temporäre Tabellen weisen als erstes Zeichen ihres Namens ein einzelnes Nummernzeichen (#) auf. Sie sind nur im Rahmen der aktuellen Verbindung des Benutzers sichtbar und werden gelöscht, sobald der Benutzer die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]trennt. Globale temporäre Tabellen weisen als erste Zeichen ihres Namens zwei Nummernzeichen (##) auf. Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar, und sie werden gelöscht, nachdem alle Benutzer, die auf diese Tabelle verweisen, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getrennt haben.  
   
- Systemtabellen  
+### <a name="system-tables"></a>Systemtabellen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Daten, welche die Konfiguration des Servers sowie alle seine Tabellen definieren, in einem bestimmten Satz von Tabellen, die als Systemtabellen bezeichnet werden. Benutzer können die Systemtabellen nicht direkt abfragen oder aktualisieren. Die in den Systemtabellen enthaltenen Informationen werden über die Systemsichten zur Verfügung gestellt. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
- Breite Tabellen  
+### <a name="wide-tables"></a>Breite Tabellen  
  Breite Tabellen verwenden [Sparsespalten](../../relational-databases/tables/use-sparse-columns.md) , um die möglichen Spalten einer Tabelle auf 30.000 zu erhöhen. Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Eine breite Tabelle besitzt einen definierten [Spaltensatz](../../relational-databases/tables/use-column-sets.md), bei dem es sich um eine nicht typisierte XML-Darstellung handelt, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Die Anzahl der Indizes und Statistiken wird ebenfalls auf 1.000 bzw. 30.000 erhöht. Die maximale Größe einer breiten Tabelle beträgt normalerweise 8.019 Byte. Deshalb sollten die meisten Daten einer Zeile NULL sein. Für eine breite Tabelle beträgt die maximale Anzahl von Spalten ohne geringe Dichte zuzüglich der berechneten Spalten weiterhin 1.024.  
   
  Bei breiten Tabellen treten folgende Leistungsauswirkungen auf:  
@@ -87,7 +87,7 @@ ms.locfileid: "51664919"
 |Beschreibt, wie eine berechnete Spalte in einer Tabelle erstellt wird.|[Angeben von berechneten Spalten in einer Tabelle](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Beschreibt, wie ein Standardwert für eine Spalte angegeben wird. Dieser Wert wird verwendet, wenn kein anderer Wert angegeben wird.|[Angeben von Standardwerten für Spalten](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Primär-und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Unique-Einschränkungen und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

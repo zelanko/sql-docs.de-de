@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242268"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Grundlegendes zu MDX-Abfragen (Analysis Services)
@@ -50,6 +50,6 @@ ms.locfileid: "59242268"
 |[Verwenden von Variablen und Parametern &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Beschreibt, wie Variablen und Parameter in MDX-Abfragen verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

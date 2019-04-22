@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241899"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Globalisierungsszenarien für Analysis Services Multidimensional
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] speichert und bearbeitet mehrsprachige Daten und Metadaten in tabellarischen und mehrdimensionalen Datenmodellen. Die Datenspeicherung erfolgt in Unicode (UTF-16) in Zeichensätzen, die die Unicode-Codierung verwenden. Wenn Sie ANSI-Daten in ein Datenmodell laden, werden Zeichen mit entsprechenden Unicode-Codepunkten gespeichert.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] speichert und bearbeitet mehrsprachige Daten und Metadaten in tabellarischen und mehrdimensionalen Datenmodellen. Die Datenspeicherung erfolgt in Unicode (UTF-16) in Zeichensätzen, die Unicode-Codierung verwenden. Wenn Sie ANSI-Daten in ein Datenmodell laden, werden Zeichen mit entsprechenden Unicode-Codepunkten gespeichert.  
   
  Die Auswirkungen der Unicode-Unterstützung sehen so aus, dass [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Daten in allen von den Windows-Client- und -Serverbetriebssystemen unterstützten Sprachen speichern kann, sodass Daten in jedem auf einem Windows-Computer verwendeten Zeichensatz gelesen, geschrieben, sortiert und verglichen werden können. BI-Clientanwendungen, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Daten nutzen, können Daten in der vom Benutzer gewünschten Sprache darstellen, vorausgesetzt, die Daten sind in der jeweiligen Sprache im Modell vorhanden.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59241899"
   
 -   Protokolldateien enthalten eine Mischung aus englischen und lokalisierten Meldungen, vorausgesetzt, Sie haben auf dem Windows-Server, auf dem Analysis Services ausgeführt wird, ein Language Pack installiert.  
   
--   Dokumentation und Tools wie z. B. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] und [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] sind in die folgenden Sprachen übersetzt: Chinesisch vereinfacht, Chinesisch traditionell, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Russisch und Spanisch. Um eine sprachspezifische Version der Tools zu verwenden, installieren Sie eine sprachspezifische Version von SQL Server (z. B. die deutsche Version von SQL Server, um Management Studio auf Deutsch zu erhalten), oder führen Sie das eigenständige Setup in der Zielsprache für [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]aus.  
+-   Dokumentationen und Tools, z. B. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] und [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], werden in den folgenden Sprachen übersetzt: Chinesisch vereinfacht, Chinesisch traditionell, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Russisch und Spanisch. Um eine sprachspezifische Version der Tools zu verwenden, installieren Sie eine sprachspezifische Version von SQL Server (z. B. die deutsche Version von SQL Server, um Management Studio auf Deutsch zu erhalten), oder führen Sie das eigenständige Setup in der Zielsprache für [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]aus.  
   
  Mit Analysis Services können Sie Sprache, Sortierung und Übersetzungen unabhängig voneinander in der gesamten Objekthierarchie festlegen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "59241899"
 -   Entwicklungs- und Produktionsumgebungen befinden sich geografisch in verschiedenen Ländern. Es geschieht immer häufiger, dass eine Lösung in einem Land entwickelt und in einem anderen bereitgestellt wird. Zu wissen, wie Sprach- und Sortierungseigenschaften festgelegt werden, ist sehr wichtig, wenn Sie die Aufgabe erhalten, eine in einer Sprache entwickelte Lösung für die Bereitstellung auf einem Server vorzubereiten, der ein anderes Sprachpaket verwendet. Durch Festlegen dieser Eigenschaften können Sie die geerbten Standardeinstellungen überschreiben, die Sie vom ursprünglichen Hostsystem erhalten. Weitere Informationen finden Sie unten unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
 ##  <a name="bkmk_features"></a> Features für die Erstellung einer globalisierten mehrdimensionalen Lösung  
- [!INCLUDE[applies](../includes/applies-md.md)] nur mehrdimensionale Datenmodelle  
+ [!INCLUDE[applies](../includes/applies-md.md)] Nur mehrdimensionale Datenmodelle  
   
  Auf der Clientebene können globalisierte Anwendungen, die mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Daten verwenden oder bearbeiten, die mehrsprachigen und multikulturellen Features in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwenden:  
   

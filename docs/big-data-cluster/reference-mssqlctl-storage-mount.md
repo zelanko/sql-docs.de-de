@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860291"
 ---
 # <a name="mssqlctl-storage-mount"></a>mssqlctl-Speicherbereitstellung
@@ -26,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **Speicher bereitstellen** Befehle
 
 |||
 |---|---|
-| [Erstellen](#create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS. |
-| [Löschen](#delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS. |
+| [create](#create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS. |
+| [delete](#delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS. |
 | [status](#status) | Status des Mount(s). |
 
 ## <a id="create"></a> Erstellen Sie Mssqlctl Speicher bereitstellen
@@ -47,7 +47,7 @@ mssqlctl storage mount create
 |---|---|
 | **--local-path** | HDFS-Pfad, in dem Bereitstellungspunkt (Ziel der Bereitstellung) erstellt werden muss. Erforderlich. |
 | **--remote-uri** | Der URI der Remotespeicher, die bereitgestellte (Quelle Mount) verwendet werden soll. Erforderlich. |
-| **---Datei an.** | Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet. |
+| **--credential-file** | Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet. |
 
 ### <a name="examples"></a>Beispiele
 

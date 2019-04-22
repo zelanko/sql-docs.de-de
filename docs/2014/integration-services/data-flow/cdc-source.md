@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241788"
 ---
 # <a name="cdc-source"></a>CDC-Quelle
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server-Fehlermeldung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt möglicherweise die folgende Meldung zurück:  
   
- **Eine unzureichende Anzahl von Argumenten bereitgestellt wurden, für die Prozedur oder Funktion CDC. fn_cdc_get_net_changes_\<... >.**  
+ **Für die Prozedur oder Funktion cdc.fn_cdc_get_net_changes_\<..> wurden zu wenig Argumente bereitgestellt.**  
   
  Dieser Fehler gibt nicht an, dass ein Argument fehlt. Die Bedeutung ist, dass die Start- bzw. End-LSN-Werte in der CDC-Statusvariablen ungültig sind.  
   

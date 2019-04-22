@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860471"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl-Cluster
@@ -26,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **Cluster** Befehle in der **Mssql
 
 |||
 |---|---|
-| [Erstellen](#create) | Cluster zu erstellen. |
-| [Löschen](#delete) | Löschen Sie Cluster. |
+| [create](#create) | Cluster zu erstellen. |
+| [delete](#delete) | Löschen Sie Cluster. |
 | [config](reference-mssqlctl-cluster-config.md) | Konfigurationsbefehle-Cluster. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Debug-Befehle. |
 
@@ -45,8 +45,8 @@ mssqlctl cluster create
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Clustername für Kubernetes-Namespace verwendet. |
-| **--akzeptieren-Eula - e** | Stimmen Sie den Lizenzbedingungen zu? \[Ja/Nein\].  Zulässige Werte: Nein, Ja. Erforderlich. |
+| **--name -n** | Clustername für Kubernetes-Namespace verwendet. |
+| **--accept-eula -e** | Stimmen Sie den Lizenzbedingungen zu? \[Ja/Nein\].  Zulässige Werte: Nein, Ja. Erforderlich. |
 
 ## <a id="delete"></a> Mssqlctl Cluster löschen
 
@@ -62,7 +62,7 @@ mssqlctl cluster delete
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
+| **--name -n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
 | **--force -f** | -Force-Delete Cluster. |
 
 ## <a name="next-steps"></a>Nächste Schritte

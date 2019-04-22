@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241578"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für SharePoint-Modus von Reporting Services
@@ -41,19 +41,19 @@ ms.locfileid: "59241578"
   
 -   [Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets](#bkmk_ssrsfeatures_cmdlets)  
   
--   [Basisbeispiele](#bkmk_basic_samples)  
+-   [Einfache Beispiele](#bkmk_basic_samples)  
   
 -   [Ausführliche Beispiele](#bkmk_detailedsamples)  
   
-    -   [Erstellen einer Reporting Services-Dienstanwendung und eines entsprechenden Proxys](#bkmk_example_create_service_application)  
+    -   [Erstellen eines Reporting Services-dienstanwendung und -Proxys](#bkmk_example_create_service_application)  
   
-    -   [Überprüfen und Aktualisieren einer Reporting Services-Übermittlungserweiterung](#bkmk_example_delivery_extension)  
+    -   [Überprüfen Sie, und Aktualisieren einer Reporting Services-übermittlungserweiterung](#bkmk_example_delivery_extension)  
   
-    -   [Abrufen und Festlegen von Eigenschaften der Reporting Services-Anwendungsdatenbank, z. B. Timeout der Datenbank](#bkmk_example_db_properties)  
+    -   [Abrufen und Festlegen von Eigenschaften der Reporting-Anwendungsdatenbank, z. B. Timeout der Datenbank](#bkmk_example_db_properties)  
   
     -   [Auflisten von reporting Services-datenerweiterungen – SharePoint-Modus](#bkmk_example_list_data_extensions)  
   
-    -   [Ändern und Aufführen von Abonnementbesitzern](#bkmk_change_subscription_owner)  
+    -   [Ändern und Auflisten von abonnementbesitzern](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet-Zusammenfassung  
 
@@ -62,7 +62,7 @@ ms.locfileid: "59241578"
   
  Wenn Sie bei der Eingabe der PowerShell-Beispiele eine Fehlermeldung mit etwa folgendem Wortlaut sehen:  
   
--   Install-SPRSService : Der Begriff 'Install-SPRSService' wird nicht als  
+-   Install-SPRSService: Der Begriff 'Install-SPRSService' wurde nicht erkannt, als die  
     Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad enthalten und korrekt ist, und wiederholen Sie den Vorgang.  
   
  Eines der folgenden Probleme tritt auf:  
@@ -94,7 +94,7 @@ ms.locfileid: "59241578"
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installiert und registriert bzw. deinstalliert den gemeinsamen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst. Dies kann nur auf dem Computer erfolgen, auf dem SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> (1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dienst in der Farm installiert ist.<br /><br /> (2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br />(1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird auf dem aktuellen Computer deinstalliert.<br />(2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird aus der Farm deinstalliert.<br /><br /> <br /><br /> HINWEIS: Wenn sich weitere Computer mit installiertem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienst in der Farm befinden, oder wenn noch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendungen in der Farm ausgeführt werden, wird eine Warnmeldung angezeigt.|  
+|Install-SPRSService|Installiert und registriert bzw. deinstalliert den gemeinsamen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst. Dies kann nur auf dem Computer erfolgen, auf dem SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> (1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dienst in der Farm installiert ist.<br /><br /> (2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br />(1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird auf dem aktuellen Computer deinstalliert.<br />(2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird aus der Farm deinstalliert.<br /><br /> <br /><br /> HINWEIS: Wenn andere Computer in der Farm, die die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst installiert ist, oder wenn immer noch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dienstanwendungen, die in der Farm ausgeführt werden, es wird eine Warnmeldung angezeigt.|  
 |Install-SPRSServiceProxy|Installiert und registriert bzw. deinstalliert den Reporting Services-Dienstproxy in der SharePoint-Farm.|  
 |Get-SPRSProxyUrl|Ruft die URL(s) für den Zugriff auf den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst ab.|  
 |Get-SPRSServiceApplicationServers|Ruft alle Server in der lokalen SharePoint-Farm ab, die eine Installation des gemeinsamen Diensts für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthalten. Dieses Cmdlet ist hilfreich für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Upgrades, um die Server zu ermitteln, auf denen der freigegebene Dienst ausgeführt wird und die folglich aktualisiert werden müssen.|  
@@ -105,7 +105,7 @@ ms.locfileid: "59241578"
 |Cmdlet|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Ruft mindestens ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungsobjekt ab.|  
-|New-SPRSServiceApplication|Erstellen Sie eine neue Reporting Services-Dienstanwendung und zugeordnete Datenbanken.<br /><br /> LogonType-Parameter: Gibt an, ob der Berichtsserver das SSRS-Anwendungspoolkonto oder eine SQL Server-Anmeldung für den Zugriff auf die Berichtsserverdatenbank verwendet. Folgende Werte sind möglich:<br /><br /> 0 Windows-Authentifizierung<br /><br /> 1 SQL Server<br /><br /> 2 Anwendungspoolkonto (Standard)|  
+|New-SPRSServiceApplication|Erstellen Sie eine neue Reporting Services-Dienstanwendung und zugeordnete Datenbanken.<br /><br /> LogonType-Parameter: Gibt an, wenn der Berichtsserver das SSRS-Anwendungspoolkonto oder eine SQL Server-Anmeldung verwendet, um die Berichtsserver-Datenbank zugreifen. Folgende Werte sind möglich:<br /><br /> 0 Windows-Authentifizierung<br /><br /> 1 SQL Server<br /><br /> 2 Anwendungspoolkonto (Standard)|  
 |Remove-SPRSServiceApplication|Entfernt die angegebene Reporting Services-Dienstanwendung. Dadurch werden auch die zugeordneten Datenbanken entfernt.|  
 |Set-SPRSServiceApplication|Bearbeitet die Eigenschaften einer vorhandenen Reporting Services-Dienstanwendung.|  
 |New-SPRSServiceApplicationProxy|Erstellt einen neuen Proxy für die Reporting Services-Dienstanwendung.|  
@@ -131,7 +131,7 @@ ms.locfileid: "59241578"
 |New-SPRSExtension|Registriert eine neue Erweiterung bei einer Reporting Services-Dienstanwendung.|  
 |Set-SPRSExtension|Legt die Eigenschaften einer vorhandenen Reporting Services-Erweiterung fest.|  
 |Remove-SPRSExtension|Entfernt eine Erweiterung aus einer Reporting Services-Dienstanwendung.|  
-|Get-SPRSExtension|Ruft mindestens eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Erweiterung für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung ab.<br /><br /> Gültige Werte sind:<br /><br /> **Delivery**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Daten**<br /><br /> **Sicherheit**<br /><br /> **Authentifizierung**<br /><br /> **EventProcessing**<br /><br /> **Berichtselemente**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Ruft mindestens eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Erweiterung für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung ab.<br /><br /> Gültige Werte sind:<br /><br /> **Übermittlung**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **Authentifizierung**<br /><br /> **EventProcessing**<br /><br /> **Berichtselemente**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Ruft die SharePoint-Websites abhängig davon ab, ob die Funktion "ReportingService" aktiviert ist. Standardmäßig werden Websites zurückgegeben, für die die Funktion "ReportingService" aktiviert ist.|  
   
 ##  <a name="bkmk_basic_samples"></a> Einfache Beispiele  
@@ -304,7 +304,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [CheckList: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex-SharePoint-Verwaltungs-PowerShell-Skripts](http://sharepointpsscripts.codeplex.com/)   
  [Verwalten von SSRS mit PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

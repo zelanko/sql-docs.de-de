@@ -16,12 +16,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47c4aed72c074ee1c591bd94afbcd53d6ba9fa01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215356"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583163"
 ---
 # <a name="non-sql-server-publishers"></a>Nicht-SQL Server-Verleger  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,12 @@ Es ist möglich, Daten aus Quellen außerhalb von [!INCLUDE[ssNoVersion](../../.
 -   Veröffentlichen von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten.  
 
 -   Beim Veröffentlichen von Daten an und von Oracle bestehen folgende Einschränkungen:  
-  | |2016 oder früher |2017 oder höher |
-  |-------|-------|--------|
+
+  |Replikation |2016 oder früher |2017 oder höher |
+  |:-----------|:---------------|:-------------|
   |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |
   |Replikation zu Oracle |Bis Oracle 12c |Nicht unterstützt |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Die heterogene Replikation an Nicht-SQL Server-Abonnenten ist veraltet. Das Veröffentlichen mit Oracle ist veraltet. Um Daten zu verschieben, erstellen Sie Lösungen mit Change Data Capture und [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

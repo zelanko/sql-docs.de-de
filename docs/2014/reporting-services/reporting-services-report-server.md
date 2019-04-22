@@ -26,22 +26,22 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241628"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services-Berichtsserver
   Dieses Thema bietet eine Übersicht über den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver, die zentrale Komponente einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation. Er besteht aus einem Paar Verarbeitungs-Engines plus einer Auflistung von besonderen Erweiterungen, mit denen die Authentifizierung, Datenverarbeitung, das Rendering und die Übermittlungsvorgänge bearbeitet werden. Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver wird in einem von zwei Bereitstellungsmodi ausgeführt: dem einheitlichen Modus oder dem SharePoint-Modus. Einen Vergleich der Features finden Sie im Abschnitt [Funktionsvergleich zwischen SharePoint und einheitlichem Modus](#bkmk_featuresupport) .  
   
- **Installation:** Informationen zur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Installation finden Sie unter:  
+ **Installation:** Informationen zum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation finden Sie in der folgenden:  
   
 -   [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [Installieren von SQL Server-BI-Funktionen mit SharePoint &#40;PowerPivot und Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**: Informationen zur Verwendung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mit Microsoft Azure Virtual Machines finden Sie unter folgenden Themen:  
+ **Windows Azure**: Informationen zur Verwendung [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mit Microsoft Azure Virtual Machines finden Sie in der folgenden:  
   
 -   [SQL Server Business Intelligence auf virtuellen Computern in Windows Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
@@ -53,19 +53,19 @@ ms.locfileid: "59241628"
   
 -   [Funktionsvergleich zwischen SharePoint und einheitlichem Modus](#bkmk_featuresupport)  
   
--   [im einheitlichen Modus](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
--   [Einheitlicher Modus mit SharePoint-Webparts](#bkmk_nativewithwebparts)  
+-   [Im einheitlichen Modus mit SharePoint-Webparts](#bkmk_nativewithwebparts)  
   
--   [-SharePoint-Modus](#bkmk_sharepointmode)  
+-   [SharePoint-Modus](#bkmk_sharepointmode)  
   
--   [Berichtsprozess und Zeitplanungs- und Übermittlungsprozess](#bkmk_reportprocessor)  
+-   [Berichtsprozess und Zeitplanungs- und Übermittlungsprozess zu melden](#bkmk_reportprocessor)  
   
 -   [Berichtsserver-Datenbank](#bkmk_reportdatabase)  
   
--   [Authentifizierungs-, Rendering-, Daten- und Übermittlungserweiterungen](#bkmk_authentication)  
+-   [Authentifizierung, Rendering, Daten und Übermittlungserweiterungen](#bkmk_authentication)  
   
--   [Related Tasks](#bkmk_relatedtasks)  
+-   [Verwandte Aufgaben](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> Übersicht über Berichtsservermodi  
  Verarbeitungs-Engines (Prozessoren) sind das Kernstück des Berichtsservers. Die Prozessoren unterstützen die Integrität des Berichtssystems und können weder geändert noch erweitert werden. Erweiterungen sind auch Prozessoren, aber sie führen spezifische Funktionen aus. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst mindestens eine Standarderweiterung für jeden unterstützten Erweiterungstyp. Sie können einem Berichtsserver benutzerdefinierte Erweiterungen hinzufügen. Dadurch können Sie einen Berichtsserver für die Unterstützung von Funktionen erweitern, die nicht ohne Anpassungen unterstützt werden. Beispiele für benutzerdefinierte Funktionen sind u.&nbsp;a. die Unterstützung von Technologien für einmaliges Anmelden (SSO, Single Sign-On), der Berichtsausgabe in Anwendungsformaten, die nicht bereits von den Standardrenderingerweiterungen verarbeitet werden, und der Berichtsübermittlung an einen Drucker oder eine Anwendung.  
@@ -173,7 +173,7 @@ ms.locfileid: "59241628"
 |Erläutert, wie die Speichereinstellungen für den Report Server-Webdienst und den Windows-Dienst angepasst werden können.|[Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Erläutert empfohlene Schritte zur Konfiguration des Berichtsservers für die Remoteverwaltung.|[Konfigurieren eines Berichtsservers für die Remoteverwaltung](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Stellt Anweisungen zum Konfigurieren der Verfügbarkeit von **Meine Berichte** auf einer einheitlichen Berichtsserverinstanz bereit.|[Aktivieren und Deaktivieren von "Meine Berichte"](report-server/enable-and-disable-my-reports.md)|  
-|Stellt Anweisungen zum Einrichten des RSClientPrint-Steuerelements bereit, das Druckfunktionen innerhalb unterstützter Browser bereitstellt. Weitere Informationen zu den Browseranforderungen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Stellt Anweisungen zum Einrichten des RSClientPrint-Steuerelements bereit, das Druckfunktionen innerhalb unterstützter Browser bereitstellt. Weitere Informationen zu den Browseranforderungen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Enable and Disable Client-Side Printing for Reporting Services (Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services)](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterungen für Reporting Services](extensions/reporting-services-extensions.md)   

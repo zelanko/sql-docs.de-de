@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533358"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774575"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533358"
 
 Die Featurefamilie „Intelligente Abfrageverarbeitung“ umfasst Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern. 
 
-![Intelligente Abfrageverarbeitung](./media/3_iqpfeaturefamily.png)
+![Intelligente Abfrageverarbeitung](./media/iqp-feature-family.png)
 
 Sie können Workloads automatisch für die intelligente Abfrageverarbeitung anpassen, indem Sie den geeigneten Datenbank-Kompatibilitätsgrad für die Datenbank aktivieren. Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
 
@@ -498,7 +498,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)    

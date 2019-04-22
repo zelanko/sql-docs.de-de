@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860021"
 ---
 # <a name="mssqlctl-cluster-config"></a>Konfiguration des mssqlctl-Clusters
@@ -26,7 +26,7 @@ Der folgende Artikel bietet Referenz für die **cluster Config** Befehle in der 
 
 |||
 |---|---|
-| [Erhalten](#get) | Rufen Sie Cluster an. |
+| [get](#get) | Rufen Sie Cluster an. |
 
 ## <a id="get"></a> Mssqlctl Cluster-Konfiguration zu erhalten.
 
@@ -42,8 +42,8 @@ mssqlctl cluster config get
 
 | Parameter | Description |
 |---|---|
-| **: Benennen von - n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
-| **--Ausgabedatei - f** | Die Ausgabedatei zum Speichern des Ergebnisses in. Erforderlich. |
+| **--name -n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
+| **--output-file -f** | Die Ausgabedatei zum Speichern des Ergebnisses in. Erforderlich. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

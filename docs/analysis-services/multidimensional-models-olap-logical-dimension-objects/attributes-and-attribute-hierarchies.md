@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b858af0f4f3e86e480099a16e2b8db607b8882c3
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042409"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
@@ -37,6 +37,6 @@ ms.locfileid: "59042409"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241378"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
@@ -100,9 +100,9 @@ Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Pr
 
 Wenn Sie aktuell Version 1.0.1.0 oder höher verwenden, führen Sie diese Schritte aus, um auf die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors zu aktualisieren. Durch diese Anweisungen entfällt der ansonsten erforderliche Neustart der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz.
  
-1. Installieren Sie die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). Speichern Sie im Installations-Assistenten die neue DLL-Datei unter einem anderen Dateipfad als dem der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector-DLL. Als neuer Dateipfad würde sich beispielsweise anbieten: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. Installieren Sie die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). Speichern Sie im Installations-Assistenten die neue DLL-Datei unter einem anderen Dateipfad als dem der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector-DLL. Als neuer Dateipfad würde sich beispielsweise anbieten: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. Führen Sie in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den folgenden Transact-SQL-Befehl aus, um Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz auf die neue Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connectors verweisen zu lassen:
+2. Führen Sie in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]den folgenden Transact-SQL-Befehl aus, um Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz auf die neue Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors verweisen zu lassen:
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -121,7 +121,7 @@ Wenn Sie aktuell Version 1.0.0.440 oder älter verwenden, führen Sie diese Schr
   
      (Alternativ können Sie den Ordner umbenennen, in dem sich die DLL-Datei befindet. Der Standardname des Ordners ist „[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Microsoft Azure Key Vault“.  
   
-4.  Installieren Sie die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connectors aus dem Microsoft Download Center.  
+4.  Laden Sie die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors aus dem Microsoft Download Center herunter.  
   
 5.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]neu.  
   
@@ -138,8 +138,8 @@ Wenn Sie aktuell Version 1.0.0.440 oder älter verwenden, führen Sie diese Schr
   
 8.  Nachdem Sie bestätigt haben, dass das Update funktioniert, können Sie den alten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectorordner löschen (wenn Sie sich in Schritt 3 dazu entschlossen haben, ihn umzubenennen statt zu deinstallieren).  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstprinzipals  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet in Azure Active Directory erstellte Dienstprinzipale als Anmeldeinformationen zum Zugriff auf den Schlüsseltresor.  Der Dienstprinzipal verfügt über eine Client-ID und einen Authentifizierungsschlüssel.  Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen werden der **VaultName**, die **Client-ID**und der **Authentifizierungsschlüssel**festgelegt.  Der **Authentifizierungsschlüssel** ist für einen bestimmten Zeitraum (1 oder 2 Jahre) gültig.   Vor Ablauf des Zeitraums muss für den Dienstprinzipal ein neuer Schlüssel in Azure AD generiert werden.  Anschließend müssen die Anmeldeinformationen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] geändert werden.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verwaltet einen Cache für die Anmeldeinformationen in der aktuellen Sitzung. Wenn also Anmeldeinformationen geändert werden, sollte [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] neu gestartet werden.  
+### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstprinzipals  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet in Azure Active Directory erstellte Dienstprinzipale als Anmeldeinformationen zum Zugriff auf den Schlüsseltresor.  Der Dienstprinzipal verfügt über eine Client-ID und einen Authentifizierungsschlüssel.  Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen werden der **VaultName**, die **Client-ID**und der **Authentifizierungsschlüssel**festgelegt.  Der **Authentifizierungsschlüssel** ist für einen bestimmten Zeitraum (1 oder 2 Jahre) gültig.   Vor Ablauf des Zeitraums muss für den Dienstprinzipal ein neuer Schlüssel in Azure AD generiert werden.  Anschließend müssen die Anmeldeinformationen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geändert werden.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verwaltet einen Cache für die Anmeldeinformationen in der aktuellen Sitzung. Wenn also Anmeldeinformationen geändert werden, sollte [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] neu gestartet werden.  
   
 ### <a name="key-backup-and-recovery"></a>Schlüsselsicherung und -wiederherstellung  
 Der Schlüsseltresor sollte regelmäßig gesichert werden. Wenn ein asymmetrischer Schlüssel im Tresor verloren geht, kann er aus der Sicherung wiederhergestellt werden. Der Schlüssel muss mit dem gleichen Namen wie zuvor wiederhergestellt werden, was vom PowerShell-Befehl „Restore“ auch ausgeführt wird (siehe Schritte unten).  
@@ -159,7 +159,7 @@ Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solang
 ### <a name="on-azure-key-vault"></a>Zum Azure-Schlüsseltresor  
   
 **Wie funktionieren Schlüsselvorgänge mit Azure Key Vault?**  
- Der asymmetrische Schlüssel im Schlüsseltresor dient zum Schutz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsschlüssels. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge, die den asymmetrischen Schlüssel verwenden, erfolgen innerhalb des Azure Key Vault-Diensts und werden durch die Sicherheit des Diensts geschützt.  
+ Der asymmetrische Schlüssel im Schlüsseltresor dient zum Schutz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsschlüssels. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge, die den asymmetrischen Schlüssel verwenden, erfolgen innerhalb des Azure Key Vault-Diensts und werden durch die Sicherheit des Diensts geschützt.  
   
  **Was ist ein Schlüssel-URI?**  
  Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie zum Abrufen der aktuellen Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` und zum Abrufen einer bestimmten Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` .  
@@ -170,7 +170,7 @@ Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solang
 -  Login.microsoftonline.com/*:443
 -  *.Vault.Azure.NET/*:443
   
-**Was sind die minimal erforderlichen Berechtigungsstufen, die für die einzelnen Konfigurationsschritte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erforderlich sind?**  
+**Was sind die minimal erforderlichen Berechtigungsstufen, die für die einzelnen Konfigurationsschritte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erforderlich sind?**  
  Zwar können Sie alle Konfigurationsschritte als Mitglied der festen Serverrolle „sysadmin“ ausführen, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] legt Ihnen jedoch dringlich nahe, die verwendeten Berechtigungen zu minimieren. Die folgende Liste definiert die minimale Berechtigungsstufe für jede Aktion.  
   
 -   Zum Erstellen eines Kryptografieanbieters ist die `CONTROL SERVER` -Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** erforderlich.  
@@ -269,7 +269,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 -   [Erstellen einer verschlüsselten Sicherung](../../../relational-databases/backup-restore/create-an-encrypted-backup.md)  
   
- Verwandte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Befehle:  
+ Verwandte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Befehle:  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
@@ -291,10 +291,10 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 -   [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   Referenz der PowerShell-[Azure Key Vault-Cmdlets](/powershell/module/azurerm.keyvault/)  
+-   Referenz der PowerShell- [Azure Key Vault-Cmdlets](/powershell/module/azurerm.keyvault/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweiterbare Schlüsselverwaltung mithilfe von Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Erweiterbare Schlüsselverwaltung mithilfe von Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

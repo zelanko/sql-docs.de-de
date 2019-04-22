@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9cf146720502f31a030cb5be63c0a238e460c41
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "47646948"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Immer Funktionen auf Verfügbarkeit dynamische Verwaltungssichten-
@@ -39,7 +39,7 @@ ms.locfileid: "47646948"
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
- [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Katalogsichten AlwaysOn-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

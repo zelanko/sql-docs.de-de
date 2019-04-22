@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0d1e59f0f049373b0858b756618454659898dc2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211929"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59242278"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -81,19 +81,19 @@ ms.locfileid: "53211929"
 ## <a name="supported-data-sources"></a>Unterstützte Datenquellen  
  In der folgenden Tabelle sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Datenverarbeitungserweiterungen und Datenanbieter aufgeführt, die Sie zum Abrufen von Daten für Berichtsdatasets und Berichtsmodelle verwenden können. Weitere Informationen zu Erweiterungen oder Datenanbietern erhalten Sie, indem Sie auf den Link in der zweiten Spalte klicken. Die Tabellenspalten enthalten folgende Informationen:  
   
--   Die Quelle der Berichtsdaten: Der Datentyp, auf den zugegriffen wird, z. B. relationale Datenbank, mehrdimensionale Datenbank, Flatfile oder XML. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datentypen kann [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für einen Bericht verwenden?"  
+-   Quelle der Berichtsdaten: Der Datentyp, auf den zugegriffen wird, z. B. relationale Datenbank, mehrdimensionale Datenbank, Flatfile oder XML. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datentypen können in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für einen Bericht verwendet werden?"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenquellentyp: Einer der Datenquellentypen, die in der Dropdownliste angezeigt werden, wenn Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eine Datenquelle definieren. Diese Liste enthält die installierten und registrierten Datenverarbeitungserweiterungen und Datenanbieter. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenquellentyp wähle ich beim Erstellen einer Berichtsdatenquelle in der Dropdownliste aus?"  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenquellentyp: Einer der Datenquellentypen, die in der Dropdownliste angezeigt werden, wenn Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]eine Datenquelle definieren. Diese Liste enthält die installierten und registrierten Datenverarbeitungserweiterungen und Datenanbieter. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenquellentyp wähle ich beim Erstellen einer Berichtsdatenquelle in der Dropdownliste aus?"  
   
--   Name der Datenverarbeitungserweiterung/des Datenanbieters: Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung oder andere Datenanbieter, die dem ausgewählten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenquellentyp entsprechen. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datenverarbeitungserweiterung oder welcher Datenanbieter wird verwendet, wenn ich einen Datenquellentyp auswähle?"  
+-   Name der Datenverarbeitungserweiterung/des Datenanbieters: Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung oder der andere Datenanbieter, die oder der dem ausgewählten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenquellentyp entspricht. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datenverarbeitungserweiterung oder welcher Datenanbieter wird verwendet, wenn ich einen Datenquellentyp auswähle?"  
   
--   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehrere Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: „Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?“  
+-   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehr als einen Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?"  
   
--   Datenquelle *\<plattform>*: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Plattformtyp abgerufen werden?"  
+-   Datenquellen-*\<Plattform>*: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Typ von Plattform abgerufen werden?"  
   
--   Version der Datenquelle: Die Version der Zieldatenquelle, die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützt wird. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?"  
+-   Version der Datenquelle: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützte Version der Zieldatenquelle. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?"  
   
--   RS *\<plattform>*: Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Plattformtyp installiert werden?"  
+-   RS-*\<Plattform>*: Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Typ von Plattform installiert werden?"  
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   
@@ -229,7 +229,7 @@ Die Unterstützung für diese Datenquelle wurde eingestellt. Verwenden Sie den S
  
 Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
  
-1.  Navigieren Sie zur [Oracle-Downloadwebsite](https://www.oracle.com/us/products/tools/index-090165.html).
+1.  Navigieren Sie zur [Oracle-Downloadwebsite](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html).
 2.  Laden Sie das ODAC 12c-Release 4 (12.1.0.2.4) für Windows (64 Bit für einen Server, 32 Bit für die Tools) herunter.
 3.  Installieren Sie den Datenanbieter für .NET 4.
   
@@ -270,7 +270,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
   
  Weitere Informationen finden Sie unter [Teradataverbindungstyp (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- Sie können auch Modelle auf Grundlage einer Teradata-Datenbank erstellen. Weitere Informationen finden Sie im folgenden Whitepaper auf der Teradata-Website: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation (Microsoft SQL Server Reporting Services und Teradata)](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ Sie können auch Modelle auf Grundlage einer Teradata-Datenbank erstellen. Weitere Informationen finden Sie im folgenden Whitepaper auf der Teradata-Website: [Microsoft SQL Server 2012 Reporting Services und Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   

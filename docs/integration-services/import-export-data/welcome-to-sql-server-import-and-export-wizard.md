@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24f278e21564f771fc2a0f897eba24473ddeb7e6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042059"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Willkommen beim SQL Server-Import/Export-Assistenten
@@ -49,9 +49,9 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
     -   **Wenn Sie sich lieber ein Video ansehen möchten:** Sehen Sie sich dieses vierminütige YouTube-Video an, in dem der Assistent vorgestellt wird und klar und deutlich erklärt wird, wie Daten nach Excel exportiert werden können: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Verwenden des SQL Server-Import/Export-Assistenten zum Exportieren nach Excel).
 
--   **Weitere Informationen zu den Funktionen des Assistenten.**
+-   **Weitere Informationen zur Funktionsweise des Assistenten:**
 
-    -   **Weitere Informationen zum Assistenten.** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+    -   **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
     -   **Weitere Informationen zu den Schritten des Assistenten:** Weitere Informationen zu den einzelnen Schritten des Assistenten finden Sie auf der Seite [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md) (Schritte im SQL Server-Import/Export-Assistenten). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 
@@ -59,4 +59,4 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
 -   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--  **Installieren des Assistenten**  Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
+-  **So erhalten Sie den Wizard.**  Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).

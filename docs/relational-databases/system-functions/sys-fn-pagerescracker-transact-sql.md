@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899706"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
@@ -52,9 +52,9 @@ Ist das hexadezimale 8-Byte-Format einer Seite Datenbankressource.
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|db_id|**ssNoversion**|Datenbank-ID|  
-|file_id|**ssNoversion**|Datei-ID|  
-|page_id|**ssNoversion**|Seiten-ID|  
+|db_id|**int**|Datenbank-ID|  
+|file_id|**int**|Datei-ID|  
+|page_id|**int**|Seiten-ID|  
   
 ## <a name="remarks"></a>Hinweise  
 `sys.fn_PageResCracker` wird verwendet, um die hexadezimale 8-Byte-Darstellung einer Datenbankseite in ein Rowset zu konvertieren, die die ID der Datenbank, Datei-ID und Seiten-ID der Seite enthält.   

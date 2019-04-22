@@ -18,30 +18,27 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||= azure-sqldw-latest ||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae5abf48d2cdd2325c69df1c1f680594a7d8b3eb
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: acce5dd1290f1e19efaf85e80aed5cdb76902cf6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566399"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671186"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Entfernt das Leerzeichen `char(32)` oder andere am Beginn oder Ende einer Zeichenfolge angegebene Zeichen.  
- 
-## <a name="syntax"></a>Syntax   
-``` 
--- Syntax for SQL Server and Azure SQL Database
-TRIM ( [ characters FROM ] string ) 
-```
-[//]: # "[ BOTH | LEADING | TRAILING ] noch nicht verfügbar."
 
+## <a name="syntax"></a>Syntax
+
+```sql
+-- Syntax for SQL Server and Azure SQL Database
+TRIM ( [ characters FROM ] string )
 ```
--- Syntax for Azure SQL Data Warehouse
-TRIM ( string )
-```
+
 ## <a name="arguments"></a>Argumente
 
 Bei „characters“ handelt es sich um ein Literal, eine Variable oder ein Funktionsaufruf eines beliebigen Zeichentyps, der sich nicht auf eine Branchenanwendung bezieht (`nvarchar`, `varchar`, `nchar` oder `char`), mit Zeichen, die entfernt werden sollten. Die Typen `nvarchar(max)` und `varchar(max)` sind nicht zulässig.
@@ -49,35 +46,40 @@ Bei „characters“ handelt es sich um ein Literal, eine Variable oder ein Funk
 „string“ ist ein Ausdruck eines beliebigen Zeichentyps (`nvarchar`, `varchar`, `nchar` oder `char`), aus dem Zeichen entfernt werden sollten.
 
 ## <a name="return-types"></a>Rückgabetypen
+
 Gibt einen Zeichenausdruck mit einem Zeichenargumenttyp zurück, aus dem das Leerzeichen `char(32)` oder andere angegebene Zeichenfolgen auf beiden Seiten entfernt werden sollen. Gibt `NULL` zurück, wenn die Eingabezeichenfolge `NULL` ist.
 
 ## <a name="remarks"></a>Remarks
+
 Standardmäßig entfernen `TRIM`-Funktionen das Leerzeichen `char(32)` auf beiden Seiten. Dieses Verhalten entspricht `LTRIM(RTRIM(@string))`. Das Verhalten der `TRIM`-Funktion mit angegebenen Zeichen ist identisch mit dem Verhalten der `REPLACE`-Funktion, in dem Zeichen am Beginn oder Ende durch leere Zeichenfolgen ersetzt werden.
 
-
 ## <a name="examples"></a>Beispiele
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Entfernt die Leerzeichen auf beiden Seiten der Zeichenfolge.   
-Das folgende Beispiel entfernt Leerzeichen vor und nach dem Wort `test`.   
+
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Entfernt die Leerzeichen auf beiden Seiten der Zeichenfolge.
+
+Das folgende Beispiel entfernt Leerzeichen vor und nach dem Wort `test`.
+
 ```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 `test`
 
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Entfernt angegebene Zeichen von beiden Seiten der Zeichenfolge
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Entfernt angegebene Zeichen von beiden Seiten der Zeichenfolge   
 Das folgende Beispiel entfernt einen nachgestellten Punkt oder nachgestellte Leerzeichen.
+
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 `#     test`
 
-
 ## <a name="see-also"></a>Weitere Informationen
+
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  

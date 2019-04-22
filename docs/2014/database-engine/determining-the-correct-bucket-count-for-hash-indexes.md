@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241958"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
@@ -137,9 +137,9 @@ GO
   
  Betrachten Sie die drei Hashindizes für diese Tabelle:  
   
--   IX_Status: 50 Prozent der Buckets sind leer, das ist positiv. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
+-   IX_Status: 50 Prozent der Buckets sind leer, was gut ist. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
   
--   IX_OrderSequence: 0 Prozent der Buckets sind leer. Dieser Wert ist zu niedrig. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
+-   IX_OrderSequence: 0 Prozent der Buckets sind leer, zu niedrig ist. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
   
 -   Primärschlüsselindex (pk__salesorder…): 36 Prozent der Buckets sind leer, was gut ist. Außerdem beträgt die durchschnittliche Kettenlänge 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
   

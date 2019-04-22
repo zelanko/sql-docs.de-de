@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 1a56eec4c2b36aba75664a34e96166b60841f89e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241368"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
@@ -33,7 +33,7 @@ ms.locfileid: "59241368"
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualisieren und Untersuchen von Daten||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Fragen mithilfe von Abfragen in natürlicher Sprache|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von < 10 MB-Dateien)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (unterstützt die Anzeige von < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Mobile Power BI-app auf iOS-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Mobile Power BI-app auf Android-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Mobile Power BI-app für Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von Dateien unter 10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (unterstützt die Anzeige von unter 250 GB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Mobile Power BI-App auf iOS-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Mobile Power BI-App auf Android-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Mobile Power BI-App für Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Websites](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint-Teamwebsites](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI-Websites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Unternehmens-BI**|Professionelle IT-Anwender||||||  
 |Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](../analysis-services/analysis-services.md)|  
@@ -43,6 +43,6 @@ ms.locfileid: "59241368"
 |Erstellen benutzerdefinierter und eingebetteter Berichte||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Erweiterte Analysen**|Datenanalysten||||||  
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
-|Verwenden von Data Mining-Algorithmen||||||[Data Mining in Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
+|Verwenden von Data Mining-Algorithmen||||||[Data Mining in Analysis Services (Data Mining in Analysediensten)](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
  <sup>1</sup> reporting Services bietet eine Reihe von Funktionen, die Bereitstellung von Betriebsberichten und benutzerdefinierten Berichten wie Abonnements oder datenwarnungen unterstützen.

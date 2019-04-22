@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042429"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042429"
 > [!IMPORTANT]  
 >  Aktualisieren Sie stets sämtliche sekundäre Serverinstanzen vor der primären Serverinstanz.  
   
- **So aktualisieren Sie mit einem Failover und wechseln dann zum ursprünglichen primären Server zurück**  
+ **Um ein upgrade Sichern mithilfe eines Failovers und der anschließende Wechsel zum ursprünglichen primären server**  
   
 1.  Aktualisieren Sie alle sekundären Serverinstanzen (Server B und C).  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042429"
 ## <a name="see-also"></a>Siehe auch  
  [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [Protokollversandtabellen und gespeicherte Prozeduren](log-shipping-tables-and-stored-procedures.md)  

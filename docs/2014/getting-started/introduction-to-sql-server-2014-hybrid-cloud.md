@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241618"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Einführung in SQL Server 2014 Hybrid Cloud
@@ -110,8 +110,8 @@ ms.locfileid: "59241618"
  
 ## <a name="see-also"></a>Siehe auch 
  [SQL Server 2014 CTP2-Produkthandbuch](https://www.microsoft.com/download/details.aspx?id=39269)  
- [SQLServer 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Blogreihe über die Microsoft SQL Server Hybrid Cloud](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
+ [Microsoft SQL Server Hybrid Cloud-Blogreihe](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migrieren von datenorientierten Anwendungen zu Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

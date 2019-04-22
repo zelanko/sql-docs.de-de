@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242448"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
@@ -53,7 +53,7 @@ ms.locfileid: "59242448"
 ## <a name="assistive-technology-products-for-windows"></a>Hilfstechnologieprodukte für Windows  
  Eine Vielzahl von Hilfstechnologieprodukten steht zur Verfügung, um Personen mit Behinderungen die Verwendung von Computern zu erleichtern.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] stellt auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=67166)(in Englisch) einen durchsuchbaren Katalog mit Hilfstechnologieprodukten bereit, die unter Windows-Betriebssystemen ausgeführt werden können.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Stellt einen durchsuchbaren Katalog mit Hilfstechnologieprodukten, die auf Windows-Betriebssystemen ausgeführt werden. die [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Folgende Arten von Produkten stehen zur Verfügung:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242448"
  Falls Sie ein Hilfstechnologieprodukt verwenden, setzen Sie sich mit dem Produkthersteller in Verbindung, um die Kompatibilität mit Produkten auf Ihrem Computer zu überprüfen, bevor Sie ein Upgrade durchführen. Der Hersteller kann Ihnen außerdem zeigen, wie Sie die Einstellungen so anpassen können, dass die Kompatibilität mit Ihrer Version von Windows oder anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkten optimiert wird.  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>[!INCLUDE[msCoName](../includes/msconame-md.md)]-Dokumentation in alternativen Formaten  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Produktdokumentation ist in alternativen Formaten helfen unseren Kunden mit Anforderungen an die Barrierefreiheit verfügbar.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen stehen in alternativen Formaten zur Verfügung, um Kunden, die Barrierefreiheit benötigen, zu unterstützen.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Zugreifen auf die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist im Onlineformat verfügbar. Weitere Informationen finden Sie unter [Verwendungs-Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
@@ -82,9 +82,9 @@ ms.locfileid: "59242448"
  Sie erhalten zugängliche Dokumentationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Produkte aus der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)]-Veröffentlichungen können Sie von Recording for the Blind & Dyslexic, Inc. beziehen. Diese Dokumente werden entweder als Audiokassetten oder auf Disketten an registrierte, lizenzierte Mitglieder des Verteildiensts versendet. Der Bestand umfasst mehr als 80.000 Titel, einschließlich der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentation und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Um Informationen zur Lizenzierung und Verfügbarkeit von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press zu erhalten, wenden Sie sich an:  
+ Sie erhalten weitere [!INCLUDE[msCoName](../includes/msconame-md.md)] Veröffentlichungen Aufzeichnung für die Blind & Dyslexic, Inc. Diese Dokumente werden an registrierte, berechtigte Mitglieder des Verteilungsdiensts in Form von Audiokassetten oder Disketten verteilt. Der Bestand umfasst mehr als 80.000 Titel, einschließlich der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentation und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Um Informationen zur Lizenzierung und Verfügbarkeit von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press zu erhalten, wenden Sie sich an:  
   
- Recording for the Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
+ Recording for the Blind & Dyslexic, Inc. 20 Hilfe Road Princeton, "Nj" 08540  
   
  Telefonnummer für Anrufe innerhalb der USA: (800) 221-4792  
   
@@ -101,7 +101,7 @@ ms.locfileid: "59242448"
  Sie erreichen die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center über ein Texttelefon von Sprachwahl (800) 892-5234 zwischen 6:30 Uhr und 17:30 Uhr. pazifischer Zeit, Montag bis Freitag, außer an Feiertagen.  
   
 ### <a name="technical-help"></a>Technische Hilfe  
- Technische Hilfe in den USA erhalten Sie vom [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktsupport über ein Texttelefon unter der Nummer (800) 892-5234 zwischen 6:00 Uhr und 18:00 Uhr pazifischer Zeit, Montag bis Freitag, außer an Feiertagen. In Kanada wählen Sie die Nummer (905) 568-9641 zwischen 8:00 Uhr und 20:00 Uhr. amerikanischer Zeit (Osten), Montag bis Freitag, außer an Feiertagen. [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produktsupport gelten die zum Zeitpunkt der Inanspruchnahme aktuellen Preise und Bedingungen.  
+ Technische Hilfe in den USA erhalten Sie vom [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktsupport über ein Texttelefon unter der Nummer (800) 892-5234 zwischen 6:00 Uhr und 18:00 Uhr pazifischer Zeit, Montag bis Freitag, außer an Feiertagen. In Kanada wählen Sie die Nummer (905) 568-9641 zwischen 8:00 Uhr und 20:00 Uhr. amerikanischer Zeit (Osten), Montag bis Freitag, außer an Feiertagen. Für den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktsupport gelten die zum Zeitpunkt der Inanspruchnahme aktuellen Preise und Bedingungen.  
   
 ## <a name="getting-more-accessibility-information"></a>Weitere Informationen zur Barrierefreiheit  
  Informationen zu Hilfstechnologien, die Personen mit Behinderungen die Arbeit mit dem Computer erleichtern, finden Sie auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=8287)(in Englisch).  
@@ -111,7 +111,7 @@ ms.locfileid: "59242448"
  Ein kostenloser elektronischer Newsletter wird monatlich versendet und enthält die neuesten Informationen zur Barrierefreiheit in [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkten. Informationen zum Abonnieren finden Sie auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=8287)(in Englisch).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit der Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
+ [Erste Schritte mit der Produktdokumentation für SQLServer](../2014-toc/books-online-for-sql-server-2014.md)   
  [Informationsquellen für SQL Server](getting-sql-server-assistance.md)  
   
   

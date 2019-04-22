@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860541"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Nutzen einer app, die auf SQL Server-big Data-Cluster mit einem RESTful-Webdienst bereitgestellt
@@ -105,7 +105,7 @@ Das Ergebnis dieser Anforderung erhalten Sie ein JWT `access_token`, die Sie ben
 > [!NOTE]
 > Wenn Sie möchten, können Sie öffnen die URL für die `swagger` , die zurückgegeben wurde, bei der Ausführung `mssqlctl app describe --name [appname] --version [version]` in Ihrem Browser, sein sollte ähnlich wie `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`. Den Inhalt der `swagger.json` können Sie in einfügen [Swagger Editor](https://editor.swagger.io). Sie sehen, dass der Webdienst stellt die `run` Methode. Beachten Sie auch die Basis-URL, die am oberen Rand angezeigt.
 
-Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:30778/api/app/[appname]/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Sehen Sie sich hierzu folgendes Bildschirmfoto an.
+Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:30778/api/app/[appname]/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Siehe Screenshot unten.
 
 ![Führen Sie Postman Header](media/big-data-cluster-consume-apps/postman_run_1.png)
 

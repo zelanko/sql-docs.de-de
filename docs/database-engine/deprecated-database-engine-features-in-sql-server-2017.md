@@ -17,10 +17,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480326"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
@@ -79,7 +79,7 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Datentypen|**timestamp** -Syntax für **rowversion** -Datentyp|**rowversion** -Datentypsyntax|timestamp|158|  
 |Datentypen|Fähigkeit, NULL-Werte in **timestamp** -Spalten einzufügen|Verwenden Sie stattdessen DEFAULT.|INSERT NULL in TIMESTAMP-Spalten|179|  
 |Datentypen|Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)**. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row'|9|  
-|Datentypen|Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)**.|Datentypen: **text**, **ntext** oder **image**.|4|  
+|Datentypen|Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image**.|4|  
 |Datenbankverwaltung|sp_attach_db<br /><br /> sp_attach_single_file_db|CREATE DATABASE-Anweisung mit der FOR ATTACH-Option. Verwenden Sie die FOR ATTACH_REBUILD_LOG-Option, um mehrere Protokolldateien neu zu erstellen, wenn mindestens eine Datei einen neuen Speicherort aufweist.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Datenbankobjekte|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|DEFAULT-Schlüsselwort in CREATE TABLE und ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Datenbankobjekte|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CHECK-Schlüsselwort in CREATE TABLE und ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -140,8 +140,8 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Systemtabellen|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Systemfunktionen|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |Systemsichten|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|Tabellenkomprimierung|Verwendung des vardecimal-Speicherformats|Das Vardecimal-Speicherformat ist veraltet. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenkomprimierung werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden.|Vardecimal-Speicherformat|200|  
-|Tabellenkomprimierung|Verwenden Sie die sp_db_vardecimal_storage_format-Prozedur.|Das Vardecimal-Speicherformat ist veraltet. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenkomprimierung werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden.|sp_db_vardecimal_storage_format|201|  
+|Tabellenkomprimierung|Verwendung des vardecimal-Speicherformats|Das Vardecimal-Speicherformat ist veraltet. Bei der[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenkomprimierung werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden.|Vardecimal-Speicherformat|200|  
+|Tabellenkomprimierung|Verwenden Sie die sp_db_vardecimal_storage_format-Prozedur.|Das Vardecimal-Speicherformat ist veraltet. Bei der[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenkomprimierung werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden.|sp_db_vardecimal_storage_format|201|  
 |Tabellenkomprimierung|sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)|Verwenden Sie stattdessen die Datenkomprimierung und die sp_estimate_data_compression_savings-Prozedur.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |Tabellenhinweise|Angeben von NOLOCK oder READUNCOMMITTED in der FROM-Klausel einer UPDATE- oder DELETE-Anweisung|Entfernen Sie die NOLOCK- oder READUNCOMMITTED-Tabellenhinweise aus der FROM-Klausel.|NOLOCK oder READUNCOMMITTED in UPDATE oder DELETE|1|  
 |Tabellenhinweise|Angeben von Tabellenhinweisen ohne das WITH-Schlüsselwort|Verwenden Sie WITH.|Tabellenhinweis ohne WITH|8|  

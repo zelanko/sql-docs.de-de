@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241558"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen
@@ -42,7 +42,7 @@ ms.locfileid: "59241558"
 -   [Vergleich zwischen Tasks im einheitlichen Modus und SharePoint-Berechtigungen](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Vergleich zwischen Berechtigungstools und zugehöriger Terminologie  
- **Einheitlicher Modus :** Die Berechtigungsobjekte von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im systemeigenen Modus (Rollen und Tasks) werden in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] erstellt und im Berichts-Manager für einzelne Benutzer konfiguriert.  
+ **Einheitlicher Modus :** Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berechtigungsobjekte des einheitlichen Modus (Rollen und Tasks) werden in erstellt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und für einzelne Benutzer im Berichts-Manager konfiguriert.  
   
  **SharePoint-Modus:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Der SharePoint-Modus nutzt die SharePoint-Berechtigungsfeatures. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "59241558"
 ##  <a name="bkmk_compare_roles_groups"></a> Vergleich zwischen Rollen im einheitlichen Modus und SharePoint-Gruppen  
  Die folgende Tabelle enthält eine Gegenüberstellung der vordefinierten Rollendefinitionen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus und der SharePoint-Standardgruppen. Wenn die SharePoint-Gruppen nicht mit der von Ihnen gewünschten Rolle übereinstimmen, können Sie eine benutzerdefinierte Gruppe erstellen und in SharePoint Berechtigungsstufen zuweisen.  
   
- **Hinweis**: Die verfügbaren SharePoint-Standardgruppen hängen von der Websitevorlage ab, die verwendet wird, um die SharePoint-Website zu erstellen.  
+ **Beachten Sie**: Die SharePoint-Standardgruppen, die verfügbar sind, hängen von der Websitevorlage verwendet, um die SharePoint-Website erstellen ab.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rolle|SharePoint-Gruppen|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Rolle|SharePoint-Gruppen|  
 |--------------------------------------|-----------------------|  
-|**-Browser**<br /><br /> Sicht|Verwenden Sie die Gruppe **Besucher** , um Berechtigungen zum Anzeigen von Berichten zu erteilen. Die Gruppe **Besucher** verfügt über die Berechtigungsstufe Lesen, mit der Gruppenmitglieder Seiten, Listenelemente und Dokumente anzeigen können.|  
+|**Browser**<br /><br /> Sicht|Verwenden Sie die Gruppe **Besucher** , um Berechtigungen zum Anzeigen von Berichten zu erteilen. Die Gruppe **Besucher** verfügt über die Berechtigungsstufe Lesen, mit der Gruppenmitglieder Seiten, Listenelemente und Dokumente anzeigen können.|  
 |**Inhalts-Manager**<br /><br /> Volle Berechtigungen für alle Elemente und Vorgänge auf Elementebene, einschließlich Berechtigungen zum Festlegen der Sicherheit.|Mit der Gruppe **Besitzer** gewähren Sie volle Kontrolle über die Verwaltung von Berichtsserverelementen auf einer SharePoint-Website. Die Gruppe **Besitzer** verfügt über die Berechtigungen Vollzugriff, mit denen Gruppenmitglieder Änderungen am Websiteinhalt, einzelnen Webseiten oder der Funktionalität vornehmen können. Der Vollzugriff sollte nur Websiteadministratoren gewährt werden.|  
 |**Meine Berichte**|Es ist keine entsprechende Gruppe vorhanden. **Meine Berichte** wird auf einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, nicht unterstützt. Wenn Sie eine entsprechende Funktionalität wünschen, können Sie die Funktionen für Meine Website [!INCLUDE[winSPServ](../includes/winspserv-md.md)] in  verwenden.|  
 |**Verleger**<br /><br /> Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen hinzufügen, aktualisieren, anzeigen und löschen.|Mit der Gruppe **Mitglieder** erteilen Sie Berechtigungen zum Hinzufügen von Elementen, Bearbeiten von Elementen und Aktualisieren von Verweisen auf abhängige Elemente auf einer SharePoint-Website. Die Gruppe **Mitglieder** verfügt über die Berechtigungsebene Teilnehmen, mit der Gruppenmitglieder Seiten anzeigen, Elemente hinzufügen und aktualisieren sowie Änderungen zur Genehmigung übermitteln können.|  

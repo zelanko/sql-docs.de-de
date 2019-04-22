@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241648"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
@@ -43,11 +43,11 @@ ms.locfileid: "59241648"
   
  Prüfen Sie mit dem Systemmonitor die folgenden Leistungsindikatoren:  
   
--   **Mittlere Sek./Übertragung**  
+-   **Average Disk Sec/Transfer**  
   
--   **Durchschnittliche Warteschlangenlänge des Datenträgers**  
+-   **Average Disk Queue Length**  
   
--   **Aktuelle Warteschlangenlänge**  
+-   **Current Disk Queue Length**  
   
  Beispielsweise beträgt die Zeit von **Average Disk Sec/Transfer** für einen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalerweise unter 15 Millisekunden. Wenn sich der Wert **Average Disk Sec/Transfer** erhöht, ist dies ein Hinweis darauf, dass das E/A-Subsystem den E/A-Bedarf nicht optimal erfüllt.  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59291550"
 ---
 # <a name="xml-task"></a>XML-Task
@@ -121,7 +121,7 @@ ms.locfileid: "59291550"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validieren von XML-Dokumenten mit dem XML-Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   

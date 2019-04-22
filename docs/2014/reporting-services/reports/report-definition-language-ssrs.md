@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241151"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
@@ -90,6 +90,6 @@ ms.locfileid: "59241151"
 ## <a name="see-also"></a>Siehe auch  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Custom Report Items](../custom-report-items/custom-report-items.md)  
+ [Benutzerdefinierte Berichtselemente](../custom-report-items/custom-report-items.md)  
   
   

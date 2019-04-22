@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556242"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506557"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
@@ -34,15 +34,15 @@ Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowe
 
 - Berichte, aus denen Sie Informationen anheften möchten, müssen gespeicherte Anmeldeinformationen verwenden. Dies ist keine Voraussetzung für die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integration selbst, aber für den Aktualisierungsprozess für die angehefteten Elemente.  Beim Anheften eines Berichtselements wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement zum Verwalten des Aktualisierungszeitplans der Kacheln in [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]erstellt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements: Erfordern gespeicherte Anmeldeinformationen. Wenn ein Bericht keine gespeicherten Anmeldeinformationen verwendet, kann ein Benutzer weiterhin Berichtselemente anheften, aber wenn das zugehörige Abonnement versucht, die Daten auf [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]zu aktualisieren, wird eine Fehlermeldung angezeigt, die der folgenden Meldung auf der Seite **Meine Abonnements** ähnelt.
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Dies gilt auch für die Datenquellen-Anmeldeinformationen des Benutzers.
 
 Weitere Informationen zum Speichern von Anmeldeinformationen finden Sie im Abschnitt „Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle“ unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Ein Administrator kann die  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien auf weitere Informationen überprüfen.  Es werden Meldungen wie die Folgenden angezeigt. Eine hervorragende Möglichkeit zum Überprüfen und Überwachen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien ist die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query für die Dateien.  Weitere Informationen und ein kurzes Video finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- Abonnement!WindowsService_1!1458!09/24/2015-00:09:27:: e FEHLER: PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- Benachrichtigung!WindowsService_1!1458!09/24/2015-00:09:27:: e FEHLER: Fehler beim Verarbeiten von Abonnement fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht den Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
 
 ## <a name="bkmk_steps2integrate"></a> So integrieren und registrieren Sie den Berichtsserver
 
@@ -155,6 +155,6 @@ Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bi
 
 [Meine Einstellungen für die Power BI-Integration](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Anheften von Reporting Services-Elementen an Power BI-Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[Dashboards im Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum.](https://go.microsoft.com/fwlink/?LinkId=620231)

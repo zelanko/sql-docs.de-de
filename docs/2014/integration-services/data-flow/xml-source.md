@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240378"
 ---
 # <a name="xml-source"></a>XML-Quelle
@@ -69,21 +69,21 @@ ms.locfileid: "59240378"
   
  Die XML-Quelle unterstützt mehrere reguläre Ausgaben und Fehlerausgaben.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring schließt das Dialogfeld **Quellen-Editor für XML**zum Konfigurieren der XML-Quelle ein.sDieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt das Dialogfeld **Quellen-Editor für XML**zum Konfigurieren der XML-Quelle ein. Dieses Dialogfeld steht im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zur Verfügung.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für XML** festlegen können:  
   
--   [Quellen-Editor für XML &#40;Seite „Verbindungs-Manager“&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für XML &#40;Seite Verbindungs-Manager&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für XML &#40;Seite „Spalten“&#41;](../xml-source-editor-columns-page.md)  
+-   [Quellen-Editor für XML &#40;Seite Spalten&#41;](../xml-source-editor-columns-page.md)  
   
 -   [Quellen-Editor für XML &#40;Seite Fehlerausgabe&#41;](../xml-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften der XML-Quelle](xml-source-custom-properties.md)  
   

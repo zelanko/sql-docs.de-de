@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241828"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. `Language` und `Collation` Eigenschaften werden zunächst auf Instanzebene festgelegt, während der Installation, jedoch nachträglich auf unterschiedlichen Ebenen der Objekthierarchie geändert werden können.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. Die Eigenschaften `Language` und `Collation` werden bei der Installation auf Instanzebene festgelegt, können aber nachträglich auf anderen Ebenen der Objekthierarchie geändert werden.  
   
  Klicken Sie in einem mehrdimensionalen Modell (nur) können Sie diese Eigenschaften für eine Datenbank oder den Cube festlegen - Sie können sie auch festlegen, Übersetzungen, die Sie für Objekte innerhalb eines Cubes erstellen.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241828"
   
  Darüber hinaus können Sie festlegen `Language`, sich auf eine **Übersetzung** Objekt.  
   
- Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. `Language` ist Teil der übersetzungsdefinition. `Collation`, auf der anderen Seite ist für den Cube oder höher festgelegt und von allen Übersetzungen gemeinsam verwendet werden. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird `Language` jedoch allein verwendet, ohne `Collation`. Ausführlichere Informationen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. `Language` ist Teil der Definition der Übersetzung. Dagegen wird `Collation` für den Cube oder höher festgelegt und von allen Übersetzungen gemeinsam verwendet. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird `Language` jedoch allein verwendet, ohne `Collation`. Ausführlichere Informationen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Sprachunterstützung in Analysis Services  
  Die `Language`-Eigenschaft legt das Gebietsschema eines Objekts fest, das während der Verarbeitung, Abfrage und mit `Captions` und `Translations` zur Unterstützung von mehrsprachigen Szenarios verwendet wird. Gebietsschemas basieren auf einem Sprachbezeichner, z. B. Englisch, und einem Gebiet, wie z. B. USA oder Australien, wodurch Datums- und Uhrzeitdarstellungen weiter verfeinert werden.  
@@ -100,7 +100,7 @@ ms.locfileid: "59241828"
 >  Die `Language`-Eigenschaft bestimmt nicht die Sprache für die Rückgabe von Systemmeldungen oder die in der Benutzeroberfläche angezeigten Zeichenfolgen. Fehler, Warnungen und Meldungen sind in allen von Office und Office 365 unterstützten Sprachen lokalisiert und werden automatisch verwendet, wenn die Clientverbindung eines der unterstützten Gebietsschemas angibt.  
   
 ##  <a name="bkmk_collations"></a> Sortierungsunterstützung in Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows- und Binärsortierungen. Ältere SQL Server-Sortierungen werden nicht verwendet. Innerhalb eines Cubes wird eine einzelne Sortierung verwendet, mit Ausnahme von Übersetzungen auf Attributebene. Weitere Informationen zum Definieren von Attributübersetzungen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows-Sortierungen und binäre Sortierungen. Ältere SQL Server-Sortierungen werden nicht verwendet. Innerhalb eines Cubes wird eine einzelne Sortierung verwendet, mit Ausnahme von Übersetzungen auf Attributebene. Weitere Informationen zum Definieren von Attributübersetzungen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  Sortierungen steuern die Unterscheidung nach Groß-/Kleinschreibung aller Zeichenfolgen in einem „bikameralen“ Sprachskript, mit Ausnahme von Objektbezeichnern. Wenn Sie in einem Objektbezeichner Groß- und Kleinbuchstaben verwenden, beachten Sie, dass die Berücksichtigung der Groß- und Kleinschreibung von Objektbezeichnern nicht durch die Sortierung bestimmt wird, sondern durch [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Für Objektbezeichner, die im englischen Skript verfasst werden, wird die Groß-/Kleinschreibung unabhängig von der Sortierung nie unterschieden. Für Kyrillisch und andere „bikamerale“ Sprachen gilt das Gegenteil (immer Unterscheidung nach Groß-/Kleinschreibung). Einzelheiten dazu finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59241828"
  GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Die Datenbank-Engine unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globalisierungsszenarien für Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

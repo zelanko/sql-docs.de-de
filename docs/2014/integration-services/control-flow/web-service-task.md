@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240809"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
@@ -64,9 +64,9 @@ ms.locfileid: "59240809"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task 'Webdienst' &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Webdienst“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task 'Webdienst' &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor für den Task „Webdienst“ &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
   
 -   [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../web-service-task-editor-output-page.md)  
   

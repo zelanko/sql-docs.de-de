@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860352"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -27,10 +27,10 @@ Der folgende Artikel bietet Referenz für die **Mssqlctl** tool für [SQL Server
 |||
 |---|---|
 | [app](reference-mssqlctl-app.md) | Erstellen, löschen, ausführen und Verwalten von Anwendungen. |
-| [Cluster](reference-mssqlctl-cluster.md) | Wählen Sie, verwalten Sie und betreiben Sie Cluster. |
+| [cluster](reference-mssqlctl-cluster.md) | Wählen Sie, verwalten Sie und betreiben Sie Cluster. |
 | [login](#login) | Melden Sie sich an den Cluster. |
-| [Abmelden](#logout) | Melden Sie sich der Cluster. |
-| [Speicher](reference-mssqlctl-storage.md) | Verwalten von Clusterspeicher. |
+| [logout](#logout) | Melden Sie sich der Cluster. |
+| [storage](reference-mssqlctl-storage.md) | Verwalten von Clusterspeicher. |
 
 ## <a id="login"></a> Mssqlctl-Anmeldung
 

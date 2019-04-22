@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241430"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
@@ -64,7 +64,7 @@ ms.locfileid: "59241430"
   
      Mögliche Werte sind **Ein** und **Aus**. Zur Verwendung der Kanalbindung muss **Verschlüsselung erzwingen** auf **Ein**festgelegt werden, sodass die Verschlüsselung auf allen Clients erzwungen wird. Bei der Einstellung **Aus**wird nur die Dienstbindung gewährleistet. **Verschlüsselung erzwingen** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Flags“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **wird von**  
+-   **Erweiterter Schutz**  
   
      Mögliche Werte sind **Aus**, **Zulässig**und **Erforderlich**. Mit der Variablen **Erweiterter Schutz** können Benutzer die Ebene für **Erweiterter Schutz** für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfigurieren. **Erweiterter Schutz** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Registerkarte „Erweitert“).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "59241430"
  [Server-Netzwerkkonfiguration](server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](client-network-configuration.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

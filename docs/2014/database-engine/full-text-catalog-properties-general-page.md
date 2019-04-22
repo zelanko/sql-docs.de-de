@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241449"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
@@ -34,17 +34,17 @@ ms.locfileid: "59241449"
  **Auffüllungsstatus**  
  Zeigt den Status des Katalogs an. Dabei sind folgende Werte möglich:  
   
--   **Idle**  
+-   **Im Leerlauf**  
   
 -   **Durchforstung wird ausgeführt**  
   
 -   **Angehalten**  
   
--   **Gedrosselt**  
+-   **Throttled**  
   
--   **Wird wiederhergestellt**  
+-   **Wiederherstellen von**  
   
--   **Shutdown**  
+-   **Herunterfahren**  
   
 -   **Inkrementelles Auffüllen wird ausgeführt**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59241449"
   
 -   **Datenträger ist voll-angehalten**  
   
--   **Änderungsnachverfolgung**  
+-   **Change tracking**  
   
  **Elementanzahl**  
  Zeigt die Anzahl der Volltextelemente im Katalog an.  
@@ -68,7 +68,7 @@ ms.locfileid: "59241449"
   
 -   **Nein**  
   
--   **Ja**  
+-   **ja**  
   
 -   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritischer](https://www.merriam-webster.com/dictionary/diacritic) im Nitsche-Webster Wörterbuch.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59241449"
   
 |||  
 |-|-|  
-|**None**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
+|**Keine**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
 |**Katalog optimieren**|Optimiert die Speicherplatzausnutzung des Katalogs und verbessert die Abfrageleistung. Erhöht außerdem die Genauigkeit der Relevanzbewertung von Suchergebnissen.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE aus.|  
 |**Katalog neu erstellen**|Löscht den Volltextkatalog und erstellt ihn neu. Dieser Vorgang muss bei der Änderung einer grundlegenden Katalogeigenschaft, z. B. der Akzentunterscheidung, ausgeführt werden.<br /><br /> Damit die Neuerstellung erfolgreich ist, muss die Dateigruppe, in der sich der Volltextkatalog befindet, online oder les- und beschreibbar sein. Nach der Neuerstellung wird der Volltextindex neu aufgefüllt.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REBUILD aus.|  
 |**Katalog neu auffüllen**|Aktualisiert den Katalog entsprechend den kürzlich vorgenommenen Datenänderungen. Diese Option hat keine Katalogausfallzeit zur Folge.|  

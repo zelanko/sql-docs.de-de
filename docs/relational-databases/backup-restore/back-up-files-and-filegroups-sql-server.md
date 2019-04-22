@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241928"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sichern von Dateien und Dateigruppen (SQL Server)
@@ -140,7 +140,7 @@ ms.locfileid: "59241928"
   
     |Option|und Beschreibung|  
     |------------|-----------------|  
-    |*Datenbank*|Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird.|  
+    |*database*|Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird.|  
     |FILE _=_*logischer_Dateiname*|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  
     |FILEGROUP _=_*logischer_Dateigruppenname*|Gibt den logischen Namen einer Dateigruppe an, die in die Dateisicherung eingeschlossen werden soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.|  
     |[ **,**...*f* ]|Stellt einen Platzhalter dar, der anzeigt, dass mehrere Dateien und Dateigruppen angegeben werden können. Für die Anzahl der Dateien oder Dateigruppen gibt es keine Einschränkungen.|  
@@ -213,7 +213,7 @@ GO
   
 -   [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

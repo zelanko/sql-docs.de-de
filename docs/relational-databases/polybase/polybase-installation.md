@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872300"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
@@ -105,7 +105,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 |SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server-Setupsteuerung|**Required**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
+|SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Engine-Dienstkonto an.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für die PolyBase-Engine an: „Automatisch“ (Standard), „Deaktiviert“ und „Manuell“.|  
@@ -121,7 +121,7 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 |SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server-Setupsteuerung|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installiert Unterstützung für alle PolyBase-Features mit Ausnahme der Hadoop-Konnektivität. PolyBaseJava aktiviert die Hadoop-Konnektivität. PolyBase installiert beides. |  
+|SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installiert Unterstützung für alle PolyBase-Features mit Ausnahme der Hadoop-Konnektivität. PolyBaseJava aktiviert die Hadoop-Konnektivität. PolyBase installiert beides. |  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Gibt das Kennwort für das Engine-Dienstkonto an.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Gibt den Startmodus für die PolyBase-Engine an: „Automatisch“ (Standard), „Deaktiviert“ und „Manuell“.|  

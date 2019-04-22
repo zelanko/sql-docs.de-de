@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860741"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
@@ -96,9 +96,9 @@ Bei einer verteilten Verfügbarkeitsgruppe müssen die primären Replikate in je
 
 Im Folgenden finden Sie die drei Hauptverwendungsszenarios für eine verteilte Verfügbarkeitsgruppe: 
 
-* [Notfallwiederherstellung und vereinfachte Konfigurationen für mehrere Standorte](#disaster-recovery-and-multi-site-scenarios)
-* [Migration zu neuer Hardware oder neuen Konfigurationen, die möglicherweise das Verwenden neuer Hardware oder das Ändern des zugrunde liegenden Betriebssystems erfordert](#migrate-by-using-a-distributed-availability-group)
-* [Erhöhen der Anzahl der lesbaren Replikate auf mehr als acht in einer einzigen Verfügbarkeitsgruppe, indem mehrere Verfügbarkeitsgruppen umfasst werden](#scale-out-readable-replicas-with-distributed-availability-groups)
+* [Disaster recovery and easier multi-site configurations (Notfallwiederherstellung und vereinfachte Konfigurationen für mehrere Standorte)](#disaster-recovery-and-multi-site-scenarios)
+* [Migration to new hardware or configurations, which might include using new hardware or changing the underlying operating systems (Migration zu neuer Hardware oder neuen Konfigurationen, die möglicherweise das Verwenden neuer Hardware oder das Ändern des zugrunde liegenden Betriebssystems erfordert)](#migrate-by-using-a-distributed-availability-group)
+* [Increasing the number of readable replicas beyond eight in a single availability group by spanning multiple availability groups (Erhöhen der Anzahl der lesbaren Replikate auf mehr als acht in einer einzigen Verfügbarkeitsgruppe, indem mehrere Verfügbarkeitsgruppen umfasst werden)](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Szenarios für Notfallwiederherstellung und mehrere Standorte
 

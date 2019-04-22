@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017966"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583173"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -31,7 +31,7 @@ ms.locfileid: "57017966"
 Ändert den Inhalt einer vorhandenen externen Paketbibliothek.
 
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R. Python und Java werden für die Windows-Plattform in SQL Server 2019 CTP 2.3 unterstützt. Die Unterstützung für Linux ist für ein späteres Release eingeplant.
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 unterstützt. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Syntax für SQL Server 2019
@@ -46,7 +46,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=
 {
     (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-    [, PLATFORM = WINDOWS )
+    [, PLATFORM = <platform> )
 }
 
 <client_library_specifier> :: =
@@ -60,6 +60,12 @@ WITH ( LANGUAGE = <language> )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
 }
 
 <language> :: = 
@@ -129,11 +135,17 @@ Diese Option ist nützlich, wenn Sie die erforderliche Berechtigung zum Ändern 
 
 Stattdessen können Sie den Paketinhalt als Variable im Binärformat übergeben.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Windows ist die einzige unterstützte Plattform.
+Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
+
 **language**
 
 gibt die Sprache des Pakets an. Mögliche Werte sind: **R**, **Python** oder **Java**.
@@ -141,9 +153,13 @@ gibt die Sprache des Pakets an. Mögliche Werte sind: **R**, **Python** oder **J
 
 ## <a name="remarks"></a>Remarks
 
-Bei der R-Sprache müssen Pakete in Form von gezippten Archivdateien mit der Dateiendung .zip für Windows vorbereitet werden. Derzeit wird nur die Windows-Plattform unterstützt.  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+Bei der R-Sprache müssen Pakete in Form von gezippten Archivdateien mit der Dateiendung .zip für Windows vorbereitet werden. Für SQL Server 2017 wird nur die Windows-Plattform unterstützt.  
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Erweiterung „.ZIP“ vorbereitet werden. 
+
 Für Python muss das Paket in einer WHL- oder ZIP-Datei als ZIP-Archivdatei vorbereitet werden. Wenn das Paket bereits eine ZIP-Datei ist, muss es in eine neue ZIP-Datei eingefügt werden. Der direkte Upload einer WHL- oder ZIP-Datei wird derzeit nicht unterstützt.
 ::: moniker-end
 

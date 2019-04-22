@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042449"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -347,15 +347,15 @@ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann
  Gibt die Assembly und die Methode an, auf die der erstellte Funktionsname verweisen soll.  
   
 -   *assembly_name* muss einem Wert in der Spalte `name` der folgenden Anweisung entsprechen   
-    `SELECT * FROM sys.assemblies;`erforderlich.  
+    `SELECT * FROM sys.assemblies;`.  
     Dies ist der Name, der für die `CREATE ASSEMBLY`-Anweisung verwendet wurde.  
   
 -   *class_name* muss einem Wert in der Spalte `assembly_name` der folgenden Anweisung entsprechen  
-    `SELECT * FROM sys.assembly_modules;`erforderlich.  
+    `SELECT * FROM sys.assembly_modules;`.  
     Häufig enthält der Wert einen Punkt. In solchen Fällen muss der Wert aufgrund der Transact-SQL-Syntax von eckigen Klammern [] oder doppelten Anführungszeichen "" umschlossen werden.  
   
 -   *method_name* muss einem Wert in der Spalte `method_name` der folgenden Anweisung entsprechen   
-    `SELECT * FROM sys.assembly_modules;`erforderlich.  
+    `SELECT * FROM sys.assembly_modules;`.  
     Die Methode muss statisch sein.  
   
 In einem typischen Beispiel für MyFood.DLL, bei dem sich alle Typen im MyFood-Namespace befinden, könnte der Wert `EXTERNAL NAME` folgender sein:   
@@ -567,15 +567,15 @@ Wenn eine benutzerdefinierte Funktion nicht mit der `SCHEMABINDING`-Klausel erst
 
 -   Anweisungen zur Ablaufsteuerung mit Ausnahme von `TRY...CATCH`-Anweisungen.  
 
--   `DECLARE` -Anweisungen zum Definieren lokaler Datenbankvariablen und lokaler Cursor.  
+-   `DECLARE`-Anweisungen zum Definieren lokaler Datenbankvariablen und lokaler Cursor.  
 
--   `SELECT` -Anweisungen, die Auswahllisten mit Ausdrücken enthalten, die lokalen Variablen Werte zuweisen.  
+-   `SELECT`-Anweisungen, die Auswahllisten mit Ausdrücken enthalten, die lokalen Variablen Werte zuweisen.  
 
 -   Cursorvorgänge, die auf lokale Cursor verweisen, die in der Funktion deklariert, geöffnet und geschlossen werden und deren Zuordnungen in der Funktion aufgehoben werden. Es sind nur `FETCH`-Anweisungen zulässig, die lokalen Variablen Werte mit der `INTO`-Klausel zuweisen. `FETCH`-Anweisungen, die Daten an den Client zurückgeben, sind nicht zulässig.  
 
--   `INSERT`, `UPDATE`- und `DELETE`-Anweisungen, die lokale Tabellenvariablen ändern.  
+-   `INSERT`-, `UPDATE`- und `DELETE`-Anweisungen, die lokale Tabellenvariablen ändern.  
 
--   `EXECUTE` -Anweisungen, die erweiterte gespeicherte Prozeduren aufrufen.  
+-   `EXECUTE`-Anweisungen, die erweiterte gespeicherte Prozeduren aufrufen.  
 
 Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Beachten Sie die folgenden Richtlinien, wenn Sie die `ORDER`-Klausel in CLR-Tabe
   
     -   Bei Einfügeabfragen, bei denen die `ORDER`-Klausel mit einem Index kompatibel ist.  
   
-    -   `ORDER BY` -Klauseln, die mit der `ORDER`-Klausel kompatibel sind.  
+    -   Bei `ORDER BY`-Klauseln, die mit der `ORDER`-Klausel kompatibel sind.  
   
     -   Bei Aggregaten, bei denen `GROUP BY` mit der `ORDER`-Klausel kompatibel ist.  
   
-    -   `DISTINCT` -Aggregaten, bei denen verschiedene Spalten mit der `ORDER`-Klausel kompatibel sind.  
+    -   Bei `DISTINCT`-Aggregaten, bei denen verschiedene Spalten mit der `ORDER`-Klausel kompatibel sind.  
   
 Durch die `ORDER`-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausführung einer SELECT-Abfrage sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls `ORDER BY` angegeben. Informationen zu Abfragen nach Spalten, die in der Sortierreihenfolge für Tabellenwertfunktionen enthalten sind, finden Sie unter [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md).  
   
@@ -824,7 +824,7 @@ GO
  Die Definition von Funktionen, die mithilfe der `ENCRYPTION`-Option erstellt wurden, können nicht mit sys.sql_modules angezeigt werden. Im Gegensatz dazu werden andere Informationen zu den verschlüsselten Funktionen jedoch angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

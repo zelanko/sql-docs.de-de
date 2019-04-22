@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240398"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Assistent für verwendungsbasierte Optimierung (F1-Hilfe)
@@ -39,7 +39,7 @@ ms.locfileid: "59240398"
   
 -   Speichern und optionales Verarbeiten der Partition, der Measuregruppe oder des Cubes, um die definierten Aggregationen zu generieren.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wird der Aggregationsentwurfs-Assistent zum Entwerfen von Aggregationen bereitgestellt, die auf statistischen Analysen der Struktur der Partition basieren, um einen Aggregationsentwurf zu erstellen, der durch die Speicherplatzgröße oder den geschätzten Leistungsgewinn begrenzt werden kann. Sie können den Aggregationsentwurfs-Assistenten dazu verwenden, die Gesamtleistung einer Partition zu steigern, aber der Aggregationsentwurf ist dann nicht auf die speziellen Bedürfnisse Ihrer gewerblichen Benutzer ausgerichtet. Mit dem Assistenten für verwendungsbasierte Optimierung können Sie einen Aggregationsentwurf bereitstellen, der auf diese speziellen Bedürfnisse ausgerichtet ist. Das ist aber nur möglich, wenn das Abfrageprotokoll der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz genügend Informationen zum Erstellen solcher Abfragen enthält.  
+ In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wird der Aggregationsentwurfs-Assistent zum Entwerfen von Aggregationen bereitgestellt, die auf statistischen Analysen der Struktur der Partition basieren, um einen Aggregationsentwurf zu erstellen, der durch die Speicherplatzgröße oder den geschätzten Leistungsgewinn begrenzt werden kann. Sie können den Aggregationsentwurfs-Assistenten dazu verwenden, die Gesamtleistung einer Partition zu steigern, aber der Aggregationsentwurf ist dann nicht auf die speziellen Bedürfnisse Ihrer gewerblichen Benutzer ausgerichtet. Mit dem Assistenten für verwendungsbasierte Optimierung können Sie einen Aggregationsentwurf bereitstellen, der auf diese speziellen Bedürfnisse ausgerichtet ist. Das ist aber nur möglich, wenn das Abfrageprotokoll der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz genügend Informationen zum Erstellen solcher Abfragen enthält.  
   
  Normalerweise werden beide Assistenten zusammen verwendet, um die Leistung sowohl in Bezug auf die Bereitstellung als auch in Bezug auf den Zeitverlauf zu steigern. Der Aggregationsentwurfs-Assistent sollte zuerst verwendet werden, wenn die Partition (bzw. der Cube oder die Measuregruppe, die die Partition enthält) erstmalig bereitgestellt wird, um von einer besseren Gesamtleistung zu profitieren. Nach einem bestimmten Zeitraum, in dem die Abfragen der gewerblichen Benutzer für die Partition im Abfrageprotokoll aufgezeichnet wurden, können Sie den Assistenten für verwendungsbasierte Optimierung verwenden, um den Aggregationsentwurf stärker auf die bessere Erfüllung der Leistungs- und Abfrageanforderungen Ihrer gewerblichen Benutzer zu fokussieren.  
   
@@ -48,24 +48,24 @@ ms.locfileid: "59240398"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Zu ändernde Partitionen auswählen &#40;Assistent für verwendungsbasierte Optimierung&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Zu ändernde Partitionen auswählen &#40;Verwendungsbasierte Optimierung-Assistent&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Abfragekriterien angeben &#40;Assistent für verwendungsbasierte Optimierung&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Abfragekriterien angeben &#40;Verwendungsbasierte Optimierung-Assistent&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Zu optimierende Abfragen prüfen &#40;Assistent für verwendungsbasierte Optimierung&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Überprüfen Sie die Abfragen, die optimiert werden &#40;Verwendungsbasierte Optimierung-Assistent&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Aggregationsverwendung überprüfen &#40;Assistent für verwendungsbasierte Optimierung&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Aggregationsverwendung überprüfen &#40;Verwendungsbasierte für Verwendungsbasierte Optimierung-Assistenten&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Objektanzahl angeben &#40;Assistent für verwendungsbasierte Optimierung&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Objektanzahl angeben &#40;Verwendungsbasierte Optimierung-Assistent&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Aggregationsoptionen festlegen &#40;Assistent für verwendungsbasierte Optimierung&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Aggregationsoptionen festlegen &#40;Verwendungsbasierte Optimierung-Assistent&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Assistenten abschließen &#40;Assistent für verwendungsbasierte Optimierung&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Der Assistent &#40;Verwendungsbasierte Optimierung-Assistent&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Aggregationen und Aggregationsentwürfe](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Aggregationsentwurfs-Assistent (F1-Hilfe)](aggregation-design-wizard-f1-help.md)   
+ [Aggregation Design-Assistent F1-Hilfe](aggregation-design-wizard-f1-help.md)   
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506547"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582953"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -156,7 +156,7 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.
 
@@ -174,7 +174,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführu
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Das Feedback zur Speicherzuweisung im Batchmodus stellt einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
@@ -183,7 +183,7 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuwe
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins im Batchmodus stellen einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
@@ -235,13 +235,13 @@ Dieser Wert erhöht Vorgänge, die RESUMABLE unterstützen. Vorgänge, die forts
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**Gilt für:** [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert einen Stub des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll. Der Standardwert ist OFF. Sobald die datenbankweite Konfiguration OPTIMIZE_FOR_AD_HOC_WORKLOADS für eine Datenbank aktiviert ist, wird ein Stub des kompilierten Plans zwischengespeichert, wenn ein Batch zum ersten Mal kompiliert wird. Planstubs weisen im Vergleich zur Größe des vollständigen kompilierten Plans einen niedrigeren Speicherbedarf auf. Wenn ein Batch erneut kompiliert oder ausgeführt wird, wird der Stub des kompilierten Plans entfernt und durch einen vollständigen kompilierten Plan ersetzt.
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**Gilt für:** [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistiken werden in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) wiedergegeben.
 
@@ -249,7 +249,7 @@ Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module werde
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**Gilt für:** [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Anweisungsebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistik wird in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) und im [Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) wiedergegeben.
 
@@ -295,13 +295,13 @@ Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen t
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Ermöglicht das Aktivieren oder Deaktivieren der [einfachen Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md) Die LWP-Abfrageinfrastruktur (Lightweight Profiling) stellt Abfrageleistungsdaten effizienter bereit als standardmäßige Profilerstellungsmechanismen. Sie ist standardmäßig aktiviert.
 
 VERBOSE_TRUNCATION_WARNINGS **=** {**ON** | OFF}
 
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Ermöglicht Ihnen das Aktivieren oder Deaktivieren der neuen `String or binary data would be truncated`-Fehlermeldung. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine neue, spezifischere Fehlermeldung (2628) für dieses Szenario ein:  
 
@@ -447,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. Festlegen von OPTIMIZE_FOR_AD_HOC_WORKLOADS
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 In diesem Beispiel wird ein Stub des kompilierten Plans aktiviert, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.
 
@@ -485,7 +485,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 ### <a name="maxdop-resources"></a>Ressourcen von MAXDOP
 
 - [Grad der Parallelität](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server (Empfehlungen und Richtlinien für die Konfigurationsoption „Max. Grad an Parallelität“ in SQL Server)](https://support.microsoft.com/kb/2806535)
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server (Empfehlungen und Guidelines für die Konfigurationsoption „Max. Grad an Parallelität“ in SQL Server)](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>Ressourcen von LEGACY_CARDINALITY_ESTIMATION
 
@@ -495,12 +495,12 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 ### <a name="parametersniffing-resources"></a>Ressourcen von PARAMETER_SNIFFING
 
 - [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- [„I Smell a Parameter!“](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
+- [„I smell a parameter!“](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Ressourcen von QUERY_OPTIMIZER_HOTFIXES
 
 - [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server query optimizer hotfix trace flag 4199 servicing model (Wartungsmodell für SQL Server-Hotfix für Abfrageoptimierer – Ablaufverfolgungsflag 4199)](https://support.microsoft.com/kb/974006)
+- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006) (Wartungsmodell für SQL Server-Hotfix für Abfrageoptimierer – Ablaufverfolgungsflag 4199)
 
 ### <a name="elevateonline-resources"></a>ELEVATE_ONLINE-Ressourcen
 

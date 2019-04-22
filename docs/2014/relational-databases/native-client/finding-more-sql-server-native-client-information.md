@@ -13,12 +13,12 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29fd34d6a2141aff84e846424e4900f3acb252e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357859"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59241290"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Finden weiterer SQL Server Native Client-Informationen
   Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und anderen Arten der Datenzugriffsprogrammierung finden Sie in folgenden Onlineressourcen:  
@@ -34,7 +34,7 @@ ms.locfileid: "53357859"
   
  Das Window DAC SDK enthält Dokumentationen zu ADO (ActiveX Data Objects), OLE DB und ODBC (Open Database Connectivity).  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client finden Sie, indem Sie die Suche nach der [Microsoft Knowledge Base](https://go.microsoft.com/fwlink?linkid=5757).  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client finden Sie, indem Sie die Suche nach der [Microsoft-Support](https://support.microsoft.com).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmierung für SQL Server Native Client](sql-server-native-client-programming.md)  

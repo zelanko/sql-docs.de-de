@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241738"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
@@ -25,13 +25,13 @@ ms.locfileid: "59241738"
   
  **In diesem Thema:**  
   
--   [So gruppieren Sie Daten in einem Bericht](#bkmk_groupdata)  
+-   [Zum Gruppieren von Daten in einem Bericht](#bkmk_groupdata)  
   
--   [So fügen Sie einem Bericht Gesamtwerte hinzu](#bkmk_addtotals)  
+-   [Zum Hinzufügen von Gesamtwerten zu einem Bericht](#bkmk_addtotals)  
   
--   [So fügen Sie einem Bericht einen Tagesgesamtwert hinzu](#bkmk_adddailytotal)  
+-   [Ein Bericht einen tagesgesamtwert hinzu](#bkmk_adddailytotal)  
   
--   [So fügen Sie einem Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
+-   [Ein Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
   
 -   [So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)](#bkmk_publishreport)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241738"
   
      Wenn Sie im Ausgabefenster eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: Project: tutorial, Configuration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
+    > ---Build gestartet: Project: tutorial, Configuration: "Debug"---"Überspringen 'Sales Orders.rdl'". Element ist auf dem neuesten Stand. Build abgeschlossen: Schritte 0 Fehler, 0 Warnungen---bereitstellen: Project: tutorial, Configuration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen ==== bereitstellen: 1 erfolgreich, 0 fehlgeschlagen, 0 übersprungen ====  
   
      Wenn Sie eine Fehlermeldung wie die Folgende sehen, überprüfen Sie, ob Sie über Berechtigungen für den Berichtsserver verfügen und ob Sie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] mit Administratorrechten gestartet haben.  
   

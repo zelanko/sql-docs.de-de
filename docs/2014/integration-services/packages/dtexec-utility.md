@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241892"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Option **xp_cmdshell** für neue Installationen standardmäßig deaktiviert. Die Option kann durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die Option **xp_cmdshell** für neue Installationen standardmäßig deaktiviert. Die Option kann durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntax  
   
@@ -252,7 +252,7 @@ dtexec /option [value] [/option [value]]...
      Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   **/DumpOnError**:   
-                  Dies ist optional. Erstellt die debugdumpdateien mdmp und TMP, wenn ein Fehler auftritt, während das Paket ausgeführt wird.  
+                  Optional. Erstellt die debugdumpdateien mdmp und TMP, wenn ein Fehler auftritt, während das Paket ausgeführt wird.  
   
      In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
@@ -268,7 +268,7 @@ dtexec /option [value] [/option [value]]...
      Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   `/Env[Reference]` *Umgebung Verweis-ID*:   
-                  Optional. Gibt die Umgebungsverweis-ID an, die von der Paketausführung verwendet wird, für ein Paket an, das auf dem Server mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellt ist. Die Parameter, die konfiguriert wurden, um an Variablen gebunden zu sein, verwenden die Werte der Variablen, die in der Umgebung enthalten sind.  
+                  Dies ist optional. Gibt die Umgebungsverweis-ID an, die von der Paketausführung verwendet wird, für ein Paket an, das auf dem Server mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellt ist. Die Parameter, die konfiguriert wurden, um an Variablen gebunden zu sein, verwenden die Werte der Variablen, die in der Umgebung enthalten sind.  
   
      Sie können die Option `/Env[Reference]` zusammen mit den Optionen `/ISServer` und `/Server` verwenden.  
   
@@ -281,7 +281,7 @@ dtexec /option [value] [/option [value]]...
   
      Die `/File`-Option kann nicht zusammen mit der `/DTS`- oder der `/SQL`-Option verwendet werden. Werden mehrere Optionen angegeben, erzeugt `dtexec` einen Fehler.  
   
--   **/H[elp]** [*option_name*]: Optional. Zeigt die Hilfe zu den Optionen oder die Hilfe zu der mit *Optionsname* angegebenen Option an und beendet das Hilfsprogramm.  
+-   **/H[elp]** [*option_name*]: Dies ist optional. Zeigt die Hilfe zu den Optionen oder die Hilfe zu der mit *Optionsname* angegebenen Option an und beendet das Hilfsprogramm.  
   
      Bei Angabe einer *Optionsname* Argument `dtexec` startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation und zeigt Sie an das Thema für Dtexec-Hilfsprogramm.  
   
@@ -311,13 +311,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]decodiert werden:  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]decodiert werden:  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLServer.1  
   
@@ -336,18 +336,18 @@ dtexec /option [value] [/option [value]]...
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
 -   **/M[axConcurrent]** _concurrent_executables_:  
-                  Dies ist optional. Gibt die Anzahl von ausführbaren Dateien an, die das Paket gleichzeitig ausführen kann. Der angegebene Wert muss entweder eine nicht negative ganze Zahl oder -1 sein. Ein Wert von „-1“ bedeutet, dass [!INCLUDE[ssIS](../../includes/ssis-md.md)] eine maximale Anzahl gleichzeitig aktiver ausführbarer Dateien zulässt, die der Gesamtanzahl von Prozessoren plus zwei des Computers entspricht, auf dem das Paket ausgeführt wird.  
+                  Optional. Gibt die Anzahl von ausführbaren Dateien an, die das Paket gleichzeitig ausführen kann. Der angegebene Wert muss entweder eine nicht negative ganze Zahl oder -1 sein. Ein Wert von „-1“ bedeutet, dass [!INCLUDE[ssIS](../../includes/ssis-md.md)] eine maximale Anzahl gleichzeitig aktiver ausführbarer Dateien zulässt, die der Gesamtanzahl von Prozessoren plus zwei des Computers entspricht, auf dem das Paket ausgeführt wird.  
   
 -   **/Pack[age]** _PackageName_:  
                   Dies ist optional. Gibt das Paket an, das ausgeführt wird. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
   
 -   **/P[assword]** _password_:  
-                  Dies ist optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
+                  Optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: Optional. Gibt Parameterwerte an. Es können mehrere **/Parameter** -Optionen angegeben werden. Die Datentypen sind CLR TypeCodes als Zeichenfolgen. Für einen Nicht-Zeichenfolge-Parameter wird der Datentyp in Klammern angegeben und folgt dem Parameternamen.  
+-   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: Dies ist optional. Gibt Parameterwerte an. Es können mehrere **/Parameter** -Optionen angegeben werden. Die Datentypen sind CLR TypeCodes als Zeichenfolgen. Für einen Nicht-Zeichenfolge-Parameter wird der Datentyp in Klammern angegeben und folgt dem Parameternamen.  
   
      Die **/Parameter** Option kann verwendet werden, nur mit der `/ISServer` Option.  
   
@@ -372,7 +372,7 @@ dtexec /option [value] [/option [value]]...
     ```  
   
 -   **/Proj[ect]** _ProjectFile_:  
-                  Dies ist optional. Gibt das Projekt an, von dem das ausgeführte Paket abgerufen wird. Das *Projektdatei* -Argument gibt den ISPAC-Dateinamen an. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
+                  Optional. Gibt das Projekt an, von dem das ausgeführte Paket abgerufen wird. Das *Projektdatei* -Argument gibt den ISPAC-Dateinamen an. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
   
 -   **/Rem** _comment_:  
                   Dies ist optional. Schließt einen Kommentar in die Befehlszeile oder in Befehlsdateien ein. Das Argument ist optional. Der Wert für *Kommentar* ist eine Zeichenfolge, die entweder in Anführungszeichen eingeschlossen werden muss oder keine Leerzeichen enthalten darf. Wird kein Argument angegeben, wird eine leere Zeile eingefügt. Während der Befehlsermittlungsphase werden*Kommentar* -Werte nicht berücksichtigt.  
@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
      Der Standardwert **force** wird verwendet, wenn kein Wert angegeben wird.  
   
--   **/Set** [$Sensitive::]*propertyPath;value*: Optional. Überschreibt die Konfiguration eines Parameters, einer Variablen, einer Eigenschaft, eines Containers, eines Protokollanbieters, eines Foreach-Enumerators oder einer Verbindung innerhalb eines Pakets. Wenn diese Option verwendet wird, ändert **/Set** das *Eigenschaftspfad* -Argument in den angegebenen Wert. Es können mehrere **/Set** -Optionen angegeben werden.  
+-   **/Set** [$Sensitive::]*propertyPath;value*: Dies ist optional. Überschreibt die Konfiguration eines Parameters, einer Variablen, einer Eigenschaft, eines Containers, eines Protokollanbieters, eines Foreach-Enumerators oder einer Verbindung innerhalb eines Pakets. Wenn diese Option verwendet wird, ändert **/Set** das *Eigenschaftspfad* -Argument in den angegebenen Wert. Es können mehrere **/Set** -Optionen angegeben werden.  
   
      Zusätzlich zur Verwendung der **/Set** -Option mit der **/f [Ile]** auswählen, können Sie auch die **/Set** -Option mit der `/ISServer` Option oder die `/Project` Option. Bei Verwendung von **/Set** mit `/Project`, **/Set** legt die Parameterwerte fest. Bei Verwendung von **/Set** mit `/ISServer`, **/Set** legt die eigenschaftenüberschreibungen fest. Wenn Sie darüber hinaus verwenden **/Set** mit `/ISServer`, Sie können die optionale $Sensitive-Präfix verwenden, um anzugeben, dass auf die Eigenschaft als vertraulich behandelt werden soll die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server.  
   
@@ -430,7 +430,7 @@ dtexec /option [value] [/option [value]]...
      Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, finden Sie unter [Paketkonfigurationen](../package-configurations.md) und [Verhaltensänderungen von Integration Services-Funktionen in SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   `/Ser[ver]` *server*:  
-                  Dies ist optional. Wenn die Option `/SQL` oder `/DTS` verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option `/Server` nicht angeben, die Option `/SQL` oder `/DTS` jedoch angegeben wird, wird versucht, das Paket von dem lokalen Server auszuführen. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
+                  Optional. Wenn die Option `/SQL` oder `/DTS` verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option `/Server` nicht angeben, die Option `/SQL` oder `/DTS` jedoch angegeben wird, wird versucht, das Paket von dem lokalen Server auszuführen. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
      Die Option `/Ser[ver]` ist erforderlich, wenn die Option `/ISServer` angegeben wird.  
   
@@ -455,13 +455,13 @@ dtexec /option [value] [/option [value]]...
 -   **/Su[m]**: Dies ist optional. Zeigt einen inkrementellen Zähler an, der die Anzahl der Zeilen enthält, die von der nächsten Komponente empfangen werden.  
   
 -   **/U[ser]** _user_name_:  
-                  Dies ist optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird nur verwendet, wenn die Option `/SQL` angegeben wird. Der *Benutzername* -Wert kann in Anführungszeichen eingeschlossen werden.  
+                  Optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird nur verwendet, wenn die Option `/SQL` angegeben wird. Der *Benutzername* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va[lidate]**:  
-                  Dies ist optional. Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung zu verwenden, der die **/warnaserror** bewirkt `dtexec` eine Warnung wie einen Fehler behandelt daher ein Paketfehler auftritt, wenn während des Überprüfens eine Warnung auftritt.  
+                  Optional. Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung zu verwenden, der die **/warnaserror** bewirkt `dtexec` eine Warnung wie einen Fehler behandelt daher ein Paketfehler auftritt, wenn während des Überprüfens eine Warnung auftritt.  
   
 -   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: Dies ist optional. Überprüft die Buildnummer eines Pakets anhand der Buildnummern, die während der Überprüfungsphase mit den Argumenten *Hauptversion*, *Nebenversion*und *Build* angegeben wurden. Stimmen die Buildnummern nicht überein, wird das Paket nicht ausgeführt.  
   
@@ -516,9 +516,9 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> Beispiele  
  Die folgenden Beispiele veranschaulichen, wie Sie mit der `dtexec` eingabeaufforderungs-Hilfsprogramm zum Konfigurieren und ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete.  
   
- **Ausführen von Paketen**  
+ **Ausgeführte Pakete**  
   
- Verwenden Sie folgenden Code, um ein in [!INCLUDE[ssIS](../../includes/ssis-md.md)] gespeichertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Paket auszuführen, das die Windows-Authentifizierung verwendet:  
+ Verwenden Sie folgenden Code, um ein in [!INCLUDE[ssIS](../../includes/ssis-md.md)] gespeichertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Paket auszuführen, das die Windows-Authentifizierung verwendet:  
   
 ```  
 dtexec /sq pkgOne /ser productionServer  
@@ -666,7 +666,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ausführen eines Pakets in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
+ [Ausführen eines Pakets in SQL Server-Datentools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/) auf www.mattmasson.com.  

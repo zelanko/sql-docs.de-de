@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872170"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-downloads für kumulative Updates Analysefunktionen von SQL Server in der Datenbank-Instanzen
@@ -81,7 +81,7 @@ CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgeführt. Wenn 
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderung gegenüber früheren Versionen. | 
 | | Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Fügt Rx_create_col_info für die Rückgabe von Schemainformationen an. <br/>Verbesserungen bei der [Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) zur Unterstützung der paralleler Szenarien für die Verwendung der `RxLocalParallel` compute Context verwenden.|
-|**Erste Veröffentlichung** |  |  |
+|**Erste Version** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 | | Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |

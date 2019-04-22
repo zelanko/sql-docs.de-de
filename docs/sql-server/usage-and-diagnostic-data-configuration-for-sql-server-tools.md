@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243514"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools
@@ -31,7 +31,7 @@ Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Cust
 
  Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) in Visual Studio 2017, Visual Studio 2015 und Visual Studio 2013 widerrufen bzw. neu erteilen können.  
 
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools für Visual Studio 2017
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2017
 
  SSDT für Visual Studio 2017 ist das Datenmodellierungstool, das mit SQL Server 2017 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2017 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2017 finden Sie in diesem [Hilfedokument von Visual Studio](https://www.visualstudio.com/docs/work/connect/give-feedback).  
   

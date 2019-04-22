@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241030"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
@@ -53,9 +53,9 @@ ms.locfileid: "59241030"
   
  Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [== &#40;Gleich, SSIS-Ausdruck&#41;](equal-ssis-expression.md)  
+-   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)  
   
