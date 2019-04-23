@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text-based query designer [Reporting Services]
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 114b73bf2e15c55669dacea6456dfd9666a485d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2bfadd99be58b3b81ef9f0b321914305bf8dc5b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288258"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958766"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Benutzeroberfläche des textbasierten Abfrage-Designers
   Verwenden Sie den textbasierten Abfrage-Designer, um eine Abfrage mithilfe der Abfragesprache zu verwenden, die von der Datenquelle unterstützt wird, führen Sie die Abfrage aus, und zeigen Sie die Ergebnisse zur Entwurfszeit an. Sie können mehrere [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Abfrage- oder Befehlssyntaxen für benutzerdefinierte Datenverarbeitungserweiterungen und Abfragen angeben, die als Ausdrücke angegeben sind. Da der textbasierte Abfrage-Designer die Abfrage nicht zuvor verarbeitet und eine beliebige Abfragesyntax aufnehmen kann, handelt es sich hierbei um das standardmäßige Abfrage-Designer-Tool für viele Datenquellentypen.  
@@ -52,7 +52,7 @@ ms.locfileid: "56288258"
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|Dataseteigenschaften|Zeigt den [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragetext an. In diesem Bereich schreiben oder bearbeiten Sie eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfrage.|  
+|Abfrage|Zeigt den [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragetext an. In diesem Bereich schreiben oder bearbeiten Sie eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfrage.|  
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  

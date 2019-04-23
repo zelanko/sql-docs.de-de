@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ab736ee801afcb14332b8719a7168c38757ee35
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287788"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934416"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
   Formeln sind Berechnungen, die für Werte in einem Bericht ausgeführt werden, die ein Berichtsmodell als Datenquelle verwenden. Eine Formel kann Funktionen, Operatoren, Konstanten und Verweise auf Felder oder Entitäten enthalten. Mithilfe von Formeln können Sie numerische und Textdaten kombinieren, aggregieren, filtern und auswerten. Sie können Formeln erstellen und als neue Felder speichern oder die Formeln vorhandener Felder ändern.  

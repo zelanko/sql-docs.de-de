@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 92872f29600bc380025e76933ef8a1aab2879e51
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285878"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962156"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Verweise auf ReportItems-Auflistungen (Berichts-Generator und SSRS)
   Die integrierte `ReportItems`-Auflistung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die `ReportItems`-Auflistung umfasst Textfelder, die sich im aktuellen Bereich einer Seitenkopfzeile, einer Seitenfußzeile oder eines Berichtshauptteils befinden. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die integrierte `ReportItems`-Auflistung verwenden, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die das erste und das letzte Element auf jeder Seite anzeigen.  
@@ -25,7 +25,7 @@ ms.locfileid: "56285878"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Verwenden der ReportItems-Werteigenschaft  
- Elemente in der `ReportItems` -Auflistung verfügen über nur eine Eigenschaft: Wert. Mit dem Wert für ein `ReportItems`-Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
+ Elemente in der `ReportItems` -Auflistung verfügen über nur eine Eigenschaft: -Wert. Mit dem Wert für ein `ReportItems`-Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
   
  Zum Beispiel:  
   

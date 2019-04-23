@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035631"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941516"
 ---
 # <a name="data-alert-messages"></a>Datenwarnmeldungen
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -datenwarnungen übermitteln zwei Typen von datenwarnmeldungen per e-Mail an: Meldungen mit datenwarnungsergebnissen und Meldungen mit fehlerbeschreibungen. Durch Meldungen mit Ergebnissen werden alle Empfänger über Änderungen der Berichtsdaten informiert, die von allgemeinem Interesse und wichtig für Geschäftsentscheidungen sind. Tritt aus einem unbestimmten Grund ein Fehler auf, und sind die Ergebnisse nicht verfügbar, wird stattdessen die Fehlermeldung gesendet.  

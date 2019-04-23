@@ -3,7 +3,7 @@ title: Zur Installation herunterladen können Sie
 titleSuffix: Azure Data Studio
 description: Herunterladen und installieren Sie Azure Data Studio für Windows, MacOS oder Linux
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,30 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b559beb71a06885160774ebba6afc835bb7b7fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388748"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966020"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, MacOS und Linux ausgeführt wird.
 
 
-Herunterladen und installieren die neueste Version der *Release von März*:
+Herunterladen und installieren die neueste Version der *April Release*:
 
 > [!NOTE]
 > Wenn Sie über SQL Operations Studio aktualisieren und Ihre Einstellungen, Tastenkombinationen in Visual Studio oder Codeausschnitte beibehalten möchten, finden Sie unter [verschieben benutzereinstellungen](#move-user-settings).
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Version |
 |:---|:---|:---|:---|
-|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2083322)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2083323)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2083324)|22 März 2019 |1.5.2|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2083325)|22 März 2019 |1.5.2|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2083327)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2083326)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2083424)|22 März 2019 |1.5.2|
+|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2087316)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2087317)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2087318)|18 April 2019 |1.6.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2087170)|18 April 2019 |1.6.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2087415)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)|18 April 2019 |1.6.0|
 
-Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes.md).
+Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](release-notes.md).
 
 ## <a name="get-azure-data-studio-for-windows"></a>Azure Data-Studio für Windows herunterladen
 
@@ -45,25 +45,25 @@ Die *Installationsprogramm Benutzer* wird empfohlen, da es keine Administratorre
 
 **Installationsprogramm Benutzer** (empfohlen)
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *Benutzer* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2083322).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *Benutzer* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2087316).
 2. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System-Installer**
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *System* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2083323).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *System* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2087317).
 2. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **zip-Datei**
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2083324).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2087318).
 2. Suchen Sie die heruntergeladene Datei, und extrahieren Sie sie.
 3. Ausführen von `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>Abrufen von Azure Data Studio für macOS
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=2083325).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=2087170).
 2. Doppelklicken Sie darauf, um den Inhalt der ZIP-Datei zu erweitern.
 3. Vornehmen [!INCLUDE[name-sos](../includes/name-sos-short.md)] zur Verfügung, in der *Launchpad*, ziehen Sie *Azure Daten Studio.app* auf die *Anwendungen* Ordner.
 
@@ -71,9 +71,9 @@ Die *Installationsprogramm Benutzer* wird empfohlen, da es keine Administratorre
 ## <a name="get-azure-data-studio-for-linux"></a>Azure Data-Studio für Linux herunterladen
 
 1. Herunterladen [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux mithilfe eines der Installationsprogramme oder das Archiv für die ".TAR.gz":
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2083327)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2083326)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2083424)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2087415)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)
 1. Extrahieren Sie die Datei, und starten Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], öffnen Sie ein neues Terminalfenster, und geben Sie die folgenden Befehle:
 
    **Debian-Installation:**
@@ -103,7 +103,7 @@ Die *Installationsprogramm Benutzer* wird empfohlen, da es keine Administratorre
    ``` 
 
    > [!NOTE]
-   > Für Debian, Red hat und Ubuntu müssen Sie möglicherweise fehlende Abhängigkeiten. Verwenden Sie die folgenden Befehle aus, um diese Abhängigkeiten abhängig von Ihrer Version von Linux zu installieren:
+   > Bei Debian, Red hat und Ubuntu fehlen möglicherweise Abhängigkeiten. Verwenden Sie die folgenden Befehle, um diese Abhängigkeiten je nach Ihrer Linux-Version zu installieren:
    
 
    **Debian:** 

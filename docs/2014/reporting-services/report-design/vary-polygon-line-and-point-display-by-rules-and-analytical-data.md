@@ -18,15 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969292"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten (Berichts-Generator und SSRS)
   Die Anzeigeoptionen für Polygone, Linien und Punkte in einer Kartenebene werden gesteuert, indem Optionen für die Ebene sowie Regeln für die Kartenelemente in der Ebene festgelegt werden oder indem Optionen für bestimmte eingebettete Kartenelemente in einer Ebene überschrieben werden.  
@@ -101,11 +101,11 @@ ms.locfileid: "56294538"
 ##  <a name="Distribution"></a> Grundlegendes zu Verteilungsoptionen  
  Um eine Verteilung von Werten zu erstellen, können Sie die Daten in Bereiche unterteilen. Sie geben den Verteilungstyp, die Anzahl der Unterbereiche sowie den minimalen und den maximalen Bereichswert an.  
   
- Nehmen Sie in der folgenden Liste an, dass Sie über drei Kartenelement und sechs verwandte analytische Werte verfügen, die zwischen 1 und 9999 liegen, und zwar: 1, 10, 200, 2000, 4777, 8999.  
+ In der folgenden Liste wird davon ausgegangen Sie, dass Sie drei kartenelement und sechs verwandte analytische Werte, die zwischen 1 und 9999, die mit den folgenden Werten: 1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Teilbereich 1: 1, 10, 200, 500. Teilbereich 2: 4777. Teilbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
+-   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Unterbereich 1: 1, 10, 200, 500. Unterbereich 2: 4777. Unterbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
   
--   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Teilbereich 1: 1, 10. Teilbereich 2: 200, 500. Teilbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
+-   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Unterbereich 1: 1, 10. Unterbereich 2: 200, 500. Unterbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
   
 -   **Optimal** . Erstellt Bereiche, die automatisch die Verteilung so anpassen, dass ausgewogene Unterbereiche erstellt werden. Die Anzahl der Unterbereiche wird vom Algorithmus bestimmt.  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e83c008e44d0aa6011e74cdf85ce88a9c19444e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297108"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957026"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
   Ein Messgerätzeiger gibt den aktuellen Wert des Messgeräts an. Standardmäßig werden beim Hinzufügen eines Felds die darin enthaltenen Werte zu einem Wert aggregiert, der vom Zeiger auf dem Messgerät angezeigt wird. Sie können dem Messgerät mehrere Zeiger hinzufügen, die auf unterschiedliche Werte auf der gleichen Skala zeigen, oder Sie können mehrere Skalen und einen Zeiger für jede hinzugefügte Skala hinzufügen. Nachdem Sie einem Messgerät ein Feld hinzugefügt haben, müssen Sie den maximalen und den minimalen Wert für die entsprechende Skala festlegen, um einen Kontext zum Zeigerwert anzugeben. Sie haben auch die Möglichkeit, den minimalen und den maximalen Wert für einen Bereich festzulegen, wodurch auf der Skala ein kritischer Bereich angegeben wird.  

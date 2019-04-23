@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019331"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942736"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -41,7 +41,7 @@ ms.locfileid: "56019331"
   
      Die Datei befindet sich unter  *\<Laufwerk >:* \Programme\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Suchen Sie den Eintrag <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56019331"
           </AuthenticationTypes>  
     ```  
   
-4.  Ersetzen Sie damit die vorhandenen Einträge für <`Authentication`>.  
+4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
   
      Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie lediglich das `RSWindowsBasic`-Element ein, löschen Sie jedoch die Einträge für `RSWindowsNegotiate`, `RSWindowsNTLM` oder `RSWindowsKerberos` nicht.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56019331"
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   
-5.  Ersetzen Sie leere Werte für <`Realm`> oder <`DefaultDomain`> durch Werte, die für Ihre Umgebung gültig sind.  
+5.  Ersetzen Sie leere Werte für <`Realm`> oder <`DefaultDomain`> mit Werten, die für Ihre Umgebung gültig sind.  
   
 6.  Speichern Sie die Datei.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "56019331"
   
 |Element|Erforderlich|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] nicht unterstützt.|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden nicht unterstützt, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   

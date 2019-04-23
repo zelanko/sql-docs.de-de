@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025141"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954967"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
   Ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]schreiben [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Server im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Ereignisse in die Ablaufverfolgung des SharePoint Unified Logging Service (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -spezifische Kategorien sind auf der Seite Überwachung der SharePoint-Zentraladministration verfügbar.  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |Berichtsserveranbieter||  
 |Berichtsserverrendering||  
 |Berichtsserver-Berichtsvorschau||  
-|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Start-SKU für MediumReporting-Dienste: Evaluation<br /><br /> MediumEvaluation-Kopie: 180 Tage|  
+|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Starten die SKU für MediumReporting-Dienste: Evaluation<br /><br /> MediumEvaluation-Kopie: 180 Tage|  
 |Laufende Berichtsserveraufträge||  
 |Laufende Berichtsserveranforderungen||  
 |Berichtsserverplan||  

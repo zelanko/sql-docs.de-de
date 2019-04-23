@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036961"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967406"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen einer neuen Website
+# <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen Sie eine neue Website
   In dieser Lektion erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der ASP.NET-Websitevorlage für Visual C# erstellen.  
   
 ### <a name="to-create-a-new-website"></a>So erstellen Sie eine neue Website  
@@ -34,6 +34,6 @@ ms.locfileid: "56036961"
  Das Websiteprojekt wird geöffnet.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Finden Sie unter [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Siehe [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

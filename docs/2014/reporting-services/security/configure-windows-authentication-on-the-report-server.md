@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57046a5dc5b92cfd3b4b349dc86d004d477169f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043001"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966106"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -52,7 +52,7 @@ ms.locfileid: "56043001"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen Sie den Eintrag <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Sie können `RSWindowsNegotiate`, `RSWindowsNTLM` und `RSWindowsKerberos` in beliebiger Reihenfolge angeben. Sie sollten die Authentifizierungspersistenz aktivieren, wenn die Verbindung und nicht jede einzelne Anforderung authentifiziert werden soll. Bei Verwendung der Authentifizierungspersistenz werden alle Anforderungen, für die eine Authentifizierung erforderlich ist, zugelassen, solange die Verbindung besteht.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "56043001"
           </AuthenticationTypes>  
     ```  
   
-4.  Ersetzen Sie damit die vorhandenen Einträge für <`Authentication`>.  
+4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
   
      Beachten Sie, dass `Custom` nicht mit den `RSWindows`-Typen verwendet werden kann.  
   

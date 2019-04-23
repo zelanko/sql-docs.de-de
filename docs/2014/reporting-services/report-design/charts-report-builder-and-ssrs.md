@@ -18,15 +18,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a4d723a545ebe6fb849d3b5b78f2f2e8e99908
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295388"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932456"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
   Wenn Sie Daten in einem visuellen Format zusammenfassen möchten, verwenden Sie den Diagrammdatenbereich. Diagramme ermöglichen es Ihnen, große Mengen aggregierter Informationen auf einen Blick zu präsentieren. Wichtig ist eine sorgfältige Aufbereitung und Analyse der Daten, bevor Sie das Diagramm erstellen, da so eine schnelle und effiziente Gestaltung der Diagramme erleichtert wird. Weitere Informationen finden Sie unter [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Um ein Diagramm umgehend verwenden finden Sie in der Balken-, Spalten-, Sparkline und Kreisdiagrammen unter [Tutorials &#40;Berichts-Generator&#41; ](../report-builder-tutorials.md) oder die Balken- und Kreisdiagrammen unter [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
@@ -152,8 +152,8 @@ ms.locfileid: "56295388"
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

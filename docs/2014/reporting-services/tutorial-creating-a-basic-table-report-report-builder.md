@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295368"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959546"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -55,7 +55,7 @@ ms.locfileid: "56295368"
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Erstellen eines neuen Berichts im Dialogfeld "Erste Schritte"  
+##  <a name="CreateTable"></a> 1. Erstellen eines neuen Berichts von den ersten Schritten  
  Erstellen eines Tabellenberichts aus der **Einstieg** Dialogfeld. Zwei Modi stehen zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. Im Berichtsentwurfsmodus legen Sie im Berichtsdatenbereich Daten und auf der Entwurfsoberfläche das Berichtslayout fest. Im Entwurfsmodus für freigegebene Datasets erstellen Sie Datasetabfragen, die für andere Benutzer freigegeben werden. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
@@ -229,7 +229,7 @@ ms.locfileid: "56295368"
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
- Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich Zeilengruppen werden drei Zeilengruppen angezeigt: "Salesdate", Unterkategorie und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+ Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ##  <a name="FormatCurrency"></a> 2. Formatieren von Daten als Währung  
  Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  

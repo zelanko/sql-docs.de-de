@@ -15,15 +15,15 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f3c7ecd51616bc1c8424bf6d14f7d9fd15482ba
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 38aed7f227c4720f334f6a4791a6f2c61583c0d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036201"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961656"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  

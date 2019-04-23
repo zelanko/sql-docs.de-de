@@ -11,15 +11,15 @@ helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011252"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962546"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht
   Das Ausführungsprotokoll des Berichtsservers enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Dataset, das nicht live ausgeführt werden.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **AdHoc** : Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> **Sitzung**: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**:  Gibt eine Report Definition Customization Extension an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Dataset, das nicht live ausgeführt werden.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **AdHoc** : Gibt an, entweder einem dynamisch erstellten Berichtsmodell basierendes Modell Drillthroughbericht oder einen Berichts-Generator-Bericht, der in der Vorschau angezeigt wird, auf einem Client mithilfe des Berichtsservers zum Verarbeiten und rendern.<br /><br /> **Sitzung**: Gibt eine anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**:  Gibt eine Report Definition Customization Extension an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  

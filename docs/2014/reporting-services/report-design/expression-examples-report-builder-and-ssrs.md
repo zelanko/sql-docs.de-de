@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943086"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](add-an-expression-report-builder-and-ssrs.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56286619"
   
  Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Um weitere Informationen zum Schreiben von Ausdrücken, die viele der Funktionen und Operatoren, die auch ein, die Beispiele für Ausdrücke in diesem Thema, aber in den Kontext Schreiben von Berichten verwenden, finden Sie unter [Lernprogramm: Einführung in Ausdrücke](../tutorial-introducing-expressions.md).  
+ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Einführung in Ausdrücke](../tutorial-introducing-expressions.md).  
   
  Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter den [Expression Dialog Box](../expression-dialog-box.md) oder [Expression Dialog Box &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4409e62761018263b9ce78471661ae70afda1887
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015486"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942586"
 ---
 # <a name="user-role-properties-management-studio"></a>Benutzerrolleneigenschaften (Management Studio)
   Mithilfe dieser Seite sehen Sie, welche Aufgaben in einer Rollendefinition auf Elementebene eingeschlossen sind. Mit dieser Seite können Sie außerdem die Aufgabenliste oder eine Rollenbeschreibung ändern.  

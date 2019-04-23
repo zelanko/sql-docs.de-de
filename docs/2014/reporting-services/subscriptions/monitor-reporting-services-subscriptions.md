@@ -14,15 +14,15 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295454"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933619"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
@@ -79,7 +79,7 @@ ms.locfileid: "56295454"
   
  Es folgt eine Beispielfehlermeldung einer Ablaufverfolgungsprotokolldatei im Zusammenhang mit Abonnements:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initialisieren von EnableExecutionLogging auf 'True' gemäß Server System properties.emailextension! WindowsService_7! b60! 05/20/2014-22: 34:41:: e Fehler: **Fehler beim Senden von e-Mail-Adresse**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initialisieren von EnableExecutionLogging auf 'True' gemäß Serversystemeigenschaften properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Fehler beim Senden von E-Mail**. Ausnahme: System.Net.Mail.SmtpException: Der SMTP-Server erfordert eine sichere Verbindung oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf (System.NET.Mail.mailcommand.checkresponse(SmtpStatusCode StatusCode, String Response) authentifiziert.  
   
  Die Protokolldatei enthält keine Informationen, ob der Bericht geöffnet wurde oder ob die Übermittlung tatsächlich erfolgreich war. Eine erfolgreiche Übermittlung bedeutet, dass der Prozessor für Zeitplanung und Übermittlung keine Fehler generiert und der Berichtsserver eine Verbindung zum Mailserver hergestellt hat. Falls für die E-Mail im Postfach des Benutzers eine Fehlermeldung wegen Unzustellbarkeit generiert wird, werden diese Informationen nicht in die Protokolldatei aufgenommen. Weitere Informationen zu Protokolldateien finden Sie unter [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "56295454"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |date|Verarbeiten|Bereich|Kategorie|Ebene|Correlation|MessageBox|  
-|5/21/2014 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort war: 5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden  an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  an System.Net.Mail.SmtpClient.Send(MailMessage message)  an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort war: 5.7.1 Client hat keinen Berechtigungen zum Senden von als dieser Absender zu an (System.NET.Mail.mailcommand.checkresponse(SmtpStatusCode StatusCode, String ServerResponse) an System.NET.Mail.datastopcommand.Send(smtpconnection (SmtpConnection Conn) an. System.NET.Mail.SmtpClient.Send(MailMessage (MailMessage-Nachricht) an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification Notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Verwenden von PowerShell zur Überwachung von Abonnements  
  Beispiele für PowerShell-Skripts zum Überprüfen des Status von Abonnements im einheitlichen Modus oder im SharePoint-Modus finden Sie unter [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  

@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582206"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939486"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
 
@@ -81,7 +81,7 @@ Weitere Informationen zur Installation und Konfiguration finden Sie unter:
   
 -   *Im lokalen Modus*: Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek bereitgestellt werden, ohne das eine Integration in einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver erfolgen muss. Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Das Add-In lässt sich auf verschiedene Weise installieren, einschließlich mithilfe des Vorbereitungstools für SharePoint 2010-Produkte. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) und [, wo Sie das Reporting Services-add-in für SharePoint-Produkte finden](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Verbundener Modus*: Der verbundene Modus wird durch Integration eines [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtsservers mit der SharePoint-Zentraladministration in die SharePoint-Farm unterstützt. Die Integration mit einem Berichtsserver ermöglicht vollständige End-to-End-Berichterstellung, indem die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen eines Berichtservers bereitgestellt werden, dazu gehören: Abonnements, Momentaufnahmen und die serverbasierte Verarbeitung.  
+-   *Verbundener Modus*: Modus "verbunden" wird unterstützt, durch die Integration einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver in der SharePoint-Farm mit SharePoint-Zentraladministration. Die Integration mit einem Berichtsserver ermöglicht vollständige End-to-End-berichterstellung, indem bereitgestellt, die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen von einem Server, einschließlich: Abonnements, Momentaufnahmen und serverbasierte Verarbeitung.  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> Nicht unterstützte SharePoint-Funktionen
 

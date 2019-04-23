@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7c364708f3d574f5096210a94fc33174b3eb2c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f9826e22c617bbcae2630121ce1be23b2511a35
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021550"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932686"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
     
@@ -56,7 +56,7 @@ ms.locfileid: "56021550"
   
 -   Ein Parameter, der die Nullable-Eigenschaft auf festgelegt hat `False` hat einen null-Wert im Parameter erkannt.  
   
--   Ein Ausdruck für die Hidden-Eigenschaft, eines Datenbereichs enthält einen Fehler an: Der Objektverweis ist nicht auf eine Objektinstanz festgelegt.  
+-   Ein Ausdruck für die Hidden-Eigenschaft, eines Datenbereichs enthält einen Fehler an: Objektverweis nicht auf eine Instanz eines Objekts.  
   
 -   Ein Ausdruck hat einen ungültigen Funktionsaufruf oder einen Syntaxfehler enthalten.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56021550"
  Ein mehrwertiger Parameter darf nicht NULL sein. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Hauptbericht mit Unterbericht konnte nicht verarbeitet werden  
- Ein Bericht mit Unterberichten muss von der gleichen Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessors verarbeitet werden. Beim Aktualisieren von Berichten auf die aktuelle Version des Berichtsdefinitionsschemas werden der Hauptbericht und die Unterberichte möglicherweise nicht gleichzeitig aktualisiert. Wenn die Version zwischen einem Bericht und dessen Unterberichten nicht kompatibel ist, wird die folgende Meldung angezeigt: "Der Unterbericht konnte nicht verarbeitet werden."  
+ Ein Bericht mit Unterberichten muss von der gleichen Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessors verarbeitet werden. Beim Aktualisieren von Berichten auf die aktuelle Version des Berichtsdefinitionsschemas werden der Hauptbericht und die Unterberichte möglicherweise nicht gleichzeitig aktualisiert. Wenn die Version nicht zwischen einem Bericht und dessen Unterberichten kompatibel ist, wird die folgende Meldung angezeigt: "Der Unterbericht konnte nicht verarbeitet werden."  
   
  Sie müssen den Hauptbericht oder die Unterberichte ändern, sodass alle Berichte von der gleichen Version des Berichtsprozessors verarbeitet werden. Informationen zu Fehlern beim Upgrade eines Berichts finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md).  
   

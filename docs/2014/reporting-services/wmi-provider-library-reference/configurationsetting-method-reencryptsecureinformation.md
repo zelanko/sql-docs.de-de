@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - ReencryptSecureInformation method
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b02e6f8bbaa25b3141d602107fa44ca526c9eb31
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: faf998f4d9d3cbd3c45de4c1a0b214ba1de2152e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022051"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941166"
 ---
 # <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen im Katalog erneut mit diesem neuen Schlüssel  

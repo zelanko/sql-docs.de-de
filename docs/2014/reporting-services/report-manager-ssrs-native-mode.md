@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289013"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940666"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Berichts-Manager (einheitlicher SSRS-Modus)
   Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Dieses Tool kann verwendet werden, um eine einzelne Berichtsserverinstanz von einem Remotestandort aus über eine HTTP-Verbindung zu verwalten. Sie können ebenso die Berichts-Viewer- und Navigationsfunktionen des Berichts-Managers verwenden. In diesem Thema:  

@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295988"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938156"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
   In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darstellung bietet folgende Vorteile:  
   
 -   Bessere Lesbarkeit langer Kategorienamen  
@@ -55,9 +55,9 @@ ms.locfileid: "56295988"
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver her erstellen Sie ein Dataset, und wählen Sie eine Datenquelle, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Ungefähre Dauer dieses Lernprogramms: 15 Minuten.  
+ Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "56295988"
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-     Auf der **Diagrammfelder** Seite, gibt es vier Felder in der **verfügbare Felder** Bereich: FirstName, LastName, "salesyear2009" und "salesyear2008".  
+     Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, "salesyear2009" und "salesyear2008".  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -213,7 +213,7 @@ ms.locfileid: "56295988"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Auf der **Kategoriegruppeneigenschaften** auf der Seite die **Reihenfolge** Dropdown-Liste **Z bis A**. Dadurch wird die umgekehrte alphabetische Reihenfolge ausgewählt, damit die Namen von oben nach unten angezeigt werden.  
+8.  Auf der **Kategoriegruppeneigenschaften** auf der Seite die **Reihenfolge** Dropdown-Liste **Z bis A**. Dadurch werden die umgekehrten alphabetischen Reihenfolge ausgewählt, so, dass die Namen in der Reihenfolge von oben nach unten angezeigt werden.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

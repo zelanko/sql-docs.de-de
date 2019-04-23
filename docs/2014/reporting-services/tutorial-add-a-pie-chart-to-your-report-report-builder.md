@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290448"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959506"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
   Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Kreis- und Ringdiagramme Diagramme, zusammen mit Pyramiden-und Trichterdiagrammen, bilden eine Gruppe von Diagrammen als Formdiagrammen bezeichnet. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
   
  Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. In diesem Fall sollten Sie die Verwendung eines Liniendiagramms erwägen. Verwenden Sie Kreisdiagramme möglichst nur, nachdem Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
@@ -45,7 +45,7 @@ ms.locfileid: "56290448"
 7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Hinzufügen einer Datenquelle, und fügen Sie ein Dataset, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Lernprogramm dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   

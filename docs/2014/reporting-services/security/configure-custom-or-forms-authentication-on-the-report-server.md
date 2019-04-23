@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e568d04a58ad13479f0e3a58254f8e409c46164d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8969e3202a9c58b46fac2116912e3d90474d7072
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010821"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932537"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
   Reporting Services stellt eine erweiterbare Architektur zur Verfügung, mit der Sie benutzerdefinierte oder formularbasierte Authentifizierungsmodule integrieren können. Möglicherweise ist es ratsam, eine benutzerdefinierte Authentifizierungserweiterung zu implementieren, wenn die Bereitstellungsanforderungen keine Windows-integrierte Sicherheit oder grundlegende Authentifizierung umfassen. Das häufigste Szenario für die Verwendung der benutzerdefinierten Authentifizierung ist eine Unterstützung des Internet- oder Extranetzugriffs auf eine Webanwendung. Durch das Ersetzen der standardmäßigen Windows-Authentifizierungserweiterung durch eine benutzerdefinierte Erweiterung können Sie besser steuern, wie externen Benutzern Zugriff auf den Berichtsserver gewährt wird.  
@@ -35,7 +35,7 @@ ms.locfileid: "56010821"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen Sie den Eintrag <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die folgende XML-Struktur:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56010821"
     </Authentication>  
     ```  
   
-4.  Ersetzen Sie damit die vorhandenen Einträge für <`Authentication`>.  
+4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   

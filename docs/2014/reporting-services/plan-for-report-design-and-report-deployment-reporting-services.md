@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032011"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936826"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planen von Berichtsentwurf und -bereitstellung (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt verschiedene Ansätze zum Erstellen und Bereitstellen von Berichten bereit. Dieses Thema soll Sie bei der Planung für eine Berichterstellungsumgebung und einen Berichtsserver unterstützen, die reibungslos zusammenarbeiten. Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinition durch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponenten. Eine Berichtsdefinition ist eine XML-Datei, die in der Berichtsdefinitionssprache (Report Definition Language, RDL) oder in der Berichtsdefinitionssprache für Clients (Report Definition Language for Clients, RDLC) geschrieben ist. Jede Berichtsdefinition entspricht einer bestimmten Schemaversion, die am Anfang der Datei aufgelistet ist.  
@@ -56,13 +56,13 @@ ms.locfileid: "56032011"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
  Eine Berichtsdefinitionsdatei kann wie folgt auf einem [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Berichtsserver bereitgestellt werden:  
   
--   **Berichts-Designer:** Stellen Sie einen Bericht aus dem Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] bereit.  
+-   **Berichts-Designer:** Stellen Sie einen Bericht im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Berichts-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
+-   **Berichts-Generator:** Speichern eines Berichts auf dem Berichtsserver mit Berichts-Generator.  
   
--   **Berichts-Manager:** Laden Sie einen Bericht aus dem Berichts-Manager auf einen Berichtsserver im einheitlichen Modus hoch.  
+-   **Berichts-Manager:** Hochladen eines Berichts auf einem Berichtsserver im einheitlichen Modus im Berichts-Manager.  
   
--   **SharePoint:** Laden Sie einen Bericht auf eine SharePoint-Website hoch, die mit einem Berichtsserver im SharePoint-Modus konfiguriert wurde.  
+-   **SharePoint:** Hochladen eines Berichts auf einer SharePoint-Website, die mit einem Berichtsserver im SharePoint-Modus konfiguriert ist.  
   
 -   **Programmgesteuert:** Veröffentlichen Sie einen Bericht programmgesteuert mithilfe der SOAP-API-Schnittstellen auf einem Berichtsserver. Weitere Informationen finden Sie unter [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   

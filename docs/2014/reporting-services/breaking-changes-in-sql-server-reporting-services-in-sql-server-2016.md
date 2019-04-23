@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040171"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947656"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade oder in benutzerdefinierten Skripts oder Berichten auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56040171"
   
 -   Der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, rskeymgmt.exe und rsconfig.exe. Verwenden Sie statt diesen Hilfsprogrammen zur Konfiguration des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus die SharePoint-Zentraladministration und PowerShell.  
   
--   SQL Server Management Studio:  Kunden können nicht auf einen Server mit einer Syntax wie < Machine_name > verweisen / < Instance_name >. Ab der [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] -Version war die empfohlene Methode, eine SharePoint-Website-URL zu verwenden. Z. B. **http://<sharepoint_server>/<sharePoint_site&gt**. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist die einzige unterstützte Syntax eine SharePoint-Website-URL.  
+-   SQL Server Management Studio: Kunden können nicht auf einen Server mit einer Syntax wie < Machine_name > verweisen / < Instance_name >. Ab der [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] -Version war die empfohlene Methode, eine SharePoint-Website-URL zu verwenden. Z. B. **http://<sharepoint_server>/<sharePoint_site&gt**. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist die einzige unterstützte Syntax eine SharePoint-Website-URL.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Der Berichtsmodell-Designer ist in SQL Server-Datentools nicht verfügbar  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] unterstützt Berichtsmodellprojekte nicht mehr. Der Berichtsmodell-Designer steht in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]nicht zur Verfügung. Sie können keine neuen Berichtsmodellprojekte erstellen oder vorhandene Projekte in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] öffnen, und Sie können keine Berichtsmodelle erstellen oder aktualisieren. Um Berichtsmodelle zu aktualisieren, können Sie [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oder frühere Tools verwenden. Sie können Berichtsmodelle weiterhin als Datenquellen in Berichten verwenden, die in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Tools, wie z. B. Berichts-Generator und Berichts-Designer, erstellt wurden. Der Abfrage-Designer, mit denen Sie Abfragen erstellen, um die Berichtsdaten aus Berichtsmodellen zu extrahieren weiterhin verfügbar in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

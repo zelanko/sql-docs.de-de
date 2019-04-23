@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017962"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947756"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
   Mithilfe des Berichts-Viewer-Webparts können Sie Berichte anzeigen, die auf einem Berichtsserver ausgeführt werden, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Sie können u. a. Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Generator-Berichte anzeigen. Berichte werden im Berichts-Viewer-Webpart automatisch auf einer neuen Seite angezeigt, doch können Sie auch einer vorhandenen Webseite oder Website ein Berichts-Viewer-Webpart hinzufügen, wenn auf der Seite ein bestimmter Bericht immer angezeigt werden soll.  

@@ -11,15 +11,15 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97f61325c563c1c8ff22ff3e4177c74726f775cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961586"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In Berichts-Generator ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  
@@ -37,7 +37,7 @@ ms.locfileid: "56286538"
  Eine Gruppe besitzt einen Namen und einen Satz von Gruppierungsausdrücken, den Sie festlegen. Der Satz von Gruppierungsausdrücken kann ein Verweis auf ein einzelnes Datasetfeld oder eine Kombination mehrerer Ausdrücke sein. Zur Laufzeit werden Gruppenausdrücke kombiniert, wenn die Gruppe mehrere Ausdrücke enthält, und für Daten in einer Gruppe angewendet. Angenommen, Sie verfügen über eine Gruppe, die die Daten im Datenbereich mithilfe eines Datumsfelds organisiert. Zur Laufzeit werden die Daten nach Datum angeordnet und dann mit dem Gesamtwerten anderer Datasetwerte für jedes Datum angezeigt.  
   
 ## <a name="when-do-i-create-groups"></a>Wann sollten Gruppen erstellt werden?  
- In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel dafür, wie beim Hinzufügen von Gruppen, wenn Sie einen Bericht erstellen, finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) oder [erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel zum Hinzufügen von Gruppen beim Erstellen eines Berichts finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) oder [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Wie kann eine Gruppe geändert werden?  
  Wenn Sie eine Gruppe erstellt haben, können Sie die datenbereichsspezifischen Eigenschaften festlegen, z. B. Filter- und Sortierungsausdrücke, Seitenumbrüche und Gruppierungsvariablen für bereichsspezifische Daten. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  

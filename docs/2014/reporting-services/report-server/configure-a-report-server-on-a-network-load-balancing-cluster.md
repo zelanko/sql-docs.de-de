@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0b2a24a0db089262512094b5cb33c2eda695094
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4587f4e496e5542e53df40741c1dcdf6e9abc6ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042809"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941846"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
   Wenn Sie einen Berichtsserver für horizontales Skalieren für die Ausführung in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) konfigurieren möchten, müssen Sie folgende Schritte ausführen:  
@@ -38,7 +38,7 @@ ms.locfileid: "56042809"
 |----------|-----------------|----------------------|  
 |1|Überprüfen Sie vor der Installation von Reporting Services auf Serverknoten in einem NLB-Cluster die Anforderungen für die Bereitstellung für horizontales Skalieren.|[Konfigurieren der Bereitstellung im einheitlichen Modus Bericht Berichtsserver horizontaler &#40;SSRS-Konfigurations-Manager&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation|  
 |2|Konfigurieren Sie den NLB-Cluster, und überprüfen Sie, ob er ordnungsgemäß arbeitet.<br /><br /> Ordnen Sie unbedingt der virtuellen Server-IP-Adresse des NLB-Clusters einen Hostheadernamen zu. Der Hostheadername wird in der Berichtsserver-URL verwendet, und er ist leichter zu behalten als eine IP-Adresse.|Weitere Informationen finden Sie in der Windows Server-Produktdokumentation für die Version des verwendeten Windows-Betriebssystems.|  
-|3|Fügen Sie den NetBIOS-Namen und den vollqualifizierten Domänennamen (Fully Qualified Domain Name oder FQDN) für den Hostheader der in der Windows-Registrierung gespeicherten Liste **BackConnectionHostNames** hinzu. Verwenden Sie die Schritte in **Methode 2: Angeben von Hostnamen** in [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), mit der folgenden Anpassung. **Schritt 7** des Knowledge Base-Artikels lautet wie folgt: "Beenden Sie den Registrierungs-Editor, und starten Sie den IISAdmin-Dienst anschließend neu." Starten Sie stattdessen den Computer neu, damit die Änderungen wirksam werden.<br /><br /> Wenn z.B. der Hostheadername \<MyServer> ein virtueller Name für den Windows-Computernamen „contoso“ ist, können Sie wahrscheinlich mit „contoso.domain.com“ auf das FQDN-Formular verweisen. Sie müssen sowohl den Hostheadernamen (MyServer ) als auch den FQDN-Namen (contoso.domain.com) zur Liste in **BackConnectionHostNames**hinzufügen.|Dieser Schritt ist erforderlich, wenn Ihre Serverumgebung die NTLM-Authentifizierung auf dem lokalen Computer verwendet und eine Loopbackverbindung erstellt.<br /><br /> In diesem Fall tritt bei Anforderungen zwischen dem Berichts-Manager und dem Berichtsserver der Fehler 401 (Nicht autorisiert) auf.|  
+|3|Fügen Sie den NetBIOS-Namen und den vollqualifizierten Domänennamen (Fully Qualified Domain Name oder FQDN) für den Hostheader der in der Windows-Registrierung gespeicherten Liste **BackConnectionHostNames** hinzu. Verwenden Sie die Schritte in **Methode 2: Angeben von Hostnamen** im [Knowledge Base-Artikel 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) mit der folgenden Anpassung aus. **Schritt 7** des Knowledge Base-Artikels lautet wie folgt: "Beenden Sie den Registrierungs-Editor, und starten Sie den IISAdmin-Dienst anschließend neu." Starten Sie stattdessen den Computer neu, damit die Änderungen wirksam werden.<br /><br /> Wenn z.B. der Hostheadername \<MyServer> ein virtueller Name für den Windows-Computernamen „contoso“ ist, können Sie wahrscheinlich mit „contoso.domain.com“ auf das FQDN-Formular verweisen. Sie müssen sowohl den Hostheadernamen (MyServer ) als auch den FQDN-Namen (contoso.domain.com) zur Liste in **BackConnectionHostNames**hinzufügen.|Dieser Schritt ist erforderlich, wenn Ihre Serverumgebung die NTLM-Authentifizierung auf dem lokalen Computer verwendet und eine Loopbackverbindung erstellt.<br /><br /> In diesem Fall tritt bei Anforderungen zwischen dem Berichts-Manager und dem Berichtsserver der Fehler 401 (Nicht autorisiert) auf.|  
 |4|Installieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus auf Knoten, die bereits zu einem NLB-Cluster gehören, oder konfigurieren Sie die Berichtsserverinstanzen für die Bereitstellung für horizontales Skalieren.<br /><br /> Die konfigurierte Bereitstellung für horizontales Skalieren antwortet möglicherweise nicht auf Anforderungen, die an die IP des virtuellen Servers gerichtet sind. Sie wird erst in einem späteren Schritt so konfiguriert, dass die IP des virtuellen Servers verwendet wird, und zwar nach dem Konfigurieren der Anzeigestatusüberprüfung.|[Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Konfigurieren der Anzeigestatusüberprüfung<br /><br /> Optimale Ergebnisse erzielen Sie, wenn Sie diesen Schritt nach dem Konfigurieren der Bereitstellung für horizontales Skalieren und vor dem Konfigurieren der Berichtsserverinstanzen für die Verwendung der virtuellen Server-IP-Adresse ausführen. Indem Sie zuerst die Anzeigestatusüberprüfung konfigurieren, können Sie Ausnahmen für fehlgeschlagene Statusüberprüfungen vermeiden, wenn Benutzer versuchen, auf interaktive Berichte zuzugreifen.|[Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung](#ViewState) in diesem Thema|  
 |6|Konfigurieren Sie `Hostname` und `UrlRoot` so, dass die IP des virtuellen Servers des NLB-Clusters verwendet wird.|[So konfigurieren Sie HostName und UrlRoot](#SpecifyingVirtualServerName) in diesem Thema.|  
@@ -51,7 +51,7 @@ ms.locfileid: "56042809"
   
  Zum Umgehen dieses Problems können Sie einen willkürlichen Validierungsschlüssel generieren, um die Anzeigestatusüberprüfung zu unterstützen, und anschließend jeden Berichtsserverknoten zum Verwenden desselben Schlüssels manuell konfigurieren. Sie können eine beliebige nach dem Zufallsprinzip generierte hexadezimale Sequenz verwenden. Der Überprüfungsalgorithmus (z. B. SHA1) bestimmt, wie lang die hexadezimale Sequenz sein muss.  
   
-1.  Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen <`machineKey`>-Eintrag, den Sie für jede Berichts-Manager-Instanz in der Bereitstellung für horizontales Skalieren in die Datei Web.config einfügen können.  
+1.  Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen <`machineKey`>-Eintrag, der Sie in der Datei "Web.config" für jede Berichts-Manager-Instanz in der Bereitstellung für horizontales Skalieren einfügen können.  
   
      Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in die Konfigurationsdateien, denn die Schlüsselwerte sind ungültig.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "56042809"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  Öffnen Sie die Datei „Web.config“ für den Berichts-Manager, und fügen Sie im Abschnitt <`system.web`> das <`machineKey`>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+2.  Öffnen Sie die Datei "Web.config" für den Berichts-Manager und in der <`system.web`> im Abschnitt fügen Sie die <`machineKey`>-Element, das Sie erstellt haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
   
 3.  Speichern Sie die Datei.  
   
 4.  Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
-5.  Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Report Manager-Ordnern identische <`machineKey`>-Elemente im Abschnitt <`system.web`> enthalten.  
+5.  Stellen Sie sicher, dass alle Web.Config-Dateien in den \Reporting Services\Report-Manager-Ordnern identische enthalten <`machineKey`>-Elemente in der <`system.web`> Abschnitt.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> So konfigurieren Sie HostName und UrlRoot  
  Wenn Sie eine Berichtsserverbereitstellung für horizontales Skalieren in einem NLB-Cluster konfigurieren möchten, müssen Sie den Namen eines einzelnen virtuellen Servers definieren, der einen einzelnen Zugriffspunkt für den Servercluster bietet. Registrieren Sie den Namen dieses virtuellen Servers dann beim DNS-Server in der Umgebung.  
@@ -108,9 +108,9 @@ ms.locfileid: "56042809"
   
 1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen Sie nach <`Hostname`>, <`ReportServerUrl`> und <`UrlRoot`>, und überprüfen Sie den Hostnamen für jede Einstellung. Wenn der Wert nicht dem erwarteten Hostnamen entspricht, ersetzen Sie ihn durch den richtigen Hostnamen.  
+2.  Finden Sie <`Hostname`>, <`ReportServerUrl`>, und <`UrlRoot`>, und überprüfen Sie den Hostnamen jeder Einstellung. Wenn der Wert nicht dem erwarteten Hostnamen entspricht, ersetzen Sie ihn durch den richtigen Hostnamen.  
   
- Wenn Sie das Reporting Services-Konfigurationstool starten, nachdem Sie diese Änderungen vorgenommen haben, ändert das Tool möglicherweise die Einstellungen für <`ReportServerUrl`> in den Standardwert. Bewahren Sie immer eine Sicherungskopie der Konfigurationsdateien für den Fall auf, dass Sie diese durch die Version ersetzen müssen, die die gewünschten Einstellungen enthält.  
+ Wenn Sie das Reporting Services-Konfigurationstool starten, nachdem diese Änderungen vorgenommen wurden, ändert das Tool möglicherweise die <`ReportServerUrl`> Einstellungen auf den Standardwert. Bewahren Sie immer eine Sicherungskopie der Konfigurationsdateien für den Fall auf, dass Sie diese durch die Version ersetzen müssen, die die gewünschten Einstellungen enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

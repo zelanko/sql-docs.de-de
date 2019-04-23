@@ -25,15 +25,15 @@ f1_keywords:
 - "10527"
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f174d2ba00211459d8ef7d7c0d61a0affa0b38ae
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936656"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  
@@ -247,7 +247,7 @@ ms.locfileid: "58657694"
   
     -   Geben Sie den minimalen und maximalen Zoomwert für die Anzeige der Ebene ein.  
   
-    -   Dies ist optional. Geben Sie einen Wert für die Transparenz ein.  
+    -   Optional. Geben Sie einen Wert für die Transparenz ein.  
   
      Sie können die Ebene auch bedingt ausblenden. Weitere Informationen finden Sie unter [Ausblenden eines Elements &#40;Berichts-Generator und SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
 

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017926"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958476"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
   Erweiterter Schutz ist eine Gruppe von Erweiterungen zu den letzten Versionen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Windows-Betriebssystems. Erweiterter Schutz verbessert den Schutz der Anmeldeinformationen und der Authentifizierung durch Anwendungen. Das Feature selbst bietet keinen Schutz gegen bestimmte Angriffe, z.B. die Anmeldeinformationen-Weiterleitung, sie stellt jedoch eine Infrastruktur für Anwendungen wie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bereit, um erweiterten Schutz für die Authentifizierung zu erzwingen.  
@@ -44,7 +44,7 @@ ms.locfileid: "56017926"
 > 
 >  Die Dokumentation einer Datenzugriffstechnologie sollte Informationen zu Unterstützung des erweiterten Schutzes enthalten.  
   
-### <a name="upgrade"></a>UPGRADE  
+### <a name="upgrade"></a>Aktualisieren  
   
 -   Durch das Aktualisieren eines [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Servers auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] werden der Datei `rsreportserver.config` Konfigurationseinstellungen mit Standardwerten hinzugefügt. Wenn die Einstellungen bereits vorhanden waren die [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation behalten Sie sie in der `rsreportserver.config` Datei.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "56017926"
 |Einstellung|Description|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Gibt den Grad der Erzwingung des erweiterten Schutzes an. Gültige Werte sind `Off`, `Allow` und `Require`.<br /><br /> Der Standardwert ist `Off`.<br /><br /> Der Wert `Off` gibt keine Kanal- oder Dienstbindungsüberprüfung an.<br /><br /> Der Wert `Allow` unterstützt erweiterten Schutz, erfordert ihn aber nicht. Der Wert "Zulassen" gibt Folgendes an:<br /><br /> Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen. Wie Schutz erzwungen wird, wird durch das Festlegen von `RsWindowsExtendedProtectionScenario` bestimmt.<br /><br /> Der Authentifizierung ist für Anwendungen zulässig, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen.<br /><br /> Der Wert `Require` gibt Folgendes an:<br /><br /> Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen.<br /><br /> Die Authentifizierung ist **nicht** für Anwendungen, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen zulässig.|  
-|`RsWindowsExtendedProtectionScenario`|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beides. Gültige Werte sind `Any`, `Proxy` und `Direct`.<br /><br /> Der Standardwert ist `Proxy`.<br /><br /> Der Wert `Any` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> Der Wert `Proxy` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> Der Wert `Direct` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Diese Einstellung wird ignoriert, wenn `RsWindowsExtendedProtectionLevel` auf `OFF` festgelegt ist.|  
+|`RsWindowsExtendedProtectionScenario`|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beides. Gültige Werte sind `Any`, `Proxy` und `Direct`.<br /><br /> Der Standardwert ist `Proxy`.<br /><br /> Der Wert `Any` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> Der Wert `Proxy` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> Der Wert `Direct` gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Diese Einstellung wird ignoriert, wenn `RsWindowsExtendedProtectionLevel` nastaven NA hodnotu `OFF`.|  
   
  Beispieleinträge in der Konfigurationsdatei `rsreportserver.config`:  
   

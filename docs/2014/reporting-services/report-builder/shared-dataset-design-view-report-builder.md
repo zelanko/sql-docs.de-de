@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292585"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940406"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   Das Entwurfsfenster für freigegebene Datasets dient zum Erstellen von Datasetabfragen, die Sie für andere Benutzer freigeben können. Im Fenster können Sie eine freigegebene Datenquelle auswählen, Eigenschaften für das freigegebene Dataset angeben und im Abfrage-Designer eine Abfrage erstellen.  
@@ -26,7 +26,7 @@ ms.locfileid: "56292585"
  Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Menüband  
- Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Befehle sind in die folgenden logischen Gruppen unterteilt: Verbindung, Dataset und Abfrage-Designer.  
+ Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Befehle sind in der folgenden logischen Gruppen organisiert: Verbindung, Dataset und Abfrage-Designer.  
   
 ### <a name="connection"></a>Verbindung  
  Verwenden Sie die Schaltfläche **Auswählen** in der Gruppe "Verbindung", um eine freigegebene Datenquelle im Bericht auszuwählen, oder navigieren Sie zu einer freigegebenen Datenquelle auf dem Berichtsserver.  

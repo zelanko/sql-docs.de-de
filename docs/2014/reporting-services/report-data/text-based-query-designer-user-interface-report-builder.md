@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 42be2520e6961dcf990635a18fcc7d237876b869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9c0ec55435c54b1281473e98d137cd8cc86ef4da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010341"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955496"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)
   Verwenden Sie den textbasierten Abfrage-Designer, um eine Abfrage mithilfe der Abfragesprache zu verwenden, die von der Datenquelle unterstützt wird, führen Sie die Abfrage aus, und zeigen Sie die Ergebnisse zur Entwurfszeit an. Sie können mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, Abfrage- oder Befehlssyntaxen für benutzerdefinierte Datenverarbeitungserweiterungen und Abfragen angeben, die als Ausdrücke angegeben sind. Da der textbasierte Abfrage-Designer die Abfrage nicht zuvor verarbeitet und eine beliebige Abfragesyntax aufnehmen kann, handelt es sich hierbei um das standardmäßige Abfrage-Designer-Tool für viele Datenquellentypen.  
@@ -53,7 +53,7 @@ ms.locfileid: "56010341"
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|Dataseteigenschaften|Zeigt den [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfragetext an. In diesem Bereich schreiben oder bearbeiten Sie eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage.|  
+|Abfrage|Zeigt den [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfragetext an. In diesem Bereich schreiben oder bearbeiten Sie eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage.|  
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  
@@ -76,7 +76,7 @@ SELECT Name FROM Person.ContactType
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|Dataseteigenschaften|Zeigt den Namen der gespeicherten Prozedur und eventueller Eingabeparameter an.|  
+|Abfrage|Zeigt den Namen der gespeicherten Prozedur und eventueller Eingabeparameter an.|  
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  

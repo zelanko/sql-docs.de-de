@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017261"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956726"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt integrierte Sicherheitsfunktionen bereit, mit denen Sie Zugriff von SharePoint-Websites und -Bibliotheken auf Berichtsserverelemente ermöglichen können. Wenn Sie Benutzern bereits Berechtigungen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge. Mit den vorhandenen Berechtigungen können Sie Berichtsdefinitionen und andere Dokumente hochladen, Berichte anzeigen, Abonnements erstellen und Elemente verwalten.  

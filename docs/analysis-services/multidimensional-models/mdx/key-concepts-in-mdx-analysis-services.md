@@ -1,6 +1,6 @@
 ---
 title: Grundlegende Konzepte in MDX (Analysis Services) | Microsoft-Dokumentation
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527825"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962166"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527825"
   
  ![PivotTable mit alle-Element als Legende](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "PivotTable mit alle-Element als Legende")  
   
- Erweitern Sie die Hierarchie, um bis zur niedrigsten Ebene vorzudringen. Dieses Element wird als **Blattelement**bezeichnet. Ein Blattelement ist ein Element einer Hierarchie, das keine untergeordneten Elemente besitzt. In diesem Beispiel ist Australien das Blattelement.  
+ Erweitern Sie die Hierarchie, um bis zur niedrigsten Ebene vorzudringen. Dieses Element wird als **Blattelement**bezeichnet. Ein Blattelement ist ein Element einer Hierarchie, das keine untergeordneten Elemente besitzt. In diesem Beispiel hat das Blattelement Südwesten ist.  
   
  ![PivotTable mit untergeordneten Element als Legende](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable mit untergeordneten Element als Legende")  
   
- Alle übergeordneten Elemente nennt man einfach **übergeordnetes Element**. Pazifik ist das übergeordnete Element von Australien.  
+ Alle übergeordneten Elemente nennt man einfach **übergeordnetes Element**. Vereinigte Staaten ist das übergeordnete Element des Südwesten.  
   
  **Komponenten einer Attributhierarchie**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527825"
 ## <a name="key-attributes"></a>Schlüsselattribute  
  Modelle sind Sammlungen miteinander verwandter Objekte, deren Zuordnungen mit Schlüsseln und Indizes verwaltet werden. Analysis Services-Modelle funktionieren auf dieselbe Weise. Für jede Dimension (Äquivalent zu Tabellen im relationalen Modell) existiert ein Schlüsselattribut. Das **Schlüsselattribut** wird in Fremdschlüssel-Beziehungen zur Faktentabelle (Measuregruppe) verwendet. Alle nicht-Schlüsselattribute in der Dimension werden (direkt oder indirekt) mit dem Schlüsselattribut verknüpft.  
   
- Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Stellen Sie sich Datumswerte vor: Für die täglichen Verkäufe brauchen Sie Datumswerte bis zum Tag. Für Kontingente reichen möglicherweise Quartalsangaben, aber wenn Ihre Analysedaten aus Rennergebnissen von Sportereignissen bestehen, benötigen Sie unter Umständen sogar Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
+ Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Berücksichtigen Sie Datumswerte aus: Für die täglichen Verkäufe müssen Sie die Werte, die bis zum Tag Datum; für Kontingente vierteljährlich kann ausreichend sein, aber wenn Ihre Analysedaten aus rennergebnissen von Sportereignissen besteht, die Auflösung möglicherweise sehr gut Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
   
  Währung ist ein weiteres Beispiel: eine finanzanwendung kann monetärer Werte aus vielen Dezimalstellen, verfolgen, während Ihrer lokalen Schule Kurator nur Werte vollständigen Dollarbetrag möglicherweise. Das Konzept der Körnung ist wichtig, um die Speicherung unnötiger Daten zu vermeiden. Indem Sie Millisekunden von einem Zeitstempel oder Cents von einem Verkaufsbetrag abschneiden, können Sie Speicherungs- und Verarbeitungszeit sparen, wenn der jeweilige Detailgrad für Ihre Analyse nicht relevant ist.  
   

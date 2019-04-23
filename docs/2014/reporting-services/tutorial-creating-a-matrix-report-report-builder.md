@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288412"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965696"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Erstellen eines Matrixberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Matrixbericht erstellen. Die Matrix besitzt geschachtelte Zeilen- und Spaltengruppen und eine angrenzende Spaltengruppe. Sie erhalten auch Informationen zum Formatieren von Spalten und zum Drehen von Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -117,7 +117,7 @@ ms.locfileid: "56288412"
   
 10. Klicken Sie auf **Weiter**.  
   
-##  <a name="Groups"></a> 2. Organisieren von Daten und Auswählen des Layouts und Formats mit dem Assistenten für neue Tabellen oder Matrix  
+##  <a name="Groups"></a> 2. Organisieren von Daten und Auswählen des Layouts und Formats aus dem Tabellen- oder Matrix-Assistenten  
  Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Daten bereit. Im Vorschaufenster des Assistenten können Sie das Ergebnis der Datengruppierung visualisieren, bevor Sie den Matrixentwurf abschließen.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>So organisieren Sie Daten in Gruppen und wählen ein Layout und ein Format aus  
@@ -160,7 +160,7 @@ ms.locfileid: "56288412"
   
 13. Klicken Sie auf **Fertig stellen**.  
   
-     Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Bereich Zeilengruppen werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Zeilengruppenbereich werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   

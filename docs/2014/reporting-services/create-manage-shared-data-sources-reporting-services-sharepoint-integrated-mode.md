@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fdfcdae32c4709a19833612e16a4956f76c78c5f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f4920a345d3be827f369257be231654cf193fd04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295128"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949396"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)
   Beim Ausführen eines Berichts aus einer SharePoint-Bibliothek können die Verbindungsinformationen innerhalb des Berichts oder in einer externen Datei definiert werden, die mit dem Bericht verknüpft ist. Falls die Verbindungsinformationen in den Bericht eingebettet sind, wird die Datenquelle als benutzerdefinierte Datenquelle bezeichnet. Sind die Verbindungsinformationen in einer externen Datei definiert, wird sie als freigegebene Datenquelle bezeichnet. Bei der externen Datei kann es sich um eine RSDS-Datei (Report Server Data Source, Berichtsserver-Datenquellendatei) oder um eine Office Data Connection-Datei (ODC-Datei) handeln.  

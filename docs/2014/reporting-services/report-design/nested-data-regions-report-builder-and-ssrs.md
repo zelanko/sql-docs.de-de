@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297408"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938836"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
   Sie können einen Datenbereich wie ein Diagramm in einen anderen Datenbereich schachteln, z. B. in eine Matrix. Dies geschieht häufig, um Zusammenfassungen von Daten in kompakter Form anzuzeigen oder eine visuelle Darstellung zusammen mit einer Tabellen- oder Matrixdarstellung bereitzustellen.  
@@ -90,7 +90,7 @@ ms.locfileid: "56297408"
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

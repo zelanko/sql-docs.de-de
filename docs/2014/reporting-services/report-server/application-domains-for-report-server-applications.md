@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012671"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933577"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wird der Berichtsserver als einzelner Dienst implementiert, der den Report Server-Webdienst, den Berichts-Manager und eine Hintergrundverarbeitungsanwendung umfasst. Jede Anwendung wird in einer eigenen Anwendungsdomäne innerhalb des einzelnen Berichtsserverprozesses ausgeführt. Größtenteils werden Anwendungsdomänen intern erstellt, konfiguriert und verwaltet. Es ist jedoch nützlich zu wissen, wie Wiederverwendungsvorgänge für Berichtsserver-Anwendungsdomänen auftreten, wenn Sie Leistungs- oder Speicherprobleme untersuchen oder Dienstausfälle beheben müssen.  

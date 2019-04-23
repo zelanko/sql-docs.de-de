@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013701"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940446"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Skripts für Bereitstellungs- und Verwaltungsaufgaben
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die Verwendung von Skripts, um routinemäßige Installations-, Bereitstellungs- und Verwaltungsaufgaben zu automatisieren. Die Bereitstellung eines Berichtsservers stellt einen aus mehreren Schritten bestehenden Vorgang dar. Sie müssen mehrere Tools und Prozesse verwenden, um eine Bereitstellung zu konfigurieren. Es gibt kein einzelnes Programm oder Verfahren, das zum Automatisieren aller zugehörigen Aufgaben verwendet werden kann.  

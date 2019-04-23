@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 590b8f44e1d3ba064176bf8944c4011fbf52ab53
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297968"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937698"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Angeben von Pfaden zu externen Elementen (Berichts-Generator und SSRS)
   Sie geben Pfade in Berichtselementeigenschaften an, um auf Elemente wie Drillthroughberichte, Unterberichte und Bilddateien zu verweisen, die nicht in der Berichtsdefinitionsdatei enthalten und auf einem Berichtsserver gespeichert sind (externe Elemente).  
@@ -42,7 +42,7 @@ ms.locfileid: "56297968"
   
     -   **Auf einem Berichtsserver:** Der Pfad beginnt mit **/**, dem Basisordner. Beispiel: /Reports/AllSubreports/Subreport1.  
   
-    -   **In einer SharePoint-Website:** Sie müssen den Namen des Berichts in einem Ausdruck, mit der vollständigen URL des Elements und die Dateinamenerweiterung .rdl angeben. Beispiel: `="http://server/site/library/folder/Report1.rdl"`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+    -   **Auf einer SharePoint-Website:** Sie müssen den Berichtsnamen in einem Ausdruck angeben, mit der vollständigen URL des Elements und der Dateierweiterung ".rdl". Beispiel: `="http://server/site/library/folder/Report1.rdl"`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen eines externen Bilds &#40;Berichts-Generator und SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   

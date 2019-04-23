@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012891"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946076"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner-Konfigurationsdatei
   In der Datei RSReportDesigner.config werden Einstellungen zu Rendering- und Datenverarbeitungserweiterungen gespeichert, die in Berichts-Designer verfügbar sind. Die Informationen zu Datenverarbeitungserweiterungen werden im `Data`-Element gespeichert. Die Informationen zu Renderingerweiterungen werden im `Render`-Element gespeichert. Das `Designer`-Element zählt die in Berichts-Designer verwendeten Abfrage-Generatoren auf.  
@@ -59,7 +59,7 @@ ms.locfileid: "56012891"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Der Sicherheitsgrad der Webdienstverbindung. Gültige Werte sind 0 bis 3, wobei 0 die geringste Sicherheit bietet. Weitere Informationen finden Sie unter [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |`InstanceName`|Ein Bezeichner für den Vorschauserver. Ändern Sie diesen Wert nicht.|  
-|`SessionCookies`|Gibt an, ob der Berichtsserver Sitzungsinformationen mithilfe von Browsercookies verwaltet. Gültige Werte sind `true` und `false`. Der Standardwert ist `true`. Wenn Sie diesen Wert auf false festlegen, werden Sitzungsdaten in der **reportservertempdb** -Datenbank gespeichert.|  
+|`SessionCookies`|Gibt an, ob der Berichtsserver Sitzungsinformationen mithilfe von Browsercookies verwaltet. Gültige Werte sind `true` und `false`. Die Standardeinstellung ist `true`. Wenn Sie diesen Wert auf false festlegen, werden Sitzungsdaten in der **reportservertempdb** -Datenbank gespeichert.|  
 |`SessionTimeoutMinutes`|Gibt an, für welchen Zeitraum ein Sitzungscookie gültig ist. Der Standardwert ist 3 Minuten.|  
 |`PolicyLevel`|Gibt die Sicherheitsrichtlinien-Konfigurationsdatei an. Der gültige Wert ist Rspreviewpolicy.config. Weitere Informationen finden Sie unter [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Ist der Wert auf `True` festgelegt, speichert Berichts-Designer Daten in einer Cachedatei auf dem lokalen Computer. Gültige Werte sind `True` (Standard) und `False`. Weitere Informationen finden Sie unter [Previewing Reports](../reports/previewing-reports.md).|  

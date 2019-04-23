@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e41b76481748175a68b4a0a0a4877c7c17147788
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288568"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942286"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
   Die integrierte Feldauflistung, die sowohl die `Globals`-Auflistung als auch die `User`-Auflistung umfasst, stellt globale Werte dar, die von Reporting Services beim Verarbeiten eines Berichts bereitgestellt werden. Die `Globals`-Auflistung enthält Werte wie den Namen des Berichts, die Startzeit der Berichtsverarbeitung und die aktuellen Seitenzahlen für den Berichtskopf oder -fuß. Die `User`-Auflistung stellt die Benutzer-ID und Spracheinstellungen bereit. Diese Werte können in Ausdrücken verwendet werden, um Ergebnisse in einem Bericht zu filtern.  
@@ -81,7 +81,7 @@ ms.locfileid: "56288568"
  Weitere Informationen zur Unterstützung mehrerer Sprachen in einem Bericht finden Sie unter „Überlegungen zu Lösungsentwürfen für mehrsprachige oder globale Bereitstellungen“ in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### <a name="using-locale-settings"></a>Verwenden von Gebietsschemaeinstellungen  
- Sie können Ausdrücke verwenden, um auf die Gebietsschemaeinstellungen auf einem Clientcomputer zu verweisen. Mithilfe des `User.Language`-Wertes können Sie bestimmen, wie ein Bericht für den Benutzer angezeigt wird. Beispielsweise können Sie einen Bericht erstellen, in dem je nach Gebietsschemawert ein unterschiedlicher Abfrageausdruck verwendet wird. Die Abfrage kann z. B. so geändert werden, dass abhängig von der zurückgegebenen Sprache lokalisierte Informationen aus unterschiedlichen Spalten abgerufen werden. Sie können auch in den Spracheinstellungen des Berichts oder Berichtselements einen Ausdruck verwenden, der auf dieser Variablen basiert.  
+ Sie können Ausdrücke verwenden, um auf die Gebietsschemaeinstellungen auf einem Clientcomputer zu verweisen. Mithilfe des `User.Language`-Werts können Sie bestimmen, wie ein Bericht für den Benutzer angezeigt wird. Beispielsweise können Sie einen Bericht erstellen, in dem je nach Gebietsschemawert ein unterschiedlicher Abfrageausdruck verwendet wird. Die Abfrage kann z. B. so geändert werden, dass abhängig von der zurückgegebenen Sprache lokalisierte Informationen aus unterschiedlichen Spalten abgerufen werden. Sie können auch in den Spracheinstellungen des Berichts oder Berichtselements einen Ausdruck verwenden, der auf dieser Variablen basiert.  
   
 > [!NOTE]  
 >  Wenn Sie die Spracheinstellungen eines Berichts ändern, müssen Sie darauf achten, dass dies keine Probleme bei der Anzeige verursacht. Durch das Ändern der Gebietsschemaeinstellung des Berichts kann beispielsweise das Datumsformat im Bericht geändert werden, gleichzeitig ändert sich jedoch möglicherweise auch das Währungsformat. Falls kein Konvertierungsprozess für die Währung installiert ist, wird möglicherweise das falsche Währungssymbol im Bericht angezeigt. Sie können dies vermeiden, indem Sie die Sprachinformationen für die einzelnen Elemente festlegen, die Sie ändern möchten, oder indem Sie das Element mit den Währungsdaten auf eine bestimmte Sprache festlegen.  
