@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035081"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949106"
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  
@@ -114,7 +114,7 @@ ms.locfileid: "56035081"
   
 17. Wählen Sie eine der folgenden zwei Cacheoptionen aus, und konfigurieren Sie die Ablaufzeit wie folgt:  
   
-    -   Wenn die zwischengespeicherte Kopie nach einem bestimmten Zeitraum ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Diese Kopie soll nach der folgenden Anzahl von Minuten ablaufen.** Geben Sie die Anzahl von Minuten für den Berichtsablauf ein.  
+    -   Wenn die zwischengespeicherte Kopie nach einem bestimmten Zeitraum ablaufen soll, klicken Sie auf **eine temporäre Kopie des Berichts Zwischenspeichern. Diese Kopie soll nach der folgenden Anzahl von Minuten ablaufen.** Geben Sie die Anzahl von Minuten für den Berichtsablauf ein.  
   
     -   Wenn die zwischengespeicherte Kopie nach einem Zeitplan ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Die Kopie des Berichts läuft gemäß dem folgenden Zeitplan ab.** Klicken Sie auf **Konfigurieren**, oder wählen Sie einen freigegebenen Zeitplan aus, um einen Zeitplan für den Berichtsablauf festzulegen.  
   

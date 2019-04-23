@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ExceptionMessageBox class, about ExceptionMessageBox class
@@ -19,12 +17,12 @@ ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2417978fa053d2d6cb030149993a54013faa75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148667"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155126"
 ---
 # <a name="exception-message-box-programming"></a>Programmierung eines Ausnahmemeldungsfelds
   Das Ausnahmemeldungsfeld ist eine programmgesteuerte Schnittstelle, die mit installiert wird, und verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Komponenten. Das Ausnahmemeldungsfeld ist eine unterstützte verwaltete Assembly, die Sie in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen bedeutend zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen. Weil das Ausnahmemeldungsfeld von allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)] installiert wird, können Sie es ohne zusätzliche Konfiguration auf jedem Computer verwenden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientkomponenten installiert wurden.  

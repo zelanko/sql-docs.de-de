@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -23,12 +21,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507789"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157597"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Speichermodi und Verarbeitung von Partitionen
   Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
@@ -76,9 +74,9 @@ ms.locfileid: "52507789"
   
 -   Die Gesamtgröße des Indexschlüssels in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]darf 900 Bytes nicht überschreiten. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] implementiert diese Bedingung anhand von Schlüsselspalten mit fester Länge, wenn die CREATE INDEX-Anweisung verarbeitet wird. Falls der Indexschlüssel jedoch Spalten variabler Länge enthält, überprüft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Bedingung auch bei jedem Update der Basistabellen. Da unterschiedliche Aggregationen unterschiedliche Sichtdefinitionen aufweisen, kann die ROLAP-Verarbeitung mithilfe indizierter Sichten je nach Aggregationsentwurf erfolgreich verlaufen oder fehlschlagen.  
   
--   Für die Sitzung, in der die indizierte Sicht erstellt wird, müssen die folgenden Optionen den Wert ON aufweisen: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING und ANSI_WARNING. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden.  
+-   Die Sitzung, erstellt die indizierte Sicht muss die folgenden Optionen auf ON festgelegt haben: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING und ANSI_WARNING. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden.  
   
--   Für die Sitzung, in der die indizierte Sicht erstellt wird, muss die folgende Option den Wert OFF aufweisen: NUMERIC_ROUNDABORT. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden.  
+-   Die Sitzung, erstellt die indizierte Sicht muss die folgende Option auf OFF festgelegt haben: NUMERIC_ROUNDABORT. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden.  
   
 ## <a name="holap"></a>HOLAP  
  Der Speichermodus HOLAP kombiniert Attribute von MOLAP und ROLAP. Wie bei MOLAP bewirkt auch HOLAP, dass die Aggregationen der Partition in einer mehrdimensionalen Struktur in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert werden. Die Verwendung von HOLAP führt nicht dazu, dass eine Kopie der Quelldaten gespeichert wird. Bei Abfragen, die lediglich auf zusammengefasste Daten in den Aggregationen einer Partition zugreifen, ist HOLAP das Äquivalent zu MOLAP. Abfragen, die Quelldaten zugreifen – beispielsweise sollten Sie eine atomare Cubezelle Drilldown für den es keine Aggregation Daten muss Daten aus der relationalen Datenbank abgerufen werden und werden nicht so schnell, wie dies der Fall wäre, wenn die Quelldaten in der MOLAP-Structur gespeichert wurden e. Beim Speichermodus HOLAP werden Benutzer normalerweise erhebliche Unterschiede bei den Abfragezeiten feststellen, je nachdem, ob die Abfrage anhand das Caches oder mittels Aggregationen aufgelöst werden kann oder ob hierzu die Quelldaten selbst benötigt werden.  

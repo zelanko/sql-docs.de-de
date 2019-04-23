@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618177"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159006"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -71,18 +71,22 @@ Diese Inventur kann eine von zwei Formen aufweisen:
 - SQL Server-Tabelle
 
 ### <a name="if-using-a-csv-file"></a>Wenn Sie eine CSV-Datei verwenden.
+
 > [!IMPORTANT]
->
 > Stellen Sie sicher, dass die Inventory-Datei als durch Trennzeichen getrennte Datei (CSV) gespeichert wird.
 >
 > Für Standardinstanzen müssen Sie den Namen der Instanz auf MSSQLServer festgelegt.
->
+
 
 Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwei Spalten mit Daten per Push – **Instanzname** und **Datenbanknamen**, und dass die Spalten keine Kopfzeilen enthalten.
  
  ![Inhalt der CSV-Datei](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>Bei Verwendung von SQL Server-Tabelle
+### <a name="if-using-a-sql-server-table"></a>Wenn mithilfe einer SQL Server-Tabelle
+
+> [!IMPORTANT]
+> Für Standardinstanzen müssen Sie den Namen der Instanz auf MSSQLServer festgelegt.
+
 Erstellen Sie eine Datenbank namens **EstateInventory** und eine Tabelle namens **DatabaseInventory**. Die Tabelle mit den Inventurdaten kann eine beliebige Anzahl von Spalten aufweisen, solange die folgende vier Spalten vorhanden sind:
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-A
 
 1. Öffnen Sie die DMA-Berichte Power BI-Vorlage in Power BI Desktop.
 2. Geben Sie die Serverdetails, die auf Ihre **DMAWarehouse** Datenbank, und wählen Sie dann **Load**.
-   
-      ![Geladene DMA Berichte Power BI-Vorlage](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![Geladene DMA Berichte Power BI-Vorlage](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** Datenbank daraufhin mit einem Bericht, der dem folgenden ähnelt.
 

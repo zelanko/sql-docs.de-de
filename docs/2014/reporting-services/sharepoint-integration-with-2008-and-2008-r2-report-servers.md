@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc06dc9c708354e863c37d6067a2355492d4cddd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024291"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945306"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint-Integration in Berichtsserver der Versionen 2008 und 2008 R2
   Mit der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurde eine Architektur eingeführt, bei der der SharePoint-Modus jetzt auf einem gemeinsamen SharePoint-Dienst basiert. Verwaltung von der neuen Funktionen in der SharePoint-Zentraladministration abgeschlossen ist, auf die **Dienste verwalten** und **Manager-Dienstanwendungen** Seiten. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vorherigen-Architektur für SharePoint-Integration wird weiterhin unterstützt, mit der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in für SharePoint 2010-Produkte, sodass Sie SharePoint 2010 mit früheren Versionen eines Berichtsservers integrieren können.  

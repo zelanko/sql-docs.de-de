@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
@@ -15,15 +13,15 @@ ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164110"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157936"
 ---
 # <a name="program-exception-message-box"></a>Programmieren eines Ausnahmemeldungsfelds
-  Können das Ausnahmemeldungsfeld in Ihren Anwendungen wesentlich mehr Kontrolle über Nachrichten als mit der <xref:System.Windows.Forms.MessageBox> Klasse. Weitere Informationen finden Sie unter [Ausnahme Message Box-Programmierung](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Weitere Informationen zum Abrufen und die DLL-Ausnahme Assembly bereitstellen, finden Sie unter [Bereitstellen einer Ausnahmemeldungsfeld-Anwendung](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
+  Mit dem Ausnahmemeldungsfeld können Sie in Ihren Anwendungen das Verhalten von Meldungen erheblich besser bestimmen als mit der <xref:System.Windows.Forms.MessageBox>-Klasse. Weitere Informationen finden Sie unter [Ausnahme Message Box-Programmierung](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Weitere Informationen zum Abrufen und Bereitstellen der DLL-Assembly für das Ausnahmemeldungsfeld finden Sie unter [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -35,9 +33,9 @@ ms.locfileid: "48164110"
   
 3.  Erstellen Sie einen try/catch-Block, um die erwartete Ausnahme zu behandeln.  
   
-4.  In der `catch` blockieren, erstellen Sie eine Instanz von der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> Klasse. Übergeben Sie die <xref:System.Exception> Objekt behandelt, indem die `try` - `catch` Block.  
+4.  Erstellen Sie innerhalb des `catch`-Blocks eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Übergeben Sie die <xref:System.Exception> Objekt behandelt, indem die `try` - `catch` Block.  
   
-5.  (Optional) Legen Sie eine oder mehrere der folgenden Eigenschaften auf <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+5.  (Optional) Legen Sie eine oder mehrere der folgenden Eigenschaften für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> fest:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> Enumeration, die im Ausnahmemeldungsfeld anzuzeigenden Schaltflächen angibt.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48164110"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> Enumeration, die das Symbol für die Anzeige im Ausnahmemeldungsfeld angibt.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
 7.  (Optional) Beachten Sie den Wert des zurückgegebenen <xref:System.Windows.Forms.DialogResult> Enumeration, die bei Bedarf, um zu bestimmen, welche Schaltfläche der Benutzer geklickt haben.  
   
@@ -57,9 +55,9 @@ ms.locfileid: "48164110"
   
 2.  (Optional) Hinzufügen einer `using` (c#) oder `Imports` -Anweisung (Visual Basic .NET) verwenden die <xref:Microsoft.SqlServer.MessageBox> Namespace.  
   
-3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> -Klasse. Übergeben Sie den Nachrichtentext als eine <xref:System.String> Wert.  
+3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> -Klasse. Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
-4.  (Optional) Legen Sie eine oder mehrere der folgenden Eigenschaften auf <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+4.  (Optional) Legen Sie eine oder mehrere der folgenden Eigenschaften für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> fest:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> Enumeration, die im Ausnahmemeldungsfeld anzuzeigenden Schaltflächen angibt.  
   
@@ -71,9 +69,9 @@ ms.locfileid: "48164110"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> Enumeration, die das Symbol für die Anzeige im Ausnahmemeldungsfeld angibt.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
-6.  (Optional) Beachten Sie den Wert des zurückgegebenen <xref:System.Windows.Forms.DialogResult> Enumeration, die bei Bedarf, um zu bestimmen, welche Schaltfläche der Benutzer geklickt haben.  
+6.  (Optional) Notieren Sie den Wert der zurückgegebenen <xref:System.Windows.Forms.DialogResult>-Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat.  
   
 #### <a name="to-display-the-exception-message-box-with-customized-buttons"></a>So zeigen Sie das Ausnahmemeldungsfeld mit benutzerdefinierten Schaltflächen an  
   
@@ -85,13 +83,13 @@ ms.locfileid: "48164110"
   
     -   Übergeben Sie die <xref:System.Exception> Objekt behandelt, indem eine `try` - `catch` Block.  
   
-    -   Übergeben Sie den Nachrichtentext als eine <xref:System.String> Wert.  
+    -   Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
-4.  Gruppe, die einen der folgenden für Werte <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>:  
+4.  Legen Sie für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> einen der folgenden Werte fest:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -Zeigt die **Abbrechen**, **wiederholen**, und **ignorieren** Schaltflächen.  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> -Zeigt benutzerdefinierte Schaltflächen an.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - zeigt benutzerdefinierte Schaltflächen an.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK> -Zeigt die **OK** Schaltfläche.  
   
@@ -103,11 +101,11 @@ ms.locfileid: "48164110"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -Zeigt **Ja**, **keine**, und **Abbrechen** Schaltflächen.  
   
-5.  (Optional) Wenn Sie benutzerdefinierte Schaltflächen verwenden, rufen Sie eine der Überladungen der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> Methode, um Text für bis zu fünf benutzerdefinierte Schaltflächen anzugeben.  
+5.  (Optional) Wenn Sie benutzerdefinierte Schaltflächen verwenden, rufen Sie eine der Überladungen der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A>-Methode auf, um Text für bis zu fünf benutzerdefinierte Schaltflächen anzugeben.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
-7.  (Optional) Beachten Sie den Wert des zurückgegebenen <xref:System.Windows.Forms.DialogResult> Enumeration, die bei Bedarf, um zu bestimmen, welche Schaltfläche der Benutzer geklickt haben. Wenn Sie benutzerdefinierte Schaltflächen verwenden, beachten Sie den Wert <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> für die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> Eigenschaft, um zu ermitteln, welche benutzerdefinierte den Benutzer geklickt haben.  
+7.  (Optional) Notieren Sie den Wert der zurückgegebenen <xref:System.Windows.Forms.DialogResult>-Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat. Wenn Sie benutzerdefinierte Schaltflächen verwenden, notieren Sie den Wert von <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> für die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A>-Eigenschaft, um zu ermitteln, auf welche benutzerdefinierte Schaltfläche der Benutzer geklickt hat.  
   
 #### <a name="to-allow-users-to-decide-whether-to-show-the-exception-message-box"></a>So ermöglichen Sie Benutzern die Entscheidung darüber, ob das Ausnahmemeldungsfeld angezeigt werden soll  
   
@@ -119,23 +117,23 @@ ms.locfileid: "48164110"
   
     -   Übergeben Sie die <xref:System.Exception> Objekt behandelt, indem eine `try` - `catch` Block.  
   
-    -   Übergeben Sie den Nachrichtentext als eine <xref:System.String> Wert.  
+    -   Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
-4.  Legen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> Eigenschaft `true`.  
+4.  Legen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> -Eigenschaft auf `true`fest.  
   
-5.  (Optional) Geben Sie den Text mit der Frage, ob für das Ausnahmemeldungsfeld angezeigt werden <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>. Der Standardtext lautet: "Diese Meldung nicht mehr anzeigen."  
+5.  (Optional) Geben Sie den Text an, mit dem der Benutzer aufgefordert wird, zu entscheiden, ob das Ausnahmemeldungsfeld für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A> erneut angezeigt werden soll. Der Standardtext lautet: "Diese Meldung nicht mehr anzeigen."  
   
-6.  Wenn Sie die Entscheidung des Benutzers nur für die Dauer der die Ausführung der Anwendung beibehalten möchten, legen Sie den Wert der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> in einen globalen <xref:System.Boolean> Variable. Werten Sie diesen Wert aus, bevor Sie eine Instanz des Ausnahmemeldungsfelds erstellen.  
+6.  Wenn die Entscheidung des Benutzers nur für die Dauer der Anwendungsausführung gültig sein soll, legen Sie den Wert von <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> auf eine globale <xref:System.Boolean>-Variable fest. Werten Sie diesen Wert aus, bevor Sie eine Instanz des Ausnahmemeldungsfelds erstellen.  
   
 7.  Wenn Sie die Entscheidung eines Benutzers dauerhaft speichern müssen, gehen Sie wie folgt vor:  
   
-    1.  Rufen Sie die CreateSubKey-Methode, um einen benutzerdefinierten Registrierungsschlüssel zu öffnen, die Ihre Anwendung verwendet, und legen <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> auf das zurückgegebene RegistryKey-Objekt.  
+    1.  Rufen Sie die CreateSubKey-Methode auf, um einen von Ihrer Anwendung verwendeten benutzerdefinierten Registrierungsschlüssel zu öffnen, und legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> auf das zurückgegebene RegistryKey-Objekt fest.  
   
     2.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> auf den Namen des verwendeten Registrierungswerts fest.  
   
-    3.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> zu `true`.  
+    3.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> auf `true` fest.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Der angegebene Registrierungsschlüssel wird ausgewertet, und das Ausnahmemeldungsfeld wird nur angezeigt, wenn die im Registrierungsschlüssel gespeicherten Daten 0 sind. Wenn das Dialogfeld angezeigt wird und der Benutzer das Kontrollkästchen aktiviert, bevor er auf eine Schaltfläche klickt, werden die Daten im Registrierungsschlüssel auf 1 gesetzt.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Der angegebene Registrierungsschlüssel wird ausgewertet, und das Ausnahmemeldungsfeld wird nur angezeigt, wenn die im Registrierungsschlüssel gespeicherten Daten 0 sind. Wenn das Dialogfeld angezeigt wird und der Benutzer das Kontrollkästchen aktiviert, bevor er auf eine Schaltfläche klickt, werden die Daten im Registrierungsschlüssel auf 1 gesetzt.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verwendet das Ausnahmemeldungsfeld nur mit der **OK** Schaltfläche, um Informationen von einer Anwendungsausnahme anzuzeigen, die die behandelte Ausnahme sowie zusätzliche anwendungsspezifische Informationen enthält.  

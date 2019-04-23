@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Hinzufügen eines KPIS zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296448"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946018"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIS zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
   Ein Key Performance Indicator (KPI) ist ein messbarer Wert mit einer Aussagekraft für das Geschäft. In diesem Lernprogramm erfahren Sie, wie ein (KPI) in einen Bericht eingeschlossen wird. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status des KPI wird mit Farben, Messgeräten und Indikatoren angezeigt.  
   
  Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -45,9 +45,9 @@ ms.locfileid: "56296448"
 7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, erstellen Sie ein Dataset, und führen Sie den Assistenten, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Ungefähre Dauer dieses Lernprogramms: 15 Minuten.  
+ Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "56296448"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56296448"
   
 10. Klicken Sie auf **Weiter**.  
   
-##  <a name="CompleteWizard"></a> 2. Organisieren von Daten, Auswählen des Layouts und Formats mit dem Tabellen- oder Matrix-Assistenten  
+##  <a name="CompleteWizard"></a> 2. Organisieren von Daten, Auswählen des Layouts und Formats mit dem Tabellen- oder Matrixassistenten  
  Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Daten bereit. Im Vorschaufenster des Assistenten können Sie das Ergebnis der Datengruppierung visualisieren, bevor Sie den Tabellen- oder Matrixentwurf abschließen.  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>Um Daten in Gruppen organisieren möchten, wählen Sie ein Layout und einen Stil  
@@ -159,7 +159,7 @@ ms.locfileid: "56296448"
   
 12. Klicken Sie auf **Fertig stellen**.  
   
-     Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Im Bereich Zeilengruppen werden drei Zeilengruppen angezeigt: "Salesdate", Unterkategorie und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 13. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296448"
   
 1.  In der Tabelle mit der rechten Maustaste zwei Zellen nach unten aus dem `[Sum(Sales)]` Zelle (die Teilergebniszeile mit dem Umsatz für eine Unterkategorie), und klicken Sie dann auf **Textfeldeigenschaften**.  
   
-2.  In **füllen**, klicken Sie auf die **fx** neben der **Füllfarbe** aus und geben Sie den folgenden Ausdruck in der **Ausdruck festlegen für: BackgroundColor** Feld:  
+2.  In **füllen**, klicken Sie auf die **fx** neben der **Füllfarbe** aus und geben Sie den folgenden Ausdruck in der **Ausdruck festlegen für: BackgroundColor** ein:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

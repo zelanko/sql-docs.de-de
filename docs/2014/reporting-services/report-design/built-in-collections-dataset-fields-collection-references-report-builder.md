@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4717b1f8a905576d2f59657fd8ae8ad00396e3b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297428"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950136"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS)
   Jedes Dataset in einem Bericht enthält eine Fields-Sammlung. Bei der Fields-Sammlung handelt es sich um eine Gruppe von Feldern, die von der Datasetabfrage und zusätzlichen berechneten Feldern angegeben werden, die Sie erstellen. Nachdem Sie ein Dataset erstellt haben, wird die Feldauflistung im **Berichtsdatenbereich** angezeigt.  
@@ -41,7 +41,7 @@ ms.locfileid: "56297428"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Erkennen von fehlenden Feldern für dynamische Abfragen zur Laufzeit  
- Standardmäßig haben Elemente in der Fields-Sammlung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Die Abfrage kann zum Beispiel eine gespeicherte Prozedur aufrufen, bei der das Resultset in Abhängigkeit eines Eingabeparameters variiert, oder die Abfrage kann `SELECT * FROM` *\<Tabelle>* lauten und die Tabellendefinition ändern.  
+ Elemente in der Fields-Sammlung besitzen in der Standardeinstellung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Die Abfrage kann zum Beispiel eine gespeicherte Prozedur aufrufen, bei der das Resultset in Abhängigkeit eines Eingabeparameters variiert, oder die Abfrage kann `SELECT * FROM` *\<Tabelle>* lauten und die Tabellendefinition ändern.  
   
 > [!NOTE]  
 >  IsMissing erkennt für alle Datenquellentypen Änderungen des Datasetschemas zwischen Entwurfs- und Laufzeit. IsMissing kann nicht verwendet werden, um in einem mehrdimensionalen Cube leere Elemente zu erkennen und bezieht sich nicht um die MDX-Abfrage die Sprachkonzepte von `EMPTY` und `NON EMPTY`.  

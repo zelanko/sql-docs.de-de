@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356131"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953826"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
 Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen. Erhöht sich mit Prozessoren, die 10 oder mehr Kernen pro Socket enthält, verwenden die Software NUMA (Soft-NUMA), um die Hardware-NUMA-Knoten in der Regel aufgeteilt, Skalierbarkeit und Leistung.   
@@ -27,7 +27,6 @@ Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder So
 > Hot-Add-Prozessoren werden von Soft-NUMA nicht unterstützt.
   
 ## <a name="automatic-soft-numa"></a>Automatischer Soft-NUMA
-
 Ab SQL Server 2014 Service Pack 2, wenn die Datenbank-Engine-Server mehr als 8 physische Prozessoren beim Start erkennt, werden Soft-NUMA-Knoten automatisch erstellt, wenn das Ablaufverfolgungsflag 8079 als Startparameter aktiviert ist. Prozessorkerne mit Hyperthreading werden nicht berücksichtigt beim Zählen der physischer Prozessoren. Wenn die Anzahl der physischen Prozessoren, die erkannt, mehr als 8 pro Socket ist, wird die Datenbank-Engine-Dienst Soft-NUMA-Knoten erstellt, die im Idealfall enthalten 8 Kerne, jedoch kann auf 5 oder bis zu 9 logische Prozessoren pro Knoten ausfallen. Die Größe des Hardwareknotens kann durch eine CPU-Affinitätsmaske eingeschränkt werden. Die Anzahl von NUMA-Knoten wird nie die maximale Anzahl von unterstützten NUMA-Knoten übersteigen.
 
 Ohne das Ablaufverfolgungsflag wird Soft-NUMA standardmäßig deaktiviert. Sie können Soft-NUMA verwenden das Ablaufverfolgungsflag 8079. Nach der Änderung des Werts dieser Einstellung ist ein Neustart der Datenbank-Engine erforderlich, damit diese wirksam wird.
@@ -36,9 +35,12 @@ Die folgende Abbildung zeigt die Art der Informationen zu Soft-NUMA, die Sie in 
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 
+> [!NOTE]
+> Ab SQL Server 2016, die dieses Verhalten durch die Engine und das Ablaufverfolgungsflag 8079 gesteuert wird, hat keine Auswirkungen.
+
 ## <a name="manual-soft-numa"></a>Manueller Soft-NUMA
   
-So konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Soft-NUMA manuell verwenden zu können, müssen Sie die Registrierung, um eine Affinitätsmaske für die Knoten-Konfiguration hinzufügen bearbeiten. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (Die Verwendung von QWORD-Werten ist in Versionen vor Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht möglich.) Zum Konfigurieren von Soft-NUMA müssen Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu starten.  
+So konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Soft-NUMA manuell verwenden zu können, müssen Sie die Registrierung, um eine Affinitätsmaske für die Knoten-Konfiguration hinzufügen bearbeiten. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (Die Verwendung von QWORD-Werten ist in Versionen vor Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht möglich.) Muss neu gestartet werden die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Soft-NUMA konfigurieren.  
   
 > [!TIP]  
 >  Die Nummerierung der CPUs beginnt mit 0.  

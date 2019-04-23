@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148155"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156136"
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
   Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Dieselbe Speicherstruktur für Partitionen mit können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

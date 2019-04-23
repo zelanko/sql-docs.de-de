@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statefulness [XML for Analysis]
@@ -19,12 +17,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146235"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157376"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
   *Statusbehaftung* ist eine Bedingung, die während der die der Server beibehalten, die Identität und den Kontext eines Clients zwischen Methodenaufrufen werden. *Zustandsfreiheit* ist eine Bedingung, die während der der Server nicht mehr weiß hat der Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242188"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949996"
 ---
 # <a name="literals-ssis"></a>Literale (SSIS)
   Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Die Ausdrucksauswertung unterstützt eine Reihe von numerischen Literalen, wie z. B. ganze Zahlen, Dezimalzeichen und Gleitkommakonstanten. Außerdem unterstützt die Ausdrucksauswertung die long- und float-Suffixe, die die Behandlung von Werten durch die Ausdrucksauswertung angeben, sowie die wissenschaftliche Schreibweise bei numerischen Literalen.  

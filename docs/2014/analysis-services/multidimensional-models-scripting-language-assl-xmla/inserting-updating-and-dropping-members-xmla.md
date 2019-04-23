@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - inserting dimension members
@@ -21,12 +19,12 @@ ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1c30b916d910b93b53ae10a9eefaa19d45c957a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148025"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155486"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
   Können Sie die [einfügen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [aktualisieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), und [löschen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Mitgliedern aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff, finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

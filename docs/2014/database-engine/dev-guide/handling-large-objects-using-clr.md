@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350270"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155666"
 ---
 # <a name="handling-large-objects-using-clr"></a>Behandeln von großen Objekten mit CLR
   Das `HandlingLOBUsingCLR`-Beispiel für SQL Server veranschaulicht das Übertragen von LOBs (Large Objects) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem, das für den Server mithilfe von gespeicherten CLR (Common Language Runtime)-Prozeduren verfügbar ist. Dieses Beispiel veranschaulicht, wie Sie auf Dateien in serverseitigem Code zugreifen und dann aus CLR-basierten gespeicherten Prozeduren dynamische Abfragen und gespeicherte Prozeduren aufrufen. Darüber hinaus veranschaulicht es, wie Sie CLR-Methoden und CLR-Assemblys mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] registrieren und deren Registrierung aufheben.  

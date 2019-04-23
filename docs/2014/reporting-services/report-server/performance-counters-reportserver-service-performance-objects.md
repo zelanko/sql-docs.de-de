@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037611"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944546"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'
   In diesem Thema werden Leistungsindikatoren für die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Leistungsobjekte:  
@@ -68,7 +68,7 @@ ms.locfileid: "56037611"
 |`Logon Attempts/sec`|Die Rate der Anmeldeversuche.|  
 |`Logon Successes Total`|Die Anzahl erfolgreicher Anmeldungen für RSWindows-Authentifizierungstypen. Zu den RSWindows-Authentifizierungstypen gehören RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos und RSWindowsBasic. Der Wert 0 (null) stellt die benutzerdefinierte Authentifizierung dar.|  
 |`Logon Successes/sec`|Die Rate erfolgreicher Anmeldungen.|  
-|`Memory Pressure State`|Eine der folgenden Zahlen, von 1 bis 5, die den aktuellen Speicherzustand des Servers angeben:<br /><br /> 1: Keine Speicherauslastung<br /><br /> 2: Niedrige Speicherauslastung<br /><br /> 3: Mittlere Speicherauslastung<br /><br /> 4: Hohe Speicherauslastung<br /><br /> 5: Speicherauslastung überschritten|  
+|`Memory Pressure State`|Eine der folgenden Zahlen, von 1 bis 5, die den aktuellen Speicherzustand des Servers angeben:<br /><br /> 1: Keine speicherauslastung<br /><br /> 2: Niedrige speicherauslastung<br /><br /> 3: Mittlere speicherauslastung<br /><br /> 4: Hohe speicherauslastung<br /><br /> 5: Speicherauslastung überschritten|  
 |`Memory Shrink Amount`|Die Anzahl der Bytes, die der Server angefordert hat, um den belegten Speicher zu reduzieren.|  
 |`Memory Shrink Notifications/sec`|Die Anzahl der Benachrichtigungen, die der Server in der letzten Sekunde ausgibt, um den belegten Speicher zu reduzieren. Dieser Wert gibt an, wie oft der Server einen Speichermangel erfährt.|  
 |`Requests Disconnected`|Die Anzahl der Anforderungen, die aufgrund von Kommunikationsfehlern getrennt sind.|  

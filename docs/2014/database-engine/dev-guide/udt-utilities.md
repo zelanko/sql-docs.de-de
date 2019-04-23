@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372392"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157916"
 ---
 # <a name="udt-utilities"></a>UDT-Hilfsprogramme
   Das Beispiel "UDT-Hilfsprogramme" enthält eine Reihe von Hilfsprogrammfunktionen. Hierzu gehören u. a. Funktionen zum Verfügbarmachen von Assemblymetadaten für Transact-SQL, Beispiele für Streaming-Tabellenwertfunktionen, mit denen die Typen in einer Assembly als Tabelle zurückgegeben werden können, sowie Funktionen zum Zurückgeben von Feldern, Methoden und Eigenschaften in einem benutzerdefinierten Datentyp. Zu den veranschaulichten Technologien zählen Streaming-Tabellenwertfunktionen, .NET Framework-Reflektions-APIs und das Aufrufen von Tabellenwertfunktionen aus Transact-SQL.  

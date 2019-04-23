@@ -4,17 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +14,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519483"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157107"
 ---
 # <a name="glossary"></a>Glossar
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>Begriffe  
   
 |Begriff|Definition|  
@@ -469,7 +475,7 @@ ms.locfileid: "52519483"
 |Diakritisches Zeichen|Ein Zeichen, das oberhalb oder unterhalb eines Zeichens platziert wird oder durch ein Zeichen geht. Es dient in der Regel zur Angabe der Änderung eines phonetischen Werts gegenüber dem nicht markierten Status.|  
 |Diakritisches Zeichen|Ein Zeichen, das oberhalb oder unterhalb eines Zeichens platziert wird oder durch ein Zeichen geht. Es dient in der Regel zur Angabe der Änderung eines phonetischen Werts gegenüber dem nicht markierten Status.|  
 |Dialekt|Die Syntax und die allgemeinen Regeln, die zum Analysieren einer Zeichenfolge oder einer Abfrageanweisung verwendet werden.|  
-|Rautenförmige Beziehung|Eine Kette von Attributbeziehungen, die sich teilt und wieder vereint, jedoch keine redundanten Beziehungen enthält. Beispielsweise besitzen "Tag->Monat->Jahr" und "Tag->Quartal->Jahr" die gleichen Start- und Endpunkte, weisen aber keine gemeinsamen Beziehungen auf.|  
+|Rautenförmige Beziehung|Eine Kette von Attributbeziehungen, die sich teilt und wieder vereint, jedoch keine redundanten Beziehungen enthält. Z. B. Tag-Monat > -> Jahr und Tag > Quarter -> Jahr haben die gleichen Start- und Endpunkte, aber keinen keine gemeinsamen Beziehungen.|  
 |Differenzierer|Eine Schnittstelle zu einem Tool, das ein DifferencingService-Objekt erstellt.|  
 |Differenzielle Sicherung|Eine Sicherung, die nur Änderungen an der Datenbank enthält, die seit der vorherigen Datensicherung vorgenommen wurden, auf der die differenzielle Sicherung basiert.|  
 |Differenzielle Basis|Die letzte vollständige Sicherung aller Daten in einer Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen.|  
@@ -543,7 +549,7 @@ ms.locfileid: "52519483"
 |dump|Das Duplikat eines Programms, eines Datenträgers oder von Daten, das entweder zu Archivierungszwecken oder zum Schützen von Dateien dient.|  
 |Sicherungsgerät|Ein Bandlaufwerk oder Laufwerk, das ein Sicherungsmedium enthält.|  
 |Dynamischer Cursor|Ein Cursor, der Datenänderungen wiedergeben kann, die an den zugrunde liegenden Daten vorgenommen werden, während der Cursor geöffnet ist.|  
-|Dynamischer Filter|Ein Zeilenfilter, der bei der Mergereplikation zur Verfügung steht und mit dem Daten eingeschränkt werden können, die für einen Abonnenten repliziert werden. Der Zeilenfilter basiert auf der Systemfunktion oder einer benutzerdefinierten Funktion (beispielsweise SUSER_SNAME()).|  
+|Dynamischer Filter|Ein Zeilenfilter, der zur Verfügung, mit der Mergereplikation, die Ihnen ermöglicht, die auf einen Abonnenten replizierten Daten zu beschränken auf Grundlage der Systemfunktion oder einer benutzerdefinierten Funktion (z. B.: SUSER_SNAME()).|  
 |Dynamische Sperre|Der Vorgang, mit dem in SQL Server die zum jeweiligen Zeitpunkt kostengünstigsten Sperren ermittelt werden.|  
 |Dynamische Verwaltungsfunktion|Eine Funktion in einer Reihe von integrierten Funktionen, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgibt.|  
 |Dynamische Verwaltungssicht|Eine Reihe von integrierten Sichten, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben.|  
@@ -737,7 +743,7 @@ ms.locfileid: "52519483"
 |Oberer Whisker|Der höchste Wert, der kein Ausreißer auf einem Boxplotdiagramm ist.|  
 |Tipp|Tipps sind Optionen oder Strategien, die angegeben werden, um durch den SQL Server-Abfrageprozessor für SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen erzwungen zu werden. Der Tipp überschreibt jeden Ausführungsplan, den der Abfrageoptimierer möglicherweise für eine Abfrage auswählt.|  
 |Verlauf|Eine Liste mit den Aktionen eines Benutzers in einem Programm. Diese Liste kann beispielsweise Befehle enthalten, die in einer Betriebssystemshell eingegeben wurden, sowie mithilfe von Gopher weitergeleitete Menüs oder Links, die in einem Webbrowser verwendet wurden.|  
-|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Zum Beispiel:  "SQL Server unterstützt die Holdability-Eigenschaft nur auf Verbindungsebene."|  
+|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Zum Beispiel:  "SQL Server unterstützt die Holdability nur auf Verbindungsebene."|  
 |Zurückgehaltene Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Zurückhalten von Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Speicher für zurückgehaltene Daten|Die Data Mining-Struktur, die verwendet wird, um die zurückgehaltenen Daten zwischenzuspeichern. Sie enthält Verweise auf die zurückgehaltenen Daten.|  
@@ -969,7 +975,7 @@ ms.locfileid: "52519483"
 |Microsoft SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
 |Microsoft SQL Server 2008 Express|Eine integrierbare Lightweight-Version von Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Ein Entwurfs- und Verwaltungssystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
-|Microsoft SQL Server 2008 Express with Tools|Eine kostenfreie, benutzerfreundliche Version der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst: SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Eine kostenlose, leicht zu bedienende Version von der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst: SQL Server Management Studio (SMSS) Express.|  
 |Microsoft SQL Server-Onlinedokumentation|Eine Sammlung elektronischer Dokumentation, die die vollständige Dokumentation enthält, die mit Microsoft SQL Server geliefert wird.|  
 |Microsoft SQL Server Business Intelligence|Die auf Microsoft SQL Server basierende Dateninfrastruktur und Business Intelligence-Plattform, die aus Microsoft SQL Server Integration Services, der relationalen Engine, Master Data Services, Reporting Services und Analysis Services bestehen.|  
 |Microsoft SQL Server Compact|Ein Verwaltungs- und Analysesystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
@@ -1091,7 +1097,7 @@ ms.locfileid: "52519483"
 |Parallele Verarbeitung|Eine Verarbeitungsmethode, die nur auf einem Computer ausgeführt werden kann, der über mindestens zwei gleichzeitig verwendbare Prozessoren verfügt. Der Unterschied zwischen Parallelverarbeitung und Multiprocessing liegt in der Verteilung von Tasks auf die verfügbaren Prozessoren. Beim Multiprocessing kann ein Prozess in sequenzielle Blöcke aufgeteilt werden, wobei ein Prozessor den Zugriff auf eine Datenbank verwaltet, während ein anderer Prozessor die Datenanalyse übernimmt und ein dritter Prozessor die grafische Ausgabe an den Bildschirm verarbeitet. Programmierer, die mit Systemen arbeiten, die die Parallelverarbeitung einsetzen, müssen einen Task so aufteilen, dass er mehr oder weniger gleichmäßig auf die verfügbaren Prozessoren verteilt ist.|  
 |Parametrisierte Abfrage|Eine Abfrage, an die mithilfe von Parametern Eingabewerte übergeben werden können.|  
 |Parametrisierter Bericht|Ein veröffentlichter Bericht, an den mithilfe von Parametern Eingabewerte übergeben werden können.|  
-|Parametrisierter Zeilenfilter|Ein Zeilenfilter, der bei der Mergereplikation zur Verfügung steht und mit dem Daten eingeschränkt werden können, die für einen Abonnenten repliziert werden. Der Zeilenfilter basiert auf der Systemfunktion oder einer benutzerdefinierten Funktion (beispielsweise SUSER_SNAME()).|  
+|Parametrisierter Zeilenfilter|Ein Zeilenfilter, der zur Verfügung, mit der Mergereplikation, die Ihnen ermöglicht, die auf einen Abonnenten replizierten Daten zu beschränken auf Grundlage der Systemfunktion oder einer benutzerdefinierten Funktion (z. B.: SUSER_SNAME()).|  
 |Teilsicherung|Eine Sicherung aller Daten in der primären Dateigruppe, in jeder Lese-Schreib-Dateigruppe und in optional angegebenen Dateien. Eine Teilsicherung einer schreibgeschützten Datenbank enthält nur die primäre Dateigruppe.|  
 |Teilweise Datenbankwiederherstellung|Die Wiederherstellung eines Teils einer Datenbank, der die primäre Dateigruppe und mindestens eine sekundäre Dateigruppe umfasst. Die anderen Dateigruppen bleiben dauerhaft offline, obwohl sie später wiederhergestellt werden können.|  
 |Differenzielle Teilsicherung|Eine Teilsicherung, die differenziell in Bezug auf eine einzelne, frühere Teilsicherung (die Basissicherung) ist. Bei einer schreibgeschützten Datenbank enthält eine differenzielle Teilsicherung nur die primäre Dateigruppe.|  
@@ -1511,7 +1517,7 @@ ms.locfileid: "52519483"
 |SQL-Datenbank|Eine Datenbank, die auf Structured Query Language (SQL) basiert.|  
 |SQL-Ausdruck|Eine beliebige Kombination aus Operatoren, Konstanten, Literalwerten, Funktionen und Namen von Tabellen und Feldern, die einen einzelnen Datenwert ergibt.|  
 |SQL Native Client|Eine eigenständige Datenzugriffs-API, die sowohl für OLE DB als auch für ODBC verwendet wird.|  
-|SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
+|SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
 |SQL Server 2005 Express Edition|Eine Edition eines Entwurfs- und Verwaltungssystems für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
 |SQL Server 2005 Mobile Edition|SQL Server-Produktname (Edition)|  
 |SQL Server-Agent|Ein Microsoft Windows-Dienst, der geplante administrative Aufgaben ausführt, die als Aufträge bezeichnet werden, und die Informationen in SQL Server speichert.|  
@@ -1785,7 +1791,7 @@ ms.locfileid: "52519483"
 |x-Achse|Die horizontale Bezugslinie in einem Raster oder Diagramm, das über horizontale und vertikale Dimensionen verfügt.|  
 |XML für Analysis|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
 |XMLA|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
-|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Auch bezeichnet als: XML Query, XQL.|  
+|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Auch bezeichnet als: XML-Abfrage, XQL.|  
 |XSL|Ein XML-Vokabular, mit dem XML-Daten mithilfe eines Stylesheets, in dem die Präsentationsregeln definiert sind, in ein anderes Format, z. B. HTML, umgewandelt, d. h. transformiert werden können.|  
 |XSL-Transformation|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  
 |XSLT|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  

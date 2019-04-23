@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7442847c4c96148635320335956a02cec2bad87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028011"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945396"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -115,7 +115,7 @@ ms.locfileid: "56028011"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Anforderungen für das Abrufen von XML-Webdienstdaten  
  Die XML-Datenverarbeitungserweiterung kann das Schema nicht selbstständig erkennen. Daher müssen Sie über eine Möglichkeit verfügen, die SOAP-Methoden zu ermitteln, mit denen die gewünschten Daten abgerufen werden können. Sie müssen außerdem wissen, welches Adressierungsschema oder welchen Namespace der Webdienst für seine Daten verwendet.  
   
- Für einen Webdienst können Sie ein <`Query`>-Element angeben, das eine aufzurufende Methode oder eine SOAP-Aktion angibt. Sie können die Abfrage leer lassen und die Standardabfrage verwenden, wenn die XML-Datenquelle eine hierarchische Struktur besitzt, die die im Bericht zu verwendenden Daten bereitstellt. Mit der Abfrage abgerufene Werte und Attribute von XML-Elementknoten werden den im Bericht verwendeten Datasetfeldern zugeordnet.  
+ Sie können für einen Webdienst Bereitstellen einer <`Query`> Element, das eine aufzurufende Methode oder SOAP-Aktion angibt. Sie können die Abfrage leer lassen und die Standardabfrage verwenden, wenn die XML-Datenquelle eine hierarchische Struktur besitzt, die die im Bericht zu verwendenden Daten bereitstellt. Mit der Abfrage abgerufene Werte und Attribute von XML-Elementknoten werden den im Bericht verwendeten Datasetfeldern zugeordnet.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Anforderungen für das Abrufen von XML-Dokumentdaten  
  Bei Verwendung von HTTP muss der Server XML-Daten zurückgeben, oder die XML-Daten müssen im XML-`Query`-Element eingebettet sein. Wenn Sie über HTTP direkt auf ein XML-Dokument verweisen, muss die Erweiterung .xml verwendet werden.  

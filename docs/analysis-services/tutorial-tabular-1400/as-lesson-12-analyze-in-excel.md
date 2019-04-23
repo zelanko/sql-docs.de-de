@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476716"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945376"
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
 
@@ -25,7 +25,7 @@ In dieser Lektion verwenden Sie die Funktion in Excel analysieren zu Microsoft E
   
 Um diese Lektion abschließen zu können, muss Excel auf dem gleichen Computer wie Visual Studio installiert sein.
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **5 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **5 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 

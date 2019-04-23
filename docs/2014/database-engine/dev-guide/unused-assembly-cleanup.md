@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155884"
 ---
 # <a name="unused-assembly-cleanup"></a>Bereinigung nicht verwendeter Assemblys
   Das `AssemblyCleanup`-Beispiel enthält eine gespeicherte .NET-Prozedur, die nicht verwendete Assemblys in der aktuellen Datenbank bereinigt, indem sie die Metadatenkataloge abfragt. Der einzige Parameter, `visible_assemblies`, wird verwendet, um anzugeben, ob nicht verwendete sichtbare Assemblys gelöscht werden sollen. Durch den Wert 'false' wird standardmäßig angegeben, dass nur nicht verwendete, unsichtbare Assemblys gelöscht werden, andernfalls werden alle nicht verwendeten Assemblys gelöscht. Der Satz an nicht verwendeten Assemblys umfasst die Assemblys, für die kein Einstiegspunkt definiert ist (Routinen, Typen und Aggregate) und auf die keine anderen Assemblys direkt oder indirekt verweisen.  

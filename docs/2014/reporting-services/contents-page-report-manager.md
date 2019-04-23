@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019432"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949246"
 ---
 # <a name="contents-page-report-manager"></a>Inhalt (Seite, Berichts-Manager)
   Mithilfe der Seite Inhalt können Sie den Inhalt des aktuellen Ordners anzeigen, Elemente zur Ansicht auswählen oder zu anderen Ordnern wechseln. Diese Seite wird geöffnet, wenn Sie einen Ordner auswählen. Sie ist zudem die Startseite des Berichts-Managers.  

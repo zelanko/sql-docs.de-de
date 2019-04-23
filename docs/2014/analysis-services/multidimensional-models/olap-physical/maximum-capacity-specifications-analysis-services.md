@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
@@ -15,12 +13,12 @@ ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed648821a41006842911eede9ee5740cdddeabde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190470"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155166"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spezifikationen der maximalen Kapazität (Analysis Services)
   Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
@@ -29,9 +27,9 @@ ms.locfileid: "48190470"
   
  [Mehrdimensionale und Datamining (DeploymentMode = 0)](#bkmk_OLAP)  
   
- [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
+ [SharePoint (DeploymentMode=1)](#bkmk_sharepoint)  
   
- [Tabellarisch (DeploymentMode = 2)](#bkmk_vertipaq)  
+ [Tabular (DeploymentMode=2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> Mehrdimensionale und Datamining (DeploymentMode = 0)  
  Der MOLAP-Speichermodus, der sowohl Daten als auch Metadaten speichert, verfügt über zusätzliche physische Grenzen für Dateigrößen. Zeichenfolgenspeicherdateien weisen standardmäßig eine maximale Größe von 4 GB auf. Wenn Sie größere Dateien für Zeichenfolgenspeicher benötigen, können Sie eine andere Zeichenfolgenspeicherarchitektur angeben. Weitere Informationen finden Sie unter [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](../configure-string-storage-for-dimensions-and-partitions.md).  
@@ -69,14 +67,14 @@ ms.locfileid: "48190470"
 |------------|----------------------------|  
 |Datenbank in einer Instanz|2^31-1 = 2,147,483,647|  
 |Tabellen in einer Datenbank|2^31-1 = 2,147,483,647|  
-|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass die einzelne Spalte mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
+|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Zeilen in einer Tabelle|Unbegrenzte **Warnung:**  Mit der Einschränkung, dass keine einzelne Spalte mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
 |Hierarchien in einer Tabelle|2^31-1 = 2,147,483,647|  
 |Ebenen in einer Hierarchie|2^31-1 = 2,147,483,647|  
 |Beziehungen|2^31-1 = 2,147,483,647|  
 |Schlüsselspalten in einer Tabelle|2^31-1 = 2,147,483,647|  
-|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtanzahl der Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtzahl von Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Von einer Abfrage zurückgegebene Zellen|2^31-1 = 2,147,483,647|  
 |Datensatzgröße in der Quellabfrage|64-KB|  
 |Länge des zu verwendenden Objektnamen|100 Zeichen|  
@@ -87,14 +85,14 @@ ms.locfileid: "48190470"
 |------------|----------------------------|  
 |Datenbank in einer Instanz|2^31-1 = 2,147,483,647|  
 |Tabellen in einer Datenbank|2^31-1 = 2,147,483,647|  
-|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass keine einzelne Spalte in der Tabelle mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
+|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Zeilen in einer Tabelle|Unbegrenzte **Warnung:**  Mit der Einschränkung, dass keine einzelne Spalte in der Tabelle mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
 |Hierarchien in einer Tabelle|2^31-1 = 2,147,483,647|  
 |Ebenen in einer Hierarchie|2^31-1 = 2,147,483,647|  
 |Beziehungen|2^31-1 = 2,147,483,647|  
 |Schlüsselspalten in einer Tabelle|2^31-1 = 2,147,483,647|  
-|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtanzahl der Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:**  Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtzahl von Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Von einer Abfrage zurückgegebene Zellen|2^31-1 = 2,147,483,647|  
 |Datensatzgröße in der Quellabfrage|64-KB|  
 |Länge des zu verwendenden Objektnamen|100 Zeichen|  

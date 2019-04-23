@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 009cce23aff5d3b3755b4eb8086bd1560a5be487
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289093"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948906"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS)
   Sie können einen Bericht in einem anderen Dateiformat wie CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]oder [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]rendern, während Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den Bericht aber auch rendern, während Sie den Bericht auf dem Berichtsserver anzeigen. Das Rendern des Berichts in ein bestimmtes Format ist sinnvoll, wenn Sie den Bericht sofort als anderen Dateityp speichern möchten, ohne ihn auf dem Berichtsserver zu veröffentlichen, oder wenn Sie sehen möchten, wie Ihr Berichtsentwurf den Lesern in einem bestimmten Format angezeigt wird. Das Rendern des Berichts auf dem Berichtsserver ist sinnvoll, wenn Sie Abonnements einrichten, Berichte per E-Mail bereitstellen oder einen Bericht speichern möchten, der auf dem Berichtsserver verfügbar ist. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35b5eea0ce29f5360f3147ea250c7ca1ba6a7a87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090770"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155413"
 ---
 # <a name="tables-representation-tabular"></a>Tabellendarstellung (tabellarisch)
   In tabellarischen Modellen ist eine Tabelle die Basisdarstellung der Daten.  
@@ -25,7 +23,7 @@ ms.locfileid: "48090770"
 ## <a name="tables-representation"></a>Tabellendarstellung  
   
 ### <a name="tables-in-amo"></a>Tabellen in AMO  
- Wenn AMO zum Verwalten einer Tabelle verwendet wird, besteht keine 1:1-Objektentsprechung. Eine Tabelle wird dargestellt in AMO wird durch eine <xref:Microsoft.AnalysisServices.Dimension> und <xref:Microsoft.AnalysisServices.MeasureGroup>. Damit eine Measuregruppe vorhanden sein kann, muss ein <xref:Microsoft.AnalysisServices.Cube> als Host der Measuregruppe definiert werden. Damit eine Dimension, eine Measuregruppe und ein Cube vorhanden sein können, muss ein Datenquellensicht-Objekt definiert werden, das die Bindungsdefinitionen zur Datenquelle enthält.  
+ Wenn AMO zum Verwalten einer Tabelle verwendet wird, besteht keine 1:1-Objektentsprechung. In AMO wird eine Tabelle durch <xref:Microsoft.AnalysisServices.Dimension> und <xref:Microsoft.AnalysisServices.MeasureGroup> dargestellt. Damit eine Measuregruppe vorhanden sein kann, muss ein <xref:Microsoft.AnalysisServices.Cube> als Host der Measuregruppe definiert werden. Damit eine Dimension, eine Measuregruppe und ein Cube vorhanden sein können, muss ein Datenquellensicht-Objekt definiert werden, das die Bindungsdefinitionen zur Datenquelle enthält.  
   
  Aus einer Verfahrensperspektive muss eine Datenquellensicht vor der Definition jedes anderen Objekts erstellt werden. Das Datenquellensicht-Objekt enthält die Zuordnung für alle relevanten Objekte in der Datenquelle. Die Zuordnung des relationalen Modells wird als .NET DataSet-Objekt in die Datenquellensicht eingebettet und in der Schema-Eigenschaft der Datenquellensicht gespeichert.  
   

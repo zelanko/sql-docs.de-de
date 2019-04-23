@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287128"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948636"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
   Tabellen, Matrizen und Listen sind Datenbereiche, in denen Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten angeordnet sind. Die Zellen enthalten in der Regel Textdaten wie Text, Datumsangaben und Zahlen, können jedoch auch Messgeräte, Diagramme oder Berichtselemente wie Bilder enthalten. Als Ganzes gesehen werden Tabellen, Matrizen und Listen häufig als Tablix-Datenbereiche bezeichnet.  
@@ -56,7 +56,7 @@ ms.locfileid: "56287128"
   
  ![RS_TabelleMatrixListe](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Um schnell mit Tabellen, Matrizen und Listen beginnen, finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Lernprogramm: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-matrix-report-report-builder.md), und [Lernprogramm: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Informationen zum schnellen Einstieg in die Arbeit mit Tabellen, Matrizen und Listen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-matrix-report-report-builder.md) und [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Tabellen, Matrizen und Listen getrennt von einem Bericht als Berichtsteile veröffentlichen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "56287128"
   
  ![Neue Matrix aus Toolbox hinzugefügt, markiert](../media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
   
- Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zellen sind, dass der zwei Schnittmengen sind: Kategorie "und" Territory "und" Kategorie "und" Jahr ". Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
+ Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zelle sind die beiden Schnittmengen: „Kategorie und Gebiet“ und „Gebiet und Jahr“. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
   
  Um die Matrixdaten besser lesbar zu machen und die Daten hervorzuheben, die Sie herausstellen möchten, können Sie Zellen miteinander verbinden oder horizontal und vertikal teilen und Daten- und Gruppenüberschriften formatieren.  
   

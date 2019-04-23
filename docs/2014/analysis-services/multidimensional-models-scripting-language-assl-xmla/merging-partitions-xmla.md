@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - merging partitions [XMLA]
@@ -17,12 +15,12 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a7a72e385dd6cfb4d0d83d3afab346dab8c85ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367342"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156066"
 ---
 # <a name="merging-partitions-xmla"></a>Zusammenführen von Partitionen (XMLA)
   Wenn Partitionen, die dasselbe Aggregationsdesign und die Struktur verfügen, können Sie die Partition zusammenführen, mit der [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) -Befehl in XML for Analysis (XMLA) verwenden. Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  

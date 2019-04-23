@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5258e08abd322025b3f7349a6d22fdbdd046d4f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373842"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155304"
 ---
 # <a name="result-set-sample"></a>Beispiel für einen Ergebnissatz
   Manchmal kann es nützlich sein, Befehle beim Durchsehen der Ergebnisse einer Abfrage ausführen zu können, ohne eine neue Verbindung öffnen und ohne alle Ergebnisse in den Speicher laden zu müssen. Dies kann mit der Technologie der MARS-Funktion (Multiple Active Result Set) in ADO.NET 2.0 verwirklicht werden. Derzeit ist MARS nicht für den Anbieter im Prozess, der für die serverseitige Programmierung verwendet wird, implementiert. Diese Einschränkung können Sie mithilfe eines serverseitigen Cursors umgehen. Dieses Beispiel zeigt, wie Sie serverseitige Cursor verwenden, um die fehlende MARS-Unterstützung für die serverseitige Progammierung zu umgehen.  
@@ -74,7 +72,7 @@ ms.locfileid: "53373842"
 ## <a name="sample-code"></a>Beispielcode  
  Die Codelistings für dieses Beispiel lauten wie folgt.  
   
- Dies ist der Code für die Bibliothek `ResultSet.`  
+ Dies ist der Code für das Bibliotheks-`ResultSet.`  
   
  C#  
   
