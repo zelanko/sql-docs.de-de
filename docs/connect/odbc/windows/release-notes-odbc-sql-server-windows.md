@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872010"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Versionshinweise zu ODBC for SQL Server unter Windows
@@ -98,7 +98,7 @@ Diese Version von ODBC umfasst Unterstützung für verwaltete Azure SQL-Instanze
 > - Das Erstellen von benutzerdefinierten Typen aus lokalen Pfaden wird nicht unterstützt
 > - Die integrierte Windows-Authentifizierung wird nicht unterstützt
 > - DTC wird nicht unterstützt
-> - `sa` Konto ist nicht vorhanden (Standardkonto heißt `cloudSA`)
+> - Das `sa`-Konto ist nicht vorhanden (Standardkonto: `cloudSA`).
 > - Fehler beim TDS-Token (0xAA) gibt einen falschen Servernamen zurück
 > - Sonderzeichen werden im Datenbanknamen nicht unterstützt
 > - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] wird nicht unterstützt

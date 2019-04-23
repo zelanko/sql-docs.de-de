@@ -1,7 +1,7 @@
 ---
 title: Anzeigen von Berichten in der Vorschau
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553232"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946946"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vorschau von Berichten in SQL Server Reporting Services (SSRS)
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vorschauberichte in SQL Server Reporting Services (SSRS)
 
   Wenn Sie einen Bericht entwerfen, sollten Sie ihn anzeigen, bevor Sie ihn in einer Produktionsumgebung veröffentlichen. Dazu gibt es mehrere Möglichkeiten: Sie können im Berichts-Designer in den Vorschaumodus wechseln, im Berichts-Designer das Vorschaufenster verwenden oder den Bericht auf einem Berichtsserver in einer Testumgebung veröffentlichen.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53553232"
   
  Sie können die Ansicht ändern und einen gedruckten Bericht darstellen, indem Sie zur Seitenansicht wechseln. Klicken Sie auf der Vorschausymbolleiste auf die Schaltfläche **Seitenansicht** . Der Bericht wird so angezeigt, wie er auf einer physischen Seite dargestellt werde würde. Diese Ansicht gleicht der Ausgabe durch die Bild- und PDF-Renderingerweiterung. Die Seitenansicht ist keine Bild- oder PDF-Datei, das Layout und die Paginierung des Berichts gleichen jedoch der Ausgabe in diesen Formaten.  
   
-## <a name="publish-to-a-test-server"></a>Auf einem Testserver veröffentlichen
+## <a name="publish-to-a-test-server"></a>Veröffentlichen auf einem Testserver
 
  Ferner können Sie Berichte durch Veröffentlichen auf einem Testserver testen. Das Veröffentlichen eines Berichts auf einem Testserver unterscheidet sich nicht vom Veröffentlichen auf einem Produktionsserver. Informationen zum Veröffentlichen eines Berichts finden Sie unter [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md).  
   

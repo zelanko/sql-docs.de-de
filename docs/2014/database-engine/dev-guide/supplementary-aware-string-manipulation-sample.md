@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364292"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153899"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Beispiel für Zeichenfolgendarstellung mit ergänzenden Zeichen
   Dieses Beispiel für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht Zeichenfolgenbearbeitungen mit ergänzenden Zeichen. Dieses Beispiel zeigt die Implementierung von fünf Transact-SQL-Zeichenfolgenfunktionen, die dieselben Bearbeitungsfunktionen für Zeichenfolgen bereitstellen wie die integrierten Funktionen, jedoch zusätzliche Funktionen für ergänzende Zeichen bieten, um sowohl Unicode- als auch Sonderzeichenfolgen bearbeiten zu können. Die fünf Funktionen sind lens(), `lefts(), rights(), subs()` und `replace_s()` entsprechen sich in die integrierten Funktionen `LEN(), LEFT(), RIGHT(), SUBSTRING()` und `REPLACE()` Zeichenfolgenfunktionen.  

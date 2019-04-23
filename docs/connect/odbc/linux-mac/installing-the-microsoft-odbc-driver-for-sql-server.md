@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042329"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
@@ -513,7 +513,7 @@ Der ODBC-Treiber unter Linux und MacOS besteht aus den folgenden Komponenten:
 |Komponente|und Beschreibung|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X oder libmsodbcsql-13.X.so.X.X|Das freigegebene Objekt (`so`) der dynamischen Bibliotheksdatei, das die gesamte Funktionalität des Treibers enthält. Diese Datei wird in `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/lib64/` für den Treiber 13 installiert.|  
-|`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird installiert in `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird in `[driver .so directory]../share/resources/en_US/` installiert.| 
 |msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> „msodbcsql“ wird in `/opt/microsoft/msodbcsql17/include/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/include/` für den Treiber 13 installiert. |
 |LICENSE.txt|Die Textdatei, die die Bestimmungen des Endbenutzer-Lizenzvertrags enthält. Diese Datei wird in `/usr/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/share/doc/msodbcsql/` für den Treiber 13 platziert.|
 |RELEASE_NOTES|Die Textdatei, die die Versionshinweise enthält. Diese Datei wird in `/usr/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/share/doc/msodbcsql/` für den Treiber 13 platziert.|

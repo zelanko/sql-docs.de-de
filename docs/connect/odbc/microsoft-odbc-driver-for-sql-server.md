@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041879"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -43,25 +43,25 @@ Das folgende C++-Beispiel zeigt, wie die ODBC-APIs verwendet werden, um eine Ver
 - [Benutzerdefinierte Keystore-Anbieter](../../connect/odbc/custom-keystore-providers.md)
 - [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (Die verfügbaren Features gelten mit Ausnahme von OLEDB auch für den ODBC-Treiber für SQL Server)
-- [Verwenden von Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [Verwenden von Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
+- [Verwendung von Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Verwendung von Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Verwenden der transparenten Netzwerk-IP-Adressauflösung](../../connect/odbc/using-transparent-network-ip-resolution.md)
 - [Verwenden von XA-Transaktionen](../../connect/odbc/use-xa-with-dtc.md)
 
 ### <a name="linux-and-macos"></a>Linux und macOS
 
-- [Installing the Driver (Installieren des Treibers)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Herstellen einer Verbindung mit SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Connecting with **bcp** (Herstellen einer Verbindung mit „bcp“)](../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [Connecting with **sqlcmd** (Herstellen einer Verbindung mit „sqlcmd“)](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
+- [Installieren des Treibers](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Connecting to SQL Server (Herstellen einer Verbindung mit SQL Server)](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+- [Herstellen einer Verbindung mit **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [Herstellen einer Verbindung mit **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Datenzugriffsablaufverfolgung](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Häufig gestellte Fragen](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installieren des Treiber-Managers](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [Bekannte Probleme](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Programmierrichtlinien](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Versionsanmerkungen](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
-- [Support for High Availability and Disaster Recovery (Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung)](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
-- [Using Integrated Authentication (Kerberos) (Nutzung der Integrierten Authentifizierung (Kerberos))](../../connect/odbc/linux-mac/using-integrated-authentication.md)
+- [Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [Nutzung der Integrierten Authentifizierung (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
 ### <a name="windows"></a>Windows
 

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042369"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
@@ -41,7 +41,7 @@ Die folgenden Abschnitte aus der [!INCLUDE[ssNoVersion](../../../includes/ssnove
 -   [Ausführen gespeicherter Prozeduren](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Unterstützung für Spalten mit geringer Dichte (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL-Verschlüsselung](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Tabellenwertparameter](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [Table valued parameters (Tabellenwertparameter)](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 und UTF-16 für die Befehls- und Daten-API](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Verwenden von Katalogfunktionen](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 

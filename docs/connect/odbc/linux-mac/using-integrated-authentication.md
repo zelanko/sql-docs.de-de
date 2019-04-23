@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042249"
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
@@ -81,9 +81,9 @@ Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver ode
   
 -   Der Benutzer meldet sich bei einem Clientcomputer an und authentifiziert sich beim Anwendungsserver.  
   
--   Der Anwendungsserver ist mit anderem Datenbanknamen authentifiziert und stellt eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]her.  
+-   Der Anwendungsserver ist mit anderem Datenbanknamen authentifiziert und stellt eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentifiziert sich gegenüber einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) als Datenbankbenutzer.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist als Datenbankbenutzer bei einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) authentifiziert.  
   
 Nachdem die integrierte Authentifizierung konfiguriert ist, werden Anmeldeinformationen für den Verbindungsserver übergeben.  
   
@@ -133,4 +133,4 @@ Weitere Informationen zur Authentifizierung von Linux- oder macOS-Computern bei 
 
 [Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
-[Verwenden von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Verwendung von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
