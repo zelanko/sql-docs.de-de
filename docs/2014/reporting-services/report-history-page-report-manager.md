@@ -1,31 +1,32 @@
 ---
 title: Melden Sie die Seite "Verlauf" (Berichts-Manager) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033861"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945136"
 ---
 # <a name="report-history-page-report-manager"></a>Berichtsverlauf (Seite, Berichts-Manager)
-  Mithilfe der Seite Berichtsverlauf können Sie die im Laufe der Zeit generierten und gespeicherten Berichtsmomentaufnahmen anzeigen. Abhängig von den für den Berichtsserver festgelegten Optionen enthält der Berichtsverlauf möglicherweise nur die neuesten Momentaufnahmen.  
+
+Mithilfe der Seite Berichtsverlauf können Sie die im Laufe der Zeit generierten und gespeicherten Berichtsmomentaufnahmen anzeigen. Abhängig von den für den Berichtsserver festgelegten Optionen enthält der Berichtsverlauf möglicherweise nur die neuesten Momentaufnahmen.  
   
- Der Berichtsverlauf wird immer im Kontext des Berichts angezeigt, aus dem er stammt. Es ist nicht möglich, den Verlauf aller Berichte auf einem Berichtsserver zentral anzuzeigen.  
+
+Der Berichtsverlauf wird immer im Kontext des Berichts angezeigt, aus dem er stammt. Es ist nicht möglich, den Verlauf aller Berichte auf einem Berichtsserver zentral anzuzeigen.  
   
- Wenn Sie den Berichtsverlauf generieren möchten, muss der Bericht unbeaufsichtigt ausgeführt werden können, d. h., er muss gespeicherte Anmeldeinformationen verwenden, und parametrisierte Berichte müssen Standardparameterwerte für alle Parameter enthalten. Der Berichtsverlauf kann manuell oder als geplante Operation generiert werden. Verlaufseigenschaften im Bericht bestimmen die Art und Weise, in der der Berichtsverlauf erstellt werden kann.  
+Wenn Sie den Berichtsverlauf generieren möchten, muss der Bericht unbeaufsichtigt ausgeführt werden können, d. h., er muss gespeicherte Anmeldeinformationen verwenden, und parametrisierte Berichte müssen Standardparameterwerte für alle Parameter enthalten. Der Berichtsverlauf kann manuell oder als geplante Operation generiert werden. Verlaufseigenschaften im Bericht bestimmen die Art und Weise, in der der Berichtsverlauf erstellt werden kann.  
   
- Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
+Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
   
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,6 +60,4 @@ ms.locfileid: "56033861"
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Momentaufnahmeoptionen Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
-  
-  
+ [Momentaufnahmeoptionen Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

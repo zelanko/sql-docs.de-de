@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009684"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967746"
 ---
 # <a name="move-items-page-report-manager"></a>Elemente verschieben (Seite, Berichts-Manager)
   Auf der Seite Elemente verschieben können Sie einen Bericht, Ordner oder ein anderes Element an einen neuen Speicherort auf dem Berichtsserver verschieben. Sie können den Pfad des neuen Speicherortes eingeben oder die Strukturansicht verwenden, um zu einem neuen Speicherort im Namespace des Berichtsservers zu wechseln. Sie können nur die Elemente verschieben, für die Sie über die entsprechende Berechtigung verfügen und die auf dem aktuellen Berichtsserver gespeichert sind.  

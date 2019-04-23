@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041251"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961136"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
   Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwendet zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken für den Zentralspeicher. Die Namen der Datenbanken lauten standardmäßig ReportServer und ReportServerTempdb. ReportServerTempdb wird mit der primären Berichtsserver-Datenbank erstellt und dient zur Speicherung von temporären Daten, Sitzungsinformationen und zwischengespeicherten Berichten.  
@@ -59,7 +59,7 @@ ms.locfileid: "56041251"
  Dieser Fehler tritt auf, weil der ReportServerTempdb-Name intern gespeichert und von gespeicherten Prozeduren zum Ausführen interner Vorgänge verwendet wird. Nach dem Umbenennen der temporären Datenbank können die gespeicherten Prozeduren nicht mehr ordnungsgemäß ausgeführt werden.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Aktivieren von Momentaufnahmeisolation auf der Berichtsserver-Datenbank  
- Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Momentaufnahmeisolation aktiviert ist, tritt folgender Fehler auf: "Der ausgewählte Bericht ist nicht bereit für die Anzeige. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
+ Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Snapshot-Isolation aktiviert ist, wird den folgenden Fehler auftreten: "Der ausgewählte Bericht ist nicht bereit für die Anzeige. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
   
  Wenn Sie die Momentaufnahmeisolation nicht absichtlich aktiviert haben, wurde das Attribut unter Umständen von einer anderen Anwendung festgelegt oder für die **model** -Datenbank ist die Momentaufnahmeisolation aktiviert, sodass alle neuen Datenbanken diese Einstellung übernehmen.  
   

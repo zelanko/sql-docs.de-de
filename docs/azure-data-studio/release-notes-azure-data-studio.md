@@ -3,7 +3,7 @@ title: Versionshinweise
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381588"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963786"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="april-2019"></a>April 2019
+
+18 April 2019 &nbsp;  /  &nbsp; Version: 1.6.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Umbenannt **Server** TAB-Taste zum **Verbindungen** | |
+| Azure-Ressourcen-Explorer als ein Azure Viewlet unter Verbindungen verschoben | Benutzer können jetzt ihre Azure SQL-Instanzen über Azure Viewlet anzeigen, in der Verbindungen und erweitern, um Objekte unter jedem Server oder die Datenbank anzuzeigen.|
+| SQL-Notebook-Verbesserungen | &bull; &nbsp; Hinzugefügte Schaltfläche auf der Symbolleiste, um die Ausgabe für alle Zellen löschen <br/>&bull; &nbsp; Hinzugefügte Schaltfläche auf der Symbolleiste, um alle Zellen ausführen <br/>&bull; &nbsp; Feste Verbindung Server anstelle des Namens (falls festgelegt) an den Dropdownliste anhängen <br/>&bull; &nbsp; Korrektur für Images in Markdown nicht wiedergegeben werden, wenn Sie relative Image Pfade verwenden <br/>&bull; &nbsp; Verbesserte Funktionalität in der Notebook-Raster durch Hinzufügen von Doppelklicken Sie auf automatische Größenänderung Spaltengröße und eine verbesserte Mousewheel-Unterstützung <br/>&bull; &nbsp; Verbesserungen bei der Fehlerbehandlung und Python installieren resilienz bei der Installation von Python über notebooks <br/>&bull; &nbsp; Verbesserungen an der Funktionalität "Alles auswählen", bei der Auswahl der Notebook-Zellen <br/>&bull; &nbsp; Verbesserungen bei der Notebook-Verbindungen, um zu verhindern, schließen ein Notebook und Auswirkungen auf eine Objekt-Explorer-Verbindung <br/>&bull; &nbsp; Verbesserte Notebook-Erfahrung ermöglicht dem Benutzer eine Meldung angezeigt, wenn Notebook getrennt und eine Verbindung zum Ausführen von Zellen benötigt<br/>&bull; &nbsp; Verbesserte Unterstützung für nicht gespeicherte Notebooks, in Werbung zu aktivieren, wenn ADS erneut gestartet wird |
+| Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>März 2019 (Hotfix)
 

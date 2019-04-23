@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036121"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965476"
 ---
 # <a name="choose-link-page-report-manager"></a>Link auswählen (Seite) (Berichts-Manager)
   Mithilfe der Seite Link auswählen können Sie einen anderen Bericht als Grundlage für den aktuell ausgewählten verknüpften Bericht wählen. Verknüpfte Berichte basieren auf anderen Berichten, die bereits auf einem Berichtsserver publiziert wurden. Ein verknüpfter Bericht verwendet das Layout und die Daten des Basisberichts, besitzt aber eigene Eigenschaftenseiten, damit Sie Parametereigenschaften, Sicherheitseinstellungen, Name, Beschreibung und Speicherort anpassen können.  

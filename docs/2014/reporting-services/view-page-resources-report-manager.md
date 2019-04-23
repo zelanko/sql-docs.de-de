@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a92fb78664e472ef65a5c9af9fca87e5b50fa1e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027911"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948086"
 ---
 # <a name="view-page-resources-report-manager"></a>Anzeigen (Seite) (Ressourcen, Berichts-Manager)
   Mithilfe der Seite Anzeigen für Ressourcen können Sie eine Ressource anzeigen. Eine Ressource ist ein Element, das auf einem Berichtsserver gespeichert ist und darauf verwaltet, aber nicht verarbeitet wird (auf einem Berichtsserver werden Berichte und Modelle verarbeitet). Sie können Ressourcen verwenden, wenn Sie beliebige Dokumente, Bilder oder andere Dateien speichern möchten, die nicht vom Server verarbeitet werden. Ein Großteil der Bilddateien (z. B. JPG-, GIF- und PNG-Dateien) können auf der Seite Anzeigen vom Berichts-Manager angezeigt werden. Andere Ressourcen werden in einem separaten Anwendungsfenster geöffnet.  

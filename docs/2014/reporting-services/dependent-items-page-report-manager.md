@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030071"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963740"
 ---
 # <a name="dependent-items-page-report-manager"></a>Abhängige Elemente (Seite) (Berichts-Manager)
   Auf der Seite Abhängige Elemente können Sie eine Liste der Berichte und Modelle anzeigen, die auf eine freigegebene Datenquelle verweisen. Das Symbol für jeden Elementtyp zeigt an, ob es sich um einen Bericht oder ein Modell handelt. Die Seite kann in der Listen- oder Detailansicht angezeigt werden. Verwenden Sie die Detailansicht, um mehr Informationen über jedes einzelne Element anzuzeigen. In der Detailansicht sind zusätzliche Seitenoptionen verfügbar. Um Ihnen bei der Verwaltung freigegebener Datenquellen zu helfen, bietet diese Seite Links zu Berichten und Modellen, die die Datenquelle verwenden, sowie Metriken, die zeigen, wann der Bericht oder das Modell zuletzt ausgeführt oder geändert wurde. Mit den Schaltflächen Löschen und Verschieben können Sie nicht mehr verwendete Berichte und Modelle bequem entfernen oder sie an einen anderen Speicherort verschieben, wenn Sie feststellen, dass sie noch immer benötigt werden.  

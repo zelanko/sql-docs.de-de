@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033191"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937356"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2014
   In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Ein verändertes Programmverhalten beeinflusst die Funktionsweise und das Interagieren von Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -56,24 +56,24 @@ ms.locfileid: "56033191"
  Weitere Informationen zu den SharePoint-Berechtigungsstufen finden Sie unter [Benutzerberechtigungen und Berechtigungsstufen](https://technet.microsoft.com/library/cc721640.aspx)  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>Berichtsserver-Ablaufverfolgungsprotokolle befinden sich an einem neuen Speicherort für den SharePoint-Modus  
- **Neues Verhalten:** Die Berichtsserver-Ablaufverfolgungsprotokolle für einen im SharePoint-Modus installierten Berichtsserver werden unter %Programme%\Gemeinsame Dateien\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles gespeichert.  
+ **Neues Verhalten:** Für einen Berichtsserver im SharePoint-Modus installiert wird werden der Berichtsserver-Ablaufverfolgungsprotokolle unter %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web gespeichert werden.  
   
  **Vorheriges Verhalten:** Berichtsserver-Ablaufverfolgungsprotokolle wurden finden Sie unter einem ähnlichen Pfad wie dem folgenden: %Programfilesdir%\Microsoft SQL Server\\< RS_instance > \reporting  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>GetServerConfigInfo SOAP-API wird nicht mehr unterstützt (SharePoint-Modus)  
  **Neues Verhalten**: Verwenden von PowerShell-Cmdlet "Get-SPRSServiceApplicationServers"  
   
- **Vorheriges Verhalten:** Kunden konnten SOAP-Clientcode für die direkte Kommunikation mit dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Endpunkt entwickeln und "GetReportServerConfigInfo()" aufrufen.  
+ **Vorheriges Verhalten:** Kunden können zur direkten Kommunikation mit SOAP-Clientcode entwickeln die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Endpunkt und getreportserverconfiginfo()".  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Berichtsserverkonfiguration und Verwaltungstools  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>Der Konfigurations-Manager wird nicht für den SharePoint-Modus verwendet  
- **Neues Verhalten:** Der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Konfigurations-Manager unterstützt Berichtsserver im SharePoint-Modus nicht mehr. Der SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] kann jetzt mit der SharePoint-Zentraladministration konfiguriert werden. Aus diesem Grund unterstützt der Konfigurations-Manager von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] den SharePoint-Modus nicht mehr. Der Konfigurations-Manager wird nur noch für Berichtsserver im einheitlichen Modus verwendet.  
+ **Neues Verhalten:** Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager nicht mehr unterstützt Berichtsserver im SharePoint-Modus. Der SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] kann jetzt mit der SharePoint-Zentraladministration konfiguriert werden. Aus diesem Grund unterstützt der Konfigurations-Manager von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] den SharePoint-Modus nicht mehr. Der Konfigurations-Manager wird nur noch für Berichtsserver im einheitlichen Modus verwendet.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Sie können den Modus des Servers nicht in einen anderen ändern  
  **Neues Verhalten:** Sie können keine Servermodi ändern. Wenn Sie einen Berichtsserver im einheitlichen Modus installieren, können Sie ihn nicht in den SharePoint-Modus ändern oder für den SharePoint-Modus neu konfigurieren. Wenn Sie den Berichtsserver im SharePoint-Modus installieren, können Sie ihn in den einheitlichen Modus ändern.  
   
- **Vorheriges Verhalten:** Kunde installiert einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtsserver im SharePoint-Modus. Wenn der Berichtsserver in den einheitlichen Modus geändert werden soll, kann der Kunde den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurations-Manager öffnen und zum einheitlichen Modus wechseln, indem er eine neue Datenbank im einheitlichen Modus erstellt oder eine Verbindung mit einer vorhandenen Datenbank im einheitlichen Modus herstellt. Eine weitere Möglichkeit besteht darin, mit dem Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vom SharePoint-Modus in den einheitlichen Modus zu wechseln.  
+ **Vorheriges Verhalten:** Kunde installiert einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver im SharePoint-Modus. Wenn der Berichtsserver in den einheitlichen Modus geändert werden soll, kann der Kunde den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurations-Manager öffnen und zum einheitlichen Modus wechseln, indem er eine neue Datenbank im einheitlichen Modus erstellt oder eine Verbindung mit einer vorhandenen Datenbank im einheitlichen Modus herstellt. Eine weitere Möglichkeit besteht darin, mit dem Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vom SharePoint-Modus in den einheitlichen Modus zu wechseln.  
   
 ##  <a name="bkmk_kj"></a> Verändertes Programmverhalten in SQL Server 2008 R2 Reporting Services  
  In diesem Abschnitt werden Änderungen im Programmverhalten von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben.  

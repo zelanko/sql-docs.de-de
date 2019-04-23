@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a063c20ce3fdb98cc86232bbe1492e7e0c603408
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7adf0b27a30b938904b73a75669a7fb2e7923ffb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296022"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937026"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Diagrammdialogfelder (Berichts-Generator und SSRS)
   Dieser Abschnitt enthält die Hilfe zu einigen Dialogfeldern für Diagramme. Sie können die Hilfe auch öffnen, indem Sie die F1-Taste drücken oder auf die im Dialogfeld angezeigte Schaltfläche Hilfe klicken.  

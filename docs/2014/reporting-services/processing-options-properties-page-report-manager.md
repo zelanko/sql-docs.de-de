@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013101"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939156"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite Verarbeitungsoptionen können Sie Eigenschaften der Berichtsausführung für den aktuell ausgewählten Bericht festlegen. Mit diesen Optionen wird der Zeitpunkt der Verarbeitung von Daten für den Bericht bestimmt. Sie können diese Optionen festlegen, um die Berichtsdaten außerhalb der Spitzenbetriebszeiten abzurufen. Wenn ein Bericht häufig verwendet wird, können Sie auch vorübergehend Kopien des Berichts zwischenspeichern, um Wartezeiten zu vermeiden, falls mehrere Benutzer innerhalb von Minuten auf denselben Bericht zugreifen.  

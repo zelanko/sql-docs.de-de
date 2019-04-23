@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297388"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954256"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   Der Messgerätdatenbereich ist ein eindimensionaler Datenbereich, der einen einzelnen Wert im Dataset anzeigt. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Mithilfe des Messgerätbereichs können Sie mehrere Messgeräte in einem Messgerätbereich mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -181,7 +181,7 @@ ms.locfileid: "56297388"
   
  ![Diagramm mit Messgerätelementen](../media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Lernprogramm: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zu Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Messgeräten in einem Bericht als Berichtsteile getrennt veröffentlichen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297388"
   
  ![rs_RundesMessgerät](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Optionen für radiale Messgeräte: Radiale, Radial mit kleinem Messgerät, zwei Skalen, 90 Grad Nordost, 90 Grad Nordwest, um 90 Grad Südwest, 90 Grad Südost, 180 Grad Nord, 180 Grad Süd, um 180 Grad West180 Grad Ost und Messgerät.  
+ Optionen für radiale Messgeräte: „Radial“, „Radial mit kleinem Messgerät“, „Zwei Skalen“, „90 Grad Nordost“, „90 Grad Nordwest“, „90 Grad Südwest“, „90 Grad Südost“, „180 Grad Nord“, „180 Grad Süd“, „180 Grad West“, „180 Grad Ost“ und „Messgerät“.  
   
  **Lineares Messgerät**  
   
  ![rs_LinearesMessgerät](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Lineares Messgerät-Optionen: Horizontal, vertikal, mehrere Balkenzeiger, zwei Skalen, drei Farbbereiche, logarithmische, Thermometer, Thermometer Fahrenheit/Celcius und Lineardiagramm.  
+ Optionen für lineare Messgeräte: „Horizontal“, „Vertikal“, „Mehrere Balkenzeiger“, „Zwei Skalen“, „Drei Farbbereiche“, „Logarithmisch“, „Thermometer“, „Thermometer Fahrenheit/Celsius“ und „Lineardiagramm“.  
   
   
 ##  <a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040402"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964878"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Allgemein (Eigenschaftenseite) (Freigegebene Datenquellen, Berichts-Manager)
   Auf der Seite Allgemeine Eigenschaften können Sie Eigenschaften eines freigegebenen Datenquellenelements anzeigen oder ändern. Die von Ihnen an den Eigenschaften vorgenommenen Änderungen gelten für alle Berichte, die auf dieses Element verweisen, sobald Sie auf die Schaltfläche **Anwenden**klicken.  

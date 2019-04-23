@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010656"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964956"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden verschiedene Webparts bereitgestellt, die mit bestimmten Versionen eines Berichtsservers und in bestimmten Bereitstellungsmodi verwendet werden können.  
   
--   **Einheitlicher Modus :** Wenn Sie von einem Berichtsserver, der im einheitlichen Modus ausgeführt wird, auf Berichtsserverinhalte auf einer SharePoint-Website zugreifen möchten, verwenden Sie die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen SharePoint 2.0-Webparts. Anweisungen zur Installation und Verwendung der 2.0-Webparts finden Sie in diesem Thema.  
+-   **Einheitlicher Modus :** Wenn Sie berichtsserverinhalte auf einer SharePoint-Website von einem Berichtsserver im einheitlichen Modus zugreifen möchten, verwenden Sie die SharePoint 2.0 Web Webparts Berichts-Explorer und Berichts-Viewer, die in enthaltenen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Anweisungen zur Installation und Verwendung der 2.0-Webparts finden Sie in diesem Thema.  
   
--   **SharePoint-Modus:** Wenn Sie auf einen Berichtsserver zugreifen möchten, der im SharePoint-Modus ausgeführt wird, verwenden Sie die Webparts, die vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte installiert werden. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **SharePoint-Modus:** Verwenden Sie die Webparts, die von installiert werden, sollten Sie einen Berichtsserver zugreifen, die im SharePoint-Modus ausgeführt wird, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in für SharePoint-Produkte. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  Das Berichts-Viewer-Webpart für den einheitlichen Modus („SPViewer.dwp“) unterscheidet sich von dem Webpart („ReportViewer.dwp“), das vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Die Webparts haben andere Schemas und Implementierungen, aber beide können in der gleichen SharePoint-Farm installiert sein. Optisch können Sie die beiden Webparts anhand des folgenden Merkmals unterscheiden: Das mit dem Add-In installierte Report Viewer-Webpart weist auf der Symbolleiste das Menü **Aktionen** auf.  

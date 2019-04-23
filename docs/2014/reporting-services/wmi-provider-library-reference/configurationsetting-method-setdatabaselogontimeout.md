@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetDatabaseLogonTimeout method
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d864f76898e98c904fd35682984bf60b97c77c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7bf1da1a02fabe1675533de13992ffd34350f4ab
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042331"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969476"
 ---
 # <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseLogonTimeout-Methode (WMI: MSReportServer_ConfigurationSetting)
   Gibt den Standardtimeoutwert für Verbindungen mit der Berichtsserver-Datenbank an  

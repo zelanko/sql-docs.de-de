@@ -1,7 +1,7 @@
 ---
 title: Erweiterungen
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553102"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938416"
 ---
-# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Extensions für SQL Server Reporting Services (SSRS)
+# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Erweiterungen für SQL Server Reporting Services (SSRS)
 
   Der Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwendet Erweiterungen, um die Eingabe- und Ausgabetypen zu modularisieren, die für die Authentifizierung, die Datenverarbeitung, das Berichtsrendering und die Berichtsübermittlung akzeptiert werden. Dadurch wird für vorhandene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installationen die Verwendung neuer Softwarestandards in der Branche erleichtert, z. B. ein neues Authentifizierungsschema, oder ein benutzerdefinierter Datenquellentyp. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  
   
@@ -56,7 +56,7 @@ Einige Erweiterungen können auch die folgenden Tasks ausführen:
   
 ## <a name="rendering-extensions"></a>Renderingerweiterungen
 
- Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen zur Verfügung: HTML, Excel, CSV, XML, Image, PDF, und [!INCLUDE[msCoName](../includes/msconame-md.md)]-Word.  
+ Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, CSV, XML, Image, PDF-Datei, und [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
 - **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern von HTML &#40;Berichts-Generator und SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -66,7 +66,7 @@ Einige Erweiterungen können auch die folgenden Tasks ausführen:
   
 - **XML-Renderingerweiterung** Die XML-Renderingerweiterung rendert Berichte in XML-Dateien. Diese XML-Dateien können dann von anderen Programmen gespeichert oder gelesen werden. Sie können auch eine XSLT-Transformation verwenden, um den Bericht in ein anderes XML-Schema zu verwandeln, das von einer anderen Anwendung verwendet wird. Der von der XML-Renderingerweiterung generierte XML-Code ist UTF-8-codiert. Weitere Informationen finden Sie unter [Exportieren nach XML &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
--   **Bild-Renderingerweiterung** Die Bild-Renderingerweiterung rendert Berichte in Bitmaps oder Metadateien. Die Erweiterung kann Berichte in den folgenden Formaten rendern: BMP, EMF, GIF, JPEG, PNG, TIFF und WMF. Standardmäßig wird das Bild in TIFF gerendert, das mit dem standardmäßigen Image Viewer des Betriebssystems (z. B. Windows Bild- und Faxanzeige) angezeigt werden kann. Sie können das Bild vom Viewer aus an einen Drucker senden. Durch Verwenden der Bildrenderingerweiterung zum Rendern des Berichts wird sichergestellt, dass der Bericht auf jedem Client gleich dargestellt wird. (Wenn ein Benutzer einen Bericht in HTML anzeigt, kann die Darstellung des Berichts in Abhängigkeit von der vom Benutzer verwendeten Browserversion, den Browsereinstellungen des Benutzers und den verfügbaren Schriftarten variieren.) Die Bildrenderingerweiterung rendert den Bericht auf dem Server, sodass allen Benutzern dasselbe Bild angezeigt wird. Da der Bericht auf dem Server gerendert wird, müssen alle im Bericht verwendeten Schriftarten auf dem Server installiert sein. Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
+-   **Bild-Renderingerweiterung** Die Bild-Renderingerweiterung rendert Berichte in Bitmaps oder Metadateien. Die Erweiterung kann Berichte in den folgenden Formaten Rendern: BMP, EMF, GIF, JPEG, PNG, TIFF und WMF. Standardmäßig wird das Bild in TIFF gerendert, das mit dem standardmäßigen Image Viewer des Betriebssystems (z. B. Windows Bild- und Faxanzeige) angezeigt werden kann. Sie können das Bild vom Viewer aus an einen Drucker senden. Durch Verwenden der Bildrenderingerweiterung zum Rendern des Berichts wird sichergestellt, dass der Bericht auf jedem Client gleich dargestellt wird. (Wenn ein Benutzer einen Bericht in HTML anzeigt, kann die Darstellung des Berichts variieren je nach Version der Browser des Benutzers, Browsereinstellungen des Benutzers und die Schriftarten, die verfügbar sind.) Die Bildrenderingerweiterung rendert den Bericht auf dem Server, sodass allen Benutzern dasselbe Bild angezeigt wird. Da der Bericht auf dem Server gerendert wird, müssen alle im Bericht verwendeten Schriftarten auf dem Server installiert sein. Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
 - **PDF-Renderingerweiterung** Die PDF-Renderingerweiterung rendert Berichte in PDF-Dateien, die mit Adobe Acrobat 6.0 oder höher geöffnet und angezeigt werden können. Weitere Informationen finden Sie unter [Exportieren als PDF-Datei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289868"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961236"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289868"
   
 8.  [Führen Sie die Haupt- und Drillthroughberichts](#MRunReports)  
   
- Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Dieses Lernprogramm erfordert Zugriff auf den Contoso Sales-Cube. Diese Anforderung gilt sowohl für den Drillthrough- als auch für den Hauptbericht. Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -390,7 +390,7 @@ ms.locfileid: "56289868"
   
 7.  Klicken Sie auf **Speichern**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Erstellen eines neuen Berichts mit dem Tabellen- oder Matrix-Assistenten  
+##  <a name="MMatrixAndDataset"></a> 1. Erstellen eines neuen Berichts aus der Tabelle oder Matrix-Assistenten  
  Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
@@ -562,7 +562,7 @@ ms.locfileid: "56289868"
   
 1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
-     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
+     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`, und die vierte Zeile enthält die Ergebnisse.  
   
 2.  Klicken Sie auf **Weiter**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289868"
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Typ **2009 Product Category Sales: Online and Reseller Category:**.  
+2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:**.  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   

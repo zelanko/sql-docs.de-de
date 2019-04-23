@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284998"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936236"
 ---
 # <a name="report-f1-help"></a>Hilfe (F1) zu Berichten
   Die Themen in diesem Abschnitt enthalten Informationen zu den Optionen, die Sie im Dialogfeld **Berichtseigenschaften** für einen Bericht festlegen können. Zum Öffnen des Dialogfelds **Berichtseigenschaften** klicken Sie mit der rechten Maustaste auf den Hintergrund des Berichts-Designers, und klicken Sie dann auf **Berichtseigenschaften**.  

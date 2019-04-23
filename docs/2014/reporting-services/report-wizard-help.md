@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971586"
 ---
 # <a name="report-wizard-help"></a>Hilfe des Berichts-Assistenten
   Dieser Abschnitt stellt F1-Hilfe für den Berichts-Assistenten bereit. Der Berichts-Assistent automatisiert den Erstellungsprozess von tabellarischen Berichten und Matrixberichten. In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291558"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957196"
 ---
 # <a name="tutorials-report-builder"></a>Lernprogramme (Berichts-Generator)
   In den folgenden Lernprogrammen zum Berichts-Generator können Sie sich mit dem Erstellen einfacher Berichte vertraut machen.  
@@ -41,22 +41,22 @@ ms.locfileid: "56291558"
  [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](tutorial-format-text-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um einige der zahlreichen Methoden zur Formatierung von Text in Berichten kennenzulernen.  
   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Säulendiagramm mit einem gleitenden Durchschnitt hinzufügen.  
   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Kreisdiagramm hinzufügen.  
   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Balkendiagramm hinzufügen.  
   
  [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie eine Matrix erstellt und dieser anschließend ein Satz von Sparklinediagrammen hinzugefügt wird.  
   
- [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht einen KPI (Key Performance Indicator) hinzufügen.  
   
- [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](tutorial-map-report-report-builder.md)  
+ [Tutorial: Kartenbericht (Berichts-Generator)](tutorial-map-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht eine Karte hinzufügen.  
   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](tutorial-add-a-parameter-to-your-report-report-builder.md).  
