@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2052f5614f5a1e810e2f0c50981c391c027073ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022911"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158187"
 ---
 # <a name="security-considerations-for-extensions"></a>Überlegungen zur Sicherheit von Erweiterungen
   Jede Anwendung für die Common Language Runtime (CLR) muss mit dem CLR-Sicherheitssystem interagieren. Bei der Ausführung einer solchen Anwendung wird diese automatisch ausgewertet, und sie erhält von der CLR einen Berechtigungssatz. Abhängig von den Berechtigungen, die die Anwendung erhält, wird sie entweder weiter ausgeführt, oder es wird eine Sicherheitsausnahme ausgelöst. Die lokalen Sicherheitseinstellungen und –richtlinien in den Dateien für die Sicherheitsrichtlinienkonfiguration eines bestimmten Berichtsservers definieren die Codeberechtigungen, die eine Assembly erhält.  

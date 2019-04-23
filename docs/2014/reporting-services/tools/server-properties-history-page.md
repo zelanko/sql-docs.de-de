@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042731"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951276"
 ---
 # <a name="server-properties-history-page"></a>Servereigenschaften (Seite Verlauf)
   Verwenden Sie diese Seite als Standardwert für die Anzahl von Kopien der Berichtsverläufe, die Sie beibehalten möchten. Mithilfe eines Standardwertes werden erste Grenzwerte für den Berichtsverlauf für alle Berichte festgelegt. Sie können diese Werte für die jeweiligen Berichte anpassen.  

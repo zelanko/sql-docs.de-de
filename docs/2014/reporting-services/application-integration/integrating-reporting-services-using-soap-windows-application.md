@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 93297d4b1da9363b0755ffe0e1c103a54797d299
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb34dc31d65c9b0814a348232d0e2405d7676fda
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018092"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154147"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>Verwenden der SOAP-API in einer Windows-Anwendung
   Über die Reporting Services-SOAP-API können Sie auf alle Funktionen des Berichtsservers zugreifen. Bei der SOAP-API handelt es sich um einen Webdienst, auf den problemlos zugegriffen werden kann, um Funktionen zur Unternehmensberichterstellung für benutzerdefinierte Geschäftsanwendungen bereitzustellen. Sie können in einer Windows-Anwendung auf den Webdienst zugreifen, indem Sie einfach Code schreiben, mit dem der Dienst aufgerufen wird. Mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Sie eine Proxyklasse generieren, die die Eigenschaften und Methoden des Webdiensts verfügbar macht und es Ihnen ermöglicht, bei der Erstellung von Geschäftsanwendungen auf Basis von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Technologie eine vertraute Infrastruktur und vertraute Tools zu verwenden.  

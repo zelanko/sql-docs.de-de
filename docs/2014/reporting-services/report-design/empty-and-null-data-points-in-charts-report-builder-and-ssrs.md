@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c52f168871b3768b6bee6ec0a0d5ab25f338c6bf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f350fed895d039a0d5298832e2cd0437748a0a92
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291928"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947236"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)
   Wenn Sie Felder mit leeren oder NULL-Werte im Diagramm anzeigen, wird das Diagramm möglicherweise nicht wie erwartet angezeigt. Je nach angegebenem Diagrammtyp werden leere Werte in Diagrammen unterschiedlich verarbeitet:  

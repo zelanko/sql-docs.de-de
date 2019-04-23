@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158006"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802654"
 
  > **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] steht in einer Evaluierungsedition für einen Testzeitraum von 180 Tagen. Weitere Informationen finden Sie unter den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Website für Testsoftware](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **HINWEIS:** Informationen über Funktionen, die von den Evaluation- und Developer-Editionen unterstützt werden, finden Sie im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise-Funktionssatz.  
+> **HINWEIS:** Von Evaluation und Developer-Editionen unterstützte Funktionen finden Sie unter den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise-Funktionssatz.  
   
  Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
@@ -41,7 +34,7 @@ ms.locfileid: "56802654"
   
  [Skalierbarkeit und Leistung](#Scalability)  
   
- [Sicherheit](#Enterprise_security)  
+ [Security](#Enterprise_security)  
   
  [Replikation](#Replication)  
   
@@ -105,7 +98,7 @@ ms.locfileid: "56802654"
 |Datenbankspiegelung|Ja|Ja (nur SAFETY FULL)|Ja (nur SAFETY FULL)|Nur WITNESS|Nur WITNESS|Nur WITNESS|Nur WITNESS|  
 |Sicherungskomprimierung|Ja|Ja|Ja|||||  
 |Datenbankmomentaufnahme|Ja|||||||  
-|AlwaysOn-Failoverclusterinstanzen|Ja (Knotenunterstützung: Maximum des Betriebssystems|Ja (Knotenunterstützung: 2)|Ja (Knotenunterstützung: 2)|||||  
+|AlwaysOn-Failoverclusterinstanzen|Ja (knotenunterstützung: Maximum des Betriebssystems|Ja (knotenunterstützung: 2)|Ja (knotenunterstützung: 2)|||||  
 |AlwaysOn-Verfügbarkeitsgruppen|Ja (bis zu 8 sekundäre Replikate, einschließlich 2 synchronen sekundären Replikaten)|||||||  
 |Connection Director|Ja|||||||  
 |Onlineseiten- und Onlinedateiwiederherstellung|Ja|||||||  
@@ -381,10 +374,10 @@ ms.locfileid: "56802654"
 |Data Mining-Tools (Assistenten, Editoren, Abfrage-Generatoren)|Ja|Ja|Ja|||||  
 |Übergreifende Überprüfung|Ja|Ja||||||  
 |Modelle für gefilterte Teilmengen von Daten der Miningstruktur|Ja|Ja||||||  
-|Zeitreihen: Benutzerdefinierte Kombination von ARTXP- und ARIMA-Methoden|Ja|Ja||||||  
+|Zeitreihen: Benutzerdefinierte Kombination von ARTXP-und ARIMA-Methoden|Ja|Ja||||||  
 |Zeitreihen: Vorhersage mit neuen Daten|Ja|Ja||||||  
 |Unbegrenzte gleichzeitige Data Mining-Abfragen|Ja|Ja||||||  
-|Erweiterte Konfigurations- & Optimierungsoptionen für Data Mining-Algorithmen|Ja|Ja||||||  
+|Erweiterte Konfigurations- & Optimierungsoptionen für Datamining-Algorithmen|Ja|Ja||||||  
 |Unterstützung für Plug-In-Algorithmen|Ja|Ja||||||  
 |Parallele Modellverarbeitung|Ja|Ja||||||  
 |Zeitreihen: Reihenübergreifende Vorhersage|Ja|Ja||||||  

@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286800"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951246"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.  
   
  Der Bericht, den Sie in diesem Lernprogramm erstellen, basiert auf Beispielumsatzdaten, die im Lernprogramm enthalten sind. Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekorativer Bereich mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen von Zusammenfassungsinformationen.  
@@ -224,7 +224,7 @@ ms.locfileid: "56286800"
   
 2.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands auf **Textfeld**, und ziehen Sie dann ein Textfeld in die linke obere Ecke der Liste, jedoch innerhalb des zuvor hinzugefügten Rechtecks. Legen Sie für das Textfeld eine Höhe von ca. 7,5 cm und eine Breite von ca. 12,7 cm fest.  
   
-3.  Setzen Sie den Cursor in den oberen Bereich des Textfelds, und geben Sie anschließend Folgendes ein: **Newsletter für** .  
+3.  Platzieren Sie den Cursor in den oberen Bereich des Textfelds, und geben Sie dann: **Newsletter für** .  
   
      ![Hinzufügen von Text für Newsletterüberschriften](../../2014/tutorials/media/tutorial-newsletterfor.png "Add newsletter heading text")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286800"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie Folgendes ein: **Hello** .  
+9. Platzieren Sie den Cursor unterhalb des Texts, den Sie in Schritt 3 und Datentyp eingegeben: **Hello** .  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "Hello" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
@@ -279,7 +279,7 @@ ms.locfileid: "56286800"
   
      ![Hinzufügen von newslettertext](../../2014/tutorials/media/tutorial-newslettertext.png "Hinzufügen von newslettertext")  
   
-20. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 15 eingefügt haben, und geben Sie dann Folgendes ein: **Herzlichen Glückwunsch zum Gesamtumsatz von** .  
+20. Platzieren Sie den Cursor unterhalb des Texts, die Sie in Schritt 15 eingefügt haben, und geben Sie dann: **Herzlichen Glückwunsch zum Gesamtumsatz von** .  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "von" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
@@ -431,7 +431,7 @@ ms.locfileid: "56286800"
   
      ![Fügen Sie die Zeile zum Bericht](../../2014/tutorials/media/tutorial-reportwithline.png "Zeile zum Bericht hinzufügen")  
   
-##  <a name="Visualization"></a> 9. Hinzufügen von Zusammenfassungsdatenvisualisierung (optional)  
+##  <a name="Visualization"></a> 9. (Optional) Hinzufügen von Zusammenfassungsdatenvisualisierung  
  Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.  
   
 #### <a name="to-add-a-rectangle"></a>So fügen Sie ein Rechteck hinzu  

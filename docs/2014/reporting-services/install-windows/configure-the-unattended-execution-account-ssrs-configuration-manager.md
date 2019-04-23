@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012071"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946926"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -36,7 +36,7 @@ ms.locfileid: "56012071"
  Mit unbeaufsichtigter Berichtsverarbeitung wird jede Berichtsausführung bezeichnet, die durch ein Ereignis (entweder ein geplantes Ereignis oder ein Datenaktualisierungsereignis) und nicht durch eine Benutzeranforderung ausgelöst wird. Der Berichtsserver verwendet das Konto für die unbeaufsichtigte Berichtsverarbeitung, um sich am Computer anzumelden, der die externe Datenquelle hostet. Dieses Konto ist erforderlich, da die Anmeldeinformationen des für den Berichtsserver verwendeten Dienstkontos nie für Verbindungen mit anderen Computern verwendet werden.  
   
 > [!IMPORTANT]  
->  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Insbesondere, wenn Sie das Ablaufen eines Kennworts zulassen oder die Kontoinformationen in Active Directory geändert werden, tritt beim nächsten Verarbeiten eines Berichts folgender Fehler auf: "Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: Unbekannter Benutzername oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
+>  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Insbesondere wird, wenn Sie das Ablaufen ein Kennworts zulassen oder die Kontoinformationen in Active Directory geändert wird, den folgenden Fehler beim nächsten auftreten, die ein Bericht verarbeitet wird: "Fehler bei der Anmeldung (RsLogonFailed) Anmeldefehler: Unbekannter Benutzername oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
   
 ## <a name="how-to-configure-the-account"></a>Konfigurieren des Kontos  
  Sie müssen ein Domänenbenutzerkonto verwenden. Damit das Konto seinen Zweck erfüllt, sollte es nicht mit dem Konto identisch sein, unter dem Report Server-Webdienst ausgeführt wird. Verwenden Sie unbedingt ein Konto mit minimalen Berechtigungen (Nur-Lese-Zugriff mit Berechtigungen für Netzwerkverbindungen ist ausreichend) und eingeschränktem Zugriff auf die Computer, die Datenquellen und Ressourcen für den Berichtsserver bereitstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  

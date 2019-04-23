@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37c20a59efa741b5ca768cd6b63773ad7aa15afe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287976"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951776"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Umgehung der Zeilenbeschränkung in Excel
   In diesem Thema wird erläutert, wie Sie beim Exportieren von Berichten nach Excel die Zeilenbeschränkung von Excel 2003 umgehen. Die Problemumgehung bezieht sich auf einen Bericht, der nur eine Tabelle enthält.  

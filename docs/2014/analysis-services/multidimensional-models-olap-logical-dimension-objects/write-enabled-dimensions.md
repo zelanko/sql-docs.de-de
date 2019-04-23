@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225130"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156947"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensionen mit aktiviertem Schreibzugriff
     
@@ -32,7 +30,7 @@ ms.locfileid: "48225130"
   
  Die Daten in einer Dimension sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Dimension zu aktivieren. Wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]für eine Dimension der Schreibschutz aktiviert wird, können Anwender der Unternehmenssoftware und Administratoren den Inhalt der Dimension ändern und die unmittelbaren Auswirkungen der Änderungen auf die Hierarchien der Dimension anzeigen. Der Schreibzugriff kann für jede Dimension aktiviert werden, die auf einer einzelnen Tabelle basiert. In einer Dimension mit aktiviertem Schreibzugriff können Benutzer im geschäftlichen Bereich und Administratoren Attributelemente innerhalb der Dimension ändern, verschieben, hinzufügen und löschen. Diese Updates werden zusammenfassend als *Rückschreiben von Dimensionen*bezeichnet.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt das Rückschreiben für alle Dimensionsattribute, und jedes Element einer Dimension kann geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt das Rückschreiben von Dimensionen für alle Dimensionsattribute, und jedes Element einer Dimension kann dabei geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
   
  Dimensionen mit aktiviertem Schreibzugriff und Cubes mit aktiviertem Schreibzugriff weisen unterschiedliche, jedoch sich ergänzende Funktionen auf. Durch eine Dimension mit aktiviertem Schreibzugriff erhalten Anwender der Unternehmenssoftware und Administratoren die Möglichkeit, Elemente zu aktualisieren, wohingegen sie durch einen Cube mit aktiviertem Schreibzugriff in die Lage versetzt werden, Zellenwerte zu aktualisieren. Obwohl sich diese zwei Funktionen ergänzen, müssen Sie sie nicht kombiniert verwenden. Eine Dimension muss nicht in einen Cube eingebunden sein, damit das Rückschreiben von Dimensionen verwendet werden kann. So kann eine Dimension mit aktiviertem Schreibzugriff auch in einen Cube eingebunden sein, für den der Schreibzugriff nicht aktiviert wurde. Für die Aktivierung des Schreibzugriffs von Dimensionen und Cubes und für die Verwaltung ihrer Sicherheit verwenden Sie unterschiedliche Verfahren.  
   
@@ -44,7 +42,7 @@ ms.locfileid: "48225130"
   
  Jedes vorhandene Element einer Rückschreibedimension kann geändert oder gelöscht werden. Wenn ein Element gelöscht wird, wird die Löschung an alle untergeordneten Elemente weitergegeben. So würden beispielsweise in einer Customer-Dimension mit den Attributen CountryRegion, Province, City und Customer durch das Löschen eines CountryRegion-Attributs alle Provinzen, Städte und Kunden gelöscht, die zum gelöschten Land bzw. zur gelöschten Region gehören. Wenn ein Land bzw. eine Region nur über eine Provinz verfügt, würden beim Löschen dieser Provinz auch das Land bzw. die Region gelöscht.  
   
- Elemente einer Rückschreibedimension können nur innerhalb derselben Ebene verschoben werden. So könnte beispielsweise eine Stadt auf die City-Ebene in einem anderen Land bzw. einer anderen Region oder Provinz verschoben werden, nicht aber auf die Province- oder CountryRegion-Ebene. In einer über-/ unterordnungshierarchie, sind alle Elemente Blattelemente, und weshalb ein Element verschoben werden kann auf jeder Ebene anders als die `(All)` Ebene.  
+ Elemente einer Rückschreibedimension können nur innerhalb derselben Ebene verschoben werden. So könnte beispielsweise eine Stadt auf die City-Ebene in einem anderen Land bzw. einer anderen Region oder Provinz verschoben werden, nicht aber auf die Province- oder CountryRegion-Ebene. In einer Über-/Unterordnungshierarchie sind alle Elemente Blattelemente, weshalb ein Element zu allen Ebenen verschoben werden kann, außer zur `(All)`-Ebene.  
   
  Wird ein Element in einer Über-/Unterordnungshierarchie gelöscht, werden die untergeordneten Elemente zum übergeordneten Element verschoben. Für das gelöschte Element sind Updateberechtigungen in der relationalen Tabelle erforderlich, nicht aber für die verschobenen Elemente. Wenn eine Anwendung ein Element in einer Über-/Unterordnungshierarchie verschiebt, kann die Anwendung im UPDATE-Vorgang angeben, ob nachfolgende Werte des Elements zusammen mit dem Element verschoben werden sollen oder zum übergeordneten Element des Elements verschoben werden sollen. Zum rekursiven Löschen eines Elements in einer Über-/Unterordnungshierarchie muss ein Benutzer über Updateberechtigungen in der relationalen Tabelle für das Element und alle nachfolgenden Werte des Elements verfügen.  
   
@@ -56,7 +54,7 @@ ms.locfileid: "48225130"
 > [!NOTE]  
 >  Das Rückschreiben für Dimensionen wird nicht von verknüpften Dimensionen unterstützt.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Nur Anwender der Unternehmenssoftware und Administratoren in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankrollen, denen die Lese-/Schreibberechtigung für die Dimension gewährt wurde, können eine Dimension mit aktiviertem Schreibzugriff aktualisieren. Sie können für jede Rolle steuern, welche Elemente aktualisiert werden können und welche nicht. Damit Anwender der Unternehmenssoftware und Administratoren eine Dimension mit aktiviertem Schreibzugriff aktualisieren können, muss ihre Clientanwendung diese Funktionalität unterstützen. Für solche Benutzer muss die Dimension mit aktiviertem Schreibzugriff in einen Cube eingebunden sein, der nach der letzten Änderung der Dimension verarbeitet wurde. Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Benutzer und Gruppen, die zur Administratorrolle gehören, können die Attributelemente einer Dimension mit aktiviertem Schreibzugriff aktualisieren, selbst wenn die Dimension nicht in einen Cube eingebunden ist.  

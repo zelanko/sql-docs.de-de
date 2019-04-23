@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012541"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156086"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
   Benutzerdefinierte Berichtselemente verwenden Klassen aus dem `Microsoft.ReportDesigner`-Namespace. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -65,7 +63,7 @@ ms.locfileid: "56012541"
 |`OnPaint`|Wird als Reaktion auf das `Paint`-Ereignis aufgerufen.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss dem Wert des <`Name`>-Attributs des `ReportItem`-Elements in der Konfigurationsdatei des Berichts-Designers entsprechen.  
+ Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss den Wert der entsprechen der <`Name`>-Attribut der `ReportItem` Element in der Konfigurationsdatei des Berichts-Designer.  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154182"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Key Performance Indicator (KPI)-Darstellung (tabellarisch)
   Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
@@ -223,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular-Beispiel  
- Um einen Einblick in die Verwendung von AMO zur Erstellung und Bearbeitung von KPI-Darstellungen zu gewinnen, können Sie den Quellcode im AMO2Tabular-Beispiel einsehen; prüfen Sie insbesondere die folgende Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
+ Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator können Sie Darstellungen des Quellcodes der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   

@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b820e36ba4c7fd90398ba5984a2d43bbd29b3746
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b2bd5c489bf799e39b51bf61f0f9e8922a993f65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039601"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947556"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus schließt für Anwendungsserver und Web-Front-End-Server (WFE) benötigte Komponenten ein. In diesem Thema liegt der Schwerpunkt auf der Installation der erforderlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten für einen WFE-Server, einschließlich der Anwendungsseiten, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen wie z. B. Abonnements, Datenwarnungen und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwendet werden. Die primäre für ein WFE benötigte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation ist das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint 2010-Produkte.  

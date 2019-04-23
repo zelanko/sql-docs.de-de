@@ -31,15 +31,15 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3deeceee2baae356dee30cc4eea29e0366c9f952
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951006"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln (Berichts-Generator und SSRS)
   Eine Karte kann Legenden, eine Farbskala und eine Entfernungsskala enthalten. Diese Teile einer Karte erleichtern Benutzern die Interpretation der Datenvisualisierung auf der Karte.  

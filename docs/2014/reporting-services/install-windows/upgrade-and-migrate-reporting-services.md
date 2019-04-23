@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583073"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952846"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Optionen für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
   
--   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie im Abschnitt "Einheitlichen Modus zum SharePoint-Migration" weiter unten in diesem Dokument und im verwandten Thema [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, in dem sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie im Abschnitt "Einheitlichen Modus zum SharePoint-Migration" weiter unten in diesem Dokument und im verwandten Thema [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Migrieren von**: Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
+-   **Migrieren von**: Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung, und konfigurieren die neue Umgebung für die vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
   
 ||  
 |-|  
@@ -135,7 +135,7 @@ Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Option
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Upgrade im einheitlichen Modus und Migrationsszenarien  
- **Upgrade:** Direkte Upgrades für den einheitlichen Modus werden für jede der unterstützten Versionen, die oben in diesem Thema aufgeführt sind, gleich ausgeführt. Führen Sie den SQL Server-Installations-Assistenten oder eine Befehlszeileninstallation aus. Nach der Installation wird die Berichtsserver-Datenbank automatisch auf das neue Berichtsserver-Datenbankschema aktualisiert. Weitere Informationen finden Sie im Abschnitt [In-place upgrade](#bkmk_inplace_upgrade) in diesem Thema.  
+ **Upgrade:** Direktes Upgrade für den einheitlichen Modus ist für jede der unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind, gleich ausgeführt. Führen Sie den SQL Server-Installations-Assistenten oder eine Befehlszeileninstallation aus. Nach der Installation wird die Berichtsserver-Datenbank automatisch auf das neue Berichtsserver-Datenbankschema aktualisiert. Weitere Informationen finden Sie im Abschnitt [In-place upgrade](#bkmk_inplace_upgrade) in diesem Thema.  
   
  Der Upgradevorgang beginnt, wenn Sie eine vorhandene Berichtsserverinstanz für das Upgrade auswählen.  
   
@@ -165,7 +165,7 @@ Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Option
   
 9. Beim Setup werden die Einstellungen in den Konfigurationsdateien zusammengeführt. Auf der Grundlage der Konfigurationsdateien aus der aktuellen Installation werden neue Einträge hinzugefügt. Veraltete Einträge werden nicht entfernt; sie werden jedoch nach Abschluss des Upgrades nicht mehr vom Berichtsserver gelesen. Beim Upgrade werden alte Protokolldateien, die veraltete Datei RSWebApplication.config oder Einstellungen für virtuelle Verzeichnisse in IIS nicht gelöscht. Beim Upgrade werden SQL Server 2005-Berichts-Designer, Management Studio und andere Clienttools nicht entfernt. Wenn Sie diese Dateien und Tools nicht mehr benötigen, müssen Sie sie nach Abschluss des Upgrades entfernen.  
   
- **Migration:** Wenn Sie eine frühere Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrieren, sind die Schritte für alle unterstützten Versionen identisch, die oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration:** Migrieren von einer früheren Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist die gleichen Schritte für alle unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
@@ -204,7 +204,7 @@ Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Option
   
  **Endumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 oder SharePoint 2013.  
   
--   **SharePoint 2010:** Direkte Upgrades von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden unterstützt, allerdings muss die SharePoint-Umgebung bei diesem Upgradeszenario außer Betrieb genommen werden.  
+-   **SharePoint 2010:** Direktes Upgrade von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird unterstützt, aber das Upgradeszenario außer Betrieb genommen der SharePoint-Umgebung erforderlich sind.  
   
      Wenn in der Endumgebung außerdem SharePoint 2013 ausgeführt werden soll, müssen Sie beim Aktualisieren von SharePoint 2010 auf SharePoint 2013 ein Upgrade mit Anfügen der Datenbanken ausführen.  
   

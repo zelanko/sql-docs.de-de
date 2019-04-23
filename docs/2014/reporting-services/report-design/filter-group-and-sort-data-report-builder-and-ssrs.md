@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: c848ddd8d7234ab8286d5f25603704638ce26bfd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658354"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950996"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  

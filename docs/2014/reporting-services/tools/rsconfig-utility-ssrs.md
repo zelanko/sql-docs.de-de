@@ -14,15 +14,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cebdfdbccf21ca3370cf2670d97d6cea6e4c7836
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9a22983a23e9bd1801de849774836a0a0acd2927
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036881"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947246"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig-Hilfsprogramm (SSRS)
   Mit dem Hilfsprogramm **rsconfig.exe** werden Verbindungs- und Kontowerte in der Datei „RSReportServer.config“ verschlüsselt und gespeichert. Die verschlüsselten Werte umfassen Verbindungsinformationen für Berichtsserver-Datenbanken und Kontowerte, die für die unbeaufsichtigte Berichtsverarbeitung verwendet werden.  
@@ -58,7 +58,7 @@ ms.locfileid: "56036881"
 |`-a`  *Authentifizierungsmethode*|Erforderlich.|Gibt die Authentifizierungsmethode an, die vom Berichtsserver zum Herstellen der Verbindung mit der Berichtsserver-Datenbank verwendet wird. Gültige Werte sind `Windows` oder `SQL` (die Groß- und Kleinschreibung wird bei diesem Argument nicht beachtet).<br /><br /> `Windows` gibt an, dass der Berichtsserver die Windows-Authentifizierung verwendet.<br /><br /> `SQL` gibt an, dass der Berichtsserver die SQL Server-Authentifizierung verwendet.|  
 |`-u`  *[Domain\\] Benutzername*|Erforderlich, wenn `-e` verwendet wird; optional, wenn `-c` angegeben wird.|Gibt ein Benutzerkonto für die Verbindung mit der Berichtsserver-Datenbank oder für ein Konto für unbeaufsichtigte Vorgänge an.<br /><br /> Bei Angabe von **rsconfig -e**ist dieses Argument erforderlich. Bei dem Konto muss es sich um ein Domänenbenutzerkonto handeln.<br /><br /> Für **Rsconfig - C** und `-a SQL`, geben Sie dieses Argument muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.<br /><br /> Für **Rsconfig - C** und `-a Windows`, diesem Argument ein Domänenbenutzer, ein integriertes Konto oder Anmeldeinformationen für das Dienstkonto angegeben. Wenn Sie ein Domänenkonto angeben, geben Sie *Domäne* und *Benutzername* im Format *Domäne\Benutzername*an. Wenn Sie ein integriertes Konto verwenden, ist dieses Argument optional. Wenn Sie die Anmeldeinformationen für ein Dienstkonto verwenden möchten, geben Sie dieses Argument nicht an.|  
 |`-p`  *Das Kennwort*|Erforderlich, wenn `-u` angegeben wird.|Gibt das Kennwort an, das mit dem *Benutzername* -Argument verwendet wird. Sie können für dieses Argument einen leeren Wert festlegen, falls für das Konto kein Kennwort erforderlich ist. Bei Domänenkonten wird bei diesem Wert die Groß- und Kleinschreibung beachtet.|  
-|`-t`|Dies ist optional.|Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
+|`-t`|Optional.|Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Auf dem Computer, der den von Ihnen konfigurierten Berichtsserver hostet, müssen Sie als lokaler Administrator angemeldet sein.  

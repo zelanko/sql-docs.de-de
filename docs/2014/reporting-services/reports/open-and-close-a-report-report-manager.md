@@ -12,15 +12,15 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034396"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947876"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
   Sie können den Berichts-Manager verwenden, um Berichte anzuzeigen, die auf einem Berichtsserver veröffentlicht wurden. Standardmäßig werden alle Berichte in HTML geöffnet. Nachdem ein Bericht geöffnet wurde, können Sie ihn exportieren, um ihn in anderen Anwendungsformaten anzuzeigen. Wenn der Bericht interaktive Funktionen enthält oder wenn es sich um einen Bericht vom Berichts-Generator mit interaktiven Daten handelt, können Sie auf die Links klicken, um zusätzliche Berichte oder Daten anzuzeigen.  

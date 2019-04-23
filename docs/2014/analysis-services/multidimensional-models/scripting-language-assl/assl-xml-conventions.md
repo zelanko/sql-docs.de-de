@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -26,12 +24,12 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531411"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156688"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
   Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
@@ -137,7 +135,7 @@ ms.locfileid: "52531411"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- Die `Name`- und die `ID`-Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ `Name` und `ID` -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
  Ein `DateTime` Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, proxies
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b4ba7b4775009fe346cbb32473ecf34d2445c9c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022591"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156496"
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys
   Ein Client und ein Webdienst können über SOAP-Nachrichten kommunizieren, die die Eingabe- und Ausgabeparameter als XML-Datei einkapseln. Eine Proxyklasse ordnet XML-Elementen Parameter zu und sendet dann die SOAP-Nachrichten über ein Netzwerk. So sorgt die Proxyklasse dafür, dass Sie nicht auf der SOAP-Ebene mit dem Webdienst kommunizieren müssen. Außerdem können Sie die Webdienstmethoden in jeder Entwicklungsumgebung aufrufen, die SOAP- und Webdienstproxys unterstützt.  

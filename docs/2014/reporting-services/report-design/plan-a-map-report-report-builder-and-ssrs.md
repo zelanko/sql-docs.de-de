@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288188"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950776"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
   Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  
@@ -114,12 +114,12 @@ ms.locfileid: "56288188"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_Kartentyp_Polygon_Standard](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Standardkarte|Polygon|Eine Karte, die nur Bereiche anzeigt, wie z. B. Vertriebsgebiete.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe. Eine Palette ist ein vordefinierter Satz von Farben. Wenn alle Farben in einer Palette zugewiesen wurden, werden Farbschattierungen zugewiesen.|  
 |![rs_Kartentyp_Polygon_AnalytischeFarbkarte](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Analytische Farbkarte|Polygon|Eine Karte, die analytische Daten mithilfe unterschiedlicher Farben anzeigt, wie z. B. Umsatzdaten nach Bereich.|  
-|![rs_Kartentyp_Polygon_Blasendiagramm](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Blasendiagrammkarte|Polygon|Eine Karte, die analytische Daten durch unterschiedliche Blasengrößen für unterschiedliche Bereiche anzeigt, wie z. B. Umsatzdaten nach Bereich.<br /><br /> Optionen: Verändern Sie die Farben von Bereichen anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
+|![rs_Kartentyp_Polygon_Blasendiagramm](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Blasendiagrammkarte|Polygon|Eine Karte, die analytische Daten durch unterschiedliche Blasengrößen für unterschiedliche Bereiche anzeigt, wie z. B. Umsatzdaten nach Bereich.<br /><br /> Optionen: Verändern Sie Farben von Bereichen anhand eines zweiten analytischen Felds, und geben Sie farbregeln aus.|  
 |![rs_Kartentyp_Linien_Standard](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Standardkarte (Linien)|Linie|Eine Karte, die nur Linien anzeigt, wie z. B. Lieferrouten.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe.|  
-|![rs_Kartentyp_Linien_Analytisch](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytische Karte (Linien)|Linie|Eine Karte, die unterschiedliche Linienfarben und -breiten enthält, wie z. B. für die Anzahl gelieferter Pakete und für Pünktlichkeitsmetriken nach Route.<br /><br /> Optionen: Verändern Sie Linienstärke anhand eines analytischen Felds, verändern Sie die Linienfarbe anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
-|![rs_Kartentyp_Marker_Einfach](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Einfache Markerkarte|Punkt|Eine Karte, die für jeden Standort einen Marker anzeigt, z. B. für Städte.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe, und ändern Sie das Markerformat.|  
-|![rs_Kartentyp_Marker_Blasendiagramm](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Blasendiagramm-Markerkarte|Punkt|Eine Karte, die eine Blase für jeden Standort anzeigt, wobei die Blasengröße von einem analytischen Datenfeld abhängt, z. B. Umsatzdaten nach Stadt.<br /><br /> Optionen: Verändern Sie die Blasenfarbe anhand eines zweiten analytischen Felds, und geben Sie Farbregeln an.|  
-|![rs_Kartentyp_Marker_Analytisch](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytische Markerkarte|Punkt|Eine Karte, die an jedem Standort einen Marker anzeigt, wobei Farbe, Größe und Typ der Marker auf analytischen Daten basieren, wie z. B. Produkte mit den besten Verkaufszahlen, Gewinnspanne und Rabattstrategie.<br /><br /> Optionen: Verändern Sie den Markertyp anhand eines analytischen Felds, verändern Sie die Markergröße anhand eines zweiten analytischen Felds, verändern Sie die Markerfarbe anhand eines dritten analytischen Felds, und geben Sie Farbregeln an.|  
+|![rs_Kartentyp_Linien_Analytisch](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytische Karte (Linien)|Linie|Eine Karte, die unterschiedliche Linienfarben und -breiten enthält, wie z. B. für die Anzahl gelieferter Pakete und für Pünktlichkeitsmetriken nach Route.<br /><br /> Optionen: Verändern Sie Linienstärke anhand eines analytischen Felds, verändern Sie Linienfarbe anhand eines zweiten analytischen Felds, und geben Sie farbregeln.|  
+|![rs_Kartentyp_Marker_Einfach](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Einfache Markerkarte|Punkt|Eine Karte, die für jeden Standort einen Marker anzeigt, z. B. für Städte.<br /><br /> Optionen: Verändern Sie Farben anhand der Palette, oder verwenden Sie eine einzelne Farbe, und ändern Sie Markierungsstil.|  
+|![rs_Kartentyp_Marker_Blasendiagramm](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Blasendiagramm-Markerkarte|Punkt|Eine Karte, die eine Blase für jeden Standort anzeigt, wobei die Blasengröße von einem analytischen Datenfeld abhängt, z. B. Umsatzdaten nach Stadt.<br /><br /> Optionen: Variieren Sie die blasenfarbe anhand eines zweiten analytischen Felds, und geben Sie farbregeln an.|  
+|![rs_Kartentyp_Marker_Analytisch](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytische Markerkarte|Punkt|Eine Karte, die an jedem Standort einen Marker anzeigt, wobei Farbe, Größe und Typ der Marker auf analytischen Daten basieren, wie z. B. Produkte mit den besten Verkaufszahlen, Gewinnspanne und Rabattstrategie.<br /><br /> Optionen: Variieren Sie Markertyp anhand eines analytischen Felds, variieren Sie die Markergröße anhand eines zweiten analytischen Felds, variieren Sie die Markerfarbe anhand eines dritten analytischen Felds, und geben Sie farbregeln.|  
   
  Nachdem Sie mit dem Karten-Assistenten eine Karte hinzugefügt haben, können Sie mit dem Ebenen-Assistenten zusätzliche Ebenen erstellen oder die Optionen für eine Ebene ändern. Weitere Informationen zu Assistenten finden Sie unter [Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -163,7 +163,7 @@ ms.locfileid: "56288188"
   
 ## <a name="see-also"></a>Siehe auch  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Kartenbericht (Berichts-Generator)](../tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

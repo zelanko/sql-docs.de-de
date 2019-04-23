@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5522f24dbb7b930b69b2656f7c2c5b53954f16ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290918"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946936"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Kartenbericht (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Berichtsdaten vor einem geografischen Hintergrund anzeigen können.  
   
  Karten basieren auf räumlichen Daten, die in der Regel aus Punkten, Linien und Polygonen bestehen. Ein Polygon kann z. B. den Umriss eines Countys darstellen, eine Linie eine Straße und ein Punkt die Position eines Orts. Jeder räumliche Datentyp wird auf einer separaten Kartenebene als Satz von Kartenelementen angezeigt.  
@@ -63,9 +63,9 @@ ms.locfileid: "56290918"
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, erstellen Sie ein Dataset, und führen Sie den Assistenten, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  

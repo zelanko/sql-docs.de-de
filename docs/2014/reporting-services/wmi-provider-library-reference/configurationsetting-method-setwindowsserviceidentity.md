@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd4d7e271b23cdcd7dc9641a53f9dd046f030b9a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc59e8a963f39a3686e7d7cb02cd2e2b17a39783
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015872"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947066"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity-Methode (WMI: MSReportServer_ConfigurationSetting)
   Lässt den Report Server-Windows-Dienst als einen angegebenen Windows-Benutzer ausführen und gibt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann  

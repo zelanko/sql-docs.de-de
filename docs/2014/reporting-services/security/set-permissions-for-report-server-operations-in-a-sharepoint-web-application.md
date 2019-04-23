@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dcb6feb0accb9c8033ea6f7d58a645aae31bc25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017745"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953376"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
   Bei einem im integrierten SharePoint-Modus ausgeführten Berichtsserver wird durch die für die SharePoint-Website definierten Sicherheitseinstellungen bestimmt, wie Sie Berichte, Berichtsmodelle und freigegebene Datenquellen anzeigen und verwalten. Wenn Sie die standardmäßigen SharePoint-Gruppen, Berechtigungsebenen und Berechtigungszuweisungen verwenden, können Sie mit Berichten und anderen Dokumenten arbeiten und die aktuellen Sicherheitseinstellungen verwenden.  

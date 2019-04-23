@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294728"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951236"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie auf Grundlage der Beispielumsatzdaten einen einfachen Tabellenbericht und fügen anschließend einer Zelle in der Tabelle ein Sparklinediagramm hinzu.  
   
  Eine erweiterte Version des Berichts, den Sie in diesem Lernprogramm erstellen, ist als [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=184851). Die folgende Abbildung zeigt den Beispielbericht, der dem Bericht ähnelt, den Sie erstellen.  
@@ -49,7 +49,7 @@ ms.locfileid: "56294728"
   
  9. [Speichern des Berichts](#Save)  
   
- Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -183,7 +183,7 @@ ms.locfileid: "56294728"
   
 14. Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält drei Spalten und drei Zeilen.  
   
-     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Produkt**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **SalesDate**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Bereich Zeilengruppen wird eine Zeilengruppe angezeigt: **Product**. Im spaltengruppenbereich wird eine Spaltengruppe angezeigt: **SalesDate**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56294728"
   
  Die Ausrichtung aller Balken entspricht nun der der Balken in den anderen Zeilen.  
   
-##  <a name="FormatCurrency"></a> 5. Formatieren von Daten als Währung (optional)  
+##  <a name="FormatCurrency"></a> 5. (Optional) Formatieren von Daten als Währung  
  Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
   
 #### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  

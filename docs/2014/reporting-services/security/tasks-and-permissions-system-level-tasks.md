@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00dbe62d042618fdf61ef07f2ace5ba2acb2e11e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b84e669f1a3621671bb476f8bc96fa68e36f7ae6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013042"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946866"
 ---
 # <a name="system-level-tasks"></a>Aufgaben auf Systemebene
   Eine Aufgabe auf Systemebene ist eine Auflistung von Berechtigungen im Hinblick auf Vorgänge, die die Berichtsserversite insgesamt betreffen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält auch Aufgaben auf Elementebene, die sich auf bestimmte Elemente beziehen. Weitere Informationen finden Sie unter [Aufgaben auf Elementebene](tasks-and-permissions-item-level-tasks.md). Weitere Informationen zu Aufgaben und Berechtigungen im Allgemeinen finden Sie unter [Tasks and Permissions](tasks-and-permissions.md).  

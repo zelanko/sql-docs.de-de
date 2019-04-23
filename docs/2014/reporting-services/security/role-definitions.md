@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038111"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950846"
 ---
 # <a name="role-definitions"></a>Rollendefinitionen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine *Rollendefinition*** eine benannte Auflistung von Aufgaben, die die auf einem Berichtsserver verfügbaren Vorgänge definieren. Rollendefinitionen stellen die Regeln bereit, mit denen der Berichtsserver die Sicherheit erzwingt. Wenn ein Benutzer versucht, eine Aufgabe auszuführen, z. B. das Veröffentlichen eines Berichts in einem Ordner, überprüft der Berichtsserver die Rollenzuweisung des Benutzers, um zu bestimmen, ob die Aufgabe in der Rollendefinition enthalten ist. Falls die Aufgabe in der Rollendefinition enthalten ist, wird die Anforderung gesendet.  

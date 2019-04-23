@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - registering assemblies
@@ -18,12 +16,12 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506272"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158546"
 ---
 # <a name="creating-stored-procedures"></a>Erstellen gespeicherter Prozeduren
   Alle gespeicherten Prozeduren müssen mit einer CLR-Klasse (Common Language Runtime) oder einer COM-Klasse (Component Object Model) verknüpft sein, damit sie verwendet werden können. Die Klasse muss installiert sein, auf dem Server – in der Regel in Form einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Dynamic link Library (DLL) - und registriert als Assembly auf dem Server oder in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank.  

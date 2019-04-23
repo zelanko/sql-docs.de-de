@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287018"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953296"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Berichts-Generator-Fenster ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Darüber ist das Menüband angeordnet. Die Bereiche "Berichtsdaten", "Gruppierung" und "Eigenschaften" und der BerichtsteilKatalog befinden sich links, unter und rechts neben der Entwurfsoberfläche. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Auf dem Menüband sind herkömmliche Menüelemente in Kategorien angeordnet, die einfach zu finden und zu verwenden sind. In den Bereichen können Sie die Berichtsressourcen hinzufügen, auswählen und anordnen und Berichtselementeigenschaften ändern.  
@@ -42,7 +42,7 @@ ms.locfileid: "56287018"
  Im Ausführmodus ist das Menüband nur eine Registerkarte: **ausführen**.  
   
 ### <a name="home-tab"></a>Registerkarte "Home"  
- Bei der Registerkarte "Home" handelt es sich um eine Auflistung von häufig benutzten Befehlen, die sich im Wesentlichen auf die Darstellung der Elemente im Bericht beziehen. Auf der Registerkarte Home können Sie auf die Befehle für Ausführung, Schriftart, Absatz, Rahmen, Zahl und Layout zugreifen. Wenn Sie auf ein Element in der Registerkarte klicken, ändert sich das ausgewählte Element auf der Entwurfsoberfläche. Beim Klicken auf **ausführen**, damit Sie sehen, wie der Inhalt des Berichts angezeigt werden, wenn veröffentlicht, wird der Bericht in HTML gerendert und anstelle der Registerkarte "Start" die Registerkarte ausführen angezeigt. Die Registerkarte Home wird standardmäßig angezeigt, wenn Sie das erste Mal einen Bericht erstellen.  
+ Bei der Registerkarte "Home" handelt es sich um eine Auflistung von häufig benutzten Befehlen, die sich im Wesentlichen auf die Darstellung der Elemente im Bericht beziehen. Auf der Registerkarte Home können Sie auf die Befehle für Ausführung, Schriftart, Absatz, Rahmen, Zahl und Layout zugreifen. Wenn Sie auf ein Element in der Registerkarte klicken, ändert sich das ausgewählte Element auf der Entwurfsoberfläche. Beim Klicken auf **ausführen**, damit Sie sehen, wie der Inhalt des Berichts angezeigt werden, wenn veröffentlicht, wird der Bericht in HTML gerendert und anstelle der Registerkarte "Start" die Registerkarte ausführen angezeigt. Registerkarte "Start" ist die Standardregisterkarte angezeigt, wenn Sie einen Bericht erstellen.  
   
 ### <a name="insert-tab"></a>Registerkarte Einfügen  
  Die Registerkarte Einfügen ist eine Auflistung von Befehlen, die häufig zum Hinzufügen von Berichtselementen zum Bericht verwendet werden. Auf der Registerkarte Einfügen können Sie Assistenten verwenden, um eine Tabelle, eine Matrix, ein Diagramm oder eine Karte hinzuzufügen. Sie können diese Elemente auch ohne einen Assistenten hinzufügen. Außerdem können Sie weitere Berichtselemente wie Sparklines, Indikatoren, Textfelder, Bilder, Rechtecke, Unterberichte sowie Berichtskopf- und -ußzeilen hinzufügen.  
@@ -146,17 +146,17 @@ ms.locfileid: "56287018"
 ### <a name="changing-the-properties-pane-view"></a>Ändern der Eigenschaftenbereichsansicht  
  Standardmäßig sind die Eigenschaften, die im Eigenschaftenbereich angezeigt werden, in größere Kategorien unterteilt, wie Aktion, Rahmen, Ausfüllen, Schriftart und Allgemein. Mit jeder Kategorie ist eine Gruppe von Eigenschaften verknüpft. Beispielsweise sind die folgenden Eigenschaften in der Kategorie Schriftart aufgeführt: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight und TextDecoration. Sie können alle Eigenschaften, die im Bereich aufgeführt werden, auch alphabetisieren. In diesem Fall werden die Kategorien entfernt. Alle Eigenschaften werden ungeachtet der Kategorie in alphabetischer Reihenfolge aufgeführt.  
   
- Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand angezeigt: Kategorie, auch Alphabetisieren, und Eigenschaftenseiten. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
+ Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand: Category, Alphabetize, und Property Pages. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
   
   
 ##  <a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
- Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich enthält zwei Bereiche: Zeilengruppen und Spaltengruppen. Wenn Sie einen Datenbereich auswählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter ihre übergeordneten Gruppen angezeigt.  
+ Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich hat zwei Bereiche: Row Groups und Column Groups. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
   
  ![Gruppierungsbereich für geschachtelte Zeilen- und Spaltengruppen](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   
  Sie können Gruppen erstellen, indem Sie Felder mit Drag and Drop aus dem Berichtsdatenbereich ziehen und auf der Entwurfsoberfläche oder im Gruppierungsbereich einfügen. Sie können übergeordnete, angrenzende und untergeordnete Gruppen im Gruppierungsbereich hinzufügen, Gruppeneigenschaften ändern und Gruppen löschen.  
   
- Der Gruppierungsbereich wird standardmäßig angezeigt. Sie können den Bereich jedoch schließen, indem Sie die Auswahl des Kontrollkästchens Gruppierungsbereich auf der Registerkarte Sicht aufheben. Der Gruppierungsbereich ist für die Diagramm- und Messgerätdatenbereiche nicht verfügbar.  
+ Der Gruppierungsbereich wird standardmäßig angezeigt, aber Sie können den Bereich schließen, indem Sie auf der Registerkarte Ansicht das Kontrollkästchen im Bereich Gruppierung deaktivieren. Der Gruppierungsbereich ist für die Diagramm- und Messgerätdatenbereiche nicht verfügbar.  
   
  Weitere Informationen finden Sie unter [Gruppierungsbereich &#40;Berichts-Generator&#41;](../report-design/grouping-pane-report-builder.md) und [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   

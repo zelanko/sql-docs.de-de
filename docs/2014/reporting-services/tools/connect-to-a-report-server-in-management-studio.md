@@ -13,15 +13,15 @@ helpviewer_keywords:
 - registering report servers
 - report servers [Reporting Services], registering
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f87ea4b801e9f7c60364e235877f84db810384c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041371"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951286"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt einen Objekt-Explorer bereit, mit dem Sie eine Verbindung zu einem beliebigen Server der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Familie herstellen und seinen Inhalt grafisch darstellen können. Für Reporting Services können Sie den Objekt-Explorer verwenden, um Folgendes durchzuführen:  

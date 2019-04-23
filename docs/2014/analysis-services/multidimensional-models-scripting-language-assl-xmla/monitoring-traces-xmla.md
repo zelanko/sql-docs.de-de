@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146465"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156411"
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
   Sie können die [abonnieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
@@ -57,7 +55,7 @@ ms.locfileid: "50146465"
 |NestLevel|Integer|Die Ebene der Transaktion, für die das Ereignis aufgetreten ist.|  
 |NumSegments|Lange ganze Zahl|Die Anzahl der Datensegmente, die von dem Befehl, für den das Ereignis aufgetreten ist, betroffen ist, oder auf die zugegriffen wurde.|  
 |Schweregrad|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> Wert: 0 = Erfolg<br /><br /> Wert: 1 = Information<br /><br /> Wert: 2 = Warnung<br /><br /> Wert: 3 = Fehler|  
-|Success|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
+|Erfolgreich|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
 |Fehler|Lange ganze Zahl|Die Fehlernummer des Ereignisses (falls zutreffend).|  
 |ConnectionID|Zeichenfolge|Der Bezeichner der Verbindung, für die das Ereignis aufgetreten ist.|  
 |DatabaseName|Zeichenfolge|Der Name der Datenbank, für die das Ereignis aufgetreten ist.|  

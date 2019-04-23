@@ -15,15 +15,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012462"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952436"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  

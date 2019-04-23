@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cba433f840f2e2284ed41ca4b87f0fd2bb1410f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630ebd1ed531a15935fd71871608b300425feb56
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013681"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950976"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Ändern der Standardübermittlungserweiterung für Reporting Services
   Sie können [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurationseinstellungen ändern, um die Standardübermittlungserweiterung in der Liste **Übermittelt von** einer Abonnementdefinitionsseite zu ändern. Sie können die Konfiguration z. B. so ändern, dass beim Erstellen eines neuen Abonnements durch den Benutzer standardmäßig eine Dateifreigabeübermittlung statt einer E-Mail-Übermittlung ausgewählt wird. Sie können auch die Reihenfolge der in der Benutzeroberfläche aufgeführten Übermittlungserweiterungen ändern.  
@@ -88,7 +88,7 @@ ms.locfileid: "56013681"
   
      **Ereignis-ID:** 109  
   
-     **Quelle:** Berichtsserver-Windows-Dienst (Instanzname)  
+     **Quelle:** Report Server-Windows-Dienst (Instanzname)  
   
      Die Datei „RSReportServer.config“ wurde geändert.  
   

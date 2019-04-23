@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -21,12 +19,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542585"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156806"
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
   Können Sie die [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) -Befehl in XML for Analysis (XMLA), führen Sie mehrere XMLA-Befehle, die mit einer einzigen XMLA- [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) Methode. Sie können mehrere im `Batch`-Befehl enthaltene Befehle entweder als Einzeltransaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel ausführen. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der `Batch` Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  

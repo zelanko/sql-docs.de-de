@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293128"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947967"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten
   In diesem Artikel werden die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen und -Workflows beschrieben, die für Microsoft Surface-Geräte sowie für Geräte mit Apple iOS 6 und Apple Safari (z. B. iPad) unterstützt werden.  
@@ -49,16 +49,16 @@ Schauen Sie sich eine Demo der Berichtsanzeige auf einem iPad an.
   
 2.  Öffnen Sie den Bericht, indem Sie einen der folgenden Schritte ausführen.  
   
-    -   **Starten von E-mail:** Tippen Sie in einer E-Mail, die von einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnement erstellt wurde, auf die URL des Berichts. Der Bericht wird im Browser geöffnet.  
+    -   **Starten von E-mail:** In einer E-mail, die erstellt wird eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnement, tippen Sie auf die URL des Berichts. Der Bericht wird im Browser geöffnet.  
   
-    -   **Starten Sie vom Berichtsserver:** Durchsuchen Sie das Verzeichnis auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtsserver, und tippen Sie auf den Berichtsnamen, um den Bericht zu öffnen.  
+    -   **Starten Sie vom Berichtsserver:** Durchsuchen Sie das Verzeichnis auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver, und tippen Sie dann auf den Berichtsnamen, um den Bericht zu öffnen.  
   
-    -   **Starten Sie von einer SharePoint-Dokumentbibliothek:** Navigieren Sie zu einer SharePoint-Dokumentbibliothek, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichte enthält, und tippen Sie dann auf den Berichtsnamen. Sie können den Bericht anzeigen und damit interagieren.  
+    -   **Starten Sie von einer SharePoint-Dokumentbibliothek:** Navigieren Sie zu einer SharePoint-Dokumentbibliothek, die enthält [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] meldet, und tippen Sie dann auf den Namen des Berichts. Sie können den Bericht anzeigen und damit interagieren.  
   
         > [!IMPORTANT]  
         >  Achten Sie bei einem iPad darauf, dass die Eigenschaft **Privates Surfen** für Safari deaktiviert ist.  
   
-    -   **SharePoint-Webpart:** Wenn das Webpart einer SharePoint-Seite hinzugefügt wurde, können Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichte anzeigen.  
+    -   **SharePoint-Webpart:** Wenn das Webpart zu einer SharePoint-Seite hinzugefügt wurde, können Sie anzeigen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichte.  
   
 3.  Auf Ihrem Microsoft Surface-Gerät können Sie den Bericht auch mithilfe des Berichts-Managers öffnen. Durchsuchen Sie das Verzeichnis im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager, und tippen Sie auf den Berichtsnamen, um den Bericht zu öffnen.  
   

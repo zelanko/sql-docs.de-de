@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361372"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154686"
 ---
 # <a name="clr-transactions-sample"></a>Beispiel für CLR-Transaktionen
   Dieses Beispiel veranschaulicht das Steuern von Transaktionen mithilfe der im `System.Transactions`-Namespace vorhandenen verwalteten APIs. Dabei wird mithilfe der `System.Transactions.TransactionScope`-Klasse eine Transaktionsgrenze festgelegt, um sicherzustellen, dass keine Lagerbestandsdaten angepasst werden, solange kein genügend großer Lagerbestand zur Deckung der Anforderung vorhanden ist, und dass bei einem ausreichenden Lagerbestand der Transfer von Beständen zwischen den Standorten auf atomare Weise erfolgt. Zur Demonstration der automatischen Registrierung in einer verteilten Transaktion werden Bestandsänderungen in einer Überwachungsdatenbank protokolliert, die in einer eigenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist.  

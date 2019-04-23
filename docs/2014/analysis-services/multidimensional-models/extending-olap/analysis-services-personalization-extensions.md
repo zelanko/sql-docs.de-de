@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372222"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156258"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Personalisierungserweiterungen für Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionalität, die Folgendes erreicht werden können:  
@@ -141,10 +139,10 @@ ms.locfileid: "53372222"
  Die Befehle CREATE KPI und DROP KPI werden der MDX-Syntax hinzugefügt. KPIs können dynamisch aus einem beliebigen MDX-Skript erstellt werden.  
   
 ### <a name="schema-rowsets-extensions"></a>Schemarowset-Erweiterungen  
- MDSCHEMA_MEMBERS *Bereich* Spalte hinzugefügt wird. Bereichswerte lauten wie folgt aus: MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
+ MDSCHEMA_MEMBERS *Bereich* Spalte hinzugefügt wird. Bereichswerte lauten wie folgt aus: MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
   
  Mdschema_sets *Set_evaluation_context* Spalte hinzugefügt wird. Satzauswertungs-Kontextwerte lauten wie folgt aus: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- MDSCHEMA_KPIS wird eine scope-Spalte hinzugefügt. Bereichswerte lauten wie folgt aus: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
+ MDSCHEMA_KPIS wird eine scope-Spalte hinzugefügt. Bereichswerte lauten wie folgt aus: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   

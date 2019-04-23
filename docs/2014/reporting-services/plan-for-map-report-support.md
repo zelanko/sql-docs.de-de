@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293919"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946896"
 ---
 # <a name="plan-for-map-report-support"></a>Planen der Unterstützung für Kartenberichte
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] unterstützt kartenberichte, die räumliche Datenquellen verwenden. Räumliche Daten können aus SQL Server-Datenbanken, aus ESRI-Shape-Dateien oder aus dem Kartenkatalog stammen, der mit Reporting Services oder Berichts-Generator installiert wird. Eine Karte kann auch einen Hintergrund aus Bing-Kartenkacheln anzeigen. Ein Berichtsautor kann es sich um einen Bericht erstellen, der angibt, räumliche Daten oder Bing-kartenkacheln dynamische und zur Laufzeit abgerufene oder als statische und in der Berichtsdefinition eingebettet.  

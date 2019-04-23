@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 005c9fe0ff5ba3f998e80a93ea19d85c87331403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028581"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953256"
 ---
 # <a name="configure-report-manager-native-mode"></a>Konfigurieren des Berichts-Managers (einheitlicher Modus)
   Der Berichts-Manager ist eine Front-End-Webanwendung, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können. Der Berichts-Manager wird mit dem Berichtsserver-Webdienst in derselben Berichtsserverinstanz installiert und kann konfiguriert werden, wenn Sie in Setup die Option **Standardkonfiguration im einheitlichen Modus installieren** auswählen. Sie können den Berichts-Manager auch nach der Installation konfigurieren. Dieses Thema enthält Informationen zu den folgenden Berichts-Manager-Konfigurationsszenarios:  

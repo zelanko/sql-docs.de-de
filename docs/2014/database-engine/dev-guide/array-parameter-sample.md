@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375382"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158676"
 ---
 # <a name="array-parameter-sample"></a>Beispiel für einen Arrayparameter
   In bestimmten Situationen ist es hilfreich, eine Zeilenmenge zu erstellen, zu aktualisieren oder zu löschen. Für die Durchführung dieser Aufgabe gibt es mehrere Ansätze. Einer diese Ansätze besteht darin, ein Array mit Informationen mithilfe eines benutzerdefinierten Datentyps der CLR-Integration (Common Language Runtime) von einem Client an eine gespeicherte Prozedur der CLR-Integration auf dem Server zu übergeben. Aufgrund der Eigenschaften dieser benutzerdefinierten Datentypen ist die für den Server bereitgestellte Datenmenge auf 8000 Bytes begrenzt. Aus diesem Grund eignet sich dieser Ansatz nicht für große oder komplexe Datenmengen. Wenn die bearbeitete Datenmenge klein und übersichtlich ist, kann dieser Ansatz deutlich effizienter sein als das Aufrufen einer gespeicherten Prozedur pro Zeile. Durch Übergeben eines Arrays wird die Reihenfolge der Daten für Anwendungen beibehalten, wenn die Reihenfolge wichtig ist. Inhalt dieses Beispiels:  
@@ -113,7 +111,7 @@ ms.locfileid: "53375382"
 ## <a name="sample-code"></a>Beispielcode  
  Die Codelistings für dieses Beispiel lauten wie folgt.  
   
- Dies ist der Code für die Bibliothek `ContactTypeNames.`  
+ Dies ist der Code für das Bibliotheks-`ContactTypeNames.`  
   
  C#  
   

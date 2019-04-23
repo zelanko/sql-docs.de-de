@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,12 +20,12 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a41e9cedf8a2a19aea0cf8a374bc71f520ff52f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147745"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156387"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Behandeln von Fehlern und Warnungen (XMLA)
   Eine Fehlerbehandlung ist notwendig, wenn ein XMLA-Aufruf (XML for Analysis) der Methoden [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) oder [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) nicht ausgeführt wird, erfolgreich ausgeführt wird, aber Fehler oder Warnungen generiert oder erfolgreich ausgeführt wird, aber fehlerhafte Ergebnisse zurückgibt.  
@@ -41,7 +39,7 @@ ms.locfileid: "50147745"
 ##  <a name="handling_soap_faults"></a> Behandlung von SOAP-Fehler  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt einen SOAP-Fehler zurück, wenn die folgenden Situationen auftreten:  
   
--   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz nicht überprüft werden.  
+-   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz nicht überprüft werden.  
   
 -   Eine Kommunikations- oder anderer Fehler ist in Bezug auf die SOAP-Nachricht, die die XMLA-Methode enthält, aufgetreten.  
   
@@ -54,11 +52,11 @@ ms.locfileid: "50147745"
   
 |Spaltenname|Typ|Description|Null zulässig<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen `UnsignedInt`-Wert konvertiert werden.|nein|  
-|`WarningCode`|`UnsignedInt`|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen `UnsignedInt`-Wert konvertiert werden.|Benutzerkontensteuerung|  
-|`Description`|`String`|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Benutzerkontensteuerung|  
-|`Source`|`String`|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Benutzerkontensteuerung|  
-|`HelpFile`|`String`|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Benutzerkontensteuerung|  
+|`ErrorCode`|`UnsignedInt`|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen `UnsignedInt`-Wert konvertiert werden.|Nein|  
+|`WarningCode`|`UnsignedInt`|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen `UnsignedInt`-Wert konvertiert werden.|Ja|  
+|`Description`|`String`|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Ja|  
+|`Source`|`String`|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Ja|  
+|`HelpFile`|`String`|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Ja|  
   
  <sup>1</sup> angibt, ob die Daten erforderlich sind und zurückgegeben werden müssen, oder gibt an, ob die Daten optional sind und eine null-Zeichenfolge ist zulässig, wenn die Spalte nicht anwendbar ist.  
   
@@ -87,9 +85,9 @@ HelpFile="" />
 ##  <a name="handling_errors_and_warnings"></a> Behandeln von Fehlern und Warnungen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt die `Messages`-Eigenschaft im `root`-Element für einen Befehl zurück, wenn nach Ausführung des Befehls die folgenden Situationen auftreten:  
   
--   Die Methode selber schlug nicht fehl, aber nach erfolgreicher Ausführung des Methodenaufrufs trat ein Fehler auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz ein.  
+-   Die Methode selber schlug nicht fehl, aber nach erfolgreicher Ausführung des Methodenaufrufs trat ein Fehler auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ein.  
   
--   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz gibt eine Warnung zurück, wenn der Befehl erfolgreich ist.  
+-   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz gibt eine Warnung zurück, wenn der Befehl erfolgreich ist.  
   
  Die `Messages`-Eigenschaft folgt allen Eigenschaften, die im `root`-Element enthalten sind, und kann ein oder mehr `Message`-Elemente enthalten. Jedes `Message`-Element kann entweder ein einzelnes `error`- oder ein `warning`-Element enthalten, das entweder Fehler oder Warnungen beschreibt, die beim angegebenen Befehl aufgetreten sind.  
   

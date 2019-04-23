@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e035ea7b89e3871253db907f34c620f99bf085
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295958"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947476"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Wählen Sie die Option **Formel** im Dialogfeld **Eigenschaften von berechneten Reihen** aus, um eine Reihe hinzuzufügen oder zu ändern, die auf Basis integrierter Formeln, die vorhandene Reihendaten als Eingaben verwenden, berechnet wird.  

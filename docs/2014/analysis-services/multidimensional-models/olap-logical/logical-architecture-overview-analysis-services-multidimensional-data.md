@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
@@ -15,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416491"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157123"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
   Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionaler und Data Mining-Modus** unterstützt herkömmliches OLAP und Datamining. **Im tabellarischen Modus** unterstützt tabellarische Modelle. **Integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als PowerPivot für SharePoint – wird verwendet, die für das Laden und Abfragen von Excel- oder PowerPivot-Datenmodellen innerhalb einer Arbeitsmappe installiert wurde.  
