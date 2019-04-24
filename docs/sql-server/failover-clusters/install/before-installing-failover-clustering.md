@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913295"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
@@ -32,8 +32,8 @@ ms.locfileid: "58913295"
 |Beschreibung der Themen|Thema|  
 |-----------------------|-----------|  
 |Beschreibt Konzepte des Failoverclusterings mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und stellt Links zu relevanten Inhalten und Tasks bereit.|[AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Beschreibt Konzepte zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverrichtlinie und stellt Links zum Konfigurieren der Failoverrichtlinie in Anpassung an die Anforderungen Ihrer Organisation bereit.|[Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
-|Beschreibt, wie ein vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster verwaltet wird.|[Verwaltung und Wartung von Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
+|Beschreibt Konzepte zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverrichtlinie und stellt Links zum Konfigurieren der Failoverrichtlinie in Anpassung an die Anforderungen Ihrer Organisation bereit.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Beschreibt, wie ein vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster verwaltet wird.|[Verwaltung und Wartung von Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Erläutert, wie Sie [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf einem Windows Server-Failovercluster (WSFC) installieren.|[Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
@@ -48,7 +48,7 @@ ms.locfileid: "58913295"
   
     -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart durchgeführt wird, ist für das [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Setup die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart erfolgt, ist für das Setup von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ein einzige Replikat die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
   
     -   .NET Framework 4: In einem Clusterbetriebssystem wird .NET Framework 4 von Setup installiert. Um die Installationsdauer zu reduzieren, können Sie .NET Framework 4 installieren, bevor Sie das Setup ausführen.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "58913295"
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-Bit) x64*|Ja|Ja|Ja**|Ja**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|Ja|Ja|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Bit) Developer (64|Ja|Ja|Ja**|Ja**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Bit) Developer (64|Ja|Ja|Ja**|Ja**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|Ja|Ja|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|Ja|Ja|Ja|Ja|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|Ja|Ja|||  
@@ -211,7 +211,7 @@ ms.locfileid: "58913295"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster stellt bei einem Failover mithilfe des Windows Server-Failoverclusters sicher, dass die IP-Abhängigkeitsbedingungen gültig sind.  
   
--   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] erfordert, dass sich alle Clusterserver in der gleichen Active Directory-Domäne befinden. Daher müssen sich alle Clusterknoten eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failoverclusters in der gleichen Active Directory-Domäne befinden, auch wenn sie Teil unterschiedlicher Subnetze sind.  
+-   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] erfordert, dass sich alle Clusterserver in der gleichen Active Directory-Domäne befinden. Daher müssen sich alle Clusterknoten eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failoverclusters in der gleichen Active Directory-Domäne befinden, auch wenn sie Teil unterschiedlicher Subnetze sind.  
   
 #### <a name="ip-address-and-ip-address-resource-dependencies"></a>IP-Adressen und Abhängigkeiten von IP-Adressressourcen  
   
@@ -228,13 +228,13 @@ ms.locfileid: "58913295"
   
 ##  <a name="WSFC"></a> Konfigurieren von Windows Server-Failoverclustern  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) muss auf mindestens einem Knoten des Serverclusters konfiguriert werden. Außerdem müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in Verbindung mit WSFC ausführen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise werden Failovercluster mit bis zu 16 Knoten unterstützt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard unterstützen Failovercluster mit zwei Knoten.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) muss auf mindestens einem Knoten des Serverclusters konfiguriert werden. Außerdem müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in Verbindung mit WSFC ausführen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise werden Failovercluster mit bis zu 16 Knoten unterstützt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard unterstützen Failovercluster mit zwei Knoten.  
   
--   Die Ressourcen-DLL für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst exportiert zwei vom WSFC-Cluster-Manager verwendete Funktionen, um die Verfügbarkeit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressource zu überprüfen. Weitere Informationen finden Sie unter [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+-   Die Ressourcen-DLL für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst exportiert zwei vom WSFC-Cluster-Manager verwendete Funktionen, um die Verfügbarkeit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource zu überprüfen. Weitere Informationen finden Sie unter [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 -   WSFC muss mithilfe von IsAlive überprüfen können, ob die Failoverclusterinstanz ausgeführt wird. Hierzu muss über eine vertrauenswürdige Verbindung eine Verbindung mit dem Server hergestellt werden. Standardmäßig ist das Konto, unter dem der Clusterdienst ausgeführt wird, auf den Knoten im Cluster nicht als Administrator konfiguriert, und die Gruppe BUILTIN\Administratoren verfügt nicht über die Berechtigung zum Anmelden an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Diese Einstellungen werden nur dann geändert, wenn Sie die Berechtigungen für die Clusterknoten ändern.  
   
--   Konfigurieren Sie Domain Name Service (DNS) oder Windows Internet Name Service (WINS). Ein DNS-Server oder WINS-Server muss in der Umgebung ausgeführt werden, in der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster installiert wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup erfordert eine DDNS-Registrierung (Dynamic Domain Name Service) des virtuellen Verweises der IP-Schnittstelle von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die DNS-Serverkonfiguration sollte Clusterknoten die dynamische Registrierung einer Online-IP-Adresszuordnung mit dem Netzwerknamen ermöglichen. Wenn die dynamische Registrierung nicht abgeschlossen werden kann, kann das Setup nicht erfolgreich ausgeführt werden, und es wird ein Rollback der Installation ausgeführt. Weitere Informationen finden Sie [in diesem Knowledge Base-Artikel](https://support.microsoft.com/kb/947048)  
+-   Konfigurieren Sie Domain Name Service (DNS) oder Windows Internet Name Service (WINS). Ein DNS-Server oder WINS-Server muss in der Umgebung ausgeführt werden, in der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster installiert wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup erfordert eine DDNS-Registrierung (Dynamic Domain Name Service) des virtuellen Verweises der IP-Schnittstelle von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die DNS-Serverkonfiguration sollte Clusterknoten die dynamische Registrierung einer Online-IP-Adresszuordnung mit dem Netzwerknamen ermöglichen. Wenn die dynamische Registrierung nicht abgeschlossen werden kann, kann das Setup nicht erfolgreich ausgeführt werden, und es wird ein Rollback der Installation ausgeführt. Weitere Informationen finden Sie [in diesem Knowledge Base-Artikel](https://support.microsoft.com/kb/947048)  
   
 ##  <a name="MSDTC"></a> Installieren von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Bevor Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem Failovercluster installieren, müssen Sie bestimmen, ob die MSDTC-Clusterressource ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator) erstellt werden muss. Wenn Sie nur das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]installieren, ist die MSDTC-Clusterressource nicht erforderlich. Wenn Sie das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] und SSIS, die Arbeitsstationskomponenten, installieren, oder wenn Sie verteilte Transaktionen verwenden, müssen Sie MSDTC installieren. Für Nur- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanzen ist MSDTC nicht erforderlich.  

@@ -1,7 +1,7 @@
 ---
 title: Verwenden des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ec234f4a9d35b20b01f7752842dd6d59d1dc2ac
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
-ms.translationtype: MTE75
+ms.openlocfilehash: 971b1aa8e8b3f2d75aa2178e109b4c8fb556c45d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154825"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671246"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
@@ -26,61 +26,61 @@ Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVer
   
 ## <a name="choosing-the-right-jar-file"></a>Auswählen der richtigen JAR-Datei
 
-Microsoft JDBC-Treiber bietet verschiedene JAR-Dateien in Übereinstimmung mit Ihren bevorzugten Einstellungen für die Java Runtime Environment (JRE) verwendet werden, wie unter:
+Der Microsoft JDBC-Treiber bietet verschiedene JAR-Dateien, die in Verbindung mit Ihren bevorzugten Einstellungen für die Java Runtime Environment (JRE) verwendet werden können:
 
-Die Microsoft JDBC-Treiber 7.2 für SQL Server bietet **Mssql-Jdbc-7.2.1.jre8.jar**, und **Mssql-Jdbc-7.2.1.jre11.jar** Klassenbibliotheken.
+Der Microsoft JDBC-Treiber 7.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.2.2.jre8.jar** und **mssql-jdbc-7.2.2.jre11.jar**.
 
-Microsoft JDBC-Treiber 7.0 für SQL Server bietet **Mssql-Jdbc-7.0.0.jre8.jar**, und **Mssql-Jdbc-7.0.0.jre10.jar** Klassenbibliotheken.
+Der Microsoft JDBC-Treiber 7.0 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.0.0.jre8.jar** und **mssql-jdbc-7.0.0.jre10.jar**.
 
-Der Microsoft JDBC-Treiber 6.4 für SQL Server bietet **Mssql-Jdbc-6.4.0.jre7.jar**, **Mssql-Jdbc-6.4.0.jre8.jar**, und **Mssql-Jdbc-6.4.0.jre9.jar** -Klassenbibliothek Dateien.
+Der Microsoft JDBC-Treiber 6.4 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** und **mssql-jdbc-6.4.0.jre9.jar**.
 
-Der Microsoft JDBC-Treiber 6.2 für SQL Server bietet **Mssql-Jdbc-6.2.2.jre7.jar**, und **Mssql-Jdbc-6.2.2.jre8.jar** Klassenbibliotheken.
+Der Microsoft JDBC-Treiber 6.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-6.2.2.jre7.jar** und **mssql-jdbc-6.2.2.jre8.jar**.
   
-Geben Sie den Microsoft JDBC-Treiber 6.0- und 4.2 für SQL Server **"sqljdbc41.jar"**, und **"sqljdbc42.jar"** Klassenbibliotheken.
+Die Microsoft JDBC-Treiber 6.0 und 4.2 für SQL Server bieten die Klassenbibliotheksdateien **sqljdbc41.jar** und **sqljdbc42.jar**.
   
-Der Microsoft JDBC-Treiber 4.1 für SQL Server bietet die **"sqljdbc41.jar"** klassenbibliothekdatei.
+Der Microsoft JDBC-Treiber 4.1 für SQL Server bietet die Klassenbibliotheksdatei **sqljdbc41.jar**.
 
-Ihre Auswahl entscheidet auch über die verfügbaren Funktionen. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Ihre Auswahl entscheidet auch über die verfügbaren Funktionen. Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Festlegen des Klassenpfads
 
-Die Microsoft JDBC-Treiber JAR-Dateien sind nicht Bestandteil des Java SDK und im Klassenpfad der Benutzer die Anwendung enthalten sein müssen.
+Die JAR-Dateien des Microsoft JDBC-Treibers sind nicht Bestandteil des Java SDK und müssen im Klassenpfad der Benutzeranwendung enthalten sein.
 
-Wenn der JDBC-Treiber 4.1 und 4.2, legen Sie den Klassenpfad aufnehmen **"sqljdbc41.jar"** oder **"sqljdbc42.jar"** -Datei aus der entsprechenden Treiber-Download.
+Wenn Sie JDBC-Treiber 4.1 oder 4.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **sqljdbc41.jar** oder **sqljdbc42.jar** aus dem entsprechenden Treiberdownload enthält.
 
-Wenn der JDBC-Treiber 6.2, legen Sie den Klassenpfad aufnehmen der **Mssql-Jdbc-6.2.2.jre7.jar** oder **Mssql-Jdbc-6.2.2.jre8.jar**.
+Wenn Sie JDBC-Treiber 6.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-6.2.2.jre7.jar** oder **mssql-jdbc-6.2.2.jre8.jar** enthält.
 
-Wenn der JDBC-Treiber 6.4, legen Sie den Klassenpfad aufnehmen der **Mssql-Jdbc-6.4.0.jre7.jar**, ** Mssql-Jdbc-6.4.0.jre8.jar oder **Mssql-Jdbc-6.4.0.jre9.jar**.
+Wenn Sie JDBC-Treiber 6.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-6.4.0.jre7.jar**, „**mssql-jdbc-6.4.0.jre8.jar“ oder **mssql-jdbc-6.4.0.jre9.jar** enthält.
 
-Wenn der JDBC-Treiber 7.0, legen Sie den Klassenpfad aufnehmen der **Mssql-Jdbc-7.0.0.jre8.jar** oder **Mssql-Jdbc-7.0.0.jre10.jar**.
+Wenn Sie JDBC-Treiber 7.0 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.0.0.jre8.jar** oder **mssql-jdbc-7.0.0.jre10.jar** enthält.
 
-Wenn der JDBC-Treiber 7.2, legen Sie den Klassenpfad aufnehmen der **Mssql-Jdbc-7.2.1.jre8.jar** oder **Mssql-Jdbc-7.2.1.jre11.jar**.
+Wenn Sie JDBC-Treiber 7.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.2.2.jre8.jar** oder **mssql-jdbc-7.2.2.jre11.jar** enthält.
 
-Wenn im Klassenpfad kein Eintrag für die richtige JAR-Datei vorhanden ist, löst eine Anwendung die allgemeine `Class not found` Ausnahme.  
+Wenn im Klassenpfad kein Eintrag für die richtige JAR-Datei vorhanden ist, löst eine Anwendung die allgemeine Ausnahme `Class not found` aus.  
 
 ### <a name="for-microsoft-jdbc-driver-72"></a>Für Microsoft JDBC-Treiber 7.2
 
-Die **Mssql-Jdbc-7.2.1.jre8.jar** oder **Mssql-Jdbc-7.2.1.jre11.jar** Dateien werden in den folgenden Speicherorten installiert:
+Die Dateien **mssql-jdbc-7.2.2.jre8.jar** und **mssql-jdbc-7.2.2.jre11.jar** werden in den folgenden Verzeichnissen installiert:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre11.jar
 ```
 
 Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Windows-Anwendung verwendet wird:
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.2.jre11.jar`
 
 Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Linux/Unix-Anwendung verwendet wird:
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
 
-Stellen Sie sicher, dass die CLASSPATH-Anweisung nur einen enthält [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], z. B. entweder **Mssql-Jdbc-7.2.1.jre8.jar** oder **Mssql-Jdbc-7.2.1.jre11.jar**.
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder **mssql-jdbc-7.2.2.jre8.jar** oder **mssql-jdbc-7.2.2.jre11.jar**.
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Für Microsoft JDBC-Treiber 7.0
 
-Die **Mssql-Jdbc-7.0.0.jre8.jar** oder **Mssql-Jdbc-7.0.0.jre10.jar** Dateien werden in den folgenden Speicherorten installiert:
+Die Dateien **mssql-jdbc-7.0.0.jre8.jar** und **mssql-jdbc-7.0.0.jre10.jar** werden in den folgenden Verzeichnissen installiert:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
@@ -96,11 +96,11 @@ Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
-Stellen Sie sicher, dass die CLASSPATH-Anweisung nur einen enthält [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], z. B. entweder **Mssql-Jdbc-7.0.0.jre8.jar** oder **Mssql-Jdbc-7.0.0.jre10.jar**.
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder **mssql-jdbc-7.0.0.jre8.jar** oder **mssql-jdbc-7.0.0.jre10.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-64"></a>Für Microsoft JDBC-Treiber 6.4
 
-Die **Mssql-Jdbc-6.4.0.jre7.jar**, ** Mssql-Jdbc-6.4.0.jre8.jar oder **Mssql-Jdbc-6.4.0.jre9.jar** Dateien werden am folgenden Speicherort installiert:  
+Die Datei **mssql-jdbc-6.4.0.jre7.jar**, „**mssql-jdbc-6.4.0.jre8.jar“ oder **mssql-jdbc-6.4.0.jre9.jar** wird im folgenden Verzeichnis installiert:  
 
 ```bash  
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
@@ -118,11 +118,11 @@ Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
-Stellen Sie sicher, dass die CLASSPATH-Anweisung nur einen enthält [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], z. B. entweder **Mssql-Jdbc-6.4.0.jre7.jar**, ** Mssql-Jdbc-6.4.0.jre8.jar oder **Mssql-Jdbc-6.4.0.jre9.jar**.
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder **mssql-jdbc-6.4.0.jre7.jar**, „**mssql-jdbc-6.4.0.jre8.jar“ oder **mssql-jdbc-6.4.0.jre9.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>Für Microsoft JDBC-Treiber 6.2
 
-Die **Mssql-Jdbc-6.2.2.jre7.jar** oder **Mssql-Jdbc-6.2.2.jre8.jar** Dateien werden in den folgenden Speicherorten installiert:
+Die Dateien **mssql-jdbc-6.2.2.jre7.jar** und **mssql-jdbc-6.2.2.jre8.jar** werden in den folgenden Verzeichnissen installiert:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
@@ -138,9 +138,9 @@ Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-Stellen Sie sicher, dass die CLASSPATH-Anweisung nur einen enthält [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], z. B. entweder "Mssql-Jdbc-6.2.2.jre7.jar" oder "Mssql-Jdbc-6.2.2.jre8.jar.  
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder „mssql-jdbc-6.2.2.jre7.jar“ oder „mssql-jdbc-6.2.2.jre8.jar“.  
 
-### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Für den Microsoft JDBC-Treiber 6.0, 4.2 und 4.1
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Für Microsoft JDBC-Treiber 4.1, 4.2 und 6.0
 
 Die JAR-Datei sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar oder sqljdbc42.jar wird an folgendem Speicherorten installiert.  
 
@@ -185,11 +185,11 @@ Enterprise Java Beans (EJB) werden in einem EJB-Container ausgeführt. EJB-Conta
   
 ## <a name="making-a-simple-connection-to-a-database"></a>Herstellen einer einfachen Verbindung mit einer Datenbank
 
-Mithilfe der sqljdbc.jar-Klassenbibliothek müssen Anwendungen zuerst den Treiber wie folgt zu registrieren:  
+Wenn Sie die sqljdbc.jar-Klassenbibliothek verwenden, müssen Sie zuerst den Treiber wie folgt registrieren:  
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
-Wenn der Treiber geladen wird, können Sie eine Verbindung herstellen, unter Verwendung einer Verbindungs-URL und die GetConnection-Methode der DriverManager-Klasse:
+Nachdem der Treiber geladen wurde, können Sie über eine Verbindungs-URL und die getConnection-Methode der DriverManager-Klasse eine Verbindung herstellen:
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
@@ -199,12 +199,12 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 Ab der JDBC-API 4.0 wurde die `DriverManager.getConnection()`-Methode so erweitert, dass JDBC-Treiber automatisch geladen werden. Daher müssen Anwendungen die `Class.forName`-Methode bei Verwendung von JAR-Treiberbibliotheken nicht aufrufen, um den Treiber zu registrieren oder zu laden.  
   
-Wenn die GetConnection-Methode der DriverManager-Klasse aufgerufen wird, ist ein geeigneter Treiber aus der Gruppe der registrierten JDBC-Treiber. "sqljdbc4.jar", "sqljdbc41.jar" oder "sqljdbc42.jar"-Datei enthält die Datei "META-INF/services/java.sql.Driver" enthält die **com.microsoft.sqlserver.jdbc.SQLServerDriver** als registrierten Treiber. Vorhandene Anwendungen, die die Treiber derzeit mit der Methode Class.forName laden, funktionieren auch weiterhin ohne Änderungen.  
+Wenn die getConnection-Methode der DriverManager-Klasse aufgerufen wird, wird aus der Gruppe der registrierten JDBC-Treiber ein geeigneter Treiber ausgewählt. „sqljdbc4.jar“, „sqljdbc41.jar“ und „sqljdbc42.jar“ enthalten die Datei „META-INF/services/java.sql.Driver“, die den **com.microsoft.sqlserver.jdbc.SQLServerDriver** als registrierten Treiber enthält. Vorhandene Anwendungen, die die Treiber derzeit mit der Methode Class.forName laden, funktionieren auch weiterhin ohne Änderungen.  
   
 > [!NOTE]  
-> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) für die Liste der vom unterstützten JRE-Versionen der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Die Liste der vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützten JRE-Versionen finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
 
-Weitere Informationen zum Herstellen einer Verbindung mit Datenquellen und die Verwendung einer Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md) und [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
+Weitere Informationen zum Herstellen einer Verbindung mit Datenquellen und zum Verwenden einer Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md) und [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 

@@ -1,7 +1,7 @@
 ---
 title: Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung| Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7ccb6e362bdf602c4df650d96ca22eac269c46f1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243544"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582764"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung
 
@@ -305,7 +305,7 @@ Es folgt ein Auszug aus einer JSON-Dateiausgabe der lokalen Überwachung.
 **Wie lesen DBAs die Protokolldateien der lokalen Überwachung?**
 Diese Protokolldateien werden im JSON-Format geschrieben. Jede Zeile ist ein JSON-Objekt, das Nutzungs-/Diagnosedaten darstellt, die zu Microsoft hochgeladen werden. Die Feldnamen sollten selbsterklärend sein.
 
-**Was geschieht, wenn der DBA die Nutzungs- und Diagnosedatensammlung deaktiviert?**
+**Was geschieht, wenn der DBA die Sammlung von Nutzungs- und Diagnosedaten deaktiviert?**
 Es wird keine Datei für die lokale Überwachung geschrieben.
 
 **Was geschieht, wenn keine Verbindung mit dem Internet besteht bzw. der Computer sich hinter der Firewall befindet?**
@@ -368,5 +368,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Weitere Informationen
-[Lokale Überwachung für SSMS-Nutzungs- und -Diagnosedatensammlung](../ssms/sql-server-management-studio-telemetry-ssms.md)
+## <a name="see-also"></a>Siehe auch
+[Lokale Überwachung für die Sammlung von SSMS-Nutzungs- und -Diagnosedaten](../ssms/sql-server-management-studio-telemetry-ssms.md)

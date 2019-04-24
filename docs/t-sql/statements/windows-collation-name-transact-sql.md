@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974349"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671386"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
 
@@ -37,7 +37,6 @@ Gibt den Namen der Windows-Sortierung in der COLLATE-Klausel in [!INCLUDE[ssNoVe
 ## <a name="syntax"></a>Syntax
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Argumente
 
-*CollationDesignator* Gibt die grundlegenden für die Windows-Sortierung verwendeten Sortierungsregeln an. Zu den grundlegenden Sortierungsregeln zählen:
+*CollationDesignator*   
+Gibt die grundlegenden bei der Windows-Sortierung verwendeten Sortierungsregeln an. Zu den grundlegenden Sortierungsregeln zählen:
 
 - Die Sortier- und Vergleichsregeln, die angewendet werden, wenn Wörterbuchsortierung angegeben wird. Sortierregeln basieren auf Alphabet oder Sprache.
 - Die Codepage, die verwendet wird, um **varchar**-Daten zu speichern.
@@ -67,20 +67,20 @@ Im Folgenden finden Sie einige Beispiele:
 **AI** gibt keine Unterscheidung nach Akzent an. Bei **AS** erfolgt eine Unterscheidung.
 
 *KanatypeSensitive*  
-**Omitted** gibt keine Unterscheidung nach Kanatyp an. Bei **KS** erfolgt eine Unterscheidung.
+Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Kanatyp. Bei **KS** erfolgt eine Unterscheidung.
 
 *WidthSensitivity*  
-**Omitted** gibt keine Unterscheidung nach Breite an. Bei **WS** erfolgt eine Unterscheidung.
+Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Breite. Bei **WS** erfolgt eine Unterscheidung.
 
 *VariationSelectorSensitivity*  
-**Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Bei Auslassung** wird keine Unterscheidung nach Variantenselektor angegeben. Bei **VSS** erfolgt eine Unterscheidung.
+- Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Variantenselektor. Bei **VSS** erfolgt eine Unterscheidung.
 
 **UTF8**  
-**Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Gibt UTF-8-Codierung an, die für geeignete Datentypen verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Gibt UTF-8-Codierung an, die für geeignete Datentypen verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.

@@ -1,7 +1,7 @@
 ---
-title: SQL Server Management Studio – Telemetrie (SSMS) | Microsoft-Dokumentation
+title: SQL Server Management Studio – Nutzungs- und Diagnosedaten (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/20/2017
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,28 +11,29 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d76b2cbcab3ad156e3a8a5054429198c542c602b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240388"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670846"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für SSMS-Nutzungs- und -Diagnosedatensammlung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server Management Studio (SSMS) enthält internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Ausführliche Informationen finden Sie in den [Datenschutzbestimmungen von Microsoft](https://privacy.microsoft.com/privacystatement) und den [Ergänzenden Datenschutzbestimmungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a name="audit-feature-usage-data"></a>Überwachen von Featurenutzungsdaten
+## <a name="audit-feature-usage-and-diagnostic-data"></a>Überwachen der Verwendung von Features und Diagnosedaten
 
-Machen Sie Folgendes, um sich die von SSMS erfassten Featurenutzungsdaten anzeigen zu lassen:
+Führen Sie die folgenden Schritte aus, um die von SSMS erfassten Daten zur Nutzung von Features anzuzeigen:
+
 1.  Starten Sie SSMS.
 2.  Klicken Sie auf **View** (Ansicht), und klicken Sie anschließend im Hauptmenü auf **Output** (Ausgabe), um das Fenster **Output** (Ausgabe) anzuzeigen. 
 3.  Wenn das Fenster **Output** (Ausgabe) angezeigt wird, wählen Sie im Menü **Show output from:** (Ausgabe anzeigen von:) **Telemetry** (Telemetrie) aus.
 
 Während Sie SSMS verwenden, um mit Ihrer Datenbank zu interagieren, zeigt das Fenster **Output** (Ausgabe) die erfassten Daten an.
 
-## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Feedbackerfassung der Nutzung in SSMS aktivieren bzw. deaktivieren
+## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>Aktivieren oder Deaktivieren der Sammlung von Nutzung- und Diagnosedaten in SSMS
 
 So aktivieren oder deaktivieren Sie die Sammlung von Nutzungsdaten für SSMS
 
@@ -61,7 +62,7 @@ So aktivieren oder deaktivieren Sie die Sammlung von Nutzungsdaten für SSMS
 
   Eintragstyp `DWORD`: `0` steht für Deaktivieren und `1` für Aktivieren.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung](http://msdn.microsoft.com/library/mt743085.aspx)
+- [Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [Lokale Überwachung für die Sammlung von SQL Server-Nutzungs- und -Diagnosedaten](http://msdn.microsoft.com/library/mt743085.aspx)

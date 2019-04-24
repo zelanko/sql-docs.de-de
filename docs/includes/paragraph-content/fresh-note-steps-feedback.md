@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b1151235fb0c78925d1823ad0bfa5de1c3a155ff
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 9c440470361c1bb466ce41e3f78df17484d19a56
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243494"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59737094"
 ---
 
 > [!NOTE]
-> Wenn Sie in diesem Artikel – beispielsweise in einem Verfahrensschritt oder Codebeispiel – veraltete oder falsche Informationen finden, lassen Sie es uns bitte wissen. Sie können unten auf der Seite auf die Schaltfläche „Feedback“ klicken. Wir bedanken uns für Ihre Hilfe.
+> Wenn Sie in diesem Artikel – beispielsweise in einem Verfahrensschritt oder Codebeispiel – veraltete oder falsche Informationen finden, lassen Sie es uns bitte wissen. Sie können unten auf dieser Seite im Abschnitt **Feedback** auf die Schaltfläche **Diese Seite** klicken. Wenn Sie die Problemlösung kennen, können Sie auch oben auf dieser Seite auf das Stiftsymbol **Bearbeiten** und dann auf der GitHub-Seite auf das Stiftsymbol klicken. Wir bedanken uns für Ihre Hilfe.
 

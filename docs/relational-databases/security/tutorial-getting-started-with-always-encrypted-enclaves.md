@@ -14,10 +14,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241538"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
@@ -325,7 +325,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     2. Wählen Sie **Abfrageoptionen...** aus.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
     4. Stellen Sie sicher, dass „Parametrisierung für Always Encrypted aktivieren“ aktiviert ist.
-    5. Wählen Sie „OK“.
+    5. Wählen Sie „OK“ aus.
 2. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgende Abfrage ein, und führen Sie sie aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
@@ -336,9 +336,9 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     ```
 3. Versuchen Sie dieselbe Abfrage erneut im Abfragefenster, in dem Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 Informationen zu weiteren Anwendungsfällen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Sie können auch Folgendes ausprobieren:
 
-- [Konfigurieren des TPM-Nachweises.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Konfigurieren von HTTPS für die HGS-Instanz.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [Konfigurieren des TPM-Nachweises](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [Konfigurieren von HTTPS für die HGS-Instanz](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Entwickeln von Anwendungen, die umfangreiche Abfragen für verschlüsselte Spalten ausgeben

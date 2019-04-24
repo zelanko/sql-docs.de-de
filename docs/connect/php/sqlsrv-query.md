@@ -1,7 +1,7 @@
 ---
-title: Sqlsrv_query | Microsoft-Dokumentation
+title: sqlsrv_query | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d7f4d6562f64061f01bf0ff7a73fcd03a4f63c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606250"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582823"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,17 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |Element|und Beschreibung|  
     |-----------|---------------|  
     |*$value*|Ein Literalwert, eine PHP-Variable oder eine PHP-Variable als Verweis.|  
-    |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\***-Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\***-Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\***-Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [OPTIONAL]: Ein assoziatives Array, das Abfrageeigenschaften festlegt. Die folgenden Schlüssel werden unterstützt:  
-  
-|Key|Unterstützte Werte|und Beschreibung|  
-|-------|--------------------|---------------|  
-|QueryTimeout|Ein positiver ganzzahliger Wert|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
-|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
-|Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+*$options* [OPTIONAL]: Ein assoziatives Array, das Abfrageeigenschaften festlegt. Es handelt sich um die gleiche Liste von Schlüsseln, die auch [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) unterstützt.
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisung nicht erstellt und/oder ausgeführt werden kann, wird **FALSE** zurückgegeben.  
@@ -163,10 +157,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingabe verwendet, bei der Bindung von Werten, eine [decimal oder numeric-Spalte](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) auf Richtigkeit und Genauigkeit zu gewährleisten, wie PHP Genauigkeit für eingeschränkten [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs von sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
 ## <a name="example"></a>Beispiel  
-In diesem Codebeispiel wird veranschaulicht, wie einen decimal-Wert als Eingabeparameter gebunden wird.  
+In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
 
 ```
 <?php
@@ -190,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Beispiel
-In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen einer Tabelle von [Sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) Typen und die eingefügten Daten abzurufen.
+In diesem Codebeispiel wird das Erstellen einer Tabelle mit Werten des Datentyps [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) und das Abrufen der eingefügten Daten veranschaulicht.
 
 ```
 <?php
@@ -240,14 +234,14 @@ sqlsrv_close($conn);
 ?>
 ```
 
-Die erwartete Ausgabe wäre:
+Die erwartete Ausgabe sieht wie folgt aus:
 
 ```
 First field:  1
 Second field:  test_data
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Gewusst wie: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828080"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583373"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -176,6 +176,14 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 150 eingeführte Verhal
 
 Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der öffentlichen Vorschau für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.
 
+|Kompatibilitätsgradeinstellung 140 oder niedriger|Kompatibilitätsgradeinstellung 150|
+|--------------------------------------------------|-----------------------------------------|
+|Relationale Data Warehouse- und Analyseworkloads können Columnstore-Indizes möglicherweise aufgrund des Mehraufwands für OLTP, fehlender Unterstützung durch den Hersteller oder anderer Einschränkungen nicht unten.  Ohne Columnstore-Indizes können diese Workloads nicht vom Batchausführungsmodus profitieren.|Der Batchausführungsmodus ist nun für Analyseworkloads verfügbar, ohne dass Columnstore-Indizes erforderlich sind. Weitere Informationen finden Sie unter [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
+|Abfragen im Zeilenmodus, die nicht genügend Speicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Zeilenmodus, die nicht genügend Arbeitsspeicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine Leistungssteigerung auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Abfragen im Zeilenmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Batchmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine verbesserte Parallelität auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Abfragen, die auf TSQL_SCALAR_UDFs verweisen, verwenden einen iterativen Aufruf, verursachen keine Kosten und erzwingen die serielle Ausführung. |TSQL_SCALAR_UDFs werden in äquivalente relationale Ausdrücke transformiert, die per „Inlining“ durch die aufrufende Abfrage ersetzt werden, was oft zu erheblichen Leistungssteigerungen führt. Weitere Informationen finden Sie unter [TSQL_SCALAR_UDF_INLINING](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
+|Tabellenvariablen nutzen für die Kardinalitätsschätzung eine festgelegte Schätzung.  Wenn die tatsächliche Anzahl der Zeilen sehr viel höher als der geschätzter Wert ist, kann die Leistung nachgelagerter Vorgänge beeinträchtigt werden. |Neue Pläne verwenden anstelle einer festgelegten Schätzung die tatsächliche Kardinalität der Tabellenvariablen, die bei der ersten Kompilierung vorgefunden wird. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
+
 Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) und [Intelligente Abfrageverarbeitung in SQL-Datenbanken](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Unterschiede zwischen Kompatibilitätsgrad 130 und Kompatibilitätsgrad 140
@@ -268,8 +276,8 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 100 eingeführte Verhal
 |Die Spalteneigenschaften `ROWGUIDCOL` und `IDENTITY` können als Einschränkung falsch benannt werden. Beispielsweise wird die Anweisung `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` ausgeführt, doch wird der Einschränkungsname nicht beibehalten und ist für den Benutzer nicht verfügbar.|Die Spalteneigenschaften `ROWGUIDCOL` und `IDENTITY` können nicht als Einschränkung benannt werden. Der Fehler 156 wird zurückgegeben.|Low|
 |Die Aktualisierung von Spalten mithilfe einer bidirektionalen Zuweisung, wie z.B. `UPDATE T1 SET @v = column_name = <expression>`, kann zu unerwarteten Ergebnissen führen, weil während der Ausführung der Anweisung anstelle des Anfangswerts der aktuelle Wert der Variablen in anderen Klauseln verwendet werden kann, wie z.B. in der `WHERE`- und `ON`-Klausel. Dies kann dazu führen, dass sich die Bedeutungen der Prädikate für jede Zeile einzeln unvorhersehbar ändern.<br /><br /> Dieses Verhalten gilt nur, wenn der Kompatibilitätsgrad auf 90 festgelegt ist.|Die Aktualisierung von Spalten mithilfe einer zweiseitigen Zuweisung liefert die erwarteten Ergebnisse, weil während der Ausführung der Anweisung nur auf den Anweisungsanfangswert der Spalte zugegriffen wird.|Low|
 |Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|Siehe Beispiel F im nachfolgenden Abschnitt „Beispiele“.|Low|
-|Die ODBC-Funktion {fn CONVERT ()} verwendet das Standarddatumsformat der Sprache. Bei einigen Sprachen lautet das Standardformat YDM. Dies kann zu Konvertierungsfehlern führen, wenn CONVERT() mit anderen Funktionen kombiniert wird, die ein YMD-Format erwarten, wie z.B. `{fn CURDATE()}`.|Die ODBC-Funktion `{fn CONVERT()}` verwendet für die Konvertierung in die ODBC-Datentypen SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP das sprachenunabhängige XMD-Format im Format 121.|Low|
-|Für systeminterne datetime-Funktionen, wie z.&#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Low|
+|Die ODBC-Funktion &lt;legacyBold&gt;{fn CONVERT ()}&lt;/legacyBold&gt; verwendet das Standarddatumsformat der Sprache. Bei einigen Sprachen lautet das Standardformat YDM. Dies kann zu Konvertierungsfehlern führen, wenn CONVERT() mit anderen Funktionen kombiniert wird, die ein YMD-Format erwarten, wie z.B. `{fn CURDATE()}`.|Die ODBC-Funktion `{fn CONVERT()}` verwendet für die Konvertierung in die ODBC-Datentypen SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP das sprachenunabhängige XMD-Format im Format 121.|Low|
+|Für systeminterne datetime-Funktionen, wie z.&amp;#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Low|
 
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 

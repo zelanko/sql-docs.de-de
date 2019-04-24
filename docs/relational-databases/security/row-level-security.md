@@ -19,10 +19,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bf464198a795a2ada5a6cb273754a2fb1945978
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476696"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
@@ -522,4 +522,4 @@ DROP SCHEMA Security;
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)</br>
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)</br>
  [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)</br>
- [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)
+ [Erstellen benutzerdefinierter Funktionen &a#40;Datenbank-Engine &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)

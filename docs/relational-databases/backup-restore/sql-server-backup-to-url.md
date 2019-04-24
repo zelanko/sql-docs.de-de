@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434511"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582833"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
   
  Hier ist ein Beispiel-URL-Wert: „http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<DATEINAME.bak>“. HTTPS ist zwar nicht erforderlich, aber empfehlenswert.  
   
- **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Hier werden Anmeldeinformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Microsoft Azure BLOB-Speicherdienst sowie den zugehörigen Container- und BLOB-Objekten zu authentifizieren. Als Anmeldeinformationen werden entweder der Name und die **Zugriffsschlüsselwerte** des Speicherkontos oder die Container-URL und das zugehörige Shared Access Signature-Token gespeichert. Sobald die Anmeldeinformationen erstellt wurden, bestimmt die Syntax der BACKUP/RESTORE-Anweisungen den Typ des BLOBs und die erforderlichen Anmeldeinformationen.  
+ **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Hier werden Anmeldeinformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Microsoft Azure BLOB-Speicherdienst sowie den zugehörigen Container- und BLOB-Objekten zu authentifizieren. Als Anmeldeinformationen werden entweder der Name und die **Zugriffsschlüsselwerte** des Speicherkontos oder die Container-URL und das zugehörige Shared Access Signature-Token gespeichert. Sobald die Anmeldeinformationen erstellt wurden, bestimmt die Syntax der BACKUP/RESTORE-Anweisungen den Typ des BLOBs und die erforderlichen Anmeldeinformationen.  
   
  Ein Beispiel zum Erstellen einer Shared Access Signature finden Sie in den Beispielen zum [Erstellen einer Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) weiter unten in diesem Thema. Informationen zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen finden Sie in den Beispielen unter [Erstellen von Anmeldeinformationen](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) weiter unten in diesem Thema.  
   
@@ -323,15 +323,15 @@ New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroup
 $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
-$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
-$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
 
 
 # Gets the Shared Access Signature for the policy  

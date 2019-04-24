@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042170"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -55,9 +55,9 @@ ms.locfileid: "59042170"
 -   Benutzer auf Basis einer Windows-Gruppe ohne Anmeldenamen. `CREATE USER [Contoso\Sales];`  
 -   Benutzer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basierend auf einem Azure Active Directory-Benutzer. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Benutzer einer eigenständigen Datenbank mit Kennwort. (Nicht mit [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verfügbar.) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Benutzer einer eigenständigen Datenbank mit Kennwort. (Nicht in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verfügbar.) `CREATE USER Mary WITH PASSWORD = '********';`   
   
-**Benutzer auf Basis von Windows-Prinzipalen, die über Windows-Gruppenanmeldenamen eine Verbindung herstellen**  
+**Benutzer auf Basis von Windows-Prinzipalen, die eine Verbindung über Windows-Gruppenanmeldenamen herstellen**  
   
 -   Benutzer auf Basis eines Windows-Benutzers ohne Anmeldenamen, die über die Mitgliedschaft in einer Windows-Gruppe eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] herstellen können. `CREATE USER [Contoso\Fritz];`  
   
@@ -337,7 +337,7 @@ Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss
   
  In einer eigenständigen Datenbank hilft das Erstellen von Benutzern, eine Trennung zwischen der Datenbank und der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] herzustellen, damit die Datenbank leichter in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden kann. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Informationen zum Ändern eines Datenbankbenutzers von einem Benutzer mit Anmeldenamen auf Basis einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung in den Benutzer einer eigenständigen Datenbank mit Kennwort finden Sie unter [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master**-Datenbank verfügen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Administratoren sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Benutzer in einer eigenständigen Datenbank müssen nicht über Anmeldenamen in der **master**-Datenbank verfügen. Administratoren von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollten wissen, dass der Zugriff auf eine eigenständige Datenbank auf Datenbankebene und nicht auf der Ebene von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesteuert wird. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Bei Verwendung der in Datenbanken enthaltenen Benutzern auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] konfigurieren Sie den Zugriff mithilfe einer Firewallregel auf Datenbankebene, anstatt einer Firewallregel auf Serverebene. Weitere Informationen finden Sie unter [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  

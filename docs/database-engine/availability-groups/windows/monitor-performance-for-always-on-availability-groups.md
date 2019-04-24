@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872320"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
@@ -60,7 +60,7 @@ ms.locfileid: "58872320"
   
 |||||  
 |-|-|-|-|  
-|**Ebene**|**Anzahl der Gates**|**Anzahl der Nachrichten**|**Nützliche Metriken**|  
+|**Level**|**Anzahl der Gates**|**Anzahl der Nachrichten**|**Nützliche Metriken**|  
 |Transport|1 pro Verfügbarkeitsreplikat|8192|Erweiterte Ereignisse **database_transport_flow_control_action**|  
 |Datenbank|1 pro Verfügbarkeitsdatenbank|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Erweitertes Ereignis **hadron_database_flow_control_action**|  
   
@@ -361,7 +361,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
-    -   **Feld:** `Add(@EstimatedRecoveryTime, 60)`  
+    -   **Feld**: `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **Operator**: **<=**  
   
@@ -375,7 +375,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
-    -   **Feld:** `@EstimatedDataLoss`  
+    -   **Feld**: `@EstimatedDataLoss`  
   
     -   **Operator**: **<=**  
   
@@ -389,7 +389,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Facet:** **Verfügbarkeitsgruppe**  
   
-    -   **Feld:** `@LocalReplicaRole`  
+    -   **Feld**: `@LocalReplicaRole`  
   
     -   **Operator**: **=**  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913305"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server-Failoverclusterinstallation
@@ -72,7 +72,7 @@ ms.locfileid: "58913305"
 #### <a name="ip-address-configuration-during-setup"></a>Konfigurieren von IP-Adressen während des Setups  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie die IP-Adressabhängigkeit im Zusammenhang mit folgenden Aktionen festlegen oder ändern:  
   
--   Integrierte Installation: [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   Integrierte Installation: [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   Vollständiger Failovercluster (erweiterte Installation): [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "58913305"
 ## <a name="see-also"></a>Weitere Informationen  
  [Vor dem Installieren des Failoverclusterings](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Installieren von SQL Server 2016 über die Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Aktualisieren einer SQL Server-Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

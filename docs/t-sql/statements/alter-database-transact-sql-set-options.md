@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft-Dokumentation
 description: Informationen zum Festlegen von Datenbankoptionen wie automatische Optimierung, Verschlüsselung und Abfragespeicher in SQL Server und Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494432"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583383"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -578,7 +578,7 @@ Gibt die Standardsprache für alle neu erstellten Benutzernamen an. Die Sprache 
 
 NESTED_TRIGGERS **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-Gibt an, ob ein AFTER-Trigger kaskadiert werden kann, d. h., ob er eine Aktion ausführen kann, durch die ein anderer Trigger initiiert wird, der einen weiteren Trigger initiiert usw. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
+Gibt an, ob ein AFTER-Trigger kaskadiert werden kann, d. h., ob er eine Aktion ausführen kann, durch die ein anderer Trigger ausgelöst wird, der einen weiteren Trigger ausgelöst usw. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 TRANSFORM_NOISE_WORDS **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
@@ -721,7 +721,7 @@ Beachten Sie beim Verwenden der PAGE_VERIFY-Option die folgenden wichtigen Punkt
 - PAGE_VERIFY kann festgelegt werden, ohne die Datenbank offline zu schalten, zu sperren oder die Parallelität der Datenbank anderweitig zu beeinträchtigen.
 - CHECKSUM und TORN_PAGE_DETECTION schließen sich gegenseitig aus. Beide Optionen können nicht gleichzeitig aktiviert werden.
 
-Bei Entdecken einer zerrissenen Seite oder eines Prüfsummenfehlers können Sie eine Wiederherstellung ausführen, indem Sie die Daten wiederherstellen oder den Index u. U. neu erstellen, wenn der Fehler auf Indexseiten beschränkt ist. Führen Sie DBCC CHECKDB aus, um bei einem Prüfsummenfehler den Typ der betroffenen Datenbankseite(n) zu bestimmen. Weitere Informationen zu RESTORE-Optionen finden Sie unter [RESTORE-Argumente](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Auch wenn das Datenbeschädigungsproblem durch das Wiederherstellen der Daten behoben wird, sollte die eigentliche Ursache, wie z. B. ein Datenträger-Hardwarefehler, diagnostiziert und baldmöglichst behoben werden, um wiederholte Fehler zu vermeiden.
+Bei Entdecken einer zerrissenen Seite oder eines Prüfsummenfehlers können Sie eine Wiederherstellung ausführen, indem Sie die Daten wiederherstellen oder den Index u.U. neu erstellen, wenn der Fehler auf Indexseiten beschränkt ist. Führen Sie DBCC CHECKDB aus, um bei einem Prüfsummenfehler den Typ der betroffenen Datenbankseite(n) zu bestimmen. Weitere Informationen zu RESTORE-Optionen finden Sie unter [RESTORE-Argumente](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Auch wenn das Datenbeschädigungsproblem durch das Wiederherstellen der Daten behoben wird, sollte die eigentliche Ursache, wie z.B. ein Datenträger-Hardwarefehler, diagnostiziert und baldmöglichst behoben werden, um wiederholte Fehler zu vermeiden.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederholt Lesevorgänge, die wegen eines Prüfsummenfehlers, einer zerrissenen Seite oder eines anderen E/A-Fehlers fehlschlagen, vier Mal. Ist der Lesevorgang bei einem dieser Wiederholungsversuche erfolgreich, wird eine Meldung in das Fehlerprotokoll geschrieben. Der Befehl, der den Lesevorgang ausgelöst hat, wird fortgesetzt. Schlagen alle Wiederholungsversuche fehl, schlägt der Befehl mit Fehlermeldung 824 fehl.
 

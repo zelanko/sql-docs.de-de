@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042419"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774605"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -24,13 +24,13 @@ ms.locfileid: "59042419"
 
 Weitere Informationen und bekannte Probleme finden Sie unter [Release Notes zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (Vorschauversion)](sql-server-ver15-release-notes.md).
 
-**Testen Sie [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**Versuchen Sie Folgendes[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]:**
 
 - [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] für die Installation unter Windows herunterladen](https://go.microsoft.com/fwlink/?LinkID=862101).
 - Installieren Sie die Version unter Linux für [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) und [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Ausführen von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] auf Docker](../linux/quickstart-install-connect-docker.md)
 
-**Verwenden Sie die [neuesten Tools](#tools) für die optimale Erfahrung mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**Nutzen Sie die [neuesten Tools](#tools) für die optimale Verwendung von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 ## <a name="ctp-24"></a>CTP 2.4
 
@@ -39,8 +39,8 @@ Community Technology Preview (CTP) 2.4 ist das neueste öffentliche Release von 
 - [Big Data-Cluster](#bigdatacluster)
   - Anleitung für die GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark
   - Upgrade der Spark-Runtime auf Spark 2.4
-  - `INSERT INTO SELECT` Unterstützung für den Datenpool.
-  - `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION`-Optionsklausel für Abfragen für externe Tabellen.
+  - Unterstützung von `INSERT INTO SELECT` für den Datenpool
+  - Optionsklauseln `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` für Abfragen für externe Tabellen
 
 - [Datenbank-Engine](#databaseengine)
   - Fehlermeldungen für die Kürzung enthalten standardmäßig die Tabellen- und Spaltennamen sowie den gekürzten Wert. Informationen hierzu finden Sie im Abschnitt zu [Kürzungen](#truncation).
@@ -59,8 +59,8 @@ In den folgenden Abschnitten werden die neuen Features beschrieben, die mit dem 
 
 - [GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md) (CTP 2.4)
 - Upgrade der Spark-Runtime auf Spark 2.4 (CTP 2.4)
-- `INSERT INTO SELECT` Unterstützung für den Datenpool.
-- `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION`-Optionsklausel für Abfragen für externe Tabellen.
+- Unterstützung von `INSERT INTO SELECT` für den Datenpool
+- Optionsklauseln `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` für Abfragen für externe Tabellen
 - [Übermitteln von Spark-Aufträgen an Big Data-Cluster von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
 - [Bereitstellen von Anwendungen und Verwalten der Benutzeroberfläche](../big-data-cluster/big-data-cluster-create-apps.md) für viele datenbezogene Apps, einschließlich dem Operationalisieren von Machine Learning-Modellen mithilfe von R und Python sowie der Ausführung von SSIS-Aufträgen (SQL Server Integration Services) und mehr (CTP 2.3)
 - [Verwenden von Sparklyr in Big Data-Clustern von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
@@ -77,7 +77,7 @@ In den folgenden Abschnitten werden die neuen Features beschrieben, die mit dem 
 
 ## <a id="databaseengine"></a> Datenbank-Engine
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] werden die folgenden neuen Features für die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eingeführt oder verbessert.
+Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] werden die folgenden neuen Features für die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eingeführt oder verbessert.
 
 ### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Neues erweitertes Ereignis query_post_execution_plan_profile (CTP 2.4)
 
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Sie benötigen diese Syntax nicht, um das Feature in Azure SQL-Datenbank zu verwenden. Dort ist es standardmäßig aktiviert.
+> Sie benötigen diese Syntax nicht, um das Feature in Azure SQL-Datenbank zu verwenden. Es wurde [auf Wunsch in der öffentlichen Vorschauversion aktiviert](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Nach seiner Aktivierung ist das Feature standardmäßig aktiviert.
 
 Wenn Sie kritische Datenbanken besitzen, die für große Transaktionen anfällig sind, können Sie dieses Feature während der Vorschauphase testen. Senden Sie Feedback an das [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Team](<https://aka.ms/sqlfeedback>).
 
@@ -171,7 +171,7 @@ Dadurch können überflüssige Neukompilierungen vermieden und der CPU-Aufwand r
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Verbesserter Skalierbarkeit indirekter Prüfpunkte (CTP 2.3)
 
-In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] konnten Scheduler-Fehler ohne Ergebnis auftreten, wenn eine Datenbank viele modifizierte Seiten generiert hat (z.B. tempdb). [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird die Skalierbarkeit für indirekte Prüfpunkte verbessert, um diese Fehler in Datenbanken zu vermeiden, die Workloads mit vielen UPDATE/INSERT-Vorgängen enthalten.
+In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] konnten Scheduler-Fehler ohne Ergebnis auftreten, wenn eine Datenbank viele modifizierte Seiten generiert hat (z.B. tempdb). In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird die Skalierbarkeit für indirekte Prüfpunkte verbessert, um diese Fehler in Datenbanken zu vermeiden, die Workloads mit vielen UPDATE/INSERT-Vorgängen enthalten.
 
 ### <a name="utf-8-support-ctp-23"></a>UTF-8-Unterstützung (CTP 2.3)
 
@@ -330,9 +330,9 @@ Um Features der intelligenten Abfrageverarbeitung verwenden zu können, legen Si
 
 - Legen Sie diese Standardeinstellungen mithilfe der datenbankweit gültigen Konfigurationsoptionen `ELEVATE_ONLINE` und `ELEVATE_RESUMABLE` fest. Beide Optionen bewirken, dass die Engine unterstützte Vorgänge automatisch auf die Ausführung von Online- oder fortsetzbaren Indizes erhöht. Mit diesen Optionen können Sie die folgenden Verhaltensweisen ermöglichen:
 
-  - `FAIL_UNSUPPORTED` -Option ermöglicht alle Onlineindex- oder fortsetzbare und Fehlerindexvorgänge, die nicht für Online- oder fortsetzbare Indizes unterstützt werden.
-  - `WHEN_SUPPPORTED` -Option ermöglicht unterstützte Online- oder fortsetzbare und die Ausführung von nicht unterstützten Offline- oder nicht fortsetzbaren Indexvorgängen.
-  - `OFF` -Option lässt das aktuelle Verhalten zur Ausführung aller Offlineindexvorgänge und nicht fortsetzbare Indexvorgänge zu, sofern dies nicht explizit in der DDL-Anweisung angegeben ist.
+  - Die Option `FAIL_UNSUPPORTED` ermöglicht alle Onlineindex- oder fortsetzbare und Fehlerindexvorgänge, die nicht für Online- oder fortsetzbare Indizes unterstützt werden.
+  - Die Option `WHEN_SUPPPORTED` ermöglicht unterstützte Online- oder fortsetzbare und die Ausführung von nicht unterstützten Offline- oder nicht fortsetzbaren Indexvorgängen.
+  - Die Option `OFF` lässt das aktuelle Verhalten zur Ausführung aller Offlineindexvorgänge und nicht fortsetzbare Indexvorgänge zu, sofern dies nicht explizit in der DDL-Anweisung angegeben ist.
 
 Um die Standardeinstellung zu überschreiben, schließen Sie die `ONLINE`- oder die `RESUMABLE`-Option in die Indexerstellungs- und -neuerstellungsbefehle ein. 
 
@@ -385,7 +385,7 @@ Die [Überwachung](../relational-databases/security/auditing/sql-server-audit-da
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Neue Optionen für „sp_estimate_data_compression_savings“ (CTP 2.0)
 
-`sp_estimate_data_compression_savings` gibt die aktuelle Größe des angeforderten Objekts zurück und schätzt die Objektgröße für den angeforderten Komprimierungsstatus. Diese Prozedur unterstützt derzeit drei Optionen: `NONE`, `ROW` und `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] werden zwei neue Optionen eingeführt: `COLUMNSTORE` und `COLUMNSTORE_ARCHIVE`. Diese neuen Optionen ermöglichen es Ihnen, die Speicherplatzeinsparungen abzuschätzen, wenn mit der Columnstore-Standard- oder -Archivkomprimierung ein Columnstore-Index für die Tabelle erstellt wird.
+`sp_estimate_data_compression_savings` gibt die aktuelle Größe des angeforderten Objekts zurück und schätzt die Objektgröße für den angeforderten Komprimierungsstatus. Diese Prozedur unterstützt derzeit drei Optionen: `NONE`, `ROW` und `PAGE`. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] werden zwei neue Optionen eingeführt: `COLUMNSTORE` und `COLUMNSTORE_ARCHIVE`. Diese neuen Optionen ermöglichen es Ihnen, die Speicherplatzeinsparungen abzuschätzen, wenn mit der Columnstore-Standard- oder -Archivkomprimierung ein Columnstore-Index für die Tabelle erstellt wird.
 
 ### <a id="ml"></a> Failovercluster für SQL Server Machine Learning Services und partitionsbasierte Modellierung (CTP 2.0)
 
@@ -524,11 +524,11 @@ Berechnungsgruppen werden für das häufig auftretende Problem in komplexen Mode
 
 In einer Berechnungsgruppe können beliebig viele Berechnungselemente vorhanden sein. Jedes Berechnungselement wird durch einen DAX-Ausdruck definiert. Drei neue DAX-Funktionen wurden für Berechnungsgruppen eingeführt: 
 
-- `SELECTEDMEASURE()` – Gibt einen Verweis auf das Measure zurück, das sich derzeit im Kontext befindet.  
+- `SELECTEDMEASURE()`: Gibt einen Verweis auf das Measure zurück, das sich derzeit im Kontext befindet.  
 
-- `SELECTEDMEASURENAME()` – Gibt eine Zeichenfolge zurück, die den Namen des Measures zurück, das sich derzeit im Kontext befindet.  
+- `SELECTEDMEASURENAME()`: Gibt eine Zeichenfolge zurück, die den Namen des Measures zurück, das sich derzeit im Kontext befindet.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` – Gibt einen booleschen Wert zurück, der angibt, ob das Measure, das sich derzeit im Kontext befindet, eines der Measures ist, die als Argument angegeben wurden.
+- `ISSELECTEDMEASURE(M1, M2, …)`: Gibt einen booleschen Wert zurück, der angibt, ob das Measure, das sich derzeit im Kontext befindet, eines der Measures ist, die als Argument angegeben wurden.
 
 Zusätzlich zu den neuen DAX-Funktionen wurden zwei neue dynamische Verwaltungssichten eingeführt:
 
@@ -562,6 +562,6 @@ Ab CTP 2.4 werden für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] k
 
 - [Versionshinweise zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md)
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technisches Whitepaper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Veröffentlicht im September 2018. Gilt für Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 für Windows-, Linux- und Docker-Container.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper (technisches Whitepaper)](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Veröffentlicht im September 2018. Gilt für Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 für Windows-, Linux- und Docker-Container.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

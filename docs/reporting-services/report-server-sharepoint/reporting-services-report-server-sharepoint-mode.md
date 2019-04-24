@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529738"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583353"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529738"
   
  Wenn Sie einen Berichtsserver für die Ausführung innerhalb einer Bereitstellung eines SharePoint-Produkts konfigurieren, wird möglicherweise eine Kombination von Sprachen angezeigt. Benutzeroberfläche, Dokumentation und Meldungen werden in den folgenden Sprachen angezeigt:  
   
--   Alle Anwendungsseiten, Tools, Fehler, Warnungen und Meldungen, die aus Reporting Services stammen, werden in der Sprache angezeigt, die von der Reporting Services-Instanz in einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprachen verwendet wird.  
+- Alle Anwendungsseiten, Tools, Fehler, Warnungen und Meldungen, die aus Reporting Services stammen, werden in der Sprache angezeigt, die von der Reporting Services-Instanz in einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprachen verwendet wird.  
   
--   Anwendungsseiten, die Sie auf einer SharePoint-Website öffnen, das Berichts-Viewer-Webpart und der Berichts-Generator werden in einer der unterstützten Sprachen für das Reporting Services-Add-In angezeigt. Rufen Sie die Seite für [SQL Server-Downloads](https://msdn.microsoft.com/sql/downloads/) auf, und suchen Sie die Downloadseite für das SQL Server 2016-Reporting Services-Add-In, um sich die Liste unterstützter Sprachen anzeigen zu lassen.  
+- Anwendungsseiten, die Sie auf einer SharePoint-Website öffnen, das Berichts-Viewer-Webpart und der Berichts-Generator werden in einer der unterstützten Sprachen für das Reporting Services-Add-In angezeigt. Rufen Sie die Seite für [SQL Server-Downloads](https://msdn.microsoft.com/sql/downloads/) auf, und suchen Sie die Downloadseite für das SQL Server 2016-Reporting Services-Add-In, um sich die Liste unterstützter Sprachen anzeigen zu lassen.  
   
--   SharePoint-Websites, die SharePoint-Zentraladministration, die Onlinehilfe und Meldungen sind in den Sprachen verfügbar, die von Office Server-Produkten unterstützt werden.  
+- SharePoint-Websites, die SharePoint-Zentraladministration, die Onlinehilfe und Meldungen sind in den Sprachen verfügbar, die von Office Server-Produkten unterstützt werden.  
   
  Wenn die Sprache Ihres SharePoint-Produkts oder der SharePoint-Technologie von der Berichtsserversprache abweicht, versucht Reporting Services, eine Sprache aus derselben Sprachfamilie zu verwenden, die der ursprünglichen Sprache am ähnlichsten ist. Falls keine geeignete Ersatzsprache verfügbar ist, verwendet der Berichtsserver Englisch.  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529738"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Report Viewer Web Part on a SharePoint Site (Berichts-Viewer-Webpart auf einer SharePoint-Website)](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configuring SSRS 2012 for SharePoint integration (Quiz: Konfigurieren von SSRS 2012 für die SharePoint-Integration)](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

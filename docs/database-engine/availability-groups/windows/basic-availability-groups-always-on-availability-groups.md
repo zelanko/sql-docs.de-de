@@ -11,12 +11,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210709"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671206"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Always On-Basisverfügbarkeitsgruppen für einzelne Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210709"
 ## <a name="limitations"></a>Einschränkungen  
  Basis-Verfügbarkeitsgruppen verwenden eine Teilmenge der Funktionen verglichen mit erweiterten Verfügbarkeitsgruppen auf SQL Server 2016 Enterprise Edition. Basis-Verfügbarkeitsgruppen beinhalten die folgenden Einschränkungen:  
   
-- Beschränkung auf zwei Replikate (primäres und sekundäres)  
+- Beschränkung auf zwei Replikate (primäres und sekundäres) Einfache Verfügbarkeitsgruppen für SQL Server 2017 unter Linux unterstützen nur die zusätzliche Konfiguration eines einzigen Replikats.
   
 - Kein Lesezugriff auf das sekundäre Replikat.  
   

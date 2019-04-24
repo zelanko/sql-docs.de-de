@@ -16,47 +16,43 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff2d9980e4036acae9f2b11a41582847b1a686b
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7734ce09ca33c1db8b0ab650509edeabe9e80a08
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342923"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670856"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Gibt die Zeichenfolge zurück, die als erstes Argument bereitgestellt wurde, nachdem einige durch das zweite Argument angegebene Zeichen in einen Zielzeichensatz übersetzt wurden, der im dritten Argument angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
+```sql
+TRANSLATE ( inputString, characters, translations)
 ```
-TRANSLATE ( inputString, characters, translations) 
-```
 
-## <a name="arguments"></a>Argumente   
+## <a name="arguments"></a>Argumente
 
- *inputString*   
- Der [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der gesucht werden soll. *inputString* kann ein beliebiger Zeichendatentyp sein (nvarchar, varchar, nchar, nchar, char).
+ *inputString* ist der [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der gesucht werden soll. *inputString* kann ein beliebiger Zeichendatentyp sein (nvarchar, varchar, nchar, nchar, char).
 
- *characters*   
- Ist ein aus einer Zeichenfolge bestehender [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der zu ersetzende Zeichen enthält. Für *characters* sind beliebige Zeichendatentypen möglich.
+ *characters* ist ein aus einer Zeichenfolge bestehender [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der zu ersetzende Zeichen enthält. Für *characters* sind beliebige Zeichendatentypen möglich.
 
-*translations*   
- Ist ein aus einer Zeichenfolge bestehender [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die ersetzten Zeichen enthält. *translations* muss denselben Datentyp und dieselbe Länge wie *characters* haben.
+*translations* ist ein aus einer Zeichenfolge bestehender[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Ersetzungszeichen enthält. *translations* muss denselben Datentyp und dieselbe Länge wie *characters* haben.
 
 ## <a name="return-types"></a>Rückgabetypen
 
 Gibt einen Zeichenausdruck des gleichen Datentyps wie `inputString` zurück, bei dem die Zeichen des zweiten Arguments durch die entsprechenden Zeichen des dritten Arguments ersetzt werden.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 
 `TRANSLATE` gibt einen Fehler zurück, wenn sich die Länge von *characters* und *translations* unterscheidet. `TRANSLATE` gibt NULL zurück, wenn eines der Argumente NULL ist.  
 
 Das Verhalten der `TRANSLATE`-Funktion ist ähnlich dem Verwenden mehrerer [REPLACE](../../t-sql/functions/replace-transact-sql.md)-Funktionen. `TRANSLATE` ersetzt ein Zeichen jedoch nur einmal. Dies ist anders bei mehreren `REPLACE`-Funktionen, da bei jeder Verwendung alle relevanten Zeichen ersetzt werden. 
-
 
 Bei `TRANSLATE` werden SC-Sortierungen immer beachtet.
 
@@ -105,7 +101,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. Konvertieren von GeoJSON-Punkten in WKT
+### <a name="b-convert-geojson-points-into-wkt"></a>B. Konvertieren von GeoJSON-Punkten in WKT
 
 GeoJSON ist ein Format für das Codieren von vielen verschiedenen geografischen Datenstrukturen. Mit der `TRANSLATE`-Funktion können Entwickler GeoJSON-Punkte einfach in das WKT-Format (und umgekehrt) konvertieren. Die folgende Abfrage ersetzt eckige und geschweifte Klammern in der Eingabe durch reguläre Klammern:
 
@@ -114,7 +110,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 |Punkt  |Koordinaten |  
 |---------|--------- |

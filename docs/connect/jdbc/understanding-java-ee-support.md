@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zur Java EE-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
-ms.translationtype: MTE75
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154615"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671226"
 ---
 # <a name="understanding-java-ee-support"></a>Grundlegendes zur Java EE-Unterstützung
 
@@ -30,21 +30,21 @@ Stellen Sie zunächst sicher, dass die Java-Umgebung (JDK, JRE) das Paket javax.
 
 Der Treiberklassenname lautet **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Für die JDBC-Treiber 4.1, 4.2 und 6.0 ist der Treiber in einer der folgenden Dateien enthalten: **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar** oder **sqljdbc42.jar**.
 
-Der Treiber ist für die JDBC-Treiber 6.2 in enthalten **Mssql-Jdbc-6.2.2.jre7.jar** oder **Mssql-Jdbc-6.2.2.jre8.jar**.
+JDBC-Treiber 6.2: Der Treiber ist in der Datei **mssql-jdbc-6.2.2.jre7.jar** oder **mssql-jdbc-6.2.2.jre8.jar** enthalten.
 
-Der Treiber ist für die JDBC-Treiber 6.4 in enthalten **Mssql-Jdbc-6.4.0.jre7.jar**, **Mssql-Jdbc-6.4.0.jre8.jar**, oder **Mssql-Jdbc-6.4.0.jre9.jar**.
+JDBC-Treiber 6.4: Der Treiber ist in der Datei **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** oder **mssql-jdbc-6.4.0.jre9.jar** enthalten.
 
-Der Treiber ist für die JDBC-Treiber 7.0 in enthalten **Mssql-Jdbc-7.0.0.jre8.jar**, oder **Mssql-Jdbc-7.0.0.jre10.jar**.
+JDBC-Treiber 7.0: Der Treiber ist in der Datei **mssql-jdbc-7.0.0.jre8.jar** oder **mssql-jdbc-7.0.0.jre10.jar** enthalten.
 
-Der Treiber ist für die JDBC-Treiber 7.2, in enthalten **Mssql-Jdbc-7.2.1.jre8.jar**, oder **Mssql-Jdbc-7.2.1.jre11.jar**.
+JDBC-Treiber 7.2: Der Treiber ist in der Datei **mssql-jdbc-7.2.2.jre8.jar** oder **mssql-jdbc-7.2.2.jre11.jar** enthalten.
   
 Der Klassenname wird immer dann verwendet, wenn Sie den Treiber mit der JDBC-Klasse „DriverManager“ laden. Er wird außerdem verwendet, wenn Sie den Klassennamen des Treibers in einer Treiberkonfiguration angeben müssen. Für das Konfigurieren einer Datenquelle in einem Java EE-Anwendungsserver kann es beispielsweise erforderlich sein, den Treiberklassennamen einzugeben.  
   
 ## <a name="data-sources"></a>Projektmappen-Explorer
 
-Der JDBC-Treiber unterstützt Java EE-/JDBC 3.0-Datenquellen. Der JDBC-Treiber [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) -Klasse wird implementiert von `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+Der JDBC-Treiber unterstützt Java EE-/JDBC 3.0-Datenquellen. Die JDBC-Treiberklasse [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) wird von `com.microsoft.sqlserver.jdbc.SQLServerXADataSource` implementiert.  
   
-### <a name="datasource-names"></a>DataSource-Namen
+### <a name="datasource-names"></a>Datenquellennamen
 
 Sie können Datenbankverbindungen mithilfe von Datenquellen herstellen. Die mit dem JDBC-Treiber verfügbaren Datenquellen werden in der folgenden Tabelle beschrieben:  
   

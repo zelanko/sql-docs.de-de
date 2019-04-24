@@ -12,10 +12,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872150"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
@@ -46,7 +46,7 @@ Der Computer, auf dem SQL Server ausgeführt wird, benötigt das folgende Betrie
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] oder höher.
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] oder höher
 
 *Windows*:
 
@@ -152,7 +152,7 @@ Derzeit gelten die folgenden Einschränkungen für die Bereitstellung Enclave-f�
 
 - Enclave-fähige **Spaltenhauptschlüssel müssen im Windows-Zertifikatspeicher oder im Azure Key Vault** gespeichert sein. Das Speichern von Enclave-fähigen Spaltenhauptschlüsseln in anderen Arten von Schlüsselspeichern (Hardwaresicherheitsmodule oder kundenspezifische Schlüsselspeicher) wird derzeit nicht unterstützt.
 
-### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Bereitstellen von Enclave-fähigen-Schlüsseln mithilfe von SQL Server Management Studio (SSMS)**
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Bereitstellen von Enclave-fähigen-Schlüsseln mithilfe von SQL Server Management Studio (SSMS)**
 
 Die folgenden Schritte erstellen Enclave-fähige Schlüssel (erfordert SSMS 18.0 oder höher):
 
@@ -177,7 +177,7 @@ Die folgenden Schritte erstellen Enclave-fähige Schlüssel (erfordert SSMS 18.0
     3. Wählen Sie in der Dropdownliste **Spaltenhauptschlüssel** den in den vorherigen Schritten erstellten Spaltenhauptschlüssel.
     4. Klicken Sie auf **OK**.
 
-### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Bereitstellen Enclave-fähiger Schlüssel mit PowerShell**
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Bereitstellen Enclave-fähiger Schlüssel mit PowerShell**
 
 In den folgenden Abschnitten finden Sie Beispiele für PowerShell-Skripte zur Bereitstellung von Enclave-fähigen Schlüsseln. Die Schritte, die spezifisch (neu) für Always Encrypted mit Secure Enclaves sind, werden hervorgehoben. Weitere Informationen (nicht spezifisch für Always Encrypted mit Secure Enclaves) zur Bereitstellung von Schlüsseln mit PowerShell finden Sie unter [Konfigurieren von Always Encrypted-Schlüsseln mit PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Öffnen Sie auf dem Client-/Entwicklungscomputer Windows PowerShell ISE, und führen Sie das folgende Skript aus.
 
-**Schritt 1: Stellen Sie einen Spaltenhauptschlüssel im Azure Key Vault bereit**
+**Schritt 1: Stellen Sie den Spaltenhauptschlüssel im Azure Key Vault bereit**
 
 Dies ist auch über das Azure-Portal möglich. Weitere Informationen finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
@@ -861,7 +861,7 @@ Darüber hinaus muss sich Ihre Anwendung an allgemeine Richtlinien halten, die f
 Einzelheiten zur Entwicklung von.NET Framework-Anwendungen mit Always Encrypted finden Sie in den folgenden Artikeln:
 
 - [Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted: Schützen vertraulicher Daten in SQL-Datenbank und Speichern von Verschlüsselungsschlüsseln im Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: Protect sensitive data in SQL Database and store your encryption keys in Azure Key Vault (Schützen vertraulicher Daten in SQL-Datenbank und Speichern von Verschlüsselungsschlüsseln im Azure Key Vault)](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Beispiel
 

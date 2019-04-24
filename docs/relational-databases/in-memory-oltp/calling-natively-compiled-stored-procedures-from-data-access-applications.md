@@ -1,7 +1,7 @@
 ---
 title: Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,115 +12,130 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef3ca4751259ad7e61d0de4f7f5758da2dbd5fd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 052293944d820a13d8457f0b122733858b62e874
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545691"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671276"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
-  
- Cursor können keine systemintern kompilierte gespeicherte Prozedur durchlaufen.  
-  
- Das Aufrufen von systemintern kompilierten gespeicherten Prozeduren über CLR-Module mithilfe der Kontextverbindung wird nicht unterstützt.  
-  
- SqlClient  
- Bei SqlClient wird nicht zwischen direkter und vorbereiteter Ausführung unterschieden. Führen Sie gespeicherte Prozeduren mit SqlCommand mit CommandType = CommandType.StoredProcedure aus.  
-  
- SqlClient unterstützt keine vorbereiteten RPC-Prozeduraufrufe.  
-  
- Das Abrufen von Informationen vom Typ "Nur Schema" (Metadatenermittlung) zu den Resultsets, die durch eine systemintern kompilierte gespeicherte Prozedur (CommandType.SchemaOnly) zurückgegeben werden, wird von SqlClient nicht unterstützt. Verwenden Sie stattdessen [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
- Das Abrufen von Informationen vom Typ "Nur Schema" (Metadatenermittlung) zu den Resultsets, die durch eine systemintern kompilierte gespeicherte Prozedur zurückgegeben werden, wird von Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht unterstützt. Verwenden Sie stattdessen [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
-  
- Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
-  
- Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von **SQLExecDirect** und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** -Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
-  
- Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:  
-  
--   Herstellen einer Verbindung mit der Datenbank  
-  
--   Binden der Parameter mithilfe von **SQLBindParameter**  
-  
--   Vorbereiten des Prozeduraufrufs mit **SQLPrepare.**  
-  
--   Mehrmaliges Ausführen der gespeicherte Prozedur mit **SQLExecute**  
-  
- Das folgende Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. **SQLPrepare** wird nur einmal und **SQLExecute** mehrmals aufgerufen, einmal pro Prozedurausführung.  
-  
-```  
-// Bind parameters  
-// 1 - OrdNo   
-SQLRETURN returnCode = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,   
-                     &order.OrdNo, sizeof(SQLINTEGER), NULL);  
-if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {  
-   ODBCError(henv, hdbc, hstmt, NULL, true);   
-   exit(-1);  
-}  
-  
-// 2, 3, 4 - ItemNo, ProdCode, Qty  
-...  
-  
-// Prepare stored procedure  
-returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
-  
-for (unsigned int i = 0; i < order.ItemCount; i++) {  
-   ItemNo = order.ItemNo[i];  
-   ProdCode = order.ProdCode[i];  
-   Qty = order.Qty[i];  
-  
-   // Execute stored procedure  
-   returnCode = SQLExecute(hstmt);  
-   if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {  
-      ODBCError(henv, hdbc, hstmt, NULL, true);   
-      exit(-1);  
-   }  
-}  
-```  
-  
-## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Ausführen einer nativ kompilierten gespeicherten Prozedur mithilfe von ODBC  
- In diesem Beispiel wird veranschaulicht, wie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers Parameter gebunden und gespeicherte Prozeduren ausgeführt werden.  Das Beispiel wird zu einer Konsolenanwendung kompiliert, die mithilfe der direkten Ausführung einen einzelnen Auftrag einfügt und mithilfe der vorbereiteten Ausführung die Auftragsdetails einfügt.  
-  
- So führen Sie dieses Beispiel aus:  
-  
-1.  Erstellen Sie eine Beispieldatenbank mit einer speicheroptimierten Datendateigruppe. Informationen zum Erstellen einer Datenbank mithilfe einer speicheroptimierten Datendateigruppe finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
-  
-2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
-  
-3.  Führen Sie das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript (unten) in der Beispieldatenbank aus.  
-  
-4.  Kompilieren Sie das Beispiel, und führen Sie es aus.  
-  
-5.  Vergewissern Sie sich, dass das Programm erfolgreich ausgeführt wurde, indem Sie den Inhalt der Tabellen abfragen:  
-  
-    ```  
-    SELECT * FROM dbo.Ord  
-    ```  
-  
-    ```  
-    SELECT * FROM dbo.Item  
-    ```  
-  
- Der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code erstellt die speicheroptimierten Datenbankobjekte.  
-  
-```  
-IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  
+
+Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.
+
+## <a name="guidance-points"></a>Anleitungspunkte
+
+- Cursor können keine systemintern kompilierte gespeicherte Prozedur durchlaufen.
+
+- Das Aufrufen von nativ kompilierten gespeicherten Prozeduren über CLR-Module mithilfe der Kontextverbindung wird nicht unterstützt.
+
+### <a name="sqlclient"></a>SqlClient
+
+- Bei SqlClient wird nicht zwischen *vorbereiteter* und *direkter* Ausführung unterschieden. Führen Sie gespeicherte Prozeduren mit SqlCommand mit CommandType = CommandType.StoredProcedure aus.
+
+- SqlClient unterstützt keine vorbereiteten RPC-Prozeduraufrufe.
+
+- Das Abrufen von Informationen vom Typ „Nur Schema“ (Metadatenermittlung) zu den Resultsets, die durch eine nativ kompilierte gespeicherte Prozedur (CommandType.SchemaOnly) zurückgegeben werden, wird von SqlClient nicht unterstützt.
+  - Verwenden Sie stattdessen [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+
+### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+
+- Das Abrufen von Informationen vom Typ „Nur Schema“ (Metadatenermittlung) zu den Resultsets, die durch eine nativ kompilierte gespeicherte Prozedur zurückgegeben werden, wird von Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht unterstützt.
+  - Verwenden Sie stattdessen [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+
+### <a name="odbc"></a>ODBC
+
+Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
+
+*Einmaliger Aufruf:* Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von **SQLExecDirect** und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung **EXECUTE**. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.
+
+*Mehrmaliger Aufruf:* Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:
+
+1. Herstellen einer Verbindung mit der Datenbank
+2. Binden der Parameter mithilfe von **SQLBindParameter**
+3. Vorbereiten des Prozeduraufrufs mit **SQLPrepare**
+4. Mehrmaliges Ausführen der gespeicherte Prozedur mit **SQLExecute**
+
+#### <a name="c-code-for-odbc"></a>C-Code für ODBC
+
+Das folgende C-Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. **SQLPrepare** wird nur einmal aufgerufen. **SQLExecute** wird mehrmals aufgerufen, nämlich einmal pro Prozedurausführung.
+
+```cpp
+// Bind parameters
+// 1 - OrdNo
+SQLRETURN returnCode = SQLBindParameter(
+                     hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                     &order.OrdNo, sizeof(SQLINTEGER), NULL);
+if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
+   ODBCError(henv, hdbc, hstmt, NULL, true);
+   exit(-1);
+}
+
+// 2, 3, 4 - ItemNo, ProdCode, Qty
+...
+
+// Prepare stored procedure
+returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),
+                        SQL_NTS);
+
+for (unsigned int i = 0; i < order.ItemCount; i++) {
+   ItemNo = order.ItemNo[i];
+   ProdCode = order.ProdCode[i];
+   Qty = order.Qty[i];
+
+   // Execute stored procedure
+   returnCode = SQLExecute(hstmt);
+   if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
+      ODBCError(henv, hdbc, hstmt, NULL, true);
+      exit(-1);
+   }
+}
+```
+
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Ausführen einer nativ kompilierten gespeicherten Prozedur mithilfe von ODBC
+
+In diesem Beispiel wird veranschaulicht, wie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers Parameter gebunden und gespeicherte Prozeduren ausgeführt werden. Das Beispiel wird zu einer Konsolenanwendung kompiliert, die mithilfe der direkten Ausführung einen einzelnen Auftrag einfügt und mithilfe der vorbereiteten Ausführung die Auftragsdetails einfügt.
+
+So führen Sie dieses Beispiel aus:
+
+1. Erstellen Sie eine Beispieldatenbank mit einer speicheroptimierten Datendateigruppe. Informationen zum Erstellen einer Datenbank mithilfe einer speicheroptimierten Datendateigruppe finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
+
+2. Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)verwenden.
+
+3. Führen Sie das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript (unten) in der Beispieldatenbank aus.
+
+4. Kompilieren Sie das Beispiel, und führen Sie es aus.
+
+5. Vergewissern Sie sich, dass das Programm erfolgreich ausgeführt wurde, indem Sie den Inhalt der Tabellen abfragen:
+
+    ```sql
+    SELECT * FROM dbo.Ord
+    ```
+
+    ```sql
+    SELECT * FROM dbo.Item
+    ```
+
+## <a name="preliminary-transact-sql"></a>Vorläufige Transact-SQL
+
+Der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code erstellt die speicheroptimierten Datenbankobjekte.
+
+```sql
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))
   DROP PROCEDURE dbo.OrderInsert  
-go  
-IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.ItemInsert'))  
+GO
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.ItemInsert'))
   DROP PROCEDURE dbo.ItemInsert  
 GO  
-IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Ord'))  
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Ord'))
   DROP TABLE dbo.Ord  
 GO  
-IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Item'))  
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Item'))
   DROP TABLE dbo.Item  
-GO  
+GO
+
 CREATE TABLE dbo.Ord  
 (  
    OrdNo INTEGER NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -139,34 +154,40 @@ CREATE TABLE dbo.Item
    WITH (MEMORY_OPTIMIZED=ON)  
 GO  
   
-CREATE PROCEDURE dbo.OrderInsert(@OrdNo INTEGER, @CustCode VARCHAR(5))  
+CREATE PROCEDURE dbo.OrderInsert(
+    @OrdNo INTEGER, @CustCode VARCHAR(5))  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
 (   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
    LANGUAGE = 'english')  
   
   DECLARE @OrdDate datetime = GETDATE();  
-  INSERT INTO dbo.Ord (OrdNo, CustCode, OrdDate) VALUES (@OrdNo, @CustCode, @OrdDate);   
+  INSERT INTO dbo.Ord (OrdNo, CustCode, OrdDate)
+      VALUES (@OrdNo, @CustCode, @OrdDate);
 END  
 GO  
   
-CREATE PROCEDURE dbo.ItemInsert(@OrdNo INTEGER, @ItemNo INTEGER, @ProdCode INTEGER, @Qty INTEGER)  
+CREATE PROCEDURE dbo.ItemInsert(
+    @OrdNo INTEGER, @ItemNo INTEGER, @ProdCode INTEGER, @Qty INTEGER)
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
 (   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
    LANGUAGE = N'us_english')  
   
-  INSERT INTO dbo.Item (OrdNo, ItemNo, ProdCode, Qty) VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)  
+  INSERT INTO dbo.Item (OrdNo, ItemNo, ProdCode, Qty)
+      VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)
 END  
 GO  
-```  
-  
- Im Folgenden das C-Codelisting.  
-  
-```  
-// compile with: user32.lib odbc32.lib  
+```
+
+## <a name="c-code"></a>C-Code
+
+Im Folgenden das C-Codelisting.
+
+```cpp
+// compile with: user32.lib odbc32.lib
 #pragma once  
-#define WIN32_LEAN_AND_MEAN   // Exclude rarely-used stuff from Windows headers  
+#define WIN32_LEAN_AND_MEAN  // Exclude rarely-used stuff from Windows headers.
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <tchar.h>  
@@ -175,7 +196,7 @@ GO
 #include "sqlext.h"  
 #include "sqlncli.h"  
   
-// cardinality of order item related array variables  
+// cardinality of order item related array variables
 #define ITEM_ARRAY_SIZE 20  
   
 // struct to pass order entry data  
@@ -190,33 +211,43 @@ typedef struct OrdEntry_struct {
   
 SQLHANDLE henv, hdbc, hstmt;  
   
-void ODBCError(SQLHANDLE henv, SQLHANDLE hdbc, SQLHANDLE hstmt, SQLHANDLE hdesc, bool ShowError) {  
+void ODBCError(
+      SQLHANDLE henv, SQLHANDLE hdbc,
+      SQLHANDLE hstmt, SQLHANDLE hdesc,
+      bool ShowError)
+{  
    SQLRETURN r = 0;  
    SQLTCHAR szSqlState[6] = {0};  
    SQLINTEGER fNativeError = 0;  
    SQLTCHAR szErrorMsg[256] = {0};  
-   SQLSMALLINT cbErrorMsgMax = sizeof(szErrorMsg) - 1;  
+   SQLSMALLINT cbErrorMsgMax = sizeof(szErrorMsg) - 1;
    SQLSMALLINT cbErrorMsg = 0;  
    TCHAR text[1024] = {0}, title[256] = {0};  
   
    if (hdesc != NULL)  
-      r = SQLGetDiagRec(SQL_HANDLE_DESC, hdesc, 1, szSqlState, &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+      r = SQLGetDiagRec(SQL_HANDLE_DESC, hdesc, 1, szSqlState,
+              &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
    else {  
       if (hstmt != NULL)  
-         r = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, 1, szSqlState, &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+         r = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, 1, szSqlState,
+                 &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
       else {  
          if (hdbc != NULL)  
-            r = SQLGetDiagRec(SQL_HANDLE_DBC, hdbc, 1, szSqlState, &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+            r = SQLGetDiagRec(SQL_HANDLE_DBC, hdbc, 1, szSqlState,
+                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
          else  
-            r = SQLGetDiagRec(SQL_HANDLE_ENV, henv, 1, szSqlState, &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+            r = SQLGetDiagRec(SQL_HANDLE_ENV, henv, 1, szSqlState,
+                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
       }  
    }  
   
    if (ShowError) {  
-      _sntprintf_s(title, _countof(title), _TRUNCATE, _T("ODBC Error %i"), fNativeError);  
-      _sntprintf_s(text, _countof(text), _TRUNCATE, _T("[%s] - %s"), szSqlState, szErrorMsg);  
+      _sntprintf_s(title, _countof(title), _TRUNCATE, _T("ODBC Error %i"),
+                      fNativeError);  
+      _sntprintf_s(text, _countof(text), _TRUNCATE, _T("[%s] - %s"),
+                      szSqlState, szErrorMsg);  
   
-      MessageBox(NULL, (LPCTSTR) text, (LPCTSTR) _T("ODBC Error"), MB_OK);  
+      MessageBox(NULL, (LPCTSTR) text, (LPCTSTR) _T("ODBC Error"), MB_OK);
    }  
 }  
   
@@ -226,7 +257,7 @@ void connect() {
    r = SQLAllocHandle(SQL_HANDLE_ENV, NULL, &henv);  
   
    // This is an ODBC v3 application  
-   r = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER) SQL_OV_ODBC3, 0);  
+   r = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER) SQL_OV_ODBC3, 0);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, NULL, NULL, NULL, true);  
       exit(-1);  
@@ -235,7 +266,8 @@ void connect() {
    r = SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);  
   
    // Run in ANSI/implicit transaction mode  
-   r = SQLSetConnectAttr(hdbc, SQL_ATTR_AUTOCOMMIT, (SQLPOINTER) SQL_AUTOCOMMIT_OFF, SQL_IS_INTEGER);  
+   r = SQLSetConnectAttr(hdbc, SQL_ATTR_AUTOCOMMIT,
+                          (SQLPOINTER) SQL_AUTOCOMMIT_OFF, SQL_IS_INTEGER);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, NULL, NULL, NULL, true);  
       exit(-1);  
@@ -243,7 +275,8 @@ void connect() {
   
    TCHAR szConnStrIn[256] = _T("DSN=PrepExecSample");  
   
-   r = SQLDriverConnect(hdbc, NULL, (SQLTCHAR *) szConnStrIn, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+   r = SQLDriverConnect(hdbc, NULL, (SQLTCHAR *) szConnStrIn, SQL_NTS,
+                          NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, NULL, NULL, true);  
       exit(-1);  
@@ -268,21 +301,23 @@ void OrdEntry(OrdEntryData& order) {
   
    // Bind parameters for the Order  
    // 1 - OrdNo input  
-   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER,
+                          0, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 2 - Custcode input  
-   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT,SQL_C_TCHAR, SQL_VARCHAR, 5, 0, &order.CustCode, sizeof(order.CustCode), NULL);  
+   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT,SQL_C_TCHAR, SQL_VARCHAR, 5, 0,
+                          &order.CustCode, sizeof(order.CustCode), NULL);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // Insert the order  
-   r = SQLExecDirect(hstmt, (SQLTCHAR *) _T("{call OrderInsert(?, ?)}"),SQL_NTS);  
+   r = SQLExecDirect(hstmt, (SQLTCHAR *) _T("{call OrderInsert(?, ?)}"),SQL_NTS);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
@@ -303,35 +338,39 @@ void OrdEntry(OrdEntryData& order) {
   
    // Bind parameters for the Items  
    // 1 - OrdNo   
-   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &order.OrdNo, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 2 - ItemNo   
-   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &ItemNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &ItemNo, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 3 - ProdCode  
-   r = SQLBindParameter(hstmt, 3, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &ProdCode, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 3, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &ProdCode, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 4 - Qty  
-   r = SQLBindParameter(hstmt, 4, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &Qty, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 4, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &Qty, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // Prepare to insert items one at a time  
-   r = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
+   r = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);
   
    for (unsigned int i = 0; i < order.ItemCount; i++) {  
   ItemNo = order.ItemNo[i];  
@@ -370,7 +409,7 @@ void testOrderEntry() {
    OrdEntryData order;  
   
    order.OrdNo = 1;  
-   _tcscpy_s((TCHAR *) order.CustCode, _countof(order.CustCode), _T("CUST1"));  
+   _tcscpy_s((TCHAR *) order.CustCode, _countof(order.CustCode), _T("CUST1"));
    order.ItemNo[0] = 1;  
    order.ProdCode[0] = 10;  
    order.Qty[0] = 1;  
@@ -393,9 +432,8 @@ int _tmain() {
   
    testOrderEntry();  
 }  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Weitere Informationen
+
+[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

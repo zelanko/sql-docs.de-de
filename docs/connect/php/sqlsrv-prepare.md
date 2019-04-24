@@ -1,7 +1,7 @@
 ---
-title: Sqlsrv_prepare | Microsoft-Dokumentation
+title: sqlsrv_prepare | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: MTE75
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676148"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582893"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,15 +66,15 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\***-Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.|  
     |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\***-Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.|  
   
-*$options* [OPTIONAL]: Ein assoziatives Array, das Abfrageeigenschaften festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:  
-  
+*$options* [OPTIONAL]: Ein assoziatives Array, das <a name="properties">Abfrageeigenschaften</a> festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:
+
 |Key|Unterstützte Werte|und Beschreibung|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie [angeben eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
-|Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4 (inklusiv)|Gibt an, dass die Dezimalstellen, die beim Formatieren von Money-Werte abgerufen.<br /><br />Eine negative ganze Zahl oder Wert größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn FormatDecimals ist **"true"**.|
-|FormatDecimals|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Gibt an, ob das Hinzufügen von führenden Nullen auf Dezimalzeichenfolgen bei Bedarf und ermöglicht die `DecimalPlaces` Option für die Formatierung von Money-Typen.<br /><br />Weitere Informationen finden Sie unter [Dezimalzeichenfolgen Formatierung und Währungswerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie unter [Festlegen eines Cursortyps und Auswählen von Zeilen](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4|Gibt die Dezimalstellen beim Formatieren abgerufener Geldwerte (Werte des Datentyps „money“) an.<br /><br />Negative ganze Zahlen oder Werte größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn „FormatDecimals“ auf **true** festgelegt ist.|
+|FormatDecimals|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen, und aktiviert die Option `DecimalPlaces` zum Formatieren von Datentypen der Kategorie „money“.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Positive Ganzzahl|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
-|ReturnDatesAsStrings|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**"true"**). Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**true**). Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -223,10 +223,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingabe verwendet, bei der Bindung von Werten, eine [decimal oder numeric-Spalte](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) auf Richtigkeit und Genauigkeit zu gewährleisten, wie PHP Genauigkeit für eingeschränkten [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs von sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
 ## <a name="example"></a>Beispiel  
-In diesem Codebeispiel wird veranschaulicht, wie einen decimal-Wert als Eingabeparameter gebunden wird.  
+In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
 
 ```
 <?php

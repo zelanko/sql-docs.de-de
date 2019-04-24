@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9e204faee33deba95a53906f473bf909e182785e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494202"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583443"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
@@ -97,7 +97,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**3427**|Aktiviert eine Fehlerbehebung für ein Problem, das auftritt, wenn viele aufeinander folgende Transaktionen Daten in die temporäre Tabelle in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] einfügen und deswegen mehr CPU-Leistung beanspruchen als in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](https://support.microsoft.com/help/3216543).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 und höheren Builds verfügbar. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] hat dieses Ablaufverfolgungsflag keine Auswirkungen.<br /><br />**Bereich:** nur global|  
 |**3459**|Deaktiviert die parallele Wiederholung. Weitere Informationen finden Sie in [diesem](https://support.microsoft.com/help/3200975) und [diesem](https://support.microsoft.com/help/4101554) Microsoft Support-Artikel.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />**Bereich:** nur global| 
 |**3468**|Deaktiviert die [indirekten Prüfpunkte](https://docs.microsoft.com/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt) auf TempDB.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 und höheren Builds verfügbar.<br /><br />**Bereich:** nur global|  
-|**3608**|Verhindert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet wird und andere Datenbanken als die **Masterdatenbank** wiederherstellt. Wenn Aktivitäten, die **tempdb** erfordern, initiiert werden, wird **model** wiederhergestellt und **tempdb** erstellt. Andere Datenbanken werden gestartet und wiederhergestellt, wenn darauf zugegriffen wird. Einige Funktionen, z. B. Momentaufnahmeisolation und Read Committed-Momentaufnahme, funktionieren möglicherweise nicht. Nutzen Sie es zum [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md) und [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md).<br /><br />**Hinweis:** Verwenden Sie es nicht im Normalbetrieb.<br /><br />**Bereich:** nur global|   
+|**3608**|Verhindert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet wird und andere Datenbanken als die **Masterdatenbank** wiederherstellt. Wenn Aktivitäten, die **tempdb** erfordern, initiiert werden, wird **model** wiederhergestellt und **tempdb** erstellt. Andere Datenbanken werden gestartet und wiederhergestellt, wenn darauf zugegriffen wird. Einige Funktionen, z. B. Momentaufnahmeisolation und Read Committed-Momentaufnahme, funktionieren möglicherweise nicht. Nutzen Sie es zum [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md) und [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md).<br /><br />**Hinweis:** Nicht im Normalbetrieb verwenden.<br /><br />**Bereich:** nur global|   
 |**3625**|Beschränkt die Menge von Informationen, die an Benutzer zurückgegeben wird, die keine Mitglieder der festen Serverrolle „sysadmin“ sind, indem die Parameter einiger Fehlermeldungen mit „\*\*\*\*\*\*“ maskiert werden. Dadurch kann verhindert werden, dass vertrauliche Informationen offen gelegt werden.<br /><br />**Bereich:** nur global|  
 |**3656**|Aktiviert die Symbolauflösung für Stapelabbilder, wenn die Tools zum Debuggen unter Windows installiert sind. Weitere Informationen finden Sie in diesem [Microsoft-Whitepaper](https://www.microsoft.com/download/details.aspx?id=26666).<br /><br />**Warnung:** Dies ist ein Ablaufverfolgungsflag zum Debuggen, das sich nicht für die Verwendung in einer Produktionsumgebung eignet.<br /><br />**Bereich:** global und Sitzung|
 |**4136**|Deaktiviert die Parameterermittlung, es sei denn, OPTION(RECOMPILE), WITH RECOMPILE oder OPTIMIZE FOR \<Wert> wird verwendet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/980653).<br /><br />Damit Sie dies ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] auf der Datenbankebene erreichen, lesen Sie die Informationen zur Option PARAMETER_SNIFFING unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />Um dies auf Abfrageebene zu erreichen, fügen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) OPTIMIZE FOR UNKNOWN hinzu. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können Sie dies auch auf Abfrageebene erreichen, indem Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'DISABLE_PARAMETER_SNIFFING' anstelle dieses Ablaufverfolgungsflags verwenden.<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global oder Sitzung|  

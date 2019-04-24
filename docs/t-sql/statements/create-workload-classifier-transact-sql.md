@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd10a628e5a60487ceaf11a6dd39f781fbc41596
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538212"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581214"
 ---
 # <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL) (Vorschauversion)
+
+> [!Note]
+> Die Klassifizierung von Workloads ist in der Vorschauversion für SQL Data Warehouse Gen2 verfügbar. Die Klassifizierung für die Workloadverwaltung und Workloadpriorität (Vorschauversion) ist für Builds mit einem Veröffentlichungsdatum ab dem 09. April 2019 verfügbar.  Builds mit einem früheren Veröffentlichungsdatum sollten nicht für das Testen der Workloadverwaltung verwendet werden.  Um zu bestimmen, ob Ihr Build die Workloadverwaltung unterstützt, führen Sie, sobald Sie mit Ihrer SQL Data Warehouse-Instanz verbunden sind, select @@version aus.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
