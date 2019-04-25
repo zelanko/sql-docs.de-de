@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768436"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
   Wie bereits erwähnt in [Coding and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, enthält das skriptkomponentenprojekt drei Projektelemente:  
@@ -135,7 +135,7 @@ public override void PreExecute()
   
 -   Überschreiben Sie **\<inputbuffer>_ProcessInputRow**, um die Daten in jeder Eingabezeile beim Durchlaufen zu verarbeiten.  
   
--   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise `EndOfRowset` testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie **\<inputbuffer>_ProcessInputRow** auf, um die Zeilenverarbeitung auszuführen.  
+-   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen z. B. testen `EndOfRowset` um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie **\<inputbuffer>_ProcessInputRow** auf, um die Zeilenverarbeitung auszuführen.  
   
 -   überschreiben Sie `FinishOutputs`, wenn Sie etwas mit den Ausgaben durchführen müssen, bevor sie geschlossen werden.  
   

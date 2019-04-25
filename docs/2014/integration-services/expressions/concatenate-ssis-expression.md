@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769368"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Verketten) (SSIS-Ausdruck)
   Verkettet zwei Ausdrücke zu einem einzelnen Ausdruck.  
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  Beide Ausdrücke müssen vom gleichen Datentyp sein, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn z. B. die Zeichenfolge "Order date is " und die **OrderDate** -Spalte verkettet werden, werden die Werte in **OrderDate** implizit in einen Zeichenfolgen-Datentyp konvertiert. Um zwei numerische Werte zu verketten, müssen beide numerischen Werte explizit in einen Zeichenfolgen-Datentyp umgewandelt werden.  
   
- Eine Verkettung können nur eine BLOB-Datentyp: Vom Typ DT_TEXT, DT_NTEXT oder DT_IMAGE.  
+ In einer Verkettung kann nur ein BLOB-Datentyp verwendet werden: DT_TEXT, DT_NTEXT oder DT_IMAGE.  
   
  Wenn eines der Elemente NULL ist, ist das Ergebnis NULL.  
   

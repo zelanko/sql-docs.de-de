@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa25e99c5bc0b0a5799cfac479e97bd9b89db338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447234"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Implizit zugewiesene Deskriptoren
 Wenn ein Anweisungshandle zugeordnet ist, weist die Anwendung implizit einen Satz von vier Deskriptoren. Die Anwendung kann die Handles dieser implizit als Attribute des Anweisungshandles zugeordnet Deskriptoren erhalten. Wenn die Anwendung das Anweisungshandle frei, gibt der Treiber alle implizit zugewiesene Deskriptoren für dieses Handle frei.

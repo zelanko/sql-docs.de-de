@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445982"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Durchscrollen und Abrufen von Zeilen (ODBC)
 Wenn Sie einen bildlauffähigen Cursor verwenden, um Anwendungen Aufrufen **SQLFetchScroll** , positionieren Sie den Cursor und Fetch-Zeilen. **SQLFetchScroll** relative Bildlauf unterstützt (Weiter vor und relativ *n* Zeilen), absolute Bildlauf (Vorname, Nachname und Zeile *n*), und die Positionierung von Lesezeichen. Die *FetchOrientation* und *FetchOffset* Argumente in **SQLFetchScroll** welche Rowset abzurufen, geben Sie wie in den folgenden Diagrammen dargestellt.  
@@ -41,4 +41,4 @@ Wenn Sie einen bildlauffähigen Cursor verwenden, um Anwendungen Aufrufen **SQLF
  Nach dem das Rowset abgerufen wurde, kann die Anwendung aufrufen **SQLSetPos** zu einer bestimmten Zeile im Rowset oder aktualisieren Sie Zeilen im Rowset zu positionieren. Weitere Informationen zur Verwendung von **SQLSetPos**, finden Sie unter [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Durchführen eines Bildlaufs wird in ODBC 2. unterstützt. *x* Treiber durch **SQLExtendedFetch**. Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.
+>  Durchführen eines Bildlaufs wird in ODBC 2. unterstützt. *x* Treiber durch **SQLExtendedFetch**. Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.

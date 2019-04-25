@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472686"
 ---
 # <a name="comments-on-hellodata"></a>Kommentare zur HelloData
 Die Anwendung für die HelloData erläutert die grundlegenden Vorgänge einer typischen ADO-Anwendung: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Wenn Sie die Anwendung starten, klicken Sie auf die erste Schaltfläche **Datenabruf**. Dies führt die **GetData** Unterroutine.  

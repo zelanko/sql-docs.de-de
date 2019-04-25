@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757430"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In diesem Thema werden die Datenquellentypen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
@@ -37,7 +37,7 @@ ms.locfileid: "53371312"
 |Source|Versionen|Dateityp|Anbieter <sup>1</sup>|  
 |Access-Datenbanken|Microsoft Access 2003, 2007, 2010.|.accdb oder .mdb|ACE 14 OLE DB-Anbieter|  
 |Relationale SQL Server-Datenbanken|Microsoft SQL Server 2005, 2008, 2008 R2; SQLServer 2012, Microsoft SQL Azure-Datenbank <sup>2</sup>|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 10.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
-|SQL Server Parallel Datawarehouse (PDW) <sup>3</sup>|2008 R2|(–)|OLE DB-Anbieter für SQL Server PDW|  
+|SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(–)|OLE DB-Anbieter für SQL Server PDW|  
 |Relationale Oracle-Datenbanken|Oracle 9i, 10g, 11g|(–)|OLE DB-Anbieter für Oracle<br /><br /> .NET Framework-Datenanbieter für Oracle Client<br /><br /> .NET Framework-Datenanbieter für SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Relationale Teradata-Datenbanken|Teradata V2R6, V12|(–)|OLE DB-Anbieter für TDOLEDB<br /><br /> .NET-Datenanbieter für Teradata|  
 |Relationale Informix-Datenbanken||(–)|OLE DB-Anbieter für Informix|  

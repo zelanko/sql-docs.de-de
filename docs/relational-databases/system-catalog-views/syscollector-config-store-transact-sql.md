@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761346"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "47681408"
   
 |Eigenschaftenname|Description|  
 |-------------------|-----------------|  
-|CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnis verwendet wird.|  
+|CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnis wird verwendet.|  
 |CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = beibehalten von Daten aus *n* vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  
 |CollectorEnabled|Gibt den Status des Datensammlers an.<br /><br /> 0 = deaktiviert<br /><br /> 1 = aktiviert<br /><br /> Verwenden Sie entweder die gespeicherte Prozedur sp_syscollector_enable_collector oder die gespeicherte Prozedur sp_syscollector_disable_collector, um diesen Wert zu ändern.|  
 |MDWDatabase|Der Name des Verwaltungs-Data Warehouses. Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_warehouse_database_name, um diesen Wert zu ändern.|  
-|MDWInstance|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz für das Verwaltungs-Data Warehouse. Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_warehouse_instance_name, um diesen Wert zu ändern.|  
+|MDWInstance|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz für das Verwaltungs-Data Warehouse. Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_warehouse_instance_name, um diesen Wert zu ändern.|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die syscollector_config_store-Sicht abgefragt.  
@@ -64,8 +64,8 @@ FROM msdb.dbo.syscollector_config_store;
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [Sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [Sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

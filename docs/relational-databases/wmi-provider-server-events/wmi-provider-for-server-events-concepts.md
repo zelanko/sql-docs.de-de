@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514560"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Konzepte des WMI-Anbieters für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51215032"
  [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  Erläutert die Syntax der WMI-Abfragesprache (WQL) und ihre Verwendung zur Programmierung für den Anbieter.  
   
- [Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Beispiel: Erstellen einer SQL Server-Agent-Warnung mithilfe des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Gibt ein Beispiel für die Verwendung des WMI-Anbieters zur Rückgabe von Informationen zu einem Ablaufverfolgungsereignis für die Erstellung einer SQL Server-Agent-Warnung.  
   
  [Beispiel: Verwenden des WMI-Ereignisanbieters mit .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  

@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632413"
 ---
 # <a name="parameter-data-types"></a>Parameterdatentypen
 Obwohl jedes Parameters angegeben **SQLBindParameter** wird definiert, mit einer SQL-Datentyp, die Parameter in einer SQL-Anweisung keine systeminternen Datentyp haben. Parametermarkierungen können daher in einer SQL­Anweisung enthalten sein, nur dann, wenn ihre Datentypen, die von einem anderen Operanden in der Anweisung abgeleitet werden können. Z. B. in einem arithmetischen Ausdruck wie z. B.? + COLUMN1, den Datentyp des Parameters kann von den Datentyp der benannten Spalte COLUMN1 verhältnisschwellenwert abgeleitet werden. Eine Anwendung kann nicht auf eine parametermarkierung verwenden, wenn der Datentyp kann nicht bestimmt werden.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642475"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignis (ADO)
 Die **WillMove** Ereignis wird immer dann aufgerufen, bevor Sie ein ausstehender Vorgang ändert sich die aktuelle Position in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **MoveComplete** Ereignis wird aufgerufen, nachdem die aktuelle Position in der **Recordset** Änderungen.  
@@ -60,7 +60,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  Ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein **WillMove** oder **MoveComplete** Ereignis kann auftreten, aufgrund der folgenden **Recordset** Operations: [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), und [Requery](../../../ado/reference/ado-api/requery-method.md). Diese Ereignisse auftreten, aufgrund der folgenden Eigenschaften: [Filter](../../../ado/reference/ado-api/filter-property.md), [Index](../../../ado/reference/ado-api/index-property.md), [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Diese Ereignisse auch auftreten, wenn ein Kind **Recordset** hat **Recordset** Ereignisse, die Verbindung hergestellt und das übergeordnete Element **Recordset** verschoben wird.  
+ Ein **WillMove** oder **MoveComplete** Ereignis kann auftreten, aufgrund der folgenden **Recordset** Vorgänge: [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), und [Requery](../../../ado/reference/ado-api/requery-method.md). Diese Ereignisse können auftreten, aufgrund der folgenden Eigenschaften: [Filter](../../../ado/reference/ado-api/filter-property.md), [Index](../../../ado/reference/ado-api/index-property.md), [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Diese Ereignisse auch auftreten, wenn ein Kind **Recordset** hat **Recordset** Ereignisse, die Verbindung hergestellt und das übergeordnete Element **Recordset** verschoben wird.  
   
  Müssen Sie festlegen, die *AdStatus* Parameter **AdStatusUnwantedEvent** für jeden möglichen *AdReason* Wert, um die ereignisbenachrichtigung für jedes Ereignis vollständig zu beenden, enthält eine *AdReason* Parameter.  
   

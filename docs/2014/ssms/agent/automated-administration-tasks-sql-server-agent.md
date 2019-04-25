@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472954"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatisierte Administrationstasks (SQL Server-Agent)
   In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können administrative Tasks automatisiert werden. Zum Automatisieren der Administration definieren Sie voraussichtliche administrative Tasks und geben die Bedingungen an, unter denen die einzelnen Tasks ausgeführt werden. Durch die Verwendung der automatischen Administration für Routineaufgaben und -ereignisse haben Sie mehr Zeit für andere administrative Funktionen.  

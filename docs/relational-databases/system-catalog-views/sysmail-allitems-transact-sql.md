@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759862"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "47824848"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Der Bezeichner des E-Mail-Elements in der E-Mail-Warteschlange.|  
 |**profile_id**|**int**|Der Bezeichner des Profils, das zum Senden der Nachricht verwendet wurde.|  
-|**Empfänger**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
+|**recipients**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
-|**Betreff**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
+|**subject**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
 |**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind TEXT und HTML.|  
-|**Wichtigkeit**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Empfindlichkeit**|**varchar(12)**|Die **Vertraulichkeit** -Parameter der Nachricht.|  
+|**importance**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
+|**sensitivity**|**varchar(12)**|Die **Vertraulichkeit** -Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
 |**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
@@ -57,7 +57,7 @@ ms.locfileid: "47824848"
 |**send_request_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht in der E-Mail-Warteschlange platziert wurde.|  
 |**send_request_user**|**sysname**|Der Benutzer, der die Nachricht übermittelt hat. Hierbei handelt es sich um den Benutzerkontext der Datenbank-E-Mail-Prozedur, nicht um das Von-Feld der Nachricht.|  
 |**sent_account_id**|**int**|Der Bezeichner des Datenbank-E-Mail-Kontos, das zum Senden der Nachricht verwendet wird.|  
-|**sent_status**|**varchar(8)**|Der Status der E-Mail. Folgende Werte sind möglich:<br /><br /> **gesendete** -die e-Mail wurde gesendet.<br /><br /> **nicht gesendete** -Datenbank-e-Mails versucht, die die Nachricht zu senden.<br /><br /> **Wiederholung** -Datenbank-e-Mails Fehler beim Senden der Nachricht jedoch versucht, erneut zu senden.<br /><br /> **Fehler bei** -Datenbank-e-Mails konnte nicht zum Senden der Nachricht.|  
+|**sent_status**|**varchar(8)**|Der Status der E-Mail. Dabei sind folgende Werte möglich:<br /><br /> **gesendete** -die e-Mail wurde gesendet.<br /><br /> **nicht gesendete** -Datenbank-e-Mails versucht, die die Nachricht zu senden.<br /><br /> **Wiederholung** -Datenbank-e-Mails Fehler beim Senden der Nachricht jedoch versucht, erneut zu senden.<br /><br /> **Fehler bei** -Datenbank-e-Mails konnte nicht zum Senden der Nachricht.|  
 |**sent_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht gesendet wurde.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  

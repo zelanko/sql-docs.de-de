@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_tasks (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627913"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47785338"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Speicheradresse des Objekts.|  
-|**task_state**|**nvarchar(60)**|Der Status des Tasks. Die folgenden Werte sind möglich:<br /><br /> PENDING: Warten auf einen Arbeitsthread.<br /><br /> RUNNABLE: Ausführbar, doch wird auf das Eintreffen eines Quantums gewartet.<br /><br /> RUNNING: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> SUSPENDED: Verfügt über einen Arbeitsthread, wartet jedoch auf ein Ereignis.<br /><br /> DONE: Abgeschlossen.<br /><br /> SPINLOOP: In einem Spinlock festgehalten.|  
+|**task_state**|**nvarchar(60)**|Der Status des Tasks. Die folgenden Werte sind möglich:<br /><br /> AUSSTEHEND: Warten auf einen Arbeitsthread.<br /><br /> RUNNABLE: Ausführbar, doch eines Quantums gewartet.<br /><br /> AUSGEFÜHRTE: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> ANGEHALTEN: Verfügt über einen Arbeitsthread, aber für ein Ereignis wartet.<br /><br /> FERTIG: Abgeschlossen.<br /><br /> SPINLOOP: Hängen in einem SpinLock festgehalten.|  
 |**context_switches_count**|**int**|Anzahl der Kontextwechsel im Zeitplanungsmodul, die dieser Task abgeschlossen hat.|  
 |**pending_io_count**|**int**|Anzahl der physischen E/A-Vorgänge, die dieser Task ausgeführt hat.|  
 |**pending_io_byte_count**|**bigint**|Gesamtbytezahl der von diesem Task ausgeführten E/A-Vorgänge.|  

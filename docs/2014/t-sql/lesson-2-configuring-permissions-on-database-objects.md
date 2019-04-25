@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642579"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte
   Wenn Sie einem Benutzer Zugriff auf eine Datenbank gewähren möchten, müssen drei Schritte ausgeführt werden. Zuerst erstellen Sie einen Anmeldenamen. Dieser Anmeldename ermöglicht es dem Benutzer, eine Verbindung mit [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]herzustellen. Anschließend konfigurieren Sie den Anmeldenamen als Benutzer in der angegebenen Datenbank. Im letzten Schritt erteilen Sie diesem Benutzer Berechtigungen für Datenbankobjekte. In dieser Lektion werden diese drei Schritte beschrieben, und es wird gezeigt, wie eine Sicht und eine gespeicherte Prozedur als Objekt erstellt werden.  

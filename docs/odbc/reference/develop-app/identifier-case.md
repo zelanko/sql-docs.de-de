@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447822"
 ---
 # <a name="identifier-case"></a>Groß-/Kleinschreibung von Bezeichnern
 In SQL-Anweisungen und Katalog-Funktionsargumente, Bezeichner und Bezeichner in Anführungszeichen können es sich entweder Groß-/Kleinschreibung oder nicht, die ermittelt eine Anwendung, durch den Aufruf **SQLGetInfo** mit dem SQL_IDENTIFIER_CASE und SQL_QUOTED_ IDENTIFIER_CASE-Optionen.  

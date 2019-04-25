@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761733"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimieren der NewOrg-Tabelle
-  Die **NewOrd** in erstellten Tabelle der [Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) Aufgabe enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe einer `hierarchyid`-Datentyp. Dieser Task fügt neue Indizes für die Unterstützung von Suchvorgängen für die `hierarchyid` Spalte.  
+  Die **NewOrd** in erstellten Tabelle der [Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) Aufgabe enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe einer `hierarchyid`-Datentyp. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der `hierarchyid`-Spalte unterstützen.  
   
 ## <a name="clustered-index"></a>Gruppierter Index  
  Die `hierarchyid` Spalte (**OrgNode**) ist der Primärschlüssel für die **NewOrg** Tabelle. Als die Tabelle erstellt wurde, enthielt sie den gruppierten Index **PK_NewOrg_OrgNode** , der die Eindeutigkeit der **OrgNode** -Spalte erzwingen sollte. Dieser gruppierte Index unterstützt auch eine Tiefensuche in der Tabelle.  
@@ -31,7 +31,7 @@ ms.locfileid: "48146980"
   
 #### <a name="to-index-the-neworg-table-for-efficient-searches"></a>So indizieren Sie die Tabelle 'NewOrg' für effiziente Suchoperationen  
   
-1.  Verwenden Sie zur Unterstützung von Abfragen der gleichen Ebene in der Hierarchie die [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) -Methode, um eine berechnete Spalte zu erstellen, welche die Ebene in der Hierarchie enthält. Erstellen Sie dann auf der Ebene einen zusammengesetzten Index und die `Hierarchyid`. Führen Sie den folgenden Code aus, um die berechnete Spalte und den Breitensuchindex zu erstellen:  
+1.  Verwenden Sie zur Unterstützung von Abfragen der gleichen Ebene in der Hierarchie die [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) -Methode, um eine berechnete Spalte zu erstellen, welche die Ebene in der Hierarchie enthält. Erstellen Sie dann für diese und die `Hierarchyid`-Spalte einen zusammengesetzten Index. Führen Sie den folgenden Code aus, um die berechnete Spalte und den Breitensuchindex zu erstellen:  
   
     ```  
     ALTER TABLE NewOrg   
@@ -72,7 +72,7 @@ ms.locfileid: "48146980"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Tiefensuchindex: Mitarbeiterdatensätze sind angrenzend an den ihres Managers gespeichert.  
+     Tiefensuchindex: Mitarbeiterdatensätze sind angrenzend an ihren Vorgesetzten gespeichert.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146980"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Sortiert nach **EmployeeID**: Die Zeilen werden in der Reihenfolge der **EmployeeID** gespeichert.  
+     **EmployeeID**-index: Zeilen werden gespeichert, **EmployeeID** Sequenz.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

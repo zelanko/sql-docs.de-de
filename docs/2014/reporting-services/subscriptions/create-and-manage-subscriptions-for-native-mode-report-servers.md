@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd1404868213820d3ba3fc6d2715f7a8ae1c6716
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59972116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511089"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Erstellen, Ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus)
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Ein Standardabonnement wird stets über den Bericht definiert, auf dem es basiert.  

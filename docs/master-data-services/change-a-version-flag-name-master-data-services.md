@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b807f92b40a772762bf09edd83a129aabd91cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638128"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Ändern des Namens eines Versionsflags (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52781822"
 
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen eines Versionsflags ändern.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
@@ -49,7 +49,7 @@ ms.locfileid: "52781822"
   
 6.  Drücken Sie die EINGABETASTE.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

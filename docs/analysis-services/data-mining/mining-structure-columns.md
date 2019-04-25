@@ -1,5 +1,5 @@
 ---
-title: Miningstrukturspalten | Microsoft Docs
+title: Miningstrukturspalten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509972"
 ---
 # <a name="mining-structure-columns"></a>Miningstrukturspalten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,17 +27,17 @@ ms.locfileid: "34015157"
   
  Die Definition einer Miningstrukturspalte muss die folgenden Informationen enthalten:  
   
--   **ID**: Der eindeutige Name der Spalte, der häufig dem Namen entspricht. Dies kann nicht geändert werden, nachdem Sie die Miningstruktur erstellt haben, wohingegen der Name geändert werden kann.  
+-   **ID**: Der eindeutige Name der Spalte, der häufig dem Namen identisch. Dies kann nicht geändert werden, nachdem Sie die Miningstruktur erstellt haben, wohingegen der Name geändert werden kann.  
   
--   **Name**: Der Name oder Alias der Spalte.  
+-   **Name**: Ein Name oder Alias der Spalte.  
   
--   **Inhalt**: Eine Enumeration, die beschreibt, ob es sich um einzelne oder fortlaufende Daten handelt.  
+-   **Inhalt**: Eine Enumeration, die angibt, ob die Daten diskret oder kontinuierlich sind.  
   
--   **Typ**: Eine Enumeration, die den allgemeinen Datentyp angibt.  
+-   **Typ:** Eine Enumeration, die den allgemeinen Datentyp angibt.  
   
 -   **Verteilung**: Eine Enumeration, die die erwartete Verteilung der Werte beschreibt. Eine Verteilung liegt vor, wenn die Spalte kontinuierlich ist.  
   
--   **Modellierungsflags**: Eine Enumeration, die angibt, wie fehlende Werte usw. gehandhabt werden. Modellierungsflags können auch im Miningmodell definiert werden, aber die Modellflags unterscheiden sich von den für Strukturspalten verwendeten Flags.  
+-   **Modellierungsflags**: Eine Enumeration, die wie fehlende Werte usw. gehandhabt werden sollen. Modellierungsflags können auch im Miningmodell definiert werden, aber die Modellflags unterscheiden sich von den für Strukturspalten verwendeten Flags.  
   
 -   **Bindungen**: Eigenschaften, die die Quelldaten angeben.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015157"
 |Erfahren Sie, wie Sie Miningstrukturspalten hinzufügen und ändern.|[Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

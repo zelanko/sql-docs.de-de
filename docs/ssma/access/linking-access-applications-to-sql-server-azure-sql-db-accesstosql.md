@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760131"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Access-Anwendungen zu SQL Server – Azure SQL-Datenbank (AccessToSQL)
 Wenn Sie möchten, verwenden Sie die vorhandenen Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie können die ursprünglichen Access-Tabellen verknüpfen, um die migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen. Verknüpfen die Access-Datenbank ändert, sodass Ihre Abfragen, Formulare, Berichte und Data Access-Seiten verwenden Sie die Daten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank anstelle der Daten in der Access-Datenbank.  
@@ -101,22 +101,22 @@ Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azur
 Die folgenden Abschnitte, die in die vorhandenen Access-Anwendungen auftreten können, nach der Migration von Datenbanken aus den Zugriff auf Probleme mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure und verknüpfen Sie dann die Tabellen, zusammen mit den Ursachen und Lösungen.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Geringe Leistung mit verknüpften Tabellen  
-**Ursache:** einige Abfragen können langsam sein, nach dem Upsizing von den folgenden Gründen:  
+**Ursache:** Einige Abfragen langsam nach Upsizing von den folgenden Gründen möglicherweise:  
   
 -   Die Anwendung abhängig von Funktionen, die in nicht vorhanden sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, wodurch Jet zum Pullen von Tabellen, die lokal auf eine SELECT-Abfrage ausgeführt wird.  
   
 -   Abfragen, die aktualisieren oder Löschen von vielen Zeilen, werden für jede Zeile von Jet als parametrisierte Abfrage gesendet.  
   
-**Lösung:** die langsam ausgeführte Abfragen in Pass-Through-Abfragen, gespeicherten Prozeduren oder Sichten zu konvertieren. Konvertieren in Pass-Through-Abfragen weist die folgenden Probleme:  
+**Lösung:** Konvertieren Sie Pass-Through-Abfragen, gespeicherten Prozeduren oder Ansichten die langsam ausgeführte Abfragen. Konvertieren in Pass-Through-Abfragen weist die folgenden Probleme:  
   
 -   Pass-Through-Abfragen können nicht geändert werden. Ergebnis der Abfrage ändern oder Hinzufügen neuer Datensätze muss auf eine andere Weise, wie z. B. anhand erfolgen müssen expliziten **ändern** oder **hinzufügen** Schaltflächen auf dem Formular, das an die Abfrage gebunden ist.  
   
 -   Einige Abfragen eine Benutzereingabe erforderlich ist, aber der Benutzereingabe von Pass-Through-Abfragen nicht unterstützt. Benutzereingaben kann abgerufen werden, indem Sie Visual Basic für Applikationen (VBA) Code, der für Parameter auffordert oder ein Formular, das als ein Eingabesteuerelement verwendet wird. In beiden Fällen sendet der VBA-Code der Abfrage mit der Benutzereingabe an den Server ab.  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>Automatisch inkrementierte Spalten werden nicht aktualisiert werden, bis der Datensatz aktualisiert wird  
-**Ursache:** nach dem Aufruf von RecordSet.AddNew in Jet aus, die automatisch inkrementieren-Spalte ist verfügbar, bevor der Datensatz aktualisiert wird. Dies ist nicht in "true" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Der neue Wert der neue Wert der Identitätsspalte ist erst nach dem Speichern des neuen Datensatzes verfügbar.  
+**Ursache:** Nach dem Aufruf von RecordSet.AddNew in Jet, ist die automatische-Inkrement-Spalte verfügbar, bevor der Datensatz aktualisiert wird. Dies ist nicht in "true" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Der neue Wert der neue Wert der Identitätsspalte ist erst nach dem Speichern des neuen Datensatzes verfügbar.  
   
-**Lösung:** führen Sie im folgende Visual Basic für Applikationen (VBA) Code vor dem Zugriff auf das Feld "Identity":  
+**Lösung:** Führen Sie im folgende Visual Basic für Applikationen (VBA) Code vor dem Zugriff auf das Feld "Identity" aus:  
   
 ```  
 Recordset.Update  
@@ -125,33 +125,33 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Neue Datensätze sind nicht verfügbar  
-**Ursache:** Wenn Sie einen Eintrag zum Hinzufügen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle mithilfe von VBA, wenn in der Tabelle den eindeutigen Indexfeld den Standardwert hat, und Sie nicht Sie einen Wert an dieses Feld, der neue Datensatz wird nicht angezeigt weisen, bis Sie erneut, in der Tabelle im Öffnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder S SQL Azure. Wenn Sie versuchen, einen Wert aus der neue Datensatz abrufen, erhalten Sie die folgende Fehlermeldung angezeigt:  
+**Ursache:** Wenn Sie einen Eintrag zum Hinzufügen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle mithilfe von VBA, wenn in der Tabelle den eindeutigen Indexfeld den Standardwert hat, und Sie nicht Sie einen Wert an dieses Feld, der neue Datensatz wird nicht angezeigt weisen, bis Sie erneut, in der Tabelle im Öffnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Wenn Sie versuchen, einen Wert aus der neue Datensatz abrufen, erhalten Sie die folgende Fehlermeldung angezeigt:  
   
 `Run-time error '3167' Record is deleted.`  
   
-**Lösung:** beim Öffnen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle mithilfe von VBA-Code, einschließlich der `dbSeeChanges` auswählen, wie im folgenden Beispiel gezeigt:  
+**Lösung:** Beim Öffnen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle mithilfe von VBA-Code, einschließlich der `dbSeeChanges` auswählen, wie im folgenden Beispiel gezeigt:  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>Nach der Migration können einige Abfragen nicht den Benutzer einen neuen Datensatz hinzufügen  
-**Ursache:** Wenn eine Abfrage nicht alle Spalten enthält, die in einem eindeutigen Index enthalten sind, können nicht Sie neue Werte hinzufügen, indem Sie mit der Abfrage.  
+**Ursache:** Wenn eine Abfrage nicht alle Spalten enthält, die in einem eindeutigen Index enthalten sind, können nicht Sie neue Werte hinzufügen, mit der Abfrage.  
   
-**Lösung:** stellen Sie sicher, dass alle im mindestens einen eindeutigen Index enthaltene Spalten Teil der Abfrage sind.  
+**Lösung:** Stellen Sie sicher, dass alle im mindestens einen eindeutigen Index enthaltene Spalten Teil der Abfrage sind.  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>Eine verknüpfte Tabelle-Schema mit dem Zugriff kann nicht geändert werden.  
-**Ursache:** der Benutzer kann nicht nach der Migration von Daten und verknüpfen Tabellen, das Schema einer Tabelle in Access ändern.  
+**Ursache:** Nach der Migration von Daten und verknüpfen Tabellen kann nicht der Benutzer das Schema einer Tabelle in Access ändern.  
   
 **Lösung:** Ändern des Tabellenschemas mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und aktualisieren Sie dann auf den Link in Access.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Hyperlinkfunktionalität verloren gegangen ist, nach dem Migrieren von Daten  
-**Ursache:** nach der Migration, Hyperlinks in Spalten ihre Funktionalität verlieren, und werden einfache **nvarchar(max)** Spalten.  
+**Ursache:** Nach der Migration, Hyperlinks in Spalten ihre Funktionalität verlieren, und werden einfache **nvarchar(max)** Spalten.  
   
-**Lösung:** None.  
+**Lösung:** Keine.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Einige SQL Server-Datentypen werden durch den Zugriff nicht unterstützt.  
-**Ursache:** , wenn Sie später aktualisieren Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen, Datentypen, die von Access, nicht unterstützt werden, enthalten Sie können nicht in der Tabelle in Access öffnen.  
+**Ursache:** Wenn Sie später aktualisieren Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen, Datentypen, die von Access, nicht unterstützt werden, enthalten Sie können nicht in der Tabelle in Access öffnen.  
   
-**Lösung:** können Sie eine Access-Abfrage, die nur die Zeilen mit unterstützten Datentypen zurückgibt definieren.  
+**Lösung:** Sie können eine Access-Abfrage definieren, die nur die Zeilen mit unterstützten Datentypen zurückgibt.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636105"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC-3.x-Treibern
 Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt wird, wenn es sich bei die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
   
-|Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC 3. *x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC 3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> der ODBC-3. *x*<br /><br /> Treiber-Manager zu<br /><br /> eine ODBC-3. *x* Treiber?|  
+|Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC 3.*x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC 3.*x*<br /><br /> application?|Zugeordnet/unterstützt<br /><br /> der ODBC-3. *x*<br /><br /> Treiber-Manager zu<br /><br /> eine ODBC-3. *x* Treiber?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|Nein|Keine [1]|Ja|  
 |**SQLAllocEnv**|Nein|Keine [1]|Ja|  

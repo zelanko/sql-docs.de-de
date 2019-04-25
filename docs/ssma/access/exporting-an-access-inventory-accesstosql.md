@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760831"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eines Access-Inventars (AccessToSQL)
 Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann überprüfen und Abfragen der Inventur-Metadaten, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Dieser Hardwareinventur können Sie schnell finden Sie Antworten auf Fragen, wie z. B. die folgenden:  

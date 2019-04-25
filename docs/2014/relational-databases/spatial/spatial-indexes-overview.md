@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524281"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.  
@@ -106,7 +106,7 @@ ms.locfileid: "54100885"
 #### <a name="deepest-cell-rule"></a>Tiefste-Zelle-Regel  
  Bei der Tiefste-Zelle-Regel wird die Tatsache genutzt, dass jede Zelle einer untergeordneten Ebene zu der ihr übergeordneten Zelle gehört: Eine Zelle auf Ebene 4 gehört zu einer Zelle auf Ebene 3, eine Zelle auf Ebene 3 gehört zu einer Zelle auf Ebene 2, und eine Zelle auf Ebene 2 gehört zu einer Zelle auf Ebene 1. Zum Beispiel gehört ein Objekt, das zu Zelle 1.1.1.1 gehört, auch zu Zelle 1.1.1, Zelle 1.1 und Zelle 1. Die Kenntnis solcher Beziehungen in der Zellenhierarchie wurde in den Abfrageprozessor integriert. Daher müssen nur die Zellen der tiefsten Ebene im Index verzeichnet werden, sodass im Index nur die minimale Menge an Informationen gespeichert werden muss.  
   
- In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4 und 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
+ In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Ebene-1 bis Ebene 3 Zellen: 4, 4.4, und 4.4.10 und 4.4.14. Allerdings zählt das Mosaik Verwendung der tiefste-Zelle-Regel nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
   
  ![Tiefste-Zelle-Optimierung](../../database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "54100885"
 ##  <a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
   
 ###  <a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
- Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten Geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+ Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten Geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches(), and STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geometrie1*.*Methodenname*(*geometrie2*)*Vergleichsoperator**gültige_Zahl*  
   

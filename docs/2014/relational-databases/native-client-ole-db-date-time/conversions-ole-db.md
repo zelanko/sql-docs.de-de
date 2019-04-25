@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638207"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Bindungen und Konvertierungen (OLE DB)
   In diesem Abschnitt wird erläutert, wie zwischen `datetime`- und `datetimeoffset`-Werten konvertiert wird. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
@@ -28,7 +28,7 @@ ms.locfileid: "52763155"
   
 -   Das Format von `datetime`- und `datetimeoffset`-Zeichenfolgen ist:  
   
-     *Yyyy*-*mm*-*TT*[ *Hh*:*mm*:*ss*[. *9999999*] [?? *Hh*:*mm*]]  
+     *Yyyy*-*mm*-*TT*[ *Hh*:*mm*:*ss*[. *9999999*] [?? *hh*:*mm*]]  
   
 -   Das Format von `time`-Zeichenfolgen ist:  
   

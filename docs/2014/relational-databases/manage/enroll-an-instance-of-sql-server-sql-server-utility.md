@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468268"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
   Registrieren Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm, um deren Leistung und Konfiguration als verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Der Steuerungspunkt für das Hilfsprogramm (UCP) erfasst alle 15 Minuten Konfigurations- und Leistungsinformationen von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Diese Informationen werden auf dem UCP im Utility Management Data Warehouse (UMDW) gespeichert. Der UMDW-Dateiname lautet "sysutility_mdw". [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsdaten werden mit Richtlinien verglichen, sodass Sie Engpässe bei der Ressourcennutzung und Konsolidierungsmöglichkeiten leichter erkennen können.  
@@ -145,9 +145,9 @@ ms.locfileid: "52762482"
   
  Einstellungen verwalteter Instanzen:  
   
--   SQL Server-Instanzname: "Computername\Instanzname" bereit  
+-   SQL Server-Instanzname: ComputerName\InstanceName  
   
--   Konto des Hilfsprogramm-Sammlungssatz festlegen: Domänenname\benutzername  
+-   Konto des Hilfsprogramm-Sammlungssatz festlegen: DomainName\UserName  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "52762482"
 >   
 >  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Zusätzliche Informationen:  Informationen zu Windows NT-Gruppe oder-Benutzer konnten nicht abgerufen "\<DomainName\AccountName >', Fehlercode 0 x 5. (Microsoft SQL Server, Fehler: -2)" 15404)  
+>  Weitere Informationen:  Informationen zu Windows NT-Gruppe oder-Benutzer konnten nicht abgerufen "\<DomainName\AccountName >', Fehlercode 0 x 5. (Microsoft SQL Server, Fehler: 15404)  
 >   
 >  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762331"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -25,12 +25,12 @@ ms.locfileid: "48101700"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7906|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Meldungstext|Datenbankfehler: Die Datei 'FILE' ist keine gültige FileStream-Datei.|  
+|Meldungstext|Datenbankfehler: Die Datei 'FILE' ist keine gültige Filestream-Datei.|  
   
 ## <a name="explanation"></a>Erklärung  
  Außer einigen speziellen Dateien wie filestream.hdr sollten keine Dateien direkt unter dem Filestream-Datenspeicher vorhanden sein.  

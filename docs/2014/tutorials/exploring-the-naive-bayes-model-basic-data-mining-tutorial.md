@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472884"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Untersuchen des Naive Bayes-Modells (Lernprogramm zu Data Mining-Grundlagen)
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes-Algorithmus bietet mehrere Methoden für die Interaktion zwischen dem fahrradkaufverhalten und den Eingabeattributen anzuzeigen.  

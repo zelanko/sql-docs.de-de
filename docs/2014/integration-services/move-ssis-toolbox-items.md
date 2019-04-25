@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767212"
 ---
 # <a name="move-ssis-toolbox-items"></a>Verschieben von SSIS-Toolboxelementen
   Die neue SSIS-Toolbox schließt neue Kategorien und die Möglichkeit ein, Elemente nach Ihren Bedürfnissen zu organisieren. Ein Informationsfenster am unteren Rand der Toolbox stellt eine Beschreibung eines ausgewählten Toolboxelements und einen Link zu einem Onlinedokumentationsthema bereit.  

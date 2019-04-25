@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84e00a2111b9cfe38ca680ec6c17ada724456878
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503714"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO-Abfragen geben abgeleitete Tabellenverweise im Kompatibilitätsmodus 90 oder höher zurück
   Wenn der Datenbank-Kompatibilitätsgrad auf 90 oder höher festgelegt ist, geben FOR XML-Abfragen, die im AUTO-Modus ausgeführt werden, Verweise auf Aliase abgeleiteter Tabellen wieder. Wenn der Datenbank-Kompatibilitätsgrad auf 80 festgelegt ist, geben FOR XML AUTO-Abfragen Verweise auf die Basistabellen wieder, die eine abgeleitete Tabelle definieren.  

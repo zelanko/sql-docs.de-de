@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509532"
 ---
 # <a name="collection-permissions-master-data-services"></a>Auflistungsberechtigungen (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52759272"
 > [!NOTE]  
 >  Diese Berechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|Description|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Elemente der Auflistung und die Elementattribute lesen.|  
 |**Erstellen**|Der Benutzer kann Auflistungselemente erstellen und Attributwerte zuweisen.|  
@@ -40,7 +40,7 @@ ms.locfileid: "52759272"
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  

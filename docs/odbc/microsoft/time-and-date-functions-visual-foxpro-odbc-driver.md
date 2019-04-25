@@ -19,35 +19,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632770"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 In der folgende Tabelle werden die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt werden. Wenn die Visual FoxPro-Grammatik für die gleiche Funktion aus der ODBC-Syntax unterscheidet, wird der Visual FoxPro-Äquivalent aufgeführt.  
   
 |ODBC-Grammatik|Visual FoxPro-Grammatik|  
 |------------------|---------------------------|  
-|CURDATE *)*|DATUM *)*|  
-|CURTIME *)*|ZEIT *)*|  
-|DAYNAME *("date_exp")*|CDOW *("date_exp")*|  
-|DAYOFMONTH (*"date_exp")*|TAG *)*|  
-|Stunde *("time_exp")*||  
-|MINUTE *("time_exp")*||  
-|Monat *("time_exp")*||  
-|MONTHNAME *("date_exp")*|CMONTH *("date_exp")*|  
-|JETZT *)*|"DATETIME"*)*|  
-|ZWEITE *("time_exp")*|S *("time_exp")*|  
-|Woche *("date_exp")*||  
-|Jahr *("date_exp")*||  
+|CURDATE *( )*|DATE *( )*|  
+|CURTIME *( )*|TIME *( )*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYOFMONTH(*date_exp)*|DAY *( )*|  
+|HOUR *(time_exp)*||  
+|MINUTE *(time_exp)*||  
+|MONTH *(time_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|NOW *( )*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|WEEK *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  Die folgenden Funktionen für Datum und Uhrzeit werden nicht unterstützt:  
   
- DAYOFYEAR *("date_exp")*  
+ DAYOFYEAR *(date_exp)*  
   
- Quartal *("date_exp")*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *("Intervall", "Integer_exp", "Timestamp_exp")*  
   

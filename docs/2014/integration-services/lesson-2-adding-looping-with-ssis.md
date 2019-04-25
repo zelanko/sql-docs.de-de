@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767552"
 ---
 # <a name="lesson-2-adding-looping"></a>Lektion 2: Hinzufügen von Schleifen
   In [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md), Erstellung ein Pakets, das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe der Suchtransformationen transformiert und schließlich laden die Daten in die **FactCurrency** Faktentabelle der der **AdventureWorksDW2012** -Beispieldatenbank.  

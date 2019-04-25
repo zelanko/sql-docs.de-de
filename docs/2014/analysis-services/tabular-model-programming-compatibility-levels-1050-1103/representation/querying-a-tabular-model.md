@@ -1,23 +1,23 @@
 ---
 title: Abfragen eines tabellarischen Modells | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/07/2018
+ms.prod: sql
 ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757744"
 ---
 # <a name="querying-a-tabular-model"></a>Abfragen eines tabellarischen Modells
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Ein Entwickler, der ein tabellarisches Modell abfragt, möchte Daten aus der tabellarischen Datenbank abrufen. Dafür gibt es zwei Optionen: Verwenden Sie Tabellenabfragen in DAX, oder verwenden Sie MDX und rufen Sie die Daten so ab, als stammten sie aus einem Cube. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  
   
 ## <a name="querying-with-adomdnet"></a>Abfragen mit ADOMD.Net  

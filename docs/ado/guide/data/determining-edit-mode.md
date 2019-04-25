@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472341"
 ---
 # <a name="determining-edit-mode"></a>Bestimmen des Bearbeitungsmodus
 ADO verwaltet einen Bearbeitung Puffer mit den aktuellen Datensatz verknüpft ist. Die **EditMode** Eigenschaft gibt an, ob Änderungen an diesen Puffer vorgenommen wurden, oder gibt an, ob ein neuer Datensatz erstellt wurde. Verwendung **EditMode** auf den Bearbeitungsstatus des aktuellen Datensatzes zu bestimmen. Sie können für ausstehende Änderungen testen, wenn ein Bearbeitungsprozess unterbrochen wurde und zu bestimmen, ob Sie benötigen die **Update** oder **CancelUpdate** Methode.  

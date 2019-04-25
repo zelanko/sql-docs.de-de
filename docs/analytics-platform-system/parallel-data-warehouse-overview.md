@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639884"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallel Data Warehouse-Komponenten - Analytics Platform System
 Dieser Artikel beschreibt die Appliance-Software und die nicht zur Appliance gehört Softwarekomponenten des Analytics Platform System.  
@@ -130,7 +130,7 @@ Microsoft Hyper-V Server bietet eine einfache und zuverlässige Virtualisierungs
 ## <a name="sec2"></a>Nicht relationale Daten
 PolyBase-Technologie integriert SQL Server-PDW-Daten mit externen Hadoop-Daten. Die Hadoop-Daten können auf einer dieser Quellen Hadoop-Daten gespeichert werden:  
   
--   Hortonworks Hadoop-Distribution  
+-   Hortonworks Hadoop Distribution  
   
 -   Cloudera-Verteilung von Hadoop  
   
@@ -248,7 +248,7 @@ Die Admin-Konsole basiert auf System ansichtsabfragen. Sie können einzeln durch
 
 Weitere Informationen finden Sie unter [Überwachen der Appliance durch Verwenden von Systemansichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
-### <a name="system-center-operations-manager"></a>System Center Operationsmanager  
+### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 Es sind System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. 
 
 Um die Einheit für SCOM konfigurieren zu können, finden Sie unter [Überwachen der Appliance, indem Sie mithilfe von System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

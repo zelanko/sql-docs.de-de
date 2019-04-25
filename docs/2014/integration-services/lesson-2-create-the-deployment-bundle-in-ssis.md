@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767512"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lektion 2: Erstellen des Bereitstellungspakets
-  In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), erstellte das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt mit dem Namen Deployment Tutorial, das Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
+  In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
   
  In dieser Lektion erstellen Sie das Bereitstellungspaket. Dabei handelt es sich um einen Ordner, der die Elemente enthält, die Sie benötigen, um Pakete auf einem anderen Computer zu installieren. Das Bereitstellungspaket enthält ein Bereitstellungsmanifest, Kopien der Pakete und Kopien der Unterstützungsdateien aus dem Deployment Tutorial-Projekt. Im Bereitstellungsmanifest werden die Pakete, verschiedene Dateien und Konfigurationen im Bereitstellungspaket aufgelistet.  
   
  Sie überprüfen auch die Dateiliste im Bereitstellungspaket und untersuchen den Inhalt des Manifests.  
   
- **Geschätzte Zeit zum Abschließen dieser Lektion:** 30 Minuten  
+ **Geschätzte Zeit zum Bearbeiten dieser Lektion:** 30 Minuten  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Diese Lektion enthält die folgenden Aufgaben:  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629885"
 ---
 # <a name="validation-statuses-master-data-services"></a>Überprüfungsstatus (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52769752"
 
   Auf der Seite **Version überprüfen** im Bereich **Versionsverwaltung** sind die folgenden Status möglich.  
   
-|Status|und Beschreibung|  
+|Status|Description|  
 |------------|-----------------|  
 |Überprüfung wird erwartet|Alle neu erstellten Elemente, die überprüft werden sollen|  
 |Erneute Überprüfung wird erwartet|Vorhandene Elemente, die überprüft werden sollen|  
@@ -32,7 +32,7 @@ ms.locfileid: "52769752"
 |Fehler bei der Überprüfung|Elemente, bei denen die Geschäftsregelüberprüfung fehlgeschlagen ist|  
 |Erneute Überprüfung abhängiger Elemente wird erwartet|Aktualisierte konsolidierte Elemente, die zusammen mit untergeordneten Elementen überprüft werden sollen|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

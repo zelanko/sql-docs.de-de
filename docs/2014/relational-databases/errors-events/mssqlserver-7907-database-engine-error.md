@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762411"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
     
@@ -25,12 +25,12 @@ ms.locfileid: "48133040"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7907|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Das Verzeichnis 'DIRECTORY' in Partitions-ID PN_ID stellt kein gültiges Filestream-Verzeichnis dar.|  
+|Meldungstext|Tabellenfehler: Das Verzeichnis 'DIRECTORY' in Partitions-ID PN_ID ist kein gültiges Filestream-Verzeichnis.|  
   
 ## <a name="explanation"></a>Erklärung  
  Der Name eines Spaltenverzeichnisses stellt die Spalten-ID der Partition der relationalen Engine dar. Wenn ein Spaltenverzeichnisname nicht in eine Spalten-ID konvertiert werden kann, stellt das Verzeichnis kein gültiges Spaltenverzeichnis dar.  

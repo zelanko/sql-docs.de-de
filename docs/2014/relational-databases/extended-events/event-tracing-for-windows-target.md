@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519304"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  

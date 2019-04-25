@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468647"
 ---
 # <a name="lesson-10-create-partitions"></a>Lektion 10: Erstellen von Partitionen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion erstellen Sie Partitionen, um die FactInternetSales-Tabelle in kleinere logische Teile aufteilen, die verarbeitet werden können (aktualisiert) unabhängig von anderen Partitionen. Standardmäßig verfügt jede Tabelle im Modell über eine Partition, die Spalten und Zeilen der Tabelle enthält. Wir möchten die Daten nach Jahr unterteilen, für die Tabelle "factinternetsales"; eine Partition für jedes der fünf Jahren der Tabelle. Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 9: Erstellen von Hierarchien](../analysis-services/lesson-9-create-hierarchies.md).  
@@ -135,13 +135,13 @@ Beachten Sie, dass im Partitions-Manager die **zuletzt verarbeitet** Spalte für
   
 4.  Aktivieren Sie das Kontrollkästchen in der Spalte **Verarbeiten** für jede der fünf von Ihnen erstellten Partitionen, und klicken Sie anschließend auf **OK**.  
 
-    ![als-tabellarische-lesson10-Prozess-Partitionen](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![as-tabular-lesson10-process-partitions](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     Wenn Sie für den Identitätswechsel-Anmeldeinformationen aufgefordert werden, geben Sie den Windows-Benutzernamen und das Kennwort, die Sie in Lektion 2 angegeben.  
   
     Das Dialogfeld **Datenverarbeitung** wird daraufhin angezeigt. Es zeigt die Verarbeitungsdetails für jede Partition an. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Das liegt daran, dass jede Partition nur die Zeilen für das in der WHERE-Klausel der SQL-Anweisung angegebene Jahr beinhaltet. Wenn die Verarbeitung abgeschlossen ist, fahren Sie fort und schließen Sie das Dialogfeld „Datenverarbeitung“.  
   
-    ![als tabellarische-lesson10-Prozess-Vervollständigung](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Wie geht es weiter?
 Wechseln Sie zur nächsten Lektion: [Lektion 11: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md). 

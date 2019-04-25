@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636162"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
  [ @remoteserver **=** ] **"***Remoteserver***"**  
  Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remoteserver* ist **Sysname**, hat den Standardwert NULL. Wenn *Remoteserver* ist nicht angegeben ist, werden Informationen zu allen Remoteservern, auf dem lokalen Server definierten zurückgegeben.  
   
- [ @remotename **=** ] **"***Remote_name***"**  
+ [ @remotename **=** ] **'***remote_name***'**  
  Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Remote_name* nicht angegeben ist, Informationen zu allen Remotebenutzern für definierten *Remoteserver* zurückgegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -85,10 +85,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

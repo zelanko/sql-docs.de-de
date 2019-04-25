@@ -1,5 +1,5 @@
 ---
-title: Miningstrukturen (Analysis Services – Datamining) | Microsoft Docs
+title: Miningstrukturen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c5a71b864a1ec032112c2a73b965b82775e5b92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509887"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Miningstrukturen (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In der Miningstruktur werden die Daten definiert, aus denen Miningmodelle erstellt werden. Es werden die Quelldatensicht, die Anzahl und der Typ von Spalten sowie eine optionale Partitionierung in Trainings- und Testsätze angegeben. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen, die die gleiche Domäne verwenden. In der folgenden Abbildung ist die Beziehung der Data Mining-Struktur zur Datenquelle und zu den dazugehörigen Data Mining-Modellen dargestellt.  
   
- ![Datenverarbeitung: Quelle Struktur Modell](../../analysis-services/data-mining/media/dmcon-modelarch.gif "Datenverarbeitung: Quelle Struktur Modell")  
+ ![Datenverarbeitung: Quelle Struktur Modell](../../analysis-services/data-mining/media/dmcon-modelarch.gif "Datenverarbeitung: Quelle auf Struktur zum Modell")  
   
  Die Miningstruktur in der Abbildung basiert auf einer Datenquelle, die mehrere Tabellen oder Sichten enthält, die über das Feld CustomerID verknüpft sind. Eine Tabelle enthält Informationen zu Kunden, wie geografische Region, Alter, Einkommen und Geschlecht, während die dazugehörige geschachtelte Tabelle mehrere Zeilen mit Zusatzinformationen zu den einzelnen Kunden enthält, z. B. vom Kunden gekaufte Produkte. Die Abbildung zeigt, dass mehrere Modelle für eine Miningstruktur erstellt werden können und dass die Modelle unterschiedliche Spalten der Struktur verwenden können.  
   
@@ -98,19 +98,19 @@ ms.locfileid: "34019517"
   
  Weitere Informationen zur Architektur von Data Mining-Modellen finden Sie unter [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Verwenden Sie die im Folgenden angegebenen Links, um weitere Informationen zum Definieren, Verwalten und Verwenden von Miningstrukturen zu erhalten.  
   
-|Aufgaben|Links|  
+|Richtlinienübersicht|Links|  
 |-----------|-----------|  
 |Arbeiten mit relationalen Miningstrukturen|[Erstellen einer neuen relationalen Miningstruktur](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |Arbeiten mit Miningstrukturen, die auf Cubes basieren|[Erstellen einer neuen OLAP-Miningstruktur](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
 |Arbeiten mit Spalten in einer Miningstruktur|[Hinzufügen von Spalten zu einer Miningstruktur](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Entfernen von Spalten aus einer Miningstruktur](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Ändern oder Abfragen von Eigenschaften und Daten einer Miningstruktur|[Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Arbeiten mit den zugrunde liegenden Datenquellen und Aktualisieren von Quelldaten|[Bearbeiten Sie die für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Verarbeiten einer Miningstruktur](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Arbeiten mit den zugrunde liegenden Datenquellen und Aktualisieren von Quelldaten|[Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Verarbeiten einer Miningstruktur](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

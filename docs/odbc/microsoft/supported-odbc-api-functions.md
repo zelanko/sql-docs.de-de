@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633400"
 ---
 # <a name="supported-odbc-api-functions"></a>Unterstützte ODBC-API-Funktionen
 Der Zweck der Lastenausgleich ist auf die Anwendung zu informieren, welche Features, aus dem Treiber verfügbar sind. Der Microsoft ODBC Desktop-Datenbanktreiber unterstützt alle Funktionen von Core und Ebene 1.  

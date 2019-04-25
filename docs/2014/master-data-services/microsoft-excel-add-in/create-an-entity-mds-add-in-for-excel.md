@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7d9df5f8cd96421f97ecbdd0401fc87d800ffab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764628"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren neue Entitäten erstellen, um Daten zu speichern. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  
@@ -65,7 +65,7 @@ ms.locfileid: "52784512"
   
 10. Wählen Sie in der Liste **Code** die Spalte aus, die eindeutige Bezeichner enthält, oder lassen Sie die Codes automatisch generieren.  
   
-11. Dies ist optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
+11. Optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
   
 12. Klicken Sie auf **OK**. Nachdem die Entität erfolgreich erstellt wurde, wird eine neue Kopfzeile angezeigt, die Zellen werden hervorgehoben, und der Blattname wird an den Entitätsnamen angepasst.  
   

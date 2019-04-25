@@ -1,5 +1,5 @@
 ---
-title: Definieren von berechneten Elementen | Microsoft Docs
+title: Definieren von berechneten Elementen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523702"
 ---
-# <a name="lesson-6-1---defining-calculated-members"></a>Lektion 6-1: Definieren von berechneten Elementen
+# <a name="lesson-6-1---defining-calculated-members"></a>Lektion 6 – 1: Definieren von berechneten Elementen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Berechnete Elemente sind Elemente einer Dimension oder Measuregruppe, die auf Basis einer Kombination aus Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen definiert werden. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
@@ -33,7 +33,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie berechnete Measures, damit Be
   
     In der folgenden Abbildung ist die Registerkarte **Berechnungen** des Cube-Designers dargestellt.  
   
-    ![Registerkarte ' Berechnungen ', Cube-Designer](../analysis-services/media/l6-calculatedmembers-1.gif "Registerkarte Berechnungen des Cube-Designers")  
+    ![Registerkarte "Berechnungen", Cube-Designer](../analysis-services/media/l6-calculatedmembers-1.gif "Registerkarte ' Berechnungen ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
@@ -273,7 +273,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie berechnete Measures, damit Be
   
     Die Bruttorendite für Verkäufe des Wiederverkäufers ist deutlich niedriger als für Verkäufe über das Internet, wie in der folgenden Abbildung dargestellt.  
   
-    ![Datenbereich mit Verkäufe des Wiederverkäufers](../analysis-services/media/l6-calculatedmembers-7b.gif "Datenbereich mit Verkäufe des Wiederverkäufers")  
+    ![Datenbereich mit der Verkäufe des Wiederverkäufers](../analysis-services/media/l6-calculatedmembers-7b.gif "Datenbereich mit der Verkäufe des Wiederverkäufers")  
   
 9. Fügen Sie dem Bereich „Werte“ die Measures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**und **Reseller Sales Ratio to All Products** hinzu.  
   
@@ -287,7 +287,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie berechnete Measures, damit Be
   
     Die Verkaufszahlen für das Zubehör steigen im Laufe der Zeit, doch machen diese Verkäufe nur einen Bruchteil der Gesamtverkäufe aus. Die Bruttorendite beim Verkauf von Zubehör ist jedoch höher als beim Verkauf von Fahrrädern.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren von benannten Mengen](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>Siehe auch  

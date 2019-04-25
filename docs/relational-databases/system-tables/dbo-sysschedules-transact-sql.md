@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470712"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "47674378"
 |**schedule_id**|**int**|ID des Auftragszeitplans des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.|  
 |**schedule_uid**|**uniqueidentifier**|Eindeutiger Bezeichner des Auftragszeitplans. Anhand dieses Wertes wird ein Zeitplan für verteilte Aufträge identifiziert.|  
 |**originating_server_id**|**int**|ID des Masterservers, von dem der Auftragszeitplan stammt.|  
-|**name**|**Sysname ((nvarchar(128))**|Benutzerdefinierter Name für den Auftragszeitplan. Dieser Name muss innerhalb eines Auftrags eindeutig sein.|  
+|**name**|**sysname (nvarchar(128))**|Benutzerdefinierter Name für den Auftragszeitplan. Dieser Name muss innerhalb eines Auftrags eindeutig sein.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *Security_identifier* des Benutzers oder der Gruppe, die den Auftragszeitplan besitzt.|  
-|**aktiviert**|**int**|Status des Auftragszeitplans:<br /><br /> **0** = nicht aktiviert.<br /><br /> **1** = Aktiviert.<br /><br /> Wenn der Zeitplan nicht aktiviert ist, werden keine Aufträge auf dem Zeitplan ausgeführt.|  
+|**enabled**|**int**|Status des Auftragszeitplans:<br /><br /> **0** = nicht aktiviert.<br /><br /> **1** = Aktiviert.<br /><br /> Wenn der Zeitplan nicht aktiviert ist, werden keine Aufträge auf dem Zeitplan ausgeführt.|  
 |**freq_type**|**int**|Häufigkeit der Ausführung eines Auftrags für diesen Zeitplan.<br /><br /> **1** = nur einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zum **Freq_interval**<br /><br /> **64** = wird ausgeführt, wenn der SQL Server-Agent-Dienst gestartet wird<br /><br /> **128** = wird ausgeführt, wenn der Computer im Leerlauf befindet.|  
 |**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Hängt vom Wert der **Freq_type**. Der Standardwert ist **0**, die angibt, dass **Freq_interval** wird nicht verwendet. Finden Sie unter der folgenden Tabelle die möglichen Werte und deren Auswirkungen.|  
-|**freq_subday_type**|**int**|Einheiten für die **Freq_subday_interval**. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> <br /><br /> **1** : zum angegebenen Zeitpunkt<br /><br /> **2** : Sekunden<br /><br /> **4** : Minuten<br /><br /> **8** : Stunden|  
+|**freq_subday_type**|**int**|Einheiten für die **Freq_subday_interval**. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> <br /><br /> **1** : Zum angegebenen Zeitpunkt<br /><br /> **2** : Sekunden<br /><br /> **4** : Minuten<br /><br /> **8** : Stunden|  
 |**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den Ausführungsinstanzen des Auftrags.|  
-|**freq_relative_interval**|**int**|Wenn **Freq_interval** in jedem Monat, tritt auf, wenn **Freq_interval** ist **32** (mit relativem Monatsintervall). Folgende Werte sind möglich:<br /><br /> **0** = **Freq_relative_interval** wird nicht verwendet<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
+|**freq_relative_interval**|**int**|Wenn **Freq_interval** in jedem Monat, tritt auf, wenn **Freq_interval** ist **32** (mit relativem Monatsintervall). Kann einer der folgenden Werte sein:<br /><br /> **0** = **freq_relative_interval** is unused<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = Last|  
 |**freq_recurrence_**<br /><br /> **factor**|**int**|Die Anzahl der Wochen oder Monate zwischen den geplanten Ausführungen eines Auftrags. **Freq_recurrence_factor** wird nur verwendet, wenn **Freq_type** ist **8**, **16**, oder **32**. Wenn diese Spalte enthält **0**, **Freq_recurrence_factor** wird nicht verwendet.|  
 |**active_start_date**|**int**|Datum, an dem die Ausführung eines Auftrags beginnen kann. Das Datum wird als JJJJMMTT formatiert. NULL steht für das Datum des heutigen Tages.|  
 |**active_end_date**|**int**|Datum, an dem die Ausführung eines Auftrags enden kann. Für das Datum wird das Format YYYYMMDD verwendet.|  
@@ -61,7 +61,7 @@ ms.locfileid: "47674378"
 |**4** (täglich)|Jede **Freq_interval** Tage|  
 |**8** (wöchentlich)|**Freq_interval** kann einen oder mehrere der folgenden:<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **4** = Dienstag<br /><br /> **8** = Mittwoch<br /><br /> **16** = Donnerstag<br /><br /> **32** = Freitag<br /><br /> **64** = Samstag|  
 |**16** (monatlich)|Auf der **Freq_interval** Tag des Monats|  
-|**32** (monatlich, relativ)|**Freq_interval** ist eine der folgenden:<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **3** = Dienstag<br /><br /> **4** = Mittwoch<br /><br /> **5** = Donnerstag<br /><br /> **6** = Freitag<br /><br /> **7** = Samstag<br /><br /> **8** = Tag<br /><br /> **9** = Arbeitstag<br /><br /> **10** = Wochenendtag|  
+|**32** (monatlich, relativ)|**Freq_interval** ist eine der folgenden:<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **3** = Dienstag<br /><br /> **4** = Mittwoch<br /><br /> **5** = Thursday<br /><br /> **6** = Freitag<br /><br /> **7** = Samstag<br /><br /> **8** = Tag<br /><br /> **9** = Arbeitstag<br /><br /> **10** = Wochenendtag|  
 |**64** (startet, wenn SQL Server-Agent-Dienst gestartet wird)|**Freq_interval** wird nicht verwendet (**0**)|  
 |**128** (wird ausgeführt, wenn der Computer im Leerlauf befindet)|**Freq_interval** wird nicht verwendet (**0**)|  
   

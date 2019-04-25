@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632557"
 ---
 # <a name="update---sql-command"></a>UPDATE (SQL-Befehl)
 Datensätze in einer Tabelle mit neuen Werten aktualisiert.  
@@ -41,7 +41,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Gibt den Namen einer Datenbank als der Datenbank, die mit der Datenquelle, die die Tabelle angegeben. Sie müssen den Namen der Datenbank, die in der Tabelle enthält, wenn die Datenbank nicht mit dem aktuellen Objekt ist einschließen. Schließen Sie das Ausrufezeichen (!)-Trennzeichen an, nach dem Datenbanknamen und vor dem Tabellennamen.  
   
- Legen Sie *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Gibt an, die Spalten, die aktualisiert werden und die neuen Werte. Wenn Sie die WHERE-Klausel auslassen, wird jede Zeile in der Spalte mit den gleichen Wert aktualisiert.  
   
  WO *FilterCondition1*[AND &#124; oder *FilterCondition2*...]  

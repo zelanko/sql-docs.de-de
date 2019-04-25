@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469807"
 ---
 # <a name="lesson-6-create-measures"></a>Lektion 6: Erstellen von Measures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -27,10 +27,10 @@ Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im Measurerast
   
 In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel in der Bearbeitungsleiste als auch mithilfe der AutoSumme-Funktion.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).  
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lesson 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
   
@@ -87,13 +87,13 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     |Measurename|Spalte|AutoSumme (∑)|Formel|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |"Internettotalsales" an|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|Summe|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Summe|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Summe|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Summe|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Summe|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Summe|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Summe|=SUM([Freight])|  
   
 2.  Erstellen Sie durch Klicken auf eine leere Zelle im measureraster, und mithilfe der Bearbeitungsleiste, und nennen Sie die folgenden Measures in der Reihenfolge aus:  
   

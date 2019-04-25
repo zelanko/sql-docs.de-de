@@ -12,18 +12,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767572"
 ---
 # <a name="lesson-3-installing-packages"></a>Lektion 3: Installieren von Paketen
   In [Lektion 2: Erstellen des Bereitstellungspakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), ein Bereitstellungsprogramm und das Bereitstellungspaket erstellt, enthält die Elemente müssen Sie die Pakete auf einem anderen Computer installieren. Sie haben außerdem die Dateiliste im Bereitstellungspaket überprüft und den Inhalt der Manifestdatei untersucht, die beim Erstellen des Bereitstellungshilfsprogramms erstellt wurde.  
   
  In dieser Lektion kopieren Sie das Bereitstellungspaket auf den Zielcomputer und führen anschließend den Paketinstallations-Assistenten aus, um die Pakete, Paketabhängigkeiten und Hilfsdateien auf diesem Computer zu installieren. Die Pakete werden in der **msdb**-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installiert, während die anderen Elemente im Dateisystem installiert werden. Nach Abschluss der Paketinstallation testen Sie die Bereitstellung, indem Sie die Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen.  
   
- **Geschätzte Zeit zum Abschließen dieser Lektion:** 30 Minuten  
+ **Geschätzte Zeit zum Bearbeiten dieser Lektion:** 30 Minuten  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Diese Lektion enthält die folgenden Aufgaben:  

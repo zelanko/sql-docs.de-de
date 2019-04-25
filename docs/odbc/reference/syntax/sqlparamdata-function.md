@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465966"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLParamData** zusammen mit **SQLPutData** Parameterdaten während der Ausführung der Anweisung, und klicken Sie mit bereitstellen **SQLGetData** gestreamte ausgabeparameterdaten abrufen.  
@@ -51,7 +51,7 @@ SQLRETURN SQLParamData(
  [Ausgabe] Zeiger auf einen Puffer, in dem die Adresse des zurückzugebenden der *ParameterValuePtr* im angegebenen Puffer **SQLBindParameter** (für Parameterdaten) oder die Adresse des der *TargetValuePtr* im angegebenen Puffer **SQLBindCol** (für Spaltendaten) an, wie in das SQL_DESC_DATA_PTR-Deskriptorfeld Datensatz enthalten.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLParamData** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLParamData** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

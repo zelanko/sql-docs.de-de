@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764935"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) ist die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Lösung für die Masterdatenverwaltung. Im Rahmen der Masterdatenverwaltung (Master Data Management, MDM) versucht eine Organisation, nicht-transaktionale Listen mit Daten zu ermitteln und zu definieren, um dann daraus verwaltbare Masterlisten zusammenstellen zu können. Ein MDM-Projekt beinhaltet in der Regel eine Bewertung und Umstrukturierung von internen Geschäftsprozessen zusammen mit der Implementierung von MDM-Technologie. Das Ergebnis einer erfolgreichen MDM-Lösung sind zuverlässige, zentralisierte Daten, die sich analysieren lassen und so eine solide Grundlage für bessere Geschäftsentscheidungen darstellen.  

@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637618"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
   Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ `xml` verknüpfen. In diesem Fall die `xml` -Datentypinstanz heißt *typisierte*. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
@@ -67,14 +67,14 @@ ms.locfileid: "58538437"
   
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemasammlung mit einer XML-Variable  
  Das folgende Beispiel erstellt eine`xml` Variablen vom Typ und eine schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für ein XML-Typspalte  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine XML-Spalte  
  Im folgenden Beispiel wird eine Tabelle mit einer Spalte vom Typ `xml` erstellt und ein Schema für die Spalte angegeben:  
   
 ```  
@@ -83,7 +83,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben an eine gespeicherte Prozedur Parameter vom Typ xml  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines XML-Parameters an eine gespeicherte Prozedur  
  Im folgenden Beispiel wird ein Parameter vom Typ `xml` an eine gespeicherte Prozedur übergeben und ein Schema für die Variable angegeben:  
   
 ```  

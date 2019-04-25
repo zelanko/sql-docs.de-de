@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764845"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
   Erfahren Sie, wie Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwenden können, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  

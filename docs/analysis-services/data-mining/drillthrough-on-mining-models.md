@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ccb3e36739043684f2a86a082dd04ab749a0b031
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467426"
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "49085436"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen finden Sie weitere Informationen zur Verwendung von Drillthroughs mit Miningmodellen.  
   
-|Aufgaben|Links|  
+|Richtlinienübersicht|Links|  
 |-----------|-----------|  
 |Verwenden von Drillthrough in den Miningmodell-Viewern|[Verwenden von Drillthrough mit den Modell-Viewern](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |Abrufen von Falldaten für ein Modell mithilfe von Drillthrough|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761777"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLAllocHandle** reserviert ein Handle-Umgebung, Verbindung, Anweisung oder -Deskriptor.  
@@ -51,15 +51,15 @@ SQLRETURN SQLAllocHandle(
  *HandleType*  
  [Eingabe] Der Typ des Handles von zugeordnet werden **SQLAllocHandle**. Dabei muss es sich um einen der folgenden Werte sein:  
   
--   SQL_HANDLE_DBC AUF  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
 -   SQL_HANDLE_DESC  
   
--   SQL_HANDLE_ENV AUF  
+-   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT AUF  
+-   SQL_HANDLE_STMT  
   
  SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur von der Treiber-Manager und Treiber verwendet. Anwendungen sollten nicht mit dieser Handletyp verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -70,7 +70,7 @@ SQLRETURN SQLAllocHandle(
  [Ausgabe] Zeiger auf einen Puffer, in dem das Handle zu der neu zugewiesenen Datenstruktur zurückgegeben.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_INVALID_HANDLE oder SQL_ERROR zurück.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_INVALID_HANDLE, or SQL_ERROR.  
   
  Wenn ein Handle als ein Umgebungshandle zuordnen, wenn **SQLAllocHandle** gibt SQL_ERROR zurück, wird *OutputHandlePtr* SQL_NULL_HDBC, SQL_NULL_HSTMT oder SQL_NULL_HDESC, je nach den Wert des *HandleType*, es sei denn, das ausgabeargument ein null-Zeiger ist. Die Anwendung kann zusätzliche Informationen aus der Diagnosedaten-Struktur, die das Handle im zugeordneten erhalten die *InputHandle* Argument.  
   

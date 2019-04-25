@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468677"
 ---
 # <a name="rowset-size"></a>Rowsetgröße
 Die Größe des Rowsets verwenden, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen gehen häufig von zwei Strategien verfolgen. Die erste ist für die Rowsetgröße festzulegen, die Anzahl der Zeilen, die auf dem Bildschirm angezeigt. Wenn der Benutzer den Bildschirm angepasst wird, wird die Anwendung die Rowsetgröße entsprechend geändert. Die zweite besteht darin, die Rowsetgröße auf einen höheren Wert ein, z. B. 100 festzulegen, die reduziert die Anzahl der Aufrufe an die Datenquelle. Die Anwendung lokal innerhalb des Rowsets möglichst verschiebt und neue Zeilen abruft, nur, wenn es außerhalb des Rowsets verschiebt.  

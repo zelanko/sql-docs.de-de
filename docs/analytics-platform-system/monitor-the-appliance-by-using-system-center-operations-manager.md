@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639847"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Überwachung mit System Center Operationsmanager – Analytics Platform System
 Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
@@ -44,7 +44,7 @@ Klicken Sie nach dem Konfigurieren der SCOM-Management Packs, klicken Sie auf di
 ### <a name="alerts"></a>Benachrichtigungen  
 Warnungen sind, finden Sie auf die aktuelle Warnungen verwalten.  
   
-![Warnungen](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Appliances  
 Geräte sind, in dem Sie die aktuell ermittelte und überwachte SQL Server PDW-Geräte in Ihrer Umgebung finden. Wenn ein Gerät sich hier nicht angezeigt, und Sie die ODBC-Verbindung für sie erstellt haben, klicken Sie dann möglicherweise ein Problem mit Ihrem Konto von PDWWatcher. Wenn sie als "nicht überwacht" angezeigt, liegt möglicherweise ein Problem mit Ihrem Konto PDWMonitor. Seien Sie geduldig, da in SCOM werden keine Änderungen in Echtzeit vornehmen, aber überprüft in regelmäßigen Abständen auf neue Geräte überwachen und sendet in regelmäßigen Abständen Abfragen an die Geräte für die Überwachung.  

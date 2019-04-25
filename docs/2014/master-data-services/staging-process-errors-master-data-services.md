@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763271"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Fehler des Stagingprozesses (Master Data Services)
   Nach Abschluss des Stagingprozesses verfügen alle in den Stagingtabellen verarbeitete Datensätze über einen Werte in der Spalte ErrorCode. Diese Werte sind in der folgenden Tabelle aufgeführt.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822354"
 |210041|„ROOT“ ist kein gültiger Elementcode.|Der **MemberCode**-Wert enthält das Wort „ROOT“.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |210042|„MDMUNUSED“ ist kein gültiger Elementcode.|Der **MemberCode**-Wert enthält das Wort „MDMUNUSED“.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |210052|Der MemberCode kann nicht deaktiviert werden, da er als domänenbasierter Attributwert verwendet wird.|Wenn **ImportType** = **3** oder **4**ist, schlägt das Staging fehl, wenn das Element als Attributwert für andere Elemente verwendet wird. Legen Sie den Wert entweder mithilfe von **ImportType5** **6** auf NULL fest, oder ändern Sie die Werte vor dem Ausführen des Stagingprozesses.|Blatt<br /><br /> Konsolidiert|  
-|300002|Der Elementcode ist nicht gültig.|Beziehungen: Der über- oder untergeordnete Elementcode vorhanden nicht.<br /><br /> Blatt oder konsolidiert: **ImportType** = **3** oder **4** und der Elementcode ist nicht vorhanden.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
+|300002|Der Elementcode ist nicht gültig.|Beziehungen: Entweder ist der übergeordnete oder der untergeordnete Elementcode nicht vorhanden.<br /><br /> Blatt oder konsolidiert: **ImportType** = **3** oder **4**, und der Elementcode ist nicht vorhanden.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |300004|Der Elementcode ist bereits vorhanden.|**ImportType** = **1** , und Sie haben einen Elementcode verwendet, der bereits in der Entität vorhanden ist.|Blatt<br /><br /> Konsolidiert|  
 |210011|Wenn **RelationshipType** **1**ist, kann der **ParentCode** kein Blattelement sein.|Stellen Sie sicher, dass der **ParentCode** -Wert ein konsolidierter Elementcode ist.|Beziehung|  
 |210015|Der Elementcode für eine Hierarchie und einen Batch ist in der Stagingtabelle mehrmals vorhanden.|Sie haben für eine explizite Hierarchie im gleichen Batch mehrmals den Speicherort des gleichen Elements angegeben.|Beziehung|  

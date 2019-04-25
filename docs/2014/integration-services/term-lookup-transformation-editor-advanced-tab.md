@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766274"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie angeben, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird.  
@@ -29,7 +29,7 @@ ms.locfileid: "58387188"
   
 ## <a name="options"></a>Optionen  
  **Ausdruckssuche mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
- Geben Sie an, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist `False`.  
+ Geben Sie an, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird. Die Standardeinstellung ist `False`.  
   
  **Konfigurieren der Fehlerausgabe**  
  Auf der Registerkarte [Fehlerausgabe konfigurieren](../../2014/integration-services/configure-error-output.md) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  

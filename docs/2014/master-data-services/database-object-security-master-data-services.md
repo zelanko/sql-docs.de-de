@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765763"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
   In der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank werden Daten in mehreren Datenbanktabellen gespeichert und in Sichten angezeigt. Daher können Informationen, die Sie in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung gesichert haben, für Benutzern mit Zugriff auf die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank sichtbar sein.  
@@ -46,11 +46,11 @@ ms.locfileid: "52822234"
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
-|Laden Sie Blattelemente und ihre Attribute in die Stagingtabelle.|stg.name_Leaf|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
+|Laden Sie Blattelemente und ihre Attribute in die Stagingtabelle.|stg.name_Leaf|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
 |Laden Sie die Daten aus der Blattstagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Leaf|Führen Sie|  
-|Laden Sie konsolidierte Elemente und ihre Attribute in die Stagingtabelle.|stg.name_Consolidated|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
+|Laden Sie konsolidierte Elemente und ihre Attribute in die Stagingtabelle.|stg.name_Consolidated|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
 |Laden Sie die Daten aus der konsolidierten Stagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Consolidated|Führen Sie|  
-|Laden Sie Blatt- und konsolidierten Elementen Beziehungen zueinander in einer expliziten Hierarchie in die Stagingtabelle ein.|stg.name_Relationship|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
+|Laden Sie Blatt- und konsolidierten Elementen Beziehungen zueinander in einer expliziten Hierarchie in die Stagingtabelle ein.|stg.name_Relationship|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
 |Laden Sie die Daten aus der Beziehungsstagingtabelle in die entsprechenden MDS-Tabellen.|stg.udp_name_Relationship|Führen Sie|  
 |Zeigen Sie Fehler an, die aufgetreten sind, als Daten aus den Stagingtabellen in die MDS-Datenbanktabellen eingefügt wurden.|stg.udp_name_Relationship|SELECT|  
   

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765403"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
   Verwenden Sie die Seite **Webkonfiguration** , um eine neue Website zu erstellen oder eine neue Website oder eine Webanwendung zu erstellen. Nachdem Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung ausgewählt haben, können Sie die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank der Anwendung angeben und Data Quality Services aktivieren.  
