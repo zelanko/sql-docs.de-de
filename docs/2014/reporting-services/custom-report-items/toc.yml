@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
       href: creating-a-custom-report-item-design-time-component.md
-    - name: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements'
+    - name: 'Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements'
       href: how-to-deploy-a-custom-report-item.md
     - name: Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
       href: custom-report-item-class-libraries.md

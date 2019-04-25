@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213628"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -211,7 +211,7 @@ ms.locfileid: "56319121"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Transparente Datenverschlüsselung (TDE)</h3>
+                                                    <h3>TDE (Transparent Data Encryption)</h3>
                                                     <p>Verschlüsselt ruhende Daten auf dem Datenträger. </p>
                                                 </div>
                                             </div>

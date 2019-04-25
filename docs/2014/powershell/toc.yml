@@ -1,4 +1,4 @@
-- name: SQL Server-PowerShell
+- name: SQL Server PowerShell
   href: sql-server-powershell.md
 - name: Laden der SMO-Assemblys in Windows PowerShell
   href: load-the-smo-assemblies-in-windows-powershell.md

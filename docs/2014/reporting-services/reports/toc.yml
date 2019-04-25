@@ -33,8 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: Erstellen eines verknüpften Berichts
   href: create-a-linked-report.md
-- name: Berichte mit Durchklicken (SSRS)
-  href: clickthrough-reports-ssrs.md
 - name: Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
   href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Hilfe (F1) zu Berichten

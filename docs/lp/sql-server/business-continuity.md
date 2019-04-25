@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265015"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +97,7 @@ ms.locfileid: "56319091"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>AlwaysOn-Verfügbarkeitsgruppen</h3>
+                                                    <h3>Always On-Verfügbarkeitsgruppen</h3>
                                                     <p>Hochverfügbarkeit auf Datenbankebene, bei der unabhängige Instanzen Datenbanken hosten, die voneinander repliziert wurden, auf Failoverclustern gehostet werden und die Auslagerung schreibgeschützter Abfragen auf sekundäre Replikate erlauben</p>
                                                 </div>
                                             </div>

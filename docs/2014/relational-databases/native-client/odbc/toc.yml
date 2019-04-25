@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 'Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)'
+    - name: 'Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Einrichten der gegenseitigen Kerberos-Authentifizierung
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

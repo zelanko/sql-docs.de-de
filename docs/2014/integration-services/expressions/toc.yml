@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (Kleiner als oder gleich) (SSIS-Ausdruck)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? : (Bedingt) (SSIS-Ausdruck)'
+    - name: '? decodiert werden: (Bedingt) (SSIS-Ausdruck)'
       href: conditional-ssis-expression.md
 - name: Funktionen (SSIS-Ausdruck)
   href: functions-ssis-expression.md

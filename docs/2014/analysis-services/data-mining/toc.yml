@@ -480,7 +480,7 @@
       href: ../profit-chart-sql-server-data-mining-add-ins.md
     - name: Kreuzvalidierung
       href: ../cross-validation-sql-server-data-mining-add-ins.md
-    - name: Dataseteigenschaften
+    - name: Abfrage
       href: ../query-sql-server-data-mining-add-ins.md
     - name: Erweiterter Data Mining-Abfrage-Editor
       href: ../advanced-data-mining-query-editor.md

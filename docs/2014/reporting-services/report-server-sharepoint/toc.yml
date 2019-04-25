@@ -28,7 +28,7 @@
       href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
     - name: Einstellungen und Funktionen für Reporting Services-Websites (SharePoint-Modus)
       href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
-    - name: Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien
+    - name: Aktivieren des Features zur Berichtsserver-Dateisynchronisierung
       href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
     - name: Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus)
       href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
