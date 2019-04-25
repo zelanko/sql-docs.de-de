@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520251"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Genauigkeitsdiagramm (SQL Server Data Mining-Add-Ins)
   ![Genauigkeit diagrammschaltfläche im Data Mining-Menüband](media/dmc-accchart.gif "Schaltfläche \"Genauigkeitsdiagramm\" im Data Mining-Menüband")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136796"
      Der Assistent erstellt einen Bericht, der das Prognosegütediagramm und zugrunde liegende Daten enthält.  
   
 ### <a name="requirements"></a>Anforderungen  
- Wenn Sie einen diskreten Wert vorhersagen, müssen Sie den Zielwert auswählen, den Sie vorhersagen möchten. Wenn Ihre Daten beispielsweise mit einer Antwort "Ja: Kaufen" als 1 und der Antwort "Nein: Nicht kaufen" als 2 kategorisiert werden, müssen Sie 1 oder 2 als Vorhersagewerte festlegen. Wenn Sie jedoch einen Wertebereich vorhersagen möchten, können Sie nur zwei Werte gleichzeitig vergleichen. Wenn Sie beispielsweise ein Ergebnis über 5 vorhersagen möchten, müssen Sie Ihre Quelldaten möglicherweise neu bezeichnen und ein neues Modell erstellen, in dem die Ergebnisse in zwei Gruppen aufgeteilt werden: größer als 5 und kleiner als 5 Anschließend können Sie die Genauigkeit dieser beiden Gruppen vergleichen.  
+ Wenn Sie einen diskreten Wert vorhersagen, müssen Sie den Zielwert auswählen, den Sie vorhersagen möchten. Wenn Ihre Daten mit einer Antwort kategorisiert werden z. B. "Ja: Kaufen"als 1 und die Antwort" Nein: Nicht kaufen"als 2, müssen Sie entweder 1 oder 2 als Vorhersagewerte angeben. Wenn Sie jedoch einen Wertebereich vorhersagen möchten, können Sie nur zwei Werte gleichzeitig vergleichen. Wenn Sie beispielsweise ein Ergebnis über 5 vorhersagen möchten, müssen Sie Ihre Quelldaten möglicherweise neu bezeichnen und ein neues Modell erstellen, in dem die Ergebnisse in zwei Gruppen aufgeteilt werden: größer als 5 und kleiner als 5 Anschließend können Sie die Genauigkeit dieser beiden Gruppen vergleichen.  
   
 ## <a name="understanding-accuracy"></a>Grundlegendes zur Genauigkeit  
  Sie können zwei Arten von Diagrammen erstellen: ein Diagramm, in dem Sie einen Status der vorhersagbaren Spalte angeben, und eines, in dem Sie den Status nicht angeben.  

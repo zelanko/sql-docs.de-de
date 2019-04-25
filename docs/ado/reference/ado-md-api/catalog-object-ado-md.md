@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469915"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog-Objekt (ADO MD)
 Mehrdimensionale Schemainformationen (d. h. Cubes und zugrunde liegenden Dimensionen, Hierarchien, Ebenen und Elemente), die speziell für eine mehrdimensionale Datenanbieter (MDP) enthält.  

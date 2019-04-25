@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472864"
 ---
 # <a name="anticipating-errors"></a>Vorhersehen von Fehlern
 Fehler zur Verhinderung von ist mindestens ebenso wichtig wie die Fehlerbehandlung. In diesem letzten Abschnitt enthält eine kurze Liste mit Vorsichtsmaßnahmen, die Ihre Anwendung ausführen kann, um seltener auf Fehler zu machen.  

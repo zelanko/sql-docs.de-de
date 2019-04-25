@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628898"
 ---
 # <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken nicht die minimale SQL-Grammatik ein; um die Kompatibilität mit Treibern sichergestellt ist, die Core-SQL-Grammatik unterstützen, sollten Anwendungen jedoch nicht mit einem dieser Schlüsselwörter. Die Anzahl**definieren** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
@@ -68,7 +68,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |CONNECTION|ÜBERLAPPT|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL-SCHREIBWEISE|  
+|CONTINUE|PASCAL|  
 |CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -84,12 +84,12 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|DECIMAL|RIGHT|  
+|DEZIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Delete|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  

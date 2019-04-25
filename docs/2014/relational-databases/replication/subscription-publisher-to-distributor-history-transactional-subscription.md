@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626775"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Verlauf Verleger zu Verteiler (Transaktionsabonnement)
   Die Registerkarte **Verlauf Verleger zu Verteiler** zeigt detaillierte Informationen zum Protokolllese-Agent an, u. a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
@@ -62,7 +62,7 @@ ms.locfileid: "54126680"
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)   
  [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
   

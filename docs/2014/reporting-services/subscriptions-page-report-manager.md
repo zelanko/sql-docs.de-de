@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511365"
 ---
 # <a name="subscriptions-page-report-manager"></a>Abonnements (Seite) (Berichts-Manager)
   Mithilfe der Seite Abonnements können Sie alle Abonnements für den aktuellen Bericht oder die aktuelle freigegebene Datenquelle anzeigen. Wenn Sie über ausreichende Berechtigungen verfügen (wie sie durch den Task "Alle Abonnements verwalten" übertragen werden), können Sie die Abonnements aller Benutzer anzeigen. Ansonsten sind auf dieser Seite nur Ihre Abonnements aufgeführt.  

@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1be4fbfb6ce30443a979fb500954e7aa8fa9779a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507413"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Listet die Datenbanken, die entweder in einer Instanz von befinden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über ein Datenbankgateway zugegriffen werden.  
+  Listet Datenbanken auf, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind bzw. auf die der Zugriff über ein Datenbank-Gateway möglich ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +46,9 @@ sp_databases
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|Der Name der Datenbank. In der [!INCLUDE[ssDE](../../includes/ssde-md.md)], stellt diese Spalte den Datenbanknamen dar, gespeichert in der **sys.databases** -Katalogsicht angezeigt.|  
+|**DATABASE_NAME**|**sysname**|Der Name der Datenbank. Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]stellt diese Spalte den Datenbanknamen dar, der in der Katalogsicht **sys.databases** gespeichert ist.|  
 |**DATABASE_SIZE**|**int**|Die Größe der Datenbank in Kilobyte.|  
-|**"HINWEISE"**|**varchar(254)**|Für die [!INCLUDE[ssDE](../../includes/ssde-md.md)], dieses Feld gibt immer NULL zurück.|  
+|**"HINWEISE"**|**varchar(254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die zurückgegebenen Datenbanknamen können als Parameter für die USE-Anweisung verwendet werden, um den aktuellen Datenbankkontext zu ändern.  

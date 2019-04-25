@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467914"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Ergänzende Lektion – Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -27,7 +27,7 @@ Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktion
   
 In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses ergänzende Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  

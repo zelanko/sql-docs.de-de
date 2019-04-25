@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e33c6aefcb1286e8550e539e1d403953aa6fa6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518636"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
 
@@ -28,7 +28,7 @@ Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [M
   
   
 ## <a name="business-rule-examples"></a>Beispiele für Geschäftsregeln  
-Beispielmodell |Entität  |Geschäftsregelname| und Beschreibung  
+Beispielmodell |Entität  |Geschäftsregelname| Description  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
@@ -43,7 +43,7 @@ Else
   
 **--------------------------------------------------**  
   
-Beispielmodell  |Entität  |Geschäftsregelname|und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
@@ -59,9 +59,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname| und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname| Description    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
+Produkt     |  Produkt       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -75,9 +75,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|-------------  
-Product     |Product         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
+Produkt     |Product         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
 In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
 ```  
 If  
@@ -100,9 +100,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|-----------  
-Product     | Product        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
+Produkt     | Produkt        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
 In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -116,9 +116,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
+Produkt     | Produkt        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
   
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -134,9 +134,9 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|und Beschreibung    
+Beispielmodell  |Entität  |Geschäftsregelname|Description    
 ---------|---------|---------|------------  
-Product     | Product        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
+Produkt     | Produkt        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
 In der folgenden Geschäftsregel wird die `defaults to` [Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die`is equal`-Regelbedingung nicht erfüllen.  
 ```  
 If  

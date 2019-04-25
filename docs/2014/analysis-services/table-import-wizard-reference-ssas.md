@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757791"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Tabellenimport-Assistent (Referenz) (SSAS)
   Dieser Abschnitt enthält Hilfe zum **Tabellenimport-Assistenten**. Mit diesem Assistenten können Sie Daten aus einer Vielzahl von Datenquellen importieren. Um mit dem Modell-Designer auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

@@ -1,5 +1,5 @@
 ---
-title: InStr (MDX) | Microsoft Docs
+title: InStr (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629097"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -38,10 +38,10 @@ InStr([start, ]searched_string, search_string[, compare])
  Der Zeichenfolgenausdruck, nach dem gesucht werden soll.  
   
  *Vergleichen*  
- (optional) Ein ganzzahliger Wert. Dieses Argument wird immer ignoriert. Es wird definiert, um die Kompatibilität mit anderen **Instr** Funktionen in anderen Sprachen.  
+ (optional) Ein ganzzahliger Wert. Dieses Argument wird immer ignoriert. Es wird definiert, für die Kompatibilität mit anderen **Instr** Funktionen in anderen Sprachen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Ganzzahlwert, mit die Anfangsposition der *Zeichenfolge2* in *String1*.  
+ Ein ganzzahliger Wert mit der die Position des ersten *Zeichenfolge2* in *String1*.  
   
  Darüber hinaus **InStr** Funktion gibt in Abhängigkeit von der Bedingung in der folgenden Tabelle aufgeführten Werte zurück:  
   
@@ -57,7 +57,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>Hinweise  
   
 > [!WARNING]  
->  **InStr** führt immer groß-und Kleinschreibung unterschieden.  
+>  **InStr** führt immer einen Vergleich Groß-/Kleinschreibung.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Verwendung der **Instr** -Funktion gezeigt sowie verschiedene ergebnisszenarien.  

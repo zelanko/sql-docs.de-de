@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630725"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogsicherheit sollte für Ereignisbenachrichtigungen konfiguriert werden, die Meldungen an einen Service Broker auf einem Remoteserver senden. Die Dialogsicherheit muss entsprechend dem Modell für die vollständige Sicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogen manuell konfiguriert werden. Das Modell für vollständige Sicherheit ermöglicht die Ver- und Entschlüsselung von Nachrichten, die an und von Remoteservern gesendet werden. Obwohl Ereignisbenachrichtigungen nur in eine Richtung gesendet werden, werden andere Nachrichten, z. B. Fehlermeldungen, auch in die Gegenrichtung zurückgegeben.  

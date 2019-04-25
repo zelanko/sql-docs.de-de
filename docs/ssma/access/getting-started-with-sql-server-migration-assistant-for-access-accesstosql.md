@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759926"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Erste Schritte mit SQL Server Migration Assistant für Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff ermöglicht den Zugriff auf Datenbankobjekte zu schnell Konvertierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Objekte, laden Sie die resultierenden Objekte in hoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten aus den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank. Wenn erforderlich, Sie auch zugreifen auf Tabellen zu verknüpfen können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Tabellen von Azure SQL-Datenbank, damit Sie fortfahren können, verwenden Sie die vorhandenen Access-Front-End-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
@@ -88,7 +88,7 @@ Können Sie die SQL Server oder Azure SQL-DB-Metadaten-Explorer konvertierte den
 Weitere Informationen finden Sie unter [konvertiert Datenbankobjekte in SQL Server laden](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadaten  
-Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Beispielsweise wenn Sie eine Tabelle in der Access-Metadaten-Explorer auswählen, die vier Registerkarten angezeigt: **Tabelle**, **Type Mapping**, **Eigenschaften**, und **Daten** . Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, drei Registerkarten angezeigt: **Tabelle**, **SQL**, und **Daten**.  
+Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Wenn Sie eine Tabelle in der Access-Metadaten-Explorer auswählen, werden z. B. vier Registerkarten angezeigt: **Tabelle**, **Typzuordnung**, **Eigenschaften**, und **Daten**. Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, drei Registerkarten angezeigt: **Tabelle**, **SQL**, und **Daten**.  
   
 Die meisten Metadateneinstellungen für die sind schreibgeschützt. Allerdings können Sie die folgende Metadaten ändern:  
   

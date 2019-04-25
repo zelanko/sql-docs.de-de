@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625792"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -44,28 +44,28 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Fü
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
-|USER_TABLE$ "TRG"|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
-|USER_TABLE$ AUD|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
-|USER_TABLE$ AUDID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$Trg|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
+|USER_TABLE$AUD|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$AUDID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$ NEU|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
-|USER_TABLE$ NEW_ID|Ansicht|ID des eingefügten und geänderter Zeilen.|  
-|USER_TABLE$ ALTE|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$NEW|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
+|USER_TABLE$NEW_ID|Ansicht|ID des eingefügten und geänderter Zeilen.|  
+|USER_TABLE$OLD|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt wird erstellt, in das Schema der überprüften Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
-|USER_TABLE$ "TRG"|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
+|USER_TABLE$Trg|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
   
 Und die folgenden Objekte werden erstellt, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Datenbank Ssmatesterdb.  
   
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
-|USER_TABLE$ Aud|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
-|USER_TABLE$ AudID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$Aud|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$AudID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |USER_TABLE$new|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
 |USER_TABLE$new_id|Ansicht|ID des eingefügten und geänderter Zeilen.|  

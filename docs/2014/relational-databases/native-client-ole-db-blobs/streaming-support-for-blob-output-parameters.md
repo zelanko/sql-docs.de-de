@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468177"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Streamingunterstützung für BLOB-Ausgabeparameter
   Dieses Thema enthält ein Beispiel, das die Streamingunterstützung für BLOB-Ausgabeparameter zeigt und das BLOB-Ausgabeparameter als IsequentialStreams bindet.  

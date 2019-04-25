@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513322"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Angeben von Anmeldeinformationen im Berichts-Generator
   Anmeldeinformationen authentifizieren den Benutzer, der Daten von einer Datenquelle abrufen möchte. Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die verwendet werden müssen. Ein Datenbankadministrator kann zum Beispiel festlegen, dass der Benutzer einen Windows-Benutzernamen und ein Kennwort angeben muss.  

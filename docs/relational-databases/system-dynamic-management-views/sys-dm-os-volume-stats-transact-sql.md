@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628095"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen über das Betriebssystemvolume (Verzeichnis) auf dem die angegebenen Datenbanken und Dateien in gespeichert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese dynamische Verwaltungsfunktion, um die Attribute des physischen Datenträgers zu überprüfen oder um Informationen zum verfügbaren freien Speicherplatz für das Verzeichnis zurückzugeben.  
+  Gibt Informationen zum Betriebssystemvolume (Verzeichnis) zurück, in dem die angegebenen Datenbanken und Dateien in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind. Verwenden Sie diese dynamische Verwaltungsfunktion, um die Attribute des physischen Datenträgers zu überprüfen oder um Informationen zum verfügbaren freien Speicherplatz für das Verzeichnis zurückzugeben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Lässt keine NULL-Werte zu.|  
 |**is_compressed**|**bit**|Gibt an, ob dieses Volume derzeit komprimiert ist. Lässt keine NULL-Werte zu.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung.  
@@ -73,7 +73,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. Zurückgeben des gesamten und des verfügbaren freien Speicherplatzes für alle Datenbankdateien  
- Im folgenden Beispiel werden der gesamte Speicherplatz und der verfügbare freie Speicherplatz (in Bytes) für alle Datenbankdateien in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
+ Im folgenden Beispiel werden der gesamte Speicherplatz und der verfügbare freie Speicherplatz (in Bytes) für alle Datenbankdateien in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückgegeben.  
   
 ```  
 SELECT f.database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
