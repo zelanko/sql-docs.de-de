@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742188"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51660269"
 |SRVIMAGE|**image**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
-|SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  
+|SRVINT4|**ssNoversion**|**int**-Datentyp mit einer Länge von 4 Byte|  
 |SRVINTN|**tinyint** | **smallint** | **int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVMONEY4|**smallmoney**|**smallmoney**-Datentyp mit einer Länge von 4 Byte|  
 |SRVMONEY|**money**|**money**-Datentyp mit einer Länge von 8 Byte|  
@@ -65,6 +65,7 @@ ms.locfileid: "51660269"
 |SRVVARCHAR|**varchar**|**character**-Datentyp mit variabler Länge|  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409
+		  https://msdn.microsoft.com/security/).  
   
   
