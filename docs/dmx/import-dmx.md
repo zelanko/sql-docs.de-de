@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4987701deb466148253c8418c88683d2dbfbc16b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506070"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Dateiname*  
+ *filename*  
  Eine Zeichenfolge, die den Namen und den Speicherort der Datei angibt, die importiert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -48,7 +48,7 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [EXPORTIEREN SIE &AMP;#40;DMX&AMP;#41;](../dmx/export-dmx.md)   
+ [EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)   
  [Exportieren und Importieren von Data Mining-Objekten](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

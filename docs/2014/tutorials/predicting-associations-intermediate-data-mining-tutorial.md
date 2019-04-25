@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472845"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Vorhersagen von Zuordnungen (Data Mining-Lernprogramm für Fortgeschrittene)
   Im Anschluss an die Verarbeitung der Modelle können Sie anhand der Informationen über Zuordnungen, die im Modell gespeichert sind, Vorhersagen erstellen. In der abschließenden Aufgabe der Lektion lernen Sie, Vorhersageabfragen auf Basis der erstellten Zuordnungsmodelle zu erstellen. In dieser Lektion wird davon ausgegangen, dass Sie mit der Verwendung des Generators für Vorhersageabfragen vertraut sind und lernen möchten, wie Vorhersageabfragen für Zuordnungsmodelle erstellt werden. Weitere Informationen zum Verwenden des Generators für Vorhersageabfragen finden Sie unter [Data Mining-Abfrageschnittstellen](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

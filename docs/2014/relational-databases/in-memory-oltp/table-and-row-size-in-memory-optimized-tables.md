@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466041"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Zeilen eine maximale Länge von 8.060 Bytes aufweisen. Wenn Sie eine Vorstellung von der Größe einer speicheroptimierten Tabelle haben, können Sie besser einschätzen, ob Ihr Computer über genügend Arbeitsspeicher verfügt.  

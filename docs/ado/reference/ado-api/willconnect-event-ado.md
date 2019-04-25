@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642521"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect-Ereignis (ADO)
 Die **WillConnect** Ereignis wird immer dann aufgerufen, bevor eine Verbindung gestartet wird.  
@@ -46,7 +46,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *Kennwort*  
  Ein **Zeichenfolge** , ein Kennwort für die ausstehende Verbindung enthält.  
   
- *enthalten*  
+ *Optionen*  
  Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *"ConnectionString"*. Ihre einzige Option **AdAsyncOpen**.  
   
  *adStatus*  

@@ -1,5 +1,5 @@
 ---
-title: Beziehungsdarstellung (tabellarisch) | Microsoft Docs
+title: Beziehungsdarstellung (tabellarisch) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59eedf95c9e8e8bd9ff4a44c88e2574efe0048e3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467864"
 ---
 # <a name="relationship-representation-tabular"></a>Beziehungsdarstellung (tabellarisch)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Eine Beziehung ist eine Verbindung zwischen zwei Tabellen mit Daten. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen.  
   
- Finden Sie unter [Beziehungsdarstellung (tabellarisch)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) für eine ausführliche Erläuterung zum Erstellen und Bearbeiten der beziehungsdarstellung.  
+ Finden Sie unter [Beziehungsdarstellung (tabellarisch)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der beziehungsdarstellung.  
   
 ## <a name="relationship-representation"></a>Beziehungsdarstellung  
  In tabellarischen Modellen können mehrere Beziehungen zwischen zwei Tabellen definiert werden. Wenn mehrere Beziehungen zwischen zwei Tabellen definiert werden, kann nur eine als Standardbeziehung für das Modell definiert werden und wird als aktive Beziehung bezeichnet. Alle anderen Beziehungen werden als inaktive Beziehungen bezeichnet.  

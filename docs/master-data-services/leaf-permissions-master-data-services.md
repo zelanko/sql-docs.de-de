@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467821"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817802"
   
 -   Den Attributen **Name** und **Code** zugewiesene Berechtigungen werden nicht erzwungen.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|Description|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
@@ -51,28 +51,28 @@ ms.locfileid: "52817802"
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
  Attributberechtigungen gelten für die Attributwerte der jeweiligen Entität. Benutzer mit Attributberechtigungen wird lediglich verweigert, Elemente hinzuzufügen oder zu entfernen.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|Description|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
 |**Update**|Der Benutzer kann Attribute aktualisieren.|  
 |**Delete**|Keine Auswirkung.|  
-|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
+|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Sie können den Zugriff auf Attribute Name und Code können nicht explizit verweigert.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
 |Name|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} Mountainbikes|  
+|Mountain-100|BK-M201|{5} Mountainbikes|  
   
  Sie können im **Explorer**jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
   
 > [!NOTE]  
 >  In diesem Beispiel ist Subcategory ein domänenbasiertes Attribut, das auf der SubcategoryList-Entität basiert. Sie können eine andere Unterkategorie für Mountain-100 auswählen, der SubcategoryList-Entität jedoch keine Elemente hinzufügen bzw. Elemente aus dieser Entität löschen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

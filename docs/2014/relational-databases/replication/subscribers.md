@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629389"
 ---
 # <a name="subscribers"></a>Abonnenten
   Geben Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - oder Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten an, die ein Abonnement für die ausgewählte Veröffentlichung erhalten.  
@@ -50,7 +50,7 @@ ms.locfileid: "52806202"
   
 -   Als Verleger für die ausgewählte Veröffentlichung wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher verwendet.  
   
- Auf **-Abonnenten hinzufügen** wird ein Menü mit zwei Auswahlmöglichkeiten angezeigt: **SQL Server-Abonnenten hinzufügen** und **nicht-SQL Server-Abonnenten hinzufügen**. Klicken Sie auf **Nicht-SQL Server-Abonnenten hinzufügen** , um einen Oracle- oder IBM DB2-Abonnenten hinzuzufügen.  
+ Wenn Sie auf **Abonnent hinzufügen** klicken, wird ein Menü mit zwei Optionen angezeigt: **SQL Server-Abonnenten hinzufügen...** und **Nicht-SQL Server-Abonnenten hinzufügen**. Klicken Sie auf **Nicht-SQL Server-Abonnenten hinzufügen** , um einen Oracle- oder IBM DB2-Abonnenten hinzuzufügen.  
   
  **SQL Server-Abonnenten hinzufügen**  
  Fügen Sie einen Server zur Liste der Server hinzu, die als Abonnenten aktiviert werden können. Diese Schaltfläche wird angezeigt, wenn eine oder mehrere der folgenden Bedingungen zutreffen:  
@@ -68,7 +68,7 @@ ms.locfileid: "52806202"
     -   Die Veröffentlichung lässt anonyme Abonnements zu.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Erstellen eines Pullabonnements](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  

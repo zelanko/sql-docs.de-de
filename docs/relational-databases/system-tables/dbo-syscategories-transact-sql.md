@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ee0509469f7a9bddca066a6e05416a13685ad9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470924"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47703518"
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID der Kategorie|  
 |**category_class**|**int**|Elementart in der Kategorie:<br /><br /> **1** = Auftrag<br /><br /> **2** = Warnung<br /><br /> **3** Operator =-Operator|  
-|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
+|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
 |**name**|**sysname**|Name der Kategorie|  
   
   

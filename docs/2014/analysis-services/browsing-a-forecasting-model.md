@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640269"
 ---
 # <a name="browsing-a-forecasting-model"></a>Durchsuchen eines Planungsmodells
   Beim Öffnen eines forecasting-Modells mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, ähnlich wie die Time Series-Modell-Viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Mithilfe des Viewers können Sie Trends untersuchen, Reihen vergleichen, Vorhersagen erstellen und Informationen zum Modell und zu den zugrunde liegenden Daten abrufen.  
@@ -87,7 +87,7 @@ ms.locfileid: "48223200"
   
  [Durchsuchen des Modells](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a> Modell  
+###  <a name="bkmk_Model"></a> Model  
  Ein Planungsmodell kann auch als Entscheidungsstruktur oder, bei einer größtenteils linearen Reihe, als Regressionsmodell dargestellt werden.  
   
  In diesem Modell liegt zum Beispiel basierend auf einer bestimmten Bedingung ein Unterschied in der Regressionsformel vor, sodass die Struktur in zwei Verzweigungen mit einer jeweils unterschiedlichen Regressionsformel aufgeteilt wird.  

@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473466"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installieren der BI-Funktionen von SQL Server mit SharePoint (PowerPivot und Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können in eine Microsoft SharePoint-Farm integriert werden, um Business Intelligence (BI)-Funktionen in SharePoint bereitzustellen. Die Funktionen umfassen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Dient zum [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff in einer SharePoint-Farm. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ist die Daten-Engine für Arbeitsmappen, die in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellt werden und auf die über eine SharePoint-Bibliothek zugegriffen wird. Nachdem Sie eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in SharePoint gespeichert haben, können Sie sie als Datenquelle für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwenden.  

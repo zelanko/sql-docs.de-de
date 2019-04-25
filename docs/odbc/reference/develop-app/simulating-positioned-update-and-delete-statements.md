@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445892"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulieren von positionierten Aktualisierungen und DELETE-Anweisungen
 Wenn die Datenquelle nicht positioniertes Update unterstützt und-Anweisungen DELETE, kann der Treiber diese simulieren. Beispielsweise wird die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen. Die allgemeine Strategie zum Simulieren positionierte Update- und Delete-Anweisungen werden positionierte-Anweisungen zu komplexen zu konvertieren. Dies erfolgt durch Ersetzen der **WHERE CURRENT OF** -Klausel mit einer komplexen **, in denen** -Klausel, die die aktuelle Zeile angibt.  

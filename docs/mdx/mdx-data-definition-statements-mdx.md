@@ -1,5 +1,5 @@
 ---
-title: MDX-Datendefinitionsanweisungen (MDX) | Microsoft Docs
+title: MDX-Datendefinitionsanweisungen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629780"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX-Datendefinitionsanweisungen (MDX)
 
@@ -27,7 +27,7 @@ ms.locfileid: "34741589"
 |-----------|-----------------|  
 |[ALTER CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
 |[CREATE ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.|  
-|[CELL CALCULATION-Anweisung erstellen &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
+|[CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
 |[CREATE GLOBAL CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich.|  
 |[CREATE MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|Erstellt ein berechnetes Element.|  
 |[CREATE SESSION CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Erstellt einen Cube, der auf Cubes auf dem Server basiert und für alle Abfragen in derselben Sitzung verfügbar ist, und füllt den Cube auf.|  

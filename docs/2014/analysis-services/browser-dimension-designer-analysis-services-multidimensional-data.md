@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640514"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Browser (Dimensions-Designer) (Analysis Services - Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Browser** des Dimensions-Designers können Sie nach Dimensionsdaten und Metadaten für eine Dimension suchen. Wenn für die aktuell ausgewählte Dimension das Rückschreiben aktiviert ist, können Sie in dieser Sicht die Elementdaten für die Dimension ändern.  

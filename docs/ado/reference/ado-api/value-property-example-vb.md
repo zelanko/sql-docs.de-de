@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642504"
 ---
 # <a name="value-property-example-vb"></a>Value-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft mit dem [Feld](../../../ado/reference/ado-api/field-object.md) und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte durch anzeigen und die Eigenschaftswerte für die ***Mitarbeiter*** Tabelle.  

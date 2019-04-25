@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfbe388f6320ba81dd2be38bf315f05326008235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632338"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM-Unterstützung (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47637748"
  Wenn Sie SQLFetch für eine gebundene Spalte aufrufen, erhalten Sie eine Warnung "die Daten abgeschnitten", wenn der Puffer nicht groß genug für den gesamten Wert ist. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit der SQLParamData und SQLPutData-Aufrufe. Sie können FILESTREAM-Daten mit SQLSetPos, wenn es mit SQLBindCol gebunden ist, aktualisieren.  
   
 ## <a name="example"></a>Beispiel  
- FILESTREAM-Spalten Verhalten sich genau wie **'varbinary(max)'** Spalten, aber ohne eine größenbeschränkung zu beschränken. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Zum Beispiel kann SQL_LONGVARBINARY nicht als Ausgabeparameter verwendet werden.) In den folgenden Beispielen wird der direkte NTFS-Zugriff für FILESTREAM-Spalten dargestellt. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
+ FILESTREAM-Spalten Verhalten sich genau wie **'varbinary(max)'** Spalten, aber ohne eine größenbeschränkung zu beschränken. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Z. B. SQL_LONGVARBINARY kann nicht als Output-Parameter verwendet werden.) Die folgenden Beispiele zeigen die direkte NTFS-Zugriff für FILESTREAM-Spalten. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

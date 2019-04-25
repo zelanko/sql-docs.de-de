@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472382"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Löschen von Datensätzen mit der Delete-Methode
 Mithilfe der **löschen** Methode kennzeichnet den aktuellen Datensatz oder eine Gruppe von Datensätzen in einer **Recordset** Objekt zum Löschen. Wenn die **Recordset** Objekt lässt keine Datensätze löschen, ein Fehler auftritt. Wenn Sie sich im sofortupdatemodus sind, werden die Löschvorgänge in der Datenbank sofort. Wenn ein Datensatz (aufgrund von Datenbank-integritätsverletzungen, z. B.) wurde erfolgreich gelöscht werden kann, der Datensatz bleibt im Bearbeitungsmodus nach dem Aufruf von **aktualisieren.** Dies bedeutet, dass Sie das Update mit abbrechen müssen [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) vor dem Verlassen des aktuellen Datensatzes (z. B. [schließen](../../../ado/reference/ado-api/close-method-ado.md), [verschieben](../../../ado/reference/ado-api/move-method-ado.md), oder [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

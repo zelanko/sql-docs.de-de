@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472729"
 ---
 # <a name="command-object-parameters"></a>Parameter für Command-Objekt
 Im vorherigen Thema erläutert [erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Verwenden Sie einen interessanteren für die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt wird im nächsten Beispiel, in dem der SQL-Befehl parametrisiert wurde angezeigt. Diese Änderung ermöglicht es, den Befehl aus, und übergibt einen anderen Wert für den Parameter jedes Mal erneut verwenden. Da die [vorbereitet Eigenschaft](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft für die **Befehl** Objekt nastaven NA hodnotu **"true"**, ADO wird der Anbieter gezwungen, kompilieren Sie den Befehl, der im angegebenen [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) bevor Sie ihn zum ersten Mal ausführen. Es wird auch den kompilierten Befehl im Arbeitsspeicher beibehalten. Dies verlangsamt die Ausführung des Befehls etwas beim ersten, die sie aufgrund des Mehraufwands für vorbereiten, sondern führt zu einer Leistungssteigerung jedes Mal, wenn der Befehl, das anschließend aufgerufen wird ausgeführt wird. Aus diesem Grund sollten Befehle darauf vorbereitet sein, nur dann, wenn sie mehr als einmal verwendet werden.  

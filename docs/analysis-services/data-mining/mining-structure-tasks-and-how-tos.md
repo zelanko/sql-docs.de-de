@@ -1,5 +1,5 @@
 ---
-title: Mining-Struktur Tasks und Anweisungen für | Microsoft Docs
+title: Mining-Struktur-Tasks und Anweisungen für | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509858"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tasks und Anweisungen für Miningstrukturen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "34015787"
   
 -   [Hinzufügen von Spalten zu einer Miningstruktur](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
--   [Entfernen Sie Spalten aus einer Miningstruktur](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
+-   [Entfernen von Spalten aus einer Miningstruktur](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
 -   [Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
 -   [Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Bearbeiten Sie die für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Verarbeiten einer Miningstruktur](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

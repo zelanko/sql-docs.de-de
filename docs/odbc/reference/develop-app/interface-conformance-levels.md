@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446687"
 ---
 # <a name="interface-conformance-levels"></a>Ebenen der Schnittstellenübereinstimmung
 Der Zweck der Lastenausgleich ist auf die Anwendung zu informieren, welche Features, aus dem Treiber verfügbar sind. Eine leveling-Schema anhand von Funktionen erreichen dieses Ziels nicht ausreichend. In ODBC 3. *x*, Treiber klassifiziert sind, basierend auf den Features, die sie besitzen. Unterstützung der Funktions, kann die Unterstützung der Funktion enthalten; Er kann auch die Unterstützung von einem Beschreibungsfeld, ein Anweisungsattribut, einen Wert "Y" für ein zurückgegebenes Informationstyp enthalten **SQLGetInfo**und so weiter.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519225"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
   In SMO wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent durch die folgenden Objekte dargestellt:  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Erstellen einer Warnung in Visual Basic  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ erfordert eckige Klammern, da es sich beim `operator` um ein Visual Basic-Schlüsselwort handelt.  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Erstellen einer Warnung in Visual C#  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Für den <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ sind eckige Klammern erforderlich, da es sich bei `operator` um ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort handelt.  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Erstellen einer Warnung in PowerShell  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Für den <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ sind eckige Klammern erforderlich, da es sich bei `operator` um ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort handelt.  
   

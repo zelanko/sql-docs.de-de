@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506772"
 ---
 # <a name="report-server-properties-service-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Dienst)
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berichtsserverdienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
@@ -45,11 +45,11 @@ ms.locfileid: "52803422"
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
   
--   Manuell: Dieser Dienst wird nicht automatisch zusammen mit dem Computer gestartet. Zum Starten des Dienstes verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder ein anderes Tool.  
+-   Manuell: Dieser Dienst wird beim Starten des Computers nicht automatisch gestartet. Zum Starten des Dienstes verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder ein anderes Tool.  
   
--   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
+-   Automatisch: Dieser Dienst wird zusammen mit dem dieser Computer gestartet.  
   
--   Deaktiviert: Der Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
   
  **Zustand**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512634"
 ---
 # <a name="creating-extended-stored-procedures"></a>Erstellen erweiterter gespeicherter Prozeduren
     
@@ -29,7 +29,7 @@ ms.locfileid: "52749072"
   
  Eine erweiterte gespeicherte Prozedur ist eine Funktion mit einem Prototyp:  
   
- SRVRETCODE *Xp_extendedProcName* **(** SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  Die Verwendung des Präfix xp_ ist optional. Bei den Namen erweiterter gespeicherter Prozeduren wird die Groß-/Kleinschreibung beachtet, wenn in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auf sie verwiesen wird, und zwar unabhängig von der auf dem Server installierten Codepage/Sortierreihenfolge. Wenn Sie eine DLL erstellen:  
   

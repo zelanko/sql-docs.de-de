@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470599"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Definiert Attribute einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto ein. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+  Definiert Attribute eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykontos. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID des Proxykontos.|  
 |**name**|**sysname**|Name des Proxykontos.|  
 |**credential_id**|**int**|ID der vom Proxykonto verwendeten Anmeldeinformationen.|  
-|**aktiviert**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = Deaktiviert. **1** = Aktiviert.|  
+|**enabled**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = Deaktiviert. **1** = Aktiviert.|  
 |**description**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows-Sicherheits-ID ( *security_identifier* ) des Benutzers oder der Gruppe, der bzw. die den Proxyanmeldeinformationen zugeordnet ist.|  
 |**credential_date_created**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Anmeldeinformationen erstellt wurden.|  

@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757320"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitionen und DirectQuery-Modus (SSAS – tabellarisch)
-  In diesem Abschnitt wird erläutert, wie Partitionen in DirectQuery-Modellen verwendet werden. Allgemeinere Informationen zu Partitionen in Tabellenmodellen finden Sie unter [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+  In diesem Abschnitt wird erläutert, wie Partitionen in DirectQuery-Modellen verwendet werden. Allgemeinere Informationen zu Partitionen in Tabellenmodellen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md).  
   
  Anweisungen zum Ändern der Partition, die verwendet wird, oder Anzeigen von Informationen zu der Partition, finden Sie unter [Ändern der DirectQuery-Partition &#40;SSAS – tabellarisch&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48054045"
   
  Zwei Verarbeitungsoptionen stehen für die DirectQuery-Partition zur Verfügung. Um diese Eigenschaft festzulegen, verwenden Sie den **Partitions-Manager** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und wählen Sie die Eigenschaft **Verarbeitungsoption** aus. In der folgenden Tabelle sind die Werte dieser Eigenschaft aufgeführt. Außerdem sind die Effekte jedes einzelnen Werts für den Fall beschrieben, dass ein Wert mit der DirectQueryUsage-Eigenschaft zur Verbindungszeichenfolge kombiniert wird:  
   
-|**DirectQueryUsage** Eigenschaft|Eigenschaft**Verarbeitungsoption** |Hinweise|  
+|**DirectQueryUsage** property|Eigenschaft**Verarbeitungsoption** |Hinweise|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Kein Verarbeiten dieser Partition|Wenn das Modell ausschließlich DirectQuery verwendet, ist eine Verarbeitung niemals notwendig.<br /><br /> In Hybridmodellen können Sie die DirectQuery-Partition so konfigurieren, dass sie niemals verarbeitet wird. Beispiel: Wenn Sie ein sehr großes Dataset verwenden und dem Cache nicht die vollständigen Ergebnisse hinzufügen möchten, können Sie angeben, dass die DirectQuery-Partition die Vereinigung der Ergebnisse für alle anderen Partitionen in der Tabelle enthalten und dass niemals eine Verarbeitung stattfinden soll. Abfragen, die an die relationale Quelle gerichtet werden, sind nicht betroffen, und in Abfragen für zwischengespeicherte Daten werden Daten aus den anderen Partitionen kombiniert.|  
 |InMemory mit DirectQuery|Verarbeitung von Partitionen zulassen|Wenn beim Modell der hybride Modus verwendet wird, sollten Sie für Abfragen für die speicherinterne Datenquelle und für Abfragen für die DirectQuery-Datenquelle die gleiche Partition verwenden.|  

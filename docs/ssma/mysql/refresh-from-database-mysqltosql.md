@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473896"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Aktualisieren der Datenbank (MySqlToSql)
 Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte aus der MySQL-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  
@@ -32,7 +32,7 @@ Sie können angeben, Einstellungen für die Aktualisierung von Standard-Objekt i
   
 Für den Zugriff auf die **Refresh from Database aktualisieren** mit der rechten Maustaste ein Objekt in der MySQL-Metadaten-Explorer, und klicken Sie im Dialogfeld **Refresh from Database aktualisieren**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |||  
 |-|-|  

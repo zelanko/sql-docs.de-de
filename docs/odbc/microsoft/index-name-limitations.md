@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83a3ee256e49b23cf7a58f5127db7dec7242555e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471218"
 ---
 # <a name="index-name-limitations"></a>Einschränkungen für Indexnamen
 Wenn die Paradox-Treiber verwendet wird, benötigen ein primärer Index den gleichen Namen wie die Tabelle auf dem sie definiert ist. Nicht eindeutige oder nicht eindeutige Indizes müssen den gleichen Namen wie die Tabelle auf denen sie definiert sind.

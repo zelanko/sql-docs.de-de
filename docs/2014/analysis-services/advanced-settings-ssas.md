@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bb1214991c26880a75409783cf40157fce2449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635233"
 ---
 # <a name="advanced-settings-ssas"></a>Erweiterte Einstellungen (SSAS)
   In diesem Dialogfeld des **Tabellenimport-Assistenten** können Sie die Codierung und das Gebietsschema für die Flatfile angeben, mit der Sie eine Verbindung herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -28,7 +28,7 @@ ms.locfileid: "48054879"
 |||  
 |-|-|  
 |Begriff|Definition|  
-|**Codierung**|Geben Sie den zu verwendenden Codierungstyp an: ANSI oder Unicode.<br /><br /> Der Wert **Unicode** entspricht der UTF-16-Codierung.|  
+|**Codierung**|Geben Sie die zu verwendende Codierung: ANSI- oder Unicode.<br /><br /> Der Wert **Unicode** entspricht der UTF-16-Codierung.|  
 |**Gebietsschema**|Gibt das Gebietsschema für die Bereitstellung sprachspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  
   
   

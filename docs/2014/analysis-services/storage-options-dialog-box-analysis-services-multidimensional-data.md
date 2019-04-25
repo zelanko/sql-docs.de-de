@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758475"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Speicheroptionen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Speicheroptionen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie einen benutzerdefinierten Speichermodus, proaktives Zwischenspeichern und Benachrichtigungsoptionen für Dimensionen, Cubes, Measuregruppen und Partitionen angeben. Sie können das Dialogfeld **Speicheroptionen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld **Speichereinstellungen** auf **Optionen** klicken. Weitere Informationen zum Dialogfeld **Speichereinstellungen** finden Sie unter [Speichereinstellungen &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48099420"
   
 ## <a name="tabs"></a>Tabstopps  
   
-|Page|Definition|  
+|Seite|Definition|  
 |----------|----------------|  
 |**Allgemein**|Mithilfe der Registerkarte **Allgemein** können Sie die Einstellungen für den Speicher und das proaktive Zwischenspeichern angeben. Weitere Informationen zu dieser Registerkarte finden Sie unter [Allgemein &#40;Dialogfeld „Speicheroptionen“, Analysis Services – mehrdimensionale Daten&#41;](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Benachrichtigungen**|Mithilfe der Registerkarte **Benachrichtigungen** können Sie die Benachrichtigungsmethode und die damit verbundenen Einstellungen angeben. Weitere Informationen zu dieser Registerkarte finden Sie unter [Benachrichtigungen &#40;Dialogfeld „Speicheroptionen“, Analysis Services – mehrdimensionale Daten&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  

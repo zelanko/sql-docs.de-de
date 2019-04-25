@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758567"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer für tabellarische Modelle (SSAS – tabellarisch)
   Der Designer für tabellarische Modelle ist Bestandteil [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 oder höher mit zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  

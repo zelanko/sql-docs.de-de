@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472834"
 ---
 # <a name="batch-mode"></a>Batchmodus
 Batchmodus ist gültig, wenn der **LockType** -Eigenschaftensatz auf **AdLockBatchOptimistic** und BatchUpdates wird vom Anbieter unterstützt. Bestimmte Einstellungen für Sperren sind nicht verfügbar, abhängig von der Cursorposition. Z. B. ein pessimistische Sperren ist nicht verfügbar, wenn die **CursorLocation** nastaven NA hodnotu **AdUseClient**. Umgekehrt kann kein Anbieter optimistische unterstützt, wenn die Cursorposition auf dem Server befindet. Verwenden Sie Batch mit einem Keyset oder static-Cursor wird aktualisiert.  

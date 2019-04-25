@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472229"
 ---
 # <a name="the-fields-collection"></a>Die Fields-Collection
 Die **Felder** Collection ist eines der systeminternen des ADO-Auflistungen. Eine Sammlung ist eine geordnete Menge von Elementen, die auf die als Einheit verwiesen werden kann. Weitere Informationen zu Sammlungen mit ADO finden Sie unter [der ADO-Objektmodell](../../../ado/guide/data/ado-objects-and-collections.md).  

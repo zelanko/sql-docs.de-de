@@ -12,32 +12,32 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518214"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services Developer Documentation
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Hier finden Sie Informationen zum Schreiben von Code, um anzupassen, wie Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] interagieren. Vorgehensweise:  
+  Lesen Sie die Informationen zum Schreiben von Code, um die Methode anzupassen, mit der Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]interagieren. Vorgehensweise:  
   
--   Schreiben Sie ein Programm, das auf den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst zugreift. Der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst ist ein WCF-Dienst (Windows Communication Foundation), den Entwickler verwenden, um [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Funktionen durch Code zu steuern.  
+-   Schreiben Sie ein Programm, das auf den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webdienst zugreift. Der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webdienst ist ein Windows Communication Foundation (WCF)-Dienst, den Entwickler verwenden, um [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Funktionen durch Code zu steuern.  
   
--   Integrieren Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Funktionen in vorhandene Anwendungen.  
+-   Integrieren Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Funktionen in vorhandene Anwendungen.  
   
--   Schreiben Sie Code, um wiederkehrende oder komplexe Aktionen auszuführen, die sich über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Benutzeroberfläche nur schwer oder gar nicht ausführen lassen.  
+-   Schreiben Sie Code, um wiederkehrende oder komplexe Aktionen auszuführen, die sich über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Benutzeroberfläche nur schwer oder gar nicht ausführen lassen.  
   
 -   Erstellen Sie einen benutzerdefinierten Workflow, der als Reaktion auf eine von Ihnen angegebene Geschäftsregel ausgeführt wird. Ein benutzerdefinierter Workflow ruft von Ihnen geschriebenen Code auf, durch den jede zum Verarbeiten des Workflows erforderliche Aktion ausgeführt werden kann.  
   
 ## <a name="master-data-manager-web-service"></a>Master Data Manager-Webdienst  
- Der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst ermöglicht die programmgesteuerte Verwendung der Funktionen von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] an jedem Computer, der auf die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Website zugreifen kann. Bevor Sie Code für den Zugriff auf den Webdienst schreiben können, müssen Sie Proxyklassen generieren, die in einem von Ihnen angegebenen Namespace enthalten sind. In dieser Dokumentation wird <xref:Microsoft.MasterDataServices> als Proxynamespace verwendet. Die Hauptproxyklasse, mit der Sie Webdienstvorgänge ausführen, ist die <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse, welche die <xref:Microsoft.MasterDataServices.IService>-Schnittstelle implementiert. Rufen Sie über Ihren Code Methoden der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse auf, um auf den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst zuzugreifen. Die übrigen Klassen im Namespace werden von den Webdienstvorgängen verwendet.  
+ Der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webdienst ermöglicht die programmgesteuerte Verwendung der Funktionen von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] an jedem Computer, der auf die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Website zugreifen kann. Bevor Sie Code für den Zugriff auf den Webdienst schreiben können, müssen Sie Proxyklassen generieren, die in einem von Ihnen angegebenen Namespace enthalten sind. In dieser Dokumentation wird <xref:Microsoft.MasterDataServices> als Proxynamespace verwendet. Die Hauptproxyklasse, mit der Sie Webdienstvorgänge ausführen, ist die <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse, welche die <xref:Microsoft.MasterDataServices.IService>-Schnittstelle implementiert. Rufen Sie über Ihren Code Methoden der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse auf, um auf den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst zuzugreifen. Die übrigen Klassen im Namespace werden von den Webdienstvorgängen verwendet.  
   
 ### <a name="web-service-content"></a>Webdienstinhalt  
  [Erstellen von Proxyklassen für den Master Data Manager-Webdienst](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
- Beschreibt die Aktivierung der Veröffentlichung von Metadaten über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Website sowie die Erstellung von Proxyklassen für den programmgesteuerten Zugriff auf Webdienstvorgänge.  
+ Beschreibt die Aktivierung der Veröffentlichung von Metadaten über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Website sowie die Erstellung von Proxyklassen für den programmgesteuerten Zugriff auf Webdienstvorgänge.  
   
  [Kategorisierte Webdienstvorgänge &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  Eine kategorisierte Liste der Webdienstvorgänge der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse.  
@@ -52,12 +52,12 @@ ms.locfileid: "47812238"
 ## <a name="web-server-namespaces"></a>Webserver-Namespaces  
  Durch [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] wird eine Reihe von Assemblys auf dem Webservercomputer installiert. Diese Assemblys enthalten Namespaces, die für erweiterte Szenarien verwendet werden können, in denen das Verhalten des Webservercomputers angepasst wird. In der folgenden Tabelle werden diese Namespaces beschrieben.  
   
-|Namespace|und Beschreibung|  
+|Namespace|Description|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Enthält Klassen, die zum Erstellen eines Bereitstellungspakets aus einem Modell und zum Bereitstellen eines Pakets in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank verwendet werden können.|  
-|<xref:Microsoft.MasterDataServices.Services>|Enthält eine Klasse zum Empfangen und Verarbeiten von Webdienstvorgängen, die durch die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung an den Webservercomputer übergeben wurden.|  
-|<xref:Microsoft.MasterDataServices.Services.DataContracts>|Enthält Klassen, mit denen definiert wird, wie Daten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung an den Webservercomputer übergeben werden.|  
-|<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Enthält Klassen, mit denen definiert wird, wie Anforderungen und Antworten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung an den Webservercomputer übergeben werden.|  
-|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Enthält die Schnittstelle, mit der die Vorgänge definiert werden, die durch den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst aufgerufen werden können.|  
+|<xref:Microsoft.MasterDataServices.Deployment>|Enthält Klassen, die zum Erstellen eines Bereitstellungspakets aus einem Modell und zum Bereitstellen eines Pakets in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank verwendet werden können.|  
+|<xref:Microsoft.MasterDataServices.Services>|Enthält eine Klasse zum Empfangen und Verarbeiten von Webdienstvorgängen, die durch die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung an den Webservercomputer übergeben wurden.|  
+|<xref:Microsoft.MasterDataServices.Services.DataContracts>|Enthält Klassen, mit denen definiert wird, wie Daten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung an den Webservercomputer übergeben werden.|  
+|<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Enthält Klassen, mit denen definiert wird, wie Anforderungen und Antworten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung an den Webservercomputer übergeben werden.|  
+|<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Enthält die Schnittstelle, mit der die Vorgänge definiert werden, die durch den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webdienst aufgerufen werden können.|  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472312"
 ---
 # <a name="types-of-cursors-ado"></a>Cursortypen (ADO)
 Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der den Zugriff erforderlichen Daten bereitstellt. Jedes Merkmal zusätzliche Cursor über die Grundlagen (Vorwärtscursor, schreibgeschützte, statische, scrollen, ungepufferte) hat es sich um einen Preis – in den Clientspeicher, Netzwerkauslastung oder Leistung. In vielen Fällen generiert die Standardcursoroptionen einen komplexeren Cursor als die Anwendung tatsächlich benötigt.  

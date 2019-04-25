@@ -1,6 +1,6 @@
 ---
 title: Abrufen von numerischen Daten mit SQL_NUMERIC_STRUCT | Microsoft-Dokumentation
-description: C/C++-mithilfe von ODBC ruft den numerischen Datentyp für die SQL Server mit SQL_NUMERIC_STRUCT, die im Zusammenhang mit SQL_C_NUMERIC ab.
+description: C /C++ mithilfe von ODBC mit SQL_NUMERIC_STRUCT, die im Zusammenhang mit SQL_C_NUMERIC ruft der numerische Datentyp für die SQL Server ab.
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -12,11 +12,11 @@ ms.author: genemi
 authors: MightyPen
 manager: craigg
 ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629517"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 

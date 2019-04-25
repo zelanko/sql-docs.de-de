@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636779"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Eigenschaften für Analysis-Server (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Eigenschaften für Analysis-Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die allgemeinen, die Sprach- und Sortierungs- sowie die Sicherheitseinstellungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz festlegen. Zum Öffnen des Dialogfelds **Eigenschaften für Analysis-Server** klicken Sie mit der rechten Maustaste im **Objekt-Explorer** auf eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz, und wählen Sie dann im Kontextmenü die Option **Eigenschaften** aus. Das Dialogfeld **Eigenschaften für Analysis-Server** enthält die folgenden Eigenschaften.  
@@ -84,7 +84,7 @@ ms.locfileid: "50145095"
   
      Wenn diese Option nicht ausgewählt ist, unterscheidet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht zwischen Buchstaben mit und ohne Akzent.  
   
--   **Unterscheidung nach Kana** wird verwendet, um Daten basierend auf den für die zugehörige Sprache oder das Alphabet bereitgestellten Wörterbuchregeln zu sortieren und zu vergleichen und zwischen den beiden japanischen Kanazeichentypen zu unterscheiden: Hiragana und Katakana.  
+-   **Unterscheidung nach Kana** wird verwendet, um, und Vergleichen von Daten auf Grundlage der Wörterbuchregeln bereitgestellt, für die zugeordnete Sprache oder das Alphabet und zwischen den beiden japanischen Kanazeichentypen zu unterscheiden: Hiragana und Katakana.  
   
      Wenn diese Option nicht ausgewählt ist, unterscheidet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht zwischen Hiragana- und Katakana-Zeichen.  
   

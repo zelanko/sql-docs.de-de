@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633748"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
 Die Systemanforderungen für die Installation Geben Sie die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nachdem Sie den Treiber installiert haben, können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  

@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473181"
 ---
 # <a name="other-replication-upgrade-issues"></a>Weitere Probleme beim Replikationsupgrade
   In diesem Thema werden einige Upgradeprobleme erläutert, die nicht von Upgrade Advisor gemeldet werden.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200730"
   
 -   Alle ActiveX-Steuerelemente sind als unsicher für die Skripterstellung und für die Initialisierung gekennzeichnet.  
   
--   Das ActiveX-Steuerelement für Momentaufnahmen wurde entfernt. Sie können Momentaufnahmen mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder programmgesteuert mit gespeicherten Replikationsprozeduren erstellen und verwalten. Weitere Informationen finden Sie in der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Onlinedokumentation unter "Vorgehensweise: Erstellen und Anwenden der Anfangsmomentaufnahme ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" und unter "Vorgehensweise: Erstellen der Anfangsmomentaufnahme (Replikationsprogrammierung mit Transact-SQL)".  
+-   Das ActiveX-Steuerelement für Momentaufnahmen wurde entfernt. Sie können Momentaufnahmen mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder programmgesteuert mit gespeicherten Replikationsprozeduren erstellen und verwalten. Weitere Informationen finden Sie unter den Themen "Vorgehensweise: Erstellen und Anwenden der Anfangsmomentaufnahme ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "und" Vorgehensweise: Erstellen der Anfangsmomentaufnahme (Replikationsprogrammierung mit Transact-SQL) "in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 -   Das ActiveX-Verteilungssteuerelement und das ActiveX-Mergesteuerelement wurden als veraltete markiert. Ähnliche Funktionalität wird mit Replikationsverwaltungsobjekten (RMO) für verwaltete Codeanwendungen bereitgestellt. Weitere Informationen finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation unter "Synchronisieren von Abonnements (RMO-Programmierung)".  
   

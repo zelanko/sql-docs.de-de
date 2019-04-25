@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468017"
 ---
 # <a name="create-a-tabular-model-project"></a>Erstellen Sie ein Projekt für tabellarische Modelle
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685217"
 
 In dieser Lektion verwenden Sie Visual Studio mit SQL Server Data Tools (SSDT) oder Visual Studio 2017 mit Microsoft Analysis Services-Projekten VSIX-Methode, um ein neues Projekt für tabellarische Modelle mit Kompatibilitätsgrad 1400 zu erstellen. Nachdem das neue Projekt erstellt wurde, können Sie beginnen das Modell erstellen und Daten hinzuzufügen. In dieser Lektion erhalten Sie eine kurze Einführung in die tabellarische modellerstellungsumgebung in Visual Studio.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631721"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
   Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
   
-###  <a name="HowToCheckEnabled"></a> So wird es gemacht: Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
+###  <a name="HowToCheckEnabled"></a> So wird es gemacht: Überprüfen Sie, ob die semantische Suche für Datenbankobjekte aktiviert ist  
  **Werden semantische Suche ist für eine Datenbank aktiviert?**  
  Fragen Sie die Eigenschaft **IsFullTextEnabled** der Metadatenfunktion [DATABASEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) ab.  
   

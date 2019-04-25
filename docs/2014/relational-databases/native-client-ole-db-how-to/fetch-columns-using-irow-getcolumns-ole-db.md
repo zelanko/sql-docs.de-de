@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468496"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
   Die `IRow`-Schnittstelle ermöglicht den direkten Zugriff auf Spalten einer einzelnen Zeile im Resultset. Daher ist `IRow` eine effiziente Möglichkeit, Spalten aus einem Resultset mit einer Zeile abzurufen.  
@@ -48,7 +48,7 @@ ms.locfileid: "53372962"
   
 -   Wie auf eine Spalte zweimal zugegriffen wird. Das erste Mal wird die Spaltenbreite abgerufen, und später erfolgt der Zugriff auf die eigentlichen Daten.  
   
- Wenn in der DBCOLUMNACCESS-Struktur pData NULL ist und cbMaxLen 0 ist, wird beim Aufruf von IRow->GetColumns nur die Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
+ In der DBCOLUMNACCESS-Struktur pData NULL ist und CbMaxLen 0 ist, beim Aufruf von IRow--> GetColumns gibt nur die Spaltenlänge. In diesem Fall IRow -> kann GetColumns wieder in der gleichen Spalte zum Abrufen der tatsächlichen Daten aufgerufen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   

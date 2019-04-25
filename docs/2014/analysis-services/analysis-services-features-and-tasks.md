@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640220"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services-Funktionen und -Tasks
   Die grundlegende Analysis Services-Dokumentation ist nach den Themen Modellierung und Servermodus aufgebaut, sodass Sie sich einfach auf die Tools, Aufgaben und Funktionen konzentrieren können, die im installierten Modus verfügbar sind. Die Serverwaltungsaufgaben, die sich auf mehrere Modi beziehen, werden unter dem Thema Serverinstanzen behandelt.  
@@ -32,7 +32,7 @@ ms.locfileid: "48172832"
   
  [Mehrdimensionale Modellierung &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- [Datamining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ [Data Mining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
  [PowerPivot für SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469997"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel zeigt die [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft dazu drei [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekte mithilfe von anderen Anbietern. Darüber hinaus verwendet er die [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Eigenschaft, um die Standarddatenbank für den Microsoft ODBC-Anbieter festzulegen.  

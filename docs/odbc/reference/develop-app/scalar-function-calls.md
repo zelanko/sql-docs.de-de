@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468797"
 ---
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
 Skalarfunktionen geben einen Wert für jede Zeile zurück. Z. B. die Skalarfunktion absoluten Wert eine numerische Spalte als Argument akzeptiert und gibt den absoluten Wert der einzelnen Werte in der Spalte zurück. Die-Escapesequenz zum Aufrufen einer Skalarfunktion ist.  

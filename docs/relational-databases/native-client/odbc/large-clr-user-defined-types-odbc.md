@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634575"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "49072214"
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Resultsets gezeigt:  
   
-|SQL Server-Datentyp|SQL-Datentyp|value|  
+|SQL Server-Datentyp|SQL-Datentyp|Wert|  
 |--------------------------|-------------------|-----------|  
 |CLR-UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -215,7 +215,7 @@ ms.locfileid: "49072214"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Für UDTs werden folgende Werte zurückgegeben:  
   
-|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|Typ|SubType|Länge|Genauigkeit|Dezimalstellen|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -235,7 +235,7 @@ ms.locfileid: "49072214"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  
   
-|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|Typ|SubType|Länge|Genauigkeit|Dezimalstellen|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

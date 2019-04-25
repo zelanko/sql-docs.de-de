@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516082"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47810228"
 |**assembly_id**|**int**|Die ID der Assembly, zu der die Datei gehört.|  
 |**name**|**nvarchar(260)**|Der Name der Assemblydatei.|  
 |**file_id**|**int**|Die ID der Datei. Sie ist innerhalb einer Assembly eindeutig. Die Datei-ID 1 stellt die Assembly-DLL dar.|  
-|**Inhalt**|**varbinary(max)**|Der Inhalt der Datei.|  
+|**content**|**varbinary(max)**|Der Inhalt der Datei.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

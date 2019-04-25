@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465926"
 ---
 # <a name="sending-long-data"></a>Senden von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 254 Zeichen. Es eventuell nicht möglich, zum Speichern des gesamten Elements von long-Daten im Arbeitsspeicher, z. B. wenn das Element ein langer Text-Dokument oder eine Bitmap darstellt. Da diese Daten in einem einzigen Puffer gespeichert werden können, die Datenquelle wird an den Treiber in Teilen mit **SQLPutData** Wenn die Anweisung ausgeführt wird. Parameter für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Parameter*.  
@@ -43,6 +43,6 @@ Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über
   
 7.  Aufrufe **SQLParamData** erneut aus, um anzugeben, dass sie alle Daten für den Parameter gesendet hat. Wenn Data-at-Execution-Parameter für die Daten nicht der Treiber gibt SQL_NEED_DATA zurück, und der Wert gesendet wurde, der den nächsten Parameter identifiziert, vorhanden sind; Gibt zurück, die Anwendung mit Schritt 6 fort. Wenn die Daten für alle Data-at-Execution-Parameter gesendet wurde, wird die Anweisung ausgeführt. **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO und kann zurückgeben, einen Rückgabewert oder Diagnose, die **SQLExecute** oder **SQLExecDirect** zurückgeben können.  
   
- Nach dem **SQLExecute** oder **SQLExecDirect** wird SQL_NEED_DATA zurückgegeben. und bevor die Daten vollständig für den letzten Data-at-Execution-Parameter gesendet wurde, wird die Anweisung in einem Zustand müssen Daten ist. Während eine Anweisung in einem Zustand der Daten erforderlich ist, kann nur die Anwendung aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler funktionieren). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Nach dem **SQLExecute** oder **SQLExecDirect** wird SQL_NEED_DATA zurückgegeben. und bevor die Daten vollständig für den letzten Data-at-Execution-Parameter gesendet wurde, wird die Anweisung in einem Zustand müssen Daten ist. Während eine Anweisung in einem Zustand der Daten erforderlich ist, kann nur die Anwendung aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler funktionieren). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Ein Beispiel für das Senden von Daten zum Zeitpunkt der Ausführung, finden Sie unter den [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) funktionsbeschreibung.

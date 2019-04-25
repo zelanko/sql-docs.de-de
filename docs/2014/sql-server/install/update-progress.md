@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c6c8cceb9ed8c7dfdd2e1cacf908af0e722af2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505948"
 ---
 # <a name="update-progress"></a>Updatestatus
   Auf der Seite Installationsstatus können Sie Setup beim Anwenden des Updates auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der zugehörigen Komponenten überwachen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  In der Tabelle werden der Produktname von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dessen Instanznamen und der Installationsstatus zur Verfügung gestellt.  
   
   

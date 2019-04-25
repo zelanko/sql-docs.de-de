@@ -1,5 +1,5 @@
 ---
-title: 'Zusammenfassung: Konvertieren einer Tabelle in eine hierarchische Struktur | Microsoft -Dokumentation'
+title: 'Zusammenfassung: Konvertieren einer Tabelle in eine hierarchische Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760877"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Zusammenfassung: Konvertieren einer Tabelle in eine hierarchische Struktur
-  Die `hierarchyid` -Datentyp kann in einen einfachen, kompakten Format eine hierarchische Beziehung speichern. Mithilfe richtiger Indizes können Daten effizient auf der Hierarchieebene, auf der Ebene von Teilstrukturen der Hierarchie oder durch herkömmliche Singleton-Suchvorgänge zurückgegeben werden.  
+  Der `hierarchyid`-Datentyp kann in einem einfachen, kompakten Format eine hierarchische Beziehung speichern. Mithilfe richtiger Indizes können Daten effizient auf der Hierarchieebene, auf der Ebene von Teilstrukturen der Hierarchie oder durch herkömmliche Singleton-Suchvorgänge zurückgegeben werden.  
   
  In dieser Lektion haben Sie zwei der hierarchischen Methoden verwendet. In der nächsten Lektion wird gezeigt, wie hierarchische Daten mithilfe dieser und anderer Methoden abgefragt und bearbeitet werden.  
   

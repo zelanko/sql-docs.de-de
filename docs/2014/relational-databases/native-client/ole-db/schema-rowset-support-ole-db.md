@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625959"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
   Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch zurückgegebene Schemainformationen von einem verknüpften Server, bei der Verarbeitung von [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilte Abfragen.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633015"
 ---
 # <a name="text-file-format-text-file-driver"></a>Textformat (Textdateitreiber)
 Der Text der ODBC-Treiber unterstützt beide Textdateien mit durch Trennzeichen getrennte und fester Breite an. Eine Textdatei besteht aus einer optionalen Kopfzeile und NULL oder mehr Textzeilen.  
@@ -41,7 +41,7 @@ Der Text der ODBC-Treiber unterstützt beide Textdateien mit durch Trennzeichen 
 |Format|Darstellung|  
 |------------|--------------------|  
 |Nicht-kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
-|*Kursiv*|Argumente, die an anderer Stelle in der Grammatik definiert sind|  
+|*italics*|Argumente, die an anderer Stelle in der Grammatik definiert sind|  
 |eckige Klammern ([])|Optionale Elemente|  
 |geschweifte Klammern ({})|Eine Liste von sich gegenseitig ausschließende Optionen|  
 |vertikaler Balken (&#124;)|Separate sich gegenseitig ausschließende Optionen|  

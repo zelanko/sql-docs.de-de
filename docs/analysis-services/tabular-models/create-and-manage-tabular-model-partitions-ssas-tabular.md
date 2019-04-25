@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Tabellenmodellpartitionen | Microsoft Docs
+title: Erstellen und Verwalten von Tabellenmodellpartitionen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472292"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Erstellen und Verwalten von tabellenmodellpartitionen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,10 +22,10 @@ ms.locfileid: "34039887"
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Während der Modellerstellung werden die für ein Modell definierten Partitionen in ein bereitgestelltes Modell dupliziert. Nach der Bereitstellung können Sie diese Partitionen mit dem Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe eines Skripts verwalten. In den Tasks in diesem Thema wird beschrieben, wie Partitionen für ein bereitgestelltes Modell erstellt und verwaltet werden.  
   
   > [!NOTE]  
->  Partitionen in tabellarischen Modellen mit Kompatibilitätsgrad 1400 erstellt werden mit einer M-Abfrage-Anweisung definiert. Weitere Informationen finden Sie unter [M Verweis](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partitionen in tabellarischen Modellen mit Kompatibilitätsgrad 1400 erstellt werden, mithilfe einer M-Query-Anweisung definiert. Weitere Informationen finden Sie unter [M Verweis](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Um Partitionen für die bereitgestellte Datenbank eines tabellarischen Modells zu erstellen und zu verwalten, verwenden Sie das Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Um das Dialogfeld **Partitionen** anzuzeigen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine Tabelle und klicken dann auf **Partitionen**.  
   
 ###  <a name="bkmk_create_new"></a> So erstellen Sie eine neue Partition  
@@ -34,7 +34,7 @@ ms.locfileid: "34039887"
   
 2.  Geben Sie in **Partitionsname**einen Namen für die Partition ein. Der Name der Standardpartition wird für jede neue Partition inkrementell erhöht.  
   
-3.  In **Abfrageanweisung**, geben oder fügen Sie eine SQL- oder M-Abfrage-Anweisung, die definiert, die Spalten und Klauseln in der Partition in das Abfragefenster ein enthalten sein sollen.  
+3.  In **Abfrageanweisung**geben oder fügen Sie eine SQL oder M-Abfrage-Anweisung, die definiert, die Spalten und Klauseln in der Partition in das Abfragefenster enthalten sein sollen.  
   
 4.  Um die Anweisung zu überprüfen, klicken Sie auf **Syntax überprüfen**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34039887"
 -   Wählen Sie im Dialogfeld **Partitionen** in der Liste **Partitionen** mithilfe von STRG-Klicken die Partitionen aus, die Sie zusammenführen möchten, und klicken Sie dann auf die Schaltfläche **Zusammenführen** .  
   
 > [!IMPORTANT]  
->  Beim Zusammenführen von Partitionen werden die Partitionsmetadaten nicht aktualisiert. Bearbeiten Sie die SQL- oder M-Anweisung für die resultierende Partition aus, um sicherzustellen, dass die Verarbeitung von Vorgängen auf alle Daten in der zusammengeführten Partition verarbeitet.  
+>  Beim Zusammenführen von Partitionen werden die Partitionsmetadaten nicht aktualisiert. Sie müssen die SQL- oder M-Anweisung für die resultierende Partition aus, um sicherzustellen, dass die Verarbeitung aller Daten in der zusammengeführten Partition verarbeitet bearbeiten.  
   
 ###  <a name="bkmk_delete"></a> So löschen Sie eine Partition  
   

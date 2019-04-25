@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467957"
 ---
 # <a name="create-roles"></a>Erstellen von Rollen
 
@@ -36,7 +36,7 @@ Sie erstellen drei Rollen:
   
 Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Testen Sie die Auswirkungen der einzelnen Rollen weiter unten in der Lektion 12: In Excel analysieren.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 

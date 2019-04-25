@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft-Dokumentation'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511450"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Gibt den Status eines asynchron ausgeführten Vorgangs zurück.  
@@ -123,6 +123,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen asynchroner Vorgänge](../native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE-DB&#41;](issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
   
   

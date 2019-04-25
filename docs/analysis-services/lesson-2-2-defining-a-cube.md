@@ -1,5 +1,5 @@
 ---
-title: Definieren eines Cubes | Microsoft Docs
+title: Definieren eines Cubes | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467366"
 ---
-# <a name="lesson-2-2---defining-a-cube"></a>Lektion 2 x 2 – Definieren eines Cubes
+# <a name="lesson-2-2---defining-a-cube"></a>Lektion 2-2: Definieren eines Cubes
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Der Cube-Assistent unterstützt Sie beim Definieren der Measuregruppen und Dimensionen für einen Cube. In der folgenden Aufgabe verwenden Sie den Cube-Assistenten, um einen Cube zu erstellen.  
@@ -67,7 +67,7 @@ Der Cube-Assistent unterstützt Sie beim Definieren der Measuregruppen und Dimen
   
 15. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Hinzufügen von Attributen zu Dimensionen](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>Siehe auch  

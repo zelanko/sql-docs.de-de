@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468762"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Durchsuchen eines Entscheidungsstrukturmodells
   Beim Öffnen ein klassifizierungsmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Entscheidungsstruktur-Viewer, ähnlich wie die [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Viewer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Im Viewer werden die Ergebnisse der Klassifizierung als Diagramm angezeigt. Darin sind die Kriterien hervorgehoben, die verschiedene Datengruppen voneinander unterscheiden. Sie können auch einen Drilldown auf einzelne Teilmengen der Struktur ausführen und die zugrunde liegenden Daten abrufen.  
@@ -92,13 +92,13 @@ ms.locfileid: "52525559"
   
          Fälle gesamt: 1150  
   
-         Bike Buyer Wahrscheinlichkeit: 18 %  
+         Bike Buyer Wahrscheinlichkeit: 18%  
   
     -   Age > = 32 und \< 53 und jährlichen Einkommen > = 26000 und Kinder nicht = 0 und Familienstand = "Single"  
   
          Fälle gesamt: 402  
   
-         Bike Buyer Wahrscheinlichkeit: 16 %  
+         Bike Buyer Wahrscheinlichkeit: 16%  
   
 7.  Ändern Sie den Wert für **Hintergrund** aus **Ja** zu **keine** und festzustellen, wie das Diagramm ändert.  
   

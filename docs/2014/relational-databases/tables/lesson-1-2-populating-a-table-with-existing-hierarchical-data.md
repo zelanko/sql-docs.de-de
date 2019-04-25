@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760841"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
   In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
@@ -142,7 +142,7 @@ ms.locfileid: "48213583"
   
     ```  
   
-4.  Ein `hierarchyid` -Spalte ist verständlicher, wenn Sie in das Zeichenformat konvertiert. Überprüfen Sie die Daten der Tabelle **NewOrg** , indem Sie den folgenden Code ausführen, der zwei Darstellungen der Spalte **OrgNode** enthält:  
+4.  Eine `hierarchyid`-Spalte ist verständlicher, wenn sie in das Zeichenformat konvertiert wird. Überprüfen Sie die Daten der Tabelle **NewOrg** , indem Sie den folgenden Code ausführen, der zwei Darstellungen der Spalte **OrgNode** enthält:  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
@@ -152,7 +152,7 @@ ms.locfileid: "48213583"
   
     ```  
   
-     Die **LogicalNode** Spalte konvertiert die `hierarchyid` Spalte in ein lesbareres Textformat, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie mithilfe der `ToString()` Methode, um die im logischen Format anzuzeigen die `hierarchyid` Spalten.  
+     Die **LogicalNode** Spalte konvertiert die `hierarchyid` Spalte in ein lesbareres Textformat, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie die `ToString()`-Methode verwenden, um die `hierarchyid`-Spalten im logischen Format anzuzeigen.  
   
 5.  Löschen Sie die temporäre Tabelle, die nicht mehr benötigt wird:  
   

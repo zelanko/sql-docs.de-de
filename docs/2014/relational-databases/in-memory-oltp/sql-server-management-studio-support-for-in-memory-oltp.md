@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468192"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "48050120"
   
     -   Script As  
   
-    -   Aufgaben  
+    -   Richtlinienübersicht  
   
     -   Berichte  
   

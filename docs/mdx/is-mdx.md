@@ -1,5 +1,5 @@
 ---
-title: IST (MDX) | Microsoft Docs
+title: IST (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29d251c05639d928f3ea5a9925a4cc21935e0529
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630877"
 ---
 # <a name="is-mdx"></a>IS (MDX)
 
@@ -36,13 +36,13 @@ Expression1 IS ( Expression2 | NULL )
  Ein gültiger MDX-Ausdruck, der einen MDX-Objektverweis zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der zurückgibt **"true"** , wenn beide Argumente für das gleiche Objekt verweisen, andernfalls **"false"**. Wenn die **NULL** Schlüsselwort angegeben ist, gibt der Operator **"true"** Wenn *Expression1* ist **null**ist, andernfalls **"false"**.  
+ Ein boolescher Wert, der zurückgibt **"true"** , wenn beide Argumente für das gleiche Objekt verweisen, andernfalls **"false"**. Wenn die **NULL** Schlüsselwort angegeben ist, gibt der Operator **"true"** Wenn *Expression1* ist **null**ist, andernfalls **"false"** .  
   
 ## <a name="remarks"></a>Hinweise  
- Die **IS** -Operator wird häufig verwendet, um zu bestimmen, ob Tupeln und Elemente Idempotent sind, was bedeutet, dass sie genau gleich sind.  
+ Die **IS** -Operator wird häufig verwendet, um festzustellen, ob Tupeln und Elemente Idempotent sind, was bedeutet, dass sie genau gleich sind.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie Sie die **IS** Operator zum Überprüfen, ob das aktuelle Element auf einer Achse ein spezifisches Element ist:  
+ Das folgende Beispiel zeigt, wie Sie mit der **IS** Operator, um zu überprüfen, ob das aktuelle Element auf einer Abfrageachse ein spezifisches Element ist:  
   
  `With`  
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637730"
 ---
 # <a name="example-querying-xmltype-columns"></a>Beispiel: Abfragen von Spalten des Typs XML
   Die folgende Abfrage schließt Spalten vom Typ `xml` ein. Die Abfrage ruft die Produktmodell-ID, den Namen und die Produktionsschritte am ersten Standort aus der `Instructions`-Spalte vom Typ `xml` ab.  

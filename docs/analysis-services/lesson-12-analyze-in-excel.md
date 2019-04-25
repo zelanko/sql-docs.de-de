@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468431"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>Lektion 12: Analysieren in Excel
+# <a name="lesson-12-analyze-in-excel"></a>Lektion 12: In Excel analysieren
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion verwenden Sie analysieren in Excel-Funktion in SSDT auf Microsoft Excel öffnen, automatisch eine datenquellenverbindung mit dem Modellarbeitsbereich zu erstellen und automatisch eine PivotTable zum Arbeitsblatt hinzuzufügen. Die Funktion In Excel analysieren stellt eine schnelle und einfache Methode dar, um die Wirksamkeit Ihres Modellentwurfs vor der Modellbereitstellung zu testen. Sie führen in dieser Lektion keine Datenanalyse aus. Der Zweck dieser Lektion ist es, Sie, den Modellautor, mit den Tools vertraut zu machen, die Sie zum Testen des Modellentwurfs verwenden können. Im Gegensatz zur Verwendung von analysieren in Excel-Funktion, die für Modellentwickler vorgesehen ist, verwenden Endbenutzer Clientanwendungen zur berichterstellung wie Excel oder Power BI eine Verbindung herstellen, und navigieren Sie Modelldaten bereitgestellt.  
   
 Um diese Lektion abzuschließen, muss Excel auf dem gleichen Computer wie SSDT installiert sein. Weitere Informationen finden Sie unter [In Excel analysieren](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)installiert sein.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md).  
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Durchsuchen mit der Standardperspektive und der Internet Sales-Perspektive  
 In dieser ersten Aufgaben durchsuchen Sie Ihr Modell unter Verwendung der Standardperspektive, die alle Modellobjekte enthält, sowie mit der Internet Sales-Perspektive Sie vorher erstellt haben. Die Internet Sales-Perspektive enthält nicht das Customer-Tabellenobjekt.  
@@ -49,11 +49,11 @@ In dieser ersten Aufgaben durchsuchen Sie Ihr Modell unter Verwendung der Standa
   
 2.  Lassen Sie im Dialogfeld **In Excel analysieren** die Option **Aktueller Windows-Benutzer** aktiviert, wählen Sie im Dropdownlistenfeld **Perspektive** den Eintrag **Internet Sales**aus, und klicken Sie anschließend auf **OK**. 
     
-    ![als tabellarische – Lektion 12-Perspektive](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  In Excel in **PivotTable Fields**, beachten Sie, dass die DimCustomer-Tabelle aus der Feldliste ausgeschlossen ist.  
     
-    ![als-tabellarische – Lektion 12-Felder](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

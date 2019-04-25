@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467280"
 ---
 # <a name="atomic-blocks"></a>ATOMIC-Blöcke
   `BEGIN ATOMIC` ist Teil des ANSI SQL-Standards. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke nur auf der obersten Ebene systemintern kompilierter gespeicherter Prozeduren.  
@@ -123,7 +123,7 @@ ORDER BY c1
 GO  
 ```  
   
- Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
+ Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines atomic-Blocks auftreten, werden sie dazu führen, dass die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit `BEGIN ATOMIC` angegeben werden, während andere immer denselben festen Wert aufweisen.  

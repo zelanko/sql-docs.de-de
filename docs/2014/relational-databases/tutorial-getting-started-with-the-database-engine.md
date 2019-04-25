@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
+title: 'Tutorial: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524331"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Lernprogramm: Erste Schritte mit der Datenbank-Engine
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
   Willkommen bei den ersten Schritten im Lernprogramm zu [!INCLUDE[ssDE](../includes/ssde-md.md)] . Dieses Lernprogramm richtet sich an Benutzer, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vertraut sind und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]installiert haben. Dieses kurze Lernprogramm hilft Ihnen bei den ersten Schritten mit [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lernziele  

@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobs (Transact-SQL) | Microsoft-Dokumentation
+title: dbo.sysjobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7735873fcad0447099c97171a940d570354552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471089"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausgeführt werden soll. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+  Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt werden soll. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
 |**originating_server_id**|**int**|ID des Servers, von dem der Auftrag stammt.|  
 |**name**|**sysname**|Name des Auftrags.|  
-|**aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
 |**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category_id**|**int**|ID der Auftragskategorie.|  

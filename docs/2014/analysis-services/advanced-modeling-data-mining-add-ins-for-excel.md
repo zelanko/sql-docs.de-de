@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637013"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Erweiterte Modellierung (Data Mining-Add-Ins für Excel)
   Sie können die **erweitert** datenmodellierungsoptionen benutzerdefinierte Datamining-Strukturen und-Modelle mit Parametern sich von denen von den Assistenten erstellten erstellen. Mit den beiden in diesem Abschnitt beschriebenen Assistenten können Sie eine völlig neue Data Mining-Struktur und ein neues Miningmodell erstellen, das auf eine vorhandene Data Mining-Struktur angewendet wird.  

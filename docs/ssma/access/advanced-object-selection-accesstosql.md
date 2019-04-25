@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a44e3882121347235141aacf879beea8127e3133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759748"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Erweiterte Objektauswahl (AccessToSQL)
 Die **Objektabschnitt erweiterte** Dialogfeld können Sie das Filtern von Datenbankobjekten mit Zeichenfolgen und Teilzeichenfolgen in den Namen, und klicken Sie dann zu aktivieren oder deaktivieren Sie diese Objekte. SSMA führt konvertieren und Migrieren von Vorgängen für ausgewählte Objekte.  
@@ -26,7 +26,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, empfiehlt es sich um SSMA alle Metadaten, die durch Konvertieren von Schemas oder Speichern des Projekts laden zu erzwingen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Alle Elemente aktivieren**  
 Fügt ein Häkchen neben allen Elementen hinzu. Diese Elemente werden sofort in den Metadaten-Explorer ausgewählt werden.  
   

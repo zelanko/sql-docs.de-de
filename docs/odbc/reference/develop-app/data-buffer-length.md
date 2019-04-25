@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640498"
 ---
 # <a name="data-buffer-length"></a>Datenpufferlänge
 Die Anwendung übergibt die Bytelänge der Datenpuffer an den Treiber in einem Argument, mit dem Namen *Pufferlänge* oder einem ähnlichen Namen. Z. B. in den folgenden Aufruf von **SQLBindCol**, die Anwendung gibt die Länge der *ValuePtr* Puffer (**"sizeof" (***ValuePtr***)**):  

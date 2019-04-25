@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637847"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes
   Beschreibt, wie ein neuer sekundärer, selektiver XML-Index erstellt bzw. ein vorhandener sekundärer, selektiver XML-Index geändert oder gelöscht wird.  
   
 ##  <a name="create"></a> Erstellen eines sekundären, selektiven XML-Indexes  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>Gewusst wie: Erstellen Sie einen sekundären, selektiven XML-Index  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>Gewusst wie: Erstellen eines sekundären, selektiven XML-Index  
  **Erstellen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
  Erstellen Sie einen sekundären, selektiven XML-Index, indem Sie die CREATE XML INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [CREATE XML INDEX &#40;selektive XML-Indizes&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
   
@@ -69,7 +69,7 @@ FOR
   
 ##  <a name="drop"></a> Löschen eines sekundären, selektiven XML-Indexes  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Gewusst wie: Löschen eines sekundären, selektiven XML-Indexes  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Gewusst wie: Löschen eines sekundären, selektiven XML-Index  
  **Löschen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
  Löschen Sie einen sekundären, selektiven XML-Index, indem Sie die DROP INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [DROP INDEX &#40;selektive XML-Indizes&#41;](../indexes/indexes.md).  
   

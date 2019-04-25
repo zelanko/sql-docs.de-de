@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634551"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Unterstützte Optionen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -26,7 +26,7 @@ ms.locfileid: "47610379"
   
  Der ODBC-Treiber für Oracle unterstützt die folgenden Optionen für die SQLGetConnectOption () und die SQLSetConnectOption ()-Ebene-1-Funktionen:  
   
--   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)(nur))  
+-   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)( ) only)  
   
 -   [SQL_AUTOCOMMIT](../../odbc/microsoft/connect-options.md)  
   
@@ -54,4 +54,4 @@ ms.locfileid: "47610379"
   
 -   [SQL_MAX_ROWS](../../odbc/microsoft/statement-options.md)  
   
--   [SQL_ROWSET_SIZE SETZEN](../../odbc/microsoft/statement-options.md)
+-   [SQL_ROWSET_SIZE](../../odbc/microsoft/statement-options.md)

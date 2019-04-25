@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637608"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
   In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Wenn der *style* -Parameter nicht verwendet oder sein Wert auf 0 festgelegt wird, werden insignifikante Leerzeichen für die Konvertierung der xml DT-Instanz nicht beibehalten. Weitere Informationen zum Verwenden des CONVERT-Operators und seines *style*-Parameters beim Konvertieren von Zeichenfolgendaten in XML DT-Instanzen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes Xml und weisen sie einer Spalteninhalts  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwerts in typisiertes XML und Zuweisen des Werts zu einer Spalte  
  Das folgende Beispiel wandelt eine Zeichenfolgenvariable, die eine XML-Fragment enthält den `xml` -Datentyp um und speichert Sie dann in der `xml` Spalte vom Typ:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisierte XML-Daten, und weisen sie Sie einer Variablenverweis  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisiertes XML und Zuweisen der Zeichenfolge zu einer Spalte  
  Im folgenden Beispiel wird in eine Zeichenfolge konvertiert `xml` geben, einer Variablen zugewiesen, und wählen Sie die `xml` -Datentyp:  
   
 ```  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518633"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420661"
 5.  Der SQL Server-MDS Workflow Integration Service leitet die Daten an die Workflowhandlerassembly weiter.  
   
 > [!NOTE]  
->  Hinweis: Der SQL Server MDS Workflow Integration Service ist für das Auslösen von einfachen Prozessen konzipiert. Wenn der benutzerdefinierte Code komplexe Verarbeitungsvorgänge erfordert, führen Sie die Verarbeitung entweder in einem separaten Thread oder außerhalb des Workflowprozesses aus.  
+>  Hinweis: SQL Server MDS Workflow Integration Service ist für das Auslösen von einfachen Prozessen vorgesehen. Wenn der benutzerdefinierte Code komplexe Verarbeitungsvorgänge erfordert, führen Sie die Verarbeitung entweder in einem separaten Thread oder außerhalb des Workflowprozesses aus.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Konfigurieren von Master Data Services für benutzerdefinierte Workflows  
  Das Erstellen eines benutzerdefinierten Workflows erfordert das Schreiben von benutzerdefiniertem Code sowie das Konfigurieren von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] zur Übergabe von Workflowdaten an den Workflowhandler. Gehen Sie folgendermaßen vor, um die Verarbeitung von benutzerdefinierten Workflows zu aktivieren:  
@@ -64,7 +64,7 @@ ms.locfileid: "52420661"
   
 3.  Fügen Sie „using Microsoft.MasterDataServices.Core.Workflow;“ der C#-Codedatei hinzu.  
   
-4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte in etwa wie folgt aussehen: „public class WorkflowTester : IWorkflowTypeExtender“.  
+4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte ähnlich sein: "public Class WorkflowTester: IWorkflowTypeExtender'.  
   
 5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
@@ -145,14 +145,14 @@ ms.locfileid: "52420661"
   
 1.  Verwenden Sie das Dienst-Snap-In, um den Dienst zu beenden.  
   
-2.  Öffnen Sie eine Eingabeaufforderung, navigieren Sie zum Speicherort des Diensts, und führen Sie den Dienst im Konsolenmodus aus. Geben Sie dazu Folgendes ein: Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Öffnen Sie eine Eingabeaufforderung, navigieren Sie zum Speicherort des Diensts, und führen Sie den Dienst im Konsolenmodus befindet, indem Sie eingeben: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  Aktualisieren Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] das Element, und wenden Sie erneut Geschäftsregeln an. Ausführliche Protokolle werden im Konsolenfenster angezeigt.  
   
 ### <a name="view-the-service-broker-queue"></a>Anzeigen der Service Broker-Warteschlange  
  Die Service Broker-Warteschlange, die die als Teil des Workflows übergebenen Masterdaten enthält, lautet folgendermaßen: mdm.microsoft/mdm/queue/externalaction. Warteschlangen befinden sich im **Objekt-Explorer** von SQL Management Studio unter dem Service Broker-Knoten der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank. Wenn der Dienst die Warteschlange ordnungsgemäß geleert hat, ist diese Warteschlange leer.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Beispiel für einen benutzerdefinierten Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Benutzerdefinierte Workflow-XML-Beschreibung &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

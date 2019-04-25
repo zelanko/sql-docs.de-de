@@ -1,5 +1,5 @@
 ---
-title: Abfragen der Parameter verwendet, um ein Miningmodell erstellen | Microsoft Docs
+title: Abfragen der Parameter verwendet, um ein Miningmodell erstellen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469495"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Abfragen der Parameter, mit denen ein Miningmodell erstellt wird
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Die Zusammensetzung eines Miningmodells wird nicht nur von den Trainingsfällen beeinflusst, sondern auch von den Parametern, die bei der Erstellung des Modells festgelegt wurden. Daher ist es unter Umständen hilfreich, die Parametereinstellungen eines vorhandenen Modells abzurufen, um das Verhalten des Modells besser zu verstehen. Das Abrufen der Parameter ist auch beim Dokumentieren einer bestimmten Version dieses Modells nützlich.  
   
- Um die Parameter zu finden, die bei der Erstellung des Modells verwendet wurden, erstellen Sie eine Abfrage für eines der Miningmodell-Schemarowsets. Diese Schemarowsets werden als eine Gruppe von Systemsichten verfügbar gemacht, die Sie mithilfe von Transact-SQL-Syntax problemlos Abfragen können. In diesem Verfahren wird beschrieben, wie Sie eine Abfrage erstellen, die die Parameter zurückgibt, mit denen das angegebene Miningmodell erstellt wurde.  
+ Um die Parameter zu finden, die bei der Erstellung des Modells verwendet wurden, erstellen Sie eine Abfrage für eines der Miningmodell-Schemarowsets. Diese Schemarowsets als Gruppe von Systemsichten verfügbar gemacht, die einfach mithilfe von Transact-SQL-Syntax abgefragt werden können. In diesem Verfahren wird beschrieben, wie Sie eine Abfrage erstellen, die die Parameter zurückgibt, mit denen das angegebene Miningmodell erstellt wurde.  
   
 ### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>So öffnen Sie ein Abfragefenster für eine Schemarowsetabfrage  
   
@@ -65,7 +65,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10, CLUSTER_SEED=0, CLUSTERING_METHOD=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, MINIMUM_SUPPORT=1, MODELLING_CARDINALITY=10, SAMPLE_SIZE=50000, STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragetasks und Anweisungen](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Data Mining-Abfragetasks und Anweisungen](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
+ [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

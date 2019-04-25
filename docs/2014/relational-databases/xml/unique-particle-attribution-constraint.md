@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467416"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Einschränkung für eindeutige Partikelzuordnung
   In XSD werden komplexe Inhaltsmodelle durch die UPA-Einschränkungsregel (Unique Particle Attribution, eindeutige Partikelzuordnung) eingeschränkt. Diese Regel verlangt, dass jedes Element in einem Instanzdokument eindeutig genau einem `<xsd:element>` - oder `<xsd:any>` -Partikel im übergeordneten Inhaltsmodell entspricht. Jedes Schema, das einen Typ mit einem potenziell mehrdeutigen Inhaltsmodell enthält, wird zurückgewiesen.  
@@ -80,11 +80,11 @@ ms.locfileid: "58538520"
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
  Das folgende Dokument wird vom W3C (World Wide Web Consortium) veröffentlicht; es enthält die technische Beschreibung der UPA-Einschränkung:  
   
- "XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe":  
+ "XML Schema Part 1: Zweite Auflage von Strukturen, W3C empfohlene Ausgabe":  
   
--   Section 3.8.6: Einschränkungen für Komponenten des Modellgruppenschemas  
+-   Abschnitt 3.8.6: Einschränkungen für Komponenten des Modellgruppenschemas  
   
--   Appendix H: Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ)  
+-   Anhang H: Analyse der Unique Particle Attribution-Einschränkung (nicht-Normativ)  
   
  Besuchen Sie [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469133"
 ---
 # <a name="lesson-11-create-roles"></a>Lektion 11: Erstellen von Rollen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +34,7 @@ Sie erstellen drei Rollen:
   
 Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Sie werden können die Auswirkungen der einzelnen Rollen weiter unten in der Lektion 12 testen: In Excel analysieren.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Partitionen](../analysis-services/lesson-10-create-partitions.md).  
@@ -51,7 +51,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 4.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste, und wählen Sie anschließend die Berechtigung **Lesen** aus. 
 
-    ![als-tabellarische-lesson11-neue-Rolle](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  Optional: Klicken Sie auf die **Mitglieder** Registerkarte, und klicken Sie dann auf **hinzufügen**. Geben Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder -Gruppen in Ihrer Organisation ein, die Sie der Rolle hinzufügen möchten.  
   
@@ -70,7 +70,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     ```
     
     Eine Zeilenfilterformel muss in einen booleschen Wert (TRUE/FALSE) aufgelöst werden. Mit dieser Formel geben Sie an, dass nur Zeilen mit dem Wert der Länder-/ Regionscode "US" für den Benutzer sichtbar sein.  
-    ![als-tabellarische-lesson11-Rolle-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Optional: Klicken Sie auf die Registerkarte **Mitglieder** und anschließend auf **Hinzufügen**. Geben Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder -Gruppen in Ihrer Organisation ein, die Sie der Rolle hinzufügen möchten.  
   

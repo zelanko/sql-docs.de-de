@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45c66f4092304d804f5e5401aceba1fcefc135e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632202"
 ---
 # <a name="use-my-subscriptions"></a>Verwenden von "Meine Abonnements"
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichts-Manager enthält eine **Meine Abonnements** Seite, die alle Ihre Abonnements zentral aufgelistet werden. Mithilfe von Meine Abonnements können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633771"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Unterstützte ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber)
 Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
@@ -44,7 +44,7 @@ Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:
   
  Zusätzlich zu den unterstützten ODBC-SQL-Grammatik unterstützt der Visual FoxPro-ODBC-Treiber die vollständige systemeigene Visual FoxPro-Language-Syntax für die folgenden Visual FoxPro-Befehle:  
   
- [ÄNDERN DER TABELLE](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   

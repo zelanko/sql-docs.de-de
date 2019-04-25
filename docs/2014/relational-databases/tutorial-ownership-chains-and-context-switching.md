@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Besitzketten und Kontextwechsel | Microsoft-Dokumentation'
+title: 'Tutorial: Besitzketten und Kontextwechsel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524366"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Lernprogramm: Besitzketten und Kontextwechsel
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Besitzketten und Kontextwechsel
   Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
 > [!NOTE]  

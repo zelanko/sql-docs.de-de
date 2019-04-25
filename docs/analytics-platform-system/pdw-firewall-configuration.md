@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639530"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallel Data Warehouse-Firewall-Konfiguration in Analytics Platform System
 Die **Firewall** von SQL Server PDW-Konfigurations-Manager können Sie Ihre Firewallregeln, die zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System aktivieren oder deaktivieren.  
@@ -29,7 +29,7 @@ Die **Firewall** von SQL Server PDW-Konfigurations-Manager können Sie Ihre Fire
   
 4.  Klicken Sie auf **übernehmen** zum Speichern der Änderungen.  
   
-![DWConfig-Anwendung-PDW-Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+![DWConfig Appliance PDW Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>Externe Ports  
 Die folgenden Ports werden für Clientverbindungen stammen, die außerhalb von PDW geöffnet.  
@@ -39,8 +39,8 @@ Die folgenden Ports werden für Clientverbindungen stammen, die außerhalb von P
 |SQL-Client-Zugriff für PDW (TDS)|17001|CTL|  
 |Ladeprogramm-Clientzugriff (Dwloader und SSIS)|8001|CTL|  
 |Remotedesktopzugriff|3389|CTL, CMP|  
-|SSIS-BinaryLoaderDataChannel|16551|CTL|  
-|Dwloader BinaryLoaderDataChannel|16551|CMP|  
+|SSIS BinaryLoaderDataChannel|16551|CTL|  
+|dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL verschlüsselte Verbindungen (für die interne Kommunikation, um die Verwaltungskonsole zugreifen)|443|Alle Knoten|  
 |SQL Server PDW Load Ablaufsteuerung - Windows-Anmeldeinformationen|8002|CTL|  
 |_Kerberos|88|AD01 und AD02,|  

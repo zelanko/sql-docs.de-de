@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510012"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Dialogfeld Fenster (Hilfe von Microsoft Document Explorer)
   Mithilfe dieses Dialogfelds können Sie Dokumente, die in Editoren und Designern geöffnet sind, anzeigen, schließen und anordnen. Sie können dieses Dialogfeld anzeigen, indem Sie im Menü **Fenster** auf **Fenster** klicken.  

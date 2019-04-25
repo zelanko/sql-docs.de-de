@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630696"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>Operatoreigenschaften: New-Operator (Seite "Benachrichtigungen")
+# <a name="operator-properties-new-operator-notifications-page"></a>Operatoreigenschaften: Neuer Operator (Seite „Benachrichtigungen“)
   Mithilfe dieser Seite können Sie Warnungen und Aufträge zum Benachrichtigen des Operators festlegen.  
   
 ## <a name="options"></a>Optionen  

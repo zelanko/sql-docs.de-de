@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dce19cfa521bcf14c2d42ef932083de8deea72fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465764"
 ---
 # <a name="lock-a-version-master-data-services"></a>Sperren einer Version (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52757762"
 > [!NOTE]  
 >  Wenn eine Version gesperrt ist, können Administratorbenutzer und Modelladministratoren weiterhin Elemente hinzuzufügen, bearbeiten und entfernen. Andere Benutzer mit Berechtigungen für das Modell können die Elemente jedoch nur anzeigen.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
@@ -49,13 +49,13 @@ ms.locfileid: "52757762"
   
 4.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)  
   

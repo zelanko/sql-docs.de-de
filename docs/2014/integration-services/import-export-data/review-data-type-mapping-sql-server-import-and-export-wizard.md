@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767942"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
   Verwenden der **Datentypzuordnung** Seite, um ausführliche Informationen über datentypkonvertierungen zu überprüfen, die der Assistent ausführen, damit die Quelldaten mit den Zieldaten kompatibel sind muss. Diese Informationen enthalten optische Hinweise, um Konvertierungen, die voraussichtlich fehlerfrei ablaufen, von Konvertierungen zu unterscheiden, die zu Fehlern oder Kürzungen führen könnten. Sie können für jede Konvertierung entscheiden, ob Sie die vom Assistenten vorgeschlagene Konvertierung übernehmen möchten. Außerdem können Sie angeben, wie mit Fehlern verfahren werden soll.  

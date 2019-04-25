@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f046a3a33e05228ab5e49116bc46eb9451f43129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642453"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignis (ADO)
 Die **WillChangeField** Ereignis wird immer dann aufgerufen, bevor Sie ein ausstehender Vorgang ändert sich den Wert einer oder mehreren [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **FieldChangeComplete** -Ereignis wird aufgerufen, nachdem sich der Wert von einem oder mehreren **Feld** -Quellobjekten geändert wurde.  

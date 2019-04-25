@@ -1,5 +1,5 @@
 ---
-title: IsGeneration (MDX) | Microsoft Docs
+title: IsGeneration (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a726470f89f2d3ea1677259e849735a09909a42d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629413"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 
@@ -36,7 +36,7 @@ IsGeneration(Member_Expression, Generation_Number)
  Ein gültiger numerischer Ausdruck, der die Generierung angibt, für die das angegebene Element ausgewertet wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **IsGeneration** -Funktion gibt **"true"** , wenn das angegebene Element in der angegebenen Generierungsnummer befindet. Die Funktion hingegen gibt **"false"**. Auch, wenn das angegebene Element zu einem leeren Element ausgewertet wird die **IsGeneration** -Funktion gibt **"false"**.  
+ Die **IsGeneration** -Funktion zurückgegeben **"true"** , wenn das angegebene Element in der angegebenen Generierungsnummer befindet. Die Funktion hingegen gibt **"false"**. Auch wenn das angegebene Element zu einem leeren Element ausgewertet wird die **IsGeneration** -Funktion zurückgegeben **"false"**.  
   
  Für die Zwecke der Generierungsindizierung haben Blattelemente den Generierungsindex 0. Der Generationsindex von Nichtblattelementen wird bestimmt, indem zuerst der höchste Generationsindex aus der Vereinigung aller untergeordneten Elemente des angegebenen Elements abgerufen wird und dann 1 zu diesem Index addiert wird. Aufgrund der Bestimmungsweise des Generationsindexes von Nichtblattelementen kann es vorkommen, dass ein bestimmtes Nichtblattelement mehreren Generationen angehört.  
   

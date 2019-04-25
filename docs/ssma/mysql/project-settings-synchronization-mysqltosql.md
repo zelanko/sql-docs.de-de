@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473906"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Projekteinstellungen (Synchronisierung) (MySqlToSql)
 Die Synchronisierung **projekteinstellungen** können Sie konfigurieren, wie Objekte von MySQL-Datenbank mit SQL Server-Datenbankobjekte synchronisiert werden.  
@@ -28,7 +28,7 @@ Sie können zwei verschiedene Synchronisierung Seiten zugreifen, die die gleiche
   
 -   Die Einstellungen für das aktuelle Projekt, auf die **Tools** Menü klicken Sie auf **Projekteinstellungen**, und klicken Sie dann auf **Synchronisierung** am unteren Rand im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ##### <a name="misc"></a>Sonstiges  
   

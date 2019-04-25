@@ -1,5 +1,5 @@
 ---
-title: IMDEmbeddedData Schnittstelle | Microsoft Docs
+title: IMDEmbeddedData-Schnittstelle | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467781"
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
+  IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle, die zum Verwalten von einem eingebetteten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
   
 -   Ruft einen Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   
@@ -30,16 +30,16 @@ ms.locfileid: "34044384"
   
 -   Bricht den aktuellen Einbettungsvorgang ab.  
   
--   Abgerufen Sie die geschätzte Größe (in Bytes) des Streams, der zum Speichern des eingebetteten Objekts werden. Geerbt von **IPersistStream**.  
+-   Rufen Sie die geschätzte Größe (in Byte) des Datenstroms um das eingebettete Objekt zu speichern. Geerbt von **IPersistStream**.  
   
--   Überprüfen Sie, ob die eingebettete Datenbank seit der letzten Speicherung geändert wurde. Geerbt von **IPersistStream**.  
+-   Überprüfen Sie, wenn die eingebettete Datenbank seit der letzten Speicherung geändert hat. Geerbt von **IPersistStream**.  
   
--   Laden Sie die eingebettete Datenbank in das lokale oder prozessinterne Modul. Geerbt von **IPersistStream**.  
+-   Laden Sie die eingebettete Datenbank in die lokale oder prozessinterne Engine. Geerbt von **IPersistStream**.  
   
 -   Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Geerbt von **IPersistStream**.  
   
-## <a name="reference"></a>Verweis  
- Die folgenden verweisen auf Dokumente, die **IMDEmbeddedData** Schnittstelle in dargestellt **msmd.h** Headerdatei.  
+## <a name="reference"></a>Referenz  
+ Die folgenden verweisen auf Dokumente, die **IMDEmbeddedData** Schnittstelle wie in **msmd.h** Headerdatei.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Quelldatei: PXOEmbeddedData.idl  
   
@@ -107,9 +107,9 @@ HRESULT GetStreamIdentifier (
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
-|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer Remoteanwendung (d. h. SharePoint Server) gehostet.|  
+|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer remote-Anwendung (z. B. SharePoint-Server) gehostet.|  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  **E_FAIL**  
  Beim Festlegen der Container-URL ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  **E_FAIL**  
  Beim Festlegen des Flags ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  **E_FAIL**  
  Beim Festlegen des Pfads ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  Beim Abbrechen des eingebetteten Vorgangs ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -289,7 +289,7 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>Description  
- Lädt die eingebettete Datenbank in das lokale oder prozessinterne Modul. Geerbt von **IPersistStream**.  
+ Lädt die eingebettete Datenbank in die lokale oder prozessinterne Engine. Geerbt von **IPersistStream**.  
   
 #### <a name="parameters"></a>Parameter  
  *in_pStm*  
@@ -315,7 +315,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Geerbt von **IPersistStream**.  
+ Speichert die lokale oder prozessinterne Datenbank in den eingebetteten Datenstrom im Containerdokument an. Geerbt von **IPersistStream**.  
   
 #### <a name="parameters"></a>Parameter  
  *in_pStm*  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68c00133fde8c15fb028c013032c316658c056a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466839"
 ---
 # <a name="manage-changesets-master-data-services"></a>Verwalten von Changesets (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52777412"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie alle Änderungen nach Modell und Version verwalten.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

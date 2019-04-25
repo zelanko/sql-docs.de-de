@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626100"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Aktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich Aktionsformular-Editor auf der Registerkarte **Aktionen** im Cube-Designer können Sie Standardaktionen erstellen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen der Aktion ein.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "48225550"
  **Zieltyp**  
  Wählen Sie den Typ des Objekts aus, dem die Aktion zugeordnet werden soll. Der Server gibt nur jene Aktionen an den Client zurück, die auf das Objekt vom angegebenen Typ angewendet werden. Die Aktion ist für den Client verfügbar, wenn die **Bedingung** erfüllt ist und die in der folgenden Tabelle angegebenen Objekte ausgewählt sind.  
   
-|value|Ausgewähltes Objekt|  
+|Wert|Ausgewähltes Objekt|  
 |-----------|---------------------|  
 |Attributelemente|Ein Element wird aus einer Ebene ausgewählt, die auf dem Attribut unter **Zielobjekt**basiert.|  
 |Zellen|Die benannte Menge in **Zielobjekt** wird ausgewählt. Wählen Sie **Alle Zellen** aus, um alle Zellen im Cube auszuwählen.|  
-|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Das Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität für Fälle bereit, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert wird. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
+|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität in Fällen, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert, bereit. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
 |Dimensionselemente|Ein Element der Dimension in **Zielobjekt** wird ausgewählt.|  
 |Hierarchy|Die Hierarchie in **Zielobjekt** wird ausgewählt.|  
 |Hierarchieelemente|Ein Element innerhalb der Hierarchie in **Zielobjekt** wird ausgewählt.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48225550"
  **Typ**  
  Wählen Sie den Typ der Aktion aus, der verwendet werden soll, wenn die Aktion ausgeführt wird. Folgende Aktionstypen sind verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Dataset|Gibt einen MDX-Ausdruck (Multidimensional Expressions) zurück, der ein mehrdimensionales Dataset darstellt, das von der Clientanwendung ausgeführt und angezeigt wird.|  
 |Proprietär|Gibt eine proprietäre Zeichenfolge zurück, die von Clientanwendungen interpretiert werden kann, die der Einstellung **Anwendung** für diese Aktion zugeordnet sind.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48225550"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
 |Interaktiv|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  

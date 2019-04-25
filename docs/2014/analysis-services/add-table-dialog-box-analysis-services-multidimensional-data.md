@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111453302bd72396e9bc44d357851cccf2f30e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635370"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle hinzufügen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Tabelle hinzufügen, während Sie eine Abfrage erstellen mithilfe der Dialogfelder **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** . Sie können das Dialogfeld **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** im Bereich **Symbolleiste** auf **Tabelle hinzufügen** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "48209706"
 |**Funktionen**|Mithilfe der Registerkarte **Funktionen** können Sie eine hinzuzufügende Funktion oder gespeicherte Prozedur anzeigen und auswählen.|  
 |**Synonyme**|Mithilfe der Registerkarte **Synonyme** können Sie ein hinzuzufügendes Synonym anzeigen und auswählen.|  
 |**Aktualisieren**|Klicken Sie auf diese Option, um alle Registerkarten des Dialogfelds erneut zu laden.|  
-|**Hinzufügen**|Klicken Sie auf diese Option, um das aktuell ausgewählte Element hinzuzufügen. **Hinweis:** diese Option ist nur aktiviert, wenn ein Element ausgewählt ist.|  
+|**Hinzufügen**|Klicken Sie auf diese Option, um das aktuell ausgewählte Element hinzuzufügen. **Hinweis**:  Diese Option ist nur aktiviert, wenn ein Element ausgewählt ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

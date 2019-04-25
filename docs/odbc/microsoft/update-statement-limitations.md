@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633132"
 ---
 # <a name="update-statement-limitations"></a>Einschränkungen der UPDATE-Anweisung
 Für die Paradox-Treiber, um eine Tabelle zu aktualisieren muss die Tabelle einen eindeutigen Index (Paradox-Primärschlüssel) verfügen. Wenn Sie die Paradox-Treiber verwenden, ohne die Datenbank-Engine für Borland implementieren zu müssen, ist es nicht möglich, eine Paradox-Tabelle zu aktualisieren.  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636226"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
 Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte enthält.  
@@ -82,7 +82,7 @@ Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der I
   
  Eine Bewertung zwischen 0 und 100 ist möglich, wobei 0 bedeutet, dass nicht wieder verwendet werden können und 100 bedeutet, dass absolut übereinstimmt. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) ist die Funktion für die Bewertung einer Verbindungs.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Neue ODBC-Anweisungshandle - SQL_HANDLE_DBC_INFO_TOKEN  
+## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>New ODBC Handle - SQL_HANDLE_DBC_INFO_TOKEN  
  Um treiberfähiges Verbindungspooling zu unterstützen, benötigt der Treiber Verbindungsinformationen, um die Pool-ID zu berechnen. Der Treiber benötigt auch Verbindungsinformationen, um neue verbindungsanforderungen mit Verbindungen im Pool zu vergleichen.  Wenn keine Verbindung im Pool wiederverwendet werden kann, hat der Treiber zum Herstellen einer neuen Verbindungs, die Verbindungsinformationen-masterdatenbankzugriff erforderlich ist.  
   
  Da die Verbindungsinformationen aus mehreren Quellen (Verbindungszeichenfolge-Verbindungsattributen und DSN) stammen kann, müssen ggf. der Treiber zum Analysieren der Verbindungszeichenfolge, und lösen Sie den Konflikt zwischen diesen Quellen in jedem der obigen Funktionsaufruf.  
@@ -139,7 +139,7 @@ Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der I
 ## <a name="sequence-diagram"></a>Sequenzdiagramm  
  Dieses Diagramm zeigt den grundlegenden pooling-Mechanismus, die in diesem Thema beschrieben. Zeigt nur die Verwendung von [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) jedoch [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt.  
   
- ![Sequenzieren Diagramm](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "Odbc_seq_dia")  
+ ![Sequence Diagram](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>Zustandsdiagramm  
  Diese Zustandsdiagramm zeigt die Informationen token Verbindungsobjekt können in diesem Thema beschriebenen. Zeigt das Diagramm nur [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) jedoch [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt. Da der Treiber-Manager unter Umständen um Fehler zu einem beliebigen Zeitpunkt zu behandeln, kann der Treiber-Manager aufrufen [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) für sämtliche Staaten.  

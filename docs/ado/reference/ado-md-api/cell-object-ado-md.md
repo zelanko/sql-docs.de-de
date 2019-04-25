@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469485"
 ---
 # <a name="cell-object-ado-md"></a>Cell-Objekt (ADO MD)
 Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthalten, die in einem Cellset dar.  
@@ -45,7 +45,7 @@ Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthalten, die in einem C
   
 |Name|Description|  
 |----------|-----------------|  
-|Hintergrundfarbe|Hintergrundfarbe die Zelle angezeigt.|  
+|BackColor|Hintergrundfarbe die Zelle angezeigt.|  
 |FontFlags|Bitmaske, die mit Details zu Auswirkungen auf die Schriftart.|  
 |FontName|Der Wert der Zelle anzuzeigenden verwendete Schriftart.|  
 |FontSize|Der Schriftgrad ist der Wert der Zelle angezeigt.|  

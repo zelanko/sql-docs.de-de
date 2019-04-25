@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466178"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Durchsuchen eines Naive Bayes-Modells
   Beim Öffnen eines Naïve Bayes-Modells mit **Durchsuchen**, das Modell in einem interaktiven Viewer mit vier unterschiedlichen Bereichen angezeigt. Verwenden Sie den Viewer, um Korrelationen zu untersuchen sowie um Informationen zum Modell und den zugrunde liegenden Daten abzurufen.  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5c262a6cd29767f627e3827dff93078679867389
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518535"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Geschäftsregelaktionen (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52760093"
 ## <a name="default-value-actions"></a>Standardwertaktionen  
  Über**Standardwert** -Aktionen wird der Standardwert eines bestimmten Attributs festgelegt. Benutzer mit entsprechender Berechtigung können diese Standardwerte ändern.  
   
-|Wertname|und Beschreibung|  
+|Wertname|Description|  
 |----------------|-----------------|  
 |**Entspricht standardmäßig**|Das ausgewählte Attribut **entspricht standardmäßig** einem bestimmten Attribut oder Attributwert bzw. ist leer.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Entspricht standardmäßig einem generierten Wert**|Das ausgewählte Attribut **entspricht standardmäßig einem generierten Wert** , der durch Eingabe eines Startwerts und eines inkrementellen Werts bestimmt wird.<br /><br /> Diese Aktion ist für Text- und Nummernwerte gültig.|  
@@ -39,7 +39,7 @@ ms.locfileid: "52760093"
 ## <a name="change-value-actions"></a>Wertänderungsaktionen  
  Durch Aktionen vom Typ**Wert ändern** wird der Wert eines angegebenen Attributs oder Attributwerts geändert. Benutzer können diese Werte nur ändern, wenn der neue Wert bewirkt, dass die Aktion TRUE ergibt.  
   
-|Wertname|und Beschreibung|  
+|Wertname|Description|  
 |----------------|-----------------|  
 |**Ist gleich**|Das ausgewählte Attribut wird in einen definierten Attributwert oder ein anderes Attribut geändert bzw. ist leer.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Entspricht einem verketteten Wert**|Das ausgewählte Attribut wird in einen verketteten Wert geändert, der durch Angabe mehrerer Attribute bestimmt wird.<br /><br /> Diese Aktion ist für Text- und Linkwerte gültig.|  
@@ -49,7 +49,7 @@ ms.locfileid: "52760093"
   
  Die einzigen Ausnahmen sind die Aktionen **ist verbindlich** und **ist ungültig** . Diese Aktionen müssen mit einer Aktion zum Ändern von Werten kombiniert werden, damit die Daten erfolgreich überprüft werden können und ein Commit für die Version ausgeführt werden kann.  
   
-|Name der Überprüfung|und Beschreibung|  
+|Name der Überprüfung|Description|  
 |---------------------|-----------------|  
 |**Ist erforderlich**|Das ausgewählte Attribut **ist erforderlich**, es kann also nicht NULL lauten oder leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**ist ungültig**|Das ausgewählte Attribut **ist ungültig**.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
@@ -68,11 +68,11 @@ ms.locfileid: "52760093"
 ## <a name="external-action"></a>Externe Aktion  
  **Externe** Aktionen interagieren mit Anwendungen außerhalb von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-|Aktionsname|und Beschreibung|  
+|Aktionsname|Description|  
 |-----------------|-----------------|  
 |**start workflow**|Initiiert einen externen Workflow. Die Daten, die diese Aktion bewirkt haben, werden an den Workflow übergeben. Weitere Informationen finden Sie unter [SharePoint Workflow Integration with Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Geschäftsregelbedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

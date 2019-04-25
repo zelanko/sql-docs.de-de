@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766602"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Signieren eines Pakets mit einem digitalen Zertifikat
   In diesem Thema wird beschrieben, wie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket mit einem digitalen Zertifikat signiert wird. Mit einer digitalen Signatur in Verbindung mit anderen Einstellungen können Sie verhindern, dass ein ungültiges Paket geladen und ausgeführt wird.  

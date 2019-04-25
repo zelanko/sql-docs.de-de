@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629641"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
-  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Abgesehen vom Befolgen der bewährten Methoden in diesem Thema, sollten Sie das Thema mit den häufig gestellten Fragen, die sich häufig gestellte Fragen und Probleme hinweisen lesen: [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md).  
+  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md).  
   
  Eine Unterteilung der Hinweise zu den bewährten Methoden in zwei Bereiche bietet sich an:  
   
@@ -148,6 +148,6 @@ ms.locfileid: "54134735"
  Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsverwaltung – häufig gestellte Fragen](frequently-asked-questions-for-replication-administrators.md)  
+ [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md)  
   
   

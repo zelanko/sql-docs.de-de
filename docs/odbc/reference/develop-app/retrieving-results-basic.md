@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468662"
 ---
 # <a name="retrieving-results-basic"></a>Abrufen von Ergebnissen (Standard)
 Ein *Resultset* ist ein Satz von Zeilen in der Datenquelle, die bestimmten Kriterien entsprechen. Es ist eine konzeptionelle Tabelle, die aus einer Abfrage führt in Tabellenform, die für eine Anwendung verfügbar ist. **Wählen Sie** -Anweisungen, Katalogfunktionen und einige Verfahren Resultsets zu erstellen. Im folgenden Beispiel ist die erste SQL-Anweisung erstellt ein Resultset mit der alle Zeilen und alle Spalten in der Orders-Tabelle, und die zweite SQL-Anweisung erstellt ein Resultset mit Spalten für OrderID, Vertriebsmitarbeiter und Status für die Zeilen in der Orders-Tabelle der Status in der offen ist:  

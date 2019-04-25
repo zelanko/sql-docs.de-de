@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468592"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Scrollbare Cursor und Transaktionsisolation
 In der folgende Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit der Änderungen.  
@@ -38,29 +38,29 @@ In der folgende Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit der 
   
  Die folgende Tabelle enthält die Fähigkeit der einzelnen Cursor zum Erkennen von Änderungen, die sich durch andere Vorgänge in einer eigenen Transaktion und von anderen Transaktionen vorgenommen werden. Die Sichtbarkeit der letzten Änderungen hängt davon ab, der Cursortyp und die Isolationsstufe der Transaktion, die den Cursor enthält.  
   
-|Cursor type\action|Self-Service|Besitzer<br /><br /> Transaktionsvorgänge|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RU[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RC[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RR[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (S[a])|  
+|Cursor type\action|Self-Service|Besitzer<br /><br /> Txn|Adresszuweisungen<br /><br /> Txn<br /><br /> (RU[a])|Adresszuweisungen<br /><br /> Txn<br /><br /> (RC[a])|Adresszuweisungen<br /><br /> Txn<br /><br /> (RR[a])|Adresszuweisungen<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|STATIC-Cursor|||||||  
-|Insert|Vielleicht [b]|nein|nein|nein|nein|nein|  
-|Update|Vielleicht [b]|nein|nein|nein|nein|nein|  
-|DELETE|Vielleicht [b]|nein|nein|nein|nein|nein|  
+|Statisch|||||||  
+|Insert|Maybe[b]|Nein|Nein|Nein|Nein|Nein|  
+|Update|Maybe[b]|Nein|Nein|Nein|Nein|Nein|  
+|DELETE|Maybe[b]|Nein|Nein|Nein|Nein|Nein|  
 |Keysetgesteuerte|||||||  
-|Insert|Vielleicht [b]|nein|nein|nein|nein|nein|  
-|Update|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|DELETE|Vielleicht [b]|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|Insert|Maybe[b]|Nein|Nein|Nein|Nein|Nein|  
+|Update|Ja|Ja|Ja|Ja|Nein|Nein|  
+|DELETE|Maybe[b]|Ja|Ja|Ja|Nein|Nein|  
 |Dynamic|||||||  
-|Insert|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Update|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|DELETE|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|Insert|Ja|Ja|Ja|Ja|Ja|Nein|  
+|Update|Ja|Ja|Ja|Ja|Nein|Nein|  
+|DELETE|Ja|Ja|Ja|Ja|Nein|Nein|  
   
  [a] der Buchstaben in Klammern geben die Isolationsstufe der Transaktion, die mit dem Cursor; die Isolationsstufe der anderen Transaktion (in dem die Änderung vorgenommen wurde) ist nicht relevant.  
   
- RU: Read uncommitted  
+ RU: Read Uncommitted  
   
- RC: Lesen zugesichert  
+ RC: Read Committed  
   
- RR: Wiederholbarer Lesevorgang  
+ RR: Repeatable Read  
   
- S: serialisierbar  
+ S:  Serializable  
   
  [b] hängt wie der Cursor implementiert wird. Gibt an, ob der Cursor für solche Änderungen erkennen, kann werden gemeldet, über die Feedbackoption im SQL_STATIC_SENSITIVITY in **SQLGetInfo**.

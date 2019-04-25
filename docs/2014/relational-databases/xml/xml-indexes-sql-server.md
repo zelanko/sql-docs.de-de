@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631363"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
   XML-Indizes können für `xml`-Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
@@ -53,7 +53,7 @@ ms.locfileid: "58533972"
   
 -   Sekundärer XML-Index  
   
- Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Verwenden den primären XML-Index, werden die folgenden Typen von sekundären Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
+ Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Mithilfe des primären XML-Index werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
   
 > [!NOTE]  
 >  Sie können einen XML-Index nur dann erstellen oder bearbeiten, wenn die Datenbankoptionen korrekt für die Arbeit mit dem `xml`-Datentyp festgelegt sind. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](use-full-text-search-with-xml-columns.md).  

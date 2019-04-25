@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634158"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren der Failoverclusterinstanz – SMB – SQL Server unter Linux
 
@@ -31,7 +31,7 @@ Hier sind einige Tipps und Hinweise für die erfolgreiche Verwendung von SMB:
 - Die SMB-Freigabe sollte hoch verfügbar sein.
 - Sicherheit muss festgelegt werden, ordnungsgemäß auf die SMB-Freigabe. Unten ist ein Beispiel von /etc/samba/smb.conf, wobei SQLData1 den Namen der Freigabe.
 
-![05 – smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -161,7 +161,7 @@ Hier sind einige Tipps und Hinweise für die erfolgreiche Verwendung von SMB:
 
    *    Geben Sie beenden, um das Root nicht verwendet werden
 
-   *    Starten Sie SqlServer. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
+   *    Start SQL Server. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
 
     ```bash
     sudo systemctl start mssql-server

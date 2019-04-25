@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64b54acb2334aa09c5d4c2fde421f1dca9f8f3c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472392"
 ---
 # <a name="data-shaping-overview"></a>Datenstrukturierung – Übersicht
 *Data shaping* bedeutet die Entwicklung von hierarchischer Beziehungen zwischen mindestens zwei logische Entitäten in einer Abfrage. Die Hierarchie finden Sie in der über-/ unterordnungsbeziehungen zwischen einem Datensatz eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und eine oder mehrere Datensätze (auch bekannt als ein Kapitel) eines anderen **Recordset**. In einer über-/ unterordnungsbeziehung, die das übergeordnete Element **Recordset** enthält die untergeordneten **Recordset**. Ein Beispiel für eine hierarchische Beziehung ist, Kunden und Bestellungen. Für jeden Kunden in einer Datenbank können NULL oder mehrere Bestellungen vorhanden sein. Die hierarchische Beziehung kann rekursiv sein, was bedeutet, dass zwei Ebenen untergeordneten Datensätzen in einem untergeordneten Datensatz geschachtelt werden können. Im Prinzip kann ein hierarchischer Datensatz in einer beliebigen Tiefe geschachtelt werden. In der Praxis eingeschränkt ADO die Rekursion auf maximal 512 **Recordset**s.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766533"
 ---
 # <a name="select-variables"></a>Variablen auswählen
   Mithilfe des Dialogfelds **Variablen auswählen** geben Sie die Variablen an, die beim Vorgang des Sendens einer Nachricht im Task Nachrichtenwarteschlange verwendet werden. Die Liste **Verfügbare Variablen** enthält Systemvariablen und benutzerdefinierte Variablen, die sich auf den Task „Nachrichtenwarteschlange“ oder dessen übergeordneten Container beziehen. Der Task verwendet die Variablen der Liste **Ausgewählte Variablen** .  

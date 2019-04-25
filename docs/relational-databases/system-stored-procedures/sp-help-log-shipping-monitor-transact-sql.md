@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639219"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_help_log_shipping_monitor
 |**last_restored_file**|**nvarchar(500).**|Der Name der letzten erfolgreich wiederhergestellten Protokollsicherungsdatei.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
 |**last_restored_latency**|**int**|Die Zeitdauer in Minuten von der Erstellung der letzten Sicherung bis zur Wiederherstellung der Sicherung.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
 |**restore_threshold**|**int**|Die Anzahl der zulässigen Minuten zwischen Wiederherstellungsvorgängen, bevor eine Warnung generiert wird. **restore_threshold** kann nicht NULL sein.|  
-|**is_restore_alert_enabled**|**bit**|Gibt an, ob eine Warnung ausgegeben wird, wenn **restore_threshold** überschritten wird. Der Standardwert**1**bedeutet, dass die Warnung ausgelöst wird.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.<br /><br /> Verwenden Sie zum Festlegen der wiederherstellungsschwelle [Sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
+|**is_restore_alert_enabled**|**bit**|Gibt an, ob eine Warnung ausgegeben wird, wenn **restore_threshold** überschritten wird. Der Standardwert**1**bedeutet, dass die Warnung ausgelöst wird.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.<br /><br /> Verwenden Sie [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md), um die Wiederherstellungsschwelle festzulegen.|  
   
 ## <a name="remarks"></a>Hinweise  
  **sp_help_log_shipping_monitor** muss in der **master** -Datenbank auf dem Überwachungsserver ausgeführt werden.  

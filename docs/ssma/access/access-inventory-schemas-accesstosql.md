@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759706"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
 Die folgenden Abschnitte beschreiben die Tabellen, die vom SSMA, beim Exportieren von Schemas Zugriff erstellt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +55,7 @@ Datenbank-Metadaten exportiert wird, um die **SSMA_Access_InventoryDatabases** T
 |**DatabaseId**|**uniqueidentifier**|Eine GUID, die jede Datenbank eindeutig identifiziert. Diese Spalte wird auch der primäre Schlüssel für die Tabelle.|  
 |**DatabaseName**|**nvarchar(4000)**|Der Name der Access-Datenbank.|  
 |**ExportTime**|**datetime**|Das Datum und Uhrzeit, die diese Metadaten von SSMA erstellt wurde.|  
-|**"FilePath"**|**nvarchar(4000)**|Der vollständige Pfad und Name der Access-Datenbank.|  
+|**FilePath**|**nvarchar(4000)**|Der vollständige Pfad und Name der Access-Datenbank.|  
 |**FileSize**|**bigint**|Die Größe der Access-Datenbank in KB.|  
 |**FileOwner**|**nvarchar(4000)**|Das Windows-Konto, das als Besitzer der Access-Datenbank angegeben ist.|  
 |**DateCreated**|**datetime**|Das Datum und Uhrzeit der Erstellung die Access-Datenbank.|  
@@ -160,7 +160,7 @@ Makro Metadaten exportiert wird, um die **SSMA_Access_InventoryMacros** Tabelle.
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Makro enthält.|  
 |**MacroId**|**int**|Inkrementelle eine ganze Zahl, die das Makro identifiziert. Diese Spalte ist der primäre Schlüssel für die Tabelle.|  
-|**Makroname**|**nvarchar(4000)**|Der Name des Makros.|  
+|**MacroName**|**nvarchar(4000)**|Der Name des Makros.|  
   
 ## <a name="reports"></a>Berichte  
 Berichtsmetadaten exportiert wird, um die **SSMA_Access_InventoryReports** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
@@ -178,7 +178,7 @@ Metadaten des Moduls exportiert wird, um die **SSMA_Access_InventoryModules** Ta
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Modul enthält.|  
 |**ModuleId**|**int**|Inkrementelle eine ganze Zahl, die das Modul identifiziert. Diese Spalte ist der primäre Schlüssel für die Tabelle.|  
-|**Modulname**|**nvarchar(4000)**|Der Name des Moduls.|  
+|**ModuleName**|**nvarchar(4000)**|Der Name des Moduls.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Exporting an Access Inventory (Exportieren eines Access-Inventars)](exporting-an-access-inventory-accesstosql.md)  

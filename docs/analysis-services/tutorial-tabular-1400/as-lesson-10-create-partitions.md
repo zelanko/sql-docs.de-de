@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466244"
 ---
 # <a name="create-partitions"></a>Erstellen von Partitionen
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685697"
 
 In dieser Lektion erstellen Sie Partitionen, um die FactInternetSales-Tabelle in kleinere logische Teile aufteilen, die verarbeitet werden können (aktualisiert) unabhängig von anderen Partitionen. Standardmäßig hat jede Tabelle in Ihrem Modell eine Partition, die alle in der Tabelle Spalten und Zeilen enthält. Wir möchten die Daten nach Jahr unterteilen, für die Tabelle "factinternetsales"; eine Partition für jedes der fünf Jahren der Tabelle. Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen](../tabular-models/partitions-ssas-tabular.md). 
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 

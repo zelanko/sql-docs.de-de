@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82fa90f5dca5d9aee85ef3630b9d3a66d3c14e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633195"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Unterstützte Skalarfunktionen (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC-Treiber unterstützt drei Arten von skalaren Funktionen aus, wie in der ODBC-SQL-Grammatik definiert: Zeichenfolgen-, numerischen und Uhrzeit-und Datumsfunktionen.  

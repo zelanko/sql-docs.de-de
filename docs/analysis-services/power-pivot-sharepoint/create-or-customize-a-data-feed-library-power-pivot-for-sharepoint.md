@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472329"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Erstellen oder Anpassen einer Datenfeedbibliothek (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52519096"
   
  Die folgenden Schritte müssen für jede Bibliothek wiederholt werden, in der Sie Dokumente für die Datenfeedregistrierung erstellen oder bearbeiten möchten.  
   
-#### <a name="step-1-enable-content-type-management"></a>Schritt 1: Aktivieren der Inhaltstypverwaltung  
+#### <a name="step-1-enable-content-type-management"></a>Schritt 1: Aktivieren der Inhaltstypverwaltung  
   
 1.  Öffnen Sie die Dokumentbibliothek, für die Sie mehrere Inhaltstypen aktivieren möchten.  
   

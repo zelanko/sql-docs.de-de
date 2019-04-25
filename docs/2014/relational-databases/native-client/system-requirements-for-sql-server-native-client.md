@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637828"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
   Um Datenzugriffsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wie z. B. MARS, zu verwenden, muss die folgende Software installiert sein:  
@@ -71,7 +71,7 @@ ms.locfileid: "53365122"
 |varchar(max)|varchar|varchar|Textmodus|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|Bild|  
+|CLR-UDTS (> 8Kb)|udt|varbinary|Bild|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509922"
 ---
 # <a name="data-mining-properties"></a>Data Mining-Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Data Mining-Eigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** Nur mehrdimensionaler Servermodus.  
+ **Gilt für:** Nur mehrdimensionaler Servermodus  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  **AllowSessionMiningModels**  

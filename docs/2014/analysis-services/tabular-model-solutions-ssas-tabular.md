@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b2cb7347f38053474b6b6f1e001f9bd9f758f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758509"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Tabellenmodelllösungen (SSAS – tabellarisch)
   In diesem Abschnitt wird beschrieben, wie Sie tabellarische Modelle mithilfe des Designers für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48174390"
   
  [Kompatibilitätsgrad &#40;SSAS – tabellarisch, SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [Projekte für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
+ [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
  [Eigenschaften &#40;SSAS – tabellarisch&#41;](tabular-models/properties-ssas-tabular.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48174390"
   
  [Rollen &#40;SSAS – tabellarisch&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [In Excel analysieren &#40;SSAS – tabellarisch&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
  [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   

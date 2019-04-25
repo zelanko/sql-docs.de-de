@@ -1,6 +1,6 @@
 ---
-title: Kennwort zurücksetzen – Analytics Platform System | Microsoft Docs
-description: Die Seite "Kennwort zurücksetzen" können Sie so ändern Sie das Kennwort für die Administratorkonten von Analytics Platform System verwendet.
+title: Kennwortzurücksetzung - Analytics Platform System | Microsoft-Dokumentation
+description: Der Seite "Kennwort zurücksetzen" können Sie zum Ändern des Kennworts für die Administratorkonten von Analytics Platform System verwendet.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,51 +10,51 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639960"
 ---
-# <a name="password-reset---analytics-platform-system"></a>Das Zurücksetzen des Kennworts - Analyseplattformsystem
-Die **Kennwortzurücksetzung** auf der Seite können Sie so ändern Sie das Kennwort für die Administratorkonten von Analytics Platform System verwendet.  
+# <a name="password-reset---analytics-platform-system"></a>Zurücksetzen des Kennworts - Analytics Platform System
+Die **Zurücksetzen des Kennworts** auf der Seite können Sie zum Ändern des Kennworts für die Administratorkonten von Analytics Platform System verwendet.  
   
 > [!WARNING]  
-> Verwenden Sie immer die **Configuration Manager** die Einheit für Domänenadministratorkennwort zu aktualisieren. Andere Methoden möglicherweise nicht alle Komponenten von Analytics Platform System aktualisiert und Appliance Zugriffsprobleme verursachen könnte.  
+> Verwenden Sie immer die **Configuration Manager** der Appliance für Domänenadministratorkennwort zu aktualisieren. Andere Methoden möglicherweise nicht alle Komponenten des Analytics Platform System aktualisiert und Appliance Zugriffsprobleme verursachen können.  
   
-Die Kennwörter Analytics Platform System erhalten, wenn das Gerät übermittelt wird. Immer ändern Sie die Kennwörter mit neuen Werten, wenn Sie die Verantwortung für Ihre Anwendung erstellen. Es gibt drei Kennwörter aktualisieren. Die Kennwörter müssen nicht miteinander übereinstimmen.  
+Sie erhalten die Kennwörter für Analytics Platform System, wenn das Gerät übermittelt wird. Immer ändern Sie die Kennwörter mit neuen Werten, wenn Sie die Verantwortung für Ihre Anwendung übernehmen. Es gibt drei Kennwörter aktualisieren. Die Kennwörter müssen nicht miteinander übereinstimmen.  
   
-**-F <*Xxxx*> \Administrator**  
-Die **Administrator** der Appliance Domäne.  
+**F<*xxxx*>\Administrator**  
+Die **Administrator** von der Domäne der Anwendung.  
   
-**. \Administrator**  
+**.\Administrator**  
 Die lokale **Administrator** Konto auf den Computern, auf denen die virtuellen Computer gehostet.  
   
 > [!IMPORTANT]  
-> Für die Appliance update 1, **Configuration Manager** wird nicht ordnungsgemäß geändert, das Kennwort für die lokale Administratorkonten im gesamten der PDW VM. Wenn dies erforderlich ist, wenden Sie sich an den CSS für Weitere Informationen zu erhalten.  
+> Aktualisieren Sie für das Gerät 1 **Configuration Manager** ist nicht ordnungsgemäß ändern das Kennwort für die lokale Administratorkonten in der PDW VM des. Wenn dies erforderlich ist, wenden Sie sich an CSS, weitere Anweisungen zu erhalten.  
   
-**SA**  
-Die **sa** Anmeldung in SQL Server. **SA** ist ein Mitglied der **Sysadmin** festen Serverrolle und SQL Server-Administrator ist. Das Kennwort für die **sa** Anmeldung kann auch geändert werden, mithilfe der **ALTER LOGIN** Anweisung.  
+**sa**  
+Die **sa** SQL Server-Anmeldung. **SA** ist ein Mitglied der **Sysadmin** festen Serverrolle und SQL Server-Administrator ist. Das Kennwort für die **sa** Anmeldung kann auch geändert werden, indem Sie mit der **ALTER LOGIN** Anweisung.  
   
-## <a name="password-requirements"></a>Für das Domänenkennwort  
-Die Anmeldeinformationen des Domänenadministrators und die Anmeldeinformationen des Administrators entsprechen, um die Richtlinien zur kennwortsicherheit für jeden Typ von Anmeldeinformationen. Wenn Sie die Anmeldeinformationen des Domänenadministrators ändern, wird das neue Kennwort aktualisiert, mit der Domäne, falls in der gesamten SQL Server PDW erforderlich.  
+## <a name="password-requirements"></a>Kennwortanforderungen  
+Sowohl der System-Administratoranmeldeinformationen als auch die Anmeldeinformationen des Domänenadministrators an die und die Richtlinien zur kennwortsicherheit, für jeden Typ von Anmeldeinformationen. Wenn Sie die Anmeldeinformationen des Domänenadministrators zu ändern, wird das neue Kennwort in die Domäne aktualisiert bei Bedarf in der gesamten SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW unterstützt nicht das Dollarzeichen (**$**) in der Domänenadministrator oder ein lokaler Administratorkennwörter. Die Zeichen **^ % &** sind jedoch PowerShell diese als Sonderzeichen sieht in Kennwörtern, zulässig. Wenn eines dieser Zeichen in Kennwörtern, für den Systemadministrator oder den SQL Server verwendet werden**sa** Konten (die **AdminPassword** und **PdwSAPassword** Parametern während der Setup) klicken Sie dann setup, einschließlich Installation, UPGRADE, REPLACENODE und PATCHEN, schlägt fehl. Um ein erfolgreiches Upgrade sicherzustellen, dass beim aktuellen Kennwörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kennwörter, sodass sie keine solche Zeichen vor dem Ausführen der Aktualisierung enthalten. Nach Abschluss des Upgrades können Sie diese Kennwörter zurück in ihre ursprünglichen Werte festlegen. Weitere Informationen zu kennwortanforderungen finden Sie unter [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW unterstützt nicht das Dollarzeichen (**$**) in der Administrator der Domäne oder lokaler Administratorkennwörter. Die Zeichen **^ % &** dürfen in Kennwörtern, jedoch PowerShell als Sonderzeichen betrachtet. Wenn eines dieser Zeichen in Kennwörtern, für die vom Systemadministrator oder den SQL Server verwendet werden**sa** Konten (die **AdminPassword** und **PdwSAPassword** Parametern während der Setup) klicken Sie dann setup, einschließlich Installation, UPGRADE, "replaceNode" auf und PATCHEN, schlägt fehl. Um ein erfolgreiches Upgrade sicherzustellen, wenn der aktuelle Kennwörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kennwörter, sodass sie vor dem Ausführen der Aktualisierung keine solche Zeichen enthalten. Nach Abschluss des Upgrades können Sie diese Kennwörter wieder auf ihre ursprünglichen Werte festlegen. Weitere Informationen zu kennwortanforderungen finden Sie unter [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
-## <a name="to-reset-a-password"></a>Zurücksetzen des Kennworts  
+## <a name="to-reset-a-password"></a>Zurücksetzen eines Kennworts  
   
-1.  Herstellen einer Verbindung mit dem Knoten "Zugriffssteuerung", und starten Sie die **Configuration Manager** (**dwconfig.exe**). Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md).  
+1.  Herstellen einer Verbindung den Steuerelementknoten aus, und starten Sie mit der **Configuration Manager** (**dwconfig.exe**). Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Im linken Bereich des der **Configuration Manager**, klicken Sie auf **Kennwortzurücksetzung**.  
+2.  Klicken Sie im linken Bereich die **Configuration Manager**, klicken Sie auf **Zurücksetzen des Kennworts**.  
   
-3.  Wählen Sie den Administrator aus der **Konto** Dropdown-Menü, und geben Sie dann das neue Kennwort in die **Kennwort** und **Kennwort bestätigen** Felder. Klicken Sie auf **übernehmen** zum Speichern der Änderungen.  
+3.  Wählen Sie den Administrator aus der **Konto** Dropdown-Menü, und geben Sie dann auf das neue Kennwort in die **Kennwort** und **Kennwort bestätigen** Felder. Klicken Sie auf **übernehmen** zum Speichern der Änderungen.  
   
-    Änderungen, die Sie für diese Konten stellen wirken sich nicht auf alle aktuell aktiven Sitzungen, aber bei der nächsten Anmeldung für jeden Benutzer angewendet werden.  
+    Auf diese Konten vorgenommene Änderungen wirken sich nicht auf alle aktuell aktiven Sitzungen, aber bei der nächsten Anmeldung für jeden Benutzer gelten.  
   
     ![SQL Server DWConfig, Kennwort](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>Siehe auch  
-[Legen Sie das Administratorkennwort für das Anmelden beim AD-Knoten im Modus "Verzeichnisdienste wiederherstellen" &#40;DSRM&#41; &#40;Analyseplattformsystem&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[Starten Sie den Konfigurations-Manager &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md)  
+[Festlegen des Administratorkennworts für die Anmeldung bei AD-Knoten in der im Verzeichnisdienst-Wiederherstellungsmodus &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

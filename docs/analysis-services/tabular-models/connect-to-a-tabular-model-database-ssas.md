@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469479"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Herstellen einer Verbindung mit einer Datenbank für tabellarische Modelle  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "53072417"
   
  Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, den Assistenten zum Herstellen einer Verbindung zu einer tabellarischen Modelldatenbank auf einem Analysis Services-Remoteserver verwenden, und Sie verfügen nicht über ausreichende Berechtigungen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname >-Sandbox**  
+ **Fehler beim Versuch, eine Verbindung mit der externen Datenquelle herzustellen. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname >-Sandbox**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Sie nicht über ausreichende Berechtigungen für den Analysis Services-Remoteserver verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Ausführen dieses Vorgangs. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann, um diesen Vorgang erneut auszuführen.**  
+ **Fehler beim Versuch, diesen Vorgang auszuführen. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann, um diesen Vorgang erneut auszuführen.**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Excel Services nicht von der Analysis Services-Instanz vertraut wird, in der die Modelldaten bereitgestellt werden. Um diesen Fehler zu beheben, gewähren Sie Excel Services Administratorberechtigung für die Analysis Services-Instanz. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Administratorberechtigungen. Wenn der Fehler weiterhin auftritt, verwenden Sie wieder den Excel Services-Anwendungspool.  
   
