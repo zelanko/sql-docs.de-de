@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640412"
 ---
-# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>Sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
+# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Dient zum Ermitteln, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist.  

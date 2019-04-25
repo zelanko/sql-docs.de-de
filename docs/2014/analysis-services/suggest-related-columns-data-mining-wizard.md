@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757824"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Verbundene Spalten vorschlagen (Data Mining-Assistent)
   Verwenden Sie die Seite **Verbundene Spalten vorschlagen** , um Empfehlungen der **Vorschlagen** -Funktion anzuzeigen, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben. Eingabespalten werden basierend auf ihrer Zuordnung in der Spalte **Vorhersagbar** , die Sie ausgewählt haben, vorab ausgewählt. Falls Sie die Änderungen in diesem Dialogfeld akzeptieren, werden die Änderungen auf der Seite **Trainingsdaten angeben** wiedergegeben.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spaltenname**  
  Zeigt die Eingabespalten an, die Sie auf der Seite **Trainingsdaten angeben** des Assistenten definiert haben.  
   

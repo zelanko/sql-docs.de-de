@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8507be55ae84a3a03fd75871106bc39e0631d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472613"
 ---
 # <a name="cursor-and-lock-characteristics"></a>Cursor und Merkmale der Sperre
 Während die Merkmale eines Cursors auf Funktionen des Anbieters abhängig sind, gelten sich die folgenden vor- und Nachteile in der Regel für die verschiedenen Typen von Cursors und sperren.  

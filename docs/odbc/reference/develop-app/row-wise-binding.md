@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468692"
 ---
 # <a name="row-wise-binding"></a>Zeilenbezogenes Binden
 Bei Verwendung zeilenweise Bindung wird eine Anwendung definiert eine Struktur mit einem oder zwei, oder in einigen Fällen werden drei Elemente für jede Spalte, die für die Daten zurückgegeben werden. Das erste Element enthält den Datenwert, und das zweite Element enthält der Längen-/Indikatorpuffer. Indikatoren und Längenwerte können in separaten Puffer gespeichert werden, durch die deskriptorfelder SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR auf unterschiedliche Werte festlegen; Wenn dies geschehen ist, enthält die Struktur ein drittes Element. Klicken Sie dann die Anwendung weist ein Array dieser Strukturen, die enthält so viele Elemente als Zeilen im Rowset vorhanden sind.  

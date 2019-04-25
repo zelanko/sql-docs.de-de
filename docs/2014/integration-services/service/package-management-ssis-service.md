@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766626"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
   Die Verwaltung von Paketen beinhaltet u. a. die folgenden Tasks:  
@@ -56,7 +56,7 @@ ms.locfileid: "58375348"
   
  Der Ordner **Ausgeführte Pakete** enthält keine Unterordner und ist nicht erweiterbar.  
   
- In der Standardeinstellung die **gespeicherte Pakete** Ordner enthält zwei Ordner: **Dateisystem** und **MSDB**. Im Ordner **Dateisystem** sind die im Dateisystem gespeicherten Pakete aufgelistet. Der Speicherort dieser Dateien wird in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst angegeben. Der Standardordner ist der Paketordner, der sich in %Programme%\Microsoft SQL Server\100\DTS befindet. Der Ordner **MSDB** enthält eine Liste der in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -msdb-Datenbank auf dem Server gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Pakete. Die „sysssispackages“-Tabelle enthält die in msdb gespeicherten Pakete.  
+ Der Ordner **Gespeicherte Pakete** enthält standardmäßig zwei Ordner: **Dateisystem** und **MSDB**. Im Ordner **Dateisystem** sind die im Dateisystem gespeicherten Pakete aufgelistet. Der Speicherort dieser Dateien wird in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst angegeben. Der Standardordner ist der Paketordner, der sich in %Programme%\Microsoft SQL Server\100\DTS befindet. Der Ordner **MSDB** enthält eine Liste der in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -msdb-Datenbank auf dem Server gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Pakete. Die „sysssispackages“-Tabelle enthält die in msdb gespeicherten Pakete.  
   
  Zum Anzeigen der Liste der Pakete im Paketspeicher müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und eine Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellen. Weitere Informationen finden Sie unter [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   

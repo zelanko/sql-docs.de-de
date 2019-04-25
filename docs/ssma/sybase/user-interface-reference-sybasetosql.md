@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626560"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referenz zur Benutzeroberfläche (SybaseToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase.  
@@ -32,11 +32,11 @@ Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes
 |[Data Migration Report Bericht &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Zeigt die Ergebnisse der Daten aus der App Service-Umgebung migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.|  
 |[Data Migration Settings (Einstellungen für die Datenmigration)](data-migration-settings-sybasetosql.md)|Verwenden der **erweiterte Data Migration Settings** Tab, um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Bearbeiten der Typzuordnung &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Verwenden der **neue Typzuordnung** oder **Bearbeiten der Typzuordnung** Dialogfeld zum Erstellen oder bearbeiten die Zuordnung von Datentypen zwischen den Quell- und Ziel-Datenbanken und Datenbankobjekte.|  
-|[Globale Einstellungen &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
+|[Global Settings &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
 |[Globale Einstellungen &#40;Dialogfelder&#41;&#40;SybaseToSQL  &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** konfigurieren – Dialogfeld "und" Warnung Einstellungen im Dialogfeld.|  
-|[Globale Einstellungen &#40;Protokollierung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
+|[Global Settings &#40;Logging&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
 |[Globale Einstellungen &#40;Protokollierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Verwenden der **globale Einstellungen** im Dialogfeld Einstellungen der SSMA für Sybase-Benutzeroberfläche festgelegt werden.|  
-|[Globale Einstellungen &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Verwenden Sie die Seite Tester, der die **GlobalSettings** Dialogfeld die Einstellungen für Tester.|  
+|[Global Settings &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Verwenden Sie die Seite Tester, der die **GlobalSettings** Dialogfeld die Einstellungen für Tester.|  
 |[Neues Projekt &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Verwenden der **neues Projekt** um ein neues SSMA für Sybase-Projekt zu erstellen.|  
 |[Projekteinstellungen &#40;Konvertierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Verwenden Sie die Seite die **Projekteinstellungen** im Dialogfeld, um anzugeben, wie SSMA für Sybase Funktionen und globalen Variablen konvertiert.|  
 |[Projekteinstellungen &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Mithilfe der GUI-Seite des der **Projekteinstellungen** Dialogfeld wird angezeigt, wie viele Daten auf den **Daten** Registerkarte.|  

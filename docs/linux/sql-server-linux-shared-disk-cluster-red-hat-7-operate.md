@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635586"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben Sie Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server
 
@@ -261,7 +261,7 @@ Im Beispiel `partition with quorum` bedeutet, dass ein mehrheitsquorum von Knote
 
     Die folgenden Ports müssen auf allen Knoten, damit Pacemaker kommunizieren können geöffnet sein.
     
-    - ** TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker oder Corosync-Dienste, die ausgeführt wird**
 

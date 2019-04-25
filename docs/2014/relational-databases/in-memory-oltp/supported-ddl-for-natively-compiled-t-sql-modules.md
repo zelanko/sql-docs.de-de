@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467874"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren
   In diesem Thema werden die unterstützten Konstrukte für systemintern kompilierte gespeicherte Prozeduren aufgelistet.  
@@ -37,10 +37,10 @@ ms.locfileid: "48113210"
   
 -   Tabellenwertparameter.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Folgende werden unterstützt:  
   
--   Für Prozeduren: EXECUTE AS SELF, OWNER und Benutzer.  
+-   Für Prozeduren: EXECUTE AS OWNER, Self-Service und Benutzer.  
   
 -   GRANT- und DENY-Berechtigungen in Tabellen und Prozeduren.  
   

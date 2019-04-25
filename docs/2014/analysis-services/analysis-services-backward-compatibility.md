@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635218"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   In den Themen dieses Abschnitts werden die Verhaltensänderungen bei den verschiedenen Versionen von  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]beschrieben.  

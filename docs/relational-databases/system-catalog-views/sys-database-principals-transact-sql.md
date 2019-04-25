@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632680"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "47643158"
 |**create_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal erstellt wurde.|  
 |**modify_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal zum letzten Mal geändert wurde.|  
 |**owning_principal_id**|**int**|ID des Prinzipals, der der Besitzer dieses Prinzipals ist. Alle Prinzipale außer Datenbankrollen müssen im Besitz **Dbo**.|  
-|**SID**|**varbinary(85)**|Sicherheits-ID (SID) des Prinzipals.  NULL für SYS und INFORMATION SCHEMAS.|  
+|**sid**|**varbinary(85)**|Sicherheits-ID (SID) des Prinzipals.  NULL für SYS und INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Falls 1, stellt diese Zeile einen Eintrag für eine der festen Datenbankrollen dar: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader oder db_denydatawriter.|  
-|**authentication_type**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Authentifizierungstyp an. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: keine Authentifizierung<br />1: Instanzauthentifizierung<br />2: Datenbank-Authentifizierung<br />3: Windows-Authentifizierung|  
-|**Datensatz**|**nvarchar(60)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Beschreibung des Authentifizierungstyps. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> NONE: Keine Authentifizierung<br />-Instanz: Instanzauthentifizierung<br />Datenbank: Datenbank-Authentifizierung<br />WINDOWS: Windows-Authentifizierung|  
+|**authentication_type**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Authentifizierungstyp an. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0 : Keine Authentifizierung<br />1 : Instanzauthentifizierung<br />2 : Datenbankauthentifizierung<br />3 : Windows-Authentifizierung|  
+|**authentication_type_desc**|**nvarchar(60)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Beschreibung des Authentifizierungstyps. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> NICHTS: Keine Authentifizierung<br />INSTANZ: Instanzauthentifizierung<br />DATENBANK: Datenbankauthentifizierung<br />FENSTER: Windows-Authentifizierung|  
 |**default_language_name**|**sysname**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die Standardsprache für diesen Prinzipal an.|  
 |**default_language_lcid**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die Standard-LCID für diesen Prinzipal an.|  
 |**allow_encrypted_value_modifications**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer zum Massenkopieren von Daten zwischen Tabellen oder Datenbanken ohne Entschlüsselung der Daten mit Always Encrypted verschlüsselt. Der Standardwert ist OFF. |      
@@ -59,7 +59,7 @@ ms.locfileid: "47643158"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Auflisten aller Berechtigungen von Datenbankprinzipalen  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Auflisten aller Berechtigungen von datenbankprinzipalen  
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Datenbankprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>G. Auflisten von Berechtigungen für Schemaobjekte in einer Datenbank  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Auflisten der Berechtigungen für Schemaobjekte in einer Datenbank  
  Die folgende Abfrage verknüpft sys.database_principals und sys.database_permissions mit sys.objects und sys.schemas, um Berechtigungen aufzulisten, die bestimmten Schemaobjekten gewährt oder verweigert wurden.  
   
 ```  
@@ -91,7 +91,7 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>"C:" Auflisten aller Berechtigungen von datenbankprinzipalen  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Auflisten aller Berechtigungen von datenbankprinzipalen  
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Datenbankprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>"D:" Auflisten der Berechtigungen für Schemaobjekte in einer Datenbank  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Auflisten der Berechtigungen für Schemaobjekte in einer Datenbank  
  Die folgende Abfrage Joins `sys.database_principals` und `sys.database_permissions` zu `sys.objects` und `sys.schemas` beim Auflisten der Berechtigungen erteilt oder verweigert bestimmten Schemaobjekten.  
   
 ```  
@@ -122,7 +122,7 @@ JOIN sys.schemas AS s
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   

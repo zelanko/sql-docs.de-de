@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472646"
 ---
 # <a name="creating-a-connection-string"></a>Erstellen einer Verbindungszeichenfolge
 Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren (das heißt, Parameter), die durch Semikolons getrennt. Zum Beispiel:  

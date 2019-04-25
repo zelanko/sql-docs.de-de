@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758488"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Speichereinstellungen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Speichereinstellungen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie das proaktive Zwischenspeichern, den Speicher und Benachrichtigungseinstellungen für Dimensionen, Cubes, Measuregruppen und Partitionen festlegen. Das Dialogfeld **Speichereinstellungen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  
@@ -32,7 +32,7 @@ ms.locfileid: "48063446"
   
 -   Erweitern Sie eine Measuregruppe, wählen Sie auf der Registerkarte **Partitionen** von **Cube-Designer** eine Partition im Raster für diese Measuregruppe aus, und klicken Sie in **Cube-Designer** auf der Registerkarte **Partitionen** im Bereich **Symbolleiste** auf **Speichereinstellungen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|Werte|  
 |----------|----------------|------------|  

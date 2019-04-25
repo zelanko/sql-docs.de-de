@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628463"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Das erste Verfahren für das Senden von SQL-Anweisungen für das DBMS eingebettet ist SQL. Da SQL keine Variablen und die ablaufsteuerung von Anweisungen verwendet werden, wird er häufig als eine untergeordnete Datenbanksprache verwendet, die ein in einer herkömmlichen Programmiersprache, z. B. C oder COBOL geschriebenes Programm hinzugefügt werden können. Dies ist eine zentralen Überblick über die eingebettete SQL: Platzieren von SQL-Anweisungen in einem Programm auf einem Host Programmiersprache geschrieben. Kurz gesagt, werden die folgenden Verfahren zum Einbetten von SQL-Anweisungen in einer Hostsprache verwendet:  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468627"
 ---
 # <a name="row-status-array"></a>Zeilenstatusarray
 Zusätzlich zu den Daten **SQLFetch** und **SQLFetchScroll** kann ein Array, das den Status der einzelnen Zeilen im Rowset kann zurückgeben. Dieses Array wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR angegeben. Dieses Array muss wird von der Anwendung zugeordnet und so viele Elemente, die von dem SQL_ATTR_ROW_ARRAY_SIZE-Attribut-Anweisung angegeben werden. Die Werte im Array werden durch festgelegt **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, und **SQLSetPos.** Die Werte werden den Status der Zeile und gibt an, ob diese Status geändert hat, seit dem letzten Abruf beschrieben.  

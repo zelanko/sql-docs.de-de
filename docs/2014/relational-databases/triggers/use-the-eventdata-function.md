@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524256"
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen `xml`-Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  Zur Rückgabe von Ereignisdaten sollten Sie die XQuery-`value()`-Methode anstelle der `query()`-Methode verwenden. Die `query()`-Methode gibt in der Ausgabe XML und Ampersand-Escape-CRLF-Instanzen (Carriage Return and Line Feed) zurück, wogegen die `value()`-Methode CRLF-Instanzen zurückgibt, die in der Ausgabe unsichtbar sind.  
   
- Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Mit der rechten Maustaste **DdlDatabaseTriggerLog** , und wählen Sie **Skript für Datenbanktrigger als**. Standardmäßig werden von DDL-Trigger **DdlDatabaseTriggerLog** ist deaktiviert.  
+ Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabaseTriggerLog**, und wählen Sie **Skript für Datenbanktrigger als** aus. Standardmäßig ist der DDL-Trigger **ddlDatabaseTriggerLog** deaktiviert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DDL-Ereignisse](../triggers/ddl-events.md)   

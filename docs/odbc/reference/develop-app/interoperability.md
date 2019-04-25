@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446487"
 ---
 # <a name="interoperability"></a>Interoperabilität
 *Interoperabilität* ist die Möglichkeit einer einzelnen Anwendung mit vielen verschiedenen DBMS-Systeme ausgeführt werden. Die Notwendigkeit zum Schreiben von generischer und interoperabler Anwendungen war eines der der wichtigsten Faktoren, die Sie für die Entwicklung von ODBC. Interoperabilität ist jedoch kein einfacher Pfad, gefolgt von "nicht kompatibel" auf "vollständig interoperabel." Der Pfad enthält zahlreiche Verzweigungen, und jedes erfordert Kompromisse zwischen Funktionen, Geschwindigkeit, Codekomplexität und Zeitpunkt der Entwicklung.  

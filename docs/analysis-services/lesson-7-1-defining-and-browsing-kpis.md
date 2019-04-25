@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von KPIs | Microsoft Docs
+title: Definieren und Durchsuchen von KPIs | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469671"
 ---
-# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lektion 7-1: definieren und Durchsuchen von KPIs
+# <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lektion 7 – 1: definieren und Durchsuchen von KPIs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:  
@@ -60,7 +60,7 @@ In den Aufgaben in dieser Lektion definieren Sie KPIs im [!INCLUDE[ssASnoversion
   
     In der folgenden Abbildung ist die Registerkarte **KPIs** des Cube-Designers dargestellt.  
   
-    ![Registerkarte ' KPIs ', Cube-Designer](../analysis-services/media/l7-kpi-1.gif "Registerkarte ' KPIs ', Cube-Designer")  
+    ![Registerkarte "KPIs", Cube-Designer](../analysis-services/media/l7-kpi-1.gif "Registerkarte ' KPIs ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Neuer KPI** .  
   

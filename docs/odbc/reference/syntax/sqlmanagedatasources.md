@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466012"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Übereinstimmung mit Standards**  
@@ -43,7 +43,7 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HWND*  
+ *hwnd*  
  [Eingabe] Handle des übergeordneten Fensters.  
   
 ## <a name="returns"></a>Rückgabewert  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  System-DSN wird in der HKEY_LOCAL_MACHINE-Eintrag in die Systeminformationen und nicht in der HKEY_CURRENT_USER-Eintrag registriert. Es ist nicht an ein Benutzer meldet sich mit seinem bestimmten Benutzernamen und Kennwort kann jedoch verwendet werden von jedem Benutzer des Computers oder von einem Dienst für automatische systemweiten gebunden. System-DSN ist, jedoch an einem Computer gebunden. Die Möglichkeit der Verwendung von remote-DSNs zwischen Computern wird nicht unterstützt. System-DSNs werden in den Systeminformationen wie folgt registriert:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>Datei-DSNs  
  Eine Datenquelle einen Datenquellennamen ein, keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist. Die Verbindungsinformationen für diese Datenquelle ist in einer DSN-Datei enthalten, die auf einem beliebigen Computer kopiert werden können. Eine Dateidatenquelle möglich freigegeben ist, befindet sich in diesem Fall die DSN-Datei in einem Netzwerk, und gleichzeitig verwendet werden kann von mehreren Benutzern im Netzwerk als der Benutzer den entsprechenden Treiber installiert wurde. Eine Datenquelle kann auch Dateidatenquelle, werden in diesem Fall können sie nur auf einem einzelnen Computer verwendet werden.  

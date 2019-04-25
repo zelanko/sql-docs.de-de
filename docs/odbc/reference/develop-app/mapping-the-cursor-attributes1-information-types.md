@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628907"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Zuordnen der Informationstypen „Cursor Attributes1“
 Wenn eine ODBC-3. *x* Anwendungsaufrufe **SQLGetInfo** in einer ODBC 2.*.x* Treiber mit dem Typ der SQL_XXXX_CURSOR_ATTRIBUTES1-Informationen (für dynamische, nur vorwärts gerichteten, keysetgesteuerte, oder statische Cursor), hängt die Einstellung der Bits, die vom Treiber-Manager zurückgegeben, auf welche die ODBC 2. *x* gibt der Treiber für die entsprechenden ODBC 2. *X* Informationstypen. Die Bits werden festgelegt, wie in der folgenden Tabelle gezeigt.  

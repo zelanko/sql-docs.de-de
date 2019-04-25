@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768411"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
   Nach dem Konfigurieren des Skripttasks im **Skripttask-Editor** schreiben Sie den benutzerdefinierten Code in der Skripttask-Entwicklungsumgebung.  
@@ -47,7 +47,7 @@ ms.locfileid: "58381038"
  Wenn Sie das in einem Skripttask enthaltene Skript erstellen oder ändern, öffnet VSTA ein neues leeres Projekt oder erneut das vorhandene Projekt. Die Erstellung dieses VSTA-Projekts wirkt sich nicht auf die Paketbereitstellug aus, da das Projekt in der Paketdatei gespeichert wird. Der Skripttask erstellt keine weiteren Dateien.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Projektelemente und -klassen im Skripttaskprojekt  
- Standardmäßig umfasst das im VSTA-Fenster <legacyBold>Projektexplorer</legacyBold> angezeigte Skripttaskprojekt nur ein Element, nämlich `ScriptMain`. Das `ScriptMain`-Element enthält wiederum eine einzelne Klasse, die ebenfalls `ScriptMain` heißt. Die Codeelemente in der Klasse variieren abhängig davon, welche Programmiersprache Sie für den Skripttask gewählt haben:  
+ Standardmäßig umfasst das im VSTA-Fenster &lt;legacyBold&gt;Projektexplorer&lt;/legacyBold&gt; angezeigte Skripttaskprojekt nur ein Element, nämlich `ScriptMain`. Das `ScriptMain`-Element enthält wiederum eine einzelne Klasse, die ebenfalls `ScriptMain` heißt. Die Codeelemente in der Klasse variieren abhängig davon, welche Programmiersprache Sie für den Skripttask gewählt haben:  
   
 -   Wenn der Skripttask für die Programmiersprache [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] konfiguriert ist, enthält die `ScriptMain`-Klasse eine öffentliche Unterroutine namens `Main`. Die `ScriptMain.Main`-Unterroutine ist die Methode, die die Laufzeit beim Ausführen des Skripttasks aufruft.  
   

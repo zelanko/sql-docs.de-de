@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Dimension | Microsoft Docs
+title: Definieren einer Dimension. | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467924"
 ---
-# <a name="lesson-2-1---defining-a-dimension"></a>Lektion 2-1: Definieren einer Dimension
+# <a name="lesson-2-1---defining-a-dimension"></a>Lektion 2-1: Definieren einer Dimension.
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 In der folgenden Aufgabe verwenden Sie den Dimensions-Assistenten, um eine Date-Dimension zu erstellen.  
@@ -72,7 +72,7 @@ In der folgenden Aufgabe verwenden Sie den Dimensions-Assistenten, um eine Date-
   
 12. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren eines Cubes](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>Siehe auch  

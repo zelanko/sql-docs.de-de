@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636424"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer
   Dieses Lernprogramm veranschaulicht die Verwendung von registrierten Servern und Objekt-Explorer.  

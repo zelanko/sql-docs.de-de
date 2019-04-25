@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466896"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "50146265"
   
  Wenn Sie mit den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Tools ein Modell generieren, folgen die Namen, die für Objekte erstellt werden, den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Konventionen für Objektbenennung und Namenseindeutigkeit. Da jedoch CSDLBI auf dem Entity Data Framework (EDF) basiert, welches erfordert, dass Namen die Konventionen für C#-Bezeichner einhalten, nimmt der Server, wenn er die CSDLBI-Ausgabe für ein Modell erstellt, die innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Schemas verwendeten Namen und erstellt automatisch neue Objektnamen, die den EDF-Anforderungen entsprechen. In der folgenden Tabelle werden die Vorgänge, durch die die neuen Namen generiert werden, beschrieben.  
   
-|Regel|Aktion|  
+|Rule|Aktion|  
 |----------|------------|  
 |Keine unzulässigen Zeichen|Unzulässige Zeichen werden durch Unterstriche ersetzt.|  
 |Namen müssen eindeutig sein|Wenn zwei Zeichenfolgen gleich sind, wird an eine ein Unterstrich plus eine Zahl angefügt, um sie eindeutig zu machen|  
@@ -123,27 +123,27 @@ ms.locfileid: "50146265"
 ## <a name="additions-to-support-multidimensional-models"></a>Ergänzungen zur Unterstützung mehrdimensionaler Modelle  
  In Version 1.0 der CSDLBI-Anmerkungen wurden nur tabellarische Modelle unterstützt. Version 1.1. wurde durch die Unterstützung mehrdimensionaler Modelle (OLAP-Cubes) erweitert, die mithilfe herkömmlicher BI-Entwicklungstools erstellt wurden. Daher können nun zur Berichterstellung XML-Anforderungen für ein mehrdimensionales Modell ausgeben werden und eine CSDLBI-Definition des Modells kann empfangen werden.  
   
- **Cubes:** einer SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus umfassen. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
+ **Cubes:** Eine SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus umfassen. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
   
  Die Darstellung eines Cubes ähnelt ansonsten sehr stark der einer tabellarischen Modelldatenbank. Der Cubename und der Cube entsprechen dem Namen und dem Bezeichner der tabellarischen Datenbank.  
   
- **Dimensionen:** eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass, selbst wenn in einer Perspektive nicht enthalten ist, eine Dimension, die im Modell enthalten ist in der CSDL-Ausgabe, die markiert dargestellt wird **Hidden**.  
+ **Dimensionen:** Eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass, selbst wenn in einer Perspektive nicht enthalten ist, eine Dimension, die im Modell enthalten ist in der CSDL-Ausgabe, die markiert dargestellt wird **Hidden**.  
   
- **Perspektiven:** ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspektiven:** Ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hierarchien:** Hierarchien unterstützt und in CSDLBI als Satz von Ebenen dargestellt werden.  
+ **Hierarchien:** Hierarchien werden unterstützt und wird in CSDLBI als Satz von Ebenen dargestellt.  
   
- **Member:** Unterstützung für das Standardelement wurde hinzugefügt, und Standardwerten werden die CSDLBI-Ausgabe automatisch hinzugefügt.  
+ **Mitglieder:** Unterstützung für das Standardelement wurde hinzugefügt, und Standardwerten werden die CSDLBI-Ausgabe automatisch hinzugefügt.  
   
- **Berechnete Elemente:** mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnetes Element des **alle** mit einem einzelnen realen Element.  
+ **Berechnete Elemente:** Mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnetes Element des **alle** mit einem einzelnen realen Element.  
   
- **Dimension-Attribute:** In CSDLBI-Ausgabe Dimensionsattribute unterstützt und automatisch als nicht aggregierbar gekennzeichnet sind.  
+ **Dimensionsattribute:** Dimensionsattribute werden in CSDLBI-Ausgabe unterstützt und automatisch als nicht aggregierbar gekennzeichnet.  
   
  **KPIs:** KPIs wurden in CSDLBI, Version 1.1 unterstützt, aber die Darstellung geändert hat. Bisher war ein KPI eine Eigenschaft eines Measures. In Version 1.1 kann das KPI-Element einem Measure hinzugefügt werden.  
   
- **Neue Eigenschaften:** zusätzliche Attribute wurden hinzugefügt, um DirectQuery-Modelle zu unterstützen.  
+ **Neue Eigenschaften:** Zusätzliche Attribute wurden hinzugefügt, um DirectQuery-Modelle zu unterstützen.  
   
- **Einschränkungen:** zellensicherheit wird nicht unterstützt.  
+ **Einschränkungen:** Zellensicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

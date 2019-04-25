@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee56d8f285eb3e054241ac912b552e55665a552
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766902"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Resultsets im Task „SQL ausführen“
   In einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket ist es vom Typ des von dem Task verwendeten SQL-Befehls abhängig, ob an den Task „SQL ausführen“ ein Resultset zurückgegeben wird. Beispielsweise gibt eine SELECT-Anweisung in der Regel ein Resultset zurück, eine INSERT-Anweisung jedoch nicht.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635632"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Erweiterter Data Mining-Abfrage-Editor
   Die **erweiterten Data Mining Query Editor** ist ein Tool zum Erstellen benutzerdefinierter Modelle und Abfragen können.  
@@ -37,7 +37,7 @@ ms.locfileid: "48072800"
  Verwenden Sie diese Schaltfläche, um den Editor zwischen einem Text-Editor, zu wechseln, in dem Sie DMX-Anweisungen direkt schreiben können; und die **Abfragegenerator**, dessen Hilfe Sie eine DMX-Anweisung erstellen.  
   
 > [!NOTE]  
->  **Warnung:** , wenn Sie die zwischen Sichten wechseln, bevor die Abfrage ausgeführt wurde, wird eine Meldung angezeigt, die besagt, dass Sie einige Änderungen verloren gehen können. Wenn die DMX-Anweisung gültig ist, in vielen Fällen ist die **Abfragegenerator** diese Änderungen erfolgreich konvertiert. Wenn Sie jedoch eine besonders komplexe DMX-Anweisung erstellt haben, sollten Sie Ihre Arbeit unbedingt speichern, bevor Sie die Ansicht wechseln.  
+>  **Warnung:** Wenn Sie die Ansichten wechseln, bevor die Abfrage ausgeführt wurde, wird eine Meldung an, die besagt, dass Sie einige Änderungen verloren gehen können. Wenn die DMX-Anweisung gültig ist, in vielen Fällen ist die **Abfragegenerator** diese Änderungen erfolgreich konvertiert. Wenn Sie jedoch eine besonders komplexe DMX-Anweisung erstellt haben, sollten Sie Ihre Arbeit unbedingt speichern, bevor Sie die Ansicht wechseln.  
   
  **DMX-Vorlagen**  
  Klicken Sie auf diese Option, und wählen Sie aus einer Liste von Vorlagen aus, die DMX-Beispiele enthalten. Die Vorlagen stellen praktisch alle Modell- oder Vorhersageabfragetypen bereit, die Sie benötigen, einschließlich Abfragen, die geschachtelte Tabellen verwenden, und DMX-Anweisungen zur Verwaltung von Modellen. Auch wenn Sie mit der Verwendung von DMX vertraut sind, können Sie mit den Vorlagen u. U. Zeit sparen, weil Sie direkt die richtige Syntax erhalten.  

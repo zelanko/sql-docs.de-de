@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768002"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>SQL-Anweisung CREATE TABLE (SQL Server-Import/Export-Assistent)
   Verwenden der **SQL­Anweisung Create Table** im Dialogfeld, um die Anweisung anzuzeigen, die automatisch generiert wurde, oder für Ihre Zwecke ändern. Wenn Sie diese Anweisung ändern, müssen Sie möglicherweise auch entsprechende Änderungen an den Spaltenzuordnungen vornehmen und daher die bearbeitete SQL-Anweisung anschließend manuell warten.  

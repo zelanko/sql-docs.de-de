@@ -1,5 +1,5 @@
 ---
-title: Dividieren (MDX) | Microsoft Docs
+title: Dividieren (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471311"
 ---
 # <a name="divide-mdx"></a>Dividieren (MDX)
 
@@ -29,10 +29,10 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zähler*  
+ *numerator*  
  Der Dividend oder Zahl dividiert werden soll.  
   
- *Nenner*  
+ *denominator*  
  Der Divisor oder Zahl, durch die dividiert werden soll.  
   
  *alternateresult*  
