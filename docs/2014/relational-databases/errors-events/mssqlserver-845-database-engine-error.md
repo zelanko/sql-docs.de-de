@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_845 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 845 (Database Engine error)
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
@@ -13,19 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761928"
 ---
 # <a name="mssqlserver845"></a>MSSQLSERVER_845
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Details  
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|845|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -33,10 +34,10 @@ ms.locfileid: "48100700"
 |Meldungstext|Timeout beim Warten auf Pufferlatchtyp %d für Seite %S_PGID, Datenbank-ID %d.|  
   
 ## <a name="explanation"></a>Erklärung  
- Ein Prozess hat darauf gewartet, einen Latch abzurufen, doch der Prozess hat so lange gewartet, bis die Zeitgrenze überschritten wurde und kein Latch abgerufen werden konnte. Dies kann auftreten, wenn das Ausführen eines E/A-Vorgangs zu lange dauert, was normalerweise daraus resultiert, dass Systemprozesse durch andere Tasks blockiert werden. In manchen Fällen kann dieser Fehler auch das Ergebnis eines Hardwarefehlers sein.  
+Ein Prozess hat darauf gewartet, einen Latch abzurufen, doch der Prozess hat so lange gewartet, bis die Zeitgrenze überschritten wurde und kein Latch abgerufen werden konnte. Dies kann auftreten, wenn das Ausführen eines E/A-Vorgangs zu lange dauert, was normalerweise daraus resultiert, dass Systemprozesse durch andere Tasks blockiert werden. In manchen Fällen kann dieser Fehler auch das Ergebnis eines Hardwarefehlers sein.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Durch folgende Aktionen kann dieser Fehler verhindert werden:  
+Durch folgende Aktionen kann dieser Fehler verhindert werden:  
   
 -   Reduzieren Sie die Arbeitsauslastung.  
   
@@ -46,6 +47,5 @@ ms.locfileid: "48100700"
   
 -   Wenn kritische Fehler, z. B. Assert-Vorgänge, häufig auftreten, beheben Sie diese Probleme.  
   
- Wenn der Fehler wiederholt auftritt, wenden Sie sich an den Microsoft-Kundendienst und -Support.  
-  
+Wenn der Fehler wiederholt auftritt, wenden Sie sich an den Microsoft-Kundendienst und -Support.  
   

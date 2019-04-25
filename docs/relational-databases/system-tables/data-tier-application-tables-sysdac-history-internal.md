@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471139"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "47810387"
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  
 |**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann verknüpft werden, auf die **Instance_id** Spalte [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Bezeichner des Aktionstyps:<br /><br /> **0** = bereitstellen<br /><br /> **1** = erstellen<br /><br /> **2** = umbenennen<br /><br /> **3** = trennen<br /><br /> **4** = löschen|  
-|**action_type_name**|**h. varchar(19)**|Name des Aktionstyps:<br /><br /> **Bereitstellen**<br /><br /> **create**<br /><br /> **Umbenennen**<br /><br /> **Trennen**<br /><br /> **delete**|  
+|**action_type_name**|**varchar(19)**|Name des Aktionstyps:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = DACPAC-Datei<br /><br /> **1** =-Anmeldung<br /><br /> **2** = Datenbank|  
 |**dac_object_type_name**|**varchar(8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **DACPAC-Datei** = DAC-Instanz<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
-|**action_status_name**|**varchar(11)**|Aktueller Status der Aktion:<br /><br /> **Ausstehend**<br /><br /> **Erfolg**<br /><br /> **fail**|  
+|**action_status_name**|**varchar(11)**|Aktueller Status der Aktion:<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**Erforderlich**|**bit**|Wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet, wenn das Rollback eines DAC-Vorgangs ausgeführt wird.|  
 |**dac_object_name_pretran**|**sysname**|Name des Objekts, bevor ein Commit für die Transaktion ausgeführt wird, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
 |**dac_object_name_posttran**|**sysname**|Name des Objekts, nachdem ein Commit für die Transaktion ausgeführt wurde, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
 |**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript, das eine Aktion für eine Datenbank oder einen Anmeldenamen implementiert.|  
-|**Nutzlast**|**varbinary(max)**|DAC-Paketdefinition, die in einer binären codierten Zeichenfolge gespeichert ist.|  
+|**payload**|**varbinary(max)**|DAC-Paketdefinition, die in einer binären codierten Zeichenfolge gespeichert ist.|  
 |**Kommentare**|**varchar(max)**|Zeichnet die Anmeldung eines Benutzers auf, der potenziellen Datenverlust in einem DAC-Upgrade als akzeptabel angegeben hat.|  
 |**error_string**|**nvarchar(max)**|Fehlermeldung, die im Fall eines Fehler generiert wird.|  
 |**created_by**|**sysname**|Der Anmeldename, unter dem die Aktion, die diesen Eintrag erstellt hat, gestartet wurde.|  

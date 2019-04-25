@@ -1,5 +1,5 @@
 ---
-title: Microsoft Time Series-Algorithmus | Microsoft Docs
+title: Microsoft Time Series-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758077"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34018537"
   
  Die Kombination der Quelldaten und der Vorhersagedaten wird als *Reihe*bezeichnet.  
   
- ![Ein Beispiel für eine Zeitreihe](../../analysis-services/data-mining/media/time-series.gif "ein Beispiel für eine Zeitreihe")  
+ ![Ein Beispiel für eine Zeitreihe](../../analysis-services/data-mining/media/time-series.gif "ein Beispiel für ein Zeitreihenmodell")  
   
  Eine wichtige Funktion des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus besteht in der Möglichkeit, Kreuzvorhersagen zu erstellen. Wenn Sie den Algorithmus mit zwei separaten, jedoch miteinander verknüpften Reihen trainieren, können Sie das daraus resultierende Modell dazu verwenden, das Ergebnis einer Reihe basierend auf dem Verhalten der anderen Reihe vorherzusagen. Beispiel: Die Verkaufsbeobachtungen zu einem Produkt können die Verkaufsprognosen für ein anderes Produkt beeinflussen.  Eine Kreuzvorhersage dient auch zum Erstellen eines allgemeinen Modells, das auf mehrere Reihen angewendet werden kann. Zum Beispiel sind die Vorhersagen für eine bestimmte Region instabil, da der Reihe Daten guter Qualität fehlen.  Sie könnten aber ein allgemeines Modell mit einem Durchschnittswert für alle vier Regionen trainieren und das Modell anschließend auf die einzelne Reihe anwenden, um für jede Region stabilere Prognosen zu erstellen.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "34018537"
   
  In beiden Beispielen können Sie neue künftige Verkäufe und Mengen für jedes Produkt vorhersagen. Neue Werte für Produkt oder Zeit können nicht vorhergesagt werden.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset, dessen Reihen als Spaltenwerte dargestellt sind  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset mit Reihen als Spaltenwerte dargestellt sind  
  In diesem Beispiel wird die folgende Tabelle von Eingabefällen verwendet:  
   
-|TimeID|Product|Sales|Menge|  
+|TimeID|Produkt|Sales|Menge|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018537"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. So entsteht ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_Verkauf, A_Menge, B_Verkauf und B_Menge.  
+ In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. Erstellt ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_verkauf, a_menge, b_verkauf und b_menge.  
   
  Da Sie die Produkte außerdem auf verschiedene Spalten verteilt haben, müssen Sie keine zusätzliche Reihenschlüsselspalte angeben. Alle Spalten im Modell sind entweder eine Fallreihenspalte oder eine vorhersagbare Spalte.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "34018537"
 -   Unterstützt Drillthrough.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Technische Referenz für Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Miningmodellinhalt von Zeitreihenmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

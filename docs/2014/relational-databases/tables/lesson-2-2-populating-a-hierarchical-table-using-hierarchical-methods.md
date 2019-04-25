@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760860"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Auffüllen einer hierarchischen Tabelle mit hierarchischen Methoden
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hat 8 Mitarbeiter, die in der Marketingabteilung arbeiten. Die Angestelltenhierarchie sieht ungefähr wie folgt aus:  
@@ -61,11 +61,11 @@ ms.locfileid: "48058045"
     /            Ox      0        6          David   Marketing Manager  
     ```  
   
- Wie in der vorigen Lektion verwenden wir die `ToString()` Methode zum Konvertieren der `hierarchyid` -Datentyp in ein leichter verständliches Format.  
+ Wie in der vorigen Lektion verwenden wir die Methode `ToString()`, um den `hierarchyid`-Datentyp in ein leichter verständliches Format zu konvertieren.  
   
 ### <a name="to-insert-a-subordinate-employee"></a>So fügen Sie einen unterstellten Mitarbeiter ein  
   
-1.  **Sariya** berichtet **David**. Einzufügende **Sariyas** Knoten müssen Sie erstellen eine entsprechende **OrgNode** Wert des Datentyps `hierarchyid`. Der folgende Code erstellt eine Variable des Datentyps `hierarchyid` und füllt sie mit dem OrgNode-Stammwert der Tabelle. Diese Variable wird zusammen mit der Methode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) verwendet, um eine Zeile einzufügen, die den untergeordneten Knoten darstellt. `GetDescendant` übernimmt zwei Argumente. Für die Argumentwerte gelten die folgenden Optionen:  
+1.  **Sariya** berichtet **David**. Einzufügende **Sariyas** Knoten müssen Sie erstellen eine entsprechende **OrgNode** Wert des Datentyps `hierarchyid`. Das folgende Beispiel erstellt eine Variable des Datentyps `hierarchyid` und füllt sie mit dem OrgNode-Stammwert der Tabelle. Diese Variable wird zusammen mit der Methode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) verwendet, um eine Zeile einzufügen, die den untergeordneten Knoten darstellt. `GetDescendant` übernimmt zwei Argumente. Für die Argumentwerte gelten die folgenden Optionen:  
   
     -   Ist parent NULL, gibt `GetDescendant` NULL zurück.  
   

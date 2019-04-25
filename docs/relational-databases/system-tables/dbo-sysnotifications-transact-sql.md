@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470702"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47735758"
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|ID der Warnung.|  
 |**operator_id**|**int**|ID des Operators, an den diese Benachrichtigung gesendet werden soll.|  
-|**notification_method**|**tinyint**|Benachrichtigungsmethode:<br /><br /> **1** = E-mail<br /><br /> **2** = Pager<br /><br /> **4** = **NET SEND**<br /><br /> **7** = all|  
+|**notification_method**|**tinyint**|Benachrichtigungsmethode:<br /><br /> **1** = E-mail<br /><br /> **2** = Pager<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

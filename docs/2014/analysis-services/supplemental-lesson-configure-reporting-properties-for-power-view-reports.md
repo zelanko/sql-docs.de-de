@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757964"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
   In dieser ergänzenden Lektion legen Sie Berichterstellungseigenschaften für das Projekt Adventure Works Internet Sales Model fest. Berichterstellungseigenschaften erleichtern Endbenutzern das Auswählen und Anzeigen von Modelldaten in Power View. Zusätzlich legen Sie Eigenschaften fest, um bestimmte Spalten und Tabellen auszublenden und neue Daten zur Verwendung in Diagrammen zu erstellen.  
@@ -25,7 +25,7 @@ ms.locfileid: "53363462"
   
  In dieser Lektion wird nicht beschrieben, wie Power View-Berichte erstellt und verwendet werden. Diese Lektion bietet Entwicklern tabellarischer Modelle eine Einführung in die Eigenschaften und Einstellungen, mit denen die Darstellung der Modelldaten in Power View beeinflusst wird. Weitere Informationen zum Erstellen von Power View-Berichten finden Sie unter [Lernprogramm: Erstellen ein Beispielberichts in Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Diese ergänzende Lektion ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
@@ -161,7 +161,7 @@ ms.locfileid: "53363462"
      **Datum**  
   
     > [!NOTE]  
-    >  Da die Tabelle „Date“ mithilfe der Einstellung „Als Datumstabelle markieren“ in „Lektion 7: Markieren als Datumstabelle“ als Datumstabelle für das Modell ausgewählt wurde und die Spalte „Date“ in der Tabelle „Date“ als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft „Zeilenbezeichner“ für die Spalte „Date“ automatisch auf „True“ festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
+    >  Da die Date-Tabelle ausgewählt wurde, wie die Tabelle "date" mithilfe der markieren als Datumstabelle festlegen, "in" Lektion 7: Als Datumstabelle markieren, die Datumsspalte in der Tabelle Date als Spalte als eindeutiger Bezeichner, die Zeilen-ID-Eigenschaft für die Date-Spalte verwendet werden automatisch auf "true" festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
   
     |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  

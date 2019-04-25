@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766992"
 ---
 # <a name="progress-tab"></a>Status (Registerkarte)
   Verwenden Sie die Registerkarte **Status** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer, um den Status der Ausführung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets anzuzeigen, wenn Sie das Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ausführen. Die Registerkarte **Status** listet die Startzeit, die Beendigungszeit und die für die Überprüfung und Ausführung des Pakets und der enthaltenen ausführbaren Dateien verstrichene Zeit sowie sämtliche Informationen oder Warnungen für das Paket, Statusbenachrichtigungen, Informationen zum Erfolg oder Fehlschlagen des Pakets und sämtliche Fehlermeldungen, die bei der Ausführung des Pakets generiert wurden, auf.  

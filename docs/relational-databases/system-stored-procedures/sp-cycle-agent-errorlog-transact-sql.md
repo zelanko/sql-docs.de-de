@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfb1f3ef9dc8bdac81ed7c3a3a490ca91f73ff23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507195"
 ---
 # <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Schließt die aktuelle Fehlerprotokolldatei des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents und nummeriert die Fehlerprotokollerweiterungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents wie bei einem Serverneustart durch. Das neue Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents enthält eine Zeile, die anzeigt, dass das neue Protokoll erstellt wurde.  
+  Schließt die aktuelle Fehlerprotokolldatei des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents und nummeriert die Fehlerprotokollerweiterungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents wie bei einem Serverneustart durch. Das neue Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents enthält eine Zeile, die anzeigt, dass das neue Protokoll erstellt wurde.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_cycle_agent_errorlog
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes Mal, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird gestartet, die aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokoll wird umbenannt in **SQLAgent. 1**; **SQLAgent. 1** wird **SQLAgent. 2**, **SQLAgent. 2** wird **SQLAgent. 3**und so weiter. Mit**sp_cycle_agent_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
+ Bei jedem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents wird das aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokoll in **SQLAgent.1**umbenannt, **SQLAgent.1** wird in **SQLAgent.2**umbenannt, **SQLAgent.2** wird in **SQLAgent.3**umbenannt usw. Mit**sp_cycle_agent_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
   
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
@@ -54,7 +54,7 @@ sp_cycle_agent_errorlog
  Die Ausführungsberechtigungen für **sp_cycle_agent_errorlog** sind auf die Mitglieder der festen Serverrolle **sysadmin** beschränkt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird das Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents durchnummeriert.  
+ Im folgenden Beispiel wird das Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents durchnummeriert.  
   
 ```  
 USE msdb ;  

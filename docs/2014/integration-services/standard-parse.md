@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a6d0b88805c1e6fb86e7656d96cc0be7fa045f8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766303"
 ---
 # <a name="standard-parse"></a>Standard Parse
   Die Standardanalyse enthält gebietsschemabezogene Analyseroutinen, die alle in Oleaut32.dll und Ole2dsip.dll verfügbaren Datentypkonvertierungen der APIs für die automatische Datentypkonvertierung unterstützen. Die Standardanalyse entspricht den OLE DB-Analyse-APIs.  

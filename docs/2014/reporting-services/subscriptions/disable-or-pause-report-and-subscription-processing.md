@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510627"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Anhalten der Berichts- und Abonnementverarbeitung
   Es ist nicht möglich, einen Bericht oder ein Abonnement direkt anzuhalten. Sie können die Berichts- und Abonnementverarbeitung jedoch vor Beginn der Verarbeitung oder beim Herstellen der Verbindung zu einer Datenquelle unterbrechen. Wenn Sie den Benutzern den Zugriff auf einen Bericht oder ein Abonnement verwehren, können Sie ebenfalls dessen Ausführung verhindern.  

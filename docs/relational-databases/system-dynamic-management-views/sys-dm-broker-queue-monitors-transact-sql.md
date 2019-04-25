@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760124"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47779858"
 |**state**|**nvarchar(32)**|Status des Überwachungsservers. Lässt NULL-Werte zu. Folgende Werte sind möglich:<br /><br /> **INAKTIV**<br /><br /> **BENACHRICHTIGT**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Zeitpunkt, zu dem bei einer RECEIVE-Anweisung aus der Warteschlange zuletzt ein leeres Ergebnis zurückgegeben wurde. Lässt NULL-Werte zu.|  
 |**last_activated_time**|**datetime**|Zeitpunkt, zu dem die Warteschlangenüberwachung zuletzt eine gespeicherte Prozedur aktiviert hat. Lässt NULL-Werte zu.|  
-|**tasks_waiting**|**int**|Anzahl von Sitzungen, die zurzeit in einer RECEIVE-Anweisung auf diese Warteschlange warten. Lässt NULL-Werte zu.<br /><br /> Hinweis: Diese Zahl umfasst auch eine beliebige Sitzung, die Ausführung einer Receive-Anweisung, unabhängig davon, ob die Sitzung in die warteschlangenüberwachung gestartet wurde. Dies gilt beim Verwenden von WAITFOR zusammen mit RECEIVE. Im Wesentlichen warten diese Tasks darauf, dass Nachrichten in der Warteschlange eintreffen.|  
+|**tasks_waiting**|**int**|Anzahl von Sitzungen, die zurzeit in einer RECEIVE-Anweisung auf diese Warteschlange warten. Lässt NULL-Werte zu.<br /><br /> Hinweis: Diese Zahl umfasst eine beliebige Sitzung, die Ausführung einer Receive-Anweisung, unabhängig davon, ob die Sitzung in die warteschlangenüberwachung gestartet wurde. Dies gilt beim Verwenden von WAITFOR zusammen mit RECEIVE. Im Wesentlichen warten diese Tasks darauf, dass Nachrichten in der Warteschlange eintreffen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509822"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans und RollbackTrans-Methode – Beispiel (VC++)
 In diesem Beispiel ändert den Book-Typ, der alle Psychologiebücher in die ***Titel*** Tabelle der Datenbank. Nach der [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode startet eine Transaktion, die alle Änderungen an isoliert die ***Titel*** Tabelle, die [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode speichert die Änderungen. Können Sie die [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode, um die Änderungen rückgängig zu machen, die Sie unter Verwendung des gespeicherten der [Update](../../../ado/reference/ado-api/update-method.md) Methode.  

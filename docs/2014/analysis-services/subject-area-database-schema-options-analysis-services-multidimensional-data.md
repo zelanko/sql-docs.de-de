@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e608f6ca210f1d86a58b469145a9840f7c25ba2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758500"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Schemaoptionen für die Themenbereichsdatenbank (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Seite **Schemaoptionen für die Themenbereichsdatenbank** können Sie die Generierung des Schemas steuern und definieren, wie Daten erhalten bleiben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Besitzendes schema**  
  Gibt den Namen des Schemas innerhalb der neuen Themenbereichsdatenbank an.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48216663"
 > [!NOTE]  
 >  Diese Option ist nur aktiviert, wenn der Schemagenerierungs-Assistent von einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt aus mithilfe von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Projektmodus aufgerufen wird.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Auffüllen|Die Themenbereichs-Zeittabellen werden aufgefüllt.|  
 |Nicht auffüllen|Die Themenbereichs-Zeittabellen werden nicht aufgefüllt.|  

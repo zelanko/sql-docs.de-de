@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759944"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Windows- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Meldung, die vom Datenbank-E-Mail-System zurückgegeben wird. (Meldung bezieht sich in diesem Kontext z. B. auf eine Fehlermeldung, nicht auf eine E-Mail-Nachricht.) Konfigurieren der **Protokolliergrad** Parameter mithilfe der **Systemparameter konfigurieren** im Dialogfeld des e-Mail-Datenbankkonfigurations-Assistenten, oder die [Sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)gespeicherte Prozedur, um zu bestimmen, welche Meldungen zurückgegeben werden.  
+  Enthält eine Zeile für jede Windows- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Meldung, die vom Datenbank-E-Mail-System zurückgegeben wird. (Die Nachricht in diesem Kontext bezieht sich auf eine Nachricht z. B. eine Fehlermeldung, die nicht in einer e-Mail-Nachricht.) Konfigurieren der **Protokolliergrad** Parameter mithilfe der **Systemparameter konfigurieren** im Dialogfeld des e-Mail-Datenbankkonfigurations-Assistenten, oder die [Sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)gespeicherte Prozedur, um zu bestimmen, welche Meldungen zurückgegeben werden.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

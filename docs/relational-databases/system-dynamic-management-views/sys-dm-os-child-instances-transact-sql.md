@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62504963"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53203449"
   
  Die Informationen, die von zurückgegeben **Sys. dm_os_child_instances** kann verwendet werden, zum Ermitteln des Status jeder Benutzerinstanz (Heart_beat) und des Pipenamens (Instance_pipe_name) zu erhalten, die verwendet werden kann, um eine Verbindung mit der Benutzer zu erstellen. -Zielinstanz [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder SQLCmd. Die Verbindung zur Benutzerinstanz kann erst hergestellt werden, wenn die Benutzerinstanz von einem externen Vorgang, wie z. B. einer Clientanwendung, gestartet worden ist. Mit den SQL-Verwaltungstools selbst können keine Benutzerinstanzen gestartet werden.  
   
-> **HINWEIS:** Benutzerinstanzen sind als Funktion nur in [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] verfügbar.  
+> **HINWEIS:** Benutzerinstanzen sind eine Funktion von [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] nur.  
 > 
 > **Beachten Sie** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_child_instances**.  
   

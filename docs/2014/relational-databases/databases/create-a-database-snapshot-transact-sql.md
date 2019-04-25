@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762346"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmomentaufnahme kann nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nicht unterstützt.  
@@ -26,7 +26,7 @@ ms.locfileid: "52768332"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
      [Bewährte Methode: Benennen von Datenbankmomentaufnahmen](#Naming)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52768332"
   
 -   [Bewährte Methode: Beschränken der Anzahl von Datenbankmomentaufnahmen](#Limiting_Number)  
   
--   [Bewährte Methode: Clientverbindungen mit einer Datenbank-Momentaufnahme](#Client_Connections)  
+-   [Bewährte Methode: Clientverbindungen mit einer Datenbankmomentaufnahme](#Client_Connections)  
   
 ####  <a name="Naming"></a> Bewährte Methode: Benennen von Datenbankmomentaufnahmen  
  Vor dem Erstellen von Momentaufnahmen müssen Sie unbedingt überlegen, wie Sie diese benennen. Jede Datenbankmomentaufnahme erfordert einen eindeutigen Datenbanknamen. Um den Verwaltungsaufwand zu reduzieren, kann der Name einer Momentaufnahme Informationen enthalten, mit denen die Datenbank identifiziert wird:  
@@ -88,7 +88,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  Wenn Sie eine Datenbankmomentaufnahme wiederherstellen möchten, müssen Sie andere Momentaufnahmen in dieser Datenbank löschen.  
   
-####  <a name="Client_Connections"></a> Bewährte Methode: Clientverbindungen mit einer Datenbankmomentaufnahme  
+####  <a name="Client_Connections"></a> Bewährte Methode: Clientverbindungen mit einer Datenbank-Momentaufnahme  
  Zur Verwendung einer Datenbankmomentaufnahme müssen die Clients wissen, wo sie diese finden. Die Benutzer können aus einer Datenbankmomentaufnahme lesen, während eine andere Datenbankmomentaufnahme erstellt oder gelöscht wird. Wenn Sie jedoch eine vorhandenen Momentaufnahme durch eine neue Momentaufnahme ersetzen, müssen Sie Clients an die neue Momentaufnahme umleiten. Die Benutzer können mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]manuell eine Verbindung mit einer Datenbankmomentaufnahme herstellen. Für die Unterstützung einer Produktionsumgebung sollten Sie jedoch eine programmatische Lösung erstellen, die Berichterstellungsclients transparent an die neueste Momentaufnahme der Datenbank weiterleitet.  
   
 ###  <a name="Security"></a> Sicherheit  

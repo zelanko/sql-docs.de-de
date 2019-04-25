@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762383"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
     
@@ -25,12 +25,12 @@ ms.locfileid: "48143050"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7905|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Meldungstext|Datenbankfehler: Das Verzeichnis 'DIRECTORY' stellt kein gültiges Filestream-Verzeichnis dar.|  
+|Meldungstext|Datenbankfehler: Das Verzeichnis 'DIRECTORY' ist kein gültiges Filestream-Verzeichnis.|  
   
 ## <a name="explanation"></a>Erklärung  
  Der Name eines Rowsetverzeichnisses ist die Partitions-ID der Partition. Dies gilt nicht für spezielle Rowsetverzeichnisnamen, z. B. "ghost". Wenn ein Rowsetverzeichnisname nicht in eine Partitions-ID konvertiert werden kann, handelt es sich bei dem Verzeichnis nicht um ein gültiges Rowsetverzeichnis.  

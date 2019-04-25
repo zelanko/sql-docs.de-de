@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760768"
 ---
 # <a name="descriptor-handles"></a>Deskriptorhandles
 Ein *Deskriptor* ist eine Auflistung von Metadaten, die die Parameter der SQL-Anweisung oder die Spalten eines Resultsets zu beschreiben, wie von der Anwendung oder Treiber (auch bekannt als die *Implementierung*). Daher kann ein Deskriptor einer der vier Rollen ausfüllen:  
