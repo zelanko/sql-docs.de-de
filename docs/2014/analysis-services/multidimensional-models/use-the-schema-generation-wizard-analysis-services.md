@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740740"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Verwenden des Schemagenerierungs-Assistenten (Analysis Services)
   Beim Schemagenerierungs-Assistenten müssen während der Generierungsphase nur wenige Informationen eingegeben werden. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  
@@ -33,7 +33,7 @@ ms.locfileid: "48210170"
   
 -   Starten Sie den Assistenten innerhalb des Dimensions-Assistenten, indem Sie auf der letzten Seite des Assistenten auf das Kontrollkästchen **Schema jetzt generieren** klicken.  
   
-## <a name="step-1-specify-targets"></a>Schritt 1: Angeben von Zielen  
+## <a name="step-1-specify-targets"></a>Schritt 1: Ziele angeben  
  Sie müssen die Datenquellensicht (Data Source View, DSV) angeben, in der der Schemagenerierungs-Assistent das Schema für die Themenbereichsdatenbank generieren soll. Obwohl Sie eine vorhandene DSV auswählen können, erstellen Sie in der Regel eine neue Sicht auf Grundlage einer Datenquelle. Sie können die Datenquelle basierend auf einer vorhandenen oder neuen Verbindung oder basierend auf einem anderen Objekt erstellen. Der Schemagenerierungs-Assistent generiert das Schema für die Themenbereichsdatenbank in der Datenbank, auf die die Datenquelle verweist, sowie in der Datenquellensicht. Dabei erstellt der Schemagenerierungs-Assistent nicht die Themenbereichsdatenbank selbst, sondern das relationale Schema zur Unterstützung der Cubes und Dimensionen in einer vorhandenen Datenbank, die Sie angeben.  
   
  Wenn der Schemagenerierungs-Assistent die zugrunde liegenden Objekte erstellt, bindet er die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dimensionen und -Cubes mithilfe von Datenquellensicht-Bindungen an die generierten Tabellen und Spalten.  
@@ -41,7 +41,7 @@ ms.locfileid: "48210170"
 > [!NOTE]  
 >  Um die Bindung für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dimensionen und -Cubes an zuvor generierte Objekte aufzuheben, löschen Sie die Datenquellensicht, an die die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen gebunden sind, und definieren Sie anschließend die neue Datenquellensicht für die Cubes und Dimensionen mithilfe des Schemagenerierungs-Assistenten.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Schritt 3: Angeben von Schemaoptionen für die Themenbereichsdatenbank  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Schritt 3: Angeben von Schemaoptionen für die Datenbank des Themenbereichs  
  Der Schemagenerierungs-Assistent stellt eine Reihe von Optionen zum Definieren des Schemas bereit, das für die Themenbereichsdatenbank generiert wird. Sie können diese Optionen auf der Seite **Schemaoptionen für die Themenbereichsdatenbank** des Assistenten angeben.  
   
 ### <a name="specifying-the-schema-owner"></a>Angeben des Schemabesitzers  
@@ -57,7 +57,7 @@ ms.locfileid: "48210170"
 ### <a name="preserving-data-for-incremental-generation"></a>Beibehalten von Daten für inkrementelle Generierung  
  Der Schemagenerierungs-Assistent versucht beim erneuten Generieren des Datenbankschemas standardmäßig Daten beizubehalten. Wenn der Schemagenerierungs-Assistent Zeilen aufgrund einer Schemaänderung löschen muss, wird vor dem Löschen der Zeilen eine Warnung angezeigt. So müssen Zeilen möglicherweise gelöscht werden, um Probleme mit der referenziellen Integrität zu beheben, die auftreten, wenn eine Dimension gelöscht oder beim Ändern eines Dimensionsattributs ein Datentyp geändert wurde. Um beim erneuten Generieren des Datenbankschemas Daten beizubehalten, klicken Sie auf **Daten bei erneuter Generierung beibehalten**.  
   
-## <a name="step-4-specify-naming-conventions"></a>Schritt 4: Angeben von Benennungskonventionen  
+## <a name="step-4-specify-naming-conventions"></a>Schritt 4: Benennungskonventionen angeben  
  Auf der Seite **Benennungskonventionen angeben** des Assistenten können Sie die Benennungskonventionen angeben, die der Schemagenerierungs-Assistent beim Generieren bestimmter Objekte in der Themenbereichsdatenbank verwendet. Weitere Informationen über die verfügbaren Optionen auf der Seite **Benennungskonventionen angeben** finden Sie unter [Benennungskonventionen angeben &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md).  
   
   

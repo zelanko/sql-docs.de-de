@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745541"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Data Mining-Grundlagen)
   Im Rahmen einer Werbekampagne sendet [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] einen Prospekt an alle potenziellen Kunden im Alter von 34 bis 40 Jahren. Der gleiche Prospekt soll auf Wunsch der Marketingabteilung auch an Kunden gesendet werden, die vor mehr als fünf Jahren ein Fahrrad von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gekauft haben. In dieser Lektion identifizieren Sie Kunden mit älteren Fahrrädern und rufen ihre Kontaktinformationen ab. Diese Informationen sind nicht im Modell, sondern in der Struktur enthalten. Stellen Sie zunächst sicher, dass die Drillthroughfunktion für die Struktur aktiviert ist, um die Kontaktinformationen abzurufen. Rufen Sie dann die Namen und Adressen der Kundenzielgruppe ab, indem Sie einen Drillthrough ausführen.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736081"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "52508540"
 |9|Statistik|Gibt einen numerischen Wert an, der eine Statistik für einen Regressor darstellt.|  
 |10|Eindeutiger Knotenname|Gibt an, dass der Wert weder als numerischer Wert noch als Zeichenfolge behandelt werden soll, sondern als der eindeutige Bezeichner eines anderen Inhaltsknotens in einem Model.<br /><br /> In einem neuronalen Netzwerkmodell beispielsweise verweisen IDs von Knoten in der Ausgabeebene auf Knoten in der verborgenen Ebene bzw. von Knoten in der verborgenen Ebene auf Knoten in der Eingabeebene.|  
 |11|Konstantes Glied|Gibt einen numerischen Wert an, der das konstante Glied in einer Regressionsformel darstellt.|  
-|12|Periodizität|Gibt an, dass der Wert eine periodische Struktur in einem Modell kennzeichnet.<br /><br /> Gilt für nur Zeitreihenmodelle, die ein ARIMA-Modell enthalten.<br /><br /> Hinweis: Der Microsoft Time Series-Algorithmus erkennt automatisch periodische Strukturen auf Grundlage der Trainingsdaten. Dies hat zum Ergebnis, dass die Periodizitäten im endgültigen Modell möglicherweise Periodizitätswerte enthalten, die Sie beim Erstellen des Modells nicht in Form von Parametern angegeben haben.|  
+|12|Periodizität|Gibt an, dass der Wert eine periodische Struktur in einem Modell kennzeichnet.<br /><br /> Gilt für nur Zeitreihenmodelle, die ein ARIMA-Modell enthalten.<br /><br /> Hinweis: Der Microsoft Time Series-Algorithmus erkennt automatisch periodische Strukturen auf Grundlage der Trainingsdaten. Dies hat zum Ergebnis, dass die Periodizitäten im endgültigen Modell möglicherweise Periodizitätswerte enthalten, die Sie beim Erstellen des Modells nicht in Form von Parametern angegeben haben.|  
 |13|Autoregressive Reihenfolge|Gibt an, dass der Wert die Anzahl der autoregressiven Reihen darstellt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |14|Reihenfolge für gleitenden Durchschnitt|Wert, der die Anzahl der gleitenden Durchschnitte in einer Reihe angibt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |15|Differenzreihenfolge|Gibt an, dass der Wert einen Wert darstellt, aus dem hervorgeht, wie oft für die Reihe eine Unterscheidung getroffen wurde.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  

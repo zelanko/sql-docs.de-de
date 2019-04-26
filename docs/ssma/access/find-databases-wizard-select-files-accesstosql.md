@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741245"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Find Databases Wizard suchen (Option-Dateien) (AccessToSQL)
 Die Seite "Dateien auswählen" des Assistenten für Datenbanken finden Sie listet die Dateien, die bei der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** zum Anzeigen der Seite Auswahl überprüfen.  

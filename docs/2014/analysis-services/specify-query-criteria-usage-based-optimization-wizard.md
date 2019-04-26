@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 088d53d1257c4b0d4b141b1e090ab1174416d397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746144"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Abfragekriterien angeben (Assistent für verwendungsbasierte Optimierung)
   Über die Seite **Abfragekriterien festlegen** können Sie ein oder mehrere Filteroptionen auswählen, um zu optimierende Abfragen zu identifizieren.  
@@ -26,7 +26,7 @@ ms.locfileid: "48088380"
 > [!NOTE]  
 >  Diese Seite ist deaktiviert, wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Verbindung mit dem Abfrageprotokoll herstellen kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Abfrageprotokollstatistik**  
  Zeigt Informationen zu den Abfragen an, die in dem Abfrageprotokoll für die ausgewählten Partitionen gespeichert sind. Folgende Elemente werden angezeigt:  
   

@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740513"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand-Objekt (Verwaltete SQLXML-Klassen)
   Dies ist der Konstruktor für die SqlXmlCommand-Objekt:  
@@ -53,16 +53,16 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>Methoden  
  TheSqlXmlCommand Objekt unterstützt mehrere Methoden, einschließlich der folgenden Methoden zum Ausführen eines Befehls:  
   
- void ExecuteNonQuery()-Methode  
+ void ExecuteNonQuery()  
  Führt den Befehl aus, gibt aber nichts zurück. Diese Methode ist nützlich, wenn Sie einen Nichtabfragebefehl ausführen möchten (ein Befehl, der nichts zurückgibt). Ein Beispiel ist das Ausführen eines Updategrams oder DiffGrams, das Datensätze aktualisiert, aber nichts zurückgibt.  
   
- Stream-ExecuteStream()  
+ Stream ExecuteStream()  
  Gibt ein neues Stream-Objekt zurück. Diese Methode ist nützlich, wenn Sie möchten, dass Ihnen die Abfrageergebnisse in einem neuen Datenstrom zurückgegeben werden. Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  Öffentliche void ExecuteToStream (Stream OutputStream)  
  Schreibt die Abfrageergebnisse in einen vorhandenen Datenstrom. Diese Methode ist nützlich, wenn Sie einen Datenstrom haben, auf dem benötigten Ergebnisse anhängen (z. B. die Ergebnisse der Abfrage, die in der System.Web.HttpResponse.OutputStream geschrieben haben). Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
- "XmlReader" ExecuteXmlReader()  
+ XmlReader ExecuteXmlReader()  
  Gibt ein XmlReader-Objekt zurück. Sie können diese Methode verwenden, entweder direkt Manipulieren von Daten in das XmlReader-Objekt, oder geben Sie die kettenarchitektur von "System.xml". Weitere Informationen finden Sie in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Dokumentation. Ein Arbeitsbeispiel finden Sie unter [Ausführen von SQL-Abfragen mithilfe der "ExecuteXMLReader"-Methode](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  TheSqlXmlCommand Objekt unterstützt auch diese zusätzlichen Methoden:  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ff8dfddd844a766172ff0f459a1fff5d984574
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646391"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet Schreibgeschützt.  
