@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743347"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank im Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie eine Sicherungsdatei lokal erstellen und dann im Windows Azure-Speicher wiederherstellen. Ihre Datenbank kann sich entweder in einer lokalen Umgebung oder auf einem virtuellen Computer in Windows Azure befinden. Für diese Lektion müssen Sie Lektion 4, 5, 6 und 7 nicht abschließen.  

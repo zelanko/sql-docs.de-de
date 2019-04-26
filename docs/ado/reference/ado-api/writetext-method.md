@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642950"
 ---
 # <a name="writetext-method"></a>WriteText-Methode
 Schreibt eine Zeichenfolge angegebenen Text in einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -35,11 +35,11 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Daten*  
+ *Data*  
  Ein **Zeichenfolge** Wert, der den Text im zu schreibender Zeichen enthält.  
   
- *enthalten*  
- Optional. Ein [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) Wert, der angibt, ob ein Zeilentrennzeichen am Ende der angegebenen Zeichenfolge geschrieben werden muss.  
+ *Optionen*  
+ Dies ist optional. Ein [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) Wert, der angibt, ob ein Zeilentrennzeichen am Ende der angegebenen Zeichenfolge geschrieben werden muss.  
   
 ## <a name="remarks"></a>Hinweise  
  Angegebene Zeichenfolgen werden geschrieben, um die **Stream** Objekt ohne dazwischenliegende Leerzeichen oder Zeichen zwischen den einzelnen Zeichenfolgen.  

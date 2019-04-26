@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742246"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLSetCursorName** eine aktive Anweisung ein Cursorname zugeordnet. Wenn eine Anwendung nicht aufruft **SQLSetCursorName**, generiert der Treiber die Cursornamen nach Bedarf für die Verarbeitung von SQL-Anweisung.  
@@ -48,14 +48,14 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *cursorName*  
+ *CursorName*  
  [Eingabe] Name des Cursors. Für die effiziente Verarbeitung nicht sollte der Name des Cursors keine führenden oder nachgestellten Leerzeichen enthalten, in der Name des Cursors, und wenn der Name des Cursors einen Begrenzungsbezeichner enthält, das Trennzeichen positioniert werden muss als erstes Zeichen in der Name des Cursors.  
   
- *Namenslänge*  
+ *NameLength*  
  [Eingabe] Länge in Zeichen des **CursorName*.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetCursorName** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetCursorName** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

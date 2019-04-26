@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768851"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -125,7 +125,7 @@ ms.locfileid: "58376040"
   
  Wenn der Paketname EmailRowCountPP ist, es am 4. März 2005 (3/4/2005) ausgeführt wurde und die Dauer der Ausführung 9 Sekunden betrug, wird der Ausdruck in Form der folgenden Zeichenfolge ausgewertet:  
   
- PExpression--> Paket: (EmailRowCountPP) Gestartet: 3/4/2005 11:06:18 Uhr Dauer: 9 Sekunden.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Eigenschaftsausdruck für die Nachricht einer E-Mail-Nachricht  
  Der folgende Eigenschaftsausdruck kann verwendet werden, um die MessageSource-Eigenschaft eines Tasks vom Typ „Mail senden“ festzulegen. Der Ausdruck verwendet eine Kombination aus Zeichenfolgenliteralen, benutzerdefinierten Variablen und dem Verkettungsoperator (+). Die benutzerdefinierten Variablen tragen die Namen `nasdaqrawrows`, `nyserawrows`und `amexrawrows`. Die Zeichenfolge "\n" steht für einen Wagenrücklauf.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643550"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] schließt einen SQLAS-Anbieter (Analysis Services PowerShell) und Cmdlets ein, damit Sie mithilfe von Windows PowerShell durch Analysis Services-Objekte navigieren und diese verwalten und abfragen können.  
@@ -147,7 +147,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> Aktivieren der Remoteverwaltung  
- Bevor Sie Analysis Services PowerShell mit einer Remote-Analysis Services-Instanz verwenden können, müssen Sie zuerst die Remoteverwaltung und die Dateifreigabe aktivieren. Der folgende Fehler gibt ein firewallkonfigurationsproblem an: "Der RPC-Server ist nicht verfügbar. (Ausnahme von HRESULT: 0x800706BA) ".  
+ Bevor Sie Analysis Services PowerShell mit einer Remote-Analysis Services-Instanz verwenden können, müssen Sie zuerst die Remoteverwaltung und die Dateifreigabe aktivieren. Der folgende Fehler gibt ein firewallkonfigurationsproblem an: "Der RPC-Server ist nicht verfügbar. (Ausnahme von HRESULT: 0x800706BA)".  
   
 1.  Überprüfen Sie, ob sowohl lokale als auch Remotecomputer über die [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]-Versionen der Client- und Servertools verfügen.  
   
@@ -157,7 +157,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
 4.  Starten Sie auf dem Remoteserver das Snap-In Gruppenrichtlinienobjekt-Editor (gpedit.msc).  
   
-5.  Öffnen Sie "Computerkonfiguration" > "Administrative Vorlagen" > "Netzwerk" > "Netzwerkverbindungen" >"Windows-Firewall" und dann "Domänenprofil".  
+5.  Öffnen Sie "Computerkonfiguration" &gt; "Administrative Vorlagen" &gt; "Netzwerk" &gt; "Netzwerkverbindungen" &gt;"Windows-Firewall" und dann "Domänenprofil".  
   
 6.  Doppelklicken Sie auf **Windows-Firewall: Eingehende Remoteverwaltungsausnahme zulassen**Option **aktiviert**, und klicken Sie dann auf **OK**.  
   

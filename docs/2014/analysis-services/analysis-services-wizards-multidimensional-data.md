@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643716"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services-Assistenten (mehrdimensionale Daten)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt Assistenten zur Verwendung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. In der folgenden Tabelle sind die verfügbaren Assistenten beschrieben.  
@@ -38,7 +38,7 @@ ms.locfileid: "48189750"
 |[Assistent für verknüpfte Objekte (F1-Hilfe)](linked-object-wizard-f1-help.md)|Mithilfe des Assistenten für verknüpfte Objekte können Sie verknüpfte Dimensionen oder Measuregruppen definieren und verbundene Objekte optional importieren.|  
 |[Partitions-Assistent F1-Hilfe &#40;Analysis Services – mehrdimensionale Daten&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Mithilfe des Partitions-Assistenten können Sie Partitionen und Remotepartitionen definieren.|  
 |[Schema Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services – mehrdimensionale Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Mithilfe des Schemagenerierungs-Assistenten können Sie Datenquellensichten definieren und optional Skripts für die relationalen Schemas der Datenquellensichten aus einem vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt in einer Datenquelle erstellen.|  
-|[Assistent für verwendungsbasierte Optimierung (F1-Hilfe)](usage-based-optimization-wizard-f1-help.md)|Mithilfe des Assistenten für verwendungsbasierte Optimierung können Sie Aggregationen für einen Aggregationsentwurf definieren, der auf Abfragen basiert, die im Abfrageprotokoll für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank gespeichert sind.|  
+|[Assistent für verwendungsbasierte Optimierung (F1-Hilfe)](usage-based-optimization-wizard-f1-help.md)|Mithilfe des Assistenten für verwendungsbasierte Optimierung können Sie Aggregationen für einen Aggregationsentwurf definieren, der auf Abfragen basiert, die im Abfrageprotokoll für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank gespeichert sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

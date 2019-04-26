@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643357"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe einer ISequentialStream-Schnittstelle, die an einen ICommandText Parameter gebunden ist (OLE DB)
   Dieses Beispiel verwendet eine ISequentialStream-Schnittstelle, die an einen ICommandText-Parameter gebunden ist und dazu dient, zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  
@@ -27,7 +27,7 @@ ms.locfileid: "48109340"
   
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Der Server muss ein Verzeichnis mit dem Namen C:\DBFsa aufweisen; dort erstellt das Beispiel die Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss Schreibzugriff auf diesen Speicherort haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Der Server muss ein Verzeichnis mit dem Namen C:\DBFsa aufweisen; dort erstellt das Beispiel die Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss Schreibzugriff auf diesen Speicherort haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Kopieren Sie das erste Codelisting, und fügen Sie es in eine Datei mit dem Namen ISSHelper.h ein.  
   
