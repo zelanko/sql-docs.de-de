@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745830"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Geben Sie die Spalte&#39;s-Inhalt und Datentyp (Datamining-Assistent)
   Verwenden Sie die Seite **Inhalt und Datentyp der Spalten angeben** , um den von dem Assistenten bereits festgelegten Spalten- oder Inhaltstyp zu ändern. Der Assistent verwendet die Datentypen der Quellspalten sowie den ausgewählten Algorithmus, um den Standarddaten- und Inhaltstyp zu bestimmen.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spalten**  
  Eine Liste der Spalten, die Sie auf der Seite **Trainingsdaten angeben** des Assistenten definiert haben.  
   

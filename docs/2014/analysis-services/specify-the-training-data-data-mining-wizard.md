@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745850"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Trainingsdaten angeben (Data Mining-Assistent)
   Mithilfe der Seite **Trainingsdaten angeben** können Sie festlegen, welche Spalten in der Miningstruktur enthalten sein sollen. Sie können auch Spalten für die Struktur auswählen, wenn Sie sie nicht in allen Modellen verwenden möchten. Wenn Sie beispielsweise einen Drillthrough zu den Spalten vom Miningmodell ausführen möchten, können Sie die Spalten in die Struktur aufnehmen, aber nicht in das Modell.  
@@ -28,9 +28,9 @@ ms.locfileid: "48149330"
 > [!NOTE]  
 >  Unterschiedliche Miningalgorithmen verwenden Schlüssel auf unterschiedliche Art und Weise. Weitere Informationen über die verschiedenen Schlüsselarten finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Weitere Informationen:** [Miningstrukturen &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Tabellen/Spalten**  
  Zeigt die Tabellen und Spalten an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   

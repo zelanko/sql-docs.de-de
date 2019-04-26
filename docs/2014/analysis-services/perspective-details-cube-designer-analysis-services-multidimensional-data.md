@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743456"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Perspektivendetails (Registerkarte 'Perspektiven', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich für **Perspektivendetails** auf der Registerkarte **Perspektiven** im Cube-Designer können Sie die Metadaten verwalten, die für die Benutzer verfügbar sind, die die ausgewählte Perspektive abfragen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cubeobjekte**  
  Zeigt eine hierarchische Liste von den im Cube enthaltenen Objekten und Eigenschaften an, die in die Perspektive eingeschlossen werden können.  
   

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743492"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -247,8 +247,7 @@ ms.locfileid: "58527844"
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Verbindungsserver &#40;Datenbank-Engine&#41;](linked-servers-database-engine.md)   
+ [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   

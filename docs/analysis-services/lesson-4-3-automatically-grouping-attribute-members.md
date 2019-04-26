@@ -1,5 +1,5 @@
 ---
-title: Automatisches Gruppieren von Attributelementen | Microsoft Docs
+title: Automatisches Gruppieren von Attributelementen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737720"
 ---
-# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lektion 4-3 - automatisch Gruppieren von Attributelementen
+# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lektion 4-3: automatisch Gruppieren von Attributelementen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es allerdings sinnvoll, von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attributelementen erstellen zu lassen, die auf der Verteilung der Elemente innerhalb einer Attributhierarchie basieren. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
@@ -24,10 +24,10 @@ Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer 
 Von der Eigenschaft **DiscretizationMethod** wird bestimmt, ob von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppierungen erstellt werden, sowie der Typ der Gruppierung, die durchgeführt wird. Standardmäßig werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Gruppierungen ausgeführt. Es ist beim Aktivieren der automatischen Gruppierungen möglich, von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch die beste Gruppierungsmethode basierend auf der Struktur des Attributs bestimmen zu lassen. Sie können auch einen der Gruppierungsalgorithmen in der folgenden Liste auswählen, um die Gruppierungsmethode anzugeben:  
   
 **EqualAreas**  
-Von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Gruppenbereiche erstellt, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppenbereiche, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
   
 **Clusters**  
-Von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen erstellt. Diese Option ist nur für numerische Spalten gültig.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen. Diese Option ist nur für numerische Spalten gültig.  
   
 Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -95,7 +95,7 @@ In den Aufgaben in diesem Thema aktivieren Sie verschiedene Gruppierungstypen f�
   
     Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-    ![Sales dimensioniert nach den Krankheitstagen des Angestellten lassen Stunden](../analysis-services/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen des Angestellten lassen Stunden")  
+    ![Sales dimensioniert nach den Krankheitstagen lassen Stunden](../analysis-services/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen lassen Stunden")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   
@@ -123,11 +123,11 @@ In den Aufgaben in diesem Thema aktivieren Sie verschiedene Gruppierungstypen f�
   
     Beachten Sie, dass jetzt drei Gruppen von Elementen des **Vacation Hours** -Attributs vorhanden sind, die Verkaufswerte für Produkte aufweisen. Die anderen sieben Gruppen enthalten Elemente ohne Verkaufsdaten.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ausblenden und Deaktivieren von Attributhierarchien](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Gruppieren von Attributelementen & #40; Diskretisierung & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

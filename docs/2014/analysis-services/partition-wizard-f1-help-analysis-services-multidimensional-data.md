@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743596"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Partitions-Assistent (F1-Hilfe) (Analysis Services – Mehrdimensionale Daten)
   Mit dem Partitions-Assistent können Sie Partitionen für eine Measuregruppe in einem Cube definieren. Standardmäßig wird für jede Measuregruppe in einem Cube eine Partition definiert. Große Partitionen können sich jedoch auf die Zugriffs- und Verarbeitungsleistung auswirken. Wenn Sie mehrere Partitionen erstellen, die jeweils einen Teil der Daten für eine Measuregruppe enthalten, können Sie die Zugriffs- und Verarbeitungsleistung für die Measuregruppe verbessern.  
@@ -49,6 +49,6 @@ ms.locfileid: "48198530"
 -   [Suchen Sie nach Remoteordner Dialogfeld &#40;Analysis Services – mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0d0cfd668ae945cd54df11fe6110ce59d088980
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746213"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Spaltenzuordnung angeben (Dialogfeld, Mininggenauigkeitsdiagramm)
   Auf der Registerkarte **Spaltenzuordnung angeben** können Sie Tabellen aus einer externen Datenquelle auswählen und die Spalten einem Data Mining-Modell zuordnen. Mithilfe der externen Daten können Sie dann die Genauigkeit eines Miningmodells testen und die Ergebnisse im Genauigkeitsdiagramm anzeigen.  
   
  **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstruktur**  
  Zeigt die ausgewählte Miningstruktur mit dem zu testenden Modell an.  
   

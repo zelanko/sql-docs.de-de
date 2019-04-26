@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ca92c8ed66c7669863cc234fe4999ab95e662
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743296"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services
   MSOLAP.5 bezieht sich auf den Analysis Services OLE DB-Anbieter für SQL Server 2012. Excel Services müssen diesem Anbieter vertrauen, bevor es die Verbindunganforderung ermöglicht, wodurch die PowerPivot-Daten auf dem Server verfügbar werden.  
@@ -37,7 +37,7 @@ ms.locfileid: "48051178"
   
 4.  Falls nicht aufgeführt, klicken Sie auf **Vertrauenswürdigen Datenanbieter hinzufügen**.  
   
-5.  Geben Sie unter Anbieter-ID `MSOLAP.5`.  
+5.  Geben Sie unter Anbieter-ID `MSOLAP.5` ein.  
   
 6.  Stellen Sie sicher, dass für den Anbietertyp OLE DB ausgewählt ist.  
   

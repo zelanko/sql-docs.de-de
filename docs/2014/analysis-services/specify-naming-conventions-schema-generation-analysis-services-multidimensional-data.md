@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746273"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Benennungskonventionen angeben (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Benennungskonventionen angeben** definieren Sie die Benennungskonventionen, die bei der Erstellung von Schemaobjekten vom Schemagenerierungs-Assistenten verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Option**  
  Geben Sie die Benennungskonventionen für den zu verwendenden Assistenten an. In der folgenden Tabelle werden die Optionen beschrieben, die Sie angeben können.  
   
 |Option|Description|  
 |------------|-----------------|  
-|**Trennzeichen**|Gibt das Zeichen an, das zwischen den Wörtern in einem Objektnamen steht. Wählen Sie in der **Value** -Spalte **Unterstrich**, **Leerzeichen**oder **Kein**aus. Der Standardwert ist **Unterstrich**.|  
+|**Separator**|Gibt das Zeichen an, das zwischen den Wörtern in einem Objektnamen steht. Wählen Sie in der **Value** -Spalte **Unterstrich**, **Leerzeichen**oder **Kein**aus. Der Standardwert ist **Unterstrich**.|  
 |**Präfix der Primärschlüsselspalte**|Gibt die Zeichenfolge an, die dem Namen einer Primärschlüsselspalte als Präfix vorangestellt wird. Der Standardwert lautet **PS**.|  
 |**Präfix der Fremdschlüsselspalte**|Gibt die Zeichenfolge an, die dem Namen einer Fremdschlüsselspalte als Präfix vorangestellt wird. Der Standardwert lautet **FS**.|  
 |**Attributnamenssuffix**|Gibt die Zeichenfolge an, die an den Namen der einzelnen Attributspalten angefügt wird. Die Standardeinstellung lautet **Name**.|  

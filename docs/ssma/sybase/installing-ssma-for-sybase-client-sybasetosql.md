@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740990"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Installieren von SSMA für den Sybase-Client (SybaseToSQL)
 Der SSMA-Client besteht aus den Programmdateien, die verwendet werden, zur Verbindung mit einem Datenbankserver von Sybase Adaptive Server Enterprise (ASE) und einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, konvertieren Sie die ASE-Datenbankobjekten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Syntax, laden die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, und klicken Sie dann migrieren Sie Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure-SQLDB.  

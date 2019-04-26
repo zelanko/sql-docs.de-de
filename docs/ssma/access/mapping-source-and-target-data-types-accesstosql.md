@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740980"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnen von Quell- und Ziel-Datentypen (AccessToSQL)
 Access-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Datentypen. Wenn Sie den Zugriff auf Datenbankobjekte zu konvertieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte aufweist, müssen Sie angeben, wie Sie Datentypen aus den Zugriff auf zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Verfahren dargestellt.  

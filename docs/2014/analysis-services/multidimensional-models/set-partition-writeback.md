@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741382"
 ---
 # <a name="set-partition-writeback"></a>Einrichten des Rückschreibens von Partitionen
   Wenn Sie den Schreibzugriff für eine Measuregruppe aktivieren, können Endbenutzer Cubedaten während des Durchsuchens ändern. Die Änderungen werden dabei in einer getrennten Tabelle, der Rückschreibetabelle, gespeichert und nicht in den Cubedaten oder Quelldaten. Endbenutzer, die eine Partition mit aktiviertem Schreibzugriff durchsuchen, können die Auswirkungen der Änderungen in der Rückschreibetabelle für die Partition anzeigen.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743391"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Dieser Fehler tritt auf, wenn Sie PowerPivot-Daten auf einem Server abfragen, auf dem PowerPivot für SharePoint nicht installiert ist. Er tritt auch auf, wenn der SQL Server Analysis Services (PowerPivot)-Dienst beendet wird, oder wenn Sie versuchen, PowerPivot-Daten von einer früheren Version anzuzeigen.  
@@ -25,7 +25,7 @@ ms.locfileid: "48198595"
   
 |||  
 |-|-|  
-|Gilt für|PowerPivot für SharePoint|  
+|Betrifft|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Fehler beim Herstellen der Datenverbindung.|  
 |Meldungstext|Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten|  

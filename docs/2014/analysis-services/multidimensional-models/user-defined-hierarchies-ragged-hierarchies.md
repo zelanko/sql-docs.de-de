@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740710"
 ---
 # <a name="ragged-hierarchies"></a>Unregelmäßige Hierarchien
   Eine unregelmäßige Hierarchie ist eine benutzerdefinierte Hierarchie, die über eine ungerade Anzahl von Ebenen verfügt. Typische Beispiele dafür sind ein Organigramm, bei dem einer hochrangigen Führungskraft sowohl Abteilungsleiter als auch Nicht-Abteilungsleiter unterstellt sind, oder geografische Hierarchien aus Ländern, Regionen und Städten, bei denen einige Städte keinen übergeordneten Bundesstaat bzw. keine übergeordnete Provinz aufweisen, z. B. Washington D. C., Vatikanstadt oder Neu-Delhi.  

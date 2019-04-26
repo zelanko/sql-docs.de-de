@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c94ac9865540016020bf1853bc318881defdaea7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740855"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Festlegen der Slice-Eigenschaft für Partitionen (Analysis Services)
   Ein Datenslice ist eine wichtige Optimierungsfunktion, die Ihnen dabei hilft, Abfragen an Daten der entsprechenden Partitionen weiterzuleiten. Das explizite Festlegen der Slice-Eigenschaft kann die Abfrageleistung verbessern, indem die für MOLAP- und HOLAP-Partitionen generierten Standardslices überschrieben werden. Darüber hinaus bietet die Slice-Eigenschaft bei der Verarbeitung der Partition eine zusätzliche Überprüfungsmöglichkeit.  

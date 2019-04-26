@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740380"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
   In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "56041051"
   
  In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses ergänzende Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741262"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services)
   Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankeigenschaften, die Sie im Datenbank-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] konfigurieren können.  

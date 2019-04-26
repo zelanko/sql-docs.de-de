@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7cf922fb0182c2905ac855daef0f90cd80ddf55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740923"
 ---
 # <a name="test-an-action"></a>Testen einer Aktion
   Zum Testen einer Aktion verwenden Sie die Browseransicht im Cube-Designer. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich. Nachdem Sie die Aktion erstellt haben, müssen Sie den Cube verarbeiten, bevor die Aktion getestet werden kann. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](processing-a-multidimensional-model-analysis-services.md).  

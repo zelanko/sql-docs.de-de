@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740915"
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
   Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  

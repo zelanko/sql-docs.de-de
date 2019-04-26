@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745481"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
   Wenn in einer relationalen Datenbank eine Tabelle in einer Beziehung zu sich selbst steht, wird dies als rekursive Beziehung bezeichnet. Beispielsweise steht eine Tabelle, in der Mitarbeiterdatensätze gespeichert werden, in einer Beziehung zwischen Vorgesetzten und unterstellten Mitarbeitern mit sich selbst in Beziehung. In diesem Fall spielt die Mitarbeitertabelle auf der einen Seite der Beziehung die Rolle des Vorgesetzten und auf der anderen Seite spielt dieselbe Tabelle die Rolle des unterstellten Mitarbeiters.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Weil die Beziehung rekursiv ist, müssen Sie auf irgendeine Weise die Rekursionstiefe im Schema angeben können. Andernfalls enthält das Ergebnis eine endlose Rekursion (ein Mitarbeiter berichtet an den Mitarbeiter, der an den Mitarbeiter berichtet usw.). Mit der `sql:max-depth`-Anmerkung können Sie die Rekursionstiefe angeben. In diesem Beispiel müssen Sie wissen, über wie viele Ebenen die Managementhierarchie der betreffenden Firma verfügt, um einen Wert für `sql:max-depth` angeben zu können.  
   
 > [!NOTE]  
->  Im Schema wird die `sql:limit-field`-Anmerkung, nicht jedoch die `sql:limit-value`-Anmerkung angegeben. Dadurch wird der oberste Knoten der resultierenden Hierarchie lediglich auf diejenigen Mitarbeiter beschränkt, die niemandem unterstellt sind. (ReportsTo ist NULL.) Dies wird dadurch erreicht, dass die Anmerkung `sql:limit-field` angegeben und die Anmerkung `sql:limit-value` nicht angegeben wird (die den Standardwert NULL hat). Wenn die resultierende XML-Hierarchie alle möglichen Berichtsstrukturen enthalten soll (die Berichtsstruktur für jeden in der Tabelle enthaltenen Mitarbeiter), dann entfernen Sie die `sql:limit-field`-Anmerkung aus dem Schema.  
+>  Im Schema wird die `sql:limit-field`-Anmerkung, nicht jedoch die `sql:limit-value`-Anmerkung angegeben. Dadurch wird der oberste Knoten der resultierenden Hierarchie lediglich auf diejenigen Mitarbeiter beschränkt, die niemandem unterstellt sind. (ReportsTo ist NULL.) Angeben von `sql:limit-field` ohne Angabe `sql:limit-value` (Standardwert: NULL) erreicht dies, Anmerkung. Wenn die resultierende XML-Hierarchie alle möglichen Berichtsstrukturen enthalten soll (die Berichtsstruktur für jeden in der Tabelle enthaltenen Mitarbeiter), dann entfernen Sie die `sql:limit-field`-Anmerkung aus dem Schema.  
   
 > [!NOTE]  
 >  In der folgenden Prozedur wird die Datenbank tempdb verwendet.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Verwenden Sie die `sql:max-depth`-Anmerkung im Schema, um die Rekursionstiefe einer rekursiven Beziehung anzugeben, die im Schema beschrieben wird. Der Wert des der `sql:max-depth` Anmerkung ist eine positive ganze Zahl (1 bis 50), der die Anzahl der Rekursionen angibt:  Der Wert 1 beendet die Rekursion bei dem Element, für die die `sql:max-depth` -Anmerkung; Wert 2 wird die Rekursion bei der nächsten Ebene unter dem Element beendet `sql:max-depth` angegeben ist; und so weiter.  
   
 > [!NOTE]  
->  In der zugrunde liegenden Implementierung wird eine Xpath-Abfrage, die mit einem Zuordnungsschema angegeben wird, in eine SELECT ... FOR XML EXPLICIT-Abfrage umgewandelt. Bei dieser Abfrage ist es erforderlich, eine endliche Rekursionstiefe anzugeben. Je höher der Wert, der für `sql:max-depth` angegeben wird, desto umfangreicher ist die generierte FOR XML EXPLICIT-Abfrage. Dies könnte den Abrufvorgang verlangsamen.  
+>  In der zugrunde liegenden Implementierung wird eine XPath-Abfrage, die für ein Zuordnungsschema angegeben ist in einer SELECT-Anweisung konvertiert... FÜR XML EXPLICIT-Abfrage. Bei dieser Abfrage ist es erforderlich, eine endliche Rekursionstiefe anzugeben. Je höher der Wert, der für `sql:max-depth` angegeben wird, desto umfangreicher ist die generierte FOR XML EXPLICIT-Abfrage. Dies könnte den Abrufvorgang verlangsamen.  
   
 > [!NOTE]  
 >  Bei Updategrams und beim XML-Massenladen wird die -Anmerkung ignoriert. Dies bedeutet, rekursive Updates oder Einfügungen werden unabhängig von dem Wert ausgeführt, der für  angegeben wird.  
@@ -241,7 +241,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Die `sql:max-depth`-Anmerkung kann für jedes komplexe Inhaltselement angegeben werden.  
   
 ### <a name="recursive-elements"></a>Rekursive Elemente  
- Wenn `sql:max-depth` sowohl für das übergeordnete als auch das untergeordnete Element einer rekursiven Beziehung angegeben wird, dann hat die `sql:max-depth`-Anmerkung Vorrang, die für das übergeordnete Element angegeben wurde. Beispielsweise wird die `sql:max-depth`-Anmerkung im folgenden Schema sowohl für das übergeordnete als auch das untergeordnete <Emp>-Element angegeben. In diesem Fall `sql:max-depth=4`hat die Angabe für den  **\<Emp >** übergeordneten-Element (das die Rolle des aufsehers) Vorrang. Die `sql:max-depth` angegeben wird, auf dem untergeordneten Element  **\<Emp >** -Element (das die Rolle eines beaufsichtigten) wird ignoriert.  
+ Wenn `sql:max-depth` sowohl für das übergeordnete als auch das untergeordnete Element einer rekursiven Beziehung angegeben wird, dann hat die `sql:max-depth`-Anmerkung Vorrang, die für das übergeordnete Element angegeben wurde. Beispielsweise wird die `sql:max-depth`-Anmerkung im folgenden Schema sowohl für das übergeordnete als auch das untergeordnete &lt;Emp&gt;-Element angegeben. In diesem Fall `sql:max-depth=4`hat die Angabe für den  **\<Emp >** übergeordneten-Element (das die Rolle des aufsehers) Vorrang. Die `sql:max-depth` angegeben wird, auf dem untergeordneten Element  **\<Emp >** -Element (das die Rolle eines beaufsichtigten) wird ignoriert.  
   
 #### <a name="example-b"></a>Beispiel B  
   

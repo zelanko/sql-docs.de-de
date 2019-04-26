@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740897"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
   Wenn Sie ein `data source`-Objekt in einem Analysis Services-Modell erstellen, müssen Sie unter den verschiedenen Einstellungen eine Option für den Identitätswechsel konfigurieren. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  

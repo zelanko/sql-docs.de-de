@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769106"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paket weitergegeben werden, konvertiert die Datenfluss-Engine alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  

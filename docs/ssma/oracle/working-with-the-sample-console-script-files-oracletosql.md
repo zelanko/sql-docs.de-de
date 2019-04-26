@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743922"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Arbeiten mit den Beispielskriptdateien der Konsole (OracleToSQL)
 Einige Beispieldateien wurden für die Benutzer-Verweis und die Verwendung zusammen mit dem Produkt bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts entsprechend die Anforderungen der Endbenutzer leicht anpassen.  

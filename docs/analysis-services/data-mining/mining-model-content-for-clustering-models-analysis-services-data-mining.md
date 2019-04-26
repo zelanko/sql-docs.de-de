@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt für Clustering-Modellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Clustermodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3344fbcd8a1a31f0bb98a8a1702f1535eb831b3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736230"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34019167"
   
  Der übergeordnete Knoten enthält nützliche statistische Daten, die die tatsächliche Verteilung aller Trainingsfälle beschreiben. Diese statistischen Daten befinden sich in der geschachtelten Tabellenspalte NODE_DISTRIBUTION. Beispielsweise enthält die folgende Tabelle einige Zeilen der Tabelle NODE_DISTRIBUTION, die die Verteilung der demografischen Kundendaten aus dem Clustermodell `TM_Clustering`beschreibt, das Sie im [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|Varianz|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|Age|Nicht vorhanden|0|0|0|1 (Missing)|  
+|Age|Missing|0|0|0|1 (Missing)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (Continuous)|  
-|Geschlecht|Nicht vorhanden|0|0|0|1 (Missing)|  
+|Geschlecht|Missing|0|0|0|1 (Missing)|  
 |Geschlecht|V|6350|0.490764355823479|0|4 (Discrete)|  
 |Geschlecht|M|6589|0.509235644176521|0|4 (Discrete)|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34019167"
 > [!NOTE]  
 >  Die Varianz repräsentiert die Gesamtvarianz des Clusters. Wenn der Varianzwert klein ist, bedeutet dies, dass die meisten Werte der Spalte relativ nah am Mittelwert liegen. Um die Standardabweichung zu erhalten, berechnen Sie die Quadratwurzel der Varianz.  
   
- Beachten Sie, dass jedes Attribut den Werttyp **Missing** enthält, der anzeigt, in wie vielen Fällen kein Wert für das Attribut gegeben war. Fehlende Daten können signifikant sein und die Berechnungen je nach Datentyp auf verschiedene Weise beeinflussen. Weitere Informationen finden Sie unter [Missing Values &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
+ Beachten Sie, dass jedes Attribut den Werttyp **Missing** enthält, der anzeigt, in wie vielen Fällen kein Wert für das Attribut gegeben war. Fehlende Daten können signifikant sein und die Berechnungen je nach Datentyp auf verschiedene Weise beeinflussen. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
   
 ## <a name="model-content-for-a-clustering-model"></a>Modellinhalt eines Clusteringmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Clusteringmodelle relevant sind.  
@@ -143,7 +143,7 @@ ms.locfileid: "34019167"
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung. Diese Beschriftung kann nicht geändert werden.  
   
- **Übergeordneter Knoten** Der Typ des Modells: Clusteringmodell.  
+ **Übergeordneter Knoten** vom Typ des Modells: Clustermodell  
   
  **Clusterknoten** Der Name des Clusters. Beispiel: Cluster 1.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "34019167"
 >  Struktur und Inhalt des Modells werden weder durch die verwendete Clusteringmethode noch die Parameter beeinflusst.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

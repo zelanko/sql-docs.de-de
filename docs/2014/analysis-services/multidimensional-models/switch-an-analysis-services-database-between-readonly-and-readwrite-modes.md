@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741362"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
   In vielen Situationen muss vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator (DBA) der Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank geändert werden. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. der Freigabe der Datenbank für einen Pool von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Servern zur Vereinfachung der Nutzung.  

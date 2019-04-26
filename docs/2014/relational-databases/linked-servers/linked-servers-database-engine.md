@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743504"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
   Konfigurieren Sie einen Verbindungsserver, um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für die Ausführung von Befehlen für OLE DB-Datenquellen außerhalb der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu aktivieren. In der Regel werden Verbindungsserver so konfiguriert, um [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die Tabellen in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enthält, oder ein anderes Datenbankprodukt z. B. Oracle zu aktivieren. Viele Typen von OLE DB-Datenquellen können als Verbindungsserver konfiguriert werden, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access und Excel. Verbindungsserver bieten die folgenden Vorteile:  

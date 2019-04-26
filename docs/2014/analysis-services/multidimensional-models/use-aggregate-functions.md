@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740730"
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
   Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion `Sum`. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
@@ -51,7 +51,7 @@ ms.locfileid: "48199576"
 |`Max`|Semiadditiv|Ruft den höchsten Wert für alle untergeordneten Elemente ab.|  
 |`DistinctCount`|Nicht additiv|Ruft die Zahl aller eindeutigen untergeordneten Elemente ab. Weitere Informationen finden Sie unter [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) im nächsten Abschnitt.|  
 |`None`|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
-|`ByAccount`|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Wenn keine Kontodimension in der Measuregruppe vorhanden ist, behandelt, als die `None` Aggregatfunktion.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Ist keine Kontodimension in der Measuregruppe vorhanden, wird der Wert als `None`-Aggregationsfunktion behandelt.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiadditiv|Berechnet den Durchschnitt der Werte für alle nicht leeren, untergeordneten Elemente.|  
 |`FirstChild`|Semiadditiv|Ruft den Wert des ersten untergeordneten Elements ab.|  
 |`LastChild`|Semiadditiv|Ruft den Wert des letzten untergeordneten Elements ab.|  
@@ -70,6 +70,6 @@ ms.locfileid: "48199576"
 ## <a name="see-also"></a>Siehe auch  
  [Measures und Measuregruppen](measures-and-measure-groups.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Definieren des semiadditiven Verhaltens](define-semiadditive-behavior.md)  
+ [Define Semiadditive Behavior](define-semiadditive-behavior.md)  
   
   

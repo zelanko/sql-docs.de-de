@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746124"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Quellinformationen angeben (Partitions-Assistent)
   Auf der Seite **Quellinformationen angeben** können Sie die Measuregruppe, in der die Partition erstellt werden soll, und die Datenquellensicht und die Filtertabellen für die Partition auswählen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48120557"
 > [!CAUTION]  
 >  Wenn Sie unter **Verfügbare Tabellen** eine Tabelle angeben, die auch von einer anderen Partition verwendet wird, müssen Sie auf der Seite **Zeilen einschränken** eine Abfrage bereitstellen, da andernfalls die Gefahr besteht, dass die Daten im Cube dupliziert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Measuregruppe**  
  Wählen Sie für die Partition eine Measuregruppe aus.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48120557"
 >  Wenn mehrere Tabellen ausgewählt werden, kann die Seite **Zeilen einschränken** nicht angezeigt werden, und die Zeilen können nicht für die von den ausgewählten Tabellen erstellten Partitionen eingeschränkt werden. Um die Zeilen für die einzelnen Partitionen einzuschränken, führen Sie den Partitions-Assistenten einmal für jede Tabelle aus, von der eine Partition erstellt werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

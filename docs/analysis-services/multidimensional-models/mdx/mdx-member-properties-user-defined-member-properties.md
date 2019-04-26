@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft Docs
+title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740227"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX - Elementeigenschaften: benutzerdefinierte Elementeigenschaften
+# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX – Elementeigenschaften: benutzerdefinierte Elementeigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können weder der **(Alle)** -Ebene einer Hierarchie noch der Hierarchie selbst hinzugefügt werden.  
   
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  Weitere Informationen zum Erstellen berechneter Elemente finden Sie unter [Erstellen von berechneten Elementen in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Elementeigenschaften & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Datenbankeigenschaften & #40; MDX & #41;](../../../mdx/properties-mdx.md)  
+ [Verwenden von Elementeigenschaften &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

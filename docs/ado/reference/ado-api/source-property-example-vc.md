@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740317"
 ---
 # <a name="source-property-example-vc"></a>Source-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel zeigt die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) Eigenschaft öffnen Sie drei [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte auf verschiedene Datenquellen basieren.  
@@ -158,5 +158,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

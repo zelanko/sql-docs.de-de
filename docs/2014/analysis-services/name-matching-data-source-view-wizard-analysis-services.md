@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743639"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Namensübereinstimmung (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Namensübereinstimmung** können Sie das Kriterium auswählen, das zum Ermitteln möglicher Beziehungen zwischen den für die Datenquellensicht ausgewählten Tabellen und den anderen Tabellen im Schema verwendet wird. Wenn keine physischen Fremdschlüsselbeziehungen zwischen den Tabellen vorhanden sind, hilft dieses Kriterium dabei, verwandte Tabellen zu kennzeichnen und der Datenquellensicht hinzuzufügen. Die logischen Beziehungen, die durch die Namensübereinstimmung identifiziert sind, werden ebenfalls der Datenquellensicht hinzugefügt.  
@@ -26,7 +26,7 @@ ms.locfileid: "48217770"
 > [!NOTE]  
 >  Diese Seite wird nur angezeigt, wenn Sie eine Datenquelle auswählen, die mehrere Tabellen enthält, in der aber keine Fremdschlüsselbeziehungen zwischen den Tabellen bestehen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erstellen Sie logische Beziehungen nach übereinstimmenden Spalten.**  
  Legt fest, dass ein Namensübereinstimmungskriterium verwendet wird, um mögliche logische Abhängigkeiten und Beziehungen zwischen den Tabellen, die für die Datenquellensicht ausgewählt wurden, und den anderen Tabellen im Schema zu ermitteln. Wenn Sie dieses Kontrollkästchen deaktivieren, wird kein Kriterium für die Namensübereinstimmung verwendet, um logische Beziehungen zwischen den Tabellen in der Datenquelle zu identifizieren.  
   

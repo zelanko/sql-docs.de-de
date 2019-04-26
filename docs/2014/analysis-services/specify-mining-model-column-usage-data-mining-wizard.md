@@ -14,21 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746233"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Verwendung der Miningmodellspalte angeben (Data Mining-Assistent)
   Auf der Seite **Verwendung der Miningmodellspalte angeben** können Sie angeben, wie die Miningmodellspalte verwendet wird, und ob geschachtelte Tabellen hinzugefügt werden.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube** ausgewählt haben.  
+>  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube ausgewähl**t haben.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Tabellen/Spalten**  
  Zeigt die Namen der Tabellen und Spalten an, die Sie zuvor im Assistenten definiert haben.  
   

@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737536"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "56030642"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben wird, dann muss das Zeichen < als Entität codiert werden, weil das Zeichen < in XML-Dokumenten eine besondere Bedeutung hat. Verwenden Sie in einer Vorlage `<`, um das < Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist die < Zeichen muss die Entität codiert werden, da die < Zeichen eine besondere Bedeutung in einem XML-Dokument hat. Verwenden Sie in einer Vorlage `<` an die < Zeichen.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

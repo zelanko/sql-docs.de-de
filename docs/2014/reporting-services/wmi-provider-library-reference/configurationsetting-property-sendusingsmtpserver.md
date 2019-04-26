@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646148"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt an, ob das `SendUsing`-Element in der E-Mail-Konfiguration für den Berichtsserver auf `true` festgelegt wurde  

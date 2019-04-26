@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741151"
 ---
 # <a name="translations-in-multidimensional-models"></a>Übersetzungen in mehrdimensionalen Modellen
   Unterstützung mehrerer Sprachen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erfolgt mithilfe von Übersetzungen. Eine Übersetzung enthält einen Sprachbezeichner und Bindungen für Eigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten, die in mehreren Sprachen angezeigt werden können. Beispielsweise können Sie eine Übersetzung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank definieren, um die Überschrift und Beschreibung dieser Datenbank in einer bestimmten Sprache anzuzeigen. Weitere Informationen zu Übersetzungen finden Sie unter [Cubeübersetzungen](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Definieren von Übersetzungen  
- Sie können Übersetzungen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] definieren, indem Sie den entsprechenden Designer für das zu übersetzende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt verwenden. Durch Definieren einer Übersetzung wird ein `Translation` Objekt verknüpft ist, mit dem entsprechenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt, das die angegebenen Literalwerte in der angegebenen Sprache, für die Eigenschaften des zugeordneten hat [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt.  
+ Sie können Übersetzungen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] definieren, indem Sie den entsprechenden Designer für das zu übersetzende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt verwenden. Durch Definieren einer Übersetzung wird ein `Translation`-Objekt erstellt, das dem entsprechenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekt zugewiesen ist. Dieses verfügt über die angegebenen Literalwerte in der angegebenen Sprache für die Eigenschaften des zugewiesenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekts.  
   
  Folgenden Objekten und Eigenschaften in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Übersetzungen zugewiesen sein:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48218940"
 |Benannte Menge|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |berechnetes Element|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Datenbankdimension|`Caption`, `AttributeAllMember`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Attribut|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hierarchy|`Caption`, `AllMemberName`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Ebene|`Caption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   

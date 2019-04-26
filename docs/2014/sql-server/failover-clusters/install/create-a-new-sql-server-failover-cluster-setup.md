@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740600"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
   Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll. Führen Sie zum Verwalten der anderen Knoten Setup nicht für den aktiven Knoten aus.  
@@ -35,7 +35,7 @@ ms.locfileid: "53359382"
   
  Die folgenden Optionen sind für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustern verfügbar:  
   
- **Option 1: Integrierte Installation mit Knoten hinzufügen**  
+ **Option1: Integrierte Installation mit Knoten hinzufügen**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation besteht aus den folgenden Schritten:  
   
@@ -234,7 +234,7 @@ ms.locfileid: "53359382"
   
 ##  <a name="prepare"></a> Vorbereiten  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Schritt 1 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Vorbereiten  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Die erweiterte bzw. Enterprise-Failovercluster installieren Schritt 1: Vorbereiten  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, navigieren Sie in der Freigabe zum Stammordner, und doppelklicken Sie dann auf Setup.exe. Weitere Informationen zum Installieren der erforderlichen Komponenten finden Sie unter [Before Installing Failover Clustering](before-installing-failover-clustering.md). Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359382"
   
 ## <a name="complete"></a>Abgeschlossen  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Schritt 2 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Abgeschlossen  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Die erweiterte bzw. Enterprise-Failovercluster installieren Sie Schritt 2: Abgeschlossen  
   
 1.  Nachdem Sie alle Knoten wie im Schritt [Vorbereiten](#prepare)beschrieben vorbereitet haben, führen Sie Setup für einen der vorbereiteten Knoten aus, und zwar nach Möglichkeit für den Knoten, der Besitzer des freigegebenen Datenträgers ist. Klicken Sie im -Installationscenter auf der Registerkarte **Erweitert** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf **Erweiterter Clusterabschluss**.  
   

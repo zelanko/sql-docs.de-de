@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740752"
 ---
 # <a name="understanding-the-database-schemas"></a>Grundlegendes zu Datenbankschemas
   Der Schemagenerierungs-Assistent generiert ein nicht normalisiertes relationales Schema für die Datenbank des Themenbereichs auf Basis der Dimensionen und Measuregruppen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Assistent generiert für jede Dimension eine relationale Tabelle zum Speichern von Dimensionsdaten, die als Dimensionstabelle bezeichnet wird, und für jede Measuregruppe eine relationale Tabelle zum Speichern von Faktendaten, die als Faktentabelle bezeichnet wird. Beim Generieren dieser relationalen Tabellen ignoriert der Assistent verknüpfte Dimensionen, verknüpfte Measuregruppen und Serverzeitdimensionen.  
@@ -45,7 +45,7 @@ ms.locfileid: "48133430"
  Der Schemagenerierungs-Assistent generiert für jede Dimension eine Dimensionstabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Dimensionstabelle hängt von den Optionen ab, die Sie beim Entwerfen der Dimension, auf der die Dimensionstabelle basiert, ausgewählt haben.  
   
  Spalte  
- Der Assistent generiert eine Spalte für die Bindungen zugeordnet sind, die jedem Attribut in der Dimension auf der die Dimensionstabelle, z. B. die Bindungen für basiert die `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`, und `UnaryOperatorColumn`Eigenschaften jedes Attributs.  
+ Der Assistent generiert eine Spalte für die Bindungen, die den einzelnen Attributen der Dimension, auf der die Dimensionstabelle basiert, zugeordnet sind. Hierzu zählen z. B. die Bindungen für die Eigenschaften `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn` und `UnaryOperatorColumn` jedes Attributs.  
   
  Beziehungen  
  Der Assistent generiert eine Beziehung zwischen der Spalte jedes übergeordneten Attributs und dem Primärschlüssel der Dimensionstabelle.  
@@ -65,7 +65,7 @@ ms.locfileid: "48133430"
  Der Schemagenerierungs-Assistent generiert für jede Measuregruppe eines Cubes eine Faktentabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Faktentabelle hängt von den Optionen ab, die Sie beim Entwerfen der Measuregruppe, auf der die Faktentabelle basiert, ausgewählt haben. Des Weiteren hängt die Struktur von den zwischen der Measuregruppe und den eingeschlossenen Dimensionen erstellten Beziehungen ab.  
   
  Spalte  
- Der Assistent generiert eine Spalte für jedes Measure, mit Ausnahme von Measures, mit denen die `Count` Aggregatfunktion. Für diese Art von Measures ist in der Faktentabelle keine entsprechende Spalte erforderlich.  
+ Der Assistent generiert für jedes Measure eine Spalte. Dies gilt nicht für Measures, die die `Count`-Aggregationsfunktion verwenden. Für diese Art von Measures ist in der Faktentabelle keine entsprechende Spalte erforderlich.  
   
  Der Assistent generiert ebenfalls eine Spalte pro Granularitätsattributspalte für jede reguläre Dimensionsbeziehung der Measuregruppe. Bei Bedarf generiert der Assistent mindestens eine Spalte für die Bindungen, die jedem Attribut einer Dimension mit einer Faktendimensionsbeziehung zur Measuregruppe, auf der die Tabelle basiert, zugeordnet sind.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133430"
  Der Assistent generiert eine separate Tabelle für die übersetzten Werte beliebiger Eigenschaften der Measuregruppe, die eine Übersetzungsspalte erfordert. Des Weiteren erstellt der Assistent eine separate Spalte für jede erforderliche Sprache.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Datentypkonvertierung und Standardlängen  
- Im Schemagenerierungs-Assistent werden in allen Fällen Datentypen ignoriert. Ausgeschlossen sind hiervon Spalten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`-Datentyps. Die `wchar` -Datengröße wird direkt an die `nvarchar` -Datentyp. Wenn die angegebene Länge einer Spalte, die die `wchar`-Größe verwendet, 4.000 Byte überschreitet, generiert der Schemagenerierungs-Assistent einen Fehler.  
+ Im Schemagenerierungs-Assistent werden in allen Fällen Datentypen ignoriert. Ausgeschlossen sind hiervon Spalten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`-Datentyps. Die `wchar`-Datengröße wird direkt in den `nvarchar`-Datentyp übersetzt. Wenn die angegebene Länge einer Spalte, die die `wchar`-Größe verwendet, 4.000 Byte überschreitet, generiert der Schemagenerierungs-Assistent einen Fehler.  
   
  Wenn für ein Datenelement, wie z. B. die Bindung eines Attributs, keine Länge angegeben ist, wird für die Spalte die in der folgenden Tabelle aufgelistete Standardlänge verwendet.  
   

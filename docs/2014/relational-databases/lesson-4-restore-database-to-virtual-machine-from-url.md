@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743306"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lektion 5. (Optional) Verschlüsseln Ihrer Datenbank anhand von TDE
   Optional können Sie die neu erstellte Datenbank verschlüsseln. Die transparente Datenverschlüsselung (TDE) führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Diese Art der Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Weitere Informationen finden Sie unter [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) und [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
@@ -92,6 +92,6 @@ GO
   
  **Nächste Lektion:**  
   
- [Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lektion 6: Migrieren einer Datenbank aus einer Quelle lokalen zu einem Zielcomputer in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

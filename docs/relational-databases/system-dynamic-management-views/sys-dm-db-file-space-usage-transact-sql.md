@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b803b86c216d877c0e056dd4892931575ca91010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741936"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837998"
 |user_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten, die aus gleichartigen Blöcken für Benutzerobjekte in der Datenbank zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Sie können die Total_pages-Spalte in der [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) Katalogsicht, um die Anzahl der reservierten Seiten jeder Zuordnungseinheit im Benutzerobjekt zurückgegeben. Beachten Sie jedoch, dass die Spalte Total_pages IAM-Seiten enthält.|  
 |internal_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten in gleichartigen Blöcken, die für interne Objekte in der Datei zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Es ist keine Katalogsicht bzw. kein dynamisches Verwaltungsobjekt vorhanden, die bzw. das die Seitenanzahl für jedes interne Objekt zurückgibt.|  
 |mixed_extent_page_count|**bigint**|Gesamtzahl der zugeordneten und nicht zugeordneten Seiten in zugeordneten gemischten Blöcken in der Datei. Gemischte Blöcke enthalten Seiten, die verschiedenen Objekten zugeordnet werden. Diese Gesamtzahl enthält alle IAM-Seiten in der Datei.|
-|modified_extent_page_count|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gesamtzahl der Seiten, die geändert werden, zugeordneten Blöcken der Datei, seit der letzten vollständigen datenbanksicherung. Anzahl der geänderten Seiten kann verwendet werden, zum Nachverfolgen der Umfang der differenzielle Änderungen in der Datenbank seit der letzten vollständigen Sicherung, zu entscheiden, ob die differenzielle Sicherung benötigt wird.|
+|modified_extent_page_count|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gesamtzahl der Seiten, die geändert werden, zugeordneten Blöcken der Datei, seit der letzten vollständigen datenbanksicherung. Anzahl der geänderten Seiten kann verwendet werden, zum Nachverfolgen der Umfang der differenzielle Änderungen in der Datenbank seit der letzten vollständigen Sicherung, zu entscheiden, ob die differenzielle Sicherung benötigt wird.|
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
 |distribution_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige numerische Id, die die Verteilung.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47837998"
  Häufige Änderungen in der Spalte Mixed_extent_page_count hinweisen intensiven Gebrauch von SGAM-Seiten. In diesem Fall sind zahlreiche PAGELATCH_UP-Wartevorgänge enthalten, bei denen die Warteressource eine SGAM-Seite ist. Weitere Informationen finden Sie unter [Sys. dm_os_waiting_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), und [sys.dm_os_latch_ Statistiken &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
   
 ## <a name="user-objects"></a>Benutzerobjekte  
- Die folgenden Objekte sind in den Seitenindikatoren für Benutzerobjekte enthalten:  
+ Die folgenden Objekte sind in den Seitenzählern für Benutzerobjekte enthalten:  
   
 -   Benutzerdefinierte Tabellen und Indizes  
   
@@ -77,9 +77,9 @@ ms.locfileid: "47837998"
 ## <a name="internal-objects"></a>Interne Objekte  
  Interne Objekte gibt es nur in ' tempdb '. Die folgenden Objekte sind in den Seitenzählern für interne Objekte enthalten:  
   
--   Arbeitstabellen für Cursor- oder Spoolvorgänge und die Speicherung temporärer LOBs (Large Object)  
+-   Arbeitstabellen für Cursor- oder Spoolvorgänge und temporären LOB-Speicher (Large Object)  
   
--   Arbeitsdateien für Vorgänge wie Hashjoins  
+-   Arbeitsdateien für Vorgänge wie z. B. Hashjoins  
   
 -   Sortierläufe  
   

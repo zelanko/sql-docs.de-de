@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8a4347b3cd3f9163eb13f76e1ae22e123b1026c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740680"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ausführen von Vorlagendateien mit der 'CommandStream'-Eigenschaft
   In diesem Beispiel wird veranschaulicht, wie Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der ' CommandStream '-Eigenschaft des SqlXmlCommand-Objekt angegeben werden können. In dieser Anwendung eine FileStreamobject für eine Befehlsdatei geöffnet wird, und der Dateidatenstrom wird zugewiesen, als der ' CommandStream ', der ausgeführt wird.  

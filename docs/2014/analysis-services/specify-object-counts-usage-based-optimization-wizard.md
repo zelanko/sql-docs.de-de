@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746134"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Objektanzahl angeben (Assistent für verwendungsbasierte Optimierung)
   Auf der Seite **Objektanzahl angeben** können Sie die Anzahl der Objekte im Cube automatisch berechnen lassen oder die geschätzte Anzahl manuell eingeben. Der Assistent für verwendungsbasierte Optimierung schätzt die Speicheranforderungen anhand der Objektanzahlen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cubeobjekte**  
  Zeigt die Dimensionen und Attribute im Cube an. Nur die Attribute, die nicht ihre `AggregationUsage` -Eigenschaft festgelegt auf "None" in der **Aggregationsverwendung überprüfen** Seite des Assistenten werden angezeigt, da sind die einzigen Attribute, die Anzahl angegeben.  
   

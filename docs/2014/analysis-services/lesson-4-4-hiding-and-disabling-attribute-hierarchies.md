@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728703"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ausblenden und Deaktivieren von Attributhierarchien
   Standardmäßig wird eine Attributhierarchie für jedes Attribut in einer Dimension erstellt, und jede Hierarchie ist für die Dimensionierung von Faktendaten verfügbar. Diese Hierarchie setzt sich aus einer Gesamtergebnisebene und einer Detailebene mit allen Elementen der Hierarchie zusammen. Ihnen ist bereits bekannt, dass Sie Attribute in benutzerdefinierten Hierarchien organisieren können, um Navigationspfade in einem Cube bereitzustellen. Unter bestimmten Umständen möchten Sie möglicherweise einige Attribute und deren Hierarchien deaktivieren oder ausblenden. Bestimmte Attribute wie Sozialversicherungs- oder Personalausweisnummer, Lohnsatz, Geburtsdatum und Anmeldeinformationen sind beispielsweise keine Attribute, mit denen Benutzer Cubeinformationen dimensionieren. Stattdessen werden diese Informationen nur als Details eines bestimmten Attributelements angezeigt. Diese Attributhierarchien können von Ihnen ausgeblendet werden, sodass die Attribute nur als Elementeigenschaften eines bestimmten Attributs angezeigt werden. Sie möchten Elemente anderer Attribute, beispielsweise Kundennamen oder Postleitzahlen, möglicherweise nur anzeigen lassen, wenn sie durch eine Benutzerhierarchie und nicht unabhängig durch eine Attributhierarchie angezeigt werden. Ein Grund dafür kann in der schieren Anzahl verschiedener Elemente in der Attributhierarchie liegen. Zur Steigerung der Verarbeitungsleistung sollten Sie schließlich Attributhierarchien deaktivieren, die nicht von Benutzern zum Durchsuchen verwendet werden.  

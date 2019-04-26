@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740531"
 ---
 # <a name="source-property-example-vb"></a>Source-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) Eigenschaft öffnen Sie drei [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte auf verschiedene Datenquellen basieren.  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

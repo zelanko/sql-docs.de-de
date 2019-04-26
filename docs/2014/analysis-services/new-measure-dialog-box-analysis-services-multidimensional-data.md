@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743666"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Neues Measure' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Neues Measure** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie einer Measuregruppe im Cube-Designer ein neues Measure hinzufügen. Das Dialogfeld **Neues Measure** können Sie wie folgt aufrufen:  
@@ -29,7 +29,7 @@ ms.locfileid: "48225180"
   
 -   Klicken Sie im Bereich **Measures** auf der Registerkarte **Cubestruktur** mit der rechten Maustaste auf eine Measuregruppe oder ein Measure, und wählen Sie aus dem Kontextmenü **Neues Measure** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Usage**  
  Wählen Sie die Aggregatfunktion aus, die von dem neuen Measure verwendet werden soll.  
   

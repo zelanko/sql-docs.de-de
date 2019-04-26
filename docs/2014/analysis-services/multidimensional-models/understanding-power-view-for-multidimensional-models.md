@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741099"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -98,7 +98,7 @@ ms.locfileid: "53362982"
  Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Da Dimensionsattributdaten bei mehrdimensionalen Modellen auf andere Weise gespeichert werden, kann das Abfragen impliziter Measures einige Zeit in Anspruch nehmen. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensionen, Attribute und Hierarchien  
- Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Die Dimensionsattribute, für die die AttributeHierarchyEnabled-Eigenschaft auf "false" festgelegt ist. Beispiel: Birth Date-Attribut in der Customer-Dimension oder AttributeHierarchyVisible-Eigenschaft auf "false" wird nicht in der Power View-Feldliste angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
+ Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Die Dimensionsattribute, die die AttributeHierarchyEnabled-Eigenschaft, die auf "false" festgelegt sein; Zum Beispiel: Birth Date-Attribut in der Customer-Dimension oder AttributeHierarchyVisible-Eigenschaft auf "false" festgelegt, wird in der Power View-Feldliste nicht angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
   
  **Dimensionen, Attribute und Hierarchien in SQL Server Data Tools (SSDT) und der Power View-Feldliste**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53362982"
  Mehrdimensionale Modelle unterstützen Sicherheit auf Dimensions- und Zellenebene mithilfe von Rollen. Ein Benutzer, der über Power View eine Verbindung mit einem Cube herstellt, wird authentifiziert und auf die geeigneten Berechtigungen überprüft. Bei Sicherheit auf Dimensionsebene kann der Benutzer die jeweiligen Dimensionselemente in Power View nicht einsehen. Wurde für einen Benutzer jedoch eine Sicherheitsberechtigung auf Zellenebene definiert, bei der bestimmte Zellen eingeschränkt sind, kann er in Power View keine Verbindung mit dem Cube herstellen. In einigen Fällen können Benutzer Aggregatdaten anzeigen, wenn Teile davon aus gesicherten Daten berechnet werden.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Nicht aggregierbare Attribute/Hierarchien  
- Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. Die folgende Abbildung enthält ein Beispiel für die nicht aggregierbare Hierarchie "Konten". Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
+ Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. In der folgenden Abbildung sehen Sie ein Beispiel für eine nicht-aggregierbare Hierarchie: Konten. Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
   
  **Nicht aggregierbare Hierarchie in Power View**  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746283"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Inhalt und Datentyp der Spalten angeben (Data Mining-Assistent)
   Auf der Seite **Inhalt und Datentyp der Spalten angeben** geben Sie die Verwendung und den Datentyp für jede Spalte an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben. Wenn Sie die Spalte ignorieren möchten, klicken Sie auf **Zurück** , um zur Seite **Trainingsdaten**zurückzukehren, und deaktivieren Sie alle Kontrollkästchen.  
@@ -25,9 +25,9 @@ ms.locfileid: "48213470"
   
  Der Datentyp gibt zusätzliche Details zum Typ der in der Spalte enthaltenen Daten und zur Verwendung der Daten während des Trainings an. Einige Inhaltstypen erfordern einen bestimmten Datentyp und umgekehrt. Je nach Algorithmus, den Sie beim Erstellen eines Miningmodells verwenden, müssen Sie unter Umständen einen bestimmten Datentyp angeben. Informationen zu den Inhalts- und Datentypen in Miningmodellen und -strukturen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Weitere Informationen:** [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningmodellstruktur**  
  Zeigt die Spalten aus den Ansichten und geschachtelte Tabellen an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   

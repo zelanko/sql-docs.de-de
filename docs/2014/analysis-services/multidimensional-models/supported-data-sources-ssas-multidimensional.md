@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740965"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Datenquellen unterstützt (SSAS – mehrdimensional)
   In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
@@ -37,7 +37,7 @@ ms.locfileid: "53349745"
 |-|-|-|-|  
 |Source|Versionen|Dateityp|Anbieter <sup>1</sup>|  
 |Access-Datenbanken|Microsoft Access 2007, 2010, 2013|.accdb oder .mdb|Microsoft Jet 4.0 OLE DB-Anbieter|  
-|Relationale SQL Server-Datenbanken <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server Parallel Datawarehouse (PDW) <sup>3</sup>|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
+|Relationale SQL Server-Datenbanken <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<sup>2</sup>, SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
 |Relationale Oracle-Datenbanken|Oracle 9i, 10g, 11g|(–)|OLE DB-Anbieter für Oracle<br /><br /> .NET Framework-Datenanbieter für Oracle Client<br /><br /> .NET Framework-Datenanbieter für SQL Server<br /><br /> MSDAORA-OLE DB-Anbieter <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Relationale Teradata-Datenbanken|Teradata V2R6, V12|(–)|OLE DB-Anbieter für TDOLEDB<br /><br /> .NET-Datenanbieter für Teradata|  
 |Relationale Informix-Datenbanken|V11.10|(–)|OLE DB-Anbieter für Informix|  
