@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740340"
 ---
 # <a name="stat-method"></a>Stat-Methode
 Ruft Informationen ab, zu einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Gibt an, dass es sich bei dieser Methode einige der Member nicht in der STATSTG-Struktur, und speichern daher ein speicherbelegungsvorgang zurückgegeben werden. Werte werden aus der STATFLAG-Enumeration entnommen. Die STATFLAG-Enumeration hat zwei Werte  
   
-|Konstante|value|  
+|Konstante|Wert|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -63,7 +63,7 @@ Long stream.Stat(StatStg, StatFlag)
  *ctime*  
  Gibt den Zeitpunkt der Erstellung für dieses Speicherkonto, Stream- oder Byte-Array an.  
   
- *"atime"*  
+ *atime*  
  Gibt den Zeitpunkt des letzten Zugriffs für dieses Speicherkonto, Stream- oder Byte-Array an.  
   
  Wenn STATFLAG_NONAME im StatFlag-Parameter angegeben wird, wird der Name des Datenstroms nicht zurückgegeben.  

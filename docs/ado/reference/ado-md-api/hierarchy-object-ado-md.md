@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740280"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
 Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert werden können oder die "wird durchgeführt." Eine Dimension kann entlang einer oder mehreren Hierarchien aggregiert werden.  

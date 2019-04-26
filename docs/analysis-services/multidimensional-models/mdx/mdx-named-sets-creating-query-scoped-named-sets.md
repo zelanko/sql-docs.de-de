@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Bereich einer Abfrage benannter Mengen (MDX) | Microsoft Docs
+title: Erstellen im Bereich einer Abfrage, benannte Mengen (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739980"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX benannte Mengen - Bereich einer Abfrage erstellen benannter Mengen
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Benannte Mengen – erstellen im Bereich einer Abfrage MDX benannte Mengen
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Wenn eine benannte Menge nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie die benannte Menge mit dem WITH-Schlüsselwort definieren. Eine benannte Menge, die mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  
   
@@ -90,7 +90,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SELECT-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [Erstellen im Bereich einer Sitzung mit dem Namen Sets & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Erstellen benannter Mengen im Bereich einer Sitzung &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

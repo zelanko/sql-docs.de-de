@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Aggregatfunktionen | Microsoft Docs
+title: Verwenden von Aggregatfunktionen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743086"
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34026037"
 |**Min**|Semiadditiv|Ruft den niedrigsten Wert für alle untergeordneten Elemente ab.|  
 |**Max**|Semiadditiv|Ruft den höchsten Wert für alle untergeordneten Elemente ab.|  
 |**DistinctCount**|Nicht additiv|Ruft die Zahl aller eindeutigen untergeordneten Elemente ab. Weitere Informationen finden Sie unter [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) im nächsten Abschnitt.|  
-|**InclusionThresholdSetting**|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
+|**Keine**|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
 |**ByAccount**|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Ist keine Kontodimension in der Measuregruppe vorhanden, wird der Wert als **None** -Aggregationsfunktion behandelt.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiadditiv|Berechnet den Durchschnitt der Werte für alle nicht leeren, untergeordneten Elemente.|  
 |**FirstChild**|Semiadditiv|Ruft den Wert des ersten untergeordneten Elements ab.|  
@@ -66,7 +66,7 @@ ms.locfileid: "34026037"
   
 ## <a name="see-also"></a>Siehe auch  
  [Measures und Measuregruppen](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX-Funktionsreferenz & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [Semiadditives Verhalten definieren](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

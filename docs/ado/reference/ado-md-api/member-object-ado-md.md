@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740080"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt ein Element einer Ebene in einem Cube, die untergeordneten Elemente ein Element einer Ebene oder ein Mitglied einer Position auf einer Achse eines cellSets dar.  
@@ -29,7 +29,7 @@ Stellt ein Element einer Ebene in einem Cube, die untergeordneten Elemente ein E
 ## <a name="remarks"></a>Hinweise  
  Die Eigenschaften einer **Member** unterscheiden sich je nach Kontext, in denen es verwendet wird. Ein **Member** von eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) in eine [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) verfügt über eine [untergeordnete Elemente](../../../ado/reference/ado-md-api/children-property-ado-md.md) Eigenschaft, die zurückgibt der **Mitglieder** auf der nächstniedrigeren Ebene in der Hierarchie aus der aktuellen **Member**. Für eine **Member** von einer [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), wird die **untergeordnete Elemente** Sammlung immer leer ist. Darüber hinaus die [Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md) Eigenschaft gilt nur für **Mitglieder** von einer **Ebene**.  
   
- Ein **Member** von **Position** verfügt über zwei Eigenschaften, die hilfreich sind, bei der Anzeige der [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) und [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Wenn auf diese Eigenschaften zugegriffen werden, wird ein Fehler auftreten. ein **Member** von eine **Ebene**.  
+ Ein **Member** von **Position** verfügt über zwei Eigenschaften, die hilfreich sind, bei der Anzeige der [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) und [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Wenn auf diese Eigenschaften zugegriffen werden, wird ein Fehler auftreten. ein **Member** von eine **Ebene**.  
   
  Mit der Auflistungen und Eigenschaften eine **Member** Objekt eine **Ebene**, können Sie Folgendes tun:  
   

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768616"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben kann die Fertigstellung ihrer Verarbeitung abwarten, bis die Transformation alle Eingabezeilen empfangen hat. Die Transformation kann bestimmte Zeilen auch ausgeben, bevor sie alle Eingabezeilen empfangen hat. In diesem Thema wird eine asynchrone Transformation erläutert. Wenn die Verarbeitung eine synchrone Transformation erfordert, finden Sie weitere Informationen unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../data-flow/transformations/script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "58375018"
   
 -   Sie haben die Möglichkeit, eine oder mehrere zusätzliche Ausgaben zu erstellen, beispielsweise eine Ausgabe für das Ergebnis einer Aggregation. Verwenden Sie die Schaltflächen **Ausgabe hinzufügen** und **Ausgabe entfernen**, um die Ausgaben der asynchronen Transformationskomponente zu verwalten. Legen Sie die `SynchronousInputID`-Eigenschaft jeder Ausgabe auf Null, um anzugeben, dass die Ausgabe nicht nur einfach Daten von einer Upstreamkomponente weitergibt oder sie an Ort und Stelle in den vorhandenen Zeilen und Spalten transformiert. Durch dies Einstellung werden die Ausgaben asynchron zur Eingabe.  
   
--   Sie können der Eingabe und den Ausgaben einen beschreibenden Namen geben. In der Skriptkomponente werden diese Namen verwendet, um die typisierten Accessoreigenschaften zu erzeugen, mit denen Sie auf die Eingabe und Ausgaben in Ihrem Skript verweisen.  
+-   Sie können der Eingabe und den Ausgaben einen beschreibenden Namen geben. In der Skriptkomponente werden diese Namen verwendet, um die typisierten Accessoreigenschaften zu erzeugen, mit denen Sie auf die Eingabe und die Ausgaben in Ihrem Skript verweisen.  
   
 -   Häufig werden durch eine asynchrone Transformation dem Datenfluss Spalten hinzugefügt. Wenn die `SynchronousInputID`-Eigenschaft einer Ausgabe Null beträgt, was angibt, dass die Ausgabe nicht nur einfach Daten von einer Upstreamkomponente weitergibt oder sie an Ort und Stelle in den vorhandenen Zeilen und Spalten transformiert, müssen Sie in der Ausgabe explizit Ausgabespalten hinzufügen und diese konfigurieren. Ausgabespalten haben nicht dieselben Namen wie die Eingabespalten, denen sie zugeordnet sind.  
   

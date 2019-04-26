@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0381e04ae1df53e5502c49eb17d0823fcf611e89
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645817"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Ein Upgrade ruhender SQL Server 6.5-Anmeldungen kann nicht durchgeführt werden
   Upgrade Advisor hat eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung erkannt, deren Kennwort nicht direkt auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden kann.  

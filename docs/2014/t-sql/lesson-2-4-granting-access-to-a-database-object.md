@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643452"
 ---
 # <a name="granting-access-to-a-database-object"></a>Erteilen des Zugriffs auf ein Datenbankobjekt
   Als Administrator können Sie die SELECT-Anweisung in der **Products**-Tabelle und in der **vw_Names**-Sicht ausführen, und Sie können auch die **pr_Names**-Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
@@ -44,6 +44,6 @@ ms.locfileid: "48209510"
   
 ## <a name="see-also"></a>Siehe auch  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [WIDERRUFEN &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Cuberückschreiben (MDX) | Microsoft Docs
+title: Verwenden von Cuberückschreiben (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740121"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX - Datenänderung: Verwenden von Cuberückschreiben
+# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX – Datenbearbeitung: Verwenden des Cuberückschreibens
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Sie aktualisieren einen Cube, indem Sie die [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) -Anweisung verwenden. Mit dieser Anweisung können Sie ein Tupel mit einem bestimmten Wert aktualisieren. Damit Sie einen Cube mit der UPDATE CUBE-Anweisung effizient aktualisieren können, müssen Sie die Syntax der Anweisung, die Fehlerbedingungen, die auftreten können, und die Auswirkungen kennen, die Updates auf einen Cube haben können.  
   
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   Ändern der Dimensionsgranularität für eine Dimension, die im Rückschreiben enthalten ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Ändern von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   
