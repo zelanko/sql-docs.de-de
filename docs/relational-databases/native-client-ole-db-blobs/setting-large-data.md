@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738251"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47816018"
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType* -Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject* -Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
