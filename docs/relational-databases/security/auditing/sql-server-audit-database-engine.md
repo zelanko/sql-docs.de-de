@@ -27,7 +27,7 @@ ms.locfileid: "56590475"
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
+  Die *Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auftreten. Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
