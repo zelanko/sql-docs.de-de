@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792090"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Hinzufügen von Projektmappen und Projekten zur Quellcodeverwaltung
   Wenn Sie eine Projektmappe zur Quellcodeverwaltung hinzufügen, wird die Projektmappe Teil eines dynamischen versionsverwalteten Archivs, das vom Quellcodeverwaltungsanbieter erstellt und verwaltet wird. Bei jedem Einchecken einer neuen Version der Projektmappe wird diese Version Teil des Archivs und anderen Benutzern der Quellcodeverwaltung verfügbar gemacht.  

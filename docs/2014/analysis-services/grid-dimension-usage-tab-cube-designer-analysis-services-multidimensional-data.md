@@ -12,22 +12,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730777"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Raster (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Raster** der Registerkarte **Dimensionsverwendung** können Sie im Cube-Designer die Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen anzeigen und bearbeiten. Jede Dimensionsbeziehung ist in einem Raster, in dem Measuregruppen als Spalten und Dimensionen als Zeilen angezeigt werden, als Zelle dargestellt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Option|Definition|  
 |------------|----------------|  
 |**Measuregruppen**|Wählen Sie die Measuregruppen aus, die im Bereich **Raster** als Spalten angezeigt werden sollen. Wenn Sie **(Alle anzeigen)** auswählen, werden alle verfügbaren Measuregruppen angezeigt.<br /><br /> Klicken Sie auf einen ausgewählten Spaltenheader für eine Measuregruppe, um die Measuregruppe umzubenennen.|  
 |**Dimensions**|Wählen Sie die Cubedimensionen aus, die im Bereich **Raster** als Zeilen angezeigt werden sollen. Wenn Sie **(Alle anzeigen)** auswählen, werden alle verfügbaren Cubedimensionen angezeigt.<br /><br /> Klicken Sie auf einen ausgewählten Zeilenheader für eine Dimension, um die Cubedimension umzubenennen.|  
-|**(Zelle)**|Wählen Sie eine Zelle aus, und klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), um das Dialogfeld **Beziehung definieren** anzuzeigen und eine Dimensionsbeziehung zwischen einer Cubedimension und einer Measuregruppe zu definieren. Weitere Informationen zum Dialogfeld **Beziehung definieren** finden Sie unter [Beziehung definieren &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Wählen Sie eine Zelle aus, und klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), um das Dialogfeld **Beziehung definieren** anzuzeigen und eine Dimensionsbeziehung zwischen einer Cubedimension und einer Measuregruppe zu definieren. Weitere Informationen zum Dialogfeld **Beziehung definieren** finden Sie unter [Beziehung definieren &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste in den Bereich **Raster** klicken, wird ein Kontextmenü mit den folgenden Optionen angezeigt:  

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 717e6ee640099b99e9ff4ec2484fdcc2a947ba1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680573"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Assistenten abschließen (Cube-Assistent)
   Auf der Seite **Assistenten abschließen** können Sie den Cube benennen und eine Vorschau des Cubes anzeigen, der beim Abschließen des Assistenten erstellt wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cubename**  
  Geben Sie den Namen des Cubes ein.  
   

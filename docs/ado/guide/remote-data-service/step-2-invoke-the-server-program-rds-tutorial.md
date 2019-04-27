@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675812"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Schritt 2: Aufrufen eines Serverprogramms (RDS-Tutorial)
 Beim Aufruf einer Methode auf dem Client *Proxy*, das tatsächliche Programm auf dem Server führt die Methode. In diesem Schritt müssen Sie eine Abfrage auf dem Server ausführen.  
   
 > [!IMPORTANT]

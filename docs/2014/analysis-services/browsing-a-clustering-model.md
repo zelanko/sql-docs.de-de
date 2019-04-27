@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660091"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
   Wenn Sie öffnen ein Clusteringmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, der clustering-Viewer in etwa wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  

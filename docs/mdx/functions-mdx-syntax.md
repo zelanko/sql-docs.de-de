@@ -1,5 +1,5 @@
 ---
-title: Funktionen (MDX-Syntax) | Microsoft Docs
+title: Funktionen (MDX Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690167"
 ---
 # <a name="functions-mdx-syntax"></a>Funktionen (MDX-Syntax)
 
@@ -30,8 +30,8 @@ ms.locfileid: "34740729"
 |Dimensionsfunktionen|Geben einen Verweis auf eine Dimension aus einer Hierarchie, einer Ebene oder einem Element zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Hierarchiefunktionen|Geben einen Verweis auf eine Hierarchie aus einer Ebene oder einem Element zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Ebenenfunktionen|Geben einen Verweis auf eine Ebene aus einem Element, einer Dimension, einer Hierarchie oder einem Zeichenfolgenausdruck zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
-|Logische Funktionen|Führen logische Operationen und Vergleiche für Objekte und Ausdrücke aus.<br /><br /> Weitere Informationen finden Sie unter [logische Funktionen mithilfe von](../mdx/using-logical-functions.md).|  
-|Memberfunktionen|Geben einen Verweis auf ein Element aus anderen Objekten oder aus einem Zeichenfolgenausdruck zurück.<br /><br /> Weitere Informationen finden Sie unter [Memberfunktionen verwenden](../mdx/using-member-functions.md).|  
+|Logische Funktionen|Führen logische Operationen und Vergleiche für Objekte und Ausdrücke aus.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von logischen Funktionen](../mdx/using-logical-functions.md).|  
+|Member-Funktionen|Geben einen Verweis auf ein Element aus anderen Objekten oder aus einem Zeichenfolgenausdruck zurück.<br /><br /> Weitere Informationen finden Sie unter [mit Memberfunktionen](../mdx/using-member-functions.md).|  
 |Numerische Funktionen|Führen mathematische und statistische Funktionen für Objekte und Ausdrücke aus.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von mathematischen Funktionen](../mdx/using-mathematical-functions.md).|  
 |Set-Funktionen|Geben einen Verweis auf eine Menge aus anderen Objekten oder aus einem Zeichenfolgenausdruck zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Set-Funktion](../mdx/using-set-functions.md).|  
 |Zeichenfolgenfunktionen|Geben Zeichenfolgenwerte aus anderen Objekten oder vom Server zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Zeichenfolgenfunktionen](../mdx/using-string-functions.md).|  

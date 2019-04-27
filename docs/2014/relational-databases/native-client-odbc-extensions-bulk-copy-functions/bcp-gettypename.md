@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689028"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
@@ -69,19 +69,19 @@ fIsMaxType
 |`SQLDATETIME`|Sowohl als auch|**datetime**|  
 |`SQLBITN`|Sowohl als auch|**bit-null**|  
 |`SQLBIT`|Sowohl als auch|**bit**|  
-|`SQLBIGCHAR`|nein|**char**|  
-|`SQLCHARACTER`|nein|**char**|  
-|`SQLBIGVARCHAR`|nein|**varchar**|  
-|`SQLVARCHAR`|nein|**varchar**|  
+|`SQLBIGCHAR`|Nein|**char**|  
+|`SQLCHARACTER`|Nein|**char**|  
+|`SQLBIGVARCHAR`|Nein|**varchar**|  
+|`SQLVARCHAR`|Nein|**varchar**|  
 |`SQLTEXT`|Sowohl als auch|**text**|  
-|`SQLBIGBINARY`|nein|**binary**|  
-|`SQLBINARY`|nein|**Binär (Binary)**|  
-|`SQLBIGVARBINARY`|nein|**varbinary**|  
-|`SQLVARBINARY`|nein|**varbinary**|  
-|`SQLIMAGE`|Sowohl als auch|**Bild**|  
-|`SQLINTN`|Sowohl als auch|**Int null**|  
+|`SQLBIGBINARY`|Nein|**binary**|  
+|`SQLBINARY`|Nein|**Binär (Binary)**|  
+|`SQLBIGVARBINARY`|Nein|**Varbinary**|  
+|`SQLVARBINARY`|Nein|**Varbinary**|  
+|`SQLIMAGE`|Sowohl als auch|**Image**|  
+|`SQLINTN`|Sowohl als auch|**int-null**|  
 |`SQLDATETIMN`|Sowohl als auch|**datetime-null**|  
-|`SQLMONEYN`|Sowohl als auch|**Money-null**|  
+|`SQLMONEYN`|Sowohl als auch|**money-null**|  
 |`SQLFLTN`|Sowohl als auch|**float-null**|  
 |`SQLAOPSUM`|Sowohl als auch|**Sum**|  
 |`SQLAOPAVG`|Sowohl als auch|**Avg**|  
@@ -89,26 +89,26 @@ fIsMaxType
 |`SQLAOPMIN`|Sowohl als auch|**Min**|  
 |`SQLAOPMAX`|Sowohl als auch|**Max**|  
 |`SQLDATETIM4`|Sowohl als auch|**smalldatetime**|  
-|`SQLMONEY4`|Sowohl als auch|**smallmoney**|  
+|`SQLMONEY4`|Sowohl als auch|**Smallmoney**|  
 |`SQLFLT4`|Sowohl als auch|**Real**|  
 |`SQLUNIQUEID`|Sowohl als auch|**uniqueidentifier**|  
-|`SQLNCHAR`|nein|**NCHAR**|  
-|`SQLNVARCHAR`|nein|**Nvarchar**|  
+|`SQLNCHAR`|Nein|**Nchar**|  
+|`SQLNVARCHAR`|Nein|**Nvarchar**|  
 |`SQLNTEXT`|Sowohl als auch|**Ntext**|  
 |`SQLVARIANT`|Sowohl als auch|**sql_variant**|  
 |`SQLINT8`|Sowohl als auch|**Bigint**|  
-|`SQLCHARACTER`|Benutzerkontensteuerung|**varchar(max)**|  
-|`SQLBIGCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
-|`SQLBIGVARCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
-|`SQLVARCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
-|`SQLBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
-|`SQLBIGBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
-|`SQLVARBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
-|`SQLNCHAR`|Benutzerkontensteuerung|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Benutzerkontensteuerung|**nvarchar(max)**|  
-|`SQLXML`|Benutzerkontensteuerung|**Xml**|  
-|`SQLUDT`|Sowohl als auch|**UDT**|  
+|`SQLCHARACTER`|Ja|**varchar(max)**|  
+|`SQLBIGCHAR`|Ja|**varchar(max)**|  
+|`SQLBIGVARCHAR`|Ja|**varchar(max)**|  
+|`SQLVARCHAR`|Ja|**varchar(max)**|  
+|`SQLBINARY`|Ja|**varbinary(max)**|  
+|`SQLBIGBINARY`|Ja|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Ja|**varbinary(max)**|  
+|`SQLVARBINARY`|Ja|**varbinary(max)**|  
+|`SQLNCHAR`|Ja|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Ja|**nvarchar(max)**|  
+|`SQLXML`|Ja|**Xml**|  
+|`SQLUDT`|Sowohl als auch|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Typ in sqlncli.h" der Tabelle im beschrieben [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  

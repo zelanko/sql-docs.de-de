@@ -1,5 +1,5 @@
 ---
-title: Union (MDX) | Microsoft Docs
+title: Union (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653460"
 ---
-# <a name="union--mdx"></a>Union (MDX)
+# <a name="union--mdx"></a>Union  (MDX)
 
 
   Gibt die Vereinigungsmenge zweier Mengen zurück, wobei optional doppelte Elemente beibehalten werden.  
@@ -36,17 +36,17 @@ Alternate syntax 2
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Der Mengenausdruck 1*  
+ *SET-Ausdruck 1*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
  *Der Mengenausdruck 2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion gibt die Vereinigung von zwei oder mehr angegebenen Mengen *.* Bei Verwendung der Standardsyntax und mit der alternativen Syntax 1 werden standardmäßig Duplikate entfernt. Bei Verwendung der Standardsyntax mithilfe der **alle** Flags bleiben bei der Duplikate in der Vereinigten Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
+ Diese Funktion gibt die Gesamtmenge von zwei oder mehr angegebenen Mengen *.* Bei Verwendung der Standardsyntax und alternativen Syntax 1 werden Duplikate standardmäßig entfernt. Bei Verwendung der Standardsyntax mit der **alle** Flags bleiben bei der Duplikate in der Vereinigten Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen das Verhalten der **Union** Syntaxvarianten-Funktion.  
+ Die folgenden Beispiele veranschaulichen das Verhalten der **Union** funktionieren die verschiedenen Syntaxvarianten.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Standardsyntax – Löschen der doppelten Werte  
   

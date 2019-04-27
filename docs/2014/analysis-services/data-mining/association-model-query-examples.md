@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689554"
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die während der Analyse ermittelten Regeln und Itemsets. Die Vorhersageabfrage nimmt hingegen Vorhersagen anhand der in den Daten gefundenen Zuordnungen vor. Für ein Zuordnungsmodell basieren Vorhersagen üblicherweise auf Regeln und können für Empfehlungen verwendet werden. Bei Abfragen des Inhalts wird hingegen die Beziehung zwischen Itemsets analysiert. Sie können auch Metadaten über das Modell abrufen.  

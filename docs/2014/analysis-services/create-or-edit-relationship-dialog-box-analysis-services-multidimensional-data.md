@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abcfea8c23806de0e784b8784064d77195ad5cf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679778"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Beziehung erstellen oder bearbeiten (Dialogfeld) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Beziehung erstellen/bearbeiten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Beziehung in der Datenquellensicht definieren oder ändern. Zum Anzeigen des Dialogfelds **Beziehung erstellen/bearbeiten** führen Sie einen der folgenden Schritte aus:  
@@ -34,7 +34,7 @@ ms.locfileid: "48197680"
 > [!NOTE]  
 >  Sie können im **Datenquellensicht-Designer** Beziehungen erstellen, die in der zugrunde liegenden Datenquelle nicht vorhanden sind und mit dem **Datenquellensicht-Designer** erstellte Beziehungen aus Fremdschlüsselbeziehungen in der zugrunde liegenden Datenquelle entfernen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quelltabelle (Fremdschlüsseltabelle)**  
  Wählen Sie die Tabelle oder die benannte Abfrage aus, die den Verweis auf eine oder mehrere Spalten in der Zieltabelle enthält.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48197680"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

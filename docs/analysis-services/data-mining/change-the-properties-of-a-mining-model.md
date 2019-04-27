@@ -1,5 +1,5 @@
 ---
-title: Ändern der Eigenschaften eines Miningmodells | Microsoft Docs
+title: Ändern der Eigenschaften eines Miningmodells | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670376"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Ändern der Eigenschaften eines Miningmodells
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34014847"
   
  Die folgenden Modelleigenschaften besitzen erweiterte Editor-Programme, mit denen Ausdrücke erstellt oder komplexe Modelleigenschaften konfiguriert werden können. Funktionen der folgenden Eigenschaften:  
   
--   **Filter**-Eigenschaft: Öffnet das [Dialogfeld „Datasetfilter oder Modellfilter“](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
+-   **Filter** Eigenschaft: Öffnet die [Datasetfilter oder im Dialogfeld "Filter" Modell](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
   
--   **AlgorithmParameters**-Eigenschaft: Öffnet das [Dialogfeld „Algorithmusparameter“ &#40;Miningmodelle-Sicht&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
+-   **AlgorithmParameters** Eigenschaft: Öffnet die [Algorithmus Parameter (Dialogfeld) &#40;Miningmodelle-Sicht&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
   
  Informationen zum Festlegen der Eigenschaften eines Miningmodells finden Sie unter [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md).  
   
@@ -48,6 +48,6 @@ ms.locfileid: "34014847"
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Miningmodelltasks und -anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

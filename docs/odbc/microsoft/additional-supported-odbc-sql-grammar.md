@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658256"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Zusätzliche unterstützte ODBC-SQL-Grammatik
 Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden Klauseln vollständig in der Core und erweiterte ODBC 2.5-Grammatik. Zusätzliche Informationen kann angezeigt werden, auf die [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md), [abhängige Namen](../../odbc/microsoft/correlation-names.md), und [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) Themen.  
@@ -40,7 +40,7 @@ Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden 
   
 -   [Datumsarithmetik](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: Datums-, Zeit- und Zeitstempelliterale](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Datum, Uhrzeit und Zeitstempelliterale](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX-Anweisung](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +56,7 @@ Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden 
   
 -   IN (*Valuelist*) (Kerne)  
   
--   [Jet: Äußere Verknüpfung](../../odbc/microsoft/jet-outer-joins.md) (Erweitert)  
+-   [Jet: Äußere Joins](../../odbc/microsoft/jet-outer-joins.md) (Erweitert)  
   
 -   SELECT-Anweisung (Erweitert) (einschließlich der GROUP BY, HAVING und UNION-Klausel)  
   

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666777"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Verwenden von sqlcmd mit Skriptvariablen
   Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
@@ -103,7 +103,7 @@ ms.locfileid: "48113780"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|Variable|Zugehörige Option|R/W|Default|  
+|Variable|Zugehörige Option|R/W|Standard|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  

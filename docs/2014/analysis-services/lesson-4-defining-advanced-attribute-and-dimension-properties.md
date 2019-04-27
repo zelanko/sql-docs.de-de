@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Definieren von Attributen und Dimensionseigenschaften erweiterte | Microsoft-Dokumentation'
+title: 'Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728739"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
   In dieser Lektion lernen Sie, wie einige erweiterte Attributeigenschaften, Attributhierarchien und Dimensionseigenschaften verwendet werden müssen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48184070"
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
- [Verwenden einer geänderten Version des Analysis Services-Tutorialprojekts](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  In dieser Aufgabe ist eine geänderte Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogrammprojekts, das über mehrere Measuregruppen und zusätzliche Dimensionen verfügt, zu öffnen, zu überprüfen und bereitzustellen.  
   
  [Definieren der Eigenschaften des übergeordneten Attributs in einer Hierarchie aus über- und untergeordneten Elementen](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "48184070"
  In dieser Aufgabe konfigurieren Sie die Eigenschaften UnknownMember und UnknownMemberName, um Fehlerbedingungen zu behandeln, die durch NULL-Dimensionselemente verursacht werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lesson 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   

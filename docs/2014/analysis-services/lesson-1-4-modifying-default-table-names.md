@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729534"
 ---
 # <a name="modifying-default-table-names"></a>Ändern von Standardtabellennamen
   Sie können den Wert der **FriendlyName**-Eigenschaft für Objekte in der Datenquellensicht ändern, um die Benutzerfreundlichkeit und Identifizierung zu optimieren.  
@@ -51,6 +51,6 @@ ms.locfileid: "48065410"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ändern der Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

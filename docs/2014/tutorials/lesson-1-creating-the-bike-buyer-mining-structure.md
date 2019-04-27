@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678503"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
   In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, ob ein potenzieller Kunde von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ein Fahrrad kaufen wird. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  

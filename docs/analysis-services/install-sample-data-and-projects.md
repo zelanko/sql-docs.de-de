@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659239"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installieren von Beispieldaten und mehrdimensionale Projekte 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Verwenden Sie die Anweisungen und Links in diesem Artikel, um die in der Analysis Services-Tutorials verwendeten Daten- und Projektdateien-Dateien zu installieren. 
   
-## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren der erforderlichen Komponenten 
+## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren der erforderlichen Komponenten 
 In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sie können alle Features auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus.  
   
 -   SQL Server-Datenbank-Engine  
   
--   SQL Server Analysis Services (SSAS) 
+-   SQL Server Analysis Services  (SSAS) 
   
     Analysis Services ist in diesen Editionen nur zur Verfügung: Evaluation, Enterprise, Business Intelligence, Standard. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt.
   

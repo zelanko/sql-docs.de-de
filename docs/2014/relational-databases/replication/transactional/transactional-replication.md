@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655431"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
   Eine Transaktionsreplikation beginnt in der Regel mit einer Momentaufnahme des Veröffentlichungsdatenbankobjekts und der entsprechenden Daten. Nach der Erstellung der Anfangsmomentaufnahme werden spätere auf dem Verleger vorgenommene Daten- und Schemaänderungen an den Abonnenten übermittelt, wenn sie auftreten (fast in Echtzeit). Die Datenänderungen werden auf dem Abonnenten in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, in der sie auf dem Verleger stattgefunden haben. Auf diese Weise wird die Transaktionskonsistenz innerhalb einer Veröffentlichung sichergestellt.  
@@ -67,16 +67,16 @@ ms.locfileid: "54127680"
 ##  <a name="DistributionAgent"></a> Verteilungs-Agent  
  Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Der Agent verschiebt Transaktionen aus der Verteilungsdatenbank auf den Abonnenten. Wenn ein Abonnement für die Überprüfung markiert ist, überprüft der Verteilungs-Agent auch, ob die Daten auf dem Verleger und dem Abonnenten übereinstimmen.  
 
-## <a name="publication-types"></a>Veröffentlichungstypen der
+## <a name="publication-types"></a>Veröffentlichungstypen
 
   
-Die Transaktionsreplikation stellt vier veröffentlichungstypen bereit:  
+Die Transaktionsreplikation stellt vier Veröffentlichungstypen bereit:  
   
 |Veröffentlichungstyp|Description|  
 |----------------------|-----------------|  
 |Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
-|Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Server verfügt über identische Daten, die mit einem Verleger und Abonnenten. <br /> – Es ist möglich, Zeilen auf dem Abonnenten zu aktualisieren.<br /> – Diese Topologie eignet sich am besten für serverumgebungen, die hohen Verfügbarkeit erfordern und leseskalierbarkeit.<br /><br />Weitere Informationen finden Sie unter [aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
-|Peer-zu-Peer-Topologie|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /> – Jeder Server verfügt über identische Daten und fungiert als Verleger und Abonnenten.<br /> – Dieselbe Zeile kann nur an einem Speicherort zu einem Zeitpunkt geändert werden.<br /> -Unterstützt [konflikterkennung](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />– Diese Topologie eignet sich am besten für serverumgebungen, die hohen Verfügbarkeit erfordern und leseskalierbarkeit.<br /><br />Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
-|Bidirektionale Transaktionsreplikation|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br />Bidirektionale Replikation zu-Peer-zu-Peer-Replikation ähnelt, aber es bietet keine Auflösung des Konflikts zwischen. Darüber hinaus ist die bidirektionale Replikation auf 2 Server beschränkt. <br /><br /> Weitere Informationen finden Sie unter [bidirektionale Transaktionsreplikation](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Server verfügt über identische Daten, die mit einem Verleger und Abonnenten. <br /> – Es ist möglich, Zeilen auf dem Abonnenten zu aktualisieren.<br /> – Diese Topologie eignet sich am besten für Serverumgebungen, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Peer-zu-Peer-Topologie|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /> – Jeder Speicherort verfügt über identische Daten und wird gleichzeitig als Verleger und Abonnent genutzt.<br /> – Dieselbe Zeile kann nur jeweils an einem Speicherort geändert werden.<br /> – Die [Konflikterkennung](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) wird unterstützt.  <br />– Diese Topologie eignet sich am besten für Serverumgebungen, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Bidirektionale Transaktionsreplikation|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br />Die bidirektionale Replikation ähnelt der Peer-zu-Peer-Replikation, stellt jedoch keine Konfliktauflösung bereit. Darüber hinaus ist die bidirektionale Replikation auf zwei Server beschränkt. <br /><br /> Weitere Informationen finden Sie unter [Bidirektionale Transaktionsreplikation](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

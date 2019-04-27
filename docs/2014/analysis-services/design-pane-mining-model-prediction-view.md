@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732126"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Entwurfsbereich (Miningmodell-Vorhersageansicht)
   Der Bereich **Entwurf** enthält den Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersagen erstellen können. Sie können Vorhersageabfragen entwerfen, die Tabellen mit Eingabedaten einer Datenquellensicht verwenden, um Massenvorhersagen zu erstellen, oder Sie entwerfen Singleton-Vorhersageabfragen, bei denen Sie einzelne Werte angeben können.  
@@ -30,9 +30,9 @@ ms.locfileid: "48189762"
 > [!NOTE]  
 >  Wenn Sie die Abfrage manuell ändern, gehen diese Änderungen bei Rückkehr zur Entwurfssicht verloren. Wenn Sie die DMX-Abfrage speichern möchten, können Sie die Abfrage in die Windows-Zwischenablage kopieren und dann in eine Textdatei einfügen.  
   
- **Weitere Informationen finden Sie unter** [Data Mining-Abfrage](data-mining/data-mining-queries.md)  
+ **Weitere Informationen finden Sie unter** [Data Mining-Abfragen](data-mining/data-mining-queries.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zur abfrageergebnissicht wechseln**  
  Klicken Sie hier, um zwischen den Bereichen **Entwurf**, **Abfrage**und **Ergebnis** zu wechseln. Der Wechsel zum Bereich **Ergebnis** führt die Abfrage aus.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48189762"
  **Singleton-abfrageeingabe**  
  Aktiviert, wenn Sie die Schaltfläche **SINGLETON-Abfrage** auswählen. Enthält die folgenden Spalten:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Miningmodellspalte**|Listet die Miningmodellspalten auf, die in dem Miningmodell enthalten sind, das in der **Miningmodelle** -Spalte enhalten ist.|  
 |**Wert**|Wählen Sie einen Wert aus der Liste, die die verschiedenen Statusmöglichkeiten der ausgewählten Miningmodellspalte enthält.<br /><br /> Wenn es sich bei der Spalte um eine geschachtelte Tabellenspalte handelt, klicken Sie auf die Wertzelle, um das Dialogfeld **Eingabe für geschachtelte Tabelle** zu öffnen.|  
@@ -83,10 +83,10 @@ ms.locfileid: "48189762"
  Wählen Sie eine Spalte aus der Liste der aus der Quelltabelle abgeleiteten Spalten aus. Wenn Sie unter **Quelle** die **Vorhersagefunktion**ausgewählt haben, enthält diese Liste die für das ausgewählte Miningmodell verfügbare Vorhersagefunktion.  
   
  **Gruppieren**  
- Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispiel: `(expr1 Or expr2) And expr3`.  
+ Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispiel: `(expr1 Or expr2) And expr3`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  **Und/Oder**  
- Wird zum Erstellen einer logischen Abfrage verwendet. Beispiel: `(expr1 Or expr2) And expr3`.  
+ Wird zum Erstellen einer logischen Abfrage verwendet. Beispiel: `(expr1 Or expr2) And expr3`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  **Kriterium/Argument**  
  Geben Sie eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabetabellen auf die Zelle gezogen werden.  

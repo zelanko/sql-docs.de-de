@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676061"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Lektion 1: Erstellen die Webdienst-Clientprojekts
   Mithilfe dieser Anleitung werden Sie eine einfache Konsolenanwendung erstellen, die auf den Berichtsserver-Webdienst zugreift. Im Zusammenhang mit dieser Anleitung wird davon ausgegangen, dass Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] entwickeln.  

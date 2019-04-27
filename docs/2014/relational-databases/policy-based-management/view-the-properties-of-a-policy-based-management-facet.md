@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676864"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Anzeigen der Eigenschaften eines Facets der richtlinienbasierten Verwaltung
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung i mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
@@ -26,7 +26,7 @@ ms.locfileid: "54100296"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Anzeigen der Eigenschaften eines Facets mit:**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54100296"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-facet"></a>So zeigen Sie die Eigenschaften eines Facets an  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54100296"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Facets** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen in der **Facet-Eigenschaften –**_Facet_name_ im Dialogfeld finden Sie unter [Dialogfeld "Facet-Eigenschaften", Seite "Allgemein"](../../integration-services/general-page-of-integration-services-designers-options.md), [ Dialogfeld "Facet-Eigenschaften", Seite ' abhängige Richtlinien '](facet-properties-dialog-box-dependent-policies-page.md), und [Dialogfeld "Facet-Eigenschaften", "abhängige Seite Bedingungen](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen über die verfügbaren Optionen im Dialogfeld **Facet-Eigenschaften –** _Facet-Name_ finden Sie unter Dialogfeld [„Facet-Eigenschaften“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md), [Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Richtlinien“](facet-properties-dialog-box-dependent-policies-page.md) und [Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Bedingungen“](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664346"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation (Ereignisklasse)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Activation** -Ereignis, wenn eine Warteschlangenüberwachung eine gespeicherte Aktivierungsprozedur startet oder eine QUEUE_ACTIVATION-Benachrichtigung sendet oder wenn eine gespeicherte Aktivierungsprozedur, die von einer Warteschlangenüberwachung gestartet wurde, beendet wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "52752872"
 |**DatabaseID**|`int`|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**EventClass**|`int`|Der Typ der aufgezeichneten Ereignisklasse. Immer **163** für **Broker:Activation**.|27|Nein|  
 |**EventSequence**|`int`|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|**EventSubClass**|`nvarchar`|Die spezielle Aktion, die von diesem Ereignis gemeldet wird. Einer der folgenden Werte:<br /><br /> **Starten Sie**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startete eine gespeicherte Aktivierungsprozedur.<br /><br /> **beendet**: Die gespeicherte Aktivierungsprozedur wurde normal beendet.<br /><br /> **abgebrochene**: Die gespeicherte Aktivierungsprozedur wurde mit einem Fehler beendet.|21|Nein|  
+|**EventSubClass**|`nvarchar`|Die spezielle Aktion, die von diesem Ereignis gemeldet wird. Einer der folgenden Werte:<br /><br /> **start**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startete eine gespeicherte Aktivierungsprozedur.<br /><br /> **Beendet**: Die gespeicherte Aktivierungsprozedur wurde normal beendet.<br /><br /> **aborted**: Die gespeicherte Aktivierungsprozedur wurde mit einem Fehler beendet.|21|Nein|  
 |**HostName**|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |**IntegerData**|`int`|Die Anzahl der in dieser Warteschlange aktiven Aufgaben.|25|Nein|  
 |**IsSystem**|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Nein|  

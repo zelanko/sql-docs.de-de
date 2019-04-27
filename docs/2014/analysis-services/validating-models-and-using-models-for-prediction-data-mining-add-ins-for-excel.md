@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793115"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Überprüfen von Modellen und Verwenden von Modellen für Vorhersagen (Data Mining-Add-Ins für Excel)
   Das Testen und Überprüfen des Modells ist ein wichtiger Schritt im Data Mining-Prozess. Sie müssen wissen, welche Leistung Ihre Miningmodelle mit echten Daten erzielen, bevor Sie die Modelle in Ihrer Produktionsumgebung bereitstellen.  

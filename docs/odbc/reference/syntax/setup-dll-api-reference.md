@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652898"
 ---
 # <a name="setup-dll-api-reference"></a>Setup-DLL-API-Referenz
 Dieser Abschnitt beschreibt die Syntax von der Setup-Treiber-DLL-API besteht aus zwei Funktionen (**ConfigDriver** und **ConfigDSN**). **ConfigDriver** und **ConfigDSN** können entweder in die Treiber-DLL oder in einer separaten setup-DLL.  

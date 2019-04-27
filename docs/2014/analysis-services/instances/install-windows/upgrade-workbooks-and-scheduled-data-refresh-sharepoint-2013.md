@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730195"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
   In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in PowerPivot-Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie PowerPivot-Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in dieser Version eingeführter Funktionen zu nutzen. Weitere Informationen zu neuen Funktionen finden Sie unter [Neues in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,14 +53,14 @@ ms.locfileid: "53373940"
 |Erstellt in|\<|Unterstützung und Verhalten|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot für SharePoint 2010**|**2012 PowerPivot für SharePoint 2010**|**2012 SP1 PowerPivot für SharePoint 2013**|  
-|**2008 R2 PowerPivot für Excel 2010**|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek aktualisiert, wenn automatische Upgrades für den PowerPivot-Systemdienst in der SharePoint-Farm aktiviert sind.<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|  
-|**2012 PowerPivot für Excel**|Nicht unterstützt|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
+|**2008 R2 PowerPivot für Excel 2010**|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe im Browser interagieren und sie als Datenquelle für andere Lösungen.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek upgegradet, wenn automatische Upgrades für den PowerPivot-Systemdienst in der SharePoint-Farm aktiviert sind,<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen.<br /><br /> **Upgrade:** Automatisches Upgrade ist nicht verfügbar. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|  
+|**2012 PowerPivot für Excel**|Nicht unterstützt|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe im Browser interagieren und sie als Datenquelle für andere Lösungen. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Automatisches Upgrade wird nicht unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
 |**Excel 2013**|Nicht unterstützt|Nicht unterstützt|Alle Funktionen|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Aktualisieren von Arbeitsmappen der Version 2008 R2 auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen  
  In diesem Abschnitt wird das Upgrade von Arbeitsmappen im Format von SQL Server 2008 R2 PowerPivot für Excel 2010 auf SQL Server 2012 SP1 PowerPivot für Excel 2013-Arbeitsmappen beschrieben.  
   
- **Verändertes Programmverhalten:** SQL Server 2008 R2 PowerPivot-Arbeitsmappen werden nicht automatisch aktualisiert, wenn sie in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 verwendet werden. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.  
+ **Verändertes Programmverhalten:** SQL Server 2008 R2 PowerPivot-Arbeitsmappen werden nicht automatisch aktualisiert werden, wenn sie in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 verwendet werden. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.  
   
  Arbeitsmappen der Version 2008 R2 werden zwar in PowerPivot für SharePoint 2013 geöffnet, unterstützen aber keine planmäßigen Datenaktualisierungen. Wenn Sie den Aktualisierungsverlauf überprüfen, wird eine mit der folgenden vergleichbare Fehlermeldung angezeigt:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373940"
   
 -   SQL Server 2012 PowerPivot für Excel 2013.  
   
- **Wie Sie eine Arbeitsmappe zu aktualisieren:** Die planmäßigen Datenaktualisierungen funktionieren erst, nachdem die Arbeitsmappe auf eine Arbeitsmappe der Version 2012 aktualisiert wurde. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
+ **Wie Sie eine Arbeitsmappe zu aktualisieren:** Die planmäßigen datenaktualisierungen funktionieren erst, nachdem Sie die Arbeitsmappe auf eine Arbeitsmappe 2012 aktualisiert. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
   
 -   Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in einer Microsoft Excel 2010-Version, für die das SQL Server 2012 PowerPivot-Add-In für Excel installiert wurde.  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664366"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Conversation** -Ereignis, um den Fortschritt einer Service Broker-Konversation anzugeben.  

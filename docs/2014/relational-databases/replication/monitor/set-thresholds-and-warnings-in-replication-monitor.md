@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667183"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
   Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt. Standardmäßig zeigt der Replikationsmonitor Warnungen nur für nicht initialisierte Abonnements an. Sie können Warnungen jedoch auch für andere Bedingungen aktivieren. Sie sollten Warnungen für Ihre Topologie aktivieren, damit Sie rechtzeitig über Status und Leistung informiert werden.  
@@ -61,7 +61,7 @@ ms.locfileid: "52781192"
   
 2.  Klicken Sie auf die Registerkarte **Warnungen** . Wenn Sie weitere Informationen zu den Optionen auf dieser Registerkarte benötigen, klicken Sie auf der Menüleiste auf **Hilfe** .  
   
-3.  Aktivieren Sie eine Warnung, indem Sie das entsprechende Kontrollkästchen aktivieren: **Warnhinweis anzeigen, wenn ein Abonnement innerhalb des Schwellenwerts abläuft** oder **warnen, wenn die Latenzzeit den Schwellenwert überschreitet**.  
+3.  Aktivieren Sie eine Warnung, indem Sie das entsprechende Kontrollkästchen aktivieren: **Warnung, wenn ein Abonnement innerhalb des Schwellenwerts abläuft** oder **Warnung, wenn die Latenzzeit den Schwellenwert überschreitet**.  
   
 4.  Legen Sie in der **Schwellenwert** -Spalte einen Schwellenwert für die Warnungen fest. Wenn Sie z. B. unter Schritt 3 die Option **Warnung, wenn die Latenzzeit den Schwellenwert überschreitet** ausgewählt haben, können Sie in der **Schwellenwert** -Spalte eine Latenzzeit von **60 Sekunden** angeben.  
   

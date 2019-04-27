@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658183"
 ---
 # <a name="new-features"></a>Neue Funktionen
 Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung mit einer ODBC 2.*.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Der ODBC-3. *x* -Treiber-Manager lässt diese Funktionen nicht zuordnen, bei der Arbeit mit einer ODBC 2.*.x* Treiber.  

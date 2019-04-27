@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649185"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Einführung in Ausdrücke
   Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** Ausdrücke schreiben, die Namen von Werten in einem separaten Dataset zu, suchen verketten im Dialogfeld angezeigt, verschiedene Bilder anhand von Feldwerten und So weiter.  

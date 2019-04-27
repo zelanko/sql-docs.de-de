@@ -27,11 +27,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 492835539e36611a56e3896a29d06ed75c17f4b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647434"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Anzeigen oder Löschen des Berichtsverlaufs (Berichts-Manager)
   Der Berichtsverlauf wird mit dem Bericht geführt, auf dem er basiert. Jeder Benutzer mit Zugriff auf einen Bericht kann den Berichtsverlauf für diesen Bericht anzeigen.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730823"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services-Instanzverwaltung
   Eine Instanz von Analysis Services ist eine Kopie der ausführbaren Datei `msmdsrv.exe`, die als Betriebssystemdienst ausgeführt wird. Jede Instanz ist völlig unabhängig von anderen Instanzen auf dem gleichen Server. Sie hat ihre eigenen Konfigurationseinstellungen, Berechtigungen, Anschlüsse, Startkonten, Dateispeicher und Servermoduseigenschaften.  
@@ -41,7 +41,7 @@ ms.locfileid: "48196220"
  Im Allgemeinen sind die meisten administrativen Aufgaben, die Sie ausführen müssen, in den einzelnen Modi dieselben. Als Analysis Services-Systemadministrator können Sie unabhängig von der Installationsart die gleichen Prozeduren und Skripte für das Verwalten aller Analysis Services-Instanzen im Netzwerk verwenden.  
   
 > [!NOTE]  
->  Eine Ausnahme hiervon stellt PowerPivot für SharePoint dar. Die Serververwaltung einer PowerPivot-Bereitstellung findet immer innerhalb des Kontexts einer SharePoint-Farm statt. PowerPivot unterscheidet sich von anderen Servermodi darin, dass es sich immer um eine Einzelinstanz handelt, die immer über die SharePoint-Zentraladministration oder das PowerPivot-Konfigurationstool verwaltet wird. Obwohl es möglich ist, eine Verbindung mit PowerPivot für SharePoint in SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nicht erwünscht ist. Eine SharePoint-Farm enthält Infrastrukturen, die den Serverstatus synchronisieren und die Serververfügbarkeit überwachen. Die Verwendung anderer Tools kann diese Vorgänge beeinträchtigen. Weitere Informationen zur PowerPivot-serververwaltung finden Sie unter [PowerPivot für SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  Eine Ausnahme hiervon stellt PowerPivot für SharePoint dar. Die Serververwaltung einer PowerPivot-Bereitstellung findet immer innerhalb des Kontexts einer SharePoint-Farm statt. PowerPivot unterscheidet sich von anderen Servermodi darin, dass es sich immer um eine Einzelinstanz handelt, die immer über die SharePoint-Zentraladministration oder das PowerPivot-Konfigurationstool verwaltet wird. Obwohl es möglich ist, in SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eine Verbindung mit PowerPivot für SharePoint herzustellen, ist dies nicht zu empfehlen. Eine SharePoint-Farm enthält Infrastrukturen, die den Serverstatus synchronisieren und die Serververfügbarkeit überwachen. Die Verwendung anderer Tools kann diese Vorgänge beeinträchtigen. Weitere Informationen zur PowerPivot-serververwaltung finden Sie unter [PowerPivot für SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

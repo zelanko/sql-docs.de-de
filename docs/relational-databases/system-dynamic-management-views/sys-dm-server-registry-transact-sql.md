@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62684020"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Konfigurations- und Installationsinformationen zurück, die für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Windows-Registrierung gespeichert sind. Gibt eine Zeile pro Registrierungsschlüssel zurück. Verwenden Sie diese dynamische verwaltungssicht, um Informationen zurückgeben, z. B. die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Dienste auf den Host-Computer oder Netzwerk-Konfiguration-Werten für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Gibt Konfigurations- und Installationsinformationen zurück, die für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Windows-Registrierung gespeichert sind. Gibt eine Zeile pro Registrierungsschlüssel zurück. Verwenden Sie diese dynamische Verwaltungssicht, um Informationen für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückzugeben, z. B. die auf dem Hostcomputer verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste oder die Werte der Netzwerkkonfiguration.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "47788618"
 |value_name|**nvarchar(256)**|Schlüsselwertname. Dies ist das Element, das in der Spalte **Name** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  
 |value_data|**sql_variant**|Der Wert der Schlüsseldaten. Dies ist der Wert, der für einen Eintrag in der Spalte **Daten** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

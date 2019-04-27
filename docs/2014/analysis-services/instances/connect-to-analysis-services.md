@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c169795ceb4c16d7928a9cc55b9f9bc9b9917dda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730131"
 ---
 # <a name="connect-to-analysis-services"></a>Verbindung mit Analysis Services herstellen
   In diesem Abschnitt erfahren Sie etwas über Eigenschaften von Verbindungszeichenfolgen, Clientbibliotheken für Verbindungen, die von Analysis Services unterstützten Authentifizierungsmethoden sowie das Einrichten oder Löschen von Verbindungen, bevor ein Server offline geschaltet wird.  
@@ -34,9 +34,9 @@ ms.locfileid: "48195246"
 |----------|----------------------|  
 |[Herstellen einer Verbindung von Clientanwendungen &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Wenn Sie mit Analysis Services nicht vertraut sind, lesen Sie dieses Thema, um sich einen Überblick über die Tools und Anwendungen zu verschaffen, die am häufigsten mit Analysis Services verwendet werden.|  
 |[Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank konfiguriert ist, an spezifische Anwendungen angepasst werden kann.|  
-|[Von Analysis Services Unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)|Dieses Thema gibt eine kurze Einführung in die Authentifizierungsmethoden, die von Analysis Services verwendet werden.|  
+|[Von Analysis Services unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)|Dieses Thema gibt eine kurze Einführung in die Authentifizierungsmethoden, die von Analysis Services verwendet werden.|  
 |[Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](configure-analysis-services-for-kerberos-constrained-delegation.md)|Viele Business Intelligence-Lösungen setzen den Identitätswechsel voraus, um sicherzustellen, dass nur berechtigte Daten an die einzelnen Benutzer zurückgegeben werden. In diesem Thema werden die Voraussetzungen für die Verwendung des Identitätswechsels beschrieben. In diesem Thema werden außerdem die Schritte zum Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung beschrieben.|  
-|[SPN-Registrierung für Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)|Die Kerberos-Authentifizierung setzt einen gültigen Dienstprinzipalnamen (Service Principal Name, SPN) für Dienste voraus, durch die die Identität eines Benutzers in einer Multiserverlösung angenommen oder delegiert wird. Verwenden Sie die Informationen in diesem Thema, um mehr darüber zu erfahren, wie Sie die SPN-Registrierung für Analysis Services erstellen und ausführen.|  
+|[SPN-Registrierung für eine Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)|Die Kerberos-Authentifizierung setzt einen gültigen Dienstprinzipalnamen (Service Principal Name, SPN) für Dienste voraus, durch die die Identität eines Benutzers in einer Multiserverlösung angenommen oder delegiert wird. Verwenden Sie die Informationen in diesem Thema, um mehr darüber zu erfahren, wie Sie die SPN-Registrierung für Analysis Services erstellen und ausführen.|  
 |[Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|Standardauthentifizierung oder domänenübergreifende Nutzung sind zwei wichtige Gründe, um Analysis Services für den HTTP-Zugriff zu konfigurieren.|  
 |[Für Analysis Services-Verbindungen verwendete Datenanbieter](data-providers-used-for-analysis-services-connections.md)|Analysis Services stellt drei Clientbibliotheken für den Zugriff auf Servervorgänge oder Analysis Services-Daten bereit. Dieses Thema enthält eine kurze Einführung zu ADOMD.NET, AMOs (Analysis Services Management Objects) und dem OLE DB-Anbieter für Analysis Services (MSOLAP).|  
 |[Trennen von Benutzern und Sitzungen auf Analysis Services-Server](disconnect-users-and-sessions-on-analysis-services-server.md)|Löschen Sie vorhandene Verbindungen und Sitzungen, bevor Sie einen Server offline schalten oder Baseline-Leistungstests durchführen.|  

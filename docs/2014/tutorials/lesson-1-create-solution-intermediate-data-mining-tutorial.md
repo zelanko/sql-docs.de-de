@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678482"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lektion 1: Erstellen der mittleres Datamining-Lösung (mittleres Datamining-Lernprogramm)
   Im Lernprogramm zu Data Mining-Grundlagen haben Sie ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt mit einer einfachen Data Mining-Lösung auf Basis der neuen [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank erstellt.  

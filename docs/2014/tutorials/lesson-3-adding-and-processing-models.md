@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653706"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Lektion 3: Hinzufügen und Verarbeiten von Modellen
   Die ursprüngliche Miningstruktur, die Sie in der vorhergehenden Lektion erstellt haben, umfasst ein einzelnes Miningmodell, das auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus basiert. Anhand dieses Modells können Sie Kunden für die Targeted Mailing-Kampagne identifizieren. Um fundierte Analyseergebnisse zu erhalten, ist es jedoch üblich, verwandte Modelle anhand verschiedener Algorithmen zu erstellen und deren Ergebnisse zu vergleichen. Auf diese Weise erhalten Sie auch andere Einblicke. Aus diesem Grund erstellen Sie zwei zusätzliche Modelle, die Sie anschließend verarbeiten und bereitstellen.  

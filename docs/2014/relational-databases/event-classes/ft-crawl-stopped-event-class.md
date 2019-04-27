@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662403"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped-Ereignisklasse
   Die **:Crawl Stopped** -Ereignisklasse zeigt an, dass eine Volltextdurchforstung (Auffüllung) beendet wurde. Die Beendigung kann aus einem erfolgreichen Abschließen der Durchforstung oder aus einem schwerwiegenden Fehler erfolgen.  

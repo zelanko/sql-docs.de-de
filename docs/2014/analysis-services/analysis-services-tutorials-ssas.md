@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648873"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services-Lernprogramme (SSAS)
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -33,11 +33,11 @@ ms.locfileid: "53359012"
  [AMO-Codebeispiel zur programmgesteuerten Erstellung von Tabellenmodellen](https://go.microsoft.com/fwlink/?linkID=221036)  
  Dieser Link führt Sie zu einer CodePlex-Downloadseite mit dem AMO-Beispiel für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
- [Lernprogramme für SQL Server 2008 R2](https://go.microsoft.com/fwlink/?linkID=220944)  
+ [SQL Server 2008 R2 Tutorials](https://go.microsoft.com/fwlink/?linkID=220944)  
  Die meisten der Lernprogramme für SQL Server 2008 R2 werden auf einem [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Server ausgeführt. Wenn Sie noch keine Erfahrung mit Data Mining haben, verwenden Sie diesen Link zu den Lernprogrammen für SQL Server 2008 R2 Data Mining, die sich auch auf einer [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Instanz von Analysis Services ausführen lassen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [TechNet-WIKI: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [TechNet Wiki: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Picnic-Dataset (Beispieldaten)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

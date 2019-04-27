@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8c251686085de410a3b0885a4e1755217ee6c2d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680115"
 ---
 # <a name="the-xsqname-type"></a>Der xs:QName-Typ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine von **xs:QName** abgeleiteten Typen, die ein Beschränkungselement des XML-Schemas verwenden. Außerdem unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktuell keine union-Typen mit **QName** als Elementtyp.  
