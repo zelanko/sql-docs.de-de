@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795357"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Tabellen-, Spalten- oder Zeilenfilterzuordnungen im Dialogfeld **Tabelleneigenschaften bearbeiten** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]geändert werden.  
@@ -45,6 +45,6 @@ ms.locfileid: "48201490"
          Falls Sie erneut beginnen möchten, klicken Sie auf **Zeilenfilter löschen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten Sie im Dialogfeld "Eigenschaften" Tabelle &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Tabelleneigenschaften bearbeiten (Dialogfeld) &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

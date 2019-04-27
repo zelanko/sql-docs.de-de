@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678668"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server – Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, kann es sich um ADO auf Microsoft SQL Server zugreifen.
 
-**Hinweis:** es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Neue OLE DB-Anbieters wird aufgerufen, die [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert.
+**HINWEIS:**  Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Neue OLE DB-Anbieters wird aufgerufen, die [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
  Legen Sie zum Verbinden mit diesem Anbieter die *Anbieter* Argument für die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Microsoft OLE DB-Anbieter für SQL Server fügt verschiedene Eigenschaften in der **Eigenschaften** Auflistung von nicht geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und [ Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte.
 
- Die folgenden Tabellen sind ein Cross-Index der ADO und OLE DB-Namen für jede dynamische Eigenschaft. Der OLE DB Programmer's Reference bezieht sich auf den Namen einer ADO-Eigenschaft, wird der Begriff "Description". Weitere Informationen zu diesen Eigenschaften finden Sie in der OLE DB Programmer's Reference. Suchen Sie nach den Namen des OLE DB-Eigenschaft im Index oder finden Sie unter [Anhang C: OLE DB-Eigenschaften](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Die folgenden Tabellen sind ein Cross-Index der ADO und OLE DB-Namen für jede dynamische Eigenschaft. Der OLE DB Programmer's Reference bezieht sich auf den Namen einer ADO-Eigenschaft, wird der Begriff "Description". Weitere Informationen zu diesen Eigenschaften finden Sie in der OLE DB Programmer's Reference. Suchen Sie nach den Namen des OLE DB-Eigenschaft im Index oder finden Sie unter [Anhang C: Eigenschaften für OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Dynamische Eigenschaften der Verbindung
  Die folgenden Eigenschaften werden hinzugefügt, um die **Eigenschaften** Auflistung von der **Verbindung** Objekt.
@@ -152,10 +152,10 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|RÜCKGABEWERT|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
-|DBMS-Version|DBPROP_DBMSVER|
+|DBMS Version|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|
@@ -174,7 +174,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Aktualisierung mehrerer Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|

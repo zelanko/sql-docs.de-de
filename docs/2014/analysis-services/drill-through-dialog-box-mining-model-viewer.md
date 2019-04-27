@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731549"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Dialogfeld "Drillthrough" (Miningmodell &ndash; Viewer)
   Wenn Sie ein Miningmodell mithilfe der Registerkarte **Miningmodell-Viewer** im Data Mining-Designer anzeigen, können Sie einen Drillthrough in die Details der Falldaten ausführen, wenn in dem Modell Drillthrough aktiviert ist. Wenn in der zugrunde liegenden Miningstruktur Drillthrough aktiviert ist, werden zudem in der Miningstruktur auch dann Spalten angezeigt, wenn diese Spalten nicht in dem Miningmodell enthalten waren. In der Spaltenliste sind die Strukturspalten mit dem Präfix "Struktur" gekennzeichnet.  
@@ -28,7 +28,7 @@ ms.locfileid: "48066953"
   
  Informationen über das Zugreifen auf Falldaten über die verschiedenen Miningmodell-Viewer, die Drillthrough unterstützen, **finden Sie unter** [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](data-mining/drill-through-to-case-data-from-a-mining-model.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Klassifizierte Fälle für**  
  Zeigt die Definition der Regeln Itemset und Cluster an, die im ausgewählten Knoten enthalten sind.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48066953"
  Klicken Sie auf die Schaltfläche mit dem grünen Pfeil, um die Daten zu aktualisieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Datamining&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Drillthroughabfragen &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Tasks und Anweisungen für den Miningmodell-Viewer](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

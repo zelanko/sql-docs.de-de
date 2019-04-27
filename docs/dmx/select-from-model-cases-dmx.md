@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658767"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;Modell&gt;. FÄLLEN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Liste mit Ausdrücken*  
+ *expression list*  
  Eine Liste von Ausdrücken, die durch Trennzeichen voneinander getrennt sind. Ein Ausdruck kann u. a. Spaltenbezeichner, benutzerdefinierte Funktionen und VBA-Funktionen einschließen.  
   
  Um eine Strukturspalte einzuschließen, die nicht im Miningmodell enthalten ist, verwenden Sie die Funktion `StructureColumn('<structure column name>')`.  
@@ -48,7 +48,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *model*  
  Ein Modellbezeichner.  
   
- *Bedingungsausdruck*  
+ *condition expression*  
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
@@ -88,7 +88,7 @@ AND IsInNode('002')
 >  Nicht alle Miningmodelltypen unterstützen Drillthrough. Weitere Informationen zu den Modellen, die Drillthrough unterstützen, finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  

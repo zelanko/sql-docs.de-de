@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a87741b104a49f98a3cba05dc65d911774774d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662899"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert)-Ereignisklasse
   Die Ereignisklasse **Degree of Parallelism (7.0 Insert)** tritt jedes Mal auf, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SELECT-, INSERT-, UPDATE- oder DELETE-Anweisung ausgeführt wird.  
@@ -31,7 +31,7 @@ ms.locfileid: "52786802"
 |Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
-|**BinaryData**|**image**|Anzahl der CPUs, die zum Abschließen des Prozesses auf der Grundlage der folgenden Werte verwendet werden:<br /><br /> 0x00000000: Gibt an, ein serieller Plan, der in Serie ausgeführt wird.<br /><br /> 0 x 01000000 gibt an, einen parallelen Plan, der in Serie ausgeführt wird.<br /><br /> > = 0x02000000: Gibt an, einen parallelen Plan, die parallel ausgeführt.|2|Nein|  
+|**BinaryData**|**image**|Anzahl der CPUs, die zum Abschließen des Prozesses auf der Grundlage der folgenden Werte verwendet werden:<br /><br /> 0x00000000: Gibt an, ein serieller Plan, der in Serie ausgeführt wird.<br /><br /> 0 x 01000000 gibt an, einen parallelen Plan, der in Serie ausgeführt wird.<br /><br /> >= 0x02000000: Gibt an, einen parallelen Plan, die parallel ausgeführt.|2|Nein|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
 |**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE-Datenbankanweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE-Datenbankanweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**DatabaseName**|**nvarchar**|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  

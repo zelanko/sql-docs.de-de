@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670473"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Löschen von Abfragen (Visual Database Tools)
   Sie können eine Abfrage löschen, indem Sie sie aus dem Projekt entfernen und dauerhaft aus dem Dateisystem löschen. Die anhand der folgenden Methode gelöschten Abfragen werden nicht in den Papierkorb verschoben und können nicht wiederhergestellt werden.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680255"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   In diesem Thema wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, der ein ActiveX-Skript in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ausführt, erstellen und definieren können.  
@@ -27,7 +27,7 @@ ms.locfileid: "52786662"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie einen Transact-SQL-Auftragsschritt mit**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52786662"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skript-Auftragsschritt  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791894"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Verwaltung einer Verfügbarkeitsgruppe (SQL Server)
   Die Verwaltung einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] schließt folgende Tasks ein:  
@@ -123,7 +123,7 @@ ms.locfileid: "53355364"
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server, Codename „Denali“ – Always On-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 2: Erstellen einer Lösung für unternehmenskritische hohe Verfügbarkeit mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "53355364"
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität &#40;SQLServer&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [Übersicht über Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Übersicht über die PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

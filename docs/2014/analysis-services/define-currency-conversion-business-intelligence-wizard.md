@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7cca289615e94cd4ccfbcee038e002c33700be8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732312"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Währungsumrechnung definieren (Business Intelligence-Assistent)
   Auf der Seite **Währungsumrechnung definieren** können Sie das MDX-Skript (Multidimensional Expressions) überprüfen, in dem die vom Business Intelligence-Assistenten erzeugte Währungsumrechnungsfunktion enthalten ist. Mithilfe dieses vom Assistenten erzeugten MDX-Skripts können Sie die zuvor definierte Währungsumrechnungsfunktion im MDX-Skript des Cubes entweder überschreiben oder durch Anfügen erweitern.  
@@ -38,7 +38,7 @@ ms.locfileid: "48099240"
 >   
 >  Wenn Sie diese Kommentare ändern oder löschen, können durch den Business Intelligence-Assistenten keine zuvor definierten Währungsumrechnungen erkannt werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Neues Währungsumrechnungsskript**  
  Zeigt das von der aktuellen Sitzung des Business Intelligence-Assistenten erzeugte MDX-Skript an.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48099240"
  Wählen Sie den Abschnitt des vorhandenen MDX-Skripts mit der zuvor definierten Währungsumrechnungsfunktion aus, der jetzt überschrieben oder angefügt werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

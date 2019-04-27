@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789236"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Dieses Thema enthält Informationen über die Konfiguration von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zur Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Die drei Szenarien zum Verwenden von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sind Datenbanken für Berichtsdatenquellen, Berichtsserver-Datenbanken und Berichtsentwurf. Die unterstützten Funktionen und die erforderliche Konfiguration sind für die drei Szenarien unterschiedlich.  
@@ -32,7 +32,7 @@ ms.locfileid: "53370224"
 ##  <a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
   
-> **Fehlermeldung:** "Schlüsselwort wird nicht unterstützt. 'Applicationintent'"  
+> **Fehlermeldung:** "Keyword not supported 'applicationintent'" (Das Schlüsselwort wird nicht unterstützt: 'applicationintent')  
   
  Die Meldung wird ausgegeben, wenn Sie eine der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Eigenschaften in die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Verbindungszeichenfolge einschließen, aber der Server die Eigenschaft nicht erkennt. Die angegebene Fehlermeldung wird angezeigt, wenn Sie in den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Benutzeroberflächen auf die Schaltfläche „Verbindung testen“ klicken, und wenn Sie den Bericht in der Vorschau anzeigen, sofern Remotefehler auf den Berichtsservern aktiviert sind.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "53370224"
   
 -   **Lokale Vorschau:** [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden .NET Framework 4.0 und unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungszeichenfolgen-Eigenschaften.  
   
--   **Remote- oder servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder beim Anzeigen einer Vorschau in [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
+-   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder beim Anzeigen einer Vorschau in [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
   
-> **Fehlermeldung:** "Schlüsselwort wird nicht unterstützt. 'Applicationintent'"  
+> **Fehlermeldung:** "Keyword not supported 'applicationintent'" (Das Schlüsselwort wird nicht unterstützt: 'applicationintent')  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Berichtsserver-Datenbanken und Verfügbarkeitsgruppen  
  Reporting Services bietet eingeschränkte Unterstützung für das Verwenden von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Berichtsserver-Datenbanken. Die Berichtsserver-Datenbanken können in Verfügbarkeitsgruppen als Teil eines Replikats konfiguriert werden, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet bei einem Failover jedoch nicht automatisch ein anderes Replikat für die Berichtsserver-Datenbanken.  
@@ -138,7 +138,7 @@ ms.locfileid: "53370224"
   
 -   **Primäres Replikat:** Konfigurieren Sie die Berichtsserverdatenbanken als Teil einer einzelnen Verfügbarkeitsgruppe, und erstellen Sie ein primäres Replikat, das alle Berichtsserverdatenbanken einschließt.  
   
--   **Sekundäre Replikate:** Erstellen Sie eine oder mehrere sekundäre Replikate. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit „RESTORE WITH NORECOVERY“ auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Sekundäre Replikate:** Erstellen Sie mindestens ein sekundäres Replikat. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit „RESTORE WITH NORECOVERY“ auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Berichtsserveranmeldeinformationen:** Sie müssen die entsprechenden Berichtsserveranmeldeinformationen auf den sekundären Replikaten erstellen, die Sie auf dem primären Replikat erstellt haben. Die genauen Schritte hängen davon ab, welchen Authentifizierungstyp Sie in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Umgebung verwenden; Windows-[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dienstkonto, Windows-Benutzerkonto oder SQL Server-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

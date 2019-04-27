@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680558"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Konfigurieren des unbeaufsichtigten PowerPivot für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)-Konto
   Das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot ist ein ausgewiesenes Konto zum Ausführen von PowerPivot-Datenaktualisierungsaufträgen in einer SharePoint-Farm. Durch die Konfiguration, die Sie aktivieren die **verwenden, das vom Administrator konfigurierte Konto für die datenaktualisierung** -Option in einem zeitplanseite datenaktualisierung (siehe unten). Arbeitsmappenautoren, die eine Datenaktualisierung planen, können diese Option auswählen, wenn sie das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot für die Ausführung eines Datenaktualisierungsauftrags bereitstellen möchten. Weitere Informationen dazu, wie Sie die Optionen für Anmeldeinformationen in einen Zeitplan zur datenaktualisierung anzeigen, finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "53366593"
   
 -   Überprüfen Sie, ob das Konto auf der Seite für die Verwaltung des Datenaktualisierungszeitplans für eine veröffentlichte PowerPivot-Arbeitsmappe verfügbar ist.  
   
-###  <a name="bkmk_create"></a> Schritt 1: Erstellen einer Zielanwendung und Festlegen der Anmeldeinformationen  
+###  <a name="bkmk_create"></a>Schritt 1: Erstellen einer Zielanwendung und Festlegen der Anmeldeinformationen  
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53366593"
   
 16. Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_specifyUA"></a> Schritt 2: Angeben des unbeaufsichtigten Kontos in PowerPivot-Serverkonfigurationsseiten  
+###  <a name="bkmk_specifyUA"></a>Schritt 2: Angeben des unbeaufsichtigten Kontos in PowerPivot-Serverkonfigurationsseiten  
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53366593"
   
 6.  Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_grant"></a> Schritt 3: GRANT Teilnahmeberechtigungen verfügen, um das Konto  
+###  <a name="bkmk_grant"></a>Schritt 3: GRANT Teilnahmeberechtigungen verfügen, um das Konto  
  Bevor das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot verwendet werden kann, müssen allen PowerPivot-Arbeitsmappen, für die es verwendet werden soll, Teilnahmeberechtigungen zugewiesen werden. Die Berechtigungsebene ist erforderlich, um die Arbeitsmappe von einer Bibliothek zu öffnen und anschließend nach der Aktualisierung der Daten erneut in der Bibliothek zu speichern.  
   
  Das Zuweisen von Berechtigungen ist ein Schritt, der vom Websitesammlungsadministrator durchgeführt werden muss. SharePoint-Berechtigungen können an der Stammwebsitesammlung oder einer beliebigen darunterliegenden Ebene zugewiesen werden, einschließlich individueller Dokumente und Elemente. Die Art der Festlegung von Berechtigungen variiert je nach erforderlichem Genauigkeitsgrad. Die folgenden Schritte stellen eine Art der Erteilung von Berechtigungen dar.  

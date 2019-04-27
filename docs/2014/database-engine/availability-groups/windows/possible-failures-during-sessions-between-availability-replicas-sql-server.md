@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789181"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
   Physische, Betriebssystem- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Probleme können einen Fehler in einer Sitzung zwischen zwei Verfügbarkeitsreplikaten verursachen. Ein Verfügbarkeitsreplikat überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen eigenen Sitzungstimeoutmechanismus. Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Dieser Timeoutzeitraum ist die maximale Wartezeit einer Serverinstanz auf den Erhalt einer PING-Meldung von einer anderen Instanz, bevor sie annimmt, dass keine Verbindung zur anderen Instanz besteht. Wenn ein Sitzungstimeout zwischen zwei Verfügbarkeitsreplikaten auftritt, gehen die Verfügbarkeitsreplikate davon aus, dass ein Fehler aufgetreten ist, und deklarieren einen *Softwarefehler*.  

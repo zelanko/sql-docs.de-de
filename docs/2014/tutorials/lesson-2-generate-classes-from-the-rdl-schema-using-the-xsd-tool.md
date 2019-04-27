@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653752"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool
   Nachdem Sie das [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Projekt erstellt haben, rufen Sie eine lokale Kopie des Berichtsdefinitionsschemas ab, und führen Sie das XML-Schemadefinitionstool (Xsd.exe) aus.  
@@ -52,7 +52,7 @@ ms.locfileid: "56025201"
     >  Nachdem Sie das Projekt die Datei ReportDefinition.xsd hinzugefügt haben, sehen Sie im **Projektmappen-Explorer** , dass die Datei ReportDefinition.cs (. vb) nicht vorhanden ist. Um die Datei anzuzeigen, klicken Sie neben der Datei ReportDefinition.xsd auf die Schaltfläche zum Erweitern/Reduzieren.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion schreiben Sie Code, um eine Berichtsdefinition mithilfe der aus dem RDL-Schema generierten Klassen von einem Berichtsserver zu laden. Finden Sie unter [Lektion 3: Laden Sie eine Berichtsdefinition vom Berichtsserver](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ In der nächsten Lektion schreiben Sie Code, um eine Berichtsdefinition mithilfe der aus dem RDL-Schema generierten Klassen von einem Berichtsserver zu laden. Siehe [Lektion 3: Laden Sie eine Berichtsdefinition vom Berichtsserver](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791793"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]ist der *Verfügbarkeitsmodus* eine Replikateigenschaft, die bestimmt, ob ein angegebenes Verfügbarkeitsreplikat im Modus für synchrone Commits ausgeführt werden kann. Für jedes Verfügbarkeitsreplikat muss der Verfügbarkeitsmodus konfiguriert werden, entweder als Modus für synchrone Commits oder aber als Modus für asynchrone Commits.  Wenn das primäre Replikat für den *Modus für asynchrone Commits*konfiguriert wird, wartet es nicht, bis ein sekundäres Replikat eingehende Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat ( *Protokoll festschreiben*). Wenn ein bestimmtes sekundäres Replikat für den Modus für asynchrone Commits konfiguriert ist, wartet das primäre Replikat nicht, bis das betreffende sekundäre Replikat das Protokoll festgeschrieben hat. Wenn sowohl das primäre Replikat als auch ein angegebenes sekundäres Replikat für den *Modus für synchrone Commits*konfiguriert sind, wartet das primäre Replikat, bis das sekundäre Replikat bestätigt, dass es das Protokoll festgeschrieben hat (es sei denn, das sekundäre Replikat konnte innerhalb des *Sitzungstimeouts*für das primäre Replikat keinen Ping-Befehl an dieses senden).  

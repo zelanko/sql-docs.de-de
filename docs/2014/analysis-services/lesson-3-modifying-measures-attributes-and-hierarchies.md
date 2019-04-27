@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729356"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Maßen, Attributen und Hierarchien
   Nach dem Definieren des Anfangscubes können Sie den Cube nun besser verwendbar und benutzerfreundlicher machen. Fügen Sie zu diesem Zweck Hierarchien hinzu, die die Navigation und Aggregation auf verschiedenen Ebenen unterstützen, wenden Sie Formate auf bestimmte Measures an und definieren Sie Berechnungen und Beziehungen.  

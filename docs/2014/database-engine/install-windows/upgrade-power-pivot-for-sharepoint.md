@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775650"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Aktualisieren von PowerPivot für SharePoint
   In diesem Thema sind die Schritte zusammengefasst, die erforderlich sind, um eine Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]zu aktualisieren. Die jeweiligen Schritte hängen von der Version von SharePoint, die Ihrer Umgebung derzeit ausgeführt wird und umfassen das PowerPivot für SharePoint-Add-in (**spPowerPivot.msi**).  
@@ -160,7 +160,7 @@ ms.locfileid: "58434501"
   
     3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**, und klicken Sie dann auf **OK** , um fortzufahren.  
   
-    4.  Die folgende Warnung wird angezeigt: "Arbeitsmappen im PowerPivot-Management-Dashboard sind im Begriff, die auf die neueste Version aktualisiert werden. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
+    4.  Die folgende Warnung angezeigt: "Arbeitsmappen im PowerPivot-Management-Dashboard sind im Begriff, die auf die neueste Version aktualisiert werden. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
   
          Diese Warnung bezieht sich auf Arbeitsmappen im PowerPivot-Management-Dashboard, die Berichte zu Datenaktualisierungsaktivitäten enthalten. Wenn Sie diese Arbeitsmappen angepasst haben, gehen alle an diesen Arbeitsmappen vorgenommenen Änderungen verloren, wenn vorhandene Dateien durch neuere Versionen ersetzt werden.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "58434501"
   
     10. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit verbindungsanforderungen für PowerPivot-Daten schlägt fehl mit Fehlern wie "Kann nicht zum Aktualisieren von Daten" oder "Fehler beim Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
   
-8.  **Wiederholen Sie den Vorgang** für jeden SQL Server Analysis Services (PowerPivot)-Dienst in der Farm: 1) Führen Sie SQL Server-Setup aus. 2) Führen Sie das PowerPivot-Konfigurationstool aus.  
+8.  **Wiederholen Sie den Vorgang** für jeden SQL Server Analysis Services (PowerPivot)-Dienst in der Farm: (1) führen Sie SQL Server-Setup 2) führen Sie das PowerPivot-Konfigurationstool.  
   
 9. Überprüfen Sie, dass dieses Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der PowerPivot-Server in der Farm prüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Thema und im folgenden Abschnitt.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434501"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist „Zurückziehung“ oder „Bereitstellung“, **Datei** ist „powerpivotwebapp.wsp“ oder „powerpivotfarm.wsp“.  
+    2.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen ein: **Typ** ist „Zurückziehung“ oder „Bereitstellung“, **Datei** ist „powerpivotwebapp.wsp“ oder „powerpivotfarm.wsp“.  
   
     3.  Bei Bereitstellungen oder zurückziehungen von PowerPivot-Lösungen, kopieren Sie den GUID-Wert für **"JobID"** und fügen Sie ihn in den folgenden Befehl aus (verwenden Sie die Befehle zum Markieren, kopieren und Einfügen im Bearbeitungsmenü der Shell zum Kopieren der GUID):  
   

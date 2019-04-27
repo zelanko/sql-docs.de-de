@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794573"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie die Symbolleiste auf der Registerkarte **Attributbeziehung** im Dimensions-Designer, um Folgendes zu tun:  
@@ -35,7 +35,7 @@ ms.locfileid: "48209680"
   
 -   Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer auf eine Dimension, um den Dimensions-Designer zu öffnen, und klicken Sie dann auf die Registerkarte **Attributbeziehung** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Business Intelligence hinzufügen**  
  Öffnet den **Business Intelligence-Assistent** , mit dem Business Intelligence-Funktionen hinzugefügt werden können. Weitere Informationen finden Sie unter [Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   

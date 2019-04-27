@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd57ae140adee0909c0f00647a334bd62f26c170
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671338"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Durchsuchen eines Modells mit Microsoft Time Series-Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,9 +78,9 @@ ms.locfileid: "34015437"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662991"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page-Ereignisklasse
   Die Ereignisklasse **Database Suspect Data Page** zeigt an, dass der [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) -Tabelle in [msdb](../databases/msdb-database.md)eine Seite hinzugefügt wurde. Schließen Sie diese Ereignisklasse in Ablaufverfolgungen ein, von denen das Vorkommen fehlerverdächtiger Seiten überwacht wird.  

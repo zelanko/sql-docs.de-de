@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678550"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Verarbeitung und Speicherkapazität in Analytics Platform System
 Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für die Daten und die Größe der Compute-Knoten Datenträger, die in Ihrer Appliance Analytics Platform System (APS) erforderlich. Verwenden Sie diese Berechnungen Prozessor- und Speicherressourcen, um Ihre Kapazität erwerben und planungsentscheidungen geführt.  

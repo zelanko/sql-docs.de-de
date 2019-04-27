@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792131"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Hinzufügen und Entfernen von Tabellen (Dialogfeld) (Analysis Services – mehrdimensionale Daten)
   Im Dialogfeld **Tabellen hinzufügen/entfernen** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie einer Datenquelle Tabellen hinzufügen und Tabellen aus einer Datenquelle entfernen. Zum Anzeigen des Dialogfelds **Tabellen hinzufügen/entfernen** führen Sie einen der folgenden Schritte aus:  
@@ -29,7 +29,7 @@ ms.locfileid: "48200420"
   
 -   Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** von **Datenquellensicht-Designer**, und wählen Sie **Tabellen hinzufügen/entfernen** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquelle**  
  Wählen Sie die Datenquelle zum Hinzufügen oder Entfernen von Tabellen.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "48200420"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

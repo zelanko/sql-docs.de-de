@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730612"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Browser (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **KPI-Browser** der Registerkarte **KPIs** des Cube-Designers können Sie die KPI-Ergebnisse (Key Performance Indicators) anzeigen und testen. KPIs müssen vor der Verwendung im Browser erst auf einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz bereitgestellt werden.  
@@ -26,7 +26,7 @@ ms.locfileid: "48174600"
 > [!NOTE]  
 >  Der Bereich wird nur in der Browseransicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Teilcuberaster**  
  Definieren Sie mithilfe dieser Option einen Teilcube, und schränken Sie die im Bereich **Ergebnisse** angezeigten Ergebnisse der KPIs ein. Das Raster enthält die folgenden Spalten:  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48174600"
  **Operator**  
  Wählen Sie den Operator aus, der definiert, wie der Ausdruck in **Filterausdruck** auf die ausgewählte Hierarchie angewendet wird. Die folgende Tabelle beschreibt die verfügbaren Operatoren.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|**gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
+|**Equal**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
 |**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Nicht In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  

@@ -1,6 +1,6 @@
 ---
-title: Reservierte Datenbanknamen - Parallel Data Warehouse | Microsoft Docs
-description: Reservierte Datenbanknamen Analytics Platform System Parallel Data Warehouse.
+title: Reservierte Datenbanknamen - Parallel Data Warehouse | Microsoft-Dokumentation
+description: Reservierte Datenbanknamen in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679269"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Reservierte Datenbanknamen in Parallel Data Warehouse
-Reservierte Datenbankname ist ein Name, der mit einer Benutzerdatenbank in SQL Server PDW zugewiesen werden kann.  
+Reservierte Datenbankname ist ein Name, der eine Benutzerdatenbank auf SQL Server PDW zugewiesen werden kann.  
   
 Liste von reservierten Datenbanknamen verwendet:  
   

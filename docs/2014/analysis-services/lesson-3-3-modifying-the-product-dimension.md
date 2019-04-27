@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729306"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
   In den Aufgaben in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien zur Verfügung zu stellen, definieren eine Hierarchie in der Product-Dimension, und geben den (All) -Elementnamen für die Hierarchie an. Außerdem gruppieren Sie Attribute in Anzeigeordner.  

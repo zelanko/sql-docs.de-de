@@ -1,5 +1,5 @@
 ---
-title: Definieren von benutzerdefinierten Elementformeln | Microsoft Docs
+title: Definieren von benutzerdefinierten Elementformeln | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666586"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>Attributeigenschaften: Definieren von benutzerdefinierten Elementformeln
+# <a name="attribute-properties---define-custom-member-formulas"></a>Attributeigenschaften – Definieren von benutzerdefinierten Elementformeln
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Sie können einen MDX-Ausdruck (Multidimensional Expressions), eine so genannte benutzerdefinierte Elementformel, erstellen, um die Werte für die Mitglieder eines angegebenen Attributs bereitzustellen. Eine Spalte in einer Tabelle einer Datenquellensicht stellt für jedes Mitglied in einem Attribut den Ausdruck bereit, der zur Bereitstellung des Wertes für dieses Element verwendet wird.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34021667"
   
     -   Quartal 3: 100  
   
-    -   Quartal 4: 800  
+    -   4. Quartal: 800  
   
 -   2004: 1500  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34021667"
   
     -   Quartal 3: 300  
   
-    -   Quartal 4: 400  
+    -   4. Quartal: 400  
   
  Bei einer benutzerdefinierten Elementformel wird der Wert des Elements stattdessen von der benutzerdefinierten Rollupformel bereitgestellt. Die folgende benutzerdefinierte Elementformel kann z. B. verwendet werden, um den Wert 450 für das untergeordnete Quarter 4-Element des 2004-Elements in der Time-Dimension anzugeben.  
   
@@ -68,6 +68,6 @@ Time.[Quarter 3] * 1.5
   
 ## <a name="see-also"></a>Siehe auch  
  [Attribute und Attributhierarchien](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Festlegen Sie benutzerdefinierter Elementformeln für Attribute in einer Dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

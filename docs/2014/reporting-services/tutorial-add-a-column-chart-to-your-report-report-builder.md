@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648249"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Ein Säulendiagramm kann für folgende Zwecke verwendet werden:  

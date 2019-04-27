@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793012"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) ist ein wissensorientiertes Data Quality-Produkt. DQS ermöglicht es Ihnen, eine Wissensdatenbank zu erstellen und sie zum Ausführen einer Vielzahl wichtiger Datenqualitätstasks zu verwenden, einschließlich Korrektur, Erweiterung, Standardisierung und Deduplizierung der Daten. DQS ermöglicht es Ihnen, eine Datenbereinigung mit Cloud-basierten Verweisdatendiensten auszuführen, die von Verweisdatenanbieter bereitgestellt werden. DQS ermöglicht Ihnen auch die Profilerstellung. Selbige ist in die Data Quality-Tasks integriert, womit Sie die Integrität Ihrer Daten analysieren können.  

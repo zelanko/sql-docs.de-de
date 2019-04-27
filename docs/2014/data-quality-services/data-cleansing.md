@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793042"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  
@@ -63,15 +63,15 @@ ms.locfileid: "56020382"
 ##  <a name="Interactive"></a> Interaktive Bereinigung  
  Auf Grundlage des computergestützten Bereinigungsprozesses stellt DQS dem Data Steward Informationen bereit, die dieser für die Bewertung von Datenänderungen benötigt. DQS kategorisiert die Daten auf den folgenden fünf Registerkarten:  
   
--   **Vorgeschlagene**: Werte für die DQS Vorschläge, die einen Vertrauensgrad aufweisen, die höher als gefunden der *automatisch vorgeschlagene Schwellenwert* aber niedriger als die *Schwellenwert für die automatische Korrektur* Wert. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
+-   **Vorgeschlagen:** Werte, für die DQS Vorschläge gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *Schwellenwert für automatische Vorschläge*, aber niedriger als der *Schwellenwert für automatische Korrekturen* ist. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
   
--   **Neue**: Gültige Werte, für die DQS nicht genug Informationen (Vorschläge) aufweist, und die daher keiner anderen Registerkarte zugeordnet werden können. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.  
+-   **Neu:** Gültige Werte für die DQS verfügt nicht über genug Informationen (Vorschläge) und aus diesem Grund kann keiner anderen Registerkarte zugeordnet werden. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.  
   
--   **Ungültige**: Werte, die in der Domäne in der Wissensdatenbank als ungültig markiert wurden, oder Werte, die eine Domänenregel oder Verweisdaten verletzt haben. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
+-   **Ungültig:** Werte, die wurden als ungültig markiert in der Domäne in der Wissensdatenbank oder Werte, die eine domänenregel oder Verweisdaten verletzt. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
   
--   **Korrigiert**: Werte, die von DQS während des automatisierten Bereinigungsprozesses korrigiert wurden eine Korrektur für den Wert mit einem Vertrauensgrad, der oben genannten gefunden wurde die *Schwellenwert für die automatische Korrektur* Wert. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
+-   **Korrigiert:** Werte, die von DQS während des automatisierten Bereinigungsprozesses korrigiert wurden, da für den Wert eine Korrektur mit einem Vertrauensgrad oberhalb des *Schwellenwerts für automatische Korrekturen* gefunden wurde. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
   
--   **Richtige**: Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
+-   **Richtig:** Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
   
 > [!NOTE]  
 >  Auf den Registerkarten **Vorgeschlagen**, **Korrigiert**und **Richtig** zeigt DQS den führenden Wert für eine Domäne (falls anwendbar) in der Spalte **Korrigieren in** für den jeweiligen Domänenwert an.  

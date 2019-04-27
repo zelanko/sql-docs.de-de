@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 320ce5a2e09904abe0b2217f257ce008955b8607
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732626"
 ---
 # <a name="data-source-credentials-ssas"></a>Anmeldeinformationen für die Datenquelle (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie den Benutzernamen und das Kennwort für die vorhandene Datenquellenverbindung eingeben, die Sie ausgewählt haben. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

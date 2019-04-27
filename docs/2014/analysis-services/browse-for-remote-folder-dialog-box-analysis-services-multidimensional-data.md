@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658065"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Nach Remoteordner suchen' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Nach Remoteordner suchen** wird eine Liste der verfügbaren Protokoll- und Datenordner angezeigt, die für eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]definiert wurden. Wählen Sie entweder einen Ordner aus der Liste aus, oder geben Sie bei Bedarf einen anderen Ordner an. Zum Anzeigen des Dialogfelds **Nach Remoteordner suchen** führen Sie einen der folgenden Schritte aus:  
@@ -31,7 +31,7 @@ ms.locfileid: "48060052"
   
 -   Wechseln Sie zur Seite **Speicherorte für lokale Partitionen angeben** oder zur Seite **Speicherorte für Remotepartitionen angeben** des Assistenten zum Synchronisieren einer Datenbank, und klicken Sie dort in der **Zielordner** -Spalte unter der Option **Speicherorte** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie den Ordner**  
  Wählen Sie einen Ordner aus, um für **Ausgewählter Pfad** den gewünschten Pfad festzulegen.  
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8834e8412cedbd2d97f9b5717f2e7979999a0a06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681197"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Erweiterung auswählen (Business Intelligence-Assistent)
   Auf der Seite **Erweiterung auswählen** wählen Sie die Business Intelligence-Erweiterung aus, die dem Cube oder der Dimension hinzugefügt werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Erweiterungen**  
  Wählen Sie die hinzuzufügende Business Intelligence-Erweiterung aus. In der folgenden Tabelle sind die verfügbaren Erweiterungen aufgelistet.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48196196"
  Stellt eine kurze Beschreibung der ausgewählten Business Intelligence-Erweiterung bereit.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

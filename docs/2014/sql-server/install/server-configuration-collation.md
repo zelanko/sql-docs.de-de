@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654003"
 ---
 # <a name="server-configuration---collation"></a>Serverkonfiguration – Sortierung
   Auf der Seite Serverkonfiguration - Sortierung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten können Sie die Sortierungseinstellungen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Sortierung ändern. Wählen Sie die entsprechende Option aus, um die Sortierungseinstellungen von verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen oder verschiedenen Computern abzugleichen.  

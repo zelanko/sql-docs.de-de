@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792338"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  
@@ -107,7 +107,7 @@ ms.locfileid: "56019691"
   
  Survivorship ist optional. Sie können die Ergebnisse auch ohne Ausführung von Survivorship exportieren. In diesem Fall verwendet DQS den Pivotdatensatz, der in der Abgleichsanalyse festgelegt wurde. Wenn zwei oder mehr Datensätze in einem Cluster die Survivorship-Regel erfüllen, wählt der Survivorship-Prozess die niedrigste Datensatz-ID in den konfliktverursachenden Datensätzen als Survivor aus. Sie können Survivor mit unterschiedlichen Survivorship-Regeln in verschiedene Dateien oder Tabellen exportieren.  
   
-1.  Auf der **exportieren** Seite, wählen Sie das Ziel, die die übereinstimmenden Daten auf die in exportiert werden sollen **Zieltyp**: **SQLServer**, **CSV-Datei**, oder **Excel-Datei**.  
+1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp** das Ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei** oder **Excel-Datei**.  
   
     > [!IMPORTANT]  
     >  Wenn Sie die 64-Bit-Version von Excel verwenden, können Sie die übereinstimmenden Daten nicht in eine Excel-Datei exportieren; Sie können sie nur in eine SQL Server-Datenbank oder eine CSV-Datei exportieren.  
@@ -175,27 +175,27 @@ ms.locfileid: "56019691"
   
  Die Quelldatenbankstatistiken umfassen Folgendes:  
   
--   **Datensätze**: Die Gesamtzahl der Datensätze in der Datenbank  
+-   **Datensätze:** Die Gesamtzahl der Datensätze in der Datenbank  
   
--   **Gesamtwerte**: Die Gesamtzahl der Werte in den Feldern  
+-   **Gesamtwerte:** Die Gesamtzahl der Werte in den Feldern  
   
--   **Neue Werte**: Die Gesamtzahl der Werte, die neue seit der vorherigen Ausführung, und ihr prozentualer Anteil am ganzen  
+-   **Neue Werte:** Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
   
--   **Eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am ganzen  
+-   **Eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
   
--   **Neue eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte, die neu in den Feldern und ihr prozentualer Anteil am ganzen  
+-   **Neue eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
   
  Die Feldstatistiken umfassen Folgendes:  
   
--   **Feld**: Der Name des Felds, das in die Zuordnungen eingeschlossen wurde.  
+-   **Feld:** Name des Felds, das in die Zuordnungen eingeschlossen wurde  
   
--   **Domain**: Der Name der Domäne, die die dem Feld zugeordnet wurde.  
+-   **Domäne:** Name der Domäne, die dem Feld zugeordnet wurde  
   
--   **Neue**: Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
+-   **Neu:** Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Ganzen  
   
--   **Eindeutige**: Die Anzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Gesamtwert  
+-   **Eindeutig:** Die Gesamtzahl der eindeutigen Datensätze im Feld und ihr prozentualer Anteil an den Gesamtwerten  
   
--   **Vollständigkeit**: Der Prozentsatz, dass die regelausführung abgeschlossen wurde.  
+-   **Vollständigkeit:** Der Prozentsatz, zu dem die Regelausführung abgeschlossen wurde  
   
 ### <a name="matching-policy-notifications"></a>Abgleichsrichtlinienbenachrichtigungen  
  Für die Abgleichsrichtlinienaktivität führen die folgenden Bedingungen zu Benachrichtigungen:  

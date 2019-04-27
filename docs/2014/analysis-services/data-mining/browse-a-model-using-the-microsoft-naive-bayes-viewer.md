@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e90593dc605d700ed766d089e4605bd8cd243399
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689448"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für naives Bayes-Verfahren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmus für das naive Bayes-Verfahren ist ein Klassifizierungsalgorithmus, der sehr gut an Modellierungsaufgaben für Vorhersagen angepasst werden kann. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
@@ -90,9 +90,9 @@ ms.locfileid: "48112079"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Datamining-Tools](data-mining-tools.md)   
+ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining-Tools](data-mining-tools.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   
   

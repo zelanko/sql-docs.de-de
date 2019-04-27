@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664085"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Broker:Corrupted Message** -Ereignis, wenn Service Broker eine beschädigte Nachricht empfängt.  
@@ -45,7 +45,7 @@ ms.locfileid: "52761342"
 |**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  
 |**ObjectName**|**nvarchar**|Der Dienstname der anderen Seite der Konversation und die Verbindungszeichenfolge, die die Remotedatenbank verwendet hat, um eine Verbindung mit dieser Datenbank herzustellen.|34|Nein|  
-|**RoleName**|**nvarchar**|Die Rolle des Endpunktes, der diese Nachricht empfängt. Einer der folgenden Werte:<br /><br /> **Initiator**:<br />                  Der empfangende Endpunkt ist der Initiator der Konversation.<br /><br /> **Ziel**:<br />                  Der empfangende Endpunkt ist das Ziel der Konversation.|38|Nein|  
+|**RoleName**|**nvarchar**|Die Rolle des Endpunktes, der diese Nachricht empfängt. Einer der folgenden Werte:<br /><br /> **initiator**:<br />                  Der empfangende Endpunkt ist der Initiator der Konversation.<br /><br /> **target**:<br />                  Der empfangende Endpunkt ist das Ziel der Konversation.|38|Nein|  
 |**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**Severity**|**int**|Wenn ein Fehler bewirkt hat, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat, der Schweregrad des Fehlers.|29|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  

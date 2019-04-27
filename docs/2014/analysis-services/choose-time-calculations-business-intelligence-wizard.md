@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe045f479d7c482da0a3eb3691479d0159bf978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681077"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Zielhierarchie und Berechnungen auswählen (Business Intelligence-Assistent)
   Auf der Seite **Zeitberechnungen auswählen** können Sie die Auflösung der neuen Zeitberechnungen definieren, die für eine vorhandene Zeithierarchie erstellt werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwenden Sie die folgende Hierarchie zum Analysieren von zeitberechnungen**  
  Wählen Sie die Hierarchie der Zeitdimension aus, die verwendet werden soll, um die neuen Zeitberechnungen zu erstellen.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48172836"
  Wählen Sie die Zeitberechnungen aus, die für die ausgewählte Hierarchie erstellt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

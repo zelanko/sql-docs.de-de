@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648625"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.  

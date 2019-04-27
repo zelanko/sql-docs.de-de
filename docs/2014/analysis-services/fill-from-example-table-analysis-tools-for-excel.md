@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731584"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Aus Beispiel füllen (Tabellenanalysetools für Excel)
   ![Aus Beispiel füllen-Schaltfläche in Tabellenanalysetools](media/tat-fillex.gif "aus Beispiel füllen-Schaltfläche in Tabellenanalysetools")  
@@ -60,9 +60,9 @@ ms.locfileid: "48160901"
   
  Wenn Sie beispielsweise ein Arbeitsblatt mit den Entfernungen zu Lieferadressen für Bestellungen ausfüllen möchten, dann nehmen Sie logischerweise an, dass die Lieferadresse einen großen Einfluss auf die Entfernung hat. In diesem Fall enthält der Bericht möglicherweise folgende Zeile:  
   
-|Spalte|value|Begünstigt|Relative Auswirkung|  
+|Spalte|Wert|Begünstigt|Relative Auswirkung|  
 |------------|-----------|------------|---------------------|  
-|Bundesland/Kanton/PLZ|AB|>500 Kilometer|80%|  
+|Bundesland/Kanton/PLZ|AB|> 500 Kilometer|80%|  
   
  Dies bedeutet, dass den Wert AB, in der **StateProvinceCode** Spalte vorhergesagt eine Protokollversand Entfernung > 500 Kilometer.  
   

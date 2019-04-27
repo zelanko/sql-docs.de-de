@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792308"
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geöffnet und auf die Domänenverwaltung, die Wissensermittlung und das Hinzufügen einer Abgleichsrichtlinie vorbereitet wird.  
@@ -77,20 +77,20 @@ ms.locfileid: "56031231"
 ##  <a name="State"></a> Status einer Wissensdatenbank  
  Das Statusfeld gibt an, in welcher Phase einer Aktivität sich die Wissensdatenbank befindet. Wenn Sie die Wissensdatenbank öffnen, wird sie in dieser Phase geöffnet.  
   
--   **\<Empty>**: Das Feld "State" ist für eine Wissensdatenbank leer, wenn durch Klicken auf die Wissensdatenbank veröffentlicht wurde **veröffentlichen** in der domänenverwaltungsaktivität und auf **Ja – veröffentlichen Sie die Wissensdatenbank, und beenden**.  
+-   **\<Empty>**: Das Statusfeld einer Wissensdatenbank ist leer, wenn sie veröffentlicht wird, indem in der Domänenverwaltungsaktivität auf **Veröffentlichen** und **Yes – Publish the knowledge base and exit** (Ja – Wissensdatenbank veröffentlichen und beenden) geklickt wird.  
   
--   **In Arbeit**: Bearbeitung der Wissensdatenbank wurde durch Klicken auf gespeichert **veröffentlichen** in der domänenverwaltungsaktivität und auf **Nein – Arbeit in die Wissensdatenbank, und Beenden speichern**.  
+-   **In Arbeit:** Die Arbeit an der Wissensdatenbank wurde durch Klicken auf **Veröffentlichen** in der Domänenverwaltungsaktivität und auf **No – Save the work on the knowledge base and exit** (Nein – Wissensdatenbank speichern und beenden) gespeichert.  
   
--   **Domänenverwaltung**: Daten wurden für eine Domäne in der Wissensdatenbank eingegeben, aber die Wissensdatenbank wurde nicht veröffentlicht, und die Arbeit bleibt in der domänenverwaltungsaktivität erhalten. Die Wissensermittlungsaktivität ist nicht verfügbar. Dieser Fall tritt auf, wenn Sie im Bildschirm **Domänenverwaltung** auf **Schließen** klicken.  
+-   **Domänenverwaltung:** Es wurden Daten für eine Domäne in die Wissensdatenbank eingegeben, die Wissensdatenbank wurde jedoch nicht veröffentlicht, und die Arbeit bleibt in der Domänenverwaltungsaktivität erhalten. Die Wissensermittlungsaktivität ist nicht verfügbar. Dieser Fall tritt auf, wenn Sie im Bildschirm **Domänenverwaltung** auf **Schließen** klicken.  
   
--   **Ermittlung – Zuordnung**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Zuordnen von** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungs- und die Abgleichsaktivitäten sind nicht verfügbar.  
+-   **Discovery – Mapping** (Ermittlung – Zuordnung): Die Wissensdatenbank wurde auf der Seite **Knowledge Base Management: Mapping** (Wissensdatenbankverwaltung: Zuordnung) geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungs- und die Abgleichsaktivitäten sind nicht verfügbar.  
   
--   **Ermittlung – ermitteln**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Analysieren von** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
+-   **Discovery – Discover** (Ermittlung – Ermitteln): Die Wissensdatenbank wurde auf der Seite **Knowledge Base Management: Analyze** (Wissensdatenbankverwaltung: Analysieren) geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
   
--   **Ermittlung – Werteverwaltung**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
+-   **Discovery – Value Management** (Ermittlung – Werteverwaltung): Die Wissensdatenbank wurde auf der Seite **Knowledge Base Management: Manage Domain Terms** (Wissensdatenbankverwaltung: Domänenbegriffe verwalten) geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
   
--   **Abgleichsrichtlinie - Abgleichsrichtlinie**: Die Wissensdatenbank geschlossen wurde, auf die **Abgleichsrichtlinie - abgleichen** Seite. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
+-   **Abgleichsrichtlinie – Abgleichen:** Die Wissensdatenbank wurde auf der Seite **Abgleichsrichtlinie – Abgleichen** geschlossen. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
   
--   **Abgleichsrichtlinie - Abgleichsergebnisse**: Die Wissensdatenbank geschlossen wurde, auf die **Abgleichsrichtlinie - Abgleichsergebnisse** Seite. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
+-   **Abgleichsrichtlinie – Abgleichsergebnisse:** Die Wissensdatenbank wurde auf der Seite **Abgleichsrichtlinie – Abgleichsergebnisse** geschlossen. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
   
   

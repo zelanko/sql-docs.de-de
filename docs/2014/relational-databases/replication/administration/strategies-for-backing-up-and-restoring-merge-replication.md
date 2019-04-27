@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688900"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategien zum Sichern und Wiederherstellen einer Mergereplikation
   Sichern Sie bei Mergereplikationen regelmäßig die folgenden Datenbanken:  
@@ -51,7 +51,7 @@ ms.locfileid: "54131910"
   
 -   Wird die Veröffentlichung gar nicht gefiltert, sollten Sie die Veröffentlichungsdatenbank durch Synchronisieren mit einem aktuellen Abonnenten auf den neuesten Stand bringen.  
   
--   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Betrachten Sie eine Tabelle, die partitioniert wurde, sodass jedes Abonnement erhält dann Kundendaten nur für eine einzelne Region: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden.  
+-   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Angenommen, eine Tabelle ist so partitioniert, dass jedes Abonnement nur die Kundendaten für eine der folgenden Regionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden.  
   
 > [!IMPORTANT]  
 >  Wenn eine Veröffentlichungsdatenbank mit einer Abonnementdatenbank synchronisiert wird, kann es passieren, dass veröffentlichte Tabellen nach dem Wiederherstellen aus der Sicherung einen neueren Stand aufweisen als nicht veröffentlichte Tabellen.  

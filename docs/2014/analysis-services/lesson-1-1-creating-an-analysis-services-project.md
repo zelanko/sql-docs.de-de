@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730261"
 ---
 # <a name="creating-an-analysis-services-project"></a>Erstellen eines Analysis Services-Projekts
   In der folgenden Aufgabe verwenden Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Erstellen eines neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt mit dem Namen `Analysis Services Tutorial`auf Grundlage der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projektvorlage. Ein *Projekt* ist eine Sammlung verknüpfter Objekte. Projekte befinden sich in einer Projektmappe, zu der mindestens ein Projekt gehört. Weitere Informationen finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -42,6 +42,6 @@ ms.locfileid: "48066949"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Erstellen ein Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

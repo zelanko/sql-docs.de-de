@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729778"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
   Mithilfe des SQL Server-Agent-Diensts können Sie die gewünschte Reihenfolge und die erforderlichen Zeitpunkte für die Ausführung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verwaltungsaufgaben planen. Mit geplanten Tasks können Sie Vorgänge automatisieren, die in regelmäßigen oder vorhersagbaren Abständen ausgeführt werden müssen. Dabei können Sie administrative Tasks wie z. B. die Cubeverarbeitung so planen, dass sie zu Zeiten ausgeführt werden, in denen die geschäftliche Auslastung des Servers niedrig ist. Sie können auch die Reihenfolge bestimmen, in der die Tasks ausgeführt werden sollen, indem Sie innerhalb eines SQL Server-Agent-Auftrags Auftragsschritte erstellen. Beispielsweise können Sie einen Cube verarbeiten und dann eine Sicherung des Cubes durchführen lassen.  

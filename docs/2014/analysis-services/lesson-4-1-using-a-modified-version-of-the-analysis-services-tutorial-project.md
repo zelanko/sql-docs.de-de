@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729113"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
   Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts, das Sie in den ersten drei Lektionen abgeschlossen haben. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  

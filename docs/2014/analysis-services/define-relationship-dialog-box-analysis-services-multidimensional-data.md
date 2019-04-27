@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bc1ab86373fc7c3b4b32cdfdbc87f5d5dd4acf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732086"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Beziehung definieren' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Beziehung definieren** können Sie im Cube-Designer eine Beziehung zwischen einer Cubedimension und einer Measuregruppe definieren. Sie können das Dialogfeld **Beziehung definieren** anzeigen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) in einer Zelle im Bereich **Raster** der Registerkarte **Dimensionsverwendung** im Cube-Designer klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beziehungstyp auswählen**  
  Wählen Sie den Typ der Dimensionsbeziehung aus, die zum Erstellen der Beziehung zwischen Cubedimension und Measuregruppe verwendet wird. Durch Auswahl eines Dimensionsbeziehungstyps ändert sich der Inhalt im Bereich **Detail** .  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48196300"
 |-----------------------|-----------------|------------|  
 |**Keine Beziehung**|Es ist keine Beziehung definiert. Im Bereich **Detail** werden keine Optionen angezeigt.||  
 |**Regulär**|Gibt eine reguläre Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Granularitätsattribut**: <br />                      Wählen Sie das Attribut aus, das die Granularität der Measuregruppe unter Berücksichtigung der Dimension definiert. Dieses Attribut ist normalerweise das Schlüsselattribut der Dimension.|  
-|||**Dimensionstabelle**: Zeigt die Haupttabelle für die Dimension an.|  
-|||**Measuregruppentabelle**: Zeigt die Faktentabelle für die Measuregruppe an.|  
-|||**Beziehung**: Zeigt ein Raster aus Dimensionsspalten und Measuregruppenspalten an, die der Beziehung zugrunde liegen. Das Raster enthält die folgenden Spalten:<br /><br /> **Dimensionsspalten**: Zeigt die mit dem ausgewählten Granularitätsattribut verknüpften Spalten an. Hinweis: Wenn die Dimension noch nicht generiert wurde, ist diese Option auf **Generieren** festgelegt.<br />**Measuregruppenspalten** :<br />                              Wählen Sie die Spalten in der Measuregruppe aus, die mit den Dimensionsspalten verbunden sind.|  
+|||**Dimensionstabelle** : Zeigt die Haupttabelle für die Dimension an.|  
+|||**Measuregruppentabelle** : Zeigt die Faktentabelle für die Measuregruppe an.|  
+|||**Beziehung**: Zeigt ein Raster aus Dimensionsspalten und Measuregruppenspalten an denen der Beziehung zugrunde liegen. Das Raster enthält die folgenden Spalten:<br /><br /> **Dimensionsspalten**: Zeigt die mit dem ausgewählten Granularitätsattribut verknüpften Spalten an. Hinweis: Wenn die Dimension noch nicht generiert wurde, wird diese Option festgelegt, um **generieren**.<br />**Measuregruppenspalten** :<br />                              Wählen Sie die Spalten in der Measuregruppe aus, die mit den Dimensionsspalten verbunden sind.|  
 |||**Erweitert**:<br />                      Klicken Sie auf diese Option, um das Dialogfeld **Measuregruppenbindungen** anzuzeigen und erweiterte Eigenschaften, z.B. die NULL-Verarbeitung, für die Beziehungen zwischen Attributen und Measuregruppenspalten zu bearbeiten. Weitere Informationen zum Dialogfeld **Measuregruppenbindungen** finden Sie unter [Dialogfeld „Measuregruppenbindung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Faktentabelle**|Gibt eine Faktendimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Granularitätsattribut**: Wählen Sie das Attribut aus, das die Granularität der Measuregruppe unter Berücksichtigung der Dimension definiert. Dieses Attribut ist normalerweise das Schlüsselattribut der Dimension.|  
 |||**Dimensionstabelle**: Zeigt die primäre Dimensionstabelle an.|  
@@ -55,7 +55,7 @@ ms.locfileid: "48196300"
 |||**Materialisieren**: <br />                      Aktivieren Sie dieses Kontrollkästchen, damit das Attributelement in der Zwischendimension gespeichert wird, die das Attribut in der Bezugsdimension mit der Faktentabelle in der MOLAP-Struktur verknüpft. Das Materialisieren der Beziehung ist das Standardverhalten zum Maximieren der Abfrageleistung, bringt jedoch eine Erhöhung der Verarbeitungszeit und des erforderlichen Speicherplatzes mit sich.|  
 |**M: N**|Gibt eine m:n-Dimensionsbeziehung an Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Dimension** : Zeigt die ausgewählte Dimension an.|  
 |||**Zwischenmeasuregruppe** : <br />                      Wählen Sie die verknüpfte Zwischenmeasuregruppe aus.<br /><br /> Hinweis: Die Zwischenmeasuregruppe muss mindestens eine Dimension mit der ausgewählten Measuregruppe gemein haben. Außerdem muss die Granularität der Beziehung zwischen der Zwischenmeasuregruppe und der gemeinsamen Dimension größer oder gleich der Granularität zwischen der gemeinsamen Dimension und der ausgewählten Measuregruppe sein.|  
-|**Data Mining**|Gibt eine Data Mining-Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Zieldimension**: Zeigt die ausgewählte Data Mining-Dimension an.<br /><br /> Hinweis: Sie müssen eine Data Mining-Dimension auswählen, um eine Data Mining-Dimensionsbeziehung zu erstellen.|  
+|**Data Mining**|Gibt eine Data Mining-Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Zieldimension**: Zeigt die ausgewählte Datamining-Dimension an.<br /><br /> Hinweis: Sie müssen eine Datamining-Dimension um eine Data mining-dimensionsbeziehung zu erstellen, auswählen.|  
 |||**Quelldimension**: Wählen Sie die Dimension aus, für die die Data Mining-Dimension Vorhersageanalysen bereitstellt.|  
   
 ## <a name="see-also"></a>Siehe auch  

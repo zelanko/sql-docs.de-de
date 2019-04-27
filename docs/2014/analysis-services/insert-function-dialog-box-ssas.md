@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729897"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Funktion einfügen (Dialogfeld) (SSAS)
   Im Dialogfeld **Funktion einfügen** können Sie Funktionen aus einer Liste auswählen, die beim Erstellen von Formeln verwendet werden können. Um das Dialogfeld über den Modell-Designer zu öffnen, klicken Sie auf der Bearbeitungsleiste über jeder Tabelle auf die Funktionsschaltfläche (**fx**). Weitere Informationen zum Auswählen von Funktionen für die Verwendung in Formeln finden Sie in der DAX-Einführung und im Thema zum Erstellen eine Formel.  

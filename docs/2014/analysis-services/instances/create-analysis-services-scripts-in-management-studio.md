@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730204"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließt Skriptgenerierungsfunktionen, Vorlagen und Editoren ein, mit denen Sie Analysis Services-Objekte und Tasks schreiben können.  
@@ -36,7 +36,7 @@ ms.locfileid: "48067188"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Datenbank, und klicken Sie auf **Sichern**. Daraufhin wird das Dialogfeld Datenbank sichern geöffnet. Geben Sie einen Sicherungsdateinamen an, und wählen Sie die gewünschten Optionen für diese Sicherung aus.  
   
-3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es hat die folgenden Optionen: **Skript für Aktion in Fenster 'Neue Abfrage' schreiben** , um das Abfrage-Editor-Fenster zu öffnen, **Skript für Aktion in Datei schreiben** , um das XMLA-Skript in einer Datei zu speichern, oder **Skript für Aktion in Zwischenablage schreiben** , um das XMLA-Skript in der Zwischenablage zu speichern.  
+3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es enthält die folgenden Optionen: **Skript für Aktion in neuem Abfragefenster** um den Abfrage-Editorfenster zu öffnen **Skript für Aktion in Datei** um das XMLA-Skript in eine Datei zu speichern oder **Skript für Aktion in Zwischenablage** der XMLA-Skript zum Speichern der Die Zwischenablage.  
   
      Beachten Sie, dass die Option **Skript für Aktion in Auftrag schreiben** , die in Management Studio als Skriptoption aufgelistet wird, für Analysis Services-Skripts nicht unterstützt wird.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067188"
   
 2.  Suchen Sie das Objekt, für das Sie ein Skript zum Erstellen, Ändern oder Löschen von Objekten erstellen möchten.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**oder **DELETE in**, und klicken Sie anschließend auf eine der folgenden Optionen: **Neues Abfrage-Editorfenster** zum Öffnen des Abfrage-Editorfensters, **Datei** zum Speichern des XMLA-Skripts in einer Datei oder **Zwischenablage** zum Speichern des XMLA-Skripts in der Zwischenablage.  
+3.  Mit der rechten Maustaste in des Objekts, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**, oder **Delete in**, und klicken Sie dann auf eines der folgende Optionen: **Neues Abfrage-Editor-Fenster** zu den Abfrage-Editorfenster öffnen **Datei** um das XMLA-Skript in eine Datei zu speichern oder **Zwischenablage** um das XMLA-Skript in die Zwischenablage zu speichern.  
   
     > [!NOTE]  
     >  Normalerweise würden Sie **Datei** auswählen, wenn Sie mehrere verschiedene Versionen der Datei erstellen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA-Abfrage-Editor &#40;Analysis Services – mehrdimensionale Daten&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [XMLA-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

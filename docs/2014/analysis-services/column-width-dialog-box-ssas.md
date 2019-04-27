@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680603"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Spaltenbreite (Dialogfeld) (SSAS)
   Im Dialogfeld **Spaltenbreite** können Sie die Breite einer Spalte im Modell-Designer angeben. Um das Dialogfeld zu öffnen, klicken Sie mit der rechten Maustaste auf eine Spalte, und klicken Sie dann auf **Spaltenbreite**. Sie können auch festlegen, dass sich die Spalte automatisch an die Größe des Spalteninhalts anpasst, indem Sie auf die Gitternetzlinie am rechten Rand der Spalte doppelklicken.  

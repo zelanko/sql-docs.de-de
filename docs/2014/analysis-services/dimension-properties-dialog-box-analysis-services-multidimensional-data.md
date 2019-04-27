@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731837"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Dimensionseigenschaften' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Dimensionseigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften einer Dimension in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen. Zum Anzeigen des Dialogfelds **Dimensionseigenschaften** klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Dimension und wählen die Option **Eigenschaften**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "48101470"
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung der Dimension an.|  
 |**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Dimension an.|  
 |**Verarbeitungsmodus des skriptcaches**|Wählen Sie den für die Dimension zu verwendenden Verarbeitungsmodus aus. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
-|**Status**|Zeigt den Verarbeitungsstatus der Dimension an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Zustand**|Zeigt den Verarbeitungsstatus der Dimension an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der die Dimension zuletzt verarbeitet wurde.|  
 |**Aktueller Speichermodus**|Zeigt den aktuellen Speichermodus der Dimension an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
   

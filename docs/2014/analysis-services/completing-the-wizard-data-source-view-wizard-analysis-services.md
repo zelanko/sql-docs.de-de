@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 728643793aa43eb76e5a94a5d35e5e06acec5c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680643"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Assistenten abschließen (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Assistenten abschließen** des Assistenten können Sie einen Namen für die Datenquellensicht angeben und die in der Sicht enthaltenen Tabellen und Sichten überprüfen. Nachdem Sie auf **Fertig stellen**geklickt haben, können Sie die Eigenschaften der Sicht mithilfe des Datenquellensicht-Designers in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ändern. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für die Datenquellensicht ein. Standardmäßig ist dies der Name der Datenquelle.  
   

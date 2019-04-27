@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654065"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Ändern der einem Masterauftrag für den SQL Server-Agent zugewiesenen Zielserver
   In diesem Thema wird beschrieben, wie Sie die Zielserver, die einem Masterauftrag für den SQL Server-Agent zugewiesen sind, mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -26,7 +26,7 @@ ms.locfileid: "54129060"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Ändern der Zielserver, die einem Masterauftrag für den SQL Server-Agent zugewiesen sind, mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54129060"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>So ändern Sie die Zielserver, die einem Masterauftrag für den SQL Server-Agent zugewiesen sind  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54129060"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zielserver Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  In der **Auftragseigenschaften -**_Job_name_ Dialogfeld **wählen Sie eine Seite**Option **Ziele**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;abzielt Seite&#41;](job-properties-new-job-targets-page.md).  
+5.  Klicken Sie im Dialogfeld **Job Properties**_Auftragsname_ (Auftragseigenschaften) unter **Seite auswählen** auf die Option **Targets** (Ziele). Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;abzielt Seite&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

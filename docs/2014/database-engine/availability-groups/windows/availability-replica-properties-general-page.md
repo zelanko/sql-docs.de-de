@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791904"
 ---
 # <a name="availability-replica-properties-general-page"></a>Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
   Verwenden Sie dieses Dialogfeld, um die Eigenschaften eines Verfügbarkeitsreplikats anzuzeigen.  
@@ -87,7 +87,7 @@ ms.locfileid: "48149870"
  **ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- Weitere Informationen finden Sie unter [aktive sekundäre Replikate: lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Sitzungstimeout (Sekunden)**  
  Der Timeoutzeitraum in Sekunden. Der Timeoutzeitraum ist die maximale Zeit, die das Replikat für den Empfang einer Meldung von einem anderen Replikat abwartet, bevor die Verbindung zwischen dem primären und sekundären Replikat als fehlerhaft betrachtet wird. Das Sitzungstimeout erkennt, ob sekundäre Replikate mit dem primären Replikat verbunden sind. Bei der Erkennung einer fehlerhaften Verbindung mit einem sekundären Replikat betrachtet das primäre Replikat das sekundäre Replikat als nicht synchronisiert und weist diesem den Wert NOT_SYNCHRONIZED zu. Ein sekundäres Replikat versucht einfach, erneut eine Verbindung herzustellen, wenn eine fehlgeschlagene Verbindung mit dem primären Replikat erkannt wird.  

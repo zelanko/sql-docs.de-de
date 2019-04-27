@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729677"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Schlüsselspalten (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Schlüsselspalten** , um die **KeyColumns** -Eigenschaft eines Attributs zu ändern. Weitere Informationen finden Sie unter [Ändern der KeyColumn-Eigenschaft eines Attributs](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48049052"
   
 -   Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ein Attribut aus, und klicken Sie dann im Fenster **Eigenschaften** in der**KeyColumns**-Eigenschaftszelle auf die Schaltfläche mit den drei Punkten ( **...** ).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quelltabelle**  
  Wählen Sie die Quelltabelle aus, für die Sie die Schlüsselspalten auswählen möchten. Sie können die Quelltabelle in der Datenquellensicht in einer Liste aller Tabellen auswählen.  
   

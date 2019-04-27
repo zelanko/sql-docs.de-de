@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689480"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Durchsuchen eines Modells mit Microsoft Time Series-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
@@ -87,9 +87,9 @@ ms.locfileid: "48137560"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](time-series-model-query-examples.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
+ [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   
   

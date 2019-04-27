@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679758"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dialogfelder Attributbeziehung erstellen und Attributbeziehung bearbeiten (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributbeziehung erstellen** können Sie neue Attributbeziehungen definieren, und mithilfe des Dialogfelds **Attributbeziehung bearbeiten** können Sie eine Attributbeziehung ändern. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  

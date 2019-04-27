@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f2abf6a18b0d3c99a67e818be00ff7603de63c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789993"
 ---
 # <a name="specify-availability-group-name-page-new-availability-group-wizardadd-database-wizard"></a>Seite Namen der Verfügbarkeitsgruppe angeben (Assistent für neue Verfügbarkeitsgruppen/Assistent zum Hinzufügen von Datenbanken)
   In diesem Thema werden die Optionen der Seite **Namen der Verfügbarkeitsgruppe angeben** beschrieben. Dieses Thema wird sowohl von [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] als auch von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680474"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)
   Verwenden Sie das PowerPivot-Konfigurationstool, um eine Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot für SharePoint 2010 zu konfigurieren oder zu reparieren. Das Konfigurationstool durchsucht zunächst das System und gibt dann eine Liste von Aktionen zurück, die notwendig sind, um eine Installation abzuschließen oder zu reparieren. Der Setup-Assistent für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installiert das PowerPivot-Konfigurationstool für SharePoint 2010 sowie ein PowerPivot-Konfigurationstool für SharePoint 2013. In diesem Thema wird das PowerPivot-Konfigurationstool für SharePoint 2010 beschrieben. Weitere Informationen zu SharePoint 2010 finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2013 &#40;PowerPivot-Konfigurationstool&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "53360342"
   
      **Passphrase:** Geben Sie eine Passphrase ein. Bei einer neuen SharePoint-Farm wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen neuen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die es Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
   
-5.  **Port:** Geben Sie optional eine Portnummer für die Verbindung mit der Webanwendung für die Zentraladministration an, oder verwenden Sie die bereitgestellte, zufällig generierte Nummer. Das Konfigurationstool überprüft, ob die Nummer verfügbar ist, bevor sie als Option angeboten wird.  
+5.  **Port:** Geben Sie optional eine Portnummer für die Verbindung mit der Zentraladministration-Webanwendung, oder verwenden die bereitgestellte, zufällig generierte Zahl. Das Konfigurationstool überprüft, ob die Nummer verfügbar ist, bevor sie als Option angeboten wird.  
   
 6.  Klicken Sie auf **SQL Server Analysis Services (PowerPivot) auf lokalen Server registrieren**.  
   

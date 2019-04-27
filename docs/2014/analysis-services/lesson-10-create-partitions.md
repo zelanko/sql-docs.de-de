@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729491"
 ---
 # <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
   In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle im Modell über eine Partition, die Spalten und Zeilen der Tabelle enthält. Der Internet Sales-Tabelle möchten wir die Daten nach Jahr unterteilen; eine Partition für jedes der fünf Jahren der Tabelle.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Hierarchien](lesson-9-create-hierarchies.md).  

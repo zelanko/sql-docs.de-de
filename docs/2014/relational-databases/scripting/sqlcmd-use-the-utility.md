@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666905"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Verwenden des Hilfsprogramms sqlcmd
   Das Hilfsprogramm `sqlcmd` ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripttasks. Damit Sie `sqlcmd` interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von `sqlcmd` ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)] vertraut sein. Das Hilfsprogramm `sqlcmd` wird in der Regel wie folgt verwendet:  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654664"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
   Ein Datenpunkt stellt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md).  

@@ -1,5 +1,5 @@
 ---
-title: Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft Docs
+title: Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659219"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "34019137"
  [Verwenden des Identitätswechsels mit Transportsicherheit](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [SPN-Registrierung für Analysis Services-Instanz](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [SPN-Registrierung für eine Analysis Services-Instanz](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

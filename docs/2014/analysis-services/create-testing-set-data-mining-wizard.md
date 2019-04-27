@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679869"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Erstellen eines Testsatzes (Data Mining-Assistent)
   Auf der Seite **Testsatz erstellen** können Sie angeben, welche Daten für das Training verwendet werden sollen und welche Daten für die Verwendung als Testsatz reserviert werden sollen. Durch das Aufteilen von Daten in einen Trainings- und Testsatz beim Erstellen einer Miningstruktur wird die Beurteilung der Genauigkeit von Miningmodellen, die Sie zu einem späteren Zeitpunkt erstellen, erheblich vereinfacht.  
@@ -35,9 +35,9 @@ ms.locfileid: "48096350"
   
 -   Sie können Daten nicht partitionieren, wenn Sie versuchen, einen Wert vorherzusagen, der in einer geschachtelten Tabelle gespeichert ist.  
   
- **Weitere Informationen**: [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md), [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Weitere Informationen finden Sie unter** [Tests und Überprüfung &#40;Datamining-&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md), [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Prozentsatz der Testdaten**  
  Klicken Sie auf die Nach-oben- und Nach-unten-Pfeile, um den Prozentsatz der Daten, die als Trainingssatz verwendet werden sollen, herauf- oder herabzusetzen, oder geben Sie einen Wert zwischen 0 und 100 in das Textfeld ein.  
   

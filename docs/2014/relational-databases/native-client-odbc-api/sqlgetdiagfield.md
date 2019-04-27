@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657703"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt an, die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
@@ -100,7 +100,7 @@ ms.locfileid: "53368112"
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetDiagField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField Function](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

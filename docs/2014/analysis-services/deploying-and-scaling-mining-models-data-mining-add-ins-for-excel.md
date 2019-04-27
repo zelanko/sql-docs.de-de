@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732161"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Bereitstellen und Skalieren von Miningmodellen (Data Mining-Add-Ins für Excel)
   Die Tools in der **Modellverwendung** und **Management** Gruppe zum Verwalten und Durchsuchen vorhandener Miningmodelle bereitgestellt werden. Mithilfe der Tools können alle auf einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gespeicherten Modelle angezeigt werden, nicht nur die mit den Add-Ins erstellten Modelle.  
@@ -37,7 +37,7 @@ ms.locfileid: "48103880"
   
  Weitere Informationen finden Sie unter [Miningmodelle dokumentieren &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
-### <a name="query"></a>Dataseteigenschaften  
+### <a name="query"></a>Abfrage  
  Klicken Sie auf **Abfrage** zum Starten der **Abfrage** Assistenten. Im Assistenten werden Sie interaktiv durch das Verfahren zur Erstellung einer Vorhersageabfrage für ein vorhandenes Data Mining-Modell geführt.  
   
  Zum weiteren Anpassen der Abfrage oder nicht im Assistenten enthaltene Abfragen zu erstellen, und klicken Sie einfach die **erweitert** Schaltfläche zum Starten der **erweiterten Data Mining Query Editor**.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689431"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Data Mining-Assistent F1-Hilfe (Analysis Services - Data Mining)
   Verwenden Sie den **Data Mining-Assistenten** , um eine neue Miningstruktur und ein optionales zugeordnetes Miningmodell zu erstellen.  
@@ -58,8 +58,8 @@ ms.locfileid: "48087760"
  Wenn Sie die Miningstruktur und ein optionales Miningmodell erstellt haben, können Sie deren Eigenschaften mit dem **Data Mining-Designer** ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Datamining-Designer](data-mining/data-mining-designer.md)   
+ [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Data Mining-Designer](data-mining/data-mining-designer.md)   
  [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)   
  [Definitionsmethode auswählen &#40;Datamining-Assistent&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Erstellen von Datamining-Struktur &#40;Datamining-Assistent&#41;](create-the-data-mining-structure-data-mining-wizard.md)   

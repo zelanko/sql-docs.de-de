@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795447"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View-Berichterstellungseigenschaften (SSAS – tabellarisch)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ermöglicht eine intuitive Ad-hoc-Berichterstellung für Fachanwender wie Datenanalysten, Entscheidungsträger und Information Worker. Sie können bequem Sichten von Daten aus Tabellenmodellen, die auf in einem PowerPivot-Katalog erstellten PowerPivot-Arbeitsmappen basieren, oder aus durch die Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellten und anschließend für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services-Instanzen bereitgestellten Tabellenmodellen erstellen und mit diesen Sichten interagieren. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine browserbasierte Silverlight-Anwendung, die aus SharePoint Server 2010 oder später gestartet wird.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680125"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Kopieren und Einfügen von Daten (SSAS – tabellarisch)
   Sie können Tabellendaten aus externen Anwendungen kopieren und sie in eine neue oder vorhandene Tabelle im Modell-Designer einfügen. Die Daten, die Sie aus der Zwischenablage einfügen, müssen im HTML-Format vorliegen, z. B. Daten, die aus Excel oder Word kopiert werden. Der Modell-Designer erkennt automatisch Datentypen und wenden sie auf die eingefügten Daten an. Sie können den Datentyp auch manuell ändern oder die Formatierung einer Spalte anzeigen.  

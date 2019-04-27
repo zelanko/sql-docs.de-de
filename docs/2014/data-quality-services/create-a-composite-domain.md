@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793211"
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
   In diesem Thema wird beschrieben, wie eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen, die für ein einzelnes Datenfeld gelten. Weitere Informationen zu Verbunddomänen finden Sie unter [Verwalten einer Verbunddomäne](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -79,11 +79,11 @@ ms.locfileid: "56034091"
   
 4.  Wählen Sie für **Analysemethode**eine der folgenden Optionen aus:  
   
-    -   **Verweisen auf Daten**: Analysieren Sie die Werte des Felds danach, wie die Daten von der Reference Data Service (RDS) formatiert ist. Data Quality Services sendet die Werte in der Verbunddomäne an den RDS, und der RDS gibt die gemäß der Domäne in der Verbunddomäne korrigierten und analysierten Daten zurück.  
+    -   **Verweisdaten:** Analysieren der Werte des Felds danach, wie die Daten vom Verweisdatendienst (Reference Data Service, RDS) formatiert werden. Data Quality Services sendet die Werte in der Verbunddomäne an den RDS, und der RDS gibt die gemäß der Domäne in der Verbunddomäne korrigierten und analysierten Daten zurück.  
   
-    -   **In der Reihenfolge**: Analysieren Sie die Werte des Felds nach der Reihenfolge der Domänen in der verbunddomäne. Der erste Wert wird in der ersten Domäne eingeschlossen, der zweite Wert in der zweiten Domäne usw.  
+    -   **Reihenfolge:** Analysieren der Werte des Felds nach der Reihenfolge der Domänen in der Verbunddomäne. Der erste Wert wird in der ersten Domäne eingeschlossen, der zweite Wert in der zweiten Domäne usw.  
   
-    -   **Trennzeichen**: Analysieren, die die Werte des Felds auf des Trennzeichens aus den Optionsfeldern ausgewählt Grundlage angezeigt wird, wenn Trennzeichen ausgewählt ist. Kann **Tabulator**, **Semikolon**, **Komma**, **Leerzeichen**oder **Anderes**sein. Geben für **Anderes**den Wert ein, der als Trennzeichen dienen soll.  
+    -   **Trennzeichen:** Analysieren der Werte des Felds auf Grundlage des Trennzeichens, das aus den Optionsfeldern ausgewählt wurde, wenn „Delimiters“ (Trennzeichen) ausgewählt wird. Kann **Tabulator**, **Semikolon**, **Komma**, **Leerzeichen**oder **Anderes**sein. Geben für **Anderes**den Wert ein, der als Trennzeichen dienen soll.  
   
 5.  Wenn Sie **Trennzeichen** als Analysemethode ausgewählt haben, können Sie auch **Analyse der Wissensdatenbank verwenden**auswählen. Weitere Informationen finden Sie unter [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689606"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Hinzufügen von Miningmodellen zu einer Struktur (Analysis Services - Data Mining)
   Eine Miningstruktur ist für die Unterstützung mehrerer Miningmodelle bestimmt. Nachdem Sie den Assistenten beendet haben, können Sie die Struktur öffnen und neue Miningmodelle hinzufügen. Jedes Mal, wenn Sie ein Modell erstellen, können Sie einen anderen Algorithmus verwenden, die Parameter ändern oder Filter anwenden, um eine andere Teilmenge der Daten zu verwenden.  

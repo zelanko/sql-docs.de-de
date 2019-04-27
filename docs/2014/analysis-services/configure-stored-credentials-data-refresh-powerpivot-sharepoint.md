@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680449"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)
   PowerPivot-Datenaktualisierungsaufträge können mit jedem Windows-Benutzerkonto ausgeführt werden, sofern Sie eine Zielanwendung in Secure Store Service erstellen, um die Anmeldeinformationen zu speichern, die Sie verwenden möchten. Auf dieselbe Weise können Sie die Anmeldeinformationen einer Secure Store Service-Zielanwendung zuordnen und die Zielanwendung in einem Datenaktualisierungszeitplan angeben, wenn Sie eine andere Datenbankanmeldung als die zum Importieren der Daten in PowerPivot für Excel verwendete bereitstellen möchten.  
@@ -55,7 +55,7 @@ ms.locfileid: "53365083"
   
 -   Überprüfen Sie, ob die Datenaktualisierung funktioniert, wenn diese Zielanwendung in einem Datenaktualisierungszeitplan angegeben wird.  
   
-### <a name="step-1-create-a-target-application"></a>Schritt 1: Erstellen einer Zielanwendung  
+### <a name="step-1-create-a-target-application"></a>Schritt 1: Erstellen einer Zielanwendung  
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "53365083"
   
 17. Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_grant"></a> Schritt 2: Erteilen von Teilnahmeberechtigungen für das Konto  
+###  <a name="bkmk_grant"></a>Schritt 2: Erteilen von Teilnahmeberechtigungen für das Konto  
  Bevor die gespeicherten Anmeldeinformationen verwendet werden können, müssen allen PowerPivot-Arbeitsmappen, für die sie verwendet werden sollen, Teilnahmeberechtigungen zugewiesen werden. Die Berechtigungsebene ist erforderlich, um die Arbeitsmappe von einer Bibliothek zu öffnen und anschließend nach der Aktualisierung der Daten erneut in der Bibliothek zu speichern.  
   
  Das Zuweisen von Berechtigungen ist ein Schritt, der vom Websitesammlungsadministrator durchgeführt werden muss. SharePoint-Berechtigungen können an der Stammwebsitesammlung oder einer beliebigen darunterliegenden Ebene zugewiesen werden, einschließlich individueller Dokumente und Elemente. Die Art der Festlegung von Berechtigungen variiert je nach erforderlichem Genauigkeitsgrad. Die folgenden Schritte stellen eine Art der Erteilung von Berechtigungen dar.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365083"
   
 5.  Wählen Sie **mitwirken**, und klicken Sie dann auf **OK**.  
   
-###  <a name="bkmk_dbread"></a> Schritt 3: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der datenaktualisierung verwendet  
+###  <a name="bkmk_dbread"></a>Schritt 3: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der datenaktualisierung verwendet  
  Wenn sie Daten in eine PowerPivot-Arbeitsmappe importieren, basieren Verbindungen zu externen Daten häufig auf vertrauenswürdigen oder personifizierten Verbindungen, die die Identität des aktuellen Benutzers verwenden, um eine Verbindung mit der Datenquelle herzustellen. Diese Typen von Verbindungen funktionieren nur, wenn der aktuelle Benutzer über die Berechtigung verfügt, die Daten zu lesen, die er importiert.  
   
  In einem Datenaktualisierungsszenario wird die gleiche Verbindungszeichenfolge, die zum Importieren von Daten verwendet wurde, jetzt erneut verwendet, um die Daten zu aktualisieren. Wenn die Verbindungszeichenfolge den aktuellen Benutzer voraussetzt (z. B. eine Zeichenfolge, die Integrated_Security=SSPI einschließt), dann übergibt der PowerPivot-Systemdienst die in der Zielanwendung angegebene Benutzeridentität als den aktuellen Benutzer. Diese Verbindung ist nur erfolgreich, wenn das Konto über Leseberechtigungen für die externe Datenquelle verfügt.  

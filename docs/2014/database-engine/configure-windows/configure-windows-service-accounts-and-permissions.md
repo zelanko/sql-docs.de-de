@@ -51,11 +51,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4ed6f335e3a791d4af8b780527d963115439a7f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787834"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
   Jeder Dienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Prozess oder eine Gruppe von Prozessen zum Verwalten der Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgängen mit Windows dar. In diesem Thema werden die Standardkonfiguration von Diensten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die Konfigurationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben, die Sie während und nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation festlegen können.  
@@ -174,13 +174,13 @@ ms.locfileid: "54131630"
   
 |Komponente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 und [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 oder höher|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETZWERKDIENST](#Network_Service)|[Virtual Account](#VA_Desc) <sup>*</sup>|  
 |FD-Startprogramm (Volltextsuche)|[LOKALER DIENST](#Local_Service)|[Virtuelles Konto](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser|[LOKALER DIENST](#Local_Service)|[LOKALER DIENST](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOKALES SYSTEM](#Local_System)|[LOKALES SYSTEM](#Local_System)|  
@@ -246,7 +246,7 @@ ms.locfileid: "54131630"
   
  Weitere Informationen zu verwalteten Dienstkonten und virtuellen Konten finden Sie im Abschnitt **Managed service account and virtual account concepts** (Konzepte verwalteter Dienstkonten und virtueller Konten) in der [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) (Schritt-für-Schritt-Anleitung für Dienstkonten) und den [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)(Häufig gestellten Fragen (FAQ) zu verwalteten Dienstkonten).  
   
- **Sicherheitshinweis:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Verwenden einer [MSA](#MSA) oder [virtuelles Konto](#VA_Desc) Wenn möglich. Wenn die Verwendung von verwalteten Dienstkonten und virtuellen Konten nicht möglich ist, verwenden Sie ein bestimmtes Benutzerkonto oder Domänenkonto mit niedrigen Berechtigungen anstelle eines freigegebenen Kontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Verwenden Sie separate Konten für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Gewähren Sie dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder den Dienstgruppen keine zusätzlichen Berechtigungen. Berechtigungen werden durch Gruppenmitgliedschaft oder direkt für eine Dienst-SID gewährt, sofern eine Dienst-SID unterstützt wird.  
+ **Sicherheitshinweis:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Verwenden Sie möglichst ein [verwaltetes Dienstkonto](#MSA) oder ein [virtuelles Konto](#VA_Desc). Wenn die Verwendung von verwalteten Dienstkonten und virtuellen Konten nicht möglich ist, verwenden Sie ein bestimmtes Benutzerkonto oder Domänenkonto mit niedrigen Berechtigungen anstelle eines freigegebenen Kontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Verwenden Sie separate Konten für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Gewähren Sie dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder den Dienstgruppen keine zusätzlichen Berechtigungen. Berechtigungen werden durch Gruppenmitgliedschaft oder direkt für eine Dienst-SID gewährt, sofern eine Dienst-SID unterstützt wird.  
   
 ###  <a name="Auto_Start"></a> Automatischer Start  
  Neben Benutzerkonten verfügt jeder Dienst über drei mögliche Startstatuswerte, die von den Benutzern gesteuert werden können:  
@@ -265,7 +265,7 @@ ms.locfileid: "54131630"
 |Name des SQL Server-Diensts|Schalter für unbeaufsichtigte Installationen<sup>1</sup>|  
 |-----------------------------|-------------------------------------------------------|  
 |MSSQLSERVER|SQLSVCACCOUNT, SQLSVCPASSWORD, SQLSVCSTARTUPTYPE|  
-|' SQLServerAgent '<sup>2</sup>|AGTSVCACCOUNT, AGTSVCPASSWORD, AGTSVCSTARTUPTYPE|  
+|SQLServerAgent<sup>2</sup>|AGTSVCACCOUNT, AGTSVCPASSWORD, AGTSVCSTARTUPTYPE|  
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
@@ -321,14 +321,14 @@ ms.locfileid: "54131630"
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst|Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup gewährte Berechtigungen|  
 |---------------------------------------|------------------------------------------------------------|  
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\MSSQLSERVER**. Benannte Instanz: **NT SERVICE\MSSQL$** InstanceName.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> Berechtigung zum Starten von SQL Writer<br /><br /> Berechtigung zum Lesen des Ereignisprotokolldiensts<br /><br /> Berechtigung zum Lesen des Remoteprozeduraufruf-Diensts|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent:** <sup>1</sup><br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\SQLSERVERAGENT**. Benannte Instanz: **NT Service\SQLAGENT$**_InstanceName_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Benannte Instanz: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Instanz: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Nur für tabellarisch:<br /><br /> **Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Sperren von Seiten im Speicher** (SeLockMemoryPrivilege): Dies ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird.<br /><br /> Nur für Failoverclusterinstallationen:<br /><br /> **Anheben der Zeitplanungspriorität** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\MSSQLSERVER**. Benannte Instanz: **NT SERVICE\MSSQL$** Instanzname.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> Berechtigung zum Starten von SQL Writer<br /><br /> Berechtigung zum Lesen des Ereignisprotokolldiensts<br /><br /> Berechtigung zum Lesen des Remoteprozeduraufruf-Diensts|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent:** <sup>1</sup><br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\SQLSERVERAGENT**. Benannte Instanz: **NT Service\SQLAGENT$**_Instanzname_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz: **SQLServerMSASUser$**_Computername_**$MSSQLSERVER**. Benannte Instanz: **SQLServerMSASUser$**_Computername_**$**_Instanzname_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Instanz: **SQLServerMSASUser$**_Computername_**$**_PowerPivot_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Nur für tabellarisch:<br /><br /> **Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Sperren von Seiten im Speicher** (SeLockMemoryPrivilege): Dies ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird.<br /><br /> Nur für Failoverclusterinstallationen:<br /><br /> **Anheben der Zeitplanungspriorität** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\ReportServer**. Benannte Instanz: **NT-Dienst\\$**_InstanceName_.)|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz und benannte Instanz: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verfügt über keinen separaten Prozess für eine benannte Instanz.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Berechtigung zum Schreiben in das Anwendungsereignisprotokoll<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Annehmen der Clientidentität nach Authentifizierung** (SeImpersonatePrivilege)|  
-|**Volltextsuche:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\MSSQLFDLauncher**. Benannte Instanz: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz oder benannte Instanz: **SQLServer2005SQLBrowserUser**_$ComputerName_. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser verfügt über keinen separaten Prozess für eine benannte Instanz.)|**Als Dienst anmelden** (SeServiceLogonRight)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz oder benannte Instanz: **NT-dienst\sqlwriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer verfügt über keinen separaten Prozess für eine benannte Instanz.)|Der SQLWriter-Dienst wird unter dem lokalen Systemkonto ausgeführt, das über alle erforderlichen Berechtigungen verfügt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup überprüft oder erteilt keine Berechtigungen für diesen Dienst.|  
+|**Volltextsuche:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\MSSQLFDLauncher**. Benannte Instanz: **NT Service\ MSSQLFDLauncher$**_Instanzname_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz oder benannte Instanz: **SQLServer2005SQLBrowserUser**_$Computername_. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser verfügt über keinen separaten Prozess für eine benannte Instanz.)|**Als Dienst anmelden** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz oder benannte Instanz: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer verfügt über keinen separaten Prozess für eine benannte Instanz.)|Der SQLWriter-Dienst wird unter dem lokalen Systemkonto ausgeführt, das über alle erforderlichen Berechtigungen verfügt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup überprüft oder erteilt keine Berechtigungen für diesen Dienst.|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
   
@@ -353,7 +353,7 @@ ms.locfileid: "54131630"
 ||Instid\MSSQL\Repldata|Vollzugriff|  
 ||120\shared|Lesen, Ausführen|  
 ||Instid\MSSQL\Template-Daten (nur[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|Leseberechtigung|  
-|' SQLServerAgent '<sup>1</sup>|Instid\MSSQL\binn|Vollzugriff|  
+|SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|Vollzugriff|  
 ||Instid\MSSQL\binn|Vollzugriff|  
 ||Instid\MSSQL\Log|Lesen, Schreiben, Löschen, Ausführen|  
 ||120\com|Lesen, Ausführen|  
@@ -479,13 +479,13 @@ ms.locfileid: "54131630"
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL12. MyInstance**  
   
--   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12. MyInstance**  
+-   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12.MyInstance**  
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL.120**  
   
  Die Registrierung verwaltet auch eine Zuordnung der Instanz-ID zum Instanznamen. Die Zuordnung der Instanz-ID zum Instanznamen wird folgendermaßen verwaltet:  
   
--   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server-/ Names\SQL] "InstanceName"="MSSQL12"**  
+-   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\SQL] "InstanceName"="MSSQL12"**  
   
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server-/ Names\OLAP] "InstanceName"="MSASSQL12"**  
   

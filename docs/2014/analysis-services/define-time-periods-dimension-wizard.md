@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8839c847d9c415a549ac829a3f24c351ed1cb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732136"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Zeiträume definieren (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** können Sie Informationen zum Kalenderjahr sowie Zeithäufigkeiten für die Zeitdimension oder die Serverzeitdimension definieren.  
@@ -29,7 +29,7 @@ ms.locfileid: "48104286"
 > [!IMPORTANT]  
 >  Auf dieser Seite können Sie das Kalenderjahr für eine Zeitdimension definieren. Auf der Seite **Kalender auswählen** können Sie für die Zeitdimension ein Geschäfts-, Produktions-, Berichts- oder ISO 8601-Jahr definieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erster Kalendertag**  
  Geben Sie den ersten Tag des aktuellen Jahres ein, oder wählen Sie den Tag aus.  
   

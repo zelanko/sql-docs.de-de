@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663966"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Message Undeliverable**-Ereignis, wenn Service Broker eine empfangene Nachricht nicht beibehalten kann, die an einen Dienst in dieser Instanz weitergeleitet werden sollte. Informationen über Nachrichten, die weitergeleitet werden sollten, finden Sie unter [Broker:Forwarded Message Dropped (Ereignisklasse)](broker-forwarded-message-dropped-event-class.md).  

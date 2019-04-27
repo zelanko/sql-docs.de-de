@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676605"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)
   Die Beibehaltungsdauer für den Verlauf wird auf der Seite **General** des Dialogfelds **Distribution Database Properties - \<DistributionDatabase>** angegeben. Mit dieser Einstellung wird angegeben, wie lange der Replikations-Agentverlauf gespeichert werden soll. Diese Seite ist über die Seite **General** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  

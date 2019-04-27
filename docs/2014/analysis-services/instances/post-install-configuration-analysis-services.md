@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56430aacb7055f3d8ffa531d157ad3c4f65c0b4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730101"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Konfiguration nach der Installation (Analysis Services)
   Nach der Installation von Analysis Services sind weitere Konfigurationsschritte erforderlich, um einen voll funktionsfähigen Server für die allgemeine Verwendung bereitzustellen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)).  
   
- Sobald Datenbanken zur Bereitstellung verfügbar sind, müssen zusätzliche Schritte ausgeführt werden. Sie müssen Rollenmitgliedschaften für die Datenbank konfigurieren, um den Benutzerzugriff auf die Daten zu gewähren, eine Sicherungs- und Wiederherstellungsstrategie für Datenbanken entwerfen und entscheiden, ob Daten in regelmäßigen Intervallen nach einem Verarbeitungszeitplan aktualisiert werden sollen. Weitere Informationen zur Bereitstellung und Verwaltung von Datenbanken finden Sie unter den folgenden Links: [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md) und [Tabellarische Modelldatenbanken &#40;SSAS – tabellarisch&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Sobald Datenbanken zur Bereitstellung verfügbar sind, müssen zusätzliche Schritte ausgeführt werden. Sie müssen Rollenmitgliedschaften für die Datenbank konfigurieren, um den Benutzerzugriff auf die Daten zu gewähren, eine Sicherungs- und Wiederherstellungsstrategie für Datenbanken entwerfen und entscheiden, ob Daten in regelmäßigen Intervallen nach einem Verarbeitungszeitplan aktualisiert werden sollen. Weitere Informationen zur Bereitstellung und Verwaltung von finden Sie unter den folgenden Links: [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41; ](../multidimensional-models/multidimensional-model-databases-ssas.md) und [Datenbanken für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Instanzkonfiguration  
  Analysis Services ist ein replizierbarer Dienst, d. h., Sie können mehrere Instanzen des Diensts auf einem einzelnen Server installieren. Jede zusätzliche Instanz wird mithilfe von SQL Server-Setup separat als benannte Instanz installiert und unabhängig konfiguriert, um ihren jeweiligen Verwendungszweck zu erfüllen. Beispielsweise kann auf einem Entwicklungsserver Flight Recorder ausgeführt werden, oder es werden Standardwerte für die Datenspeicherung verwendet, die auf Servern mit Produktionsarbeitslasten normalerweise geändert werden müssen. Die Anpassung der Systemkonfiguration ist außerdem erforderlich, wenn die Analysis Services-Instanz auf Hardware installiert wird, die von anderen Diensten gemeinsam genutzt wird. Wenn mehrere datenintensive Anwendungen auf derselben Hardware gehostet werden, können Sie die Ressourcenverfügbarkeit anwendungsübergreifend optimieren, indem Sie die Arbeitsspeicherschwellenwerte mithilfe der Servereigenschaften herabsetzen.  

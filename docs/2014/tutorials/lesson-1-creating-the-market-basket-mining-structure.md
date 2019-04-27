@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676279"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lektion 1: Erstellen der Market Basket-Miningstruktur
   In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, welche [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]-Produkte ein Kunde tendenziell als Kombinationskauf erwirbt. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  

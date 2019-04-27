@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729603"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts
   Der Entwurf einer Business Intelligence-Anwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beginnt mit dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Innerhalb dieses Projekts definieren Sie alle Elemente in Ihrer Projektmappe beginnend mit einer Datenquellensicht.  

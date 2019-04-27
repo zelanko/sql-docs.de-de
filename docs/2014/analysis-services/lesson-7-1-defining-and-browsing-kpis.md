@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8f0807478066e5e82cf479246c35dcd6b511f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728933"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
   Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:  

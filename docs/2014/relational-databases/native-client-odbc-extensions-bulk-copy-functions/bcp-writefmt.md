@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689406"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Erstellt eine Formatdatei, die eine Beschreibung des Formats der aktuellen Datendatei für das Massenkopieren enthält.  
@@ -43,7 +43,7 @@ szFormatFile
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *szFormatFile*  
@@ -53,14 +53,14 @@ szFormatFile
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Aufrufe von [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md) definieren das Format der Datendatei. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [Bcp_init](bcp-init.md).  
+ Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Durch Aufrufen von [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md) wird das Format der Datendatei definiert. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
   
  Weitere Informationen zur Struktur von **Bcp** -datenformatdateien finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
- Um eine gespeicherte Formatdatei zu laden, verwenden [Bcp_readfmt](bcp-readfmt.md).  
+ Verwenden Sie [bcp_readfmt](bcp-readfmt.md), um eine gespeicherte Formatdatei zu laden.  
   
 > [!NOTE]  
->  Die Formatdatei erzeugten **Bcp_writefmt** wird nur von Versionen von unterstützt die **Bcp** Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 und höher.  
+>  Die von **bcp_writefmt** erstellte Formatdatei wird nur von Versionen des in Version **7.0 und höher enthaltenen Hilfsprogramms** bcp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt.  
   
 ## <a name="example"></a>Beispiel  
   

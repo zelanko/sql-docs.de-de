@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730371"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
   Ein unverzichtbarer erster Schritt beim Verfügbarmachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk besteht darin zu bestimmen, ob die Blockierung von Ports in einer Firewall aufgehoben werden muss. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
@@ -68,7 +68,7 @@ ms.locfileid: "53371162"
   
 -   Führen Sie den Befehl `netstat -ao -p TCP` über die Befehlszeile aus, um die Informationen zum TCP-Port für diese PID anzuzeigen.  
   
--   Überprüfen Sie den Port mithilfe von SQL Server Management Studio, und Verbinden mit einem Analysis Services-Server im folgenden Format: \<IP-Adresse >:\<Portnumber >.  
+-   Überprüfen Sie den Port mithilfe von SQL Server Management Studio, und Verbinden mit einem Analysis Services-Server im folgenden Format: \<IPAddress>:\<portnumber>.  
   
  Auch wenn eine Anwendung einen bestimmten Port überwacht, können Verbindungen nicht erfolgreich hergestellt werden, wenn eine Firewall den Zugriff blockiert. Damit Verbindungen zu einer benannten Analysis Services-Instanz hergestellt werden können, müssen Sie die Blockierung des Zugriffs auf msmdsrv.exe oder den festen Port, den die Instanz überwacht, in der Firewall aufheben. In den übrigen Abschnitten in diesem Thema finden Sie Anweisungen zur Vorgehensweise.  
   

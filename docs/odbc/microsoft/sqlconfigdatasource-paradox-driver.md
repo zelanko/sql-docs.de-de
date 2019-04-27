@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665342"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox-Treiber)
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.locfileid: "47694592"
 |FIL|Dateityp Paradox 3.x, Paradox 4.x oder Paradox 5.x|  
 |DATEITYP|Der Dateityp für den Text-Treiber (Text).|  
 |' PAGETIMEOUT '|Gibt den Zeitraum, in Zehntelsekunden, die eine Seite (sofern nicht verwendet wird) im Puffer bleibt, bevor Sie entfernt werden. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Beachten Sie, dass diese Option auf alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Hiermit wird die gleiche Option als **Page Timeout** im Dialogfeld "Setup".|  
-|X|Der vollständige Pfad des Verzeichnisses mit der eine Sperre Paradox-Datenbank, weil sie entweder die PDOXUSRS.net-Datei enthält (Paradox-4. *X*) oder die Datei PARADOX.net (Paradox-5. *X*). Wenn das Verzeichnis nicht mit einer dieser Dateien enthält, die Paradox-Treiber wird erstellt. Informationen zu diesen Dateien finden Sie unter der Dokumentation für die Paradox.<br /><br /> Bevor ein Netzwerkverzeichnis ausgewählt werden kann, muss ein Benutzernamen für die Paradox eingegeben werden.<br /><br /> Hiermit wird die gleiche Option als **Netzwerkverzeichnis wählen** im Dialogfeld "Setup".|  
+|PARADOXNETPATH|Der vollständige Pfad des Verzeichnisses mit der eine Sperre Paradox-Datenbank, weil sie entweder die PDOXUSRS.net-Datei enthält (Paradox-4. *X*) oder die Datei PARADOX.net (Paradox-5. *X*). Wenn das Verzeichnis nicht mit einer dieser Dateien enthält, die Paradox-Treiber wird erstellt. Informationen zu diesen Dateien finden Sie unter der Dokumentation für die Paradox.<br /><br /> Bevor ein Netzwerkverzeichnis ausgewählt werden kann, muss ein Benutzernamen für die Paradox eingegeben werden.<br /><br /> Hiermit wird die gleiche Option als **Netzwerkverzeichnis wählen** im Dialogfeld "Setup".|  
 |PARADOXNETSTYLE|Für die Paradox-Treiber, Zugriff auf das Netzwerk zu verwendende Format beim Paradox-Daten: entweder "3.x" für Paradox-3. *x* oder "4.x" für Paradox 4. *X* oder 5. *X*. Kann festgelegt werden, "3.x" oder "4.x" ist die Version 4 von Paradox. *x* oder 5. *X*; Wenn die Version 3 für Paradox. *X*, das Format muss "3.x" sein.<br /><br /> Hiermit wird die gleiche Option als **Net Stil** im Dialogfeld "Setup".|  
 |PARADOXUSERNAME|Für die Paradox-Treiber, den Benutzernamen für die Paradox.<br /><br /> Hiermit wird die gleiche Option als **Benutzernamen** im Dialogfeld "Setup".|  
 |PWD|Das Kennwort.<br /><br /> Dies ist ein optionales Schlüsselwort, und wird vom Treiber nicht in die Datei geschrieben werden. Hiermit wird in einem Aufruf von **SQLDriverConnect** für Kennwort-gesicherte Paradox-Dateien. Das verwendete Kennwort ist gültig, wenn eine Tabelle geöffnet wird. Wenn kein Kennwort in der Verbindungszeichenfolge übergeben wird, wird kein Kennwort für diese Tabelle eingerichtet. Wenn Tabellen verschiedene Kennwörter verwendet werden, mehr als eine kann nicht geöffnet werden, in der gleichen Sitzung, noch können in den Tabellen verknüpft werden.|  

@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671318"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34016787"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Clusterprofile  
- Die Registerkarte **Clusterprofil** bietet eine Übersicht der Cluster, die der Algorithmus in Ihrem Modell erstellt. Jede Spalte, die der Spalte **Auffüllung** im Raster folgt, stellt einen vom Modell ermittelten Cluster dar. Die \<Attribute > .Samples steht für verschiedene Sequenzen der Daten, die im Cluster vorhanden sind und die \<Attribut > Zeile beschreibt alle Elemente, die der Cluster enthält, sowie ihre gesamtverteilung.  
+ Die Registerkarte **Clusterprofil** bietet eine Übersicht der Cluster, die der Algorithmus in Ihrem Modell erstellt. Jede Spalte, die der Spalte **Auffüllung** im Raster folgt, stellt einen vom Modell ermittelten Cluster dar. Die \<Attribut > .Samples steht für verschiedene Sequenzen der Daten, die im Cluster vorhanden sind und die \<Attribut > Zeile beschreibt alle Elemente, die der Cluster enthält, sowie ihre gesamtverteilung.  
   
  Mit der Option **Histogrammbalken** wird die Anzahl der im Histogramm sichtbaren Balken gesteuert. Sind mehr Balken vorhanden, als Sie zum Anzeigen ausgewählt haben, werden die wichtigsten Balken beibehalten. Die restlichen Balken werden dabei in einem grauen Bucket zusammengruppiert.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "34016787"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft Sequence Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

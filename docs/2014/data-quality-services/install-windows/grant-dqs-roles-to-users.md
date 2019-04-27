@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792550"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Zuweisen von DQS-Rollen an Benutzer
   In diesem Thema wird beschrieben, wie SQL-Anmeldungen auf Grundlage eines Windows-Prinzipals erstellt werden und wie ihnen [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)-Rollen für die DQS_MAIN-Datenbank gewährt werden.  
@@ -38,7 +38,7 @@ ms.locfileid: "56035449"
   
 5.  Klicken Sie nach der Überprüfung des Benutzers auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-6.  Wählen Sie im rechten Bereich das Kontrollkästchen unter der **Zuordnung** Spalte für die **DQS_MAIN** Datenbank, und wählen Sie dann die **"dqs_administrator"**, **Rolle "dqs_kb_editor"** , oder **Dqs_kb_operator** Kontrollkästchen in der **Mitgliedschaft in Datenbankrolle für: DQS_MAIN** Bereich abhängig von der Zugriffsebene für den Benutzer benötigt. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../dqs-security.md).  
+6.  Aktivieren Sie im rechten Bereich das Kontrollkästchen unter der Spalte **Map** (Zuordnung) für die **DQS_MAIN**-Datenbank, und aktivieren Sie dann das Kontrollkästchen **dqs_administrator**, **dqs_kb_editor** oder **dqs_kb_operator** im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_MAIN**, je nachdem, welche Zugriffsebene für den Benutzer benötigt wird. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../dqs-security.md).  
   
 7.  Klicken Sie im Dialogfeld **Anmeldung – Neu** auf **OK**, um die Änderungen zu übernehmen.  
   

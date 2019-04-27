@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672531"
 ---
 # <a name="attribute-conformance"></a>Attributübereinstimmung
 Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODBC-Umgebung, in denen dies gut definiert ist.  
@@ -94,7 +94,7 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_ROW_NUMBER|Ebene 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|Ebene 1|  
 |SQL_ATTR_ROW_STATUS_PTR|Core|  
-|SQL_ATTR_ROWS_FETCHED_PTR FEST|Core|  
+|SQL_ATTR_ROWS_FETCHED_PTR|Core|  
 |SQL_ATTR_SIMULATE_CURSOR|Ebene 2|  
 |SQL_ATTR_USE_BOOKMARKS|Ebene 2|  
   

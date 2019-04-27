@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680368"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
   Sie können einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster mithilfe des Installations-Assistenten für [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] oder mithilfe einer Eingabeaufforderung auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster aktualisieren.  
@@ -78,9 +78,9 @@ ms.locfileid: "53363712"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Aktualisieren auf einen [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]-Multisubnetz-Failovercluster  
  Es gibt zwei mögliche Szenarien für Upgrades:  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster ist derzeit in einem einzelnen Subnetz konfiguriert: Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren, indem Sie Setup starten und die erforderlichen Upgradeschritte ausführen. Fügen Sie nach Abschluss des Upgradeprozesses für den vorhandenen Failovercluster mithilfe der AddNode-Funktion einen Knoten hinzu, der sich in einem anderen Subnetz befindet. Bestätigen Sie auf der Konfigurationsseite des Clusternetzwerks die Änderung der IP-Adressabhängigkeit in OR. Sie verfügen jetzt über einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster ist derzeit in einem einzelnen Subnetz konfiguriert: Sie müssen zunächst ein upgrade des vorhandenen Clusters [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] von Setup starten und die Verfahren beim Upgrade. Fügen Sie nach Abschluss des Upgradeprozesses für den vorhandenen Failovercluster mithilfe der AddNode-Funktion einen Knoten hinzu, der sich in einem anderen Subnetz befindet. Bestätigen Sie auf der Konfigurationsseite des Clusternetzwerks die Änderung der IP-Adressabhängigkeit in OR. Sie verfügen jetzt über einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster.  
   
-2.  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster ist derzeit unter Verwendung von Stretch-V-LAN-Technologie für mehrere Subnetze konfiguriert:  Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren. Da mit der Stretch-V-LAN-Technologie ein einzelnes Subnetz konfiguriert wird, muss die Netzwerkkonfiguration in mehrere Subnetze geändert werden, und die Abhängigkeit der IP-Adressressource muss mithilfe des Failovercluster-Manager von Windows in OR geändert werden.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster ist derzeit in mehreren Subnetzen, die Verwendung von Stretch-V-LAN-Technologie konfiguriert: Sie müssen zunächst ein upgrade des vorhandenen Clusters [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Da mit der Stretch-V-LAN-Technologie ein einzelnes Subnetz konfiguriert wird, muss die Netzwerkkonfiguration in mehrere Subnetze geändert werden, und die Abhängigkeit der IP-Adressressource muss mithilfe des Failovercluster-Manager von Windows in OR geändert werden.  
   
 ###  <a name="BestPractices"></a> Bewährte Methoden vor dem Upgrade eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failovercluster  
  Um unerwartete Ausfallzeiten aufgrund eines Neustarts auszuschließen, installieren Sie vor dem Aktualisieren der Clusterknoten das Updatepaket (kein Neustart erforderlich) für .NET Framework 4.0 in allen Failoverclusterknoten. Für die Vorinstallation der erforderlichen Komponenten werden folgende Schritte empfohlen:  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728740"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
   Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimension auf einer Tabelle, die direkt mit der Faktentabelle für eine Measuregruppe durch eine Primärschlüssel/Fremdschlüssel-Beziehung verknüpft war. In den Aufgaben in diesem Thema verknüpfen Sie die **Geography** -Dimension mit der Faktentabelle für Händlerverkäufe über die **Reseller** -Dimension, die als *Referenzdimension*bezeichnet wird. Dadurch können Benutzer Händlerverkäufe nach Geografie dimensionieren. Weitere Informationen finden Sie unter [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

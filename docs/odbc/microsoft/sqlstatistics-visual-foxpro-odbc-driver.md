@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd96e1bbd35835382557baffda4fc3accb206672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686949"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   

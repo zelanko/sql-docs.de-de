@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795373"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Erstellen und Verwalten von Tabellenmodellpartitionen (SSAS – tabellarisch)
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Während der Modellerstellung werden die für ein Modell definierten Partitionen in ein bereitgestelltes Modell dupliziert. Nach der Bereitstellung können Sie diese Partitionen mit dem Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe eines Skripts verwalten. In den Tasks in diesem Thema wird beschrieben, wie Partitionen für ein bereitgestelltes Modell erstellt und verwaltet werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48113601"
   
 -   [So löschen Sie eine Partition](#bkmk_delete)  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Um Partitionen für die bereitgestellte Datenbank eines tabellarischen Modells zu erstellen und zu verwalten, verwenden Sie das Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Um das Dialogfeld **Partitionen** anzuzeigen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine Tabelle und klicken dann auf **Partitionen**.  
   
 ###  <a name="bkmk_create_new"></a> So erstellen Sie eine neue Partition  

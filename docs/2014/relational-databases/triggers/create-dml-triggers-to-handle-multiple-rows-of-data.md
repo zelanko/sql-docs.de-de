@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676456"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen
   Wenn Sie den Code für einen DML-Trigger schreiben, sollten Sie berücksichtigen, dass es sich bei der Anweisung, die zum Auslösen des Triggers führt, um eine einzelne Anweisung handeln kann, die sich jedoch nicht nur auf eine einzelne Zeile, sondern auf mehrere Datenzeilen auswirkt. Dieses Verhalten trifft häufig auf UPDATE- und DELETE-Trigger zu, da sich diese Anweisungen oft auf mehrere Zeilen auswirken. Eher ungewöhnlich ist dieses Verhalten für INSERT-Trigger, da durch die einfache INSERT-Anweisung nur eine einzelne Zeile hinzugefügt wird. Da ein INSERT-Trigger jedoch durch eine INSERT INTO (*table_name*) SELECT-Anweisung ausgelöst werden kann, kann die Einfügung mehrerer Zeilen zum Aufruf eines einzelnen Triggers führen.  

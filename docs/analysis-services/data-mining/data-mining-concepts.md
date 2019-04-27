@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650041"
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "54185136"
   
  Diese Muster und Trends können gesammelt und als *Data Mining-Modell*definiert werden. Miningmodelle können auf spezifische Szenarien angewendet werden, beispielsweise:  
   
--   **Prognose**: Schätzen des Absatzes, Vorhersagen der Serverlast oder Serverausfallzeiten  
+-   **Prognose**: Schätzen Vertrieb, Vorhersagen der Serverlast oder Serverausfallzeiten  
   
--   **Risiko und Wahrscheinlichkeit**: Risiko und Wahrscheinlichkeit: Auswählen der besten Kunden für Targeted Mailings, Bestimmen der wahrscheinlichen Gewinnschwelle für Risikoszenarien, Zuweisen von Wahrscheinlichkeiten zu Diagnosen oder anderen Ergebnissen  
+-   **Risiko und Wahrscheinlichkeit**: Auswählen der besten Kunden für targeted Mailings, Bestimmen der wahrscheinlichen Gewinnschwelle für risikoszenarien, Zuweisen von Wahrscheinlichkeiten zu Diagnosen oder anderen Ergebnissen  
   
--   **Empfehlungen**: Ermitteln von Produkten mit Cross-Selling-Potenzial und Generieren von Empfehlungen  
+-   **Empfehlungen**: Ermitteln von Produkten tendenziell zusammen verkauft werden Generieren von Empfehlungen  
   
 -   **Ermitteln von Reihenfolgen**: Analysieren der Kundenauswahl in einem Einkaufswagen, Vorhersagen der nächsten wahrscheinlichen Ereignisse  
   
--   **Gruppieren von**: Unterteilen von Kunden oder Ereignissen in Cluster verwandter Elemente, Analysieren und Vorhersagen von Affinitäten  
+-   **Gruppieren von**: Unterteilen von Kunden oder Ereignissen in Cluster verwandter Elemente, analysieren und Vorhersagen von Affinitäten  
   
  Die Erstellung eines Miningmodells muss als Teil eines größeren Prozesses verstanden werden, der sich von der Fragestellung im Hinblick auf die Daten und die Erstellung eines Modells zur Beantwortung dieser Fragen bis hin zur Implementierung des Modells in einer Arbeitsumgebung erstreckt. Ein Data Mining-Prozess besteht im Wesentlichen aus sechs Schritten:  
   

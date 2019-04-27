@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792080"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird erläutert, wie eine sekundäre Datenbank für eine AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell vorbereitet wird. Vorbereiten einer sekundären Datenbank erfordert zwei Schritte: (1) das Wiederherstellen einer aktuellen datenbanksicherung der primären Datenbank und nachfolgende protokollsicherungen auf jeder Serverinstanz, die das sekundäre Replikat hostet, mit RESTORE WITH NORECOVERY und (2) die wiederhergestellte Datenbank mit der verfügbarkeitsgruppe verknüpfen.  
@@ -37,7 +37,7 @@ ms.locfileid: "52525746"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52525746"
   
  Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!NOTE]  
 >  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Datenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](availability-group-add-database-to-group-wizard.md)erstellen.  
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Vorbereiten einer sekundären Datenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Vorbereiten einer sekundären Datenbank  
  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die neu wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  

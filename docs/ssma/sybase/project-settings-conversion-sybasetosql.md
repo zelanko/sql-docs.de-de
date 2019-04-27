@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664662"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Projekteinstellungen (Konvertierung) (SybaseToSQL)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax.  
@@ -148,7 +148,7 @@ Wenn SSMA trifft eine *Format_string* -Argument, es kann ein Zeichenfolgenlitera
   
 -   Um ein Zeichenfolgenliteral für PRINT und RAISERROR-Funktionen verwenden möchten, wählen **neue Zeichenfolge**.  
   
-    Wenn eine Print- oder RAISERROR-Anweisung keine Platzhalter und die lokale Variable verwendet, ist die Anweisung in diesem Modus kann nicht geändert. Double-Prozent-Zeichen (%) werden in Zeichenfolgenliteralen Drucken auf eine einzelne Prozentzeichen geändert.  
+    Wenn eine Print- oder RAISERROR-Anweisung keine Platzhalter und die lokale Variable verwendet, ist die Anweisung in diesem Modus kann nicht geändert. Double-Prozent-Zeichen (%) werden in Zeichenfolgenliteralen Drucken auf eine einzelne Prozentzeichen geändert werden.  
   
     Wenn eine Print- oder RAISERROR-Anweisung, Platzhalter und eine verwendet oder mehrere lokalen Variablen, wie im folgenden Beispiel:  
   
@@ -183,7 +183,7 @@ Wenn SSMA trifft eine *Format_string* -Argument, es kann ein Zeichenfolgenlitera
   
 -   SSMA für jede Print- und RAISERROR-Anweisung eine neue Variable zu erstellen und verwenden Sie diese Variable dann für den Zeichenfolgenwert, aktivieren **neue Variable erstellen**.  
   
-    In diesem Modus werden Wenn eine Print- oder RAISERROR-Anweisung keine Platzhalter und die lokale Variable verwendet SSMA ersetzt alle doppelte Prozent Zeichen (%) durch einzelne Prozent Zeichen zur Einhaltung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure-Syntax.  
+    In diesem Modus Wenn eine Print- oder RAISERROR-Anweisung keine Platzhalter und die lokale Variable verwendet ersetzt SSMA alle doppelte Prozent Zeichen (%) mit einzelnen Prozent Zeichen zur Einhaltung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure-Syntax.  
   
     Wenn eine Print- oder RAISERROR-Anweisung, Platzhalter und eine verwendet oder mehrere lokalen Variablen, wie im folgenden Beispiel:  
   

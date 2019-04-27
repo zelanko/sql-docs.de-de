@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794281"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs für **Transaktionsdetails** auf der Registerkarte **Transaktionen** in Cube-Designer können Sie Transaktionen für den aktuell ausgewählten Cube definieren und verwalten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardsprache**  
  Legt die Namen der Cube-Objekte in der Standardsprache fest.  
   
@@ -32,37 +32,37 @@ ms.locfileid: "48118750"
   
 -   Measuregruppe  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
 -   Measure  
   
-     `Caption` und `DisplayFolder` Eigenschaften  
+     `Caption`- und `DisplayFolder`-Eigenschaften  
   
 -   Dimension  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
 -   Perspektive  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
 -   Key Performance Indicator (KPI)  
   
-     `Caption`, `Description`, und `DisplayFolder` Eigenschaften  
+     `Caption`- `Description`-Eigenschaft und `DisplayFolder`-Eigenschaft  
   
 -   Aktion  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
 -   Benannte Menge  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
 -   berechnetes Element  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
- **\<Sprache >**  
+ **\<Language>**  
  Geben Sie den Wert der Eigenschaft für das Cube-Objekt in der ausgewählten Sprache ein.  
   
 ## <a name="context-menu"></a>Kontextmenü  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664401"
 ---
 # <a name="browsing-an-association-rules-model"></a>Durchsuchen eines Association Rules-Modells
   Beim Öffnen einer Zuordnung Modell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, ähnelt dem Viewer für Zuordnungsregeln in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  Im Viewer sehen Sie auf einen Blick, welche Elemente untereinander korreliert wurden. Außerdem können Sie Regeln anzeigen, die Sie für Vorhersagen oder Empfehlungen verwenden können.  
@@ -149,9 +149,9 @@ ms.locfileid: "52537177"
   
  Wenn Sie erweiterte Parameter festzulegen oder alter mindestwahrscheinlichkeit und-Unterstützung, verwenden möchten die [Assistenten zum Zuordnen von &#40;Data Mining-Client für Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) -Assistenten, oder erstellen Sie Ihr eigenes Modell mit den [Modell hinzufügen Struktur &#40;Data Mining-Add-ins für Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellierungsoption.  
   
--   **Itemsets:** Beim Erstellen des Modells können Sie die Anzahl der Itemsets steuern, die durch Zuordnen von Werten zum Parameter MINIMUM_PROBABILITY generiert werden. Dieser Parameter ist im Dialogfeld Algorithmusparameter verfügbar.  
+-   **Itemsets:** Wenn Sie das Modell erstellen, können Sie auch die Anzahl der Itemsets steuern, die durch das Zuweisen eines Werts zum Parameter MINIMUM_PROBABILITY generiert werden. Dieser Parameter ist im Dialogfeld Algorithmusparameter verfügbar.  
   
--   **Regeln:** Vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus werden Wahrscheinlichkeitswerte verwendet, um die Anzahl der generierten Regeln zu beschränken. Sie können die Anzahl der Regeln steuern, indem Sie die Parameter `MINIMUM_PROBABILITY` oder `MINIMUM _IMPORTANCE` festlegen.  
+-   **Regeln:** Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus werden Wahrscheinlichkeitswerte verwendet, um die Anzahl der Regeln zu beschränken, die generiert werden. Sie können die Anzahl der Regeln steuern, indem Sie die Parameter `MINIMUM_PROBABILITY` oder `MINIMUM _IMPORTANCE` festlegen.  
   
  Weitere Informationen zum Konfigurieren erweiterter Parameter finden Sie unter [Data Mining-Algorithmen &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729646"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Formular-Editor (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Formular-Editors für KPIs** auf der Registerkarte **KPIs** des Cube-Designers können Sie den ausgewählten Key Performance Indicator (KPI) erstellen oder ändern.  

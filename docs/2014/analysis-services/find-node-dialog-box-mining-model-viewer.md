@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731512"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Dialogfeld "Knoten suchen" (Miningmodell-Viewer)
   Im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** eines Modells können Sie einen bestimmten Knoten suchen. Diese Funktion ist bei komplexen Diagrammen hilfreich, die viele Knoten oder Itemsets enthalten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Knotenname enthält**  
  Geben Sie einen Teil des Knotennamens ein, um eine Liste aller Knoten abzurufen, die diesen Text enthalten. Reguläre Ausdrücke werden nicht unterstützt. Die Suche verwendet standardmäßig Platzhalter.  
   
@@ -36,8 +36,8 @@ ms.locfileid: "48218535"
  Wählen Sie einen Knoten in der Knotenliste aus, und klicken Sie anschließend auf **OK**. Das Dialogfeld wird geschlossen, und der ausgewählte Knoten wird im Viewer hervorgehoben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Datamining-Modell-Viewer](data-mining/data-mining-model-viewers.md)   
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

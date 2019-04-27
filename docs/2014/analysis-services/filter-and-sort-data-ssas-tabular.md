@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0987dc64ae4e2fe750073c67cb38b73924708643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731372"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtern und Sortieren von Daten (SSAS – tabellarisch)
   Wenn Sie mit Tabellen in einem tabellarischen Modell arbeiten, können Sie Daten mithilfe der Steuerelemente im Modell-Designer filtern oder sortieren. Sie können auch Filter innerhalb von Berechnungen erstellen, um die Daten zu steuern, die aus einer Datenspalte oder -tabelle verwendet werden. Jeder Typ des Filters funktioniert nur in seinem jeweiligen Fenster.  

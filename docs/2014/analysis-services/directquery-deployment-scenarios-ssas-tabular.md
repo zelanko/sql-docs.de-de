@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731666"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch)
   In diesem Abschnitt wird eine exemplarische Vorgehensweise des Entwurfs- und Bereitstellungsprozesses für DirectQuery-Modelle erläutert. Sie können DirectQuery konfigurieren, um ausschließlich relationale Daten (nur DirectQuery) zu verwenden, oder Sie können das Modell konfigurieren, um zwischen der Verwendung ausschließlich zwischengespeicherter Daten oder ausschließlich relationaler Daten zu wechseln (hybrider Modus). In diesem Abschnitt wird der Implementierungsprozess für beide Modi erläutert. Außerdem werden mögliche Unterschiede bei den Abfrageergebnissen in Abhängigkeit vom Modus und der Sicherheitskonfiguration beschrieben.  
@@ -69,7 +69,7 @@ ms.locfileid: "48135180"
   
 |||  
 |-|-|  
-|**Nur DirectQuery**|Optional. Bei einem ausschließlichen DirectQuery-Modell besteht keine Notwendigkeit einer Partition.<br /><br /> Wenn Sie jedoch während der Entwurfsphase Partitionen im Modell erstellen, müssen Sie beachten, dass nur eine Partition als Datenquelle verwendet werden kann. Standardmäßig wird die erste Partition, die Sie erstellen, als DirectQuery-Partition verwendet.<br /><br /> Um zu gewährleisten, dass alle vom Modell benötigten Daten über die DirectQuery-Partition verfügbar sind, wählen Sie eine DirectQuery-Partition und bearbeiten Sie die SQL-Anweisung, um das gesamte Dataset abzurufen.|  
+|**Nur DirectQuery**|Dies ist optional. Bei einem ausschließlichen DirectQuery-Modell besteht keine Notwendigkeit einer Partition.<br /><br /> Wenn Sie jedoch während der Entwurfsphase Partitionen im Modell erstellen, müssen Sie beachten, dass nur eine Partition als Datenquelle verwendet werden kann. Standardmäßig wird die erste Partition, die Sie erstellen, als DirectQuery-Partition verwendet.<br /><br /> Um zu gewährleisten, dass alle vom Modell benötigten Daten über die DirectQuery-Partition verfügbar sind, wählen Sie eine DirectQuery-Partition und bearbeiten Sie die SQL-Anweisung, um das gesamte Dataset abzurufen.|  
 |**Hybridmodus**|Wenn eine Tabelle im Modell mehrere Partitionen aufweist, müssen Sie eine einzelne Partition als *DirectQuery-Partition*auswählen. Wenn Sie standardmäßig keine Partition zuweisen, wird die erste erstellte Partition als DirectQuery-Partition verwendet.<br /><br /> Legen Sie Verarbeitungsoptionen für alle Partitionen mit Ausnahme von DirectQuery fest. In der Regel wird die DirectQuery-Partition nie verarbeitet, da die Daten von der relationalen Quelle aus übergeben werden.<br /><br /> Weitere Informationen finden Sie unter [Partitionen und DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).|  
   
  **Schritt 6. Identitätswechselinformationen**  
@@ -78,7 +78,7 @@ ms.locfileid: "48135180"
   
 |||  
 |-|-|  
-|**Nur DirectQuery**|Geben Sie für die Eigenschaft  **Identitätswechseleinstellungen** das Konto an, mit dem eine Verbindung mit der SQL Server-Datenquelle hergestellt werden soll.<br /><br /> Wenn Sie den Wert des verwenden **ImpersonateCurrentUser**, die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dass Hosts das Modell die Anmeldeinformationen des aktuellen Benutzers des Modells zu SQL Server-Datenbank erfolgreich abgeschlossen werden.|  
+|**Nur DirectQuery**|Geben Sie für die Eigenschaft  **Identitätswechseleinstellungen** das Konto an, mit dem eine Verbindung mit der SQL Server-Datenquelle hergestellt werden soll.<br /><br /> Wenn Sie den Wert **ImpersonateCurrentUser**verwenden, übergibt die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die das Modell hostet, die Anmeldeinformationen des aktuellen Benutzers des Modells an die SQL Server-Datenbank.|  
 |**Hybridmodus**|Geben Sie für die Eigenschaft **Identitätswechseleinstellungen** das Konto an, mit dem auf die Daten der SQL Server-Datenquelle zugegriffen werden soll.<br /><br /> Diese Einstellung beeinflusst nicht die Anmeldeinformationen, die zum Verarbeiten des vom Modell verwendeten Caches verwendet werden.|  
   
  **Schritt 7 fort. Bereitstellen des Modells**  
@@ -94,7 +94,7 @@ ms.locfileid: "48135180"
   
  **Schritt 8. Überprüfen des bereitgestellten Modells**  
   
- Öffnen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], in der Sie das Modell bereitgestellt haben. Klicken Sie mit der rechten Maustaste auf den Namen der Datenbank, und wählen Sie **Eigenschaften**aus.  
+ Öffnen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , in der Sie das Modell bereitgestellt haben. Klicken Sie mit der rechten Maustaste auf den Namen der Datenbank, und wählen Sie **Eigenschaften**aus.  
   
 -   Die Eigenschaft **DirectQueryMode**wurde festgelegt, als die Bereitstellungseigenschaften definiert wurden.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48135180"
  **Nur DirectQuery**  
  Diese Option wird bevorzugt, wenn Sie eine einzelne Datenquelle garantieren möchten oder wenn die Datenmenge die Größe des Arbeitsspeichers übersteigt. Wenn Sie mit einer sehr großen relationalen Datenquelle arbeiten, können Sie während der Entwurfszeit das Modell mit einer Teilmenge der Daten erstellen. Wenn Sie das Modell im ausschließlichen DirectQuery-Modus bereitstellen, können Sie die Datenquellendefinition bearbeiten, um alle erforderlichen Daten einzuschließen.  
   
- Diese Option wird auch bevorzugt, wenn Sie die von der relationalen Datenquelle bereitgestellten Sicherheitsfunktionen für die Steuerung des Benutzerzugriffs auf Daten verwenden möchten. Mit zwischengespeicherten tabellenmodellen können Sie auch [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Rollen zum Steuern des Datenzugriffs, aber die im Cache gespeicherten Daten müssen ebenfalls gesichert werden. Sie sollten diese Option immer verwenden, wenn der Sicherheitskontext erfordert, dass Daten niemals zwischengespeichert werden sollen.  
+ Diese Option wird auch bevorzugt, wenn Sie die von der relationalen Datenquelle bereitgestellten Sicherheitsfunktionen für die Steuerung des Benutzerzugriffs auf Daten verwenden möchten. Mit zwischengespeicherten Tabellenmodellen können Sie den Datenzugriff auch mithilfe von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Rollen steuern, doch die im Cache gespeicherten Daten müssen ebenfalls gesichert werden. Sie sollten diese Option immer verwenden, wenn der Sicherheitskontext erfordert, dass Daten niemals zwischengespeichert werden sollen.  
   
  In der folgenden Tabelle werden die möglichen Bereitstellungsergebnisse für den ausschließlichen DirectQuery-Modus beschrieben:  
   

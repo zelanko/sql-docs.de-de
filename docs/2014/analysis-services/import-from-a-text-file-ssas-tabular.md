@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730411"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importieren aus einer Textdatei (SSAS – tabellarisch)
   Mit dem Tabellenimport-Assistenten können Sie Daten aus Microsoft Excel-Dateien und Textdateien importieren.  

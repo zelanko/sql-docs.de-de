@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681177"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Registerkarte "Diagramm" (Miningmodell-Viewer)
   Im Bereich **Diagramm** können Sie die Vergangenheitsdaten, die beim Trainieren eines Zeitreihenmodells verwendet wurden, zusammen mit den vorhergesagten Werten anzeigen. Die vertikale Achse des Diagramms stellt die Werte der Zeitreihe dar, und die horizontale Achse stellt die Zeit dar. Zukünftige Vorhersagen werden durch eine gestrichelte Linie dargestellt.  
   
- **Weitere Informationen:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48146012"
  Öffnet ein Dialogfeld, in dem Sie alle Serien auswählen können, die im Viewer angezeigt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

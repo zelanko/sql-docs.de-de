@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791939"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] muss aktiviert werden, damit eine Serverinstanz Verfügbarkeitsgruppen verwenden kann. Bevor Sie eine beliebige Verfügbarkeitsgruppe erstellen und konfigurieren können, muss die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] für jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aktiviert worden sein, auf der ein Verfügbarkeitsreplikat für mindestens eine Verfügbarkeitsgruppe gehostet wird.  
@@ -201,7 +201,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Manager speichert die Änderung und startet den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst neu. Beim Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts wird AlwaysOn deaktiviert. Zudem wird die Servereigenschaft `IsHadrEnabled` auf 0 festgelegt, um anzugeben, dass AlwaysOn-Verfügbarkeitsgruppen deaktiviert werden.  
   
-5.  Es empfiehlt sich, dass Sie die Informationen unter [Nachverfolgung: Nach dem Deaktivieren von AlwaysOn](#FollowUp)später in diesem Thema lesen.  
+5.  Es wird empfohlen, dass Sie die Informationen unter [Nächster Schritt: Nach dem Deaktivieren von AlwaysOn](#FollowUp)weiter unten in diesem Thema.  
   
 ###  <a name="PScmd3Procedure"></a> SQL Server PowerShell  
  **So deaktivieren Sie AlwaysOn**  
@@ -225,7 +225,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="FollowUp"></a> Nachverfolgung: Nach dem Deaktivieren von AlwaysOn  
+###  <a name="FollowUp"></a>Nächster Schritt: Nach dem Deaktivieren von AlwaysOn  
  Nachdem Sie AlwaysOn-Verfügbarkeitsgruppen deaktiviert haben, muss die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] neu gestartet werden. Die Serverinstanz wird vom SQL-Konfigurations-Manager automatisch neu gestartet. Wenn Sie jedoch das `Disable-SqlAlwaysOn`-Cmdlet verwendet haben, müssen Sie die Serverinstanz manuell neu starten. Weitere Informationen finden Sie unter [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  Auf der neu gestarteten Serverinstanz:  
@@ -251,10 +251,10 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |-NoServiceRestart-Parameter angegeben|-Force-Parameter angegeben|Wurde der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst neu gestartet?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|nein|nein|Standardmäßig. Aber das Cmdlet fordert Sie folgendermaßen auf:<br /><br /> **Um diese Aktion abzuschließen, müssen wir den SQL Server-Dienst für die Serverinstanz "<instance_name>" neu starten. Möchten Sie den Vorgang fortsetzen?**<br /><br /> **[Y] Ja  [N] Nein  [S] Anhalten  [?] Hilfe (Standard ist „Y"):**<br /><br /> Wenn Sie **N** oder **S**angeben, wird der Dienst nicht neu gestartet.|  
-|nein|Benutzerkontensteuerung|Der Dienst wird neu gestartet.|  
-|Benutzerkontensteuerung|nein|Der Dienst wird nicht neu gestartet.|  
-|Benutzerkontensteuerung|Benutzerkontensteuerung|Der Dienst wird nicht neu gestartet.|  
+|Nein|Nein|Standardmäßig. Aber das Cmdlet fordert Sie folgendermaßen auf:<br /><br /> **Um diese Aktion abzuschließen, müssen wir den SQL Server-Dienst für die Serverinstanz "<instance_name>" neu starten. Möchten Sie den Vorgang fortsetzen?**<br /><br /> **[Y] Ja  [N] Nein  [S] Anhalten  [?] Hilfe (Standard ist „Y"):**<br /><br /> Wenn Sie **N** oder **S**angeben, wird der Dienst nicht neu gestartet.|  
+|Nein|Ja|Der Dienst wird neu gestartet.|  
+|Ja|Nein|Der Dienst wird nicht neu gestartet.|  
+|Ja|Ja|Der Dienst wird nicht neu gestartet.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

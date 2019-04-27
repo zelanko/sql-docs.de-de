@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670450"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Data Mining-Schemarowsets (SSAs)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50144286"
 ## <a name="examples"></a>Beispiele  
  Der folgende Abschnitt enthält einige Beispiele für Abfragen gegen die Data Mining-Schemarowsets.  
   
-### <a name="example-1-list-data-mining-services"></a>Beispiel 1: Auflisten von Data Mining-Diensten  
+### <a name="example-1-list-data-mining-services"></a>Beispiel 1: Auflisten von Data Mining-Dienste  
  Die folgende Abfrage gibt eine Liste der Miningdienste zurück, die auf dem aktuellen Server zur Verfügung stehen, d. h. die aktivierten Algorithmen. Die für jeden Miningdienst bereitgestellten Spalten beinhalten die Modellierungsflags und Inhaltstypen, die von jedem Algorithmus verwendet werden können, die GUID für jeden Dienst und jegliche Vorhersagenbeschränkungen, die für jeden Dienst hinzugefügt worden sein könnten.  
   
 ```  
@@ -52,7 +52,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Beispiel 2: Auflisten von Miningmodellparametern  
+### <a name="example-2-list-mining-model-parameters"></a>Beispiel 2: Liste Miningmodellparametern  
  Das folgende Beispiel gibt die Parameter zurück, die verwendet wurden, um ein bestimmtes Miningmodell zu erstellen.  
   
 ```  
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Beispiel 3: Auflisten aller Rowsets  
+### <a name="example-3-list-all-rowsets"></a>Beispiel 3: Listen Sie aller Rowsets auf  
  Im folgenden Beispiel wird eine umfassende Liste der Rowsets, die auf dem aktuellen Server verfügbar sind, zurückgegeben:  
   
 ```  

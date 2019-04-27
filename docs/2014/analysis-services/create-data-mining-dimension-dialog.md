@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b842f922c3e3d575467534d8254f16fc7289c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680042"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Data Mining-Dimension erstellen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Data Mining-Dimension erstellen** , um basierend auf einem OLAP-Miningmodell eine neue Data Mining-Dimension zu erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Modells**  
  Wählen Sie das OLAP-Miningmodell, auf dem die Data Mining-Dimension basiert, aus einer Liste mit OLAP-Miningmodellen im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt aus.  
   

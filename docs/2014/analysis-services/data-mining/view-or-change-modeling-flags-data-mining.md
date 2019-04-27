@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732621"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Anzeigen oder Ändern von Modellierungsflags (Data Mining)
   Modellierungsflags sind Eigenschaften, die Sie für eine Miningstrukturspalte oder für Miningmodellspalten festlegen, um zu steuern, wie der Algorithmus die Daten während der Analyse verarbeitet.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050136"
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen Mining](mining-model-tasks-and-how-tos.md)   
- [Modellierungsflags &#40;Datamining&#41;](modeling-flags-data-mining.md)  
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
+ [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
   

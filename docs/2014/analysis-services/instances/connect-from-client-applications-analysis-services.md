@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730423"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
   Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  

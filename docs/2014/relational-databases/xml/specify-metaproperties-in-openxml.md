@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679501"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
   Metaeigenschaftsattribute in einem XML-Dokument sind Attribute, die die Eigenschaften eines XML-Objekts (z. B. Element, Attribut oder ein beliebiger anderer DOM-Knoten) beschreiben. Diese Attribute sind nicht physisch im Text des XML-Dokuments enthalten. Vielmehr stellt OPENXML diese Metaeigenschaften für alle XML-Objekte bereit. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Diese Informationen bieten Ihnen mehr Details, als in der Textdarstellung zu sehen sind.  

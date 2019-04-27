@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792000"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], die in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] eingeführte Lösung für Hochverfügbarkeit und Notfallwiederherstellung, erfordert WSFC (Windows Server-Failoverclustering). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist zwar nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering abhängig, Sie können aber dennoch eine FCI (Failoverclusterinstanz) verwenden, um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu hosten. Es ist wichtig, dass Sie die Rolle jeder Clusteringtechnologie kennen, und wissen, welche Überlegungen Sie für den Entwurf Ihrer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Umgebung anstellen müssen.  
@@ -120,7 +120,7 @@ ms.locfileid: "53352314"
   
 -   **Whitepaper:**  
   
-     [AlwaysOn-Architekturhandbuch: Erstellen eine hohe Verfügbarkeit und die Lösung für die Notfallwiederherstellung mithilfe von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn-Architekturhandbuch: Erstellen einer Lösung für Hochverfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

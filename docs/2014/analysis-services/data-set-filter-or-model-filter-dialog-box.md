@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732595"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Datasetfilter oder Modellfilter (Dialogfeld)
   In diesem Dialogfeld können Sie die Filter erstellen, die Sie auf ein Dataset anwenden können.  Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten für ein Miningmodell handeln. Der Name des Dialogfelds ändert sich je nachdem, ob der Filter für ein externes Dataset oder für ein Miningmodell gilt.  

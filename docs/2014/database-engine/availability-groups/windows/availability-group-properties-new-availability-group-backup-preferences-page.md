@@ -1,5 +1,5 @@
 ---
-title: 'Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen) | Microsoft-Dokumentation'
+title: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790219"
 ---
-# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)
+# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)
   Verwenden Sie dieses Dialogfeld, um die Sicherungseinstellungen der ausgewählten Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
   
  **So zeigen Sie Verfügbarkeitsgruppeneigenschaften an**  
@@ -44,7 +44,7 @@ ms.locfileid: "48101970"
  Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
 > [!IMPORTANT]  
->  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ## <a name="replica-backup-priorities"></a>Replikatssicherungsprioritäten  
  Dieses Raster enthält die aktuelle Sicherungspriorität aller Serverinstanzen, die ein Replikat für die Verfügbarkeitsgruppe hosten. Verwenden Sie dieses Raster, um die Sicherungspriorität von Verfügbarkeitsreplikaten zu ändern.  

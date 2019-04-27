@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730311"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
   Zur Verbesserung der Abfrageleistung werden Daten von Analysis Services zwischengespeichert. In diesem Thema sind Empfehlungen für die Verwendung des XMLA ClearCache-Befehls enthalten. Der Befehl dient dazu, Zwischenspeicher zu leeren, die als Antwort auf eine MDX-Abfrage erstellt wurden. Die Auswirkungen der Ausführung von ClearCache sind abhängig davon, ob Sie ein tabellarisches oder ein mehrdimensionales Modell verwenden.  
@@ -47,7 +47,7 @@ ms.locfileid: "53350653"
   
  Zum Löschen des Zwischenspeichers müssen Sie einen Objektbezeichner für die `ClearCache`-Anweisung in einer XMLA-Abfrage bereitstellen. Im ersten Schritt in diesem Thema erfahren Sie, wie ein Objektbezeichner abgerufen wird.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Rufen Sie die Objekt-ID  
+#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Rufen Sie die Objekt-ID  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf ein Objekt, wählen Sie **Eigenschaften**aus, und kopieren Sie den Wert aus der ID-Eigenschaft im Bereich **Eigenschaften** . Dieser Ansatz funktioniert für die Datenbank, Cube, Dimension oder Tabelle.  
   

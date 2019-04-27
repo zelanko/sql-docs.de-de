@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680105"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Mit einem Bericht oder Datenfeed verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einem Datenfeed herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -56,7 +56,7 @@ ms.locfileid: "48090210"
  **Kontoschlüssel**  
  Geben Sie den Kontoschlüssel an, mit dem auf die Windows Azure Marketplace-Datasetabonnements zugegriffen wird.  
   
- **Suchen**  
+ **Find**  
  Suchen Sie einen einem Windows Live-Konto zugeordneten Kontoschlüssel.  
   
  **Meinen kontoschlüssel speichern**  

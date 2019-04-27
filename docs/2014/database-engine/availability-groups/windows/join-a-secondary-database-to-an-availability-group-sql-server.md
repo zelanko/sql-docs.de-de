@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c66cf723f81e6676e991251ea1305bc2005722e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790186"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe (SQL Server)
-  In diesem Thema wird erläutert, wie Sie eine sekundäre Datenbank mit einer AlwaysOn-verfügbarkeitsgruppe verknüpft [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Nachdem Sie eine sekundäre Datenbank auf ein sekundäres Replikat vorbereitet haben, müssen Sie die Datenbank so schnell wie möglich mit der Verfügbarkeitsgruppe verknüpfen. So wird die Datenverschiebung aus der entsprechenden primären Datenbank in die sekundäre Datenbank gestartet.  
+  In diesem Thema wird beschrieben, wie eine sekundäre Datenbank in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]oder PowerShell mit einer AlwaysOn-Verfügbarkeitsgruppe verknüpft wird. Nachdem Sie eine sekundäre Datenbank auf ein sekundäres Replikat vorbereitet haben, müssen Sie die Datenbank so schnell wie möglich mit der Verfügbarkeitsgruppe verknüpfen. So wird die Datenverschiebung aus der entsprechenden primären Datenbank in die sekundäre Datenbank gestartet.  
   
 -   **Vorbereitungen:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48064680"
 > [!NOTE]  
 >  Informationen darüber, was geschieht, nachdem eine sekundäre Datenbank mit der Gruppe verknüpft sind, finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -96,9 +96,9 @@ ms.locfileid: "48064680"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe**  
   
-1.  Ändern Sie das Verzeichnis (`cd`) mit der Serverinstanz her, die das sekundäre Replikat hostet.  
+1.  Ändern Sie das Verzeichnis (`cd`) in die Serverinstanz, die das sekundäre Replikat hostet.  
   
-2.  Verwenden der `Add-SqlAvailabilityDatabase` Cmdlet, um eine oder mehrere sekundäre Datenbanken mit der verfügbarkeitsgruppe zu verknüpfen.  
+2.  Verwenden Sie das `Add-SqlAvailabilityDatabase`-Cmdlet, um eine oder mehrere sekundäre Datenbanken mit der Verfügbarkeitsgruppe zu verknüpfen.  
   
      Beispielsweise wird durch den folgenden Befehl die sekundäre Datenbank `Db1`mit der Verfügbarkeitsgruppe `MyAG` in einer der Serverinstanzen verknüpft, von denen ein sekundäres Replikat gehostet wird.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48064680"
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   

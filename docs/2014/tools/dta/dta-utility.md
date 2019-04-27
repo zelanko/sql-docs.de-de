@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670692"
 ---
 # <a name="dta-utility"></a>dta
   Das **dta** -Hilfsprogramm ist die Eingabeaufforderungsversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
@@ -204,7 +204,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
- **'-ipf**  
+ **-ipf**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für alle Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
  **-if** _workload_file_  
@@ -389,8 +389,7 @@ dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

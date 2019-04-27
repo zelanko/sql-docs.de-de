@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 978a14c59c92328add341427c990b4f9b14b8f79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650681"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Attributbeziehungen (Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Attributbeziehungen** im Dimensions-Designer können Sie die Attributbeziehungen für die ausgewählte Dimension erstellen, ändern oder löschen.  

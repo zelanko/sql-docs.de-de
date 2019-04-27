@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732106"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Neue Measures definieren (Cube-Assistent)
   Auf der Seite **Neue Measures definieren** können Sie neue Measures für einen Cube erstellen, der ohne Datenquelle erstellt wird.  

@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728644"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lektion 6: Erstellen von berechneten Spalten
   In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns.md).  
   
  Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die Schritte sind für jede Aufgabe etwas anders. Damit sollen Ihnen verschiedene Methoden zum Erstellen neuer Spalten, zum Umbenennen der Spalten und zum Platzieren der Spalten an verschiedenen Positionen in einer Tabelle aufgezeigt werden.  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lesson 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134041"
      Werte werden dann für alle Zeilen in der berechneten Spalte eingetragen. Wenn Sie in der Tabelle einen Bildlauf nach unten durchführen, sehen Sie, dass Zeilen für diese Spalte je nach den Daten in jeder Zeile unterschiedliche Werte haben können.  
   
     > [!NOTE]  
-    >  Wenn Sie einen Fehler erhalten, überprüfen Sie, ob die Spaltennamen in der Formel mit den von Ihnen in [Lektion 3: Umbenennen von Spalten](rename-columns.md) geänderten Spaltennamen übereinstimmen.  
+    >  Wenn Sie eine Fehlermeldung erhalten, überprüfen Sie die Spaltennamen in der Formel entsprechen, die Spaltennamen, die Sie geändert, im haben [Lektion 3: Umbenennen von Spalten](rename-columns.md).  
   
 5.  Benennen Sie diese Spalte in `Month Calendar`.  
   
@@ -127,6 +127,6 @@ ms.locfileid: "48134041"
  Die berechnete Spalte "Margin" dient zur Analyse von Gewinnspannen für jede Zeile (Produktzeile).  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 7: Erstellen von Measures](lesson-6-create-measures.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 7: Erstellen von Measures](lesson-6-create-measures.md).  
   
   

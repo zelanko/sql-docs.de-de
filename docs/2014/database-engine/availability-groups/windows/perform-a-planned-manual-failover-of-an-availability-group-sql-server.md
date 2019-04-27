@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789294"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
-  In diesem Thema wird beschrieben, wie ein manuelles Failover ohne Datenverlust (ein *geplantes manuelles Failover*) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem geplanten manuellen Failover geht wie bei jedem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover ein sekundäres Replikat zur primären Rolle und gleichzeitig das frühere primäre Replikat zur sekundären Rolle über.  
+  In diesem Thema wird beschrieben, wie ein manuelles Failover ohne Datenverlust (ein *geplantes manuelles Failover*) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem geplanten manuellen Failover geht wie bei jedem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover ein sekundäres Replikat zur primären Rolle und gleichzeitig das frühere primäre Replikat zur sekundären Rolle über.  
   
  Ein geplantes manuelles Failover, das nur unterstützt wird, wenn das primäre Replikat und das sekundäre Zielreplikat im Modus für synchrone Commits ausgeführt und gerade synchronisiert werden, behält alle Daten in den sekundären Datenbanken bei, die mit der Verfügbarkeitsgruppe im sekundären Zielreplikat verknüpft sind. Sobald das frühere primäre Replikat zur sekundären Rolle übergeht, werden seine Datenbanken sekundäre Datenbanken und starten die Synchronisierung mit den neuen primären Datenbanken. Nach dem Übergang in den Status SYNCHRONIZED kann das neue sekundäre Replikat als Ziel eines künftigen geplanten manuellen Failovers dienen.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48155342"
 >  Wenn das sekundäre und primäre Replikat für den automatischen Failovermodus konfiguriert sind, kann das sekundäre Replikat nach der Synchronisierung auch als Ziel für ein automatisches Failover dienen. Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -89,12 +89,12 @@ ms.locfileid: "48155342"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So führen Sie manuell ein Failover für eine Verfügbarkeitsgruppe aus**  
   
-1.  Ändern Sie das Verzeichnis (`cd`) mit der Serverinstanz her, die das sekundäre Zielreplikat hostet.  
+1.  Ändern Sie das Verzeichnis (`cd`) in die Serverinstanz, die das sekundäre Zielreplikat hostet.  
   
-2.  Verwenden der `Switch-SqlAvailabilityGroup` Cmdlet.  
+2.  Verwenden Sie das `Switch-SqlAvailabilityGroup`-Cmdlet.  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
      Im folgenden Beispiel wird manuell ein Failover der *MyAg* -Verfügbarkeitsgruppe zum sekundären Replikat mit dem angegebenen Pfad ausgeführt.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48155342"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem manuellen Ausführen eines Failovers für eine Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a>Nächster Schritt: Nachdem Sie manuell ein Failover einer Verfügbarkeitsgruppe  
  Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] der Verfügbarkeitsgruppe ausgeführt haben, passen Sie die Quorumabstimmungen der WSFC-Knoten an die Konfiguration der neuen Verfügbarkeitsgruppe an. Weitere Informationen finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  

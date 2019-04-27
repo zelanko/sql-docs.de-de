@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730351"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
   Verwenden Sie die Anweisungen und Links in diesem Thema, um alle Daten- und Projektdateien zu installieren, die in den Analysis Services-Lernprogrammen verwendet werden.  
   
-## <a name="step-1-install-sql-server-software"></a>Schritt 1: Installieren von SQL Server-Software  
+## <a name="step-1-install-sql-server-software"></a>Schritt 1: Installieren von SQL Server-Software  
  In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sämtliche folgende Software wird mit dem SQL Server-Installationsmedium installiert. Zur Vereinfachung der Bereitstellung können Sie alle Funktionen auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Datenbank-Engine  

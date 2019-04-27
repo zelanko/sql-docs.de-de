@@ -14,18 +14,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793191"
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
   In diesem Thema wird beschrieben, wie eine domänenübergreifende Regel für eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine domänenübergreifende Regel testet die Beziehung zwischen Werten in einzelnen Domänen, die in einer Verbunddomäne enthalten sind. Eine domänenübergreifende Regel muss über eine Verbunddomäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Eine domänenübergreifende Regel wird verwendet, um Domänenwerte zu validieren, zu korrigieren und zu standardisieren.  
   
  Die If-Klausel und die Then-Klausel einer domänenübergreifenden Regel sind jeweils für eine der einzelnen Domänen in der Verbunddomäne definiert. Jede Klausel muss für eine andere einzelne Domäne definiert werden. Eine domänenübergreifende Regel muss sich auf mehrere einzelne Domänen beziehen; Sie können keine einfache Domänenregel (für nur eine einzelne Domäne) für eine Verbunddomäne definieren. Dies wäre der Fall, wenn Sie eine Domänenregel für eine einzelne Domäne definieren. Die If-Klausel und die Then-Klausel können jeweils eine oder mehrere Bedingungen enthalten.  
   
- Eine domänenübergreifende Regel, die definitive Bedingungen hat, übernimmt die Regellogik für Synonyme des Werts in den Bedingungen sowie die Werte selbst. Die definitiven Bedingungen für die If-Klausel und die Then-Klausel sind "Wert ist gleich", Wert ist ungleich", "Wert ist in" oder "Wert ist nicht in". Nehmen wir beispielsweise an, dass Sie die folgende domänenübergreifende Regel für eine verbunddomäne haben: "Für 'Ort', falls der Wert gleich 'Los Angeles' ist für 'Bundesland' Wert gleich 'CA'. Wenn „Los Angeles“ und „LA“ Synonyme sind, gibt diese Regel das richtige Ergebnis für „Los Angeles CA“ und „LA CA“ und einen Fehler für „Los Angeles WA“ und „LA WA“ zurück.  
+ Eine domänenübergreifende Regel, die definitive Bedingungen hat, übernimmt die Regellogik für Synonyme des Werts in den Bedingungen sowie die Werte selbst. Die definitiven Bedingungen für die If-Klausel und die Then-Klausel sind "Wert ist gleich", Wert ist ungleich", "Wert ist in" oder "Wert ist nicht in". Angenommen, Sie haben die folgende domänenübergreifende Regel für eine Verbunddomäne konfiguriert: "For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'. (Wenn Wert für „City“ (Stadt) gleich „Los Angeles“ ist, dann ist Wert für „State“ (Staat) gleich „CA“.) Wenn „Los Angeles“ und „LA“ Synonyme sind, gibt diese Regel das richtige Ergebnis für „Los Angeles CA“ und „LA CA“ und einen Fehler für „Los Angeles WA“ und „LA WA“ zurück.  
   
  Abgesehen davon, dass erfahren, ob eine domänenübergreifenden Regel gültig ist, korrigiert die definitive *Then* -Klausel in einer domänenübergreifenden Regel **Wert ist gleich**auch die Daten während der Datenbereinigungsaktivität. Weitere Informationen finden Sie unter [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

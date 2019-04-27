@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689491"
 ---
 # <a name="data-mining-wizards"></a>Data Mining-Assistenten
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt Assistenten zur Verwendung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -39,8 +39,8 @@ ms.locfileid: "48099230"
  Informationen zu Assistenten, die Sie beim Entwerfen von und Arbeiten mit mehrdimensionalen Daten unterstützen, finden Sie unter [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Tools](data-mining/data-mining-tools.md)   
- [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Data Mining-Tools](data-mining/data-mining-tools.md)   
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Erstellen einer OLAP-Miningstruktur](data-mining/create-an-olap-mining-structure.md)   
  [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)   
  [Erstellen einer neuen relationalen Miningstruktur](data-mining/create-a-new-relational-mining-structure.md)   
