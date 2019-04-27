@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756895"
 ---
 # <a name="roles-ssas-tabular"></a>Rollen (SSAS – tabellarisch)
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Jede Rolle enthält Mitglieder in Form von Windows-Benutzernamen oder Windows-Gruppen sowie Berechtigungen (Lese-, Verarbeitungs- und Administratorberechtigungen). Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden.  
@@ -82,8 +82,8 @@ ms.locfileid: "52419851"
   
 |Tabelle|DAX-Ausdruck|  
 |-----------|--------------------|  
-|Region|= Region [Country] = "USA"|  
-|ProductCategory|= "ProductCategory" [Name] = "Fahrräder"|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |Transaktionen|=Transactions[Year]=2008|  
   
  Im Endeffekt ergeben diese Berechtigungen für die Transactions-Tabelle, dass Mitglieder berechtigt sind, Datenzeilen für Kunden in den USA, die Produktkategorie Bicycles und das Jahr 2008 abzufragen. Benutzer wären nicht in der Lage, Transaktionen außerhalb der USA, Transaktionen, die keine Fahrräder beinhalten, oder Transaktionen in einem anderen Jahr als 2008 abzufragen, es sei denn, sie sind Mitglied einer anderen Rolle, die diese Berechtigungen gewährt.  

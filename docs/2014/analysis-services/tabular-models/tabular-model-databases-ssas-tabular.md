@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756587"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Tabellarische Modelldatenbanken (SSAS – tabellarisch)
   Eine tabellarische Modelldatenbank ist eine Analysis Services-Datenbank, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen, der die tabellarische Analysis Services-Modell-Projektvorlage verwendet, wobei Tabellen und Beziehungen die primären Strukturen zum Darstellen von Daten sind.  
@@ -25,7 +25,7 @@ ms.locfileid: "48190700"
  Tabellarische Modelldatenbanken sind einfacher zu erstellen als mehrdimensionale Datenbanken, insbesondere, wenn Sie einen relationalen Datenbankhintergrund haben. Andernfalls sind administrative Aufgaben ähnlich, wenn nicht sogar identisch mit der Datenbankverwaltung einer mehrdimensionalen Datenbank. Es sind die gleichen Tools und Ansätze gültig.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Projektmappen für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Zugriff auf Daten im tabellarischen Modell](tabular-model-data-access.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48190700"
   
  [Konfigurieren von speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank](enable-directquery-mode-in-ssms.md)  
   
- [Verbinden mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Von PowerPivot wiederherstellen](restore-from-power-pivot.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190700"
   
  [Synchronisieren von Analysis Services-Datenbanken](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Ändern oder Löschen einer Analysis Services-Datenbank](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

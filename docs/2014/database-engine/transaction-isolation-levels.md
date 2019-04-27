@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774123"
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
   Die folgenden Isolationsstufen werden für Transaktionen unterstützt, die auf Speicheroptimierte Tabellen zugreifen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48213145"
   
  Die Isolationsstufe READ COMMITTED wird für speicheroptimierte Tabellen mit Autocommittransaktionen unterstützt. READ COMMITTED ist in Benutzertransaktionen oder in einem atomaren Block nicht zulässig. READ COMMITTED wird mit expliziten oder impliziten Benutzertransaktionen nicht unterstützt. Die READ_COMMITTED_SNAPSHOT-Isolationsstufe wird für speicheroptimierte Tabellen mit Autocommittransaktionen und nur dann unterstützt, wenn die Abfrage nicht auf datenträgerbasierte Tabellen zugreift. Zudem können Transaktionen, die mit interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] mit SNAPSHOT-Isolation gestartet werden, nicht auf speicheroptimierte Tabellen zugreifen. Transaktionen, die interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] mit REPEATABLE READ- oder SERIALIZABLE-Isolation verwenden, müssen mit SNAPSHOT-Isolation auf speicheroptimierte Tabellen zugreifen. Weitere Informationen zu diesem Szenario finden Sie unter [containerübergreifende Transaktionen](cross-container-transactions.md).  
   
- READ COMMITTED ist die Standardisolationsstufe in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn die Isolationsstufe der Sitzung READ COMMITED (oder niedriger) ist, können Sie eine der folgenden Maßnahmen ergreifen:  
+ Die Standardisolationsstufe in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ist READ COMMITTED. Wenn die Isolationsstufe der Sitzung READ COMMITED (oder niedriger) ist, können Sie eine der folgenden Maßnahmen ergreifen:  
   
 -   Verwenden Sie zum Zugreifen auf die speicheroptimierte Tabelle explizit einen Hinweis für eine höhere Isolationsstufe (z. B. WITH (SNAPSHOT)).  
   

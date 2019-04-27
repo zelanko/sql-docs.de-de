@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756731"
 ---
 # <a name="table-properties-ssas-tabular"></a>Tabelleneigenschaften (SSAS – tabellarisch)
   In diesem Thema werden Tabelleneigenschaften für tabellarische Modelle beschrieben. Die hier beschriebenen Eigenschaften unterscheiden sich von den Eigenschaften im Dialogfeld Tabelleneigenschaften bearbeiten, mit denen definiert wird, welche Spalten aus der Quelle importiert werden.  

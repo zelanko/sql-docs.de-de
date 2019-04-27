@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bada5acfd14b824be79fca692debf1a3479f056d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746792"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterübergang" (Miningmodell-Viewer)
   Die Registerkarte **Statusübergänge** im **Microsoft Sequence Cluster-Viewer** bietet eine detailliertere Ansicht der Übergänge zwischen Attribut/Wert-Paaren oder Status im ausgewählten Cluster.  
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie Muster anzeigen. In diesem Diagramm stellt ein Link die Wahrscheinlichkeit eines Übergangs dar und ein Knoten den Sequenzstatus.  
   
- **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48216641"
  **Cluster**  
  Wählen Sie den Cluster aus, der im Viewer angezeigt werden soll. Standardmäßig ist **Auffüllung (Alle)** ausgewählt, d.h., dass das Diagramm Status und Übergänge aus dem gesamten Modell enthält. Wenn Sie einen bestimmten Cluster auswählen, werden nur die Status und Übergänge in diesem Cluster angezeigt.  
   
- **Tipp:** Sie können Cluster auf der Registerkarte **Clusterdiagramm** umbenennen. Wählen Sie einfach einen Cluster aus, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Umbenennen**aus. Wenn Sie Cluster mit einer aussagekräftigeren Bezeichnung umbenennen, können Sie sie leichter auf der Registerkarte **Statusübergänge** vergleichen.  
+ **Tipp:** Sie können die Cluster umbenennen, indem Sie mit der **Clusterdiagramm** Registerkarte. Wählen Sie einfach einen Cluster aus, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Umbenennen**aus. Wenn Sie Cluster mit einer aussagekräftigeren Bezeichnung umbenennen, können Sie sie leichter auf der Registerkarte **Statusübergänge** vergleichen.  
   
  **Kantenbeschriftungen anzeigen**  
  Wählen Sie diese Option aus, um an allen Rändern im Diagramm Zahlen anzuzeigen, die die Wahrscheinlichkeit des Übergangs angeben.  
@@ -61,8 +61,8 @@ ms.locfileid: "48216641"
  Steuern Sie mithilfe des Schiebereglers die Anzahl von Status und Übergängen, die im Diagramm angezeigt werden. Wenn Sie den Schieberegler nach unten ziehen, werden nur die Status und Übergänge mit der höchsten Wahrscheinlichkeit angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

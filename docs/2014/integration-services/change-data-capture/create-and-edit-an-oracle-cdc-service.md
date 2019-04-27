@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771446"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Erstellen und Bearbeiten eines Oracle CDC Service
   Sie erstellen und bearbeiten einen neuen Oracle CDC-Windows-Dienst über die CDC Service Configuration Console.  
@@ -56,14 +56,14 @@ ms.locfileid: "58379374"
   
      Sie können ein lokales Windows-Konto oder ein Windows-Domänenkonto für das Dienstkonto verwenden. In diesem Fall müssen Sie das **Kennwort** für dieses Konto eingeben. Dieses Konto kann für den lokalen Host gelten oder ein Domänenkonto sein. Beachten Sie, dass Sie das Kennwort, falls es sich ändert, in der Windows-Systemsteuerung unter Lokale Dienste aktualisieren müssen.  
   
- **Servername**: Wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung (z. B.  **\\ \\< Computer_name >\\< Instance_name >**). Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+ **Servername**: Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, mit der eine Verbindung hergestellt werden soll, z.B. **\\\\<Computername>\\<Instanzname>**. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
  Wählen Sie eine der folgenden Optionen aus:  
   
--   **Windows-Authentifizierung:** Wenn Sie diese Option auswählen, wird der Oracle CDC Service für das Ziel verbindet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz aus, die Identität des Kontos. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer ausgeführt wird, muss die Windows-Authentifizierung mit Domänenkonten verwendet werden.  
+-   **Windows-Authentifizierung:** Wenn Sie diese Option aktivieren, stellt der Oracle CDC Service mithilfe der Dienstkontoidentität eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz her. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer ausgeführt wird, muss die Windows-Authentifizierung mit Domänenkonten verwendet werden.  
   
--   **SQL Server-Authentifizierung**: Wenn Sie diese Option auswählen, geben Sie die **Benutzernamen** und **Kennwort** für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, die Sie verwenden möchten. Der Oracle CDC Service verwendet diese Anmeldeinformationen beim Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
+-   **SQL Server-Authentifizierung**: Wenn Sie diese Option aktivieren, müssen Sie den **Benutzernamen** und das **Kennwort** für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung eingeben, die Sie verwenden möchten. Der Oracle CDC Service verwendet diese Anmeldeinformationen beim Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
   
  Die vom Oracle CDC Service verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung muss lediglich Mitglied der festen Serverrolle public sein. Es sind keine anderen Berechtigungen erforderlich. Nachdem neue Oracle CDC-Instanzen hinzugefügt wurden, wird über diese Anmeldung der **db_owner** -Zugriff auf die zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -CDC-Datenbanken gewährt.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "58379374"
   
 -   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange der CDC Service for Oracle auf eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] warten soll, bevor ein Timeout eintritt. Der Standardwert lautet **15**.  
   
--   **Timeout für berichtsausführung**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange der Oracle CDC-Windows-Dienst auf die Ausführung eines Befehls wartet, bis ein Timeout eintritt. Der Standardwert ist **30**.  
+-   **Ausführungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange der Oracle CDC-Windows-Dienst auf die Ausführung eines Befehls wartet, bis ein Timeout eintritt. Der Standardwert ist **30**.  
   
--   **Verbindung verschlüsseln**: Wählen Sie **Verbindung verschlüsseln** für die Kommunikation zwischen dem Oracle CDC Service und dem Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz über eine verschlüsselte Verbindung.  
+-   **Verbindung verschlüsseln**: Wählen Sie **Verbindung verschlüsseln** für die Kommunikation zwischen dem Oracle CDC Service und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, bei der eine verschlüsselte Verbindung verwendet werden soll.  
   
--   **Erweitert**: Geben Sie zusätzliche Verbindungseigenschaften ein, falls erforderlich.  
+-   **Erweitert**: Geben Sie bei Bedarf zusätzliche Verbindungseigenschaften ein.  
   
  **Master Password**  
  Geben Sie ein Kennwort ein, das vom Oracle CDC-Windows-Dienst zum Schützen der Oracle-Log Mining-Anmeldeinformationen verwendet wird.  

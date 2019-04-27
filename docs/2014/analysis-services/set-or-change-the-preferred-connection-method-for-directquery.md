@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746612"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery
   Wenn Sie ein Modell für die Verwendung im DirectQuery-Modus erstellen, müssen Sie zuerst die Entwurfsumgebung konfigurieren, um die Verwendung von DirectQuery zu unterstützen. Zu diesem Zweck finden Sie unter [DirectQuery-Entwurfsmodus aktivieren &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -29,27 +29,27 @@ ms.locfileid: "48186690"
   
 -   Sie müssen Identitätswechseloptionen für Benutzer festlegen, die auf die SQL Server-Datenquelle zugreifen.  
   
- In dieser Prozedur wird beschrieben, wie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell im Designer festgelegt wird. Außerdem wird beschrieben, wie Sie diese Eigenschaft in ändern können [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nachdem das Modell bereitgestellt wurde.  
+ In dieser Prozedur wird beschrieben, wie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell im Designer festgelegt wird. Zudem wird geschildert, wie die Eigenschaft in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nach der Bereitstellung des Modells geändert werden kann.  
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>So legen Sie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell fest  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], öffnen Sie die Projektmappendatei für das DirectQuery-Modell.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Lösungsdatei für das DirectQuery-Modell.  
   
 2.  Wählen Sie in Visual Studio im Menü **Projekt** die Option **Eigenschaften**aus.  
   
 3.  Ändern Sie im Bereich **Eigenschaften** die Eigenschaft **DirectQueryMode**in einen der Werte, die DirectQuery-Verwendung unterstützen:  
   
-    -   **InMemory mit DirectQuery**: Wenn Sie diese Option verwenden, wird das Modell bereitgestellt, doch Sie müssen den Cache verarbeiten, bevor Sie Abfragen des Modell ausführen können.  
+    -   **InMemory mit DirectQuery**: Wenn Sie diese Option verwenden, das Modell bereitgestellt, aber Sie müssen den Cache verarbeiten, bevor Sie Abfragen für das Modell ausführen können.  
   
-    -   **DirectQuery mit InMemory**: Wenn Sie diese Option verwenden, ist der Cache zur Verwendung durch Clients verfügbar, wenn er bereits verarbeitet wurde. Wenn Sie das Modell mit dieser Einstellung bereitstellen und den Cache nicht verarbeiten, müssen einige Clients eine Fehlermeldung erhalten, wenn sie versuchen, eine Verbindung mit dem Modell herzustellen.  
+    -   **DirectQuery mit InMemory**: Wenn Sie diese Option verwenden, werden der Cache für die Verwendung durch Clients verfügbar, wenn er bereits verarbeitet wurde. Wenn Sie das Modell mit dieser Einstellung bereitstellen und den Cache nicht verarbeiten, müssen einige Clients eine Fehlermeldung erhalten, wenn sie versuchen, eine Verbindung mit dem Modell herzustellen.  
   
-    -   **Nur DirectQuery**: Wenn Sie diese Option verwenden, werden die Metadaten bereitgestellt, doch das Modell enthält keine Daten. Clients, die versuchen, mit dem Modus "Im Arbeitsspeicher" eine Verbindung herzustellen, erhalten eine Fehlermeldung wegen eines nicht vorhandenen Modells oder der fehlenden Verarbeitung.  
+    -   **Nur DirectQuery**: Wenn Sie diese Option verwenden, die Metadaten bereitgestellt, aber das Modell enthält keine Daten. Clients, die versuchen, mit dem Modus "Im Arbeitsspeicher" eine Verbindung herzustellen, erhalten eine Fehlermeldung wegen eines nicht vorhandenen Modells oder der fehlenden Verarbeitung.  
   
 4.  Wenn Fehler vorhanden sind, öffnen Sie in Visual Studio die **Fehlerliste** , und beheben Sie alle Probleme, durch die verhindert werden würde, dass das Modell im DirectQuery-Modus bereitgestellt wird.  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>So überprüfen oder ändern Sie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] eine Verbindung mit der Instanz her, wo Sie das DirectQuery-Modell bereitgestellt haben.  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]eine Verbindung mit der Instanz her, wo Sie das DirectQuery-Modell bereitgestellt haben.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Modelldatenbank, und wählen Sie **Eigenschaften**aus.  
   

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774594"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
   **Invoke-Sqlcmd** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Cmdlet, das Skripts ausführt, die Anweisungen aus den Sprachen ([!INCLUDE[tsql](../includes/tsql-md.md)] und XQuery) und Befehle enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Interaktive Befehle, Startskript und Umgebungsvariablen deaktivieren.|-X|-DisableCommands|  
 |Variablenersetzung deaktivieren.|-X|-DisableVariables|  
 |Minimaler Schweregrad für Bericht.|-v|-SeverityLevel|  
-|Minimaler Fehlergrad für Bericht.|-m|-ErrorLevel|  
+|Minimaler Fehlergrad für Bericht.|-M|-ErrorLevel|  
 |Anmeldungstimeoutintervall.|-l|-ConnectionTimeout|  
 |Hostname.|-H|-HostName|  
 |Kennwort ändern und beenden.|-Z|-NewPassword|  
@@ -132,8 +132,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Die angegebene Abfrage ausführen und mit der Ausführung fortfahren.|-Q|Kein Parameter|  
 |Codepage zur Verwendung für Ausgabedaten.|-f|Kein Parameter|  
 |Ein Kennwort ändern und mit der Ausführung fortfahren|-Z|Kein Parameter|  
-|Paketgröße|-a|Kein Parameter|  
-|Spaltentrennzeichen|-s|Kein Parameter|  
+|Paketgröße|-A|Kein Parameter|  
+|Spaltentrennzeichen|-S|Kein Parameter|  
 |Steuern von Ausgabeheadern|-H|Kein Parameter|  
 |Angeben von Steuerzeichen|-k|Kein Parameter|  
 |Feste Längenanzeigebreite|-Y|Kein Parameter|  

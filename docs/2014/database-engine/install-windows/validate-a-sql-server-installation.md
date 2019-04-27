@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775233"
 ---
 # <a name="validate-a-sql-server-installation"></a>Überprüfen einer SQL Server-Installation
   Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ermittlungsberichts können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version sowie die auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen überprüfen. Die **installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen** zeigt einen Bericht aller [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Produkte und Funktionen, werden auf dem lokalen Server installiert werden. Der Bericht zur Ermittlung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen steht im **-Installationscenter auf der Seite** Tools [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit.  

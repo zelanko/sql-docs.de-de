@@ -55,11 +55,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746872"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Protokollservereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

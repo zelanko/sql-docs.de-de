@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d753fa58ce7b710ae406d4fc23a5745edafcec4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746574"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>Quelldatenbank (Assistent zum Importieren einer Analysis Services-Datenbank)
   Wählen Sie mithilfe der Seite **Quelldatenbank** die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und die Datenbank aus, aus der ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt erstellt wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Server**  
  Geben Sie die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz ein, die die Datenbank enthält, aus der das Projekt erstellt wird.  
   

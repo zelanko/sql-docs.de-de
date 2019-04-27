@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787393"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Max. Anzahl von Arbeitsthreads** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Sie können mithilfe der Option **Max. Anzahl von Arbeitsthreads** die Anzahl von Arbeitsthreads konfigurieren, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesse zur Verfügung stehen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die systemeigenen Threaddienste der Betriebssysteme, sodass jedes Netzwerk, das gleichzeitig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird, von mindestens einem Thread unterstützt wird. Ein weiterer Thread verarbeitet die Datenbank-Prüfpunkte, und ein Threadpool verarbeitet alle Benutzer. Der Standardwert für **Max. Anzahl von Arbeitsthreads** ist 0. Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anzahl der Arbeitsthreads beim Starten automatisch konfigurieren. Die Standardeinstellung ist für die meisten Systeme am besten geeignet. Abhängig von der Konfiguration des Systems kann durch Festlegen von **Max. Anzahl von Arbeitsthreads** auf einen bestimmten Wert manchmal die Leistung verbessert werden.  
@@ -143,7 +143,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option Max. Anzahl von Arbeitsthreads  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Max. Anzahl von Arbeitsthreads“  
  Die Änderung wird sofort wirksam, ohne dass ein Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich ist.  
   
 ## <a name="see-also"></a>Siehe auch  

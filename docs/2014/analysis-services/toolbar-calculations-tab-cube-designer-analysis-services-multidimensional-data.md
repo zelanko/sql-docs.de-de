@@ -12,22 +12,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756478"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Symbolleiste** können Sie die Aktionen ausführen, die häufig auf der Registerkarte **Berechnungen** des Cube-Designers verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Option|Description|  
 |------------|-----------------|  
 |**Business Intelligence hinzufügen**|Klicken Sie auf diese Option, um **Businesss Intelligence-Assistent** anzuzeigen und dem Cube Business Intelligence-Funktionen hinzuzufügen.|  
 |**Verarbeiten**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und den Cube zu verarbeiten.|  
-|**Erneut eine Verbindung herstellen**|Klicken Sie auf diese Option, um die Registerkarte **Berechnungen** erneut mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und der Datenbank zu verbinden, die den Cube enthält, wenn die Sitzung der Registerkarte **Berechnungen** aufgrund einer unterbrochenen Verbindung oder eines Timeouts beendet wurde.|  
+|**Reconnect**|Klicken Sie auf diese Option, um die Registerkarte **Berechnungen** erneut mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und der Datenbank zu verbinden, die den Cube enthält, wenn die Sitzung der Registerkarte **Berechnungen** aufgrund einer unterbrochenen Verbindung oder eines Timeouts beendet wurde.|  
 |**Neues berechnetes Element**|Klicken Sie auf diese Option, um den **Formular-Editor für berechnete Elemente** anzuzeigen und ein neues berechnetes Element zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  
 |**Neue benannte Menge**|Klicken Sie auf diese Option, um den **Formular-Editor für benannte Mengen** anzuzeigen und eine neue benannte Menge zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  
 |**Neuer Skriptbefehl**|Klicken Sie auf diese Option, um den **Skript-Editor** anzuzeigen und einen neuen Skriptbefehl zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  

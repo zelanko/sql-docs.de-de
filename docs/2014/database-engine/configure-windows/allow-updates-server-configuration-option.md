@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6cf28b18bcad06be7383b98dee72810c4e6157c0
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786987"
 ---
 # <a name="allow-updates-server-configuration-option"></a>Updates zulassen (Serverkonfigurationsoption)
   Diese Option ist in der gespeicherten Prozedur **sp_configure** weiterhin vorhanden, obwohl ihre Funktionalität nicht in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung steht. (Die Einstellung hat keine Auswirkungen.) Für Systemtabellen werden keine direkten Updates unterstützt.  

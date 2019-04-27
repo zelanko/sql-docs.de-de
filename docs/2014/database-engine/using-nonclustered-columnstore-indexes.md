@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773787"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Verwenden nicht gruppierter Columnstore-Indizes
-  Beschreibt wichtige Aufgaben für die Verwendung eines nicht gruppierten Columnstore-Indexes für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabelle.  
+  Beschreibt wichtige Aufgaben für die Verwendung eines nicht gruppierten Columnstore-Indexes für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle.  
   
- Eine Übersicht über columnstore-Indizes, finden Sie unter [Beschreibung von columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Eine Übersicht über Columnstore-Indizes finden Sie unter [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Weitere Informationen zu gruppierten columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Informationen zum Verwenden von gruppierten Columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Inhalt  
   

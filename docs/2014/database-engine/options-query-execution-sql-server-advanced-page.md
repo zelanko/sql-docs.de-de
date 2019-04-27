@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774385"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Optionen (Abfrageausführung > SQL Server > Seite „Erweitert“)
   Bei Verwendung des SET-Befehls stehen mehrere Optionen zur Verfügung. Geben Sie mithilfe dieser Seite eine **set** -Option zur Ausführung von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen im Abfrage-Editor von SQL Server an. Auswirkungen auf andere Code-Editoren bestehen nicht. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen angewendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** oder im Kontextmenü des Abfragefensters von **auf** Abfrageoptionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Klicken Sie unter **Ausführung**auf **Erweitert**. Weitere Informationen hierzu finden Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SET NOCOUNT**  
  Es wird nicht die Anzahl der Zeilen als Meldung mit dem Resultset zurückgegeben. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   

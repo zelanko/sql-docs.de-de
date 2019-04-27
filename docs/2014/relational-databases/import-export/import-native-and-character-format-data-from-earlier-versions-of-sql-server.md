@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745920"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat
   Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]bcp **in** verwenden, um Daten im nativen Format oder im Zeichenformat mithilfe des Schalters [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , **oder** zu importieren. Der Schalter **-V** veranlasst [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , Datentypen aus der angegebenen früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu verwenden. Zudem entspricht das Datendateiformat dem Format dieser früheren Version.  

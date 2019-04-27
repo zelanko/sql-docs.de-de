@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756452"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Ablaufverfolgung (Data Mining-Client für Excel)
   ![Schaltfläche "Ablaufverfolgung"](media/misc-trace.gif "Schaltfläche \"Ablaufverfolgung\"")  
@@ -30,7 +30,7 @@ ms.locfileid: "48161303"
   
  **Ablaufverfolgung** überwacht nur die aktuelle Verbindung und den Inhalt der **Überwachungstoken** im Dialogfeld werden nicht gespeichert.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Ablaufverfolgung (Bereich)  
  Listet alle Anweisungen auf, die vom Excel-Client an den Server gesendet wurden.  
   

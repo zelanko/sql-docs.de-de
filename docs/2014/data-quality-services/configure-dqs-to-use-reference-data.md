@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755768"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Konfigurieren von DQS zum Verwenden von Verweisdaten
   In diesem Thema wird beschrieben, wie [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) zum Verwenden von Verweisdaten zum Bereinigen der Daten konfiguriert wird. Sie können Verweisdaten von Windows Azure Marketplace oder von direkten Onlineverweisdatendrittanbietern verwenden.  

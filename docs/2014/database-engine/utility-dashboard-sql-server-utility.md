@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773812"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
   Um Daten im Dashboard des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramms anzuzeigen, wählen Sie den obersten Knoten in der Struktur des Hilfsprogramm-Explorers aus: Hilfsprogramm<UCP_Name>\\(ComputerName\UCP). Das Dashboard enthält Zusammenfassungs- und Detaildaten aus allen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und allen Datenebenenanwendungen im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm. Zum Aktualisieren der Dashboarddaten klicken Sie mit der rechten Maustaste auf den obersten Knoten in der Struktur des Hilfsprogramm-Explorers und wählen dann **Aktualisieren**aus.  

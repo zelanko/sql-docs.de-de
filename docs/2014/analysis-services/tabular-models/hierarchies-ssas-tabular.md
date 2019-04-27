@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757069"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hierarchien (SSAS – tabellarisch)
   Hierarchien in Tabellenmodellen sind Metadaten, mit denen Beziehungen zwischen mindestens zwei Spalten in einer Tabelle definiert werden. Hierarchien können getrennt von anderen Spalten in der Feldliste eines Berichterstellungsclients angezeigt werden, damit Clientbenutzer einfacher darin navigieren und sie in einen Bericht aufnehmen können.  
@@ -34,11 +34,11 @@ ms.locfileid: "48133440"
   
  Beispielsweise können Sie in einer Datumstabelle eine Kalenderhierarchie erstellen. Calendar Year wird als übergeordnetes Element oberster Ebene verwendet und verfügt über die untergeordneten Ebenen Month, Week und Day (Calendar Year->Month->Week->Day). In dieser Hierarchie wird eine logische Beziehung zwischen Kalenderjahr und Tag dargestellt. Anschließend kann ein Clientbenutzer das Kalenderjahr aus einer Feldliste auswählen, um alle Ebenen in eine PivotTable einzuschließen, oder die Hierarchie erweitern und nur bestimmte Ebenen auswählen, die in die PivotTable eingeschlossen werden sollen.  
   
- Da jede Ebene in einer Hierarchie eine Darstellung einer Spalte in einer Tabelle darstellt, kann die Ebene umbenannt werden. Das Umbenennen von Hierarchieebenen ist keine exklusive Hierarchiefunktion (da jede Spalte in einem Tabellenmodell umbenannt werden kann), erleichtert dem Benutzer jedoch das Auffinden und Einschließen von Ebenen in einen Bericht. Durch das Umbenennen einer Ebene wird die Spalte, auf die die Ebene verweist, nicht umbenannt. Die Ebene ist einfach besser zu identifizieren. Im Beispiel mit der Calendar Year-Hierarchie wurden in der Date-Tabelle der Datensicht die Spalten CalendarYear, CalendarMonth, CalendarWeek und CalendarDay in Calendar Year, Month, Week und Day umbenannt, damit sie leichter identifiziert werden können. Das Umbenennen von Ebenen bietet den zusätzlichen Vorteil, dass die Konsistenz von Berichten verbessert wird, da es weniger wahrscheinlich ist, dass Benutzer die Spaltennamen ändern müssen, um deren Lesbarkeit in PivotTables, Diagrammen usw. zu erhöhen.  
+ Da jede Ebene in einer Hierarchie eine Darstellung einer Spalte in einer Tabelle darstellt, kann die Ebene umbenannt werden. Das Umbenennen von Hierarchieebenen ist keine exklusive Hierarchiefunktion (da jede Spalte in einem Tabellenmodell umbenannt werden kann), erleichtert dem Benutzer jedoch das Auffinden und Einschließen von Ebenen in einen Bericht. Durch das Umbenennen einer Ebene wird die Spalte, auf die die Ebene verweist, nicht umbenannt. Die Ebene ist einfach besser zu identifizieren. In unserem Calendar Year-Hierarchie Beispiel, in der Date-Tabelle in der Datensicht die Spalten: CalendarYear, CalendarMonth, CalendarWeek und CalendarDay wurden auf der Kalender Jahr, Monat, Woche und Tag, um sie leichter identifiziert werden können umbenannt werden. Das Umbenennen von Ebenen bietet den zusätzlichen Vorteil, dass die Konsistenz von Berichten verbessert wird, da es weniger wahrscheinlich ist, dass Benutzer die Spaltennamen ändern müssen, um deren Lesbarkeit in PivotTables, Diagrammen usw. zu erhöhen.  
   
  Hierarchien können in Perspektiven aufgenommen werden. Eine Perspektive definiert sichtbare Teilmengen eines Modells, die fokussierte, unternehmensspezifische oder anwendungsspezifische Blickpunkte des Modells bereitstellen. Beispielsweise könnten Benutzer in einer Perspektive nur Zugriff auf eine anzeigbare Liste (Hierarchie) derjenigen Datenelemente erhalten, die für ihre spezifischen Berichterstellungsanforderungen erforderlich sind. Weitere Informationen finden Sie unter [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
   
- Hierarchien sollen nicht als Sicherheitsmechanismus verwendet werden, sondern als Tool zur Verbesserung der Benutzerfreundlichkeit. Die gesamte Sicherheit einer bestimmten Hierarchie wird vom zugrunde liegenden Modell geerbt. Hierarchien gewähren keinen Zugriff auf Modellobjekte, auf die ein Benutzer nicht bereits Zugriff hat. Die Sicherheit der Modelldatenbank muss geklärt werden, damit der Zugriff auf Objekte im Modell durch eine Hierarchie ermöglicht werden kann. Sicherheitsrollen können verwendet werden, um Modellmetadaten und Daten zu sichern. Weitere Informationen finden Sie unter [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Hierarchien sollen nicht als Sicherheitsmechanismus verwendet werden, sondern als Tool zur Verbesserung der Benutzerfreundlichkeit. Die gesamte Sicherheit einer bestimmten Hierarchie wird vom zugrunde liegenden Modell geerbt. Hierarchien gewähren keinen Zugriff auf Modellobjekte, auf die ein Benutzer nicht bereits Zugriff hat. Die Sicherheit der Modelldatenbank muss geklärt werden, damit der Zugriff auf Objekte im Modell durch eine Hierarchie ermöglicht werden kann. Sicherheitsrollen können verwendet werden, um Modellmetadaten und Daten zu sichern. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)erstellte tabellarische Modellprojekte.  
   
 ##  <a name="bkmk_define"></a> Definieren von Hierarchien  
  Hierarchien werden mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet. Das Erstellen und Verwalten von Hierarchien in der Datensicht des Modell-Designers wird nicht unterstützt. Um den Modell-Designer in der Diagrammsicht anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen auf **Modellansicht**und klicken dann auf **Diagrammsicht**.  
@@ -49,11 +49,11 @@ ms.locfileid: "48133440"
   
  Neue Hierarchien erhalten standardmäßig den Namen hierarchy 1, hierarchy 2 usw. Sie sollten Hierarchienamen so ändern, dass die Über-/Unterordnungsbeziehung eindeutig zugeordnet werden kann, sodass sie für Benutzer besser zu identifizieren sind.  
   
- Nachdem Sie Hierarchien erstellt haben, können Sie deren Wirksamkeit mit der Funktion In Excel analysieren testen. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md).  
+ Nachdem Sie Hierarchien erstellt haben, können Sie deren Wirksamkeit mit der Funktion In Excel analysieren testen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)definieren.  
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |[Erstellen und Verwalten von Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md)|Beschreibt, wie Hierarchien mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet werden.|  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754713"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
   Diese schreibgeschützte Seite zeigt den neuesten Spiegelungsstatus für die Prinzipal- und die Spiegelserverinstanz der Datenbank an, die zum jetzigen Zeitpunkt in der Navigationsstruktur ausgewählt ist. Wenn Informationen zu einer Instanz zurzeit nicht verfügbar sind, sind einige der Zellen im Raster **Status** , das dieser Instanz entspricht, ausgegraut und zeigen die Option **Unbekannt**an.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773439"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - Spalten organisieren
   Verwenden Sie das Dialogfeld **Spalten organisieren** , um Datenspalten für das Gruppieren oder Aggregieren von Ereignissen auszuwählen, die in einer Ablaufverfolgung angezeigt werden. Dadurch können große Ablaufverfolgungsdateien und -tabellen einfacher gelesen und analysiert werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48218000"
   
  Um auf dieses Dialogfeld zuzugreifen, öffnen Sie eine vorhandene Ablaufverfolgungsdatei oder -tabelle, und klicken Sie auf im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Eigenschaften** . Klicken Sie im Dialogfeld **Ablaufverfolgungseigenschaften** auf die Registerkarte **Ereignisauswahl** , und dann auf **Spalten organisieren**. Sie können in der Registerkarte **Ereignisauswahl** auch auf **Spalten organisieren** klicken, wenn Sie eine neue Ablaufverfolgung erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gruppen**  
  Verschieben Sie die Datenspaltennamen unter **Gruppen** , um Ereignisklassen im Ablaufverfolgungsfenster zu gruppieren oder aggregieren.  
   

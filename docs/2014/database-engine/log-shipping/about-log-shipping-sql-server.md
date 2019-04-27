@@ -26,11 +26,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774549"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie automatisch Transaktionsprotokollsicherungen von einer *primären Datenbank* auf einer Instanz eines *primären Servers* an eine oder mehrere *sekundäre Datenbanken* auf separaten Instanzen eines *sekundären Servers* senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  

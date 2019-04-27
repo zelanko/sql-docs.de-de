@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853476"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,17 +44,17 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *spaltendefinitionsliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltendefinitionen.  
   
- *Algorithmus*  
+ *algorithm*  
  Der Name eines Data Mining-Algorithmus, der vom aktuellen Anbieter definiert wurde.  
   
 > [!NOTE]  
 >  Eine Liste der vom aktuellen Anbieter unterstützt Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Die in der aktuellen Instanz von unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Parameterliste*  
- Dies ist optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *XML-Zeichenfolge*  
- (Nur für fortgeschrittene Benutzer.) Ein XML-codiertes Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
+ (Nur für fortgeschrittene Benutzer.) Ein XML-codierte-Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
   
  Die **SITZUNG** -Klausel können Sie ein Miningmodell erstellen, die automatisch vom Server entfernt wird, wenn die Verbindung geschlossen oder das Sitzungstimeout. **SITZUNG** Miningmodelle sind nützlich, da sie nicht erfordern, dass Benutzer ein Datenbankadministrator und Speicherplatz für sie nur verwenden, solange die Verbindung geöffnet ist.  
   

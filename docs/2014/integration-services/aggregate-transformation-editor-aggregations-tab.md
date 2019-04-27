@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771946"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
   Auf der Registerkarte **Aggregationen** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie die Spalten für Aggregationen und Aggregationseigenschaften angeben. Sie können mehrere Aggregationen anwenden. Durch diese Transformation wird keine Fehlerausgabe generiert.  

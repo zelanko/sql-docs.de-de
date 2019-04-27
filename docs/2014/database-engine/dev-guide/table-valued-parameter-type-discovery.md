@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780319"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Tabellenwertparameter-Typermittlung
   Der Consumer-d. h. der Clientanwendung mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann den Typ für jeden Befehlsparameter ermitteln, wenn der Befehlstext an den OLE DB-Anbieter festgelegt wurde. Nachdem der Typ des Tabellenwertparameters ermittelt wurde, kann der Consumer die Metadateninformationen für jede einzelne Spalte des Tabellenwertparameters ermitteln.  

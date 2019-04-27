@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5349f45891dbca2c9135c38c1976f71c87491212
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786655"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>Senden einer Nachricht über das Herunterfahren (Befehlszeile)
   In diesem Thema wird beschrieben, wie Sie mit dem Befehl [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] net send **eine Nachricht zum Herunterfahren in** übertragen. Schließen Sie den Zeitpunkt, zu dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet wird, in die Nachricht ein, damit alle Benutzer ihre Aufgaben beenden können.  

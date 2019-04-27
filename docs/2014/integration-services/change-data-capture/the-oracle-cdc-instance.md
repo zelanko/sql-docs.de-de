@@ -11,24 +11,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771190"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC-Instanz
   Die Oracle CDC-Instanz ist ein vom Oracle CDC Service erstellter Prozess zur Verarbeitung der Änderungen, die aus einer einzelnen Oracle-Quelldatenbank aufgezeichnet wurden. Die Oracle CDC-Instanz ruft ihre Konfiguration aus der Tabelle **cdc.xdbcdc_config** ab und verwaltet ihren Status in der Tabelle **cdc.xdbcdc_state** . Diese Tabellen sind Teil der CDC-Datenbank, über die die Oracle CDC-Instanz definiert wird. Weitere Informationen zur Datenbank xdbcdc und zu Tabellen finden Sie unter [The CDC Databases](the-oracle-cdc-service.md).  
   
  Im Folgenden werden die Tasks beschrieben, die von der Oracle CDC-Instanz ausgeführt werden:  
   
--   **Dienst-startüberprüfung**: Nach dem Starten lädt die CDC-Instanz ihre Konfiguration aus der **Xdbcdc_config** Tabelle und führt eine Reihe von statusüberprüfungen aus, die sicherstellen, dass die CDC-Instanz der persistente Zustand konsistent ist und, die er kann mit dem Verarbeiten ändert.  
+-   **Durchführen der Startüberprüfung für den Dienst**: Nach dem Starten lädt die CDC-Instanz ihre Konfiguration aus der Tabelle **xdbcdc_config** und führt eine Reihe von Statusüberprüfungen aus. So wird sichergestellt, dass der permanente Status der CDC-Instanz einheitlich ist und dass mit der Verarbeitung der Änderungen begonnen werden kann.  
   
--   **Vorbereiten für die änderungsaufzeichnung**: Wenn die Überprüfung erfolgreich, scannt die Oracle CDC-Instanz alle momentan definierten aufzeichnungsinstanzen und bereitet die Oracle LogMiner-Abfragen und andere Unterstützungsstrukturen für die änderungsaufzeichnung erforderlich sind. Außerdem lädt die Oracle-Instanz den internen Aufzeichnungsstatus neu, der bei der letzten Ausführung der Oracle CDC-Instanz gespeichert wurde.  
+-   **Vorbereiten auf die Änderungsaufzeichnung**: Wenn die Überprüfung erfolgreich ist, scannt die Oracle CDC-Instanz alle momentan definierten Aufzeichnungsinstanzen und bereitet die Oracle LogMiner-Abfragen und andere Unterstützungsstrukturen vor, die für die Änderungsaufzeichnung erforderlich sind. Außerdem lädt die Oracle-Instanz den internen Aufzeichnungsstatus neu, der bei der letzten Ausführung der Oracle CDC-Instanz gespeichert wurde.  
   
--   **Aufzeichnen von Änderungen aus Oracle**: Oracle CDC-Instanz fasst Änderungen aus Oracle mithilfe der Oracle LogMiner-Funktion, sortiert diese nach Transaktionscommit, und klicken Sie dann ändert sich die Zeit in einer Transaktion und schreibt sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungstabellen in der CDC-Datenbank.  
+-   **Aufzeichnen von Änderungen aus Oracle**: Die Oracle CDC-Instanz fasst Änderungen aus Oracle mithilfe der Oracle LogMiner-Funktion in einem Pool zusammen, sortiert diese nach Transaktionscommit und ändert dann die Uhrzeit in einer Transaktion und schreibt sie in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Änderungstabellen in der CDC-Datenbank.  
   
--   **Herunterfahren des Diensts**: Der Lebenszyklus der Oracle CDC-Instanz wird von der Oracle CDC Service verwaltet. Wenn für die Oracle CDC-Instanz das Herunterfahren angefordert wird, werden die folgenden Tasks ausgeführt:  
+-   **Herunterfahren des Diensts**: Der Lebenszyklus der Oracle CDC-Instanz wird vom Oracle CDC Service verwaltet. Wenn für die Oracle CDC-Instanz das Herunterfahren angefordert wird, werden die folgenden Tasks ausgeführt:  
   
     -   Das Lesen von Daten aus dem Oracle-Transaktionsprotokoll wird beendet.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "58393048"
   
     -   In einem separaten Thread werden so viele im Arbeitsspeicher zwischengespeicherte Datensätze wie möglich für bis zu 30 Sekunden in die Tabelle mit den bereitgestellten Transaktionen geschrieben (von der ältesten bis zur neuesten Transaktion). Anschließend wird die Tabelle **xdbcdc_state** aktualisiert und für alle Änderungen ein Commit ausgeführt.  
   
--   **Behandeln von konfigurationsänderungen**: Oracle CDC-Instanz ist über konfigurationsänderungen, die entweder vom CDC Service oder bei Erkennung einer neuen Version in benachrichtigt die **CDC. xdbcdc_config** Tabelle. Für die meisten Änderungen ist kein Neustart der Oracle CDC-Instanz erforderlich (z. B. beim Hinzufügen oder Entfernen von Aufzeichnungsinstanzen). Bei einigen anderen Änderungen, z. B. beim Ändern der Oracle-Verbindungszeichenfolge oder der Anmeldeinformationen, muss jedoch ein Neustart der CDC-Instanz ausgeführt werden.  
+-   **Durchführen von Konfigurationsänderungen**: Die Oracle CDC-Instanz wird entweder vom CDC Service oder bei Erkennung einer neuen Version in der Tabelle **cdc.xdbcdc_config** über Konfigurationsänderungen benachrichtigt. Für die meisten Änderungen ist kein Neustart der Oracle CDC-Instanz erforderlich (z. B. beim Hinzufügen oder Entfernen von Aufzeichnungsinstanzen). Bei einigen anderen Änderungen, z. B. beim Ändern der Oracle-Verbindungszeichenfolge oder der Anmeldeinformationen, muss jedoch ein Neustart der CDC-Instanz ausgeführt werden.  
   
--   **Durchführen der Wiederherstellung**: Beim Starten einer Oracle CDC-Instanz wird ihr interne Status wiederhergestellt, aus der **Xdbcdc_state** und **Xdbcdc_staged_transactions** Tabellen. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
+-   **Durchführen der Wiederherstellung**: Beim Starten einer Oracle CDC-Instanz wird ihr interner Status aus den Tabellen **xdbcdc_state** und **xdbcdc_staged_transactions** wiederhergestellt. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung](error-handling.md)  

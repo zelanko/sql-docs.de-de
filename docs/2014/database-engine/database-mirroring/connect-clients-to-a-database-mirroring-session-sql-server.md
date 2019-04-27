@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755354"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- _Wiederholungszeit_ **=** _vorhergehende Wiederholungszeit_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
+ _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;**_Anmeldungstimeout_**)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Round|Berechnung der*Wiederholungszeit* |Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
-|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
-|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 Sekunden|  
-|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 Sekunden|   
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
+|2|1.2 **+(** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
+|3|2.4 **+(** 0,08 **&#42;** 15 **)**|3,6 Sekunden|  
+|4|3.6 **+(** 0,08 **&#42;** 15 **)**|4,8 Sekunden|   
   
  In der folgenden Abbildung werden diese Wiederholungszeiten für aufeinander folgende Wiederholungsversuche, für die jeweils ein Timeout erfolgt, veranschaulicht.  
   

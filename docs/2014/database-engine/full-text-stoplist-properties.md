@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779407"
 ---
 # <a name="full-text-stoplist-properties"></a>Volltext-Stopplisten-Eigenschaften
   Verwenden Sie dieses Dialogfeld, um einzelne Stoppwörter hinzuzufügen oder zu löschen, um alle Stoppwörter für eine bestimmte Sprache zu löschen oder um die aktuelle Stoppliste zu löschen. Ein Stoppwort ist ein häufig verwendetes Wort, das in eine Stoppliste aufgenommen wird. Die Stoppwörter in einer Stoppliste werden bei der Volltextindizierung für Tabellen, die diese Stoppliste verwenden, ausgelassen. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48072520"
   
 -   [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Gibt die Aktion an, die Sie durchführen möchten.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48072520"
  **Inhalt der Stoppliste löschen**  
  Löscht die Stoppliste, indem alle Stoppwörter für alle Sprachen gelöscht werden.  
   
- **Stoppwort**  
+ **Stopword**  
  Wenn Sie **Stoppwort hinzufügen** oder **Stoppwort löschen**ausgewählt haben, geben Sie das Stoppwort im Feld **Stoppwort** ein. Ein neues Stoppwort muss eindeutig sein; das heißt, es darf noch nicht in dieser Stoppliste für die Sprache, die Sie auswählen, enthalten sein.  
   
  **Volltext-Standardsprache**  

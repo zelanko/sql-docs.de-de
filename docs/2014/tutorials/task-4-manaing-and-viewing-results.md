@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745631"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
   In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Finden Sie unter [interaktive Bereinigungsphase](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) Weitere Details.  

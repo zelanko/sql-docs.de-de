@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756572"
 ---
 # <a name="restore-from-powerpivot"></a>Von PowerPivot wiederherstellen
   Sie können die Funktion Von PowerPivot wiederherstellen in SQL Server Management Studio verwenden, um eine neue Datenbank für tabellarische Modelle auf einer (im Tabellenmodus ausgeführte) Analysis Services-Instanz zu erstellen oder um eine vorhandene Datenbank aus einer PowerPivot-Arbeitsmappe (.xlsx) wiederherzustellen.  

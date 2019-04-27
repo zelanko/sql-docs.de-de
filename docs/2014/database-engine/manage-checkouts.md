@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774534"
 ---
 # <a name="manage-checkouts"></a>Verwalten von Auscheckvorgängen
   Nachdem eine Datei der Quellcodeverwaltung hinzugefügt wurde, müssen Sie die Datei auschecken, bevor Sie sie ändern können. Beim Auschecken einer Datei aus der Quellcodeverwaltung erstellt der Quellcodeverwaltungsanbieter auf dem lokalen Datenträger eine Kopie der letzten Version und entfernt den Schreibschutz der Datei. In bestimmten Situationen müssen Sie möglicherweise eine Datei bearbeiten, ohne sie auszuchecken. Weitere Informationen zum Bearbeiten einer Datei ohne vorheriges Auschecken finden Sie unter [Bearbeiten eingecheckter Dateien](../../2014/database-engine/edit-checked-in-files.md).  

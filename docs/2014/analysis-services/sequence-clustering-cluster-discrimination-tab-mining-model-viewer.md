@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89d33663e520fdecdf6fc8548d4930a6ea642718
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747268"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterunterscheidung" (Miningmodell-Viewer)
   Auf der Registerkarte  **Clusterunterscheidung** im **Microsoft Sequence Cluster-Viewer** werden ausgewählte Cluster aus einem Sequenzclustermodell verglichen.  
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie zwei Cluster vergleichen und anzeigen, welche Status und Übergänge unterschiedlich sind.  
   
- **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "48218302"
   
  Insgesamt könnte ein bestimmter Cluster mehrere Status enthalten: Ein häufiger Status könnte z. B. der Kauf einer Wasserflasche und eines Flaschenhalters nacheinander sein. Die Sequenz könnte jedoch in anderen Clustern vorhanden sein, die wichtigere definierende Eigenschaften aufweisen. Zum Beispiel könnte ein anderer Cluster am stärksten durch sehr kurze Transaktionszeiten charakterisiert werden, und eine Analyse würde zeigen, dass die Artikel Wasserflasche und Flaschenhalter normalerweise in diesem Cluster gruppiert werden, jedoch nicht immer.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Variablen**|Ein Attribut im Miningmodell.|  
 |**Werte**|Ein Status des Attributs, der unter **Variablen**aufgeführt ist.|  
 |**Begünstigt \<cluster 1 >**|Enthält einen schattierten Balken, der anzeigt, wie sehr das Attribut und der Status, die unter **Variablen** und **Wert** aufgeführt sind, den unter **Cluster 1**ausgewählten Cluster begünstigen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

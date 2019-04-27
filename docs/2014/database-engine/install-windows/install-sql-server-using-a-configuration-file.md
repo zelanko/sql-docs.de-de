@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775283"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installieren von SQL Server 2014 mithilfe einer Konfigurationsdatei
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bietet die Möglichkeit, eine Konfigurationsdatei auf der Grundlage von Systemstandards und Laufzeiteingaben zu generieren. Sie können die Konfigurationsdatei verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gesamten Unternehmen mit der gleichen Konfiguration bereitzustellen. Außerdem können manuelle Installationen über das gesamte Unternehmen hinweg standardisiert werden, indem eine Batchdatei erstellt wird, die Setup.exe startet.  

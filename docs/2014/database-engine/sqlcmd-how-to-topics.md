@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773506"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Themen zur Vorgehensweise für sqlcmd
   Mit dem Hilfsprogramm [sqlcmd](../tools/sqlcmd-utility.md) können Sie an der Eingabeaufforderung, im Abfrage-Editor im SQLCMD-Mode, in einer Windows-Skriptdatei oder in einem Auftragsschritt des Betriebssystems (Cmd.exe) eines [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Agent-Auftrags [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen, Systemprozeduren und Skriptdateien eingeben.  

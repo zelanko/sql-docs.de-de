@@ -27,11 +27,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774439"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Die folgenden Abschnitte enthalten Informationen zur Abwärtskompatibilität der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten. Darüber hinaus enthalten die Informationen Hinweise zu als veraltetet markierten und nicht mehr eingesetzten Funktionen, aktuellen Änderungen sowie Änderungen im Programmverhalten.  

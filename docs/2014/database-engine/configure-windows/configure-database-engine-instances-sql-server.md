@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786603"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Konfigurieren von Datenbank-Engine-Instanzen (SQL Server)
   Jede Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss so konfiguriert werden, dass sie die für die Datenbanken, die von der Instanz gehostet werden, definierten Anforderungen in Bezug auf Leistung und Verfügbarkeit erfüllen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthält Konfigurationsoptionen, die Verhaltensweisen wie Ressourcenauslastung und Verfügbarkeit von Funktionen, z. B. Überwachung oder Triggerrekursion, steuern.  

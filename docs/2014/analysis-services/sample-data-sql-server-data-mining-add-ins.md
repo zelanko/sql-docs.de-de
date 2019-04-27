@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748042"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Beispieldaten (SQL Server Data Mining-Add-Ins)
   ![Partition--Assistenten im Data Mining-Menüband](media/dmc-partition.gif "Partitionieren von Daten-Assistenten im Data Mining-Menüband")  
@@ -71,7 +71,7 @@ ms.locfileid: "48209890"
 ## <a name="related-options"></a>Zugehörige Optionen  
  Wenn Sie den Assistenten Schritt für Schritt durchgehen, werden diese Optionen aufgeführt:  
   
-|Tastatur|Kommentare|  
+|Optionen|Kommentare|  
 |-------------|--------------|  
 |Quelldaten auswählen (Dialogfeld, Data Mining-Client für Excel)|Wählen Sie einen Excel-Bereich oder eine Excel-Tabelle aus, die die Daten enthalten. Wenn Sie die externen Daten verwenden möchten, können die Daten relational sein, aber sie müssen in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquelle enthalten sein. T|  
 |Stichprobentyp auswählen (Seite, Data Mining-Client für Excel)|Wenn Sie eine externe Datenquelle verwenden, können Sie nur die Option für die zufällige Stichprobenentnahme verwenden. Sie müssen außerdem angeben, die Anzahl der Zeilen in der endgültigen Dataset erstellen, indem die **Zeilenanzahl** Option. Sie können keinen Prozentsatz der Quelldaten angeben.|  

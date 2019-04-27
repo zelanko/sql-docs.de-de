@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0233f6c40e15fd4f612002854477d98068901b15
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786669"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>C2-Überwachungsmodus (Serverkonfigurationsoption)
   Der C2-Überwachungsmodus kann durch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit der Option **c2 audit mode** in **sp_configure**konfiguriert werden. Das Auswählen dieser Option konfiguriert den Server so, dass sowohl fehlgeschlagene als auch erfolgreiche Zugriffsversuche auf Anweisungen und Objekte aufgezeichnet werden. Diese Informationen können Sie bei der Profilierung der Systemaktivität unterstützen und mögliche Verletzungen der Sicherheitsrichtlinien nachverfolgen.  

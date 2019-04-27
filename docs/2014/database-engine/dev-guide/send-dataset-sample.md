@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780957"
 ---
 # <a name="send-dataset-sample"></a>Beispiel für das Senden eines Datensatzes
   Das Beispiel für das Senden eines `DataSet` zeigt, wie ein ADO.NET-basiertes `DataSet` in einer serverseitigen CLR (Common Language Runtime)-basierten gespeicherten Prozedur als Resultset an den Client zurückgegeben wird. Dies ist z. B. hilfreich, wenn eine solche gespeicherte Prozedur ein `DataSet` mit den Ergebnissen einer Abfrage füllt und dann die in diesem `DataSet` enthaltenen Daten bearbeitet. Dies ist ebenfalls hilfreich, wenn die gespeicherte Prozedur ein `DataSet` von Grund auf neu erstellt und füllt. Das Beispiel besteht aus zwei Klassen, `DataSetUtilities` und `TestSendDataSet`. Mit der `SendDataSet`-Methode für die `DataSetUtilities`-Klasse wird ein allgemeines Verfahren für die Übertragung des Inhalts einer `DataSet`-Instanz an den Client implementiert. Die für die `DoTest`-Klasse definierte `TestSendDataSet`-Methode überprüft die Funktionsfähigkeit der `SendDataSet`-Methode, indem sie ein `DataSet` erstellt und mit Daten aus der gespeicherten Transact-SQL-Prozedur `uspGetTwoBOMTestData` füllt. `uspGetTwoBOMTestData` führt die gespeicherte Transact-SQL-Prozedur `uspGetBillOfMaterials` zweimal aus, um rekursiv die Stückliste für zwei Produkte abzufragen, die als Parameter für die gespeicherte Prozedur `usp_GetTwoBOMTestData` angegeben wurden. Nach dem Füllen des Datasets werden die Daten normalerweise vor dem Aufrufen von `SendDataSet` geändert, um die Daten im Dataset als Resultset an den Client zu übermitteln. Aus Gründen der Vereinfachung gibt dieses Beispiel die Daten ungeändert zurück.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771776"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Quellen-Editor für CDC (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für CDC** können Sie den ADO.NET-Verbindungs-Manager für die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Datenbank auswählen, aus der die CDC-Quelle Änderungszeilen liest (CDC-Datenbank). Nachdem Sie die CDC-Datenbank ausgewählt haben, müssen Sie eine aufgezeichnete Tabelle in der Datenbank auswählen.  
@@ -52,15 +52,15 @@ ms.locfileid: "58391488"
  **CDC Processing Mode**  
  Wählen Sie den Verarbeitungsmodus aus, der sich für die Behandlung Ihrer Verarbeitungsanforderungen am besten eignet. Folgende Optionen sind möglich:  
   
--   **alle**: Gibt die Änderungen zurück in den aktuellen CDC-Bereich, ohne die **vor Update** Werte.  
+-   **All**: Gibt die Änderungen im aktuellen CDC-Bereich ohne **Vor Update** -Werte zurück.  
   
--   **Alle mit den alten Werten**: Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich Einbeziehung der alten Werte (**vor Update**). Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
+-   **All with old values**: Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich unter Einbeziehung der alten Werte (**Vor Update**) zurück. Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
   
--   **NET**: Gibt nur eine Änderungszeile pro Quellzeile, die im aktuellen CDC-Verarbeitungsbereich geändert. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
+-   **Net**: Gibt nur eine Änderungszeile pro Quellzeile zurück, die im aktuellen CDC-Verarbeitungsbereich geändert wurde. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
   
--   **NET mit updatemaske**: Dieser Modus ähnelt dem normalen Net-Modus, jedoch werden außerdem boolesche Spalten mit dem Namensmuster hinzugefügt **__ $\<Spaltenname >\__Changed** , die auf geänderte Spalten in der aktuellen Änderungszeile.  
+-   **Net with update mask**: Dieser Modus ähnelt dem normalen Net-Modus, aber es werden außerdem boolesche Spalten mit dem Namensmuster **__$\<Spaltenname>\___Changed** hinzugefügt, die auf geänderte Spalten in der aktuellen Änderungszeile hinweisen.  
   
--   **NET mit Merge**: Dieser Modus ähnelt dem normalen Net-Modus aber Hierbei sind Einfüge-und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
+-   **Net with merge**: Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
   
 > [!NOTE]  
 >  Für alle Nettoänderungsoptionen muss die Quelltabelle über einen Primärschlüssel oder einen eindeutigen Index verfügen. Für Tabellen ohne Primärschlüssel oder eindeutigen Index muss die Option **All** verwendet werden.  

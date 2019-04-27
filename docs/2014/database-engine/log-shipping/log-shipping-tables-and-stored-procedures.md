@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774497"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   In diesem Thema werden alle mit der Protokollversandkonfiguration verknüpften Tabellen und gespeicherten Prozeduren beschrieben. Die Protokollversandtabellen sind auf allen Servern in **msdb** gespeichert. Die unten stehenden Tabellen beschreiben, welche Tabellen und gespeicherten Prozeduren auf welchen Servern in Protokollversandkonfigurationen verwendet werden.  

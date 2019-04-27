@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747834"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Schemagenerierungs-Assistent (F1-Hilfe) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Schemagenerierungs-Assistenten können Sie automatisch das relationale Schema für eine Themenbereichsdatenbank generieren, die auf vorhandenen Cubes und Dimensionen basiert. Zusätzlich können Sie Tabellen auffüllen, die durch den Assistenten für Zeitdimensionen generiert wurden sowie die Benennungskonvention und die Optionen für die Themenbereichsdatenbank verwalten.  

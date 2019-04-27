@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774967"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Optionen (Abfrageausführung – SQL Server-ANSI-Seite)
   Diese SET-Optionen nach ANSI (ISO)-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Abfrage des Benutzers bzw. der Ausführung eines Triggers oder einer gespeicherten Prozedur. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard vollständig zu entsprechen. Mithilfe dieser Seite können Sie festlegen, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard angegebenen Einstellungen ausführt. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ausführung** auf **ANSI**.  

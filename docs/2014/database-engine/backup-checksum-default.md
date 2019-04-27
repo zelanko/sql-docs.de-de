@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788799"
 ---
 # <a name="backup-checksum-default"></a>Standardeinstellung der Sicherungsprüfsumme
   Nehmen Sie Änderungen an der Standardeinstellung der Sicherungsprüfsumme vor, um diese während der Sicherung und der Wiederherstellung zu aktivieren oder zu deaktivieren.  

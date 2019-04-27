@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01ce74621f22da45807112a63f7f85d5849a620f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746164"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Quellinformationen angeben (Dimensions-Assistent)
   Mithilfe der Seite **Hauptdimensionstabelle auswählen** können Sie die Datenquellensicht, die Hauptdimensionstabelle, die Schlüsselspalten und die Elementnamenspalte für die zu erstellende Dimension auswählen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48087990"
   
 -   Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Ordner **Dimensionen** eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts, und klicken Sie anschließend auf **Neue Dimension**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquellensicht**  
  Wählen Sie eine Datenquellensicht aus.  
   

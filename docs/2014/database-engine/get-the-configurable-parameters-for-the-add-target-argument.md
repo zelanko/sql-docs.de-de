@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 368f019453fe0c8f5fcbef245db3f4b50769a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779145"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>Abrufen der konfigurierbaren Parameter für das ADD TARGET-Argument
   Das Ausführen dieser Aufgabe beinhaltet die Verwendung des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48223150"
   
 -   erforderlich  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Vor dem Erstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse sollten Sie zunächst herausfinden, welche Parameter Sie festlegen können, wenn Sie das ADD TARGET-Argument in CREATE EVENT SESSION oder ALTER EVENT SESSION verwenden.  
   
 ### <a name="to-get-the-configurable-parameters-for-the-add-target-argument-using-query-editor"></a>So rufen Sie die konfigurierbaren Parameter für das ADD TARGET-Argument mit dem Abfrage-Editor ab  

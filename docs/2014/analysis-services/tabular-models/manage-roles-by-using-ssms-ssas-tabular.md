@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756981"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Verwalten von Rollen mit SSMS (SSAS – tabellarisch)
   Sie können Rollen für ein bereitgestelltes tabellarisches Modell mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, bearbeiten und verwalten.  

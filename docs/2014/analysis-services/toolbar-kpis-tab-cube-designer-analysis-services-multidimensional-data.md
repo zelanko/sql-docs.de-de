@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756498"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie Aktionen ausführen, die auf der Registerkarte **KPIs** des Cube-Designers häufig verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Business Intelligence hinzufügen**  
  Klicken Sie auf diese Option, um **Businesss Intelligence-Assistent** anzuzeigen und dem Cube Business Intelligence-Funktionen hinzuzufügen.  
   
  **Verarbeiten**  
  Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und den Cube zu verarbeiten.  
   
- **Erneut eine Verbindung herstellen**  
+ **Reconnect**  
  Klicken Sie auf diese Option, um die Registerkarte **KPIs** erneut mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und der Datenbank zu verbinden, die den Cube enthält, wenn die Sitzung der Registerkarte **KPIs** aufgrund einer unterbrochenen Verbindung oder eines Timeouts beendet wurde.  
   
  **Neuer KPI**  

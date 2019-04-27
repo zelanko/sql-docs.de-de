@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788684"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie mithilfe des Assistenten für neue Verfügbarkeitsgruppen (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) eine AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]erstellt und konfiguriert wird. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
@@ -34,9 +34,9 @@ ms.locfileid: "53363882"
   
      [Voraussetzungen, Einschränkungen und Empfehlungen](#PrerequisitesRestrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **Zum Erstellen und Konfigurieren einer verfügbarkeitsgruppe zu gruppieren, verwenden:**  [Assistent für neue Verfügbarkeitsgruppen (SQL Server Management Studio)](#RunAGwiz)  
+-   **So erstellen und konfigurieren Sie eine Verfügbarkeitsgruppe:**  [Assistent für neue Verfügbarkeitsgruppen (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  Als Alternative zur Verwendung des Assistenten für neue Verfügbarkeitsgruppen können Sie [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Cmdlets verwenden. Weitere Informationen finden Sie unter [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) oder [Erstellen einer Verfügbarkeitsgruppe &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)erstellt und konfiguriert wird.  
@@ -111,12 +111,12 @@ ms.locfileid: "53363882"
   
      Wenn Sie eine Datenbank so ändern, dass sie verwendet werden kann, klicken Sie auf **Aktualisieren** , um das Raster für die Datenbanken zu aktualisieren.  
   
-7.  Auf der Seite **Replikate angeben** können Sie ein oder mehrere Replikate für die neue Verfügbarkeitsgruppe angeben und konfigurieren. Diese Seite enthält vier Registerkarten. In der folgenden Tabelle werden diese Registerkarten eingeführt. Weitere Informationen finden Sie unter den [geben Seite "Replikate" &#40;Assistenten für neue Verfügbarkeitsgruppen: Replikat-Assistent zum Hinzufügen von&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) Thema.  
+7.  Auf der Seite **Replikate angeben** können Sie ein oder mehrere Replikate für die neue Verfügbarkeitsgruppe angeben und konfigurieren. Diese Seite enthält vier Registerkarten. In der folgenden Tabelle werden diese Registerkarten eingeführt. Weitere Informationen finden Sie im Thema [Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Registerkarte|Kurze Beschreibung|  
     |---------|-----------------------|  
     |**Replikate**|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein sekundäres Replikat hostet. Beachten Sie, dass die Serverinstanz, mit der Sie gerade verbunden sind, das primäre Replikat hosten muss.|  
-    |**Endpunkte**|Auf dieser Registerkarte können Sie vorhandene Endpunkte für die Datenbankspiegelung überprüfen und automatisch einen Endpunkt erstellen, falls er auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung nutzen. **Hinweis**:  Wenn eine Serverinstanz unter einem Nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#PrerequisitesRestrictions).|  
+    |**Endpunkte**|Auf dieser Registerkarte können Sie vorhandene Endpunkte für die Datenbankspiegelung überprüfen und automatisch einen Endpunkt erstellen, falls er auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung nutzen. **Hinweis**:  Wenn eine Serverinstanz unter einem nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie vornehmen, eine manuelle Änderung an der Serverinstanz, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#PrerequisitesRestrictions).|  
     |**Sicherungseinstellungen**|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
     |**Listener**|Verwenden Sie diese Registerkarte, um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig erstellt der Assistent keinen Listener.|  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53363882"
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON-Lernreihe: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "53363882"
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server, Codename „Denali“ – Always On-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 2: Erstellen einer Lösung für unternehmenskritische hohe Verfügbarkeit mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

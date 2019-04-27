@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754668"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie einen Zeugen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aus einer Datenbankspiegelungssitzung entfernen. Der Datenbankbesitzer kann den Zeugen für eine Datenbank-Spiegelungssitzung jederzeit während einer Datenbank-Spiegelungssitzung deaktivieren.  
@@ -38,7 +38,7 @@ ms.locfileid: "48205510"
   
 -   **Nachverfolgung:**  [Nach dem Entfernen des Zeugen](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48205510"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Entfernen des Zeugen  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Entfernen des Zeugen  
  Durch das Deaktivieren des Zeugen ändert sich der [Betriebsmodus](database-mirroring-operating-modes.md)entsprechend der Einstellung für die Transaktionssicherheit:  
   
 -   Wenn die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt ist, wird in der Sitzung der synchrone Modus für hohe Sicherheit ohne automatisches Failover verwendet.  
@@ -88,7 +88,7 @@ ms.locfileid: "48205510"
 -   Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Sitzung asynchron (im Modus für hohe Leistung) ausgeführt, ohne dass ein Quorum erforderlich ist. Bei deaktivierter Transaktionssicherheit wird stets dringend empfohlen, den Zeugen ebenfalls zu deaktivieren.  
   
 > [!TIP]  
->  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)-Katalogsicht in der **mirroring_safety_level**-Spalte und der **mirroring_safety_level_desc**-Spalte aufgezeichnet.  
+>  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) -Katalogsicht in der **mirroring_safety_level** -Spalte und der **mirroring_safety_level_desc** -Spalte aufgezeichnet.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   

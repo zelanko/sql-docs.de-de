@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772311"
 ---
 # <a name="active-operations-dialog-box"></a>Aktive Vorgänge (Dialogfeld)
   Verwenden Sie das Dialogfeld **Aktive Vorgänge** , um den Status der derzeit ausgeführten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Vorgänge auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server anzuzeigen, z. B. Bereitstellung, Überprüfung und Paketausführung. Diese Daten werden im SSISDB-Katalog gespeichert.  

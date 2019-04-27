@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779732"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
   Dieses Thema enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. 
@@ -175,7 +175,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
      `GO`  
   
-### <a name="enable-and-start-the-sql-server-browser-service"></a>Aktivieren und Starten des SQL Server-Browserdiensts  
+### <a name="enable-and-start-the-sql-server-browser-service"></a>Aktivieren Sie und starten Sie den SQL Server-Browser-Dienst  
  Standardmäßig ist der Browserdienst deaktiviert.  Wenn er auf einer auf Server Core ausgeführten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deaktiviert ist, führen Sie den folgenden Befehl von der Befehlszeile aus, um ihn zu aktivieren:  
   
  `sc config SQLBROWSER start= auto`  
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>Verwenden von Tools zur Problembehandlung  
  Mit dem Hilfsprogramm [SQLdiag](../../tools/sqldiag-utility.md) können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. SQLdiag dient dazu, das Sammeln von Diagnoseinformationen für Microsoft Support Services zu beschleunigen und zu vereinfachen.  
   
- Sie können das Hilfsprogramm über die Administratoreingabeaufforderung von Server Core starten. Verwenden Sie hierbei die in diesem Thema angegebene Syntax: [SQLdiag (Hilfsprogramm)](../../tools/sqldiag-utility.md).  
+ Starten Sie das Hilfsprogramm über die administratoreingabeaufforderung von Server Core, die im Thema angegebene Syntax verwenden: [SQLdiag (Hilfsprogramm)](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von SQLServer 2014 unter Server Core](install-sql-server-on-server-core.md)   

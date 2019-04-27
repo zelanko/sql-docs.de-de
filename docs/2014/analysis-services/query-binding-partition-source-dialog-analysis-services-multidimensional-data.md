@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c26ceea2f6dd8ad136d505269f028f47e0b9b7fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748392"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Abfragebindungsdetail (Dialogfeld 'Partitionsquelle') (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Option **Abfragebindung** im Dialogfeld **Partitionsquelle** können Sie die Abfrage angeben, die die Daten für die Partition bereitstellt. Sie können dieses Fenster anzeigen, indem Sie im Dialogfeld **Partitionsquelle** unter der Option **Bindungstyp** **Abfragebindung** auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquelle**  
  Wählen Sie die Datenquelle aus, für die die Abfrage ausgeführt wird, um Daten für die Partition bereit zu stellen.  
   

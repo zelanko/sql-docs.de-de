@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779953"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
  Die Testergebnisse variieren normalerweise je nach Hardware und dem im Testlauf verwendeten Parallelitätsgrad. Wenn die Ergebnisse nicht wie erwartet ausfallen, sollten Sie folgende Punkte überprüfen:  
   
--   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn von [!INCLUDE[hek_2](../includes/hek-2-md.md)] wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
+-   Die Anzahl gleichzeitiger Transaktionen: Wenn die arbeitsauslastung auf einem einzelnen Thread ausgeführt, Leistungsgewinn von [!INCLUDE[hek_2](../includes/hek-2-md.md)] werden Sie wahrscheinlich weniger als 2 X. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
+-   Anzahl von Kernen niedriger [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Dies bedeutet, dass im System ein geringen Parallelitätsgrad fallen, wie es können nur so viele Transaktionen gleichzeitig ausgeführte wie Kerne für SQL verfügbar sind.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für datenträgerbasierte Tabellen hoch ist, liegen normalerweise wenig Konflikte vor, was auf eine fehlende Parallelität hinweist.  
   
--   Geschwindigkeit des Protokolllaufwerks: Wenn das Protokolllaufwerk für den Transaktionsdurchsatz im System zu langsam ist, verursacht die Arbeitsauslastung bei E/A-Protokollvorgängen einen Engpass. Obwohl die Protokollierung mit [!INCLUDE[hek_2](../includes/hek-2-md.md)]effizienter ist, wenn E/A-Protokollvorgänge einen Engpass verursachen, ist der potenzielle Leistungsgewinn begrenzt.  
+-   Die Geschwindigkeit des protokolllaufwerks: Wenn das Protokolllaufwerk in das System mit der Ebene der Transaktionsdurchsatz mithalten kann, wird die arbeitsauslastung bei e/a ein Engpass. Obwohl die Protokollierung mit [!INCLUDE[hek_2](../includes/hek-2-md.md)]effizienter ist, wenn E/A-Protokollvorgänge einen Engpass verursachen, ist der potenzielle Leistungsgewinn begrenzt.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für speicheroptimierte Tabellen nicht nahe 100 % liegt oder unregelmäßige Spitzen aufweist, kann ein Engpass bei E/A-Protokollvorgängen vorliegen. Sie können die Ursache im Ressourcenmonitor anhand der Warteschlangenlänge für das Protokolllaufwerk ermitteln.  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
+ Wie Sie, dass die Tabellen relativ klein sind sehen können: SalesOrderHeader_inmem umfasst ca. 7MB und salesorderdetail_inmem ca. 15MB.  
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   

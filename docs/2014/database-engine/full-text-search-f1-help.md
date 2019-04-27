@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778951"
 ---
 # <a name="full-text-search-f1-help"></a>F1-Hilfe zur Volltextsuche
-  Dieser Abschnitt enthält Themen über die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dialogfelder in Full-Text Search [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Wenn Sie auf ein Thema zur Benutzeroberfläche zugreifen möchten, drücken Sie F1, oder klicken Sie bei geöffnetem Dialogfeld auf **Hilfe** .  
+  Dieser Abschnitt enthält Themen über die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dialogfelder für die Volltextsuche in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Wenn Sie auf ein Thema zur Benutzeroberfläche zugreifen möchten, drücken Sie F1, oder klicken Sie bei geöffnetem Dialogfeld auf **Hilfe** .  
   
 |||  
 |-|-|  

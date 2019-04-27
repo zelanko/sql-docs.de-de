@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771616"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Anwenden der Änderungen auf das Ziel
   Im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der dritte und letzte Task die Anwendung der Änderungen auf Ihr Ziel. Sie benötigen jeweils eine Komponente, um Einfügungen, Updates und Löschungen anzuwenden.  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775398"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten (Setup)
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent enthält eine Funktionsstruktur zum Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten: Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auch parallel zu einer früheren Version installieren oder vorhandene Datenbanken und Konfigurationseinstellungen aus einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version migrieren und auf eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] anwenden.  

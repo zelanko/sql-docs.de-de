@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748898"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
   Das PowerPivot-Management-Dashboard ist eine Sammlung vordefinierter Berichte und Webparts in der SharePoint-Zentraladministration, die Sie bei der Verwaltung einer SQL Server PowerPivot für SharePoint-Bereitstellung unterstützen. Das Management-Dashboard bietet Informationen zum Serverstatus, zur Arbeitsmappenaktivität sowie zur Datenaktualisierung. Das Dashboard nutzt Daten aus der Sammlung von Verwendungsdaten in SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "55087711"
   
 -   [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
+ Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie ereignismeldungen oder verwendungsverläufe deaktivieren, werden die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
 ##  <a name="edit"></a> Bearbeiten eines PowerPivot-Dashboards  
  Wenn Sie erfahren in der Dashboardentwicklung oder -anpassung sind, können Sie das Dashboard bearbeiten, um neue Webparts aufzunehmen. Sie können auch die Webparteigenschaften bearbeiten, die im Dashboard enthalten sind.  
@@ -93,7 +93,7 @@ ms.locfileid: "55087711"
  Um Ihnen den Einstieg in die benutzerdefinierte Berichterstellung zu erleichtern, bietet das PowerPivot-Management-Dashboard eine ODC (Office Data Connection)-Datei, über die eine Verbindung mit der Quellarbeitsmappe hergestellt werden kann. Beispielsweise können Sie die ODC-Datei in Excel verwenden, um zusätzliche Berichte zu erstellen.  
   
 > [!NOTE]  
->  Bearbeiten Sie die Datei, um beim Verwenden der ODC-Datei in Excel folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
+>  Bearbeiten Sie die Datei, um die folgenden Fehler zu vermeiden, beim Versuch die ODC-Datei in Excel zu verwenden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
   
  Sie müssen ein Farm- oder Dienstadministrator sein, um Berichte zu erstellen, die auf der PowerPivot-Arbeitsmappe der Zentraladministration basieren.  
   

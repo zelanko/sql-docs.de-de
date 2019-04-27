@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781535"
 ---
 # <a name="handling-large-objects-using-clr"></a>Behandeln von großen Objekten mit CLR
   Das `HandlingLOBUsingCLR`-Beispiel für SQL Server veranschaulicht das Übertragen von LOBs (Large Objects) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem, das für den Server mithilfe von gespeicherten CLR (Common Language Runtime)-Prozeduren verfügbar ist. Dieses Beispiel veranschaulicht, wie Sie auf Dateien in serverseitigem Code zugreifen und dann aus CLR-basierten gespeicherten Prozeduren dynamische Abfragen und gespeicherte Prozeduren aufrufen. Darüber hinaus veranschaulicht es, wie Sie CLR-Methoden und CLR-Assemblys mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] registrieren und deren Registrierung aufheben.  

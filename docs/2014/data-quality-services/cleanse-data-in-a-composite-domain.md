@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755848"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Bereinigen von Daten in einer Verbunddomäne
   Dieses Thema enthält Informationen zur Bereinigung von Verbunddomänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen und ist einem Datenfeld zugeordnet, das sich aus mehreren verwandten Begriffen zusammensetzt. Die einzelnen Domänen in einer Verbunddomäne müssen einen gemeinsamen Wissensbereich haben. Ausführliche Informationen zu Verbunddomänen finden Sie unter [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "56012721"
 ##  <a name="CDCorrection"></a> Datenkorrektur mit definitiven domänenübergreifenden Regeln  
  Domänenübergreifende Regeln in Verbunddomänen ermöglichen es Ihnen, Regeln zu erstellen, die die Beziehung zwischen einzelnen Domänen in einer Verbunddomäne angeben. Domänenübergreifende Regeln werden berücksichtigt, wenn Sie die Bereinigungsaktivität für die Quelldaten von Verbunddomänen ausführen. Abgesehen davon, dass Sie erfahren, ob eine domänenübergreifenden Regel gültig ist, korrigiert die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**auch die Daten während der Datenbereinigungsaktivität.  
   
- Im folgenden Beispiel: Es ist eine composite Domain, Produkt, mit drei einzelnen Domänen: ProductName, CompanyName und ProductVersion. Erstellen Sie die folgende definitive domänenübergreifende Regel:  
+ Beachten Sie das folgende Beispiel: Es gibt eine Verbunddomäne namens „Product“ mit drei einzelnen Domänen: ProductName, CompanyName und ProductVersion. Erstellen Sie die folgende definitive domänenübergreifende Regel:  
   
  Wenn der Domänenwert „CompanyName“ *Microsoft* enthält und der Domänenwert „ProductName“ gleich *Office* und „ProductVersion“ gleich *2010* ist, dann ist der Domänenwert „ProductName“ gleich *Microsoft Office 2010*.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56012721"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit 100 % iger, und die **Grund** Spalte wird die folgende Meldung angezeigt: Korrigiert von Regel '*\<Name der domänenübergreifenden Regel >*". Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-Bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit hundertprozentiger Vertraulichkeit, und die Spalte **Reason** (Grund) zeigt die folgende Meldung an: Korrigiert von Regel *\<Name der domänenübergreifenden Regel>*. Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  Die definitive domänenübergreifende Regel funktioniert nicht für Verbunddomänen, die an einen Verweisdatendienst angefügt wurden.  

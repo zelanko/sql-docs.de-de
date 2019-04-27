@@ -14,21 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7aa506c8faa0e86979da47dfafb7c8525cde6e7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747774"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Spalte auswählen (Dialogfeld) (Business Intelligence-Assistent)
   Im Dialogfeld **Spalte auswählen** können Sie eine Spalte aus der Liste der in Strukturansicht angezeigten Tabellen auswählen. Das Dialogfeld wird vom Business Intelligence-Assistenten geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Strukturansicht**  
  Klicken Sie auf eine Spalte, um die betreffende Spalte für den Business Intelligence-Assistenten auszuwählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787072"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Benutzeroptionen** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die Option **Benutzeroptionen** gibt globale Standardwerte für alle Benutzer an. Es wird eine Liste der Standardoptionen der Abfrageverarbeitung für die Dauer der Sitzung eines Benutzers erstellt. Mit der Option **Benutzeroptionen** können Sie die Standardwerte der SET-Optionen ändern (wenn die Standardeinstellungen des Servers nicht verwendet werden können).  

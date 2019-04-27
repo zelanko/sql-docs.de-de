@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774763"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Optionen (Abfrage Ausführung-Analysis-Server – Seite "Allgemein")
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] angeben. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie den unter **Abfrageausführung** angezeigten Ordner **Analysis Server** , und klicken Sie dann auf **Allgemein**.  

@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7e24657764e16bf5b826019419dd57077276463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774108"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation-Cmdlet
   **Invoke_PolicyEvaluation** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das meldet, ob ein Zielsatz von SQL Server-Objekten den Bedingungen entspricht, die in ein oder mehreren richtlinienbasierten Verwaltungsrichtlinien angegeben sind.  

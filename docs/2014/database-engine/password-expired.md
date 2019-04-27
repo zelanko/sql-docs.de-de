@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774743"
 ---
 # <a name="password-expired"></a>Kennwort abgelaufen
   Das Dialogfeld wird angezeigt, wenn Sie eine Verbindung mit einem Server mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung herstellen und das von Ihnen angegebene Kennwort richtig jedoch bereits abgelaufen ist. Es wird außerdem angezeigt, wenn Sie eine Verbindung mit einem Server mit einem neuen Konto herstellen, das mit der Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern** erstellt wurde. Ändern Sie mithilfe des Dialogfelds **Kennwort abgelaufen** das Kennwort für den Anmeldenamen dieser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Anmeldename**  
  Zeigt den von Ihnen verwendeten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen an.  
   

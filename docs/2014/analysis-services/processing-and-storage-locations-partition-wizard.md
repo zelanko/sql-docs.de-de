@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748582"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Speicherorte zum Verarbeiten und Speichern (Partitions-Assistent)
   Mithilfe der Seite **Speicherorte zum Verarbeiten und Speichern** können Sie die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz des Cubes angeben, der die Partition besitzt, sowie die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, die die Daten für die Partition speichert. Sie können eine Partition als Remotepartition definieren, indem Sie entweder eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Remoteinstanz oder einen vom Standardspeicherort abweichenden Speicherort angeben. Weitere Informationen zu Remotepartitionen finden Sie unter [Remotepartitionen](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  

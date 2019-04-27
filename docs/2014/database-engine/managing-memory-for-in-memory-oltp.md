@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774834"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Verwalten des Arbeitsspeichers für In-Memory OLTP
   Speicheroptimierte Tabellen benötigen ausreichend verfügbaren Arbeitsspeicher, um alle Zeilen und Indizes im Arbeitsspeicher ablegen zu können. Da Arbeitsspeicher nicht unbegrenzt verfügbar ist, sollten Sie die Arbeitsspeichernutzung in Ihrem System kennen und effizient verwalten. Die Themen in diesem Abschnitt behandeln allgemeine Szenarien zur Speichernutzung und -verwaltung.  

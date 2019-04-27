@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755294"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)
   In diesem Thema wird beschrieben, wie ein Datenbankspiegelungs-Endpunkt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird, der die Windows-Authentifizierung verwendet. Um die Datenbankspiegelung oder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützen zu können, benötigt jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Datenspiegelungs-Endpunkt. Eine Serverinstanz kann nur über einen Datenbankspiegelungsendpunkt verfügen, der einen einzelnen Port besitzt. Ein Datenbankspiegelungsendpunkt kann einen beliebigen Port verwenden, der auf dem lokalen System verfügbar ist, wenn der Endpunkt erstellt wird. Alle Datenbankspiegelungssitzungen auf einer Serverinstanz lauschen an diesem Port, und alle eingehenden Verbindungen für die Datenbankspiegelung verwenden diesen Port.  
@@ -33,9 +33,9 @@ ms.locfileid: "48213890"
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **Erstellen eines Datenbankspiegelungs-Endpunkts mit:**  [Transact-SQL](#TsqlProcedure)  
+-   **So erstellen Sie einen Datenbankspiegelungsendpunkt:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
  Die Authentifizierungs- und Verschlüsselungsmethoden der Serverinstanz werden vom Systemadministrator festgelegt.  
@@ -106,11 +106,11 @@ ms.locfileid: "48213890"
         > [!IMPORTANT]  
         >  Für jede Serverinstanz ist ein und nur ein eindeutiger Überwachungsport erforderlich.  
   
-    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. *\<Autorisierungsmethode>* gibt die Methode zum Authentifizieren von Verbindungen an: NTLM, KERBEROS oder NEGOTIATE. Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
+    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. *\<Autorisierungsmethode >* gibt die Methode zum Authentifizieren von Verbindungen als eine der folgenden verwendet: NTLM, KERBEROS oder NEGOTIATE. Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
   
     -   ENCRYPTION wird standardmäßig auf REQUIRED festgelegt. Dies bedeutet, dass alle Verbindungen mit diesem Endpunkt Verschlüsselungen verwenden müssen. Sie können die Verschlüsselung jedoch auch deaktivieren oder als optional für einen Endpunkt festlegen. Die Alternativen lauten folgendermaßen:  
   
-        |value|Definition|  
+        |Wert|Definition|  
         |-----------|----------------|  
         |DISABLED|Gibt an, dass über eine Verbindung gesendete Daten nicht verschlüsselt werden.|  
         |SUPPORTED|Gibt an, dass die Daten nur verschlüsselt werden, wenn der gegenüberliegende Endpunkt SUPPORTED oder REQUIRED angibt.|  
@@ -118,7 +118,7 @@ ms.locfileid: "48213890"
   
          Wenn ein Endpunkt Verschlüsselung erfordert, muss für den anderen Endpunkt ENCRYPTION auf SUPPORTED oder REQUIRED festgelegt werden.  
   
-    -   *\<Algorithmus>* stellt die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt bereit. Der Wert von *\<Algorithmus>* kann einer der folgenden Algorithmen oder eine Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
+    -   *\<Algorithmus>* stellt die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt bereit. Der Wert des  *\<Algorithmus >* kann einer der folgenden Algorithmen oder Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
   
          AES RC4 gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der AES-Algorithmus bevorzugt wird. RC4 AES gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der RC4-Algorithmus bevorzugt wird. Wenn beide Endpunkte beide Algorithmen angeben, jedoch in unterschiedlicher Reihenfolge, gewinnt der Endpunkt, der die Verbindung annimmt.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48213890"
     > [!NOTE]  
     >  Um einen vorhandenen Endpunkt zu ändern, verwenden Sie [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)erstellt wird, der die Windows-Authentifizierung verwendet.  
   
-###  <a name="TsqlExample"></a> Beispiel: Erstellen von Endpunkten mit Unterstützung der Datenbankspiegelung (Transact-SQL)  
+###  <a name="TsqlExample"></a> Beispiel: Erstellen von Endpunkten mit Unterstützung für Datenbank-Spiegelungssitzung (Transact-SQL)  
  Im folgenden Beispiel werden Datenbankspiegelungs-Endpunkte für die Standardserverinstanzen auf drei separaten Computersystemen erstellt:  
   
 |Rolle der Serverinstanz|Name des Hostcomputers|  
@@ -201,7 +201,7 @@ GO
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [Angeben einer Servernetzwerkadresse (Datenbankspiegelung)](specify-a-server-network-address-database-mirroring.md)   
- [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

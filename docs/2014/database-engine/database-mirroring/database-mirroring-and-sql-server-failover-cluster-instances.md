@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755589"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Datenbankspiegelung und SQL Server-Failoverclusterinstanzen
   Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "48151178"
   
  ![Ein Failover auf einem Cluster](../media/dbm-and-failover-clustering.gif "A failover on a cluster")  
   
- Die drei Serverinstanzen in der Spiegelungssitzung befinden sich auf drei verschiedenen Clustern: **Cluster_A**, **Cluster_B**und **Cluster_C**. Auf jedem Cluster wird eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ausgeführt. Wenn die Spiegelungssitzung beginnt, ist die Failoverclusterinstanz auf **Cluster_A** der Prinzipalserver, die Failoverclusterinstanz auf **Cluster_B** ist der Spiegelserver, und die Failoverclusterinstanz auf **Cluster_C** ist der Zeuge in der Spiegelungssitzung. Schließlich fällt der aktive Knoten auf **Cluster_A** aus, sodass der Prinzipalserver nicht mehr verfügbar ist.  
+ Die drei Serverinstanzen in der spiegelungssitzung befinden sich auf drei verschiedenen Clustern: **Cluster_A**, **Cluster_B**, und **Cluster_C**. Auf jedem Cluster wird eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ausgeführt. Wenn die Spiegelungssitzung beginnt, ist die Failoverclusterinstanz auf **Cluster_A** der Prinzipalserver, die Failoverclusterinstanz auf **Cluster_B** ist der Spiegelserver, und die Failoverclusterinstanz auf **Cluster_C** ist der Zeuge in der Spiegelungssitzung. Schließlich fällt der aktive Knoten auf **Cluster_A** aus, sodass der Prinzipalserver nicht mehr verfügbar ist.  
   
  Bevor der Cluster ein Failover ausführen kann, erkennt der Spiegelserver mithilfe des Zeugen den Ausfall des Prinzipalservers. Der Spiegelserver führt ein Rollforward für seine Datenbank aus und schaltet sie so schnell wie möglich als neue Prinzipaldatenbank online. Wenn das Failover für **Cluster_A** beendet ist, ist der ehemalige Prinzipalserver nun der Spiegelserver und synchronisiert seine Datenbank mit der aktuellen Prinzipaldatenbank auf **Cluster_B**.  
   

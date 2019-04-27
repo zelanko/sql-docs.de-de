@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787867"
 ---
 # <a name="browse-for-servers-local-servers"></a>Nach Servern suchen (lokale Server)
   Wenn eine Verbindung mit einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponente hergestellt wird und Sie nicht den genauen Namen des Computers mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kennen, klicken Sie im Feld **Servername** auf **Suche fortsetzen**, um das Dialogfeld **Nach Servern suchen** zu öffnen.  

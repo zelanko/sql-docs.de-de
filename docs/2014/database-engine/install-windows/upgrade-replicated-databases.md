@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775319"
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt das Aktualisieren replizierter Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während der Aktualisierung eines Knotens müssen die auf anderen Knoten ausgeführten Aktivitäten nicht beendet werden. Stellen Sie sicher, dass die Regeln, die im Hinblick auf die in einer Topologie unterstützten Versionen gelten, eingehalten werden:  
@@ -89,7 +89,7 @@ ms.locfileid: "54132400"
  Um sicherzustellen, dass die Replikationseinstellungen beibehalten werden, wenn die Sicherung einer replizierten Datenbank mithilfe einer früheren Version wiederhergestellt wird, stellen Sie die Sicherung auf einem Server und in einer Datenbank wieder her, deren Namen mit den Namen des Servers und der Datenbank übereinstimmen, von dem bzw. der die Sicherung erstellt wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsverwaltung – häufig gestellte Fragen](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Abwärtskompatibilität von Replikationen](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade auf SQL Server 2014](upgrade-sql-server.md)  

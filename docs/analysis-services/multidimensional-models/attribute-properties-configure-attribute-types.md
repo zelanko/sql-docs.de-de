@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Attributtypen | Microsoft Docs
+title: Konfigurieren von Attributtypen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745661"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>Attributeigenschaften: Konfigurieren von Attributtypen
+# <a name="attribute-properties---configure-attribute-types"></a>Attributeigenschaften – Konfigurieren von Attributtypen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tragen Attributtypen zur Klassifizierung eines Attributs im Hinblick auf die Geschäftsfunktionalität bei. Es gibt viele Attributtypen. Die meisten werden von Clientanwendungen verwendet, um ein Attribut anzuzeigen oder zu unterstützen. Einige Attributtypen haben jedoch auch eine besondere Bedeutung für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. So identifizieren manche Attributtypen Attribute, die in verschiedenen Kalendern für Zeitdimensionen die Zeiträume darstellen.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "34025567"
 |**GeoCentroidY**|Stellt einen Y-Achsenschwerpunkt für einen geographischen Bereich dar.|  
 |**GeoCentroidZ**|Stellt einen Z-Achsenschwerpunkt für einen geographischen Bereich dar.|  
 |**ID**|Stellt einen Bezeichner oder einen Schlüssel dar.|  
-|**Bild**|Stellt ein Bild in einem nicht definierten Grafikformat dar.|  
+|**Image**|Stellt ein Bild in einem nicht definierten Grafikformat dar.|  
 |**ImageBmp**|Stellt ein Bild im Bitmap-Grafikformat dar.|  
 |**ImageGif**|Stellt ein Bild im GIF-Grafikformat dar.|  
 |**ImageJpg**|Stellt ein Bild im JPEG-Grafikformat dar.|  
@@ -135,7 +135,7 @@ ms.locfileid: "34025567"
 |**RelationToParent**|Stellt eine Beziehung zu einem übergeordneten Element dar.|  
 |**Representative**|Stellt einen Vertriebsmitarbeiter dar.|  
 |**Szenario**|Stellt ein Szenario dar.|  
-|**Sequenz**|Stellt ein sequenzielles Attribut dar.|  
+|**Sequence**|Stellt ein sequenzielles Attribut dar.|  
 |**ShortCaption**|Stellt einen Kurztitel dar.|  
 |**StateOrProvince**|Stellt ein Bundesland oder einen Kanton dar.|  
 |**Hilfsprogramm**|Stellt ein Hilfsprogramm dar.|  

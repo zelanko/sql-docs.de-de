@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771180"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
   In diesem Abschnitt werden einige wichtige Begriffe des Oracle CDC Service beschrieben. Es werden die folgenden Begriffe behandelt:  
@@ -94,7 +94,7 @@ ms.locfileid: "58658054"
 |NAME|Der Name der Oracle-Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.|  
 |config_version|Der Zeitstempel (UTC) für die letzte Änderung in der entsprechenden **xdbcdc_config** -Tabelle der CDC-Datenbank oder der Zeitstempel der aktuellen Zeile in dieser Tabelle.<br /><br /> Der UPDATE-Trigger erzwingt für dieses Element den Wert GETUTCDATE(). Mithilfe von**config_version** kann der CDC-Dienst die CDC-Instanz ermitteln, die auf eine Konfigurationsänderung geprüft oder die aktiviert/deaktiviert werden muss.|  
 |cdc_service_name|Dieses Element bestimmt, welcher Oracle CDC Service die ausgewählte Oracle-Datenbank behandelt.|  
-|aktiviert|Gibt an, ob die Oracle CDC-Instanz aktiviert (1) oder deaktiviert (0) ist. Wenn der Oracle CDC Service gestartet wird, werden nur die als aktiviert (1) markierten Instanzen gestartet.<br /><br /> **Hinweis**: Eine Oracle CDC-Instanz kann aufgrund eines Fehlers deaktiviert werden, der nicht wiederholbar ist. In diesem Fall muss die Instanz manuell neu gestartet werden, nachdem der Fehler behoben wurde.|  
+|aktiviert|Gibt an, ob die Oracle CDC-Instanz aktiviert (1) oder deaktiviert (0) ist. Wenn der Oracle CDC Service gestartet wird, werden nur die als aktiviert (1) markierten Instanzen gestartet.<br /><br /> **Beachten Sie**: Eine Oracle CDC-Instanz kann aufgrund eines Fehlers deaktiviert werden, der nicht wiederholbar ist. In diesem Fall muss die Instanz manuell neu gestartet werden, nachdem der Fehler behoben wurde.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  In dieser Tabelle sind die CDC-Dienste aufgeführt, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hostinstanz zugeordnet sind. Diese Tabelle wird von der CDC Designer Console verwendet, um die Liste der CDC-Dienste zu bestimmen, die für die lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfiguriert werden. Außerdem wird sie vom CDC-Dienst verwendet, um sicherzustellen, dass nur ein ausgeführter Windows-Dienst jeweils einen bestimmten Oracle CDC Service-Namen behandelt.  
@@ -217,7 +217,7 @@ ms.locfileid: "58658054"
   
  **sql-username**und **sql-password** sind die zu aktualisierenden Anmeldeinformationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Wenn sqlacct sowohl einen leeren Benutzernamen als auch ein leeres Kennwort aufweist, stellt der Oracle CDC Service mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_create"></a> Create  
  Verwenden Sie `Create` , um einen Oracle CDC Service aus einem Skript zu erstellen. Der Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Create` angegeben:  
@@ -243,7 +243,7 @@ ms.locfileid: "58658054"
   
  **sql-username**und **sql-password** sind der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kontoname bzw. das Kennwort, der bzw. das zum Herstellen der Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet wird. Wenn beide Parameter leer sind, stellt CDC Service for Oracle mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Verwenden Sie `Delete` , um den Oracle CDC Service sauber aus einem Skript zu löschen. Dieser Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Delete` angegeben.  
@@ -258,7 +258,7 @@ ms.locfileid: "58658054"
   
  **cdc-service-name** ist der Name des zu löschenden CDC-Diensts.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden der CDC Service-Befehlszeilenschnittstelle](how-to-use-the-cdc-service-command-line-interface.md)   

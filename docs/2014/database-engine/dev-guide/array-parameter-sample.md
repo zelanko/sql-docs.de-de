@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753732"
 ---
 # <a name="array-parameter-sample"></a>Beispiel für einen Arrayparameter
   In bestimmten Situationen ist es hilfreich, eine Zeilenmenge zu erstellen, zu aktualisieren oder zu löschen. Für die Durchführung dieser Aufgabe gibt es mehrere Ansätze. Einer diese Ansätze besteht darin, ein Array mit Informationen mithilfe eines benutzerdefinierten Datentyps der CLR-Integration (Common Language Runtime) von einem Client an eine gespeicherte Prozedur der CLR-Integration auf dem Server zu übergeben. Aufgrund der Eigenschaften dieser benutzerdefinierten Datentypen ist die für den Server bereitgestellte Datenmenge auf 8000 Bytes begrenzt. Aus diesem Grund eignet sich dieser Ansatz nicht für große oder komplexe Datenmengen. Wenn die bearbeitete Datenmenge klein und übersichtlich ist, kann dieser Ansatz deutlich effizienter sein als das Aufrufen einer gespeicherten Prozedur pro Zeile. Durch Übergeben eines Arrays wird die Reihenfolge der Daten für Anwendungen beibehalten, wenn die Reihenfolge wichtig ist. Inhalt dieses Beispiels:  

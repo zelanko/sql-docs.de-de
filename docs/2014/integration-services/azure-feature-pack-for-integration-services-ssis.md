@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772126"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erweiterung, die die auf dieser Seite für SSIS aufgelisteten Komponenten für Verbindungen mit Azure-Diensten, für die Übertragung von Daten zwischen Azure und lokalen Datenquellen und für die Verarbeitung der in Azure gespeicherten Daten bereitstellt.

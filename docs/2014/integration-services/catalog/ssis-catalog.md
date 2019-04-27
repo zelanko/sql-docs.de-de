@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771576"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Die `SSISDB` Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekte (SSIS), die zum Bereitstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754785"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)
   Eine Datenbank-Spiegelungssitzung kann erst beginnen, nachdem der Datenbankbesitzer oder Systemadministrator sichergestellt hat, dass die Spiegeldatenbank erstellt und auf die Spiegelung vorbereitet wurde. Zum Erstellen einer neuen Spiegeldatenbank sind zumindest eine vollständige Sicherung der Prinzipaldatenbank sowie eine nachfolgende Protokollsicherung erforderlich, wobei beide auf der Spiegelserverinstanz mithilfe von WITH NORECOVERY wiederhergestellt werden müssen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48130080"
  In diesem Thema wird beschrieben, wie Sie eine Spiegeldatenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]vorbereiten.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Requirements"></a> Anforderungen  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48130080"
   
  Ein vollständiges Beispiel für das Einrichten von Datenbankspiegelung, Anzeigen der Sicherheitseinrichtung, Vorbereiten der Spiegeldatenbank, Einrichten der Partner und Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)vorbereiten.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach der Vorbereitung einer Spiegeldatenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Vorbereiten einer Spiegeldatenbank  
   
 1.  Wenn seit dem letzten RESTORE LOG-Vorgang Protokollsicherungen vorgenommen wurden, müssen Sie jede zusätzliche Protokollsicherung mit RESTORE WITH NORECOVERY manuell anwenden.  
   

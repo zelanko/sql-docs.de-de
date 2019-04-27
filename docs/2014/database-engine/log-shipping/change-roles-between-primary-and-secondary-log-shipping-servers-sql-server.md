@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774564"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server)
   Nachdem Sie für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration ein Failover zu einem sekundären Server ausgeführt haben, können Sie die sekundäre Datenbank so konfigurieren, dass sie als primäre Datenbank fungiert. Anschließend können Sie primäre und sekundäre Datenbanken je nach Bedarf austauschen.  

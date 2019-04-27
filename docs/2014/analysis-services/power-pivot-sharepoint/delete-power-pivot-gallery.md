@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749463"
 ---
 # <a name="delete-powerpivot-gallery"></a>Löschen des PowerPivot-Katalogs
   Beim Löschen eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogs werden auch sämtliche Elemente gelöscht, einschließlich des Datenaktualisierungsverlaufs für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen, die für die planmäßige Datenaktualisierung konfiguriert sind.  

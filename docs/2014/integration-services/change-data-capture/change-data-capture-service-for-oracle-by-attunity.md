@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771526"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service für Oracle von Attunity
   Der CDC Service for Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokolle scannt und Änderungen an relevanten Oracle-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungstabellen aufzeichnet. Die SQL-Änderungstabellen, in denen die aus Oracle aufgezeichneten Änderungen gespeichert werden, entsprechen vom Typ her den Änderungstabellen, die in der systemeigenen Change Data Capture-Funktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Dies macht das Verarbeiten dieser Änderungen so einfach wie das Verarbeiten von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken vorgenommenen Änderungen.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749762"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Hohe Verfügbarkeit und Notfallwiederherstellung für PowerPivot (SQL Server 2014)
   Pläne für Notfallwiederherstellung und Verfügbarkeit sind bei [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] in erster Linie abhängig vom Entwurf der SharePoint-Farm, von der für verschiedene Komponenten akzeptablen Ausfallzeit und von den Tools und Best Practices, die Sie zur Gewährleistung der Verfügbarkeit von SharePoint implementieren. In diesem Thema finden Sie eine Übersicht der Technologien und Beispiele für Topologiediagramme, die beim Planen der Verfügbarkeit und der Notfallwiederherstellung für eine Bereitstellung von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] hilfreich sein können.  

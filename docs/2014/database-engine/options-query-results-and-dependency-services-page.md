@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774925"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Optionen (Abfrageergebnisse und Seite „Abhängigkeitsdienste“)
   Geben Sie auf dieser Seite den Server an, mit dem eine Verbindung für Abhängigkeitsdienste hergestellt werden soll. Mithilfe von Abhängigkeitsdiensten können Sie Informationen zu Abhängigkeiten zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objekten und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten extrahieren, die auf anderen Servern gespeichert sind. Sie objektabhängigkeiten anzeigen, indem die **Objektabhängigkeiten** im Dialogfeld [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

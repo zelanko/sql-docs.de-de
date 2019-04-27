@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781791"
 ---
 # <a name="open-objects-server-configuration-option"></a>Geöffnete Objekte (Serverkonfigurationsoption)
   Diese Option ist in **sp_configure**weiterhin vorhanden, obwohl die zugehörige Funktionalität in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert wurde. (Die Einstellung hat keine Auswirkungen.) In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Anzahl von geöffneten Datenbankobjekten dynamisch verwaltet und nur durch den verfügbaren Arbeitsspeicher beschränkt. Die Option **Geöffnete Objekte** wurde in **sp_configure** belassen, um die Abwärtskompatibilität mit vorhandenen Skripts sicherzustellen.  

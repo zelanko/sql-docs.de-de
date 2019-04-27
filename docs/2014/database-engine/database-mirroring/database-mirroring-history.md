@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754829"
 ---
 # <a name="database-mirroring-history"></a>Datenbankspiegelungsverlauf
   Verwenden Sie dieses Dialogfeld, um den Verlauf des Spiegelungsstatus für eine gespiegelte Datenbank auf einer angegebenen Serverinstanz anzuzeigen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48086190"
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Serverinstanz**  
  Der Name der Serverinstanz, von der der Verlauf gemeldet wird.  
   

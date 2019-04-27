@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778822"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Volltextkatalog-Eigenschaften (Seite Auffüllungszeitplan)
   Mithilfe dieses Dialogfelds können Sie Zeitpläne hinzufügen oder ändern, mit denen festgelegt wird, wann der Volltextkatalog aufgefüllt oder neu aufgefüllt wird.  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778888"
 ---
 # <a name="histogram-target"></a>Histogrammziel
   Das Histogrammziel fasst Ereignisse eines bestimmten Ereignistyps auf Grundlage von Ereignisdaten zusammen. Die Gruppierungen von Ereignissen werden anhand einer bestimmten Ereignisspalte oder Aktion gezählt. Mit dem Histogrammziel können Sie Leistungsprobleme diagnostizieren. Durch Identifizieren der am häufigsten eintretenden Ereignisse können Sie relevante Bereiche ausmachen, die auf mögliche Ursachen eines Leistungsproblems hindeuten.  
@@ -30,9 +30,9 @@ ms.locfileid: "48198140"
 |Option|Zulässige Werte|Description|  
 |------------|--------------------|-----------------|  
 |slots|Ein ganzzahliger Wert. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, der die maximale Anzahl von Gruppierungen angibt, die beizubehalten sind. Wenn dieser Wert erreicht wird, werden neue Ereignisse, die nicht zu vorhandenen Gruppen gehören, ignoriert.<br /><br /> Beachten Sie, dass die Slotnummer zur Leistungsverbesserung auf die nächste Potenz von 2 aufgerundet wird.|  
-|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> SELECT p.name, se.event_name<br />VON dm_xe_session_events se<br />Verknüpfen von dm_xe_packages p<br />AUF Se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
+|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> SELECT p.name, se.event_name<br />VON dm_xe_session_events se<br />Verknüpfen von dm_xe_packages p<br />ON se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
 |source_type|Der Typ des Objekts, auf dem der Bucket basiert. Dieser Wert ist optional. Wenn er nicht angegeben wird, wird 1 als Standardwert verwendet.|Kann einen der folgenden Werte aufweisen:<br /><br /> 0 für ein Ereignis<br /><br /> 1 für eine Aktion|  
-|Quelle|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> SELECT Name FROM dm_xe_object_columns<br />WHERE Object_name = '\<Ereignisname >'<br />UND Column_type! = "Readonly"<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
+|Quelle|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> SELECT Name FROM dm_xe_object_columns<br />WHERE object_name = '\<eventname>'<br />UND Column_type! = "Readonly"<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
   
  Im folgenden Beispiel wird das Erfassen von Daten mit dem Histogrammziel auf abstrakter Ebene veranschaulicht. In diesem Beispiel soll das Histogrammziel zum Zählen der Anzahl der eingetretenen Wartevorgänge je Wartevorgangstyp verwendet werden. Geben Sie dazu beim Definieren des Histogrammziels die folgenden Optionen an:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48198140"
   
  Die wait_type-Werte werden in drei Slots mit den folgenden Werten und der jeweiligen Slotanzahl kategorisiert:  
   
-|value|Slotanzahl|  
+|Wert|Slotanzahl|  
 |-----------|----------------|  
 |file_io|2|  
 |Netzwerk|2|  
@@ -76,7 +76,7 @@ ADD TARGET package0.histogram
 (SET slots = 32, filtering_event_name = 'sqlserver.checkpoint_end', source_type = 0, source = 'database_id')  
 ```  
   
- Weitere Informationen finden Sie unter [darauf Suchen der Objekte, die über die meisten Sperren](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md), und [Überwachen der Systemaktivität mit erweiterten Ereignissen](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+ Weitere Informationen finden Sie unter [Suchen der Objekte, die über die meisten Sperren verfügen](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)und [Monitor System Activity Using Extended Events](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)(Überwachen der Systemaktivität mit erweiterten Ereignissen).  
   
 ## <a name="reviewing-the-target-output"></a>Überprüfen der Zielausgabe  
  Das Histogrammziel serialisiert Daten zu einem aufrufenden Programm oder einer Prozedur im XML-Format. Die Zielausgabe entspricht keinem Schema.  

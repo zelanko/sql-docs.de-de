@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748182"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Zeilenfilter (Rollen-Designer) (tabellarisches Modell)
   Verwenden Sie die Seite **Zeilenfilter** in Rollen-Designer, um Zeilenebenenfilter für die zugeordnete Rolle zu definieren. Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden.  
@@ -26,8 +26,8 @@ ms.locfileid: "48061220"
 > [!NOTE]  
 >  Alle Optionen auf dieser Seite sind deaktiviert, wenn auf der Seite **Allgemein** des Rollen-Designers die Option **Vollzugriff (Administrator)** ausgewählt wird, oder wenn die Rollenberechtigung auf **Verarbeiten**festgelegt wird.  
   
-## <a name="options"></a>Tastatur  
- **Tabelle**  
+## <a name="options"></a>Optionen  
+ **Table**  
  Die Modelltabelle, für die der Filter definiert wird.  
   
  **DAX-Filter**  

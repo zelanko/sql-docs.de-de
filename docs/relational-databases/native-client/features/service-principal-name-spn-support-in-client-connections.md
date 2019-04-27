@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745272"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ ms.locfileid: "53979966"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind identisch mit der Angabe von SPNs in clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die die Kerberos-Authentifizierung verwenden.  
+ Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die Kerberos-Authentifizierung verwenden.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Verwaltungsaspekte von SPNs, die von Anwendungen angegeben werden  
  Berücksichtigen Sie die folgenden Faktoren bei der Entscheidung, ob SPNs in einer Anwendung (über Verbindungszeichenfolgen) oder programmgesteuert über Verbindungseigenschaften (anstatt sich auf den standardmäßig vom Anbieter erstellten SPN zu verlassen) angegeben werden.  
   
--   Sicherheit: Legt die angegebene SPN geschützte Informationen offen?  
+-   Sicherheit: Ist der angegebene SPN geschützte Informationen offen?  
   
--   Zuverlässigkeit: Zur Aktivierung von Standard-SPNs muss das Dienstkonto der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über ausreichende Privilegien zum Update von Active Directory im KDC verfügen.  
+-   Zuverlässigkeit: So aktivieren Sie die Verwendung von Standard-SPNs muss das Dienstkonto in der die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz ausgeführt wird, müssen zum update von Active Directory im KDC von Systemdiensten besitzen.  
   
--   Benutzerfreundlichkeit und Speicherorttransparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
+-   Benutzerfreundlichkeit und Speicherorttransparenz: Wie die SPNs einer Anwendung wirkt, wenn die Datenbank auf einen anderen verschiebt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
   
 ## <a name="specifying-the-spn"></a>Angeben des SPN  
  Sie können einen SPN in Dialogfeldern und Code angeben. In diesem Abschnitt wird erläutert, wie Sie einen SPN angeben können.  

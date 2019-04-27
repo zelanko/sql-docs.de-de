@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775029"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrades. Ausführliche Informationen zum Aktualisieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im SharePoint-Modus finden Sie unter [Aktualisieren von PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md). Für Weitere Informationen zum Aktualisieren einer vorhandenen SQL Server-Instanz, finden Sie unter [ein Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  

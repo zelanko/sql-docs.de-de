@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754640"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   Physische, betriebssystembedingte oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Probleme können einen Fehler während einer Datenbank-Spiegelungssitzung verursachen. Die Datenbankspiegelung überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert die Datenbankspiegelung eigene Timeoutmechanismen. Beim Auftreten eines solchen Timeouts nimmt die Datenbankspiegelung an, dass ein Fehler aufgetreten ist, und generiert einen *Softwarefehler*. Einige Fehler auf der SQL Server-Instanzebene führen jedoch nicht dazu, dass bei der Spiegelung ein Timeout eintritt und die Sitzung nicht erkannt wird.  
@@ -109,7 +109,7 @@ ms.locfileid: "48179070"
   
 ## <a name="see-also"></a>Siehe auch  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

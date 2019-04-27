@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771631"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Masseneinfügungstask-Editor (Seite Verbindung)
   Mithilfe der Seite **Verbindung** im Dialogfeld **Masseneinfügungstask-Editor** können Sie die Quelle und das Ziel des Masseneinfügevorgangs und das zu verwendende Format angeben.  

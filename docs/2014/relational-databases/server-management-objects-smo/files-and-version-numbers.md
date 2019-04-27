@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753412"
 ---
 # <a name="files-and-version-numbers"></a>Dateien und Versionsnummern
   Alle erforderlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)-Komponenten werden installiert, als Teil einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client oder Server. SMO ist in mehreren verwalteten Assemblys implementiert. Sie können SMO-Anwendungen entweder auf einem Client oder auf einem Server entwickeln.  

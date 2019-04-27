@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755369"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
   Dieser Abschnitt stellt den Datenbankspiegelungs-Monitor und die gespeicherten Prozeduren **sp_dbmmonitor** vor, erklärt die Funktionsweise der Überwachung von Datenbankspiegelungen (mit dem **Auftrag für den Datenbankspiegelungs-Monitor**) und bietet einen Überblick über die Informationen, die Sie im Zusammenhang mit Datenbankspiegelungssitzungen überwachen können. Außerdem erläutert dieser Abschnitt das Definieren von Warnschwellenwerten für eine Reihe vordefinierter Datenbankspiegelungsereignisse sowie das Einrichten von Warnungen für jedes Datenbankspiegelungsereignis.  

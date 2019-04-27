@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9ca751ff6cf83b648e722a7577042adc0eb02681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744517"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_help_log_shipping_alert_job
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Diese gespeicherte Prozedur gibt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID des warnungsauftrags für den Protokollversand. Wenn kein Protokollversand-Warnungsauftrag vorhanden ist, wird ein leeres Resultset zurückgegeben.  
+ Diese gespeicherte Prozedur gibt die Auftrags-ID des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Protokollversand-Warnungsauftrag zurück. Wenn kein Protokollversand-Warnungsauftrag vorhanden ist, wird ein leeres Resultset zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  **sp_help_log_shipping_alert_job** muss von der **master** -Datenbank aus auf dem Überwachungsserver ausgeführt werden.  

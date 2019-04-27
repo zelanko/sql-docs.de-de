@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755242"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Eigenschaftenseite Verbindung)
   Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen oder [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server** registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssIS](../includes/ssis-md.md)]in diesem Dialogfeld angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Portnummer**  
  Geben Sie die Nummer des von [!INCLUDE[ssIS](../includes/ssis-md.md)]verwendeten Ports ein.  
   

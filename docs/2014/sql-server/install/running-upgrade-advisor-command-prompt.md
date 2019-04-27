@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753282"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
   Verwenden der **UpgradeAdvisorWizardCmd** Hilfsprogramm, um den Upgrade Advisor von der Befehlszeile aus ausführen. Sie können wählen, ob die Ergebnisse im XML-Format oder als Datei mit durch Trennzeichen getrennten Werten ausgegeben werden sollen.  
@@ -43,10 +43,10 @@ where <server_info> is any combination of the following:
  **-?**  
  Zeigt die Befehlssyntax an.  
   
- **-ConfigFile** _Dateiname_  
+ **-ConfigFile** _filename_  
  Ist der Pfad und Dateiname einer XML-Datei, die enthält Einstellungen zur Verwendung beim Ausführen der **UpgradeAdvisorWizardCmd** Hilfsprogramm.  
   
- *< Server_info >*  
+ *<server_info>*  
  Gibt an, welcher Computer und welche Instanz analysiert werden sollen. Verwenden Sie diese Optionen, wenn Sie keine Konfigurationsdatei verwenden.  
   
  *< Server_info >* kann eine beliebige Kombination der folgenden vier Argumente sein:  
@@ -63,7 +63,7 @@ where <server_info> is any combination of the following:
  **-RSInstance**_rs_instanzname_   
  Gibt den Namen der zu analysierenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist ReportServer. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-SqlUser** _Login_id_  
+ **-SqlUser** _login_id_  
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, ist dieser Wert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die der Upgrade Advisor dazu verwendet, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Wenn Sie keine Anmeldung angeben, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
  **SqlPassword -** _Kennwort_  

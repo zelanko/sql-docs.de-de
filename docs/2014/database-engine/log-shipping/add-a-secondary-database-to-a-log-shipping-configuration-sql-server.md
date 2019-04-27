@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774353"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration (SQL Server)
   In diesem Thema wird erläutert, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer vorhandenen Protokollversandkonfiguration eine sekundäre Datenbank hinzufügen.  
@@ -39,7 +39,7 @@ ms.locfileid: "48194877"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48194877"
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](log-shipping-tables-and-stored-procedures.md)  
   
   

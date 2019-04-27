@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748682"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Generator für Vorhersageabfragen (Data Mining)
   Verwenden Sie die Ansicht **Miningmodellvorhersage** , um Vorhersagen, die auf Miningmodellen in einer Miningstruktur basieren, zu erstellen.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095050"
   
 -   [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Data Mining-Abfragen](data-mining/data-mining-queries.md)  
   

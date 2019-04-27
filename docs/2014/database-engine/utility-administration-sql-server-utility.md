@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773752"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
   Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von Richtlinien-, Sicherheits- und Data Warehouse-Einstellungen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm. Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -91,9 +91,9 @@ ms.locfileid: "48128840"
   
 -   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
   
--   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
+-   Uploadhäufigkeit des Sammlungssatzes: Alle 15 Minuten.  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
+ Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk >: \Programme\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, wobei \<Systemlaufwerk > ist normalerweise C:\ Laufwerk. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
   
 > [!NOTE]  
 >  Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

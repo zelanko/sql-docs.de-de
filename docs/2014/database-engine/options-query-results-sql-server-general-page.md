@@ -18,11 +18,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775020"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Optionen (Abfrageergebnisse – SQL Server Seite Allgemein)
   Auf dieser Seite können Sie das Standardverhalten des Abfrageergebnisbereichs bestimmen. Zum Anzeigen der entsprechenden Einstellungen klicken Sie im Menü **Extras** auf **Optionen**, erweitern den Ordner **Abfrageergebnisse**, wählen **SQL Server** aus und klicken dann auf **Allgemein**. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Um diese Optionen für die aktuellen Abfragen zu ändern, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in ein Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie dann **Abfrageoptionen** aus.  

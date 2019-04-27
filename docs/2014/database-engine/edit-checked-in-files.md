@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779604"
 ---
 # <a name="edit-checked-in-files"></a>Bearbeiten eingecheckter Dateien
-  In der Regel müssen Sie quellcodeverwaltete Dateien zunächst auschecken, bevor Sie sie bearbeiten können. Sie können jedoch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so konfigurieren, dass Sie Dateien ändern können ,die Sie nicht ausgecheckt haben. Dabei bleiben die Änderungen im Arbeitsspeicher, bis Sie die Dateien speichern. Sie werden dann aufgefordert, die Datei aus der Quellcodeverwaltung auszuchecken.  
+  In der Regel müssen Sie quellcodeverwaltete Dateien zunächst auschecken, bevor Sie sie bearbeiten können. Sie können jedoch konfigurieren [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , damit Sie Dateien ändern können, wenn Sie nicht ausgecheckt haben. Wenn Sie auf diese Weise die Änderungen im Speicher gehalten werden, bis Sie die Dateien speichern. Sie werden dann aufgefordert, die Datei aus der Quellcodeverwaltung auszuchecken.  
   
  Beim teambasierten Arbeiten ist es nicht empfehlenswert, eingecheckte Dateien zur Bearbeitung freizugeben, es sei denn, der Quellcodeverwaltungsanbieter unterstützt das Auschecken von lokalen Versionen und von Serverversionen. Die meisten Anbieter unterstützen kein Auschecken lokaler Versionen. Wenn Ihr Anbieter kein Auschecken lokaler Versionen unterstützt und Sie eine eingecheckte Datei bearbeiten, müssen Sie die Versionen im Arbeitsspeicher und auf dem Server manuell zusammenführen, bevor die Datei eingecheckt werden kann. In diesem Fall werden automatische und vom Anbieter unterstützte Zusammenführungen nicht unterstützt.  
   

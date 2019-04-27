@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be709cb574d1dc7fac6f1b4948c6deb227dff100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747692"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Wählen Sie eine Datenquelle aus (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Wählen Sie eine Datenquelle aus** können Sie eine Datenquelle für die Datenquellensicht auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Relationale Datenquellen**  
  Wählen Sie die Datenquelle aus, für die Sie eine Datenquellensicht erstellen möchten.  
   

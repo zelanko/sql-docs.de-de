@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746822"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Währungsumrechnung festlegen (Business Intelligence-Assistent) (SSAS)
   Auf der Seite **Währungsumrechnung festlegen** können Sie Währungsumrechnungen für eine Measuregruppe definieren, die Wechselkurse enthält.  
@@ -26,7 +26,7 @@ ms.locfileid: "48205730"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie die Measuregruppe aus, die Wechselkurse enthält**  
  Wählen Sie die Measuregruppe mit den Wechselkursen aus, die beim Berechnen der Währungsumrechnung verwendet werden sollen.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48205730"
  Wählen Sie diese Option aus, wenn die Wechselkurse in der Wechselkurs-Measuregruppe als Multiplikator für die angegebene Beispielwährung fungieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

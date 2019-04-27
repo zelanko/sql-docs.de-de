@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774292"
 ---
 # <a name="manage-checkins"></a>Verwalten von Eincheckvorgängen
   Um Änderungen an einer quellcodeverwalteten Datei anderen Benutzern zur Verfügung zu stellen, müssen Sie die Datei einchecken. Wenn Sie eine Datei einchecken, wird die von Ihnen erstellte Version in den Quellcodeverwaltungsanbieter kopiert und als letzte Dateiversion festgelegt. Sie ist allgemein für Benutzer verfügbar, die die entsprechenden Berechtigungen haben.  

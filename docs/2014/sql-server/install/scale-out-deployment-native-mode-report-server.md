@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753302"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Bereitstellung für horizontales Skalieren (Berichtsserver im einheitlichen Modus)
-  Verwenden der **Bereitstellung für horizontales Skalieren** auf der Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager, um den Initialisierungsstatus einer Bereitstellung für horizontales Skalieren anzuzeigen oder zu einer Bereitstellung für horizontales Skalieren einen Berichtsserver hinzuzufügen. Eine *Bereitstellung für horizontales Skalieren* wird definiert als zwei oder mehr Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
+  Verwenden Sie die Seite **Bereitstellung für horizontales Skalieren** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um den Initialisierungsstatus einer Bereitstellung für horizontales Skalieren anzuzeigen oder um einer Bereitstellung für horizontales Skalieren einen Berichtsserver hinzuzufügen. Eine *Bereitstellung für horizontales Skalieren* wird definiert als zwei oder mehr Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "48099940"
   
  Um eine Bereitstellung für horizontales Skalieren zu konfigurieren, beginnen Sie mit zwei oder mehr Berichtsserver-Instanzen, die alle mit derselben Berichtsserver-Datenbank verbunden sind. Nachdem alle Instanzen installiert sind, stellen Sie eine Verbindung zum ersten Berichtsserver her, und verwenden Sie anschließend die Seite Bereitstellung für horizontales Skalieren, um alle weiteren Instanzen zu verbinden. Nur ein Berichtsserver, der bereits für die Verwendung einer Datenbank initialisiert ist, kann zusätzliche Knoten initialisieren.  
   
- Um diese Seite zu öffnen, starten die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager, und wählen **Bereitstellung für horizontales Skalieren** im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie im Navigationsbereich auf **Bereitstellung für horizontales Skalieren** . Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL Server-Name**  
- Geben Sie den Namen des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, die die Berichtsserver-Datenbank hostet.  
+ Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet.  
   
  **Database Name**  
  Gibt den Namen der Datenbank an, mit der die Berichtsserverinstanz momentan verbunden ist.  
@@ -51,7 +51,7 @@ ms.locfileid: "48099940"
  Zeigt den Berichtsservernamen an. In den meisten Fällen ist dies der Name des Computers, auf dem der Berichtsserver installiert ist.  
   
  **Instanz**  
- Zeigt den Namen der Berichtsserverinstanz an. Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen.  
+ Zeigt den Namen der Berichtsserverinstanz an. Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen.  
   
  **Status**  
  Gibt an, ob der Berichtsserver initialisiert wird oder auf die Verknüpfung mit einer Bereitstellung für horizontales Skalieren wartet:  

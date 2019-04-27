@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs
+title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748642"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019587"
   
 -   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorisieren des Zugriffs auf Objekte und Vorgänge & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)  
  Stellen Sie eine Verbindung mit Analysis Services in SSMS her, um Serverinstanzen und Datenbanken interaktiv zu verwalten. Sie können auch XMLA- oder MDX-Abfragen ausführen, um Verwaltungsaufgaben auszuführen oder Daten abzurufen. Im Unterschied zu anderen Tools und Anwendungen, von denen Datenbanken nur beim Senden einer Abfrage geladen werden, lädt SSMS alle Datenbanken, sobald eine Verbindung mit dem Server hergestellt wird. Dies setzt allerdings voraus, dass Sie zur Anzeige der Datenbank berechtigt sind. Wenn Sie also über viele tabellarische Datenbanken auf dem Server verfügen, werden alle Datenbanken in den Systemarbeitsspeicher geladen, sobald Sie über SSMS eine Verbindung herstellen.  
@@ -129,8 +129,8 @@ ms.locfileid: "34019587"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Erstellen einer Datenquelle & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

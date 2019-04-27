@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779486"
 ---
 # <a name="hash-indexes"></a>Hashindizes
   Indizes werden als Einstiegspunkte für speicheroptimierte Tabellen verwendet. Das Lesen von Zeilen aus einer Tabelle erfordert einen Index, um Daten im Arbeitsspeicher zu suchen.  

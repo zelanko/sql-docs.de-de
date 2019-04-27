@@ -14,21 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c2b5fbc89b6852d178ae4afc5c8cab67259ee89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747148"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Fallschlüssel auswählen (Data Mining-Assistent)
   Mithilfe der Seite **Fallschlüssel auswählen** wählen Sie das Attribut der Quellcubedimension aus, das zum Schlüssel der Miningstruktur wird. Dieses Attribut muss sich in einer Hierarchie befinden, oder seine Attributhierarchie muss aktiviert sein.  
   
 > [!NOTE]  
->  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube** ausgewählt haben.  
+>  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube ausgewähl**t haben.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Attribute**  
  Klicken Sie auf das Attribut, das der Schlüssel der Miningstruktur wird.  
   

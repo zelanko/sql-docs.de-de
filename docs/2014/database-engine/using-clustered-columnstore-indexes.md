@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773737"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Verwenden von gruppierten Columnstore-Indizes
   Tasks für die Verwendung von gruppierten Columnstore-Indizes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ GO
  Verwenden der [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) Anweisung, um einen gruppierten columnstore-Index zu löschen. Bei diesem Vorgang wird der Index gelöscht, und die Columnstore-Tabelle wird in einen Rowstore-Heap konvertiert.  
   
 ##  <a name="load"></a> Laden von Daten in einen gruppierten columnstore-Index  
- Sie können einem vorhandenen gruppierten Columnstore-Index Daten hinzufügen, indem Sie eine der Standardladenmethoden verwenden.  Z. B. Bcp massenladetool, Integration Services, und INSERT... Mithilfe von SELECT können alle Daten in einen gruppierten ColumnStore-Index geladen werden.  
+ Sie können einem vorhandenen gruppierten Columnstore-Index Daten hinzufügen, indem Sie eine der Standardladenmethoden verwenden.  Z. B. Bcp massenladetool, Integration Services, und INSERT... Wählen Sie können alle Daten in einen gruppierten columnstore-Index.  
   
  Gruppierte Columnstore-Indizes nutzen den Deltastore, um eine Fragmentierung der Spaltensegmente im Columnstore zu verhindern.  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> Zeilengruppengröße: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1,048,576.|1|  
-|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1,048,576, 1,048,576, 155,000.|0|  
+|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576|1|  
+|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000|0|  
   
  Im folgenden Beispiel werden die Ergebnisse des Ladens von 1.048.577 Zeilen in eine Partition angezeigt. Aus den Ergebnissen wird ersichtlich, dass eine COMPRESSED-Zeilengruppe im Columnstore (in Form von komprimierten Spaltensegmenten) und eine Zeile im Deltastore vorhanden sind.  
   

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831258"
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
   Bei Containern handelt es sich um Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , die für Pakete, Dienste sowie Tasks eine Struktur bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  

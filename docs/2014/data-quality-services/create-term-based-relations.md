@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756444"
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
   In diesem Thema wird die Erstellung von begriffsbasierten Beziehungen für eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Mithilfe von begriffsbasierten Beziehungen (Term-based Relation, TBR) können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Sie können z.B. eine begriffsbasierte Beziehung einrichten, die den Begriff „Inc.“ in „Incorporated“ ändert. Der Begriff „Inc.“ wird jedes Mal geändert, wenn er in der Domäne vorkommt. Instanzen von „Contoso, Inc.“ werden in „Contoso, Incorporated“ geändert, und die beiden Werte werden als exakte Synonyme angesehen.  
@@ -90,7 +90,7 @@ ms.locfileid: "56016771"
   
     6.  Suchen Sie einen Wert in der Tabelle Beziehungen, indem Sie eine oder mehrere Ziffern im Textfeld **Suchen** eingeben. Die gefundenen Werte für die Zeichenfolge werden hervorgehoben. Wechseln Sie mithilfe der NACH-OBEN- und NACH-UNTEN-TASTE zu verschiedenen Instanzen der Zeichenfolge in der Tabelle.  
   
-    7.  **Rechtschreibprüfung**: Wenn ein Wert in der **Wert** oder **korrigieren in** Spalte weist eine wellige rote Unterstreichung, schlägt die Rechtschreibprüfung eine Korrektur für den Wert. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../../2014/data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Rechtschreibprüfung:** Wenn ein Wert in der Spalte **Wert** oder **Korrigieren in** eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../../2014/data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Um die Rechtschreibprüfung zu verwenden, können Sie diese auf der Seite **Domäneneigenschaften** aktivieren. Wenn sie auf der Seite **Domäneneigenschaften** deaktiviert ist, können Sie auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** auf der Seite **Begriffsbasierte Beziehungen** klicken, um sie auf dieser Seite zu aktivieren.  
@@ -99,7 +99,7 @@ ms.locfileid: "56016771"
   
 7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen von Begriffsbasierten Beziehungen  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen von begriffsbasierten Beziehungen  
  Nachdem Sie die begriffsbasierten Beziehungen erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

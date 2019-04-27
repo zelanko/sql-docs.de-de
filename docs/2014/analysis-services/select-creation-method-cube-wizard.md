@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747882"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Erstellungsmethode auswählen (Cube-Assistent)
   Auf der Seite **Erstellungsmethode auswählen** können Sie angeben, wie der Cube erstellt werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Vorhandene Tabellen verwenden**  
  Wählen Sie diese Option aus, um einen Cube mithilfe vorhandener Tabellen in einer Datenquelle zu erstellen. Der Assistent führt Sie durch den Vorgang der Auswahl und Definition von Measuregruppen und Dimensionen anhand vorhandener Tabellen zur Erstellung des neuen Cubes.  
   

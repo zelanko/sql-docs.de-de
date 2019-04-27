@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754198"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Zulassen von teilweise vertrauenswürdigen Aufrufern
   Die gemeinsame Nutzung von Codebibliotheken ist bei der CLR-Integration gängige Praxis. Hierbei greift eine Assembly oder Anwendung häufig auf eine andere Assembly zu, die einen benutzerdefinierten Typ, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion, ein benutzerdefiniertes Aggregat, einen Trigger oder eine Hilfsprogrammklasse enthält. Codebibliotheken, die von mehreren Anwendungen genutzt werden sollen, müssen mit einem starken Namen signiert werden.  

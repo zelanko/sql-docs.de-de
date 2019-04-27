@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747192"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Übergeordnetes Element auswählen' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Übergeordnetes Element auswählen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie ein übergeordnetes Element für ein berechnetes Element auswählen. Sie können das Dialogfeld **Übergeordnetes Element auswählen** anzeigen, indem Sie im Dialogfeld **Berechnungen** des Cube-Designers im Bereich des **Formular-Editors für berechnete Elemente** auf **Ändern** klicken.  
@@ -28,7 +28,7 @@ ms.locfileid: "48067470"
 > [!NOTE]  
 >  In bestimmten Fällen kann möglicherweise kein übergeordnetes Element ausgewählt werden, z. B. wenn die in **Struktur** ausgewählte Hierarchie für ein Attribut definiert ist, für das keine Gesamtergebnisebene angegeben ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Struktur**  
  Wählen Sie das übergeordnete Element aus, das für das berechnete Element verwendet wird.  
   

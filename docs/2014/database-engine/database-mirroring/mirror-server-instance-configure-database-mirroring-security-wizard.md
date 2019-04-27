@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755165"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung)
   Auf dieser Seite können Informationen zu der Serverinstanz der Spiegeldatenbank angegeben werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48079690"
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spiegelserverinstanz**  
  Wenn bereits eine Spiegelserverinstanz angegeben ist (auf der Seite **Spiegelung** im Dialogfeld **Datenbankeigenschaften** ), wird diese Instanz angezeigt. Weitere Informationen finden Sie unter [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48079690"
   
 ## <a name="see-also"></a>Siehe auch  
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Datenbankeigenschaften &#40;Seite „Wird gespiegelt“&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  

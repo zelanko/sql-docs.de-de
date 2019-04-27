@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779594"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installieren eines Service Packs auf einem System mit minimaler Downtime der gespiegelten Datenbanken
   In diesem Thema wird beschrieben, wie beim Installieren von Service Packs und Hotfixes die Ausfallzeit von gespiegelten Datenbanken minimiert werden kann. Dieser Prozess umfasst ein sequenzielles Upgrade der Instanzen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], die von der Datenbankspiegelung betroffen sind. Diese Form des Updates, die so genannte eine *paralleles Update*, reduziert Ausfallzeiten auf ein einziges Failover. Beachten Sie, dass für den Modus für hohe Leistung-Sitzungen, in denen der Spiegelserver vom Prinzipalserver geografisch entfernt ist, ein paralleles Update möglicherweise nicht geeignet.  

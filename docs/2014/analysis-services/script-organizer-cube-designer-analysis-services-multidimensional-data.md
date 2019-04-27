@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747814"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Skriptplaner (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Skriptplaner** der Registerkarte **Berechnungen** können Sie im Cube-Designer auf die berechneten Elemente, benannten Mengen und Skriptbefehle zugreifen, die im Cubeskript des angegebenen Cubes enthalten sind, und können diese neu anordnen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48069186"
 > [!NOTE]  
 >  Der Bereich wird in der Formularansicht nicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Schritt**  
  Zeigt die Ausführungsreihenfolge der berechneten Elemente, benannten Mengen und Skriptbefehle im Cubeskript an.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48069186"
 |**Neues berechnetes Element**|Wählen Sie diese Option aus, um den **Formular-Editor für berechnete Elemente** anzuzeigen und ein neues berechnetes Element zu erstellen. Weitere Informationen zum **Formular-Editor für berechnete Elemente**finden Sie unter [Formular-Editor für berechnete Elemente &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Neue benannte Menge**|Wählen Sie diese Option aus, um den **Formular-Editor für benannte Mengen** anzuzeigen und eine neue benannte Menge zu erstellen. Weitere Informationen zum **Formular-Editor für benannte Mengen**finden Sie unter [Formular-Editor für benannte Mengen &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Neuer Skriptbefehl**|Wählen Sie diese Option aus, um **Skript-Editor** anzuzeigen und einen neuen Skriptbefehl zu erstellen. Weitere Informationen zum **Skript-Editor**finden Sie unter [Skript-Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Nach oben**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach oben zu verschieben.<br /><br /> Hinweis: Wenn die ausgewählte Berechnung nicht weiter nach unten verschoben werden kann, ist diese Option deaktiviert.|  
-|**Nach unten**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach unten zu verschieben.<br /><br /> Hinweis: Wenn die ausgewählte Berechnung nicht weiter nach unten verschoben werden kann, ist diese Option deaktiviert.|  
+|**Nach oben**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach oben zu verschieben.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn die ausgewählte Berechnung nicht weiter verschoben werden kann.|  
+|**Nach unten**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach unten zu verschieben.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn die ausgewählte Berechnung nicht weiter verschoben werden kann.|  
 |**Delete**|Wählen Sie diese Option aus, um die ausgewählte Berechnung zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  

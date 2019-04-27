@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748022"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datei speichern unter' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Datei speichern unter** wird eine Liste der verfügbaren Dateien angezeigt, die in Protokoll- und Datenordnern für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert sind. Wählen Sie entweder eine der aufgeführten Dateien aus, oder geben Sie bei Bedarf einen anderen Ordner und eine andere Datei an. Das Dialogfeld **Datei speichern unter** kann durch folgende Vorgehensweisen angezeigt werden:  
@@ -27,7 +27,7 @@ ms.locfileid: "48163200"
   
 -   Klicken Sie im Dialogfeld**Datenbank sichern**in der **Remotesicherungsdatei** -Spalte des Rasters für die Option **Speicherort für Remotepartitionssicherungen** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie den Ordner**  
  Wählen Sie einen Ordner aus, um für **Ausgewählter Pfad** den gewünschten Pfad festzulegen.  
   

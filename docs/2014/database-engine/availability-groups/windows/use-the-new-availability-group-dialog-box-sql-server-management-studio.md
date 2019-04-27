@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788062"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)
   Dieses Thema enthält Informationen zum Verwenden des Dialogfelds **Neue Verfügbarkeitsgruppe** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , um auf Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert sind, eine AlwaysOn-Verfügbarkeitsgruppe zu erstellen. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
@@ -83,7 +83,7 @@ ms.locfileid: "53373172"
   
      Um das Dialogfeld zu beenden, ohne die Verfügbarkeitsgruppe zu erstellen, klicken Sie auf **Abbrechen**.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer Verfügbarkeitsgruppe mithilfe des Dialogfelds neue Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Verfügbarkeitsgruppe mithilfe des Dialogfelds neue Verfügbarkeitsgruppe  
   
 -   Sie wiederum müssen eine Verbindung zu jeder Serverinstanz herstellen, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet, und die folgenden Schritte ausführen:  
   

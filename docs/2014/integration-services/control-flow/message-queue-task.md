@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831477"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  

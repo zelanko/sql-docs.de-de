@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754068"
 ---
 # <a name="clr-transactions-sample"></a>Beispiel für CLR-Transaktionen
   Dieses Beispiel veranschaulicht das Steuern von Transaktionen mithilfe der im `System.Transactions`-Namespace vorhandenen verwalteten APIs. Dabei wird mithilfe der `System.Transactions.TransactionScope`-Klasse eine Transaktionsgrenze festgelegt, um sicherzustellen, dass keine Lagerbestandsdaten angepasst werden, solange kein genügend großer Lagerbestand zur Deckung der Anforderung vorhanden ist, und dass bei einem ausreichenden Lagerbestand der Transfer von Beständen zwischen den Standorten auf atomare Weise erfolgt. Zur Demonstration der automatischen Registrierung in einer verteilten Transaktion werden Bestandsänderungen in einer Überwachungsdatenbank protokolliert, die in einer eigenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist.  

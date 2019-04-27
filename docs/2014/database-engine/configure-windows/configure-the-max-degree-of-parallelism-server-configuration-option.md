@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46598cf66c80d07383fb033436bbe1792b1eec64
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786939"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
   In diesem Thema wird beschrieben, wie so konfigurieren Sie die `max degree of parallelism` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, wird der am besten geeignete Grad an Parallelität erkannt, also die Anzahl an Prozessoren, die für die Ausführung einer einzigen Anweisung eingesetzt werden. Dies gilt für die einzelnen Ausführungen paralleler Pläne. Sie können mithilfe der `max degree of parallelism`-Option die Anzahl der Prozessoren beschränken, die für die Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, Data Definition Language (DDL) Indexvorgänge und statische und keysetgesteuerte cursorauffüllung.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748484"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Datenquellensicht aktualisieren (Dialogfeld)
   Mithilfe des Dialogfelds **Datenquellensicht aktualisieren** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Änderungen annehmen oder abbrechen, die im Zuge der Aktualisierung der Datenquellensicht aufgetreten sind. Das Dialogfeld zeigt die Änderungen an, die an der Datenquellensicht im Zuge der Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. Klicken Sie auf **OK** , um die Änderungen anzunehmen und die Datenquellensicht zu aktualisieren, oder auf **Abbrechen** , um die Änderungen zu ignorieren und die Datenquellensicht unverändert zu lassen. Sie können das Dialogfeld **Datenquellensicht aktualisieren** folgendermaßen anzeigen:  
@@ -29,7 +29,7 @@ ms.locfileid: "48119620"
   
 -   Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** des Datenquellensicht-Designers, und wählen Sie **Aktualisieren**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Die folgenden Änderungen werden vorgenommen**  
  Zeigt die Änderungen an (aktualisierte, hinzugefügte und gelöschte Bereiche), die an der Datenquelle vorgenommen werden, wenn Sie auf **OK**klicken.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "48119620"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

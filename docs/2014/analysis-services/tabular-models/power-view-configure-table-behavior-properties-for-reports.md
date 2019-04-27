@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757144"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch)
   Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  

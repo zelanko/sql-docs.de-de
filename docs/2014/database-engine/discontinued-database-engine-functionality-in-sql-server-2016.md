@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779872"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
@@ -62,7 +62,7 @@ ms.locfileid: "54132613"
 |Verbindungsprotokolle|Die Unterstützung für das VIA-Protokoll wird eingestellt.|Verwenden Sie stattdessen TCP.|  
 |Datenbankobjekte|`WITH APPEND`-Klausel für Trigger|Erstellen Sie den ganzen Trigger neu.|  
 |Datenbankoptionen|`sp_dboption`|`ALTER DATABASE`|  
-|E-Mail|SQL Mail|Verwenden Sie Datenbank-E-Mail. Weitere Informationen finden Sie unter [Database Mail](../relational-databases/database-mail/database-mail.md) und [Use Database Mail Instead Of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Mail|SQL Mail|Verwenden Sie Datenbank-E-Mail. Weitere Informationen finden Sie unter [Database Mail](../relational-databases/database-mail/database-mail.md) und [Use Database Mail Instead Of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Arbeitsspeicherverwaltung|Unterstützung für 32-Bit-AWE (Address Windowing Extensions) und für das Hinzufügen von 32-Bit-Speicher im laufenden Systembetrieb (Hot Add Memory).|Verwenden Sie ein 64-Bit-Betriebssystem.|  
 |Metadaten|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programmierbarkeit|SQL Server-Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|  
@@ -76,17 +76,17 @@ ms.locfileid: "54132613"
 |Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
 |Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwendung von `ROLLUP`|  
 |Transact-SQL-Syntax|Verwenden von **\* =** und **=&#42;**|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvents|Databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Zusätzliche XEvent-Änderungen**  
   
- **Resource_monitor_ring_buffer_record**:  
+ **resource_monitor_ring_buffer_record**:  
   
 -   Entfernte Felder: single_pages_kb, multiple_pages_kb  
   
 -   Hinzugefügte Felder: target_kb, pages_kb  
   
- **Memory_node_oom_ring_buffer_recorded**:  
+ **memory_node_oom_ring_buffer_recorded**:  
   
 -   Entfernte Felder: single_pages_kb, multiple_pages_kb  
   

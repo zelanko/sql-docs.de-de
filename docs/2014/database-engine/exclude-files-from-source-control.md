@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779900"
 ---
 # <a name="exclude-files-from-source-control"></a>Ausschließen von Dateien aus der Quellcodeverwaltung
   Wenn die Projektmappe, die Sie arbeiten an Dateien, die keine Quellcodeverwaltungsdienste erfordern enthält, können Sie mithilfe der **aus Quellcodeverwaltung ausschließen** Befehl aus, um die Datei aus quellcodeverwaltung ausschließen. Dabei bleibt die Datei zwar in der [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Datenbank, wird aber nicht mehr mit dem Projekt ein- oder ausgecheckt.  

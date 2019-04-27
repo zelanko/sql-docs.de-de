@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746942"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
@@ -251,7 +251,7 @@ ms.locfileid: "55087899"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- Zur Erinnerung: Der Algorithmus für die Einstellungen **MinThread** und **MaxThread** schließt die Systemkonfiguration ein, insbesondere die Anzahl der Prozessoren. Der folgenden Blogbeitrag bietet Einblicke in die Berechnung der Werte: [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](https://go.microsoft.com/fwlink/?LinkId=330387). Beachten Sie, dass diese Einstellungen und Verhaltensweisen in nachfolgenden Versionen geändert werden können.  
+ Zur Erinnerung: Der Algorithmus für die Einstellungen **MinThread** und **MaxThread** schließt die Systemkonfiguration ein, insbesondere die Anzahl der Prozessoren. Im folgenden Blogbeitrag bietet Einblicke in die Berechnung der Werte an: [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](https://go.microsoft.com/fwlink/?LinkId=330387). Beachten Sie, dass diese Einstellungen und Verhaltensweisen in nachfolgenden Versionen geändert werden können.  
   
  Die folgende Liste enthält Beispiele für weitere Affinitätsmaskeneinstellungen, die für unterschiedliche Prozessorkombinationen gelten:  
   
@@ -259,7 +259,7 @@ ms.locfileid: "55087899"
   
 -   Affinität für die Prozessoren 7-6-5-4 in einem System mit 8 Kernen führt zu dieser Bitmaske: 11110000 und ein hexadezimaler Wert: 0xF0  
   
--   Affinität für die Prozessoren 5-4-3-2 in einem System mit 8 Kernen führt zu dieser Bitmaske: 00111100 und ein hexadezimaler Wert: 0x3C  
+-   Affinität für 5-4-3-2-Prozessoren auf einem System mit 8 Kernen führt zu dieser Bitmaske: 00111100 und ein hexadezimaler Wert: 0x3C  
   
 -   Affinität für die Prozessoren 7-6-1-0 in einem System mit 8 Kernen führt zu dieser Bitmaske: 11000011 und ein hexadezimaler Wert: 0xC3  
   

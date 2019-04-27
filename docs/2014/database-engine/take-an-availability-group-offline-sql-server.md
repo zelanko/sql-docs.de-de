@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773614"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Offlineschalten einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie eine AlwaysOn-Verfügbarkeitsgruppe über [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] und höheren Versionen vom Status ONLINE zum Status OFFLINE gebracht wird. Es gibt keinen Datenverlust an Datenbanken mit synchronem Commit, da bei nicht vorgenommener Synchronisierung irgendeines Replikats mit synchronem Commit der OFFLINE-Vorgang einen Fehler auslöst und die Verfügbarkeitsgruppe ONLINE bleibt. Da die Verfügbarkeitsgruppe online bleibt, werden unsynchronisierte Datenbanken mit synchronem Commit vor möglichem Datenverlust geschützt. Nachdem eine Verfügbarkeitsgruppe offline geschaltet wurde, sind ihre Datenbanken für Clients nicht mehr verfügbar, und Sie können die Verfügbarkeitsgruppe nicht wieder online schalten. Schalten Sie daher eine Verfügbarkeitsgruppe nur offline, um die Verfügbarkeitsgruppenressourcen von einem WSFC-Cluster zu einem anderen zu migrieren.  
@@ -63,7 +63,7 @@ ms.locfileid: "53371372"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nachdem die Verfügbarkeitsgruppe offline geschaltet wurde  
+##  <a name="FollowUp"></a>Nächster Schritt: Nachdem die Verfügbarkeitsgruppe offline geschaltet wurde.  
   
 -   **Protokollieren eines OFFLINE-Vorgangs:**  Die Identität des WSFC-Knotens, in dem der OFFLINE-Vorgang initiiert wurde, wird sowohl im WSFC-Clusterprotokoll als auch in SQL ERRORLOG gespeichert.  
   

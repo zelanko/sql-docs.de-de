@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72ab1727fc20f5eb47df7d933e9c7c42e598423b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747162"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Schlüssel der geschachtelten Tabelle auswählen (Assistent zum Hinzufügen einer neuen geschachtelten Tabelle)
   Mithilfe der Seite **Schlüssel der geschachtelten Tabelle auswählen** können Sie das Attribut auswählen, das als Schlüssel der geschachtelten Tabelle verwendet wird.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Attribute**  
  Wählen Sie das Attribut aus, das die Schlüsselspalte der geschachtelten Tabelle wird. Alle ausgewählten Attribute müssen sich in Hierarchien befinden, oder die Attributhierarchien müssen aktiviert sein.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066334"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Vergleichen von Vorhersagen für Modelle zur Planungserstellung (Data Mining-Lernprogramm für Fortgeschrittene)
   In den vorherigen Schritten dieses Lernprogramms haben Sie mehrere Zeitreihenmodelle erstellt:  

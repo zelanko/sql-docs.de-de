@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b42fdb9d53a4aa0444a98ee311000fb1c2929ff1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756158"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Manueller Failover für eine Datenbank-Spiegelungssitzung (SQL Server Management Studio)
   Wenn die gespiegelte Datenbank synchronisiert wird, also den Status SYNCHRONIZED aufweist, kann der Datenbankbesitzer ein manuelles Failover zu dem gespiegelten Server initiieren.  
@@ -31,7 +31,7 @@ ms.locfileid: "48212080"
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  
   
- Beachten Sie, dass die Serverrollen für andere Datenbank-Spiegelungssitzungen nicht davon betroffen sind. Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.  
+ Beachten Sie, dass die Serverrollen für andere Datenbank-Spiegelungssitzungen nicht davon betroffen sind. Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ### <a name="to-manually-fail-over-database-mirroring"></a>Sie führen Sie ein manuelles Failover für Datenbankspiegelungen durch  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48212080"
  [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Ausführen des manuellen Failovers einer Datenbank-Spiegelungssitzung (Transact-SQL)](manually-fail-over-a-database-mirroring-session-transact-sql.md)   
- [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
   

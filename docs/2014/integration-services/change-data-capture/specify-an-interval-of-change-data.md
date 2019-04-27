@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771216"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind `datetime`-Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert.  

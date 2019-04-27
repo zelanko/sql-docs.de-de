@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749469"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden.  
@@ -129,7 +129,7 @@ ms.locfileid: "52411277"
  Weitere Informationen wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definieren schneller, mittlerer und langsamer Abfrageantwortkategorien für die Berichterstellung  
- Die Leistung der Abfrageverarbeitung wird anhand vordefinierter Kategorien gemessen, in denen ein Anforderung/Antwort-Zyklus durch dessen Ausführungsdauer definiert wird. Die vordefinierten Kategorien lauten: Trivial, Schnell, Erwartet, Lange Ausführung und Überschritten. Jede an einen PowerPivot-Server übermittelte Anforderung wird abhängig von ihrer Ausführungsdauer in eine der Kategorien eingeteilt.  
+ Die Leistung der Abfrageverarbeitung wird anhand vordefinierter Kategorien gemessen, in denen ein Anforderung/Antwort-Zyklus durch dessen Ausführungsdauer definiert wird. Vordefinierten Kategorien lauten: Trivial, schnell, erwartet, lang andauernde und überschritten. Jede an einen PowerPivot-Server übermittelte Anforderung wird abhängig von ihrer Ausführungsdauer in eine der Kategorien eingeteilt.  
   
  Die Abfrageantwortinformationen werden in Aktivitätsberichten verwendet. Alle Kategorien werden innerhalb der Berichte unterschiedlich behandelt, um die Leistungstrends des PowerPivot-Systems besser zu verdeutlichen. Beispielsweise werden triviale Anforderungen völlig ausgeschlossen, um unwesentliche Daten herauszufiltern und mithilfe der verbleibenden Kategorien aussagekräftigere Trends aufzuzeigen. Im Gegensatz dazu sind Statistiken zu Anforderungen mit langer oder überschrittener Ausführungszeit im Bericht gut erkennbar, damit Administratoren oder Arbeitsmappenbesitzer unverzüglich Korrekturmaßnahme ergreifen können.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "52411277"
   
 |Einstellung|Standardwert|Typ|Gültiger Bereich|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services-Verwendungsereignisse** (Verbinden, Laden, Entladen, Anforderungen)|\<aktiviert >|Boolean|Diese Werte werden entweder aktiviert oder deaktiviert.|  
+|**Analysis Services-Verwendungsereignisse** (Verbinden, Laden, Entladen, Anforderungen)|\<enabled>|Boolean|Diese Werte werden entweder aktiviert oder deaktiviert.|  
 |**Query Reporting interval**|300 (in Sekunden)|Integer|Zwischen 1 und einer beliebigen positiven ganzen Zahl. Der Standardwert ist 5 Minuten.|  
 |**Usage data history**|365 (in Tagen)|Integer|0 gibt eine unbegrenzte Dauer an, Sie können jedoch auch eine Obergrenze festlegen, damit Verlaufsdaten ablaufen und automatisch gelöscht werden. Gültige Werte für eine begrenzte Beibehaltungsdauer betragen 1 bis 5000 (Tage).|  
 |Obergrenze für triviale Antworten|500 (in Millisekunden)|Integer|Legt eine Obergrenze fest, die den Austausch einer trivialen Anforderung/Antwort definiert. Jede Anforderung, die innerhalb von 0 bis 500 Millisekunden abgeschlossen wird, ist eine triviale Anforderung und wird bei der Berichterstellung ignoriert.|  

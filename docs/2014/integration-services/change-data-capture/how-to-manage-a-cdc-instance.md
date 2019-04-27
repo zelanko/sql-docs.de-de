@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771168"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten von CDC-Instanzvorgängen zur Laufzeit verwenden.  
@@ -34,19 +34,19 @@ ms.locfileid: "58391528"
   
      Sie können die folgenden Tasks ausführen:  
   
-    -   **Start**: Starten Sie die Aufzeichnung der Änderungen.  
+    -   **Start**: Die Aufzeichnung der Änderungen wird gestartet.  
   
-    -   **Beenden Sie**: Zum Beenden der Aufzeichnung der Änderungen  
+    -   **Stop**: Dient zum Beenden der Aufzeichnung der Änderungen  
   
-    -   **Zurücksetzen**: Klicken Sie auf **Zurücksetzen** , um die CDC-Instanz auf ihren ursprünglichen (leeren) Zustand zurückzusetzen. Diese Option ist verfügbar, wenn die CDC-Instanz beendet wurde. Alle Änderungen in den Änderungstabellen und der interne Status der CDC-Instanz werden gelöscht. Wenn die CDC-Instanz später dann gestartet wird, beginnt die Änderungsaufzeichnung ab diesem Zeitpunkt und schließt nur Transaktionen ein, die nach dem Starten der CDC-Instanz gestartet wurden.  
+    -   **Reset**: Klicken Sie auf **Zurücksetzen** , um die CDC-Instanz auf ihren ursprünglichen (leeren) Zustand zurückzusetzen. Diese Option ist verfügbar, wenn die CDC-Instanz beendet wurde. Alle Änderungen in den Änderungstabellen und der interne Status der CDC-Instanz werden gelöscht. Wenn die CDC-Instanz später dann gestartet wird, beginnt die Änderungsaufzeichnung ab diesem Zeitpunkt und schließt nur Transaktionen ein, die nach dem Starten der CDC-Instanz gestartet wurden.  
   
-    -   **Löschen:** So löschen Sie die CDC-Instanz.  
+    -   **Löschen:** Dient zum Löschen der CDC-Instanz.  
   
-    -   **Oracle-Protokollierungsskript**: Klicken Sie auf **Oracle Logging Script** um das entsprechende Dialogfeld mit dem Oracle-protokollierungsskript anzuzeigen. Informationen zu den Schritten, die Sie in diesem Dialogfeld ausführen können, finden Sie unter [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
+    -   **Oracle Logging Script**: Klicken Sie auf **Oracle Logging Script**, um das entsprechende Dialogfeld mit dem Oracle-Skript für ergänzende Protokollierung anzuzeigen. Informationen zu den Schritten, die Sie in diesem Dialogfeld ausführen können, finden Sie unter [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
   
-         **Hinweis**: Wenn Sie die ergänzenden Protokollierungsskripts ausführen, wird das Dialogfeld Oracle Credentials for Running Script geöffnet, in dem Sie einen gültigen Oracle-Benutzernamen und das dazugehörige Kennwort angeben können. Informationen zum Bereitstellen der richtigen Oracle-Anmeldeinformationen finden Sie unter [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
+         **Beachten Sie**: Wenn Sie die ergänzenden Protokollierungsskripts ausführen, wird das Dialogfeld Oracle Credentials for Running Script geöffnet, in dem Sie einen gültigen Oracle-Benutzernamen und das dazugehörige Kennwort angeben können. Informationen zum Bereitstellen der richtigen Oracle-Anmeldeinformationen finden Sie unter [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
   
-    -   **CDC Instance Deployment**: Zum Generieren eines Bereitstellungsskripts für die CDC-Instanz. Informationen zu diesem Dialogfeld finden Sie unter [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
+    -   **CDC Instance Deployment**: Dient zum Generieren eines Bereitstellungsskripts für die CDC-Instanz. Informationen zu diesem Dialogfeld finden Sie unter [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
   
      Weitere Informationen zu diesen Tasks finden Sie unter [Manage a CDC Instance](manage-a-cdc-instance.md).  
   

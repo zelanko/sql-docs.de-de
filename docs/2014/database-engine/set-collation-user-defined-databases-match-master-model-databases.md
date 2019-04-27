@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773311"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der master- und model-Datenbanken
   Diese Regel überprüft, ob benutzerdefinierte Datenbanken unter Verwendung einer Datenbanksortierung definiert sind, die mit der Sortierung der master- oder model-Datenbank übereinstimmt.  
@@ -50,7 +50,7 @@ ms.locfileid: "53371082"
   
  [Microsoft Knowledge Base-Artikel 325335 befolgen](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [So wird es gemacht: Installieren von SQLServer 2008 über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Vorgehensweise: Installieren von SQLServer 2008 über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

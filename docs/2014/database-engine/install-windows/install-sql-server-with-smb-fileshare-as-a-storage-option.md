@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775333"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Systemdatenbanken (Master, Model, MSDB und TempDB) sowie [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Benutzerdatenbanken mit dem SMB (Server Message Block)-Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
@@ -114,7 +114,7 @@ ms.locfileid: "54136050"
   
 -   Einige Drittanbieter, wie NetApp-Geräte unterstützen nicht alle SQL Server-API-Aufrufe. Mit diesen erhalten Sie möglicherweise:   
     2015-06-04-13:14:19.97 spid9s Fehler: 17053, Schweregrad: 16, Status: 1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): Betriebssystemfehler 1 (falsche Funktion.).  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : Betriebssystemfehler 1 (falsche Funktion.).  
   
      Für NTFS ist der Fehler harmlos,  aber für ReFS kann er zu bedeutenden Leistungseinbußen führen.  
   

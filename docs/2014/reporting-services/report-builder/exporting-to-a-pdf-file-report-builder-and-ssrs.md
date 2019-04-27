@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1675221a4d6cfc8ad61a975610113435423ae05b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987118"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
   Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höheren Versionen kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.  

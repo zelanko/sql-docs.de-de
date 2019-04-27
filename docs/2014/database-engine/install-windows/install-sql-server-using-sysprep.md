@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775303"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installieren von SQL Server 2014 mit SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -171,7 +171,7 @@ ms.locfileid: "58658338"
   
 7.  Wählen Sie auf der Seite **Vorbereitete Instanz auswählen** im Dropdownfeld die vorbereitete Instanz aus, die Sie abschließen möchten. Wählen Sie die nicht konfigurierte Instanz aus der Liste **Instanz-ID** aus.  
   
-     **Installierte Instanzen:** Dieses Raster zeigt alle Instanzen einschließlich der vorbereiteten Instanzen auf diesem Computer an.  
+     **Installierte Instanzen:** Dieses Raster zeigt alle Instanzen einschließlich der vorbereiteten Instanzen auf diesem Computer.  
   
 8.  Auf der Seite **Überprüfung der Funktionen** werden die ausgewählten Funktionen und Komponenten angezeigt, die während des Vorbereitungsschritts in die Installation eingeschlossen wurden. Wenn Sie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz weitere Funktionen hinzufügen möchten, die nicht in die vorbereitete Instanz eingeschlossen sind, müssen Sie zunächst diesen Schritt abschließen, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz fertig zu stellen, und anschließend die Funktionen im **Installationscenter** im Bereich **Funktionen hinzufügen**hinzufügen.  
   

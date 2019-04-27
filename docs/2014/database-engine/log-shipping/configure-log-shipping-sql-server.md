@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774584"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
   In diesem Thema wird beschrieben, wie der Protokollversand in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "48049240"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48049240"
   
 8.  Beachten Sie den Sicherungszeitplan im Feld **Zeitplan** unter **Sicherungsauftrag**. Wenn Sie den Zeitplan für Ihre Installation anpassen möchten, klicken Sie auf **Zeitplan** , und passen Sie den Zeitplan des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bei Bedarf an.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Beim Erstellen einer Protokollversandkonfiguration können Sie das Verhalten der Sicherungskomprimierung von Protokollsicherungen durch Auswahl einer der folgenden Optionen steuern: **Standardservereinstellung verwenden**, **Sicherung komprimieren**oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Beim Erstellen einer Protokollversandkonfiguration können Sie das Verhalten der sicherungskomprimierung von protokollsicherungen steuern, indem Sie eine der folgenden Optionen auswählen: **Verwenden Sie die Standardeinstellung für den Server**, **Sicherung komprimieren**, oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Klicken Sie auf **OK**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48049240"
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](log-shipping-tables-and-stored-procedures.md)  
   
   

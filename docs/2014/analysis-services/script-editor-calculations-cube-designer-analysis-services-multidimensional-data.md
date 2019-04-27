@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747824"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Skript-Editor (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Skript-Editor** auf der Registerkarte **Berechnungen** im Cube-Designer können Sie den Ausdruck für einen Skriptbefehl (in der Formularansicht) oder das gesamte Cubeskript (in der Skriptansicht) ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Ausdruck**|Geben Sie die MDX-Ausdrücke (Multidimensional Expressions) und -Anweisungen für den Skriptbefehl, der im Bereich **Metadaten** ausgewählt ist (in der Formularansicht), oder das gesamte Cubeskript (in der Skriptansicht) ein.<br /><br /> Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; Verweis](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Symbolleiste &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Skriptplaner &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

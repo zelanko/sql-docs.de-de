@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771056"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Auswählen von Oracle-Tabellen und -Spalten
   Verwenden Sie die Seite Select Oracle Tables and Columns, um die Tabellen aus der Oracle-Quelldatenbank auszuwählen, in der die Änderungen aufgezeichnet werden. Diese Seite verfügt über die folgenden Elemente:  
@@ -28,13 +28,13 @@ ms.locfileid: "58384758"
   
 -   **Oracle Table Name**: Der Name der Tabelle, einschließlich des Tabellenschemas.  
   
--   **Aufzeichnungsinstanz**: Der Name der Aufzeichnungsinstanz verwendet, um Namen instanzspezifischen Change Data Capture-Objekte. Die Aufzeichnungsinstanz darf nicht NULL sein.  
+-   **Capture Instance**: Der Name der Aufzeichnungsinstanz, die für die Benennung der instanzspezifischen Change Data Capture-Objekte verwendet wird. Die Aufzeichnungsinstanz darf nicht NULL sein.  
   
      Wenn kein Name angegeben wird, wird der Name aus dem Quellschemanamen und dem Quelltabellennamen im Format `<schema-name>_<table-name>`abgeleitet. Der Name der Aufzeichnungsinstanz darf nicht länger als 100 Zeichen sein und muss innerhalb der Datenbank eindeutig sein.  
   
      Sie können in dieser Spalte in jede Zelle klicken, um die **capture_instance**manuell zu bearbeiten.  
   
--   **Rolle "Sicherheit"**: Der Name der Datenbank gatingrolle, die Zugriff auf Änderungsdaten gesteuert wird.  
+-   **Security Role**: Der Name der Datenbank-Gatingrolle, mit deren Hilfe der Zugriff auf die Änderungsdaten gesteuert wird.  
   
      Sie können in dieser Spalte in jede Zelle klicken, um die **security_role**manuell zu bearbeiten.  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756154"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Assistent für verwendungsbasierte Optimierung (F1-Hilfe)
   Der Assistent für verwendungsbasierte Optimierung ist hinsichtlich der Ausgabe dem Aggregationsentwurfs-Assistenten ähnlich und wird zum Entwerfen von Aggregationen für eine Partition verwendet. Die vom Assistenten für verwendungsbasierte Optimierung entworfenen Aggregationen basieren jedoch auf bestimmten Verwendungsmustern, die in dem Abfrageprotokoll einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz aufgezeichnet wurden. Aggregationen führen zu Leistungssteigerungen, indem sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ermöglichen, vorher berechnete Ergebnisse direkt aus dem Cubespeicher abzurufen, statt die Daten aus einer zugrunde liegenden Datenquelle bei jeder Abfrage erneut zu berechnen.  

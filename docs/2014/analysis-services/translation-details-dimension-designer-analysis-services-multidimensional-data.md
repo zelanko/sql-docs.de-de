@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756329"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Übersetzungsdetails** auf der Registerkarte **Übersetzungen** im Dimensions-Designer können Sie Übersetzungen für die aktuell ausgewählte Dimension definieren und verwalten.  
@@ -29,7 +29,7 @@ ms.locfileid: "48179020"
   
 2.  Klicken Sie auf die Registerkarte **Übersetzungen** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardsprache**  
  Legt die Namen der Dimensionsobjekte in der Standardsprache fest.  
   
@@ -38,31 +38,31 @@ ms.locfileid: "48179020"
   
 -   Dimension  
   
-     `Caption` und `AttributeAllMember` Eigenschaften  
+     `Caption`- und `AttributeAllMember`-Eigenschaften  
   
--   attribute  
+-   Attribut  
   
-     `Caption`, `AttributeHierarchyDisplayFolder`, und `NamingTemplate` Eigenschaften  
+     `Caption`- `AttributeHierarchyDisplayFolder`-Eigenschaft und `NamingTemplate`-Eigenschaft  
   
     > [!NOTE]  
     >  Die `NamingTemplate`-Eigenschaft ist nur für übergeordnete Attribute verfügbar.  
   
 -   Hierarchy  
   
-     `Caption` und `AllMemberName` Eigenschaften  
+     `Caption`- und `AllMemberName`-Eigenschaften  
   
 -   Ebene  
   
-     `Caption` Eigenschaft  
+     `Caption`-Eigenschaft  
   
- **\<Sprache >**  
+ **\<Language>**  
  Geben Sie den Eigenschaftswert des Dimensionsobjekts in der ausgewählten Sprache an, oder wählen Sie ihn aus. In Abhängigkeit von der bearbeiteten Eigenschaft werden zusätzliche Dialogfelder geöffnet, wenn Sie auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken:  
   
--   `NamingTemplate` Eigenschaft  
+-   `NamingTemplate`-Eigenschaft  
   
      Zeigt das [Dialogfeld „Vorlage zur Ebenenbenennung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md) an.  
   
--   `Caption` (für Attribute)  
+-   `Caption`-Eigenschaft (für Attribute)  
   
      Zeigt das [Dialogfeld „Attributdatenübersetzung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   

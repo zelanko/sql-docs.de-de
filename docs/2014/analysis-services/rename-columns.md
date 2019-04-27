@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748242"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
   In dieser Lektion benennen Sie viele der Spalten in jeder importierten Tabelle um. Durch das Umbenennen von Spalten sind diese leichter identifizierbar und navigierbar sowohl im Modell-Designer als auch in einer Clientanwendung bei der Auswahl von Feldern durch Benutzer. Weitere Informationen finden Sie unter [Umbenennen einer Tabelle oder Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "52416691"
 > [!IMPORTANT]  
 >  Das Umbenennen von Spalten ist zum Abschluss dieses Lernprogramms nicht notwendig. Übrige Lektionen, insbesondere diejenigen über die Erstellung von Beziehungen und berechneten Spalten und Measures mit DAX-Formeln, verweisen auf die in dieser Lektion beschriebenen Spaltenanzeigenamen. Wenn Sie Spalten umbenennen möchten, sind die DAX-Formeln in den Lektionen 5, 6 und 7 zu bearbeiten, um die ursprünglichen in dieser Lektion bereitgestellten Namen der Quellspalten zu verwenden.  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  

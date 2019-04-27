@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779112"
 ---
 # <a name="migrate-query-plans"></a>Migrieren von Abfrageplänen
   Im Allgemeinen führt das Upgrade einer Datenbank auf die aktuellste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einer besseren Abfrageleistung. Bei unternehmenswichtigen Abfragen, deren Leistung sorgfältig optimiert wurde, möchten Sie jedoch möglicherweise vor dem Upgrade die entsprechenden Abfragepläne aufzeichnen. Zu diesem Zweck können Sie für jede Abfrage eine Planhinweisliste erstellen. Falls der Abfrageoptimierer nach der Aktualisierung für immer mehr Abfragen einen weniger effizienten Plan wählt, können Sie die Planhinweislisten aktivieren und den Abfrageoptimierer zwingen, die alten Pläne zu verwenden.  
@@ -41,7 +41,7 @@ ms.locfileid: "53352517"
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie vor der Aktualisierung durch Erstellen einer Planhinweisliste den Plan für eine Abfrage aufzeichnen können.  
   
-### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
+### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
  Der in der Planhinweisliste aufgezeichnete Abfrageplan muss im XML-Format vorliegen. Abfragepläne im XML-Format können auf folgende Weise erstellt werden:  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  

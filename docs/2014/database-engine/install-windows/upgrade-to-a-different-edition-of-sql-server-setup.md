@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774574"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Aktualisieren auf eine andere Edition von SQL Server 2014 (Setup)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup unterstützt das Editionsupgrade unter den verschiedenen Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md). Bevor Sie das Editionsupgrade einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]initiieren, überprüfen Sie die folgenden Themen:  
@@ -29,7 +29,7 @@ ms.locfileid: "51019045"
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Clusterumgebung:** Die Ausführung eines Editionsupgrades auf einem der Knoten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clusters reicht aus. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Clusterumgebung nutzen:** Ausführung eines editionsupgrades auf einem Knoten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clusters reicht. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787093"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Timeout für Remoteabfragen
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Timeout für Remoteabfragen** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Timeout für Remoteabfragen** können Sie angeben, wie viel Zeit (in Sekunden) ein Remotevorgang in Anspruch nehmen kann, bevor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Timeout auftritt. Der Standardwert für diese Option beträgt 600, was einer Wartezeit von 10 Minuten entspricht. Dieser Wert gilt für eine von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Remoteabfrage initiierte ausgehende Verbindung. Der Wert hat keine Auswirkungen auf von [!INCLUDE[ssDE](../../includes/ssde-md.md)]empfangene Abfragen. Wenn Sie das Timeout deaktivieren möchten, setzen Sie den Wert auf 0. Bei einer Abfrage wird dann bis zum Abschluss gewartet.  

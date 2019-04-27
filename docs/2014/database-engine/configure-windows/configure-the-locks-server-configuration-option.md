@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787210"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Sperren
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Sperren** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Sperren** können Sie die maximale Anzahl verfügbarer Sperren festlegen und so die Menge an Arbeitsspeicher begrenzen, die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für Sperren verwendet. Die Standardeinstellung ist 0. Dadurch kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sperrstrukturen je nach Systemanforderungen dynamisch zuordnen oder die Zuordnung von Sperrstrukturen aufheben.  

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774753"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)
   In diesem Dialogfeld können Sie das allgemeine Bearbeitungsverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , und erweitern Sie anschließend **Text-Editor**. Erweitern Sie als Nächstes **Nur Text** , und klicken Sie dann auf **Allgemein**.  

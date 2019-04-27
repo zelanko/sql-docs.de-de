@@ -97,11 +97,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746722"
 ---
 # <a name="olap-properties"></a>OLAP-Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten OLAP-Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -288,7 +288,7 @@ ms.locfileid: "48122140"
  `ROLAPDimensionProcessingEffort`  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="query"></a>Dataseteigenschaften  
+## <a name="query"></a>Abfrage  
  `AggregationsUseEnabled`  
  Eine boolesche Eigenschaft, die definiert, ob zur Laufzeit gespeicherte Aggregationen verwendet werden. Diese Eigenschaft lässt zu, dass Aggregationen für Informationszwecke oder Vergleichstests ohne Ändern des Aggregationsentwurfs oder erneutes Verarbeiten deaktiviert werden.  
   

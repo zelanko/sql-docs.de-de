@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779755"
 ---
 # <a name="feature-reference-database-engine"></a>Funktionsreferenz (Datenbank-Engine)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Datenbankobjekten und Daten verwenden können. Daneben stehen Tools zur Verfügung, mit denen Sie die Server- und die Datenbankleistung überwachen und etwaige Fehler beheben sowie Funktionen, Dienste und Netzwerkprotokolle aktivieren und deaktivieren können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern dieser Tools und Anwendungen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48206670"
  Um während der Ausführung eines Tools oder einer Anwendung auf ein Thema zur Benutzeroberfläche zuzugreifen, drücken Sie F1. Sie können auch auf <localizedText>Hilfe</localizedText> klicken, während das Dialogfeld, die Webseite oder der Assistent geöffnet ist.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Starten und Verwenden des Datenbankoptimierungsratgebers](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Start and Use the Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Stellt Hilfeinformationen zum [!INCLUDE[ssDE](../includes/ssde-md.md)] -Optimierungsratgeber und zu den zugehörigen Dialogfeldern bereit.  
   
  Stellt Hilfeinformationen zu den Tools, Assistenten und Diensten bereit, die im Lieferumfang von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  

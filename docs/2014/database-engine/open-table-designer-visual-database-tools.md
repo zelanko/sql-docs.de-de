@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774184"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Öffnen des Tabellen-Designers (Visual Database Tools)
   Der Tabellen-Designer ist ein visuelles Tool, das das Entwerfen und Anzeigen von Datenbanktabellen ermöglicht, mit denen Sie eine Verbindung hergestellt haben. Mit dem Tabellen-Designer können Sie Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen.  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787038"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage
   In diesem Thema wird beschrieben, wie so konfigurieren Sie die `min memory per query` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die `min memory per query` Option gibt an, die Mindestmenge an Arbeitsspeicher (in KB), die für die Ausführung einer Abfrage zugeordnet wird. Z. B. wenn `min memory per query` wird festgelegt auf 2.048 KB, die Abfrage wird sichergestellt, dass mindestens so viel Gesamtarbeitsspeicher. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  

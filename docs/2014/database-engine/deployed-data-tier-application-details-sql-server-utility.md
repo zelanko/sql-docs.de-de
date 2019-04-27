@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754093"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Bereitgestellte Datenebenenanwendungen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Datenebenenanwendungen, Verlaufsdaten zur CPU-Auslastung und Details zur Speicherplatzauslastung auf Dateiebene sowie die Möglichkeit, Richtlinienschwellenwerte anzuzeigen und zu aktualisieren. Richtlinienschwellenwerte können auf der Ebene der Datenebenenanwendung für die CPU-Auslastung sowie Datenbankdateien und Protokolldateien gesteuert werden. Sie können auch Eigenschaftendetails für einzelne Datenebenenanwendungen anzeigen.  

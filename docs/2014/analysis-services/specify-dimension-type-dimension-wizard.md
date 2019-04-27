@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746732"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Dimensionstyp angeben (Dimensions-Assistent)
   Mithilfe der Seite **Dimensionstyp angeben** können Sie den Dimensionstyp definieren und der Dimension spezielle Attributtypen hinzufügen, die mit der ausgewählten Dimension verknüpft sind.  
@@ -30,7 +30,7 @@ ms.locfileid: "50145585"
  **Dimensionstyp**  
  Wählen Sie den Dimensionstyp für die Dimension aus. In der folgenden Tabelle sind die verfügbaren Dimensionstypen aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Konten**|Kontodimensionen enthalten Daten und Metadaten, die eine Kontenliste darstellen.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Stücklisten (oder BOM)-Dimensionen sind reguläre Dimensionen, in denen Daten und Metadaten Informationen zum Bestand sowie zur Produktion darstellen, z. B. Teilelisten für Produkte.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  

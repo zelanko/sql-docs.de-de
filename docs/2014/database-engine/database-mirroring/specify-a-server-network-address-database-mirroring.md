@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755056"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
   Beim Einrichten einer Datenbank-Spiegelungssitzung ist für jede Serverinstanz eine Server-Netzwerkadresse erforderlich. Die Server-Netzwerkadresse der Serverinstanz muss die Instanz eindeutig identifizieren, indem sie eine Systemadresse und die Nummer des Ports angibt, den die Instanz überwacht.  

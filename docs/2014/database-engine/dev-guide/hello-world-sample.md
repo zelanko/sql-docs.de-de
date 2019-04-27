@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781253"
 ---
 # <a name="hello-world-sample"></a>Beispiel "Hello World"
   Das Hello World-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten Prozedur, die auf einer CLR (Common Language Runtime)-Integration basiert, ausgeführt werden müssen. Diese Beispiel zeigt außerdem, wie Sie Daten über einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Aufrufer zurückgegeben wird, zurückgeben können.  

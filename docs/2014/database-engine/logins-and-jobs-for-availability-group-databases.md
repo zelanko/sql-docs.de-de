@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774282"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe (SQL Server)
   Sie sollten routinemäßig den gleichen Satz von Benutzeranmeldungen und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agentaufträgen auf jeder primären Datenbank einer AlwaysOn-Verfügbarkeitsgruppe und den entsprechenden sekundären Datenbanken beibehalten. Die Anmeldungen und die Aufträge müssen auf jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reproduziert werden, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  

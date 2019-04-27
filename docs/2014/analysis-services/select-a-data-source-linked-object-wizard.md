@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d966c4602a870a51c64dc7cf86e5363b99a4e76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747922"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Datenquelle auswählen (Assistent für verknüpfte Objekte)
   Auf der Seite **Datenquelle auswählen** können Sie die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle mit den Objekten auswählen, die für Links oder Import verwendet werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Analysis Services-Datenquellen**  
  Wählen Sie die Datenquelle mit dem Objekt aus, das verknüpft werden soll.  
   

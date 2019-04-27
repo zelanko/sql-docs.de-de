@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780177"
 ---
 # <a name="unused-assembly-cleanup"></a>Bereinigung nicht verwendeter Assemblys
   Das `AssemblyCleanup`-Beispiel enthält eine gespeicherte .NET-Prozedur, die nicht verwendete Assemblys in der aktuellen Datenbank bereinigt, indem sie die Metadatenkataloge abfragt. Der einzige Parameter, `visible_assemblies`, wird verwendet, um anzugeben, ob nicht verwendete sichtbare Assemblys gelöscht werden sollen. Durch den Wert 'false' wird standardmäßig angegeben, dass nur nicht verwendete, unsichtbare Assemblys gelöscht werden, andernfalls werden alle nicht verwendeten Assemblys gelöscht. Der Satz an nicht verwendeten Assemblys umfasst die Assemblys, für die kein Einstiegspunkt definiert ist (Routinen, Typen und Aggregate) und auf die keine anderen Assemblys direkt oder indirekt verweisen.  

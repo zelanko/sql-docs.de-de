@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749001"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Starten oder Beenden eines PowerPivot für SharePoint-Servers
   PowerPivot-Systemdienst und [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz arbeiten zusammen mit dem gleichen lokalen Anwendungsserver, die koordinierte Anforderungs- und Datenverarbeitung in einer SharePoint-Farm zu unterstützen.  

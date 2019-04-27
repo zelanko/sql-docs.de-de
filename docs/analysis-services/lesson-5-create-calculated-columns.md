@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752511"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lektion 5: Erstellen von berechneten Spalten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von
   
 Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die Schritte sind für jede Aufgabe etwas anders. Damit sollen Ihnen verschiedene Methoden zum Erstellen neuer Spalten, zum Umbenennen der Spalten und zum Platzieren der Spalten an verschiedenen Positionen in einer Tabelle aufgezeigt werden.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md). 
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  
   
@@ -122,7 +122,7 @@ Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie i
   
 5.  Ziehen Sie die Spalte zwischen die **"SalesAmount"** Spalte und die **"taxamt"** Spalte. 
  
-      ![als-tabellarische-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     Die berechnete Margin-Spalte wird verwendet, um die Analyse von Gewinnspannen für jeden Verkauf.  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774414"
 ---
 # <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
   Zusätzlich zu speicheroptimierten Tabellen (für den effizienten Datenzugriff) und nativ kompilierten gespeicherten Prozeduren (für effiziente Abfrageverarbeitung und Ausführung von Geschäftslogik) wird mit [!INCLUDE[hek_2](../includes/hek-2-md.md)] eine dritte Objektart eingeführt: speicheroptimierte Tabellentypen. Eine Tabellenvariable, die mithilfe eines speicheroptimierten Tabellentyps erstellt wird, ist eine speicheroptimierte Tabellenvariable.  
@@ -36,7 +36,7 @@ ms.locfileid: "58530742"
   
 -   Tabellenvariablen können zum Simulieren von Cursorn in systemintern kompilierten gespeicherten Prozeduren verwendet werden, um Einschränkungen der Oberfläche in systemintern kompilierten gespeicherten Prozeduren zu umgehen.  
   
- Wie bei speicheroptimierten Tabellen erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine DLL für jeden speicheroptimierten Tabellentyp. (Die Kompilierung wird aufgerufen, wenn der speicheroptimierte Tabellentyp erstellt wird und nicht, wenn er zum Erstellen von speicheroptimierten Tabellenvariablen verwendet wird.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellenvariablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
+ Wie bei speicheroptimierten Tabellen erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine DLL für jeden speicheroptimierten Tabellentyp. (Kompilierung wird aufgerufen, wenn der Typ eine Speicheroptimierte Tabelle erstellt wird und nicht verwendet werden, wenn zur Erstellung von speicheroptimierten Tabellenvariablen verwendet.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellenvariablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
   
  Das folgende Beispiel zeigt einen speicheroptimierten Tabellentyp aus dem AdventureWorks-basierten In-Memory-OLTP-Beispiel ([Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752957"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden finden wichtige Elemente der RDS-Programmiermodell:  
@@ -74,10 +74,10 @@ Im folgenden finden wichtige Elemente der RDS-Programmiermodell:
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Programmiermodell mit Objekten](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

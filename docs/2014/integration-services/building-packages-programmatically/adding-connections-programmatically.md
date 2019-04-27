@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772223"
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
   Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, bei denen Verbindungsklassen Methoden wie die `Open`- oder die `Connect`-Methode verfügbar machen, um eine physische Verbindung mit der Datenquelle herzustellen, verwaltet die Runtime-Engine alle Verbindungen für das Paket während der Ausführung.  

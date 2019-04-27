@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70fa82ad94ed82c7cfbf809556bfde72edb90da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749099"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Für Excel-Arbeitsmappen, die PowerPivot-Daten enthalten, gibt Excel Services diesen Fehler zurück, wenn keine Verbindung mit eingebetteten Datenquellen hergestellt werden kann.  
@@ -25,7 +25,7 @@ ms.locfileid: "48126400"
   
 |||  
 |-|-|  
-|Gilt für|PowerPivot für SharePoint|  
+|Betrifft|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Excel Services sind dafür konfiguriert, den externen Datenzugriff zu verweigern.|  
 |Meldungstext|Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten|  

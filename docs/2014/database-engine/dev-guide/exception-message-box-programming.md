@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753373"
 ---
 # <a name="exception-message-box-programming"></a>Programmierung eines Ausnahmemeldungsfelds
   Das Ausnahmemeldungsfeld ist eine programmgesteuerte Schnittstelle, die mit installiert wird, und verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Komponenten. Das Ausnahmemeldungsfeld ist eine unterstützte verwaltete Assembly, die Sie in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen bedeutend zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen. Weil das Ausnahmemeldungsfeld von allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)] installiert wird, können Sie es ohne zusätzliche Konfiguration auf jedem Computer verwenden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientkomponenten installiert wurden.  

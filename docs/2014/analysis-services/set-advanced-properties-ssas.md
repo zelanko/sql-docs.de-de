@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68a3a90500149e982cc45ad417f3dd68ef524140
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746686"
 ---
 # <a name="set-advanced-properties-ssas"></a>Erweiterte Eigenschaften festlegen (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie zusätzliche Eigenschaftseinstellungen für eine Datenquellenverbindung angeben. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

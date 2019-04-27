@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ff423ce9c274e8244b931e3e5816c6acefd1ba5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755881"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Hinzufügen von Wissen zur Wissensdatenbank
   In diesem Thema werden die Methoden beschrieben, mit denen Sie einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) Wissen hinzufügen können. Bevor Sie Data Quality-Vorgänge ausführen können, müssen Sie Wissen zu den Daten haben. Sie erlangen dieses Wissen, indem Sie eine Data Quality-Wissensdatenbank erstellen und verwalten und ihr Wissen zu einem bestimmten Typ von Datenquelle hinzufügen. Die Wissensdatenbank ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten.  

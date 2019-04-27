@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748082"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Umrechnungstyp auswählen (Business Intelligence-Assistent)
   Auf der Seite **Umrechnungstyp auswählen** können Sie die Beziehung zwischen lokalen Währungen und Berichtswährungen für Transaktionen definieren, die in mehreren Währungen gespeichert werden. Eine lokale Währung ist die Währung, in der die Transaktionen für die auf der Seite **Measures auswählen** ausgewählten Measures gespeichert werden. Eine Berichtswährung ist die Währung, in die die auf der Seite **Measures auswählen** ausgewählten Transaktionen umgerechnet werden.  
@@ -26,7 +26,7 @@ ms.locfileid: "48092314"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **m:n**  
  Speichert Transaktionen mithilfe lokaler Währungen. Mithilfe der Währungsumrechnungsfunktion werden solche Transaktionen in die Pivotwährung umgerechnet, die auf der Seite **Optionen für die Währungsumrechnung festlegen** angegeben ist, und danach in eine oder mehrere weitere Berichtswährungen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48092314"
  Die Pivotwährung kann z. B. auf US-Dollar (USD) festgelegt werden, und die Transaktionen werden in der Faktentabelle in USD gespeichert. Durch das Auswählen dieser Option werden diese Transaktionen aus der Pivotwährung in die angegebenen Berichtswährungen umgerechnet. Dadurch können Transaktionen in der angegebenen Pivotwährung gespeichert und entweder in der angegebenen Pivotwährung oder in einer beliebigen anderen der auf der Seite **Währungen für die Berichterstellung angeben** angegebenen Berichtswährungen angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

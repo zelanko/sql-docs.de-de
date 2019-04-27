@@ -15,27 +15,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773875"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparente Datenverschlüsselung in Azure SQL-Datenbank
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] Transparente datenverschlüsselung (Vorschau) unterstützt Maßnahmen zum Schutz der Bedrohung durch schädliche Aktivitäten, durch Ausführen von in Echtzeit Ver- und Entschlüsselung der Datenbank, die zugehörigen Sicherungen und die Transaktionsprotokolldateien im Ruhezustand ohne Änderungen an der Anwendung.  
+  Die transparente Datenverschlüsselung in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (Vorschau) unterstützt Maßnahmen zum Schutz vor bösartigen Aktivitäten, indem sie die Verschlüsselung und Entschlüsselung der Datenbank in Echtzeit sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen vornimmt, ohne Änderungen an der Anwendung zu erfordern.  
   
  TDE verschlüsselt den Speicher einer ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. In [!INCLUDE[ssSDS](../includes/sssds-md.md)] ist der Datenbank-Verschlüsselungsschlüssel durch ein integriertes Serverzertifikat geschützt. Das integrierte Serverzertifikat ist für jeden [!INCLUDE[ssSDS](../includes/sssds-md.md)] -Server eindeutig. Wenn sich eine Datenbank in einer GeoDR-Beziehung befindet, ist sie auf jedem Server durch einen anderen Schlüssel geschützt. Wenn zwei Datenbanken mit dem gleichen Server verbunden sind, verwenden sie das gleiche integrierte Zertifikat. [!INCLUDE[msCoName](../includes/msconame-md.md)] tauscht diese Zertifikate mindestens alle 90 Tage automatisch untereinander. Eine allgemeine Beschreibung von TDE finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] unterstützt die Integration des Azure-Schlüsseltresors mit TDE nicht. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann bei der Ausführung auf einem virtuellen Azure-Computer einen asymmetrischen Schlüssel aus dem Schlüsseltresor verwenden. Weitere Informationen finden Sie unter [Beispiel A: Transparent Data Encryption mithilfe eines asymmetrischen Schlüssels aus Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] unterstützt die Integration des Azure-Schlüsseltresors mit TDE nicht. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann bei der Ausführung auf einem virtuellen Azure-Computer einen asymmetrischen Schlüssel aus dem Schlüsseltresor verwenden. Weitere Informationen finden Sie unter [Beispiel A: Transparente datenverschlüsselung mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
   
 ||  
 |-|  
 |**Gilt für**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Vorschau in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Dies ist zurzeit eine Vorschaufunktion. Ich bestätige und zustimmen, dass diese Implementierung des [!INCLUDE[ssSDS](../includes/sssds-md.md)] transparente datenverschlüsselung in meinen Datenbanken den vorschaubedingungen in meinem Lizenzvertrag (z. B. Enterprise Agreement, Microsoft Azure Agreement oder Microsoft Online-Abonnement unterliegt Vereinbarung) sowie allen anwendbaren [zusätzliche Nutzungsbestimmungen für Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  Dies ist zurzeit eine Vorschaufunktion. Ich bestätige und erkläre mich damit einverstanden, dass diese Implementierung von transparenter [!INCLUDE[ssSDS](../includes/sssds-md.md)] -Datenverschlüsselung in meinen Datenbanken den Vorschaubedingungen in meinem Lizenzvertrag (z. B. das Enterprise Agreement, Microsoft Azure Agreement oder Microsoft Online-Abonnementvertrag) und gegebenenfalls den [Nutzungsbedingungen für Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)unterliegt.  
   
- Die Vorschau des Status von TDE gilt auch in der Teilmenge der geografischen Regionen, in denen die Versionsproduktfamilie V12 von [!INCLUDE[ssSDS](../includes/sssds-md.md)] als jetzt allgemein verfügbar angekündigt wird. TDE für [!INCLUDE[ssSDS](../includes/sssds-md.md)] dient nicht zur Verwendung in den Produktionsdatenbanken bis [!INCLUDE[msCoName](../includes/msconame-md.md)] ankündigt, dass TDE von der Vorschau zu GA heraufgestuft wird. Weitere Informationen zu [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 finden Sie unter [Neuerungen in Azure SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ Die Vorschau des Status von TDE gilt auch in der Teilmenge der geografischen Regionen, in denen die Versionsproduktfamilie V12 [!INCLUDE[ssSDS](../includes/sssds-md.md)] als jetzt allgemein verfügbar angekündigt wird. TDE für [!INCLUDE[ssSDS](../includes/sssds-md.md)] dient nicht zur Verwendung in den Produktionsdatenbanken bis [!INCLUDE[msCoName](../includes/msconame-md.md)] ankündigt, dass TDE von der Vorschau zu GA heraufgestuft wird. Weitere Informationen zu [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 finden Sie unter [Neuerungen in Azure SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
 ##  <a name="Permissions"></a> Berechtigungen  
  Um sich für die Vorschau zu registrieren und TDE über das Azure-Portal mithilfe der REST-API oder mithilfe von PowerShell zu konfigurieren,müssen Sie als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager verbunden sein.  
@@ -44,7 +44,7 @@ ms.locfileid: "48049780"
   
 -   Sie müssen bereits für die TDE-Vorschau registriert sein.  
   
--   Auf die Verschlüsselungsschlüssel der Datenbank erstellen müssen eine [!INCLUDE[ssSDS](../includes/sssds-md.md)] Administrator, oder Sie müssen Mitglied der der **"DBManager"** -Rolle in der Master-Datenbank und über die **Steuerelement** Berechtigung für die Datenbank.  
+-   Zum Erstellen des Datenbank-Verschlüsselungsschlüssels müssen Sie ein [!INCLUDE[ssSDS](../includes/sssds-md.md)] -Administrator oder ein Mitglied der Rolle **dbmanager** in der Masterdatenbank sein und über die Berechtigung **STEUERN** für die Datenbank verfügen.  
   
 -   Zum Ausführen der Anweisung ALTER DATABASE mit der Option SET ist lediglich die Mitgliedschaft in der Rolle **dbmanager** erforderlich.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48049780"
     GO  
     ```  
   
-3.  Überwachen Sie den Verlauf der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)], Datenbankbenutzer mit der **VIEW DATABASE STATE** Berechtigung kann Abfragen, die `encryption_state` Spalte die [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) anzeigen.  
+3.  Überwachen Sie den Verlauf der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)], Datenbankbenutzer mit der **VIEW DATABASE STATE** Berechtigung kann Abfragen, die `encryption_state` Spalte die [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) ansehen.  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Aktivieren von TDE für SQL-Datenbank mithilfe von PowerShell  
  Mithilfe von Azure PowerShell können Sie den folgenden Befehl ausführen, um TDE ein- oder auszuschalten. Sie müssen eine Verbindung Ihres Kontos mit dem PS-Fenster herstellen, bevor Sie den Befehl ausführen. In den folgenden Schritten wird angenommen, dass Sie sich bereits für die Vorschau registriert haben. Weitere Informationen zu PowerShell finden Sie unter [Installieren und Konfigurieren von Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -146,7 +146,7 @@ ms.locfileid: "48049780"
     GO  
     ```  
   
-3.  Überwachen Sie den Verlauf der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)], Datenbankbenutzer mit der **VIEW DATABASE STATE** Berechtigung kann Abfragen, die `encryption_state` Spalte die [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) anzeigen.  
+3.  Überwachen Sie den Verlauf der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)], Datenbankbenutzer mit der **VIEW DATABASE STATE** Berechtigung kann Abfragen, die `encryption_state` Spalte die [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) ansehen.  
   
 ##  <a name="Working"></a> Arbeiten mit durch TDE geschützten Datenbanken in [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
  Für Vorgänge in Azure brauchen Datenbanken nicht entschlüsselt zu werden. Die TDE-Einstellungen für die Quelldatenbank oder die primäre Datenbank werden transparent an das Ziel vererbt. Dazu gehören auch Vorgänge, die dieses beinhalten:  
@@ -162,7 +162,7 @@ ms.locfileid: "48049780"
 -   Erstellen einer Datenbankkopie  
   
 ##  <a name="Moving"></a> Verschieben einer TDE-geschützten Datenbank auf verwenden. Bacpac-Dateien  
- Beim Exportieren einer durch TDE geschützten Datenbank, die über die Funktion "Datenbank exportieren" in der [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] Portal oder die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import / Export-Assistenten den Inhalt der Datenbank nicht verschlüsselt. Die Inhalte werden in BACPAC-Dateien gespeichert, die nicht verschlüsselt sind.  Achten Sie darauf, die BACPAC-Dateien in geeigneter Weise zu schützen und TDE zu aktivieren, sobald der Import der neuen Datenbank abgeschlossen ist.  
+ Beim Exportieren einer durch TDE geschützten Datenbank mithilfe der Funktion „Datenbank exportieren“ im [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] -Portal oder im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import- und -Export-Assistenten werden die Datenbankinhalte nicht verschlüsselt. Die Inhalte werden in BACPAC-Dateien gespeichert, die nicht verschlüsselt sind.  Achten Sie darauf, die BACPAC-Dateien in geeigneter Weise zu schützen und TDE zu aktivieren, sobald der Import der neuen Datenbank abgeschlossen ist.  
   
 ## <a name="related-sql-server-topic"></a>Verwandte SQL Server-Themen  
  [Aktivieren von TDE mit EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1fa743255397aee03b71a8b7d77f79237a8b009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744049"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47827728"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
 |**principal_id**|**int**|Die ID des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
-|**SID**|**varbinary(85)**|Sicherheitsbezeichner (SID, Security-IDentifier) des Prinzipals. Bei einem Windows-Prinzipal entspricht dies Windows SID.|  
+|**sid**|**varbinary(85)**|Sicherheitsbezeichner (SID, Security-IDentifier) des Prinzipals. Bei einem Windows-Prinzipal entspricht dies Windows SID.|  
 |**type**|**char(1)**|Prinzipaltyp:<br /><br /> S = SQL-Anmeldename<br /><br /> U = Windows-Anmeldename<br /><br /> G = Windows-Gruppe<br /><br /> R = Serverrolle<br /><br /> C = Einem Zertifikat zugeordneter Anmeldename<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Anmeldename|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Prinzipaltyps:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Anmeldename ist deaktiviert.|  
@@ -71,7 +71,7 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

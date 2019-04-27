@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749565"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
   Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer PowerPivot-Arbeitsmappe in der gleichen Farm umleitet.  
@@ -99,7 +99,7 @@ ms.locfileid: "48095788"
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot BI-Semantikmodellverbindung &#40;bism-Datei&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

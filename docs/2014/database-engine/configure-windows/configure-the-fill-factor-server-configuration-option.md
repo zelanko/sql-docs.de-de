@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786781"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Füllfaktor
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Füllfaktor** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Der Füllfaktor wird zur erweiterten Leistungsoptimierung beim Speichern von Indexdaten bereitgestellt. Wenn ein Index erstellt oder neu erstellt wird, bestimmt der Füllfaktorwert den prozentualen Speicherplatz, der auf jeder Blattebenenseite mit Daten gefüllt werden soll; der übrige freie Speicherplatz wird für zukünftige Erweiterungen reserviert. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

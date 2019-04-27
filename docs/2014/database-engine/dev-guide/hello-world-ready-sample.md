@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781171"
 ---
 # <a name="hello-world-ready-sample"></a>Beispiel für "Hello World Ready"
   Das Hello World Ready-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten World-Ready-Prozedur auf der Basis einer CLR (Common Language Runtime)-Integration ausgeführt werden müssen. Eine World-Ready-Komponente lässt sich problemlos in verschiedene Sprachen für unterschiedliche Märkte in aller Welt lokalisieren, ohne den Quellcode der Komponente zu ändern. Dieses Beispiel zeigt außerdem, wie Sie Daten über einen Ausgabeparameter und einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Client zurückgegeben wird, zurückgeben können. Das Beispiel ist fast identisch mit dem Hello World-Beispiel, die Anwendung ist jedoch einfacher und sicherer zu lokalisieren. Das Ändern von lokalisiertem Text erfordert Folgendes:  

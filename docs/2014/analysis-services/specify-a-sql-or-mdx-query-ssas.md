@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a49884701445668aeb4f3785ed3f4a8ff13a1ee1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746534"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>SQL-Abfrage oder MDX-Abfrage angeben (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Daten mit einer SQL- oder MDX-Abfrage importieren. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

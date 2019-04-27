@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756020"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Anzeigen von Data Mining-Modellen in Visio (Data Mining-Add-Ins)
   Mit Visio-Shapes für das Data Mining können Sie eine Verbindung mit einem Server herstellen und ein Diagramm erstellen, das ein vorhandenes Data Mining-Modell darstellt. Die Diagramme können anschließend mithilfe von Visio-Steuerelementen angepasst werden; Sie können jedoch auch einen Drilldown auf Daten ausführen, einige der zugrunde liegenden Statistiken verfügbar machen und mit dem zugrunde liegenden Modell arbeiten.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050640"
 |Visio-Shape|Unterstützte Modelle|  
 |-----------------|----------------------|  
 |Entscheidungsstruktur|Verwenden Sie dieses Shape für Modelle, die auf dem Decision Tree- oder Linear Regression-Algorithmus basieren.|  
-|Abhängigkeitsnetzwerk|Verwenden Sie dieses Shape für Diagramme, die auf einem der folgenden Algorithmen basieren: Naive Bayes, Decision Trees oder Association Rules.|  
+|Abhängigkeitsnetzwerk|Verwenden Sie dieses Shape für Modelle, die auf einem der folgenden Algorithmen basieren: Naive Bayes, Decision Trees oder Association Rules.|  
 |Cluster|Verwenden Sie dieses Shape für Modelle, die auf den Clustering-Algorithmen basieren.|  
   
  Abhängig vom Datentyp im Miningmodell werden vom Assistenten möglicherweise verschiedene Optionen angezeigt. Spalten, die fortlaufende Zahlen enthalten, werden beispielsweise anders visualisiert als Kategorievariablen.  

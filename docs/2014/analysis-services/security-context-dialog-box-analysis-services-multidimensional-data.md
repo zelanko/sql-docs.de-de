@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748124"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Sicherheitskontext' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Sicherheitskontext** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie den Benutzer und die Rolle ändern, die zur Untersuchung von Daten oder Metadaten für ein [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden. Sie können das Dialogfeld **Sicherheitskontext** anzeigen, indem Sie im Cube-Designer auf der Registerkarte **Berechnungen** oder **Browser** im Bereich **Symbolleiste** auf **Sicherheitskontext** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktueller Benutzer**  
  Wählen Sie diese Option aus, um zum Anzeigen der Daten und Metadaten des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekts die Domäne und den Benutzernamen des aktuellen Benutzers zu verwenden.  
   

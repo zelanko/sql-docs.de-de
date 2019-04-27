@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747712"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Schlüsselspalte für eine geschachtelte Tabelle auswählen (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Schlüsselspalte für eine geschachtelte Tabelle auswählen** , um eine Spalte zu bestimmen, die als Schlüssel für die neue geschachtelte Tabelle fungieren soll. Sobald Sie das Dialogfeld schließen, wird der Miningstruktur eine neue Tabelle mit der designierten Schlüsselspalte hinzugefügt. Sie können der geschachtelten Tabelle zusätzliche Spalten hinzufügen, indem Sie mit der rechten Maustaste auf die Struktur klicken und dann auf **Spalte hinzufügen**klicken. Das Dialogfeld enthält unterschiedliche Optionen, abhängig davon, ob Sie mit einem OLAP-Miningmodell oder einem relationalen Miningmodell arbeiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quelltabelle**  
  Die Tabelle, auf der das Miningmodell basiert.  
   

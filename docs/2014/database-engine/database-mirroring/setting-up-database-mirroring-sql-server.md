@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754455"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Einrichten der Datenbankspiegelung (SQL Server)
   In diesem Abschnitt werden die Voraussetzungen, Empfehlungen und Schritte zum Einrichten der Datenbankspiegelung beschrieben. Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "48065990"
   
     3.  Stellen Sie alle Protokollsicherungen wieder her, die seit der vollständigen oder differenziellen Datenbanksicherung ausgeführt wurden.  
   
-     Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
+     Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Führen Sie die restlichen Einrichtungsschritte möglichst bald nach der Sicherung der Prinzipaldatenbank aus. Bevor Sie die Spiegelung auf den Partnern beginnen können, sollten Sie auf der ursprünglichen Datenbank eine aktuelle Protokollsicherung erstellen und in der zukünftigen Spiegelungsdatenbank wiederherstellen.  
@@ -93,9 +93,9 @@ ms.locfileid: "48065990"
         >  Im Modus für hohe Leistung muss WITNESS auf OFF festgelegt sein. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Ein Beispiel der Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der datenbankspiegelung mithilfe der Microsoft Windows-Authentifizierung, finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Sicherheit finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Ein Beispiel der Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der datenbankspiegelung mithilfe der zertifikatbasierten Sicherheit, finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48065990"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Datenbankspiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Datenbankspiegelung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)  
   

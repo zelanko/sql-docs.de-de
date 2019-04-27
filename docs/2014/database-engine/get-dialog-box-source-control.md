@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779007"
 ---
 # <a name="get-dialog-box-source-control"></a>Abrufen (Dialogfeld der Quellcodeverwaltung)
   Ruft eine schreibgeschützte Kopie des ausgewählten Elements aus der Quellcode-Verwaltungsdatenbank in den aktuell verwendeten oder einen anderen angegebenen Ordner ab.  
@@ -30,7 +30,7 @@ ms.locfileid: "48048790"
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Gibt die Aktion an, die für die abzurufenden Elemente ausgeführt wird.  
   

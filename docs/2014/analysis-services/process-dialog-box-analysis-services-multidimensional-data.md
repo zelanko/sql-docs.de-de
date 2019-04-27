@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748852"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Verarbeiten' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Verarbeiten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte verarbeiten. Das Dialogfeld **Verarbeiten** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  
@@ -33,9 +33,9 @@ ms.locfileid: "48074540"
   
 -   Klicken Sie in **Objekt-Explorer** mit der rechten Maustaste auf eine Datenbank, einen Cube, eine Measuregruppe, eine Partition, eine Dimension, eine Miningstruktur oder ein Miningmodell von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], und wählen Sie **Verarbeiten** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Objektliste**  
- Wählen Sie die zu verarbeitenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Objekte und die anzuwendenden Verarbeitungsoptionen und -einstellungen aus. Das Raster enthält die folgenden Spalten:  
+ Wählen Sie die zu verarbeitenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte und die anzuwendenden Verarbeitungsoptionen und -einstellungen aus. Das Raster enthält die folgenden Spalten:  
   
  **Objektnamen**  
  Zeigt den Namen des zu verarbeitenden Objekts an. Das Symbol links vom Namen gibt den Objekttyp an.  

@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775220"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
-  Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
+  Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor dem Upgrade  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018585"
 -   64-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können nur auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64-Bit-Server aktualisiert werden.  
   
 > [!NOTE]  
->  Wenn Sie von einer früheren Version der [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus und die maximale Anzahl unterstützter Cores. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Bei einem upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, Enterprise Edition entscheiden: Kernbasierte Lizenzierung, und klicken Sie mit der Enterprise Edition. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus und die maximale Anzahl unterstützter Cores. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt ein Upgrade von folgenden Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51018585"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 oder höher  
   
- In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] aufgeführt.  
+ In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
   
 |Upgrade von|Unterstützter Upgradepfad|  
 |------------------|----------------------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "51018585"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
 ### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- In diesem Abschnitt wird die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erläutert. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]können Sie die folgenden Schritte ausführen:  
+ In diesem Abschnitt wird die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erläutert. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]können Sie die folgenden Schritte ausführen:  
   
 -   Aktualisieren einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Instanz der Datenbank-Engine auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , indem Sie das [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Setup mithilfe des Installations-Assistenten oder von der Eingabeaufforderung ausführen.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018585"
   
 -   Stellen Sie eine Verbindung zu [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]über [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014 her.  
   
- Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind 100, 110 und 120 gültige Werte für den Datenbank-Kompatibilitätsgrad.) In [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) wird erläutert, wie sich eine Änderung des Datenbank-Kompatibilitätsgrads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungen auswirken kann.  
+ Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], gültige Werte für den Datenbank-Kompatibilitätsgrad 100, 110 und 120 zu werden.) In [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) wird erläutert, wie sich eine Änderung des Datenbank-Kompatibilitätsgrads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungen auswirken kann.  
   
  Szenarien, die in der Liste nicht aufgeführt sind, werden nicht unterstützt. Das gilt z. B. für:  
   

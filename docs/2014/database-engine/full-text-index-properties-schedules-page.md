@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779030"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Volltextindex-Eigenschaften (Seite "Zeitpläne")
-  Auf dieser Seite können Sie Zeitpläne zum Ausführen eines SQL Server-Agent-Auftrags anzeigen und erstellen, mit dem eine inkrementelle Auffüllung von Aktualisierungen für die Basistabelle des Volltextindexes gestartet wird. Wenn die Basistabelle oder Sicht nicht über eine Spalte enthält die `timestamp` -Datentyp, eine vollständige Auffüllung wird ausgeführt.  
+  Auf dieser Seite können Sie Zeitpläne zum Ausführen eines SQL Server-Agent-Auftrags anzeigen und erstellen, mit dem eine inkrementelle Auffüllung von Aktualisierungen für die Basistabelle des Volltextindexes gestartet wird. Wenn die Basistabelle oder Sicht keine Spalte für den Datentyp `timestamp` enthält, wird eine vollständige Auffüllung ausgeführt.  
   
  **Zum Anzeigen oder ändern die Eigenschaften einer Volltext-Indexes**  
   

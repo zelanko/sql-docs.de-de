@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771111"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   Um das ergänzende Oracle-Protokollierungsskript in der Oracle CDC Designer Console auszuführen, werden Sie vom Programm zum Angeben der Anmeldeinformationen des Oracle-Benutzers aufgefordert, der das Skript ausführt. Zum Ausführen dieses Skripts muss der Oracle-Benutzer über die ALTER TABLE-Berechtigung für alle zu erfassenden Tabellen und die SELECT-Berechtigung für die DBA_LOG_GROUPS-Sicht verfügen.  
@@ -29,7 +29,7 @@ ms.locfileid: "58388818"
   
 -   **Windows-Authentifizierung:** Wählen Sie diese Option aus, um die aktuellen Anmeldeinformationen für die Windows-Domäne zu verwenden. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.  
   
--   **Oracle-Authentifizierung:** Wenn Sie diese Option auswählen, geben Sie die **Benutzernamen** und **Kennwort** für den Benutzer in der Sie eine Verbindung mit Oracle-Quelldatenbank.  
+-   **Oracle-Authentifizierung:** Wenn Sie diese Option aktivieren, müssen Sie **Benutzername** und **Kennwort** für den Benutzer der Oracle-Quelldatenbank eingeben, mit der Sie eine Verbindung herstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten einer CDC-Instanz](manage-a-cdc-instance.md)   

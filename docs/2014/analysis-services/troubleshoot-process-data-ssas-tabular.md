@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756265"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch)
   Dieses Thema enthält Informationen zur Verarbeitung (Aktualisierung) von Modelldaten, wenn ein Modell mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellt wird. Das Thema enthält keine Informationen zur Verarbeitung von Daten in Modellen, die für eine Analysis Services-Serverinstanz bereitgestellt wurden. Weitere Informationen zur Verarbeitung von Daten in einem bereitgestellten Modell finden Sie unter [Skriptverwaltungsaufgaben in Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48174700"
   
  Daher sollten Sie immer die möglichen Auswirkungen beachten, bevor Sie Datenquellen ändern oder die Daten verarbeiten, die aus der Datenquelle abgerufen werden. Zudem sollten Sie sich über die möglichen Folgen im Klaren sein:  
   
--   Möglicherweise sind einige der Modelldaten aufgrund der Änderungen an der Datenquelle beschädigt. Wenn nicht alle Spalten aus der Datenquelle abgerufen werden können (da sie z. B. gelöscht oder geändert wurden), schlägt die Verarbeitung fehl, und Sie müssen die Zuordnungen zwischen den Quell- und Modelldaten aktualisieren. Weitere Informationen finden Sie unter [Bearbeiten einer vorhandenen Datenquellenverbindung &#40;SSAS – tabellarisch&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
+-   Möglicherweise sind einige der Modelldaten aufgrund der Änderungen an der Datenquelle beschädigt. Wenn nicht alle Spalten aus der Datenquelle abgerufen werden können (da sie z. B. gelöscht oder geändert wurden), schlägt die Verarbeitung fehl, und Sie müssen die Zuordnungen zwischen den Quell- und Modelldaten aktualisieren. Weitere Informationen finden Sie unter [Bearbeiten einer vorhandenen Datenquellenverbindung &#40;SSAS – tabellarisch&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)erstellt wird.  
   
 -   Nach der Verarbeitung wird ggf. angezeigt, dass einige Spalten einen Fehler enthalten. Dies kann folgende Ursachen haben: Die DAX-Formel in der Spalte verwendet Daten, die bei der Verarbeitung nicht verfügbar wurden, der Datentyp einer Spalte hat sich geändert oder den externen Daten wurde ein ungültiger Wert hinzugefügt. Um das Problem zu beheben, können Sie die Formel bearbeiten, oder Sie können die Spalte löschen, wenn diese auf nicht mehr verfügbaren Daten basiert.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48174700"
 -   Sie können nicht in verschiedenen Tabellen gleichzeitig mehrere Spalten auswählen und die Eigenschaften der Spalten ändern. Sie können nur mit jeweils einer Tabelle oder Sicht arbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Manuelles verarbeiten Daten &#40;SSAS – tabellarisch&#41;](manually-process-data-ssas-tabular.md)   
- [Bearbeiten eine vorhandenen Datenquellenverbindung &#40;SSAS – tabellarisch&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Manuelle Verarbeitung von Daten &#40;SSAS – tabellarisch&#41;](manually-process-data-ssas-tabular.md)   
+ [Bearbeiten einer vorhandenen Datenquellenverbindung &#40;SSAS – tabellarisch&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

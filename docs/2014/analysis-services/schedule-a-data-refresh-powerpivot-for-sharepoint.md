@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747952"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planen einer Datenaktualisierung (PowerPivot für SharePoint)
   Sie können die Datenaktualisierung planen, um PowerPivot-Daten in einer Excel-Arbeitsmappe, die Sie auf einer SharePoint-Website veröffentlicht haben, automatisch aktualisieren zu lassen.  

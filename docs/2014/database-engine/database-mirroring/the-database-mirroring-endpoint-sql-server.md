@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754658"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Der Datenbankspiegelungs-Endpunkt (SQL Server)
   Um in [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder an der Datenbankspiegelung teilzunehmen, benötigt eine Serverinstanz ihren eigenen *Datenbank-Spiegelungsendpunkt*. Dieser Endpunkt ist ein auf einen bestimmten Zweck ausgerichteter Endpunkt, der ausschließlich dafür verwendet wird, diese Verbindungen von anderen Serverinstanzen zu empfangen. Auf einer angegebenen Serverinstanz verwendet jeder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder jede Datenbankspiegelungsverbindung zu einer beliebigen anderen Serverinstanz einen einzelnen Datenbankspiegelungs-Endpunkt.  
@@ -67,7 +67,7 @@ ms.locfileid: "48170370"
   
 -   Wenn eine Serverinstanz unter einem integrierten Konto, z. B. lokales System, lokaler Dienst oder Netzwerkdienst, oder unter einem Nicht-Domänenkonto ausgeführt wird, müssen Sie Zertifikate zur Endpunktauthentifizierung verwenden. Wenn Sie Zertifikate für die Datenbankspiegelungs-Endpunkte verwenden, muss der Systemadministrator jede Serverinstanz so konfigurieren, dass Zertifikate sowohl für ausgehende als auch für eingehende Verbindungen verwendet werden.  
   
-     Es gibt keine automatische Methode zum Konfigurieren der Datenbankspiegelungssicherheit mithilfe von Zertifikaten. Sie müssen entweder die CREATE ENDPOINT verwenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der `New-SqlHadrEndpoint` PowerShell-Cmdlet. Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Informationen zum Aktivieren der Zertifikatauthentifizierung auf einer Serverinstanz finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Es gibt keine automatische Methode zum Konfigurieren der Datenbankspiegelungssicherheit mithilfe von Zertifikaten. Sie müssen entweder die CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder den PowerShell-Cmdlet `New-SqlHadrEndpoint` verwenden. Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Informationen zum Aktivieren der Zertifikatauthentifizierung auf einer Serverinstanz finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
@@ -95,7 +95,7 @@ ms.locfileid: "48170370"
 ## <a name="see-also"></a>Siehe auch  
  [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

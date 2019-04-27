@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756830"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  

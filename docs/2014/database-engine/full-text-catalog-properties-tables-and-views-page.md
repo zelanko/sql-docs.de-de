@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779191"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Volltextkatalog-Eigenschaften (Seite „Tabellen und Sichten“)
   In diesem Dialogfeld können Sie die Tabellen und Sichten anzeigen oder bearbeiten, die dem Volltextkatalog zugewiesen sind.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Alle geeigneten Tabellen-/Sichtobjekte in dieser Datenbank**  
- Listet alle Tabellen und Sichten auf, für die ein eindeutiger Index definiert ist, die jedoch noch nicht Bestandteil des Volltextkatalogs sind. Zum Auswählen einer Tabelle oder Sicht und zum Zuweisen zum Katalog wählen Sie im Listenfeld das Element aus, und drücken Sie auf die Schaltfläche "->".  
+ Listet alle Tabellen und Sichten auf, für die ein eindeutiger Index definiert ist, die jedoch noch nicht Bestandteil des Volltextkatalogs sind. Wählen Sie eine Tabelle oder Sicht aus, und weisen sie Sie den Katalog, wählen Sie die Elemente im Listenfeld aus, und klicken Sie auf die Schaltfläche "->".  
   
  **Dem Katalog zugewiesene Tabellen-/Sichtobjekte**  
  Listet die Tabellen und Sichten auf, die zurzeit dem Volltextkatalog zugewiesen sind.  
@@ -53,7 +53,7 @@ ms.locfileid: "48202090"
 |||  
 |-|-|  
 |**Automatic**|Der Volltextindex wird automatisch aktualisiert, wenn in der zugrunde liegenden Tabelle Daten geändert, hinzugefügt oder gelöscht werden.|  
-|**Manuell**|Wenn Daten geändert, hinzugefügt oder werden, in den indizierten Daten gelöscht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfolgt die Änderungen. Wenn für die Nachverfolgung von Änderungen die Option **Manuell** aktiviert ist, werden die Änderungen nicht automatisch in den Index übernommen. Stattdessen ein Administrator kann die Änderungen manuell anzuwenden mithilfe einer [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) Anweisung.|  
+|**Manuell**|Wenn indizierte Daten geändert, hinzugefügt oder gelöscht werden, protokolliert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Änderungen. Wenn für die Nachverfolgung von Änderungen die Option **Manuell** aktiviert ist, werden die Änderungen nicht automatisch in den Index übernommen. Stattdessen ein Administrator kann die Änderungen manuell anzuwenden mithilfe einer [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) Anweisung.|  
 |**Änderungen nicht nachverfolgen**|Wenn diese Option aktiviert ist, werden Änderungen an den indizierten Daten im Katalog nicht aufgezeichnet. Ein Administrator muss den Index mithilfe von ALTER FULLTEXT INDEX mit FULL POPULATION oder INCREMENTAL POPULATION erstellen.|  
   
 ## <a name="see-also"></a>Siehe auch  

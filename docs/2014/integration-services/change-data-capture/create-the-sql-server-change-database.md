@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771366"
 ---
 # <a name="create-the-sql-server-change-database"></a>Erstellen der SQL Server-Änderungsdatenbank
   Wenn Sie den Assistenten für neue Instanzen starten, wird die Seite Create CDC Database geöffnet. Verwenden Sie die Seite Create CDC Database, um Informationen zur neuen CDC-Instanz bereitzustellen und eine neue Änderungsdatenbank zu erstellen.  
@@ -35,16 +35,16 @@ ms.locfileid: "58391178"
  **Oracle CDC-Instanz**  
  Geben Sie die folgenden Informationen zur CDC-Instanz an, die Sie erstellen.  
   
--   **Name**: Geben Sie einen Namen für den neuen Dienst. Dieser Name wird auch als Name der neuen Änderungsdatenbank verwendet.  
+-   **Name**: Geben Sie einen Namen für den neuen Dienst ein. Dieser Name wird auch als Name der neuen Änderungsdatenbank verwendet.  
   
--   **Beschreibung**: Geben Sie eine Beschreibung für die neue Instanz, damit Sie sie identifizieren können. Diese Eingabe ist optional.  
+-   **Beschreibung**: Geben Sie eine Beschreibung für die neue Instanz ein, um sie besser identifizieren zu können. Diese Eingabe ist optional.  
   
  **SQL Server Change Database**  
  Dieser Abschnitt wird verwendet, um die Datenbank zu erstellen.  
   
-1.  **Ändern Sie die Datenbank**: Der Name der neuen änderungsdatenbank. Der Name der Datenbank entspricht dem Namen, den Sie der Instanz gegeben haben. In diesem schreibgeschützten Feld wird der vollständige Pfad zur Datenbank angezeigt.  
+1.  **Change Database**: Der Name der neuen Änderungsdatenbank. Der Name der Datenbank entspricht dem Namen, den Sie der Instanz gegeben haben. In diesem schreibgeschützten Feld wird der vollständige Pfad zur Datenbank angezeigt.  
   
-2.  **Erstellen der Datenbank**: Klicken Sie auf **Create Database** zum Erstellen der Datenbank.  
+2.  **Datenbank erstellen**: Klicken Sie auf **Datenbank erstellen**, um die Datenbank zu erstellen.  
   
      Zum Erstellen der Datenbank muss die Anmeldung über die Serverrolle `sysasmin` verfügen. Weitere Informationen finden Sie oben unter dem Sicherheitshinweis.  
   

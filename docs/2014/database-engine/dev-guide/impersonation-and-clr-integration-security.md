@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781128"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Identitätswechsel und Sicherheit der CLR-Integration
   Wenn verwalteter Code auf externe Ressourcen zugreift, dann nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht automatisch die Identität des aktuellen Ausführungskontexts an, in dem die Routine ausgeführt wird. Der in einer `EXTERNAL_ACCESS`-Assembly und einer `UNSAFE`-Assembly enthaltene Code kann explizit die Identität des aktuellen Ausführungskontexts annehmen.  

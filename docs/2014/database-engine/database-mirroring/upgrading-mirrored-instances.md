@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754278"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen
   Beim Aktualisieren von Serverinstanzen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Sie können Downtime für jede gespiegelte Datenbank auf ein einzelnes Manuelles Failover reduzieren, indem Sie ein sequenzielles Upgrade ausführen, bekannt als eine *paralleles Upgrade*. Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete Serverinstanz aktualisiert, dann ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, der vorherige Prinzipalserver aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Beriebsmodus und der Anzahl und dem Layout der Spiegelungssitzung auf den zu aktualisierenden Serverinstanzen ab.  

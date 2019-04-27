@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746114"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)
   Dieses Tutorial veranschaulicht, wie das XML Schema Definition Tool (Xsd.exe) Klassen generieren, mit denen Sie zum Serialisieren und Deserialisieren von Berichtsdefinitionsdateien (RDL- und RDLC) mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
