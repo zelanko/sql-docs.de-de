@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773668"
 ---
 # <a name="search-property-list-editor"></a>Sucheigenschaftenlisten-Editor
   In diesem Dialogfeld können Sie einer Sucheigenschaftenliste Sucheigenschaften hinzufügen oder solche darin löschen.  
@@ -25,11 +25,11 @@ ms.locfileid: "48148940"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>So verwalten Sie Sucheigenschaftenlisten in SQL Server Management Studio  
  Weitere Informationen über das Erstellen, anzeigen oder Löschen einer sucheigenschaftenliste und zum Konfigurieren einen Volltextindex für die Eigenschaftensuche finden Sie unter [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eigenschaftenname**  
  Geben Sie den Namen an, der in Volltextabfragen für die Eigenschaft verwendet werden soll. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge von **Eigenschaftsname** beträgt 256 Zeichen. Für diesen Name kann ein benutzerfreundlicher Name verwendet werden, z. B. "Autor" oder "Privatadresse", oder aber der kanonische Windows-Name der Eigenschaft, z. B. `System.Author` oder `System.Contact.HomeAddress`. **Eigenschaftsname** muss die Eigenschaft innerhalb des Eigenschaftensatzes eindeutig bezeichnen.  
   
- Entwickler verwenden der Eigenschaftenname bezeichnen die Eigenschaft in der [CONTAINS](/sql/t-sql/queries/contains-transact-sql) Prädikat. Wenn Sie eine Eigenschaft hinzufügen, sollten Sie daher einen Wert angeben, mit dem die Eigenschaft aussagekräftig bezeichnet wird.  
+ Entwickler bezeichnen die Eigenschaft im [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat über den Eigenschaftsnamen. Wenn Sie eine Eigenschaft hinzufügen, sollten Sie daher einen Wert angeben, mit dem die Eigenschaft aussagekräftig bezeichnet wird.  
   
  **Eigenschaftensatz-GUID**  
  Geben Sie den Bezeichner des Eigenschaftensatzes an, zu dem die Eigenschaft gehört. Bei diesem handelt es sich um einen global eindeutigen Bezeichner (GUID, Globally Unique Identifier). Als Eigenschaftensatz wird eine Gruppe logisch aufeinander bezogener Eigenschaften bezeichnet. Informationen zum Abrufen dieses Werts finden Sie weiter unten in diesem Thema unter "Hinweise".  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748012"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Registerkarte "Regeln" (Miningmodell-Viewer)
   Im Bereich **Regeln** in einem Zuordnungsmodell können Sie die Regeln anzeigen, die vom Algorithmus aus den Daten extrahiert wurden. Regeln beschreiben, in welcher Beziehung Elemente zueinander stehen, und können zum Erstellen von Empfehlungen verwendet werden.  
@@ -28,9 +28,9 @@ ms.locfileid: "48059600"
 > [!WARNING]  
 >  Standardmäßig werden nur die Regeln im Viewer angezeigt, die über dem in **Minimale Wahrscheinlichkeit** definierten Schwellenwert für die Wahrscheinlichkeit liegen. Dieser Wert kann im Viewer nicht verringert werden, da der Wahrscheinlichkeitsschwellenwert für Regelausgaben beim Erstellen des Modells bestimmt wird. Weitere Informationen finden Sie unter [Technische Referenz für den Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Weitere Informationen:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -88,8 +88,8 @@ ms.locfileid: "48059600"
  Sie können auf die Spaltenüberschrift klicken, um nach dem Text der Regel zu sortieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

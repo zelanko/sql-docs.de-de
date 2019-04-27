@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778911"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
   OR-Operatoren werden in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren nicht unterstützt. Da NOT-Operatoren in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren ebenfalls nicht unterstützt werden, können die Auswirkungen der OR-Operatoren nicht allein durch Verwendung der entsprechenden logischen Operatoren simuliert werden. Die Auswirkungen eines OR-Operators können jedoch anhand von speicheroptimierten Tabellenvariablen simuliert werden.  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771240"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Verwalten eines CDC Service über die CDC Designer Console
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten eines CDC-Diensts verwenden.  
@@ -28,7 +28,7 @@ ms.locfileid: "58381498"
   
 3.  Wählen Sie den Dienst aus, den Sie verwalten möchten.  
   
-     **Hinweis**: Wenn es in der CDC Designer Console keine Dienste aufgeführt sind, müssen Sie mithilfe der CDC Service Configuration Console neue Instanzen erstellen. Informationen zur Erstellung eines neuen Diensts finden Sie in der Onlinehilfe der Service Configuration Console.  
+     **Beachten Sie**: Wenn in der CDC Designer Console keine Dienste aufgeführt sind, müssen Sie mithilfe der CDC Service Configuration Console neue Instanzen erstellen. Informationen zur Erstellung eines neuen Diensts finden Sie in der Onlinehilfe der Service Configuration Console.  
   
 4.  Sie können die folgenden Tasks für einen CDC-Dienst ausführen:  
   

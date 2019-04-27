@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754295"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Die Transportsicherheit schließt die Authentifizierung und optional die Verschlüsselung der Nachrichten ein, die zwischen den Datenbanken ausgetauscht werden. Für die Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]werden Authentifizierung und Verschlüsselung am Datenbankspiegelungs-Endpunkt konfiguriert. Eine Einführung für die Datenbankspiegelungs-Endpunkte finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "48075860"
 -   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung bei jedem Hostcomputer-Konto (*Domänenname***\\***Computername$*) in **master** auf jedem der anderen Server erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
   
 > [!NOTE]  
->  Ein Beispiel für das Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Ein Beispiel für das Einrichten einer Datenbankspiegelungs-Sitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Zertifikate  
  Unter bestimmten Umständen – z. B. wenn sich Serverinstanzen nicht in vertrauenswürdigen Domänen befinden oder wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als lokaler Dienst ausgeführt wird – steht die Windows-Authentifizierung nicht zur Verfügung. In solchen Fällen werden zum Authentifizieren der Verbindungsanforderungen anstelle der Benutzeranmeldeinformationen Zertifikate benötigt. Der Spiegelungsendpunkt jeder Serverinstanz muss mit ihrem eigenen lokal erstellten Zertifikat konfiguriert werden.  

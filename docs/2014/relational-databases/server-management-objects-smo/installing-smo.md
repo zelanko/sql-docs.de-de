@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753632"
 ---
 # <a name="installing-smo"></a>Installieren von SMO
   Wenn Sie eine Anwendung entwickeln möchten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) verwendet, sollten Sie beim Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Clienttools SDK auswählen. Um das Clienttools SDK ohne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu installieren, können Sie freigegebene Verwaltungsobjekte vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Feature Pack installieren. Um sicherzustellen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects auf einem Computer installiert ist, auf dem Ihre Anwendung ausgeführt wird, können Sie die MSI-Datei der freigegebenen Verwaltungsobjekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Feature Pack verwenden.  

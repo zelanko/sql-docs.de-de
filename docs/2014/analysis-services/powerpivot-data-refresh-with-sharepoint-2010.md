@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749300"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>PowerPivot-Datenaktualisierung mit SharePoint 2010
   Die [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Datenaktualisierung ist ein geplanter serverseitiger Vorgang, mit dem externe Datenquellen abgefragt werden, um eingebettete [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Daten in einer Excel 2010-Arbeitsmappe zu aktualisieren, die in einer Inhaltsbibliothek gespeichert ist.  
@@ -48,7 +48,7 @@ ms.locfileid: "53365552"
   
  [Schritt 7: Aktivieren von arbeitsmappenaktualisierung für datenaktualisierung](#bkmk_upgradewrkbk)  
   
- [Schritt 8: Überprüfen der datenaktualisierungskonfiguration](#bkmk_verify)  
+ [Step 8: Überprüfen der datenaktualisierungskonfiguration](#bkmk_verify)  
   
  [Ändern der Konfigurationseinstellungen für Datenaktualisierung](#bkmk_config)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53365552"
   
  Wenn die Serverumgebung und die Berechtigungen konfiguriert wurden, kann die Datenaktualisierung ausgeführt werden. Um die Datenaktualisierung zu verwenden, erstellt ein SharePoint-Benutzer in einer PowerPivot-Arbeitsmappe einen Zeitplan, in dem die Häufigkeit der Datenaktualisierung angegeben wird. Die Erstellung des Zeitplans wird normalerweise vom Besitzer oder Ersteller der Arbeitsmappe übernommen, der die Datei in SharePoint veröffentlicht hat. Diese Person erstellt und verwaltet die Zeitpläne zur Datenaktualisierung für die eigenen Arbeitsmappen. Weitere Informationen finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
-##  <a name="bkmk_services"></a> Schritt 1: Aktivieren von Secure Store Service und Generieren eines Hauptschlüssels  
+##  <a name="bkmk_services"></a>Schritt 1: Aktivieren von Secure Store Service und Generieren eines Hauptschlüssels  
  Die PowerPivot-Datenaktualisierung stellt mithilfe von Secure Store Service Anmeldeinformationen bereit, die zum Ausführen von Datenaktualisierungsaufträgen und zum Verbinden mit externen Datenquellen verwendet werden, die gespeicherte Anmeldeinformationen verwenden.  
   
  Wenn Sie PowerPivot für SharePoint mit der Installationsoption Neuer Server installiert haben, wird Secure Store Service für Sie konfiguriert. Für alle anderen Installationsszenarien müssen Sie eine Dienstanwendung erstellen und konfigurieren sowie einen Hauptverschlüsselungsschlüssel für Secure Store Service generieren.  
@@ -98,7 +98,7 @@ ms.locfileid: "53365552"
   
  Die für Problembehandlungszwecke nützliche Überwachungsprotokollierung von Secure Store Service-Vorgängen ist erst verfügbar, nachdem sie aktiviert wurde. Weitere Informationen zum Aktivieren der Protokollierung finden Sie unter [Secure Store Service konfigurieren (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
-##  <a name="bkmk_creds"></a> Schritt 2: Deaktivieren der Anmeldeinformationsoptionen, die nicht unterstützt werden sollen  
+##  <a name="bkmk_creds"></a>Schritt 2: Deaktivieren der Anmeldeinformationsoptionen, die Sie nicht unterstützen möchten.  
  Die PowerPivot-Datenaktualisierung stellt drei Anmeldeinformationsoptionen in einem Datenaktualisierungszeitplan bereit. Wenn ein Besitzer einer Arbeitsmappe eine Datenaktualisierung plant, wählt er eine dieser Optionen aus. Anhand dieser Auswahl wird das Konto bestimmt, unter dem der Datenaktualisierungsauftrag ausgeführt wird. Als Administrator können Sie festlegen, welche Anmeldeinformationsoptionen für Zeitplanbesitzer verfügbar sind.  
   
  Es muss mindestens eine Option verfügbar sein, damit die Datenaktualisierung funktioniert.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365552"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- Diese Anmeldeinformationsoption ist standardmäßig aktiviert. Wenn diese Anmeldeinformationsoption aktiviert ist, generiert der PowerPivot-Systemdienst in Secure Store Service eine Zielanwendung zum Speichern des Benutzernamens und des Kennworts, die vom Zeitplanbesitzer eingegeben wurden. Eine generierte Zielanwendung wird mit folgender Benennungskonvention erstellt: PowerPivotDataRefresh_\<Guid >. Für jeden Satz von Windows-Anmeldeinformationen wird eine Zielanwendung erstellt. Wenn bereits eine Zielanwendung vorhanden ist, die im Besitz des PowerPivot-Systemdiensts ist und in der die beim Definieren des Zeitplans eingegebenen Anmeldeinformationen gespeichert werden, wird diese Zielanwendung vom PowerPivot-Systemdienst verwendet und keine neue Zielanwendung erstellt.  
+ Diese Anmeldeinformationsoption ist standardmäßig aktiviert. Wenn diese Anmeldeinformationsoption aktiviert ist, generiert der PowerPivot-Systemdienst in Secure Store Service eine Zielanwendung zum Speichern des Benutzernamens und des Kennworts, die vom Zeitplanbesitzer eingegeben wurden. Eine generierte Zielanwendung wird mit folgender Benennungskonvention erstellt: PowerPivotDataRefresh_\<guid>. Für jeden Satz von Windows-Anmeldeinformationen wird eine Zielanwendung erstellt. Wenn bereits eine Zielanwendung vorhanden ist, die im Besitz des PowerPivot-Systemdiensts ist und in der die beim Definieren des Zeitplans eingegebenen Anmeldeinformationen gespeichert werden, wird diese Zielanwendung vom PowerPivot-Systemdienst verwendet und keine neue Zielanwendung erstellt.  
   
  Der Hauptvorteil bei der Verwendung dieser Anmeldeinformationsoption ist die Benutzerfreundlichkeit und Einfachheit. Die Vorarbeit ist minimal, da die Zielanwendungen für Sie erstellt werden. Auch das Ausführen einer Datenaktualisierung unter den Anmeldeinformationen des Zeitplanbesitzers (sehr wahrscheinlich auch der Ersteller der Arbeitsmappe) vereinfacht die Berechtigungsanforderungen. Dieser Benutzer besitzt höchstwahrscheinlich bereits Berichtigungen für die Zieldatenbank. Wenn die datenaktualisierung unter Windows-Benutzeridentität von der Person, keine Daten Verbindungen ausgeführt wird, die angeben, funktioniert die 'aktuelle Benutzer' automatisch.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "53365552"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> Schritt 3: Erstellen von Zielanwendungen zum Speichern der Anmeldeinformationen, die bei der Datenaktualisierung verwendet werden  
+##  <a name="bkmk_stored"></a>Schritt 3: Erstellen von zielanwendungen zum Speichern von Anmeldeinformationen, die bei der datenaktualisierung verwendet werden.  
  Sobald Secure Store Service konfiguriert ist, können SharePoint-Administratoren Zielanwendungen erstellen, um gespeicherte Anmeldeinformationen zu Datenaktualisierungszwecken verfügbar zu machen. Hierzu zählt auch das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot oder ein beliebiges anderes Konto, das zur Ausführung des Auftrags oder zum Herstellen einer Verbindung mit externen Datenquellen verwendet wird.  
   
  Damit bestimmte Anmeldeinformationsoptionen verwendet werden können, müssen Zielanwendungen erstellt werden, so wie bereits im vorherigen Abschnitt erwähnt. Insbesondere müssen Zielanwendungen für das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot sowie zusätzliche gespeicherte Anmeldeinformationen bereitgestellt werden, die voraussichtlich bei den Datenaktualisierungsvorgängen verwendet werden.  
   
  Weitere Informationen zum Erstellen von zielanwendungen, die gespeicherte Anmeldeinformationen enthalten, finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [ Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_scale"></a> Schritt 4: Konfigurieren des Servers für die skalierbare Datenaktualisierung  
+##  <a name="bkmk_scale"></a> Schritt 4: Konfigurieren Sie den Server für die skalierbare datenaktualisierung  
  Standardmäßig unterstützt jede PowerPivot für SharePoint-Installation sowohl bedarfsgesteuerte Abfragen als auch geplante Datenaktualisierungen.  
   
  Für jede Installation können Sie angeben, ob die Analysis Services-Serverinstanz sowohl die bedarfsgesteuerte Abfrage als auch die geplante Datenaktualisierung unterstützt oder ob sie für einen bestimmten Typ von Vorgang vorgesehen ist. Enthält die Farm mehrere Installationen von PowerPivot für SharePoint, können Sie einen bestimmten Server nur für Datenaktualisierungsvorgänge verwenden, wenn Sie feststellen, dass sich Aufträge verzögern oder scheitern.  
@@ -162,7 +162,7 @@ ms.locfileid: "53365552"
   
  Bei SharePoint-Servern handelt es sich um 64-Bit-Anwendungen. Installieren Sie die 64-Bit-Version der Datenanbieter, mit denen Sie Datenaktualisierungsvorgänge unterstützen.  
   
-##  <a name="bkmk_accounts"></a> Schritt 6: Gewähren von Berechtigungen für die Erstellung von Zeitplänen und für den Zugriff auf externe Datenquellen  
+##  <a name="bkmk_accounts"></a> Schritt 6: Gewähren von Berechtigungen für die Erstellung von Zeitplänen und Zugriff auf externe Datenquellen  
  Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Wenn diese Berechtigungsebene, können er oder sie öffnen und Bearbeiten der Arbeitsmappe datenaktualisierungskonfigurationsseite zum Geben Sie die Anmeldeinformationen ein, und planen die Informationen, mit denen die Daten zu aktualisieren.  
   
  Neben den SharePoint-Berechtigungen müssen auch die Datenbankberechtigungen für externe Datenquellen geprüft werden, um sicherzustellen, dass die bei der Datenaktualisierung verwendeten Konten über ausreichende Rechte für den Zugriff auf die Daten verfügen. Zum Ermitteln der Berechtigungsanforderungen ist eine sorgfältige Auswertung erforderlich, da die zu erteilenden Berechtigungen von der Verbindungszeichenfolge in der Arbeitsmappe und von der Benutzeridentität abhängen, unter der der Datenaktualisierungsauftrag ausgeführt wird.  
@@ -225,10 +225,10 @@ ms.locfileid: "53365552"
   
  Sobald Sie herausgefunden haben, welche Konten einen Datenzugriff benötigen, können Sie Berechtigungen für die Datenquellen prüfen, die in PowerPivot-Arbeitsmappen am häufigsten verwendet werden. Beginnen Sie mit beliebigen Data Warehouses oder Berichtsdatenbanken, die aktiv verwendet werden. Fragen Sie aber auch Benutzer, die sehr häufig mit PowerPivot arbeiten, welche Datenquellen sie verwenden. Sobald Sie eine Liste der Datenquellen erstellt haben, können Sie jede Datenquelle prüfen, um sicherzustellen, dass die Berechtigungen korrekt festgelegt sind.  
   
-##  <a name="bkmk_upgradewrkbk"></a> Schritt 7: Aktivieren von Arbeitsmappenaktualisierung für Datenaktualisierung  
+##  <a name="bkmk_upgradewrkbk"></a> Schritt 7: Aktivieren von arbeitsmappenaktualisierung für datenaktualisierung  
  Standardmäßig können Arbeitsmappen, die mit der [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Version von PowerPivot für Excel erstellt wurden, nicht für geplante Datenaktualisierungen auf einer [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version von PowerPivot für SharePoint konfiguriert werden. Wenn Sie neuere und ältere Versionen der PowerPivot-Arbeitsmappen in der SharePoint-Umgebung hosten, müssen Sie zuerst alle [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Arbeitsmappen aktualisieren, bevor eine automatische Datenaktualisierung auf dem Server geplant werden kann.  
   
-##  <a name="bkmk_verify"></a> Schritt 8: Überprüfen der Datenaktualisierungskonfiguration  
+##  <a name="bkmk_verify"></a> Schritt 8: Überprüfen der datenaktualisierungskonfiguration  
  Zum Überprüfen der Datenaktualisierung ist eine PowerPivot-Arbeitsmappe erforderlich, die auf einer SharePoint-Website veröffentlicht ist. Sie benötigen Teilnahmeberechtigungen für die Arbeitsmappe und Berechtigungen für den Zugriff auf die Datenquellen, die im Datenaktualisierungszeitplan enthalten sind.  
   
  Wenn Sie den Zeitplan erstellen, wählen Sie die **außerdem so bald wie möglich aktualisieren** Kontrollkästchen, um die datenaktualisierung sofort auszuführen. Auf der Seite mit dem Datenaktualisierungsverlauf der Arbeitsmappe können Sie dann überprüfen, ob die Datenaktualisierung erfolgreich ausgeführt wurde. Der Zeitgeberauftrag zur PowerPivot-Datenaktualisierung wird einmal pro Minute ausgeführt. Es dauert daher mindestens eine Minute, um eine Bestätigung über den Erfolg der Datenaktualisierung zu erhalten.  

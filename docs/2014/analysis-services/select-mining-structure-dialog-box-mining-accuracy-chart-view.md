@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067f76f0f48c11b3946476e6386788dd7b812760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747452"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Dialogfeld Miningstruktur auswählen (Mininggenauigkeitsdiagrammsicht)
   Mithilfe des Dialogfelds **Miningstruktur auswählen** können Sie eine Miningstruktur auswählen, die die Miningmodelle enthält, deren Genauigkeit Sie vergleichen oder testen wollen.  
@@ -33,6 +33,6 @@ ms.locfileid: "48159000"
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

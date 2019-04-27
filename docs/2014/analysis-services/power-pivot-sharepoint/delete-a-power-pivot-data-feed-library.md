@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749401"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>Löschen einer PowerPivot-Datenfeedbibliothek
   Sie müssen der Websitebesitzer sein, um eine Datenfeedbibliothek löschen zu können. Wenn die Bibliothek Elemente enthält, werden sie zusammen mit der Bibliothek gelöscht.  

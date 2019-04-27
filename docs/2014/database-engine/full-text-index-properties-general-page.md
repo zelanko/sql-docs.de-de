@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778941"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
   **Zum Anzeigen oder ändern die veränderbaren Eigenschaften einen Volltextindex**  
@@ -31,7 +31,7 @@ ms.locfileid: "48072460"
  **Datenbank**  
  Zeigt den Namen der Datenbank an, in der sich der Volltextindex befindet.  
   
- **Tabelle**  
+ **Table**  
  Zeigt den Namen der Tabelle an, für die der Volltextindex definiert wurde.  
   
  **Volltextindex-Schlüssel**  
@@ -65,7 +65,7 @@ ms.locfileid: "48072460"
  Die Dateigruppe, zu der der Volltextindex gehört.  
   
  **Volltextindex-Stoppliste**  
- Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste der [Stoppwörter](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stoppliste aus dem Index entfernen, indem Sie auswählen  **\<OFF >** aus der Liste aus, oder Sie können eine andere Stoppliste; auswählen  **\<SYSTEM >** gibt die Systemstoppliste.  
+ Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste von [Stoppwörtern](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stoppliste aus dem Index entfernen, indem Sie auswählen  **\<OFF >** aus der Liste aus, oder Sie können eine andere Stoppliste; auswählen  **\<SYSTEM >** gibt die Systemstoppliste.  
   
  **So erstellen Sie eine Stoppliste**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48072460"
  **Volltext-Elementanzahl-Tabelle**  
  Gibt die Anzahl der Zeilen an, die erfolgreich volltextindiziert wurden.  
   
- Diese Eigenschaft entspricht der `TableFulltextItemCount` Eigenschaft zurückgegeben wird, von der OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] Funktion.  
+ Diese Eigenschaft entspricht der von der OBJECTPROPERTYEX-Funktion von [!INCLUDE[tsql](../includes/tsql-md.md)] zurückgegebenen `TableFulltextItemCount`-Eigenschaft.  
   
  **Tabelle Volltextdokumente verarbeitet**  
  Zeigt die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen an. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet. Gelöschte Zeilen werden nicht gezählt.  
@@ -129,7 +129,7 @@ ms.locfileid: "48072460"
   
 |||  
 |-|-|  
-|**Ausschalten**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
+|**Off**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
 |**Manuell**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten nicht automatisch aktualisiert. Änderungen an den zugrunde liegenden Daten werden jedoch beibehalten, und Sie können sie an den Volltextindex weitergeben, entweder nach einem Zeitplan unter Verwendung des SQL-Server-Agents oder manuell.|  
 |**Automatic**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten in der Basistabelle automatisch aktualisiert.|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48072460"
 |||  
 |-|-|  
 |**Full**|Während einer vollständigen Auffüllung einer Tabelle werden Indexeinträge für alle Zeilen erstellt.|  
-|**Inkrementelle**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Eine inkrementelle Auffüllung ist erforderlich, dass die Basistabelle enthält eine Spalte mit dem `timestamp` -Datentyp.|  
+|**Inkrementelle**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Für eine inkrementelle Auffüllung muss die Basistabelle eine Spalte des Datentyps `timestamp` enthalten.|  
 |**Update**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
   
 ## <a name="see-also"></a>Siehe auch  

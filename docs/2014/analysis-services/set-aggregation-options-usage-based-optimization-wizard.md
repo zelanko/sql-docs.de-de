@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746642"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Aggregationsoptionen festlegen (Assistent für verwendungsbasierte Optimierung)
   Auf der Seite **Aggregationsoptionen festlegen** können Sie den Aggregationsentwurf starten und Speicher- und Leistungslimits für die Aggregationen angeben, die vom Assistenten für verwendungsbasierte Optimierung generiert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geschätzter Speicherplatz erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie die maximale Anzahl von Megabytes (MB) oder Gigabytes (GB) angeben, die zum Generieren der Aggregationen verwendet werden kann.  
   

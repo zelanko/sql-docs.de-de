@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754445"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung (SQL Server Management Studio)
   Der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung kann verwendet werden, um die Sicherheitseinstellungen aller oder mehrerer der an der Spiegelung beteiligten Serverinstanzen zu Beginn zu konfigurieren. Der Assistent ist mit der Seite **Wird gespiegelt** im Dialogfeld **Datenbankeigenschaften** verknüpft.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753362"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Erstellung von Kontakten mit CLR und XML
   Das Kontakterstellungsbeispiel für SQL Server stellt nützliche Hilfsprogramme bereit, die eine zusätzliche Funktionalitätsebene auf der einfachen AdventureWorks2012-Beispieldatenbank bilden. Das erste Hilfsprogramm erstellt Kontaktdatensätze für die verschiedenen Personen, die mit der AdventureWorks2012-Datenbank in Verbindung stehen. Die Kontaktinformationen werden mit XML angegeben und an eine C#- oder VB-basierte gespeicherte Prozedur übergeben, um das XML zu erstellen und es in die ordnungsgemäßen Tabellen für die Datenbank einzufügen.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756121"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Details anzeigen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Details anzeigen** können Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zusätzliche Informationen zu einer Meldung oder einem Vorgang in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]anzeigen. Das Dialogfeld **Details anzeigen** können Sie wie folgt aufrufen:  
@@ -27,7 +27,7 @@ ms.locfileid: "48157440"
   
 -   Doppelklicken Sie auf ein Element in der **Statusstrukturansicht** des Fensters **Bereitstellungsstatus** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Details**  
  Zeigt zusätzliche Informationen zur ausgewählten Meldung bzw. zum ausgewählten Vorgang an.  
   

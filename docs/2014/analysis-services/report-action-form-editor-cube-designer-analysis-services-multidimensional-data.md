@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748382"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Berichtsaktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des **Berichtsaktionsformular-Editors** auf der Registerkarte **Aktionen** im Cube-Designer können Sie die im Bereich **Aktionsplaner** ausgewählte Berichtsaktion ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen der Aktion ein.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "48196590"
  **Zieltyp**  
  Wählen Sie den Typ des Objekts aus, dem die Aktion zugeordnet werden soll. Der Server gibt nur jene Aktionen an den Client zurück, die auf das Objekt vom angegebenen Typ angewendet werden. Die Aktion ist für den Client verfügbar, wenn die **Bedingung** erfüllt ist und die in der folgenden Tabelle angegebenen Objekte ausgewählt sind.  
   
-|value|Ausgewähltes Objekt|  
+|Wert|Ausgewähltes Objekt|  
 |-----------|---------------------|  
 |Attributelemente|Ein Element wird aus einer Ebene ausgewählt, die auf dem Attribut unter **Zielobjekt**basiert.<br /><br /> Hinweis: Andere Benutzerhierarchien, die das ausgewählte Attribut verwenden, erben die Berichtsaktion.|  
 |Zellen|Die benannte Menge in **Zielobjekt** wird ausgewählt. Wählen Sie **Alle Zellen** aus, um alle Zellen im Cube auszuwählen.|  
-|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Das Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität für Fälle bereit, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert wird. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
+|Cube|Der Cube in **Zielobjekt** wird ausgewählt. Wählen Sie CURRENTCUBE aus, um den aktuellen Cube zu verwenden.<br /><br /> Hinweis: Verwenden von CURRENTCUBE stellt eine zusätzliche Portabilität in Fällen, in denen der Cube umbenannt oder die Aktion in andere Cubes kopiert, bereit. Es wird empfohlen, zum Darstellen des aktuellen Cubes CURRENTCUBE zu verwenden.|  
 |Dimensionselemente|Ein Element der Dimension in **Zielobjekt** wird ausgewählt.|  
 |Hierarchy|Die Hierarchie in **Zielobjekt** wird ausgewählt.|  
 |Hierarchieelemente|Ein Element innerhalb der Hierarchie in **Zielobjekt** wird ausgewählt.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48196590"
  **Berichtsformat**  
  Wählen Sie das Format aus, in dem der Bericht zurückgegeben wird. In der folgenden Tabelle werden die verfügbaren Formate beschrieben.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |HTML5|Der Bericht wird in einem mit HTML 5.0 kompatiblen Format zurückgegeben.|  
 |HTML3|Der Bericht wird in einem mit HTML 3.2 kompatiblen Format zurückgegeben.|  
@@ -90,7 +90,7 @@ ms.locfileid: "48196590"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
 |Interaktiv|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749438"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Referenz zu Integritätsregeln (PowerPivot für SharePoint)
   In diesem Referenzthema werden die SharePoint-Integritätsregeln beschrieben, die durch eine PowerPivot für SharePoint-Installation hinzugefügt werden. Diese Regeln werden verwendet, um Probleme mit dem Serverzustand, der Verfügbarkeit oder der Konfiguration einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung bzw. einer zugeordneten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu melden.  

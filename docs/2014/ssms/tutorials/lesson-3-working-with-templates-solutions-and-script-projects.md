@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Verwenden von Vorlagen, Lösungen und Skriptprojekten | Microsoft-Dokumentation'
+title: 'Lektion 3: Arbeiten mit Vorlagen, Lösungen und Skriptprojekten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753017"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lektion 3: Verwenden von Vorlagen, Lösungen und Skriptprojekten
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lektion 3: Arbeiten mit Vorlagen, Lösungen und Skriptprojekte
   Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie benutzerdefinierte Vorlagen erstellen und Lösungen und Skriptprojekte erstellen.  
   
  Diese Lektion enthält die folgenden Themen:  

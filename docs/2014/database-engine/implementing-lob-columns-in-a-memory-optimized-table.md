@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778921"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
   Speicheroptimierte Tabellen keine außerhalb von Zeilen große Objekte (LOB)-Speicher (diese Einschränkung wurde entfernt wurde, in SQL Server 2016 und höher – Siehe [unterstützte Datentypen für In-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), und die maximale Zeilengröße ist auf 8060 Bytes. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  

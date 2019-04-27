@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756395"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Dimensionsstruktur', Dimensions-Designer) (Analysis Services - Mehrdimensionale Daten)
   Verwenden Sie die Symbolleiste, um Vorgänge auszuführen, die auf der Seite **Dimensionsstruktur** von **Dimensions-Designer**häufig verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Business Intelligence hinzufügen**  
  Zeigt den **Business Intelligence-Assistent** an, mit dem Business Intelligence-Funktionen hinzugefügt werden können.  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779224"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
   Indizes werden für den effizienten Datenzugriff in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabellen verwendet. Die Auswahl der richtigen Indizes kann die Abfrageleistung deutlich verbessern. Stellen Sie sich beispielsweise die folgende Abfrage vor:  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Wenn kein Index für Spalte c1 enthalten ist, muss [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die gesamte Tabelle t überprüfen und dann nach den Zeilen filtern, die die Bedingung „c1=1“ erfüllen. Wenn jedoch t über einen Index für die Spalte c1 verfügt, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] direkt auf Wert 1 suchen und die gewünschten Zeilen abrufen.  
   
- Bei der Suche nach Datensätzen, die einen bestimmten Wert oder Wertebereich in einer oder mehreren Tabellenspalten aufweisen, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für diese Spalten einen Index nutzen, um die entsprechenden Datensätze schnell zu finden. Sowohl datenträgerbasierte als auch speicheroptimierte Tabellen profitieren von Indizes. Es gibt jedoch bestimmte Unterschiede zwischen den Indexstrukturen, die bei der Verwendung speicheroptimierter Tabellen berücksichtigt werden müssen. (Indizes für speicheroptimierte Tabellen werden als speicheroptimierte Indizes bezeichnet.) Einige der Hauptunterschiede sind:  
+ Bei der Suche nach Datensätzen, die einen bestimmten Wert oder Wertebereich in einer oder mehreren Tabellenspalten aufweisen, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für diese Spalten einen Index nutzen, um die entsprechenden Datensätze schnell zu finden. Sowohl datenträgerbasierte als auch speicheroptimierte Tabellen profitieren von Indizes. Es gibt jedoch bestimmte Unterschiede zwischen den Indexstrukturen, die bei der Verwendung speicheroptimierter Tabellen berücksichtigt werden müssen. (Indizes für Speicheroptimierte Tabellen werden als Speicheroptimierte Indizes bezeichnet.) Einige der Hauptunterschiede sind:  
   
 -   Speicheroptimierte Indizes müssen mit erstellt [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Datenträgerbasierte Indizes können mit `CREATE TABLE` und `CREATE INDEX` erstellt werden.  
   

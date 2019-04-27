@@ -14,11 +14,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774777"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Optionen (Abfrage Ergebnisse-Analysis-Server – Seite "Allgemein")
   Auf dieser Seite können Sie das Standardverhalten des Abfrageergebnisfensters für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Abfragen bestimmen. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Ordner **Abfrageergebnisse** den Unterordner **Analysis-Server**, und wählen Sie dann **Allgemein** aus.  

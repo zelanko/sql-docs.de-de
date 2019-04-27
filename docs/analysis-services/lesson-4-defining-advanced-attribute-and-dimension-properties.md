@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752767"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ In dieser Aufgabe lernen Sie, wie Elementeigenschaften für Attribute zu definie
 In dieser Aufgabe konfigurieren Sie die Eigenschaften UnknownMember und UnknownMemberName, um Fehlerbedingungen zu behandeln, die durch NULL-Dimensionselemente verursacht werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Lesson 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Analysis Services-Tutorialszenario](../analysis-services/analysis-services-tutorial-scenario.md)  

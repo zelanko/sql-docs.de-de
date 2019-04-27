@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743977"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Wenn die Tabelle erneut aktiviert, der Index jedoch nicht erneut aufgefüllt wird, ist der alte Index weiterhin für Abfragen für verbleibende, aber nicht für neue, volltextfähige Spalten verfügbar. Für Daten aus gelöschten Spalten werden Übereinstimmungen in Abfragen gefunden, für die eine umfassende Volltextspaltensuche angegeben ist.  
   
- Nach der Definition einer Tabelle für die Volltextindizierung kann das Ändern des Datentyps der Volltextspalte für den eindeutigen Schlüssel, durch Ändern des Datentyps dieser Spalte oder durch Ändern der Volltextspalte für den eindeutigen Schlüssel, ohne ein vollständiges erneutes Auffüllen bei einer nachfolgenden Abfrage zu einem Fehler führen, wobei die folgende Fehlermeldung zurückgegeben wird: "Konvertierung in den Typ *Data_type* Fehler bei der für die Volltext-Suchdienst-Schlüsselwert *Key_value*." Um dies zu verhindern, löschen Sie die Volltextdefinition für diese Tabelle mithilfe der **drop** -Aktion von **sp_fulltext_table** , und definieren Sie sie neu mithilfe von **sp_fulltext_table** und **sp_fulltext_column**.  
+ Nach eine Tabelle für Volltextindizierung, wurde definiert die Volltext-eindeutige Schlüsselspalte aus einem Datentyp in einen anderen, entweder durch das Ändern des Datentyps dieser Spalte oder der eindeutige Volltextschlüssel aus einer Spalte ändern, in eine andere, ohne ein vollständiges erneutes Auffüllen wechseln Sie verursachen möglicherweise einen Ausfall während einer nachfolgenden Abfrage und die Fehlermeldung zurückgegeben: "Konvertierung in den Typ *Data_type* Fehler bei der für die Volltext-Suchdienst-Schlüsselwert *Key_value*." Um dies zu verhindern, löschen Sie die Volltextdefinition für diese Tabelle mithilfe der **drop** -Aktion von **sp_fulltext_table** , und definieren Sie sie neu mithilfe von **sp_fulltext_table** und **sp_fulltext_column**.  
   
  Die Volltextschlüsselspalte muss mit einer Größe von maximal 900 Byte definiert sein. Aus Gründen der Leistung sollte die Schlüsselspalte so klein wie möglich sein.  
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748362"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Relationale Objekte' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Relationale Objekte** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Tabellen, Sichten oder andere Objekte aus einer Datenquelle anzeigen, für die Sie das proaktive Zwischenspeichern festlegen möchten. Sie können dieses Dialogfeld in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld**Speicheroptionen**auf der Registerkarte **Benachrichtigungen** für eine der beiden Optionen für **Nachverfolgungstabellen angeben** auf die Schaltfläche mit den Auslassungspunkten ( **...** ) klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie relationale Objekte, die für die proaktive Zwischenspeichern festlegen möchten**  
  Wählen Sie die Objekte aus, für die eine Nachverfolgung durchgeführt werden soll. Diese Option zeigt ein Raster verfügbarer Objekte und ihrer Typen an, die mit dem unter **Filter** festgelegten Filter übereinstimmen (oder aller Tabellen, wenn kein **Filter** festgelegt wurde) und noch nicht im aktuellen Diagramm angezeigt wurden.  
   

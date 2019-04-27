@@ -37,16 +37,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746712"
 ---
 # <a name="network-properties"></a>Netzwerkeigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** mehrdimensionalen und Tabellenservermodus  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus  
   
 ## <a name="general"></a>Allgemein  
  `ListenOnlyOnLocalConnections`  
@@ -56,7 +56,7 @@ ms.locfileid: "48101960"
  `IPV4Support`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Unterstützung für das IPv4-Protokoll definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|IPv4 ist deaktiviert; Clients können keine Verbindung herstellen.|  
 |*1*|(Standard) IPv4 ist erforderlich; Server startet nicht, wenn eine Überwachung von IPv4 nicht möglich ist.|  
@@ -65,7 +65,7 @@ ms.locfileid: "48101960"
  `IPV6Support`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Unterstützung für das IPv6-Protokoll definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|IPv6 ist deaktiviert; Clients können keine Verbindung herstellen.|  
 |*1*|(Standard) IPv6 ist erforderlich; Server startet nicht, wenn eine Überwachung von IPv6 nicht möglich ist.|  

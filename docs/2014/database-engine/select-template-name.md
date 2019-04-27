@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55b53cac59b387a2e52f5b1e5dc641471b1b28b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773769"
 ---
 # <a name="select-template-name"></a>Vorlagennamen auswählen
   Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsvorlage auswählen und in eine Datei auf dem Betriebssystem exportieren. Darüber hinaus können Sie dieses Dialogfeld dazu verwenden, beim Bearbeiten einer vorhandenen Ablaufverfolgungsvorlage einen anderen Namen auszuwählen oder einzugeben, unter dem die Ablaufverfolgungsvorlage gespeichert werden soll. Um beim Exportieren einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Datei** auf **Vorlagen**, und klicken Sie dann auf **Vorlage exportieren**. Um beim Ändern des Namens einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie im Menü **Datei** auf **Vorlagen**und auf **Vorlage bearbeiten**, und klicken Sie dann auf **Speichern unter**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servertyp**  
  Wählen Sie den Servertyp aus, auf dem Sie eine Vorlage auswählen möchten. Diese Option ist nur beim Exportieren einer Vorlage verfügbar.  
   

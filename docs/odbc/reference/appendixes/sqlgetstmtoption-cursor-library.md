@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4c7429bd4a3780caaf5bc7e0624d0e92ef4dd3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62751183"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (Cursorbibliothek)
 > [!IMPORTANT]  
@@ -31,6 +31,6 @@ ms.locfileid: "47828895"
 |||  
 |-|-|  
 |SQL_BIND_TYPE|SQL_ROW_NUMBER|  
-|SQL_CONCURRENCY|SQL_ROWSET_SIZE SETZEN|  
+|SQL_CONCURRENCY|SQL_ROWSET_SIZE|  
 |SQL_CURSOR_TYPE|SQL_SIMULATE_CURSOR|  
 |SQL_GET_BOOKMARK||

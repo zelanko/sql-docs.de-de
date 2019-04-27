@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749205"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Datenfeeds mithilfe einer Datenfeedbibliothek verwenden (PowerPivot für SharePoint)
   Ein Datenfeed ist ein XML-Datenstrom, der von einem Dienst oder einer Anwendung generiert wird, der bzw. die Daten im Atom-Übertragungsformat verfügbar macht. Datenfeeds werden zunehmend verwendet, um Daten zwischen Anwendungen und zu clientseitigen Viewern zu transportieren. In einer PowerPivot für SharePoint-Bereitstellung werden Datenfeeds verwendet, zum Auffüllen einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle mit Daten aus Atom-fähigen Anwendungen oder Diensten.  
@@ -93,7 +93,7 @@ ms.locfileid: "48178550"
   
  Ebenso wird das Datendienstdokument aus allen Datenaktualisierungsvorgängen ausgeschlossen, die Sie anschließend planen. Während des Imports werden Verbindungsinformationen für jeden Feed zu Aktualisierungszwecken in die PowerPivot-Datenquelle kopiert. Das bedeutet, dass Berechtigungen für ein Datendienstdokument nicht auf Datenaktualisierungen überprüft werden, da in einem Aktualisierungsvorgang nie auf das Dokument selbst verwiesen wird.  
   
-|Task|SharePoint-Berechtigungsanforderungen|  
+|Aufgabe|SharePoint-Berechtigungsanforderungen|  
 |----------|----------------------------------------|  
 |Importieren von Datenfeeds in eine PowerPivot-fähige Arbeitsmappe.|Anzeigeberechtigungen für das Datendienstdokument in einer Bibliothek.|  
 |Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der PowerPivot-Clientanwendung.|Nicht verfügbar. Die PowerPivot-Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der PowerPivot-Clientanwendung nicht verwendet.|  

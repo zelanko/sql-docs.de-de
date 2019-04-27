@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773428"
 ---
 # <a name="view-a-list-of-modified-files"></a>Anzeigen einer Liste geänderter Dateien
   Sie können die **Anstehende Eincheckvorgänge** Fenster anzeigen Zeitpunkt eine Liste der ausgecheckten Dateien in der aktuellen Projektmappe, und zum Einchecken dieser Dateien mit einer einzelnen Schaltfläche auf.  

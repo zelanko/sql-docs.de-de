@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781105"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Übersicht über benutzerdefinierte Attribute der CLR-Integration 
   Die CLR-Komponente (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ermöglicht den Einsatz beschreibender Schlüsselwörter, so genannter Attribute. Diese Attribute stellen weitere Informationen für viele Elemente bereit, z. B. Methoden und Klassen. Die Attribute werden mit den Metadaten des Objekts in der Assembly gespeichert. Mit Attributen kann Code für andere Entwicklungstools beschrieben oder das Laufzeitverhalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beeinflusst werden.  

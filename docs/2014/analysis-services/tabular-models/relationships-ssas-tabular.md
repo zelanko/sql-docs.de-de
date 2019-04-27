@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756766"
 ---
 # <a name="relationships-ssas-tabular"></a>Beziehungen (SSAS – tabellarisch)
   In tabellarischen Modellen ist eine Beziehung eine Verbindung, die Sie zwischen zwei Tabellen mit Daten erstellen. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen. Eine Customers-Tabelle und eine Orders-Tabelle können z. B. verknüpft werden, um den Kundennamen anzuzeigen, der jeder Bestellung zugeordnet ist.  
@@ -47,7 +47,7 @@ ms.locfileid: "48191740"
 ##  <a name="what"></a> Vorteile  
  Eine Beziehung ist eine Verbindung zwischen zwei Datentabellen, die auf mindestens einer Spalte in jeder Tabelle basiert. Um zu verstehen, warum Beziehungen nützlich sind, stellen Sie sich vor, dass Sie in Ihrem Unternehmen die Daten für Kundenbestellungen verfolgen möchten. Sie könnten alle Daten in einer einzelnen Tabelle verfolgen, die über eine Struktur wie die folgende verfügt:  
   
-|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -71,13 +71,13 @@ ms.locfileid: "48191740"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Produkt|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, Sie können Beziehungen manuell erstellen wie in beschrieben [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, können Sie Beziehungen manuell erstellen, wie in [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)verwendet.  
   
 ### <a name="columns-and-keys"></a>Spalten und Schlüssel  
  Beziehungen basieren auf den Spalten in jeder Tabelle, die die gleichen Daten enthalten. Die Tabellen "Customers" und "Orders" können z. B. miteinander verknüpft werden, da beide eine Spalte enthalten, in der eine Kundennummer (CustomerID) gespeichert ist. Im Beispiel sind die Spaltennamen identisch, dies ist jedoch keine Voraussetzung. Eine Spalte kann beispielsweise den Namen "CustomerID" und die andere "CustomerNumber" besitzen, sofern alle Zeilen in der Tabelle "Orders" eine ID enthalten, die auch in der Tabelle "Customers" gespeichert ist.  
@@ -111,9 +111,9 @@ ms.locfileid: "48191740"
  Beim Erstellen von Beziehungen müssen im Modell-Designer mehrere Anforderungen beachtet werden:  
   
 ### <a name="single-active-relationship-between-tables"></a>Nur eine aktive Beziehung zwischen zwei Tabellen  
- Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. Beispiel: In AdventureWorks DW 2012 enthält die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
+ Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. In AdventureWorks DW 2012 enthält beispielsweise die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
   
- \* Beziehung: Table [Spalte 1] -> Table [Spalte 2] - Status: Fehler - Ursache: eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<in Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
+ \* Beziehung: Table [Spalte 1] -> Table [Spalte 2] - Status: Fehler - Ursache: Eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<in Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
   
  Wenn Sie zwei Tabellen mit mehreren Beziehungen zueinander haben, müssen Sie mehrere Kopien der Tabelle importieren, die die Suchspalte enthält, und dann eine Beziehung zwischen jedem Tabellenpaar erstellen.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48191740"
   
  Wenn das Modell Daten aus mehreren Quellen enthält, müssen Beziehungen wahrscheinlich manuell erstellt werden. Zum Beispiel können Sie Customers-, CustomerDiscounts- und Orders-Tabellen aus einer relationalen Datenquelle importieren. Beziehungen, die zwischen diesen Tabellen an der Quelle vorhanden sind, werden automatisch im Modell erstellt. Anschließend fügen Sie möglicherweise eine andere Tabelle aus einer anderen Quelle hinzu, zum Beispiel importieren Sie Bereichsdaten aus einer Geografietabelle in eine Microsoft Excel-Arbeitsmappe. Sie können dann manuell eine Beziehung zwischen einer Spalte in der Customers-Tabelle und einer Spalte in der Geografietabelle erstellen.  
   
- Um Beziehungen in einem Tabellenmodell manuell zu erstellen, können Sie den Modell-Designer in der Diagrammsicht oder das Dialogfeld "Beziehungen verwalten" verwenden. In der Diagrammsicht werden Tabellen mit den bestehenden Beziehungen in einem grafischen Format angezeigt. Sie können auf eine Spalte in einer Tabelle klicken und den Cursor in eine andere Tabelle ziehen, um problemlos in der richtigen Reihenfolge eine Beziehung zwischen den Tabellen zu erstellen. Im Dialogfeld "Beziehungen verwalten" werden Beziehungen zwischen Tabellen in einem einfachen Tabellenformat angezeigt. Vorgehensweise beim manuellen Erstellen von Beziehungen finden Sie unter [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Um Beziehungen in einem Tabellenmodell manuell zu erstellen, können Sie den Modell-Designer in der Diagrammsicht oder das Dialogfeld "Beziehungen verwalten" verwenden. In der Diagrammsicht werden Tabellen mit den bestehenden Beziehungen in einem grafischen Format angezeigt. Sie können auf eine Spalte in einer Tabelle klicken und den Cursor in eine andere Tabelle ziehen, um problemlos in der richtigen Reihenfolge eine Beziehung zwischen den Tabellen zu erstellen. Im Dialogfeld "Beziehungen verwalten" werden Beziehungen zwischen Tabellen in einem einfachen Tabellenformat angezeigt. So erfahren Sie, wie Sie Beziehungen manuell erstellen können: [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)verwendet.  
   
 ##  <a name="bkmk_dupl_errors"></a> Doppelte Werte und andere Fehler  
  Wenn Sie eine Spalte auswählen, die nicht in der Beziehung verwendet werden kann, wird ein rotes X neben der Spalte angezeigt. Sie können den Mauszeiger auf das Fehlersymbol bewegen, um eine Meldung anzuzeigen, die weitere Informationen zum Problem enthält. Beispiele für Probleme, die es unmöglich machen können, eine Beziehung zwischen den ausgewählten Spalten zu erstellen, sind:  

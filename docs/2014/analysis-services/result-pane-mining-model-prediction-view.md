@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748212"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Ergebnisbereich (Miningmodellvorhersagesicht)
   Der Bereich **Ergebnisse** zeigt die Ergebnisse der in der **Entwurfs** -Ansicht des Vorhersageabfrage-Generators entworfenen Data Mining-Vorhersageabfrage an. Sie können eine Auswahl des Rasters oder alle Ergebnisse in die Zwischenablage kopieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zur abfrageentwurfssicht wechseln**  
  Klicken Sie hier, um zwischen den Bereichen **Entwurf**, **Abfrage**und **Ergebnis** zu wechseln.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48071180"
  Verarbeitet die Vorhersageabfrage erneut.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)   
+ [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
  [Data Mining Abfrageschnittstellen](data-mining/data-mining-query-tools.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   

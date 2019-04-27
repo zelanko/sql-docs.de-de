@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756989"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` ist ein Ausführungsmodus von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] für Programmentwickler vorgesehen. `LocalDB` -Installation kopiert einen minimalen Satz von Dateien zum Starten der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Einmal `LocalDB` ist installiert, Entwickler eine Verbindung mit einer speziellen Verbindungszeichenfolge initiieren. Wenn eine Verbindung hergestellt wird, wird die erforderliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur automatisch erstellt und gestartet. Sie ermöglicht der Anwendung, die Datenbank zu verwenden, und zwar ohne komplexe oder zeitraubende Konfigurationstasks. Mit Developer Tools können Entwickler [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bereitstellen, womit sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schreiben und testen können, und zwar ohne dabei eine vollständige Serverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten zu müssen. Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` verwaltet wird, mithilfe der `SqlLocalDB.exe` Hilfsprogramm. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` sollte verwendet werden, anstelle von der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -benutzerinstanzfeatures veraltet ist.  

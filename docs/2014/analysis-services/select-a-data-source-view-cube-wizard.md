@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747732"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Datenquellensicht auswählen (Cube-Assistent)
   Mithilfe der Seite **Datenquellensicht auswählen** können Sie die Datenquellensicht für den leeren Cube ermitteln.  
@@ -26,7 +26,7 @@ ms.locfileid: "48210020"
 > [!NOTE]  
 >  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Erstellungsmethode auswählen** **Leeren Cube erstellen** ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquellensicht**  
  Wählen Sie die Datenquellensichten aus, die für den leeren Cube verwendet werden sollen.  
   

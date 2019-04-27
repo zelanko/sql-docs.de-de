@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749361"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot-Datenzugriff
   In diesem Thema werden die Methoden beschrieben, mit denen Daten aus einer PowerPivot-Arbeitsmappe abgerufen werden, die in einer SharePoint-Bibliothek veröffentlicht ist.  
@@ -41,7 +41,7 @@ ms.locfileid: "48164090"
  Nicht alle Daten in einer PowerPivot-Arbeitsmappe werden durch PowerPivot für SharePoint verarbeitet. Tabellen und Zellendaten in einem Arbeitsblatt werden durch Excel Services verarbeitet. Nur PivotTables, PivotCharts und Slicer, die auf PowerPivot-Daten basieren, werden durch den PowerPivot für SharePoint-Dienst verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbinden von Analysis Services](../instances/connect-to-analysis-services.md)   
+ [Verbindung mit Analysis Services herstellen](../instances/connect-to-analysis-services.md)   
  [Zugriff auf Daten im tabellarischen Modell](../tabular-models/tabular-model-data-access.md)  
   
   

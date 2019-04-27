@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49e2ce59b8662a8deaf47099c967355150dca201
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749579"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Konnte nicht geladen werden, Datei oder Assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = Neutral, PublicKeyToken = b77a5c561934e089&#39; oder eine ihrer Abhängigkeiten. Die angegebene Datei wurde nicht gefunden.
   In SharePoint 2010-Umgebungen mit PowerPivot für SharePoint tritt dieser Fehler auf, wenn Sie versuchen, einen Datenfeed zu exportieren und das System nicht über die erforderliche Version von Microsoft ADO.NET Data Services verfügt.  

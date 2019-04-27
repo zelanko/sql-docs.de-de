@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748372"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Abfragebereich (Miningmodell-Vorhersageansicht)
   Im Bereich **Abfrage** werden die vom Generator für Vorhersageabfragen erstellten DMX-Abfragen (Data Mining-Erweiterungen) angezeigt. Sie können diese Anweisungen ändern und anschließend auf die Schaltfläche **Zur Abfrageergebnissicht wechseln** klicken, um die Ergebnisse zurückgeben zu lassen. Wenn Sie zurück zur Ansicht **Design** wechseln, gehen alle an der Anweisung vorgenommenen Änderungen verloren.  
   
- **Weitere Informationen:** [DMX-Datenbearbeitungsanweisungen &#40;Data Mining-Erweiterungen&#41;](/sql/dmx/dmx-statements-data-manipulation), [Erstellen einer DMX-Abfrage in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Erweiterungen &#40;DMX&#41; Datenbearbeitungsanweisungen](/sql/dmx/dmx-statements-data-manipulation), [erstellen Sie eine DMX-Abfrage in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zur abfrageergebnissicht wechseln**  
  Klicken Sie hier, um zwischen den Bereichen **Entwurf**, **Abfrage**und **Ergebnis** zu wechseln. Der Wechsel zum Bereich **Ergebnis** führt die Abfrage aus.  
   

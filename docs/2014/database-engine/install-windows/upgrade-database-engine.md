@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774974"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
   Dieses Thema enthält die Informationen, die Sie zur Vorbereitung und zum Verständnis des Aktualisierungsvorgangs benötigen. Dazu gehören:  
@@ -43,10 +43,10 @@ ms.locfileid: "51018565"
 >  Bevor Sie eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine andere Edition aktualisieren, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird.  
   
 > [!NOTE]  
->  Wenn Sie von einer früheren Version der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Bei einem upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, Enterprise Edition entscheiden: Kernbasierte Lizenzierung, und klicken Sie mit der Enterprise Edition. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor der Aktualisierung  
- Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf einem anderen Computer erfolgen. Die Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren von Datenbanken, die Sicherungs- und Wiederherstellungsfunktionalität, die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Import/Export-Assistenten und der Methoden zum Massenexport oder -import.  
+ Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer erfolgen. Die Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren von Datenbanken, die Sicherungs- und Wiederherstellungsfunktionalität, die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Import/Export-Assistenten und der Methoden zum Massenexport oder -import.  
   
  Lesen Sie vor dem Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]die folgenden Themen:  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753231"
 ---
 # <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
   In dieser Aufgabe erstellen Sie eine Regel für die **Contact Email** Domäne zu überprüfen, ob die e-Mail-Adresse endet **@adventure-works.com**. Finden Sie unter [Erstellen einer Domänenregel](https://msdn.microsoft.com/library/hh510397.aspx) Weitere Informationen auf der Seite.  

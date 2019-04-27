@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773543"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen
   In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank sowie zum Konfigurieren der Standardeinstellungen für die Instanz beschrieben. Außerdem werden in diesem Thema die zum Anhalten und Fortsetzen der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] -Dienste für die Instanz erforderlichen Schritte beschrieben.  
@@ -55,7 +55,7 @@ ms.locfileid: "52534485"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Datenbankebene  
  Wenn für eine Datenbank bestimmte Anforderungen an den Sicherungszeitraum und die Beibehaltungsdauer (Wiederherstellbarkeits-SLA) bestehen, die sich von denjenigen für andere Datenbanken in der Instanz unterscheiden, konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für diese Datenbank auf Datenbankebene. Datenbankebeneneinstellungen überschreiben Konfigurationseinstellungen der Instanzebenen. Es können jedoch beide Optionen auf derselben Instanz zusammen verwendet werden. Im Folgenden finden Sie eine Liste der Vorteile und Überlegungen beim Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Datenbankebene.  
   
--   Präziser: Separate Konfigurationseinstellungen für jede Datenbank. Unterstützung verschiedener Beibehaltungsdauern für einzelne Datenbanken sind möglich.  
+-   Eine feiner abgestimmte: Trennen Sie die Konfigurationseinstellungen für jede Datenbank. Unterstützung verschiedener Beibehaltungsdauern für einzelne Datenbanken sind möglich.  
   
 -   Überschreibt Instanzebeneneinstellungen für die Datenbank.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52534485"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene mit Standardeinstellungen  
  Verwenden Sie diese Einstellung, wenn die meisten Datenbanken in der Instanz die gleichen Anforderungen an die Sicherungs- und Beibehaltungsrichtlinie besitzen oder wenn neue Datenbankinstanzen bei der Erstellung automatisch gesichert werden sollen. Einige Datenbanken, die eine Ausnahme von der Richtlinie darstellen, können dennoch einzeln konfiguriert werden. Im Folgenden sind Vorteile und Überlegungen aufgelistet, die sich auf die Aktivierung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene beziehen.  
   
--   Automatisierung auf Instanzebene: Allgemeine Einstellungen, die automatisch auf später hinzugefügte neue Datenbanken angewendet werden.  
+-   Automatisierung auf Instanzebene: Allgemeine Einstellungen, die auf automatisch später hinzugefügte neue Datenbanken angewendet werden.  
   
 -   Neue Datenbanken werden kurz nach ihrer Erstellung auf den Instanzen automatisch gesichert.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534485"
     ```  
   
 ##  <a name="InstanceConfigure"></a> Deaktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen für die Instanz  
- Sie können die standardmäßigen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Einstellungen auf Instanzebene auf zwei Arten aktivieren und konfigurieren:  Mithilfe der gespeicherten Prozedur `smart_backup.set_instance_backup` oder **SQL Server Management Studio**. Die beiden Methoden werden nachfolgend erläutert:  
+ Können Sie aktivieren und konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen auf Instanzebene auf zwei Arten:  Mithilfe der gespeicherten Prozedur `smart_backup.set_instance_backup` oder **SQL Server Management Studio**. Die beiden Methoden werden nachfolgend erläutert:  
   
  **smart_backup.set_instance_backup:**. Durch Angabe des Werts **1** für *@enable_backup* -Parameter können Sie die Sicherung aktivieren und die Standardkonfigurationen festlegen. Nachdem diese auf Instanzebene angewendet wurden, werden diese Standardeinstellungen auf alle neuen Datenbanken angewendet, die dieser Instanz hinzugefügt werden.  Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zum ersten Mal aktiviert wird, müssen zusätzlich zum Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz die folgenden Informationen angegeben werden:  
   

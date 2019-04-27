@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774092"
 ---
 # <a name="trace-table-properties-general-tab"></a>Eigenschaften der Ablaufverfolgungstabelle (Registerkarte Allgemein)
   Verwenden der **allgemeine** Registerkarte die **Eigenschaften der Ablaufverfolgungstabelle** Dialogfeld, um die Eigenschaften einer Ablaufverfolgungstabelle anzeigen.  
   
  Verwenden Sie zum Anzeigen dieses Fensters [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] zum Öffnen einer Ablaufverfolgungstabelle, und klicken Sie dann auf die **Datei** im Menü klicken Sie auf **Eigenschaften**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Tabellenname**  
  Zeigt Server, Datenbank, Schema und Name der angezeigten Ablaufverfolgungstabelle an.  
   

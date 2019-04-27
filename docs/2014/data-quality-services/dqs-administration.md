@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756026"
 ---
 # <a name="dqs-administration"></a>DQS-Administration
   Mit[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie verschiedene auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ausgeführte DQS-Aktivitäten verwalten, auf DQS-bezogene Eigenschaften auf Serverebene, die Reference Data Service-Einstellungen und DQS-Protokolleinstellungen konfigurieren. Dies ist durch die Funktion **Verwaltung** in möglich [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In Abhängigkeit von Ihrem Sicherheitszugriff (Rolle) in DQS wird Ihnen der Zugriff auf bestimmte Funktionen in diesem Bereich gewährt bzw. verweigert.  
@@ -49,11 +49,11 @@ ms.locfileid: "56032781"
 ### <a name="configuration"></a>Konfiguration  
  Der Bildschirm **Konfiguration** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht dem DQS-Administrator Folgendes:  
   
--   **Verweisen auf Daten**: Konfigurieren Sie Verweisdaten-Dienstanbieter: Windows Azure Marketplace oder direkter Verweisdaten-Dienstanbieter. Nachdem Sie die Verweisdaten-Dienstanbieter eingerichtet haben, können Sie während einer Domänenverwaltungsaktivität in einer Wissensdatenbank den Verweisdaten eine Domäne bzw. Verbunddomäne zuordnen und anschließend die gleiche Wissensdatenbank für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden. Damit können Sie auch die Proxyeinstellungen für die Verbindung mit dem Internet angeben, um Windows Azure Marketplace zu verwenden.  
+-   **Verweisdaten:** Konfigurieren Sie Reference Data Service-Anbieter: Microsoft Azure Marketplace oder direkte Reference Data Service-Anbieter. Nachdem Sie die Verweisdaten-Dienstanbieter eingerichtet haben, können Sie während einer Domänenverwaltungsaktivität in einer Wissensdatenbank den Verweisdaten eine Domäne bzw. Verbunddomäne zuordnen und anschließend die gleiche Wissensdatenbank für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden. Damit können Sie auch die Proxyeinstellungen für die Verbindung mit dem Internet angeben, um Windows Azure Marketplace zu verwenden.  
   
--   **Allgemeine Einstellungen**: Geben Sie die Schwellenwerte für die DatenBereinigung und Datenabgleich und an, ob Benachrichtigungen für die profilerstellung in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Diese Schwellenwerte werden von DQS bei der computergestützten Bereinigung und bei Abgleichsaktivitäten in einem Data Quality-Projekt verwendet.  
+-   **Allgemeine Einstellungen:** Geben Sie die Schwellenwerte für die Datenbereinigung und den Datenabgleich an, und legen Sie fest, ob Benachrichtigungen für die Profilerstellung in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aktiviert sein soll. Diese Schwellenwerte werden von DQS bei der computergestützten Bereinigung und bei Abgleichsaktivitäten in einem Data Quality-Projekt verwendet.  
   
--   **Protokolleinstellungen**: Die Protokolldateien in DQS zeichnen die in DQS ausgeführten Aktivitäten, und eignen sich zum Nachverfolgen funktionaler Probleme während der Wartung und Problembehandlung. Sie können die Meldungen filtern, die für verschiedene DQS-Funktionen (Domänenverwaltung, Wissensermittlung, Bereinigung, Abgleich und Verweisdatendienste) und DQS-Module auf Grundlage des Schweregrads der Ereignisse protokolliert werden sollen.  
+-   **Protokolleinstellungen:** Die Protokolldateien in DQS zeichnen die in DQS ausgeführten Aktivitäten auf und eignen sich zum Nachverfolgen funktionaler Probleme während der Wartung und Problembehebung. Sie können die Meldungen filtern, die für verschiedene DQS-Funktionen (Domänenverwaltung, Wissensermittlung, Bereinigung, Abgleich und Verweisdatendienste) und DQS-Module auf Grundlage des Schweregrads der Ereignisse protokolliert werden sollen.  
   
 > [!NOTE]  
 >  Der Bildschirm **Konfiguration** ist nur für Benutzer verfügbar, die die "dqs_administrator"-Rolle in der Datenbank "DQS_MAIN" aufweisen.  
@@ -61,9 +61,9 @@ ms.locfileid: "56032781"
 ##  <a name="AdminOutsideClient"></a> Verwaltungsaktivitäten außerhalb des Data Quality-Clients  
  Folgende Aktivitäten werden außerhalb des Data Quality-Clients ausgeführt:  
   
--   **Sichern und Wiederherstellen von DQS-Datenbanken**: Das Sichern und Wiederherstellen von DQS-Datenbanken ist identisch mit sichern und Wiederherstellen von SQL Server-Datenbanken, wobei einige Aspekte jedoch spezifisch für DQS sind.  
+-   **Sichern und Wiederherstellen von DQS-Datenbanken:** Das Sichern und Wiederherstellen von DQS-Datenbanken gleicht dem Sichern und Wiederherstellen von SQL Server-Datenbanken. Einige Überlegungen gelten jedoch spezifisch für DQS.  
   
--   **Trennen und Anfügen von DQS-Datenbanken**: Die Schritte zum Trennen und Anfügen von DQS-Datenbanken ist identisch mit trennen und Anfügen von SQL Server-Datenbanken, wobei einige Aspekte jedoch spezifisch für DQS sind.  
+-   **Trennen und Anfügen von DQS-Datenbanken:** Die Schritte zum Trennen und Anfügen von DQS-Datenbanken gleichen dem Trennen und Anfügen von SQL Server-Datenbanken, wobei einige Aspekte jedoch spezifisch für DQS gelten.  
   
  Weitere Informationen finden Sie unter [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md).  
   

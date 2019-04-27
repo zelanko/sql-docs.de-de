@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749616"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Sie verwenden die PowerPivot-Konfigurationstools zum Konfigurieren, Reparieren oder Entfernen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  

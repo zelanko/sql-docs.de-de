@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747242"
 ---
 # <a name="lock-manager-properties"></a>Eigenschaften des Sperren-Managers
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Sperren-Manager-Servereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** mehrdimensionalen und Tabellenservermodus  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus  
   
 ## <a name="properties"></a>Eigenschaften  
  `DefaultLockTimeoutMS`  

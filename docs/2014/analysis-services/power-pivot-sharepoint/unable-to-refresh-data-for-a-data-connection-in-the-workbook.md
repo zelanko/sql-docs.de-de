@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749127"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die PowerPivot-Daten enthalten, wenn es eine Verbindungsanforderung an einen PowerPivot-Server sendet und die Anforderung fehlschlägt.  
@@ -41,7 +41,7 @@ ms.locfileid: "53371002"
   
  Die Arbeitsmappe, die Sie zu öffnen versuchen, könnte in der SQL Server 2008 R2-Version von PowerPivot für Excel erstellt worden sein. Höchstwahrscheinlich ist der in der Datenverbindungszeichenfolge angegebene Analysis Service-Datenanbieter nicht auf dem Computer vorhanden, auf dem die Abfrage verarbeitet wird.  
   
- Wenn dies der Fall ist, finden Sie eine Nachricht ähnlich der folgenden im ULS-Protokoll: "Fehler bei der Aktualisierung für PowerPivot-Daten" in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von"Es kann keine Verbindung hergestellt werden".  
+ Wenn dies der Fall ist, finden Sie diese Meldung in das ULS-Protokoll: "Fehler bei der Aktualisierung für PowerPivot-Daten" in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von"Es kann keine Verbindung hergestellt werden".  
   
  Um die Version der Arbeitsmappe zu bestimmen, öffnen Sie sie in Excel, und überprüfen Sie, welcher Datenanbieter in der Verbindungszeichenfolge angegeben ist. Eine SQL Server 2008 R2-Arbeitsmappe verwendet MSOLAP.4 als Datenanbieter.  
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746652"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Aggregationsoptionen festlegen** können Sie den Aggregationsentwurf starten und Speicher- sowie Leistungslimits für die generierten Aggregationen angeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geschätzter Speicherplatz erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie die maximale Anzahl von Megabytes (MB) oder Gigabytes (GB) angeben, die zum Generieren der Aggregationen verwendet werden kann.  
   

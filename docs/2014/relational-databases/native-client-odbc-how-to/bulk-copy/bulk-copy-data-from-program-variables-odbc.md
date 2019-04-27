@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753642"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen unter Verwendung von `bcp_bind` und `bcp_sendrow` Daten aus Programmvariablen nach SQL Server massenkopiert werden. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  

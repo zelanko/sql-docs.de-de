@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774778"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Öffnen von Projektmappen und Projekten aus der Quellcodeverwaltung
   Sie können [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu einer Projektmappe oder das Projekt direkt aus der quellcodeverwaltung zu öffnen. Beim Öffnen einer Projektmappe aus der Quellcodeverwaltung ruft die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Umgebung automatisch die jeweils aktuelle Version der Projektmappe ab und kopiert sie an den von Ihnen angegebenen Speicherort.  

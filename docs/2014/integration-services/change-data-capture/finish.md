@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771316"
 ---
 # <a name="finish"></a>Fertig stellen
   Auf der Seite **Fertig stellen** wird der Prozess des Assistenten zusammengefasst. Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen und alle Tabellen zu generieren, die Sie im Assistenten zum Erstellen von CDC-Instanzen definiert haben.  

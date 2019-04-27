@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746802"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Serverkonfigurations-Hilfsprogramm (Data Mining-Add-Ins für Excel)
-  Beim Installieren der Data Mining-Add-Ins für Excel wird auch ein Serverkonfigurations-Hilfsprogramm installiert. Dieses wird beim erstmaligen Öffnen der Add-Ins ausgeführt. In diesem Thema wird beschrieben, wie Sie mit dem Hilfsprogramm eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen und eine Datenbank für das Verwenden von Data Mining-Modellen einrichten.  
+  Wenn Sie die Data Mining-Add-ins für Excel installieren, ein Serverkonfigurations-Hilfsprogramm wird ebenfalls installiert und wird beim ersten Öffnen Sie die Add-ins ausgeführt. In diesem Thema wird beschrieben, wie das Dienstprogramm verwenden, für die Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und eine Datenbank für die Arbeit mit Datamining-Modellen einrichten.  
   
 
   
-##  <a name="bkmk_step1"></a> Schritt 1: Verbinden Sie mit Analysis Services  
+##  <a name="bkmk_step1"></a>Schritt 1: Verbindung mit Analysis Services herstellen  
  Wählen Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server aus, der die Data Mining-Algorithmen bereitstellt und auf dem die Data Mining-Modelle gespeichert werden.  
   
  Beim Erstellen einer Verbindung zum Ermöglichen des Data Mining sollten Sie einen Server auswählen, auf dem Sie mit Data Mining-Modellen experimentieren können. Es empfiehlt sich, dass Sie eine neue Datenbank auf dem Server erstellen und die neue Datenbank für das Data Mining reservieren. Sie können sich auch an Ihren Administrator wenden, damit dieser einen Data Mining-Server für Sie vorbereitet. Auf diese Weise können Sie Modelle erstellen, ohne dass die Leistung anderer Dienste beeinträchtigt wird.  
@@ -36,7 +36,7 @@ ms.locfileid: "48069631"
  **Authentifizierung**  
  Geben Sie die Authentifizierungsmethoden an. Die Windows-Authentifizierung ist für Verbindungen mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erforderlich, es sei denn, der Administrator hat den Zugriff auf den Server über die HTTPPump konfiguriert.  
   
-##  <a name="bkmk_step2"></a> Schritt 2: Erstellen temporärer Miningmodelle zulassen  
+##  <a name="bkmk_step2"></a>Schritt 2: Erstellen temporärer Miningmodelle zulassen  
  Bevor Sie die Add-Ins verwenden können, muss eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Servereigenschaft geändert werden, um das Erstellen temporärer Miningmodelle zuzulassen.  
   
  Temporäre Miningmodelle werden auch als bezeichnet *sitzungsmodelle*. Das liegt daran, dass die Modelle nur gespeichert werden, solange die aktuelle Sitzung geöffnet ist. Wenn Sie die Verbindung mit dem Server schließen, wird die Sitzung beendet, und alle während der Sitzung verwendeten Modelle werden gelöscht.  
@@ -45,7 +45,7 @@ ms.locfileid: "48069631"
   
  Der Assistent erkennt zuerst die Einstellungen auf dem Server, den Sie angegeben haben. Wenn der Server bereits temporäre Miningmodelle zulässt, können Sie klicken **Weiter** um den Vorgang fortzusetzen. Der Assistent bietet zudem Anweisungen zum Aktivieren temporärer Miningmodelle auf dem angegebenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server sowie zum Senden von Anforderungen an den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Administrator.  
   
-##  <a name="bkmk_step3"></a> Schritt 3: Erstellen der Datenbank für Add-in-Benutzern  
+##  <a name="bkmk_step3"></a>Schritt 3: Erstellen einer Datenbank für Add-in-Benutzern  
  Auf dieser Seite des Setup- und Konfigurations-Assistenten können Sie eine neue Datenbank erstellen, die für das Data Mining reserviert ist. Sie können aber auch eine vorhandene [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank auswählen.  
   
 > [!WARNING]  
@@ -67,7 +67,7 @@ ms.locfileid: "48069631"
  **Datenbank**  
  Wenn Sie die Option zum Verwenden einer vorhandenen Datenbank ausgewählt haben, müssen Sie den Datenbanknamen in der Liste auswählen.  
   
-##  <a name="bkmk_step4"></a> Schritt 4: Erteilen von Add-in-Benutzern entsprechende Berechtigungen  
+##  <a name="bkmk_step4"></a> Schritt 4: Add-in-Benutzern entsprechende Berechtigungen erteilen  
  Sie müssen sicherstellen, dass Sie (und alle anderen Benutzer, die die Add-Ins verwenden) über die erforderlichen Berechtigungen zum Durchsuchen, Bearbeiten, Verarbeiten oder Erstellen von Data Mining-Strukturen und -Modellen verfügen.  
   
  Standardmäßig ist die integrierte Windows-Authentifizierung erforderlich, um die Add-Ins zu verwenden.  

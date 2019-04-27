@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773366"
 ---
 # <a name="view-file-status"></a>Anzeigen des Dateistatus
   Die Quellcodeverwaltung verwaltet detaillierte Statusinformationen zu jedem Element unter Quellcodeverwaltung. Mithilfe dieser Informationen können Sie den aktuellen Status der Datei identifizieren und einen Statusbericht für das Element erstellen.  

@@ -21,16 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a382b37b9b7e25c8cb42e42bf873a0ce7f2a4920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746702"
 ---
 # <a name="security-properties"></a>Sicherheitseigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Sicherheitseigenschaften des Servers aufgeführt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** mehrdimensionalen und Tabellenservermodus  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus  
   
 ## <a name="properties"></a>Eigenschaften  
  `RequireClientAuthentication`  
@@ -60,7 +60,7 @@ ms.locfileid: "48054960"
  `DataProtection\ RequiredProtectionLevel`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die erforderliche Schutzebene für alle Clientanforderungen definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|Keine, Klartext ist zulässig|  
 |*1*|(Standard) Verschlüsselung erforderlich, keine Klartextprotokollierung|  

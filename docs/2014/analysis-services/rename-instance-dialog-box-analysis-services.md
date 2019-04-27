@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748332"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Instanz umbenennen (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Instanz umbenennen** können Sie eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]umbenennen. Sie können das Dialogfeld **Instanz umbenennen** anzeigen, indem Sie das **Tool zum Umbenennen von Instanzen** (asinstancerename.exe) über „C:\Programme\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE“ aufrufen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  

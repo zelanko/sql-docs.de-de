@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780490"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Beispiel für Zeichenfolgendarstellung mit ergänzenden Zeichen
   Dieses Beispiel für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht Zeichenfolgenbearbeitungen mit ergänzenden Zeichen. Dieses Beispiel zeigt die Implementierung von fünf Transact-SQL-Zeichenfolgenfunktionen, die dieselben Bearbeitungsfunktionen für Zeichenfolgen bereitstellen wie die integrierten Funktionen, jedoch zusätzliche Funktionen für ergänzende Zeichen bieten, um sowohl Unicode- als auch Sonderzeichenfolgen bearbeiten zu können. Die fünf Funktionen sind lens(), `lefts(), rights(), subs()` und `replace_s()` entsprechen sich in die integrierten Funktionen `LEN(), LEFT(), RIGHT(), SUBSTRING()` und `REPLACE()` Zeichenfolgenfunktionen.  

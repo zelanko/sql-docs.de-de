@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748302"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Tabelle durch eine andere Tabelle ersetzen (Dialogfeld)
   In **können Sie im Dialogfeld** Tabelle durch eine andere Tabelle ersetzen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine vorhandene Tabelle in einer Datenquellensicht durch eine Tabelle in der zugrunde liegenden Datenquelle ersetzen, die noch nicht in der Datenquellensicht enthalten ist. Um das Dialogfeld **Tabelle durch eine andere Tabelle ersetzen** anzuzeigen, klicken Sie im **Datenquellensicht-Designer** mit der rechten Maustaste im Bereich **Diagramm** oder **Tabellen** auf den Namen einer Tabelle, und wählen Sie dann unter **Tabelle ersetzen** die Option **Durch andere Tabelle**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquelle**  
  Wählen Sie die Datenquelle aus, aus der die Tabelle abgerufen werden soll.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48173760"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

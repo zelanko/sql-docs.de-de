@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756009"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Warnungen (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
-  Mithilfe der Registerkarte **Warnungen** können Sie Regeln anzeigen und global verwerfen sowie bestimmte Instanzen verworfener Warnungen anzeigen und erneut aktivieren. Die Registerkarte **Warnungen** enthält zwei Raster: **Entwurfswarnungsregeln** und **Verworfene Warnungen**.  
+  Mithilfe der Registerkarte **Warnungen** können Sie Regeln anzeigen und global verwerfen sowie bestimmte Instanzen verworfener Warnungen anzeigen und erneut aktivieren. Die **Warnungen** Registerkarte enthält zwei Raster: **Entwurfswarnungsregeln** und **verworfener Warnungen**.  
   
  **Auf die Registerkarte "Warnungen" angezeigt.**  
   

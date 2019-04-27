@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753102"
 ---
 # <a name="lesson-4-create-relationships"></a>Lektion 4: Beziehungen erstellen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion überprüfen Sie die Beziehungen, die beim Importieren von Daten automatisch erstellt wurden. Zudem fügen Sie neue Beziehungen zwischen verschiedenen Tabellen hinzu. Eine Beziehung ist eine Verbindung zwischen zwei Tabellen, die festlegt, wie die Daten in diesen Tabellen miteinander in Beziehung gesetzt werden sollen. Die DimProduct-Tabelle und die DimProductSubcategory-Tabelle haben beispielsweise eine Beziehung, die darauf beruht, dass jedes Produkt zu einer Unterkategorie gehört. Weitere Informationen finden Sie unter [Beziehungen](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Als Datumstabelle markieren](../analysis-services/lesson-3-mark-as-date-table.md). 
@@ -35,7 +35,7 @@ Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, haben S
 
     Der Modell-Designer wird jetzt in der Diagrammsicht angezeigt. Hierbei handelt es sich um ein grafisches Format, in dem alle von Ihnen importierten Tabellen mit Zeilen zwischen den Tabellen angezeigt werden. Die Zeilen zwischen den Tabellen geben die Beziehungen an, die automatisch beim Importieren der Daten erstellt wurden.
     
-    ![als – tabellarische-lesson4-Diagramm](../analysis-services/media/as-tabular-lesson4-diagram.png)
+    ![as-tabular-lesson4-diagram](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
     Verwenden Sie die Steuerelemente der Miniaturkarte unten rechts im Modell-Designer, um die Sicht so anzupassen, dass so viele Tabellen wie möglich berücksichtigt werden. Sie können auch klicken und ziehen Sie Tabellen an unterschiedliche Positionen verschieben, näher zusammen, oder Sie sie in einer bestimmten Reihenfolge anordnen. Das Verschieben von Tabellen beeinflusst nicht die bereits zwischen den Tabellen bestehenden Beziehungen. Um alle Spalten in einer bestimmten Tabelle anzuzeigen, klicken Sie auf, und ziehen Sie auf einer Tabellenkante zu erweitern oder zu verkleinern.  
   
@@ -53,8 +53,8 @@ Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, haben S
     |Ja|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Ja|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
     |Ja|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Ja|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Ja|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Ja|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Ja|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     Wenn die Beziehungen in der obigen Tabelle nicht vorhanden sind, stellen Sie sicher, dass Ihr Modell in den folgenden Tabellen enthält: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Werden Tabellen über die gleiche Datenquellenverbindung zu unterschiedlichen Zeitpunkten importiert, werden Beziehungen zwischen diesen Tabellen nicht automatisch erstellt, sondern sind manuell zu erstellen.  
 
@@ -65,7 +65,7 @@ In der Diagrammansicht sehen Sie sich ein Pfeil, ein Sternchen und eine Zahl auf
 
 Der Pfeil zeigt der filterrichtung, das Sternchen zeigt Tabelle die n-Seite in der Kardinalität der Beziehung und die 1 verdeutlicht, dass diese Tabelle auf einer Seite der Beziehung ist. Wenn Sie eine Beziehung bearbeiten müssen. z. B. ändern Sie die Beziehung die filterrichtung oder Kardinalität zu, doppelklicken Sie auf die Beziehungslinie, in der Diagrammsicht, um das Dialogfeld "Beziehung bearbeiten" zu öffnen.
 
-![als tabellarische-lesson4-bearbeiten](../analysis-services/media/as-tabular-lesson4-edit.png)
+![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
 In den meisten Fällen müssen Sie nie eine Beziehung zu bearbeiten. Diese Features sind nur für den erweiterten datenmodellierung und befinden sich außerhalb des Bereichs in diesem Tutorial. Weitere Informationen finden Sie unter [bidirektionale kreuzfilter für tabellarische Modelle in SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -91,7 +91,7 @@ In einigen Fällen müssen Sie möglicherweise zusätzliche Beziehungen zwischen
      ![als-tabellarische-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Wie geht es weiter?
-Wechseln Sie zur nächsten Lektion: [Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).
+Wechseln Sie zur nächsten Lektion: [Lesson 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

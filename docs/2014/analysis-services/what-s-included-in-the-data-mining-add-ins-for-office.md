@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755917"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  
@@ -47,7 +47,7 @@ ms.locfileid: "52519091"
   
      Für eine erfolgreiche Datenanalyse sollten Sie wissen, welche Daten zu verwenden sind und wie sie vorbereitet werden. Dieses Thema bietet Tipps dazu, wie Sie Ihre Daten vorbereiten, um optimale Modelle zu erhalten.  
   
-     Wenn Sie noch keine Erfahrungen im Data Mining gesammelt haben und lediglich die Tools ausprobieren möchten, empfiehlt sich die Verwendung der Arbeitsmappe mit Beispieldaten, die zusammen mit den Add-Ins installiert wird. In diesen Daten finden Sie auch Beispiele, die die Vorbereitung von Daten für Zeitreihen- oder Zuordnungsmodelle veranschaulichen.  
+     Wenn Sie mit Datamining sind und nur die Tools ausprobieren möchten, empfehlen wir, dass Sie die Arbeitsmappe mit Beispieldaten verwenden, die zusammen mit den Add-Ins installiert wird. Anhand dieser Daten Sie sehen auch Beispiele zum Vorbereiten von Daten für Zeitreihen- oder zuordnungsmodelle.  
   
      **Beispieldaten**  
   

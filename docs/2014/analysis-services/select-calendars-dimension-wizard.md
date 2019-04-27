@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747662"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Kalender auswählen (Dimensions-Assistent)
   Auf der Seite **Kalender auswählen** können Sie für eine gegebene Zeitdimension zusätzliche Hierarchien zur Darstellung von Geschäfts-, Berichts-, Produktions- oder ISO 8601-Kalendern (International Organization for Standardization, Internationale Organisation für Normung) erstellen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48139440"
 > [!NOTE]  
 >  Diese Seite wird nur angezeigt, wenn auf der Seite **Dimensionstyp auswählen** die Option **Serverzeitdimension** oder auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geschäftskalender**  
  Wählen Sie diese Option aus, um eine Zeithierarchie basierend auf einem Geschäftskalender zu erstellen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48139440"
   
  In der folgenden Tabelle werden die für das Muster Woche nach Monat verfügbaren Optionen aufgeführt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Woche 445**|Der erste und zweite Monat im Quartal haben jeweils vier Wochen, während der dritte Monat im Quartal fünf Wochen hat.|  
 |**Woche 454**|Der erste und dritte Monat im Quartal haben jeweils vier Wochen, während der zweite Monat im Quartal fünf Wochen hat.|  
