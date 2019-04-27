@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756580"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Berechnete Spalten (SSAS – tabellarisch)
   Mithilfe berechneter Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt einzufügen, oder Importieren von Werten in der Spalte, erstellen Sie eine DAX-Formel, die zeilenebenenwerte der Spalte definiert. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  

@@ -25,18 +25,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747462"
 ---
 # <a name="memory-properties"></a>Speichereigenschaften
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Serverarbeitsspeichereigenschaften unterstützt. Einen Leitfaden zum Festlegen dieser Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Betriebshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Werte zwischen 1 und 100 stellen Prozentsätze von **Gesamter physischer Speicher** bzw. **Virtueller Adressraum**dar, je nachdem, welcher geringer ist. Werte über 100 stellen Arbeitsspeichergrenzwerte in Bytes dar.  
   
- **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nichts anderes angegeben ist.  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nicht anders angegeben.  
   
 ## <a name="properties"></a>Eigenschaften  
  `LowMemoryLimit`  

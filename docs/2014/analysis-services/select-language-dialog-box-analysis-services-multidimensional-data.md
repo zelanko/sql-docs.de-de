@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747312"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Sprache auswählen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Sprache auswählen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Sprache für eine neue Übersetzung auswählen. Das Dialogfeld **Sprache auswählen** können Sie folgendermaßen aufrufen:  
@@ -31,7 +31,7 @@ ms.locfileid: "48101304"
   
 -   Klicken Sie auf der Registerkarte **Übersetzungen** von **Dimensions-Designer** mit der rechten Maustaste auf den Bereich für **Übersetzungsdetails** , und wählen Sie **Neue Übersetzung**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie eine Sprache für die neue Übersetzung.**  
  Wählen Sie die Sprache für die neue Übersetzung aus der Liste der verfügbaren Sprachen aus. Bereits ausgewählte Sprachen werden in der Liste nicht angezeigt.  
   

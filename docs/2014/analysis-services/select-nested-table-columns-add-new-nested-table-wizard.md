@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747282"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Geschachtelte Tabellenspalten auswählen (Assistent zum Hinzufügen einer neuen geschachtelten Tabelle)
   Verwenden Sie die Seite **Geschachtelte Tabellenspalten auswählen** , um die Attribute und Measures auszuwählen, die in der geschachtelten Tabelle enthalten sein sollen, und um zu definieren, wie das Miningmodell die Attribute und Measures verwenden soll.  
   
- **Weitere Informationen:** [Mininmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Miningmodellspalten](data-mining/mining-model-columns.md), [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spalten**  
  Listet die verfügbaren Attribute und Measures auf. Alle Attribute müssen sich in Hierarchien befinden oder die Attributhierarchien müssen aktiviert sein.  
   
