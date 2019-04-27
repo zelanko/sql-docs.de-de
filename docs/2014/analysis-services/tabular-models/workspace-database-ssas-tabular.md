@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794606"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Arbeitsbereichsdatenbank (SSAS – tabellarisch)
   Die Arbeitsbereichsdatenbank für Tabellenmodelle, die während der Modellerstellung verwendet wird, wird erstellt, wenn Sie ein Projekt für Tabellenmodelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen. Die Arbeitsbereichsdatenbank befindet sich im Arbeitsspeicher auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz, die im tabellarischen Modus ausgeführt wird. In der Regel ist sie auf dem gleichen Computer wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] installiert.  

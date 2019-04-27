@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650661"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Attributdatenübersetzung' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributdatenübersetzung** können Sie die Spalte festlegen, in der die Übersetzungsbeschriftungsdaten enthalten sind, sowie die Sortierung und Sortierreihenfolge, die für die übersetzten Daten verwendet werden sollen. Das Dialogfeld **Attributdatenübersetzung** können Sie wie folgt aufrufen:  
@@ -29,7 +29,7 @@ ms.locfileid: "48117367"
   
 -   Klicken Sie auf der Registerkarte **Übersetzungen** von **Dimension Designer** mit der rechten Maustaste in den Bereich für **Übersetzungsdetails** , und wählen Sie **Neue Beschriftungsspalte** oder **Beschriftungsspalte bearbeiten**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Attribut**  
  Zeigt das ausgewählte Attribut an.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48117367"
  Wenn diese Option nicht ausgewählt ist, werden die Zeichen mit und ohne Akzent von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als identisch betrachtet.  
   
  **Unterscheidung nach Kana**  
- Wählen Sie diese Option aus, um Daten basierend auf den für die zugehörige Sprache oder das Alphabet bereitgestellten Wörterbuchregeln zu sortieren und zu vergleichen und zwischen den beiden japanischen Kanazeichentypen zu unterscheiden: Hiragana und Katakana.  
+ Wählen Sie diese Option, die zum Sortieren und Vergleichen von Daten basierend auf den für die zugeordnete Sprache oder das Alphabet bereitgestellten Wörterbuchregeln und zwischen den beiden japanischen Kanazeichentypen zu unterscheiden: Hiragana und Katakana.  
   
  Wenn diese Option nicht ausgewählt ist, werden Hiragana- und Katakanazeichen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als identisch betrachtet.  
   

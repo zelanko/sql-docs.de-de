@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650779"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Zuordnungs-Assistent (Data Mining-Client für Excel)
   ![Zuordnungs-Assistenten im Data Mining-Menüband](media/dmc-associate.gif "Zuordnungs-Assistent im Data Mining-Menüband")  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787946"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Verhaltensänderungen an Funktionen der Verwaltungstools in SQL Server 2014
   In diesem Thema werden Verhaltensänderungen an Funktionen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Verwaltungstools beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  

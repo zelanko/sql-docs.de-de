@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671038"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Berechnungseigenschaften' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Berechnungseigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Eigenschaften für Anzeigeordner und zugeordnete Measuregruppen von Berechnungen anzeigen oder bearbeiten, die auf der Registerkarte **Berechnungen** des Cube-Designers für den ausgewählten Cube definiert wurden. Sie können das Dialogfeld **Berechnungseigenschaften** anzeigen, indem Sie im Cube-Designer im **Symbolleistenbereich** der Registerkarte **Berechnungen** auf **Berechnungseigenschaften** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Berechnungsname**  
  Zeigt den Namen des berechneten Elements bzw. der benannten Menge an.  
   

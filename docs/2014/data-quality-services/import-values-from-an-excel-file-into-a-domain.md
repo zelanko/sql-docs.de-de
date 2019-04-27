@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792666"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne
   In diesem Thema wird beschrieben, wie Werte in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aus einer Excel-Datei in eine Domäne importiert werden. Eine Excel-Datei zu verwenden, um Domänenwerte in die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] zu importieren, vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Es ermöglicht Personen, die eine Liste mit gültigen Datenwerten in einer Excel-Datei oder einer Textdatei haben, jene Werte in eine Domäne zu importieren. In einer Excel-Datei können Sie Domänenwerte in eine Domäne oder Domänen in eine Wissensdatenbank importieren. (Weitere Informationen zum Importieren von Domänen in eine Wissensdatenbank finden Sie unter [Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  

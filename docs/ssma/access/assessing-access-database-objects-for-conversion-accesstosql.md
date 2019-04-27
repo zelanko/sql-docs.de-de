@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650978"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Bewerten den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL)
 Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, sollten Sie ermitteln, wie viel der Migration erfolgreich sein wird und wie lange die Konvertierung werden kann. SSMA kann ein Bewertungsbericht enthält, die den Prozentsatz von Objekten, der in konvertiert wurden erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax und die Uhrzeit schätzt, für die Migration durchführen. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die Konvertierungsfehler verursacht hat.  
@@ -44,7 +44,7 @@ Wenn es sich um ein Bewertungsbericht erstellt, konvertiert SSMA der ausgewählt
   
     SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters. Wenn im Ausgabebereich angezeigt wird, werden auch Meldungen im Ausgabebereich angezeigt.  
   
-Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Access: Bewertungsbericht-Fenster wird angezeigt.  
+Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Access: Fenster "Assessment" wird angezeigt.  
   
 ## <a name="using-assessment-reports"></a>Verwenden von Assessment-Berichten  
 Das Fenster Bewertungsbericht enthält drei Bereiche: einen Explorer, ein Detailbereich und ein Bereich "Meldung".  

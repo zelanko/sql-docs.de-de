@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731492"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Tabelleneigenschaften bearbeiten (Dialogfeld) (SSAS)
   Im Dialogfeld **Tabelleneigenschaften bearbeiten** können Sie die Eigenschaften von Tabellen anzeigen und ändern, die mit dem Tabellenimport-Assistenten in den Modell-Designer importiert werden. Um das Dialogfeld zu öffnen, wählen Sie im Modell-Designer eine Tabelle aus, und klicken Sie auf das Menü **Tabelle** und anschließend auf **Tabelleneigenschaften**.  

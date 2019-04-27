@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731757"
 ---
 # <a name="dmx-templates"></a>DMX-Vorlagen
   Die Data Mining-Vorlagen ermöglichen Ihnen das schnelle Erstellen komplexer Abfragen. Die allgemeine Syntax für DMX-Abfragen ist zwar umfassend dokumentiert, die Vorlagen erleichtern es Ihnen jedoch, Abfragen durch Klicken und Zeigen auf Argumente und Datenquellen zu erstellen.  

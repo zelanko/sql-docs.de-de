@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654975"
 ---
 # <a name="ddl-triggers"></a>DDL-Trigger
   DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  

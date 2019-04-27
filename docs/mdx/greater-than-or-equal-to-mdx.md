@@ -1,5 +1,5 @@
 ---
-title: '&gt;= (Größer als oder gleich) (MDX) | Microsoft Docs'
+title: '&gt;= (Größer als oder gleich) (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653480"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (Größer als oder gleich) (MDX)
 
@@ -35,11 +35,11 @@ MDX_Expression >= MDX_Expression
 ## <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der auf den folgenden Bedingungen basiert:  
   
--   **"true"** , wenn der erste Parameter einen Wert hat, der entweder größer oder gleich dem Wert des zweiten Parameters ist.  
+-   **"true"** verfügt der erste Parameter einen Wert, der entweder größer als oder gleich dem Wert des zweiten Parameters ist.  
   
--   **"false"** , wenn der erste Parameter einen Wert hat, der kleiner als der Wert des zweiten Parameters ist.  
+-   **"false"** , wenn der erste Parameter einen Wert hat, die niedriger als der Wert des zweiten Parameters ist.  
   
--   **"true"** Wenn beide Parameter null sind oder wenn ein Parameter null ist und der andere Parameter 0 ist.  
+-   **"true"** Wenn beide Parameter null sind oder einen Parameter null ist und die anderen Parameter 0 ist gleich.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieses Operators.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80ca92d824c6832c42161a00a0b1f59884f26880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729206"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Hinzufügen von Attributen zu Dimensionen
   Nachdem Sie Dimensionen definiert haben, können Sie sie jetzt mit Attributen auffüllen, die die einzelnen Datenelemente in der Dimension darstellen. Attribute basieren normalerweise auf Feldern einer Datenquellensicht. Wenn Sie einer Dimension Attribute hinzufügen, können Sie Felder einer beliebigen Tabelle in die Datenquellensicht einschließen.  
@@ -127,6 +127,6 @@ ms.locfileid: "48075330"
  [Überprüfen von Cube- und Dimensionseigenschaften](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dimensionsattributeigenschaften-Verweis](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

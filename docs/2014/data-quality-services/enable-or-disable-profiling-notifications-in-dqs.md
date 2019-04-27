@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ae8564c14523f7febad0416df03fb0464933a26c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792949"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS
   In diesem Thema wird beschrieben, wie Profilerstellungsbenachrichtigungen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aktiviert und deaktiviert werden. Standardmäßig sind Profilerstellungsbenachrichtigungen in DQS aktiviert. Profilerstellungsbenachrichtigungen liefern Ihnen wichtige Fakten zur Datenquelle und der Effektivität der aktuellen Aktivität, die für die Daten ausgeführt wird. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  

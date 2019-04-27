@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676932"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -27,7 +27,7 @@ ms.locfileid: "54100225"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Anzeigen oder Ändern einer Richtlinie mit:**  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54100225"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>So zeigen Sie die Eigenschaften aller Richtlinien für ein Objekt an  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, ein Serverobjekt, eine Datenbank oder ein Datenbankobjekt, zeigen Sie auf **Richtlinien** , und wählen Sie dann **Anzeigen**aus. Weitere Informationen zu den verfügbaren Optionen in der **Richtlinien anzeigen –**_Object_name_ im Dialogfeld finden Sie unter [View Policies Dialog Box](view-policies-dialog-box.md).  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, ein Serverobjekt, eine Datenbank oder ein Datenbankobjekt, zeigen Sie auf **Richtlinien** , und wählen Sie dann **Anzeigen**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinien anzeigen –** _Objektname_ finden Sie unter [Dialogfeld „Richtlinien anzeigen“](view-policies-dialog-box.md).  
   
 2.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54100225"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Richtlinien** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, die Sie anzeigen oder ändern möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen in der **Richtlinie öffnen –**_Richtlinienname_ im Dialogfeld finden Sie unter [Create New Policy or Open Policy Dialog Box, Seite "Allgemein"](../../integration-services/general-page-of-integration-services-designers-options.md) und [ Erstellen Sie neue Richtlinie oder Open Policy Dialog Box, Seite ' Beschreibung '](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, die Sie anzeigen oder ändern möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinie öffnen –** _Richtlinienname_ finden Sie unter [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md) oder [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Beschreibung“](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

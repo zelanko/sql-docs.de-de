@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793226"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Was-wäre-wenn-Szenario (Tabellenanalysetools für Excel)
   ![Welche Wenn-Szenario-Schaltfläche in Tabellenanalysetools](media/tat-whatif.gif "wäre-wenn-Szenario-Schaltfläche in Tabellenanalysetools")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140360"
   
  **'Fahrradverkäufe' = Ja**  
   
- **Zuverlässigkeit: Fair**  
+ **Vertrauen: Fair**  
   
  Da dieses Ergebnis auf einer vorhandenen Zeile in der Datentabelle beruht, bedeutet das bei einem bestimmten Kunden Folgendes: Wenn alle anderen Werte zum Kunden unverändert bleiben, das Alter des Kunden jedoch auf 25 erhöht wird, kauft der Kunde wahrscheinlich ein Fahrrad.  
   

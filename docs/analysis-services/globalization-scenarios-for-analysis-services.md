@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659695"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Globalisierungsszenarien für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658324"
   
 -   Protokolldateien enthalten eine Mischung aus englischen und lokalisierten Meldungen, vorausgesetzt, Sie haben auf dem Windows-Server, auf dem Analysis Services ausgeführt wird, ein Language Pack installiert.  
   
--   Dokumentation und Tools wie z. B. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] und [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] sind in die folgenden Sprachen übersetzt: Chinesisch vereinfacht, Chinesisch traditionell, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Russisch und Spanisch. Die Kultur wird bei der Installation angegeben.  
+-   Dokumentationen und Tools, z. B. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] und [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], werden in den folgenden Sprachen übersetzt: Chinesisch vereinfacht, Chinesisch traditionell, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Russisch und Spanisch. Die Kultur wird bei der Installation angegeben.  
   
  Sie können in Analysis Services für mehrsprachige Modelle Sprache, Sortierung und Übersetzungen unabhängig voneinander in der gesamten Objekthierarchie festlegen.  Für tabellarische Modelle können nur Übersetzungen hinzugefügt werden: Sprache und Sortierung werden vom Hostbetriebssystem geerbt.  
   

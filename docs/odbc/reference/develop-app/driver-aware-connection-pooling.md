@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658257"
 ---
 # <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling
 Treiber bewusst Verbindungspooling ist eine neue Funktion des Treiber-Managers in Windows 8. Treiber bewusst Verbindungspooling kann Treiber Writer zum Anpassen der Verbindungspooling-Verhalten in ihren ODBC-Treiber.  

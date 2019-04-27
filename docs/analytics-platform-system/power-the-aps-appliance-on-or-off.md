@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678628"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
 In diesem Thema wird beschrieben, wie mit ein- und Ausschalten der Analytics-Plattform Systemappliance, Parallel Data Warehouse ausgeführt wird. Verwenden Sie in diesem Thema eine Analytics Platform System Appliance bewegt wird und wie auf einer Appliance nach einem schwerwiegenden Stromausfall.  

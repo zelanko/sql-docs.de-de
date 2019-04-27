@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627328"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
   Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Der Abfrageoptimierer verwendet Operatoren, um einen Abfrageplan für das in der Abfrage angegebene Ergebnis zu erstellen, oder zum Ausführen des in der DML-Anweisung angegebenen Vorgangs. Der Abfrageplan ist eine Struktur, die aus physischen Operatoren besteht. Sie können den Abfrageplan mit den SET SHOWPLAN-Anweisungen, den grafischen Ausführungsplanoptionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], oder den SQL Server Profiler Showplan-Ereignisklassen anzeigen.  
@@ -155,11 +155,11 @@ ms.locfileid: "53361482"
   
  Über die physischen Operatoren werden Daten initialisiert, aufgelistet und beendet. Der physische Operator kann insbesondere die folgenden drei Methodenaufrufe beantworten:  
   
--   **Init()**: Die **Init()** Methode bewirkt, dass einen physischen Operator initialisiert und richten Sie gegebenenfalls Datenstrukturen. Der physische Operator kann mehrere **Init()** -Aufrufe empfangen; in der Regel empfängt er jedoch nur einen.  
+-   **Init():** Mit der Methode **Init()** wird ein physischer Operator initialisiert und dazu angewiesen, erforderliche Datenstrukturen einzurichten. Der physische Operator kann mehrere **Init()** -Aufrufe empfangen; in der Regel empfängt er jedoch nur einen.  
   
--   **GetNext()**: Die **GetNext()** Methode bewirkt, dass einen physischen Operator die erste oder nächste Datenzeile abzurufen. Der physische Operator kann null oder mehrere **GetNext()** -Aufrufe empfangen.  
+-   **GetNext():** Mit der Methode **GetNext()** wird ein Operator angewiesen, die erste oder nächste Datenzeile abzurufen. Der physische Operator kann null oder mehrere **GetNext()** -Aufrufe empfangen.  
   
--   **Close()**: Die **Close()** Methode bewirkt, dass einen physischen Operator, einige Cleanupvorgänge auszuführen und sich selbst zu beenden. Ein physischer Operator empfängt nur einen **Close()** -Aufruf.  
+-   **Close():** Mit der Methode **Close()** wird der physische Operator dazu angewiesen, einige Cleanupvorgänge auszuführen und sich selbst zu beenden. Ein physischer Operator empfängt nur einen **Close()** -Aufruf.  
   
  Die **GetNext()**-Methode gibt eine Datenzeile zurück, und die Anzahl der Aufrufe wird als **ActualRows** in der durch SET STATISTICS PROFILE ON oder SET STATISTICS XML ON erstellten Showplanausgabe angezeigt. Weitere Informationen zu diesen SET-Optionen finden Sie unter [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) und [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql).  
   

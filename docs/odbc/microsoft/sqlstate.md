@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2540c52a1b85a1c89c1d149116d91705ebee9869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686993"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Für Fehler, die in der Datenquelle auftreten, wird der ODBC-Treiber die zurückgegebene systemeigene Fehler dem entsprechenden SQLSTATE zugeordnet. Für Fehler, durch den Treiber oder der Treiber-Manager, den ODBC-Treiber erkannt werden, oder -Treiber-Manager wird den entsprechenden SQLSTATE-Code generiert.

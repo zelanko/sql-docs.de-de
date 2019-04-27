@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665352"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE-Treiber)
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47631648"
   
 |Schlüsselwort|Description|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz sein kann: ASCII (Standard) und internationale.<br /><br /> Hiermit wird die gleiche Option als **Sortierreihenfolge Sequenz** im Dialogfeld "Setup".|  
+|COLLATINGSEQUENCE|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz sind möglich: ASCII (Standard) und internationale.<br /><br /> Hiermit wird die gleiche Option als **Sortierreihenfolge Sequenz** im Dialogfeld "Setup".|  
 |WERT|Die Pfadangabe in das Verzeichnis.|  
 |DELETED|DBASE-Treiber gibt an, ob Zeilen, die als gelöscht markiert wurden abgerufen oder auf positioniert werden können. Wenn es sich bei Festlegung auf 1, gelöschte Zeilen nicht angezeigt werden; Wenn es sich bei Festlegung auf 0, gelöschte Zeilen werden als nicht gelöschter Zeilen behandelt.<br /><br /> Hiermit wird die gleiche Option als **anzeigen gelöschter Zeilen** im Dialogfeld "Setup".|  
 |DESCRIPTION|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Hiermit wird die gleiche Option als **Beschreibung** im Dialogfeld "Setup".|  

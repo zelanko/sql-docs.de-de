@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730770"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importieren von Daten aus einem Datenfeed (SSAS – tabellarisch)
   Datenfeeds sind einzelne oder mehrere XML-Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Zielanwendung gestreamt werden. Mit dem Tabellenimport-Assistenten können Sie Daten aus einem Datenfeed in Ihr Modell importieren.  

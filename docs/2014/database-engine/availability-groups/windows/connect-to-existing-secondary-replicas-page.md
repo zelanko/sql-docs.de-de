@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792010"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Seite „Mit vorhandenen sekundären Replikaten verbinden“ (Assistent zum Hinzufügen von Replikaten und Assistent zum Hinzufügen von Datenbanken)
   In diesem Hilfethema werden die Optionen auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** beschrieben. Dieses Thema wird unter [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] sowohl von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] als auch von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681147"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Klassifikationsmatrix (SQL Server Data Mining-Add-Ins)
   ![Matrix klassifizierungsschaltfläche, Data Mining-Menüband](media/dmc-cmatrix.gif "Klassifikationsmatrix-Schaltfläche, Data Mining-Menüband")  
@@ -37,11 +37,11 @@ ms.locfileid: "52522175"
   
 ||Bronze (IST-Wert)|Gold (IST-Wert)|Silber (IST-Wert)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45 %**|15.18 %|1.70 %|  
-|Gold|Version 2.72 %|**84.82 %**|0,00 %|  
-|Silber|1.84 %|0,00 %|**93.80 %**|  
-|*Richtig*|*95.45 %*|*84.82 %*|*98.30 %*|  
-|*Falsch klassifiziert*|*4.55 %*|*15.18 %*|*1.70 %*|  
+|Bronze|**94.45%**|15.18%|1.70%|  
+|Gold|2.72%|**84.82%**|0,00 %|  
+|Silber|1.84%|0,00 %|**93.80%**|  
+|*Richtig*|*95.45%*|*84.82%*|*98.30%*|  
+|*Falsch klassifiziert*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   In jeder Spalte werden die tatsächlichen Werte im Testdataset angezeigt.  
   

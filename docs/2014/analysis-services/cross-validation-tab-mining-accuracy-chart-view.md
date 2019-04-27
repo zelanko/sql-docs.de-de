@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679748"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
-  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
+  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
   
  Weitere Informationen finden Sie unter [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188210"
  Wenn **Ziel** **Schwellenwert** nastaven NA hodnotu `null`, dies ist der Standardwert, wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gewertet. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Übergreifende Überprüfung &#40;Analysis Services – Datamining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Measures in der Kreuzvalidierungsbericht](data-mining/measures-in-the-cross-validation-report.md)   
- [Datamining-gespeicherte Prozeduren &#40;Analysis Services – Datamining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

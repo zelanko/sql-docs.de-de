@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650413"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (Ereignisklasse)
   Das QN:Template-Ereignis übermittelt Informationen zur internen Verwendung von Abfragevorlagen. Abfragevorlagen bilden den von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendeten Mechanismus zur Freigabe von Definitionen einer Abfrage für die Benachrichtigung. Diese Vorlagen werden zusammen mit den Parametertabellen erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt ein Ereignis dieses Typs, wenn eine Abfragevorlage erstellt, verwendet oder gelöscht wird.  
@@ -34,7 +34,7 @@ ms.locfileid: "53349515"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |EventClass|`int`|Ereignistyp = 201.|27|Nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Die Vorlage erstellt: Gibt an, dass eine Vorlage für die Abfragebenachrichtigung in der Datenbank erstellt wurde.<br /><br /> Die Vorlage zugeordnet: Gibt an, wenn eine Vorlage für die Abfragebenachrichtigung wiederverwendet wird.<br /><br /> Vorlage verworfen: Gibt an, wenn eine Vorlage für die Abfragebenachrichtigung aus der Datenbank entfernt wird.|21|Ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Die Vorlage erstellt: Gibt an, dass eine Vorlage für die abfragebenachrichtigung in der Datenbank erstellt wurde.<br /><br /> Die Vorlage zugeordnet: Gibt an, wenn eine Vorlage für die abfragebenachrichtigung wiederverwendet wird.<br /><br /> Vorlage verworfen: Gibt an, wenn eine Vorlage für die abfragebenachrichtigung aus der Datenbank entfernt wird.|21|Ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  

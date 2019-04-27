@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795327"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Hinzufügen von Spalten zu einer Tabelle (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie einer vorhandenen Tabelle Spalten hinzugefügt werden.  
@@ -41,7 +41,7 @@ ms.locfileid: "48184720"
 2.  Wählen Sie im Dialogfeld **Tabelleneigenschaften bearbeiten** im Tabellenvorschaufenster die Quellspalte aus, die Sie hinzufügen möchten, und klicken Sie dann auf OK. Die bereits in der Tabellendefinition enthaltenen Spalten sind automatisch ausgewählt.  
   
 ## <a name="add-a-calculated-column"></a>Hinzufügen einer berechneten Spalte  
- In einer berechneten Spalte wird eine DAX-Formel verwendet, um einen Wert pro Zeile zu definieren. Beispielsweise können Sie eine berechnete Spalte mit einer einfachen Formel (= 1) erstellen, durch die jeder Zeile der Wert 1 hinzugefügt wird. Berechnete Spalten können auch komplexere Formeln enthalten, durch die Werte auf der Grundlage anderer Modelldaten berechnet werden. Berechnete Spalten werden in anderen Themen ausführlich behandelt. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns.md).  
+ In einer berechneten Spalte wird eine DAX-Formel verwendet, um einen Wert pro Zeile zu definieren. Beispielsweise können Sie eine berechnete Spalte mit einer einfachen Formel (= 1) erstellen, durch die jeder Zeile der Wert 1 hinzugefügt wird. Berechnete Spalten können auch komplexere Formeln enthalten, durch die Werte auf der Grundlage anderer Modelldaten berechnet werden. Berechnete Spalten werden in anderen Themen ausführlich behandelt. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns.md)erstellte tabellarische Modellprojekte.  
   
 #### <a name="to-create-a-calculated-column"></a>So erstellen Sie eine berechnete Spalte  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48184720"
 2.  Klicken Sie auf die oberste Zelle, geben Sie einen Namen ein, und drücken Sie die EINGABETASTE.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten Sie im Dialogfeld "Eigenschaften" Tabelle &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Ändern von Tabellen-, Spalten- oder zeilenfilterzuordnungen &#40;SSAS – tabellarisch&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Tabelleneigenschaften bearbeiten &#40; Dialogfeld, SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen &#40;SSAS – tabellarisch&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

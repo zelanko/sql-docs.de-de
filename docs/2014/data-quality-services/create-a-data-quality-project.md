@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793100"
 ---
 # <a name="create-a-data-quality-project"></a>Erstellen eines Data Quality-Projekts
   In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ein Data Quality-Projekt erstellt wird. Ein Data Quality-Projekt wird verwendet, um die Bereinigungs- oder Abgleichsaktivität in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) auszuführen.  
@@ -51,13 +51,13 @@ ms.locfileid: "56020171"
   
     4.  Klicken Sie im Bereich **Aktivität auswählen** auf eine Aktivität, die Sie mit diesem Data Quality-Projekt ausführen möchten:  
   
-        -   **Bereinigung**: Wählen Sie diese Aktivität, um die Quelldaten zu bereinigen.  
+        -   **Bereinigung:** Wählen Sie diese Aktivität, um die Quelldaten zu bereinigen.  
   
-        -   **Übereinstimmende**: Wählen Sie diese Aktivität aus, um einen Abgleich durchzuführen. Diese Aktivität ist nur verfügbar, wenn die für das Data Quality-Projekt ausgewählte Wissensdatenbank eine Abgleichsrichtlinie umfasst.  
+        -   **Abgleich:** Wählen Sie diese Aktivität, um einen Abgleich durchzuführen. Diese Aktivität ist nur verfügbar, wenn die für das Data Quality-Projekt ausgewählte Wissensdatenbank eine Abgleichsrichtlinie umfasst.  
   
 4.  Klicken Sie auf **Erstellen** , um ein Data Quality-Projekt zu erstellen.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Data Quality-Projekt  
+##  <a name="FollowUp"></a>Nächster Schritt: Erstellen eines Data Quality-Projekts  
  Nachdem Sie ein Data Quality-Projekt erstellt haben, wird ein Assistent angezeigt, mit dem Sie die ausgewählte Aktivität – Bereinigung oder Abgleich – ausführen können. Weitere Informationen zu den Bereinigungs- und Abgleichsaktivitäten finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md) und [Datenabgleich](../../2014/data-quality-services/data-matching.md).  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793359"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen
   Neben der direkten Änderung von Dimensionen und Dimensionsobjekteigenschaften können Sie auch den Business Intelligence-Assistenten verwenden, um Dimensionen zu konfigurieren und zu verbessern.  

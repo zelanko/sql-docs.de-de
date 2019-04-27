@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657779"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht die treiberspezifische deskriptorfelder für den Implementierungszeilendeskriptor (IRD) nur. Innerhalb des IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deskriptorfelder durch treiberspezifische Spaltenattribute verwiesen. Weitere Informationen über eine vollständige Liste der verfügbaren treiberspezifische deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  

@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688830"
 ---
 # <a name="bcpsendrow"></a>'bcp_sendrow'
-  Sendet eine Datenzeile aus Programmvariablen nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Sendet eine Datenzeile aus Programmvariablen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +40,20 @@ hdbc
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Bcp_sendrow** Funktion erstellt eine Zeile aus Programmvariablen und sendet sie an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Die **bcp_sendrow** -Funktion erstellt eine Zeile aus Programmvariablen und sendet sie an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Vor dem Aufruf **Bcp_sendrow**, es müssen Aufrufe [Bcp_bind](bcp-bind.md) um die Programmvariablen mit den Zeilendaten anzugeben.  
+ Vor dem Aufruf von **bcp_sendrow**müssen Sie Aufrufe an [bcp_bind](bcp-bind.md) vornehmen, um die Programmvariablen mit den Zeilendaten anzugeben.  
   
- Wird **bcp_bind** unter Angabe eines langen Datentyps variabler Länge wie einem *eDataType* -Parameter von SQLTEXT und einem *pData* -Parameter ungleich NULL aufgerufen, sendet **bcp_sendrow** wie bei jedem anderen Datentyp den gesamten Datenwert. IF, allerdings **Bcp_bind** enthält eine NULL *pData* Parameter **Bcp_sendrow** übergibt die Steuerung an die Anwendung sofort, nachdem alle Spalten mit den angegebenen Daten an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Anwendung kann dann aufrufen [Bcp_moretext](bcp-moretext.md) wiederholt, um die langen variabler Länge, die Daten zu senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Segment zu einem Zeitpunkt. Weitere Informationen finden Sie unter [Bcp_moretext](bcp-moretext.md).  
+ Wird **bcp_bind** unter Angabe eines langen Datentyps variabler Länge wie einem *eDataType* -Parameter von SQLTEXT und einem *pData* -Parameter ungleich NULL aufgerufen, sendet **bcp_sendrow** wie bei jedem anderen Datentyp den gesamten Datenwert. Hat dagegen **bcp_bind** einen *pData* -Parameter mit NULL-Wert, gibt **bcp_sendrow** die Steuerung an die Anwendung zurück, sobald alle angegebenen Datenspalten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet wurden. Die Anwendung kann dann wiederholt [bcp_moretext](bcp-moretext.md) aufrufen, um die langen Daten variabler Länge Segment für Segment an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu senden. Weitere Informationen finden Sie unter [bcp_moretext](bcp-moretext.md).  
   
- Wenn **Bcp_sendrow** wird verwendet, um Zeilen aus Programmvariablen in massenkopiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen wird ein Commit Zeilen nur, wenn der Benutzer ruft [Bcp_batch](bcp-batch.md) oder [Bcp_done](bcp-done.md) . Der Benutzer kann **bcp_batch** wahlweise einmal für alle *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
+ Wenn mit **bcp_sendrow** Zeilen aus Programmvariablen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen massenkopiert werden, wird für die Zeilen erst dann ein Commit durchgeführt, wenn der Benutzer [bcp_batch](bcp-batch.md) oder [bcp_done](bcp-done.md)aufruft. Der Benutzer kann **bcp_batch** wahlweise einmal für alle *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
   
  Informationen über eine wichtige Änderung Massenkopieren ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], finden Sie unter [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

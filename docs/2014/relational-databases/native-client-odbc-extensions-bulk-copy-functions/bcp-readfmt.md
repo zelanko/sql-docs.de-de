@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688668"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Liest eine Datendatei-Formatdefinition aus der angegebenen Formatdatei.  
@@ -43,7 +43,7 @@ szFormatFile
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *szFormatFile*  
@@ -55,7 +55,7 @@ szFormatFile
 ## <a name="remarks"></a>Hinweise  
  Nach dem `bcp_readfmt` die Formatwerte gelesen, nimmt Sie geeignete Aufrufe an [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md). Sie brauchen keine Formatdatei zu analysieren, um diese Aufrufe zu tätigen.  
   
- Um eine Formatdatei beizubehalten, rufen [Bcp_writefmt](bcp-writefmt.md). Aufrufe von `bcp_readfmt` können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [Bcp_init](bcp-init.md).  
+ Um eine Formatdatei beizubehalten, rufen [Bcp_writefmt](bcp-writefmt.md). Aufrufe von `bcp_readfmt` können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
   
  Alternativ können Sie das Hilfsprogramm zum Massenkopieren (**Bcp**) können Sie die benutzerdefinierte Datenformate in Dateien, die auf Sie verweisen können speichern `bcp_readfmt`. Weitere Informationen zu den **Bcp** -Hilfsprogramm und die Struktur der **Bcp** -datenformatdateien finden Sie unter [Massenimport und-Export von Daten &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   

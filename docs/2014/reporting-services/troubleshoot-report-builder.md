@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657408"
 ---
 # <a name="troubleshoot-report-builder"></a>Problembehandlung in Berichts-Generator
   Der Berichts-Generator ist ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichterstellungstool, mit dem Sie Berichte aus verschiedenen Datenquellen erstellen und die Berichte auf einem Berichtsserver oder einer SharePoint-Website veröffentlichen können. Die von Ihnen erstellten Berichte können in Berichts-Generator, einem Webbrowser oder über eine [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Anwendung oder eine SharePoint-Website angezeigt werden.  

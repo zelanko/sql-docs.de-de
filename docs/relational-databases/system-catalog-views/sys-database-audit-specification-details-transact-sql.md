@@ -1,5 +1,5 @@
 ---
-title: database_audit_specification_details (Transact-SQL) | Microsoft-Dokumentation
+title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652478"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Eine Liste aller audit_action_ids und deren Namen Abfragen [dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Eine Liste aller audit_action_ids und deren Namen Abfragen [dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID der Überwachungsspezifikation.|  
 |**audit_action_id**|**int**|ID der Überwachungsaktion.|  
-|**audit_action_name**|**sysname**|Name der Überwachungsaktion oder Überwachungsaktionsgruppe|  
+|**audit_action_name**|**Sysname**|Name der Überwachungsaktion oder Überwachungsaktionsgruppe|  
 |**Klasse**|**int**|Identifiziert die Klasse des überwachten Objekts.|  
-|**Class_ desc**|**nvarchar(60)**|Beschreibung der Klasse des überwachten Objekts:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|Beschreibung der Klasse des überwachten Objekts:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Haupt-ID des überwachten Objekts, z. B. eine Tabellen-ID einer Tabellenüberwachungsaktion.|  
 |**minor_id**|**Int**|Sekundäre, entsprechend der Klasse interpretierte ID des überwachten Objekts, z. B. eine Spalten-ID einer Tabellenüberwachungsaktion.|  
 |**audited_principal_id**|**int**|Prinzipal, der überwacht wird.|  
-|**audited_result**|**nvarchar(60)**|Ergebnisse der Überwachungsaktion:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|Ergebnisse der Überwachungsaktion:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Zeigt an, ob das Objekt eine Gruppe ist:<br /><br /> 0 – Keine Gruppe<br /><br /> 1 – Gruppe|  
   
 ## <a name="permissions"></a>Berechtigungen  

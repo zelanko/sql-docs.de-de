@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657829"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiberschnittstelle entspricht den drei definierten Konformitätsstufen für ODBC (ISO, Open Group und ODBC Level 2). **SQLGetFunctions** berichtet, dass alle ODBC-Funktionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client ODBC-Treiber unterstützt werden.  

@@ -12,20 +12,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729316"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
   In dieser Lektion verwenden Sie den Tabellenimport-Assistenten in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , um eine Verbindung mit der AdventureWorksDW-Datenbank herzustellen, Daten auszuwählen und die Daten zu filtern und sie anschließend in den Modellarbeitsbereich zu importieren.  
   
- Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Vielzahl relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata und mehr. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Darüber hinaus können Daten mit einer gespeicherten Prozedur ausgewählt werden.  
+ Mit dem Tabellenimport-Assistenten, können Sie Daten aus einer Vielzahl relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata und mehr. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Darüber hinaus können Daten mit einer gespeicherten Prozedur ausgewählt werden.  
   
  Weitere Informationen zum Importieren von Daten und den verschiedenen Datenquellentypen, aus denen Importe möglich sind, finden Sie unter [Datenquellen &#40;SSAS – tabellarisch&#41;](data-sources-ssas-tabular.md).  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  

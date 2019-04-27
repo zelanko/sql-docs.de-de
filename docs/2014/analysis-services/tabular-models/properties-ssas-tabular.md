@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794594"
 ---
 # <a name="properties-ssas-tabular"></a>Eigenschaften (SSAS – tabellarisch)
   Projekte für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verfügen über verschiedene Eigenschaften, die Verhaltensweisen für das Projekt, das Modell, die Berichterstellung und die Bereitstellung definieren. Eigenschafteneinstellungen werden im XML-Format in der Datei Model.bim gespeichert, alle in diesem Abschnitt beschriebenen Eigenschaften können jedoch in den Fenstern **Eigenschaften** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]konfiguriert werden.  

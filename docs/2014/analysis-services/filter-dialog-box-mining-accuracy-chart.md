@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731337"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filter (Dialogfeld, Mininggenauigkeitsdiagramm)
   Im Dialogfeld **Filter** können Sie die Bedingungen erstellen, die Sie auf ein Dataset anwenden können. Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten zum Trainieren eines Miningmodells handeln. In diesem Dialogfeld können Sie die Kriterien erstellen, die als Teil von komplexeren Filterkriterien in einem der beiden Dialogfelder **Datasetfilter** oder **Modellfilter** gespeichert werden können.  
@@ -33,13 +33,13 @@ ms.locfileid: "48060168"
   
  Wenn Sie den Filter auf das neue Dataset anwenden, werden zum Auswerten des vorhandenen Data Mining-Modells nur die Fälle in den Daten verwendet, die die Bedingungen erfüllen. Wenn Sie den Filter jedoch auf das Miningmodell anwenden, wird die Genauigkeit des Modells nur für die Fälle im Miningmodell bewertet, die diese Bedingungen erfüllen.  
   
- **Weitere Informationen finden Sie unter:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bedingungen**  
  Ein Raster mit Spalten, in denen die Bedingungen für die Spalten aus der Tabelle festgelegt werden, die im Dialogfeld **Datasetfilter** ausgewählt wurden.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Und/Oder**|Klicken Sie auf diese Option, um anzugeben, ob der AND-Operator oder der OR-Operator auf die Bedingung in dieser Zeile angewendet werden soll. Diese Werte sind nur dann verfügbar, wenn Sie eine Spalte aus der Liste **Miningstrukturspalte** ausgewählt haben.|  
 |**Miningstrukturspalte**|Klicken Sie auf diese Option, um eine Spalte aus der Liste mit den Spalten der Tabelle auszuwählen, die Sie aus den Datenquellen im Dialogfeld **Datasetfilter** ausgewählt haben.|  

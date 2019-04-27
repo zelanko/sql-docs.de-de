@@ -24,11 +24,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84e1a9a26d9fb19224f8e40d32cd98bc534d1b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678678"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "47689098"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT abgerufen werden.<br /><br /> VARIANT_TRUE: Der Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben. In diesem Fall enthält der Puffer die SSVARIANT-Struktur.<br /><br /> VARIANT_FALSE: Der Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer enthält die VARIANT-Struktur.|  
+|SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten abgerufen werden als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT ist.<br /><br /> VARIANT_TRUE: Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben, in der Fall der Puffer die SSVARIANT-Struktur enthalten soll.<br /><br /> VARIANT_FALSE: Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer müssen VARIANT-Struktur.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

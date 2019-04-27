@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681217"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Prüfliste der Vorbereitung für Data Mining
   Data Mining-Add-Ins stellen eine einfache und unkomplizierte Methode zum Erstellen und Testen von Modellen dar. Wenn es Ihnen jedoch auf wiederholbare und aussagekräftige Ergebnisse ankommt, müssen Sie genügend Zeit einplanen, um grundlegende Geschäftsanforderungen zu formulieren und die erforderlichen Daten zu beschaffen und bereitzustellen. Dieser Abschnitt enthält eine Prüfliste, die Sie beim Planen Ihrer Untersuchung unterstützen soll. Darüber hinaus werden häufig auftretende Probleme beschrieben.  
@@ -71,7 +71,7 @@ ms.locfileid: "52519929"
   
 -   Wenn Sie Datasets kombiniert haben: Haben Sie eine Überprüfung auf mehrere Spalten durchgeführt, die dieselben Daten darstellen?  
   
- **Grundlegendes Verständnis der Quelldaten: wo sind sie gespeichert, woher stammen sie, und wie werden sie verarbeitet? Der Prozess kann leicht wiederholt werden, bei Bedarf.**  
+ **Ich weiß, in denen Quelldaten gespeichert sind, woher er stammt und wie sie verarbeitet wird. Der Prozess kann leicht wiederholt werden, bei Bedarf.**  
  Einmalige Datasets sind hervorragend für Experimente geeignet, aber wenn Sie jemals das Modell in der produktionsumgebung verschieben möchten, sollten Sie sich vorab Gedanken, wie der Bereinigungsprozess auf operative Daten angewendet werden kann. Wenn Sie operative Daten verfügen, müssen Sie auch wissen, wie sie geändert wurden möglicherweise bevor man es-müssen Sie wissen, wie sie gerundet oder zusammengefasst, natürlich.  
   
 -   Möchten Sie in der Lage sein, das Experiment zu wiederholen?  

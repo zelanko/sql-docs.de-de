@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729893"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Eingabeauswahl (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der Registerkarte **Eingabeauswahl** von **Mininggenauigkeitsdiagramm** können Sie die Datenquelle angeben, aus der die zum Testen des Modells und zum Erstellen des Genauigkeitsdiagramms verwendeten Daten stammen.  
   
  **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Vorhersagespalten und**  **-werte synchronisieren**  
  Aktivieren Sie diese Option, um die vorhersagbaren Attribute des Rasters so zu koordinieren, dass sie (selbst wenn sie einen anderen Namen tragen) beim Modelltraining aus der gleichen vorhersagbaren Miningstrukturspalte abgeleitet werden.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48120870"
  **Wählen Sie die vorhersagbaren Miningmodellspalten im prognosegütediagramm angezeigt.**  
  Ein Raster mit den Spalten, die steuern, welche Modelle das Prognosegütediagramm enthalten soll und wie diese Modelle im Prognosegütediagramm verwendet werden sollen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|**Anzeigen**|Aktivieren Sie das Kontrollkästchen neben dem Namen jeder vorhersagbaren Spalte im Miningmodell, die im Diagramm angezeigt werden soll.<br /><br /> Wenn die Anzeige des Diagramms zu komplex wird, deaktivieren Sie das Kontrollkästchen neben mindestens einer Spalte, um das Diagramm zu vereinfachen.<br /><br /> Hinweis: Zum Erstellen eines Genauigkeitsdiagramms muss mindestens eine Spalte ausgewählt sein.|  
+|**Anzeigen**|Aktivieren Sie das Kontrollkästchen neben dem Namen jeder vorhersagbaren Spalte im Miningmodell, die im Diagramm angezeigt werden soll.<br /><br /> Wenn die Anzeige des Diagramms zu komplex wird, deaktivieren Sie das Kontrollkästchen neben mindestens einer Spalte, um das Diagramm zu vereinfachen.<br /><br /> Hinweis: Sie können kein Genauigkeitsdiagramm erstellen, es sei denn, Sie muss mindestens eine Spalte ausgewählt ist.|  
 |**Miningmodell**|Listet die Miningmodelle auf, die in der Miningstruktur enthalten sind.|  
 |**Name der vorhersagbaren Spalte**|Wählen Sie eine vorhersagbare Spalte aus, die in den zum Erstellen des Prognosegütediagramms verwendeten Miningmodellen enthalten ist.|  
 |**Wert Vorhersagen**|Wählen Sie einen Wert für die vorhersagbare Spalte aus. Wenn Sie keinen Wert angeben, sagt das Prognosegütediagramm die Leistung des Modells vorher, unabhängig vom Status der vorhersagbaren Spalte.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48120870"
  **Wählen Sie DataSet aus, für das Genauigkeitsdiagramm verwendet werden**  
  Eine Optionsgruppe, die drei Optionen zum Angeben von Genauigkeitstestdaten enthält.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Testfälle für Miningmodell verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde, und wenden Sie den für das Modell definierten Filter an. Weitere Informationen zu Modellfiltern finden Sie unter [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Testfälle für Miningstruktur verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde.|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120870"
  [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Anwenden eines Filters auf ein Miningmodell](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filter für Miningmodelle &#40;Analysis Services – Datamining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

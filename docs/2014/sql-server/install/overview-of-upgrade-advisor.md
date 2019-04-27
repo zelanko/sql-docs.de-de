@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676425"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Übersicht über den Upgrade Advisor
   Dieser Abschnitt bietet eine Übersicht über den Upgradevorgang sowie Informationen, die Ihnen helfen, den Assistenten des Upgrade Advisors und den Berichts-Viewer des Upgrade Advisors zu verstehen und zu verwenden.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729196"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lektion 4: Als Datumstabelle markieren
   In Lektion 2: Hinzufügen von Daten, haben Sie eine Dimensionstabelle namens DimDate importiert. Klicken Sie dann umbenannte die DimDate-Tabelle, in Lektion 3: Umbenennen von Spalten, Date. In Ihrem Modell lautet der Name dieser Tabelle jetzt „Date“, sie kann jedoch auch als *Datumstabelle* bezeichnet werden, da sie Datums- und Uhrzeitdaten enthält.  
@@ -25,7 +25,7 @@ ms.locfileid: "52417291"
   
  In dieser Lektion kennzeichnen Sie die importierte und umbenannte Date-Tabelle als *Datumstabelle* und die Date-Spalte (in der Date-Tabelle) als *Datumsspalte* (eindeutiger Bezeichner). Alle mit dem Namen, die Datum Art kann verwirrend, aber Sie werden bald das Prinzip begreifen.  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **3 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **3 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Umbenennen von Spalten](rename-columns.md).  
@@ -39,6 +39,6 @@ ms.locfileid: "52417291"
 3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** die Spalte **Datum** als eindeutigen Bezeichner aus.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lesson 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
   
   

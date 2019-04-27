@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730213"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Registerkarte "Itemsets" (Miningmodell-Viewer)
   Im Bereich **Itemsets** werden die häufig in einem Miningmodell für Zuordnungsregeln enthaltenen Itemsets angezeigt. Da ein Zuordnungsmodell viele Itemsets enthalten kann, werden im Viewer Steuerelemente bereitgestellt, mit denen Sie die im Viewer angezeigten Itemsets filtern können.  
   
- **Weitere Informationen:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48060340"
  **Maximale Zeilenanzahl**  
  Beschränkt die Anzahl der Itemsets, die im Viewer angezeigt werden. Standardmäßig werden Itemsets in absteigender Reihenfolge nach Unterstützung sortiert, durch Verringern dieses Werts wird die Liste daher auf die häufigsten Itemsets eingeschränkt.  
   
- **Unterstützung**  
+ **Support**  
  Zeigt den Unterstützungswert der einzelnen Itemsets an.  
   
  **Größe**  
  Zeigt an, wie viele Elemente in jedem Itemset vorhanden sind.  
   
- **Itemsets**  
+ **Itemset**  
  Zeigt die Beschreibung für jedes Itemset an. Standardmäßig werden Itemsets als durch Trennzeichen getrennte Liste von Attributen und ihren Werten dargestellt. Mit der Option **Anzeigen** können Sie ändern, wie sie angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

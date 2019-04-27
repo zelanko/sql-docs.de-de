@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679821"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
   Selektive XML-Indizes sind ein weiterer Typ von XML-Index, der Ihnen zusätzlich zu den herkömmlichen XML-Indizes zur Verfügung steht. Die Ziele der selektiven XML-Indexfunktion sind Folgende:  
@@ -123,7 +123,7 @@ FOR
   
 -   Indizieren von Knoten mit binären XS-Typen: z. B. base64Binary und hexBinary.  
   
--   Angeben von Knoten mit XPath-Ausdrücken indiziert werden, die das Platzhalterzeichen enthalten `*` am Ende: Z. B. `/a/b/c/*`, `/a//b/*`, oder `/a/b/*:c`.  
+-   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B. `/a/b/c/*`, `/a//b/*` oder `/a/b/*:c`.  
   
 -   Indizieren einer anderen Achse als untergeordnetes Element, Attribut oder Nachfolger. Der `//<step>` -Fall ist als spezieller Fall zulässig.  
   

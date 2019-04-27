@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681097"
 ---
 # <a name="choosing-a-model"></a>Auswählen eines Modells
   **Mining-Algorithmus:** Die Datamining *Algorithmus* ist der Mechanismus, der Muster aus Daten erstellt. Der Algorithmus definiert, wie Daten gezählt werden, wie Beziehungen abgeleitet werden und wie Muster gespeichert werden. Die Auswahl eines Algorithmus richtet sich teilweise nach der Art der zu analysierenden Daten. Beispielsweise unterstützten einige Algorithmen nur fortlaufende Nummern, während andere am besten mit einer begrenzten Anzahl unterschiedlicher Werte eingesetzt werden.  

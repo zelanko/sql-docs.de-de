@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f744abc1bca3077ca4ba191782f7ccdcfafdb0a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652792"
 ---
 # <a name="sqlallocenv-function"></a>SQLAllocEnv-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: als veraltet markiert  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
   
  **Zusammenfassung**  
  In ODBC 3. *x*, die ODBC-2. *X* Funktion **SQLAllocEnv** wurde ersetzt durch **SQLAllocHandle**. Weitere Informationen finden Sie unter [SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
+>  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

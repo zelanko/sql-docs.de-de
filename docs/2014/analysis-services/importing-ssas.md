@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59caffb94baf8ae4a991bf793a3b77386bd1075f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730163"
 ---
 # <a name="importing-ssas"></a>Importieren (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie den Status des Importvorgangs anzeigen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

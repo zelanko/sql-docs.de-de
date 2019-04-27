@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658948"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Select-Ausdrucksliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltenbezeichnern und Ausdrücken, die aus dem Miningmodell abgeleitet sind.  
@@ -42,20 +42,20 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *model*  
  Ein Modellbezeichner.  
   
- *Sub auswählen*  
+ *sub select*  
  Eine eingebettete SELECT-Anweisung.  
   
  *quelldatenabfrage*  
  Die Quellabfrage.  
   
  *Liste der JOIN-Zuordnung*  
- Optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
+ Dies ist optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
   
- *Bedingungsausdruck*  
- Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ *condition expression*  
+ Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
  Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird verwendet, um Spalten aus der Quellabfrage auf Spalten im Miningmodell zu richten, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Zuordnung joinliste*> durch den mit einem Gleichheitszeichen (=) verknüpft sind, wie im folgenden Beispiel gezeigt:  
@@ -78,7 +78,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Die ORDER BY-Klausel lässt nur eine einzelne Spalte als Argument zu, d. h. Sie können nicht nach mehreren Spalten sortieren.  
   
-## <a name="example-1-singleton-query"></a>Beispiel 1: SINGLETON-Abfrage  
+## <a name="example-1-singleton-query"></a>Beispiel 1: Singleton-Abfrage  
  Im folgenden Beispiel wird erläutert, wie eine Abfrage erstellt wird, die in Echtzeit vorhersagt, ob eine bestimmte Person ein Fahrrad kauft. In dieser Abfrage werden die Daten nicht in einer Tabelle oder einer anderen Datenquelle gespeichert, sondern direkt in die Abfrage eingegeben. Die Person in der Abfrage hat folgende Merkmale:  
   
 -   35 Jahre alt  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie mithilfe der **FLATTENED** Schlüsselwort, wie im folgenden Beispiel gezeigt wird, um die Ergebnisse übersichtlicher zu gestalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679570"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Dialogfeld für Cube- oder Modelleigenschaften (SSAS)
   Mithilfe des Dialogfelds **Datenbankeigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften eines Cubes oder einer Modelldatenbank festlegen. Sie können das Dialogfeld anzeigen, indem Sie im **Objekt-Explorer** mit der rechten Maustaste auf einen Cube oder ein Modell klicken und **Eigenschaften**auswählen.  
@@ -31,7 +31,7 @@ ms.locfileid: "48153500"
   
 -   [Proaktives Zwischenspeichern &#40;Partitionieren Sie im Dialogfeld Eigenschaften von&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "48153500"
 |**Verarbeitungsmodus des Skriptcaches**|Wählen Sie den Verarbeitungsmodus aus, der für den Skriptcache vom Cube oder Modell verwendet werden soll. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Verarbeitungsmodus des skriptcaches**|Wählen Sie den Verarbeitungsmodus aus, der für den Cube oder das Modell zu verwenden ist. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
 |**Speicherort**|Geben Sie den Ordner ein, der als Standardspeicherort für Measuregruppen und Partitionen zu verwenden ist, die dem Cube oder Modell zugewiesen sind. Klicken Sie alternativ auf die Schaltfläche mit den Auslassungszeichen (**...**), um zur Auswahl eines Ordners das Dialogfeld **Nach Remoteordner suchen** anzuzeigen. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
-|**Status**|Zeigt den Verarbeitungsstatus vom Cube oder Modell an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Zustand**|Zeigt den Verarbeitungsstatus vom Cube oder Modell an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem der Cube oder das Modell zuletzt verarbeitet wurde.|  
   
 ## <a name="see-also"></a>Siehe auch  

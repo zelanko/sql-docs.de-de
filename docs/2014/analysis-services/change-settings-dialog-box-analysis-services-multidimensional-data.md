@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681167"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Einstellungen ändern' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des in **und** bereitgestellten Dialogfelds [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Einstellungen ändern [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Einstellungen ändern, mit denen die Verarbeitung der im Dialogfeld **Verarbeiten** aufgeführten Objekte gesteuert wird. Zum Anzeigen des Dialogfelds **Einstellungen ändern** klicken Sie im Dialogfeld **Verarbeiten** auf **Einstellungen ändern** .  
@@ -26,7 +26,7 @@ ms.locfileid: "48077860"
 > [!NOTE]  
 >  Mit den in diesem Dialogfeld angegebenen Einstellungen werden die Standardeinstellungen überschrieben, die von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank an die im Dialogfeld **Verarbeiten** aufgeführten Objekte vererbt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verarbeitungsoptionen**  
  Auf dieser Registerkarte können Sie Einstellungen zu Verarbeitungsreihenfolge, Rückschreibetabelle und den vom Verarbeitungsvorgang betroffenen Objekten ändern. Die Registerkarte enthält die folgenden Optionen:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48077860"
  **Maximal auszuführende parallele tasks**  
  Wählen Sie die maximale Anzahl der Tasks aus, die vom Verarbeitungsvorgang parallel ausgeführt werden können, oder wählen Sie die Option **Entscheidung dem Server überlassen** aus, um die optimale Anzahl der parallel ausführbaren Tasks von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bestimmen zu lassen.  
   
- **Sequenzielle**  
+ **Sequential**  
  Klicken Sie hier, um die Objekte sequenziell zu verarbeiten.  
   
  **Transaktionsmodus**  

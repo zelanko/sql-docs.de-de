@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666940"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
   Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
@@ -53,7 +53,7 @@ ms.locfileid: "54123930"
   
  **So zeigen Sie den Veröffentlichungs- und Abonnementstatus an**  
   
--   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).
+-   Replikationsmonitor: [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md)
   
   
 ## <a name="publication-status-values"></a>Veröffentlichungsstatuswerte  

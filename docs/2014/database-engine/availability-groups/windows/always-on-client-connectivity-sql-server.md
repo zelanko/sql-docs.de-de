@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790659"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On-Clientkonnektivität (SQL Server)
   In diesem Thema werden Überlegungen zur Clientkonnektivität für AlwaysOn-Verfügbarkeitsgruppen beschrieben, einschließlich Voraussetzungen, Einschränkungen und Empfehlungen für Clientkonfigurationen und Einstellungen.  
@@ -33,7 +33,7 @@ ms.locfileid: "53355767"
   
  In der folgenden Tabelle ist die Treiberunterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zusammengefasst:  
   
-|Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
+|Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|-Multisubnetz-Failovercluster: Schnelleres Einzelsubnetz-Endpunkt-Failover|-Multisubnetz-Failovercluster: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Ja|Ja|Ja|Ja|Ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|Ja|Nein|Nein|  

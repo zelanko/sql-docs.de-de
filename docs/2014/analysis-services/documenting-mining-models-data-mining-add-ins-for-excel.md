@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731732"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Dokumentieren von Miningmodellen (Data Mining-Add-Ins für Excel)
   ![Schaltfläche für Dokument-Modell, Data Mining-Menüband](media/dmc-docmodel.gif "Dokumentmodell-Schaltfläche, Data Mining-Menüband")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118066"
   
 3.  In der **Modell auswählen** Dialogfeld Wählen Sie das Modell für den Bericht, und klicken Sie dann auf **Weiter**. Führen Sie die **Dokumentmodell** Assistenten separat für jedes Modell, das Sie dokumentieren möchten.  
   
-4.  In der **dokumentationsdetails auswählen** Dialogfeld Wählen Sie eine der beiden Optionen: **Informationen** oder **Zusammenfassungsinformationen**.  
+4.  In der **dokumentationsdetails auswählen** Dialogfeld Wählen Sie eine der beiden Optionen: **Führen Sie die Informationen** oder **Zusammenfassungsinformationen**.  
   
 5.  Klicken Sie auf **Fertig stellen**.  
   

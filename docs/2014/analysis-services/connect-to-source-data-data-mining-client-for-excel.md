@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680261"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Herstellen von Verbindungen mit Quelldaten (Data Mining-Client für Excel)
   In diesem Thema wird beschrieben, wie Sie Verbindungen, die zum Speichern von Data Mining-Modellen und für den Zugriff auf die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gespeicherten externen Daten verwendet werden, erstellen und verwenden.  
@@ -151,7 +151,7 @@ ms.locfileid: "48159740"
   
 -   SQL Server 2008  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
   
 -   SQL Server 2012  
   

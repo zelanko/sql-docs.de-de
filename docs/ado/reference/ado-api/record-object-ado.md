@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661631"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
 Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder der Datenanbieter oder ein Objekt, das von einem Anbieter von teilweise strukturierten Daten, z. B. einer Datei oder eines Verzeichnisses zurückgegeben.  

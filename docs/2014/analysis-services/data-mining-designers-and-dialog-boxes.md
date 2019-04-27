@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f42a30372d3f12e767a1cc64a4e77f5bfe8d1b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689638"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Designer und Dialogfelder für Data Mining
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Stellt Entwurfstools, die Sie verwenden können, zu erstellen, anzeigen, testen und Erstellen von Vorhersagen aus Datamining-Modelle bereit.  
@@ -29,14 +29,14 @@ ms.locfileid: "48146016"
 |Thema|Description|  
 |-----------|-----------------|  
 |[Datamining-Modelldesigner &#40;Analysis Services – Datamining&#41;](data-mining-model-designer-analysis-services-data-mining.md)|Mithilfe der Tools in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie neue Miningstrukturen und zugeordnete Miningmodelle definieren.|  
-|[Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)|Verwenden Sie die benutzerdefinierten Viewer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um das vervollständigte Modell zu durchsuchen und die Muster in den Daten besser zu verstehen.|  
+|[Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)|Verwenden Sie die benutzerdefinierten Viewer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um das vervollständigte Modell zu durchsuchen und die Muster in den Daten besser zu verstehen.|  
 |[Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)|Verwenden Sie die Genauigkeitsdiagrammtools, z. B. Prognosegütediagramme, Klassifikationsmatrix und Kreuzvalidierung, um Data Mining-Modelle und Sätze von Daten zu bewerten, die für das Training verwendet wurden. Alle Genauigkeitstools sind in sowohl [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als auch [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] verfügbar.|  
 |[Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)|Verwenden Sie den Generator für Vorhersageabfragen, der sowohl in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] verfügbar ist, für folgende Vorgänge:|  
 |[Mining-Struktur-Dialogfeld "Eigenschaften" &#40;Analysis Services – Datamining&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Mining-Modell-Eigenschaftendialogfeld &#40;Analysis Services – Datamining&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Ändern der Eigenschaften der Miningstruktur oder des Miningmodells, um zu beeinflussen, wie Daten behandelt werden, Modellierungsflags hinzuzufügen oder Metadaten zu bearbeiten.|  
 |[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](dmx-query-editor-analysis-services-data-mining.md)|Mithilfe des DMX-Abfrage-Editors können Sie in der DMX-Sprache (Data Mining Extensions) geschriebene Anweisungen entwerfen und ausführen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Tools](data-mining/data-mining-tools.md)   
+ [Data Mining-Tools](data-mining/data-mining-tools.md)   
  [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   

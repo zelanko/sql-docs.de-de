@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730788"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren (Analysis Services)
-  Gespeicherte Prozeduren oder Assemblys [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sind externe Routinen, geschrieben einer [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET-Programmiersprache erweitern, die die Funktionen der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Mit Assemblys können Entwickler die Vorteile der sprachübergreifenden Integration, der Ausnahmebehandlung, der Versionsunterstützung, der Verteilungs- und der Debugunterstützung nutzen.  
+  Die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gespeicherten Prozeduren oder Assemblys sind externe Routinen, die in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET-Programmiersprache geschrieben sind und die Möglichkeiten von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erweitern. Mit Assemblys können Entwickler die Vorteile der sprachübergreifenden Integration, der Ausnahmebehandlung, der Versionsunterstützung, der Verteilungs- und der Debugunterstützung nutzen.  
   
  Sie müssen ein Serveradministrator sein, um eine Assembly zu registrieren. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   

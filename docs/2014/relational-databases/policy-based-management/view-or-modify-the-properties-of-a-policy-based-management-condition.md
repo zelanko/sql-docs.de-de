@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677020"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -27,7 +27,7 @@ ms.locfileid: "54100580"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Zum Anzeigen oder ändern die Eigenschaften einer Bedingung, mit:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54100580"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>So zeigen Sie die Eigenschaften einer Bedingung an bzw. ändern sie  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54100580"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Bedingungen** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen in der **Bedingung öffnen –**_Condition_name_ im Dialogfeld finden Sie unter [neue Bedingung erstellen oder öffnen Sie im Dialogfeld Bedingung Seite "Allgemein"](../../integration-services/general-page-of-integration-services-designers-options.md), [Öffnen Sie im Dialogfeld Bedingung ', Seite ' abhängige Richtlinien '](open-condition-dialog-box-dependent-policies-page.md), [erstellen neue Bedingung oder Bedingung öffnen-Dialogfeld, Seite ' Beschreibung '](create-new-condition-or-open-condition-dialog-box-description-page.md), und [erweiterte Bearbeitung &#40; Bedingung&#41; Dialogfeld](advanced-edit-condition-dialog-box.md).  
+5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den Optionen im **Dialogfeld „Bedingung öffnen –** _Bedingungsname_“ finden Sie unter [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md), [Dialogfeld „Bedingung öffnen“, Seite „Abhängige Richtlinien“](open-condition-dialog-box-dependent-policies-page.md), [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Beschreibung“](create-new-condition-or-open-condition-dialog-box-description-page.md) und [Dialogfeld „Erweiterte Bearbeitung &#40;Bedingung&#41;“](advanced-edit-condition-dialog-box.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

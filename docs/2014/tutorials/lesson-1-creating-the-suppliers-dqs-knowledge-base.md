@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676043"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank 'Suppliers'
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '
   In dieser Lektion erstellen Sie eine DQS-Wissensdatenbank namens **Lieferanten** mit dem Wissen (Metadaten) über Lieferantendaten. Sie verwenden die Wissensdatenbank, um die Bereinigungs- und Abgleichsaktivitäten für Eingabelieferantendaten auszuführen. Die Bereinigungsaktivität identifiziert falsche/ungültige Daten, korrigiert falsche Daten, schlägt Korrekturen vor/macht Vorschläge, standardisiert die Daten und wertet die Daten durch weitere Informationen auf. Die Abgleichsaktivität vergleicht Daten und identifiziert ähnliche (aber leicht abweichende) Datensätze in den Daten, wodurch Sie Datenduplikate entfernen können.  
   
  Sie können sowohl interaktive als auch computerunterstützte Prozesse verwenden, um eine Wissensdatenbank zu erstellen, aufzubauen und zu verwalten. Wissen in einer Wissensdatenbank wird in Domänen verwaltet, die jeweils für ein Datenfeld in den Daten spezifisch sind, die Sie bereinigen und/oder abgleichen möchten.  

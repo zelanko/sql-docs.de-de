@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8367869193670fcc6573738521852ab62aced714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680543"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>Assistenten abschließen (Assistent zum Importieren einer Analysis Services-Datenbank)
   Auf der Seite **Assistenten abschließen** können Sie in einer Fortschrittsanzeige verfolgen, wie die Daten und Metadaten aus der ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank in das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt importiert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **(Status)**  
  Zeigt den Status des Assistenten beim Importieren der einzelnen Objekte aus der Datenbank in das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt an.  
   

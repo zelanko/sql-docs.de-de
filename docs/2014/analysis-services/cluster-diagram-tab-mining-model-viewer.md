@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681028"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)
   Die Registerkarte **Clusterdiagramm** bietet eine grafische Sicht aller im Clustering-Modell enthaltenen Cluster.  
   
- **Weitere Informationen:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -64,15 +64,15 @@ ms.locfileid: "48184196"
  **Schattierungsvariable**  
  Wählen Sie ein Attribut aus, das im Clusterdiagramm dargestellt werden soll.  
   
- **Status**  
+ **Zustand**  
  Wählen Sie einen Status von **Schattierungsvariable** aus, der im Clusterdiagramm verwendet werden soll.  
   
  **Links**  
  Passen Sie an, wie viele Links zwischen Clustern angezeigt werden, indem Sie den Schieberegler nach oben oder unten verschieben. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Zuordnungen zwischen Clustern angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

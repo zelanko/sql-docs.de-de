@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650555"
 ---
 # <a name="check-files-in-use"></a>Verwendete Dateien überprüfen
   Verwenden Sie zum Vermeiden eines Neustarts von Windows nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates die Seite Verwendete Dateien überprüfen zum Identifizieren von Vorgängen, die vom Setupprogramm für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update benötigte Dateien blockieren.  

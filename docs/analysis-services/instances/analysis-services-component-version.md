@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659058"
 ---
-# <a name="verify-analysis-services-cumulative-update-build-version"></a>Überprüfen Sie die Build-Version des kumulativen Updates für Analysis Services
+# <a name="verify-analysis-services-cumulative-update-build-version"></a>Überprüfen der Buildversion für kumulierte Updates für Analysis Services
 
 Ab SQL Server 2017, stimmen die Buildversionsnummer der Analysis Services und SQL Server-Datenbank-Engine-Buildversionsnummer nicht überein. Obwohl Analysis Services und Datenbank-Engine den gleichen Installer verwenden, die Buildsysteme jeweils sind getrennt.
 

@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681187"
 ---
 # <a name="choosing-data-for-data-mining"></a>Auswählen von Daten für das Data Mining
   Wenn Sie Datamining beginnen, Sie können jetzt Fragen "wie viele Daten benötige ich?" oder "Gibt es besonderen Anforderungen, die, denen ich kennen sollte, Bereinigung oder Formatierung meiner Daten?"  
@@ -73,7 +73,7 @@ ms.locfileid: "53355814"
   
  Wenn Sie über ein Dataset in der richtigen Größe verfügen, sollten Sie sich stärker auf die Datenqualität konzentrieren, anstatt laufend weitere Daten hinzuzufügen. An einem bestimmten Punkt sind alle statistisch aussagekräftigen Muster ermittelt, und das Hinzufügen weiterer Daten bringt keine zusätzlichen Vorteile. Im Gegenteil kann eine größere Datenmenge in einigen Fällen zu unbeabsichtigten Korrelationen führen.  
   
-### <a name="discrete-vs-continuous-numbers"></a>Diskrete Zahlen im Vergleich zu kontinuierlichen Zahlen  
+### <a name="discrete-vs-continuous-numbers"></a>Diskrete Zahlen im Vergleich. Zu kontinuierlichen Zahlen  
  Ein *diskrete* Spalte enthält eine endliche Anzahl von Werten. So wird beispielsweise Text immer als diskreter Wert behandelt.  
   
  Diskrete Werte zeichnen sich durch einige wichtige Merkmale aus. Wenn Sie Zahlen beispielsweise als diskret behandeln, weisen die Zahlen keine Reihenfolge auf, sodass Sie keine Mittelwerte oder Summen bilden können. Ortsvorwahlen sind ein anschauliches Beispiel für diskrete numerische Daten, die für mathematische Berechnungen niemals infrage kommen würden.  
@@ -220,7 +220,7 @@ ms.locfileid: "53355814"
   
  Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: `Double`, `Long` und `Date`.  
   
- **Tabelle**  
+ **Table**  
  Dieser Inhaltstyp wird ebenfalls nur verwendet, wenn Daten aus einer externen Datenquelle abgerufen werden, die als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquellensicht definiert wurde.  
   
  Dies bedeutet, dass jede Datenzeile tatsächlich eine geschachtelte Datentabelle mit mindestens einer Spalte und mindestens einer Zeile enthält.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794601"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch)
   Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt haben, müssen Sie sie bereitstellen, damit Benutzer das Modell mit einer Berichterstellungsclientanwendung durchsuchen können. In diesem Thema werden die verschiedenen Eigenschaften und die Methoden beschrieben, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in der Umgebung bereitstellen.  
@@ -62,7 +62,7 @@ ms.locfileid: "52502924"
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> Wird bei der Projekterstellung festgelegt.|**localhost**|Diese Eigenschaft wird bei der Projekterstellung festgelegt und gibt den Namen der Analysis Services-Instanz an, für die das Modell bereitgestellt wird. Standardmäßig wird das Modell in der Standardinstanz von Analysis Services auf dem lokalen Computer bereitgestellt. Sie können diese Einstellung jedoch ändern und eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem Remotecomputer angeben, auf dem Sie über die Berechtigung zum Erstellen von Analysis Services-Objekten verfügen.|  
 |**Edition**|Die gleiche Edition wie die Instanz, in der sich der Arbeitsbereichsserver befindet.|Diese Eigenschaft gibt die Edition des Analysis Services-Servers an, auf dem das Modell bereitgestellt wird. In der Serveredition sind verschiedene Funktionen definiert, die in das Projekt eingebunden werden können. Standardmäßig ist die Edition die des lokalen Analysis Services-Servers. Wenn Sie einen anderen Analysis Services-Server angeben, z. B. einen Analysis Services-Produktionsserver, müssen Sie die Edition dieses Analysis Services-Servers angeben.|  
-|**Datenbank**|**\<Projektname >**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen `TestDB` öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in `Sales` umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
+|**Datenbank**|**\<projectname>**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen `TestDB` öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in `Sales` umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
 |**Cubename**|**Model**|Diese Eigenschaft gibt den Cubenamen an, wie in Clienttools (z. B. Excel) und AMO (Analysis Management Objects) angezeigt.|  
   
 ### <a name="directquery-options-properties"></a>Eigenschaften für DirectQuery-Optionen  

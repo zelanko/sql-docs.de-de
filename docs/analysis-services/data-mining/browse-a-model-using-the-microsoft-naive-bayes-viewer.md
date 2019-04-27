@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678810"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,14 +72,14 @@ ms.locfileid: "34014777"
  Zeigt eine farbige Leiste an, die kennzeichnet, wie stark der Attributwert den in **Wert 1**dargestellten vorhersagbaren Attributwert bevorzugt.  
   
  **Begünstigt \<Wert 2 >**  
- Zeigt eine farbige Leiste an, die kennzeichnet, wie stark der Attributwert den in **Wert 2**dargestellten vorhersagbaren Attributwert bevorzugt.  
+ Zeigt eine farbige Leiste an, die kennzeichnet, wie stark der Attributwert den in **Wert 2** dargestellten vorhersagbaren Attributwert bevorzugt.  
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680424"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Assistenten abschließen (Assistent für verwendungsbasierte Optimierung)
   Auf der Seite **Assistenten abschließen** können Sie den Aggregationsentwurf speichern und den ausgewählten Partitionen zuweisen. Nachdem der Assistent für verwendungsbasierte Optimierung den Entwurf und das Speichern der Aggregationen abgeschlossen hat, können Sie die ausgewählten Partitionen optional auch verarbeiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Neuen Aggregationsentwurf erstellen**  
  Wählen Sie diese Option aus, um einen neuen Aggregationsentwurf zu erstellen und einen Namen für den neuen Aggregationsentwurf einzugeben.  
   

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667720"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -47,19 +47,19 @@ Die folgenden Objekte werden an Sybase erstellt, in der Datenbank SSMATESTER2005
   
 |Name|Typ|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ "TRG"|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
-|USER_TABLE$ Aud|Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
-|USER_TABLE$ AudID|Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Anzeigen|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$new|Anzeigen|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
-|USER_TABLE$new_id|Anzeigen|ID des eingefügten und geänderter Zeilen.|  
-|USER_TABLE$old|Anzeigen|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$Trg|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
+|USER_TABLE$Aud|Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$AudID|Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE|Sicht|Vereinfachte Darstellung der tabellenänderungen.|  
+|USER_TABLE$new|Sicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
+|USER_TABLE$new_id|Sicht|ID des eingefügten und geänderter Zeilen.|  
+|USER_TABLE$old|Sicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt ist in der Datenbank der überprüften Tabelle in Sybase erstellt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Name|Typ|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ "TRG"|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
+|USER_TABLE$Trg|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
   
 ### <a name="test-object-calls"></a>Testen der Aufrufe  
 SSMA-Tester an dieser Stelle ruft jedes Objekt, das für die Tests ausgewählt haben, werden die Ergebnisse verglichen und zeigt den Bericht.  

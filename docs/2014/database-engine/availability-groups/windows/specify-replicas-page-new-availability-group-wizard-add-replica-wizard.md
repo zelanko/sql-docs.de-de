@@ -1,5 +1,5 @@
 ---
-title: 'Seite "Replikate" angeben (Assistent für neue Verfügbarkeitsgruppen: Hinzufügen von Replikat-Assistent) | Microsoft-Dokumentation'
+title: 'Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788353"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite "Replikate" angeben (Assistent für neue Verfügbarkeitsgruppen: Replikat-Assistent zum Hinzufügen von)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
 |Registerkarte|Kurze Beschreibung|  
@@ -38,7 +38,7 @@ ms.locfileid: "53371572"
  Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen** . Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
   
  **Anfangsrolle**  
- Gibt die Rolle an, die das neue Replikat anfänglich ausführt: **Primäre** oder **sekundären**.  
+ Gibt an, die Rolle, die das neue Replikat anfänglich ausführt: **Primary** (Primär) oder **Secondary** (Sekundär).  
   
  **Automatisches Failover (max. 2)**  
  Aktivieren Sie dieses Kontrollkästchen nur, wenn dieses Verfügbarkeitsreplikat ein automatischer Failoverpartner sein soll. Sie müssen zum Konfigurieren eines automatischen Failovers diese Option für das ursprüngliche primäre Replikat und ein sekundäres Replikat auswählen. Beide Replikate verwenden den Verfügbarkeitsmodus für synchrone Commits. Nur zwei Replikate können automatisches Failover unterstützen.  
@@ -122,7 +122,7 @@ ms.locfileid: "53371572"
  Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
 > [!IMPORTANT]  
->  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Raster "Sicherungsprioritäten für Replikate"  
  Verwenden Sie das Raster **Sicherungsprioritäten für Replikate** , um Sicherungsprioritäten für alle Replikate der Verfügbarkeitsgruppe anzugeben. Dieses Raster enthält die folgenden Spalten:  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689423"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt werden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
@@ -105,10 +105,10 @@ ms.locfileid: "48104732"
  [Zurück zum Anfang](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Datamining-Tools](data-mining-tools.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining-Tools](data-mining-tools.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   
   

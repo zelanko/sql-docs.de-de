@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667815"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen
   In diesem Thema wird beschrieben, wie die Latenzzeit gemessen wird und Verbindungen für Transaktionsreplikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit Replikationsmonitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden. Die Transaktionsreplikation bietet die Überwachungstokenfunktion, die eine praktische Möglichkeit zum Messen der Latenzzeit bei Transaktionsreplikationstopologien und zur Überprüfung der Verbindungen zwischen dem Verleger, dem Verteiler und den Abonnenten darstellt. Ein Token (eine geringe Mange an Daten) wird in das Transaktionsprotokoll der Veröffentlichungsdatenbank geschrieben, wie eine normale replizierte Transaktion gekennzeichnet und über das System gesendet. Auf diese Weise werden die folgenden Berechnungen ermöglicht:  
@@ -88,7 +88,7 @@ ms.locfileid: "52813902"
   
 3.  Klicken Sie auf **Überwachung einfügen**.  
   
-4.  Zeigen Sie die verstrichene Zeit für das Überwachungstoken in den folgenden Spalten an: **Verleger zu Verteiler**, **Verteiler zu Abonnent**, **Gesamtlatenzzeit**. Mit dem Wert **Ausstehend** wird angegeben, dass das Token noch nicht den Bestimmungspunkt erreicht hat.  
+4.  Ansicht verstrichene Zeit für das Überwachungstoken in den folgenden Spalten: **Verleger zu Verteiler**, **Verteiler zu Abonnent**, **Gesamtlatenzzeit**. Mit dem Wert **Ausstehend** wird angegeben, dass das Token noch nicht den Bestimmungspunkt erreicht hat.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>So zeigen Sie Informationen zu früher eingefügten Überwachungstoken an  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52813902"
   
 3.  Wählen Sie in der Dropdownliste **Einfügungszeitpunkt** eine Zeit aus.  
   
-4.  Zeigen Sie die verstrichene Zeit für das Überwachungstoken in den folgenden Spalten an: **Verleger zu Verteiler**, **Verteiler zu Abonnent**, **Gesamtlatenzzeit**. Mit dem Wert **Ausstehend** wird angegeben, dass das Token noch nicht den Bestimmungspunkt erreicht hat.  
+4.  Ansicht verstrichene Zeit für das Überwachungstoken in den folgenden Spalten: **Verleger zu Verteiler**, **Verteiler zu Abonnent**, **Gesamtlatenzzeit**. Mit dem Wert **Ausstehend** wird angegeben, dass das Token noch nicht den Bestimmungspunkt erreicht hat.  
   
     > [!NOTE]  
     >  Die Informationen von Überwachungstoken werden für denselben Zeitraum wie andere Vergangenheitsdaten beibehalten. Der Zeitraum wird durch die Aufbewahrungsdauer für den Verlauf der Verteilungsdatenbank festgelegt. Weitere Informationen zum Ändern der Eigenschaften der Verteilungsdatenbank finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../view-and-modify-distributor-and-publisher-properties.md).  

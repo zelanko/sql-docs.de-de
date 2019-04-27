@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679626"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube-Designer (Analysis Services &ndash; Mehrdimensionale Daten)
   Mithilfe von **Cube-Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie verschiedene Eigenschaften eines vorhandenen Cubes bearbeiten, einschließlich der Measuregruppen und Measures, Cubedimensionen und Dimensionsbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Partitionen, Perspektiven und der im Cube enthaltenen Übersetzungen. Außerdem können Sie die im Cube enthaltenen Daten durchsuchen. Das Dialogfeld **Cube-Designer** können Sie wie folgt aufrufen:  

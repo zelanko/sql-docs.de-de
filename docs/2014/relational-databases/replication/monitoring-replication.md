@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666867"
 ---
 # <a name="monitoring-replication"></a>Überwachen (Replikation)
   Die Überwachung einer Replikationstopologie ist ein wichtiger Aspekt bei der Bereitstellung der Replikation. Da die Replikationsaktivität verteilt ist, ist es außerordentlich wichtig, die Aktivität und den Status auf allen an der Replikation beteiligten Computern nachzuverfolgen. Zum Überwachen der Replikation stehen die folgenden Tools zur Verfügung:  
@@ -34,7 +34,7 @@ ms.locfileid: "54134300"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] bietet Zugriff auf den Replikationsmonitor. Außerdem können Sie den aktuellen Status und die letzte Meldung protokolliert werden, indem Sie die folgenden Agents anzeigen und ermöglicht es, Sie starten und beenden jeden Agent: Protokolllese-Agent, Momentaufnahme-Agent, Merge-Agents und Verteilungs-Agent. Weitere Informationen finden Sie unter [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] bietet Zugriff auf den Replikationsmonitor. Darüber hinaus können Sie über dieses Tool den aktuellen Status und die letzte Meldung anzeigen lassen, die von den folgenden Agents protokolliert wurde, sowie die Agents starten und beenden: Protokolllese-Agent, Momentaufnahmen-Agent, Merge-Agent bzw. Verteilungs-Agent. Weitere Informationen finden Sie unter [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54134300"
      Mit dem Systemmonitor kann die Leistung überwacht werden. Er stellt eine Reihe von Zählern für die Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsverwaltung – häufig gestellte Fragen](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Häufig gestellte Fragen für Replikationsadministratoren](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 
   

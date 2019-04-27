@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679738"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Erstellen und Verwenden von Eigenschaftswerten (MDX)
   MDX (Multidimensional Expressions) unterstützt systeminterne und benutzerdefinierte Eigenschaften für Dimensionen, Ebenen, Elemente und Zellen. Die systeminternen Eigenschaften stellen eindeutige Namen, Beschriftungen, Formatierungen und Schriftgrade für einzelne Zellen bereit. Benutzerdefinierte Eigenschaften können dagegen fast alle Arten von zusätzlichen Attributen für Elemente bereitstellen.  
@@ -39,6 +39,6 @@ ms.locfileid: "48196000"
  Weitere Informationen zu Zelleigenschaften und ihrer Verwendung finden Sie unter [Verwenden von Zelleigenschaften &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

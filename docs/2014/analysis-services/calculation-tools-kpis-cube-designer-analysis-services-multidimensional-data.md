@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b845d0ab12447580bb27be43f0d776eac98ee7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681113"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **KPIs** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in KPIs (Key Performance Indicators) verfügbar sind.  
@@ -26,7 +26,7 @@ ms.locfileid: "48181050"
 > [!NOTE]  
 >  Der Bereich wird nur in der Formularansicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Metadaten**  
  Zeigt die Metadaten für den ausgewählten Cube an.  
   

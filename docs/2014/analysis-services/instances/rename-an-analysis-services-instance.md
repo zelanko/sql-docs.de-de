@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729802"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
   Sie können eine vorhandene Instanz von umbenennen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe der **Instanz umbenennen** Dialogfeld.  

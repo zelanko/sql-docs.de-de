@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732196"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Registerkarte "Abhängigkeitsnetzwerk" (Miningmodell-Viewer)
   Die Registerkarte **Abhängigkeitsnetzwerk** bietet eine grafische Sicht aller im Miningmodell enthaltenen Attribute und gibt die Beziehungen zwischen den Attributen an.  
@@ -31,7 +31,7 @@ ms.locfileid: "48226170"
   
  [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "48226170"
  Allgemeine gilt für alle Modelltypen: je stärker der Link, desto stärker ist auch die prognostizierte Beziehung zwischen den beiden Attributen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

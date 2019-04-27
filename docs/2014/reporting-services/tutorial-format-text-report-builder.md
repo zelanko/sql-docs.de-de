@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647532"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
   In diesem Tutorial können Sie die Formatierung von Text auf verschiedene Weise üben. Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset können Sie die Schritte auswählen, mit denen Sie sich vertraut machen möchten.  

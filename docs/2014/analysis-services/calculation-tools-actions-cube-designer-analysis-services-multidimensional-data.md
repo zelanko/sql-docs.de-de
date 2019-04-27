@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677070"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **Aktionen** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in Aktionen, Drillthroughaktionen und Berichtsaktionen verfügbar sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Metadaten**  
  Zeigt die Metadaten für den ausgewählten Cube an.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48133510"
 |------------|----------------|  
 |**Kopieren**|Wählen Sie diese Option aus, um das in **Metadaten** oder **Funktionen** ausgewählte Element in die Zwischenablage zu kopieren.<br /><br /> Beachten Sie, dass diese Option nicht angezeigt wird **Vorlagen** ausgewählt ist. Beachten Sie, dass diese Option deaktiviert ist, wenn das ausgewählte Element kann, wie z. B. kopiert werden die **legt** Ordner einer Dimension, die im angezeigten **Metadaten** oder den funktionsgruppenordner für eine Funktion, die im angezeigt **Funktionen**.|  
 |**Elemente filtern**|Wählen Sie diese Option aus, um das Dialogfeld **Elemente filtern** anzuzeigen und die angezeigten Elemente nach dem ausgewählten Element in **Metadaten**zu filtern. Weitere Informationen zum Dialogfeld **Elemente filtern** finden Sie unter [Dialogfeld „Elemente filtern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Beachten Sie, dass diese Option nur, wenn angezeigt wird **Metadaten** ausgewählt ist. Beachten Sie, dass diese Option ist nur aktiviert, wenn in eine Ebene für ein Attribut ausgewählt ist **Metadaten**.|  
-|**Vorlage hinzufügen**|Wählen Sie diese Option aus, um dem Cube eine neue Aktion, Drillthroughaktion oder Berichtsaktion auf der Grundlage der ausgewählten Vorlage hinzuzufügen und dementsprechend den **Aktionsformular-Editor**, **Drillthroughaktionsformular-Editor**oder **Berichtsaktionsformular-Editor**anzuzeigen.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Metadaten** ausgewählt ist.|  
+|**Vorlage hinzufügen**|Wählen Sie diese Option aus, um dem Cube eine neue Aktion, Drillthroughaktion oder Berichtsaktion auf der Grundlage der ausgewählten Vorlage hinzuzufügen und dementsprechend den **Aktionsformular-Editor**, **Drillthroughaktionsformular-Editor**oder **Berichtsaktionsformular-Editor**anzuzeigen.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Metadaten** ausgewählt wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Skripts Grundlagen &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Aktionen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Symbolleiste &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Aktionsplaner &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

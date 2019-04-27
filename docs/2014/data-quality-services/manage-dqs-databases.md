@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792408"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   Dieser Abschnitt enthält Informationen zu Datenbankverwaltungsaktionen, z. B. zum Sichern/Wiederherstellen oder Trennen/Anfügen, die für DQS-Datenbanken ausgeführt werden können.  

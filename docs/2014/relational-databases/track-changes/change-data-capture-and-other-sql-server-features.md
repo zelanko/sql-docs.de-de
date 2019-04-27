@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672073"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen
   In diesem Thema wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  

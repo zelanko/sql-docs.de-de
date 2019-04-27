@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4f2e680829f51664fc13116953298a281aae7679
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792706"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung
   In diesem Thema wird beschrieben, wie eine oder mehrere Domänen in einer Excel-Datei in die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Wissensermittlungsaktivität importiert werden. Der Importvorgang vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Auf diese Weise können Personen, die über Daten in einer Excel-Datei oder Textdatei verfügen, eine Wissensdatenbank mit diesen Daten erstellen. (Weitere Informationen zum Importieren von Werten in eine Domäne einer vorhandenen Wissensdatenbank finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  

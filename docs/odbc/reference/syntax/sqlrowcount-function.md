@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656068"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLRowCount** gibt die Anzahl der von betroffenen Zeilen eine **UPDATE**, **einfügen**, oder **löschen** Anweisung; eine SQL_ADD, SQL_UPDATE_BY_BOOKMARK oder SQL_ Vorgang DELETE_BY_BOOKMARK **SQLBulkOperations**; oder einen Vorgang SQL_UPDATE oder SQL_DELETE in **SQLSetPos**.  
@@ -58,7 +58,7 @@ SQLRETURN SQLRowCount(
 >  Viele Datenquellen können nicht in einem Resultset, die vor dem Abrufen der sie die Anzahl der Zeilen zurückgegeben wird. für eine optimale Interoperabilität sollten die Anwendungen nicht auf dieses Verhalten verlassen.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLRowCount** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLRowCount** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

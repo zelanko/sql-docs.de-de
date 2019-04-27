@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679611"
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
@@ -55,7 +55,7 @@ ms.locfileid: "48190840"
  Währungsdimension  
  Eine Datenbankdimension, die durch die folgenden Einstellungen definiert ist:  
   
--   Die `Type` Eigenschaft der Dimension wird auf Currency festgelegt.  
+-   Die `Type`-Eigenschaft der Dimension wird auf Currency festgelegt.  
   
 -   Die `Type`-Eigenschaft von einem Attribut der Dimension wird auf CurrencyName festgelegt.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190840"
   
 -   Zwischen einer Zeitdimension und der Wechselkurs-Measuregruppe besteht eine reguläre Dimensionsbeziehung.  
   
--   Wahlweise wird die `Type`-Eigenschaft auf ExchangeRate festgelegt. Während der Business Intelligence-Assistent die Beziehungen mit den währungs- und Zeitdimensionen zum Identifizieren der wahrscheinlichen Wechselkurs-Measuregruppen verwendet, Festlegen der `Type` -Eigenschaft auf ExchangeRate kann Clientanwendungen Umzurechnende Measure leichter zu identifizieren Gruppen.  
+-   Wahlweise wird die `Type`-Eigenschaft auf ExchangeRate festgelegt. Während der Business Intelligence-Assistent die Beziehungen mit den Währungs- und Zeitdimensionen zum Identifizieren der wahrscheinlichen Wechselkurs-Measuregruppe verwendet, können Clientanwendungen die Wechselkurs-Measuregruppen leichter identifizieren, wenn die `Type`-Eigenschaft auf ExchangeRate festgelegt wurde.  
   
 -   Mindestens ein Measure, der die Wechselkurse darstellt, die in der Wechselkurs-Measuregruppe enthalten sind.  
   
  Berichtswährungsdimension  
  Die Dimension, die vom Business Intelligence-Assistenten nach dem Definieren einer Währungsumrechnung definiert wird, und die die Berichtswährungen für diese Währungsumrechnung enthält. Die Berichtswährungsdimension basiert auf einer benannten Abfrage aus der Dimensionshaupttabelle der Währungsdimension. Diese Abfrage ist in der Datenquellensicht definiert, auf der die zur Wechselkurs-Measuregruppe zugeordnete Währungsdimension basiert. Die Dimension wird durch die folgenden Einstellungen definiert:  
   
--   Die `Type` Eigenschaft der Dimension wird auf Currency festgelegt.  
+-   Die `Type`-Eigenschaft der Dimension wird auf Currency festgelegt.  
   
--   Die `Type` Eigenschaft des Schlüsselattributs der Dimension wird auf CurrencyName festgelegt.  
+-   Die `Type`-Eigenschaft des Schlüsselattributs der Dimension wird auf CurrencyName festgelegt.  
   
--   Die `Type` Eigenschaft von einem Attribut innerhalb der Dimension wird auf CurrencyDestination festgelegt, und die Spalte gebunden wird, auf das Attribut enthält den Währungsbezeichner, der die berichtswährung für die währungsumrechnung darstellt.  
+-   Die `Type`-Eigenschaft von einem Attribut innerhalb der Dimension wird auf CurrencyDestination festgelegt, und die Spalte, die an das Attribut gebunden ist, enthält den Währungsbezeichner, der die Berichtswährung für die Währungsumrechnung darstellt.  
   
 ## <a name="defining-currency-conversions"></a>Definieren von Währungsumrechnungen  
  Sie können mit dem Business Intelligence-Assistenten die Funktionen der Währungsumrechnung für einen Cube definieren, oder Sie können Währungsumrechnungen mithilfe von MDX-Skripts manuell definieren.  

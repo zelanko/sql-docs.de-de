@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788128"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server)
   Der Assistent zum Hinzufügen von Azure-Replikaten unterstützt Sie dabei, eine neue Windows Azure-VM in einer hybriden IT-Umgebung zu erstellen und als sekundäres Replikat für eine neue oder vorhandene AlwaysOn-Verfügbarkeitsgruppe zu konfigurieren.  
@@ -28,9 +28,9 @@ ms.locfileid: "48095640"
   
      [Security](#Security)  
   
--   **Fügen Sie ein Replikat hinzu mit:**  [Assistent zum Hinzufügen von Azure-Replikaten (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Hinzufügen eines Replikats mit:**  [Hinzufügen von Azure-Replikat-Assistenten (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie noch nie zu einer verfügbarkeitsgruppe ein verfügbarkeitsreplikat hinzugefügt haben, finden Sie unter der "Serverinstanzen" und "Verfügbarkeitsgruppen und Replikate" Abschnitte in [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  

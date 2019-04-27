@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670628"
 ---
 # <a name="uninstall-reporting-services"></a>Deinstallieren von Reporting Services
   Bei der Deinstallation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden nicht der Inhalt, den Sie erstellt haben, bzw. die von Ihnen vorgenommenen Konfigurationsänderungen entfernt. Wenn es jedoch Inhalt gibt, den Sie nach der Deinstallation benötigen, sollten Sie Kopien des Inhalts erstellen, bevor Sie den Deinstallationsprozess starten.  

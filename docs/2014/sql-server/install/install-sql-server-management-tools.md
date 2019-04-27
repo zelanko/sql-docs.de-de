@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657624"
 ---
 # <a name="install-sql-server-management-tools"></a>Installieren der SQL Server-Verwaltungstools
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools gehören die folgenden Komponenten:  
+  Zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungstools gehören die folgenden Komponenten:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -33,9 +33,9 @@ ms.locfileid: "48061938"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Add-ins [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- Beachten Sie, dass [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine separate Option während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation ist.  
+ Beachten Sie, dass [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine separate Option während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation ist.  
   
- Unabhängig von der auf einem Computer installierten Anzahl von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird nur eine Kopie der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Verwaltungstools installiert.  
+ Unabhängig von der auf einem Computer installierten Anzahl von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird nur eine Kopie der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Verwaltungstools installiert.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Verwaltungstools können Seite-an-Seite ausführen auf dem gleichen Computer mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwaltungstools.  
   

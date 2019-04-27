@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729643"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Planer (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **KPI-Planer** der Registerkarte **KPIs** können Sie im Cube-Designer auf die in dem angegebenen Cube enthaltenen Key Performance Indicators (KPIs) zugreifen und diese neu anordnen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48136792"
 > [!NOTE]  
 >  Der Bereich wird in der Formularansicht nicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Liste**  
  Zeigt den Namen des KPI an.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "48136792"
 |Option|Definition|  
 |------------|----------------|  
 |**Neuer KPI**|Wählen Sie einen KPI aus, um den **KPI-Formular-Editor** anzuzeigen und einen neuen KPI zu erstellen. Weitere Informationen zum **finden** Sie unter [ &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Nach oben**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach oben zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Wenn der ausgewählte KPI nicht weiter nach unten verschoben werden kann, ist diese Option deaktiviert.|  
-|**Nach unten**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach unten zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Wenn der ausgewählte KPI nicht weiter nach unten verschoben werden kann, ist diese Option deaktiviert.|  
+|**Nach oben**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach oben zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn der ausgewählte KPI nicht weiter verschoben werden kann.|  
+|**Nach unten**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach unten zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn der ausgewählte KPI nicht weiter verschoben werden kann.|  
 |**Delete**|Wählen Sie diese Option aus, um den ausgewählten KPI zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  

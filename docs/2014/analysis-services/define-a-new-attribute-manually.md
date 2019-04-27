@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa8ea915e250afbaa0075ee51e09fc5ab0f5a53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732342"
 ---
 # <a name="define-a-new-attribute-manually"></a>Manuelles Definieren eines neuen Attributs
   Dieses Verfahren wird beschrieben, wie erstellen Sie ein neues Attribut in einer Dimension mithilfe der **Attribute** Bereich im Dimensions-Designer.  

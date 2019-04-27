@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782051"
 ---
 # <a name="manage-the-database-engine-services"></a>Verwalten der Datenbank-Engine-Dienste
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter den Betriebssystemen als Dienst ausgeführt. Ein Dienst ist ein Anwendungstyp, der im Hintergrund ausgeführt wird. Dienste stellen gewöhnlich wichtige Betriebssystemfunktionen bereit, wie z. B. Webbereitstellung, Ereignisprotokollierung oder Dateibereitstellung. Dienste können ausgeführt werden, ohne dass auf dem Computerdesktop eine Benutzeroberfläche angezeigt wird. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und mehrere andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden als Dienste ausgeführt. Diese Dienste werden in der Regel zusammen mit dem Betriebssystem gestartet. Dies hängt von der Konfiguration während der Installation ab. Manche Dienste werden standardmäßig nicht gestartet. In diesem Abschnitt wird die Verwaltung verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben. Vor dem Anmelden an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie wissen, wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, beendet, angehalten, fortgesetzt und neu gestartet wird. Nach dem Anmelden können Sie verschiedene Aufgaben ausführen, wie z. B. das Verwalten des Servers oder das Abfragen einer Datenbank.  

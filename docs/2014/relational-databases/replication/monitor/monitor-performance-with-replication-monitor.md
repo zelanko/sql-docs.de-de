@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667216"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
   Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ermöglicht es Ihnen, die Leistung bei Transaktions- und Mergereplikationen zu überwachen. Zu diesem Zweck können die folgenden Aktionen ausgeführt werden:  
@@ -85,16 +85,16 @@ ms.locfileid: "54126420"
     |---------------|----------|----------|----------|  
     |151+%|76 – 150 %|26 – 75 %|0 – 25 %|  
   
- Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+ Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Ermitteln der Latenzzeit mit Überwachungstokens  
  Mithilfe der Transaktionsreplikation können Sie die Latenzzeit (Latenz) in einem System messen, indem Sie ein Token (kleine Menge von Daten) in das Transaktionsprotokoll der Veröffentlichungsdatenbank einfügen und aufzeichnen, wie lange dieses Token benötigt, bis es beim Verteiler und den Abonnenten ankommt. Mithilfe des Tokens können Sie auch feststellen, ob Daten den Verteiler oder die Abonnenten gar nicht erreichen. Weitere Informationen finden Sie unter [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Anzeigen von Details zur Synchronisierungsleistung bei der Mergereplikation  
- Bei Mergereplikationen zeigt der Replikationsmonitor detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+ Bei Mergereplikationen zeigt der Replikationsmonitor detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierten Statistiken finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Anzeigen von Transaktions- und Bereitstellungszeiten bei der Transaktionsreplikation  
- Bei Transaktionsreplikationen zeigt der Replikationsmonitor Informationen zur Anzahl der Transaktionen in der Verteilungsdatenbank an, die noch nicht an einen Abonnenten verteilt wurden, und er gibt an, wie lange die Verteilung dieser Transaktionen schätzungsweise dauert. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+ Bei Transaktionsreplikationen zeigt der Replikationsmonitor Informationen zur Anzahl der Transaktionen in der Verteilungsdatenbank an, die noch nicht an einen Abonnenten verteilt wurden, und er gibt an, wie lange die Verteilung dieser Transaktionen schätzungsweise dauert. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Replikation](../monitoring-replication.md)   

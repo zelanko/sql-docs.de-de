@@ -1,5 +1,5 @@
 ---
-title: Tail (MDX) | Microsoft Docs
+title: Tail (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4563ec53f3ed12081e91b5010ae00a71b6c2feb3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677336"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
 
@@ -32,7 +32,7 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Anzahl*  
+ *Count*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  

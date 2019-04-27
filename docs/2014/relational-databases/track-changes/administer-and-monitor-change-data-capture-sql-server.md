@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672145"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
@@ -75,7 +75,7 @@ ms.locfileid: "52788902"
  Wenn ein Cleanup ausgeführt wird, wird die Untergrenzenmarkierung für alle Aufzeichnungsinstanzen zunächst in einer einzelnen Transaktion aktualisiert. Anschließend wird versucht, veraltete Einträge aus den Änderungstabellen und der Tabelle cdc.lsn_time_mapping zu entfernen. Der konfigurierbare Schwellenwert begrenzt, wie viele Einträge in jeder einzelnen Anweisung gelöscht werden. Das Fehlschlagen des Löschvorgangs für einzelne Tabellen führt nicht dazu, dass die Ausführung des Vorgangs nicht für die übrigen Tabellen versucht wird.  
   
 ### <a name="cleanup-job-customization"></a>Anpassen eines Cleanupauftrags  
- Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanup-Prozeduren auf basieren `lsn` statt auf Zeit basieren, eine beliebige Anzahl von Strategien kann verwendet werden, um den kleinsten bestimmen `lsn` , die in den Änderungstabellen bewahrt. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Darüber hinaus, obwohl die Standardstrategie gleich `lsn` für das Cleanup der Änderungstabellen für die Datenbanken kann die zugrunde liegende cleanupprozedur auch Cleanup auf aufzeichnungsinstanzebene aufgerufen werden.  
+ Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanupprozeduren auf `lsn` statt auf Zeit basieren, kann eine beliebige Anzahl von Strategien verwendet werden, um den kleinsten `lsn` zu bestimmen, der in den Änderungstabellen bewahrt werden soll. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie denselben `lsn` für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
   
 ##  <a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses  
  Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) und [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

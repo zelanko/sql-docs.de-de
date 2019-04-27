@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787976"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie ein geplantes manuelles Failover oder ein erzwungenes manuelles Failover (ein erzwungenes Failover) ) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem Failover zu einem sekundären Replikat im Status SYNCHRONIZED führt der Assistent ein geplantes manuelles Failover (ohne Datenverlust) aus. Bei einem Failover zu einem sekundären Replikat im Status UNSYNCHRONIZED oder NOT SYNCHRONIZING führt der Assistent ein erzwungenes manuelles Failover aus, ein sogenanntes *erzwungenes Failover* (mit möglichem Datenverlust). Bei beiden Formen des manuellen Failovers geht das sekundäre Replikat, mit dem die Verbindung besteht, in die primäre Rolle über. Bei einem geplanten manuellen Failover wird aktuell das frühere primäre Replikat in die sekundäre Rolle überführt. Nach einem erzwungenen Failover geht das frühere primäre Replikat, sobald es online geschaltet wird, in die sekundäre Rolle über.  
@@ -70,7 +70,7 @@ ms.locfileid: "57579650"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verwenden Sie den Assistenten für das Failover von Verfügbarkeitsgruppen**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die ein sekundäres Replikat der Verfügbarkeitsgruppe hostet, für die ein Failover ausgeführt werden muss, und erweitern Sie die Serverstruktur.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655300"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server Management Objects (SMO)-Programmierungshandbuch
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) ist eine Auflistung von Objekten, die entwickelt wurden, zum Programmieren aller Aspekte der Verwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO (Replikationsverwaltungsobjekte) steht für eine Auflistung von Objekten, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationsverwaltung kapselt.  

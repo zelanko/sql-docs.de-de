@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680820"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet zwei unterschiedliche Ansätze für die datenmodellierung: tabellarischer und mehrdimensionaler. Zwar gibt es erhebliche Überschneidungen, aber auch wichtige Unterschiede, die Ihre Entscheidung zur weiteren Vorgehensweise beeinflussen. In diesem Thema werden verschiedene Funktionen verglichen und erklärt, wie jeder Ansatz allgemeine Projektanforderungen erfüllt. Spielt beispielsweise die Unterstützung einer bestimmten Datenquelle eine wichtige Rolle, kann der Abschnitt zu Datenquellen bei der Entscheidung über den geeigneten Modellierungsansatz hilfreich sein.  

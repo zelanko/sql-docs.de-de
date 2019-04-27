@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789146"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
-  Wenn für eine AlwaysOn-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, schlägt das Replikationsabonnement u. U. fehl. Für Abonnenten einer Transaktionsreplikation Push wird der Verteilungs-Agent weiterhin automatisch nach einem Failover zu replizieren, wenn das Abonnement mit dem Namen der AG-Listener erstellt wurde. Für Abonnenten einer Transaktionsreplikation Pull wird der Verteilungs-Agent automatisch nach einem Failover die Replikation fort, wenn das Abonnement erstellt wurde, mithilfe des Listenernamens und dem ursprünglichen Abonnentenserver aktiv ist und ausgeführt wird. Dies ist, da der Verteilungs-Agent-Aufträge nur auf dem ursprünglichen Abonnenten (primäre Replikat der Verfügbarkeitsgruppe) erstellt werden. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
+  Wenn für eine AlwaysOn-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, schlägt das Replikationsabonnement u. U. fehl. Für Transaktionsreplikations-Pushabonnenten setzt der Verteilungs-Agent das Replizieren nach einem Failover automatisch fort, wenn das Abonnement mit dem Namen des Verfügbarkeitsgruppenlisteners erstellt wurde. Für Transaktionsreplikations-Pullabonnenten setzt der Verteilungs-Agent das Replizieren nach einem Failover automatisch fort, wenn das Abonnement mit dem Namen des Verfügbarkeitsgruppenlisteners erstellt wurde und wenn der ursprüngliche Abonnentenserver aktiv ist und ausgeführt wird. Ursache hierfür ist, dass die Verteilungs-Agent-Aufträge nur auf dem ursprünglichen Abonnenten (primäres Replikat der Verfügbarkeitsgruppe) erstellt werden. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
   
 ## <a name="what-is-supported"></a>Unterstützte Vorgänge  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation unterstützt das automatische Failover des Verlegers, das automatische Failover von Transaktionsabonnenten und das manuelle Failover von Mergeabonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. AlwaysOn kann nicht mit Websync und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact-Szenarien kombiniert werden.  

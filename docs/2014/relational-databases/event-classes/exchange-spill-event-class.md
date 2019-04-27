@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663675"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill-Ereignisklasse
   Die **Exchange Spill** -Ereignisklasse gibt an, dass die Kommunikationspuffer in einem parallelen Abfrageplan vorübergehend in die **tempdb** -Datenbank geschrieben wurden. Dies tritt nur selten auf, und auch nur, wenn ein Abfrageplan mehrere Bereichsscans hat.  

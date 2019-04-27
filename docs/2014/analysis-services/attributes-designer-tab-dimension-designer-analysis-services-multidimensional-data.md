@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2ac25046df8c346ac68c8ffe4623f37d4637f66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650611"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attribute (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie die Liste **Attribute** , um ein bestimmtes Attribut im Attributbeziehungsdiagramm zu finden und um eine neue Attributbeziehungen zu definieren. Dieser Bereich wird unmittelbar unter dem Bereich angezeigt, der das Attributbeziehungsdiagramm enthält.  

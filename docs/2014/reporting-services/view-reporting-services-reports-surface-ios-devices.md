@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647243"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten
   In diesem Artikel werden die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen und -Workflows beschrieben, die für Microsoft Surface-Geräte sowie für Geräte mit Apple iOS 6 und Apple Safari (z. B. iPad) unterstützt werden.  

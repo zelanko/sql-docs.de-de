@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792603"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
   Sie haben die folgenden Möglichkeiten, um die Quelldaten für [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)-Vorgänge zu verwenden und die verarbeiteten Daten zu exportieren:  
@@ -40,13 +40,13 @@ ms.locfileid: "56019921"
   
 4.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-5.  Wählen Sie im rechten Bereich das Kontrollkästchen unter der **Zuordnung** Spalte für die **DQS_STAGING_DATA** Datenbank, und wählen Sie dann die folgenden Rollen in der **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** Bereich:  
+5.  Aktivieren Sie im rechten Bereich in der Spalte **Map** (Zuordnung) das Kontrollkästchen für die **DQS_STAGING_DATA**-Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
   
-    -   **db_datareader**: Lesen von Daten aus Tabellen/Sichten.  
+    -   **db_datareader**: Daten aus Tabellen/Ansichten lesen.  
   
-    -   **db_datawriter**: Hinzufügen, löschen oder Ändern von Daten in Tabellen.  
+    -   **db_datawriter**: Daten in Tabellen hinzufügen, löschen oder ändern.  
   
-    -   **db_ddladmin**: Erstellen, ändern oder Löschen von Tabellen/Sichten.  
+    -   **db_ddladmin**: Tabellen/Ansichten, erstellen, anpassen oder löschen.  
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678451"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und einer Miningstruktur
   In dieser Lektion erstellen Sie ein Miningmodell, mit dem Sie auf Basis von Vergangenheitsdaten Werte für einen Zeitraum vorhersagen können. Beim Erstellen des Modells wird die zugrunde liegende Struktur automatisch generiert und kann als Basis für weitere Miningmodelle verwendet werden.  

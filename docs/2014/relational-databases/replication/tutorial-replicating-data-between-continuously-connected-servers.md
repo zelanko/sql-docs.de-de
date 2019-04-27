@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Replizieren von Daten zwischen kontinuierlich verbundenen Servern | Microsoft-Dokumentation'
+title: 'Tutorial: Replizieren von Daten zwischen kontinuierlich verbundenen Servern | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655391"
 ---
-# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Lernprogramm: Replizieren von Daten zwischen Servern mit kontinuierlicher Verbindung
+# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replizieren von Daten zwischen Servern mit kontinuierlicher Verbindung
   Die Replikation stellt eine bewährte Lösung für das Problem des Verschiebens von Daten zwischen Servern mit kontinuierlicher Verbindung dar. Mithilfe von Replikations-Assistenten können Sie eine Replikationstopologie auf einfache Weise konfigurieren und verwalten. In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für Server mit kontinuierlicher Verbindung erläutert.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
@@ -48,7 +48,7 @@ ms.locfileid: "52753922"
 > [!NOTE]  
 >  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]muss eine Verbindung mit dem Verleger und dem Abonnenten hergestellt werden. Dazu wird ein Anmeldename verwendet, der Mitglied der festen Serverrolle **sysadmin** ist.  
   
- **Ungefähre Dauer dieses Lernprogramms: 30 Minuten.**  
+ **Ungefähre Dauer dieses Tutorials: 30 Minuten.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Lektionen in diesem Lernprogramm  
   

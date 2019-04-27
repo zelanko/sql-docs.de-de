@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650846"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwalten Sie mithilfe dieses Bereichs die mit der ausgewählten Dimension verknüpften Attribute. Attribute können aus diesem Bereich in den Bereich **Hierarchien** gezogen werden, um so Hierarchien und Ebenen zu erstellen. Weitere Informationen finden Sie unter [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48229810"
   
 2.  Wenn sie nicht ausgewählt ist, klicken Sie auf die Registerkarte **Dimensionsstruktur** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Attribute**  
  Zeigt die für die ausgewählte Dimension verfügbaren Attribute an. Diese Option kann in den folgenden Modi angezeigt werden:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48229810"
  **Usage**  
  Legt die Verwendung des ausgewählten Attributs fest. Klicken Sie auf den Pfeil nach unten, und wählen Sie eine der folgenden Optionen aus:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Regular|Identifiziert ein reguläres Attribut.|  
 |Key|Identifiziert das Schlüsselattribut für die Dimension. Dies entspricht den Blattelementen der Dimension. Pro Dimension kann es nur ein Schlüsselattribut geben. Klicken Sie zum Ändern des Attributs auf die Schaltfläche mit den Auslassungspunkten (**...**) neben der Eigenschaft **KeyColumns** im Bereich **Eigenschaften** .|  

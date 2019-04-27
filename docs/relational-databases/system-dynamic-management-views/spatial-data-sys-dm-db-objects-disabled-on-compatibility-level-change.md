@@ -1,5 +1,5 @@
 ---
-title: dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669448"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Räumliche Daten - dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Führt die Indizes und die Einschränkungen auf, die in Folge der Änderung des Kompatibilitätsgrads in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert werden. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
@@ -53,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**Abhängigkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**dependency**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -65,7 +65,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Wenn die folgenden Funktionen im Ausdruck einer persistierten berechneten Spalte verwendet werden, bewirken sie, dass Indizes und Einschränkungen, die auf diese Spalten verweisen, bei einer Änderung des Kompatibilitätsgrads von 100 auf 110 oder höher deaktiviert werden:  
   
--   **SOUNDEX**  
+-   **Soundex**  
   
 -   **Geografie:: GeomFromGML**  
   
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Verhalten der deaktivierten Objekte  
  **Indizes**  
   
- Wenn der gruppierte Index deaktiviert ist oder ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrageprozessor kann keinen Plan erzeugen, da der Index ' %. \*ls für die Tabelle oder Sicht ' %. \*ls deaktiviert ist. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade durch Aufruf **ALTER INDEX ON... REBUILD** ändern.  
+ Wenn der gruppierte Index deaktiviert ist oder wenn ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrageprozessor kann keinen Plan erzeugen, da der Index ' %. \*ls für die Tabelle oder Sicht ' %. \*ls deaktiviert ist. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade durch Aufruf **ALTER INDEX ON... REBUILD** ändern.  
   
  **Heaps**  
   

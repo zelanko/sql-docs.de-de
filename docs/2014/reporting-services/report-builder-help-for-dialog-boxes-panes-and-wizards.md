@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657365"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator
   Dieser Abschnitt enthält die Hilfe zu vielen Assistenten, Ansichten, Bereichen und Dialogfeldern im Berichts-Generator. Sie können die Hilfe auch öffnen, indem Sie die F1-Taste drücken oder auf die im Dialogfeld angezeigte Schaltfläche Hilfe klicken.  

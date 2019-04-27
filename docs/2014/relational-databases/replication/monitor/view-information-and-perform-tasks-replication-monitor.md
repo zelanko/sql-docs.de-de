@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors | Microsoft-Dokumentation
+title: Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667131"
 ---
-# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben, die mithilfe des Replikationsmonitors
-Der Replikationsmonitor bietet es sich um eine Reihe von Registerkarten und Optionen zum Anzeigen von Informationen und verschiedene Aufgaben ausführen. Dieser Artikel beschreibt verschiedene Dinge, die angezeigt und bei Verwendung des Replikationsmonitors durchgeführt werden können.
+# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor
+Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen Sie Informationen anzeigen und verschiedene Aufgaben ausführen können. In diesem Artikel werden unterschiedliche Informationen und Aufgaben beschrieben, die Sie mithilfe des Replikationsmonitor aufrufen bzw. ausführen können.
 
-## <a name="for-a-publication"></a>Für eine Veröffentlichung
+## <a name="for-a-publication"></a>Veröffentlichungen
 
 ### <a name="view-information"></a>Anzeigen von Informationen
 
@@ -53,13 +53,13 @@ Der Replikationsmonitor bietet es sich um eine Reihe von Registerkarten und Opti
 2.  Zum Anzeigen und Ändern von Veröffentlichungseigenschaften klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Eigenschaften**.    
 3.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Alle Abonnements** .  
   
-     Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+     Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).    
+4.  Um Informationen zu Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).    
 5.  Um Informationen zu Agentwarnungen und Schwellenwerten anzuzeigen, klicken Sie auf die Registerkarte **Warnungen** . Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
 6.  Um Informationen zu Überwachungstoken anzuzeigen, klicken Sie auf die Registerkarte **Überwachungstoken** . Weitere Informationen zu Überwachungstoken finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
-## <a name="for-a-publisher"></a>Für einen Verleger
+## <a name="for-a-publisher"></a>Verleger
   Der Replikationsmonitor bietet folgende Registerkarten, auf denen Informationen zu dem ausgewählten Verleger angezeigt werden:  
   
 -   **Veröffentlichungen** -auf dieser Registerkarte werden Informationen zu allen Veröffentlichungen auf dem ausgewählten Verleger angezeigt.  
@@ -86,7 +86,7 @@ Der Replikationsmonitor bietet es sich um eine Reihe von Registerkarten und Opti
     -   Um einen Agent zu starten, der nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent starten**.    
     -   Um einen Agent zu beenden, der ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent beenden**.  
   
-## <a name="for-a-subscription"></a>Für ein Abonnement 
+## <a name="for-a-subscription"></a>Abonnements 
 
   Der Replikationsmonitor umfasst folgende Registerkarten mit Informationen zu Abonnements:  
   
@@ -100,16 +100,16 @@ Der Replikationsmonitor bietet es sich um eine Reihe von Registerkarten und Opti
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.   
 2.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Alle Abonnements** . Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.   
-3.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
   
-### <a name="subscription-watch-list-tab"></a>Registerkarte "Überwachungsliste für Abonnement"  
+### <a name="subscription-watch-list-tab"></a>Registerkarte „Überwachungsliste für Abonnements“  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, und klicken Sie dann auf einen Verleger.   
 2.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** .  
 3.  Wählen Sie den anzuzeigenden Abonnementtyp aus der Dropdownliste **\<SubscriptionType>-Abonnements anzeigen** aus. Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.    
-4.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md).  
 
-## <a name="for-publication-agents"></a>Für die Veröffentlichungs-Agents
+## <a name="for-publication-agents"></a>Veröffentlichungs-Agents
 
   Der Replikationsmonitor stellt die Registerkarte **Agents** bereit, auf der Informationen zu den Agents enthalten sind, die der ausgewählten Veröffentlichung zugeordnet sind. Der Verteilungs-Agent und Merge-Agent sind Abonnements zugeordnet. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
   
@@ -131,7 +131,7 @@ Der Replikationsmonitor bietet es sich um eine Reihe von Registerkarten und Opti
     -   Um einen Agent zu starten, der nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent starten**.  
       -   Um einen Agent zu beenden, der ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent beenden**.  
 
-## <a name="for-subscription-agents"></a>Für Abonnement-Agents
+## <a name="for-subscription-agents"></a>Abonnement-Agents
 
 ### <a name="view-information-and-perform-tasks"></a>Anzeigen von Informationen und Ausführen von Aufgaben
   Im Replikationsmonitor gibt es zwei Registerkarten, über die Sie auf Informationen zu den Agents zugreifen können, die dem jeweiligen Abonnement zugeordnet sind:  

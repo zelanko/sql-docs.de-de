@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678518"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lektion 1: Erstellen Sie die Visual Studio-Projekt die RDL-Schema
   In diesem Lernprogramm erstellen Sie eine einfache Konsolenanwendung. In diesem Tutorial wird vorausgesetzt, Sie entwickeln im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
@@ -197,7 +197,7 @@ ms.locfileid: "56018911"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion generieren Sie mithilfe des XML-Schemadefinitionstools (Xsd.exe) Klassen aus dem RDL-Schema und fügen diese in das Projekt ein. Finden Sie unter [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ In der nächsten Lektion generieren Sie mithilfe des XML-Schemadefinitionstools (Xsd.exe) Klassen aus dem RDL-Schema und fügen diese in das Projekt ein. Siehe [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

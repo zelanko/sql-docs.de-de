@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680434"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung (PowerPivot für SharePoint)
   Im integrierten SharePoint-Modus kann eine Analysis Services-Serverinstanz für die Unterstützung bestimmter Verarbeitungsanforderungen wie der Datenaktualisierung oder reinen Abfrageverarbeitung konfiguriert werden. Standardmäßig sind beide Typen von Ladeanforderungen aktiviert. Sie können einen der beiden Typen deaktivieren, um eine dedizierte Abfrage-Engine oder einen Datenaktualisierungsserver zu erstellen.  
@@ -62,7 +62,7 @@ ms.locfileid: "48168182"
   
 |Einstellung|Gültige Werte|Description|  
 |-------------|------------------|-----------------|  
-|Standardwert|Berechnet auf Grundlage des RAMs.|Der Standardwert basiert auf dem verfügbaren Arbeitsspeicher geteilt durch 4 GB. Da der Standardwert durch eine Formel berechnet wird, können die Einstellungen abhängig von der Systemkapazität angepasst werden.<br /><br /> Hinweis: Der Divisor von 4 GB wurde basierend auf der RAM-Verwendung für eine umfangreiche Stichprobe realer PowerPivot-Datenquellen ausgewählt. Er basiert nicht auf einer physischen oder logischen PowerPivot-Architektur.|  
+|Standardwert|Berechnet auf Grundlage des RAMs.|Der Standardwert basiert auf dem verfügbaren Arbeitsspeicher geteilt durch 4 GB. Da der Standardwert durch eine Formel berechnet wird, können die Einstellungen abhängig von der Systemkapazität angepasst werden.<br /><br /> Hinweis: Divisor von 4 GB wurde auf Grundlage der RAM-Verwendung für eine umfangreiche Stichprobe realer PowerPivot-Datenquellen ausgewählt. Er basiert nicht auf einer physischen oder logischen PowerPivot-Architektur.|  
 |Höchstwert|Berechnet anhand der CPU-Anzahl.|Die maximale Anzahl gleichzeitiger Aufträge, die Sie angeben können, basiert auf der Anzahl von Prozessoren im Computer. Auf einem 4 Socket-Quad-Core-Computer können beispielsweise maximal 16 Aufträge gleichzeitig ausgeführt werden.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>Heraufsetzen des Standardwerts auf einen höheren Wert  

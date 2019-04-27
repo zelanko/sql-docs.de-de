@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679537"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Dialogfeld 'Optionen zum Durchsuchen von Daten' (Analysis Services – Data Mining)
   Mithilfe des Dialogfelds **Optionen zum Durchsuchen von Daten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Stichproben- und Diagrammoptionen für das Dialogfeld **Daten durchsuchen** festlegen. Sie können das Dialogfeld **Optionen zum Durchsuchen von Daten** anzeigen, indem Sie im Dialogfeld **Daten durchsuchen** auf **Stichprobenoptionen** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  

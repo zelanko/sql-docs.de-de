@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680931"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Clusterdiagramm (Data Mining-Add-Ins)
   Nachdem Sie ein clustering-Modell erstellt haben, können Sie es importieren, in Visio mithilfe der **Cluster** strukturieren und anpassen und erweitern das Layout anschließend weiter. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit Datamining-Diagramme:  

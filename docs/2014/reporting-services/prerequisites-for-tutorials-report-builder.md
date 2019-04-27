@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657725"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Voraussetzungen für Lernprogramme (Berichts-Generator)
   Die Lernprogramme zum Berichts-Generator setzen voraus, dass Sie Berichte auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website anzeigen und speichern können. Für Daten werden in allen Lernprogrammen wörtliche Abfragen verwendet, die von einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Instanz verarbeitet werden müssen.  

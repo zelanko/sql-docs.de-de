@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660195"
 ---
 # <a name="browsing-a-neural-network-model"></a>Durchsuchen von Neural Network-Modellen
   Wenn Sie ein neuronales Netzwerk oder ein logistisches Regressionsmodell mithilfe von **Durchsuchen** öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der mit dem Viewer für neuronale Netzwerkmodelle in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vergleichbar ist. Mithilfe des Viewers können Sie Korrelationen untersuchen und Informationen zu den Mustern im Modell und zu den zugrunde liegenden Daten abrufen.  
@@ -79,7 +79,7 @@ ms.locfileid: "48218580"
   
     -   Die **Prognosegüte** gibt an, wie hilfreich ein bestimmtes Attribut/Wert-Paar für die Höherstufung eines Ergebnisses ist.  
   
-     Hinweis: Die QuickInfo enthält die gleichen Informationen, unabhängig davon, ob Sie die Maus auf der einen oder anderen Spalte positionieren.  
+     Hinweis: Die QuickInfo enthält die gleiche Informationen unabhängig davon, ob Sie die Maus über einen oder anderen Spalte positionieren.  
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218580"
  [Zurück zum Anfang](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Weiteren Informationen über neuronale Netzwerkmodelle  
- Die im Viewer dargestellten Informationen werden anhand einer gespeicherten Prozedur, die spezifisch für den Modelltyp ist, vom Server abgerufen: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ Die Informationen in der Ereignisanzeige werden vom Server mithilfe einer gespeicherten Prozedur, die speziell für diesen Modelltyp abgerufen: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Wenn Sie ein Modell mit mehreren vorhersagbaren Attributen mithilfe der Add-Ins erstellen möchten, verwenden Sie die Modellierungsoptionen unter **Erweitert**.  
   

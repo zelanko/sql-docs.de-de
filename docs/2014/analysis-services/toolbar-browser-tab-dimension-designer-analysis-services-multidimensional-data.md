@@ -12,20 +12,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794445"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services - Mehrdimensionale Daten)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie Vorgänge ausführen, die auf der Registerkarte **Browser** von **Dimensions-Designer**häufig verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verarbeiten**  
  Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** zu öffnen und die ausgewählte Dimension zu verarbeiten.  
   
- **Erneut eine Verbindung herstellen**  
+ **Reconnect**  
  Klicken Sie auf diese Option, um die Registerkarte **Browser** erneut mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und der Datenbank, die die Dimension enthält, zu verbinden, wenn die Sitzung der Registerkarte **Browser** aufgrund einer unterbrochenen Verbindung oder eines Timeouts beendet wurde.  
   
  **Aktualisieren**  
@@ -39,7 +39,7 @@ ms.locfileid: "48091250"
  **Elemente filtern**  
  Klicken Sie auf diese Option, um das Dialogfeld **Elemente filtern** anzuzeigen und die im Bereich für **Ebenen und Elemente** angezeigten Elemente für die ausgewählte Hierarchie zu filtern.  
   
- **Rückschreiben von Kennwörtern**  
+ **Writeback**  
  Mit dieser Option wird der Modus zum Rückschreiben von Dimensionen für den Bereich für **Ebenen und Elemente** festgelegt.  
   
  **Einzug verkleinern**  

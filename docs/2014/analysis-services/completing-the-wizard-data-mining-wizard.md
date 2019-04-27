@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680613"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Abschließen des Assistenten (Data Mining-Assistent)
   Überprüfen Sie mithilfe der Seite **Assistenten abschließen** die Miningstruktur, die beim Beenden des Assistenten angelegt wird. Sie können auch den Namen der Miningstruktur festlegen.  
@@ -28,9 +28,9 @@ ms.locfileid: "48202570"
 > [!NOTE]  
 >  Diese Seite ändert sich je nachdem, ob Sie **Aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse** oder **Aus vorhandenem Cube** auf der Seite **Definitionsmethode auswählen** des Assistenten ausgewählt haben.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Data Mining-Designer](data-mining/data-mining-designer.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Datamining-Designer](data-mining/data-mining-designer.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstrukturname**  
  Geben Sie den Namen der Miningstruktur ein, der vom **Data Mining-Assistenten**definiert wurde.  
   

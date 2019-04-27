@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657447"
 ---
 # <a name="query-designers-report-builder"></a>Abfrage-Designer (Berichts-Generator)
   Berichts-Generator stellt grafische und textbasierte Abfrage-Designer bereit, um Ihnen das Erstellen von Abfragen für Ihren Bericht zu erleichtern. Jeder Datenquellentyp hat einen zugeordneten Abfrage-Designer. Einige Datenquellen unterstützen grafische Designer, mit denen Sie eine Abfrage interaktiv erstellen können. Andere Datenquellen verwenden einen textbasierten Abfrage-Designer. Eine SQL Server-Datenquelle unterstützt sowohl grafische als auch textbasierte Abfrage-Designer.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656465"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@server = '** *Server* **"**  
+ **@server = '** *server* **'**  
  Der Name des Remoteservers, wie er in der vom Benutzer codierten Syntax für den Aufruf einer remote gespeicherten Prozedur angesprochen wird. Genau eine Zeile in **sys.servers** muss bereits vorhanden sein, um diese Option verwenden *Server*. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- **@netname ='** *lt; Netzwerkname* **"**  
+ **@netname ='** *network_name* **'**  
  Der Netzwerkname des Computers, an den Aufrufe remote gespeicherter Prozeduren gesendet werden. *lt; Netzwerkname* ist **Sysname**, hat keinen Standardwert.  
   
  Dieser Name muss mit dem Namen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Computernamens übereinstimmen und kann Zeichen enthalten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichnern nicht zulässig sind.  

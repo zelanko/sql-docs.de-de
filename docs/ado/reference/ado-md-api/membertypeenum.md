@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aef3e65c8368b7e979094b876b0f4c9b8d0957c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659259"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 Gibt die Einstellung für die [Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md) Eigenschaft eine [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|Gibt an, dass die **Member** -Objekt stellt alle Elemente der Ebene dar.|  
 |**adMemberFormula**|3|Gibt an, dass die **Member** Objekt wird mit einem Ausdruck der Formel berechnet.|  

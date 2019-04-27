@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679836"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Kreuzvalidierung (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "übergreifende Überprüfung" "," Data Mining-Menüband](media/dmc-xvalid.gif "Kreuzvalidierungs-Schaltfläche, Data Mining-Menüband")  
@@ -101,7 +101,7 @@ ms.locfileid: "48171750"
   
  Erfolg/Misserfolg wird berechnet, indem die Zählung von Fällen, in denen die folgenden Bedingungen erfüllen: **übergeben** entspricht des vorhergesagten Status mit der höchsten Wahrscheinlichkeit dem Eingabestatus und die Wahrscheinlichkeit ist größer als der Wert, den Sie für angegeben **Statusschwellenwert**ist, andernfalls **fehlschlagen**.  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>Klassifikation: Richtig oder falsch positiv und negativ  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>Klassifizierung: "True" oder "false" positiv und negativ  
  Dieser Test wird für alle Klassifizierungsmodelle verwendet, die ein festgelegtes Ziel haben. Das Measure gibt an, wie die einzelnen Fälle entsprechend folgender Fragen klassifiziert werden: was hat das Modell vorhergesagt und wie lautete das tatsächliche Ergebnis.  
   
 |Measure|Description|  

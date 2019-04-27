@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663001"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement (Ereignisklasse)
   Die **Deprecation Announcement** -Ereignisklasse tritt auf, wenn Sie eine Funktion verwenden, die in künftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr enthalten ist, jedoch nicht aus der nächsten Hauptversion entfernt wird. Damit Ihre Anwendungen möglichst langlebig sind, sollten Sie keine Funktionen verwenden, die die **Deprecation Announcement** -Ereignisklasse oder die **Deprecation Final Support** -Ereignisklasse auslösen.  

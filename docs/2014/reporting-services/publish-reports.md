@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657584"
 ---
 # <a name="publish-reports"></a>Veröffentlichen von Berichten
   Von[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aus können Sie entweder alle Berichte und freigegebenen Datenquellen in einem Berichtsserverprojekt auf einem Berichtsserver veröffentlichen, indem Sie das Projekt bereitstellen, oder Sie können einen einzelnen Bericht veröffentlichen. Bevor Sie einen Bericht veröffentlichen können, müssen Sie die URL des Zielberichtsservers angeben. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  

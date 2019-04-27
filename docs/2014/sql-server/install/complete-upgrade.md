@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61218144589dbbedb815de59f56e57854242ef5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653892"
 ---
 # <a name="complete---upgrade"></a>Abgeschlossen (Upgrade)
   Auf der Seite Abgeschlossen (Upgrade) können Sie überprüfen, ob die Aktualisierung abgeschlossen wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Dieses Dialogfeld enthält einen Link zur Setupprotokolldatei für diesen Vorgang. Klicken Sie auf **Schließen**, um den Vorgang fortzusetzen.  
   
   

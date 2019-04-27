@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788489"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Wählen Sie die Seite "Datenbanken" (neue Verfügbarkeitsgruppe-Assistent-Add-Datenbank-Assistent)
   In diesem Hilfethema werden die Optionen der Seite für das **Angeben von Datenbanken** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und den [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

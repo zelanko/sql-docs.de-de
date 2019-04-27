@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660801"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication **=** ] **"**_Veröffentlichung_**"**  
+ [ @publication**=** ] **'**_publication_**'**  
  Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
   
  [ @found **=** ] **"***gefunden***"** Ausgabe  
@@ -55,10 +55,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @reserved **=**] **"***reservierte***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
   
- [ @publisher **=** ] **"***Verleger***"**  
+ [ @publisher**=** ] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
- [@publisher_db **=** ] **"***Publisher_db***"**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  
@@ -79,7 +79,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Gibt an, ob die Momentaufnahme dieser Veröffentlichung einsatzbereit ist.<br /><br /> **0** = Momentaufnahme ist für die Verwendung bereit.<br /><br /> **1** = Momentaufnahme kann nicht für die Verwendung.|  
 |publication_type|**int**|Typ der Veröffentlichung:<br /><br /> **0** = Momentaufnahme.<br /><br /> **1** = transaktionsveröffentlichung.<br /><br /> **2** = Merge.|  
 |pubid|**uniqueidentifier**|Eindeutiger Bezeichner dieser Veröffentlichung.|  
-|snapshot_jobid|**'binary(16)'**|Auftrags-ID des Momentaufnahme-Agents. Zum Abrufen des Eintrags für den momentaufnahmeauftrag in der [Sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) -Systemtabelle, müssen Sie diesen Hexadezimalwert in konvertieren **Uniqueidentifier**.|  
+|snapshot_jobid|**binary(16)**|Auftrags-ID des Momentaufnahme-Agents. Zum Abrufen des Eintrags für den momentaufnahmeauftrag in der [Sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) -Systemtabelle, müssen Sie diesen Hexadezimalwert in konvertieren **Uniqueidentifier**.|  
 |enabled_for_internet|**int**|Legt fest, ob die Veröffentlichung für das Internet aktiviert ist. Wenn **1**, werden die Synchronisierungsdateien für die Veröffentlichung eingefügt, in der `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` Verzeichnis. Der Benutzer muss das FTP-Verzeichnis (File Transfer Protocol) erstellen. Wenn **0**, die Veröffentlichung ist nicht für den Internetzugriff aktiviert.|  
 |dynamic_filter|**int**|Gibt an, ob ein parametrisierter Zeilenfilter verwendet wird. **0** bedeutet ein parametrisierten Filter wird nicht verwendet.|  
 |has_subscription|**bit**|Gibt an, ob die Veröffentlichung über Abonnements verfügt. **0** bedeutet, dass derzeit keine Abonnements für diese Veröffentlichung vorhanden sind.|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Gibt an, wo die Veröffentlichungsmomentaufnahmedateien zum Abholen durch den Merge-Agent gespeichert sind, wenn die Momentaufnahme mithilfe von FTP übermittelt wird.|  
 |ftp_login|**sysname**|Der Benutzername wird für die Verbindung mit dem FTP-Dienst verwendet werden.|  
 |conflict_retention|**int**|Gibt die Aufbewahrungsdauer in Tagen an, für die Konflikte beibehalten werden. Wenn die angegebene Anzahl von Tagen abgelaufen ist, wird die Konfliktzeile aus der Konflikttabelle gelöscht.|  
-|keep_partition_changes|**int**|Gibt an, ob die Synchronisierungsoptimierung für diese Veröffentlichung erfolgt. **Keep_partition_changes** hat den Standardwert **0**. Der Wert **0** bedeutet, dass die Synchronisierung wird nicht optimiert, und die an alle Abonnenten gesendeten Partitionen überprüft werden, wenn sich Daten in einer Partition ändern.<br /><br /> **1** bedeutet, dass die Synchronisierung wird optimiert, und sind nur Abonnenten, die über Zeilen in der geänderten Partition betroffen.<br /><br /> Hinweis: Standardmäßig verwenden Mergeveröffentlichungen vorausberechnete Partitionen, die ein höheres Optimierungsmaß ermöglichen als diese Option. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) und [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Gibt an, ob die Synchronisierungsoptimierung für diese Veröffentlichung erfolgt. **Keep_partition_changes** hat den Standardwert **0**. Der Wert **0** bedeutet, dass die Synchronisierung wird nicht optimiert, und die an alle Abonnenten gesendeten Partitionen überprüft werden, wenn sich Daten in einer Partition ändern.<br /><br /> **1** bedeutet, dass die Synchronisierung wird optimiert, und sind nur Abonnenten, die über Zeilen in der geänderten Partition betroffen.<br /><br /> Hinweis: Standardmäßig verwenden mergeveröffentlichungen Vorausberechnete Partitionen, die einen höheren Grad der Optimierung, als diese Option bietet. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) und [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Gibt an, ob die Möglichkeit zum Kopieren der Abonnementdatenbanken aktiviert wurde, die diese Veröffentlichung abonniert haben. Der Wert **0** bedeutet, dass kopieren nicht zulässig.|  
 |allow_synctoalternate|**int**|Gibt an, ob ein alternativer Synchronisierungspartner für die Synchronisierung mit diesem Verleger zulässig ist. Der Wert **0** bedeutet, dass ein alternativer Synchronisierungspartner ist nicht zulässig.|  
 |validate_subscriber_info|**nvarchar(500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden. Dies hilft dabei, zu überprüfen, ob die Informationen bei jedem Mergeprozess konsistent partitioniert werden.|  
-|backward_comp_level|**int**|Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Gibt an, ob die Veröffentlichungsinformationen in Active Directory veröffentlicht werden. Der Wert **0** bedeutet, dass die Veröffentlichungsinformationen nicht aus Active Directory verfügbar.<br /><br /> Dieser Parameter wurde als veraltet markiert und wird nur zum Sicherstellen der Abwärtskompatibilität von Skripts unterstützt. Sie können Active Directory nicht länger Veröffentlichungsinformationen hinzufügen.|  
 |max_concurrent_merge|**int**|Die Anzahl gleichzeitiger Mergeprozesse. Wenn **0**, es gibt keine Beschränkung der Anzahl gleichzeitiger Mergeprozesse, die einem bestimmten Zeitpunkt ausgeführt.|  
 |max_concurrent_dynamic_snapshots|**int**|Die maximale Anzahl gleichzeitiger Sitzungen für eine Momentaufnahme gefilterter Daten, die für die Mergeveröffentlichung ausgeführt werden können. Wenn **0**, es gibt keine Beschränkung auf die maximale Anzahl gleichzeitiger datenfilterungs-momentaufnahmesitzungen, die für die Veröffentlichung in einem bestimmten Zeitpunkt ausgeführt werden können.|  
@@ -129,9 +129,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
