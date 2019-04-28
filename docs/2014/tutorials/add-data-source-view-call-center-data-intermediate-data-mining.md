@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823300"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Hinzufügen einer Datenquellensicht für Callcenterdaten (Data Mining-Lernprogramm für Fortgeschrittene)
   In dieser Aufgabe fügen Sie eine Datenquellensicht hinzu, mit der auf Callcenterdaten zugegriffen wird. Die gleichen Daten werden verwendet, um sowohl das ursprüngliche neuronale Netzwerkmodell zum Durchsuchen als auch das logistische Regressionsmodell zum Schreiben von Empfehlungen zu erstellen.  

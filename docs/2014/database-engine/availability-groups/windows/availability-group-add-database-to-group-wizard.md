@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815725"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server Management Studio)
   Verwenden Sie den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen, um einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe eine oder mehrere Datenbank hinzuzufügen.  
@@ -36,9 +36,9 @@ ms.locfileid: "48055635"
   
      [Security](#Security)  
   
--   **Hinzufügen einer Datenbank mit:**  [Assistent zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen(SQL Server Management Studio)](#SSMSProcedure)  
+-   **Zum Hinzufügen einer Datenbank mit:**  [Fügen Sie Datenbank hinzu, um den Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie einer verfügbarkeitsgruppe noch nie eine Datenbank hinzugefügt haben, finden Sie im Abschnitt "Verfügbarkeitsdatenbanken" [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Voraussetzungen, Einschränkungen und Empfehlungen  

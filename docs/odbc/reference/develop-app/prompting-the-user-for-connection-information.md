@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861897"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Aufforderung an Benutzer zur Eingabe von Verbindungsinformationen
 Wenn die Anwendung verwendet **SQLConnect** und fordert den Benutzer für alle Verbindungsinformationen, z. B. einen Benutzernamen und ein Kennwort, sie müssen dazu selbst. Die Anwendung das "Erscheinungsbild" steuern können, kann die Anwendung, Treiber-spezifischen Code enthalten erzwingen. Dies tritt auf, wenn die Anwendung benötigt, um den Benutzer für treiberspezifische Verbindungsinformationen aufzufordern. Dies stellt eine unmögliche Situation für allgemeine Anwendungen, die konzipiert werden alle Treiber, wie Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  

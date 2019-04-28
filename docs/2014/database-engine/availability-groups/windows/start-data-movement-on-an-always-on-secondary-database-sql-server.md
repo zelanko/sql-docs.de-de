@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813555"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank (SQL Server)
   Dieses Thema enthält Informationen zum Starten der Datensynchronisierung, nachdem Sie einer AlwaysOn-Verfügbarkeitsgruppe eine Datenbank hinzugefügt haben. Für jedes neue primäre Replikat müssen sekundäre Datenbanken auf den Serverinstanzen vorbereitet werden, die die sekundären Replikate hosten. Dann muss jede dieser sekundären Datenbanken manuell mit der Verfügbarkeitsgruppe verknüpft werden.  

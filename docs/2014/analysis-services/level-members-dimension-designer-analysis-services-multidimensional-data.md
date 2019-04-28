@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728157"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Ebenen und Elemente (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   In diesem Bereich können Sie die Elemente der aktuell ausgewählten Hierarchie und Sprache durchsuchen. Verwenden Sie die Optionen **Hierarchie** und **Sprache** im Bereich **Symbolleiste** , um eine zu durchsuchende Hierarchie oder Sprache auszuwählen. Weitere Informationen zum Symbolleistenbereich finden Sie unter [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Rückschreibemodus  
- Die Funktionalität dieses Bereichs ändert sich, wenn der Rückschreibemodus aktiviert wird. Die ausgewählte Dimension muss mit aktiviertem Schreibzugriff (das heißt, die `WriteEnabled` Eigenschaft der Dimension muss festgelegt werden auf "true") und die Dimension muss bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz, um den rückschreibemodus zu aktivieren.  
+ Die Funktionalität dieses Bereichs ändert sich, wenn der Rückschreibemodus aktiviert wird. Für die ausgewählte Dimension muss der Schreibzugriff aktiviert sein (anders ausgedrückt, die `WriteEnabled`-Eigenschaft der Dimension muss auf den Wert True festgelegt sein), und die Dimension muss für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz bereitgestellt werden, damit der Rückschreibemodus aktiviert werden kann.  
   
  Sie können entweder die Option **Rückschreiben** aus dem Bereich **Symbolleiste** auswählen oder mit der rechten Maustaste auf den Bereich **Ebene und Elemente** klicken und aus dem Kontextmenü die Option **Rückschreiben** auswählen, um den Rückschreibemodus zu aktivieren.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48209702"
 |Umbenennen eines ausgewählten Elements|Klicken Sie entweder mit der rechten Maustaste auf das ausgewählte Element, und wählen Sie die Option **Umbenennen**aus, oder klicken Sie auf ein bereits ausgewähltes Element.|  
 |Bearbeiten der Werte von Elementeigenschaften|Doppelklicken Sie auf den Wert in der ausgewählten Elementeigenschaft für das ausgewählte Element, um den Wert zu bearbeiten.|  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktuelle Ebene**  
  Zeigt die Ebene an, zu der das aktuell ausgewählte Element unter **Struktur** gehört.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48209702"
  **Element reduzieren**  
  Reduziert das ausgewählte Element unter **Struktur**.  
   
- **Rückschreiben von Kennwörtern**  
+ **Writeback**  
  Wählen Sie diese Option aus, um den Rückschreibemodus zu aktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  

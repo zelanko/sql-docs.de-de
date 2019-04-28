@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2ab9f98018e421bd14012af7d8bd1cb5da3a71c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701704"
 ---
 # <a name="set-usage-property"></a>Festlegen der Verwendungseigenschaft
   Sie können die Verwendung eines Attributs mithilfe der Sicht **Dimensionsstruktur** im Dimensions-Designer festlegen. Der Zugriff auf diese Sicht erfolgt über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

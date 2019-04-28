@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711445"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
   Die folgende Tabelle gibt die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
@@ -86,7 +86,7 @@ ms.locfileid: "52771772"
 |Geschachtelte Unterabfragen|32|32|  
 |Schachtelungsebenen für Trigger|32|32|  
 |Nicht gruppierte Indizes pro Tabelle|999|999|  
-|Anzahl der unterschiedlichen Ausdrücke in der GROUP BY-Klausel, wenn keines der folgenden vorhanden sind: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
+|Anzahl unterschiedlicher Ausdrücke in der GROUP BY-Klausel bei Vorhandensein eines der folgenden Ausdrücke: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
 |Anzahl der Gruppierungssätze, die von Operatoren in der GROUP BY-Klausel generiert wurden|4.096|4.096|  
 |Parameter pro gespeicherter Prozedur|2.100|2.100|  
 |Parameter pro benutzerdefinierter Funktion|2.100|2.100|  

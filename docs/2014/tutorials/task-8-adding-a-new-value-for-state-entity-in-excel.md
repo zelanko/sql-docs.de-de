@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866504"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität 'State' in Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität ' State ' in Excel
   In dieser Aufgabe fügen Sie einen Wert für die Entität "State" in Excel hinzu und veröffentlichen die Änderung auf dem MDS-Server.  
   
 1.  Hinzufügen einer **Arbeitsblatt** in Excel, indem Sie auf die neue Registerkarte am unteren Rand.  
@@ -26,11 +26,11 @@ ms.locfileid: "56032031"
   
 2.  In **Excel**, klicken Sie auf die **Masterdaten** auf das Menü, und klicken Sie dann auf **Explorer anzeigen** auf dem Menüband.  
   
-3.  In der **Master Data Explorer**Option **Lieferanten** für **Modell**. In der Liste mit Entitäten sollten zwei Entitäten angezeigt werden: **Lieferanten** und **Zustand** in der Liste.  
+3.  In der **Master Data Explorer**Option **Lieferanten** für **Modell**. Sie sollten zwei Entitäten angezeigt: **Lieferanten** und **Zustand** in der Liste.  
   
 4.  Doppelklicken Sie auf **Zustand** in der Liste. Alle Mitglieder der **Zustand** Entität aus MDS in das Arbeitsblatt angezeigt werden soll.  
   
-5.  Als Nächstes fügen Sie am Ende eine Zeile mit den folgenden Werten hinzu: **North Carolina** für **Namen** und **NC** für **Code**. Die Farbcodierung unterscheidet alle neuen/aktualisierten Datensätze von den anderen Datensätzen.  
+5.  Fügen Sie nun eine Zeile am Ende mit den folgenden Werten: **North Carolina** für **Namen** und **NC** für **Code**. Die Farbcodierung unterscheidet alle neuen/aktualisierten Datensätze von den anderen Datensätzen.  
   
      ![Excel – Hinzufügen von North Carolina Status](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel – Hinzufügen von North Carolina Status")  
   

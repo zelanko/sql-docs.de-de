@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701749"
 ---
 # <a name="group-attribute-members-discretization"></a>Gruppieren von Attributelementen (Diskretisierung)
   Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
@@ -63,7 +63,7 @@ ms.locfileid: "51814043"
   
  `<Last definition> ::= <Name expression>`  
   
- Der `<First definition>`-Parameter wird nur auf die erste bzw. auf die einzige von der Diskretisierungsmethode generierte Elementgruppe angewendet. Wenn die optionalen `<Intermediate definition>` - und `<Last definition>` -Parameter nicht bereitgestellt werden, wird der `<First definition>` -Parameter für alle für dieses Attribut generierten Measuregruppen verwendet.  
+ Der `<First definition>` -Parameter wird nur auf die erste bzw. auf die einzige von der Diskretisierungsmethode generierte Elementgruppe angewendet. Wenn die optionalen `<Intermediate definition>` - und `<Last definition>` -Parameter nicht bereitgestellt werden, wird der `<First definition>` -Parameter für alle für dieses Attribut generierten Measuregruppen verwendet.  
   
  Der `<Last definition>` -Parameter wird nur auf die letzte von der Diskretisierungsmethode generierte Elementgruppe angewendet.  
   

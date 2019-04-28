@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e75581756f0464197e05b78083b7e90d7d3dfb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808215"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>Konvertieren von URNs in SQL Server-Anbieterpfade
-  Das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modell (SMO-Modell) erstellt einheitliche Ressourcennamen (Uniform Resource Names, URN) für seine Objekte. Jeder URN identifiziert eindeutig ein SMO-Objekt, und in einen SQL Server PowerShell-anbieterpfad konvertiert werden kann, um mithilfe der `Convert-UrnToPath` Cmdlet.  
+  Das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modell (SMO-Modell) erstellt einheitliche Ressourcennamen (Uniform Resource Names, URN) für seine Objekte. Jeder URN identifiziert eindeutig ein SMO-Objekt und kann mit dem `Convert-UrnToPath`-Cmdlet in einen SQL Server PowerShell-Anbieterpfad konvertiert werden.  
   
 ## <a name="converting-urns-to-paths"></a>Konvertieren von URNs in Pfade  
  Jeder URN weist die gleichen Informationen wie einen Pfad zum Objekt auf, aber in einer anderen Form. Dies ist beispielsweise der Pfad zu einer Tabelle:  
@@ -30,7 +30,7 @@ ms.locfileid: "48061290"
   
  Server [@Name='MyComputer']\Database[@Name='AdventureWorks2012']\Table[@Name='Address' und @Schema='Person']  
   
- Wenn Sie ein SMO-Objekt in einem Powershellskript erstellt haben, können Sie verweisen die `Urn` Eigenschaft, um den URN für das Objekt abzurufen, und verwenden Sie dann die `Convert-UrnToPath` Cmdlet, um die SMO-URN-Zeichenfolge in eine Windows PowerShell-Pfad zu konvertieren. Sie können dann mithilfe des Anbieters zu anderen Positionen im Pfad navigieren.  
+ Wenn Sie in einem PowerShell-Skript ein SMO-Objekt erstellt haben, können Sie auf die `Urn`-Eigenschaft verweisen, um den URN für das Objekt abzurufen. Anschließend können Sie das `Convert-UrnToPath`-Cmdlet verwenden, um die SMO-URN-Zeichenfolge in einen Windows PowerShell-Pfad zu konvertieren. Sie können dann mithilfe des Anbieters zu anderen Positionen im Pfad navigieren.  
   
  Wenn Knotennamen erweiterte Zeichen enthalten, die in Windows PowerShell-Pfadnamen nicht unterstützt werden, codiert `Convert-UrnToPath` sie in ihrer hexadezimalen Darstellung. Zum Beispiel wird "Meine:Tabelle" als "Meine%3ATabelle" zurückgegeben.  
   

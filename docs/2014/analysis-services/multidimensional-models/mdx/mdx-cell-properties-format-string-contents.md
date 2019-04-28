@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725414"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING-Inhalt (MDX)
   Die `FORMAT_STRING`-Zelleigenschaft formatiert die `VALUE`-Zelleigenschaft, indem sie den Wert für die `FORMATTED_VALUE`-Zelleigenschaft erstellt. Die `FORMAT_STRING`-Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die `FORMATTED_VALUE`-Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
@@ -104,8 +104,8 @@ ms.locfileid: "52512789"
   
 |Zeichen|Description|  
 |---------------|-----------------|  
-|**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Zeittrennzeichen verwendet.|  
-|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
+|**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas unter Umständen andere Zeichen als Zeittrennzeichen verwendet.|  
+|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas unter Umständen andere Zeichen verwendet werden Datumstrennzeichen|  
 |**C**|Zeigt das Datum als **ddddd** und die Zeit als **ttttt**an, in dieser Reihenfolge.<br /><br /> Zeigt nur Datumsinformationen an, wenn die Datumsseriennummer keine Nachkommastellen enthält. Zeigt nur Zeitinformationen an, wenn kein ganzzahliger Teil vorhanden ist.|  
 |**d**|Zeigt den Tag als Zahl ohne führende Null an (1-31).|  
 |**dd**|Zeigt den Tag als Zahl mit führender Null an (01-31).|  
@@ -130,11 +130,11 @@ ms.locfileid: "52512789"
 |**s**|Zeigt die Sekunde als Zahl ohne führende Nullen (0-59).|  
 |**ss**|Zeigt die Sekunde als Zahl mit führenden Nullen an (00-59).|  
 |**t t t t t**|Zeigt eine Zeit als vollständige Zeit (einschließlich Stunde, Minute und Sekunde) an, wobei die Zeit mit dem Zeittrennzeichen formatiert ist, das durch das Zeitformat definiert ist, das vom Computersystem erkannt wird.<br /><br /> Eine führende Null wird angezeigt, wenn die entsprechende Option ausgewählt und die Uhrzeit früher als 10:00 Uhr (z. B. 09:59) ist. Dies gilt im 12-Stunden-Format für A.M. und P.M.<br /><br /> Das Standardzeitformat in Windows ist **hh:mm:ss**.|  
-|**AM/PM**|Zeigt die Großbuchstaben **AM** hinter jeder Stunde ab Mitternacht bis Mittag und die Großbuchstaben **PM** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.|  
-|**am/pm**|Zeigt die Kleinbuchstaben **am** hinter jeder Stunde ab Mitternacht bis Mittag und die Kleinbuchstaben **pm** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.|  
-|**A/P**|Zeigt den Großbuchstaben **A** hinter jeder Stunde ab Mitternacht bis Mittag und den Großbuchstaben **P** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.|  
-|**a/p**|Zeigt den Kleinbuchstaben **a** hinter jeder Stunde ab Mitternacht bis Mittag und den Kleinbuchstaben **p** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.|  
-|**AMPM**|Zeigt entsprechend den Einstellungen des Computersystems das Zeichenfolgenliteral für vormittags (AM) hinter jeder Stunde ab Mitternacht bis Mittag und das Zeichenfolgenliteral für nachmittags (PM) hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.<br /><br /> **AMPM** kann in Großbuchstaben oder in Kleinbuchstaben angegeben sein, während die Groß-/Kleinschreibung der angezeigten Zeichenfolge mit der Definition der Zeichenfolge in den Systemeinstellungen des Computers übereinstimmt.<br /><br /> Das Standardformat in Windows ist **AM/PM**.|  
+|**AM/PM**|Zeigt die Großbuchstaben **AM** hinter jeder Stunde ab Mitternacht bis Mittag und die Großbuchstaben **PM** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet das 12-Stunden-Format an.|  
+|**am/pm**|Zeigt die Kleinbuchstaben **am** hinter jeder Stunde ab Mitternacht bis Mittag und die Kleinbuchstaben **pm** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet das 12-Stunden-Format an.|  
+|**A/P**|Zeigt den Großbuchstaben **A** hinter jeder Stunde ab Mitternacht bis Mittag und den Großbuchstaben **P** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet das 12-Stunden-Format an.|  
+|**a/p**|Zeigt den Kleinbuchstaben **a** hinter jeder Stunde ab Mitternacht bis Mittag und den Kleinbuchstaben **p** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet das 12-Stunden-Format an.|  
+|**AMPM**|Zeigt entsprechend den Einstellungen des Computersystems das Zeichenfolgenliteral für vormittags (AM) hinter jeder Stunde ab Mitternacht bis Mittag und das Zeichenfolgenliteral für nachmittags (PM) hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet das 12-Stunden-Format an.<br /><br /> **AMPM** kann in Großbuchstaben oder in Kleinbuchstaben angegeben sein, während die Groß-/Kleinschreibung der angezeigten Zeichenfolge mit der Definition der Zeichenfolge in den Systemeinstellungen des Computers übereinstimmt.<br /><br /> Das Standardformat in Windows ist **AM/PM**.|  
   
 ### <a name="named-date-formats"></a>Benannte Datumsformate  
  Die folgende Tabelle enthält eine Übersicht über die vordefinierten Datums- und Zeitformate:  

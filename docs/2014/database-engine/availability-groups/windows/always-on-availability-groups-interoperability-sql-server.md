@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815746"
 ---
-# <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
+# <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQLServer)
   In diesem Thema wird die Interoperabilität von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit anderen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]dokumentiert.  
   
 
@@ -58,7 +58,7 @@ ms.locfileid: "53367998"
   
 -   **Blogs:**  
   
-     [Migrationshandbuch: Migrieren zu SQLServer 2012-Failoverclustering und-Verfügbarkeitsgruppen von vorherigen Clustering- und Spiegelungsbereitstellungen](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [Migration Guide: Migrieren zu SQLServer 2012-Failoverclustering und-Verfügbarkeitsgruppen von vorherigen Clustering- und Spiegelungsbereitstellungen](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53367998"
   
 -   **Whitepaper:**  
   
-     [Migrationshandbuch: Migrieren zu AlwaysOn-Verfügbarkeitsgruppen von vorherigen Bereitstellungen, die Kombination von Datenbankspiegelung und Protokollversand](https://msdn.microsoft.com/library/jj635217)  
+     [Migration Guide: Migrieren zu AlwaysOn-Verfügbarkeitsgruppen von vorherigen Bereitstellungen, die Kombination von Datenbankspiegelung und Protokollversand](https://msdn.microsoft.com/library/jj635217)  
   
      [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

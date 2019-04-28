@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711435"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
   Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch AlwaysOn-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der AlwaysOn-Lösung für Hochverfügbarkeit und für die Notfallwiederherstellung.  
@@ -48,7 +48,7 @@ ms.locfileid: "53349932"
 > [!IMPORTANT]  
 >  Wenn ein WSFC-Cluster aufgrund eines Quorumfehlers in den Offlinezustand versetzt wird, ist ein manueller Eingriff erforderlich, um den Onlinezustand wiederherzustellen.  
 >   
->  Weitere Informationen finden Sie in den folgenden Themen: [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQLServer&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Weitere Informationen finden Sie in den folgenden Themen: [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Quorummodi  
  Ein *Quorummodus* wird auf der WSFC-Clusterebene konfiguriert, mit dem die Methodik für die Quorumabstimmung vorgegeben wird.  Das Failovercluster-Manager-Hilfsprogramm empfiehlt basierend auf der Anzahl von Knoten im Cluster einen Quorummodus.  
@@ -87,7 +87,7 @@ ms.locfileid: "53349932"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] enthält.  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren, der keine in quorumabstimmung [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Empfohlene Anpassungen an der Quorumabstimmung  
  Beachten Sie beim Aktivieren oder Deaktivieren der Stimmberechtigung eines bestimmten WSFC-Knotens folgende Richtlinien:  
@@ -130,7 +130,7 @@ ms.locfileid: "53349932"
   
 -   [Windows Server-Technologien:  Failovercluster](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Schrittweise Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide: Configuring the Quorum in a Failover Cluster (Schrittanleitung zu Failoverclustern: Konfigurieren des Quorums eines Failoverclusters)](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

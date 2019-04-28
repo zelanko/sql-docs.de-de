@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807918"
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
     
@@ -111,7 +111,7 @@ ms.locfileid: "48154940"
  Entspricht nach dem Start oder Fortsetzen einer Spiegelungssitzung dem Prozess, durch den Protokolldatensätze der Prinzipaldatenbank, die sich auf dem Prinzipalserver angesammelt haben, an den Spiegelserver gesendet werden. Der Spiegelserver schreibt diese Protokolldatensätze so schnell wie möglich auf den Datenträger, um wieder auf den Stand des Prinzipalservers zu kommen.  
   
  Transaktionssicherheit  
- Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
+ Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: VOLLSTÄNDIGE aktivieren und deaktivieren.  
   
  Zeuge  
  Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver den Zeitpunkt für die Initiierung eines automatischen Failovers erkennen kann. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
@@ -329,7 +329,7 @@ ms.locfileid: "48154940"
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Automatische Seitenreparatur &#40;für Verfügbarkeitsgruppen und Datenbankspiegelung&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Datenbankspiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Datenbankspiegelung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  

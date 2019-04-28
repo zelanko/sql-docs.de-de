@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817128"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "52802612"
 |**status**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **0** = keine zusätzlichen Eigenschaften.<br /><br /> **1** = aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
 |**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.|  
 |**upd_cmd**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)|  
-|**schema_option**|**binary(8)**|Das Bitmuster der Schemagenerierungsoption für den angegebenen Artikel, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein kann:<br /><br /> **0 x 00** = deaktiviert die Skripterstellung durch den Momentaufnahme-Agent und verwendet das bereitgestellte Skript CreationScript.<br /><br /> **0 x 01** = generiert die objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).<br /><br /> **0 x 10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0 x 40** = generiert entsprechende nicht gruppierte Indizes.<br /><br /> **0 x 80** = enthält die deklarierte referenziellen Integrität für die Primärschlüssel.<br /><br /> **0 x 1000** = spaltensortierung repliziert. Hinweis: Diese Option wird standardmäßig für Oracle-Verleger festgelegt, sodass Vergleiche mit Beachtung der Groß-/Kleinschreibung aktiviert werden.<br /><br /> **0 x 4000** = repliziert eindeutige Schlüssel, wenn für einen Tabellenartikel definiert.<br /><br /> **0 x 8000** = repliziert einen Primärschlüssel und eindeutige Schlüssel für eine Tabelle Artikel als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.|  
+|**schema_option**|**binary(8)**|Das Bitmuster der Schemagenerierungsoption für den angegebenen Artikel, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein kann:<br /><br /> **0 x 00** = deaktiviert die Skripterstellung durch den Momentaufnahme-Agent und verwendet das bereitgestellte Skript CreationScript.<br /><br /> **0 x 01** = generiert die objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).<br /><br /> **0 x 10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0 x 40** = generiert entsprechende nicht gruppierte Indizes.<br /><br /> **0 x 80** = enthält die deklarierte referenziellen Integrität für die Primärschlüssel.<br /><br /> **0 x 1000** = spaltensortierung repliziert. Hinweis: Diese Option ist standardmäßig für Oracle-Verleger, um Groß-/Kleinschreibung Vergleiche festgelegt.<br /><br /> **0 x 4000** = repliziert eindeutige Schlüssel, wenn für einen Tabellenartikel definiert.<br /><br /> **0 x 8000** = repliziert einen Primärschlüssel und eindeutige Schlüssel für eine Tabelle Artikel als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.|  
 |**dest_owner**|**sysname**|Der Besitzer der Tabelle in der Zieldatenbank|  
 |**dest_table**|**sysname**|Der Name der Zieltabelle|  
 |**tablespace_name**|**nvarchar(255)**|Identifiziert den von der Protokollierungstabelle für den Artikel verwendeten Tabellenbereich.|  
-|**Objekt-ID**|**int**|Diese Spalte wird nicht verwendet und befindet sich nur um machen die [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Ansicht der **IHarticles** -Tabelle mit der [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) Sicht, die für SQL Server-Artikel ( [Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**objid**|**int**|Diese Spalte wird nicht verwendet und befindet sich nur um machen die [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Ansicht der **IHarticles** -Tabelle mit der [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) Sicht, die für SQL Server-Artikel ( [Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Diese Spalte wird nicht verwendet und befindet sich nur um machen die [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Ansicht der **IHarticles** -Tabelle mit der [Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) Sicht, die für SQL Server-Artikel ( [Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**description**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
 |**publisher_status**|**int**|Wird verwendet, um anzugeben, ob die Sicht, die den veröffentlichten Artikel definiert durch den Aufruf definiert wurde [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0** = [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aufgerufen wurde.<br /><br /> **1** = [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) nicht aufgerufen wurde.|  
@@ -71,6 +71,6 @@ ms.locfileid: "52802612"
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [Sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

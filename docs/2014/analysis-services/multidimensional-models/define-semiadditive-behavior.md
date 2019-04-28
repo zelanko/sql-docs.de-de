@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726287"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
   Semiadditive Measures, die nicht in allen Dimensionen einheitlich aggregiert werden, kommen in vielen Geschäftsszenarien sehr häufig vor. Jeder Cube, der auf Momentaufnahmen von Bilanzen über einen Zeitraum basiert, weist dieses Problem auf. Sie finden diese Momentaufnahmen in Anwendungen, die mit Wertpapiere, Kontostände, Budgetierung, Humanressourcen, Versicherungspolicen, Schadensansprüchen und viele andere Geschäftsfelder behandeln.  
@@ -35,7 +35,7 @@ ms.locfileid: "48190270"
  Auf der Seite **Semiadditives Verhalten definieren** des Assistenten können Sie durch Auswählen einer der folgenden Optionen auswählen, wie semiadditiv definiert werden soll:  
   
  **Semiadditives Verhalten deaktivieren**  
- Deaktiviert das semiadditive Verhalten für einen Cube, für den vorher semiadditives Verhalten definiert war. Diese Option setzt ein Measure zum `SUM` , wenn sie auf eines der folgenden aggregationsfunktionstypen festgelegt ist:  
+ Deaktiviert das semiadditive Verhalten für einen Cube, für den vorher semiadditives Verhalten definiert war. Durch Auswählen dieser Option wird ein Measure auf `SUM` zurückgesetzt, wenn es auf einen der folgenden Aggregationsfunktionstypen festgelegt ist:  
   
 -   By Account  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190270"
   
  Diese Option werden keine Measures mit einer regulären Aggregationsfunktion geändert: `Sum`, `Min`, `Max`, `Count`, oder `Distinct``Count`.  
   
- **Die Account-Kontodimension, die semiadditive Elemente enthält, wurde vom Assistenten erkannt. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
+ **Der Assistent wurde die "Konto" Kontodimension, die semiadditive Elemente enthält. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
  Bewirkt, dass alle Measures aus einer Measuregruppe, die durch eine Dimension des Typs Account dimensioniert wurden, vom System auf die Aggregationsfunktion By Account festgelegt und Elemente dieser Dimension gemäß dem semiadditiven Verhalten, das für den jeweiligen Kontotyp angegeben ist, vom Server aggregiert werden.  
   
 > [!NOTE]  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726102"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Bearbeiten oder Löschen von Partitionen (Analyisis Services – Mehrdimensional)
   Cubepartitionen werden über die Registerkarte **Partitionen** im Cube-Designer von [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]geändert. Auf der Registerkarte **Partitionen** werden die Partitionen für alle Measuregruppen in einem Cube aufgeführt. Ebenfalls werden die Rückschreibepartitionen mit aktiviertem Rückschreiben aufgeführt.  
@@ -48,7 +48,7 @@ ms.locfileid: "48104906"
  Speicher kann für jede Partition einer einzelnen Measuregruppe eines Cubes separat konfiguriert werden. Sie können auch die Standardspeichereinstellungen für einen Cube oder für eine Measuregruppe konfigurieren. Der Speicher wird im Cube-Assistenten auf der Registerkarte **Partitionen** konfiguriert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und verwalten eine lokale Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [Entwerfen von Aggregationen &#40;Analysis Services – mehrdimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
  [Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   

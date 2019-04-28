@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822189"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen einer Wissensdatenbank und von Domänen
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen eine Wissensdatenbank und Domänen
   In dieser Aufgabe erstellen Sie die **Lieferanten** Wissensdatenbank und Domänen, die für die Bereinigung und Abgleich von Daten verwendet wird, um Duplikate zu entfernen.  
   
 1.  Starten Sie **Data Quality-Client**. Klicken Sie auf **starten**, zeigen Sie auf **Programme**, klicken Sie auf **Microsoft SQL Server 2012**, klicken Sie auf **Data Quality Services**, und klicken Sie dann auf  **Data Quality-Client**.  
@@ -46,7 +46,7 @@ ms.locfileid: "56011101"
   
      ![Erstellen Sie im Dialogfeld Domäne](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "erstellen Domäne (Dialogfeld)")  
   
-9. Wiederholen Sie den vorherigen Schritt, um folgenden Domänen mit allen Standardeinstellungen zu erstellen. Um das Tutorial einfach zu halten, Sie legen die **Datentyp** aller Domänen als **Zeichenfolge**. Andere zulässige Datentypen sind: Ganze Zahl, Dezimal und Datum. Wenn die **führende Werte** Option ist aktiviert (Standardeinstellung), die alle Synonyme durch den führenden Wert der synonymgruppe in der Ausgabe ersetzt werden. Festlegen von **Zeichenfolge normalisieren** Option (Standard) wird keine Sonderzeichen in den domänenwerten entfernt. Die **Formatausgabe** Option können Sie die Formatierung auswählen, die angewendet wird, wenn die Datenwerte in der Domäne ausgegeben werden. Wählen Sie **Rechtschreibprüfung aktivieren** (Standard), um die Rechtschreibprüfung beim Auffüllen der Domäne für alle Zeichenfolgenwerte auszuführen. Die **Sprache** Einstellung gibt an, welche Sprachversion des der **Rechtschreibprüfung** angewendet werden soll. Wählen Sie **Syntaxfehleralgorithmen deaktivieren** um die Domäne aufzufüllen, ohne die Zeichenfolgenwerte auf Syntaxfehler zu überprüfen. Finden Sie unter [erstellen Sie eine Domäne](https://msdn.microsoft.com/library/hh510401.aspx) in der MSDN Library Weitere Informationen.  
+9. Wiederholen Sie den vorherigen Schritt, um folgenden Domänen mit allen Standardeinstellungen zu erstellen. Um das Tutorial einfach zu halten, Sie legen die **Datentyp** aller Domänen als **Zeichenfolge**. Die anderen zulässigen Datentypen sind: Ganze Zahl, Dezimalzahl und Datum. Wenn die **führende Werte** Option ist aktiviert (Standardeinstellung), die alle Synonyme durch den führenden Wert der synonymgruppe in der Ausgabe ersetzt werden. Festlegen von **Zeichenfolge normalisieren** Option (Standard) wird keine Sonderzeichen in den domänenwerten entfernt. Die **Formatausgabe** Option können Sie die Formatierung auswählen, die angewendet wird, wenn die Datenwerte in der Domäne ausgegeben werden. Wählen Sie **Rechtschreibprüfung aktivieren** (Standard), um die Rechtschreibprüfung beim Auffüllen der Domäne für alle Zeichenfolgenwerte auszuführen. Die **Sprache** Einstellung gibt an, welche Sprachversion des der **Rechtschreibprüfung** angewendet werden soll. Wählen Sie **Syntaxfehleralgorithmen deaktivieren** um die Domäne aufzufüllen, ohne die Zeichenfolgenwerte auf Syntaxfehler zu überprüfen. Finden Sie unter [erstellen Sie eine Domäne](https://msdn.microsoft.com/library/hh510401.aspx) in der MSDN Library Weitere Informationen.  
   
     -   Supplier Name  
   

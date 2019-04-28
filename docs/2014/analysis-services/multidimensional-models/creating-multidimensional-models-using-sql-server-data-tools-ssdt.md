@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41ddab5d08673ea71cefb7cf44169e8da6777292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727253"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zwei verschiedene Umgebungen bereit, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektmappen zu erstellen, bereitzustellen und zu verwalten: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Beide Umgebungen implementieren ein Projektsystem. Weitere Informationen zu Visual Studio-Projekten finden Sie in der MSDN Library unter [Projekte als Container](https://go.microsoft.com/fwlink/?LinkId=63960) .  

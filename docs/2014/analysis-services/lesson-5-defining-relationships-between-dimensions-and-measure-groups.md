@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728126"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen
   In den vorhergehenden Lektionen in diesem Lernprogramm haben Sie gelernt, dass zu einem Cube hinzugefügte Datenbankdimensionen als Basis für Cubedimensionen verwendet werden können. In dieser Lektion lernen Sie, verschiedene Typen von Beziehungen zwischen Cubedimensionen und Measuregruppen zu definieren und die Eigenschaften dieser Beziehungen anzugeben.  

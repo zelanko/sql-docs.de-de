@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723025"
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
   Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
   
  Diese Muster und Trends können gesammelt und als *Data Mining-Modell*definiert werden. Miningmodelle können auf spezifische Szenarien angewendet werden, beispielsweise:  
   
--   **Planungserstellung**: Schätzen des Absatzes, Vorhersagen der Serverlast oder Serverausfallzeiten  
+-   **Prognose**: Schätzen Vertrieb, Vorhersagen der Serverlast oder Serverausfallzeiten  
   
--   **Risiko und Wahrscheinlichkeit**: Auswählen der besten Kunden für Targeted Mailings, Bestimmen der wahrscheinlichen Gewinnschwelle für Risikoszenarios, Zuweisen von Wahrscheinlichkeiten zu Diagnosen oder anderen Ergebnissen  
+-   **Risiko und Wahrscheinlichkeit**: Auswählen der besten Kunden für targeted Mailings, Bestimmen der wahrscheinlichen Gewinnschwelle für risikoszenarien, Zuweisen von Wahrscheinlichkeiten zu Diagnosen oder anderen Ergebnissen  
   
--   **Empfehlungen**: Ermitteln von Produkten mit Cross-Selling-Potenzial und Generieren von Empfehlungen  
+-   **Empfehlungen**: Ermitteln von Produkten tendenziell zusammen verkauft werden Generieren von Empfehlungen  
   
 -   **Ermitteln von Reihenfolgen**: Analysieren der Kundenauswahl in einem Einkaufswagen, Vorhersagen der nächsten wahrscheinlichen Ereignisse  
   
--   **Gruppieren**: Unterteilen von Kunden oder Ereignissen in Cluster verwandter Elemente, Analysieren und Vorhersagen von Affinitäten  
+-   **Gruppieren von**: Unterteilen von Kunden oder Ereignissen in Cluster verwandter Elemente, analysieren und Vorhersagen von Affinitäten  
   
  Die Erstellung eines Miningmodells muss als Teil eines größeren Prozesses verstanden werden, der sich von der Fragestellung im Hinblick auf die Daten und die Erstellung eines Modells zur Beantwortung dieser Fragen bis hin zur Implementierung des Modells in einer Arbeitsumgebung erstreckt. Ein Data Mining-Prozess besteht im Wesentlichen aus sechs Schritten:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48067680"
   
  Microsoft SQL Server Data Mining stellt eine integrierte Umgebung für die Erstellung und Verwendung von Data Mining-Modellen zur Verfügung. Diese Umgebung umfasst SQL Server Development Studio mit Data Mining-Algorithmen und Abfragetools, die das Erstellen einer umfassenden Projektmappe für unterschiedlichste Projekte erleichtern, sowie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit Tools zum Durchsuchen von Modellen und Verwalten von Data Mining-Objekten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md).  
+ Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md).  
   
 ##  <a name="DefiningTheProblem"></a> Definieren der Problemstellung  
  Wie das folgende Diagramm verdeutlicht, besteht der erste Schritt des Data Mining-Prozesses darin, die Problemstellung exakt zu definieren und Möglichkeiten aufzuzeigen, wie das Problem anhand der richtigen Daten gelöst werden kann.  
@@ -176,7 +176,7 @@ ms.locfileid: "48067680"
 -   Ein dynamischea Update der Modelle, während neue Daten in das Unternehmen kommen, und die konstante Vornahme von Änderungen zur Verbesserung der Effizienz der Lösung sollten Teil der Bereitstellungsstrategie sein. Weitere Informationen finden Sie unter [Verwaltung von Data Mining-Lösungen und -Objekten](management-of-data-mining-solutions-and-objects.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Lösungen](data-mining-solutions.md)   
+ [Data Mining-Projektmappen](data-mining-solutions.md)   
  [Data Mining-Tools](data-mining-tools.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725394"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Erstellen berechneter Elemente im Bereich einer Sitzung (MDX)
   Zum Erstellen eines berechneten Elements, das während einer gesamten MDX-Sitzung (Multidimensional Expressions) verfügbar ist, verwenden Sie die [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)-Anweisung. Ein berechnetes Element, das mit der CREATE MEMBER-Anweisung erstellt wurde, wird erst entfernt, nachdem die MDX-Sitzung geschlossen wurde.  
@@ -53,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen im Bereich einer Abfrage berechnete Elemente &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Erstellen berechneter Elemente im Bereich einer Abfrage &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

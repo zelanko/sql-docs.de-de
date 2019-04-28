@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725404"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Erstellen berechneter Zellen im Bereich einer Sitzung
     

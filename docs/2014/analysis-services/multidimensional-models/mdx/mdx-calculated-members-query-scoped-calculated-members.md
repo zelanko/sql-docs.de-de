@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725544"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Erstellen berechneter Elemente im Bereich einer Abfrage (MDX)
   Wenn ein berechnetes Element nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie das berechnete Element mit dem WITH-Schlüsselwort definieren. Ein berechnetes Element, das mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  
@@ -94,6 +94,6 @@ WHERE [Product].[Category].[Bikes]
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [SELECT-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Erstellen im Bereich einer Sitzung berechnete Elemente &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Erstellen berechneter Elemente im Bereich einer Sitzung &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

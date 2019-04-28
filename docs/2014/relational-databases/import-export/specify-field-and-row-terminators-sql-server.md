@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712797"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
   Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
@@ -37,7 +37,7 @@ ms.locfileid: "52539752"
 |Registerkarte|\t<br /><br /> Dies ist das Standardfeldabschlusszeichen.|  
 |Neue-Zeile-Zeichen|\n<br /><br /> Dies ist das Standardzeilenabschlusszeichen.|  
 |Wagenrücklauf/Zeilenvorschub|\r|  
-|Umgekehrter Schrägstrich<sup>1</sup>|\\\|  
+|Backslash<sup>1</sup>|\\\|  
 |NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)<sup>2</sup>|\0|  
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
 |Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, end, !!!!!!!!!!, \t-\n usw.)|  

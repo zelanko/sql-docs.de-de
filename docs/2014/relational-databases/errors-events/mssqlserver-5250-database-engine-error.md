@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867934"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
     
@@ -25,12 +25,12 @@ ms.locfileid: "48143220"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|5250|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Meldungstext|Datenbankfehler: Die PAGE_TYPE-Seite P_ID ist für die 'NAME'-Datenbank (Datenbank-ID DB_ID) ungültig. Dieser Fehler kann nicht repariert werden. Sie müssen von einer Sicherungskopie wiederherstellen.|  
+|Meldungstext|Datenbankfehler: PAGE_TYPE-Seite P_ID für Datenbank 'NAME' (Datenbank-ID DB_ID) ist ungültig. Dieser Fehler kann nicht repariert werden. Sie müssen von einer Sicherungskopie wiederherstellen.|  
   
 ## <a name="explanation"></a>Erklärung  
  Eine Dateiheaderseite oder Startseite in der angegebenen Datenbank ist beschädigt.  

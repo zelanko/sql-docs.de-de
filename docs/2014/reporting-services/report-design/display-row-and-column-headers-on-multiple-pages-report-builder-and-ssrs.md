@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825846"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)
   Sie können festlegen, ob bei einem Tablix-Datenbereich, der mehrere Seiten umfasst, Zeilen- und Spaltenüberschriften auf jeder Seite wiederholt werden sollen. Ein Tablix-Datenbereich kann eine Tabelle, eine Matrix oder eine Liste sein.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807459"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
   Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  

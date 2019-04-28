@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728086"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Prognosegütediagramm (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe des Bereichs **Prognosegütediagramm** zeigen Sie ein Diagramm an, in dem alle ausgewählten Miningmodelle in der ausgewählten Miningstruktur verglichen werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48168130"
   
  Allgemeine Informationen zu Methoden zum Messen der Genauigkeit eines Miningmodells finden Sie unter [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Diagrammtyp**  
  Legt den im Viewer angezeigten Diagrammtyp fest. Sie können entweder **Prognosegütediagramm** oder **Gewinndiagramm**auswählen.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "48168130"
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

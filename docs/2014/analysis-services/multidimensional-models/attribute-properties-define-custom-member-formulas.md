@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701682"
 ---
 # <a name="define-custom-member-formulas"></a>Definieren von benutzerdefinierten Elementformeln
   Sie können einen MDX-Ausdruck (Multidimensional Expressions), eine so genannte benutzerdefinierte Elementformel, erstellen, um die Werte für die Mitglieder eines angegebenen Attributs bereitzustellen. Eine Spalte in einer Tabelle einer Datenquellensicht stellt für jedes Mitglied in einem Attribut den Ausdruck bereit, der zur Bereitstellung des Wertes für dieses Element verwendet wird.  
@@ -45,7 +45,7 @@ ms.locfileid: "48186020"
   
     -   Quartal 3: 100  
   
-    -   Quartal 4: 800  
+    -   4. Quartal: 800  
   
 -   2004: 1500  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48186020"
   
     -   Quartal 3: 300  
   
-    -   Quartal 4: 400  
+    -   4. Quartal: 400  
   
  Bei einer benutzerdefinierten Elementformel wird der Wert des Elements stattdessen von der benutzerdefinierten Rollupformel bereitgestellt. Die folgende benutzerdefinierte Elementformel kann z. B. verwendet werden, um den Wert 450 für das untergeordnete Quarter 4-Element des 2004-Elements in der Time-Dimension anzugeben.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186020"
 Time.[Quarter 3] * 1.5  
 ```  
   
- Benutzerdefinierte Elementformeln werden in einer Spalte der Dimensionstabelle gespeichert. Aktivieren Sie benutzerdefinierte Rollupformeln, indem Sie die `CustomRollupColumn` -Eigenschaft eines Attributs.  
+ Benutzerdefinierte Elementformeln werden in einer Spalte der Dimensionstabelle gespeichert. Benutzerdefinierte Rollupformeln werden durch Festlegen der `CustomRollupColumn`-Eigenschaft für ein Attribut aktiviert.  
   
  Um einen einzelnen MDX-Ausdruck auf alle Elemente eines Attributs anzuwenden, erstellen Sie eine benannte Berechnung für die Dimensionstabelle, die einen MDX-Ausdruck als Literalzeichenfolge zurückgibt. Legen Sie dann die benannte Berechnung mit der `CustomRollupColumn`-Eigenschaftseinstellung für das Attribut fest, das Sie konfigurieren wollen. Eine benannte Berechnung ist eine Spalte in einer Tabelle für die Datenquellensicht, die durch einen SQL-Ausdruck definierte Zeilenwerte zurückgibt. Weitere Informationen zum Erstellen von benannten Berechnungen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

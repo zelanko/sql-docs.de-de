@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822312"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lektion 5: Ausführen von Vorhersageabfragen
   In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen zur Association-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  

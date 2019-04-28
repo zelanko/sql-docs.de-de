@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714092"
 ---
 # <a name="what-is-odbc"></a>Was ist ODBC?
 Viele Missverständnisse über ODBC befinden sich in der IT-Welt. Für den Endbenutzer ist es ein Symbol in der Microsoft® Windows®-Systemsteuerung. Um den Anwendungsprogrammierer ist es eine Bibliothek mit der Data Access-Routinen. Für viele andere ist es die Antwort auf alle Datenbank-Access-Probleme, die jemals gestaltete.  

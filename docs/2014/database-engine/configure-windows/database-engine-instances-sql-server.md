@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811231"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
   Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der ausführbaren Datei `sqlservr.exe`, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  

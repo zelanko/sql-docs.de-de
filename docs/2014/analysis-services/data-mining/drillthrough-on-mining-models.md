@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722432"
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
   *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
@@ -55,7 +55,7 @@ ms.locfileid: "49085396"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen finden Sie weitere Informationen zur Verwendung von Drillthroughs mit Miningmodellen.  
   
-|Aufgaben|Links|  
+|Richtlinienübersicht|Links|  
 |-----------|-----------|  
 |Verwenden von Drillthrough in den Miningmodell-Viewern|[Verwenden von Drillthrough mit den Modell-Viewern](use-drillthrough-from-the-model-viewers.md)|  
 |Abrufen von Falldaten für ein Modell mithilfe von Drillthrough|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](drill-through-to-case-data-from-a-mining-model.md)|  

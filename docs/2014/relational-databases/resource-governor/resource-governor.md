@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704873"
 ---
 # <a name="resource-governor"></a>Resource Governor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Über die Ressourcenkontrolle legen Sie Grenzwerte für die CPU, physische E/A sowie den Arbeitsspeicher fest, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
@@ -90,6 +90,6 @@ ms.locfileid: "52807312"
 |Beschreibt, wie Eigenschaften der Ressourcenkontrolle angezeigt werden.|[Anzeigen der Eigenschaften der Ressourcenkontrolle](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Instanzen &amp;amp;#40;SQL Server&amp;amp;#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
+ [Datenbank-Engine-Instanzen &amp;#40;SQL Server&amp;#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

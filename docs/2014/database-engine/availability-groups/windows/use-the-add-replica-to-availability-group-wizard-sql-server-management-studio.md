@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813377"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen (SQL Server Management Studio)
   Fügen Sie mithilfe des Assistenten zum Hinzufügen von Replikaten zum Hinzufügen ein neues sekundäres Replikat zu einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe hinzu.  
@@ -30,7 +30,7 @@ ms.locfileid: "48218150"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie noch nie zu einer verfügbarkeitsgruppe ein verfügbarkeitsreplikat hinzugefügt haben, finden Sie unter der "Serverinstanzen" und "Verfügbarkeitsgruppen und Replikate" Abschnitte in [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
@@ -82,7 +82,7 @@ ms.locfileid: "48218150"
     |Registerkarte|Kurze Beschreibung|  
     |---------|-----------------------|  
     |**Replikate**|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein neues sekundäres Replikat hostet.|  
-    |**Endpunkte**|Verwenden Sie diese Registerkarte, um den vorhandenen Datenbankspiegelungs-Endpunkt ggf. für jedes neue sekundäre Replikat zu überprüfen. Falls dieser Endpunkt auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung verwenden, wird vom Assistenten versucht, den Endpunkt automatisch zu erstellen. **Hinweis:** , wenn eine Serverinstanz unter einem nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie eine manuelle Änderung vornehmen, die Server-Instanz, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).|  
+    |**Endpunkte**|Verwenden Sie diese Registerkarte, um den vorhandenen Datenbankspiegelungs-Endpunkt ggf. für jedes neue sekundäre Replikat zu überprüfen. Falls dieser Endpunkt auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung verwenden, wird vom Assistenten versucht, den Endpunkt automatisch zu erstellen. **Hinweis**:  Wenn eine Serverinstanz unter einem nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie vornehmen, eine manuelle Änderung an der Serverinstanz, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).|  
     |**Sicherungseinstellungen**|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes, wenn Sie die aktuelle Einstellung ändern möchten, und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
   
 6.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen aus:  
@@ -119,7 +119,7 @@ ms.locfileid: "48218150"
      Klicken Sie nach Abschluss des Assistenten auf **Schließen** , um den Assistenten zu beenden.  
   
 > [!IMPORTANT]  
->  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nachverfolgung: Nach dem Hinzufügen eines Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Lesen Sie nach dem Hinzufügen eines Replikats den Abschnitt „Nächster Schritt: Nach dem Hinzufügen eines sekundären Replikats“ unter [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 
   

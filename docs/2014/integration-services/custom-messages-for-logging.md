@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828775"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
@@ -116,7 +116,7 @@ ms.locfileid: "58389498"
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Zeigt an, dass die Ausführung eines DTS 2000-Pakets über den Task gestartet wurde.|  
-|`ExecuteDTS80PackageTaskEnd`|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: Das DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
+|`ExecuteDTS80PackageTaskEnd`|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Enthält beschreibende Informationen zum Task.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Berichtet das Ausführungsergebnis des durch den Task ausgeführten DTS 2000-Pakets.|  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821441"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
 -   **BOF** gibt an, der die Position des aktuelle Datensatzes vor dem ersten Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -50,8 +50,8 @@ ms.locfileid: "47748118"
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Verschieben Sie die < 0|Verschieben von 0|MoveNext,<br /><br /> Verschieben Sie die > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**"true"**, **EOF**=**"false"**|Zulässig|Fehler|Fehler|Zulässig|  
-|**BOF**=**"false"**, **EOF**=**"true"**|Zulässig|Zulässig|Fehler|Fehler|  
+|**BOF**=**True**, **EOF**=**False**|Zulässig|Fehler|Fehler|Zulässig|  
+|**BOF**=**False**, **EOF**=**True**|Zulässig|Zulässig|Fehler|Fehler|  
 |Beide **"true"**|Fehler|Fehler|Fehler|Fehler|  
 |Beide **"false"**|Zulässig|Zulässig|Zulässig|Zulässig|  
   

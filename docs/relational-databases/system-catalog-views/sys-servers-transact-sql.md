@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 59849d1e4a462433ac7f0b1b4e3e620bcdb82256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856069"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47829666"
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
 |**name**|**sysname**|Wenn **Server_id** = 0, der zurückgegebene Wert ist, den Namen des Servers.<br /><br /> Wenn **Server_id** > 0 ist, der zurückgegebene Wert wird der lokale Name des Verbindungsservers.|  
 |**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt an, eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Anbieter**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
+|**provider**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
 |**provider_string**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Anbieterzeichenfolge.<br /><br /> Besitzt den Wert NULL, wenn der Aufrufer nicht über die ALTER ANY LINKED SERVER-Berechtigung verfügt.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47829666"
   
  Zum Anzeigen des lokalen Servers (**server_id** = 0) sind keine Berechtigungen erforderlich.  
   
- Wenn Sie einen Verbindungs- oder Remoteserver erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine standardmäßige anmeldenamenzuordnung, die **öffentliche** -Serverrolle. Standardmäßige anmeldenamenzuordnung bedeutet, dass alle Anmeldungen alle Verbindungs- und Remoteserver angezeigt werden können. Um die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige anmeldenamenzuordnung, indem Sie Ausführung [Sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) und Angeben von NULL für den *Locallogin* Parameter.  
+ Wenn Sie einen Verbindungs- oder Remoteserver erstellen, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine standardmäßige Anmeldenamenzuordnung zur **public** -Serverrolle erstellt. Standardmäßige anmeldenamenzuordnung bedeutet, dass alle Anmeldungen alle Verbindungs- und Remoteserver angezeigt werden können. Wenn Sie die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige Anmeldenamenzuordnung, indem Sie [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) ausführen und NULL für den *locallogin* -Parameter angeben.  
   
  Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen.  Die folgenden Berechtigungen sind erforderlich, um alle Verbindungs- und Remoteserver-Server nach der die standardmäßige anmeldenamenzuordnung anzuzeigen:  
   

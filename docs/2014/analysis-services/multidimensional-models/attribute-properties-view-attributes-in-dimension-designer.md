@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727518"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Anzeigen von Attributen im Dimensions-Designer
   Attribute werden für Dimensionsobjekte erstellt. Sie können Attribute mithilfe des Dimensions-Designers in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzeigen und konfigurieren. Die in einer Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute** angezeigt. Verwenden Sie diesen Bereich, um Attribute hinzuzufügen, zu entfernen oder zu konfigurieren. Sie können außerdem Attribute auswählen, um sie als Ebene in einer neuen Hierarchie zu verwenden oder einer vorhandenen Hierarchie als Ebene hinzuzufügen.  
@@ -42,6 +42,6 @@ ms.locfileid: "48180040"
 |![Übergeordnetes Attribut (Symbol)](../media/as-icon-parent-attribute.gif "übergeordnetes Attribut (Symbol)")|Parent|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
   
   

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726060"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
   Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
   
- Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zur relationalen Datenbank-Engine, bei dem Datenbankanmeldenamen und Benutzerberechtigungen (oft `db_datareader`) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Wenn Sie hauptsächlich den Datenzugriff für einen Cube oder ein tabellarisches Modell aktivieren möchten, können Sie zunächst die Datenbankberechtigungen umgehen und sich direkt diesem Thema zuwenden: [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zur relationalen Datenbank-Engine, bei dem Datenbankanmeldenamen und Benutzerberechtigungen (oft `db_datareader`) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Ist zuwenden Datenzugriff für einen Cube oder tabellarisches Modell aktivieren, können Sie jetzt zunächst die Datenbankberechtigungen umgehen und direkt zu diesem Thema wechseln: [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Datenbankberechtigungen in Analysis Services ermöglichen administrative Funktionen. Weitgefasst gilt dies, wie es der Fall bei der Datenbankberechtigung Vollzugriff ist, oder granularer, wenn Sie die Verarbeitung von Vorgängen delegieren. Berechtigungsebenen für eine Analysis Services-Datenbank können Sie im Bereich **Allgemein** mit dem Dialogfeld **Rolle erstellen** festlegen. Dies wird in der folgenden Grafik gezeigt und nachstehend beschrieben.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149010"
 > [!NOTE]  
 >  Serveradministratoren (Mitglieder der Serveradministratorrolle) besitzen ebenfalls impliziten Vollzugriff auf jede Datenbank auf dem Server.  
   
- `Process Database` Lautet diese Berechtigung wird verwendet, um die Verarbeitung auf Datenbankebene zu delegieren. Als Administrator können Sie diesen Task auslagern, indem Sie eine Rolle erstellen, mit der eine andere Person oder ein Dienst Verarbeitungsvorgänge für ein beliebiges Objekt in der Datenbank aufrufen kann. Alternativ können Sie auch Rollen für die Verarbeitung bestimmter Objekte erstellen. Weitere Informationen finden Sie unter [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` Lautet diese Berechtigung wird verwendet, um die Verarbeitung auf Datenbankebene zu delegieren. Als Administrator können Sie diesen Task auslagern, indem Sie eine Rolle erstellen, mit der eine andere Person oder ein Dienst Verarbeitungsvorgänge für ein beliebiges Objekt in der Datenbank aufrufen kann. Alternativ können Sie auch Rollen für die Verarbeitung bestimmter Objekte erstellen. Weitere Informationen finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` Lautet, die diese Berechtigung, die Möglichkeit zum Lesen der Metadaten des Objekts gewährt, die Fähigkeit zum Anzeigen der zugehörigen Daten. Meist wird diese Berechtigung für Rollen verwendet, die für die dedizierte Verarbeitung erstellt wurden. Dadurch können dann Tools wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] für die interaktive Verarbeitung einer Datenbank verwendet werden. Ohne `Read Definition` ist die Berechtigung `Process Database` nur in Skriptszenarios effektiv. Wenn Sie planen, Verarbeitung, vielleicht durch SSIS oder ein anderes Zeitplanungsmodul automatisieren, Sie wahrscheinlich eine Rolle erstellen möchten, die `Process Database` ohne `Read Definition`. Erwägen Sie andernfalls, die beiden Eigenschaften in derselben Rolle zu kombinieren, um unbeaufsichtigte und interaktive Verarbeitung mit SQL Server-Tools zu unterstützen, die das Datenmodell auf einer Benutzeroberfläche grafisch darstellen.  
+ `Read Definition` Lautet, die diese Berechtigung, die Möglichkeit zum Lesen der Metadaten des Objekts gewährt, die Fähigkeit zum Anzeigen der zugehörigen Daten. Meist wird diese Berechtigung für Rollen verwendet, die für die dedizierte Verarbeitung erstellt wurden. Dadurch können dann Tools wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] für die interaktive Verarbeitung einer Datenbank verwendet werden. Ohne `Read Definition` ist die Berechtigung `Process Database` nur in Skriptszenarios effektiv. Wenn Sie die Verarbeitung automatisieren möchten, zum Beispiel durch SSIS oder ein anderes Zeitplanungsmodul, sollten Sie eine Rolle erstellen, die über `Process Database`, jedoch nicht über `Read Definition` verfügt. Erwägen Sie andernfalls, die beiden Eigenschaften in derselben Rolle zu kombinieren, um unbeaufsichtigte und interaktive Verarbeitung mit SQL Server-Tools zu unterstützen, die das Datenmodell auf einer Benutzeroberfläche grafisch darstellen.  
   
 ## <a name="full-control-administrator-permissions"></a>Berechtigung Vollzugriff (Administrator)  
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ist jede Windows-Benutzeridentität, die einer Rolle mit Berechtigung Vollzugriff (Administrator) zugewiesen ist, ein Datenbankadministrator. Ein Datenbankadministrator kann jeden Task innerhalb der Datenbank ausführen, einschließlich:  
@@ -66,7 +66,7 @@ ms.locfileid: "48149010"
   
 2.  Geben Sie im Bereich **Allgemein** einen Namen ein, zum Beispiel DBAdmin.  
   
-3.  Aktivieren Sie das Kontrollkästchen **Vollzugriff (Administrator)** für den Cube. Beachten Sie, dass `Process Database` und `Read Definition` automatisch ausgewählt werden. Diese beiden Berechtigungen sind immer in Rollen enthalten enthalten `Full Control`.  
+3.  Aktivieren Sie das Kontrollkästchen **Vollzugriff (Administrator)** für den Cube. Beachten Sie, dass `Process Database` und `Read Definition` automatisch ausgewählt werden. Diese beiden Berechtigungen sind immer in Rollen enthalten, die `Full Control` besitzen.  
   
 4.  Geben Sie im **Mitgliedschaft** sbereich die Windows-Konten von Benutzern und Gruppen ein, die mit dieser Rolle eine Verbindung zu Analysis Services herstellen.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "48149010"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Erteilen von verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

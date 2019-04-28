@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726126"
 ---
 # <a name="dimension-attribute-properties-reference"></a>Dimensionsattributeigenschaftenverweis
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird anhand von zahlreichen Eigenschaften die Funktionsweise von Dimensionen und Dimensionsattributen festgelegt. In der folgenden Tabelle werden die einzelnen Attributeigenschaften aufgelistet und beschrieben.  
@@ -42,7 +42,7 @@ ms.locfileid: "53368682"
 |`ID`|Enthält den eindeutigen Bezeichner (ID) der Dimension.|  
 |`InstanceSelection`|Stellt einen Hinweis für Clientanwendungen bezüglich der Anzeige einer Liste von Elementen bereit, die auf der erwarteten Anzahl von Elementen in der Liste basiert. Die folgenden Optionen sind verfügbar:<br /><br /> **None** Gibt keinen Hinweis an die Clientanwendung. Dies ist der Standardwert.<br /><br /> **DropDown** : Die Anzahl der Elemente ist klein genug für die Anzeige in einer Dropdownliste.<br /><br /> **List** : Die Anzahl der Elemente ist zu groß für eine **Dropdownliste**, erfordert aber keine Filter.<br /><br /> **FilteredList** Die Anzahl der Elemente ist groß genug, dass das Anwenden von Filtern für ihre Anzeige sinnvoll ist.<br /><br /> **MandatoryFilter** Die Anzahl der Elemente ist so groß, dass die Anzeige immer gefiltert werden muss.|  
 |`IsAggregatable`|Legt fest, ob die Werte der Attributelemente aggregiert werden können. Der Standardwert ist auf `True` festgelegt, was bedeutet, dass die Attributhierarchie eine (All)-Ebene enthält. Ist der Wert für diese Eigenschaft auf `False` festgelegt, enthält die Attributhierarchie keine (All)-Ebene.|  
-|`KeyColumns`|Enthält die Spalte bzw. Spalten, die den Schlüssel für das Attribut darstellen, also die Spalte in der zugrunde liegenden relationalen Tabelle in der Datenquellensicht, an die das Attribut gebunden ist. Benutzern wird der Wert dieser Spalte für die einzelnen Elemente angezeigt, bis ein Wert für die `NameColumn`-Eigenschaft festgelegt wird.|  
+|`KeyColumns`|Enthält die Spalte bzw. Spalten, die den Schlüssel für das Attribut darstellen, also die Spalte in der zugrunde liegenden relationalen Tabelle in der Datenquellensicht, an die das Attribut gebunden ist. Der Wert dieser Spalte für jedes Element wird für Benutzer angezeigt, es sei denn, ein Wert, für angegeben wird die `NameColumn` Eigenschaft.|  
 |`MemberNamesUnique`|Bestimmt, ob Elementnamen in der Attributhierarchie eindeutig sein müssen.|  
 |`MembersWithData`|Wird von übergeordneten Attributen verwendet, um zu bestimmen, ob Nichtblatt-Datenelemente im übergeordneten Attribut angezeigt werden. Dieser Eigenschaftswert wird nur verwendet, wenn der Wert der `Usage`-Eigenschaft auf Parent festgelegt ist. Dies bedeutet, dass eine Über-/Unterordnungshierarchie definiert wurde. Die folgenden Optionen sind verfügbar:<br /><br /> **NonLeafDataHidden** : Nichtblattdaten werden ausgeblendet.<br /><br /> **NonLeafDataVisible** : Nichtblattdaten sind sichtbar.|  
 |`MembersWithDataCaption`|Stellt eine Vorlagenzeichenfolge bereit, die von übergeordneten Attributen zum Erstellen von Beschriftungen für die vom System generierten Datenelemente im übergeordneten Attribut verwendet wird. Dieser Eigenschaftswert wird nur verwendet, wenn der Wert der `Usage`-Eigenschaft auf Parent festgelegt ist. Dies bedeutet, dass eine Über-/Unterordnungshierarchie definiert wurde.|  

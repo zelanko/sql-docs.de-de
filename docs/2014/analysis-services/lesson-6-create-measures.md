@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728106"
 ---
 # <a name="lesson-7-create-measures"></a>Lektion 7: Erstellen von Measures
   In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure im Wesentlichen eine mit einer DAX-Formel erstellte Berechnung. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters* ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde.   Ein Wert für jede Zelle im Filter wird dann vom übernommenen Measure berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle einbinden können, um dynamische Berechnungen für numerische Daten auszuführen. Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -27,10 +27,10 @@ ms.locfileid: "48213240"
   
  In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel in der Bearbeitungsleiste als auch mithilfe der AutoSumme-Funktion.  
   
- Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+ Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213240"
     |Measurename|Spalte|AutoSumme (∑)|Formel|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Total Units|Order Quantity|Summe|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Summe|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Summe|=SUM([Total Product Cost])|  
+    |Internet Total Sales|Sales Amount|Summe|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Summe|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Summe|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Summe|=SUM([Freight])|  
   
 2.  Erstellen Sie durch Klicken auf eine leere Zelle im Measureraster und durch Verwenden der Bearbeitungsleiste die folgenden Measures, und benennen Sie diese um:  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213240"
  Mit den für die Internet Sales-Tabelle erstellten Measures lassen sich wichtige Finanzdaten wie Verkäufe, Kosten und Gewinnspanne für Elemente analysieren, die durch vom Benutzer gewählte Filter definiert sind.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 8: Erstellen von Leistungskennzahlen](lesson-7-create-key-performance-indicators.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 8: Erstellen von Key Performance Indicators](lesson-7-create-key-performance-indicators.md).  
   
   

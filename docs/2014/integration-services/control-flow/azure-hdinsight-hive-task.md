@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832724"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive-Task
 Verwenden Sie den **Azure HDInsight Hive-Task** zum Anwenden eines Hive-Skripts auf einen Azure HDInsight-Cluster.
@@ -37,8 +37,8 @@ Um einen **Azure HDInsight-Hive-Task**hinzuzufügen, legen Sie ihn mittels Drag 
   
 5.  Sie haben zwei Möglichkeiten, das auszuführende Hive-Skript anzugeben:
   
-    1.  **Inline-Skript**: Geben Sie die **Skript** Feld durch Eingabe Inline das auszuführende Skript die **Skriptnamen eingeben** Dialogfeld.
+    1.  **Inlineskript**: Legen Sie das Feld **Skript** fest, indem Sie im Dialogfeld **Skript eingeben** inline das auszuführende Skript eingeben.
   
-    2.  **Skriptdatei**: Laden Sie die Skriptdatei in Azure Blob Storage hoch, und geben Sie die **BlobName** Feld. Befindet sich das Blob nicht im Standardspeicherkonto oder -container des HDInsight-Clusters, müssen die Felder **ExternalStorageAccountName** und **ExternalBlobContainer** festgelegt werden. Stellen Sie bei einem externen Blob sicher, dass es als öffentlich zugänglich konfiguriert ist.  
+    2.  **Skriptdatei**: Laden Sie die Skriptdatei in Azure Blob Storage hoch, und legen Sie das Feld **BlobName** fest. Befindet sich das Blob nicht im Standardspeicherkonto oder -container des HDInsight-Clusters, müssen die Felder **ExternalStorageAccountName** und **ExternalBlobContainer** festgelegt werden. Stellen Sie bei einem externen Blob sicher, dass es als öffentlich zugänglich konfiguriert ist.  
   
      Wenn Skriptdatei und Inlineskript angegeben sind, wird die Skriptdatei verwendet und das Inlineskript ignoriert.

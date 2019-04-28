@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727946"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadaten (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie im Cube-Designer auf der Registerkarte **Browser** den Bereich **Metadaten** , um die Struktur des Cubes zu durchsuchen, verwandte Measures zu sehen und Dimensionen anzuzeigen und zu erstellen. Sie können einen Drilldown in Hierarchien ausführen, eine Liste von verfügbaren Measures und KPIs anzeigen und die vollqualifizierten Namen von Objekten kopieren.  
   
  Sie können auch die Objekte und die Hierarchien im Bereich **Metadaten** in den Bereich zum Erstellen von Abfragen ziehen, um neue Abfragen zu erstellen oder Daten zum Durchsuchen in Excel zu exportieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Metadaten**  
  Zeigt die in der aktuellen Sicht verfügbaren Metadaten an. Sie können die Sicht (das heißt, die derzeit ausgewählte Perspektive oder den Cube) ändern, indem Sie auf das Cubesymbol klicken und anschließend mit dem Dialogfeld **Cubeauswahl** einen neuen Cube oder eine neue Perspektive auswählen. Sie können auch auf **Measuregruppe**klicken und eine neue Measuregruppe in der Dropdownliste auswählen, um die Objekte zu filtern, die im Bereich **Metadaten** verfügbar sind.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48171150"
   
  Bei Verwendung eines tabellarischen Modells enthält die Funktionsliste sowohl MDX-Funktionen als auch DAX-Funktionen. Andernfalls enthält die Liste nur MDX-Funktionen. Ein mehrdimensionales Modell kann DAX-Funktionen nicht direkt verwenden, obwohl eine Objektdefinition einen DAX-Ausdruck enthalten kann.  
   
- Tipp: Die Ordner, die DAX-Funktionen enthalten, sind vollständig in Großbuchstaben aufgeführt. Alle anderen Ordner enthalten MDX-Funktionen. Es gibt z. B. zwei Ordner für statistische Funktionen: **STATISTICAL** enthält die verwandten DAX-Funktionen.  
+ Tipp: Die Ordner mit DAX-Funktionen sind in allen Großbuchstaben aufgeführt. Alle anderen Ordner enthalten MDX-Funktionen. Es gibt z. B. zwei Ordner für statistische Funktionen: **STATISTISCHE** enthält die verwandten DAX-Funktionen.  
   
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste auf eines der im Bereich **Metadaten** angezeigten Elemente klicken, wird ein Kontextmenü angezeigt, das die folgenden Optionen enthält:  
@@ -47,8 +47,8 @@ ms.locfileid: "48171150"
 |Option|Description|  
 |------------|-----------------|  
 |**Abfrage hinzufügen**|Klicken Sie, um dem unteren Bereich des Abfrageerstellungsbereichs das ausgewählte Objekt hinzuzufügen.|  
-|**Zu Filter hinzufügen**|Klicken Sie, um dem Filterbereich des **Browsers**die ausgewählte Dimension, das Attribut, die Hierarchie oder die Ebene hinzuzufügen.<br /><br /> Hinweis: Diese Option ist nur aktiviert, wenn eine Dimension, ein Attribut, eine Hierarchie oder eine Ebene ausgewählt wird.|  
-|**Kopieren**|Klicken Sie auf diese Option, um der Zwischenablage das ausgewählte Element hinzuzufügen.<br /><br /> Hinweis: Mit dieser Option wird der vollqualifizierte Name des Objekts kopiert.|  
+|**Zu Filter hinzufügen**|Klicken Sie, um dem Filterbereich des **Browsers**die ausgewählte Dimension, das Attribut, die Hierarchie oder die Ebene hinzuzufügen.<br /><br /> Hinweis: Diese Option ist nur aktiviert, wenn eine Dimension, Attribut, Hierarchie oder Ebene ausgewählt wird.|  
+|**Kopieren**|Klicken Sie auf diese Option, um der Zwischenablage das ausgewählte Element hinzuzufügen.<br /><br /> Hinweis: Diese Option wird der vollqualifizierte Name des Objekts kopiert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Symbolleiste &#40;Registerkarte ' Browser ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

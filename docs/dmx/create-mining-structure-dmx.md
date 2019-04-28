@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854342"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Struktur*  
+ *structure*  
  Ein eindeutiger Name für die Struktur.  
   
  *spaltendefinitionsliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltendefinitionen.  
   
- *Holdout-maxpercent*  
+ *holdout-maxpercent*  
  Eine ganze Zahl zwischen 1 und 100, die den Prozentsatz der für Tests vorgesehenen Daten angibt.  
   
- *Holdout-maxcases*  
+ *holdout-maxcases*  
  Eine ganze Zahl, die die maximale Anzahl von Fällen angibt, die für Tests verwendet werden sollen.  
   
  Wenn der für die maximale Anzahl von Fällen angegebene Wert größer ist als die Anzahl der Eingabefälle, werden alle Eingabefälle für Tests verwendet, und eine Warnung wird ausgegeben.  
@@ -60,7 +60,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Sie sollten einen Ausgangswert angeben, wenn Sie sicherstellen müssen, dass eine Partition reproduziert werden kann.  
   
- Standardwert: REPEATABLE(0)  
+ Standard: REPEATABLE(0)  
   
 ## <a name="remarks"></a>Hinweise  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Strukturspalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Datamining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Datentypen &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Inhaltstypen &#40;Datamining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Inhaltstypen &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Spaltenverteilungen &#40;Datamining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Spaltenverteilungen &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modellierungsflags &#40;Datamining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modellierungsflags &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Beispiel 2: Angeben des Zurückhaltungsprozentsatzes und des Ausgangswerts  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Beispiel 2: Angeben des Zurückhaltungsprozentsatzes und einem Startwert  
  Die folgende Klausel kann nach der Spaltendefinitionsliste hinzugefügt werden, um ein Dataset zu definieren, das zum Testen aller der Miningstruktur zugeordneten Miningmodelle verwendet werden kann. Mithilfe der folgenden Klausel wird ein Testsatz erstellt, der 25 Prozent der gesamten Eingabefälle umfasst, ohne die maximale Anzahl der Fälle einzuschränken. Der Wert 5.000 wird als Ausgangswert zum Erstellen der Partition verwendet. Wenn Sie einen Ausgangswert angeben, werden für den Testsatz bei jeder Verarbeitung der Miningstruktur die gleichen Fälle ausgewählt, so lange die zugrunde liegenden Daten nicht geändert werden.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Beispiel 3: Angeben des Zurückhaltungsprozentsatzes und der maximalen Anzahl der Fälle  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Beispiel 3: Prozentsatz für Zurückgehaltene Daten und die maximale Anzahl von Fällen angeben  
  Mit der folgenden Klausel wird ein Testsatz erstellt, der entweder 25 Prozent der gesamten Eingabefälle oder 2.000 Fälle umfasst, je nachdem, welche Zahl kleiner ist. Da 0 als Ausgangswert angegeben ist, wird anhand des Namens der Miningstruktur der Anfangswert erstellt, der für die Stichprobe von Eingabefällen verwendet wird.  
   
 ```  

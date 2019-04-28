@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864001"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) Eigenschaft, um anzugeben, welche Zeilen an den Server - alle Zeilen oder nur geänderte Zeilen gesendet werden.  

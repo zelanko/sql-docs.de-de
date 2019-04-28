@@ -22,30 +22,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5150dfbccb6998c69151ca4cf02d9fe88a222830
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856016"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jedes Statistikobjekt, das für die Tabellen, Indizes und indizierte Sichten in der Datenbank vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Jeder Index verfügt über eine entsprechende Statistikzeile mit dem gleichen Namen und der gleichen ID (**index_id** = **stats_id**), doch verfügt nicht jede Statistikzeile über einen entsprechenden Index.  
+  Enthält eine Zeile für jedes Statistikobjekt, das für Tabellen, Indizes und indizierte Sichten in der Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden ist. Jeder Index verfügt über eine entsprechende Statistikzeile mit dem gleichen Namen und der gleichen ID (**index_id** = **stats_id**), doch verfügt nicht jede Statistikzeile über einen entsprechenden Index.  
   
- Die Katalogsicht [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) stellt Statistikinformationen für jede Spalte in der Datenbank bereit. Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
+ Die Katalogsicht [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) stellt Statistikinformationen für jede Spalte in der Datenbank bereit. Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, zu dem diese Statistik gehört.|  
 |**name**|**sysname**|Der Name der Statistik. Ist eindeutig innerhalb des Objekts.|  
 |**stats_id**|**int**|Die ID der Statistik. Ist eindeutig innerhalb des Objekts.<br /><br />Wenn Statistiken einem Index entsprechen den *Stats_id* Wert ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.|  
-|**"auto_created"**|**bit**|Gibt an, ob die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt wurde.<br /><br /> 0 = Statistik wurde nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt.<br /><br /> 1 = Statistik wurde von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt.|  
+|**auto_created**|**bit**|Gibt an, ob die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]automatisch erstellt wurde.<br /><br /> 0 = Statistik wurde nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]automatisch erstellt.<br /><br /> 1 = Statistik wurde von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]automatisch erstellt.|  
 |**user_created**|**bit**|Gibt an, ob die Statistik von einem Benutzer erstellt wurde.<br /><br /> 0 = Statistik wurde nicht von einem Benutzer erstellt.<br /><br /> 1 = Statistik wurde von einem Benutzer erstellt.|  
 |**no_recompute**|**bit**|Gibt an, ob die Statistik mit der **NORECOMPUTE** -Option erstellt wurde.<br /><br /> 0 = Statistik wurde nicht mithilfe der **NORECOMPUTE** -Option erstellt.<br /><br /> 1 = Statistik wurde mithilfe der **NORECOMPUTE** -Option erstellt.|  
 |**has_filter**|**bit**|0 = Statistik hat keinen Filter und wird für alle Zeilen berechnet.<br /><br /> 1 = Statistik hat einen Filter und wird nur für Zeilen berechnet, die der Filterdefinition entsprechen.|  
-|**filter_definition-Spalten**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die in der gefilterten Statistik enthalten sind.<br /><br /> NULL = Nicht gefilterte Statistik.|  
-|**is_temporary**|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Geben Sie an, ob die Statistik temporär ist. Temporäre Statistik unterstützt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] sekundären Datenbanken, die für schreibgeschützten Zugriff aktiviert sind.<br /><br /> 0 = Statistik ist nicht temporär.<br /><br /> 1 = Statistik ist temporär.|  
+|**filter_definition**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die in der gefilterten Statistik enthalten sind.<br /><br /> NULL = Nicht gefilterte Statistik.|  
+|**is_temporary**|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Geben Sie an, ob die Statistik temporär ist. Eine temporäre Statistik unterstützt sekundäre [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Datenbanken, die für schreibgeschützten Zugriff aktiviert sind.<br /><br /> 0 = Statistik ist nicht temporär.<br /><br /> 1 = Statistik ist temporär.|  
 |**is_incremental**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob die Statistiken als inkrementelle Statistiken erstellt werden.<br /><br /> 0 = Die Statistiken sind nicht inkrementell.<br /><br /> 1 = Die Statistiken sind inkrementell.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -74,7 +74,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
  [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Statistiken](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [Sys. dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

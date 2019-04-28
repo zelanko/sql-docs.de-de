@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871409"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
   Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index erforderlich ist.  
@@ -118,7 +118,7 @@ ms.locfileid: "48146740"
     >  Sie können einen nicht gruppierten Index erweitern, indem Nichtschlüsselspalten zusätzlich zu Indexschlüsselspalten eingeschlossen werden. Diese zusätzlichen Spalten werden auf der Blattebene des nicht gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Sie können kombinieren `varchar`, `nvarchar`, `varbinary`, oder `sql_variant` Spalten, die dazu führen, dass die definierte Gesamtbreite der Tabelle 8.060 Bytes überschreitet. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine `varchar`-, `varbinary`- oder `sql_variant`-Spalte und von 4.000 Byte für `nvarchar`-Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten. Dies gilt auch für die Zeilen auf Blattebene eines nicht gruppierten Indexes, die eingeschlossene Spalten enthalten.  
+    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine `varchar`-, `varbinary`- oder `sql_variant`-Spalte und von 4.000 Byte für `nvarchar`-Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten. Dies gilt auch für die Zeilen auf Blattebene eines nicht gruppierten Indexes, die eingeschlossene Spalten enthalten.  
   
      Wenn der nicht gruppierte Index keine eingeschlossenen Spalten besitzt, verwenden Sie die Werte aus Schritt 1 einschließlich aller Änderungen, die ggf. in Schritt 1.3 vorgenommen wurden:  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146740"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus, um zu bestimmen, genau wie viel Speicherplatz zum Speichern der LOB-Datentypen verwendet wird `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, und `image` Werte ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des nicht gruppierten Indexes zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` und `image` erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des nicht gruppierten Indexes zu addieren.  
   
 -   Komprimierung  
   

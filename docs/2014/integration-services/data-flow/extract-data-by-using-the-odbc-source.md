@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864947"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrahieren von Daten mithilfe der ODBC-Quelle
   In diesem Verfahren wird beschrieben, wie Sie Daten mithilfe einer ODBC-Quelle extrahieren. Um eine ODBC-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
@@ -32,11 +32,11 @@ ms.locfileid: "58376118"
   
 5.  Wählen Sie die Datenzugriffsmethode aus.  
   
-    -   **Tabellenname**: Wählen Sie eine Tabelle oder Sicht in der Datenbank, oder geben Sie einen regulären Ausdruck ein, um die Tabelle zu identifizieren, zu der der ODBC-Verbindungs-Manager stellt eine Verbindung her.  
+    -   **Tabellenname**: Wählen Sie in der Datenbank eine Tabelle oder Sicht aus, oder geben Sie einen regulären Ausdruck ein, um die Tabelle zu identifizieren, mit der der ODBC-Verbindungs-Manager eine Verbindung herstellt.  
   
          Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.  
   
-    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl aus, oder klicken Sie auf **Durchsuchen** die SQL-Abfrage aus einer Textdatei zu laden.  
+    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl ein, oder klicken Sie auf **Durchsuchen**, um die SQL-Abfrage aus einer Textdatei zu laden.  
   
 6.  Sie können auf **Vorschau** klicken, um bis zu 200 Datenzeilen anzuzeigen, die von der ODBC-Quelle extrahiert werden.  
   

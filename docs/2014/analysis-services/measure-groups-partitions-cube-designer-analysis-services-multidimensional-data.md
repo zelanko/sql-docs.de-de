@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727986"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Measuregruppen (Registerkarte 'Partitionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measuregruppen** der Registerkarte **Partitionen** des Cube-Designers können Sie die Partitionen verwalten, die mit den einzelnen Measuregruppen verknüpft sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Partitionen**  
  Zeigt ein Raster mit einer Liste von Partitionen an, von denen die ausgewählte Measuregruppe unterstützt wird. Das Raster enthält die folgenden Spalten:  
   
- **(Ordnungszahl)**  
+ **(Ordinal)**  
  Zeigt die Ordnungsposition der Partition innerhalb der Measuregruppe an.  
   
  Wählen Sie durch Klicken die gesamte Zeile für die Partition aus.  

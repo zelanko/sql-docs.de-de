@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812707"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Konfigurieren der verwalteten Sicherung (SQL Server Management Studio)
   Die **Managed Backup** Dialogfeld können Sie so konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardwerte für die Instanz. In diesem Thema wird beschrieben, wie Sie mit diesem Dialogfeld die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Standardeinstellungen für die Instanz konfigurieren und welche Optionen Sie dabei berücksichtigen müssen. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz konfiguriert ist, gelten die Einstellungen gelten für jede danach erstellte Datenbank.  
@@ -51,7 +51,7 @@ ms.locfileid: "52523630"
   
  Mitglied der `db_backupoperator`-Datenbankrolle mit Berechtigungen `ALTER ANY CREDENTIAL` und `EXECUTE` für gespeicherte Prozedur `sp_delete_backuphistory`.  
   
- Berechtigungen `SELECT` für die `smart_admin.fn_get_current_xevent_settings`-Funktion.  
+ `SELECT` Berechtigungen für die `smart_admin.fn_get_current_xevent_settings` Funktion.  
   
  `EXECUTE` Berechtigungen für die `smart_admin.sp_get_backup_diagnostics` gespeicherte Prozedur. Außerdem sind `VIEW SERVER STATE`-Berechtigungen erforderlich, da andere Systemobjekte, die diese Berechtigung erfordern, intern aufgerufen werden.  
   

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812746"
 ---
 # <a name="change-source-control"></a>Quellcodeverwaltung ändern
   Erstellt und verwaltet die Verbindungen und Bindungen, über die eine lokal gespeicherte Projektmappe bzw. ein Projekt mit einem Ordner in der Datenbank für die Quellcodeverwaltung verknüpft ist.  
@@ -30,8 +30,8 @@ ms.locfileid: "48092540"
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Tastatur  
- **Binden**  
+## <a name="options"></a>Optionen  
+ **Bind**  
  Ordnet ausgewählte Elemente einem angegebenen Speicherort auf dem Quellcode-Verwaltungsserver zu. So können Sie mit dieser Schaltfläche beispielsweise den letzten bekannten Ordner und die Datenbank auf dem Quellcode-Verwaltungsserver binden. Wenn kein zuletzt verwendeter Serverordner bzw. eine Serverdatenbank gefunden wird, werden Sie aufgefordert einen anderen bzw. eine andere anzugeben.  
   
  **Durchsuchen**  
@@ -80,7 +80,7 @@ ms.locfileid: "48092540"
 |Unknown|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
 |Nicht gesteuert|Das Element wurde nicht unter Quellcodeverwaltung gestellt.|  
   
- **Aufheben der Bindung**  
+ **Unbind**  
  Anzeigen der **Quellcodeverwaltung** im Dialogfeld können Sie ausgewählte Elemente aus der quellcodeverwaltung zu entfernen und dauerhaft von ihren aktuellen Ordnern trennen.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72feb645258f7e1521f3f0380ca9de42b85a1192
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807339"
 ---
 # <a name="create-an-extended-events-session"></a>Erstellen einer Sitzung für erweiterte Ereignisse
   Eine Sitzung für erweiterte Ereignisse können Sie mit dem Abfrage-Editor erstellen, können aber auch im Objekt-Explorer eine Sitzung erstellen. Im Objekt-Explorer bietet erweiterte Ereignisse zwei Benutzeroberflächen, die Sie verwenden können, erstellen, ändern und Anzeigen von ereignissitzungsdaten - einen Assistenten, der Sie durch den Prozess der Ereignis-Sitzung führt, und eine Benutzeroberfläche für neue Sitzungen, die erweiterte Konfigurationsoptionen bereitstellt. Sie können Sitzungen für erweiterte Ereignisse erstellen, um die SQL Server-Ablaufverfolgung zu diagnostizieren, sodass Sie z. B. folgende Aufgaben ausführen können:  

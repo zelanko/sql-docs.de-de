@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722702"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Erstellen von Drillthroughabfragen mit DMX
   Für alle Modelle, die Drillthrough unterstützen, können Fall- und Strukturdaten durch Erstellen einer DMX-Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder einem beliebigen anderen Client abgerufen werden.  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  In diesem Beispiel wird ein Alias verwendet, um die Strukturspalte umzubenennen. Wenn Sie der Strukturspalte keinen Alias zuordnen, wird die Spalte mit dem Namen "Expression" zurückgegeben. Dies ist das Standardverhalten für alle unbenannten Spalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Datamining&#41;](drillthrough-queries-data-mining.md)   
+ [Drillthroughabfragen &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)   
  [Drillthrough für Miningstrukturen](drillthrough-on-mining-structures.md)  
   
   

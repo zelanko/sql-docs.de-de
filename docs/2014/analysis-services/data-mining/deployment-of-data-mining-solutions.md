@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722690"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Bereitstellen von Data Mining-Projektmappen
   Der letzte Schritt im Data Mining-Prozess besteht darin, die Modelle in einer Produktionsumgebung bereitzustellen. Die Bereitstellung ist wichtig, da dadurch die Modelle Benutzern zur Verfügung gestellt werden, damit Sie irgendeine der folgenden Aufgaben ausführen können:  
@@ -85,6 +85,6 @@ ms.locfileid: "48087640"
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeitung von mehrdimensionalen Modellobjekten](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Data Mining Abfrageschnittstellen](data-mining-query-tools.md)   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

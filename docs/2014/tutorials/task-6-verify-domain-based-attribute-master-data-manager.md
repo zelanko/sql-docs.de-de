@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866160"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
   In dieser Aufgabe überprüfen Sie mit **Master Data Manager**, ob die Entität **Bundesland** in **MDS** erstellt wird und ob das Attribut **Bundesland** der Entität **Lieferant** ein domänenbasiertes Attribut ist, das von der Entität **Bundesland** abhängig ist.  
   
 1.  Wechseln Sie zur **Master Data Manger**-Webanwendung.  

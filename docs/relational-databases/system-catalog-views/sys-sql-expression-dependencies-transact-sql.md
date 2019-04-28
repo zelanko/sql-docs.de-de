@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856104"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,24 +70,24 @@ ms.locfileid: "47826184"
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|Benutzerkontensteuerung|  
-|Anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Gefilterter Index|Ja**|nein|  
-|Gefilterte Statistik|Ja**|nein|  
-|Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Gespeicherte CLR-Prozedur|nein|Benutzerkontensteuerung|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|CLR-benutzerdefinierte Funktion|nein|Benutzerkontensteuerung|  
-|CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|Erweiterte gespeicherte Prozeduren|nein|Benutzerkontensteuerung|  
-|Warteschlange|nein|Benutzerkontensteuerung|  
-|Synonym|nein|Benutzerkontensteuerung|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|Benutzerkontensteuerung|  
-|XML-Schemaauflistung|nein|Benutzerkontensteuerung|  
-|Partitionsfunktion|nein|Benutzerkontensteuerung|  
+|Tabelle|Ja*|Ja|  
+|Sicht|Ja|Ja|  
+|Gefilterter Index|Ja**|Nein|  
+|Gefilterte Statistik|Ja**|Nein|  
+|Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|Ja|Ja|  
+|Gespeicherte CLR-Prozedur|Nein|Ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
+|CLR-benutzerdefinierte Funktion|Nein|Ja|  
+|CLR-Trigger (DML und DDL)|Nein|Nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|Erweiterte gespeicherte Prozeduren|Nein|Ja|  
+|Warteschlange|Nein|Ja|  
+|Synonym|Nein|Ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Ja|  
+|XML-Schemaauflistung|Nein|Ja|  
+|Partitionsfunktion|Nein|Ja|  
   
  \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur dann, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   

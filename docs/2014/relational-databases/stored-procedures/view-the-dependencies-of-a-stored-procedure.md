@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856503"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Anzeigen der Abhängigkeiten einer gespeicherten Prozedur
     
@@ -27,9 +27,9 @@ ms.locfileid: "48224420"
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **So zeigen Sie die Abhängigkeiten einer Prozedur an mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Anzeigen die Abhängigkeiten einer Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
