@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726605"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Erteilen von Berechtigungen zum Verarbeiten (Analysis Services)
   Als Administrator können Sie eine dedizierte Rolle für Verarbeitungsvorgänge in Analysis Services erstellen. Mit dieser können Sie diesen Task an andere Benutzer oder Anwendungen für unbeaufsichtigte Geplante Verarbeitung delegieren. Die Berechtigungen zum Verarbeiten können auf der Datenbank-, Cube-, Dimensions- und Miningstrukturebene erteilt werden. Wenn Sie nicht mit einem/einer umfangreichen Cube/tabellarischen Datenbank arbeiten, wird empfohlen, Verarbeitungsberechtigungen auf Datenbankebene zu gewähren, einschließlich aller Objekte und derer, zwischen denen Abhängigkeiten bestehen.  
@@ -27,9 +27,9 @@ ms.locfileid: "48181267"
  Berechtigungen werden über Rollen gewährt, die Objekte mit Berechtigungen und Windows-Benutzerkonten oder Windows-Gruppenkonten verknüpfen. Beachten Sie, dass Berechtigungen additiv sind. Wenn eine Rolle die Berechtigung erteilt, einen Cube zu verarbeiten, während eine zweite Rolle die Berechtigung gewährt, eine Dimension zu verarbeiten, werden die Berechtigungen aus beiden Rollen kombiniert. Der Benutzer erhält so die Berechtigung, sowohl den Cube als auch die angegebene Dimension innerhalb der Datenbank zu verarbeiten.  
   
 > [!IMPORTANT]  
->  Ein Benutzer, dessen Rolle nur Verarbeitungsberechtigungen besitzt, ist nicht in der Lage, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für die Verbindung zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und die Verarbeitung von Objekten zu verwenden. Diese Tools erfordern die `Read Definition` Berechtigung für den Zugriff auf Objektmetadaten. Ohne die Möglichkeit, eines der beiden Tools zu verwenden, müssen Sie ein XMLA-Skript nutzen, um einen Verarbeitungsvorgang auszuführen.  
+>  Ein Benutzer, dessen Rolle nur Verarbeitungsberechtigungen besitzt, ist nicht in der Lage, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für die Verbindung zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und die Verarbeitung von Objekten zu verwenden. Diese Tools erfordern die `Read Definition`-Berechtigung für den Zugriff auf Objektmetadaten. Ohne die Möglichkeit, eines der beiden Tools zu verwenden, müssen Sie ein XMLA-Skript nutzen, um einen Verarbeitungsvorgang auszuführen.  
 >   
->  Wir empfehlen Ihnen auch Grant `Read Definition` Berechtigungen für Testzwecke verwenden. Ein Benutzer, der über `Read Definition` und `Process Database` Berechtigungen können Verarbeiten von Objekten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]interaktiv. Weitere Einzelheiten finden Sie unter [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  Es wird empfohlen, zu Testzwecken auch `Read Definition`-Berechtigungen zu erteilen. Ein Benutzer, der über die Berechtigungen `Read Definition` und `Process Database` verfügt, kann Objekte interaktiv in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verarbeiten. Weitere Einzelheiten finden Sie unter [Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Festlegen von Verarbeitungsberechtigungen auf Datenbankebene  
  In diesem Abschnitt erfahren Sie, wie Sie die Verarbeitung aller Cubes, Dimensionen, Miningstrukturen und Miningmodelle in der Datenbank durch Nicht-Administratoren ermöglichen.  
@@ -94,6 +94,6 @@ ms.locfileid: "48181267"
  [Verarbeiten von Datenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)   
  [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Erteilen von Berechtigungen von Definitionen für Objektmetadaten lesen &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

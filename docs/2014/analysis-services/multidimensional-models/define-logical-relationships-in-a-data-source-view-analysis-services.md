@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40cf44e416a7507693b44cc691a89ad3a5ac95af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726444"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
   Im Datenquellensicht-Assistenten und im Datenquellensicht-Designer werden automatisch Beziehungen zwischen Tabellen definiert, die einer Datenquellensicht (Data Source View, DSV) hinzugefügt werden. Das Definieren der Beziehungen erfolgt auf Grundlage der Beziehungen in der zugrunde liegenden Datenbank oder auf Grundlage der von Ihnen angegebenen Namensübereinstimmungskriterien.  

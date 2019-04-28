@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802675"
 ---
 # <a name="schema-section"></a>Schemaabschnitt
 Schema-Abschnitt ist erforderlich. Wie im vorherige Beispiel gezeigt wird, schreibt ADO detaillierter Metadaten zu jeder Spalte, um die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beizubehalten. Allerdings erfordert um in der XML-Code zu laden, ADO nur die Namen der Spalten und das Rowset, das sie angehören. Hier ist ein Beispiel für ein Schema "minimal":  

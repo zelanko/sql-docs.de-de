@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703186"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Miningstruktur-Diagrammdesigner (Data Mining)
   Verwenden Sie die Sicht **Mininggenauigkeitsdiagramm** , um die Leistung der Miningmodelle zu vergleichen, die auf der ausgewählten Miningstruktur aufbauen.  
@@ -35,9 +35,9 @@ ms.locfileid: "48171970"
   
 -   [Klassifizierung Registerkarte &#40;Mininggenauigkeitsdiagrammsicht&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     Zeigt eine Klassifikationsmatrix für Modelle, die auf ausgewählten der `Input Selection` Registerkarte.  
+     Zeigt eine Klassifikationsmatrix für Modelle an, die auf der Registerkarte `Input Selection` ausgewählt wurden.  
   
--   [Registerkarte ' Kreuzvalidierung ' &#40;Mininggenauigkeitsdiagrammsicht&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Übergreifende Überprüfung &#40;Registerkarte, Mininggenauigkeitsdiagramm-Sicht&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Legen Sie Optionen fest, und generieren Sie Kreuzvalidierungsergebnisse für die ausgewählte Miningstruktur.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171970"
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Strukturansicht &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Miningmodelle-Sicht &#40;Datamining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)  
   
   

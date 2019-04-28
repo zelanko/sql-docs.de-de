@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701376"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Hinzufügen von Kontointelligenz zu einer Dimension
   Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen verwenden, um Konten im Zeitverlauf zu aggregieren.  
@@ -51,7 +51,7 @@ ms.locfileid: "48183440"
     |**Liability**|`LastNonEmpty`|Das Geld oder der Wert von Dingen, das bzw. der zu einem bestimmten Zeitpunkt geschuldet wird. Für diesen Kontotyp werden im Verlauf der Zeit keine Akkumulierungen und daher auch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Asset**|`LastNonEmpty`|Das Geld oder der Wert von Dingen, die zu einem bestimmten Zeitpunkt im Besitz sind. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen und somit keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Balance**|`LastNonEmpty`|Die Anzahl von etwas zu einem bestimmten Zeitpunkt. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen, jedoch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält.|  
-    |**Flow**|`Sum`|Eine inkrementelle Anzahl von etwas. Dieser Kontotyp aggregiert werden, als eine `Sum` im Laufe der Zeit konvertiert jedoch nicht Regeln zur währungskonvertierung Konvertierung.|  
+    |**Flow**|`Sum`|Eine inkrementelle Anzahl von etwas. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, es werden jedoch keine Konvertierungen mithilfe von Regeln zur Währungskonvertierung ausgeführt.|  
     |**Expense**|`Sum`|Ausgegebenes Geld oder der Wert, der für Dinge ausgegeben wurde. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
     |**Income**|`Sum`|Erhaltenes Geld oder der Wert von erhaltenen Dingen. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
   

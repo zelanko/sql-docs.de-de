@@ -1,5 +1,5 @@
 ---
-title: UPDATE MEMBER-Anweisung (MDX) | Microsoft Docs
+title: UPDATE MEMBER-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694820"
 ---
-# <a name="mdx-data-definition---update-member"></a>MDX-Datendefinition - UPDATE-Element
+# <a name="mdx-data-definition---update-member"></a>MDX-Datendefinition – UPDATE MEMBER
 
 
   Aktualisiert ein vorhandenes berechnetes Element.  
@@ -41,7 +41,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *MDX_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), auf den das Element aktualisiert wird.  
   
- *Eigenschaftsname*  
+ *Property_name*  
  Eine gültige Zeichenfolge, die den Namen einer Eigenschaft eines berechneten Elements bereitstellt.  
   
  *Property_Value*  
@@ -61,11 +61,11 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Eigenschaftsbezeichner|Bedeutung|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Eine Office Stil Formatzeichenfolge, die die Clientanwendung zum Anzeigen von Zellwerten verwenden kann.|  
+|FORMAT_STRING|Ein Office Style-Formatzeichenfolge, die der Clientanwendung zum Anzeigen von Zellwerten verwenden kann.|  
 |VISIBLE|Ein Wert, der bestimmt, ob das berechnete Element in einem Schemarowset sichtbar ist. Sichtbare berechnete Elemente hinzugefügt werden können, um eine Gruppe, die [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) Funktion. Ein Wert ungleich 0 zeigt an, dass das berechnete Element sichtbar ist. Der Standardwert für diese Eigenschaft ist *Visible*.<br /><br /> Berechnete Elemente, die nicht sichtbar sind, werden üblicherweise als Zwischenschritte in komplexeren berechneten Elementen verwendet. Auf diese berechneten Elemente können auch andere Arten von Elementen (z. B. Measures) verweisen.|  
 |NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der MDX beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt.|  
 |CAPTION|Ein Zeichenfolgenwert, der die Beschriftung angibt, die von der Clientanwendung zum Anzeigen des Elements verwendet wird.|  
-|DISPLAY_FOLDER|Ein Zeichenfolgenwert, der den Pfad des Anzeigeordners angibt, in dem das Element von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) als ebenentrennzeichen. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
+|DISPLAY_FOLDER|Ein Zeichenfolgenwert, der den Pfad des Anzeigeordners angibt, in dem das Element von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) als ebenentrennzeichen. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  
   
 ## <a name="see-also"></a>Siehe auch  

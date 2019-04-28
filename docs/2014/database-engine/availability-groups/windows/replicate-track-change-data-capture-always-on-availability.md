@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814056"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579320"
   
 -   Verwendung der Mergereplikation, während die Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe angehört:  
   
-    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden.  
+    -   Pushabonnement: Dem Verleger und Verteiler müssen mindestens ausführen [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbanken müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
+    -   Pullabonnement: Die Datenbanken für Verleger, Verteiler und Abonnent muss auf mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
 -   Das Speichern der Verteilungsdatenbank in einer Verfügbarkeitsgruppe wird nicht unterstützt.  
   

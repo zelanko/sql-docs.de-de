@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807524"
 ---
 # <a name="database-engine-cross-instance-features"></a>Instanzübergreifende Datenbank-Engine-Funktionen
   Dieser Abschnitt enthält die Tools und Aufgaben, die dem Verwalten und dem Überwachen von Servern und Datenbankinstanzen zugeordnet werden.  

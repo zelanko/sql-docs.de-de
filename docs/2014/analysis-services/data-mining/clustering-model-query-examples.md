@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715357"
 ---
 # <a name="clustering-model-query-examples"></a>Beispiele für Clustermodellabfragen
   Wenn Sie eine Abfrage für ein Data Mining-Modell erstellen, können Sie Metadaten über das Modell abrufen oder eine Inhaltsabfrage erstellen, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
@@ -56,7 +56,7 @@ ms.locfileid: "48087490"
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt grundlegende Metadaten über das Clustermodell `TM_Clustering`zurück, das Sie im Rahmen des Lernprogramms zu Data Mining-Grundlagen erstellt haben. Die im übergeordneten Knoten eines Clustermodells verfügbaren Metadaten umfassen den Namen des Modells, die Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten im Modell. Diese Abfrage ruft die Metadaten mithilfe einer DMX-Inhaltsabfrage vom übergeordneten Knoten des Modells ab:  
   
 ```  
@@ -178,7 +178,7 @@ WHERE NODE_TYPE = 5
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Zurückgeben eines Clusterprofils mit gespeicherten Systemprozeduren  
+###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Zurückgeben eines Clusterprofils mit gespeicherten Prozeduren  
  Statt eigene Abfragen mit DMX zu erstellen, können Sie auch die gespeicherten Systemprozeduren aufrufen, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Arbeit mit Clustern verwendet. Im folgenden Beispiel wird veranschaulicht, wie anhand intern gespeicherter Prozeduren das Profil für einen Cluster mit der ID 002 zurückgegeben wird.  
   
 ```  
@@ -258,7 +258,7 @@ WHERE IsInNode('001')
  [Zurück zum Anfang](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Beispielabfrage 8: Vorhersagen von Ergebnissen eines Clustermodells  
- Wenn das von Ihnen erstellte Clustermodell ein vorhersagbares Attribut enthält, können Sie anhand des Modells Vorhersagen über Ergebnisse treffen. Jedoch das Modell behandelt das vorhersagbare Attribut unterschiedlich, abhängig davon, ob Sie die vorhersagbare Spalte, um festlegen `Predict` oder `PredictOnly`. Wenn Sie festlegen, dass die Verwendung der Spalte, die `Predict`, die Werte für dieses Attribut zum Clustermodell hinzugefügt und erscheinen im fertig gestellten Modell als Attribute. Legen Sie jedoch die Verwendung der Spalte auf `PredictOnly` fest, werden die Werte nicht zum Erstellen von Clustern verwendet. Stattdessen der Modus abgeschlossen ist, erstellt der clustering-Algorithmus neue Werte für die `PredictOnly` Attribut auf Basis der Cluster, der jeweilige Fall gehört.  
+ Wenn das von Ihnen erstellte Clustermodell ein vorhersagbares Attribut enthält, können Sie anhand des Modells Vorhersagen über Ergebnisse treffen. Das Modell behandelt das vorhersagbare Attribut jedoch unterschiedlich, abhängig davon, ob Sie die vorhersagbare Spalte auf `Predict` oder `PredictOnly` festlegen. Wenn Sie die Verwendung der Spalte auf `Predict` festlegen, werden die Werte für dieses Attribut zum Clustermodell hinzugefügt und erscheinen im fertig gestellten Modell als Attribute. Legen Sie jedoch die Verwendung der Spalte auf `PredictOnly` fest, werden die Werte nicht zum Erstellen von Clustern verwendet. Stattdessen erstellt der Clustering-Algorithmus neue Werte für das Attribut `PredictOnly` auf Basis der Cluster, zu denen der jeweilige Fall gehört.  
   
  Die folgende Abfrage stellt einen einzelnen neuen Fall für das Modell bereit, wobei die einzigen Informationen über den Fall Alter und Geschlecht sind. Die SELECT-Anweisung gibt das vorhersagbare Attribut/Wert-Paar an, für das Sie sich interessieren, und die Funktion [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) gibt Aufschluss über die Wahrscheinlichkeit, dass ein Fall mit diesen Attributen das gewünschte Ergebnis aufweist.  
   
@@ -272,7 +272,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Beispiel für Ergebnisse bei der Verwendung festgelegt ist, um `Predict`:  
+ Beispiel für Ergebnisse, wenn die Verwendung auf `Predict` festgelegt wird:  
   
 |Bike Buyer|expression|  
 |----------------|----------------|  
@@ -389,8 +389,8 @@ NATURAL PREDICTION JOIN
  Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](data-mining-queries.md)   
- [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)   
+ [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)  
   
   

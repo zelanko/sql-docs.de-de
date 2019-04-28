@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717467"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Massenladen-Objektmodell besteht aus den SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
@@ -63,7 +63,7 @@ ms.locfileid: "52750472"
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Einschränkungen werden weiter überprüft. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
- "Connectioncommand"  
+ ConnectionCommand  
  Gibt ein vorhandenes Verbindungsobjekt (zum Beispiel das ADO- oder ICommand Command-Objekt), das XML-Massenladen verwendet werden soll. Sie können der "connectioncommand"-Eigenschaft verwenden, anstatt eine Verbindungszeichenfolge mit der ConnectionString-Eigenschaft. Der Transaction-Eigenschaft muss auf "true" festgelegt werden, bei der Verwendung von "connectioncommand".  
   
  Wenn Sie die "ConnectionString" und "connectioncommand"-Eigenschaft verwenden, verwendet XML-Massenladen die zuletzt angegebene Eigenschaft.  
@@ -115,7 +115,7 @@ ms.locfileid: "52750472"
   
  Der Standardwert ist FALSE.  
   
- "Schemagen"  
+ SchemaGen  
  Gibt an, ob die erforderlichen Tabellen vor dem Ausführen eines Massenladevorgangs erstellt werden sollen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die im Zuordnungsschema angegebenen Tabellen erstellt (die Datenbank muss vorhanden sein). Wenn mindestens eine der Tabellen in der Datenbank bereits vorhanden sind, bestimmt die SGDropTables-Eigenschaft an, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden.  
   
  Der Standardwert für die Eigenschaft "schemagen" ist "false". "Schemagen" erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. "Schemagen" der Fall ist, FOREIGN KEY-Einschränkungen jedoch in der Datenbank erstellen werden, wenn die Übereinstimmung gefunden werden kann `sql:relationship` und `sql:key-fields` Anmerkungen im Zuordnungsschema und das Schlüsselfeld aus einer einzelnen Spalte besteht.  
@@ -137,7 +137,7 @@ ms.locfileid: "52750472"
  Der Standardwert ist FALSE.  
   
  TempFilePath  
- Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur hilfreich, wenn die Transaktionseigenschaft auf TRUE gesetzt ist.) Das beim XML-Massenladen verwendete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konto muss auf diesen Pfad zugreifen können. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
+ Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nützlich, nur, wenn die Transaktionseigenschaft auf "true" festgelegt ist.) Sie müssen sicherstellen, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für XML-Massenladen verwendete Konto verfügt auf diesen Pfad zugreifen. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
   
  Transaction  
  Gibt an, ob das Massenladen als Transaktion erfolgen soll. Bei einem Fehlschlagen des Massenspeicherns ist ein Rollback gewährleistet. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, erfolgt das Massenladen in einem Transaktionskontext. Die TempFilePath-Eigenschaft ist nützlich, nur, wenn Transaktion auf "true" festgelegt ist.  

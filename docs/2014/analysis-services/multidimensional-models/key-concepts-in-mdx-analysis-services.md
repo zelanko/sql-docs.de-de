@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700757"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
   Bevor Sie mehrdimensionale Daten mit MDX (Multidimensional Expressions) abfragen können oder MDX-Ausdrücke zur Verwendung in einem Cubes zu erstellen, sollten Sie sich mit Konzepten und Begriffen der Mehrdimensionalität vertraut machen.  
@@ -103,7 +103,7 @@ ms.locfileid: "52512801"
 ## <a name="key-attributes"></a>Schlüsselattribute  
  Modelle sind Sammlungen miteinander verwandter Objekte, deren Zuordnungen mit Schlüsseln und Indizes verwaltet werden. Analysis Services-Modelle funktionieren auf dieselbe Weise. Für jede Dimension (Äquivalent zu Tabellen im relationalen Modell) existiert ein Schlüsselattribut. Das **Schlüsselattribut** wird in Fremdschlüssel-Beziehungen zur Faktentabelle (Measuregruppe) verwendet. Alle nicht-Schlüsselattribute in der Dimension werden (direkt oder indirekt) mit dem Schlüsselattribut verknüpft.  
   
- Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Stellen Sie sich Datumswerte vor: Für die täglichen Verkäufe brauchen Sie Datumswerte bis zum Tag. Für Kontingente reichen möglicherweise Quartalsangaben, aber wenn Ihre Analysedaten aus Rennergebnissen von Sportereignissen bestehen, benötigen Sie unter Umständen sogar Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
+ Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Berücksichtigen Sie Datumswerte aus: Für die täglichen Verkäufe müssen Sie die Werte, die bis zum Tag Datum; für Kontingente vierteljährlich kann ausreichend sein, aber wenn Ihre Analysedaten aus rennergebnissen von Sportereignissen besteht, die Auflösung möglicherweise sehr gut Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
   
  Währung ist ein weiteres Beispiel: eine finanzanwendung kann monetärer Werte aus vielen Dezimalstellen, verfolgen, während Ihrer lokalen Schule Kurator nur Werte vollständigen Dollarbetrag möglicherweise. Das Konzept der Körnung ist wichtig, um die Speicherung unnötiger Daten zu vermeiden. Indem Sie Millisekunden von einem Zeitstempel oder Cents von einem Verkaufsbetrag abschneiden, können Sie Speicherungs- und Verarbeitungszeit sparen, wenn der jeweilige Detailgrad für Ihre Analyse nicht relevant ist.  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817026"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "52748423"
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
 |**description**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
-|**Beibehaltungsdauer**|**int**|Die Beibehaltungsdauer für den gesamten veröffentlichungssatz, wobei die Einheit wird durch den Wert des der **Retention_period_unit** Spalte.|  
+|**retention**|**int**|Die Beibehaltungsdauer für den gesamten veröffentlichungssatz, wobei die Einheit wird durch den Wert des der **Retention_period_unit** Spalte.|  
 |**publication_type**|**tinyint**|Zeigt an, ob die Veröffentlichung gefiltert wird.<br /><br /> **0** = nicht gefiltert.<br /><br /> **1** = gefiltert.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung. Dieser Wert wird beim Hinzufügen der Veröffentlichung generiert.|  
-|**DesignMasterID**|**uniqueidentifier**|Zur künftigen Verwendung reserviert.|  
+|**designmasterid**|**uniqueidentifier**|Zur künftigen Verwendung reserviert.|  
 |**parentid**|**uniqueidentifier**|Zeigt die übergeordnete Veröffentlichung an, aus der die aktuelle gleichgeordnete oder als Teilmenge verwendete Veröffentlichung erstellt wurde (wird für hierarchische Veröffentlichungstopologien verwendet).|  
 |**sync_mode**|**tinyint**|Der Synchronisierungsmodus dieser Veröffentlichung:<br /><br /> **0** = Native.<br /><br /> **1** = Zeichen.|  
 |**allow_push**|**int**|Zeigt an, ob die Veröffentlichung Pushabonnements zulässt.<br /><br /> **0** = Pushabonnements sind nicht zulässig.<br /><br /> **1** = Pushabonnements sind zulässig.|  
@@ -77,8 +77,8 @@ ms.locfileid: "52748423"
 |**allow_subscriber_initiated_snapshot**|**bit**|Gibt an, dass Abonnenten den Prozess initiieren können, mit dem die Momentaufnahme für eine Veröffentlichung mithilfe parametrisierter Filter generiert wird. **1** gibt an, dass Abonnenten den momentaufnahmeprozess initiieren können.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Gibt an, wie viele Minuten ein Abonnent in der Warteschlange warten muss, damit der Momentaufnahme-Generierungsprozess gestartet wird, wenn parametrisierte Filter verwendet werden.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Gibt an, wie viele Minuten ein Abonnent wartet, dass der Momentaufnahme-Generierungsprozess abgeschlossen wird, wenn parametrisierte Filter verwendet werden.|  
-|**Verteiler**|**sysname**|Der Name des Verteilers für die Veröffentlichung.|  
-|**snapshot_jobid**|**'binary(16)'**|Identifiziert den Agentauftrag, der die Momentaufnahme generiert, wenn der Abonnent den Momentaufnahmeprozess initiieren kann.|  
+|**distributor**|**sysname**|Der Name des Verteilers für die Veröffentlichung.|  
+|**snapshot_jobid**|**binary(16)**|Identifiziert den Agentauftrag, der die Momentaufnahme generiert, wenn der Abonnent den Momentaufnahmeprozess initiieren kann.|  
 |**allow_web_synchronization**|**bit**|Gibt an, ob die Veröffentlichung für die websynchronisierung aktiviert ist, in denen **1** bedeutet, dass die websynchronisierung für die Veröffentlichung aktiviert ist.|  
 |**web_synchronization_url**|**nvarchar(500)**|Gibt den Standardwert für die Internet-URL an, die für die Websynchronisierung verwendet wird.|  
 |**allow_partition_realignment**|**bit**|Gibt an, ob Löschvorgänge an den Abonnenten gesendet werden, wenn durch eine Änderung der Zeile auf dem Verleger die Partition geändert wird.<br /><br /> **0** = Daten einer alten Partition verbleiben auf dem Abonnenten, auf diese Daten auf dem Verleger vorgenommene Änderungen nicht an diesen Abonnenten repliziert werden, wobei ein auf dem Abonnenten vorgenommene Änderungen an den Verleger repliziert werden.<br /><br /> **1** = Löschvorgänge an den Abonnenten auf die Ergebnisse einer partitionsänderung widerzuspiegeln, durch das Entfernen von Daten, die nicht mehr Bestandteil der Partition des Abonnenten ist.<br /><br /> Weitere Informationen finden Sie unter [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Hinweis: Daten, die auf dem Abonnenten verbleiben, wenn dieser Wert ist **0** behandelt werden sollte, als wäre er schreibgeschützt; Dies wird jedoch nicht unbedingt erzwungen vom Replikationssystem.|  
@@ -90,8 +90,8 @@ ms.locfileid: "52748423"
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

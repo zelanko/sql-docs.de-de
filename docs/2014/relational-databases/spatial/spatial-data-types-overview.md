@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715027"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
   Es gibt zwei Typen von räumlichen Daten. Der `geometry`-Datentyp unterstützt planare bzw. euklidische Daten. Der `geometry`-Datentyp entspricht der Open Geospatial Consortium (OGC) Simple Features for SQL Specification Version 1.1.0. und ist auch mit SQL MM (ISO-Standard) kompatibel.  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- In `CompoundCurve`-Instanzen sind sowohl `LineString`- als auch `CircularString`-Komponenten zulässig, sodass nur zwei Punkte der Liniensegmente des Kreisslices bekannt sein müssen.  In diesem Codebeispiel wird gezeigt, wie ein `CompoundCurve` verwendet wird, um die gleiche Abbildung zu speichern:  
+ `CompoundCurve` Instanzen können `LineString` und `CircularString` Komponenten, damit nur zwei Punkte der Liniensegmente des kreisslices bekannt sein müssen.  In diesem Codebeispiel wird gezeigt, wie ein `CompoundCurve` verwendet wird, um die gleiche Abbildung zu speichern:  
   
 ```sql  
 DECLARE @g geometry;  

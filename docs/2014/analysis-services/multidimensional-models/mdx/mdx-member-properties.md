@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e650ee07183123f5c90e24129282820825cee652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725454"
 ---
 # <a name="using-member-properties-mdx"></a>Verwenden von Elementeigenschaften (MDX)
   Elementeigenschaften enthalten die grundlegenden Informationen zu jedem Element in jedem Tupel. Zu den grundlegenden Informationen gehören der Elementname, die übergeordnete Ebene, die Anzahl der untergeordneten Elemente usw. Elementeigenschaften sind für alle Elemente auf der jeweiligen Ebene verfügbar. Organisatorisch werden Elementeigenschaften als in Dimensionen organisierte Daten behandelt, die in einer einzigen Dimension gespeichert werden.  
@@ -44,7 +44,7 @@ ms.locfileid: "48075547"
  Sowohl systeminterne und benutzerdefinierte Elementeigenschaften können mithilfe des abgerufen werden die `PROPERTIES` Schlüsselwort oder [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
   
 ## <a name="using-the-properties-keyword"></a>Verwenden des PROPERTIES-Schlüsselworts  
- Die `PROPERTIES` -Schlüsselwort Gibt an, die Elementeigenschaften, die für eine bestimmte Achsendimension verwendet werden sollen. Die `PROPERTIES` Schlüsselwort ist verborgen, innerhalb der `<axis specification>` -Klausel der MDX- [wählen](/sql/mdx/mdx-data-manipulation-select) Anweisung:  
+ Das `PROPERTIES`-Schlüsselwort gibt die Elementeigenschaften an, die für eine bestimmte Achsendimension verwendet werden müssen. Die `PROPERTIES` Schlüsselwort ist verborgen, innerhalb der `<axis specification>` -Klausel der MDX- [wählen](/sql/mdx/mdx-data-manipulation-select) Anweisung:  
   
 ```  
 SELECT [<axis_specification>  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  Weitere Informationen zu den Werten `<set>` und `<axis_name>` finden Sie unter [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
- Die `<dim_props>` -Klausel können Sie die Abfrage Dimensions-, Ebenen- und Elementeigenschaften, die mit der `PROPERTIES` Schlüsselwort. Nachstehend ist die Syntax der `<dim_props>` -Klausel definiert:  
+ Die `<dim_props>`-Klausel ermöglicht es Ihnen, mithilfe des `PROPERTIES`-Schlüsselworts Dimensions-, Ebenen- und Elementeigenschaften abzufragen. Nachstehend ist die Syntax der `<dim_props>` -Klausel definiert:  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  

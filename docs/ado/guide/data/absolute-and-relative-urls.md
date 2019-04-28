@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802940"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
 Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann sein, eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw.*.*  
@@ -33,7 +33,7 @@ Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im 
   
  Eine relative URL in der Regel besteht aus nur die *Pfad*, und optional die *Ressource*, aber kein *Schema* oder *Server*. In den folgenden Tabellen definieren die einzelnen Bestandteile von der vollständigen URL-Format.  
   
- *Partitionsschema*  
+ *scheme*  
  Gibt an, wie die *Ressource* zugegriffen werden soll.  
   
  *server*  
@@ -90,5 +90,5 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
   
 ## <a name="see-also"></a>Siehe auch  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

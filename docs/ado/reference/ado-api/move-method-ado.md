@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863487"
 ---
 # <a name="move-method-ado"></a>Move-Methode (ADO)
 Verschiebt die Position des aktuellen Datensatzes in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -38,8 +38,8 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  Eine signierte **lange** Ausdruck, der die Anzahl von Datensätzen angibt, die die Position des aktuelle Datensatzes verschiebt.  
   
- *Starten*  
- Optional. Ein **Zeichenfolge** Wert oder **Variant** , die ein Lesezeichen ergibt. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
+ *Start*  
+ Dies ist optional. Ein **Zeichenfolge** Wert oder **Variant** , die ein Lesezeichen ergibt. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **verschieben** -Methode wird für alle unterstützt **Recordset** Objekte.  

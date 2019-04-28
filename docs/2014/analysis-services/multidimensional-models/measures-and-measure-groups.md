@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725799"
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
   Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
@@ -39,7 +39,7 @@ ms.locfileid: "48092630"
 |[Konfigurieren von Measureeigenschaften](configure-measure-properties.md)|Wenn Sie den Cube-Assistenten zum Starten des Cubes verwendet haben, müssen Sie möglicherweise die Aggregationsmethode ändern, ein Datenformat anwenden, die Sichtbarkeit des Measures in Clientanwendungen festlegen oder einen Measureausdruck hinzufügen, um die Daten vor dem Aggregieren von Werten zu bearbeiten.|  
 |[Konfigurieren von Measuregruppeneigenschaften](configure-measure-group-properties.md)|In einem mehrdimensionalen Modell entspricht eine Measuregruppe einer Faktentabelle im als Quelle verwendeten Data Warehouse. Anhand von Eigenschaften für eine Measuregruppe können Sie Cacheverhalten, Speicher und Verarbeitungsrichtlinien festlegen, die kollektiv auf Ebene der Measuregruppe gelten. Die Partitionskonfiguration richtet sich teilweise nach den Eigenschaften, die Sie für Measuregruppenobjekte festgelegten.|  
 |[Verwenden von Aggregatfunktionen](use-aggregate-functions.md)|Machen Sie sich mit den Aggregationsmethoden vertraut, die einem Measure zugewiesen werden können.|  
-|[Definieren des semiadditiven Verhaltens](define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
+|[Erweiterung auswählen](define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
 |[Verknüpfte Measuregruppen](linked-measure-groups.md)|Führen Sie eine vorhandene Measuregruppe in anderen Cubes in derselben Datenbank oder in anderen Analysis Services-Datenbanken einem anderen Zweck zu.|  
   
 ##  <a name="bkmk_measure"></a> Measures  

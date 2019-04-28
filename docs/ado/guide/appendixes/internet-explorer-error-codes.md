@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719867"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Internet Explorer-Fehlercodes für Remote Data Service
 Die folgende Tabelle enthält die Microsoft® Internet Explorer-Fehlercodes, die im Zusammenhang mit der Verwendung von Remote Data Service. Die positive decimal Übersetzung der niedrigen zwei Bytes, die negative dezimale Übersetzung von der vollständigen Fehlercode und die Hexadezimalwerte werden angezeigt.
 
 |Internet Explorer (Wininet)-Fehler|Number|Description|
 |------------------------------------------|------------|-----------------|
-|**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|Internet-Clientfehler: Keine Verbindung zum Server.|
+|**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|Internet-Clientfehler: Kann keine Verbindung mit Server herstellen.|
 |**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|Internet-Clientfehler: Zurücksetzen der Verbindung.|
 |**IDS_WinInet_Error**|8193 -2146820095 0x800A2001|Internet-Clientfehler.|
-|**IDS_WinInet_ InvalidServerResponse**|8430-2146819858 0x800A20EE|Internet-Clientfehler: Ungültige Serverantwort.|
+|**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|Internet-Clientfehler: Ungültige Serverantwort.|
 |**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|Internet-Clientfehler: SSL-Fehler (möglicherweise 32 KB Daten hochladen Einschränkung).|
-|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|Internet-Clientfehler: Timeout bei der Dienstanforderung.|
+|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|Internet-Clientfehler: Anforderungstimeout.|

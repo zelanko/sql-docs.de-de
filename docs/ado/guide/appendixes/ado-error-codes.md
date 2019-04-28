@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edafc34bc4a2e9e860edd1101b5ce17bddd02a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720009"
 ---
 # <a name="capture-ado-error-codes"></a>Erfassen von ADO-Fehlercodes
 Zusätzlich zu den anbieterfehlern zurückgegeben, der [Fehler](../../../ado/reference/ado-api/error-object.md) Objekte die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung ADO selbst kann zurückgeben, Fehler, der Mechanismus für die Ausnahmebehandlung der Laufzeit-Umgebung. Verwenden Sie die Fehler abfangen Mechanismus Ihre bevorzugte Programmiersprache, z. B. die **On Error** in Microsoft® Visual Basic-Anweisung oder der **Try / Catch** -block in Microsoft Visual C++®, ADO-Fehler zu erfassen.

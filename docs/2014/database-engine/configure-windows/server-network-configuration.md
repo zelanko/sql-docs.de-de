@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809478"
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
   Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
@@ -56,7 +56,7 @@ ms.locfileid: "53372412"
  SPNs können auch verwendet werden, um die Clientauthentifizierung bei der Verbindung mit NTLM sicherer zu gestalten. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](sql-server-browser-service-database-engine-and-ssas.md).  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Ausblenden von SQL Server  
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser ausgeführt wird, antwortet er auf Abfragen mit dem Namen, der Version und den Verbindungsinformationen für jede installierte Instanz. Das Flag **HideInstance** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll. Clientanwendungen können zwar eine Verbindung herstellen, aber sie müssen über die erforderlichen Verbindungsinformationen verfügen. Weitere Informationen finden Sie unter [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](../sql-server-database-engine-overview.md).  

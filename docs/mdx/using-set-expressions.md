@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Mengenausdrücken | Microsoft Docs
+title: Verwenden von Mengenausdrücken | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861704"
 ---
 # <a name="using-set-expressions"></a>Verwenden von Mengenausdrücken
 
@@ -23,7 +23,7 @@ ms.locfileid: "34744109"
   
  Der vollständige Ausdruck einer Menge besteht aus null oder mehr explizit angegebenen Tupeln, die in geschweiften Klammern stehen:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
   
  Die in einem Mengenausdruck angegebenen Elementausdrücke werden in Tupelausdrücke mit einem Element konvertiert.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "34744109"
   
  besteht aus zwei Elementen der Measures-Dimension. Auf der ROWS-Achse besteht die Menge  
   
- {([Product].[Product Categories].[Category].&[4], [Date].[Calendar].[Calendar Year].&[2004]),  
+ {([Product]. [Product Categories]. [Category]. & [4], [Date]. [Calendar]. [Kalenderjahr]. & [2004]),  
   
- ([Product].[Product Categories].[Category].&[1], [Date].[Calendar].[Calendar Year].&[2003]),  
+ ([Product]. [Product Categories]. [Category]. & [1], [Date]. [Calendar]. [Kalenderjahr]. & [2003]),  
   
- ([Product].[Product Categories].[Category].&[3], [Date].[Calendar].[Calendar Year].&[2004])}  
+ ([Product]. [Product Categories]. [Category]. & [3], [Date]. [Calendar]. [Calendar Year]. & [2004])}  
   
  aus drei Tupeln, von denen jede zwei explizite Verweise auf Elemente in der Product Categories-Hierarchie der Product-Dimension und der Calendar-Hierarchie der Date-Dimension enthält.  
   

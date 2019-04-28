@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691708"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Ergebnisse, Detailansicht (Dialogfeld)
   In diesem Dialogfeld werden die Ergebnisse der Richtlinienauswertung angezeigt, wenn Sie eine Richtlinie mit dem Dialogfeld **Richtlinien auswerten** ausgeführt und auf **Auswerten**geklickt haben. Dieses Dialogfeld ist schreibgeschützt und hilft Ihnen dabei zu ermitteln, welcher Teil eines Eigenschaftsausdrucks fehlschlagen könnte.  

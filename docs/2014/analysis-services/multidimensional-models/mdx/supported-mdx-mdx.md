@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725444"
 ---
 # <a name="supported-mdx-mdx"></a>Unterstütztes MDX (MDX)
   Die folgenden Anweisungen und Funktionen werden in MDX-Skripts (Multidimensional Expressions) unterstützt:  
@@ -39,7 +39,7 @@ ms.locfileid: "48099250"
   
  [CASE-Anweisung &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
   
- [Erstellen von CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
  [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "48099250"
   
  [FREEZE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [IF Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [IF-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [Dies &#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [This &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  MDX unterstützt Zuweisungen für folgende Zelleigenschaften: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` und `FONT_SIZE`. Weitere Informationen finden Sie unter [Verwenden von Zelleigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX unterstützt außerdem Zuweisungen für die `NON_EMPTY_BEHAVIOR` Eigenschaft der [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) Anweisung.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709264"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52544415"
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Verwenden von Management Studio zum Konfigurieren von Analysis Services  
  Management Studio stellt sowohl für tabellarische als auch für mehrdimensionale Instanzen einen neuen Ordner namens „Verwaltung“ bereit, der vom Benutzer initiierte xEvent-Sitzungen enthält. Sie können mehrere Sitzungen gleichzeitig ausführen. In der aktuellen Implementierung unterstützt die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Benutzeroberfläche der erweiterten Ereignisse jedoch nicht das Aktualisieren oder Wiedergeben einer vorhandenen Sitzung.  
   
- ![Ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "Ssas_extended_events_ssms_start")  
+ ![ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "ssas_extended_events_ssms_start")  
   
  **Auswählen von Ereignissen**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52544415"
   
  **Konfigurieren** ist eine Option am äußersten Ende des Dialogfelds.  
   
- ![Konfigurieren von SSAS-Xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "Konfigurieren von Ssas-Xevents")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  Wählen Sie bei der Konfiguration auf der Registerkarte „Ereignisfelder“ **TextData** aus, damit dieses Feld neben dem Ereignis auftaucht und dabei Rückgabewerte anzeigt, einschließlich auf dem Server ausgeführter Abfragen.  
   

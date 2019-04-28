@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724195"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_cycle_errorlog
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes Mal, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gestartet, wird das aktuelle Fehlerprotokoll in umbenannt **ErrorLog. 1**; **ErrorLog. 1** wird **ErrorLog. 2**, **ErrorLog. 2** wird **ErrorLog. 3**und so weiter. Mit**sp_cycle_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
+ Bei jedem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das aktuelle Fehlerprotokoll in **errorlog.1**umbenannt, **errorlog.1** wird in **errorlog.2**umbenannt, **errorlog.2** wird in **errorlog.3**umbenannt usw. Mit**sp_cycle_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Ausführungsberechtigungen für **sp_cycle_errorlog** sind auf die Mitglieder der festen Serverrolle **sysadmin** beschränkt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll durchlaufen.  
+ Im folgenden Beispiel wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll durchlaufen.  
   
 ```  
 EXEC sp_cycle_errorlog ;  

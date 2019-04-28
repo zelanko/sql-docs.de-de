@@ -1,5 +1,5 @@
 ---
-title: Mit Ausnahme der (MDX) | Microsoft Docs
+title: Mit Ausnahme der (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690883"
 ---
-# <a name="except-mdx-function"></a>EXCEPT-Funktion (MDX)
+# <a name="except-mdx-function"></a>Mit Ausnahme der (MDX)-Funktion
 
 
   Wertet zwei Mengen aus und entfernt die Tupel in der ersten Menge, die auch in der zweiten Menge vorhanden sind. Optional werden doppelte Werte beibehalten.  
@@ -36,7 +36,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn **alle** wird angegeben, die die Funktion in der ersten Menge gefundene doppelte Werte beibehalten; in der zweiten Menge gefundene doppelte Werte werden dennoch entfernt. Die Elemente werden entsprechend ihrer Reihenfolge in der ersten Menge zurückgegeben.  
+ Wenn **alle** wird angegeben, in der ersten Menge gefundene doppelte Werte beibehalten, werden weiterhin in der zweiten Menge gefundene doppelte Werte entfernt. Die Elemente werden entsprechend ihrer Reihenfolge in der ersten Menge zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieser Funktion.  
@@ -58,7 +58,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [- &#40;Außer&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

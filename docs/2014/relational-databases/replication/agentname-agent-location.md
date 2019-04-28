@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721872"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Speicherort des &lt;AgentName&gt;-Agents
   Der Merge-Agent (für Mergeabonnements) und der Verteiler-Agent (für Transaktions- und Momentaufnahme-Abonnements) werden auf dem Verteiler oder auf dem Abonnenten ausgeführt. Wenn der Agent auf dem Verteiler ausgeführt wird, wird das Abonnement als Pushabonnement, und bei Ausführung auf dem Abonnenten als Pullabonnement bezeichnet. Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](subscribe-to-publications.md). Die in diesem Schritt des Assistenten erstellten Abonnements gehören dem ausgewählten Typ an. Um Abonnements beider Typen zu erstellen, müssen Sie den Assistenten zweimal ausführen.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813792"
 >  Nach dem Erstellen eines Abonnements kann der Abonnementtyp nicht mehr geändert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Erstellen eines Pullabonnements](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
   

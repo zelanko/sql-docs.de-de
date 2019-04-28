@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722252"
 ---
 # <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die Regressionsformel zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, ob ein neuer Datenpunkt in das Modell passt. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -49,7 +49,7 @@ ms.locfileid: "48201010"
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Verwenden des Data Mining-Schemarowsets zur Ermittlung der für ein Modell verwendeten Parameter  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Verwenden die Data Mining-Schemarowsets zur Ermittlung der für ein Modell verwendeten Parameter  
  Metadaten für das Modell finden Sie, indem Sie das Data Mining-Schemarowset abfragen. Dazu gehören beispielsweise das Erstellungsdatum des Modells, das Datum der letzten Verarbeitung, der Name der Miningstruktur, auf der das Modell basiert, und der Name der als vorhersagbares Attribut verwendeten Spalte. Sie können auch die Parameter zurückgeben, die beim ersten Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -113,7 +113,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (Statistik)|  
 |11 (Intercept)|  
   
- Weitere Informationen über die Bedeutung der einzelnen Werttypen für Regressionsmodelle finden Sie unter [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ Weitere Informationen über die Bedeutung der einzelnen Werttypen für Regressionsmodelle finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
  [Zurück zum Anfang](#bkmk_top)  
   
@@ -146,7 +146,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen von Einkommen mit einer SINGLETON-Abfrage  
+###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen von Einkommen mit einer Singleton-Abfrage  
  Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Sie können z. B. die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen auswählen **Singleton-Abfrage**, und geben dann `20` als Wert für **Alter**.  
   
 ```  
@@ -203,8 +203,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
- [Datamining-Abfragen](data-mining-queries.md)   
- [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Data Mining-Abfrage](data-mining-queries.md)   
+ [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

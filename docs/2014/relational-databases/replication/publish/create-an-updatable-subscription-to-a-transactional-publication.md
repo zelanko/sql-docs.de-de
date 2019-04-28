@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691594"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)
 
@@ -29,7 +29,7 @@ Bei einer Transaktionsreplikation können am Abonnenten vorgenommene Änderungen
 
 Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisierbare Abonnements** des **Assistenten für neue Abonnements** zur Verfügung. Diese Seite ist nur verfügbar, wenn Sie eine Transaktionsveröffentlichung für aktualisierbare Abonnements aktiviert haben. Weitere Informationen zum Aktivieren aktualisierbarer Abonnements finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](enable-updating-subscriptions-for-transactional-publications.md).   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Konfigurieren Sie ein aktualisierbares Abonnement vom Verleger  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Konfigurieren eines aktualisierbaren Abonnements vom Verleger aus  
 
 1. Stellen Sie mit dem Verleger in Microsoft SQL Server Management Studio eine Verbindung her, und erweitern Sie dann den Serverknoten.
 2. Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .
@@ -52,7 +52,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 
 8. Schließen Sie den Assistenten ab.
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Konfigurieren Sie ein aktualisierbares Abonnement vom Abonnenten
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Konfigurieren eines aktualisierbaren Abonnements vom Abonnenten aus
 
 
 1. Stellen Sie mit dem Abonnenten in SQL Server Management Studio eine Verbindung her, und erweitern Sie dann den Serverknoten.
@@ -79,7 +79,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 
 11. Schließen Sie den Assistenten ab.
 
-## <a name="create-an-immediate-updating-pull-subscription"></a>Erstellen Sie ein sofort aktualisierbares Pullabonnement
+## <a name="create-an-immediate-updating-pull-subscription"></a>Erstellen eines sofort aktualisierbaren Pullabonnements
 
 1. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Abonnements mit sofortigem Update unterstützt, indem Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)ausführen. 
 
@@ -121,7 +121,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 Damit wird das Pullabonnement beim Verleger registriert. 
 
 
-## <a name="create-an-immediate-updating-push-subscription"></a>Erstellen Sie ein sofort aktualisierbares Pushabonnement 
+## <a name="create-an-immediate-updating-push-subscription"></a>Erstellen eines sofort aktualisierbaren Pushabonnements 
 
 1. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Abonnements mit sofortigem Update unterstützt, indem Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)ausführen. 
 
@@ -159,7 +159,7 @@ Damit wird das Pullabonnement beim Verleger registriert.
      * `2` – Verwenden Sie einen vorhandenen benutzerdefinierten Anmeldenamen für den Verbindungsserver, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>Erstellen Sie ein Pullabonnement mit der in der Warteschlange aktualisieren ##
+## <a name="create-a-queued-updating-pull-subscription"></a>Erstellen eines Pullabonnements mit verzögertem Update über eine Warteschlange ##
 
 1. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Abonnements mit verzögertem Update über eine Warteschlange unterstützt, indem Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)ausführen. 
 
@@ -200,7 +200,7 @@ Damit wird das Pullabonnement beim Verleger registriert.
 1. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Abonnements mit verzögertem Update über eine Warteschlange unterstützt, indem Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)ausführen. 
 
     * Wenn „allow_queued_tran“ im Resultset den Wert 1 hat, unterstützt die Veröffentlichung Abonnements mit sofortigem Update.
-    * Wenn „allow_queued_tran“ im Resultset den Wert 0 hat, muss die Veröffentlichung erneut erstellt und die Unterstützung von Abonnements mit verzögertem Update über eine Warteschlange aktiviert werden. Weitere Informationen finden Sie unter Vorgehensweise: Aktivieren von aktualisierbaren Abonnements für Transaktionsveröffentlichungen (Replikationsprogrammierung mit Transact-SQL).
+    * Wenn „allow_queued_tran“ im Resultset den Wert 0 hat, muss die Veröffentlichung erneut erstellt und die Unterstützung von Abonnements mit verzögertem Update über eine Warteschlange aktiviert werden. Weitere Informationen finden Sie unter „Vorgehensweise: Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen (Replikationsprogrammierung mit Transact-SQL)“.
 
 2. Überprüfen Sie auf dem Verleger, ob die Veröffentlichung Pushabonnements unterstützt, indem Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)ausführen. 
 

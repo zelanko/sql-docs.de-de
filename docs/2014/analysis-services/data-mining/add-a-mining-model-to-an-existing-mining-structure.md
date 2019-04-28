@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704007"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur
   Nach dem Hinzufügen des ersten Modells zu einer Miningstruktur können Sie noch weitere Miningmodelle hinzufügen. Jedes dieser Modelle muss Spalten enthalten, die in der Struktur vorhanden sind; Sie können jedoch die Verwendung für jedes Miningmodell unterschiedlich definieren. Weitere Informationen zum Definieren der Spalten von Miningmodellen finden Sie unter [Miningmodellspalten](mining-model-columns.md).  

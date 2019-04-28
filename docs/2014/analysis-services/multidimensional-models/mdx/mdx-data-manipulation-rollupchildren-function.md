@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699764"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Arbeiten mit der RollupChildren-Funktion (MDX)
   Die MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [für Suchen und ersetzen] Skriptfunktion Rollup der untergeordneten Elemente eines Elements, das einen anderer unäroperator auf jedes untergeordnete Element angewendet und gibt den Wert des Rollups wird als eine Zahl zurück. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  

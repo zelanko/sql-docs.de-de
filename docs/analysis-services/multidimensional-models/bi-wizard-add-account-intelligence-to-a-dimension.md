@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Kontointelligenz zu einer Dimension | Microsoft Docs
+title: Hinzufügen von Kontointelligenz zu einer Dimension | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717547"
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI-Assistent – Hinzufügen von Kontointelligenz zu einer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen zum Aggregieren von Konten über die Zeit verwenden.  
+  Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen verwenden, um Konten im Zeitverlauf zu aggregieren.  
   
 > [!NOTE]  
 >  Kontointelligenz ist nur für Dimensionen verfügbar, die auf vorhandenen Datenquellen basieren. Für Dimensionen, die ohne Datenquelle erstellt wurden, müssen Sie den Schemagenerierungs-Assistenten ausführen, um vor dem Hinzufügen von Kontointelligenz eine Datenquellensicht zu erstellen.  
@@ -42,7 +42,7 @@ ms.locfileid: "34023467"
   
     |Serverkontotyp|Aggregation|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**Statistisch**|**InclusionThresholdSetting**|Ein berechnetes Verhältnis von etwas oder eine Anzahl von etwas, das nicht im Verlauf der Zeit aggregiert wird. Für diesen Kontotyp wird keine Konvertierung von Währungsdaten mit Konvertierungsregeln ausgeführt.|  
+    |**Statistisch**|**Keine**|Ein berechnetes Verhältnis von etwas oder eine Anzahl von etwas, das nicht im Verlauf der Zeit aggregiert wird. Für diesen Kontotyp wird keine Konvertierung von Währungsdaten mit Konvertierungsregeln ausgeführt.|  
     |**Liability**|**LastNonEmpty**|Das Geld oder der Wert von Dingen, das bzw. der zu einem bestimmten Zeitpunkt geschuldet wird. Für diesen Kontotyp werden im Verlauf der Zeit keine Akkumulierungen und daher auch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Asset**|**LastNonEmpty**|Das Geld oder der Wert von Dingen, die zu einem bestimmten Zeitpunkt im Besitz sind. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen und somit keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Balance**|**LastNonEmpty**|Die Anzahl von etwas zu einem bestimmten Zeitpunkt. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen, jedoch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält.|  

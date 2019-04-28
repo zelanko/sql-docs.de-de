@@ -1,5 +1,5 @@
 ---
-title: DrillupLevel (MDX) | Microsoft Docs
+title: DrillupLevel (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00851557b502bda3a98763eff4bac9c3abdccff
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690777"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 
@@ -36,7 +36,7 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **DrillupLevel** Funktion gibt eine Menge von Elementen hierarchisch organisiert basierend auf den Elementen in der angegebenen Menge. Die Reihenfolge der Elemente in der angegebenen Menge wird beibehalten.  
+ Die **DrillupLevel** Funktion gibt eine Menge untergeordneter Elemente hierarchisch organisiert werden basierend auf den Elementen in der angegebenen Menge. Die Reihenfolge der Elemente in der angegebenen Menge wird beibehalten.  
   
  Wenn ein Ebenenausdruck angegeben wird, die **DrillupLevel** Funktion erstellt die Menge, indem nur die Elemente, die über der angegebenen Ebene abgerufen. Wenn ein Mengenausdruck angegeben ist und kein Element der angegebenen Ebene in der angegebenen Menge vorhanden ist, wird die angegebene Menge zurückgegeben.  
   

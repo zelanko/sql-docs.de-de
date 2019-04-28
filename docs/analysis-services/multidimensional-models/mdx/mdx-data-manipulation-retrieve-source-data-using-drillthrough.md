@@ -1,5 +1,5 @@
 ---
-title: Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX) | Microsoft Docs
+title: Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81c873d0ea6e5c21d97fc719ce1c72a773df43e5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802839"
 ---
-# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX - Datenbearbeitung: Abrufen von Quelldaten verwenden von DRILLTHROUGH
+# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX – Datenbearbeitung: Abrufen von Quelldaten mit DRILLTHROUGH
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Die [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)-Anweisung wird in MDX (Multidimensional Expressions) dazu verwendet, ein Rowset aus den Quelldaten für eine Cubezelle abzurufen.  
   
@@ -51,6 +51,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

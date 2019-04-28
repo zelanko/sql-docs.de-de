@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700990"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension
   Fügen Sie einem Cube oder einer Dimension eine Erweiterung für benutzerdefinierte Elementformeln hinzu, um die Standardaggregation, die einem Dimensionselement zugeordnet ist, durch die Ergebnisse eines MDX-Ausdrucks (Multidimensional Expressions) zu ersetzen. (Durch diese Erweiterung wird die `CustomRollupColumn`-Eigenschaft für ein angegebenes Attribut in einer Dimension festgelegt.)  

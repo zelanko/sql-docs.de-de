@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1627a0058336be654dbd18c52e27cdbae614c686
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722532"
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -44,7 +44,7 @@ ms.locfileid: "48206150"
  [Abrufen einer Regressionsformel aus einem Entscheidungsstrukturmodell](#bkmk_Query6)  
   
 ##  <a name="bkmk_top2"></a> Suchen nach Informationen über ein Entscheidungsstrukturmodell  
- Um aussagekräftige Abfragen des Inhalts eines Entscheidungsstrukturmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchem Knotentyp welche Art von Informationen gespeichert ist. Weitere Informationen finden Sie unter [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Um aussagekräftige Abfragen des Inhalts eines Entscheidungsstrukturmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchem Knotentyp welche Art von Informationen gespeichert ist. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellparametern aus dem Data Mining-Schemarowset  
  Durch Abfrage des Data Mining-Schemarowsets können Sie Metadaten zum Modell ermitteln, wie das Datum der Modellerstellung, das Datum der letzten Modellverarbeitung, den Namen der Miningstruktur, auf der das Modell basiert, und den Namen der als vorhersagbares Attribut verwendeten Spalte. Sie können auch die Parameter zurückgeben, die beim ersten Erstellen des Modells verwendet wurden.  
@@ -67,7 +67,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  Diese Abfrage gibt alle Knoten vom Typ 2 zurück, die die Knoten auf oberster Ebene einer Struktur sind, welche ein bestimmtes vorhersagbares Attribut darstellt.  
   
 > [!NOTE]  
->  Die Spalte `CHILDREN_CARDINALITY`, muss in Klammern, um ihn von dem reservierten MDX-Schlüsselwort mit demselben Namen zu unterscheiden, eingeschlossen werden.  
+>  Die Spalte `CHILDREN_CARDINALITY` muss in Klammern eingeschlossen werden, um sie von dem reservierten MDX-Schlüsselwort mit dem gleichen Namen unterscheiden zu können.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,7 +87,7 @@ WHERE NODE_TYPE = 2
  Die nachfolgende verwandte Abfrage gibt die untergeordneten Elemente für diese fünf Untergruppen zurück, zusammen mit der Verteilung der Attribute und Werte in den untergeordneten Knoten. Da statistische Informationen wie Unterstützung, Wahrscheinlichkeit und Varianz in der geschachtelten Tabelle `NODE_DISTRIBUTION`gespeichert sind, wird in diesem Beispiel das Schlüsselwort `FLATTENED` zur Ausgabe der Spalten der geschachtelten Tabelle verwendet.  
   
 > [!NOTE]  
->  Die geschachtelte Tabellenspalte `SUPPORT`, muss in Klammern, um ihn von dem reservierten Schlüsselwort mit demselben Namen zu unterscheiden, eingeschlossen werden.  
+>  Die verschachtelte Tabellenspalte `SUPPORT` muss in Klammern eingeschlossen werden, um sie von dem reservierten Schlüsselwort mit dem gleichen Namen unterscheiden zu können.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -193,7 +193,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  Wenn Ihr Anbieter keine hierarchischen Rowsets wie die hier dargestellten unterstützt, können unter Verwendung des FLATTENED-Schlüsselworts in der Abfrage die Ergebnisse als Tabelle zurückgeben lassen, die NULL-Werte anstelle der wiederholten Spaltenwerte enthält. Weitere Informationen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](nested-tables-analysis-services-data-mining.md) oder [Grundlegendes zur SELECT-Anweisung (DMX)](/sql/dmx/understanding-the-dmx-select-statement).  
   
 ###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Zuordnungen aus einem Entscheidungsstrukturmodell  
- Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
+ Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
  Die folgende Beispielabfrage ist eine SINGLETON-Abfrage, die Sie mühelos in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen können, indem Sie Felder wählen und anschließend Werte für diese Felder in einer Dropdownliste auswählen.  
   
@@ -273,9 +273,9 @@ WHERE NODE_TYPE = 25
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](data-mining-queries.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
- [Microsoft Decision Trees-Algorithmus technische Referenz](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

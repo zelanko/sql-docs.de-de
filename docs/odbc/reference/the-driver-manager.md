@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719726"
 ---
 # <a name="the-driver-manager"></a>Der Treiber-Manager
 Die *-Treiber-Manager* ist eine Bibliothek, die Kommunikation zwischen Anwendungen und Treiber verwaltet. Beispielsweise ist der Treiber-Manager auf Microsoft® Windows®-Plattformen, eine Dynamic Link Library (DLL), die von Microsoft geschrieben und kann von den Benutzern das verteilbare MDAC 2.8 SP1 SDK verteilt werden.  
@@ -32,7 +32,7 @@ Die *-Treiber-Manager* ist eine Bibliothek, die Kommunikation zwischen Anwendung
   
  Der Treiber-Manager löst dieses Problem durch die Bereitstellung einer zentralen Stelle jede Funktion aufgerufen. Die Anwendung ist für die Treiber-Manager und ruft ODBC-Funktionen im Treiber-Manager, nicht die Treiber verknüpft. Die Anwendung identifiziert den Ziel-Treiber und die Datenquelle mit einem *Verbindungshandle*. Wenn sie einen Treiber geladen wird, erstellt der Treiber-Manager eine Tabelle von Zeigern auf Funktionen in diesen Treiber. Der Verbindungshandles, die von der Anwendung übergebenen verwendet, um die Adresse der Funktion in der Zieltreiber finden und ruft diese Funktion über die Adresse.  
   
- Zum größten Teil, übergibt der Treiber-Manager nur Funktionsaufrufe von der Anwendung an den richtigen Treiber. Allerdings es implementiert auch einige Funktionen (**SQLDataSources**, **SQLDrivers**, und **SQLGetFunctions**) und führt grundlegende fehlerprüfung. Beispielsweise überprüft der Treiber-Manager, dass-Handles keine null-Zeiger sind, dass Funktionen in der richtigen Reihenfolge aufgerufen werden und dass bestimmte Argumente der Funktion gültig sind. Eine vollständige Beschreibung der Fehler vom Treiber-Manager überprüft werden soll, finden Sie im Referenzabschnitt "für jede Funktion und [Anhang B: ODBC-Übergang-Statustabellen](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Zum größten Teil, übergibt der Treiber-Manager nur Funktionsaufrufe von der Anwendung an den richtigen Treiber. Allerdings es implementiert auch einige Funktionen (**SQLDataSources**, **SQLDrivers**, und **SQLGetFunctions**) und führt grundlegende fehlerprüfung. Beispielsweise überprüft der Treiber-Manager, dass-Handles keine null-Zeiger sind, dass Funktionen in der richtigen Reihenfolge aufgerufen werden und dass bestimmte Argumente der Funktion gültig sind. Eine vollständige Beschreibung der Fehler vom Treiber-Manager überprüft werden soll, finden Sie im Referenzabschnitt "für jede Funktion und [Anhang B: ODBC-Übergang Statustabellen](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Die letzte wichtige Rolle des Treiber-Managers ist laden und Entladen von Treibern. Die Anwendung lädt und entlädt nur die Treiber-Manager. Wenn es einen bestimmten Treiber zu verwenden möchte, ruft er eine Verbindungsfunktion (**SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**) im Treiber-Manager und gibt an, der Name einer bestimmten Datenquelle oder ein Treiber, z. B. "Finanzwesen" oder "SqlServer." Mit diesem Namen, sucht der Treiber-Manager für Dateinamen des Treibers, z. B. SQLSRVR Informationen für die Datenquelle aus. Klicken Sie dann lädt den Treiber (vorausgesetzt, dass sie nicht bereits geladen wurde), speichert die Adresse für jede Funktion im Treiber und ruft die Verbindungsfunktion im Treiber, die dann initialisiert sich selbst und eine Verbindung mit der Datenquelle her.  
   

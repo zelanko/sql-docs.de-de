@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99b53c2559bf13f612a82c29ed7d41a5d58ac7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702997"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Miningmodellansicht (Data Mining-Modelldesigner)
   Mithilfe der Sicht **Miningmodelle** können Sie die in einer Miningstruktur enthaltenen Miningmodelle erstellen oder ändern.  
@@ -29,7 +29,7 @@ ms.locfileid: "48160430"
   
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Strukturansicht &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)  
   

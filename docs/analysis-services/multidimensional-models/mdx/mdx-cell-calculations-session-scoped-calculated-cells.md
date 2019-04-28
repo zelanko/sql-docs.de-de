@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Bereich einer Sitzung berechnete Zellen | Microsoft Docs
+title: Erstellen im Bereich einer Sitzung berechnete Zellen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799534"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX-Zellenberechnungen - berechneter Zellen im Bereich einer Sitzung
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX-Zellenberechnungen - berechnete Zellen im Bereich einer Sitzung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  Der `String_Expression` -Wert enthält eine Liste der orthogonalen, eindimensionalen MDX-Mengenausdrücke, von denen jeder aufgelöst zu einer der Mengenkategorien gehören muss, die in der folgenden Tabelle aufgelistet sind.  
   
-|Kategorie|Beschreibung|  
+|Kategorie|Description|  
 |--------------|-----------------|  
 |Leere Menge|Ein MDX-Mengenausdruck, der zu einer leeren Menge aufgelöst wird. In diesem Fall ist der Gültigkeitsbereich der berechneten Zelle gleich dem gesamten Cube.|  
 |Menge mit einem einzelnen Element|Ein MDX-Mengenausdruck, der zu einem einzelnen Element aufgelöst wird.|  
@@ -81,6 +81,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel hierfür ist die MDX-Funktion **Descendants**(*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](../../../mdx/descendants-mdx.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Zellenberechnungen in MDX & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+ [Erstellen von Zellenberechnungen in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

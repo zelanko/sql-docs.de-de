@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721962"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus gebotenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Algorithmus arbeitet mit iterativen Techniken, um die in einem Dataset enthaltenen Fälle in Clustern zu gruppieren, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus, der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird. Der Algorithmus arbeitet mit iterativen Techniken, um die in einem Dataset enthaltenen Fälle in Clustern zu gruppieren, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
   
  Clustermodelle identifizieren Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Sie können z. B. logisch schlussfolgern, dass Personen, die mit dem Fahrrad zur Arbeit fahren, für gewöhnlich nicht weit von ihren Arbeitsplätzen entfernt wohnen. Der Algorithmus kann jedoch nach anderen Merkmalen von Fahrradpendlern suchen, die nicht so klar auf der Hand liegen. In dem folgenden Diagramm zeigt Cluster A Daten zu Personen, die dazu tendieren, mit dem Auto zur Arbeit fahren, während Cluster B Daten zu Personen zeigt, die dazu tendieren, mit dem Fahrrad zur Arbeit zu fahren.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48195100"
   
  Nachdem Sie zuerst die Cluster definiert haben, berechnet der Algorithmus, wie gut die Cluster Punktegruppierungen darstellen. Anschließend versucht der Algorithmus, die Gruppierungen neu zu definieren, um Cluster zu erstellen, die den Daten besser entsprechen. Der Algorithmus wiederholt diesen Prozess so lange, bis sich die Ergebnisse durch Neudefinieren der Cluster nicht mehr verbessern lassen.  
   
- Sie können die Arbeitsweise des Algorithmus anpassen, indem Sie eine Clusteringtechnik auswählen, die maximale Anzahl von Clustern beschränken oder die Menge der zur Erstellung eines Clusters erforderlichen Unterstützungswerte ändern. Weitere Informationen zu diesem Algorithmus finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md).  
+ Sie können die Arbeitsweise des Algorithmus anpassen, indem Sie eine Clusteringtechnik auswählen, die maximale Anzahl von Clustern beschränken oder die Menge der zur Erstellung eines Clusters erforderlichen Unterstützungswerte ändern. Weitere Informationen finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md).  
   
 ## <a name="data-required-for-clustering-models"></a>Anforderungen für Clusteringmodelle  
  Wenn Sie Daten für das Training von Clusteringmodellen aufbereiten, müssen Sie sich mit den Anforderungen des jeweiligen Algorithmus, dessen Anforderungen an die Daten und der Verwendung der Daten vertraut machen.  
@@ -58,7 +58,7 @@ ms.locfileid: "48195100"
   
 -   **Eingabespalten** Jedes Modell muss mindestens eine Eingabespalte enthalten, welche die zur Bildung der Cluster verwendeten Werte enthält. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.  
   
--   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte zur Erstellung des Modells. Sie können aber eine vorhersagbare Spalte fast jeden Datentyps hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Z. B. Wenn Sie das Einkommen der Kunden vorhersagen, indem Sie Cluster auf der Grundlage demografischer Daten wie Region oder ALTER bilden möchten, Sie würden die einkommensspalte als `PredictOnly` und alle anderen Spalten, z. B. Region oder ALTER, als Eingabespalten hinzufügen.  
+-   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte zur Erstellung des Modells. Sie können aber eine vorhersagbare Spalte fast jeden Datentyps hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Wenn Sie beispielsweise das Einkommen der Kunden vorhersagen möchten, indem Sie Cluster auf der Grundlage demografischer Daten wie Region oder Alter bilden, würden Sie die Einkommensspalte als `PredictOnly` festlegen und alle übrigen Spalten, wie z. B. Region oder Alter, als Eingabespalten hinzufügen.  
   
  Ausführliche Informationen zu den in Clustermodellen unterstützten Inhaltstypen und Datentypen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195100"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
- [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)   
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Beispiele für Clustermodellabfragen](clustering-model-query-examples.md)  
   
   

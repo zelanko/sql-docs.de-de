@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795537"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Tabellenmodellierung (Adventure Works-Lernprogramm)
   Dieses Tutorial enthält Lektionen zum Erstellen eines tabellarischen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services-Modells unter Verwendung von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -72,7 +72,7 @@ ms.locfileid: "53373682"
 |[Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md)|20 Minuten|  
 |[Lektion 3: Umbenennen von Spalten](rename-columns.md)|20 Minuten|  
 |[Lektion 4: Markieren als Datumstabelle](lesson-3-mark-as-date-table.md)|3 Minuten|  
-|[Lektion 5: Erstellen von Beziehungen](lesson-4-create-relationships.md)|10 Minuten|  
+|[Lesson 5: Erstellen von Beziehungen](lesson-4-create-relationships.md)|10 Minuten|  
 |[Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md)|15 Minuten|  
 |[Lektion 7: Erstellen von Measures](lesson-6-create-measures.md)|30 Minuten|  
 |[Lektion 8: Erstellen von Key Performance Indicators](lesson-7-create-key-performance-indicators.md)|15 Minuten|  
@@ -94,6 +94,6 @@ ms.locfileid: "53373682"
 |[Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte|30 Minuten|  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Um das Lernprogramm zu starten, fahren Sie mit der ersten Lektion fort: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
+ Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
   
   

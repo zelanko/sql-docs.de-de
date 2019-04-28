@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704729"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus
   Angenommen, Sie möchten eine XML-Ausgabe mit Informationen zu Bestellungen konstruieren. Beachten Sie, dass das <`SalesPerson`>-Element und <`OrderDetail`>-Element gleichgeordnete Elemente sind. Jede Reihenfolge verfügt über ein <`OrderHeader`>-Element, ein <`SalesPerson`>-Element und mindestens ein <`OrderDetail`>-Element.  

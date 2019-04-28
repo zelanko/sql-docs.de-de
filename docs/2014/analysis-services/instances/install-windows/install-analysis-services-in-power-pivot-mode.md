@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703578"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Bereitstellungsmodus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint 2013-Zentraladministration aus.  
@@ -48,7 +48,7 @@ ms.locfileid: "53373972"
   
      **Hinweis**: In diesem Thema wird beschrieben, die Installation der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server und die Back-End-Dienste.  
   
--   **Mittlere Ebene:** Erweiterungen zur PowerPivot-Funktionalität in SharePoint einschließlich PowerPivot-Katalog, planmäßiger Datenaktualisierung, Management-Dashboard und Datenanbieter. Weitere Informationen zur Installation und Konfiguration der mittleren Ebene finden Sie unter:  
+-   **Mittlere Ebene:** Erweiterungen zur PowerPivot-Funktionalität in SharePoint einschließlich PowerPivot-Katalog, planmäßige datenaktualisierung, Management-Dashboard und Datenanbieter. Weitere Informationen zur Installation und Konfiguration der mittleren Ebene finden Sie unter:  
   
     -   [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53373972"
   
  [Versionsanmerkungen für Microsoft SQL Server 2012 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
-##  <a name="InstallSQL"></a> Schritt 1: Installieren von PowerPivot für SharePoint  
+##  <a name="InstallSQL"></a>Schritt 1: Installieren von PowerPivot für SharePoint  
  In diesem Schritt führen Sie SQL Server-Setup aus, um einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus zu installieren. In einem anschließenden Schritt konfigurieren Sie Excel Services so, dass dieser Server für Arbeitsmappen-Datenmodelle verwendet wird.  
   
 1.  Führen Sie den Installations-Assistenten für SQL Server (Setup.exe) aus.  
@@ -158,7 +158,7 @@ ms.locfileid: "53373972"
   
 3.  Stellen Sie eine Verbindung mit der Analysis Services-Instanz her, beispielsweise **[Servername]\POWERPIVOT**. Wenn Sie eine Verbindung mit der Instanz herstellen können, ist sichergestellt, dass der Dienst ausgeführt wird.  
   
-##  <a name="bkmk_config"></a> Schritt 2: Konfigurieren Sharepoint-Integration von Basic Analysis Services  
+##  <a name="bkmk_config"></a>Schritt 2: Konfigurieren Sie die grundlegende Analysis Services-SharePoint-Integration  
  In den folgenden Schritten werden die erforderlichen Konfigurationsänderungen beschrieben, die die Interaktion mit erweiterten Excel-Datenmodellen innerhalb einer SharePoint-Dokumentbibliothek ermöglichen. Führen Sie diese Schritte nach der Installation von SharePoint Server 2013 und SQL Server Analysis Services aus.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Gewähren von Excel Services-Serveradministratorrechten für Analysis Services  
@@ -203,10 +203,10 @@ ms.locfileid: "53373972"
   
     ```  
   
-##  <a name="bkmk_verify"></a> Schritt 3: Überprüfen der Integration  
+##  <a name="bkmk_verify"></a>Schritt 3: Überprüfen der Integration  
  In den folgenden Schritten erfahren Sie, wie eine neue Arbeitsmappe erstellt und hochgeladen wird, um zu überprüfen, ob die Analysis Services-Integration erfolgreich war. Sie benötigen für diese Schritte eine SQL Server-Datenbank.  
   
-1.  **Hinweis**: Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie sie in die SharePoint-Dokumentbibliothek hochladen und überprüfen, ob Sie in der Lage sind, mit den Slicern und Filtern in der Dokumentbibliotheksansicht zu interagieren.  
+1.  **Hinweis**: Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie diese in Ihrer SharePoint-Dokumentbibliothek hochladen und überprüfen Sie, ob Sie mit den Slicern und Filtern interagieren über die Ansicht der Dokumentbibliothek.  
   
 2.  Starten Sie in Excel eine neue Arbeitsmappe.  
   

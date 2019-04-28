@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690648"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC-Treiberarchitektur
 Treiber-Autoren müssen bewusst sein, dass die Treiberarchitektur auswirken kann, ob eine Anwendung die DBMS-spezifische SQL verwenden kann.  

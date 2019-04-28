@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722812"
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
   Beim Erstellen eines Miningmodells oder einer Miningstruktur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Sie die Datentypen für die einzelnen Spalten in der Miningstruktur definieren. Anhand des Datentyps erkennt die Data Mining-Engine, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
   
  Jeder Datentyp unterstützt einen oder mehrere Inhaltstypen. Durch Festlegen des Inhaltstyps können Sie die Methode anpassen, mit der Daten in den Spalten im Miningmodell verarbeitet oder berechnet werden.  
   
- Wenn beispielsweise numerische Daten in einer Spalte enthalten sind, können Sie entscheiden, diese als numerischen Datentyp oder als Textdatentyp zu behandeln. Wenn Sie den numerischen Datentyp wählen, können Sie mehrere Inhaltstypen festlegen: Sie können die Zahlen diskretisieren oder als kontinuierliche Werte behandeln. Eine Liste aller Inhaltstypen finden Sie unter [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
+ Wenn beispielsweise numerische Daten in einer Spalte enthalten sind, können Sie entscheiden, diese als numerischen Datentyp oder als Textdatentyp zu behandeln. Wenn Sie den numerischen Datentyp wählen, können Sie mehrere Inhaltstypen festlegen: Sie können die Zahlen diskretisieren oder als kontinuierliche Werte behandeln. Eine Liste aller Inhaltstypen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die folgenden Datentypen für Miningstrukturspalten:  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48225250"
  Wenn Sie den Datentyp einer Spalte ändern, müssen die Miningstruktur und alle auf dieser Struktur basierenden Miningmodelle neu verarbeitet werden. Beim Ändern des Datentyps kann es vorkommen, dass die jeweilige Spalte nicht mehr in einem bestimmten Modell verwendet werden kann. In diesem Fall gibt Analysis Services beim erneuten Verarbeiten entweder einen Fehler aus, oder das Modell wird unter Auslassung der Spalte verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Datamining&#41;](content-types-data-mining.md)   
+ [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Inhaltstypen &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Datentypen &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [Miningmodellspalten](mining-model-columns.md)   
  [Miningstrukturspalten](mining-structure-columns.md)  

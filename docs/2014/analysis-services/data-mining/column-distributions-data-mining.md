@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a4969e3665aca4ed5aef588fa9595e96b846e98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715432"
 ---
 # <a name="column-distributions-data-mining"></a>Spaltenverteilungen [Data Mining]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie Spaltenverteilungen in einer Miningstruktur definieren, um zu beeinflussen, wie Algorithmen die Daten in diesen Spalten verarbeiten, wenn Sie Miningmodelle erstellen. Für einige Algorithmen ist es hilfreich, vor dem Verarbeiten des Modells für jede kontinuierliche Spalte die Verteilung zu definieren, wenn für die Spalten bekannt ist, dass sie normal verteilte Werte enthalten. Wenn Sie die Verteilungen nicht definieren, liefern die sich ergebenden Miningmodelle möglicherweise ungenauere Vorhersagen, da die Algorithmen weniger Informationen zum Interpretieren der Daten haben.  
@@ -48,9 +48,9 @@ ms.locfileid: "48058632"
  Weitere Informationen zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Datamining&#41;](content-types-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Diskretisierungsmethoden &#40;Datamining&#41;](discretization-methods-data-mining.md)   
+ [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md)   
  [Verteilungen &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Miningstrukturspalten](mining-structure-columns.md)  
   

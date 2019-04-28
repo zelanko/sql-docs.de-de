@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726998"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
   Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
@@ -59,16 +59,16 @@ ms.locfileid: "48197110"
   
  Nach dem Erstellen einer tabellarischen oder mehrdimensionalen Lösung wird diese dann als Datenbank an den Server bereitgestellt. Ein Serveradministrator kann Datenverwaltungsaufgaben delegieren, indem er eine Rolle definiert, die über die Berechtigung "Vollzugriff" für die entsprechende Datenbank verfügt. Mitglieder dieser Rolle können Objekte in der Datenbank verarbeiten oder abfragen sowie zusätzliche Rollen für den Zugriff auf Cubes, Dimensionen und andere Objekte in der Datenbank selbst erstellen. Weitere Informationen finden Sie unter [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
- **Schritt 3: Aktivieren des Cube- oder Modellzugriffs für Abfrage- und Verarbeitungsworkloads**  
+ **Schritt 3: Aktivieren des Zugriffs von Cube- oder modellzugriffs für Abfrage- und verarbeitungsworkloads**  
   
- Standardmäßig haben nur Server- und Datenbankadministratoren Zugriff auf Cubes oder tabellarische Modelle. Diese Datenstrukturen zur Verfügung stellen, an andere Personen in Ihrer Organisation erfordert zusätzliche rollenzuweisungen, die Windows-Benutzer und Gruppenkonten zu Cubes oder Modellen zuordnen zusammen mit den Berechtigungen mit, die angeben, `Read` Berechtigungen. Einzelheiten finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ Standardmäßig haben nur Server- und Datenbankadministratoren Zugriff auf Cubes oder tabellarische Modelle. Damit diese Datenstrukturen auch anderen Personen in Ihrer Organisation zur Verfügung stehen, sind zusätzliche Rollenzuweisungen erforderlich, die Windows-Benutzer und Gruppenkonten zu Cubes oder Modellen zuordnen, zusammen mit Berechtigungen, die `Read`-Berechtigungen angeben. Einzelheiten finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Verarbeitungsaufgaben können von andere Verwaltungsfunktionen isoliert werden, sodass Server- und Datenbankadministratoren diese Aufgabe an andere Personen delegieren oder eine unbeaufsichtigte Verarbeitung konfigurieren können, indem Sie Dienstkonten angeben, die eine Planungssoftware ausführen. Einzelheiten finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md).  
   
 > [!NOTE]  
 >  Benutzer benötigen keine Berechtigungen für die Verweistabellen in der zugrunde liegenden relationalen Datenbank, aus der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seine Daten lädt, und benötigen keine Berechtigungen auf Dateiebene für den Computer, auf dem die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt wird.  
   
- **Schritt 4 (optional): Zulassen oder Verweigern des Zugriffs auf innere Cubeobjekte**  
+ **Schritt 4 (Optional): Zulassen Sie oder verweigern Sie des Zugriffs auf innere Cubeobjekte**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet Sicherheitseinstellungen für das Festlegen von Berechtigungen für einzelne Objekte, einschließlich Dimensionselemente und Zellen in einem Datenmodell. Einzelheiten finden Sie unter [Erteilen von benutzerdefiniertem Zugriff auf Dimensionsdaten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) und [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48197110"
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Von Analysis Services Unterstützte Authentifizierungsmethoden](../instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Von Analysis Services unterstützte Authentifizierungsmethoden](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

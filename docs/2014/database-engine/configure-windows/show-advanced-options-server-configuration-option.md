@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808871"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>Erweiterte Optionen anzeigen (Serverkonfigurationsoption)
   Sie können mit der Option **Erweiterte Optionen anzeigen** die erweiterten Optionen der gespeicherten Systemprozedur **sp_configure** anzeigen. Wenn Sie **Erweiterte Optionen anzeigen** auf 1 festlegen, können Sie die erweiterten Optionen mithilfe von **sp_configure**in einer Liste aufführen. Die Standardeinstellung ist 0.  

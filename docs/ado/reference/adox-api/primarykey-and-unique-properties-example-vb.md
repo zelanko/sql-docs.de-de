@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709869"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey- und Unique-Eigenschaften – Beispiel (VB)
 Dieses Beispiel zeigt die [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) und [Unique](../../../ado/reference/adox-api/unique-property-adox.md) Eigenschaften eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code erstellt eine neue Tabelle mit zwei Spalten. Die **PrimaryKey** und **Unique** Eigenschaften verwendet, um eine Spalte der Primärschlüssel für die doppelte Werte sind nicht zulässig.  

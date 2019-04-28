@@ -1,5 +1,5 @@
 ---
-title: Ausdrücke (MDX) | Microsoft Docs
+title: Ausdrücke (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690834"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
 
 
-  Ein Ausdruck ist eine Kombination aus Bezeichnern, Werten und Operatoren, die ausgewertet werden können, um ein Ergebnis zu erhalten. Die Daten können an verschiedenen Stellen beim Zugriff oder Ändern von Daten verwendet werden. Beispielsweise können Sie einen Ausdruck als Teil der Daten, die von einer Abfrage abgerufen werden sollen, oder als Suchbedingung verwenden, um nach Daten zu suchen, die bestimmte Kriterien erfüllen.  
+  Ein Ausdruck ist eine Kombination aus Bezeichnern, Werten und Operatoren, die ausgewertet werden können, um ein Ergebnis zu erhalten. Die Daten können an verschiedenen Orten beim Zugreifen auf oder Ändern von Daten verwendet werden. Beispielsweise können Sie einen Ausdruck als Teil der Daten, die von einer Abfrage abgerufen werden sollen, oder als Suchbedingung verwenden, um nach Daten zu suchen, die bestimmte Kriterien erfüllen.  
   
 ## <a name="simple-and-complex-expressions"></a>Einfache und komplexe Ausdrücke  
  Ein Ausdruck in MDX kann einfach oder komplex sein.  

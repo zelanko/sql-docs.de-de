@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724894"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418381"
  Gilt für die Miningstrukturspalte.  
   
  MODEL_EXISTENCE_ONLY  
- Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: **Fehlende** und **vorhandenen**. Der Wert 0 wird als **Missing** behandelt.  
+ Bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann behandelt werden: **Fehlende** und **vorhandenen**. Der Wert 0 wird als **Missing** behandelt.  
   
  Gilt für die Miningmodellspalte.  
   

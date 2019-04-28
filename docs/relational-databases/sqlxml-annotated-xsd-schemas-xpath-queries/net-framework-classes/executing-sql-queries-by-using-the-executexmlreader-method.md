@@ -1,9 +1,8 @@
 ---
 title: Ausführen von SQL-Abfragen mithilfe der "ExecuteXMLReader"-Methode | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -14,19 +13,17 @@ helpviewer_keywords:
 - ExecuteXmlReader method
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-author: MightyPen
-ms.author: genemi
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9791a5638e49c8299717d9aeb2b2ec63e3feb5a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720150"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ausführen von SQL-Abfragen mithilfe der 'ExecuteXMLReader'-Methode
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Anstatt die ExecuteToStream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode der SqlXmlCommand-Objekt zum Ausführen von Befehlen. Diese Methode gibt ein XmlReader-Objekt, das für die weitere Verarbeitung des Ergebnisses (das in diesem Beispiel den Namen der Element- oder Attributnamen und die Werte druckt) verwendet werden kann.  
   
 > [!NOTE]  
@@ -72,7 +69,7 @@ using System.Xml;
   
 1.  Stellen Sie sicher, dass [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework auf dem Computer installiert ist.  
   
-2.  Speichern Sie den in diesem Thema bereitgestellten C#-Code (<legacyBold>DocSample.cs</legacyBold>) in einem Ordner.  
+2.  Speichern Sie den in diesem Thema bereitgestellten C#-Code (&lt;legacyBold&gt;DocSample.cs&lt;/legacyBold&gt;) in einem Ordner.  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

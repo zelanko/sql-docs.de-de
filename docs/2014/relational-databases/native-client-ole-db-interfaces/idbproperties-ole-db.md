@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692183"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-  Der OLE DB-Standardspezifikation kann Anbieter VT_EMPTY für an `DBPROPINFO::vValues`. Allerdings [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB immer VT_EMPTY zurückgegeben, wenn Sie aufrufen `IDBProperties::GetPropertyInfo` mit `DBPROPSET_ROWSETALL` zum Abrufen von Rowset-Eigenschaften.  
+  Dank der OLE DB-Standardspezifikation können Anbieter VT_EMPTY für `DBPROPINFO::vValues` angeben. Allerdings [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB immer VT_EMPTY zurückgegeben, wenn Sie aufrufen `IDBProperties::GetPropertyInfo` mit `DBPROPSET_ROWSETALL` zum Abrufen von Rowset-Eigenschaften.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schnittstellen &#40;OLE-DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  

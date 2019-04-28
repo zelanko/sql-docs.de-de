@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725194"
 ---
 # <a name="multidimensional-model-programming"></a>Mehrdimensionale Modellprogrammierung
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere APIs zur Programmierung für eine Analysis Services-Instanz und die mehrdimensionalen Datenbanken, die sie verfügbar macht. In diesem Abschnitt werden Ansätze für Entwickler beschrieben, die benutzerdefinierte Anwendungen unter Verwendung mehrdimensionaler Analysis Services-Projektmappen erstellen möchten. Anhand dieser Informationen können Sie eine Programmierschnittstelle auswählen, die den Anforderungen eines bestimmten Projekts am besten entspricht. Analysis Services-Entwicklungsprojekte können auf verwaltetem oder nicht verwaltetem Code basieren, der auf einer Windows-Plattform oder anderen Plattformen ausgeführt wird, die den HTTP-Zugriff unterstützen.  

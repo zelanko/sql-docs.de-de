@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723132"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
@@ -50,14 +50,14 @@ ms.locfileid: "48190090"
   
  Selbst wenn die Werte einer diskreten Attributspalte numerisch sind, können sie keine Reihenfolge beinhalten. Auch wenn für die diskrete Spalte numerische Werte verwendet werden, können keine Bruchzahlen berechnet werden. Ortskennzahlen sind ein anschauliches Beispiel für numerische diskrete Daten.  
   
- Die `Discrete` Inhaltstyp wird von allen Data mining-Datentypen unterstützt.  
+ Der Inhaltstyp `Discrete` wird von allen Data Mining-Typen unterstützt.  
   
 ## <a name="continuous"></a>Continuous  
  *Continuous* (Kontinuierlich) bedeutet, dass die Spalte Werte enthält, die numerische Daten auf einer Skala darstellen, die Zwischenwerte zulässt. Im Gegensatz zu diskreten Spalten, die endliche, zählbare Daten darstellen, stellt eine kontinuierliche Spalte skalierbare Messdaten dar. Diese Spalten können unendliche viele Bruchzahlen enthalten. Eine Temperaturspalte stellt ein Beispiel für eine kontinuierliche Attributspalte dar.  
   
  Wenn eine Spalte kontinuierliche numerische Daten enthält und Sie wissen, wie die Daten verteilt werden sollen, können Sie die Genauigkeit der Analyse möglicherweise erhöhen, indem Sie die erwartete Verteilung der Werte angeben. Die Spaltenverteilung wird auf Ebene der Miningstruktur festgelegt. Daher bezieht sich die Einstellung auf alle Modelle, die auf der Struktur basieren. Weitere Informationen finden Sie unter [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md).  
   
- Die `Continuous` Inhaltstyp wird von den folgenden Datentypen unterstützt: `Date`, `Double`, und `Long`.  
+ Der Inhaltstyp `Continuous` wird von den folgenden Datentypen unterstützt: `Date`, `Double` und `Long`.  
   
 ## <a name="discretized"></a>Discretized  
  Unter*Diskretisierung* wird der Prozess verstanden, Werte eines kontinuierlichen Satzes an Daten in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Werten ergibt. Nur numerische Daten können diskretisiert werden.  
@@ -69,21 +69,21 @@ ms.locfileid: "48190090"
  Der Inhaltstyp `Discretized` wird von den folgenden Datentypen unterstützt: `Date`, `Double`, `Long` und `Text`.  
   
 ## <a name="key"></a>Key  
- Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Festlegen des Inhaltstyps zu `key` um anzugeben, dass die Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
+ Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Sie legen `key` als Inhaltstyp fest, um anzuzeigen, dass die betreffende Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
   
- Auch geschachtelte Tabellen verfügen über Schlüssel, die Schlüssel geschachtelter Tabellen werden jedoch etwas anders verwendet. Festlegen des Inhaltstyps zu `key` in einer geschachtelten Tabelle, wenn die Spalte das Attribut ist, die Sie analysieren möchten. Die Werte der Schlüsselspalte einer geschachtelten Tabelle müssen für die einzelnen Fälle eindeutig sein, in der Gesamtmenge der Fälle kann die Schlüsselspalte jedoch doppelte Werte enthalten.  
+ Auch geschachtelte Tabellen verfügen über Schlüssel, die Schlüssel geschachtelter Tabellen werden jedoch etwas anders verwendet. Sie legen in einer geschachtelten Tabelle `key` als Inhaltstyp fest, wenn die betreffende Spalte das zu analysierende Attribut enthält. Die Werte der Schlüsselspalte einer geschachtelten Tabelle müssen für die einzelnen Fälle eindeutig sein, in der Gesamtmenge der Fälle kann die Schlüsselspalte jedoch doppelte Werte enthalten.  
   
  Wenn Sie beispielsweise analysieren, welche Produkte von den Kunden gekauft werden, könnten Sie in der Falltabelle für die Spalte **CustomerID** den Inhaltstyp  festlegen, und in der geschachtelten Tabelle könnten Sie für die Spalte **PurchasedProducts** noch einmal den Inhaltstyp  festlegen.  
   
 > [!NOTE]  
 >  Geschachtelte Tabellen sind nur dann verfügbar, wenn Daten von externen Datenquellen verwendet werden, die in Analysis Services als Datenquellensicht definiert wurden.  
   
- Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Date`, `Double`, `Long`, und `Text`.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Date`, `Double`, `Long` und `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  Der Inhaltstyp *Key Sequence* (Schlüsselsequenz) kann nur in Sequenzclustermodellen verwendet werden. Der Inhaltstyp `key sequence` zeigt an, dass die betreffende Spalte Werte enthält, die eine Folge von Ereignissen darstellen. Die Werte sind sortiert, aber die Abstände zwischen den Werte müssen nicht gleich groß sein.  
   
- Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Double`, `Long`, `Text`, und `Date`.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Double`, `Long`, `Text` und `Date`.  
   
 ## <a name="key-time"></a>Key Time  
  Der Inhaltstyp *Key Time* (Schlüsselzeit) kann nur in Zeitreihenmodellen verwendet werden. Der Inhaltstyp `key time` gibt an, dass die Werte sortiert sind und eine Zeitskala darstellen.  
@@ -114,7 +114,7 @@ ms.locfileid: "48190090"
   
 ## <a name="see-also"></a>Siehe auch  
  [Inhaltstypen &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Datentypen &#40;Datamining&#41;](data-types-data-mining.md)   
+ [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)   
  [Datentypen &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [Ändern der Eigenschaften einer Miningstruktur](change-the-properties-of-a-mining-structure.md)   
  [Miningstrukturspalten](mining-structure-columns.md)  

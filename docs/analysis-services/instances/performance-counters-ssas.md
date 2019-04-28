@@ -1,5 +1,5 @@
 ---
-title: Leistungsindikatoren (SSAS) | Microsoft Docs
+title: Leistungsindikatoren (SSAS) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709729"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34019237"
 |[Verarbeiten von Aggregationen](#bkmk_ProcAggregations)|Statistik zur Verarbeitung der Aggregationen in MOLAP-Datendateien.|  
 |[Verarbeiten von Indizes](#bkmk_ProcIndexes)|Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien.|  
 |[Verarbeitung](#bkmk_Processing)|Statistik zur Verarbeitung von Daten.|  
-|[Speichermodulabfrage](#bkmk_StorageEngineQuery)|Statistik zu Microsoft Analysis Services-Speichermodulabfragen.|  
+|[Speicher-Engine-Abfrage](#bkmk_StorageEngineQuery)|Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.|  
 |[Threads](#bkmk_Threads)|Statistik zu Microsoft Analysis Services-Threads.|  
   
 ###  <a name="bkmk_Cache"></a> Cache  
@@ -126,15 +126,15 @@ ms.locfileid: "34019237"
 |-------------|-----------------|  
 |Anzahl der abdeckenden Berechnungen|Gesamtzahl von Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, einschließlich aktiver und zwischengespeicherter Knoten.|  
 |Aktuelle Anzahl der Auswertungsknoten|Aktuelle (ungefähre) Anzahl der Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, einschließlich aktiver und zwischengespeicherter Knoten.|  
-|Anzahl der Speichermodul-Auswertungsknoten|Gesamtzahl der Speichermodul-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
+|Anzahl der Speicher-Engine-Auswertungsknoten|Gesamtzahl der Speicher-Engine-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
 |Anzahl der Knoten für die Auswertung nach Zellen|Gesamtzahl der Knoten für die Auswertung nach Zellen, die von MDX-Ausführungsplänen erstellt wurden.|  
 |Anzahl der Massenmodus-Auswertungsknoten|Gesamtzahl der Massenmodus-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
 |Anzahl der Auswertungsknoten, die eine einzelne Zelle abdeckten|Gesamtzahl der Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wird, die nur eine Zelle abdeckten.|  
 |Anzahl der Auswertungsknoten, die Berechnungen mit der gleichen Granularität beinhalten|Gesamtzahl der Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, für die die Berechnungen mit der gleichen Granularität wie beim Auswertungsknoten ausgeführt wurden.|  
 |Aktuelle Anzahl der zwischengespeicherten Auswertungsknoten|Aktuelle (ungefähre) Anzahl der zwischengespeicherter Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
-|Anzahl der zwischengespeicherten Speichermodul-Auswertungsknoten|Gesamtzahl der zwischengespeicherten Speichermodul-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
+|Anzahl der zwischengespeicherten Speicher-Engine-Auswertungsknoten|Gesamtzahl der zwischengespeicherten Speicher-Engine-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
 |Anzahl der zwischengespeicherten Massenmodus-Auswertungsknoten|Gesamtzahl der zwischengespeicherten Massenmodus-Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden.|  
-|Anzahl zwischengespeicherter "anderer" Auswertungsknoten|Gesamtzahl der zwischengespeicherten Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, bei denen es sich weder um Speichermodule noch um Massenmodus handelt.|  
+|Anzahl zwischengespeicherter "anderer" Auswertungsknoten|Gesamtzahl der zwischengespeicherten Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, bei denen es sich weder um Speicher-Engines noch um Massenmodus handelt.|  
 |Anzahl der Entfernungen von Auswertungsknoten|Gesamtzahl der Cacheentfernungen von Auswertungsknoten aufgrund von Konflikten.|  
 |Anzahl der Hashsindextreffer im Cache der Auswertungsknoten|Gesamtzahl der Treffer im Cache von Auswertungsknoten, denen vom Hashindex entsprochen wurde.|  
 |Anzahl der Treffer nach Zellen im Cache von Auswertungsknoten|Gesamte Anzahl der Treffer nach Zellen im Cache von Auswertungsknoten.|  
@@ -169,7 +169,7 @@ ms.locfileid: "34019237"
 |Bereinigung - verkleinerbarer Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der mit dem Hintergrundbereinigungsprozess bereinigt wird.|  
 |Bereinigung - nicht verkleinerbarer Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der nicht mit dem Hintergrundbereinigungsprozess bereinigt wird.|  
 |Bereinigung - Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der mit dem Hintergrundbereinigungsprozess bereinigt wird.  (Verkleinerbarer Arbeitsspeicher für Bereinigungsprozess + Nicht verkleinerbarer Arbeitsspeicher für Bereinigungsprozess.)|  
-|Speicherauslastung in KB|Speicherauslastung des Serverprozesses, wie bei der Berechnung bereinigter Speicherkosten verwendet.  Entspricht dem Indikator "Process\PrivateBytes" zuzüglich der Größe der im Speicher abgebildeten Daten. Vom xVelocity-Modul für Datenanalyse im Arbeitsspeicher (VertiPaq) abgebildeter oder belegter Arbeitsspeicher, der über die xVelocity-Arbeitsspeichergrenze hinausgeht, wird dabei ignoriert.|  
+|Speicherauslastung in KB|Speicherauslastung des Serverprozesses, wie bei der Berechnung bereinigter Speicherkosten verwendet.  Entspricht dem Indikator "Process\PrivateBytes" zuzüglich der Größe der im Speicher abgebildeten Daten. Von der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) abgebildeter oder belegter Arbeitsspeicher, der über die xVelocity-Arbeitsspeichergrenze hinausgeht, wird dabei ignoriert.|  
 |Untere Arbeitsspeichergrenze in KB|Niedriges Speicherlimit von der Konfigurationsdatei.|  
 |Obere Arbeitsspeichergrenze in KB|Hohes Speicherlimit von der Konfigurationsdatei.|  
 |AggCacheKB|Vom Aggregationscache aktuell belegter Arbeitsspeicher in KB.|  
@@ -180,7 +180,7 @@ ms.locfileid: "34019237"
 |Dateispeicher-Lesevorgänge/s|Dateispeicher-Seitenlesevorgänge/s|  
 |Dateispeicher-Lesevorgänge in KB/s|Dateispeicher-Lesevorgänge in KB/s|  
 |Dateispeicher-Schreibvorgänge/s|Im Dateispeicher geschriebene Seiten pro Sekunde.  Die Schreibvorgänge sind asynchron.|  
-|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher in KB/s.  Die Schreibvorgänge sind asynchron.|  
+|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher KB geschrieben/s  Die Schreibvorgänge sind asynchron.|  
 |Dateispeicher-E/A-Fehler/s|Rate der Dateispeicher-E/A-Fehler.|  
 |Dateispeicher-E/A-Fehler|Dateispeicher-E/A-Fehler gesamt.|  
 |Dateispeicher-Clockpages überprüft/s|Rate, mit der der Hintergrundbereinigungsprozess Seiten daraufhin überprüft, ob sie entfernt werden können.|  
@@ -224,7 +224,7 @@ ms.locfileid: "34019237"
 |Potenzielle andere Datei im Arbeitsspeicher in KB|Größe der potenziellen anderen Datei im Arbeitsspeicher in KB.|  
 |Andere Dateien|Anzahl anderer Dateien.|  
 |Ausgelagerte VertiPaq-Daten (KB)|Der ausgelagerte Arbeitsspeicher (in KB), der für speicherinterne Daten verwendet wird.|  
-|Nicht ausgelagerte VertiPaq-Daten (KB)|Der Arbeitsspeicher (in KB), der im Workingset für die Verwendung durch das speicherinterne Modul gesperrt ist.|  
+|Nicht ausgelagerte VertiPaq-Daten (KB)|Der Arbeitsspeicher (in KB), der im Workingset für die Verwendung durch die speicherinterne Engine gesperrt ist.|  
 |Im Speicher abgebildete VertiPaq-Daten (KB)|Der auslagerbare Arbeitsspeicher (in KB), der für speicherinterne Daten verwendet wird.|  
 |Grenzwert für den festen Speicher (KB)|Der Grenzwert für den festen Speicher aus der Konfigurationsdatei.|  
 |VertiPaq-Arbeitsspeichergrenze (KB)|Speicherinterner Grenzwert aus der Konfigurationsdatei.|  
@@ -276,7 +276,7 @@ ms.locfileid: "34019237"
 |Geschriebene Zeilen gesamt|Anzahl der bei der Verarbeitung geschriebenen Zeilen.|  
   
 ###  <a name="bkmk_StorageEngineQuery"></a> Speichermodulabfrage  
- Statistik zu Microsoft Analysis Services-Speichermodulabfragen.  
+ Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.  
   
 |Leistungsindikator|Description|  
 |-------------|-----------------|  

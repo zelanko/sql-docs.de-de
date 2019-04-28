@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704845"
 ---
 # <a name="example-retrieving-binary-data"></a>Beispiel: Abrufen von Binärdaten
   Die folgende Abfrage gibt das Produktfoto zurück, das in einer Spalte des `varbinary(max)`-Typs gespeichert ist. Durch die Angabe der Option `BINARY BASE64` in der Abfrage werden die Binärdaten im Base64-codierten Format zurückgegeben.  

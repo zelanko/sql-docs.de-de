@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722282"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
   Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form einer *lift* Bewertung. Vergleichen der prognosegüteergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle, können Sie bestimmen, welches Modell am besten geeignet ist, und der Prozentsatz der Fälle im DataSet aus der Anwendung der modellvorhersagen profitieren würden.  

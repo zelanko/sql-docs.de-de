@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cefb51ce26bcc0bd454defe29c8d7f7969c1c6fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727260"
 ---
 # <a name="rename-an-attribute"></a>Umbenennen eines Attributs
   Der Name eines Attributs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird durch seine **Name** -Eigenschaft definiert. Klicken Sie zum Umbenennen eines Attributs im Bereich **Attribute** auf der Registerkarte **Dimensionsstruktur** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf ein Attribut, und klicken Sie anschließend auf **Umbenennen**. Wenn der Bereich **Attribute** sich in der Rasteransicht befindet, klicken Sie auf den Namen des Attributs, und bearbeiten Sie diesen direkt im Raster. Sie können auch ein Attribut auswählen und die **Name** -Eigenschaft im Fenster **Eigenschaften** festlegen.  
@@ -29,6 +29,6 @@ ms.locfileid: "48180030"
  Weitere Informationen zum Umbenennen eines Attributs finden Sie unter [Binden eines Attribut an eine Schlüsselspalte](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
   
   

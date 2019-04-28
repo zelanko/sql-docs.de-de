@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699229"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Mehrdimensionale Modelldatenbanken (SSAS)
   Eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank stellt eine Sammlung von Datenquellen, Datenquellensichten, Cubes, Dimensionen und Rollen dar. Optional kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank Data Mining-Strukturen und benutzerdefinierte Assemblys enthalten, mit deren Hilfe der Datenbank benutzerdefinierte Funktionen hinzugefügt werden können.  
@@ -54,15 +54,15 @@ ms.locfileid: "48082800"
   
  [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Legen Sie Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Festlegen von Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Synchronisieren von Analysis Services-Datenbanken](synchronize-analysis-services-databases.md)  
   
- [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Im Onlinemodus mit einer Analysis Services-Datenbank verbinden](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Erstellen ein Analysis Services-Projekts &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Herstellen in Onlinemodus einer Verbindung mit einer Analysis Services-Datenbank](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Abfragen von mehrdimensionalen Daten mit MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

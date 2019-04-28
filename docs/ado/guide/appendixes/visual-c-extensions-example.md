@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802888"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen – Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Da die Visual C++-Erweiterungen von implementiert werden die **Recordset** -Objekt, das den Konstruktor für den intelligenten Zeiger, `picRs`, dauert die _`RecordsetPtr` -Zeiger ist, `pRs`. Der Konstruktor ruft `QueryInterface` mit `pRs` finden die `IADORecordBinding` Schnittstelle.  
+ Da das visuelle Element C++ Erweiterungen werden implementiert, indem die **Recordset** -Objekt, das den Konstruktor für den intelligenten Zeiger, `picRs`, dauert die _`RecordsetPtr` -Zeiger ist, `pRs`. Der Konstruktor ruft `QueryInterface` mit `pRs` finden die `IADORecordBinding` Schnittstelle.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

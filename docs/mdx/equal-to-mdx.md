@@ -1,5 +1,5 @@
 ---
-title: = (Gleich) (MDX) | Microsoft Docs
+title: = (Gleich) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fac06690d811c3ae3d4b00a82ad9088b2df4aae
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690925"
 ---
 # <a name="-equal-to-mdx"></a>= (Ist gleich) (MDX)
 
@@ -22,7 +22,7 @@ ms.locfileid: "34739829"
   Führt eine Vergleichsoperation aus, die bestimmt, ob der Wert eines MDX-Ausdrucks (Multidimensional Expressions) gleich dem Wert eines anderen MDX-Ausdrucks ist.  
   
 > [!NOTE]  
->  Um Objekte zu vergleichen, verwenden Sie die [IS &#40;MDX&#41; ](../mdx/is-mdx.md) Operator. Verwenden Sie z. B. den IS-Operator, um zu prüfen, ob das aktuelle Element auf einer Abfrageachse ein spezifisches Element ist.  
+>  Um Objekte zu vergleichen, verwenden die [IS &#40;MDX&#41; ](../mdx/is-mdx.md) Operator. Verwenden Sie z. B. den IS-Operator, um zu prüfen, ob das aktuelle Element auf einer Abfrageachse ein spezifisches Element ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,9 +40,9 @@ MDX_Expression = MDX_Expression
   
 -   **"true"** , wenn der Wert des ersten Parameters gleich dem Wert des zweiten Parameters ist.  
   
--   **"false"** , wenn der Wert des ersten Parameters ungleich dem Wert des zweiten Parameters ist.  
+-   **"false"** , wenn der Wert des ersten Parameters nicht gleich dem Wert des zweiten Parameters ist.  
   
--   **"true"** Wenn beide Parameter null sind oder einen Parameter null ist, und der andere Parameter 0 ist gleich.  
+-   **"true"** Wenn beide Parameter null ist, oder einen Parameter null ist und die anderen Parameter 0 ist gleich.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage enthält Beispiele für diese Bedingungen:  

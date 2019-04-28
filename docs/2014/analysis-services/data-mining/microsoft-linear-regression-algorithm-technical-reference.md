@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721902"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
@@ -60,7 +60,7 @@ ms.locfileid: "48106070"
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
-|REGRESSOR|Gibt an, dass die Spalte kontinuierliche numerische Werte enthält, die bei der Analyse als potenzielle unabhängige Variablen behandelt werden sollen.<br /><br /> Hinweis: Das Kennzeichnen einer Spalte als Regressor gewährleistet nicht, dass die Spalte im fertigen Modell als Regressor verwendet wird.<br /><br /> Gilt für die Miningmodellspalten.|  
+|REGRESSOR|Gibt an, dass die Spalte kontinuierliche numerische Werte enthält, die bei der Analyse als potenzielle unabhängige Variablen behandelt werden sollen.<br /><br /> Hinweis: Kennzeichnen einer Spalte als Regressor gewährleistet nicht, dass die Spalte im fertigen Modell als Regressor verwendet werden soll.<br /><br /> Gilt für die Miningmodellspalten.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressoren in linearen Regressionsmodellen  
  Lineare Regressionsmodelle basieren auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Auch wenn Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus nicht verwenden, kann jedes Entscheidungsstrukturmodell eine Struktur oder Knoten enthalten, die eine Regression für ein kontinuierliches Attribut darstellen.  
@@ -83,11 +83,11 @@ ms.locfileid: "48106070"
 |Vorhersagbares Attribut|Continuous, Cyclical und Ordered|  
   
 > [!NOTE]  
->  `Cyclical` und `Ordered` Inhaltstypen werden unterstützt, aber der Algorithmus behandelt sie als diskrete Werte und führt keine spezielle Verarbeitung durch.  
+>  Die Inhaltstypen `Cyclical` und `Ordered` werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
- [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

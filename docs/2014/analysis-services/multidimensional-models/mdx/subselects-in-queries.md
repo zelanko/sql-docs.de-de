@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699143"
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
   Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
@@ -72,7 +72,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |Mountain-200 Black, 38|$1,634,647.94|(null)|(null)|$894,207.97|$740,439.97|  
 |Mountain-200 Black, 42|$1,285,524.65|(null)|(null)|$722,137.65|$563,387.00|  
 |Mountain-200 Silver, 38|$1,181,945.82|(null)|(null)|$634,600.78|$547,345.03|  
@@ -106,7 +106,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |All Products|$19,997,183.30|$1,696,815.63|$2,816,611.28|$7,930,797.72|$7,552,958.66|  
 |Mountain-200 Silver, 38|$2,160,981.60|(null)|(null)|$1,024,359.10|$1,136,622.49|  
 |Mountain-200 Silver, 42|$1,914,547.85|(null)|(null)|$903,061.68|$1,011,486.18|  
@@ -143,7 +143,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
 |All Products|$748,682.49|$32,204.43|$73,125.18|$269,506.56|$373,846.32|  
 |Mountain-200 Silver, 38|$90,479.61|(null)|(null)|$41,759.82|$48,719.79|  
 |Mountain-200 Silver, 42|$97,439.58|(null)|(null)|$39,439.83|$57,999.75|  
@@ -256,7 +256,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Zubehör|Components|Mountain|Straße|Touring|  
+||All Products|Zubehör|Komponenten|Mountain|Straße|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
@@ -281,7 +281,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Zubehör|Components|Mountain|Straße|Touring|  
+||All Products|Zubehör|Komponenten|Mountain|Straße|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -306,7 +306,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Alle Vertriebsgebiete|Australia|Canada|Zentral|Nordwest|Südwest|  
+||Alle Vertriebsgebiete|Australia|Kanada|Zentral|Nordwest|Südwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  

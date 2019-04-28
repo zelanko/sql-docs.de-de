@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727866"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Allgemein (Dialogfeld "Miningstruktureigenschaften") (Analysis Services &ndash; Data Mining)
   Mithilfe des Dialogfelds **Miningstruktureigenschaften** in **SQL Server Management Studio** können Sie die Eigenschaften einer Miningstruktur in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen. Zum Öffnen des Dialogfelds **Miningstruktureigenschaften** klicken Sie mit der rechten Maustaste im **Objekt-Explorer** auf eine Miningstruktur und wählen anschließend aus dem Kontextmenü die Option **Eigenschaften** aus.  
@@ -35,6 +35,6 @@ ms.locfileid: "48177540"
 |**Fehlerkonfiguration**|Mithilfe der Seite **Fehlerkonfiguration** können Sie die Fehlerkonfigurationseinstellungen für die Miningstruktur anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Fehlerkonfiguration &#40;Dialogfeld „Miningstruktur“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705139"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
   Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
@@ -32,7 +32,7 @@ ms.locfileid: "52798322"
  **Zieldetails: Server**  
  Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die die Richtlinien ausgewertet werden.  
   
- **Zieldetails: Ziel**  
+ **Zieldetails: Target**  
  Das Ziel, für das die Richtlinien ausgewertet werden.  
   
  **Zieldetails: Details**  

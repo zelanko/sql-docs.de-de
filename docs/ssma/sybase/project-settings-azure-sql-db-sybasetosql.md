@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703725"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Projekteinstellungen (Azure SQL-DB) (SybaseToSQL)
 Die projekteinstellungen für die Azure SQL-Datenbank können Sie konfigurieren die Azure SQL-Datenbank-Datenbank-Suffix, um im Verbindungsdialogfeld hinzugefügt werden, und gleichzeitig ermöglichen taktmechanismus in Verbindung mit Azure SQL-Datenbank implementieren.  

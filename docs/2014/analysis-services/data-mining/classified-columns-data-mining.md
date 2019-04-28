@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715177"
 ---
 # <a name="classified-columns-data-mining"></a>Klassifizierte Spalten [Data Mining]
   Wenn Sie eine klassifizierte Spalte definieren, erstellen Sie eine Beziehung zwischen der aktuellen Spalte und eine andere Spalte in der Miningstruktur. Die Daten in der Miningstrukturspalte, die Sie als klassifizierte Spalte festlegen, enthält Kategorieinformationen zur Beschreibung der Werte in einer anderen Spalte der Miningstruktur.  
@@ -37,7 +37,7 @@ ms.locfileid: "48193750"
 >  Von den in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen werden klassifizierte Spalten nicht unterstützt. Diese Funktion wird für die Erstellung benutzerdefinierter Algorithmen bereitgestellt.  
   
 ## <a name="defining-a-classified-column"></a>Definieren einer klassifizierten Spalte  
- Der Datentyp für eine klassifizierte Spalte muss entweder `Long` oder `Double`.  
+ Der Datentyp für eine klassifizierte Spalte muss entweder `Long` oder `Double` sein.  
   
  In der folgenden Liste werden die Inhaltstypen beschrieben, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für klassifizierte Spalten unterstützt.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48193750"
  Der Wert in der Spalte entspricht der Gewichtung oder dem Fallreplikationsfaktor des zugeordneten Wertes.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Datamining&#41;](content-types-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Datentypen &#40;Datamining&#41;](data-types-data-mining.md)  
+ [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)  
   
   

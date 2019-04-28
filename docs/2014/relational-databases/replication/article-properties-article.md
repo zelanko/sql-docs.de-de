@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721782"
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
   Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124990"
  Diese Option gilt nur für gespeicherte Prozeduren. Sie bestimmt, ob die Definition der gespeicherten Prozedur (die CREATE PROCEDURE-Anweisung) oder deren Ausführung repliziert wird. Wenn Sie die Ausführung der Prozedur replizieren, wird die Prozedurdefinition auf den Abonnenten repliziert, nachdem das Abonnement initialisiert wurde. Wenn die Prozedur auf dem Verleger ausgeführt wird, führt die Replikation die zugehörige Prozedur auf dem Abonnenten aus. Dies kann in Fällen, in denen große Batchvorgänge ausgeführt werden, zu einer deutlich verbesserten Leistung führen. Weitere Informationen finden Sie unter [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Optionen für Mergeveröffentlichungen  
- Die **Artikeleigenschaften** im Dialogfeld für mergeveröffentlichungen verfügt über zwei Registerkarten: **Eigenschaften** und **Konfliktlöser**.  
+ Das Dialogfeld **Artikeleigenschaften** für Mergeveröffentlichungen verfügt über zwei Registerkarten: **Eigenschaften** und **Konfliktlöser**.  
   
 ### <a name="properties-tab"></a>Eigenschaften (Registerkarte)  
  **Synchronisierungsrichtung**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124990"
  Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten COM-basierten Konfliktlöser sind signiert. Wählen Sie diese Option aus, um bei der Synchronisierung die Gültigkeit des Konfliktlösers zu überprüfen.  
   
 ## <a name="options-for-oracle-publications"></a>Optionen für Oracle-Veröffentlichungen  
- Die **Artikeleigenschaften** im Dialogfeld für die Oracle-Veröffentlichungen verfügt über zwei Registerkarten: **Eigenschaften** und **Datenzuordnung**. Oracle-Veröffentlichungen unterstützen nicht alle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen unterstützten Eigenschaften. Weitere Informationen finden Sie unter [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ Das Dialogfeld **Artikeleigenschaften** für Oracle-Veröffentlichungen verfügt über zwei Registerkarten: **Eigenschaften** und **Datenzuordnung**. Oracle-Veröffentlichungen unterstützen nicht alle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen unterstützten Eigenschaften. Weitere Informationen finden Sie unter [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Eigenschaften (Registerkarte)  
  **Die gespeicherten Prozeduren INSERT, UPDATE und DELETE kopieren**  

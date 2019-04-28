@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700128"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes in mehrdimensionalen Modellen
   Ein Cube ist eine mehrdimensionale Struktur, die Informationen für analytische Zwecke enthält. Die Hauptbestandteile eines Cubes sind Dimensionen und Measures. Dimensionen definieren die Struktur des Cubes, den Sie für Aufteilungen verwenden, während Measures dem Endbenutzer numerische Werte zur Verfügung stellen, die für ihn von Interesse sind. Als logische Struktur ermöglicht ein Cube einer Clientanwendung das Abrufen von Werten von Measures, so als ob sie in Zellen im Cube enthalten wären. Zellen werden für jeden möglichen zusammengefassten Wert definiert. Eine Zelle im Cube wird von der Schnittmenge von Dimensionselementen definiert und enthält die aggregierten Werte der Measures an dieser speziellen Schnittmenge.  
@@ -40,7 +40,7 @@ ms.locfileid: "48103955"
 |Perspektiven|[Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)|  
 |Hierarchien|[Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)|  
 |Aktionen|[Aktionen in mehrdimensionalen Modellen](actions-in-multidimensional-models.md)|  
-|Key Performance Indicators (KPI)|[Key Performance Indicators &#40;KPIs&#41; in mehrdimensionalen Modellen](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Key Performance Indicators (KPI)|[Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Berechnungen|[Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)|  
 |Translations|[Übersetzungen in mehrdimensionalen Modellen](translations-in-multidimensional-models-analysis-services.md)|  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48103955"
 |[Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Berechnung in einem MDX-Skript.|  
 |[Aktionen in mehrdimensionalen Modellen](actions-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Aktion.|  
 |[Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Perspektive.|  
-|[Definieren gespeicherter Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|Beschreibt das Verwenden von gespeicherten Prozeduren.|  
+|[Definieren von gespeicherten Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|Beschreibt das Verwenden von gespeicherten Prozeduren.|  
   
   

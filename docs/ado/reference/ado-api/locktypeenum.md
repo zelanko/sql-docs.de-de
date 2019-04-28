@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864073"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre, die auf Datensätze platziert werden, während der Bearbeitung.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Gibt die vollständige BatchUpdates an. Für den Modus "Batch-Update" erforderlich.|  
 |**adLockOptimistic**|3|Gibt an, optimistische, Datensätze. Der Anbieter verwendet optimistische, Sperren von Datensätzen nur bei Aufruf der [Update](../../../ado/reference/ado-api/update-method.md) Methode.|  
@@ -35,7 +35,7 @@ Gibt den Typ der Sperre, die auf Datensätze platziert werden, während der Bear
 |**adLockUnspecified**|-1|Es gibt keine Art von Sperre. Nach Klonen wird der Klon mit demselben Sperrentyp wie die ursprüngliche erstellt.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

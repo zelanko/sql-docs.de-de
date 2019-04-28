@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 930137c05cdf7465ba6f68aa3396d092fa6a926f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726769"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Datenquellen in mehrdimensionalen Modellen
   Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stammen aus einer externen Datenquelle. In der Regel stammen Quelldaten aus einem Data Warehouse, das für Berichtszwecke entworfen wurde, sie können jedoch auch aus einer beliebigen relationalen Datenbank stammen, auf die direkt oder indirekt über einen Mittler zugegriffen wird, z. B. ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket.  
@@ -57,14 +57,14 @@ ms.locfileid: "48113300"
 |-----------|-----------------|  
 |[Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](supported-data-sources-ssas-multidimensional.md)|Beschreibt die Datenquellentypen, die in einem tabellarischen Modell verwendet werden können.|  
 |[Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](create-a-data-source-ssas-multidimensional.md)|Erklärt, wie einem mehrdimensionalen Modell ein Datenquellenobjekt hinzugefügt wird.|  
-|[Löschen einer Datenquelle im Projektmappen-Explorer &#40;SSAS – mehrdimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Verwenden Sie diese Vorgehensweise, um ein Datenquellenobjekt aus einem mehrdimensionalen Modell zu löschen.|  
-|[Festlegen der Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Beschreibt jede Eigenschaft und erläutert deren Festlegung.|  
+|[Löschen einer Datenquelle in Projektmappen-Explorer &#40;SSAS – mehrdimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Verwenden Sie diese Vorgehensweise, um ein Datenquellenobjekt aus einem mehrdimensionalen Modell zu löschen.|  
+|[Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Beschreibt jede Eigenschaft und erläutert deren Festlegung.|  
 |[Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](set-impersonation-options-ssas-multidimensional.md)|Erklärt, wie die Optionen im Dialogfeld "Identitätswechselinformationen" konfiguriert werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Datenquellen und-Bindungen &#40;SSAS – mehrdimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Datenquellen und Bindungen &#40;SSAS – mehrdimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

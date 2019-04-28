@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715147"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen
   Sie können Vorhersageabfragen erstellen, indem Sie entweder eine Data Mining-Projektmappe in BI Development Studio erstellen oder indem Sie mit der rechten Maustaste auf ein bereits vorhandenes Miningmodell in SQL Server Management Studio klicken und anschließend die Option **Vorhersageabfrage erstellen** auswählen.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189688"
 8.  Führen Sie die Abfrage aus, indem Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** auf die erste Schaltfläche klicken und dann **Ergebnis**auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Singleton-Abfrage im Datamining-Designer](create-a-singleton-query-in-the-data-mining-designer.md)   
- [Data Mining-Abfragen](data-mining-queries.md)  
+ [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)  
   
   

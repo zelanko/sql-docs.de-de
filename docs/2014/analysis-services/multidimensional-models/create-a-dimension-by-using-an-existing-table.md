@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702144"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
@@ -59,7 +59,7 @@ ms.locfileid: "48226620"
 > [!NOTE]  
 >  Wenn der Dimensionstyp und die Standardattributtypen beim Erstellen der Dimension nicht festgelegt sind, können Sie diese Werte mit dem Business Intelligence-Assistenten festlegen, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Dimensionsintelligenz zu einer Dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) oder (bei Dimensionen vom Typ Accounts) [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- Der Assistent legt den Dimensionstyp automatisch auf Basis der angegebenen Attributtypen fest. In den Assistenten angegebenen Attributtypen die `Type` für die Attribute. Die `Type`-Eigenschafteneinstellungen für die Dimension und ihre Attribute stellen Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen bereit. In einigen Fällen diese `Type` -eigenschafteneinstellungen nur bieten eine Anleitung für Clientanwendungen bereit und sind optional. In anderen Fällen, wie Sie für Konten, Time- oder Currency Dimension, von diese `Type` eigenschafteneinstellungen bestimmen spezifisches Verhalten im Server-basierten und möglicherweise erforderlich, um bestimmte cubeverhalten zu implementieren.  
+ Der Assistent legt den Dimensionstyp automatisch auf Basis der angegebenen Attributtypen fest. Die im Assistenten angegebenen Attributtypen bestimmen die `Type`-Eigenschaft für die Attribute. Die `Type`-Eigenschafteneinstellungen für die Dimension und ihre Attribute stellen Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen bereit. In einigen Fällen stellen diese `Type`-Eigenschafteneinstellungen nur einen Hinweis für Clientanwendungen bereit und sind optional. In anderen Fällen, z. B. für die &lt;localizedText&gt;Accounts&lt;/localizedText&gt;-, &lt;localizedText&gt;Time&lt;/localizedText&gt;- oder &lt;localizedText&gt;Currency&lt;/localizedText&gt;-Dimension, bestimmen diese `Type`-Eigenschafteneinstellungen ein spezifisches serverbasiertes Verhalten und können erforderlich sein, um ein bestimmtes Cubeverhalten zu implementieren.  
   
  Weitere Informationen zu Dimensions- und Attributtypen finden Sie unter [Dimensionstypen](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Konfigurieren von Attributtypen](attribute-properties-configure-attribute-types.md).  
   

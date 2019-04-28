@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724032"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Wie bei *Scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können außer Kraft setzen der angeforderten *Ccopt* Werte.  
   
- *Zeilenanzahl*  
+ *rowcount*  
  Die Anzahl der mit AUTO_FETCH zu verwendenden Fetchpufferzeilen. Der Standardwert ist 20 Zeilen. *Überprüfung der Zeilenanzahl* verhält sich anders, wenn als Eingabewert oder Rückgabewert zugewiesen.  
   
 |Als Eingabewert|Als Rückgabewert|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Ein FAST_FORWARD-Cursor wurde automatisch geschlossen.  
   
 > [!NOTE]  
->  Wenn die Prozedur sp_cursoropen erfolgreich ausgeführt wird, werden die RPC-Rückgabeparameter und ein Resultset mit TDS-Spaltenformatinformationen (Meldungen 0xa0 und 0xa1) gesendet. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen keine Zeilendaten zurückgegeben werden, und die *Fertig* Nachrichtenanzahl werden auf 0 (null). Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
+>  Wenn die Prozedur Sp_cursoropen erfolgreich ausgeführt wird, der RPC-Rückgabeparameter und ein Resultset mit TDS-spaltenformatinformationen (0xa0 und 0xa1 Nachrichten) gesendet werden. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen keine Zeilendaten zurückgegeben werden, und die *Fertig* Nachrichtenanzahl werden auf 0 (null). Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -207,7 +207,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param-Parameter  
  Alle nach dem fünften Parameter übergebenen Parameter werden als Eingabeparameter an den Anweisungsplan übergeben. Der erste derartige Parameter muss eine Zeichenfolge im folgenden Format sein:  
   
- *{Fehler bei Datentyp-Namens der lokalen Variablen} [,... n] '.*  
+ *{Fehler bei Datentyp-Namens der lokalen Variablen} [,... n]*  
   
  Nachfolgende Parameter werden verwendet, um die Werte zu ersetzen, übergeben die *Namens der lokalen Variablen* in der Anweisung.  
   

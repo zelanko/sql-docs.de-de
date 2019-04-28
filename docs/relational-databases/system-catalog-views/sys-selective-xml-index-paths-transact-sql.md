@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860824"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|Die ID des Systemtyps der Spalte.|  
 |**user_type_id**|**tinyint**|Die ID des Benutzertyps der Spalte.|  
 |**max_length**|**smallint**|Die maximale Länge (in Bytes) des Typs.<br /><br /> -1 = Der Spaltendatentyp ist varchar(max), nvarchar(max), varbinary(max) oder xml.|  
-|**Mit einfacher Genauigkeit**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt, andernfalls 0.|  
-|**Skalieren**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt. Andernfalls ist es 0.|  
+|**precision**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt, andernfalls 0.|  
+|**scale**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt. Andernfalls ist es 0.|  
 |**collation_name**|**sysname**|Der Name der Sortierung des Typs, wenn es sich um einen zeichenbasierten Typ handelt. Andernfalls wird NULL verwendet.|  
 |**is_singleton**|**bit**|0 = Der SINGLETON-Hinweis ist nicht vorhanden.<br /><br /> 1 = Der SINGLETON-Optimierungshinweis wurde angewendet.|  
   

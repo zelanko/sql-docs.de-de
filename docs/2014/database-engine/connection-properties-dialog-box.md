@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808398"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
   Zeigen Sie mithilfe dieses Dialogfelds die aktuellen Verbindungseigenschaften an. Das Dialogfeld wird angezeigt, wenn Sie in verschiedenen Dialogfeldern des Objekt-Explorers auf **Verbindungseigenschaften anzeigen** klicken. Die auf dieser Seite angezeigten Eigenschaften sind schreibgeschützt.  
@@ -102,6 +102,6 @@ ms.locfileid: "48155900"
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Verbindung mit Server herstellen &amp;amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;amp;#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Verbindung mit Server herstellen &amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

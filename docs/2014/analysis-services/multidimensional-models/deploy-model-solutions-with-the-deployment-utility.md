@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726354"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
   Mithilfe des Hilfsprogramms **Microsoft.AnalysisServices.Deployment** können Sie die Bereitstellungs-Engine von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von der Eingabeaufforderung aus starten. Als Eingabedatei verwendet das Hilfsprogramm die XML-Ausgabedateien, die beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert werden. Die Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
@@ -69,7 +69,7 @@ ms.locfileid: "48106770"
 ##  <a name="Modes"></a> Modi  
  Das Hilfsprogramm kann in den folgenden Modi ausgeführt werden.  
   
-|Mode|Description|  
+|Modus|Description|  
 |----------|-----------------|  
 |Unbeaufsichtigter Modus|Es wird keine Benutzeroberfläche angezeigt. Alle Informationen, die für die Bereitstellung benötigt werden, werden durch die Eingabedateien angegeben. Im unbeaufsichtigten Modus gibt das Hilfsprogramm keinen Status aus. Stattdessen kann eine optionale Protokolldatei verwendet werden, um Status- und Fehlerinformationen für eine spätere Prüfung aufzuzeichnen.|  
 |Antwortmodus|Die Benutzeroberfläche des Bereitstellungs-Assistenten wird angezeigt; die Benutzerantworten werden in den angegebenen Ausgabedateien gespeichert, um sie bei einer späteren Bereitstellung verwenden zu können. Im Antwortmodus erfolgt keine Bereitstellung. Der Antwortmodus dient lediglich dazu, die Benutzerantworten aufzuzeichnen.|  
@@ -87,6 +87,6 @@ ms.locfileid: "48106770"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

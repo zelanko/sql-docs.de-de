@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703195"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Zuordnung ändern (Dialogfeld, Mininggenauigkeitsdiagramm)
   Im Dialogfeld **Zuordnung ändern** können Sie ändern, wie die Eingabespalten mit den Spalten im Miningmodell verknüpft werden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ordnet die Spalten automatisch basierend auf den Namen und den Spaltentyp, aber Sie können dieses Dialogfeld können Sie zum Ändern der spaltenzuordnungen verwenden. Wenn Sie Änderungen vornehmen, müssen Sie sicherstellen, dass die Spalten in der externen Datenquelle Datentypen und Inhaltstypen aufweisen, die den Spalten in dem Miningmodell entsprechen, das getestet wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstrukturspalte**  
  Eine Liste der Miningstrukturspalten, die in der ausgewählten Miningstruktur definiert sind.  
   
@@ -33,6 +33,6 @@ ms.locfileid: "48106480"
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

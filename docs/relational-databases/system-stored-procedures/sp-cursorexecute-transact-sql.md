@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723995"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_cursorexecute prepared_handle, cursor
 > [!IMPORTANT]  
 >  Wenn eine *Ccopt* kein Wert angegeben wird, wird der Standardwert OPTIMISTIC unabhängig von *Ccopt* in Sp_cursorprepare angegebenen Wert.  
   
- *Zeilenanzahl*  
+ *rowcount*  
  Ein optionaler Parameter, der die Anzahl der mit AUTO_FETCH zu verwendenden Fetchpufferzeilen angibt. Der Standardwert ist 20 Zeilen. *Überprüfung der Zeilenanzahl* verhält sich anders, wenn als Eingabewert oder Rückgabewert zugewiesen.  
   
 |Als Eingabewert|Als Rückgabewert|  
@@ -80,7 +80,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Code-Rückgabewert  
  *Überprüfung der Zeilenanzahl* möglicherweise die folgenden Werte zurück.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |-1|Die Anzahl der unbekannten Zeilen.|  
 |-n|Eine asynchrone Auffüllung ist wirksam.|  

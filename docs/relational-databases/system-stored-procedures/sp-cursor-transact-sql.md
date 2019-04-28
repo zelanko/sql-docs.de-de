@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724205"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|Wird verwendet, um den Puffer mithilfe zugrunde liegender Tabellen aufzufüllen, und kann zum Update der Zeile verwendet werden, wenn ein Update- oder Löschvorgang aufgrund der Steuerung durch vollständige Parallelität fehlerhaft ist, oder nachdem ein UPDATE-Vorgang ausgeführt wurde.|  
 |0X10|LOCK|Bewirkt, dass eine SQL Server U-Sperre auf der Seite mit der angegebenen Zeile. Diese Sperre ist mit S-Sperren kompatibel, jedoch nicht mit X-Sperren oder anderen U-Sperren. Kann verwendet werden, um eine kurzfristige Sperre zu implementieren.|  
 |0X20|SETPOSITION|Wird verwendet, nur wenn die Anwendung vor sich geht eine nachfolgende SQL-Server ausstellen DELETE- oder UPDATE-Anweisung positioniert.|  
-|0X40|ABSOLUTE|Kann nur in Verbindung mit UPDATE oder DELETE verwendet werden.  ABSOLUTE wird nur mit KEYSET-Cursorn verwendet (wird für DYNAMIC-Cursor ignoriert, und STATIC-Cursor können nicht aktualisiert werden).<br /><br /> Hinweis: Wenn ABSOLUTE für eine Zeile im Keyset angegeben wird, die nicht abgerufen wurde, kann ein Fehler bei der Parallelitätsprüfung auftreten und das Rückgabeergebnis nicht gewährleistet werden.|  
+|0X40|ABSOLUTE|Kann nur in Verbindung mit UPDATE oder DELETE verwendet werden.  ABSOLUTE wird nur mit KEYSET-Cursorn verwendet (wird für DYNAMIC-Cursor ignoriert, und STATIC-Cursor können nicht aktualisiert werden).<br /><br /> Hinweis: Wenn ABSOLUTE für eine Zeile im Keyset angegeben wird, die nicht abgerufen wurde, der Vorgang kann fehlschlagen, die Überprüfung auf Parallelität, und das Rückgabeergebnis nicht garantiert werden kann.|  
   
- *rowNum*  
+ *rownum*  
  Gibt an, welche Zeilen der Cursor im Fetchpuffer verwendet, aktualisiert oder löscht.  
   
 > [!NOTE]  

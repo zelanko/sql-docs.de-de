@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702931"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Miningstruktur-Sicht (Modell-Designer für Data Mining)
   Verwenden Sie die **Miningstruktur** -Sichten, um Miningstrukturen zu ändern und eine Miningstruktur und alle ihre zugeordneten Mining-Modelle zu verarbeiten.  
@@ -33,7 +33,7 @@ ms.locfileid: "48144580"
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodelle-Sicht &#40;Datamining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)  
   

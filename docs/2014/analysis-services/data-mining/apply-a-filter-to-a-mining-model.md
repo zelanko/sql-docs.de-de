@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692091"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
   Wenn Ihre Miningstruktur eine geschachtelte Tabelle enthält, können Sie einen Filter auf die Falltabelle und/oder die geschachtelte Tabelle anwenden.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Klicken Sie auf das Textfeld **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie z. B. `Income` als Spalte aus, wählen Sie den Operator "Größer als" (>) aus, und geben Sie dann `30000` ein.  
+     Wählen Sie z. B. `Income` wählen Sie als Spalte aus, die größer als-Operator (>), und geben Sie dann `30000`.  
   
 9. Klicken Sie auf die nächste Zeile im Raster.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Wählen Sie einen Operator aus, und geben Sie einen Wert ein, wie in Schritt 7 und 8 beschrieben.  
   
-     Wählen Sie z. B. erneut `Income` als Spalte aus, wählen Sie den Operator "Kleiner als" (<) aus, und geben Sie dann `40000` ein.  
+     Wählen Sie z. B. `Income` wie die Spalte erneut aus, wählen Sie den kleiner als-Operator (<), und geben Sie `40000`.  
   
 12. Klicken Sie auf die nächste Zeile im Raster.  
   

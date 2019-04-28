@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699746"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Benutzerdefinierte Elementeigenschaften (MDX)
-  Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können nicht hinzugefügt werden, um die `(All)` -Ebene einer Hierarchie noch der Hierarchie selbst.  
+  Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können weder der `(All)`-Ebene einer Hierarchie noch der Hierarchie selbst hinzugefügt werden.  
   
 ## <a name="creating-user-defined-member-properties"></a>Erstellen von benutzerdefinierten Elementeigenschaften  
  Benutzerdefinierte Elementeigenschaften können serverbasierten Dimensionen oder Cubes entweder über die Benutzeroberfläche oder programmgesteuert hinzugefügt werden.  
@@ -38,7 +38,7 @@ ms.locfileid: "48114310"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- Die `PROPERTIES` -Schlüsselwort steht hinter dem Mengenausdruck der Achsenspezifikation. Z. B. die folgende MDX-Abfrage die `PROPERTIES` Schlüsselwort ruft die `List Price` und `Dealer Price` benutzerdefinierte Elementeigenschaften und wird nach der Mengenausdruck, der die Produkte identifiziert im Januar verkauften:  
+ Das `PROPERTIES`-Schlüsselwort steht hinter dem Mengenausdruck der Achsenspezifikation. In der folgende MDX-Abfrage ruft das `PROPERTIES`-Schlüsselwort beispielsweise die benutzerdefinierten Elementeigenschaften `List Price` und `Dealer Price` ab und wird nach dem Mengenausdruck angegeben, der die im Januar verkauften Produkte identifiziert.  
   
 ```  
 SELECT   
@@ -53,7 +53,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Verwenden der Properties-Funktion zum Abrufen von benutzerdefinierten Elementeigenschaften  
- Für das Zugreifen auf benutzerdefinierte Elementeigenschaften kann auch die `Properties`-Funktion verwendet werden. Z. B. die folgende MDX-Abfrage verwendet die `WITH` Schlüsselwort, um das Erstellen eines berechneten Elements aus der `List Price` Elementeigenschaft:  
+ Für das Zugreifen auf benutzerdefinierte Elementeigenschaften kann auch die `Properties`-Funktion verwendet werden. Die folgende MDX-Abfrage verwendet beispielsweise das `WITH`-Schlüsselwort, um ein berechnetes Element zu erstellen, das aus der `List Price`-Elementeigenschaft besteht:  
   
 ```  
 WITH   
@@ -69,6 +69,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Elementeigenschaften &#40;MDX&#41;](mdx-member-properties.md)   
- [Eigenschaften &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

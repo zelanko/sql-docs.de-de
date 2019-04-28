@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814066"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Seite 'Zusammenfassung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   In diesem Hilfethema werden die Optionen der Seite **Zusammenfassung** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] und [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie das Raster auf dieser Seite zum Überprüfen der Auswahl für die neue Verfügbarkeitsgruppe. Klicken Sie zum Vornehmen von Änderungen auf **Zurück** , um zu den relevanten Seiten zurückzukehren. Wenn Sie fertig sind, klicken Sie auf **Weiter** , um zur Seite **Zusammenfassung** zurückzukehren. Wenn Sie mit der Auswahl zufrieden sind, klicken Sie auf **Fertig stellen**.  

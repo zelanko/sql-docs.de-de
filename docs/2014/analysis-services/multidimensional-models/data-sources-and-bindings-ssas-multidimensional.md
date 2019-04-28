@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700078"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
   Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
@@ -67,7 +67,7 @@ ms.locfileid: "52510537"
 |Integer|Ein 32-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I4-Datentyp in der OLE DB zugeordnet.|  
 |Single|Eine Gleitkommazahl mit einfacher Genauigkeit im Bereich von -3,40E +38 bis 3,40E +38. Dieser Datentyp wird dem Single-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R4-Datentyp in der OLE DB zugeordnet.|  
 |SmallInt|Eine 16-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem Int16-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I2-Datentyp in der OLE DB zugeordnet.|  
-|TinyInt|Eine 8-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem SByte-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I1-Datentyp in OLE DB zugeordnet.<br /><br /> Hinweis: Wenn eine Datenquelle Felder enthält, die dem tinyint-Datentyp entsprechen und die Eigenschaft Automatisch inkrementieren auf TRUE festgelegt ist, werden sie in der Datenquellensicht zu ganzen Zahlen konvertiert.|  
+|TinyInt|Eine 8-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem SByte-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I1-Datentyp in OLE DB zugeordnet.<br /><br /> Hinweis: Wenn eine Datenquelle enthält Felder, die von der Tinyint-Datentyp sind, und die Eigenschaft automatisch inkrementieren auf True festgelegt ist, sie in der Datenquellensicht zu ganzen Zahlen konvertiert werden.|  
 |UnsignedBigInt|Eine 64-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint64-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI8-Datentyp in der OLE DB zugeordnet.|  
 |UnsignedInt|Eine 32-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI4-Datentyp in der OLE DB zugeordnet.|  
 |UnsignedSmallInt|Eine 16-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint16-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI2-Datentyp in der OLE DB zugeordnet.|  

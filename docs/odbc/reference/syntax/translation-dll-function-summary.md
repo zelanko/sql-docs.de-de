@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720307"
 ---
 # <a name="translation-dll-function-summary"></a>Übersetzungs-DLL – Funktionsübersicht
 Die folgende Tabelle beschreibt die Übersetzung von DLL-Funktionen. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Übersetzung DLL-Funktionsreferenz](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
   
-|Task|Funktionsname|Zweck|  
+|Aufgabe|Funktionsname|Zweck|  
 |----------|-------------------|-------------|  
 |Übersetzen von Daten|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Übersetzt alle Datenflüsse, die aus der Datenquelle an den Treiber an.|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Übersetzt alle Datenflüsse, die vom Treiber mit der Datenquelle an.|

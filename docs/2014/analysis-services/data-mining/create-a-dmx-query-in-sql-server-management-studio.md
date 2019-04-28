@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715347"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Erstellen einer DMX-Abfrage in SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von Funktionen bereit, um Sie bei der Erstellung von Vorhersage-, Inhalts- und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen zu unterstützen.  
@@ -81,12 +81,12 @@ ms.locfileid: "48101410"
   
  Beispiele hinsichtlich des Erstellens spezieller Typen von Abfragen aus Vorlagen finden Sie unter den folgenden Themen:  
   
- [Erstellen einer Singleton-Vorhersageabfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
+ [Erstellen Sie eine Singleton-Abfrage aus einer Vorlage](create-a-singleton-prediction-query-from-a-template.md)  
   
  [Erstellen einer Miningmodell-Inhaltsabfrage](create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining Abfrageschnittstellen](data-mining-query-tools.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

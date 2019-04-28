@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc9b89f4c1d3a1a44d5a568a47d16276639bb4cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726734"
 ---
 # <a name="create-a-currency-type-dimension"></a>Erstellen einer Währungstypdimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Dimension vom Typ "Währung" eine Dimension, deren Attribute eine Auflistung von Währungen für Finanzberichte darstellt.  
@@ -34,14 +34,14 @@ ms.locfileid: "48140390"
   
  Anhand dieser Informationen entwirft der Business Intelligence-Assistent einen Währungsumrechnungsprozess, der die entsprechende Zielwährungsdimension (die Währungsdimension, die Zielwährungen darstellt) identifiziert. Abhängig von der Anzahl der Währungsumrechnungen, die für Ihre Business Intelligence-Lösung erforderlich sind, kann der Business Intelligence-Assistent mehrere Zielwährungsdimensionen definieren. Weitere Informationen zum Definieren von Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).  
   
- Um eine Dimension als Währungsdimension identifizieren möchten, legen die `Type` Eigenschaft der Dimension auf `Currency`.  
+ Wenn Sie eine Dimension als Währungsdimension identifizieren möchten, legen Sie die `Type`-Eigenschaft der Dimension auf `Currency` fest.  
   
 ## <a name="dimension-structure"></a>Dimensionsstruktur  
  Eine Währungsdimension enthält zumindest ein Schlüsselattribut, das die einzelnen Währungen in der Dimensionstabelle für die Währungsdimension identifiziert. Der Wert des Schlüsselattributs ist in Quell- und Zielwährungsdimensionen unterschiedlich.  
   
 -   Wenn Sie ein Attribut als Schlüsselattribut einer Quellwährungsdimension identifizieren möchten, legen Sie die `Type`-Eigenschaft des Attributs auf `CurrencySource` fest.  
   
--   Um ein Attribut als zielwährungsdimension identifizieren möchten, legen die `Type` -Eigenschaft des Attributs auf `CurrencyDestination`.  
+-   Wenn Sie ein Attribut als Zielwährungsdimension identifizieren möchten, legen Sie die `Type`-Eigenschaft des Attributs auf `CurrencyDestination` fest.  
   
  Für Berichtszwecke enthalten sowohl Quell- als auch Zielwährungsdimensionen optional folgende Attribute:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48140390"
   
 -   Einen Währungscode gemäß der International Standards Organization (ISO).  
   
-     Um ein Attribut als eine Währung ISO-Code-Attribut zu identifizieren, legen die `Type` -Eigenschaft des Attributs auf `CurrencyIsoCode`.  
+     Wenn Sie ein Attribut als Attribut für den ISO-Währungscode identifizieren möchten, legen Sie die `Type`-Eigenschaft des Attributs auf `CurrencyIsoCode` fest.  
   
  Weitere Informationen zu Attributtypen finden Sie unter [Konfigurieren von Attributtypen](attribute-properties-configure-attribute-types.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140390"
   
 ## <a name="see-also"></a>Siehe auch  
  [Attribute und Attributhierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence-Assistent F1-Hilfe](../business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](../business-intelligence-wizard-f1-help.md)   
  [Dimensionstypen](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

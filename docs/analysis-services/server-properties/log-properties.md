@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714647"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "53071927"
  Der Standardwert für diese Eigenschaft ist leer. Dies bedeutet, dass standardmäßig die Datei FlightRecorderTraceDef.xml verwendet wird.  
   
 ## <a name="query-log"></a>Abfrageprotokoll  
- **Gilt für:** Nur mehrdimensionaler Servermodus.  
+ **Gilt für:** Nur mehrdimensionaler Servermodus  
   
  **QueryLog\QueryLogFileName**  
  Eine Zeichenfolge, die den Namen der Abfrageprotokolldatei angibt. Diese Eigenschaft gilt nur, wenn für die Protokollierung eine Datei auf dem Datenträger anstelle einer Datenbanktabelle (das Standardverhalten) verwendet wird.  

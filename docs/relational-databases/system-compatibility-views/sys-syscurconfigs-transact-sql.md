@@ -1,5 +1,5 @@
 ---
-title: Sys.syscurconfigs (Transact-SQL) | Microsoft-Dokumentation
+title: sys.syscurconfigs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693843"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47757694"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Wert**|**int**|Vom Benutzer änderbarer Wert für die Variable. Hiermit wird durch die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nur dann, wenn RECONFIGURE ausgeführt wurde.|  
+|**value**|**int**|Vom Benutzer änderbarer Wert für die Variable. Wird nur von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet, wenn RECONFIGURE ausgeführt wurde.|  
 |**config**|**smallint**|Nummer der Konfigurationsvariablen.|  
-|**Kommentar**|**nvarchar(255)**|Erläuterung der Konfigurationsoption.|  
+|**comment**|**nvarchar(255)**|Erläuterung der Konfigurationsoption.|  
 |**status**|**smallint**|Bitmuster, das den Status der Option kennzeichnet. Folgende Werte sind möglich:<br /><br /> 0 = Statisch Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 1 = Dynamisch. Variable wird beim Ausführen der RECONFIGURE-Anweisung wirksam.<br /><br /> 2 = Erweitert. Variable wird nur angezeigt, wenn **Erweiterte Optionen anzeigen** festgelegt ist.<br /><br /> 3 = Dynamisch und erweitert.|  
   
 ## <a name="see-also"></a>Siehe auch  

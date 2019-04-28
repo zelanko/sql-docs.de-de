@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701287"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Erstellen, Ändern oder Löschen einer Attributbeziehung
   Auf der Registerkarte **Attributbeziehungen** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie eine Attributbeziehung zwischen Attributen in einer Dimension erstellen, ändern oder löschen.  

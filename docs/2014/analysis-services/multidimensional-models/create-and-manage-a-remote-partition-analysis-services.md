@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700576"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
   Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Remoteinstanz als Partitionsspeicher konfigurieren.  
@@ -67,7 +67,7 @@ ms.locfileid: "53356640"
   
 2.  Auf dem untergeordneten Server: Erstellen Sie im Projektmappen-Explorer eine neue Datenquelle, die auf die Cubedatenbank Db-Master. Verwenden Sie den Anbieter **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**.  
   
-3.  Auf dem untergeordneten Server: Bereitstellen der Projektmappe  
+3.  Auf dem untergeordneten Server: Die Lösung bereit.  
   
 #### <a name="enable-features-in-ssms"></a>Aktivieren von Funktionen (in SSMS)  
   
