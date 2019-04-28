@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft Docs
+title: Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724860"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34015057"
   
  Nachdem Sie die Tabellen ermittelt haben, die die Daten für die Prognose enthalten, müssen Sie die Spalten in den externen Daten den Spalten im Miningmodell zuordnen. Wenn im Modell zum Beispiel eine Prognose des Kaufverhaltens von Kunden auf Grundlage demografischer Daten und Umfrageantworten dargestellt wird, sollten die Eingabedaten Informationen enthalten, die im Allgemeinen dem Inhalt des Modells entsprechen. Sie benötigen nicht für jede einzelne Spalte übereinstimmende Daten, doch eine möglichst große Zahl von Spalten mit übereinstimmenden Daten ist von Vorteil. Wenn Sie Spalten zuordnen möchten, die andere Datentypen enthalten, erhalten Sie möglicherweise einen Fehler. In diesem Fall können Sie eine benannte Berechnung in der Datenquellensicht definieren, um die neuen Spaltendaten in den Datentyp umzuwandeln bzw. zu konvertieren, der für das Modell erforderlich ist. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
- Wenn Sie die Daten auswählen, die Sie für die Prognose verwenden möchten, werden einige Spalten in der ausgewählten Datenquelle möglicherweise automatisch den Miningmodellspalten zugeordnet. Dies geschieht auf Grundlage der Namensähnlichkeit und der übereinstimmenden Datentypen. Sie können im Dialogfeld **Zuordnung ändern** in der **Miningmodellvorhersage** die zugeordneten Spalten ändern, fehlerhafte Zuordnungen löschen oder neue Zuordnungen für vorhandene Spalten erstellen. Die Entwurfsoberfläche **Miningmodellvorhersage** unterstützt auch die Drag & Drop-Bearbeitung von Verbindungen.  
+ Wenn Sie die Daten auswählen, die Sie für die Prognose verwenden möchten, werden einige Spalten in der ausgewählten Datenquelle möglicherweise automatisch den Miningmodellspalten zugeordnet. Dies geschieht auf Grundlage der Namensähnlichkeit und der übereinstimmenden Datentypen. Sie können im Dialogfeld **Zuordnung ändern** in der **Miningmodellvorhersage** die zugeordneten Spalten ändern, fehlerhafte Zuordnungen löschen oder neue Zuordnungen für vorhandene Spalten erstellen. Die Entwurfsoberfläche **Miningmodellvorhersage** unterstützt auch die Drag &amp; Drop-Bearbeitung von Verbindungen.  
   
 -   Wählen Sie eine Spalte in der Tabelle **Miningmodell** aus, und ziehen Sie sie in der Tabelle **Eingabetabelle(n) auswählen** in die entsprechende Spalte, um eine neue Verbindung zu erstellen.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015057"
      Falls bereits eine Beziehung besteht, werden die Spalten des Miningmodells automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Die Beziehung zwischen der geschachtelten Tabelle und der Falltabelle können Sie ändern, indem Sie auf **Join ändern**klicken und damit das Dialogfeld **Beziehung erstellen** öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorhersageabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Vorhersageabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

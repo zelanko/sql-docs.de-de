@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812819"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Ursachen und Lösungen für Datenbank-Engine-Fehler
   Dieses Thema enthält die Ursache und Auflösungsinformationen für eine Reihe von Fehlern im Zusammenhang mit der [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48080270"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die Themen zu Fehlermeldungen in diesem Abschnitt enthalten eine Erklärung der Fehlermeldung, mögliche Ursachen sowie Maßnahmen, die Sie ergreifen können, um das Problem zu beheben.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [Grundlegendes zu Datenbank-Engine-Fehlern](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>Siehe auch  

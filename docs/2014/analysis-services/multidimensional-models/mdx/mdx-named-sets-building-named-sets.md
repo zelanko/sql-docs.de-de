@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699600"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Erstellen von benannten Mengen in MDX (MDX)
   Ein Mengenausdruck kann aus einer langen und komplexen und deshalb schwer verständlichen Deklaration bestehen. Wenn ein Mengenausdruck häufig verwendet wird, kann das wiederholte Definieren der Menge lästig werden. Um das Verwenden längerer, komplexer oder häufig verwendeter Ausdrücke zu vereinfachen, ermöglicht MDX (Multidimensional Expressions) die Definition eines solchen Ausdrucks als *benannte Menge*.  
@@ -43,6 +43,6 @@ ms.locfileid: "48083060"
 ## <a name="see-also"></a>Siehe auch  
  [SELECT-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [CREATE SET-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

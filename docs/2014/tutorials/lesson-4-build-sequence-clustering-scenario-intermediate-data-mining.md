@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d34125b7b750daa1da25c9e8788172b5d9ca2c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710602"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>Lektion 4: Erstellen eines Sequenzclusterszenarios (Datamining-Lernprogramm für fortgeschrittene)
   Die Marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] möchte verstehen, wie sich Kunden auf der [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] -Website bewegen. Das Unternehmen vermutet, dass es ein Muster für die Reihenfolge gibt, in der Kunden Produkte in ihre Einkaufskörbe legen. Die Reihenfolge der Einkaufssequenzen soll analysiert werden, um zu ermitteln, wie Kunden ihren Einkaufskörben zugehörige Elemente hinzufügen. Anhand dieser Informationen kann die Website dann so angepasst werden, dass Kunden angeregt werden, weitere Produkte zu kaufen.  

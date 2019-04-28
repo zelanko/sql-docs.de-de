@@ -21,13 +21,13 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719512"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>Sys. dm_db_log_info (Transact-SQL)
+# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Gibt [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Informationen des Transaktionsprotokolls. Beachten Sie, dass es sich bei allen Transaktionsprotokolldateien in der Tabellenausgabe kombiniert werden. Jede Zeile in der Ausgabe stellt eine VLF in das Transaktionsprotokoll und stellt Informationen zu diesem VLF im Protokoll.
@@ -39,7 +39,7 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Argumente  
- *Database_id* | NULL | STANDARDWERT  
+ *database_id* | NULL | DEFAULT  
  Ist die ID der Datenbank. *database_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID-Nummer, der eine Datenbank, NULL oder DEFAULT. Die Standardeinstellung ist NULL. NULL und DEFAULT sind gleichwertig im Kontext der aktuellen Datenbank.
  
  Geben Sie NULL an, wenn Sie VLF-Informationen der aktuellen Datenbank zurückgegeben werden sollen.

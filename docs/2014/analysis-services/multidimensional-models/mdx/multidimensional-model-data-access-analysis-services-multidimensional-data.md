@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac889b67dec5c6ff014f18d18899109741a2eef9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725274"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
   Verwenden Sie die Informationen in diesem Thema, um zu erfahren, wie mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierten Support für das Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server in Ihrem Netzwerk enthalten, auf mehrdimensionale [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Daten zugegriffen wird.  
@@ -53,7 +53,7 @@ ms.locfileid: "53359602"
 ### <a name="performancepoint-dashboards"></a>PerformancePoint-Dashboards  
  PerformancePoint-Dashboards werden verwendet, um Scorecards in SharePoint zu erstellen, die Geschäftsleistung verglichen mit vordefinierten Maßnahmen übermitteln. PerformancePoint bietet Unterstützung für Datenverbindungen zu mehrdimensionalen Analysis Services-Daten. Weitere Informationen finden Sie unter [Erstellen einer Analysis Services-Datenverbindung (PerformancePoint Services)](https://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Datatools  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Modell- und Berichts-Designer erstellen Lösungen, die mehrdimensionale Modelle enthalten, mithilfe von SQL Server Data Tools. Durch die Bereitstellung der Lösung in einer Analysis Services-Instanz wird die Datenbank erstellt, mit der Sie anschließend von Excel, Reporting Services und anderen Business Intelligence-Clientanwendungen ausgehend Verbindungen herstellen.  
   
  SQL Server Data Tools werden auf einer Visual Studio-Shell erstellt und verwenden Projekte, die organisiert werden und das Modell enthalten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  

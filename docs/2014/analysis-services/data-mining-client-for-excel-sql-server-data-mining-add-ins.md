@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692032"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Data Mining-Client für Excel (SQL Server Data Mining-Add-Ins)
   Der Data Mining-Client für Excel umfasst eine Reihe von Tools, mit denen Sie häufige Data Mining-Aufgaben ausführen können – von der Datenbereinigung bis hin zur Modellerstellung und Vorhersageabfragen. Sie können Daten in Excel-Tabellen oder Bereichen verwenden oder auf externe Datenquellen zugreifen.  
@@ -77,12 +77,12 @@ ms.locfileid: "48063556"
  [Assistent zum Klassifizieren &#40;Data Mining-Add-ins für Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  Die **klassifizieren** Assistenten können Sie ein klassifizierungsmodell auf Basis vorhandener Daten in einer Excel-Tabelle, einem Excel-Bereich oder einer externen Datenquelle zu erstellen. Mit einem Klassifizierungsmodell werden Muster in den Daten extrahiert, die auf Übereinstimmungen hinweisen. So können Sie Vorhersagen basierend auf Wertgruppen treffen. Ein Klassifizierungsmodell kann beispielsweise verwendet werden, um das Risiko auf der Grundlage von Einkommens- und Konsummustern vorherzusagen.  
   
- Die **klassifizieren** -Assistent unterstützt die Verwendung der folgenden Datamining-Algorithmen von Microsoft: Decision Trees-Algorithmus die logistische Regression, Naïve Bayes, neuronaler Netzwerke.  
+ Die **klassifizieren** -Assistent unterstützt die Verwendung der folgenden Microsoft Datamining-Algorithmen: Decision Trees-Algorithmus, logistische Regression, Naïve Bayes, neuronaler Netzwerke.  
   
  [Assistent zum Schätzen von &#40;Data Mining-Add-ins für Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  Die **Schätzung** Assistenten können Sie ein schätzmodell zu erstellen. Ein Schätzmodell extrahiert Datenmuster und verwendet diese, um ein numerisches Ergebnis (z. B. eine Währung, einen Umsatz, ein Datum oder eine Uhrzeit) vorherzusagen.  
   
- Die **Schätzung** -Assistent verwendet diese Datamining-Algorithmen von Microsoft: Decision Trees, Linear Regression, logistische Regression und Neural Networks.  
+ Die **Schätzung** -Assistent verwendet diese Microsoft Datamining-Algorithmen: Entscheidungsstrukturen, lineare Regression, logistische Regression und neuronale Netzwerke.  
   
  [Wichtige Einflussfaktoren analysieren &#40;Tabellenanalysetools für Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  Der Cluster-Assistent unterstützt Sie beim Erstellen eines Clusteringmodells. Ein Clustermodell erkennt Gruppen von Zeilen mit ähnlichen Merkmalen. Dieser Assistent ist hilfreich beim Durchsuchen von Mustern in sämtlichen Daten.  
@@ -123,7 +123,7 @@ ms.locfileid: "48063556"
  Die **Abfrage** Assistenten können Sie Vorhersagen für ein vorhandenes Datamining-Modell zu erstellen.  
   
  [Erweiterter Data Mining-Abfrage-Editor](advanced-data-mining-query-editor.md)  
- Für fortgeschrittene Benutzer bietet das Tool eine Drag & Drop-Schnittstelle zu DMX. Sie können auf einfache Weise Vorhersageabfragen oder neue Modelle erstellen, ohne dass Sie sich Gedanken über die Syntax machen müssen.  
+ Für fortgeschrittene Benutzer bietet das Tool eine Drag &amp; Drop-Schnittstelle zu DMX. Sie können auf einfache Weise Vorhersageabfragen oder neue Modelle erstellen, ohne dass Sie sich Gedanken über die Syntax machen müssen.  
   
 ##  <a name="bkmk_ViewModels"></a> Anzeigemodelle  
  Modelle, die Sie erstellen, werden zum Durchsuchen automatisch geöffnet. Sie können Modelle trotzdem auch auf dem Server durchsuchen und neue Visualisierungen generieren. Verwenden der [Visio-Shapes](viewing-data-mining-models-in-visio-data-mining-add-ins.md) um Modelldiagramme in einen anpassbaren Zeichenbereich zu exportieren.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724215"
 ---
 # <a name="hard-coded-sql-statements"></a>Hartcodierte SQL-Anweisungen
 Anwendungen, die feste Aufgabe in der Regel enthalten hartcodierte SQL-Anweisungen. Beispielsweise kann ein Liste der offenen Aufträge den folgenden Aufruf verwenden:  
@@ -29,7 +29,7 @@ Anwendungen, die feste Aufgabe in der Regel enthalten hartcodierte SQL-Anweisung
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Es gibt mehrere Vorteile in hartcodierten SQL-Anweisungen: sie können getestet werden, wenn die Anwendung geschrieben wird; Sie sind einfacher zu implementieren als Anweisungen, die zur Laufzeit erstellt. und sie die Anwendung vereinfachen.  
+ Es gibt mehrere Vorteile in hartcodierten SQL-Anweisungen ein: Sie können getestet werden, wenn die Anwendung geschrieben wird; Sie sind einfacher zu implementieren als Anweisungen, die zur Laufzeit erstellt. und sie die Anwendung vereinfachen.  
   
  Verwenden von Anweisungsparametern und Vorbereiten von Anweisungen bieten bessere Möglichkeiten, hartcodierte SQL-Anweisungen zu verwenden. Nehmen wir beispielsweise an, dass die Parts-Tabelle die Spalten PartID, Beschreibung und Preis enthält. Eine Möglichkeit, eine neue Zeile in dieser Tabelle einfügen wäre das Erstellen und führen eine **einfügen** Anweisung:  
   

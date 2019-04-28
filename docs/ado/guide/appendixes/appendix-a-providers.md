@@ -1,5 +1,5 @@
 ---
-title: Anhang A:-Anbietern | Microsoft-Dokumentation
+title: 'Anhang A: Anbieter | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719909"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
+# <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
 In diesem Abschnitt werden drei Arten von Anbietern: Datenanbieter, Dienstanbietern und Dienstkomponenten. Anbieter können in zwei Kategorien unterteilt: die Bereitstellung von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst starten, indem Sie erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter sind als auch noch weiter definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten funktionieren müssen.
 
 ## <a name="data-providers"></a>Datenanbieter
@@ -49,7 +49,7 @@ In diesem Abschnitt werden drei Arten von Anbietern: Datenanbieter, Dienstanbiet
 |Microsoft SQL Server|[Microsoft OLE DB-Anbieter für SQLServer](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle-Datenbanken|[Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Internet-Publishing|[Microsoft OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|Einfache Datenquellen|[Einfache Microsoft OLE DB-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|Einfache Datenquellen|[Microsoft OLE DB Simple Provider](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>Dynamische Eigenschaften der anbieterspezifischen
  Die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte enthalten die dynamische Eigenschaften, die spezifisch für die Anbieter. Diese Eigenschaften enthalten Informationen zu Funktionen, die spezifisch für den Anbieter über die integrierte Eigenschaften, die ADO unterstützt.

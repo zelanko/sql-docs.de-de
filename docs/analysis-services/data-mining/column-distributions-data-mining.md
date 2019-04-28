@@ -1,5 +1,5 @@
 ---
-title: Spaltenverteilungen [Datamining] | Microsoft Docs
+title: Spaltenverteilungen [Datamining] | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83da6c1ba0a278d2d6b80f309a7bc7f6a1688ba4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724991"
 ---
 # <a name="column-distributions-data-mining"></a>Spaltenverteilungen [Data Mining]
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "34014107"
  Weitere Informationen zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Content-Arten & #40; Datamining & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Diskretisierungsmethoden & #40; Datamining & #41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
- [Verteilungen & #40; DMX & #41;](../../dmx/distributions-dmx.md)   
+ [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Diskretisierungsmethoden &#40;Data Mining&#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
+ [Verteilungen &#40;DMX&#41;](../../dmx/distributions-dmx.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

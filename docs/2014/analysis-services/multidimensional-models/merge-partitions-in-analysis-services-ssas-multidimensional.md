@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699085"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Zusammenführen von Partitionen in Analysis Services (SSAS – Mehrdimensional)
   Sie können Partitionen in einer bestehenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusammenführen, um Faktendaten aus mehreren Partitionen derselben Measuregruppe zu konsolidieren.  
@@ -70,7 +70,7 @@ ms.locfileid: "48063340"
 ##  <a name="bkmk_Where"></a> Aktualisieren der Partitionsquelle nach dem Zusammenführen von Partitionen  
  Partitionen werden nach Abfrage segmentiert, etwa so wie die WHERE-Klausel einer SQL-Abfrage zur Verarbeitung der Daten verwendet wird, oder nach einer Tabelle oder benannten Abfrage, die Daten für die Partition bereitstellt. Die `Source`-Eigenschaft der Partition gibt an, ob die Partition an eine Abfrage oder eine Tabelle gebunden ist.  
   
- Wenn Sie Partitionen zusammenführen, den Inhalt der Partitionen konsolidiert, aber die `Source` -Eigenschaft wird nicht aktualisiert, um den zusätzlichen der Partition widerzuspiegeln. Dies bedeutet, wenn Sie anschließend erneut verarbeitet werden, die von der ursprünglichen beibehalten `Source`, rufen Sie falsche Daten aus dieser Partition. Die Partition aggregiert die Daten fälschlicherweise auf der übergeordneten Ebene. Im folgenden Beispiel wird dieses Verhalten veranschaulicht.  
+ Beim Zusammenführen von Partitionen wird der Inhalt der Partitionen konsolidiert, die `Source`-Eigenschaft wird jedoch nicht aktualisiert, um den erweiterten Partitionsbereich widerzuspiegeln. Wenn Sie eine Partition, die ihre ursprüngliche `Source` beibehält, also später erneut verarbeiten, rufen Sie falsche Daten aus dieser Partition ab. Die Partition aggregiert die Daten fälschlicherweise auf der übergeordneten Ebene. Im folgenden Beispiel wird dieses Verhalten veranschaulicht.  
   
  **Problemstellung**  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48063340"
   
  **Die Lösung**  
   
- Die Lösung besteht darin, aktualisieren Sie die `Source` Eigenschaft anpassen, entweder die WHERE-Klausel oder benannte Abfrage oder Manuelles Zusammenführen von Daten aus den zugrunde liegenden Faktentabellen, um sicherzustellen, dass die nachfolgende Verarbeitung präzise Berücksichtigung des erweiterten der Partition.  
+ Die Lösung liegt in der Aktualisierung der `Source`-Eigenschaft. Dabei wird entweder die WHERE-Klausel oder benannte Abfrage angepasst, oder Daten aus den zugrunde liegenden Faktentabellen werden manuell zusammengeführt. So kann sichergestellt werden, dass die nachfolgende Verarbeitung unter Berücksichtigung des erweiterten Partitionsbereichs präzise abläuft.  
   
  In diesem Beispiel können Sie nach dem Zusammenführen von Partition 3 in Partition 2 einen Filter bereitstellen, z.B. ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet'), um die Daten in der sich ergebenden Partition 2 anzugeben, damit nur Daten über [ColaDecaf] und [ColaDiet] aus der Faktentabelle extrahiert und die zu [ColaFull] gehörenden Daten ausgeschlossen werden. Alternativ können Sie bereits beim Erstellen Filter für Partition 2 und Partition 3 angeben. Diese Filter werden beim Zusammenführen dann kombiniert. In beiden Fällen enthält der Cube nach der Verarbeitung der Partition keine doppelten Daten.  
   
  **Schlussfolgerung**  
   
- Überprüfen Sie nach dem Zusammenführen von Partitionen immer die `Source` , ob der richtige Filter für die zusammengeführten Daten. Wenn Sie anfänglich eine Partition mit den Verlaufsdaten für Q1, Q2 und Q3 verwendet haben und diese jetzt mit Q4 zusammenführen möchten, müssen Sie Q4 einbeziehen, indem Sie den Filter anpassen. Andernfalls werden bei der nachfolgenden Verarbeitung der Partition fehlerhafte Ergebnisse zurückgegeben, bei denen Q4 nicht berücksichtigt wird.  
+ Nach dem Zusammenführen von Partitionen sollten Sie `Source` immer daraufhin überprüfen, ob der richtige Filter für die zusammengeführten Daten verwendet wird. Wenn Sie anfänglich eine Partition mit den Verlaufsdaten für Q1, Q2 und Q3 verwendet haben und diese jetzt mit Q4 zusammenführen möchten, müssen Sie Q4 einbeziehen, indem Sie den Filter anpassen. Andernfalls werden bei der nachfolgenden Verarbeitung der Partition fehlerhafte Ergebnisse zurückgegeben, bei denen Q4 nicht berücksichtigt wird.  
   
 ##  <a name="bkmk_fact"></a> Besondere Überlegungen für Partitionen, die nach Faktentabelle oder benannter Abfrage segmentiert sind  
- Zusätzlich zu Abfragen können auch Partitionen nach Tabelle oder benannter Abfrage segmentiert werden. Wenn Quell- und Zielpartition dieselbe Faktentabelle in einer Datenquelle oder Datenquellensicht verwenden, behält die `Source`-Eigenschaft nach dem Zusammenführen von Partitionen Gültigkeit. Sie gibt die Faktentabellendaten für die resultierende Partition an. Da die, die für die resultierende Partition erforderlichen Fakten in der Faktentabelle vorhanden sind-Tabelle ist, werden keine Änderungen an der `Source` Eigenschaft ist erforderlich.  
+ Zusätzlich zu Abfragen können auch Partitionen nach Tabelle oder benannter Abfrage segmentiert werden. Wenn Quell- und Zielpartition dieselbe Faktentabelle in einer Datenquelle oder Datenquellensicht verwenden, behält die `Source`-Eigenschaft nach dem Zusammenführen von Partitionen Gültigkeit. Sie gibt die Faktentabellendaten für die resultierende Partition an. Da die für die resultierende Partition erforderlichen Fakten in der Faktentabelle vorhanden sind, muss die `Source`-Eigenschaft nicht geändert werden.  
   
  Partitionen, die Daten aus mehreren Faktentabellen oder benannten Abfragen verwenden, erfordern zusätzlichen Arbeitsaufwand. Sie müssen die Fakten aus der Faktentabelle der Quellpartition manuell mit der Faktentabelle der Zielpartition zusammenführen.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48063340"
   
  Aus diesem Grund müssen Partitionen, die segmentierte Daten aus benannten Abfragen abrufen, ebenfalls aktualisiert werden. Die kombinierte Partition muss jetzt über eine benannte Abfrage verfügen, die das kombinierte Resultset zurückgibt, das zuvor aus separaten benannten Abfragen abgerufen wurde.  
   
-## <a name="partition-storage-considerations-molap"></a>Überlegungen zum Partitionsspeicher: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Überlegungen zur Speicherung der Partition: MOLAP  
  Beim Zusammenführen von MOLAP-Partitionen werden die in den mehrdimensionalen Strukturen der Partitionen gespeicherten Fakten ebenfalls zusammengeführt. Dies führt zu einer in sich vollständigen und konsistenten Partition. Die in MOLAP-Partitionen gespeicherten Fakten sind Kopien der Fakten in der Faktentabelle. Bei einem späteren Verarbeiten der Partition werden die Fakten in der mehrdimensionalen Struktur gelöscht (nur bei einer vollständigen Verarbeitung oder Aktualisierung) und Daten, wie durch die Datenquelle und den Filter der Partition angegeben, aus der Faktentabelle kopiert. Wenn die Quellpartition eine andere Faktentabelle aus der Zielpartition verwendet, muss die Faktentabelle der Quellpartition manuell mit der Faktentabelle der Zielpartition zusammengeführt werden, um sicherzustellen, dass eine vollständige Datenmenge verfügbar ist, wenn die sich ergebende Partition verarbeitet wird. Dies trifft auch zu, wenn die beiden Partitionen auf zwei unterschiedlichen benannten Abfragen basieren.  
   
 > [!IMPORTANT]  
 >  Eine zusammengeführte MOLAP-Partition mit einer unvollständigen Faktentabelle enthält eine intern zusammengeführte Kopie der Faktentabellendaten und wird bis zu ihrer Verarbeitung einwandfrei ausgeführt.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Überlegungen zum Partitionsspeicher: HOLAP- und ROLAP-Partitionen  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Überlegungen zur Speicherung der Partition: HOLAP- und ROLAP-Partitionen  
  Beim Zusammenführen von HOLAP- oder ROLAP-Partitionen, die über verschiedene Faktentabellen verfügen, werden die Faktentabellen nicht automatisch zusammengeführt. Werden die Faktentabellen nicht manuell zusammengeführt, ist nur die mit der Zielpartition verknüpfte Faktentabelle für die sich ergebende Partition verfügbar. Mit der Quellpartition verknüpfte Fakten sind nicht für Drilldowns in der sich ergebenden Partition verfügbar, und beim Verarbeiten der Partition fassen die Aggregationen keine Daten aus der nicht verfügbaren Tabelle zusammen.  
   
 > [!IMPORTANT]  
@@ -133,11 +133,11 @@ ms.locfileid: "48063340"
  Weitere Informationen zu diesem Thema finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Analysis Services-Objekte](processing-analysis-services-objects.md)   
+ [Verarbeiten von Analysis Services-Objekten](processing-analysis-services-objects.md)   
  [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Erstellen und verwalten eine lokale Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Erstellen und verwalten eine Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [Festlegen des Rückschreibens von Partitionen](set-partition-writeback.md)   
+ [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [Einrichten des Rückschreibens von Partitionen](set-partition-writeback.md)   
  [Partitionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](configure-string-storage-for-dimensions-and-partitions.md)  
   

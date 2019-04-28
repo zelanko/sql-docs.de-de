@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700928"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen
   Sie haben die Möglichkeit, Zeichenfolgenspeicher neu zu konfigurieren, um Platz für sehr große Zeichenfolgen in Dimensionsattributen oder Partitionen schaffen, die die maximale Dateigröße von 4 GB für Zeichenfolgenspeicher überschreiten. Wenn die Dimensionen oder Partitionen Zeichenfolgenspeicher dieser Größe beinhalten, können Sie die Dateigrößeneinschränkung durch Ändern der Eigenschaft **StringStoresCompatibilityLevel** auf Ebene der Dimension oder Partition für lokale als auch für verknüpfte Objekte (lokal oder remote) umgehen.  
@@ -25,7 +25,7 @@ ms.locfileid: "48060390"
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1050**|Gibt die standardmäßige Zeichenfolgenspeicherarchitektur an, für die eine maximale Dateigröße von 4 GB pro Speicher gilt.|  
 |**1100**|Gibt den größeren Zeichenfolgenspeicher an, unterstützt bis zu 4 Milliarden eindeutige Zeichenfolgen pro Speicher.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48060390"
   
  Der Kompatibilitätsgrad der Datenbank muss auf 1100 festgelegt werden. Wenn Sie eine Datenbank mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] und der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version oder einer neueren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt oder bereitgestellt haben, ist der Kompatibilitätsgrad der Datenbank bereits auf 1100 festgelegt. Wenn Sie eine in einer früheren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenbank in ssSQL11 oder eine neuere Version verschoben haben, müssen Sie den Kompatibilitätsgrad aktualisieren. Für Datenbanken, die Sie verschieben, aber nicht erneut bereitstellen, können Sie den Kompatibilitätsgrad mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] festlegen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Schritt 1: Festlegen der StringStoreCompatiblityLevel-Eigenschaft in SQL Server-Datentools  
+##  <a name="bkmk_step1"></a>Schritt 1: Festlegen der StringStoreCompatiblityLevel-Eigenschaft in SQL Server-Datentools  
   
 1.  Öffnen Sie das Projekt mit den zu ändernden Dimensionen oder Partitionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48060390"
   
 8.  Speichern Sie die Datei.  
   
-##  <a name="bkmk_step2"></a> Schritt 2: Verarbeiten der Objekte  
+##  <a name="bkmk_step2"></a>Schritt 2: Verarbeiten der Objekte  
  Die neue Speicherarchitektur wird verwendet, nachdem Sie die Objekte verarbeitet haben. Die Verarbeitung der Objekte zeigt auch an, dass das Problem der Speichereinschränkung behoben wurde, da der Fehler, der zuvor bei einer Überlaufbedingung des Zeichenfolgenspeichers gemeldet wurde, nicht mehr auftreten sollte.  
   
 -   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die soeben geänderte Dimension, und wählen Sie **Verarbeiten**aus.  
@@ -88,9 +88,9 @@ ms.locfileid: "48060390"
  Sie müssen die Option Vollständig verarbeiten für jedes Objekt verwenden, das die neue Zeichenfolgenspeicherarchitektur verwendet. Führen Sie vor der Verarbeitung eine Auswirkungsanalyse für die Dimension durch, um festzustellen, ob abhängige Objekte ebenfalls eine erneute Verarbeitung erfordern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools und Ansätze für die Verarbeitung &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [Speichermodi und Verarbeitung](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Tools und Ansätze zum Verarbeiten &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [Speichermodi und Verarbeitung von Partitionen](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Speichern von Dimensionen](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

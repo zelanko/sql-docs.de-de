@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704944"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Beibehalten des Standardwerts für die Affinitätsmaske
   Diese Regel überprüft, ob die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Einstellung für die Affinitätsmaske auf den Standardwert 0 (null) festgelegt ist. Mit der Affinitätsmaskenoption wird die CPU-Affinität dynamisch gesteuert.  

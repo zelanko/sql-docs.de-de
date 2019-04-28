@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817944"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "52783192"
   
 ## <a name="comparing-administrator-types"></a>Vergleichen von Administratortypen  
   
-|Administratortyp|und Beschreibung|  
+|Administratortyp|Description|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
 |Modelladministrator|Kann ein Modelladministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Adminberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in dem bestimmten Modell.|  
@@ -74,7 +74,7 @@ ms.locfileid: "52783192"
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Erstellen einer Master Data Services-Datenbank](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  

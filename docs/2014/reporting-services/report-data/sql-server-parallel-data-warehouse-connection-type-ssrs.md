@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720674"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] ist eine skalierbare Data Warehouse-Anwendung, die durch massive Parallelverarbeitung Leistung und Skalierbarkeit bietet. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] verwendet [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Datenbanken für die verteilte Verarbeitung und Datenspeicherung.  

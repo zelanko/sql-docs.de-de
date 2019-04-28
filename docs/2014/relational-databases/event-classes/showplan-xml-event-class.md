@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691871"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML-Ereignisklasse
   Die Showplan XML-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausführt. Verwenden Sie die Showplan XML-Ereignisklasse, um die Showplanoperatoren zu identifizieren. Diese Ereignisklasse speichert jedes Ereignis als ein definiertes XML-Dokument.  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722207"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
@@ -87,7 +87,7 @@ ms.locfileid: "50147575"
   
 -   [Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](/sql/dmx/dmx-statements-data-definition)  
   
- **Einschränkungen:** Einige Eigenschaften können mit DMX nicht geändert werden.  
+ **Einschränkungen:** Einige Eigenschaften können nicht geändert werden, mithilfe von DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) ist die Datendefinitionssprache für sämtliche Analysis Services. XMLA ermöglicht es Ihnen, die meisten der Data Mining-Objekte und Servervorgänge zu steuern. Alle Verwaltungsvorgänge zwischen Client und Server können mit XMLA ausgeführt werden. Zur Vereinfachung können Sie die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) verwenden, um das XML einzubinden.  

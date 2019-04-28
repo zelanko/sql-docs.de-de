@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eine benutzerdefinierte Aggregation zu einer Dimension | Microsoft Docs
+title: Hinzufügen eine benutzerdefinierte Aggregation zu einer Dimension | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717377"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI-Assistent – Hinzufügen einer benutzerdefinierten Aggregations zu einer Dimension
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI-Assistent – Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Durch das Hinzufügen einer benutzerdefinierten Aggregationserweiterung zu einem Cube oder einer Dimension werden die Standardaggregationen entfernt, die einem Dimensionselement mit einem anderen unären Operator zugeordnet sind. Die Erweiterung legt eine Spalte für unären Operator in der Dimensionstabelle fest, die das Rollup für Elemente in einer Über-/Unterordnungshierarchie definiert. Der unäre Operator bezieht sich auf das übergeordnete Attribut in einer Über-/Unterordnungshierarchie.  
   

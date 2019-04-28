@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720344"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)
   Wenn Sie bei der erstmaligen Ausführung eines Berichts die Sortierreihenfolge für Daten in einem Datenbereich ändern möchten, müssen Sie den Sortierungsausdruck für den Datenbereich oder die Datengruppe festlegen. Die Sortierungsausdruck für eine Gruppe wird automatisch auf den gleichen Wert wie der Gruppierungsausdruck festgelegt.  

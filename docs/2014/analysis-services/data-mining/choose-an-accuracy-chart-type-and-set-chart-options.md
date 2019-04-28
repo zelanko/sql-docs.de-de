@@ -1,29 +1,23 @@
 ---
 title: Auswählen eines Genauigkeitsdiagrammtyps und festlegen Diagrammoptionen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
 ms.topic: conceptual
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services]
-- mining models [Analysis Services], validating
-- classification accuracy [data mining]
-- accuracy testing [data mining]
-ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 13d55fe9e4837bdacb248ddb63aad8b4064a88a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705405"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Methoden zum Bestimmen der Gültigkeit Ihrer Miningmodelle bereit. Der Typ des Genauigkeitsdiagramms, das Sie für jedes Modell oder jede Struktur erstellen können, hängt von diesen Faktoren ab:  
   
 -   Dem Algorithmustyp, der verwendet wurde, um das Modell zu erstellen  

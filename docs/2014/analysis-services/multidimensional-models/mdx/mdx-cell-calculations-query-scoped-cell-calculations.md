@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699821"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Erstellen von Zellenberechnungen im Bereich einer Abfrage (MDX)
-  Sie verwenden in MDX (Multidimensional Expressions) das `WITH`-Schlüsselwort dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Die `WITH` Schlüsselwort weist die folgende Syntax:  
+  Sie verwenden in MDX (Multidimensional Expressions) das `WITH`-Schlüsselwort dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Das `WITH`-Schlüsselwort hat die folgende Syntax:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Andererseits verarbeitet MDX die Berechnungsformel immer dann, wenn eine MDX-Abfrage für den Cube ausgegeben wird, bei der Zellen aus der Definition berechneter Zellen betroffen sind. Diese Verarbeitung erfolgt unabhängig vom Gültigkeitsbereich bei der Erstellung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

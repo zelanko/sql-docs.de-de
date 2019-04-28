@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693915"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47796579"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der Datenbank. Ist eindeutig innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank zugegriffen werden kann oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, sind alle Spalten, die mit dem Präfix "mirroring_"den Wert NULL.|  
+|**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank zugegriffen werden kann oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, werden alle Spalten, die mit dem Präfix "mirroring_"den Wert NULL.|  
 |**mirroring_state**|**tinyint**|Status der Spiegeldatenbank und der Datenbank-Spiegelungssitzung.<br /><br /> 0 = angehalten<br /><br /> 1 = Getrennt vom anderen Partner<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert<br /><br /> 5 = Die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.<br /><br /> 6 = Die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failovercluster finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_state_desc**|**nvarchar(60)**|Beschreibung des Status der Spiegeldatenbank und der Datenbankspiegelungssitzung. Folgende Werte sind möglich:<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Weitere Informationen finden Sie unter [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  
 |**mirroring_role**|**tinyint**|Aktuelle Rolle der lokalen Datenbank in der Datenbank-Spiegelungssitzung.<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  

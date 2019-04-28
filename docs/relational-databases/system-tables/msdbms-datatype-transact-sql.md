@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816943"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810542"
 |**datatype_id**|**int**|Identifiziert jeden eindeutigen Datentyp.|  
 |**dbms_id**|**int**|Identifiziert das DBMS, zu dem der Typ gehört.|  
 |**type**|**sysname**|Der Name des Datentyps (systemeigen).|  
-|**CreateParams**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0 x 1** = mit einfacher Genauigkeit.<br /><br /> **0 x 2** = skalieren.<br /><br /> **0 x 4** = Länge.|  
+|**createparams**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0x1** = PRECISION.<br /><br /> **0 x 2** = skalieren.<br /><br /> **0 x 4** = Länge.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Tabelle enthält Einträge für SQL Server-Datentypen, da es sich bei eine Instanz von SQL Server in einer nicht - SQL Server-Datenbank abonnieren und Veröffentlichen auf einen nicht - SQL Server-Abonnenten kann.  

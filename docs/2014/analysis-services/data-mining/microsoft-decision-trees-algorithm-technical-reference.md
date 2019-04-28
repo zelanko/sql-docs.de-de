@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722002"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
@@ -61,7 +61,7 @@ ms.locfileid: "53365402"
  Eine ausführlichere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus mit diskreten vorhersagbaren Spalten funktioniert, finden Sie unter [Learning Bayesian Networks: Die Kombination aus wissen und statistischen Daten](https://go.microsoft.com/fwlink/?LinkId=45963). Weitere Informationen zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit kontinuierlichen vorhersagbaren Spalten finden Sie im Anhang des Dokuments [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(Autoregressive Strukturmodelle zur Zeitreihenanalyse).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Bewertungsmethoden und Funktionsauswahl  
- Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des Informationsgewinns: Shannon-Entropie, Bayessches Netz mit K2-A-priori-Verteilung und Bayessches Netz mit einheitlicher Dirichlet-Verteilung von A-priori-Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
+ Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des informationsgewinns: Berechnung Shannons-Entropie, Bayessches Netz mit K2 vor und Bayessches Netz mit eine gleichmäßige Dirichlet-Verteilung von Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Die Funktionsauswahl wird automatisch von allen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl verwendete Methode hängt vom Algorithmus ab, mit dem das Modell erstellt wird. Die Algorithmusparameter, die die Funktionsauswahl für ein Entscheidungsstrukturmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES und MAXIMUM_OUTPUT.  
   

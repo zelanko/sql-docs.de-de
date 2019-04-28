@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726814"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Datenquellensichten in mehrdimensionalen Modellen
   Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  
@@ -36,7 +36,7 @@ ms.locfileid: "48126110"
   
  [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [Ändern der Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
  [Definieren von logischen Beziehungen in einer Datenquellensicht &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48126110"
   
  [Durchsuchen von Daten in einer Datenquellensicht &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [Löschen eine Datenquellensicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [Löschen einer Datenquellensicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
  [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   

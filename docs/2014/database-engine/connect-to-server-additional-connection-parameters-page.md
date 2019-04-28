@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808671"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Verbindung mit Server herstellen (Seite 'Zusätzliche Verbindungsparameter')
   Im Dialogfeld **Verbinden mit** von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] werden die gängigsten Verbindungszeichenfolgenwerte als Optionen angezeigt. Mithilfe der Seite **Zusätzliche Verbindungsparameter** können Sie der Verbindungszeichenfolge weitere Verbindungsparameter hinzufügen.  

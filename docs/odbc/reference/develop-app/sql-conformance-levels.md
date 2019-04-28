@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690206"
 ---
 # <a name="sql-conformance-levels"></a>SQL-Übereinstimmungsebenen
 Die Ebene der SQL-92-Grammatik, die vom Treiber unterstützt wird angegeben, durch den Wert durch einen Aufruf zurückgegebenen **SQLGetInfo** mit dem Typ der SQL_SQL_CONFORMANCE-Informationen. Dies gibt an, ob der Treiber den Eintrag, FIPS Transitional, zwischen- oder Full-Ebenen, die in SQL-92 definierten entspricht.  

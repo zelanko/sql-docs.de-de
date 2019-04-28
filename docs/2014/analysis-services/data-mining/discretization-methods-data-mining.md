@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722722"
 ---
 # <a name="discretization-methods-data-mining"></a>Diskretisierungsmethoden (Data Mining)
   Einige Algorithmen, die verwendet werden, um Data Mining-Modelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu erstellen, benötigen bestimmte Inhaltstypen, um richtig zu funktionieren. Beispielsweise kann der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus kontinuierliche Spalten nicht als Eingabe verwenden und keine kontinuierlichen Werte vorhersagen. Außerdem können einige Spalten so viele Werte enthalten, dass der Algorithmus interessante Muster in Daten, aus denen ein Modell erstellt wird, nur schwer identifizieren kann.  
@@ -51,19 +51,19 @@ ms.locfileid: "48187051"
   
 ## <a name="remarks"></a>Hinweise  
   
--   Sie können die `EQUAL_AREAS` Methode, um Strings zu diskretisieren.  
+-   Sie können die `EQUAL_AREAS`-Methode verwenden, um Strings zu diskretisieren.  
   
--   Die `CLUSTERS` Methode verwendet eine zufällige Stichprobe von 1000 Datensätzen, um Daten zu diskretisieren. Verwenden Sie die `EQUAL_AREAS`-Methode, wenn Sie nicht möchten, dass der Algorithmus Stichproben von Daten nimmt.  
+-   Die `CLUSTERS`-Methode verwendet eine zufällige Stichprobe von 1000 Datensätzen, um Daten zu diskretisieren. Verwenden Sie die `EQUAL_AREAS`-Methode, wenn Sie nicht möchten, dass der Algorithmus Stichproben von Daten nimmt.  
   
--   Das Lernprogramm für das Miningmodell für neurale Netzwerke bietet ein Beispiel dafür, wie Diskretisierung angepasst werden kann. Weitere Informationen finden Sie unter [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   Das Lernprogramm für das Miningmodell für neurale Netzwerke bietet ein Beispiel dafür, wie Diskretisierung angepasst werden kann. Weitere Informationen finden Sie unter [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Datamining&#41;](content-types-data-mining.md)   
+ [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Inhaltstypen &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Datentypen &#40;Datamining&#41;](data-types-data-mining.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)   
  [Miningstrukturspalten](mining-structure-columns.md)   
- [Spaltenverteilungen &#40;Datamining&#41;](column-distributions-data-mining.md)  
+ [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md)  
   
   

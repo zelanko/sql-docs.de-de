@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697494"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Erstellen eines freigegebenen Datasets oder eingebetteten Datasets (Berichts-Generator und SSRS)
   Sie können ein eingebettetes Dataset zur Verwendung in einem einzelnen Bericht oder ein freigegebenes Dataset erstellen, das auf einem Berichtsserver gespeichert und von mehreren Berichten verwendet werden kann. Damit Sie ein Dataset erstellen können, muss eine eingebettete oder freigegebene Datenquelle vorhanden sein.  

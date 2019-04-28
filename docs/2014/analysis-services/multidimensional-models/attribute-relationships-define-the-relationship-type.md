@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cde44399dcee1492ab56fb2f32b2fd1da060c1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726904"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Definieren des Beziehungstyps einer Attributbeziehung
   Zum Definieren des Beziehungstyps einer Attributbeziehung verwenden Sie die Registerkarte **Attributbeziehungen** im Dimensions-Designer, den Sie über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aufrufen können.  

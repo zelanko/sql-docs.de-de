@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699850"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
   In früheren Releases waren berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig. Ab SQL Server 2008 sind diese jedoch zulässig und werden durch eine Verbindungseigenschaft bereitgestellt. Darüber hinaus wurde in SQL Server 2008 R ein neues Verhalten für berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes eingeführt.  
@@ -28,7 +28,7 @@ ms.locfileid: "50148253"
   
 |||  
 |-|-|  
-|value|Description|  
+|Wert|Description|  
 |0|Berechnete Elemente sind in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig.<br /><br /> Beim Auswerten des untergeordneten SELECT-Ausdrucks oder des Teilcubes wird ein Fehler ausgelöst, wenn auf ein berechnetes Element verwiesen wird.|  
 |1|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig, in den zurückgebenden Teilbereich werden jedoch keine Vorgänger der Elemente eingeführt.|  
 |2|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig und in den zurückgebenden Teilbereich werden Vorgänger der Elemente eingeführt. Zudem ist eine gemischte Granularität in der Auswahl berechneter Elemente zulässig.|  
@@ -82,7 +82,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|KJ 2001|KJ 2002|KJ 2003|KJ 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
-|USA|(null)|(null)|(null)|(null)|(null)|  
+|United States|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2.383.545,69|$291.248,93|$763.557,02|$915.832,36|$412.907,37|  
   

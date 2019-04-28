@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE und FORMAT_STRING für FORMATTED_VALUE | Microsoft Docs
+title: LANGUAGE und FORMAT_STRING für FORMATTED_VALUE | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807560"
 ---
-# <a name="mdx-cell-properties---formattedvalue-property"></a>MDX-Cell Properties - FORMATTED_VALUE-Eigenschaft
+# <a name="mdx-cell-properties---formattedvalue-property"></a>MDX – Zelleigenschaften: FORMATTED_VALUE-Eigenschaft
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34026957"
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
 |B|€5.040,00|FORMAT_STRING wird auf `Currency` festgelegt (geerbt von A), und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt, wodurch das Euro-Symbol, das abweichende Dezimaltrennzeichen und das abweichende Tausendertrennzeichen erhalten werden.|  
-|C|$5.040,00|FORMAT_STRING wird auf `$#,##0.00` (eine Überschreibung von Currency) von A festgelegt, und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt. Da die FORMAT_STRING-Eigenschaft das Währungssymbol explizit auf $ festgelegt hat, wird der FORMATTED_VALUE mit dem Dollarzeichen dargestellt. Da jedoch `.` (Punkt) und `,` (Komma) Platzhalter für Dezimaltrennzeichen und Tausendertrennzeichen sind, wird entsprechend der Sprachspezifikation eine Ausgabe generiert, in der Dezimal- und Tausendertrennzeichen lokalisiert sind.|  
+|c|$5.040,00|FORMAT_STRING wird auf `$#,##0.00` (eine Überschreibung von Currency) von A festgelegt, und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt. Da die FORMAT_STRING-Eigenschaft das Währungssymbol explizit auf $ festgelegt hat, wird der FORMATTED_VALUE mit dem Dollarzeichen dargestellt. Da jedoch `.` (Punkt) und `,` (Komma) Platzhalter für Dezimaltrennzeichen und Tausendertrennzeichen sind, wird entsprechend der Sprachspezifikation eine Ausgabe generiert, in der Dezimal- und Tausendertrennzeichen lokalisiert sind.|  
 |D|5.04E+03|FORMAT_STRING wird auf `Scientific` und LANGUAGE auf `1033`(geerbt vom Wert des Systemgebietsschemas) festgelegt, dadurch wird `.` (Punkt) als Dezimaltrennzeichen verwendet.|  
 |E|5,04E+03|FORMAT_STRING wird auf `Scientific` und LANGUAGE wird explizit auf `1034,` festgelegt. Dadurch wird `,` (Komma) als Dezimaltrennzeichen erhalten.|  
 |V|50.40%|FORMAT_STRING wird auf `Percent` und LANGUAGE auf `1033`(geerbt vom Wert des Systemgebietsschemas) festgelegt, dadurch wird `.` (Punkt) als Dezimaltrennzeichen verwendet.<br /><br /> Beachten Sie, dass VALUE von 5040 in 0.5040 geändert wurde.|  
@@ -130,7 +130,7 @@ ms.locfileid: "34026957"
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist `1033` (geerbt vom Wert des Systemgebietsschemas).|  
-|C|12/03/1959 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Tag im Unterschied zur US-Formatierung vertauscht sind.|  
+|c|12/03/1959 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Tag im Unterschied zur US-Formatierung vertauscht sind.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Wochentag in Spanisch angegeben werden.|  
 |E|1959/03/12 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1041` (Japanisch).<br /><br /> Beachten Sie, dass das Datum jetzt im Format Jahr/Monat/Tag Stunde:Minute:Sekunde angegeben wird.|  
 |V|1959年3月12日|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist explizit `1041` (Japanisch).|  
@@ -142,9 +142,9 @@ ms.locfileid: "34026957"
 |L|06:30|FORMAT_STRING wird explizit auf `Short Time` und LANGUAGE explizit auf `1041` (Japanisch) festgelegt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [FORMAT_STRING-Inhalt & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [Verwenden von Zelleigenschaften & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Erstellen und Verwenden von Eigenschaftswerten & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING-Inhalt &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Verwenden von Zelleneigenschaften &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

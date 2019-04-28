@@ -1,5 +1,5 @@
 ---
-title: Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft Docs
+title: Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717587"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34024037"
   
  Nach dem Erstellen einer tabellarischen oder mehrdimensionalen Lösung wird diese dann als Datenbank an den Server bereitgestellt. Ein Serveradministrator kann Datenverwaltungsaufgaben delegieren, indem er eine Rolle definiert, die über die Berechtigung "Vollzugriff" für die entsprechende Datenbank verfügt. Mitglieder dieser Rolle können Objekte in der Datenbank verarbeiten oder abfragen sowie zusätzliche Rollen für den Zugriff auf Cubes, Dimensionen und andere Objekte in der Datenbank selbst erstellen. Weitere Informationen finden Sie unter [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
- **Schritt 3: Aktivieren des Cube- oder Modellzugriffs für Abfrage- und Verarbeitungsworkloads**  
+ **Schritt 3: Aktivieren des Zugriffs von Cube- oder modellzugriffs für Abfrage- und verarbeitungsworkloads**  
   
  Standardmäßig haben nur Server- und Datenbankadministratoren Zugriff auf Cubes oder tabellarische Modelle. Damit diese Datenstrukturen auch anderen Personen in Ihrer Organisation zur Verfügung stehen, sind zusätzliche Rollenzuweisungen erforderlich, die Windows-Benutzer- und -Gruppenkonten zu Cubes oder Modellen zuordnen, zusammen mit Berechtigungen, die **Lese**-Berechtigungen angeben. Einzelheiten finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34024037"
 > [!NOTE]  
 >  Benutzer benötigen keine Berechtigungen für die Verweistabellen in der zugrunde liegenden relationalen Datenbank, aus der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seine Daten lädt, und benötigen keine Berechtigungen auf Dateiebene für den Computer, auf dem die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt wird.  
   
- **Schritt 4 (optional): Zulassen oder Verweigern des Zugriffs auf innere Cubeobjekte**  
+ **Schritt 4 (Optional): Zulassen Sie oder verweigern Sie des Zugriffs auf innere Cubeobjekte**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet Sicherheitseinstellungen für das Festlegen von Berechtigungen für einzelne Objekte, einschließlich Dimensionselemente und Zellen in einem Datenmodell. Einzelheiten finden Sie unter [Erteilen von benutzerdefiniertem Zugriff auf Dimensionsdaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) und [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
@@ -84,6 +84,6 @@ ms.locfileid: "34024037"
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

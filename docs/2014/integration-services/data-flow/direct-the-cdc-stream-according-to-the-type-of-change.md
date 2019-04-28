@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827397"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Weiterleiten des CDC-Datenstroms gemäß Änderungstyp
   Um eine CDC-Splittertransformation hinzuzufügen und zu konfigurieren, muss das Paket mindestens einen Datenflusstask und eine CDC-Quelle enthalten.  
@@ -36,11 +36,11 @@ ms.locfileid: "58377268"
   
 6.  Wählen Sie eine der folgenden Ausgaben aus:  
   
-    -   Löschen Sie Ausgabe: Die Ausgabe, in dem DELETE-änderungszeilen geleitet werden.  
+    -   Ausgabe löschen: Die Ausgabe, an die DELETE-Änderungszeilen geleitet werden.  
   
-    -   Ausgabe einfügen: Die Ausgabe, in denen INSERT-änderungszeilen geleitet werden.  
+    -   Ausgabe einfügen: Die Ausgabe, an die INSERT-Änderungszeilen geleitet werden.  
   
-    -   Ausgabe aktualisieren: Die Ausgabe, in denen vor/nach UPDATE Zeilen und Merge Zeilen werden weitergeleitet.  
+    -   Ausgabe aktualisieren: Die Ausgabe, an die UPDATE-Änderungszeilen (vor/nach Update) und MERGE-Änderungszeilen geleitet werden.  
   
 7.  Optional können Sie die erweiterten Eigenschaften mithilfe des Dialogfelds **Erweiterter Editor** konfigurieren.  
   

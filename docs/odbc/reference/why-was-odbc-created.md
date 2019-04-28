@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714147"
 ---
 # <a name="why-was-odbc-created"></a>Warum wurde ODBC erstellt?
 In der Vergangenheit verwendet Unternehmen eines einzelnen DBMS. Jeglicher Datenbankzugriff erfolgte durch die Front-End des Systems oder über Anwendungen, die ausschließlich mit dem System die Arbeit. Jedoch gestartet, weil die Verwendung von Computern wuchsen und weitere Computerhardware und-Software verfügbar sind, Unternehmen zum Abrufen der verschiedenen DBMS. Die Gründe wurden viele: Personen, die gekauft, kostengünstigste, was am schnellsten, was sich bereits wussten, was neueste auf dem Markt, was am besten für eine einzelne Anwendung gearbeitet. Andere Gründe wurden neuorganisationen und Fusionen verwendet, bei denen aufwies Abteilungen, die bisher von einer einzelnen DBMS jetzt mehrere.  

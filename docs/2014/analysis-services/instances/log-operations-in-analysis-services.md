@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703290"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
   Analysis Services-Instanz wird serverbenachrichtigungen, Fehler und Warnungen in der Datei "Msmdsrv.log" – einer für jede Instanz protokolliert, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](https://support.microsoft.com/kb/2965035)einsehen.  
@@ -38,7 +38,7 @@ ms.locfileid: "53363752"
 -   [Tipps und Best Practices](#bkmk_tips)  
   
 > [!NOTE]  
->  Wenn Sie Informationen zur Protokollierung suchen, interessiert Sie möglicherweise auch die Ablaufverfolgung von Vorgängen, die Verarbeitungs- und Abfrageausführungspfade anzeigen. Ablaufverfolgungsobjekte für die Ad-hoc- und die andauernde Ablaufverfolgung (z. B. Überwachung des Cubezugriffs), sowie Empfehlungen dazu, wie Sie Flight Recorder, SQL Server Profiler und xEvents optimal verwenden, finden Sie über die Links auf dieser Seite: [Überwachen einer Analysis Services-Instanz](monitor-an-analysis-services-instance.md).  
+>  Wenn Sie Informationen zur Protokollierung suchen, interessiert Sie möglicherweise auch die Ablaufverfolgung von Vorgängen, die Verarbeitungs- und Abfrageausführungspfade anzeigen. Ablaufverfolgungsobjekte für die ad-hoc- und die andauernde Ablaufverfolgung (z. B. Überwachung des) lautet, sowie Empfehlungen dazu, wie die optimale Verwendung Flight Recorder, SQL Server Profiler und xEvents cubezugriffs über die Links auf dieser Seite gefunden werden kann: [Überwachen einer Analysis Services-Instanz](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Speicherort und Arten von Protokollen  
  Analysis Services stellt die unten beschriebenen Protokolle zur Verfügung.  
@@ -49,7 +49,7 @@ ms.locfileid: "53363752"
 |OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|Nein|  
 |SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|Nein|  
   
- Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen zu nutzen, die in diesem Thema nicht behandelt werden: [Erste Sammlung Datentipps vom Microsoft-Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen, die in diesem Thema nicht behandelt: [Erste Sammlung Datentipps vom Microsoft-Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Allgemeine Informationen zu den Konfigurationseinstellungen der Protokolldatei  
  Sie finden Abschnitte für jedes Protokoll in der Serverkonfigurationsdatei "msmdsrv.ini" im Verzeichnis "\Programme\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config". Finden Sie unter [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) Anweisungen zum Bearbeiten der Datei.  
@@ -149,7 +149,7 @@ ms.locfileid: "53363752"
   
  **Konfigurieren von Absturzberichten**  
   
- Sofern vom Microsoft Support nicht anders angegeben, verwenden die meisten Administratoren die Standardeinstellungen. Der folgende ältere KB-Artikel dient weiterhin als Ressource für Anweisungen zum Konfigurieren von Abbilddateien: [Vorgehensweise: Konfigurieren von Analysis Services zum Generieren von Speicherabbilddateien](https://support.microsoft.com/kb/919711).  
+ Sofern vom Microsoft Support nicht anders angegeben, verwenden die meisten Administratoren die Standardeinstellungen. Ältere KB-Artikel dient weiterhin Anweisungen zum Konfigurieren von Abbilddateien bereitzustellen: [Vorgehensweise: Konfigurieren von Analysis Services zum Generieren von Speicherabbilddateien](https://support.microsoft.com/kb/919711).  
   
  Die Konfigurationseinstellung, die wahrscheinlich geändert werden muss, ist die `CreateAndSendCrashReports`-Einstellung, die bestimmt, ob eine Speicherabbilddatei generiert wird.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53363752"
   
 -   Konfigurieren Sie die Datei "msmdsrv.log", um die Größe und Anzahl der msmdsrv-Protokolldateien zu steuern. Die Einstellungen sind nicht standardmäßig aktiviert, fügen Sie diese daher nach der Installation hinzu. Weitere Informationen finden Sie in diesem Thema unter [MSMDSRV-Dienstprotokolldatei](#bkmk_msmdsrv) .  
   
--   Lesen Sie diesen Blogbeitrag vom Microsoft-Kundensupport, um zu erfahren, welche Ressourcen die Mitarbeiter zum Abrufen von Informationen zu Servervorgängen verwenden: [Anfängliche Datensammlung](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   Lesen Sie diesen Blogbeitrag vom Microsoft-Kundensupport erfahren, welche Ressourcen sie zum Abrufen von Informationen zu Servervorgängen verwenden: [Anfängliche Datensammlung](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   Verwenden Sie ASTrace2012, statt ein Abfrageprotokoll auszuführen, um herauszufinden, wer Cubes abfragt. Das Abfrageprotokoll dient in der Regel zur Bereitstellung von Eingaben für den verwendungsbasierten Optimierung-Assistenten, und die erfassten Daten können nicht einfach gelesen oder interpretiert werden. ASTrace2012 ist ein Communitytool, das weit verbreitet ist und die Abfragevorgänge erfasst. Finden Sie unter [Microsoft SQL Server-Community-Beispiele: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   

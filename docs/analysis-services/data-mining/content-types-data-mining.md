@@ -1,5 +1,5 @@
 ---
-title: Inhaltstypen (Datamining) | Microsoft Docs
+title: Inhaltstypen [Datamining] | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725184"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34015737"
   
  Wenn eine Spalte kontinuierliche numerische Daten enthält und Sie wissen, wie die Daten verteilt werden sollen, können Sie die Genauigkeit der Analyse möglicherweise erhöhen, indem Sie die erwartete Verteilung der Werte angeben. Die Spaltenverteilung wird auf Ebene der Miningstruktur festgelegt. Daher bezieht sich die Einstellung auf alle Modelle, die auf der Struktur basieren. Weitere Informationen finden Sie unter [Spaltenverteilungen &#40;Data Mining&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
- Der Inhaltstyp **Continuous** wird von den folgenden Datentypen unterstützt: **Date**, **Double**und **Long**.  
+ Die **fortlaufend** Inhaltstyp wird von den folgenden Datentypen unterstützt: **Datum**, **doppelte**, und **lange**.  
   
 ## <a name="discretized"></a>Discretized  
  Unter*Diskretisierung* wird der Prozess verstanden, Werte eines kontinuierlichen Satzes an Daten in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Werten ergibt. Nur numerische Daten können diskretisiert werden.  
@@ -49,7 +49,7 @@ ms.locfileid: "34015737"
   
  Sie können Daten manuell diskretisieren, um sicherzustellen, dass Sie die gewünschten Buckets erhalten. Alternativ können Sie auch die in SQL Server Analysis Services verfügbaren Diskretisierungsmethoden verwenden. Einige Algorithmen führen die Diskretisierung automatisch durch. Weitere Informationen finden Sie unter [Ändern der Diskretisierung von Spalten in Miningmodellen](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- Der Inhaltstyp **Discretized** wird von den folgenden Datentypen unterstützt: **Date**, **Double**, **Long**und **Text**.  
+ Die **Discretized** Inhaltstyp wird von den folgenden Datentypen unterstützt: **Datum**, **doppelte**, **lange**, und **Text**.  
   
 ## <a name="key"></a>Key  
  Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Sie legen **key** als Inhaltstyp fest, um anzuzeigen, dass die betreffende Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
@@ -61,17 +61,17 @@ ms.locfileid: "34015737"
 > [!NOTE]  
 >  Geschachtelte Tabellen sind nur dann verfügbar, wenn Daten von externen Datenquellen verwendet werden, die in Analysis Services als Datenquellensicht definiert wurden.  
   
- Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: **Date**, **Double**, **Long**und **Text**.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: **Datum**, **doppelte**, **lange**, und **Text**.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  Der Inhaltstyp *Key Sequence* (Schlüsselsequenz) kann nur in Sequenzclustermodellen verwendet werden. Der Inhaltstyp **key sequence**zeigt an, dass die betreffende Spalte Werte enthält, die eine Folge von Ereignissen darstellen. Die Werte sind sortiert, aber die Abstände zwischen den Werte müssen nicht gleich groß sein.  
   
- Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: **Double**, **Long**, **Text**und **Date**.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: **Doppelte**, **lange**, **Text**, und **Datum**.  
   
 ## <a name="key-time"></a>Key Time  
  Der Inhaltstyp *Key Time* (Schlüsselzeit) kann nur in Zeitreihenmodellen verwendet werden. Der Inhaltstyp **key time**gibt an, dass die Werte sortiert sind und eine Zeitskala darstellen.  
   
- Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: **Double**, **Long**und **Date**.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: **Doppelte**, **lange**, und **Datum**.  
   
 ## <a name="table"></a>Tabelle  
  Der Inhaltstyp *Table* (Tabelle) gibt an, dass die Spalte eine weitere Datentabelle mit einer oder mehreren Spalten und einer oder mehreren Zeilen enthält. Für jede einzelne Zeile der Falltabelle gilt, dass diese Spalte mehrere Werte enthalten kann, die den übergeordneten Falldatensatz betreffen. Wenn die Hauptfalltabelle beispielsweise eine Kundenliste enthält, könnten mehrere Spalten geschachtelte Tabellen beinhalten. Beispielsweise könnte die Spalte **ProductsPurchased** eine geschachtelte Tabelle mit den Produkten enthalten, die von einem Kunden bislang gekauft wurden, und die Spalte **Hobbies** könnte die Interessensgebiete des Kunden auflisten.  
@@ -96,9 +96,9 @@ ms.locfileid: "34015737"
  Neben den oben aufgeführten Inhaltstypen, die für alle Modelle verwendet werden, können Sie klassifizierte Spalten verwenden, um Inhaltstypen für einige Datentypen zu definieren. Weitere Informationen zu klassifizierten Spalten finden Sie unter [Klassifizierte Spalten &#40;Data Mining&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Content-Arten & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Datentypen & #40; Datamining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Datentypen & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Inhaltstypen &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Datentypen &#40;Data Mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Datentypen &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   
