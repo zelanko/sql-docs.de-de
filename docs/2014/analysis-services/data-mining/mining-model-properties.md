@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733330"
 ---
 # <a name="mining-model-properties"></a>Miningmodelleigenschaften
   Miningmodelle verfügen über die folgenden Arten von Eigenschaften:  
@@ -61,10 +61,10 @@ ms.locfileid: "48171380"
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellspalten](mining-model-columns.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen Mining](mining-model-tasks-and-how-tos.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
  [Ändern der Eigenschaften eines Miningmodells](change-the-properties-of-a-mining-model.md)   
- [Datamining-Tools](data-mining-tools.md)   
+ [Data Mining-Tools](data-mining-tools.md)   
  [Erstellen einer relationalen Miningstruktur](create-a-relational-mining-structure.md)   
  [Erstellen eines Alias für eine Modellspalte](create-an-alias-for-a-model-column.md)  
   

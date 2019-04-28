@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871537"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
   In diesem Thema wird beschrieben, wie Systemdatenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verschoben werden. Das Verschieben von Systemdatenbanken kann in den folgenden Situationen nützlich sein:  
@@ -60,7 +60,7 @@ ms.locfileid: "52756272"
   
 -   [Verschieben der Ressourcendatenbank](#Resource)  
   
--   [Nachverfolgung: Nach dem Verschieben aller Systemdatenbanken](#Follow)  
+-   [Nächster Schritt: Nach dem Verschieben aller Systemdatenbanken](#Follow)  
   
 -   [Beispiele](#Examples)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "52756272"
 ##  <a name="Resource"></a> Verschieben der Ressourcendatenbank  
  Der Speicherort der Ressourcendatenbank lautet \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
   
-##  <a name="Follow"></a> Nachverfolgung: Nach dem Verschieben aller Systemdatenbanken  
+##  <a name="Follow"></a> Anschlussaufgaben: Nach dem Verschieben aller Systemdatenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
   
 -   Ändern Sie den Pfad des SQL Server-Agent-Protokolls. Wenn Sie diesen Pfad nicht aktualisieren, kann SQL Server-Agent nicht gestartet werden.  

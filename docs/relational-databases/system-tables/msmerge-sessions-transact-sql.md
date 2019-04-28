@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903701"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52817502"
 |**download_rows_retried**|**int**|Die Anzahl der auf den Abonnenten heruntergeladenen Zeilen, deren Übermittlung wiederholt werden musste.|  
 |**schema_changes**|**int**|Die Anzahl der während der Sitzung angewendeten Schemaänderungen.|  
 |**metadata_rows_cleanedup**|**int**|Die Anzahl der Zeilen mit Metadaten, für die während der Sitzung ein Cleanup ausgeführt wurde.|  
-|**RunStatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
+|**runstatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
 |**estimated_upload_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Verleger angewendet werden mussten|  
 |**estimated_download_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Abonnenten angewendet werden mussten|  
 |**connection_type**|**int**|Die während des Hochladens verwendete Verbindung:<br /><br /> **1** = des lokalen Netzwerks (LAN).<br /><br /> **2** = DFÜ-Netzwerkverbindung.<br /><br /> **3** = websynchronisierung.|  

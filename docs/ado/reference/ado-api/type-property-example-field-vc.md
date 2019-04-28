@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910437"
 ---
 # <a name="type-property-example-field-vc"></a>Type-Eigenschaft – Beispiel (Field) (VC++)
 In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Anzeigen des Namens der Konstante, die entspricht dem Wert der Eigenschaft der **Typ** -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die Feldtyp-Funktion ist zum Ausführen dieser Prozedur erforderlich.  
@@ -155,21 +155,21 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Felder in der Employee-Tabelle:**  
- **Name: Emp_id**  
- **Typ: AdChar**  
+ **Name: emp_id**  
+ **Type: adChar**  
  **Name: Fname**  
  **Type: adVarChar**  
  **Name: Minit**  
- **Typ: AdChar**  
+ **Type: adChar**  
  **Name: Lname**  
  **Type: adVarChar**  
  **Name: dem job_id-Wert**  
  **Type: adSmallInt**  
- **Name: Job_lvl**  
- **Typ: AdUnsignedTinyInt**  
- **Name: Pub_id**  
- **Typ: AdChar**  
- **Name: Hire_date**  
+ **Name: job_lvl**  
+ **Type: adUnsignedTinyInt**  
+ **Name: pub_id**  
+ **Type: adChar**  
+ **Name: hire_date**  
  **Type: adDBTimeStamp**   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   

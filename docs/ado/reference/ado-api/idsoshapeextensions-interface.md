@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028037"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions-Schnittstelle
 Ruft das zugrunde liegende Objekt für den OLE DB-Datenquelle für das SHAPE-Anbieter ab.  
@@ -42,7 +42,7 @@ public:
 |[GetDataProviderDSO-Methode](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Ruft das zugrunde liegende Objekt für den OLE DB-Datenquelle aus der Shape-Anbieter ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Version:** ADO 2.0 und höher  
+ **Version:** ADO, 2.0 und höher  
   
  **Bibliothek:** "MSADO15.dll"  
   

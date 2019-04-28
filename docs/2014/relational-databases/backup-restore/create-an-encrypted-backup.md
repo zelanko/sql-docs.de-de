@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876508"
 ---
 # <a name="create-an-encrypted-backup"></a>Erstellen einer verschlüsselten Sicherung
   Dieses Thema beschreibt die Schritte, die notwendig sind, um eine verschlüsselte Sicherung mit Transact-SQL zu erstellen.  
@@ -41,7 +41,7 @@ ms.locfileid: "52531852"
   
     ```  
   
-2.  **Erstellen Sie ein Sicherungszertifikat:** Erstellen Sie ein Sicherungszertifikat in der Masterdatenbank. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+2.  **Erstellen Sie ein Sicherungszertifikat:** Erstellen Sie ein sicherungszertifikat in der master-Datenbank ein. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "52531852"
   
     ```  
   
-3.  **Sichern Sie die Datenbank:** Geben Sie den Verschlüsselungsalgorithmus und das Zertifikat an, das verwendet werden soll. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3.  **Sichern Sie die Datenbank:** Geben Sie den Verschlüsselungsalgorithmus und das zu verwendende Zertifikat. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -100,7 +100,7 @@ ms.locfileid: "52531852"
   
     ```  
   
-3.  **Erstellen Sie ein Sicherungszertifikat:** Erstellen Sie ein Sicherungszertifikat in der Masterdatenbank. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3.  **Erstellen Sie ein Sicherungszertifikat:** Erstellen Sie ein Sicherungszertifikat in der master-Datenbank ein. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "52531852"
   
     ```  
   
-4.  **Sichern Sie die Datenbank:** Geben Sie den Verschlüsselungsalgorithmus und das Zertifikat an, das verwendet werden soll. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+4.  **Sichern Sie die Datenbank:** Geben Sie den Verschlüsselungsalgorithmus und das zu verwendende Zertifikat. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

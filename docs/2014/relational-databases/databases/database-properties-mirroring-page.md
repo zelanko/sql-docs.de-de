@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871945"
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
   Greifen Sie von der Prinzipaldatenbank aus auf diese Seite zu, und verwenden Sie sie zum Konfigurieren und Ändern der Eigenschaften der Datenbankspiegelung für eine Datenbank. Verwenden Sie die Seite auch, um den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung zu starten, um den Status einer Spiegelungssitzung anzuzeigen und um die Datenbank-Spiegelungssitzung anzuhalten oder zu entfernen.  
@@ -41,7 +41,7 @@ ms.locfileid: "54124950"
 |Wenn die Spiegelung begonnen wurde.|Wenn der Zeugenserver im Assistenten geändert wurde, wird diese Einstellung entsprechend festgelegt.|  
   
  **Server-Netzwerkadressen**  
- Eine entsprechende Option ist für jede der Serverinstanzen vorhanden: **Dienstprinzipal**, **Spiegel**, und **Zeuge**.  
+ Eine entsprechende Option ist für jede Serverinstanz vorhanden: **Prinzipal**, **Spiegel** und **Zeuge**.  
   
  Die Server-Netzwerkadressen der Serverinstanzen werden automatisch angegeben, wenn Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung abschließen. Nach Abschluss des Assistenten können Sie die Netzwerkadressen bei Bedarf manuell ändern.  
   

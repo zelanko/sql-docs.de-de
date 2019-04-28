@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928162"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Kernebene  
+ ODBC-API-Übereinstimmung: Kern-Ebene  
   
  Gibt Informationen der Sicherheitsbeschreibung für eine Spalte in einem Resultset zurück. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, eine 32-Bit-Deskriptor-abhängige Wert oder ein ganzzahliger Wert zurückgegeben.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47820055"
   
 |*fDescType*|Anmerkung|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|Gibt "false": Der Visual FoxPro enthält keine Zählerfelder.|  
+|SQL_COLUMN_AUTO_INCREMENT|"False" zurückgibt: Visual FoxPro weist keine Zählerfelder auf.|  
 |SQL_COLUMN_CASE_SENSITIVE|Wenn der Spaltentyp Zeichen ist, wird immer TRUE zurückgegeben.|  
 |SQL_COLUMN_LABEL|Gibt den Namen der Spalte, die auch von SQL_COLUMN_NAME zurückgegeben wird.|  
 |SQL_COLUMN_MONEY|Gibt TRUE zurück, wenn der Spaltentyp Währung (dargestellt durch "Y" in der Visual FoxPro-Sprache).|  

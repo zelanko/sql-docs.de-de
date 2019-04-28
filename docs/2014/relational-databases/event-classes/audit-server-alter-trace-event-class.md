@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012511"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace-Ereignisklasse
   Die **Audit Server Alter Trace** -Ereignisklasse tritt für alle Anweisungen auf, die auf die ALTER TRACE-Berechtigung überprüfen. Zu diesen Anweisungen gehören diejenigen, mit denen eine Ablaufverfolgung erstellt oder konfiguriert oder ein Filter für eine Ablaufverfolgung festgelegt wird.  

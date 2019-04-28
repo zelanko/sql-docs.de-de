@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873492"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
   Sie können Zeitpläne für den Sammlungssatz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen oder ändern.  

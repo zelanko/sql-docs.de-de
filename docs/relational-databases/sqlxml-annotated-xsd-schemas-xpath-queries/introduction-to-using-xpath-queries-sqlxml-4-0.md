@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013355"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041631"
   
  Bei der Angabe von XPath-Abfragen in einer Vorlage ist Folgendes zu beachten:  
   
--   XPath kann Zeichen wie < oder & enthalten, die in XML (und eine Vorlage ist ein XML-Dokument) eine spezielle Bedeutung haben. Sie müssen diese Zeichen mittels XML &-Codierung mit Escapezeichen versehen oder XPath in der URL angeben.  
+-   XPath kann Zeichen enthalten, z. B. < oder &, die eine besondere Bedeutung in XML-Datei (und Vorlage ist ein XML-Dokument). Sie müssen diese Zeichen mithilfe von XML mit Escapezeichen versehen &-Codierung, oder geben Sie den XPath in der URL.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von XPath-Abfragen in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899837"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Willkommen beim Assistenten für langsam veränderliche Dimensionen
   Konfigurieren Sie mithilfe des **Assistenten für langsam veränderliche Dimensionen** das Laden von Daten in verschiedene Typen langsam veränderlicher Dimensionen.  

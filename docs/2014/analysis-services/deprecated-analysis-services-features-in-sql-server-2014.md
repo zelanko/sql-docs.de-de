@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732227"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Veraltete Analysis Services-Funktionen in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
@@ -43,13 +43,13 @@ ms.locfileid: "48067710"
 |Kategorie|Als veraltet markierte Funktion|Ersatz|  
 |--------------|------------------------|-----------------|  
 |Mehrdimensionale Modelle|Remotepartitionen|Keine. Verwenden Sie stattdessen lokale Partitionen. Finden Sie unter [erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) für Weitere Informationen.|  
-|Mehrdimensionale Modelle|Remoteverknüpfte Measuregruppen|Eine remoteverknüpfte Measuregruppe ist eine verknüpfte Measuregruppe, die eine Datenquelle auf einem Remoteserver verwendet. Die Fähigkeit, eine Remotedatenquelle für eine verknüpfte Measuregruppe zu verwenden, ist jetzt als veraltet markiert.<br /><br /> Es gibt keinen Ersatz für diese Funktion. Es wird empfohlen, stattdessen lokale verknüpfte Measuregruppen zu verwenden. Finden Sie unter [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) für Weitere Informationen.|  
+|Mehrdimensionale Modelle|Remoteverknüpfte Measuregruppen|Eine remoteverknüpfte Measuregruppe ist eine verknüpfte Measuregruppe, die eine Datenquelle auf einem Remoteserver verwendet. Die Fähigkeit, eine Remotedatenquelle für eine verknüpfte Measuregruppe zu verwenden, ist jetzt als veraltet markiert.<br /><br /> Es gibt keinen Ersatz für diese Funktion. Es wird empfohlen, stattdessen lokale verknüpfte Measuregruppen zu verwenden. Weitere Informationen finden Sie unter [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) .|  
 |Mehrdimensionale Modelle|Dimensionales Rückschreiben|Keine. Verwenden Sie das Rückschreiben von Partitionen, wenn Sie Funktionen zum Rückschreiben benötigen. Finden Sie unter [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) für Weitere Informationen.|  
 |Mehrdimensionale Modelle|Verknüpfte Dimensionen|Keine. Sie können Dimensionen in zusätzliche Modelle kopieren, statt eine Verknüpfung mit einer Dimension in einem anderen Modell zu verwenden.|  
 |MDX|Non_Empty_Behavior-Eigenschaft|Keine. Wenn Sie ein berechnetes Element erstellen, wird durch das falsche Festlegen dieser Eigenschaft die Wahrscheinlichkeit erhöht, dass ungültige Ergebnisse zurückgegeben werden. Durch kürzliche Optimierungen der OLAP-Engine wurden Vorgänge für Datasets mit geringer Dichte verbessert, sodass diese Eigenschaft weniger relevant geworden ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services – Abwärtskompatibilität](analysis-services-backward-compatibility.md)   
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)   
  [Nicht mehr unterstützte Analysis Services-Funktionalität in SQLServer 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   
   

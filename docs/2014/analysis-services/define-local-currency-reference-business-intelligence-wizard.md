@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732828"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Verweis auf lokale Währung definieren (Business Intelligence-Assistent)
   Definieren Sie mithilfe der Seite **Verweis auf lokale Währung definieren** die lokalen Währungen für die Währungsumrechnungsfunktion, die für den auf der Seite **Umrechnungstyp auswählen** angegebenen m:n- oder n:1-Umrechnungstyp verwendet wird. Eine lokale Währung ist die Währung, in der die Transaktionen für die auf der Seite **Measures auswählen** ausgewählten Measures gespeichert werden.  

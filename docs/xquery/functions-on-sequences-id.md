@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933698"
 ---
 # <a name="functions-on-sequences---id"></a>Funktionen für Sequenzen – id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Abrufen von Elementen anhand des Werts des IDREF-Attributs  
- Im folgenden Beispiel werden die <`employee`>-Elemente mit fn:id anhand des IDREF-Managerattributs abgerufen. In diesem Beispiel ist das Manager-Attribut ein Attribut vom Typ IDREF, und das eid-Attribut ist ein Attribut vom Typ ID.  
+ Im folgenden Beispiel wird die Fn: ID zum Abrufen der <`employee`> Elemente basierend auf dem IDREF-Manager-Attribut. In diesem Beispiel ist das Manager-Attribut ein Attribut vom Typ IDREF, und das eid-Attribut ist ein Attribut vom Typ ID.  
   
  Für einen bestimmten Manager Attribut-Wert der **id()** -Funktion sucht die <`employee`>-Element, dessen ID-typattributwert, den eingegebenen IDREF-Wert übereinstimmt. Das heißt, für einen bestimmten Mitarbeiter die **id()** Funktion gibt die Mitarbeiter-Manager zurück.  
   
@@ -99,7 +99,7 @@ Go
  Die Abfrage gibt "Dave" als Wert zurück. Dies gibt an, dass Dave Joes Manager ist.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Abrufen von Elementen anhand des Werts des IDREFS-Attributs von OrderList  
- Im folgenden Beispiel ist das OrderList-Attribut des <`Customer`>-Elements ein Attribut vom Typ IDREFS. Es listet die Bestellungs-IDs für diesen bestimmten Kunden auf. Für jede order_id ist ein untergeordnetes <`Order`>-Element unter dem <`Customer`> mit dem entsprechenden Wert vorhanden.  
+ Im folgenden Beispiel ist das OrderList-Attribut von der <`Customer`>-Element ist ein Attribut des IDREFS-Typ. Es listet die Bestellungs-IDs für diesen bestimmten Kunden auf. Für jede ORDER_ID ist ein <`Order`> untergeordneten Elements unter dem <`Customer`> mit dem entsprechenden Wert.  
   
  Der Abfrageausdruck `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` ruft den ersten Wert aus der IDRES-Liste für den ersten Kunden ab. Dieser Wert wird dann zum Übergeben der **id()** Funktion. Die Funktion sucht dann nach dem <`Order`> Element, dessen OrderID-Attributwert der Eingabe, um entspricht, die **id()** Funktion.  
   

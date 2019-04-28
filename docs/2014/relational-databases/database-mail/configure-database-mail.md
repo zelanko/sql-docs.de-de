@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872216"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
@@ -90,7 +90,7 @@ ms.locfileid: "54131490"
  Geben Sie auf der Seite **Konfigurationsaufgabe auswählen** die Aufgabe an, die Sie bei jeder Verwendung des Assistenten ausführen. Wenn Sie Ihre Entscheidung vor dem Beenden des Assistenten ändern, können Sie mithilfe der Schaltfläche **Zurück** zu dieser Seite zurückkehren und eine andere Aufgabe auswählen.  
   
 > [!NOTE]  
->  Wenn die Datenbank-e-Mails nicht aktiviert wurde, erhalten Sie die Nachricht: **Die Datenbank-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
+>  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
   
  **Datenbank-E-Mail durch Ausführen der folgenden Aufgaben einrichten**  
  Führt alle Aufgaben durch, die zum ersten Einrichten der Datenbank-E-Mails erforderlich sind. Diese Option umfasst alle anderen drei Optionen.  

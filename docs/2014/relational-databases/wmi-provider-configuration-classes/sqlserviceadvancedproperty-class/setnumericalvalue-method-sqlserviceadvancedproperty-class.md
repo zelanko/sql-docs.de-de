@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911493"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse)
   Legt den numerischen Wert einer Eigenschaft fest.  
@@ -47,7 +47,7 @@ NumValue
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*%Numvalue%*|Ein `uint32`-Wert, der den Wert der erweiterten Eigenschaft angibt.|  
+|*NumValue*|Ein `uint32`-Wert, der den Wert der erweiterten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026626"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Anhang G: Treiberrichtlinien für Abwärtskompatibilität
 Dieser Anhang enthält Informationen für Autoren von Treiber ODBC 3. an. *x* Treiber, die ODBC 2. unterstützt werden müssen. *X* Anwendungen. Weitere Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842577"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Problembehandlung für SQL Server Managed Backup für Windows Azure
   Dieses Thema enthält zudem Informationen zu den Aufgaben und Tools, die Sie verwenden können, um Fehler bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgängen zu beheben.  
@@ -56,7 +56,7 @@ ms.locfileid: "52522531"
   
 1.  **Fehler beim Aktivieren oder Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Error: " Fehler beim Zugriff auf die Speicher-URL... Geben Sie gültige SQL-Anmeldeinformationen...": Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Lesen Sie in solchen Fällen den Namen der SQL-Anmeldeinformationen, die Sie angegeben haben, und die Informationen in die SQL-Anmeldeinformationen - der Name des Speicherkontos und den speicherzugriffsschlüssel gespeichert, und stellen Sie sicher, dass sie aktuell und gültig sind.  
+     Fehler: " Fehler beim Zugriff auf die Speicher-URL... Geben Sie gültige SQL-Anmeldeinformationen...": Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Lesen Sie in solchen Fällen den Namen der SQL-Anmeldeinformationen, die Sie angegeben haben, und die Informationen in die SQL-Anmeldeinformationen - der Name des Speicherkontos und den speicherzugriffsschlüssel gespeichert, und stellen Sie sicher, dass sie aktuell und gültig sind.  
   
      Fehler: "... kann die Datenbank... nicht konfigurieren, da es sich um eine Systemdatenbank handelt": Dieser Fehler wird angezeigt, wenn Sie versuchen, aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Systemdatenbank.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52522531"
   
 2.  **E-Mail-Benachrichtigungsfehler:**  
   
-     Error: "Datenbank-e-Mails ist nicht aktiviert...": Dieser Fehler wird angezeigt, wenn Sie die e-Mail-Benachrichtigungen aktivieren, aber Database Mail ist für die Instanz nicht konfiguriert. Sie müssen Datenbank-E-Mail für die Instanz konfigurieren, um Benachrichtigungen zum Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] empfangen zu können. Informationen zum Aktivieren von Datenbank-e-Mails finden Sie unter [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md). Sie müssen außerdem den SQL Server-Agent aktivieren, um Datenbank-E-Mail für Benachrichtigungen verwenden zu können. Weitere Informationen finden Sie unter [Vorbemerkungen](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Fehler: "Datenbank-e-Mails ist nicht aktiviert...": Dieser Fehler wird angezeigt, wenn Sie die e-Mail-Benachrichtigungen aktivieren, aber Database Mail ist für die Instanz nicht konfiguriert. Sie müssen Datenbank-E-Mail für die Instanz konfigurieren, um Benachrichtigungen zum Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] empfangen zu können. Informationen zum Aktivieren von Datenbank-e-Mails finden Sie unter [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md). Sie müssen außerdem den SQL Server-Agent aktivieren, um Datenbank-E-Mail für Benachrichtigungen verwenden zu können. Weitere Informationen finden Sie unter [Vorbemerkungen](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Es folgt eine Liste der Fehlernummern, die möglicherweise angezeigt werden und die E-Mail-Benachrichtigungen zugeordnet sind:  
   
@@ -86,9 +86,9 @@ ms.locfileid: "52522531"
   
          *"Wahrscheinlich Verbindungsprobleme mit SQL Server. Datenbank wird in der aktuellen Iteration übersprungen."*  
   
-         *"Fehler zur Protokollverwendung Abfragen. Der Fehler ist möglicherweise vorübergehend. Datenbank wird in der aktuellen Iteration übersprungen."*  
+         *"Fehler zur Protokollverwendung Abfragen. Der Fehler kann vorübergehend sein. Datenbank wird in der aktuellen Iteration übersprungen."*  
   
-         *"SQL-Ausnahme beim Laden von SSMBackup2WA-Agent-Metadaten. Der Fehler ist möglicherweise vorübergehend. Der Vorgang wird wiederholt."*  
+         *"SQL-Ausnahme beim Laden von SSMBackup2WA-Agent-Metadaten. Der Fehler kann vorübergehend sein. Der Vorgang wird wiederholt."*  
   
          *"SSMBackup2WA gefunden SQL-Ausnahme beim... "*  
   

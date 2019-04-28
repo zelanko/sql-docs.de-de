@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873101"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540122"
   
 -   **IMPORT**: Der Benutzer kann das Schema und die Daten in eine neue Datenbank auf dem Hostserver importieren.  
   
- Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
+ Diese Funktionen werden beide von den folgenden Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `CREATE DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank zu erstellen, einschließlich dem Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `DROP DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank löschen zu können.  

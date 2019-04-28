@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902431"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie ein OLE DB-Ziel hinzufügen und konfigurieren können.  
@@ -42,7 +42,7 @@ ms.locfileid: "58376718"
   
     -   **Tabelle oder Sicht** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält.  
   
-    -   **Tabelle oder Sicht – schnelles Laden** wählen Sie eine Tabelle oder Sicht in der Datenbank, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Check-Einschränkung**, **Zeilen pro Batch**, oder **maximale Fügen Sie die Commitgröße**.  
+    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **CHECK-Einschränkung**, **Zeilen pro Batch** oder **Maximale Einfügungscommitgröße**.  
   
     -   **Variable für Tabellenname oder Sichtname** Wählen Sie die benutzerdefinierte Variable aus, die den Namen einer Tabelle oder Sicht in der Datenbank enthält.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992264"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Prüfen des Planungserstellungsmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Nun, dass Sie das forecasting-Miningmodell erstellt haben, können Sie die Ergebnisse überprüfen, mit der **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Viewer enthält zwei Registerkarten: **Diagramme** und **Modell**.  

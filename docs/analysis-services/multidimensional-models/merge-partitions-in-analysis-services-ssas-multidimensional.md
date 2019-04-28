@@ -1,5 +1,5 @@
 ---
-title: Zusammenführen von Partitionen in Analysis Services (SSAS – mehrdimensional) | Microsoft Docs
+title: Zusammenführen von Partitionen in Analysis Services (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988627"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Zusammenführen von Partitionen in Analysis Services (SSAS – Mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025397"
   
  Aus diesem Grund müssen Partitionen, die segmentierte Daten aus benannten Abfragen abrufen, ebenfalls aktualisiert werden. Die kombinierte Partition muss jetzt über eine benannte Abfrage verfügen, die das kombinierte Resultset zurückgibt, das zuvor aus separaten benannten Abfragen abgerufen wurde.  
   
-## <a name="partition-storage-considerations-molap"></a>Überlegungen zum Partitionsspeicher: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Überlegungen zur Speicherung der Partition: MOLAP  
  Beim Zusammenführen von MOLAP-Partitionen werden die in den mehrdimensionalen Strukturen der Partitionen gespeicherten Fakten ebenfalls zusammengeführt. Dies führt zu einer in sich vollständigen und konsistenten Partition. Die in MOLAP-Partitionen gespeicherten Fakten sind Kopien der Fakten in der Faktentabelle. Bei einem späteren Verarbeiten der Partition werden die Fakten in der mehrdimensionalen Struktur gelöscht (nur bei einer vollständigen Verarbeitung oder Aktualisierung) und Daten, wie durch die Datenquelle und den Filter der Partition angegeben, aus der Faktentabelle kopiert. Wenn die Quellpartition eine andere Faktentabelle aus der Zielpartition verwendet, muss die Faktentabelle der Quellpartition manuell mit der Faktentabelle der Zielpartition zusammengeführt werden, um sicherzustellen, dass eine vollständige Datenmenge verfügbar ist, wenn die sich ergebende Partition verarbeitet wird. Dies trifft auch zu, wenn die beiden Partitionen auf zwei unterschiedlichen benannten Abfragen basieren.  
   
 > [!IMPORTANT]  
 >  Eine zusammengeführte MOLAP-Partition mit einer unvollständigen Faktentabelle enthält eine intern zusammengeführte Kopie der Faktentabellendaten und wird bis zu ihrer Verarbeitung einwandfrei ausgeführt.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Überlegungen zum Partitionsspeicher: HOLAP- und ROLAP-Partitionen  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Überlegungen zur Speicherung der Partition: HOLAP- und ROLAP-Partitionen  
  Beim Zusammenführen von HOLAP- oder ROLAP-Partitionen, die über verschiedene Faktentabellen verfügen, werden die Faktentabellen nicht automatisch zusammengeführt. Werden die Faktentabellen nicht manuell zusammengeführt, ist nur die mit der Zielpartition verknüpfte Faktentabelle für die sich ergebende Partition verfügbar. Mit der Quellpartition verknüpfte Fakten sind nicht für Drilldowns in der sich ergebenden Partition verfügbar, und beim Verarbeiten der Partition fassen die Aggregationen keine Daten aus der nicht verfügbaren Tabelle zusammen.  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ ms.locfileid: "34025397"
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Measuregruppen** des Cubes, in dem die zusammenzuführenden Partitionen enthalten sind. Anschließend erweitern Sie **Partitionen**und klicken mit der rechten Maustaste auf die Partition, die das Ziel des Zusammenführungsvorgangs ist. Wenn Sie z. B. vierteljährliche Faktendaten zu einer Partition verschieben, in der jährliche Faktendaten gespeichert sind, wählen Sie die Partition aus, in der die jährlichen Faktendaten enthalten sind.  
   
-2.  Klicken Sie auf **Partitionen zusammenführen** So öffnen die **Mergepartition \<Partitionsname >** (Dialogfeld).  
+2.  Klicken Sie auf **Zusammenführen von Partitionen** zum Öffnen der **Mergepartition \<Partitionsname >** Dialogfeld.  
   
 3.  Aktivieren Sie unter **Quellpartitionen**das Kontrollkästchen neben jeder Quellpartition, die Sie mit der Zielpartition zusammenführen möchten, und klicken Sie auf **OK**.  
   
@@ -129,11 +129,11 @@ ms.locfileid: "34025397"
  Weitere Informationen zu diesem Thema finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Analysis Services-Objekte](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Partitionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Erstellen Sie und verwalten Sie einer lokalen Partition & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Erstellen Sie und verwalten Sie einer Remotepartition & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Festlegen des Rückschreibens von Partitionen](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Verarbeiten von Analysis Services-Objekten](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Einrichten des Rückschreibens von Partitionen](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Partitionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   

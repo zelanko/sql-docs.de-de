@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842975"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Abwärtskompatibilität von SQL Server-Verwaltungstools
   In den Themen zur Abwärtskompatibilität werden Änderungen beschrieben, die in den verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu einem abweichenden Verhalten führen.  

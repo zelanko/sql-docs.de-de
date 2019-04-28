@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014104"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "51667781"
   
  Der Typ für SQL_SOPT_SS_PARAM_FOCUS lautet SQLULEN.  
   
- Der Standardwert ist 0 (null). Das bedeutet, dass diese Aufrufe sich an Parameter richten, die Parametermarkierungen in der SQL-Anweisung entsprechen. Wenn diese Aufrufe auf die Parameternummer eines Tabellenwertparameters festgelegt sind, adressieren sie Spalten dieses Tabellenwertparameters. Wenn sie auf einen anderen Wert als die Parameternummer eines Tabellenwertparameters festgelegt sind, geben diese Aufrufe den Fehler IM020 zurück: "Parameterfokus verweist nicht auf einen Tabellenwertparameter."  
+ Der Standardwert ist 0 (null). Das bedeutet, dass diese Aufrufe sich an Parameter richten, die Parametermarkierungen in der SQL-Anweisung entsprechen. Wenn diese Aufrufe auf die Parameternummer eines Tabellenwertparameters festgelegt sind, adressieren sie Spalten dieses Tabellenwertparameters. Wenn auf einen Wert, der nicht die Parameternummer des einem Tabellenwertparameter ist festgelegt, diese Aufrufe, die den Fehler IM020 zurück: "Parameterfokus verweist nicht auf einen Tabellenwertparameter".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  Das SQL_SOPT_SS_NAME_SCOPE-Attribut gibt den Namensbereich für nachfolgende Katalogfunktionsaufrufe an. Von SQLColumns zurückgegebene Resultset hängt von der Einstellung von SQL_SOPT_SS_NAME_SCOPE ab.  

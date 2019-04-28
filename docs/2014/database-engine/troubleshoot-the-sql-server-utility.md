@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842526"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
   Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der ressourcenintegrität identifizierte eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ucp stammen, finden Sie unter [Problembehandlung bei SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "53371062"
   
  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
   
- Zusätzliche Informationen:  Informationen zu Windows NT-Gruppe oder-Benutzer konnten nicht abgerufen "\<DomainName\AccountName >', Fehlercode 0 x 5. (Microsoft SQL Server, Fehler: -2)" 15404)  
+ Weitere Informationen:  Informationen zu Windows NT-Gruppe oder-Benutzer konnten nicht abgerufen "\<DomainName\AccountName >', Fehlercode 0 x 5. (Microsoft SQL Server, Fehler: 15404)  
   
  Das Problem tritt im folgenden Beispielszenario auf:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371062"
   
  Die vereinfachten Fehlermeldungen sind:  
   
- Die Ausführung des Befehls wurde beendet, da die Shellvariable "ErrorActionPreference" auf "Stop" festgelegt ist: Zugriff verweigert.  
+ Ausführung des Befehls wird beendet, da die Shellvariable "ErrorActionPreference" auf Beenden festgelegt wurde: Zugriff verweigert.  
   
- FEHLER: \<Datum und Uhrzeit (MM/TT/JJJJ hh: mm:) >: Beim Sammeln von CPU-Eigenschaften wurde eine Ausnahme abgefangen.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
+ FEHLER: \<Datum und Uhrzeit (MM/TT/JJJJ hh: mm:) >: Abgefangene Ausnahme beim Sammeln von CPU-Eigenschaften.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
   
  Um dieses Problem zu beheben, überprüfen Sie die folgenden Konfigurationseinstellungen:  
   

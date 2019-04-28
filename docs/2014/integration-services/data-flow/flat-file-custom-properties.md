@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902047"
 ---
 # <a name="flat-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Flatfile
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -26,7 +26,7 @@ ms.locfileid: "58392078"
   
 |Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|Zeichenfolge|Der Name einer Ausgabespalte, die den Dateinamen enthält. Wenn kein Name angegeben wird, wird keine Ausgabespalte generiert, die den Dateinamen enthält.<br /><br /> Hinweis: Diese Eigenschaft ist nicht verfügbar, in der **Quellen-Editor für Flatfiles**, jedoch können festgelegt werden, mithilfe der **Erweiterter Editor**.|  
+|FileNameColumnName|Zeichenfolge|Der Name einer Ausgabespalte, die den Dateinamen enthält. Wenn kein Name angegeben wird, wird keine Ausgabespalte generiert, die den Dateinamen enthält.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles** verfügbar, kann jedoch im Dialogfeld **Erweiterter Editor** festgelegt werden.|  
 |RetainNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte aus der Quelldatei als NULL-Werte beibehalten werden sollen, wenn die Daten von der Data Transformation-Pipeline-Engine verarbeitet werden. Der Standardwert dieser Eigenschaft ist `False`.|  
   
  Die Ausgabe der Flatfilequelle verfügt nicht über benutzerdefinierte Eigenschaften.  
@@ -35,7 +35,7 @@ ms.locfileid: "58392078"
   
 |Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von DTS oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Weitere Informationen finden Sie unter [Fast Parse](../fast-parse.md) und [Standard Parse](../standard-parse.md). Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist nicht verfügbar, in der **Quellen-Editor für Flatfiles**, jedoch können festgelegt werden, mithilfe der **Erweiterter Editor**.|  
+|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von DTS oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Weitere Informationen finden Sie unter [Fast Parse](../fast-parse.md) und [Standard Parse](../standard-parse.md). Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quellen-Editor für Flatfiles** verfügbar, kann jedoch im Dialogfeld **Erweiterter Editor** festgelegt werden.|  
   
  Weitere Informationen finden Sie unter [Flat File Source](flat-file-source.md).  
   

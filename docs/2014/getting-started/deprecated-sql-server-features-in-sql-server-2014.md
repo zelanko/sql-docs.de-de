@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4abd066dd2fc971528468fb7104cb0c11e088150
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843043"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Als veraltet markierte SQL Server-Funktionen in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
@@ -26,8 +26,8 @@ ms.locfileid: "53348788"
   
 |Kategorie|Als veraltet markierte Funktion|Ersatz|Feature name|Funktions-ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Datenprogrammierbarkeit|[Sys. soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) oder ASP.NET|Systemeigene XML-Webdienste|22|  
-|Datenprogrammierbarkeit|[Sys. endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) oder ASP.NET|Systemeigene XML-Webdienste|23|  
+|Datenprogrammierbarkeit|[sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) oder ASP.NET|Systemeigene XML-Webdienste|22|  
+|Datenprogrammierbarkeit|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) oder ASP.NET|Systemeigene XML-Webdienste|23|  
   
 ### <a name="slipstream-functionality"></a>Slipstreamfunktionalität  
  Die Produktupdate-Funktion ersetzt die Slipstreamfunktionalität, die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 verfügbar war. Daher sollten die Befehlszeilenparameter, /*PCUSource* und /*CUSource*, die der Slipstreamfunktionalität zugeordnet sind, nicht mehr verwendet werden. Die Parameter funktionieren auch weiterhin, werden jedoch möglicherweise in einer zukünftigen Version des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setups entfernt. Der /*UpdateSource* -Parameter kombiniert die Funktionalität der Slipstreamparameter, /*PCUSource* und /*CUSource*.  

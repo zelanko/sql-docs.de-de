@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889452"
 ---
 # <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
   Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
 ## <a name="options"></a>Optionen  
  **Auswertungsvorgang**  
- Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Die Vorgänge sind: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**, und **Ausdruck oder Einschränkung**.  
+ Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
  **Wert**  
- Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**, oder **Abschluss**.  
+ Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
   
 > [!NOTE]  
 >  Die Rangfolgeneinschränkungslinie wird bei **Erfolg**grün, bei einem **Fehler**hervorgehoben und bei **Beendigung**blau dargestellt.  

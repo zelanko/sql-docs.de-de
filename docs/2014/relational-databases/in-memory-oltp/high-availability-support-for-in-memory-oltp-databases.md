@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990584"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
   Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied in Konfiguration und Unterstützung zwischen Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Objekten und solchen ohne diese Objekte.  
@@ -30,7 +30,7 @@ ms.locfileid: "48100780"
     Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Beim automatischen oder erzwungenen Failover ist die Failoverzeit auf dem neuen primären Replikat mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen keine Daten auf dem sekundären Replikat vorhanden.  
   
 -   **Lesbares sekundäres Replikat**   
-    Sie können auf speicheroptimierte Tabellen auf dem sekundären Replikat zugreifen und sie abfragen, wenn es für Lesezugriff konfiguriert ist. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+    Sie können auf speicheroptimierte Tabellen auf dem sekundären Replikat zugreifen und sie abfragen, wenn es für Lesezugriff konfiguriert ist. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Failoverclustering-Instanz (FCI) und In-Memory OLTP-Datenbanken  
  Um in einer Konfiguration mit freigegebenem Speicher Hochverfügbarkeit zu erreichen, können Sie das Failoverclustering für Instanzen mit mindestens einer Datenbank mit speicheroptimierten Tabellen einrichten. Beim Einrichten einer FCI müssen Sie die folgenden Faktoren berücksichtigen:  

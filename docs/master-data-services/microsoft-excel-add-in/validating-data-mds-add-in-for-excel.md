@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62905043"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Überprüfen von Daten (MDS-Add-In für Excel)
 
@@ -40,7 +40,7 @@ ms.locfileid: "52418551"
   
  Weitere Informationen zu zusätzlichen Status finden Sie unter [Überprüfungsstatus &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md).  
   
-|Status|und Beschreibung|  
+|Status|Description|  
 |------------|-----------------|  
 |Fehler bei der Überprüfung|Für einen oder mehrere Werte in der Zeile ist bei der Überprüfung auf Grundlage der Geschäftsregeln, die von einem MDS-Administrator definiert wurden, ein Fehler aufgetreten.|  
 |Die Überprüfung war erfolgreich|Alle Werte in der Zeile haben die Überprüfung auf Grundlage der Geschäftsregeln bestanden.|  
@@ -48,7 +48,7 @@ ms.locfileid: "52418551"
 ## <a name="input-statuses"></a>Eingabestatus  
  Beim Veröffentlichen von Daten werden in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]sind die folgenden Eingabestatus möglich.  
   
-|Status|und Beschreibung|  
+|Status|Description|  
 |------------|-----------------|  
 |Fehler|Ein oder mehrere Werte in der Zeile erfüllen die Systemanforderungen nicht, z. B. Länge oder Datentyp. Der Wert wird im MDS-Repository nicht aktualisiert.|  
 |Neue Zeile|Die Werte in der Zeile wurden noch nicht im MDS-Repository veröffentlicht.|  
@@ -64,6 +64,6 @@ ms.locfileid: "52418551"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-in für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

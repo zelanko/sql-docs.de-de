@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842399"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory-OLTP
   Dieses Thema enthält kurze Beschreibungen und Links zu vielen Datenbankobjekten, die In-Memory OLTP unterstützen.  
@@ -27,9 +27,9 @@ ms.locfileid: "52406160"
 |[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Überprüfen, ob eine Dateigruppe speicheroptimierte Daten enthält.|Die folgenden Spalten werden zusätzliche Werte angezeigt: **Typ** und **Type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Überprüfen, ob ein Index für eine speicheroptimierte Tabelle vorliegt.|Die folgenden Spalten werden zusätzliche Werte angezeigt: **Typ** und **Type_desc**.|  
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Überprüfen, ob ein Parameter keine NULL-Werte zulässt, (dies dient der effizienteren Ausführung von systemintern kompilierten gespeicherten Prozeduren).|**Is_nullable** Spalte.|  
-|[Sys. all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Überprüfen, ob eine gespeicherte Prozedur systemintern kompiliert wird.|**Uses_native_compilation** Spalte.|  
+|[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Überprüfen, ob eine gespeicherte Prozedur systemintern kompiliert wird.|**Uses_native_compilation** Spalte.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Überprüfen, ob eine gespeicherte Prozedur systemintern kompiliert wird.|**Uses_native_compilation** Spalte.|  
-|[table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Überprüfen, ob eine Tabelle speicheroptimiert ist.|**Is_memory_optimized** Spalte.|  
+|[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Überprüfen, ob eine Tabelle speicheroptimiert ist.|**Is_memory_optimized** Spalte.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Überprüfen Sie, ob eine Tabelle speicheroptimiert ist, und Überprüfen der dauerhaftigkeitseinstellung einer Tabelle.|**Dauerhaftigkeit**, **Durability_desc**, und **Is_memory_optimized** Spalten.|  
 |[sys.hash_indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Anzeigen der Hashindizes einer speicheroptimierten Tabelle.|Für In-Memory OLTP spezifisch.|  
   
@@ -44,12 +44,12 @@ ms.locfileid: "52406160"
   
 |Gespeicherte Prozedur|Description|  
 |----------------------|-----------------|  
-|[Sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Binden einer In-Memory OLTP-Datenbank an einen Ressourcenpool.|  
-|[Sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Initiieren der Garbage Collection für eine In-Memory OLTP-Datenbank.|  
-|[Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Aktivieren der Sammlung von statistischen Daten für systemintern kompilierte gespeicherte Prozeduren.|  
-|[Sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Aktivieren der Sammlung von statistischen Daten pro Abfrage für systemintern kompilierte gespeicherte Prozeduren.|  
-|[sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Zusammenführen von Daten- und Änderungsdateien.|  
-|[Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Entfernen der Bindung zwischen einer Datenbank und einem Ressourcenpool.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Binden einer In-Memory OLTP-Datenbank an einen Ressourcenpool.|  
+|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Initiieren der Garbage Collection für eine In-Memory OLTP-Datenbank.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Aktivieren der Sammlung von statistischen Daten für systemintern kompilierte gespeicherte Prozeduren.|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Aktivieren der Sammlung von statistischen Daten pro Abfrage für systemintern kompilierte gespeicherte Prozeduren.|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Zusammenführen von Daten- und Änderungsdateien.|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Entfernen der Bindung zwischen einer Datenbank und einem Ressourcenpool.|  
   
 ## <a name="dynamic-management-views-dmvs"></a>Dynamische Verwaltungssichten (DMVs)  
  Es gibt mehrere DMVs für speicheroptimierte Tabellen.  

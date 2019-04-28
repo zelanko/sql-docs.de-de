@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833678"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein Cacheverbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
@@ -61,7 +61,7 @@ ms.locfileid: "58384278"
   
 -   [Sequenzcontainer](../control-flow/sequence-container.md)  
   
- Ein Video, das veranschaulicht, wie Sie eine Transformation für Suche im Vollcachemodus mit dem Cacheverbindungs-Manager implementieren, finden Sie unter [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>So implementieren Sie eine Transformation für Suche im Vollcachemodus in einem Paket mit dem Cacheverbindungs-Manager und einer Datenquelle im Datenfluss  
   

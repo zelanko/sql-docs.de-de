@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913186"
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
     
@@ -25,11 +25,11 @@ ms.locfileid: "48181570"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|846|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
-|Symbolischer Name|–|  
+|Symbolischer Name|Nicht zutreffend|  
 |Meldungstext|Timeout beim Warten auf einen Pufferlatch -- Typ %d, Pufferpool %p, Seite %d:%d, STAT %#x, Datenbank-ID: %d, Zuordnungseinheits-ID: %I64d%ls, Task 0x%p : %d, Wartezeit %d, Flags 0x%I64x, besitzender Task 0x%p. Der Wartevorgang wird nicht fortgesetzt.|  
   
 ## <a name="explanation"></a>Erklärung  

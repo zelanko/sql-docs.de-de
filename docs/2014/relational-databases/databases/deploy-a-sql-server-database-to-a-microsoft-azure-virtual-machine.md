@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871679"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
   Verwenden Sie den Assistenten **SQL Server-Datenbank auf Windows Azure-VM bereitstellen** , um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Windows Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
@@ -89,9 +89,9 @@ ms.locfileid: "53357892"
   
  Auf Computern, auf denen ein Windows Server-Betriebssystem ausgeführt wird, müssen Sie zur Ausführung dieses Assistenten die folgenden Konfigurationseinstellungen vornehmen:  
   
--   Deaktivieren Sie die verstärkte Sicherheitskonfiguration:  Verwenden Sie Server-Manager > lokaler Server Sicherheitskonfiguration für Internet Explorer verbessert (ESC) einrichten, um **OFF**.  
+-   Deaktivieren Sie verstärkte Sicherheitskonfiguration:  Verwenden Sie Server-Manager > lokaler Server Sicherheitskonfiguration für Internet Explorer verbessert (ESC) einrichten, um **OFF**.  
   
--   Aktivieren Sie JavaScript:  Internet Explorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren Sie**.  
+-   Aktivieren Sie JavaScript:  InternetExplorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren Sie**.  
   
 ###  <a name="limitations"></a> Einschränkungen  
  Die Datenbankgröße für diesen Vorgang ist auf 1 TB beschränkt.  

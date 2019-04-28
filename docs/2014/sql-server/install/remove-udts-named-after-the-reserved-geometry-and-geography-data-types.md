@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f93b179da229793c65db452e4f38bb1f08fbfad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855888"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Entfernen von UDTs, die nach den reservierten Datentypen GEOMETRY und GEOGRAPHY benannt sind
   Der Upgrade Advisor hat einen benutzerdefinierten Typ (UDT, User-Defined Type) erkannt, der nach einem Ausdruck benannt ist, der entweder für den `geometry`-Datentyp oder den `geography`-Datentyp reserviert ist. Die Datentypen `geometry` und `geography` sind Teil der Funktion für räumliche Daten.  

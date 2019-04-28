@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873408"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
   Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
@@ -81,21 +81,21 @@ ms.locfileid: "54100495"
   
  **Zeitachsensteuerelement und Navigationsschaltflächen**  
   
- Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den lupenschaltflächen, können Sie erweitern oder verkleinern diesen Zeitschritt auf einen der folgenden Werte: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
+ Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den Lupenschaltflächen können Sie diesen Zeitschritt auf einen der folgenden Werte vergrößern oder verkleinern: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
   
  **Schaltfläche "Kalender"**  
   
  Verwenden Sie die Schaltfläche Kalender, um das Startdatum, die Startzeit und die Dauer der Daten anzugeben, über die ein Bericht erstellt werden soll.  
   
 #### <a name="query-statistics-history-report"></a>Bericht "Abfragestatistik - Verlauf"  
- Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Um eine andere Ansicht der relativen aufwendungen für jede anzuzeigen, klicken Sie auf eine der folgenden Hyperlinks unterhalb des Diagramms: **Dauer**, **e/a gesamt**, **physische Lesevorgänge**, oder **logische Schreibvorgänge**.  
+ Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Zum Anzeigen einer anderen Sicht der relativen Aufwendungen für jede Abfrage klicken Sie auf einen der Links unter dem Diagramm: **Dauer**, **E/A gesamt**, **Physische Lesevorgänge** oder **Logische Schreibvorgänge**.  
   
  In der Tabelle unter dem Diagramm werden weitere Abfragedaten bereitgestellt. Sie enthält den Text für jede grafisch dargestellte Abfrage zusammen mit ausführlichen statistischen Informationen. Beachten Sie, dass die Diagrammbalken aktive Links sind, ebenso wie die einzelnen Abfragen in der Tabelle. Durch Klicken auf einen aktiven Link wird der Unterbericht Abfragedetails für die Abfrage geöffnet.  
   
 #### <a name="query-details-subreport"></a>Unterbericht "Abfragedetails"  
  Der Unterbericht Abfragedetails enthält den gesamten Abfragetext. Der Link **Abfragetext bearbeiten** wird neben der Abfrage angezeigt. Sie können auf diesen Link klicken, um die Abfrage im Abfrage-Editor zu öffnen. In der Tabelle unter der Abfrage wird die Abfrageausführungsstatistik angezeigt, z. B. die durchschnittliche Dauer pro Abfrageausführung.  
   
- Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Um eine andere Ansicht der relativen Plankosten anzuzeigen, klicken Sie auf einen der folgenden Hyperlinks, die unter dem Diagramm angezeigt werden: **Dauer**, **physische Lesevorgänge**, oder **logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
+ Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Sie können eine andere Ansicht der relativen Kosten für jeden Abfrageplan abrufen, indem Sie auf einen der folgenden Hyperlinks unterhalb des Diagramms klicken: **Dauer**, **Physische Lesevorgänge** oder **Logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
   
  In der Tabelle unter dem Diagramm werden die ersten zehn Abfragepläne auf Grundlage der CPU-Verwendung pro Ausführung angezeigt. Jede Nummer in der Spalte **Plan #** ist ein aktiver Link, auf den Sie klicken können, um den Unterbericht „Abfrageplandetails“ zu öffnen.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54100495"
   
  **Zeitachsensteuerelement und Navigationsschaltflächen**  
   
- Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den lupenschaltflächen, können Sie erweitern oder verkleinern diesen Zeitschritt auf einen der folgenden Werte: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
+ Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den Lupenschaltflächen können Sie diesen Zeitschritt auf einen der folgenden Werte vergrößern oder verkleinern: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
   
  **Schaltfläche "Kalender"**  
   

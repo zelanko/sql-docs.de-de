@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733924"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO* -Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.  
@@ -61,7 +61,7 @@ ms.locfileid: "52518052"
   
  Μ = p - (die vorherige Wahrscheinlichkeit eines Status)  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  Wert ist vorhanden:     (1-μ)/σ / / (eins minus Mu) geteilt durch Sigma)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (Ci), aber die geschachtelte Tabelle enthält auch einen "freien" Koeffizienten (Co), die gemäß der folgenden Formel berechnet:  
   
- F(X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Aktivierung: exp(F(X)) / (1 + exp(F(X)) )  
   

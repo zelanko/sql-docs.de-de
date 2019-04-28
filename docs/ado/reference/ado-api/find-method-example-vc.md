@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028177"
 ---
 # <a name="find-method-example-vc"></a>Find-Methode – Beispiel (VC++)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und die Anzahl der Berufsbezeichnungen, in der **Pubs** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  

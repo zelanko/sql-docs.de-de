@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000344"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
   Wenn zwischen einem Verleger und einem Abonnenten eine Verbindung besteht und die Synchronisierung vorgenommen wird, werden jegliche Konflikte vom Merge-Agent erkannt. Wenn Konflikte erkannt werden, verwendet der Merge-Agent einen Konfliktlöser (der angegeben wird, wenn ein Artikel einer Veröffentlichung hinzugefügt wird), um festzustellen, welche Daten akzeptiert und an andere Sites weitergegeben werden.  
@@ -94,9 +94,9 @@ ms.locfileid: "54132880"
   
  Information zum Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität finden Sie im entsprechenden Artikel.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Geben Sie einen Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Replikation [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programmierung und die Programmierung mit replikationsverwaltungsobjekten (Replication Management Objects, RMO): [Erstellen eines Pullabonnements](../create-a-pull-subscription.md) und [Erstellen eines Pushabonnements](../create-a-push-subscription.md)  
+-   Weitere Informationen zum Programmieren von Replikationen mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] und zum Programmieren von Replication Management Objects (RMO) finden Sie unter: [Create a Pull Subscription (Erstellen eines Pullabonnements)](../create-a-pull-subscription.md) und [Create a Push Subscription (Erstellen eines Pushabonnements)](../create-a-push-subscription.md).  
   
 ### <a name="interactive-resolver"></a>Interaktiver Konfliktlöser  
  Die Replikation stellt eine Benutzeroberfläche für den interaktiven Konfliktlöser bereit, die in Verbindung mit dem prioritätsbasierten Standardkonfliktlöser oder mit einem Artikelkonfliktlöser verwendet werden kann. Bei der Ausführung einer bedarfsgesteuerten Synchronisierung mit der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows zeigt der interaktive Konfliktlöser Konfliktdaten in Laufzeit an und bietet Ihnen die Möglichkeit, die Art der Konfliktlösung auszuwählen. Weitere Informationen zum Aktivieren der interaktiven Konfliktlösung und zum Starten des interaktiven Konfliktlösers finden Sie unter [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,7 +129,7 @@ ms.locfileid: "54132880"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replikation [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programmieren: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Synchronisieren von Daten](../synchronize-data.md)  

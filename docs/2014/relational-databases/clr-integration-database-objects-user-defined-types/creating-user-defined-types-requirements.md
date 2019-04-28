@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919661"
 ---
 # <a name="user-defined-type-requirements"></a>Anforderungen für den benutzerdefinierten Typ
   Sie müssen mehrere wichtige entwurfsentscheidungen beim Erstellen eines benutzerdefinierten Typs (UDT), für die Installation in, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
@@ -86,7 +86,7 @@ ms.locfileid: "49120097"
 ## <a name="userdefined-serialization"></a>UserDefined-Serialisierung  
  Die `UserDefined`-Formateinstellung für das `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`-Attribut gibt dem Entwickler volle Kontrolle über das Binärformat. Wenn Sie die `Format`-Attributeigenschaft als `UserDefined` angeben, müssen Sie im Code wie folgt vorgehen:  
   
--   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Der Standardwert lautet `false`.  
+-   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Der Standardwert ist `false`.  
   
 -   Geben Sie die `MaxByteSize`-Eigenschaft von `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` an.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "49120097"
  Gibt an, ob alle Instanzen dieses UDTs dieselbe Länge haben.  
   
  `MaxByteSize`  
- Die maximale Größe der Instanz in Byte. Sie müssen die `MaxByteSize` mit dem `UserDefined`-Serialisierungsformat angeben. Bei einem UDT, für den benutzerdefinierte Serialisierung festgelegt ist, bezieht sich `MaxByteSize` auf die Gesamtgröße des UDTs in der vom Benutzer festgelegten serialisierten Form. Der Wert von `MaxByteSize` muss zwischen 1 und 8000 liegen oder auf -1 festgelegt werden, um anzugeben, dass der UDT größer als 8000 Byte ist (die Gesamtgröße kann die maximale LOB-Größe nicht übersteigen). Angenommen, für einen UDT ist eine Zeichenfolge von 10 Zeichen (`System.Char`) festgelegt. Wenn der UDT anhand eines BinaryWriter serialisiert wird, beträgt die Gesamtgröße der serialisierten Zeichenfolge 22 Byte: 2 Byte pro Unicode-UTF-16-Zeichen, multipliziert mit der maximalen Anzahl von Zeichen, plus 2 Kontrollzeichen, die beim Serialisieren eines binären Datenstroms zusätzlich anfallen. Bei der Ermittlung des `MaxByteSize`-Werts muss daher die Gesamtgröße des serialisierten UDTs berücksichtigt werden: die Größe der ins Binärformat serialisierten Daten plus die bei der Serialisierung anfallenden Daten.  
+ Die maximale Größe der Instanz in Byte. Sie müssen die `MaxByteSize` mit dem `UserDefined`-Serialisierungsformat angeben. Bei einem UDT, für den benutzerdefinierte Serialisierung festgelegt ist, bezieht sich `MaxByteSize` auf die Gesamtgröße des UDTs in der vom Benutzer festgelegten serialisierten Form. Der Wert von `MaxByteSize` muss zwischen 1 und 8000 liegen oder auf -1 festgelegt werden, um anzugeben, dass der UDT größer als 8000 Byte ist (die Gesamtgröße kann die maximale LOB-Größe nicht übersteigen). Angenommen, für einen UDT ist eine Zeichenfolge von 10 Zeichen (`System.Char`) festgelegt. Wenn der UDT anhand ein BinaryWriter serialisiert wird, ist die Gesamtgröße der serialisierten Zeichenfolge 22 Bytes: 2 Bytes pro Unicode UTF-16-Zeichen, multipliziert die maximale Anzahl von Zeichen, plus 2 muss das Steuerelement Bytes Kontrollzeichen Serialisieren eines binären Datenstroms zusätzlich anfallen. Bei der Ermittlung des `MaxByteSize`-Werts muss daher die Gesamtgröße des serialisierten UDTs berücksichtigt werden: die Größe der ins Binärformat serialisierten Daten plus die bei der Serialisierung anfallenden Daten.  
   
  `ValidationMethodName`  
  Der Name der Methode, mit der Instanzen des UDTs überprüft werden.  
@@ -142,7 +142,7 @@ ms.locfileid: "49120097"
   
 -   Größer als oder gleich (> =)  
   
--   Kleiner als oder gleich (<=)  
+-   Kleiner als oder gleich (< =)  
   
 ### <a name="implementing-nullability"></a>Implementieren von NULL-Zulässigkeit  
  Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden, erkennen Nullwerte, aber damit der UDT einen Nullwert erkennt, muss die Klasse die `INullable`-Schnittstelle implementieren. Weitere Informationen und ein Beispiel dafür, wie NULL-Zulässigkeit in einem UDT zu implementieren, finden Sie unter [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  

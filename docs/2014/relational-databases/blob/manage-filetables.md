@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874787"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
@@ -138,7 +138,7 @@ GO
   
 -   Das FileTable-Verzeichnis und die enthaltenen Dateien und Verzeichnisse werden im Dateisystem sichtbar und stehen zum Datei-E/A-Zugriff zur Verfügung.  
   
-###  <a name="HowToEnableNS"></a> So wird es gemacht: Deaktivieren und erneutes Aktivieren des FileTable-Namespaces auf Tabellenebene  
+###  <a name="HowToEnableNS"></a> So wird es gemacht: Deaktivieren Sie und erneutes Aktivieren Sie der FileTable-Namespace auf Tabellenebene  
  Rufen Sie die ALTER TABLE-Anweisung mit der Option **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** auf.  
   
  **So deaktivieren Sie den FileTable-Namespace**  

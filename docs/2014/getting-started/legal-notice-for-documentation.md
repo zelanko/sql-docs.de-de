@@ -17,11 +17,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837520"
 ---
 # <a name="legal-notice-for-documentation"></a>Rechtliche Hinweise für die Dokumentation
   Dieses Dokument wird "wie besehen" zur Verfügung gestellt. Die in diesen Unterlagen enthaltenen Angaben und Ansichten, einschließlich URLs und anderer Verweise auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Sie tragen das mit der Nutzung verbundene Risiko.  

@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916579"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>SQL Server-Datendateien in Windows Azure
   Die SQL Server-Datendateien in Windows Azure ermöglichen die systemeigene Unterstützung von SQL Server-Datenbankdateien, die als Windows Azure-BLOBs gespeichert sind. Mit der Funktion können Sie eine Datenbank in SQL Server erstellen, die lokal oder auf einem virtuellen Computer in Windows Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten im Windows Azure-BLOB-Speicher bereitgestellt wird. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet sie einen alternativen Speicherort für Datenbank-Sicherungsdateien, da Wiederherstellungen im oder aus dem Windows Azure-Speicher ermöglicht werden. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.  
   
  In diesem Thema werden zentrale Konzepte und Überlegungen zur Speicherung von SQL Server-Datendateien im Microsoft Azure-Speicherdienst eingeführt.  
   
- Ein praktisches Beispiel zur Verwendung dieser neuen Funktion, finden Sie unter [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Ein praktisches Beispiel für die Verwendung dieses neuen Features finden Sie im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  Das folgende Diagramm veranschaulicht, dass Sie mit dieser Erweiterung SQL Server-Datenbankdateien unabhängig vom Serverstandort im Windows Azure-Speicher als Windows Azure-BLOBs speichern können.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "53353516"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-windows-azure"></a>Vorteile der Verwendung von SQL Server-Datendateien in Windows Azure  
   
--   **Einfache und schnelle Migration Vorteile:** Diese Funktion vereinfacht den Migrationsprozess, indem jeweils eine Datenbank zwischen Computern in lokalen Umgebungen sowie zwischen lokalen und Cloudumgebungen verschoben wird, ohne dass Änderungen an der Anwendung vorgenommen werden müssen. Auf diese Weise wird eine inkrementelle Migration unterstützt, während Ihre vorhandene lokale Infrastruktur unverändert beibehalten wird. Darüber hinaus vereinfacht der Zugriff auf einen zentralen Datenspeicher die Anwendungslogik, wenn eine Anwendung in einer lokalen Umgebung an mehreren Stellen ausgeführt werden muss. Es kann vorkommen, dass Sie schnell Rechenzentren an geografisch verteilten Standorten einrichten müssen, in denen Daten aus vielen verschiedenen Quellen gesammelt werden. Mit dieser neuen Erweiterung müssen Daten nicht mehr zwischen Speicherorten verschoben werden. Stattdessen können Sie zahlreiche Datenbanken als Windows Azure-BLOBs speichern und anschließend mithilfe von Transact-SQL-Skripts Datenbanken auf den lokalen oder virtuellen Computern erstellen.  
+-   **Vorteil – Einfache und schnelle Migration:** Diese Funktion vereinfacht den Migrationsprozess, indem eine Datenbank zwischen Computern in lokalen sowie zwischen lokalen und cloudbasierten Umgebungen, ohne Änderungen an Anwendungen zu einem Zeitpunkt verschoben. Auf diese Weise wird eine inkrementelle Migration unterstützt, während Ihre vorhandene lokale Infrastruktur unverändert beibehalten wird. Darüber hinaus vereinfacht der Zugriff auf einen zentralen Datenspeicher die Anwendungslogik, wenn eine Anwendung in einer lokalen Umgebung an mehreren Stellen ausgeführt werden muss. Es kann vorkommen, dass Sie schnell Rechenzentren an geografisch verteilten Standorten einrichten müssen, in denen Daten aus vielen verschiedenen Quellen gesammelt werden. Mit dieser neuen Erweiterung müssen Daten nicht mehr zwischen Speicherorten verschoben werden. Stattdessen können Sie zahlreiche Datenbanken als Windows Azure-BLOBs speichern und anschließend mithilfe von Transact-SQL-Skripts Datenbanken auf den lokalen oder virtuellen Computern erstellen.  
   
--   **Kostenvorteile und unbegrenzter Speicher:** Mit dieser Funktion profitieren Sie von unbegrenztem Offsite-Speicher in Windows Azure, während Sie gleichzeitig die lokalen Serverressourcen nutzen. Wenn Sie Windows Azure als Datenspeicher verwenden, können Sie sich problemlos auf die Anwendungslogik konzentrieren, ohne sich um die aufwändige Hardwareverwaltung kümmern zu müssen. Wenn ein lokaler Serverknoten ausfällt, können Sie einen neuen Knoten einrichten, ohne Daten zu verschieben.  
+-   **Vorteil – Kostengünstig und unbegrenzter Speicher:** Dieses Feature können Sie von unbegrenztem Offsite-Speicher in Windows Azure während Sie von lokalen Serverressourcen nutzen. Wenn Sie Windows Azure als Datenspeicher verwenden, können Sie sich problemlos auf die Anwendungslogik konzentrieren, ohne sich um die aufwändige Hardwareverwaltung kümmern zu müssen. Wenn ein lokaler Serverknoten ausfällt, können Sie einen neuen Knoten einrichten, ohne Daten zu verschieben.  
   
--   **Hohe Verfügbarkeit und notfallwiederherstellung Vorteile:** Mithilfe von SQL Server-Datendateien in Windows Azure können Lösungen für Hochverfügbarkeit und Notfallwiederherstellung u. U. vereinfacht werden. Beispiel: Wenn ein virtueller Computer in Windows Azure oder eine SQL Server-Instanz abstürzt, können Sie die Datenbanken auf einem neuen Computer neu erstellen, indem Sie einfach wieder Verknüpfungen zu Windows Azure-BLOBs herstellen.  
+-   **Vorteil – Hochverfügbarkeit und Notfallwiederherstellung:** Mithilfe von SQL Server-Datendateien in Microsoft Azure kann die wiederherstellungslösungen für hochverfügbarkeit und notfallwiederherstellung vereinfachen. Beispiel: Wenn ein virtueller Computer in Windows Azure oder eine SQL Server-Instanz abstürzt, können Sie die Datenbanken auf einem neuen Computer neu erstellen, indem Sie einfach wieder Verknüpfungen zu Windows Azure-BLOBs herstellen.  
   
--   **Sicherheit:** Durch diese neue Erweiterung können Serverinstanzen von Speicherinstanzen getrennt behandelt werden. Beispielsweise können Sie über eine vollständig verschlüsselte Datenbank verfügen, deren Entschlüsselung ausschließlich auf einer Serverinstanz und nicht auf einer Speicherinstanz stattfindet. Dies bedeutet, dass Sie mit der neuen Erweiterung alle Daten in einer öffentlichen Cloud unter Verwendung von TDE-Zertifikaten (Transparent Data Encryption, transparente Datenverschlüsselung) verschlüsseln können, die physisch von den Daten getrennt sind. Die TDE-Schlüssel können in der Masterdatenbank gespeichert werden, die auf einem physisch sicheren lokalen Computer an Ihrem Standort gespeichert und gesichert wird. Mithilfe dieser lokalen Schlüssel können Sie die Daten verschlüsseln, die sich im Windows Azure-Speicher befinden. Falls Ihre Anmeldeinformationen für das Cloudspeicherkonto ausgespäht werden, sind die Daten trotzdem sicher, da die TDE-Zertifikate immer lokal gespeichert werden.  
+-   **Vorteil – Sicherheit:** Diese neue Erweiterung können Serverinstanzen von Speicherinstanzen getrennt. Beispielsweise können Sie über eine vollständig verschlüsselte Datenbank verfügen, deren Entschlüsselung ausschließlich auf einer Serverinstanz und nicht auf einer Speicherinstanz stattfindet. Dies bedeutet, dass Sie mit der neuen Erweiterung alle Daten in einer öffentlichen Cloud unter Verwendung von TDE-Zertifikaten (Transparent Data Encryption, transparente Datenverschlüsselung) verschlüsseln können, die physisch von den Daten getrennt sind. Die TDE-Schlüssel können in der Masterdatenbank gespeichert werden, die auf einem physisch sicheren lokalen Computer an Ihrem Standort gespeichert und gesichert wird. Mithilfe dieser lokalen Schlüssel können Sie die Daten verschlüsseln, die sich im Windows Azure-Speicher befinden. Falls Ihre Anmeldeinformationen für das Cloudspeicherkonto ausgespäht werden, sind die Daten trotzdem sicher, da die TDE-Zertifikate immer lokal gespeichert werden.  
   
 ## <a name="concepts-and-requirements"></a>Konzepte und Anforderungen  
   
@@ -77,7 +77,7 @@ ON
   
 ```  
   
- **Wichtiger Hinweis:** Wenn ein Container aktive Verweise auf Datendateien enthält, schlagen Versuche, die entsprechenden SQL Server-Anmeldeinformationen zu löschen, fehl.  
+ **Wichtiger Hinweis:** Wenn es aktive Verweise auf Datendateien in einem Container sind, versucht, die entsprechenden SQL Server zu löschen, Anmeldeinformationen ein Fehler auftritt.  
   
 ### <a name="security"></a>Sicherheit  
  Die folgenden Sicherheitsüberlegungen und -anforderungen sollten beim Speichern von SQL Server-Datendateien im Windows Azure-Speicher berücksichtigt werden.  
@@ -91,9 +91,9 @@ ON
 ### <a name="installation-prerequisites"></a>Installationsvoraussetzungen  
  Die folgenden Installationsvoraussetzungen gelten beim Speichern von SQL Server-Datendateien in Windows Azure.  
   
--   **SQLServer auf einer lokalen Umgebung:** Diese Funktion ist in SQL Server 2014 enthalten. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **Lokaler SQL Server:** Diese Funktion ist in SQL Server 2014-Version enthalten. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server auf einem virtuellen Computer in Windows Azure: Wenn Sie SQL Server auf einem virtuellen Computer in Windows Azure installieren, installieren Sie SQL Server 2014, oder aktualisieren Sie Ihre vorhandene Instanz. Sie können auch einen neuen virtuellen Computer in Windows Azure erstellen, indem Sie ein Plattformimage von SQL Server 2014 verwenden. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server auf einem virtuellen Windows Azure-Computer auf: Wenn Sie SQL Server auf einem Windows Azure-Computer installieren, installieren Sie SQL Server 2014 oder aktualisieren Sie Ihre vorhandene Instanz. Sie können auch einen neuen virtuellen Computer in Windows Azure erstellen, indem Sie ein Plattformimage von SQL Server 2014 verwenden. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Einschränkungen  
   
@@ -125,7 +125,7 @@ ON
  In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Windows Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit dem Microsoft Azure-Speicher zu überwachen.  
   
 ### <a name="sql-server-management-studio-support"></a>Unterstützung von SQL Server Management Studio  
- SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Beispielsweise können Sie den URL-Pfad des Speichercontainers, wie `https://teststorageaccnt.blob.core.windows.net/testcontainer/`, als **Pfad** in mehreren Dialogfeldern eingeben, z.B. **Neue Datenbank**, **Datenbank anfügen** und **Datenbank wiederherstellen**. Weitere Informationen finden Sie unter [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Beispielsweise können Sie den URL-Pfad des Speichercontainers, wie `https://teststorageaccnt.blob.core.windows.net/testcontainer/`, als **Pfad** in mehreren Dialogfeldern eingeben, z.B. **Neue Datenbank**, **Datenbank anfügen** und **Datenbank wiederherstellen**. Weitere Informationen finden Sie im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-support"></a>Unterstützung von SQL Server Management Objects  
  Bei Verwendung von SQL Server-Datendateien in Microsoft Azure werden alle SQL Server Management Objects (SMO) unterstützt. Wenn ein SMO-Objekt einen Dateipfad erfordert, verwenden Sie das BLOB-URL-Format anstelle eines lokalen Dateipfads, beispielsweise `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Weitere Informationen zu SQL Server Management Objects (SMO) finden Sie unter [SQL Server Management Objects &#40;SMO&#41;-Programmierungshandbuch](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in der SQL Server-Onlinedokumentation.  
@@ -143,13 +143,13 @@ ON
  **Authentifizierungsfehler**  
   
 -   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*   
-    Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Windows Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
+    Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, löschen Sie einen Satz von Anmeldeinformationen, der noch verwendet wird, indem Sie einer aktiven Datenbankdatei im Windows Azure-Speicher. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
 -   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*   
-     Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+     Lösung: Stellen Sie sicher, dass Sie eine SAS ordnungsgemäß für den Container erstellt haben. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 -   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*   
-    Lösung: Stellen Sie sicher, dass Sie "Shared Access Signature", für verwendet haben die **Identität** Feld und ordnungsgemäß einen geheimen Schlüssel erstellt. Lesen Sie die Hinweise in Lektion 3 im [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Fehler bei BLOB-Leasedauer:**  
   
@@ -158,13 +158,13 @@ ON
  **Datenbankfehler**  
   
 1.  *Fehler beim Erstellen einer Datenbank*   
-    Lösung: Lesen Sie die Hinweise in Lektion 4 im [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Lösung: Lesen Sie die Hinweise in Lektion 4 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 2.  *Fehler beim Ausführen der ALTER-Anweisung*   
-    Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Windows Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Lösung: Stellen Sie sicher, dass die Alter Database-Anweisung ausgeführt werden soll, wenn die Datenbank online ist. Wenn Sie die Datendateien in den Windows Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*   
-    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.*ls“ kann nicht geöffnet werden\*. Betriebssystemfehler %d: „%ls“*.  
+    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*.  
   
      Um dieses Problem zu beheben, stellen Sie zuerst fest, ob ServerA auf die Datenbankdatei im Windows Azure-Speicher zugreifen muss oder nicht. Wenn nicht, entfernen Sie einfach jegliche Verbindungen zwischen ServerA und den Datenbankdateien im Windows Azure-Speicher. Führen Sie hierzu folgende Schritte aus:  
   

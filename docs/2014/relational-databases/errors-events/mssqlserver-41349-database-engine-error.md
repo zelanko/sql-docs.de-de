@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914016"
 ---
 # <a name="mssqlserver41349"></a>MSSQLSERVER_41349
     
@@ -30,7 +30,7 @@ ms.locfileid: "48083670"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|HK_ENCRYPTION_ON|  
-|Meldungstext|Warnung: Für eine Datenbank, die mindestens eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit enthält, wurde die Verschlüsselung aktiviert. Die Daten in diesen speicheroptimierten Tabellen werden nicht verschlüsselt.|  
+|Meldungstext|Warnung: Die Verschlüsselung wurde für eine Datenbank aktiviert, die mindestens eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit enthält. Die Daten in diesen speicheroptimierten Tabellen werden nicht verschlüsselt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

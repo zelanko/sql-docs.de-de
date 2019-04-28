@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916482"
 ---
 # <a name="database-engine-events-and-errors"></a>Datenbank-Engine (Fehler und Ereignisse)
   Dieses Thema enthält Informationen zu Fehlern und Ereignissen für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

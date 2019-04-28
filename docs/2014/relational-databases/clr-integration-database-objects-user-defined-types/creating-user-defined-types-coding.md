@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919934"
 ---
 # <a name="coding-user-defined-types"></a>Programmieren benutzerdefinierter Typen
   Wenn Sie die Definition eines benutzerdefinierten Typs (UDT) schreiben, müssen Sie verschiedene Funktionen implementieren, abhängig davon, ob Sie den UDT als Klasse oder als Struktur implementieren, sowie abhängig von den von Ihnen gewählten Format- und Serialisierungsoptionen.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Die `Microsoft.SqlServer.Server.SqlMethodAttribute`-Klasse stellt benutzerdefinierte Attribute zur Verfügung, mit denen Methodendefinitionen markiert werden können, um einen Determinismus anzugeben, das Verhalten beim Aufruf für NULL-Werte festzulegen und anzugeben, ob eine Methode eine Mutatormethode ist. Bei diesen Eigenschaften werden die Standardwerte vorausgesetzt, und das benutzerdefinierte Attribut wird nur verwendet, wenn ein anderer Wert als der Standardwert erforderlich ist.  
   
 > [!NOTE]  
->  Die `SqlMethodAttribute`-Klasse erbt von der `SqlFunctionAttribute`-Klasse, daher erbt die `SqlMethodAttribute`-Klasse die Felder `FillRowMethodName` und `TableDefinition` von `SqlFunctionAttribute`. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die `IEnumerable` zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name > "in der Klasse\<Klasse >" in der Assembly "\<Assembly >' hat ungültigen Rückgabetyp. "  
+>  Die `SqlMethodAttribute`-Klasse erbt von der `SqlFunctionAttribute`-Klasse, daher erbt die `SqlMethodAttribute`-Klasse die Felder `FillRowMethodName` und `TableDefinition` von `SqlFunctionAttribute`. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die `IEnumerable` zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name >' in der Klasse\<Klasse > "in der Assembly"\<Assembly >' hat ungültigen Rückgabetyp. "  
   
  In der folgenden Tabelle werden einige der relevanten `Microsoft.SqlServer.Server.SqlMethodAttribute`-Eigenschaften beschrieben, die in UDT-Methoden verwendet werden können, und die zugehörigen Standardwerte aufgeführt.  
   
@@ -551,16 +551,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Gibt an, ob die Funktion auf die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Benutzerdaten zugreift. Der Standardwert lautet `DataAccessKind``None`.  
   
  IsDeterministic  
- Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Der Standardwert ist `false`.  
+ Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Der Standardwert lautet `false`.  
   
  IsMutator  
- Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Der Standardwert ist `false`.  
+ Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Der Standardwert lautet `false`.  
   
  IsPrecise  
- Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Der Standardwert ist `false`.  
+ Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Der Standardwert lautet `false`.  
   
  OnNullCall  
- Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Der Standardwert ist `true`.  
+ Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Der Standardwert lautet `true`.  
   
 ### <a name="example"></a>Beispiel  
  Mit der `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator`-Eigenschaft können Sie eine Methode markieren, die eine Änderung des Status einer Instanz eines UDTs gestattet. Mit [!INCLUDE[tsql](../../includes/tsql-md.md)] ist es nicht möglich, zwei UDT-Eigenschaften in der SET-Klausel einer UPDATE-Anweisung festzulegen. Sie können jedoch eine Methode als Mutator markieren, die zwei Elemente ändert.  

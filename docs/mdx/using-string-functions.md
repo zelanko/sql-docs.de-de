@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Zeichenfolgenfunktionen | Microsoft Docs
+title: Verwenden von Zeichenfolgenfunktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928159"
 ---
 # <a name="using-string-functions"></a>Verwenden von Zeichenfolgenfunktionen
 
@@ -48,7 +48,7 @@ ms.locfileid: "34743825"
   
  `FROM [Adventure Works]`  
   
- Die **generieren** Funktion kann verwendet werden, um eine Zeichenfolgenfunktion auf jedes Element einer Menge und verketten die Ergebnisse. Dies ist nützlich beim Debuggen von Berechnungen, da es Ihnen ermöglicht, den Inhalt einer Menge sichtbar zu machen. Im folgenden Beispiel wird diese Art der Verwendung veranschaulicht:  
+ Die **generieren** Funktion kann verwendet werden, um eine Zeichenfolgenfunktion auf jedes Element einer Menge und die Ergebnisse zu verketten. Dies ist nützlich beim Debuggen von Berechnungen, da es Ihnen ermöglicht, den Inhalt einer Menge sichtbar zu machen. Im folgenden Beispiel wird diese Art der Verwendung veranschaulicht:  
   
  `WITH`  
   
@@ -99,11 +99,11 @@ ms.locfileid: "34743825"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  Die **StrToMember** und **StrToSet** Funktionen sollte mit Vorsicht verwendet werden. Sie können zu schlechter Abfrageleistung führen, wenn sie innerhalb von Berechnungsdefinitionen verwendet werden.  
+>  Die **StrToMember** und **StrToSet** Funktionen sollten mit Vorsicht verwendet werden. Sie können zu schlechter Abfrageleistung führen, wenn sie innerhalb von Berechnungsdefinitionen verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Generieren von &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Namen &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835946"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer für Oracle von Attunity
   CDC Designer Console wird verwendet, um Oracle CDC-Instanzen zu entwickeln und zu warten. Die CDC Designer Console ist ein Microsoft Management Console-Snap-In, das die folgenden Elemente enthält:  
   
--   Assistenten für neue Instanzen: Dieser Assistent erstellt eine neue Oracle CDC-Instanz. Weitere Informationen zur Verwendung des Assistenten für neue Instanzen finden Sie unter [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   New Instance Wizard: Mit diesem Assistenten wird eine neue Oracle CDC-Instanz erstellt. Weitere Informationen zur Verwendung des Assistenten für neue Instanzen finden Sie unter [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   CDC Instance Properties Viewer: Dies ist eine angedockte Ansicht zeigt Status und zur Konfiguration der ausgewählten CDC-Instanz. Weitere Informationen zum Properties Viewer finden Sie unter [Verwalten einer CDC-Instanz](manage-a-cdc-instance.md).  
+-   CDC Instance Properties Viewer: Dies ist eine angedockte Sicht, die den Status und die Konfiguration der ausgewählten CDC-Instanz anzeigt. Weitere Informationen zum Properties Viewer finden Sie unter [Verwalten einer CDC-Instanz](manage-a-cdc-instance.md).  
   
--   CDC Instance Properties Editor: Dieses Dialogfeld wird verwendet, um vorhandene Oracle CDC Service-Instanz zu bearbeiten. Informationen zum Bearbeiten der CDC-Instanzeigenschaften finden Sie unter [Edit Instance Properties](edit-instance-properties.md).  
+-   CDC Instance Properties Editor: Dieses Dialogfeld wird verwendet, um vorhandene Instanzen des Oracle CDC Service zu bearbeiten. Informationen zum Bearbeiten der CDC-Instanzeigenschaften finden Sie unter [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>In dieser Dokumentation  
   

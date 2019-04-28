@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874879"
 ---
 # <a name="select-backup-destination"></a>Sicherungsziel auswählen
   Wählen Sie im Dialogfeld **Sicherungsziel auswählen** ein Gerät als Sicherungsziel aus. Ein Sicherungsziel kann entweder ein Datenträger oder ein logisches Sicherungsmedium sein.  
@@ -32,7 +32,7 @@ ms.locfileid: "48061010"
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Die Optionen in diesem Dialogfeld sind davon abhängig, ob Sie ein Ziel auf einem Datenträger oder einem Band auswählen.  
   
  **Ziele auf dem Datenträger**  
@@ -41,7 +41,7 @@ ms.locfileid: "48061010"
 |||  
 |-|-|  
 |**Dateiname**|Wählen Sie diese Option aus, um eine lokale Datei oder Remotedatei als Sicherungsziel im Textfeld einzugeben.<br /><br /> Klicken Sie zum Angeben einer lokalen Datei rechts vom Textfeld auf die Schaltfläche zum Durchsuchen, und wählen Sie dann auf den Festplatten des Computers, auf dem der Server ausgeführt wird, eine Datei aus. Sie können auch den vollständigen Pfad und Dateinamen direkt eingeben, z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Zum Angeben einer Remotedatei als Sicherungsziel geben Sie ihren vollqualifizierten UNC-Namen (Universal Naming Convention) ein. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.<br /><br /> **\*\* Wichtig \*\*** Beim Sichern von Daten über ein Netzwerk können Netzwerkfehler auftreten. Aus diesem Grund wird empfohlen, dass Sie den Sicherungsvorgang nach der Fertigstellung überprüfen. Weitere Informationen finden Sie unter [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
-|**Sicherungsmedium**|Wählen Sie diese Option aus, um ein logisches Sicherungsmedium auszuwählen.<br /><br /> Hinweis: Informationen zum Erstellen eines Datenträgersicherungsmediums finden Sie unter [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
+|**Sicherungsmedium**|Wählen Sie diese Option aus, um ein logisches Sicherungsmedium auszuwählen.<br /><br /> Hinweis: Informationen zum Erstellen eines datenträgersicherungsmediums finden Sie unter [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Ziele auf Band**  
  Gibt ein Sicherungsziel auf einem Bandlaufwerk an, das physisch mit dem Computer verbunden ist, auf dem der Server ausgeführt wird (d. h. die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Wählen Sie eine der folgenden Optionen.  

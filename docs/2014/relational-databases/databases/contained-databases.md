@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917569"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
   Eine*eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  

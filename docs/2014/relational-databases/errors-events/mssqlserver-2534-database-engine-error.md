@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914656"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -25,12 +25,12 @@ ms.locfileid: "48141108"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2534|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Meldungstext|Tabellenfehler: Seite P_ID!, die laut Header der Objekt-ID O_ID!, Index ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) zugeordnet ist, ist von einem anderen Objekt zugeordnet.|  
+|Meldungstext|Tabellenfehler: Page P_ID, laut Header gibt an, wie der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zugeordnet wird zuordnungseinheits-ID A_ID (Typ TYPE), wird von einem anderen Objekt zugeordnet.|  
   
 ## <a name="explanation"></a>Erklärung  
  Der Header der Seite enthält die Zuordnungseinheits-ID *A_ID*. Die Seite wird jedoch von keiner der IAM-Seiten (Index Allocation Map) dieser Zuordnungseinheit zugeordnet. Deshalb enthält der Header der Seite die falsche Zuordnungseinheits-ID, und die Seite verfügt über einen übereinstimmenden MSSQLServer_2533-Fehler, der der Zuordnungseinheits-ID entspricht, der die Seite tatsächlich zugeordnet ist.  
