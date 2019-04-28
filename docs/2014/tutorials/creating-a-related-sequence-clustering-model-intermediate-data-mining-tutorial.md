@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855876"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen eines Clustermodells für verwandte Sequenzen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Sequenzclustermodells haben Sie gelernt, dass Attribute wie "Region" oder "Einkommen" starke Auswirkungen auf die Modelle haben. Aus diesem Grund erstellen Sie nun ein Clustermodell für verwandte Sequenzen und entfernen die Attribute für demografische Kundendaten, um ein besseres Verständnis der Sequenzen zu entwickeln.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890532"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Quellen-Editor für OData (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OData** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  

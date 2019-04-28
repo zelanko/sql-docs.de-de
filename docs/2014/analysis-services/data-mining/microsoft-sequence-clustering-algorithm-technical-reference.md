@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734933"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
   Der Microsoft Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Markov-Kettenanalysen verbindet, um sortierte Sequenzen zu identifizieren, und die Ergebnisse dieser Analyse mit Clustering-Techniken verbindet, um Cluster basierend auf den Sequenzen und anderen Attributen im Modell zu erstellen. In diesem Thema werden die Implementierung des Algorithmus, die Anpassung des Algorithmus und die speziellen Anforderungen für Sequenzclustermodelle beschrieben.  

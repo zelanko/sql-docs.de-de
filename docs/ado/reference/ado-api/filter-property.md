@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028147"
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
 Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -30,9 +30,9 @@ Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api
 
 Legt fest oder gibt einen **Variant** -Wert, der einen der folgenden Elemente enthalten kann:  
   
--   **Die Zeichenfolge Suchkriterien:** eine Zeichenfolge, bestehend aus einer oder mehreren einzelnen Klauseln, die mit verkettet **und** oder **OR** Operatoren.  
+-   **Zeichenfolge der Suchkriterien:** Eine Zeichenfolge, bestehend aus einer oder mehreren einzelnen Klauseln, die mit verkettet **und** oder **OR** Operatoren.  
   
--   **Array von Lesezeichen:** ein Array von Lesezeichen mit eindeutigen Werten, die auf Datensätze in der **Recordset** Objekt.  
+-   **Ein Array von Lesezeichen:** Ein Array von Lesezeichen mit eindeutigen Werten, die auf Datensätze in der **Recordset** Objekt.  
   
 -   Ein [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) Wert.  
   
@@ -46,7 +46,7 @@ Die Zeichenfolge der Suchkriterien besteht aus der Klauseln in der Form *FieldNa
   
 -   Operator muss eine der folgenden sein: \<, >, \<=, > =, <>, =, oder **wie**.  
   
--   Wert ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. 'Smith' #8/24/95-# 12.345 oder 50,00 $). Verwenden Sie einfache Anführungszeichen mit Zeichenfolgen und Nummernzeichen (#) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn der Operator ist **wie**, Wert kann Platzhalter verwenden. Nur das Sternchen (*) und Prozentzeichen (%) Platzhalter sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht null sein.  
+-   Wert ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. 'Smith' #8/24/95-# 12.345 oder 50,00 $). Verwenden Sie einfache Anführungszeichen mit Zeichenfolgen und Nummernzeichen (#) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn der Operator ist **wie**, Wert kann Platzhalter verwenden. Nur auf das Sternchen (*) und Prozentzeichen (%) Platzhalter sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht null sein.  
   
 > [!NOTE]
 >  Wenn einfache Anführungszeichen (') in den Filterwert einschließen möchten, verwenden Sie zwei einfache Anführungszeichen zum Darstellen einer. Z. B. um Malley filtern, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einzelne Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge mit dem Nummernzeichen (#). Z. B. zum Filtern nach "1" die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  
@@ -57,7 +57,7 @@ Die Zeichenfolge der Suchkriterien besteht aus der Klauseln in der Form *FieldNa
 -   Stattdessen würden Sie diesen Filter als erstellen.  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In einem **wie** -Klausel, können Sie einen Platzhalter am Anfang und Ende des Musters. Beispielsweise können Sie `LastName Like '*mit*'`. Oder mit **wie** können Sie einen Platzhalter nur am Ende des Musters. Beispiel: `LastName Like 'Smit*'`.  
+-   In einem **wie** -Klausel, können Sie einen Platzhalter am Anfang und Ende des Musters. Beispielsweise können Sie `LastName Like '*mit*'`. Oder mit **wie** können Sie einen Platzhalter nur am Ende des Musters. Beispiel: `LastName Like 'Smit*'`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  Die Filter-Konstanten erleichtern das zum Auflösen einzelner Datensatz Konflikte während der Modus "Batch-Update", sodass Sie anzeigen, z. B. nur die Datensätze, die während des letzten betroffen [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md) Methodenaufruf.  
   
@@ -94,8 +94,8 @@ Der folgenden Tabelle werden die Auswirkungen der **AdFilterPendingRecords** in 
 ||Nicht-Schlüssel|Einzelner Schlüssel|Mehrere Schlüssel|
 |-|--------------|----------------|-------------------|
 |**Nicht-Schlüssel**|+|+|+|
-|**Einzelner Schlüssel**|+|-|–|
-|**Mehrere Schlüssel**|+|–|+|
+|**Einzelner Schlüssel**|+|-|Nicht zutreffend|
+|**Mehrere Schlüssel**|+|Nicht zutreffend|+|
 |||||
   
 ## <a name="applies-to"></a>Gilt für

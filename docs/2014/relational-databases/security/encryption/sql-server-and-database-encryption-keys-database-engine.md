@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011320"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet Verschlüsselungsschlüssel, um Daten, Anmelde- und Verbindungsinformationen zu sichern, die in einer Berichtsserver-Datenbank gespeichert sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besitzt zwei Arten von Schlüsseln: *symmetrische* und *asymmetrische*. Symmetrische Schlüssel verwenden das gleiche Kennwort, um Daten zu verschlüsseln und zu entschlüsseln. Asymmetrische Schlüssel verwenden ein Kennwort zum Verschlüsseln der Daten (den *öffentlichen* Schlüssel) und ein weiteres zum Entschlüsseln der Daten (den *privaten* Schlüssel).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160700"
   
  Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Er kann auch zum Verschlüsseln von Daten verwendet werden. Allerdings gelten für diesen Schlüssel Längenbeschränkungen, durch die er für Daten weniger praktisch ist als ein symmetrischer Schlüssel.  
   
- Beim Erstellen wird der Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. Um die automatische Entschlüsselung des Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Es wird sowohl in der Datenbank gespeichert, wo sie verwendet wird und in der `master` -Systemdatenbank.  
+ Beim Erstellen wird der Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. Um die automatische Entschlüsselung des Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Er wird sowohl in der Datenbank gespeichert, in der er verwendet wird, als auch in der `master`-Systemdatenbank.  
   
- Die Kopie der Datenbank-Hauptschlüssel gespeichert werden, der `master` wird im Hintergrund aktualisiert, wenn der Datenbank-Hauptschlüssel geändert wird. Allerdings kann diese Standardeinstellung geändert werden, mithilfe der `DROP ENCRYPTION BY SERVICE MASTER KEY` Möglichkeit, die `ALTER MASTER KEY` Anweisung. Ein Datenbank-Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der `OPEN MASTER KEY`-Anweisung und eines Kennworts geöffnet werden.  
+ Die in der `master`-Systemdatenbank gespeicherte Kopie des Datenbank-Hauptschlüssels wird im Hintergrund aktualisiert, sobald der Datenbank-Hauptschlüssel geändert wird. Diese Standardeinstellung kann jedoch mit der `DROP ENCRYPTION BY SERVICE MASTER KEY`-Option der `ALTER MASTER KEY`-Anweisung geändert werden. Ein Datenbank-Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der `OPEN MASTER KEY`-Anweisung und eines Kennworts geöffnet werden.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Verwalten von SQL Server- und Datenbankschlüsseln  
  Zur Verwaltung der Verschlüsselungsschlüssel gehört das Erstellen neuer Datenbankschlüssel, das Erstellen einer Sicherung der Server- und Datenbankschlüssel und das Wissen darüber, wann und wie die Schlüssel wiederhergestellt, gelöscht oder geändert werden müssen.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832607"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  

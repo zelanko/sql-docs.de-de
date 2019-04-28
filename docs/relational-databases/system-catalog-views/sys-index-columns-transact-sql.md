@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004388"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47655818"
 |**index_id**|**int**|ID des Indexes, in dem die Spalte definiert wird|  
 |**index_column_id**|**int**|Die ID der Indexspalte. **Index_column_id** ist nur innerhalb eindeutig **Index_id**.|  
 |**column_id**|**int**|ID der Spalte in **object_id**.<br /><br /> 0 = Zeilenbezeichner (RID, Row Identifier) in einem nicht gruppierten Index.<br /><br /> **column_id** ist nur innerhalb von **object_id**eindeutig.|  
-|**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: Eine XML-Index oder räumlichen Index kann nicht kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind, was bedeutet, dass ihre Werte nicht sortiert werden können.|  
+|**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: Ein XML-Index oder räumlichen Index kann nicht kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind, was bedeutet, dass ihre Werte nicht sortiert werden können.|  
 |**partition_ordinal**|**tinyint**|Ordinalzahl (1-basiert) innerhalb einer Gruppe von Partitionierungsspalten. Ein gruppierter columnstore-Index kann maximal 1 Partitionierungsspalte aufweisen.<br /><br /> 0 = Keine Partitionierungsspalte.|  
 |**is_descending_key**|**bit**|1 = Indexschlüsselspalte hat eine absteigende Sortierreihenfolge.<br /><br /> 0 = Indexschlüsselspalte hat eine aufsteigende Sortierreihenfolge, oder die Spalte ist Teil eines columnstore-Indexes oder Hashindexes.|  
 |**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da sie Teil der Gruppierungsschlüssel sind nicht in aufgeführt werden **index_columns**.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.|  

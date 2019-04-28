@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015312"
 ---
 # <a name="get-information-about-event-notifications"></a>Abrufen von Informationen zu Ereignisbenachrichtigungen
   Zum Abfragen von Metadaten zu Ereignisbenachrichtigungen stehen die folgenden Katalogsichten zur Verfügung.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191480"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Um in **sys.event_notifications** Metadaten zu Ereignisbenachrichtigungen anzeigen zu können, die auf der Datenbankebene erstellt wurden, müssen folgende Voraussetzungen erfüllt sein: Sie müssen über CONTROL-, ALTER-, TAKE OWNERSHIP- oder VIEW DEFINITION-Berechtigungen für die Datenbank verfügen, Sie müssen der Besitzer der Ereignisbenachrichtigung sein oder über die ALTER ANY DATABASE EVENT NOTIFICATION-Berechtigung verfügen. Für Ereignisbenachrichtigungen, die für eine bestimmte Warteschlange erstellt wurden, müssen mindestens die folgenden Voraussetzungen erfüllt sein: Sie müssen über CONTROL-, ALTER-, TAKE OWNERSHIP- oder VIEW DEFINITION-Berechtigungen für das Objekt verfügen, Sie müssen der Besitzer der Ereignisbenachrichtigung sein oder über die ALTER ANY DATABASE EVENT NOTIFICATION-Berechtigung verfügen.  
+>  Zum Anzeigen von Metadaten über ereignisbenachrichtigungen in **Sys. event_notifications** erstellt in der Datenbank, die mindestens benötigen Sie Folgendes: STEUERN, Alter-, TAKE Ownership- oder VIEW DEFINITION-Berechtigung für die Datenbank, der Besitzer der ereignisbenachrichtigung sein oder über die ALTER ANY DATABASE EVENT NOTIFICATION-Berechtigung verfügen. Für ereignisbenachrichtigungen, die für eine bestimmte Warteschlange erstellt werden müssen mindestens die folgenden sein: STEUERN, Alter-, TAKE Ownership- oder VIEW DEFINITION-Berechtigung für das Objekt, der Besitzer der ereignisbenachrichtigung sein oder über die ALTER ANY DATABASE EVENT NOTIFICATION-Berechtigung verfügen.  
   
  **So rufen Sie Informationen zu Ereignisbenachrichtigungen auf der Serverebene ab**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Zum Anzeigen von Metadaten über Ereignisbenachrichtigungen in **sys.server_event_notifications**müssen mindestens die folgenden Voraussetzungen erfüllt sein: Sie müssen über die CONTROL- oder VIEW ANY DEFINITION-Berechtigung für den Server verfügen, Sie müssen der Anmeldename oder Besitzer der Ereignisbenachrichtigung sein, oder Sie müssen über die ALTER ANY EVENT NOTIFICATION-Berechtigung verfügen.  
+>  Mindestens benötigen Sie Folgendes: Steuern oder VIEW ANY DEFINITION-Berechtigung für den Server, die Anmeldung oder der Besitzer der ereignisbenachrichtigung sein oder über die ALTER ANY EVENT NOTIFICATION-Berechtigung zum Anzeigen von Metadaten über ereignisbenachrichtigungen in **server_event_notifications**.  
   
  **So rufen Sie Informationen zu sämtlichen Ereignissen ab, die zur Auslösung von Ereignisbenachrichtigungen führen können**  
   

@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020468"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  

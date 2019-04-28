@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733637"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "49120037"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
- **Stammknoten:** Weist auf die Anzahl der Regressionsknoten hin. Ein Regressionsknoten wird für jedes vorhersagbare Attribut im Modell erstellt.  
+ **Stammknoten:** Gibt die Anzahl der regressionsknoten an. Ein Regressionsknoten wird für jedes vorhersagbare Attribut im Modell erstellt.  
   
  **Regressionsknoten:** Immer 0.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "49120037"
   
  **Stammknoten:** 0  
   
- **Regressionsknoten:** Eine Tabelle, die die Elemente enthält, die verwendet werden, um die Regressionsformel zu erstellen. Ein Regressionsknoten enthält die folgenden Werttypen:  
+ **Regressionsknoten:** Eine Tabelle, die mit den Elementen verwendet, um die Regressionsformel zu erstellen. Ein Regressionsknoten enthält die folgenden Werttypen:  
   
 |VALUETYPE|  
 |---------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "49120037"
   
  **Stammknoten:** 0  
   
- **Regressionsknoten:** Anzahl der Trainingsfälle.  
+ **Regressionsknoten:** Die Anzahl der Trainingsfälle.  
   
  MSOLAP_MODEL_COLUMN  
  Name des vorhersagbaren Attributs.  
@@ -149,7 +149,7 @@ ms.locfileid: "49120037"
 ##  <a name="NodeDist_Regression"></a> Knotenverteilung für kontinuierliche Attribute  
  Die meisten der wichtigen Informationen in einem Regressionsknoten sind in der NODE_DISTRIBUTION-Tabelle enthalten. Im folgenden Beispiel wird das Layout der NODE_DISTRIBUTION-Tabelle veranschaulicht. In diesem Beispiel wurde die Targeted Mailing-Miningstruktur verwendet, um ein lineares Regressionsmodell zu erstellen, das basierend auf dem Alter das Kundeneinkommen vorhersagt. Das Modell dient lediglich Anschauungszwecken, da es mithilfe der bestehenden [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldaten und -Miningstruktur leicht erstellt werden kann.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  

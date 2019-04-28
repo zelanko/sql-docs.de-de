@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960820"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
-  Das Sicherheitsmodell des Replikations-Agent für eine präzisere Kontrolle über die Konten, unter denen Replikations-Agents ausgeführt werden soll, und knüpfen Sie Kontakte, können: Ein anderes Konto kann für jeden Agent angegeben werden. Weitere Informationen zur Vorgehensweise beim Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+  Das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen: Für jeden Agent kann ein anderes Konto angegeben werden. Weitere Informationen zur Vorgehensweise beim Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  Wenn ein Mitglied der festen Serverrolle **sysadmin** die Replikation konfiguriert, kann es die Replikations-Agents so konfigurieren, dass sie die Identität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentkontos annehmen. Dies geschieht, indem für den Replikations-Agent kein Anmeldename oder Kennwort angegeben wird. Dieser Ansatz ist jedoch nicht empfehlenswert. Sie sollten besser als bewährte Methode in Bezug auf die Sicherheit für jeden Agent ein Konto mit den im Abschnitt zu den für Agents erforderlichen Berechtigungen beschriebenen minimalen Privilegien angeben.  
   
  Replikations-Agents werden wie alle ausführbaren Dateien im Kontext eines Windows-Kontos ausgeführt. Die Agents stellen mithilfe dieses Kontos Verbindungen über die integrierte Sicherheit von Windows her. Unter welchem Konto der Agent ausgeführt wird, ist davon abhängig, wie er gestartet wird:  
   
--   Starten des Agents aus einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Auftrag, der Standardwert: Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Auftrag wird zum Starten eines Replikations-Agents, die der Agent ausgeführt wird, unter dem Kontext eines Kontos, das Sie angeben, wenn Sie die Replikation konfigurieren. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent und der Replikation finden Sie im Abschnitt "Agentsicherheit mit SQL Server-Agent" weiter unten in diesem Thema. Informationen zu den Berechtigungen, die für das Konto erforderlich sind, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ausgeführt wird, finden Sie unter [Konfigurieren des SQL Server Agents](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Starten des Agents über einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Auftrag (Standardeinstellung): Wenn ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Auftrag zum Starten eines Replikations-Agents verwendet wird, wird dieser Agent im Kontext eines Kontos ausgeführt, das Sie während der Replikationskonfiguration angeben. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent und der Replikation finden Sie im Abschnitt "Agentsicherheit mit SQL Server-Agent" weiter unten in diesem Thema. Informationen zu den Berechtigungen, die für das Konto erforderlich sind, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ausgeführt wird, finden Sie unter [Konfigurieren des SQL Server Agents](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Starten des Agents über eine MS-DOS-Befehlszeile an, entweder direkt oder über ein Skript: Der Agent ausgeführt wird, unter dem Kontext des Kontos des Benutzers, der der Agent in der Befehlszeile ausgeführt wird.  
+-   Starten des Agents über eine MS-DOS-Befehlszeile (direkt oder über ein Skript): Der Agent wird im Kontext des Kontos des Benutzers ausgeführt, der den Agent über die Befehlszeile ausführt.  
   
--   Starten des Agents über eine Anwendung, die Replikationsverwaltungsobjekte (RMO) oder ein ActiveX-Steuerelement verwendet: Der Agent ausgeführt wird, unter dem Kontext der Anwendung, die RMO bzw. das ActiveX-Steuerelement aufgerufen wird.  
+-   Starten des Agents über eine Anwendung, die Replikationsverwaltungsobjekte (Replication Management Objects, RMO) oder ein ActiveX-Steuerelement verwendet: Der Agent wird im Kontext der Anwendung ausgeführt, die RMOs oder ActiveX-Steuerelemente aufruft.  
   
     > [!NOTE]  
     >  ActiveX-Steuerelemente sind als veraltet markiert.  

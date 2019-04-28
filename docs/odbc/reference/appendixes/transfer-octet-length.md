@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735066"
 ---
 # <a name="transfer-octet-length"></a>Länge der Übertragungsoktette
 Die Oktettlänge Übertragung einer Spalte ist die maximale Anzahl von Bytes, die an die Anwendung zurückgegeben werden, wenn Daten, für den Standard-C-Datentyp übertragen werden. Bei Zeichendaten ist die Oktettlänge Übertragung nicht den verbliebenen Speicherplatz für die Null-Terminierungszeichen. Die Oktettlänge Übertragung einer Spalte möglicherweise anders als die Anzahl der Bytes, die zum Speichern der Daten in der Datenquelle erforderlich sind.  
@@ -35,7 +35,7 @@ Die Oktettlänge Übertragung einer Spalte ist die maximale Anzahl von Bytes, di
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|Die Anzahl von Bytes erforderlich, um die Darstellung dieser Daten aufzunehmen, ist der Zeichensatz ANSI und zweimal mithilfe dieser Zahl der Zeichensatz UNICODE ist, da dieser Datentyp wird standardmäßig als Zeichenfolge zurückgegeben wird. Die Darstellung von 20 Zeichen besteht: 19 für Ziffern und ein Zeichen, wenn angemeldet oder 20 Ziffern, falls ohne Vorzeichen. Aus diesem Grund ist die Länge 20.|  
+|SQL_BIGINT|Die Anzahl von Bytes erforderlich, um die Darstellung dieser Daten aufzunehmen, ist der Zeichensatz ANSI und zweimal mithilfe dieser Zahl der Zeichensatz UNICODE ist, da dieser Datentyp wird standardmäßig als Zeichenfolge zurückgegeben wird. Die Darstellung von Zeichen besteht aus 20 Zeichen: 19 Ziffern und ein Zeichen, wenn angemeldet, oder 20 Ziffern, falls ohne Vorzeichen. Aus diesem Grund ist die Länge 20.|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

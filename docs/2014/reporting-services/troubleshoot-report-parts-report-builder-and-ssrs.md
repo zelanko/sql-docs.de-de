@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e677d9923315acc27c2b2d96d5d4eddf2ba8b51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855970"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)
   Die folgenden Tipps können beim Arbeiten mit Berichtsteilen hilfreich sein.  

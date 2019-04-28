@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894531"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach-Schleifen-Editor (Seite Auflistung)
   Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor**, um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380268"
  **Ausdrücke**  
  Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um einen Eigenschaftsausdruck zu einer Enumeratoreigenschaft hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
   
- **Verwandte Themen:**  [Integrationsdienste &#40;SSIS&#41; Ausdrücke](expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](expressions/property-expressions-editor.md), [Ausdrucks-Generator](expressions/expression-builder.md)  
+ **Verwandte Themen:**  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](expressions/property-expressions-editor.md), [Ausdrucks-Generator](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>Enumerator (dynamische Optionen)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58380268"
 > [!NOTE]  
 >  Die Variable muss den Datentyp Objekt besitzen, andernfalls tritt ein Fehler auf.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
  **Zeilen in der ersten Tabelle**  
  Wählen Sie diese Option aus, um nur Zeilen in der ersten Tabelle aufzuzählen.  
@@ -141,7 +141,7 @@ ms.locfileid: "58380268"
 > [!IMPORTANT]  
 >  Der ADO.NET-Verbindungs-Manager muss einen .NET-Anbieter für OLE DB verwenden. Wenn Sie eine Verbindung mit SQL Server herstellen, ist der empfohlene Anbieter der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, der im Dialogfeld **Verbindungs-Manager** im Abschnitt **.Net-Anbieter für OleDb** aufgeführt ist.  
   
- **Verwandte Themen:** [ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)  
+ **Verwandte Themen:** [ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](configure-ado-net-connection-manager.md)  
   
  **Schema**  
  Wählen Sie das aufzuzählende Schema aus.  
@@ -157,7 +157,7 @@ ms.locfileid: "58380268"
  **Variable**  
  Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach-NodeList-Enumerator  
  Mithilfe des Foreach-Nodelist-Enumerators wird der XML-Knotensatz, der das Ergebnis der Anwendung eines XPath-Ausdrucks auf eine XML-Datei ist, aufgezählt. Wenn die Foreach-Schleife einen Skripttask enthält, können Sie mit dem Foreach-NodeList-Enumerator einen Wert, der den Kriterien des XPath-Ausdrucks entspricht, von der XML-Datei an den Skripttask übergeben.  
@@ -184,7 +184,7 @@ ms.locfileid: "58380268"
   
  Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Wählen Sie einen Enumerationstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
@@ -214,7 +214,7 @@ ms.locfileid: "58380268"
   
  Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
  Wenn **EnumerationType** nastaven NA hodnotu `ElementCollection`, wählen Sie den Typ des inneren Elements in der Liste.  
@@ -237,7 +237,7 @@ ms.locfileid: "58380268"
   
  Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md).  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach-SMO-Enumerator  
  Mithilfe des Foreach-SMO-Enumerators werden SQL Server Management Object (SMO)-Objekte aufgezählt. Wenn die Foreach-Schleife z. B. einen Task SQL ausführen enthält, können Sie den Foreach-SMO-Enumerator zum Aufzählen der Tabellen in der **AdventureWorks** -Datenbank und Ausführen von Abfragen, mit denen die Anzahl von Zeilen pro Tabelle ermittelt wird, verwenden.  
@@ -245,7 +245,7 @@ ms.locfileid: "58380268"
  **Verbindung**  
  Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- Verwandte Themen: , . [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)  
+ Verwandte Themen: [ADONET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](configure-ado-net-connection-manager.md)  
   
  **Aufzählen**  
  Geben Sie das aufzuzählende SMO-Objekt an.  
@@ -261,7 +261,7 @@ ms.locfileid: "58380268"
  **Azure Storage-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist.  
   
- Verwandte Themen: , . [Azure Storage-Verbindungs-Manager](connection-manager/azure-storage-connection-manager.md).  
+ Verwandte Themen: [Azure Storage-Verbindungs-Manager](connection-manager/azure-storage-connection-manager.md).  
   
  **Blob-Containername**  
  Geben Sie den Namen des Blob-Containers an, der die aufzuzählenden Blob-Dateien enthält.  

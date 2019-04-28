@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874498"
 ---
 # <a name="performance-of-clr-integration"></a>Leistungsfähigkeit der CLR-Integration
   In diesem Thema wird erläutert, einige der Entwurfsoptionen, die die Leistung verbessern [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Integration mit der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR).  
@@ -48,7 +48,7 @@ ms.locfileid: "53368182"
   
  STVFs sind verwaltete Funktionen, die eine `IEnumerable`-Schnittstelle zurückgeben. `IEnumerable` verfügt über Methoden, um in von STVF zurückgegebenen Resultsets zu navigieren. Wenn die STVF aufgerufen wird, wird die zurückgegebene `IEnumerable`-Schnittstelle direkt mit dem Abfrageplan verbunden. Der Abfrageplan ruft `IEnumerable`-Methoden auf, wenn er Zeilen abrufen muss. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
   
-### <a name="arrays-vs-cursors"></a>Arrays und Cursor  
+### <a name="arrays-vs-cursors"></a>Arrays im Vergleich zu Cursor  
  Wenn [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  

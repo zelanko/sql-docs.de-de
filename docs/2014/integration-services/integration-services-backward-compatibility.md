@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892296"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services – Abwärtskompatibilität
   In diesem Abschnitt werden die Änderungen zwischen den Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  

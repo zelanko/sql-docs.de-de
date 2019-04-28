@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982166"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  Die **SQLSetDescRec** -Funktion legt fest, mehrere deskriptorfelder, die den Datentyp auswirken und Puffer, der an eine Spalte oder Parameter Daten gebunden.  
@@ -85,7 +85,7 @@ SQLRETURN SQLSetDescRec(
  [Verzögerte Eingabe oder Ausgabe] Der Wert, auf das SQL_DESC_INDICATOR_PTR-Feld für den anwendungsparameterdeskriptor-Datensatz festgelegt. *IndicatorPtr* kann auf einen null-Zeiger festgelegt werden, um das SQL_DESC_INDICATOR_PTR-Feld auf einen null-Zeiger festgelegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetDescRec** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DESC und *behandeln* von *DescriptorHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetDescRec** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

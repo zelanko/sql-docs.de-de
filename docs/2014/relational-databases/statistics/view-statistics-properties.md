@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54099965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015649"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
   Sie können die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen. Statistikobjekte enthalten einen Header mit Metadaten über die Statistik, ein Histogramm mit der Verteilung der Werte in der ersten Schlüsselspalte des Statistikobjekts sowie einen Dichtevektor zum Messen der Korrelation zwischen Spalten. Weitere Informationen zu Histogrammen und Dichtevektoren finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -29,7 +29,7 @@ ms.locfileid: "54099965"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie Statistikeigenschaften an mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54099965"
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen des Statistikobjekts muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin` bzw. der festen Datenbankrollen `db_owner` oder `db_ddladmin` sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>So zeigen Sie Statistikeigenschaften an  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54099965"
      Zeigt den Namen des Datenbankobjekts an, in dem die Statistiken gespeichert sind.  
   
      **Statistik für INDEXstatistics_name**  
-     Dieses Textfeld zeigt die Eigenschaften an, die vom Statistikobjekt zurückgegeben werden. Diese Eigenschaften sind in drei Abschnitte unterteilt: Stat_header, Density_vector und Histogram.  
+     Dieses Textfeld zeigt die Eigenschaften an, die vom Statistikobjekt zurückgegeben werden. Diese Eigenschaften gehören zu drei unterschiedlichen Bereichen: STAT_HEADER. DENSITY_VECTOR und HISTOGRAM.  
   
      Die folgenden Informationen beschreiben die Spalten, die im Resultset für STAT_HEADER zurückgegeben werden.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "54099965"
      Die folgenden Informationen beschreiben die Spalten, die im Resultset für DENSITY_VECTOR zurückgegeben werden.  
   
      **All Density**  
-     Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A,B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese Listen unterschiedlicher Werte auf: (3, 5), (4, 4) und (4, 5).  
+     Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt, das Schlüsselspalten (A, B, C) enthält, melden die Ergebnisse z. B. die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A, B), und (A, B, C). Verwenden das Präfix (A, B, C), ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix-(A, B) weisen dieselben Spaltenwerte diese unterschiedlichen Wertlisten auf: (3, 5), (4, 4) und (4, 5).  
   
      **Average Length**  
      Durchschnittliche Länge in Bytes zum Speichern einer Liste der Spaltenwerte für das Spaltenpräfix. Wenn die Werte in der Liste (3, 5, 6) beispielsweise jeweils 4 Bytes erfordern, beträgt die Länge 12 Bytes.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000367"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed-Ereignisklasse
   Die **Audit Login Failed** -Ereignisklasse zeigt an, dass ein Benutzer versucht hat, sich bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden, und dass die Anmeldung fehlgeschlagen ist. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden.  

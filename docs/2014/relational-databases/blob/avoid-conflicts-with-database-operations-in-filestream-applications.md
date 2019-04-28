@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875029"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen
   Bei Anwendungen, die SqlOpenFilestream() zum Öffnen von Win32-Dateihandles zum Lesen oder Schreiben von FILESTREAM-BLOB-Daten verwenden, können Konfliktfehler mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auftreten, die in einer gemeinsamen Transaktion verwaltet werden. Dies gilt auch für [!INCLUDE[tsql](../../includes/tsql-md.md)] - oder MARS-Abfragen, bei denen das Beenden der Ausführung viel Zeit in Anspruch nimmt. Anwendungen müssen sorgfältig entworfen werden, wenn diese Art von Konflikten vermieden werden soll.  

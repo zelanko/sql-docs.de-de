@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898928"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Verwenden von Datentypen im Datenfluss
   Wenn Sie eine benutzerdefinierte Datenflusskomponente in Integration Services entwickeln, arbeiten Sie ständig mit Datentypen, kopieren Daten in und aus Datenflusspuffern und transformieren Werte. Mithilfe der Informationen in diesem Thema können Sie die geeigneten [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen und die richtigen Verwendungsmethoden auswählen.  

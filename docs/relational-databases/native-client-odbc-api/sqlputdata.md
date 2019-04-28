@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014268"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51664219"
   
  Die *DataPtr* Parameter wird ignoriert, jedoch muss auf einen Wert ungleich NULL festgelegt werden. Weitere Informationen finden Sie im Abschnitt für Variablen zeilenbindung in [Bindung und Data Transfer of Table-Valued-Parameter und Spaltenwerte](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Wenn *StrLen_Or_Ind* verfügt über einen anderen Wert als SQL_DEFAULT_PARAM oder eine Zahl zwischen 0 und SQL_PARAMSET_SIZE (d. h. die *ColumnSize* -Parameter von SQLBindParameter), ist ein Fehler auf. Dieser Fehler bewirkt, dass SQLPutData SQL_ERROR: SQLSTATE=HY090, "Ungültige Zeichenfolge oder Pufferlänge" zurückgibt.  
+ Wenn *StrLen_Or_Ind* verfügt über einen anderen Wert als SQL_DEFAULT_PARAM oder eine Zahl zwischen 0 und SQL_PARAMSET_SIZE (d. h. die *ColumnSize* -Parameter von SQLBindParameter), ist ein Fehler auf. Dieser Fehler bewirkt, dass SQLPutData SQL_ERROR zurück: SQLSTATE = HY090, "Ungültige Zeichenfolgen- oder Pufferlänge".  
   
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

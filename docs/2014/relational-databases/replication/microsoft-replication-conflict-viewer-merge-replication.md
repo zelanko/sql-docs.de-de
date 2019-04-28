@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938582"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
   Der Replikationskonflikt-Viewer ermöglicht die Anzeige aller Konflikte, die während der Replikationssynchronisierung auftreten. Konflikte treten auf, wenn dieselben Daten auf zwei verschiedenen Servern bearbeitet werden, z. B. auf einem Verleger und einem Abonnenten, oder aber auf zwei verschiedenen Abonnenten. Die Replikation löst Konflikte automatisch mithilfe des Konfliktlösers, der beim Erstellen des Artikels ausgewählt wurde. Der Replikationskonflikt-Viewer ermöglicht es Ihnen aber auch, ggf. eine andere Lösung für den Konflikt zu wählen. Die folgenden Konflikte sind möglich:  
@@ -71,7 +71,7 @@ ms.locfileid: "52756232"
  Zeigt die ersten fünf Spalten und alle Spalten mit Konflikten an. Diese Option ist hilfreich, wenn die Tabelle über eine große Anzahl von Spalten verfügt, Sie aber nur diejenigen anzeigen möchten, die für die Konfliktlösung am wichtigsten sind. Die ersten fünf Spalten sind in diese Sicht immer einbezogen, da Felder zum Kennzeichnen einer Zeile, z. B. der Primärschlüssel oder Namensfelder, sich oft in den ersten Spalten einer Tabelle befinden.  
   
  **Spalteninformationen anzeigen** (**…**)  
- Klicken Sie auf diese Option, um Spalteninformationen anzuzeigen: **Tabellenname**, **Spaltenname**, **Datentyp**, und **Spaltenwert**. **Spaltenwert** kann bearbeitet werden, sofern der Wert nicht als schreibgeschützt angezeigt wird.  
+ Klicken Sie, um Spalteninformationen anzuzeigen: **Tabellenname**, **Spaltenname**, **Datentyp** und **Spaltenwert**. **Spaltenwert** kann bearbeitet werden, sofern der Wert nicht als schreibgeschützt angezeigt wird.  
   
  **Gewinner absenden**  
  Klicken Sie auf diese Option, um die Zeile beizubehalten, die vom Konfliktlöser als Gewinner bestimmt wurde. Der Wert jeder nicht als schreibgeschützt angezeigten Spalte kann vor dem Klicken auf diese Schaltfläche geändert werden.  

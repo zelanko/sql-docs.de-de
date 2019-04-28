@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982294"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLDescribeParam** gibt die Beschreibung einer parametermarkierung zugeordneten vorbereitete SQL-Anweisung zurück. Diese Informationen sind auch in den Feldern IPD zur Verfügung.  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  [Eingabe] Marker Parameternummer sortiert sequenziell in aufsteigender Parameterreihenfolge, beginnend mit 1.  
   
  *DataTypePtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp des Parameters zurückgegeben. Dieser Wert wird vom des IPD-Datensatzfeld SQL_DESC_CONCISE_TYPE gelesen. Dies können die Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen oder treiberspezifischen SQL-Datentyp.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp des Parameters zurückgegeben. Dieser Wert wird vom des IPD-Datensatzfeld SQL_DESC_CONCISE_TYPE gelesen. Dies können die Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen, oder einen Treiber-spezifische SQL-Datentyp.  
   
  In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP werden im zurückgegeben  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten; in ODBC 2. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben. Der Treiber-Manager führt die erforderlichen Mappings, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC 3. *X* Treiber oder wenn eine ODBC 3. *X* Anwendung arbeitet mit einer ODBC 2. *X* Treiber.  
   
  Beim *ColumnNumber* ist gleich 0 (für eine Lesezeichenspalte) ist, wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* variabler Länge, die Lesezeichen. (SQL_INTEGER wird zurückgegeben, wenn Lesezeichen von einer ODBC-3 verwendet werden. *x* Anwendung mit einer ODBC 2. *X* Treiber oder von einer ODBC 2. *X* Anwendung mit einer ODBC 3. *X* Treiber.)  
   
- Weitere Informationen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.  
+ Weitere Informationen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.  
   
  *ParameterSizePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Größe der Spalte oder des Ausdrucks der entsprechenden parametermarkierung in Zeichen zurückgeben, wenn die Datenquelle definiert. Weitere Informationen zur Spaltengröße finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
@@ -72,14 +72,14 @@ SQLRETURN SQLDescribeParam(
  *NullablePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem einen Wert zurückgegeben, der angibt, ob der Parameter NULL-Werte zulässt. Dieser Wert wird aus dem Feld SQL_DESC_NULLABLE des IPD gelesen. Einer der folgenden Typen:  
   
--   SQL_NO_NULLS: Der Parameter lässt keine NULL-Werte zu (Dies ist der Standardwert).  
+-   SQL_NO_NULLS: Der Parameter lässt keine NULL-Werte (Dies ist der Standardwert).  
   
--   SQL_NULLABLE: Der Parameter NULL-Werte zulässt.  
+-   SQL_NULLABLE: Der Parameter zulässt NULL-Werte.  
   
 -   SQL_NULLABLE_UNKNOWN: Der Treiber kann nicht bestimmen, ob der Parameter NULL-Werte zulässt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDescribeParam** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDescribeParam** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

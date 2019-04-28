@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872054"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  

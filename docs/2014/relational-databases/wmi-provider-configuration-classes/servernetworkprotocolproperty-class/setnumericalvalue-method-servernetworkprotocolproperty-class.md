@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736280"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue-Methode (ServerNetworkProtocolProperty-Klasse)
   Legt den numerischen Wert der Eigenschaft fest, auf die verwiesen wird.  
@@ -47,7 +47,7 @@ NumValue
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*%Numvalue%*|Ein `uint32`-Wert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
+|*NumValue*|Ein `uint32`-Wert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

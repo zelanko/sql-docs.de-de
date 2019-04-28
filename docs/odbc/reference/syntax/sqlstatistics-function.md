@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851609"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLStatistics** Ruft eine Liste der Statistiken zu einer einzelnen Tabelle und die Indizes der Tabelle zugeordnet. Der Treiber gibt zurück, die Informationen als Resultset.  
@@ -54,7 +54,7 @@ SQLRETURN SQLStatistics(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *Katalogname*  
+ *CatalogName*  
  [Eingabe] Name des Katalogs. Wenn ein Treiber unterstützt die Kataloge für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge ruft ("") gibt an, die Tabellen, denen keine Kataloge. *CatalogName* darf kein Suchmuster Zeichenfolge enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *CatalogName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *CatalogName* ein normales Argument ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -89,7 +89,7 @@ SQLRETURN SQLStatistics(
  SQL_QUICK angefordert wird, dass der Treiber die KARDINALITÄT und Seiten abrufen, nur dann, wenn sie direkt auf dem Server verfügbar sind. In diesem Fall wird vom Treiber nicht sichergestellt, dass die Werte aktuell sind. (Anwendungen, die in den Standard Open Group geschrieben werden rufen immer das SQL_QUICK-Verhalten von ODBC 3.*.x*-kompatibel sind.)  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLStatistics** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLStatistics** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -140,7 +140,7 @@ SQLRETURN SQLStatistics(
 |Spaltenname|Spaltennummer|Datentyp|Kommentare|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Der Katalogname der Tabelle, für die die Statistik bzw. der Index gilt; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge.|  
-|NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Der Schemaname der Tabelle, für die die Statistik bzw. der Index gilt; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Der Schemaname der Tabelle, für die die Statistik bzw. der Index gilt; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar, die nicht NULL|Der Tabellenname der Tabelle, für die die Statistik bzw. der Index gilt.|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|Gibt an, ob der Index keine doppelten Werte zulässig sind:<br /><br /> SQL_TRUE, wenn die Indexwerte nicht eindeutig sein können.<br /><br /> SQL_FALSE, wenn die Indexwerte eindeutig sein müssen.<br /><br /> Wenn Typ SQL_TABLE_STAT ist, wird NULL zurückgegeben.|  
 |INDEX_QUALIFIER (ODBC 1.0)|5|Varchar|Der Bezeichner, der verwendet wird, um den Index zu qualifizieren nennen dies einen **DROP INDEX**; NULL wird zurückgegeben, wenn ein Index Qualifizierer nicht von der Datenquelle unterstützt wird, oder wenn Typ SQL_TABLE_STAT ist. Wenn ein Wert ungleich Null in dieser Spalte zurückgegeben wird, muss es zum Qualifizieren Sie den Namen des Indexes auf verwendet werden eine **DROP INDEX** -Anweisung; andernfalls sollte der nach "TABLE_SCHEM" verwendet werden, um den Namen des Indexes zu qualifizieren.|  
@@ -149,9 +149,9 @@ SQLRETURN SQLStatistics(
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Sequenz-Nummer der Spalte im Index (beginnend mit 1); Wenn Typ SQL_TABLE_STAT ist, wird NULL zurückgegeben.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Name der Spalte. Wenn die Spalte auf einem Ausdruck basiert, z. B. Gehalt + Vorteile, der Ausdruck zurückgegeben. Wenn der Ausdruck kann nicht bestimmt werden, wird eine leere Zeichenfolge zurückgegeben. Wenn Typ SQL_TABLE_STAT ist, wird NULL zurückgegeben.|  
 |ASC_OR_DESC (ODBC 1.0)|10|char(1)|Die Sortierreihenfolge für die Spalte: "A" für eine aufsteigende; "D" für eine absteigende; NULL wird zurückgegeben, wenn die Sortierreihenfolge der Spalte von der Datenquelle nicht unterstützt wird oder SQL_TABLE_STAT ist.|  
-|KARDINALITÄTSSCHÄTZUNG (ODBC 1.0)|11|Integer|Die Kardinalität der Tabelle oder eines Indexes; die Anzahl der Zeilen in Tabelle, wenn der Typ SQL_TABLE_STAT ist; die Anzahl der eindeutigen Werte in der Index, wenn der Typ nicht SQL_TABLE_STAT ist; NULL wird zurückgegeben, wenn der Wert aus der Datenquelle nicht verfügbar ist.|  
+|CARDINALITY (ODBC 1.0)|11|Integer|Die Kardinalität der Tabelle oder eines Indexes; die Anzahl der Zeilen in Tabelle, wenn der Typ SQL_TABLE_STAT ist; die Anzahl der eindeutigen Werte in der Index, wenn der Typ nicht SQL_TABLE_STAT ist; NULL wird zurückgegeben, wenn der Wert aus der Datenquelle nicht verfügbar ist.|  
 |SEITEN (ODBC 1.0)|12|Integer|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle; die Anzahl der Seiten für die Tabelle, sofern der Typ SQL_TABLE_STAT ist; die Anzahl der Seiten, die für den Index, wenn der Typ nicht SQL_TABLE_STAT ist; NULL wird zurückgegeben, wenn der Wert aus der Datenquelle nicht verfügbar ist, oder wenn mit der Datenquelle nicht anwendbar.|  
-|FILTERBEDINGUNG (ODBC 2.0)|13|Varchar|Wenn der Index ein gefilterter Index ist, ist dies die filterbedingung, z. B. Gehalt > 30000 ist Wenn die filterbedingung nicht bestimmt werden kann, ist dies eine leere Zeichenfolge.<br /><br /> NULL, wenn der Index nicht über ein gefilterter Index ist, kann nicht bestimmt werden, ob der Index ein gefilterter Index ist oder Typ SQL_TABLE_STAT.|  
+|FILTER_CONDITION (ODBC 2.0)|13|Varchar|Wenn der Index ein gefilterter Index ist, ist dies die filterbedingung, z. B. Gehalt > 30000 ist Wenn die filterbedingung nicht bestimmt werden kann, ist dies eine leere Zeichenfolge.<br /><br /> NULL, wenn der Index nicht über ein gefilterter Index ist, kann nicht bestimmt werden, ob der Index ein gefilterter Index ist oder Typ SQL_TABLE_STAT.|  
   
  Wenn die Zeile im Resultset in eine Tabelle entspricht, der Treiber legt Typ auf SQL_TABLE_STAT und NON_UNIQUE, INDEX_QUALIFIER, INDEX_NAME, ORDINAL_POSITION, COLUMN_NAME und ASC_OR_DESC auf NULL. KARDINALITÄT oder Seiten nicht verfügbar von der Datenquelle sind, werden sie von der Treiber auf NULL festgelegt.  
   

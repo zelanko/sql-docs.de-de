@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917211"
 ---
 # <a name="database-properties-query-store-page"></a>Datenbankeigenschaften (Seite des Abfragespeichers)
   Greifen Sie von der Prinzipaldatenbank aus auf diese Seite zu, um damit die Eigenschaften des Datenbank-Abfragespeichers zu konfigurieren und zu ändern. Diese Optionen können auch mithilfe der [ALTER DATABASE SET-Optionen](/sql/t-sql/statements/alter-database-transact-sql-set-options)konfiguriert werden. Weitere Informationen zum Abfragespeicher finden Sie unter [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  

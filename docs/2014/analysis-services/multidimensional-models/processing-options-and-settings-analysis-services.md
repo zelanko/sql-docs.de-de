@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736959"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Verarbeiten von Optionen und Einstellungen (Analysis Services)
   Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, die den Verarbeitungstyp der einzelnen Objekte steuert. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
@@ -40,13 +40,13 @@ ms.locfileid: "48049500"
 ## <a name="processing-options"></a>Verarbeitungsoptionen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Verarbeitungsmethoden beschrieben und die Objekte identifiziert, für die die einzelnen Methoden Unterstützung bieten.  
   
-|Mode|Gilt für|Description|  
+|Modus|Betrifft|Description|  
 |----------|----------------|-----------------|  
 |**Standard verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Erkennt den Verarbeitungsstatus von Datenbankobjekten und führt die Verarbeitung durch, mit der nicht verarbeitete oder teilweise verarbeitete Objekte in den vollständig verarbeiteten Status versetzt werden. Wenn Sie eine Datenbindung ändern, führt die Option Standard verarbeiten für das betroffene Objekt den Schritt Vollständig verarbeiten aus.|  
 |**Vollständig verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Verarbeitet ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt und alle in ihm enthaltenen Objekte. Wenn die Verarbeitungsmethode Vollständig verarbeiten für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Dieser Verarbeitungstyp ist erforderlich, wenn eine strukturelle Änderung am Objekt vorgenommen wurde, z. B. wenn eine Attributhierarchie hinzugefügt, gelöscht oder umbenannt wurde.|  
 |**Löschung verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Löscht die Daten im angegebenen Objekt und sämtliche untergeordneten Komponentenobjekte. Nach dem Löschen der Daten wird das Objekt nicht erneut geladen.|  
 |**Verarbeiten von Daten**|Dimensionen, Cubes, Measuregruppen und Partitionen.|Verarbeitet Daten ohne die Erstellung von Aggregationen oder Indizes. Wenn in den Partitionen Daten enthalten sind, wird die Partition gelöscht, bevor sie mit Quelldaten neu aufgefüllt wird.|  
-|**Hinzufügung verarbeiten**|Dimensionen, Measuregruppen und Partitionen.<br /><br /> Hinweis: Die Hinzufügung verarbeiten ist nicht verfügbar, für die Verarbeitung von Dimensionen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aber Sie können das XMLA-Skript führt diese Aktion schreiben.|Fügt für Dimensionen neue Elemente hinzu und aktualisiert Beschriftungen und Beschreibungen von Dimensionsattributen.<br /><br /> Fügt für Measuregruppen und Partitionen neu verfügbare Faktendaten hinzu und verarbeitet nur die relevanten Partitionen.|  
+|**Hinzufügung verarbeiten**|Dimensionen, Measuregruppen und Partitionen.<br /><br /> Hinweis: Hinzufügung verarbeiten ist nicht verfügbar für die Verarbeitung von Dimensionen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aber Sie können das XMLA-Skript führt diese Aktion schreiben.|Fügt für Dimensionen neue Elemente hinzu und aktualisiert Beschriftungen und Beschreibungen von Dimensionsattributen.<br /><br /> Fügt für Measuregruppen und Partitionen neu verfügbare Faktendaten hinzu und verarbeitet nur die relevanten Partitionen.|  
 |**Update verarbeiten**|Dimensionen|Erzwingt das erneute Lesen von Daten und ein Update der Dimensionsattribute. Flexible Aggregationen und Indizes in verknüpften Partitionen werden gelöscht.|  
 |**Index verarbeiten**|Cubes, Dimensionen, Measuregruppen und Partitionen.|Erstellt Indizes und Aggregationen für alle verarbeiteten Partitionen oder erstellt diese neu. Für nicht verarbeitete Objekte verursacht diese Option einen Fehler.<br /><br /> Die Verarbeitung mit dieser Option ist erforderlich, wenn Sie Verzögertes Verarbeiten deaktivieren.|  
 |**Struktur verarbeiten**|Cubes und Miningstrukturen|Wenn der Cube nicht verarbeitet ist, verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gegebenenfalls alle Dimensionen des Cubes. Danach erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lediglich Cubedefinitionen. Wenn diese Option für eine Mininingstruktur angewendet wird, wird die Mininingstruktur mit Quelldaten aufgefüllt. Der Unterschied zwischen dieser Option und der Option Vollständig verarbeiten liegt darin, dass mit dieser Option nicht die Iteration der Verarbeitung auf die Miningmodelle selbst erfolgt.|  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1db3c3efe332eb65504c9476a569ec54b49cc1a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874830"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen, nicht strukturierte Daten wie beispielsweise Dokumente und Bilder im Dateisystem zu speichern. Anwendungen können die umfassenden Streaming-APIs und die Leistung des Dateisystems nutzen und dabei die Transaktionskonsistenz zwischen den nicht strukturierten Daten und den entsprechenden strukturierten Daten erhalten.  
@@ -28,12 +28,12 @@ ms.locfileid: "48087240"
   
  FILESTREAM verwendet den NT-Systemcache zum Zwischenspeichern von Dateidaten. Dies wirkt allen negativen Auswirkungen entgegen, die FILESTREAM-Daten auf die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Leistung haben könnten. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Pufferpool wird nicht verwendet, deshalb steht dieser Arbeitsspeicher für die Abfragebearbeitung zur Verfügung.  
   
- FILESTREAM wird bei der Installation oder beim Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht automatisch aktiviert. Sie müssen FILESTREAM mit dem SQL Server-Konfigurations-Manager und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktivieren. Um FILESTREAM zu verwenden, müssen Sie eine Datenbank mit einer bestimmten Dateigruppe erstellen bzw. ändern, sodass sie diese Dateigruppe enthält. Anschließend erstellen oder Ändern einer Tabelle, sodass sie enthält eine `varbinary(max)` Spalte mit dem FILESTREAM-Attribut. Anschließend können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] und Win32 zur Verwaltung der FILESTREAM-Daten verwenden.  
+ FILESTREAM wird bei der Installation oder beim Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht automatisch aktiviert. Sie müssen FILESTREAM mit dem SQL Server-Konfigurations-Manager und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktivieren. Um FILESTREAM zu verwenden, müssen Sie eine Datenbank mit einer bestimmten Dateigruppe erstellen bzw. ändern, sodass sie diese Dateigruppe enthält. Erstellen bzw. ändern Sie dann eine Tabelle, sodass diese eine `varbinary(max)`-Spalte mit dem FILESTREAM-Attribut enthält. Anschließend können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] und Win32 zur Verwaltung der FILESTREAM-Daten verwenden.  
   
  Weitere Informationen zum Installieren und Verwenden von FILESTREAM finden Sie in der Liste [Verwandte Aufgaben](#reltasks).  
   
 ##  <a name="whentouse"></a> Verwendungsbereiche von FILESTREAM  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],-BLOBs kann standard sein `varbinary(max)` Daten, die Daten in Tabellen oder FILESTREAM speichert `varbinary(max)` Objekte, die die Daten im Dateisystem zu speichern. Größe und Verwendung der Daten bestimmen, ob Sie sie in einer Datenbank oder im Dateisystem speichern sollten. Wenn die folgenden Bedingungen zutreffen, sollten Sie die Verwendung von FILESTREAM in Betracht ziehen:  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann es sich bei BLOBs um Standarddaten des Typs `varbinary(max)` handeln, die in Tabellen gespeichert werden, oder um FILESTREAM-Objekte des Typs `varbinary(max)`, deren Daten im Dateisystem gespeichert werden. Größe und Verwendung der Daten bestimmen, ob Sie sie in einer Datenbank oder im Dateisystem speichern sollten. Wenn die folgenden Bedingungen zutreffen, sollten Sie die Verwendung von FILESTREAM in Betracht ziehen:  
   
 -   Die Objekte, die gespeichert werden, sind im Durchschnitt größer als 1 MB.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48087240"
   
   
 ##  <a name="storage"></a> FILESTREAM-Speicherung  
- FILESTREAM-Speicherung wird als implementiert eine `varbinary(max)` Spalte, in dem die Daten als BLOBs im Dateisystem gespeichert ist. Die Größe der BLOBs wird nur durch die Volumegröße des Dateisystems beschränkt. Der Standard `varbinary(max)` Beschränkung der Dateigröße auf 2 GB gilt nicht für BLOBs, die im Dateisystem gespeichert werden.  
+ Die FILESTREAM-Speicherung wird als `varbinary(max)`-Spalte implementiert, deren Daten als BLOBs im Dateisystem gespeichert werden. Die Größe der BLOBs wird nur durch die Volumegröße des Dateisystems beschränkt. Die für `varbinary(max)` definierte Standarddateigrößenbeschränkung von 2 GB gilt nicht für BLOBs, die im Dateisystem gespeichert werden.  
   
- Um anzugeben, dass die Daten in einer Spalte im Dateisystem gespeichert werden soll, geben Sie das FILESTREAM-Attribut auf eine `varbinary(max)` Spalte. Dies bewirkt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten der betreffenden Spalte im Dateisystem, aber nicht in der Datenbankdatei speichert.  
+ Um anzugeben, dass die Daten einer Spalte im Dateisystem gespeichert werden sollten, geben Sie das FILESTREAM-Attribut für eine `varbinary(max)`-Spalte an. Dies bewirkt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten der betreffenden Spalte im Dateisystem, aber nicht in der Datenbankdatei speichert.  
   
  FILESTREAM-Daten müssen in FILESTREAM-Dateigruppen gespeichert werden. Eine FILESTREAM-Dateigruppe ist eine besondere Dateigruppe, die Dateisystemverzeichnisse statt der Dateien selbst enthält. Diese Dateisystemverzeichnisse werden als *Datencontainer*bezeichnet. Datencontainer bilden die Schnittstelle zwischen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Speicherung und der Dateisystemspeicherung.  
   

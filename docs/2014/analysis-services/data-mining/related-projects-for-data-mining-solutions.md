@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733077"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
   Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  

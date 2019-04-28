@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916766"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie Sie Trenn- und Anfügevorgänge verwenden, um eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktualisieren. Nach dem Anfügen an [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist die Datenbank sofort verfügbar und wird automatisch aktualisiert.  
@@ -104,7 +104,7 @@ ms.locfileid: "54100875"
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ist eine neu angefügte Datenbank nicht sofort im Objekt-Explorer sichtbar. Um die Datenbank anzuzeigen, klicken Sie im Objekt-Explorer im Menü **Ansicht** auf **Aktualisieren**. Wenn der **Datenbanken** -Knoten im Objekt-Explorer erweitert wird, wird nun die neu angefügte Datenbank in der Liste der Datenbanken angezeigt.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Aktualisieren einer SQL Server-Datenbank  
  Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **upgrade_option** . Wenn die Upgradeoption auf „Importieren“ (**upgrade_option** = 2) oder Neu erstellen (**upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Um die Einstellung der Servereigenschaft **upgrade_option** zu ändern, verwenden Sie [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Datenbank-Kompatibilitätsgrad nach dem Upgrade  

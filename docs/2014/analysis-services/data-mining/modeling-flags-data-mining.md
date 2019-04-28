@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 427744a5971cae92f5a3a8e111a85dd5a858b882
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733186"
 ---
 # <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
   Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  

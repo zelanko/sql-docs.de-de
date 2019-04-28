@@ -1,8 +1,8 @@
 ---
 title: LOCALDB_ERROR_UNKNOWN_VERSION | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
@@ -11,19 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebda09ae23399689e859550a23d20958ef4a7614
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736373"
 ---
 # <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Details  
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|269|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  

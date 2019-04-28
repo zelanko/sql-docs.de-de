@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844272"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Neue Serverregistrierung und Serverregistrierung bearbeiten (Registerkarte Allgemein) (Reporting Services)
   Auf dieser Registerkarte können Optionen festgelegt werden, wenn eine Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]registriert wird.  
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Reporting Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe wie **Reporting Services**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   

@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925412"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Konsolidierte Berechtigungen (Master Data Services)
   Konsolidierte Berechtigungen beziehen sich auf die Attributwerte für alle konsolidierten Elemente einer Entität.  
@@ -47,7 +47,7 @@ ms.locfileid: "56042901"
 |----------------|-----------------|  
 |**Schreibgeschützt**|Das Attribut wird zwar angezeigt, aber der Benutzer kann keine Attributwerte ändern.|  
 |**Update**|Das Attribut wird angezeigt, und der Benutzer kann Attributwerte ändern.|  
-|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
+|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Sie können den Zugriff auf Attribute Name und Code können nicht explizit verweigert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017171"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   In diesem Thema wird beschrieben, wie Sie die Mitgliedschaft der Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ändern können.  
@@ -31,7 +31,7 @@ ms.locfileid: "54131080"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie die Mitgliedschaft einer Auftragskategorie mit**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54131080"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>So ändern Sie die Mitgliedschaft einer Auftragskategorie  
   

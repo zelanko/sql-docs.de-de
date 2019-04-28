@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012053"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
   In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
@@ -29,7 +29,7 @@ ms.locfileid: "54135000"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank mit**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54135000"
   
 ##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
   
-###  <a name="SSMSCreate"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
   
 1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
@@ -159,7 +159,7 @@ ms.locfileid: "54135000"
   
 ##  <a name="TsqlProcedure"></a> So verschieben Sie eine Datenbank  
   
-###  <a name="SSMSMove"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, die Sie oben verschlüsselt haben, zeigen Sie auf **Tasks**, und wählen Sie **Trennen...** aus.  
   
@@ -184,14 +184,14 @@ ms.locfileid: "54135000"
      Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
-     Zeigt einen der folgenden Status an: **Bereit** oder **nicht bereit**.  
+     Zeigt einen der folgenden Zustände: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
   
      **MessageBox**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_**Aktive Verbindung(en)** - zum Beispiel: **1 aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_**Aktive Verbindung(en)** - zum Beispiel: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   

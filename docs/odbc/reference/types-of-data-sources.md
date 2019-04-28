@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851395"
 ---
 # <a name="types-of-data-sources"></a>Typen von Datenquellen
 Es gibt zwei Arten von Datenquellen: Computer, Datenquellen und Datenquellen für die Datei. Obwohl beide ähnliche Informationen über die Quelle der Daten enthalten, unterscheiden sie sich auf die Weise, wie, die diese Informationen gespeichert werden. Aufgrund dieser Unterschiede werden sie in etwas unterschiedliche Arten verwendet.  

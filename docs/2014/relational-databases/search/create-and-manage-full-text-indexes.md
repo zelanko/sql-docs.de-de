@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022498"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
   Die Informationen in Volltextindizes werden von der Volltext-Engine verwendet, um Volltextabfragen zu kompilieren, die eine Tabelle schnell nach bestimmten Wörtern oder Wortkombination durchsuchen können. In einem Volltextindex werden Informationen zu signifikanten Wörtern und ihre Position innerhalb einer oder mehreren Spalte einer Datenbanktabelle gespeichert. Ein Volltextindex ist besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwaltet wird. Der Vorgang der Erstellung eines Volltextindexes unterscheidet sich vom Erstellen anderer Indextypen. Statt eine B-Struktur basierend auf einem Wert in einer bestimmten Zeile aufzubauen, erstellt die Volltextsuch-Engine eine invertierte, gestapelte, komprimierte Indexstruktur basierend auf einzelnen Token aus dem zu indizierenden Text.  Die Größe des Volltextindexes wird nur durch den verfügbaren Speicherplatz des Computers eingeschränkt, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
@@ -27,7 +27,7 @@ ms.locfileid: "48054734"
 > [!NOTE]  
 >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen befindet sich die Volltext-Engine im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess, anstatt in einem separaten Dienst. Durch die Integration der Volltext-Engine in die Datenbank-Engine konnte die Verwaltbarkeit verbessert und die Leistung bei gemischten Abfragen sowie die Leistung insgesamt optimiert werden.  
   
- Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für eine Tabelle erstellt werden kann, muss die Tabelle eine einzelne eindeutige Spalte aufweisen, die keine NULL-Werte enthält. Sie können einen Volltextindex erstellen, Spalten vom Typ `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, und `varbinary(max)` für indiziert werden kann. Volltext-Suchdienst. Erstellen einen Volltextindex für eine Spalte, deren Daten ist `varbinary`, `varbinary(max)`, `image`, oder `xml` erfordert, dass Sie eine Typspalte angeben. Eine *Typspalte* ist eine Tabellenspalte, in der die Dateierweiterung (DOC, PDF, XLS usw.) für das Dokument in der betreffenden Zeile gespeichert wird.  
+ Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für eine Tabelle erstellt werden kann, muss die Tabelle eine einzelne eindeutige Spalte aufweisen, die keine NULL-Werte enthält. Sie können einen Volltextindex für die Volltextsuche für alle Spalten vom Typ `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` und `varbinary(max)` erstellen. Beim Erstellen eines Volltextindex für eine Spalte, dessen Datentyp `varbinary`, `varbinary(max)`, `image` oder `xml` lautet, müssen Sie eine Typspalte angeben. Eine *Typspalte* ist eine Tabellenspalte, in der die Dateierweiterung (DOC, PDF, XLS usw.) für das Dokument in der betreffenden Zeile gespeichert wird.  
   
  Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Auffüllung* (oder *Durchforstung*) bezeichnet. Es gibt drei Auffüllungstypen für Volltextindizes: vollständige Auffüllungen, Auffüllungen mithilfe der Änderungsnachverfolgung sowie inkrementelle, auf Timestamps basierende Auffüllungen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).  
   

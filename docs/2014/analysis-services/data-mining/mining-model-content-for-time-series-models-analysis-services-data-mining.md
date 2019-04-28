@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733587"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
   Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
@@ -312,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Grundlegendes zur ARIMA-Struktur  
  Jede Struktur in einem ARIMA-Modell entspricht einer *Periodizität* oder *periodischen Struktur*. Eine periodische Struktur ist ein Datenmuster, das sich durch die gesamte Datenreihe zieht. Geringfügige Abweichungen in diesem Muster sind innerhalb statistischer Grenzen erlaubt. Die Periodizität wird nach den Standardzeiteinheiten gemessen, die in den Trainingsdaten verwendet wurden. Beispiel: Wenn die Trainingsdaten Verkaufsdaten für jeden Tag enthalten, ist die Standardzeiteinheit ein Tag, und alle periodischen Strukturen werden als Anzahl von Tagen definiert.  
   
- Jede periodische Struktur, die vom Algorithmus erkannt wird, erhält einen eigenen Strukturknoten. Wenn Sie z. B. Verkaufsdaten auf Tagesbasis analysieren, können periodische Strukturen erkannt werden, die Wochen darstellen. In diesem Fall erstellt der Algorithmus zwei periodische Strukturen im fertigen Modell: eine für den standardmäßigen Zeitraum von einem Tag, die als {1} bezeichnet wird, und eine für Wochen, die als {7} bezeichnet wird.  
+ Jede periodische Struktur, die vom Algorithmus erkannt wird, erhält einen eigenen Strukturknoten. Wenn Sie z. B. Verkaufsdaten auf Tagesbasis analysieren, können periodische Strukturen erkannt werden, die Wochen darstellen. In diesem Fall wird der Algorithmus zwei periodische Strukturen erstellt, im fertigen Modell: eine für den standardmäßigen Zeitraum, in der schulungsausgabe als {1}, und eine für Wochen, angegeben durch {7}.  
   
  Beispiel: Die folgende Abfrage gibt alle ARIMA-Strukturen aus einem Miningmodell zurück.  
   
@@ -336,7 +336,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Forecasting|T1'000 Pacific: Menge | TA0000000b | 27 | ARIMA (1,0,3)|  
   
  Anhand dieser Ergebnisse, die Sie auch mit dem [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) anzeigen können, erkennen Sie unmittelbar, welche Reihen vollständig linear sind, welche mehrere periodische Strukturen aufweisen und um welche Periodizitäten es sich handelt.  
   
@@ -385,7 +385,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA-Formel:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Konstante Glied: 56.8888888888889  
+ ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889  
   
  Dies ist das lange ARIMA-Format, das die Werte der Koeffizienten und das konstante Glied (Intercept) einschließt. Das Kurzformat für diese Formel wäre {1,0,7}, wobei 1 gibt an, den Zeitraum als Anzahl von Zeitscheiben, 0 gibt an, die Reihenfolge und 7 die Anzahl der Koeffizienten gibt.  
   

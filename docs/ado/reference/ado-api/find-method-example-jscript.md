@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bd954af100273e3a8a8d91a72daae71b995ddab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028187"
 ---
 # <a name="find-method-example-jscript"></a>Find-Methode – Beispiel (JScript)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und Anzeigen der Unternehmen der ***Northwind*** Datenbank, deren Name mit dem Buchstaben beginnt, und fügen Sie Im folgenden code in Editor oder einem anderen Texteditor, und speichern Sie ihn **g**.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982394"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Übereinstimmung mit Standards**  
@@ -57,7 +57,7 @@ SQLRETURN SQLSetPos(
  *Vorgang*  
  [Eingabe] Der Vorgang ausführen:  
   
- SQL_POSITION SQL_REFRESH SQL_UPDATE AUF SQL_DELETE  
+ SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
 >  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC 3.*.x*. ODBC 3. *x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung funktioniert mit einer ODBC 2. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
@@ -73,7 +73,7 @@ SQLRETURN SQLSetPos(
   
  **Gibt zurück**  
   
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetPos** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetPos** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -85,8 +85,8 @@ SQLRETURN SQLSetPos(
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01001|Konflikt beim Cursorvorgang|Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE auf, und keine Zeilen oder mehr als eine Zeile gelöscht oder aktualisiert wurden. (Weitere Informationen zu Updates für mehr als eine Zeile, finden Sie unter der Beschreibung der SQL_ATTR_SIMULATE_CURSOR *Attribut* in **SQLSetStmtAttr**.) (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE und der Vorgang ist fehlgeschlagen, da vollständige Parallelität. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten rechts abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH und Zeichenfolgen- oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp des Typs SQL_C_CHAR oder sql_c_binary angegeben zurückgegeben, die in das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL geführt haben.|  
-|01 S 01|Fehler in Zeile|Die *RowNumber* Argument wurde 0 und Fehler in einer oder mehreren Zeilen beim Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und wenn für einen Vorgang für die einzelnen Zeile ein Fehler auftritt, wird SQL_ERROR zurückgegeben.)<br /><br /> (Diese SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** wird aufgerufen, nachdem **SQLExtendedFetch**, wenn der Treiber einer ODBC 2. *X* Treiber und die Cursorbibliothek wird nicht verwendet.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S01|Fehler in Zeile|Die *RowNumber* Argument wurde 0 und Fehler in einer oder mehreren Zeilen beim Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und wenn für einen Vorgang für die einzelnen Zeile ein Fehler auftritt, wird SQL_ERROR zurückgegeben.)<br /><br /> (Diese SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** wird aufgerufen, nachdem **SQLExtendedFetch**, wenn der Treiber einer ODBC 2. *X* Treiber und die Cursorbibliothek wird nicht verwendet.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset konnte nicht konvertiert werden, um den angegebenen Datentyp *TargetType* im Aufruf von **SQLBindCol**.|  
 |07009|Ungültiger Deskriptorindex|Das Argument *Vorgang* SQL_REFRESH oder SQL_UPDATE war und eine Spaltennummer, die größer als die Anzahl der Spalten im Resultset eine Spalte gebunden war.|  
 |21S02|Spaltenzahl der abgeleiteten Tabelle stimmt nicht mit der Spaltenliste überein|Das Argument *Vorgang* SQL_UPDATE war und keine Spalten aktualisiert wurden, da alle Spalten entweder nicht gebundenen, schreibgeschützt wurden oder der Wert in die gebundenen Längen-/Indikatorpuffer SQL_COLUMN_IGNORE war.|  

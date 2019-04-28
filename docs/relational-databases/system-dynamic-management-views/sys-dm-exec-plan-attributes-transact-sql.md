@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013222"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Aus der Tabelle oben **Attribut** können die folgenden Werte aufweisen:
 
-|attribute|Datentyp|Description|  
+|Attribut|Datentyp|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Ist dies die Objekt-ID, in gespeichert [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger und So weiter). Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -92,7 +92,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ### <a name="evaluating-set-options"></a>Auswerten von SET-Optionen  
  Übersetzen der zurückgegebene Wert in **Set_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte aus der **Set_options** Wert, wobei mit dem größtmöglichen Wert beginnen, bis Sie erreichen Sie 0 an. Jeder subtrahierte Wert entspricht einer Option, die im Abfrageplan verwendet wurde. Z. B. wenn der Wert in **Set_options** 251 lautet, werden die Optionen, die mit der Plan kompiliert wurde, ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) und ANSI_PADDING (1).  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Paralleler Plan|2|  
@@ -120,7 +120,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ### <a name="evaluating-cursor-options"></a>Auswerten von Cursoroptionen  
  Um den zurückgegebenen Wert zu übersetzen **Required_cursor_options** und **Acceptable_cursor_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte vom Spaltenwert, beginnend mit der größte mögliche Wert, bis 0 fortsetzen. Jeder subtrahierte Wert entspricht einer Cursoroption, die im Abfrageplan verwendet wurde.  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

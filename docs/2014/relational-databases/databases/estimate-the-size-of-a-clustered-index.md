@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916819"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern eines gruppierten Indexes erforderlich ist:  
@@ -39,7 +39,7 @@ ms.locfileid: "48140790"
   
 3.  Addieren Sie die berechneten Werte.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
   
 1.  Geben Sie die Anzahl der Zeilen an, die die Tabelle enthalten wird:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48140790"
      Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen variablen Spalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können kombinieren `varchar`, `nvarchar`, `varbinary`, oder `sql_variant` Spalten, die dazu führen, dass die definierte Gesamtbreite der Tabelle 8.060 Bytes überschreitet. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine `varchar`-, `varbinary`- oder `sql_variant`-Spalte und von 4.000 Byte für `nvarchar`-Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine `varchar`-, `varbinary`- oder `sql_variant`-Spalte und von 4.000 Byte für `nvarchar`-Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48140790"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus, um zu bestimmen, genau wie viel Speicherplatz zum Speichern der LOB-Datentypen verwendet wird `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, und `image` Werte ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` und `image` erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des gruppierten Indexes zu addieren.  
   
 -   Komprimierung  
   

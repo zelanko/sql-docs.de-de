@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733340"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Miningstrukturen (Analysis Services - Data Mining)
   In der Miningstruktur werden die Daten definiert, aus denen Miningmodelle erstellt werden. Es werden die Quelldatensicht, die Anzahl und der Typ von Spalten sowie eine optionale Partitionierung in Trainings- und Testsätze angegeben. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen, die die gleiche Domäne verwenden. In der folgenden Abbildung ist die Beziehung der Data Mining-Struktur zur Datenquelle und zu den dazugehörigen Data Mining-Modellen dargestellt.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172520"
 ### <a name="processing-mining-structures"></a>Verarbeiten von Miningstrukturen  
  Eine Miningstruktur ist bis zu ihrer Verarbeitung lediglich ein Metadatencontainer. Beim Verarbeiten einer Miningstruktur erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Cache, in dem statistische Informationen zu den Daten, Informationen zur Diskretisierung kontinuierlicher Attribute sowie weitere Informationen gespeichert werden, die später von Miningmodellen verwendet werden. Diese Zusammenfassungsinformationen werden im Miningmodell selbst nicht gespeichert, stattdessen verweist es auf die Informationen, die bei der Verarbeitung der Miningstruktur zwischengespeichert wurden. Sie müssen die Struktur folglich nicht jedes Mal neu verarbeiten, wenn Sie einer vorhandenen Struktur ein neues Modell hinzufügen; stattdessen können Sie einfach das Modell verarbeiten.  
   
- Sie können sich dazu entschließen, den Inhalt dieses Caches nach der Verarbeitung zu verwerfen, wenn der Cache sehr groß ist oder Sie detaillierte Daten entfernen möchten. Wenn keine Daten zwischengespeichert werden sollen, können Sie die `CacheMode`-Eigenschaft der Miningstruktur in `ClearAfterProcessing` ändern. Der Cache wird dann gelöscht, nachdem alle Modelle verarbeitet wurden. Festlegen der `CacheMode` Eigenschaft `ClearAfterProcessing` wird der Drillthrough des Miningmodells deaktiviert.  
+ Sie können sich dazu entschließen, den Inhalt dieses Caches nach der Verarbeitung zu verwerfen, wenn der Cache sehr groß ist oder Sie detaillierte Daten entfernen möchten. Wenn keine Daten zwischengespeichert werden sollen, können Sie die `CacheMode`-Eigenschaft der Miningstruktur in `ClearAfterProcessing` ändern. Der Cache wird dann gelöscht, nachdem alle Modelle verarbeitet wurden. Wenn Sie die `CacheMode`-Eigenschaft auf `ClearAfterProcessing` setzen, wird der Drillthrough des Miningmodells deaktiviert.  
   
  Nachdem Sie den Cache gelöscht haben, können Sie der Miningstruktur jedoch keine neuen Modelle mehr hinzuzufügen. Wenn Sie der Struktur ein neues Miningmodell hinzufügen oder die Eigenschaften vorhandener Modelle ändern, müsste die Miningstruktur zuerst erneut verarbeitet werden. Weitere Informationen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48172520"
 ## <a name="related-tasks"></a>Related Tasks  
  Verwenden Sie die im Folgenden angegebenen Links, um weitere Informationen zum Definieren, Verwalten und Verwenden von Miningstrukturen zu erhalten.  
   
-|Aufgaben|Links|  
+|Richtlinienübersicht|Links|  
 |-----------|-----------|  
 |Arbeiten mit relationalen Miningstrukturen|[Erstellen einer neuen relationalen Miningstruktur](create-a-new-relational-mining-structure.md)<br /><br /> [Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur](add-a-nested-table-to-a-mining-structure.md)|  
 |Arbeiten mit Miningstrukturen, die auf Cubes basieren|[Erstellen einer neuen OLAP-Miningstruktur](create-a-new-olap-mining-structure.md)<br /><br /> [Filtern des Quellcubes für eine Miningstruktur](../filter-the-source-cube-for-a-mining-structure.md)|  
@@ -122,7 +122,7 @@ ms.locfileid: "48172520"
 |Arbeiten mit den zugrunde liegenden Datenquellen und Aktualisieren von Quelldaten|[Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Verarbeiten einer Miningstruktur](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Miningmodelle &#40;Analysis Services – Datamining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

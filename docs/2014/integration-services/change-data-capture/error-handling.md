@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835648"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  

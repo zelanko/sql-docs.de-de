@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026592"
 ---
 # <a name="c-interval-structure"></a>C-Intervallstruktur
 Jede von der C-Interval-Datentypen aufgeführt, der [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt verwendet die gleiche Struktur, um die Intervalldaten enthalten. Wenn **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData** wird aufgerufen, der Treiber gibt Daten zurück, in die Struktur SQL_INTERVAL_STRUCT und verwendet den Wert, der vom angegeben wurde. den Anwendung für die C-Datentypen (im Aufruf von **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**) zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT , und füllt die *Interval_type* -Feld der Struktur mit der *Enum* -Wert, des C-Typs entspricht. Beachten Sie, dass die Treiber nicht gelesen werden die *Interval_type* Feld, um zu bestimmen, den Typ des Intervalls; sie rufen Sie den Wert des Felds SQL_DESC_CONCISE_TYPE-Deskriptor. Wenn die Struktur für Parameterdaten verwendet wird, der Treiber verwendet den angegebenen Wert von der Anwendung in das Feld "SQL_DESC_CONCISE_TYPE" der APD zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT, auch wenn die Anwendung den Wert für setzt die  *Interval_type* Feld auf einen anderen Wert.  

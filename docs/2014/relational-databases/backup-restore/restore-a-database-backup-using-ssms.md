@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921237"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung wiederhergestellt wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "48112021"
 > [!IMPORTANT]  
 >  Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden. Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
- Wenn Sie eine Datenbank aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wiederherstellen, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Wenn Sie eine Datenbank aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherstellen, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ### <a name="to-restore-a-full-database-backup"></a>So stellen Sie eine vollständige Datenbanksicherung wieder her  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48112021"
         >  Diese Liste steht nur zur Verfügung, wenn **Sicherungsmedium** ausgewählt ist. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
          **Sicherungsmedien**  
-         Wählen Sie das Medium für den Wiederherstellungsvorgang: **Datei**, **Band**, **URL**oder **Sicherungsmedium**. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
+         Wählen Sie das Medium für den Wiederherstellungsvorgang frei: **Datei**, **Band**, **URL**oder **Sicherungsmedium**. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
   
          **Sicherungsspeicherort**  
          Hier können Sie Medien für die Wiederherstellung anzeigen, hinzufügen oder entfernen. Die Liste kann bis zu 64 Dateien, Bänder oder Sicherungsmedien enthalten.  
@@ -74,7 +74,7 @@ ms.locfileid: "48112021"
         |Medientyp|Dialogfeld|Description|  
         |----------------|----------------|-----------------|  
         |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
-        |**Sicherungsmedium**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|  
+        |**Gerät**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|  
         |**Band**|**Sicherungsband auswählen**|In diesem Dialogfeld können Sie aus einer Liste der Bandlaufwerke auswählen, die physisch mit dem Computer verbunden sind, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.|  
         |**URL**|Die folgenden beiden Dialogfelder werden angezeigt:<br /><br /> 1) **Verbinden mit Windows Azure-Speicher**<br /><br /> 2) **Sicherungsdatei in Windows Azure suchen**|Wählen Sie im Dialogfeld **Mit Windows Azure-Speicher verbinden**  vorhandene SQL-Anmeldeinformationen aus, die den Namen des Windows Azure-Speicherkontos und den Zugriffsschlüssel enthalten, oder erstellen Sie neue SQL-Anmeldeinformationen, indem Sie den Namen des Speicherkontos und den Zugriffsschlüssel angeben. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Windows Azure-Speicher &#40;wiederherstellen&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Im Dialogfeld **Sicherungsdatei suchen** können Sie im linken Bereich aus der Liste der Container eine Datei auswählen.|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48112021"
   
 9. Zum Anzeigen oder Auswählen der erweiterten Optionen können Sie auf der Seite **Optionen** im Bereich **Wiederherstellungsoptionen** die folgenden für Ihre Situation zutreffenden Optionen auswählen:  
   
-    1.  `WITH` Optionen (nicht erforderlich):  
+    1.  `WITH`-Optionen (nicht erforderlich):  
   
         -   **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
   

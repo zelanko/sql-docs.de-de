@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919603"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisungen können Sie CLR-benutzderdefinierte Aggregate (Common Language Runtime, CLR) aufrufen, für die dieselben Regeln gelten, wie für systembasierte Aggregatfunktionen.  

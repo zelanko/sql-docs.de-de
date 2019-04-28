@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Elementen, Tupeln und Mengen (MDX) | Microsoft Docs
+title: Arbeiten mit Elementen, Tupeln und Mengen (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 295a094505fdc2b532f337aaa87dc93ae0923dd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988613"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Verwenden von Elementen, Tupeln und Mengen (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -59,10 +59,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Weitere Informationen zu Tupelfunktionen finden Sie unter [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Weitere Informationen zu Tupelfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="set-functions"></a>Mengenfunktionen  
- Es gibt mehrere MDX-Funktionen, die Mengen zurückgeben. Das explizite Eingeben von in geschweiften Klammern eingeschlossenen Tupeln ist nicht die einzige Möglichkeit, eine Menge abzurufen. Weitere Informationen über die Elementfunktionen, die Mengen zurückgeben, finden Sie unter [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Es stehen viele weitere Mengenfunktionen zur Verfügung.  
+ Es gibt mehrere MDX-Funktionen, die Mengen zurückgeben. Das explizite Eingeben von in geschweiften Klammern eingeschlossenen Tupeln ist nicht die einzige Möglichkeit, eine Menge abzurufen. Weitere Informationen über die Elementfunktionen, die Mengen zurückgeben, finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Es stehen viele weitere Mengenfunktionen zur Verfügung.  
   
  Mithilfe des Doppelpunkt-Operators können Sie zum Erstellen einer Menge die natürliche Reihenfolge der Elemente verwenden. Beispielsweise enthält die im folgenden Beispiel gezeigte Menge Tupel für das erste bis vierte Quartal des Kalenderjahres 2002:  
   
@@ -88,16 +88,16 @@ FROM [Adventure Works]
   
  Der Doppelpunkt-Operator ist eine einschließende Funktion. Die Elemente auf beiden Seiten des Doppelpunkt-Operators werden in die Ergebnismenge eingeschlossen.  
   
- Weitere Informationen zu Mengenfunktionen finden Sie unter [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Weitere Informationen zu Mengenfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="array-functions"></a>Arrayfunktionen  
- Eine Arrayfunktion nimmt eine Menge als Argument und gibt ein Array zurück. Weitere Informationen zu Arrayfunktionen finden Sie unter [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Eine Arrayfunktion nimmt eine Menge als Argument und gibt ein Array zurück. Weitere Informationen zu Arrayfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="hierarchy-functions"></a>Hierarchiefunktionen  
- Ein Hierarchiefunktion gibt eine Hierarchie zurück und nimmt ein Element, eine Ebene, eine Hierarchie oder eine Zeichenfolge als Argument. Weitere Informationen zu Hierarchiefunktionen finden Sie unter [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Ein Hierarchiefunktion gibt eine Hierarchie zurück und nimmt ein Element, eine Ebene, eine Hierarchie oder eine Zeichenfolge als Argument. Weitere Informationen zu Hierarchiefunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="level-functions"></a>Ebenenfunktionen  
- Ein Ebenenfunktion gibt eine Ebene zurück und nimmt ein Element, eine Ebene oder eine Zeichenfolge als Argument. Weitere Informationen zu Ebenenfunktionen finden Sie unter [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Ein Ebenenfunktion gibt eine Ebene zurück und nimmt ein Element, eine Ebene oder eine Zeichenfolge als Argument. Weitere Informationen zu Ebenenfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="logical-functions"></a>Logische Funktionen  
  Eine logische Funktion nimmt einen MDX-Ausdruck als Argument und gibt Informationen zu Tupeln, Elementen oder Mengen in diesem Ausdruck zurück. Die [IsEmpty-Funktion &#40;MDX&#41;](../../../mdx/isempty-mdx.md) wertet z.B. aus, ob ein Ausdruck einen leeren Zellenwert zurückgegeben hat. Weitere Informationen zu logischen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
@@ -109,8 +109,8 @@ FROM [Adventure Works]
  Eine Zeichenfolgenfunktion nimmt einen MDX-Ausdruck als Argument und gibt eine Zeichenfolge zurück. Die [UniqueName-Funktion &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) z.B. gibt einen Zeichenfolgenwert zurück, der den eindeutigen Namen einer Dimension, Hierarchie, Ebene oder eines Elements enthält. Weitere Informationen zu Zeichenfolgenfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX-Funktionsreferenz & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

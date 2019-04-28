@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007888"
 ---
 # <a name="catalog-and-schema-usage"></a>Katalog- und Schemaverwendung
-Datenquellen unterstützen nicht unbedingt Katalog-und Schemanamen als Name der Objektbezeichner in allen SQL-Anweisungen. Datenquellen können Katalog-und Schemanamen in einer oder mehreren der folgenden Klassen von SQL-Anweisungen unterstützen: Anweisungen, Prozeduraufrufe, datendefinitionsanweisungen Tabelle, Index-datendefinitionsanweisungen und Berechtigungen Definition (Data Manipulation Language, DML) -Anweisungen. Um die Klassen der SQL-Anweisungen zu ermitteln, in der Katalog und Schema Namen verwendet werden können, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CATALOG_USAGE und SQL_SCHEMA_USAGE.
+Datenquellen unterstützen nicht unbedingt Katalog-und Schemanamen als Name der Objektbezeichner in allen SQL-Anweisungen. Datenquellen können Katalog-und Schemanamen in einer oder mehreren der folgenden Klassen von SQL-Anweisungen unterstützen: Data Manipulation Language (DML)-Anweisungen, Prozeduraufrufe, datendefinitionsanweisungen für die Tabelle, Index-datendefinitionsanweisungen und datendefinitionsanweisungen Berechtigungen. Um die Klassen der SQL-Anweisungen zu ermitteln, in der Katalog und Schema Namen verwendet werden können, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CATALOG_USAGE und SQL_SCHEMA_USAGE.

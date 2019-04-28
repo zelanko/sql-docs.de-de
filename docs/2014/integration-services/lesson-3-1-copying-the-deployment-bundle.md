@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Kopieren des Bereitstellungspakets | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Bereitstellungspakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891709"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Schritt 1: Kopieren des Bereitstellungspakets
+# <a name="step-1-copying-the-deployment-bundle"></a>Schritt 1: Kopieren des Bereitstellungspakets
   In diesem Schritt kopieren Sie das Bereitstellungspaket auf den Zielcomputer.  
   
  Die einfachste Methode zum Kopieren des Bereitstellungspakets auf den Zielcomputer besteht darin, zuerst eine öffentliche Freigabe auf dem Zielcomputer zu erstellen, diese einem Laufwerk zuzuordnen und dann das Bereitstellungspaket auf die Freigabe zu kopieren. Wenn Sie nicht wissen, wie Sie öffentliche Ordner erstellen und konfigurieren oder Laufwerke zuordnen, dann finden Sie weitere Informationen in der Windows-Dokumentation.  

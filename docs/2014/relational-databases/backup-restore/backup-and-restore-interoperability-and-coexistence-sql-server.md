@@ -1,5 +1,5 @@
 ---
-title: 'Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server) | Microsoft-Dokumentation'
+title: 'Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQLServer) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922435"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQLServer)
   In diesem Thema werden Überlegungen im Zusammenhang mit der Sicherung und Wiederherstellung für mehrere Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]beschrieben. Diese Funktionen sind: Dateiwiederherstellung und Datenbankstart, Onlinewiederherstellung und deaktivierte Indizes, Datenbankspiegelung sowie schrittweise Wiederherstellung und Volltextindizes.  
   
  **In diesem Thema:**  

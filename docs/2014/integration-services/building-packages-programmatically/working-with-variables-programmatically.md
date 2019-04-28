@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836785"
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
   Variablen bieten die Möglichkeit, Werte dynamisch festzulegen und Prozesse in Paketen, Containern, Tasks und Ereignishandlern zu steuern. Variablen können auch von Rangfolgeneinschränkungen verwendet werden, um die Richtung des Datenflusses an andere Tasks zu steuern. Variablen haben vielerlei Verwendungszwecke:  

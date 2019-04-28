@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889291"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
   Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen**, um das aufzuzählende [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz anzugeben und den Enumerationstyp auszuwählen.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022512"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
   Das Veröffentlichen aus Oracle-Datenbanken erfolgt nahezu auf die gleiche Weise wie das Veröffentlichen aus [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
@@ -103,7 +103,7 @@ ms.locfileid: "54136060"
   
  Berücksichtigen Sie außerdem die folgenden Punkte:  
   
--   Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anders Behandeln von NULL: Oracle lässt mehrere Zeilen mit NULL-Werte für Spalten, die NULL zulassen und in unique-Einschränkungen oder Indizes enthalten sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit, indem nur eine einzige Zeile mit einem NULL-Wert für die gleiche Spalte zulässig ist. UNIQUE-Einschränkungen oder -Indizes, die NULL zulassen, können nicht veröffentlicht werden. Anderenfalls würde eine Einschränkungsverletzung auf dem Abonnenten eintreten, wenn die veröffentlichte Tabelle für eine der im Index oder der Einschränkung enthaltenen Spalten mehrere Zeilen mit NULL-Werten enthält.  
+-   Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verarbeiten NULL-Werte unterschiedlich: Oracle lässt mehrere Zeilen mit NULL-Werten für Spalten zu, bei denen NULL-Werte zulässig sind und die in UNIQUE-Einschränkungen oder -Indizes eingeschlossen sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit, indem nur eine einzige Zeile mit einem NULL-Wert für die gleiche Spalte zulässig ist. UNIQUE-Einschränkungen oder -Indizes, die NULL zulassen, können nicht veröffentlicht werden. Anderenfalls würde eine Einschränkungsverletzung auf dem Abonnenten eintreten, wenn die veröffentlichte Tabelle für eine der im Index oder der Einschränkung enthaltenen Spalten mehrere Zeilen mit NULL-Werten enthält.  
   
 -   Beim Testen der Eindeutigkeit ignoriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nachfolgende Leerzeichen in einem Feld, nicht jedoch Oracle.  
   

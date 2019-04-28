@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920654"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
   Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von FileTables aktiviert werden.  
@@ -54,7 +54,7 @@ ms.locfileid: "58538142"
 ##  <a name="BasicsNTAccess"></a> Aktivieren des nicht transaktionalen Zugriffs auf Datenbankebene  
  Über FileTables können Windows-Anwendungen ein Windows-Dateihandle für FILESTREAM-Daten abrufen, ohne dass hierfür eine Transaktion erforderlich ist. Um diesen nicht transaktionalen Zugriff auf in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Dateien zuzulassen, müssen Sie die gewünschte Ebene des nicht transaktionalen Zugriffs auf Datenbankebene für jede Datenbank angeben, die FileTables enthält.  
   
-###  <a name="HowToCheckAccess"></a> So wird es gemacht: Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
+###  <a name="HowToCheckAccess"></a> So wird es gemacht: Überprüfen Sie, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
  Fragen Sie die Katalogsicht [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) ab, und überprüfen Sie die Spalten **non_transacted_access** und **non_transacted_access_desc**.  
   
 ```sql  
@@ -128,7 +128,7 @@ GO
  **Angeben eines Verzeichnisses für FileTables mithilfe von SQL Server Management Studio**  
  Sie können im Feld **FILESTREAM Verzeichnisname** der Seite **Optionen** des Dialogfelds **Datenbankeigenschaften** einen Verzeichnisnamen angeben. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Datenbankeigenschaften &#40;Seite Optionen&#41;](../databases/database-properties-options-page.md).  
   
-###  <a name="viewnames"></a> So wird es gemacht: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
+###  <a name="viewnames"></a> So wird es gemacht: Zeigen Sie vorhandener Verzeichnisnamen für die Instanz an  
  Fragen Sie zum Anzeigen einer Liste vorhandener Verzeichnisnamen für die Instanz die [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)-Katalogsicht ab, und überprüfen Sie die **filestream_database_directory_name**-Spalte.  
   
 ```sql  

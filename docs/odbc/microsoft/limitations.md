@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026837"
 ---
 # <a name="limitations"></a>Einschränkungen
 Dieser Abschnitt beschreibt die Einschränkungen für die ODBC-Desktop-Datenbanktreiber im Hinblick auf den folgenden Themen:  
@@ -38,7 +38,7 @@ Dieser Abschnitt beschreibt die Einschränkungen für die ODBC-Desktop-Datenbank
 ||[SELECT-Anweisung](../../odbc/microsoft/select-statement-limitations.md)|[FROM-Klausel](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[UPDATE-Anweisung](../../odbc/microsoft/update-statement-limitations.md)|[HAVING-Klausel](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[LIKE-Prädikat](../../odbc/microsoft/like-predicate-limitations.md)|  
-|||[NICHT NULL](../../odbc/microsoft/not-null-limitations.md)|  
+|||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
 |||[ORDER BY-Klausel](../../odbc/microsoft/order-by-clause-limitations.md)|  
 |||[Tabellenname](../../odbc/microsoft/table-name-limitations.md)|  
 |||[Tabellenverweise](../../odbc/microsoft/table-references-limitations.md)|  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013217"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47718638"
   
 |Name|Datentyp|Description|  
 |----------|---------------|-----------------|  
-|**Leistungsindikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
-|**Vorkommen**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
-|**Wert**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
+|**counter**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
+|**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
+|**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -51,7 +51,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ## <a name="remarks"></a>Hinweise  
  **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt, Änderungen an **Dm_exec_query_optimizer_info**, einschließlich der beiden Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
   
-|Leistungsindikator|Vorkommen|value|  
+|Leistungsindikator|Vorkommen|Wert|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  
@@ -78,7 +78,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 |contains subquery|Anzahl der Optimierungen für eine Abfrage, die mindestens eine Unterabfrage enthält.|Nicht verfügbar|  
 |unnest failed|Nur intern|Nur intern|  
 |Tabellen|Gesamtzahl der Optimierungen.|Gesamtzahl der Tabellen, auf die pro optimierte Abfrage verwiesen wird.|  
-|hints|Häufigkeit, mit der ein Hinweis angegeben wurde. Zu diesen Hinweisen gehören die Abfragehinweise JOIN, GROUP, UNION und FORCE ORDER, die SET-Option FORCE PLAN sowie Joinhinweise.|Nicht verfügbar|  
+|hints|Häufigkeit, mit der ein Hinweis angegeben wurde. Zu diesen Hinweisen gehören: JOIN, GROUP, UNION und FORCE ORDER-Abfragehinweise, Set-Option FORCE PLAN sowie joinhinweise.|Nicht verfügbar|  
 |order hint|Häufigkeit, mit der ein FORCE ORDER-Hinweis angegeben wurde.|Nicht verfügbar|  
 |join hint|Häufigkeit, mit der der Joinalgorithmus von einem Joinhinweis erzwungen wurde.|Nicht verfügbar|  
 |view reference|Häufigkeit, mit der in einer Abfrage auf eine Sicht verwiesen wurde.|Nicht verfügbar|  

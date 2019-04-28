@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa906aaf6d9ae2033b6d029f4844c5d388bb44ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851494"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Aktualisieren auf SQL Server 2014
   Sie können Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Vor dem Ausführen des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Aktualisierung auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sehen Sie sich das [Technisches Referenzhandbuch für die Aktualisierung auf SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF-Download) an, lesen Sie die Themen über den Aktualisierungsprozess in diesem Abschnitt, und lesen Sie die [Versionshinweise für SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  

@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900238"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386548"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video, [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus](https://go.microsoft.com/fwlink/?LinkId=131031), auf "MSDN.Microsoft.com"  
+-   Video, [Vorgehensweise: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) auf msdn.microsoft.com  
   
 -   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
--   Blogeintrag, [Suchmuster: Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782), auf blogs.msdn.com  
+-   Blogeintrag, [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782) auf blogs.msdn.com  
   
 -   Beispiel [Transformation für Suche](https://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729951"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatisieren von Analysis Services-Verwaltungsaufgaben mit SSIS
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können Sie DDL-Skripts, Cube- und Miningmodell-Verarbeitungstasks sowie Data Mining-Abfragetasks automatisch ausführen. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] kann als eine Sammlung von Ablaufsteuerung und Wartungstasks angesehen werden, die verknüpft werden können, um sequenzielle und parallele Datenverarbeitungsaufträge zu bilden.  
@@ -40,8 +40,8 @@ ms.locfileid: "48099260"
   
 ## <a name="see-also"></a>Siehe auch  
  [Ziel für Partitionsverarbeitung](../../integration-services/data-flow/partition-processing-destination.md)   
- [Ziel für dimensionsverarbeitung](../../integration-services/data-flow/dimension-processing-destination.md)   
- [Transformation für Datamining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
+ [Ziel für Dimensionsverarbeitung](../../integration-services/data-flow/dimension-processing-destination.md)   
+ [Transformation für Data Mining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   

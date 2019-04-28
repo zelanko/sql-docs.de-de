@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733258"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
@@ -67,7 +67,7 @@ ms.locfileid: "48121090"
  Weitere Informationen zum Erstellen und Verwenden von Modellfiltern finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

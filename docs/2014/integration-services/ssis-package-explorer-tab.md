@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a20d1bf52e623112f96ee2890e75e8d3ce0416ff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878037"
 ---
 # <a name="ssis-package-explorer-tab"></a>Registerkarte 'Paket-Explorer' im SSIS-Designer
   Auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers wird eine hierarchische Ansicht aller in einem Paket enthaltenen Elemente angezeigt: Konfigurationen, Verbindungen, Ereignishandler, ausführbare Objekte wie Tasks und Container, Protokollanbieter, Rangfolgeneinschränkungen und Variablen. Wenn das Paket einen Datenflusstask enthält, befindet sich auf der Registerkarte **Paket-Explorer** ein Knoten, der eine hierarchische Sicht der Datenflusskomponenten enthält.  

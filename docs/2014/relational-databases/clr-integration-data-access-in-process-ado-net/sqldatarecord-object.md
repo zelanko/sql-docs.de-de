@@ -14,18 +14,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874682"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord-Objekt
-  Die `SqlDataRecord` -Objekt stellt eine einzelne Zeile mit Daten, die mit den zugehörigen Metadaten dar.  
+  Das `SqlDataRecord`-Objekt stellt eine einzelne Zeile der Daten mit den zugehörigen Metadaten dar.  
   
- Verwaltete gespeicherte Prozeduren können Resultsets an den Client, die nicht vom Senden einer `SqlDataReader`. Die `SqlDataRecord`-Klasse ermöglicht zusammen mit den Methoden `SendResultsStart`, `SendResultsRow` und `SendResultsEnd` des `SqlPipe`-Objekts gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  
+ Verwaltete gespeicherte Prozeduren können Resultsets an den Client senden, die nicht von `SqlDataReader` stammen. Die `SqlDataRecord`-Klasse ermöglicht zusammen mit den Methoden `SendResultsStart`, `SendResultsRow` und `SendResultsEnd` des `SqlPipe`-Objekts gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  
   
- Weitere Informationen finden Sie unter den `Microsoft.SqlServer.Server.SqlDataRecord` Klasse Referenzdokumentation finden Sie in der .NET Framework SDK-Dokumentation.  
+ Weitere Informationen finden Sie in der Referenz zu der `Microsoft.SqlServer.Server.SqlDataRecord`-Klasse und in der .NET Framework SDK-Dokumentation.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt einen neuen Mitarbeiterdatensatz und gibt ihn an den Aufrufer zurück.  

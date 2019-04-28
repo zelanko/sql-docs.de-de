@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942973"
 ---
 # <a name="escape-sequences-in-odbc"></a>Escapesequenzen in ODBC
 Eine Anzahl von Sprachfeatures wie äußere Joins und Aufrufe von Skalarfunktionen werden häufig von DBMS implementiert. Allerdings sind tendenziell die Syntax für diese Funktionen DBMS-spezifische, selbst wenn der standard-Syntax durch die verschiedene Standardorganisationen definiert werden. Aus diesem Grund werden in ODBC-Escapesequenzen, die standard-Syntax für die folgenden Sprachfunktionen enthalten definiert:  

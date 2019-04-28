@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734061"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus bietet regressionsalgorithmen, die für die Prognose kontinuierlicher Werte wie den Produktverkauf im Laufe der Zeit optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
@@ -99,10 +99,10 @@ ms.locfileid: "48134260"
   
  In beiden Beispielen können Sie neue künftige Verkäufe und Mengen für jedes Produkt vorhersagen. Neue Werte für Produkt oder Zeit können nicht vorhergesagt werden.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset, dessen Reihen als Spaltenwerte dargestellt sind  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset mit Reihen als Spaltenwerte dargestellt sind  
  In diesem Beispiel wird die folgende Tabelle von Eingabefällen verwendet:  
   
-|TimeID|Product|Sales|Menge|  
+|TimeID|Produkt|Sales|Menge|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -123,7 +123,7 @@ ms.locfileid: "48134260"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. So entsteht ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_Verkauf, A_Menge, B_Verkauf und B_Menge.  
+ In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. Erstellt ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_verkauf, a_menge, b_verkauf und b_menge.  
   
  Da Sie die Produkte außerdem auf verschiedene Spalten verteilt haben, müssen Sie keine zusätzliche Reihenschlüsselspalte angeben. Alle Spalten im Modell sind entweder eine Fallreihenspalte oder eine vorhersagbare Spalte.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48134260"
 -   Unterstützt Drillthrough.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Technische Referenz für Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)   
- [Time Series Model Query Examples](time-series-model-query-examples.md)   
- [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
+ [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)   
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

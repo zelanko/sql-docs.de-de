@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832453"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -86,7 +86,7 @@ ms.locfileid: "58392103"
   
  Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben, und die Meldungen für eine Reihe von Protokolleinträgen enthalten komplexe Daten. Damit es einfacher wird, den Inhalt komplexer Meldungen zu verstehen und zu kommunizieren, können Sie den Meldungstext analysieren. Je nach Speicherort des Protokolls können Sie Transact-SQL-Anweisungen oder Skriptkomponenten verwenden, um den komplexen Text in Spalten oder andere zweckmäßigere Formate zu zerlegen.  
   
- Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle: 1180 : Sortieren: 1181 : Sortiereingabe: 76" in den Spalten analysiert. Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
+ Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : OLE DB Source Output : 1180 : Sort : 1181 : Sort Input : 76", in Spalten analysiert. Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
 |Spalte|Description|Wert|  
 |------------|-----------------|-----------|  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733283"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Beispiele für Naive Bayes-Modellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Sie können mit einer Abfrage des Data Mining-Schemarowsets auch Metadaten über das Modell abrufen. In diesem Abschnitt wird erklärt, wie diese Abfragen für Modelle erstellt werden, die auf dem Microsoft Naive Bayes-Algorithmus basieren.  
@@ -46,7 +46,7 @@ ms.locfileid: "48060450"
 ## <a name="finding-information-about-a-naive-bayes-model"></a>Suchen nach Informationen über ein Naive Bayes-Modell  
  Der Inhalt eines Naive Bayes-Modells stellt aggregierte Informationen über die Verteilung der Werte in den Trainingsdaten zur Verfügung. Sie können auch Informationen über die Metadaten des Modells abrufen, indem Sie Abfragen für Data Mining-Schemarowsets erstellen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Metadaten für das Modell finden Sie, indem Sie das Data Mining-Schemarowset abfragen. Dazu gehören beispielsweise das Erstellungsdatum des Modells, das Datum der letzten Verarbeitung, der Name der Miningstruktur, auf der das Modell basiert, und der Name der als vorhersagbares Attribut verwendeten Spalten. Sie können auch die Parameter zurückgeben, die beim Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -87,7 +87,7 @@ WHERE NODE_TYPE = 26
   
  Teilergebnisse:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
@@ -100,7 +100,7 @@ WHERE NODE_TYPE = 26
   
  Eine Definition der Werte, die in der NODE_DISTRIBUTION-Tabelle in einem Naive Bayes-Modell bereitgestellt werden, finden Sie unter [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). Weitere Informationen zu den Auswirkungen von fehlenden Werten auf Unterstützungs- und Wahrscheinlichkeitsberechnungen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Suchen von weiteren Informationen über Attribute  
+###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Weitere Informationen zu Attributen suchen  
  Da ein Naive Bayes-Modell häufig komplexe Informationen über die Beziehungen zwischen verschiedenen Attributen enthält, können diese Beziehungen am einfachsten im [Microsoft Naive Bayes-Viewer](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)angezeigt werden. Sie können jedoch DMX-Abfragen erstellen, um die Daten zurückzugeben.  
   
  Im folgenden Beispiel wird gezeigt, wie Informationen aus dem Modell über ein bestimmtes Attribut, `Region`, zurückgegeben werden.  
@@ -168,7 +168,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Treffen von Vorhersagen mit einem Naive Bayes-Modell  
  Der Microsoft Naive Bayes-Algorithmus wird normalerweise weniger für die Vorhersage als vielmehr für die Untersuchung des Beziehungsgefüges von Eingabe- und vorhersagbaren Attributen verwendet. Das Modell unterstützt jedoch die Verwendung von Vorhersagefunktionen sowohl für die Vorhersage als auch für die Zuordnung.  
   
-###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Ergebnissen mit einer SINGLETON-Abfrage  
+###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Ergebnissen mit einer Singleton-Abfrage  
  In der folgenden Abfrage wird eine SINGLETON-Abfrage verwendet, um einen neuen Wert zur Verfügung zu stellen und basierend auf dem Modell vorherzusagen, ob ein Kunde mit diesen Merkmalen wahrscheinlich ein Fahrrad kaufen wird. Die einfachste Möglichkeit zum Erstellen einer SINGLETON-Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Sie können die folgende DMX-Abfrage erstellen, indem Sie das `TM_NaiveBayes` -Modell auswählen und anschließend **Singleton-Abfrage**und Werte aus der Dropdownliste für `[Commute Distance]` und `Gender`auswählen.  
   
 ```  
@@ -214,7 +214,7 @@ NATURAL PREDICTION JOIN
  Die letzte Zeile in der Tabelle zeigt die Anpassungen für Unterstützung und Wahrscheinlichkeit für den fehlenden Wert. Varianz- und Standardabweichungswerte sind immer 0, da Naive Bayes-Modelle keine kontinuierlichen Werte modellieren können.  
   
 ###  <a name="bkmk_Query7"></a> Beispielabfrage 7: Vorhersagen von Zuordnungen  
- Der Microsoft Naive Bayes-Algorithmus kann für die Zuordnungsanalyse verwendet werden, wenn die Miningstruktur eine geschachtelte Tabelle mit dem vorhersagbaren Attribut als Schlüssel verwendet. Sie könnten z.B. ein Naive Bayes-Modell mithilfe der Miningstruktur erstellen, die Sie im Data Mining-Tutorial in [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) erstellt haben. Das in diesem Beispiel verwendete Modell wurde geändert, und der Falltabelle wurden Informationen zum Einkommen und zur Kundenregion hinzugefügt.  
+ Der Microsoft Naive Bayes-Algorithmus kann für die Zuordnungsanalyse verwendet werden, wenn die Miningstruktur eine geschachtelte Tabelle mit dem vorhersagbaren Attribut als Schlüssel verwendet. Sie können z. B. ein Naive Bayes-Modell erstellen, mit der Miningstruktur erstellt haben, [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) von Datamining-Lernprogramm. Das in diesem Beispiel verwendete Modell wurde geändert, und der Falltabelle wurden Informationen zum Einkommen und zur Kundenregion hinzugefügt.  
   
  Das folgende Abfragebeispiel zeigt eine SINGLETON-Abfrage, die Produkte vorhersagt, die mit Käufen des Produkts `'Road Tire Tube'`verknüpft sind. Anhand dieser Informationen können Sie einem bestimmten Kundentyp Produkte empfehlen.  
   
@@ -246,7 +246,7 @@ AS t
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
-|[Vorhersagen &#40;DMX&#41;](/sql/dmx/predict-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
+|[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
@@ -258,6 +258,6 @@ AS t
 ## <a name="see-also"></a>Siehe auch  
  [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)   
- [Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

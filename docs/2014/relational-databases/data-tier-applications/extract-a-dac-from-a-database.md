@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872853"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrahieren einer DAC aus einer Datenbank
   Verwenden Sie entweder den **Assistenten zum Extrahieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um ein Datenebenenanwendungs-Paket (DAC) aus einer vorhandenen SQL Server-Datenbank zu extrahieren. Bei der Extraktion wird eine DAC-Paketdatei erstellt, die Definitionen der Datenbankobjekte und ihrer verwandten Elemente auf Instanzebene enthält. Eine DAC-Paketdatei enthält z. B. die Datenbanktabellen, gespeicherten Prozeduren, Sichten und Benutzer zusammen mit den Anmeldenamen, die den Datenbankbenutzern zugeordnet sind.  

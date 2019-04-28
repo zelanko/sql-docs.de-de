@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732160"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Semiadditives Verhalten definieren (Business Intelligence-Assistent)
   Verwenden Sie die Seite **Semiadditives Verhalten definieren**, um das semiadditive Verhalten für Measures zu aktivieren oder zu deaktivieren. Das semiadditive Verhalten bestimmt, wie in einem Cube enthaltene Measures über eine Zeitdimension aggregiert werden.  
@@ -26,12 +26,12 @@ ms.locfileid: "48168010"
 > [!NOTE]  
 >  Mit Ausnahme von LastChild, das in der Standard Edition verfügbar ist, ist semiadditives Verhalten nur in der Business Intelligence Edition oder der Enterprise Edition verfügbar. Da semiadditives Verhalten darüber hinaus nur für Measures und nicht für Dimensionen definiert wird, wird diese Seite im Business Intelligence-Assistenten nicht angezeigt, wenn er über den Dimensions-Designer oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Semiadditives Verhalten deaktivieren**  
  Deaktiviert das semiadditive Verhalten in allen Measures, die im Cube enthalten sind.  
   
  **Der Assistent wurde die \<Dimensionsname > Kontodimension, die semiadditive Elemente enthält. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
- Aktiviert das semiadditive Verhalten für Kontodimensionen mit semiadditiven Elementen. Nach Auswahl dieser Option wird Sie die Aggregatfunktion aller Measures in Measuregruppen, die die Kontodimension auf verweisen `ByAccount`.  
+ Aktiviert das semiadditive Verhalten für Kontodimensionen mit semiadditiven Elementen. Wenn Sie diese Option aktivieren, wird die Aggregatfunktion von all jenen Measures in den Measuregruppen festgelegt, die die Kontodimension auf `ByAccount` verweisen.  
   
  Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48168010"
  **Semiadditive Funktion**  
  Wählen Sie die Aggregatfunktion für das ausgewählte Measure aus. In der folgenden Tabelle sind die verfügbaren Aggregatfunktionen aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Wird durch Zurückgeben des Durchschnitts der dem Measure untergeordneten Elemente aggregiert.|  
 |`ByAccount`|Wird durch die Aggregatfunktion aggregiert, die dem angegebenen Kontotyp des Attributs in der Kontodimension zugeordnet ist.|  
@@ -63,7 +63,7 @@ ms.locfileid: "48168010"
 >  Die für diese Option getroffene Auswahl gilt nur, wenn **Semiadditives Verhalten für einzelne Measures definieren** ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

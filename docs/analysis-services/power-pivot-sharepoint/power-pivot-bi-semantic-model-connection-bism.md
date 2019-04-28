@@ -1,5 +1,5 @@
 ---
-title: Power Pivot BI-Semantikmodellverbindung (.bism) | Microsoft Docs
+title: Power Pivot BI-Semantikmodellverbindung (.bism) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8841a67a13db4321618c82f3b1e830988dce9a35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960239"
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>PowerPivot BI-Semantikmodellverbindung (.bism)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34024427"
 ##  <a name="bkmk_prereq"></a> Unterstützte Datenbanken  
  Eine BI-Semantikmodellverbindung verweist auf tabellarische Modelldaten. Es gibt drei Quellen für diese Daten:  
   
--   Eine Datenbank für tabellarische Modelle, die auf einer eigenständigen Analysis Services-Instanz im Tabellenservermodus ausgeführt wird. Die Bereitstellung einer eigenständigen Analysis Services-Instanz ist für die Farm extern. Für den Zugriff auf Datenquellen außerhalb der Farm sind zusätzliche Berechtigungen erforderlich, die in folgendem Thema erläutert werden: [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Eine Datenbank für tabellarische Modelle, die auf einer eigenständigen Analysis Services-Instanz im Tabellenservermodus ausgeführt wird. Die Bereitstellung einer eigenständigen Analysis Services-Instanz ist für die Farm extern. Greift auf Datenquellen außerhalb der Farm erfordert zusätzliche Berechtigungen, die Sie in diesem Thema erläutert: [Erstellen Sie eine BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] In SharePoint gespeicherte Arbeitsmappen. Eingebettete [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbanken in Excel-Arbeitsmappen entsprechen Datenbanken für tabellarische Modelle, die auf einem eigenständigen Analysis Services-Server im Tabellenmodus ausgeführt werden. Wenn Sie bereits [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwenden, können Sie eine BI-Semantikmodellverbindung definieren, die auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen in einer SharePoint-Bibliothek verweist, und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte anhand vorhandener [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten erstellen.  Sie können entweder in der SQL Server 2008 R2-Version oder in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Versionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellte Arbeitsmappen verwenden.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34024427"
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Grundlegendes zur Verbindungssequenz für BI-Semantikverbindungen  
  In diesem Abschnitt wird das Verbindungsverhalten zwischen verschiedenen Clientanwendungen, z. B. der Excel-Desktopanwendung oder dem Power View-Berichtserstellungsclient in SharePoint, und einer Datenbank für tabellarische Modelle innerhalb oder außerhalb der SharePoint-Farm veranschaulicht.  
   
- Alle Verbindungen mit einer Datenbank für tabellarische Modelle werden mit den Anmeldeinformationen des Benutzers hergestellt, der die Daten anfordert. Der Mechanismus dieser Verbindung richtet sich jedoch danach, ob die Verbindung eine farminterne bzw. eine Einzel- oder Doppelhopverbindung ist und ob Kerberos aktiviert ist. Weitere Informationen zu authentifizierten Verbindungen zwischen SharePoint und Back-End-Datenquellen finden Sie unter [Double-hop authentication: Why NTLM fails and Kerberos works](http://go.microsoft.com/fwlink/?LinkId=237137)(Doppelhopauthentifizierung: Warum Kerberos funktioniert und NTLM nicht).  
+ Alle Verbindungen mit einer Datenbank für tabellarische Modelle werden mit den Anmeldeinformationen des Benutzers hergestellt, der die Daten anfordert. Der Mechanismus dieser Verbindung richtet sich jedoch danach, ob die Verbindung eine farminterne bzw. eine Einzel- oder Doppelhopverbindung ist und ob Kerberos aktiviert ist. Weitere Informationen zu authentifizierten Verbindungen zwischen SharePoint und Back-End-Datenquellen finden Sie unter [Doppel-Hop-Authentifizierung: Warum Kerberos funktioniert und NTLM nicht](http://go.microsoft.com/fwlink/?LinkId=237137).  
   
  **Herstellen einer Verbindung von Excel mit Tabellendaten in einem Netzwerk**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34024427"
   
  In der folgenden Abbildung ist diese Verbindungssequenz dargestellt. Zunächst wird die BISM-Verbindung angefordert, anschließend werden die Verbindungsinformationen auf den Client heruntergeladen, und zuletzt wird die Einzelhopverbindung mit der Datenbank hergestellt. Die Verbindung wird mit den Windows-Anmeldeinformationen des Excel-Benutzers hergestellt, der über Leseberechtigungen für die Analysis Services-Datenbank verfügt. Da in diesem Szenario eine Einzelhopverbindung verwendet wird, ist Kerberos nicht erforderlich, selbst wenn es aktiviert ist.  
   
- ![Excel-Verbindungen mit tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "Excel-Verbindungen mit tabellarischen Modelldatenbank")  
+ ![Verbindungen von Excel mit der Datenbank für tabellarische Modelle](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "Verbindungen von Excel mit der Datenbank für tabellarische Modelle")  
   
  **Herstellen einer Verbindung von Power View mit Tabellendaten in einem Netzwerk**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34024427"
   
  [Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Herstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

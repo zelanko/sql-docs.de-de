@@ -15,11 +15,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011663"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

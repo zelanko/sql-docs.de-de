@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4587f4e496e5542e53df40741c1dcdf6e9abc6ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010988"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
   Wenn Sie einen Berichtsserver für horizontales Skalieren für die Ausführung in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) konfigurieren möchten, müssen Sie folgende Schritte ausführen:  

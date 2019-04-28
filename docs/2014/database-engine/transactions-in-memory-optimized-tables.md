@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843100"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transaktionen in speicheroptimierten Tabellen
   Die Zeilenversionsverwaltung für datenträgerbasierte Tabellen (mit SNAPSHOT-Isolation oder READ_COMMITTED_SNAPSHOT) bietet eine Form der optimistischen Nebenläufigkeitssteuerung. Lese- und Schreibvorgänge blockieren sich nicht. Bei speicheroptimierten Tabellen blockieren sich Schreibvorgänge nicht gegenseitig. Bei der Zeilenversionsverwaltung für datenträgerbasierte Tabellen wird die Zeile durch eine Transaktion gesperrt, während gleichzeitige Transaktionen, die die Zeile zu aktualisieren versuchen, blockiert werden. Bei speicheroptimierten Tabellen werden keine Sperren festgelegt. Stattdessen führt der Versuch von zwei Transaktionen, dieselbe Zeile zu aktualisieren, zu einem Schreibkonflikt (Fehler 41302).  

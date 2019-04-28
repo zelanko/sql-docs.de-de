@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022452"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Eigenschaften von SQL Server-Replikation-Veröffentlichung 
   Dieser Abschnitt enthält Informationen zu allen Seiten des der **Veröffentlichungseigenschaften** Dialogfeld. 
@@ -47,7 +47,7 @@ ms.locfileid: "54128380"
  Der Typ der Veröffentlichung (schreibgeschützt).  
   
  **Abonnementablauf**  
- Wählen Sie eine der Optionen für Abonnementablauf aus: **Abonnements laufen nie ab** oder **Abonnements laufen ab**, und einen expliziten Zeitraum (**Intervall**).  
+ Wählen Sie eine der Ablaufoptionen für das Abonnement aus: **Subscriptions never expire** (Abonnements laufen nie ab) oder **Subscriptions expire** (Abonnements laufen ab) mit einem festen Zeitraum (**Intervall**).  
   
  Bei Momentaufnahme- und Transaktionsveröffentlichungen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , die Standardeinstellung **Abonnements laufen nie ab**zu übernehmen.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54128380"
  Dieser Bereich wird mit Filtern aufgefüllt, während Sie den Tabellenartikeln in der Veröffentlichung Filter hinzufügen. Tabellen mit Zeilenfiltern werden im Bereich als Knoten der obersten Ebene angezeigt. Für Mergeveröffentlichungen werden Tabellen, auf die das Filtern durch einen Joinfilter erweitert wurde, als untergeordnete Knoten angezeigt.  
   
  **Hinzufügen**  
- Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Auf **hinzufügen** für eine Mergeveröffentlichung werden drei Auswahlmöglichkeiten angezeigt: **Fügen Sie Filter hinzu**; **Verknüpfung hinzufügen, um den ausgewählten Filter zu erweitern**; **Filter automatisch generieren**.  
+ Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Wenn Sie für eine Mergeveröffentlichung auf **Hinzufügen** klicken, werden drei Auswahlmöglichkeiten angezeigt: **Filter hinzufügen**, **Add Join to Extend the Selected Filter** (Join zum Erweitern des ausgewählten Filters hinzufügen) und **Filter automatisch generieren**.  
   
 -   Wählen Sie **Filter hinzufügen** aus, um das Dialogfeld **Filter hinzufügen** aufzurufen. Mithilfe dieses Dialogfelds können Sie Zeilenfilter auf einen Tabellenartikel anwenden. Im Dialogfeld **Filter hinzufügen** können Sie beispielsweise angeben, dass eine Tabelle mit Kundendaten nur Daten von französischen Kunden enthalten soll, wenn eine Replikation an Abonnenten erfolgt.  
   

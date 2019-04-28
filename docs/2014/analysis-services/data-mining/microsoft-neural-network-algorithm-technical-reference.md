@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733805"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
@@ -105,7 +105,7 @@ ms.locfileid: "52521120"
   
  Μ = p - die vorherige Wahrscheinlichkeit eines Status  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  **Kontinuierliche Werte**  
   

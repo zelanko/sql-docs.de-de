@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736126"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate-Methode (ServerSettings-Klasse)
   Ruft das aktuelle Sicherheitszertifikat ab.  

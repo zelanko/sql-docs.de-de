@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012535"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership-Ereignisklasse
   Die Ereignisklasse **Audit Schema Object Take Ownership** tritt auf, wenn die Berechtigungen zum Ändern des Besitzers eines Schemaobjekts (z. B. einer Tabelle, Prozedur oder Funktion) überprüft werden. Dies ist der Fall, wenn mit der ALTER AUTHORIZATION-Anweisung einem Objekt ein Besitzer zugewiesen wird.  

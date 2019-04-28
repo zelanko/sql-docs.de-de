@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 198a58816388a1f5c80b45b776548508f01a1c73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914272"
 ---
 # <a name="mssqlserver32040"></a>MSSQLSERVER_32040
     
@@ -25,7 +25,7 @@ ms.locfileid: "48135560"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|32040|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  

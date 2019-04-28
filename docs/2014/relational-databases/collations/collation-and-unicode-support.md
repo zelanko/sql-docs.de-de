@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918962"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie `char` und `varchar` verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -53,7 +53,7 @@ ms.locfileid: "53377870"
 |------------|-----------------|  
 |Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung die Groß-/Kleinschreibung nicht beachtet. D. h. SQL Server betrachtet die groß- und die kleingeschriebenen Versionen von Buchstaben für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von "_CI" explizit auswählen.|  
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Z. B. "ein"ist nicht gleich"???". Wenn diese Option nicht aktiviert wird, werden bei der Sortierung Akzente nicht beachtet. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|  
-|Unterscheidung nach Kana (_KS)|Unterscheidet zwischen zwei japanischen Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|  
+|Unterscheidung nach Kana (_KS)|Zwischen den beiden Typen Japanischer kanazeichen unterschieden: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|  
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht ausgewählt ist, betrachtet SQL Server die Darstellung in halber Breite und in normaler Breite desselben Zeichens für Sortierzwecke als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Sortierungssätze:  
@@ -219,6 +219,6 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ## <a name="see-also"></a>Weitere Informationen enthält auch die  
  [Contained Database Collations](../databases/contained-database-collations.md)   
  [Auswählen einer Sprache beim Erstellen eines Volltextindex](../search/choose-a-language-when-creating-a-full-text-index.md)   
- [fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
+ [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

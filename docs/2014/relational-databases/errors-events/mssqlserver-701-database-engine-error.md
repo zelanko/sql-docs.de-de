@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913780"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
     
@@ -25,7 +25,7 @@ ms.locfileid: "48186810"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|701|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -46,7 +46,7 @@ ms.locfileid: "48186810"
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Starten Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, **SQL Server: Speicher-Manager**.  
+2.  Starten der Erfassung von Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden SQL Server-Speicherkonfigurationsparameter:  
   

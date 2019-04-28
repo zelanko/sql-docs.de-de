@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982289"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch-Funktion
 **Übereinstimmung mit Standards**  
@@ -70,7 +70,7 @@ SQLRETURN SQLExtendedFetch(
  Anwendungen sollten Geben Sie einen gültigen Zeiger in den *RowStatusArray* -Argument; Falls nicht, das Verhalten der **SQLExtendedFetch** und das Verhalten von Aufrufen an **SQLBulkOperations**oder **SQLSetPos** nachdem durch ein Cursor positioniert ist **SQLExtendedFetch** sind nicht definiert.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLExtendedFetch** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLError**. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLExtendedFetch** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben. Bei einem für eine einzelne Spalte Fehler, **SQLGetDiagField** kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_COLUMN_NUMBER, um die Spalte zu bestimmen, der Fehler aufgetreten ist, und  **SQLGetDiagField** kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_ROW_NUMBER, um zu bestimmen, die Zeile, die diese Spalte enthält.  
@@ -79,9 +79,9 @@ SQLRETURN SQLExtendedFetch(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Zeichenfolgen- oder Binärdaten, die für eine Spalte zurückgegeben, führte das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL. Falls es sich um einen Zeichenfolgenwert handelt, war es, rechts abgeschnitten. Falls es sich um einen numerischen Wert handelt, wurde die Nachkommastellen der Zahl abgeschnitten.  (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01S06|Versucht, Daten abzurufen, bevor das Resultset das erste Rowset zurückgegeben.|Das angeforderte Rowset überlappende Anfang, wenn die aktuelle Position nach der ersten Zeile, und entweder ist das Resultset *FetchOrientation* SQL_PRIOR wurde oder *FetchOrientation* SQL_RELATIVE mit wurde ein negative *FetchOffset* , deren absoluten Wert war kleiner oder gleich der aktuellen SQL_ROWSET_SIZE setzen. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Ein Datenwert konnte nicht konvertiert werden, in den C-Datentyp, der anhand des *TargetType* in **SQLBindCol**.|  
 |07009|Ungültiger Deskriptorindex|Spalte 0 gebunden wurde **SQLBindCol**, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  

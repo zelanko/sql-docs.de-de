@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011500"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen
   Diese Seite enthält Links zu Themen, die Ihnen zeigen, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen, -Datenbankbenutzer und -Datenbankschemas verwaltet werden. Zudem erfahren Sie auf dieser Seite, wie Sie eine Rolle verknüpfen und einem Prinzipal Berechtigungen gewähren können.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afc9be649d3d9eb23a9c0e4b1b601b772cd16fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732569"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definieren der Kontointelligenz (Business Intelligence-Assistent)
   Auf der Seite **Kontointelligenz definieren** können Sie durch eine Quelltabelle in der Datenquelle für die Kontodimension definierte Kontotypen den auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz definierten Kontotypen zuordnen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48209400"
 > [!NOTE]  
 >  Diese Seite wird angezeigt, wenn dem Attributtyp **Kontotyp** auf der Seite **Dimensionsattribute konfigurieren** ein Dimensionsattribut zugeordnet wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Kontotypen der Quelltabelle**  
  Zeigt die Werte an, die im Dimensionsattribut enthalten sind, das dem Attributtyp **Kontotyp** auf der Seite **Dimensionsattribute konfigurieren** zugewiesen wurde.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48209400"
   
  In der folgenden Tabelle sind die Kontotypen aufgelistet, die auf einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz definiert sind.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Asset**|Wert des Besitzes zu einem bestimmten Zeitpunkt.|  
 |**Balance**|Anzahl von etwas zu einem bestimmten Zeitpunkt.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48209400"
 |**Statistisch**|Berechnetes Verhältnis von Werten oder Anzahl von Objekten, die nicht aggregiert wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

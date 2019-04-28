@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837392"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Hinzufügen eines Daten-Viewers zu einem Datenfluss
   In diesem Thema wird beschrieben, wie ein Daten-Viewer in einem Datenfluss hinzugefügt und konfiguriert wird. Ein Daten-Viewer zeigt Daten an, die sich zwischen zwei Datenflusskomponenten bewegen. Ein Daten-Viewer kann z. B. die Daten anzeigen, die von einer Datenquelle extrahiert werden, bevor die Daten von einer Transformation im Datenfluss geändert werden.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011430"
 ---
 # <a name="configure-report-manager-native-mode"></a>Konfigurieren des Berichts-Managers (einheitlicher Modus)
   Der Berichts-Manager ist eine Front-End-Webanwendung, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können. Der Berichts-Manager wird mit dem Berichtsserver-Webdienst in derselben Berichtsserverinstanz installiert und kann konfiguriert werden, wenn Sie in Setup die Option **Standardkonfiguration im einheitlichen Modus installieren** auswählen. Sie können den Berichts-Manager auch nach der Installation konfigurieren. Dieses Thema enthält Informationen zu den folgenden Berichts-Manager-Konfigurationsszenarios:  

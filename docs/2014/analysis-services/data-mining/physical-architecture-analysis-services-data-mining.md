@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733231"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Physische Architektur (Analysis Services &ndash; Data Mining)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server- als auch Clientkomponenten zum Bereitstellen von Data Mining-Funktionen für Business Intelligence-Anwendungen:  
@@ -52,6 +52,6 @@ ms.locfileid: "48094150"
  Die gesamte Kommunikation zwischen einem Client und dem Analysis Services-Server verwendet XMLA. Hierbei handelt es sich um ein plattform- und sprachenunabhängiges Protokoll. Wenn eine Anforderung von einem Client eingeht, wird von Analysis Services bestimmt, ob die Anforderung sich auf OLAP oder Data Mining bezieht, und die Anforderung wird entsprechend weitergeleitet. Weitere Informationen finden Sie unter [OLAP-Engine-Serverkomponenten](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Logische Architektur &#40;Analysis Services – Datamining&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832064"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
@@ -48,15 +48,15 @@ ms.locfileid: "58385588"
 ### <a name="requests-pane-columns"></a>Spalten im Anforderungsbereich  
  Welche Spalten im Anforderungsbereich angezeigt werden, hängt von der **Sicht** ab, die Sie ausgewählt haben:  
   
--   Bei Auswahl des anzuzeigenden **alle Anforderungen**, der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
+-   Wenn Sie **Alle Anforderungen** auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
   
--   Wenn Sie einen der fünf spaltenprofile anzeigen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**, und **Anforderungs-ID**.  
+-   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**und **Anforderungs-ID**.  
   
--   Wenn Sie Sicht ein kandidatenschlüsselprofils wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **KeyColumns**, und **Anforderungs-ID**.  
+-   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten**und **Anforderungs-ID**.  
   
--   Wenn Sie ein funktionales abhängigkeitsprofil anzeigen, hat der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **bestimmende Spalten**, **abhängige Spalte**, und **Anforderungs-ID**.  
+-   Wenn Sie ein funktionales Abhängigkeitsprofil anzeigen, enthält der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Bestimmende Spalten**, **Abhängige Spalte**und **Anforderungs-ID**.  
   
--   Wenn Sie ein Wertanschlussprofil anzeigen, ist der Anforderungsbereich sechs Spalten: **Profiltyp**, **untergeordnete Tabelle oder Sicht**, **übergeordnete Tabelle oder Sicht**, **untergeordnete Spalten**, **übergeordnete Spalten**, und **Anforderungs-ID**.  
+-   Wenn Sie ein Wertanschlussprofil anzeigen, enthält der Anforderungsbereich sechs Spalten: **Profiltyp**, **Untergeordnete Tabelle oder Sicht**, **Übergeordnete Tabelle oder Sicht**, **Untergeordnete Spalten**, **Übergeordnete Spalten**und **Anforderungs-ID**.  
   
  In den folgenden Abschnitten wird jede dieser Spalten beschrieben.  
   

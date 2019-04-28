@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914818"
 ---
 # <a name="mssqlserver2533"></a>MSSQLSERVER_2533
     
@@ -25,12 +25,12 @@ ms.locfileid: "48074438"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2533|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_PAGE_WAS_NOT_SEEN|  
-|Meldungstext|Tabellenfehler: Seite P_ID, die der Objekt-ID O_ID zugeordnet ist, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) wurde nicht betrachtet. Die Seite ist möglicherweise ungültig oder enthält eine falsche Zuordnungseinheits-ID im Header.|  
+|Meldungstext|Tabellenfehler: Zugeordnete Page P_ID zu Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Type-Typ) wurde nicht gefunden. Die Seite ist möglicherweise ungültig oder enthält eine falsche Zuordnungseinheits-ID im Header.|  
   
 ## <a name="explanation"></a>Erklärung  
  Eine Seite wird der Zuordnungseinheits-ID *A_ID* zugeordnet, aber diese Zuordnungseinheits-ID befindet sich nicht im Header der Seite. Der Header hat eine andere Zuordnungseinheits-ID. Wenn die Zuordnungseinheits-ID im Header der Seite einem gültigen Objekt zugewiesen ist, tritt für die Seite möglicherweise ein entsprechender MSSQLEngine_2534-Fehler auf.  

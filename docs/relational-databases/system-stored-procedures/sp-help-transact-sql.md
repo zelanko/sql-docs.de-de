@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017752"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
     |**prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
     |**Dezimalstellen**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
-    |**NULL zulassen**|**varchar(** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: "Yes" oder "No".|  
+    |**NULL zulassen**|**varchar(** 35 **)**|Gibt an, ob NULL-Werte zulässig sind: Ja oder nein.|  
     |**Default_name**|**nvarchar(** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Rule_name**|**nvarchar(** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Sortierung**|**sysname**|Sortierung des Datentyps. NULL für Nicht-Zeichen-Datentypen|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Spaltenname**|**nvarchar(** 128 **)**|Name der Spalte.|  
         |**Typ**|**nvarchar(** 128 **)**|Datentyp der Spalte.|  
-        |**Computed**|**varchar(** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: "Yes" oder "No".|  
+        |**Computed**|**varchar(** 35 **)**|Gibt an, ob die Werte in der Spalte berechnet werden: Ja oder nein.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**), wird der Wert als-1 angezeigt.|  
         |**prec**|**char(** 5 **)**|Spaltengenauigkeit|  
         |**Dezimalstellen**|**char(** 5 **)**|Dezimalstellen einer Spalte|  
-        |**NULL zulassen**|**varchar(** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: "Yes" oder "No".|  
+        |**NULL zulassen**|**varchar(** 35 **)**|Gibt an, ob NULL-Werte in der Spalte zulässig sind: Ja oder nein.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
         |**Sortierung**|**sysname**|Sortierung der Spalte. NULL für Nicht-Zeichen-Datentypen.|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Die Dateigruppe, in der sich die Daten befinden: primäre oder sekundäre Dateigruppe oder Transaktionsprotokoll|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Dateigruppe, in dem die Daten gespeichert sind: Primär, sekundär oder Transaktionsprotokoll.|  
   
     -   Zusätzliches Resultset, das für Indizes zurückgegeben wird:  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Einschränkungstyp|  
         |**constraint_name**|**nvarchar(** 128 **)**|Der Name der Einschränkung.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Zeigt den Wert der DELETE-Aktion an: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder N/A.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
-        |**update_action**|**nvarchar(** 9 **)**|Zeigt den Wert der UPDATE-Aktion an: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder N/A.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
-        |**status_enabled**|**varchar(** 8 **)**|Zeigt an, ob die Einschränkung aktiviert ist: Enabled (aktiviert), Disabled (deaktiviert) oder N/A (NV).<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
+        |**delete_action**|**nvarchar(** 9 **)**|Gibt an, ob die DELETE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
+        |**update_action**|**nvarchar(** 9 **)**|Gibt an, ob die UPDATE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
+        |**status_enabled**|**varchar(** 8 **)**|Gibt an, ob die Einschränkung aktiviert ist: Aktiviert, deaktiviert oder n/v.<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
         |**status_for_replication**|**Varchar (** 19 **)**|Zeigt an, ob die Einschränkung für die Replikation gilt.<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Die Namen der Spalten für die Einschränkung oder bei Standards und Regeln der Text, der den Standard oder die Regel definiert.|  
   

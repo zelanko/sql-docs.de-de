@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004697"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47735778"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**< geerbte Spalten >**||Erbt Spalten von [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**Website**|**nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
+|**site**|**nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
 |**url_path**|**nvarchar(4000)**|Nur den Pfad betreffender Teil der URL für diesen HTTP-Endpunkt, wie in der PATH =-Option angegeben.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR PORT ist mithilfe der PORT = CLEAR-Option aktiviert.|  
-|**CLEAR_PORT**|**int**|Die in der CLEAR PORT =-Option angegebene Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  
+|**clear_port**|**int**|Die in der CLEAR PORT =-Option angegebene Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  
 |**is_ssl_port_enabled**|**bit**|1 = SSL PORT ist mithilfe der PORT = SSL-Option aktiviert.|  
-|**SSL_PORT**|**int**|Der in der SSL PORT =-Option angegebene Wert für die Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  
+|**ssl_port**|**int**|Der in der SSL PORT =-Option angegebene Wert für die Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  
 |**is_anonymous_enabled**|**bit**|1 = Anonymer Zugriff ist mithilfe der AUTHENTICATION = ANONYMOUS-Option aktiviert.|  
 |**is_basic_auth_enabled**|**bit**|1 = Standardauthentifizierung ist mithilfe der AUTHENTICATION = BASIC-Option aktiviert.|  
 |**is_digest_auth_enabled**|**bit**|1 = Digestauthentifizierung ist mithilfe der AUTHENTICATION = DIGEST-Option aktiviert.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47735778"
 |**is_ntlm_auth_enabled**|**bit**|1 = Integrierte Authentifizierung ist mithilfe der AUTHENTICATION = NTLM-Option aktiviert.|  
 |**is_integrated_auth_enabled**|**bit**|1 = Integrierte Authentifizierung ist mithilfe der AUTHENTICATION = INTEGRATED-Option aktiviert.|  
 |**authorization_realm**|**nvarchar(128)**|Hinweis, der als Teil der HTTP-Digestauthentifizierungsabfrage an den Client zurückgegeben wird. Der Wert der AUTH REALM-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Digestauthentifizierung deaktiviert ist.|  
-|**DEFAULT_LOGON_DOMAIN**|**nvarchar(128)**|Standardanmeldedomäne, wenn die Standardauthentifizierung aktiviert wird. Der Wert der DEFAULT LOGON DOMAIN-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Standardauthentifizierung deaktiviert ist.|  
+|**default_logon_domain**|**nvarchar(128)**|Standardanmeldedomäne, wenn die Standardauthentifizierung aktiviert wird. Der Wert der DEFAULT LOGON DOMAIN-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Standardauthentifizierung deaktiviert ist.|  
 |**is_compression_enabled**|**bit**|1 = Die COMPRESSION = ENABLED-Option ist festgelegt.|  
   
 ## <a name="permissions"></a>Berechtigungen  

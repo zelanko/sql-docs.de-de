@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917084"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
   Mithilfe dieser Seite können Sie Optionen für die ausgewählte Datenbank anzeigen und ändern. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -27,7 +27,7 @@ ms.locfileid: "52774422"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eine der folgenden Modelle für die Wiederherstellung der Datenbank: **Vollständige**, **massenprotokollierten**, oder **einfache**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Full** (Vollständig), **Bulk-Logged** (Massenprotokolliert) oder **Simple** (Einfach). Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte sind  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** und **SQL Server 2008 (100)**. Wenn eine SQL Server 2005-Datenbank auf SQL Server 2014 aktualisiert wird, wird der Kompatibilitätsgrad für die Datenbank von 90 in 100 geändert.  Der Kompatibilitätsgrad 90 wird in SQL Server 2014 nicht unterstützt. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -93,7 +93,7 @@ ms.locfileid: "52774422"
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten in FileTables gespeichert sind: **OFF**, **READ_ONLY**, oder **vollständige**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in Dateitabellen gespeichert sind: **OFF**, **READ_ONLY** oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
  **ANSI NULL Default**  

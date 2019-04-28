@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733607"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -190,7 +190,7 @@ ms.locfileid: "48197330"
 |---------------|----------------------------|  
 |Modellstamm (1)|Immer 0.|  
 |Knoten für Randstatistik (26)|Ein beliebiger ID-Wert.|  
-|Vorhersagbares Attribut (9)|Hexadezimalzahl beginnend mit 10000000<br /><br /> Beispiel: 100000001, 10000000b|  
+|Vorhersagbares Attribut (9)|Hexadezimalzahl beginnend mit 10000000<br /><br /> Beispiel: 100000001, 10000000 b|  
 |Eingabeattribut (10)|Eine zweiteilige Hexadezimalzahl, wobei der erste Teil immer 20000000 ist und der zweite Teil mit dem Hexadezimalbezeichner für das verknüpfte vorhersagbare Attribut beginnt.<br /><br /> Beispiel: 20000000b00000000<br /><br /> In diesem Fall ist das verknüpfte vorhersagbare Attribut 10000000b.|  
 |Eingabeattributstatus (11)|Eine dreiteilige Hexadezimalzahl, wobei der erste Teil immer 30000000 ist, der zweite Teil mit dem Hexadezimalbezeichner des verknüpften vorhersagbaren Attributs beginnt und der dritte Teil den Bezeichner des Werts darstellt.<br /><br /> Beispiel: 30000000b00000000200000000<br /><br /> In diesem Fall ist das verknüpfte vorhersagbare Attribut 10000000b.|  
   
@@ -264,12 +264,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- Bei diesen Ergebnissen gibt der Wert der SUPPORT-Spalte Aufschluss über die Anzahl der Kunden mit dem festgelegten Familienstand, die ein Fahrrad gekauft haben. Die Spalte PROBABILITY enthält die ausschließlich für diesen Knoten berechnete Wahrscheinlichkeit eines jeden Attributwerts. Allgemeine Definitionen von Begriffen, die in der NODE_DISTRIBUTION-Tabelle verwendet werden, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Bei diesen Ergebnissen gibt der Wert der SUPPORT-Spalte Aufschluss über die Anzahl der Kunden mit dem festgelegten Familienstand, die ein Fahrrad gekauft haben. Die Spalte PROBABILITY enthält die ausschließlich für diesen Knoten berechnete Wahrscheinlichkeit eines jeden Attributwerts. Allgemeine Definitionen von Begriffen, die in der NODE_DISTRIBUTION-Tabelle verwendet werden, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informationen im Knoten für Randstatistik  
  In einem Naive Bayes-Modell enthält die geschachtelte Tabelle für den Knoten für die Randstatistik die Verteilung der Werte für den gesamten Satz an Trainingsdaten. Beispielsweise enthält die folgende Tabelle eine Teilliste der Statistiken in der geschachtelten NODE_DISTRIBUTION-Tabelle für das Modell `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -286,12 +286,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  In einem Naive Bayes-Modell kann es keine kontinuierlichen Attribute geben. Daher werden alle numerischen Daten entweder als diskret (VALUE_TYPE = 4) oder diskretisiert (VALUE_TYPE = 5) dargestellt.  
   
- Ein `Missing` Wert (VALUE_TYPE = 1) wird jedem hinzugefügt Eingabe- und um potenzielle Werte darzustellen, die nicht in den Trainingsdaten vorhanden waren. Achten Sie zur Unterscheidung zwischen "missing" eine Zeichenfolge und dem Standardwert `Missing` Wert. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Ein `Missing`-Wert (VALUE_TYPE = 1) wird jedem Eingabe- und Ausgabeattribut hinzugefügt, um potenzielle Werte darzustellen, die in den Trainingsdaten nicht vorhanden waren. Es ist zwischen der Zeichenfolge "Missing" und dem Standardwert `Missing` zu unterscheiden. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Datamining-Modell-Viewer](data-mining-model-viewers.md)   
- [Datamining-Abfragen](data-mining-queries.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining-Modell-Viewer](data-mining-model-viewers.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)   
  [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)  
   
   

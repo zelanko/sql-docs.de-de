@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019998"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145915"
  Deaktivieren Sie die verzögerte Aggregationsverarbeitung, falls sie auf dem Quellserver verwendet wird. Im Hintergrund verarbeitete Aggregationen können die Datenbanksynchronisierung beeinträchtigen. Weitere Informationen zum Festlegen dieser Servereigenschaft finden Sie unter [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, wenn die Synchronisierung jedoch zu langsam verläuft, sollten Sie die parallele Synchronisierung mehrerer Server in Betracht ziehen, die im technischen Artikel [Bewährte Methoden für die Synchronisierung in Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136)beschrieben wird.  
+>  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, aber wenn die Synchronisierung zu langsam verläuft, sollten Sie Synchronisierung mehrerer Server gleichzeitig, wie im technischen Artikel beschrieben: [Bewährte Methoden für die Synchronisierung von Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Assistent zum Synchronisieren einer Datenbank  
  Verwenden Sie den Assistenten zum Synchronisieren einer Datenbank, um eine unidirektionale Synchronisierung von einer Quell- zu einer Zieldatenbank auszuführen oder um ein Skript zu generieren, in dem ein Datenbanksynchronisierungsvorgang angegeben ist. Während des Synchronisierungsvorgangs können Sie sowohl lokale als auch Remotepartitionen synchronisieren und auswählen, ob Rollen eingeschlossen werden sollen.  

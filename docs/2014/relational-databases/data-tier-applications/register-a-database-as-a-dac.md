@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918131"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
   Verwenden Sie entweder die **Datenebenen-Assistenten zum Registrieren von** oder ein Windows PowerShell-Skript, um eine Definition der von datenebenenanwendungen (DACs) zu erstellen, die die Objekte in einer vorhandenen Datenbank beschreibt, und registrieren die DAC-Definition in der `msdb` -Systemdatenbank (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **So aktualisieren Sie eine DAC mit:**  [Die Assistenten zum Registrieren von datenebenenanwendungen](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **So aktualisieren Sie eine DAC:**  [dem Assistenten zum Registrieren von Datenschichtanwendungen](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Registrierungsprozess wird eine DAC-Definition erstellt, die die Objekte in der Datenbank definiert. Eine DAC-Instanz setzt sich aus der Kombination von DAC-Definition und Datenbank zusammen. Bei der Registrierung einer Datenbank als DAC in einer verwalteten Instanz der Datenbank-Engine wird die registrierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  

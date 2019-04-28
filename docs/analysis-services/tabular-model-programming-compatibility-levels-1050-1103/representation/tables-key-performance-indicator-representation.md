@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019325"
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabellen – Key Performance Indicator-Darstellung (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular-Beispiel  
- Um einen Einblick in die Verwendung von AMO zur Erstellung und Bearbeitung von KPI-Darstellungen zu gewinnen, können Sie den Quellcode im AMO2Tabular-Beispiel einsehen; prüfen Sie insbesondere die folgende Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
+ Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator können Sie Darstellungen des Quellcodes der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   

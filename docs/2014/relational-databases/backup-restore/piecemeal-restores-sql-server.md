@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876080"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
   Dieses Thema ist nur für Datenbanken in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant, die mehrere Dateien oder Dateigruppen enthalten, und unter dem einfachen Modell nur für schreibgeschützte Dateigruppen.  
@@ -119,7 +119,7 @@ ms.locfileid: "48057768"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48057768"
   
 -   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Vollständiges Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;Vollständiges Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;vollständiges Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Ausführen einer schrittweisen Wiederherstellung einer Datenbank, deren Wiederherstellungsmodell von einfach in vollständig geändert wurde  
  Sie können eine schrittweise Wiederherstellung einer Datenbank ausführen, bei der nach der vollständigen Teil- oder Datenbanksicherung vom einfachen Wiederherstellungsmodell zum vollständigen Wiederherstellungsmodell gewechselt wurde. Angenommen, Sie führen in einer Datenbank die folgenden Schritte aus:  

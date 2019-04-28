@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015881"
 ---
 # <a name="modify-a-stored-procedure"></a>Ändern einer gespeicherten Prozedur
     
 ##  <a name="Top"></a> In diesem Thema wird beschrieben, wie eine gespeicherte Prozedur mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert wird.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
   
--   **So ändern Sie eine Prozedur mithilfe von:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **So ändern Sie eine Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   

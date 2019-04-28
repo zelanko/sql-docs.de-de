@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 636b2f541ebd5d3624e205a3442cf1618cdf78a6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028167"
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand-Methode
 Gibt den zugrunde liegenden OLE DB-Befehl, Weitergabe zuerst alle Parameterinformationen, legen Sie für die ADO-Befehl aus, um den OLE DB-Befehl.  

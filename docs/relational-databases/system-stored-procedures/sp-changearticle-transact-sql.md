@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997952"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|Repliziert die Sortierung auf Spaltenebene.|  
 ||**0x2000**|Repliziert erweiterte Eigenschaften, die dem Quellobjekt des veröffentlichten Artikels zugeordnet sind.|  
 ||**0x4000**|Repliziert eindeutige Schlüssel, wenn auf einem Tabellenartikel definiert.|  
-||**0x8000**|Repliziert den Primärschlüssel und eindeutige Schlüssel eines Tabellenartikels als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Hinweis: Diese Option wurde als veraltet markiert. Verwendung **0 x 80** und **0 x 4000** stattdessen.|  
+||**0x8000**|Repliziert den Primärschlüssel und eindeutige Schlüssel eines Tabellenartikels als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Hinweis: Diese Option ist veraltet. Verwendung **0 x 80** und **0 x 4000** stattdessen.|  
 ||**0x10000**|Repliziert CHECK-Einschränkungen als NOT FOR REPLICATION, sodass die Einschränkungen während der Synchronisierung nicht erzwungen werden.|  
 ||**0x20000**|Repliziert FOREIGN KEY-Einschränkungen als NOT FOR REPLICATION, sodass diese Einschränkungen bei der Synchronisierung nicht erzwungen werden.|  
 ||**0x40000**|Repliziert Dateigruppen, die mit einer partitionierten Tabelle oder einem Index verbunden sind.|  

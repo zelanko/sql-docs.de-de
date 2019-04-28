@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020743"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator und SSRS)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015772"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
   Wenn Sie ein vorhandenes SQL-Ablaufverfolgungsskript haben, das Sie in eine Sitzung für erweiterte Ereignisse konvertieren möchten, können Sie die Vorgehensweisen in diesem Thema verwenden, um eine entsprechende Sitzung für erweiterte Ereignisse zu erstellen. Mit den Informationen in den Systemtabellen „trace_xe_action_map“ und „trace_xe_event_map“ können Sie die Informationen sammeln, die für die Konvertierung erforderlich sind.  

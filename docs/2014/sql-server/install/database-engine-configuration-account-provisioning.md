@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69885ad9affb87ea160231fa6f6d42d0fef7ea6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987922"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Konfiguration der Datenbank-Engine - Kontobereitstellung
   Auf dieser Seite können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodus festlegen und Windows-Benutzer oder -Gruppen als Administratoren von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]hinzufügen.  
@@ -24,7 +24,7 @@ ms.locfileid: "48099050"
 ## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Überlegungen für das Ausführen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wurde die Gruppe **BUILTIN\Administrators** für die Anmeldung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] bereitgestellt, und Mitglieder der lokalen Administratorgruppe konnten sich mit ihren Administratoranmeldeinformationen anmelden. Die Verwendung von erhöhten Berechtigungen ist keine bewährte Vorgehensweise. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die Gruppe **BUILTIN\Administrators** nicht für die Anmeldung bereitgestellt. Daher sollten Sie für jeden Administratorbenutzer eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung erstellen und diese während der Installation einer neuen Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]der festen Serverrolle sysadmin hinzufügen. Gehen Sie genauso für Windows-Konten vor, die zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen verwendet werden. Dies schließt auch Replikations-Agent-Aufträge ein.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Sicherheitsmodus** – Wählen Sie Windows-Authentifizierung oder die Authentifizierung im gemischten Modus für die Installation aus.  
   
  **Windows-Prinzipal-Bereitstellung** – In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befand sich die lokale Windows-Gruppe Vordefiniert\Administrator in der sysadmin-Serverrolle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wodurch die Windows-Administratoren effektiv Zugriff auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erhielten. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Gruppe Vordefiniert\Administrator nicht in der Sysadmin-Serverrolle bereitgestellt. Stattdessen sollten Sie während des Setups explizit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren für Neuinstallationen festlegen.  

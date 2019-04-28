@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874441"
 ---
 # <a name="clr-user-defined-types"></a>Benutzerdefinierte CLR-Typen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen von Datenbankobjekten, die für eine Assembly programmiert sind, die in der CLR (Common Language Runtime) von .NET Framework erstellt wurde. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  

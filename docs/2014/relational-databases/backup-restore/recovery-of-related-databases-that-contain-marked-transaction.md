@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875713"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
   Dieses Thema ist nur für Datenbanken relevant, die markierte Transaktionen enthalten und von denen das vollständige oder massenprotokollierte Wiederherstellungsmodell verwendet wird.  
@@ -54,7 +54,7 @@ ms.locfileid: "48187140"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- Das Transaktionsprotokoll zeichnet der Markierungsname (Transaktionsname), die Beschreibung, die Datenbank, die Benutzer `datetime` Informationen und die protokollfolgenummer (LSN). Die `datetime` Informationen werden mit dem Markierungsnamen zur eindeutigen Identifizierung die Markierung verwendet.  
+ Mit dem Transaktionsprotokoll werden der Markierungsname (Transaktionsname), die Beschreibung, die Datenbank, der Benutzer, `datetime`-Informationen und die Protokollfolgenummer (LSN, Log Sequence Number) aufgezeichnet. Die `datetime`-Informationen werden zusammen mit dem Markierungsnamen für die eindeutige Identifizierung der Markierung verwendet.  
   
  Informationen zum Einfügen einer Markierung in eine Transaktion, die mehrere Datenbanken umfasst, finden Sie unter [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;vollständiges Wiederherstellungsmodell&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   

@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843690"
 ---
 # <a name="query-options-results-grid-page"></a>Abfrageergebnis (Seite Ergebnisse in Raster)
   Mithilfe dieser Seite können Sie die Anzeigeoptionen für Abfrageresultsets angeben, die im Rasterformat ausgegeben werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Abfrage in das Resultset einschließen**  
  Gibt den Text der Abfrage als Teil des Resultsets zurück.  
   

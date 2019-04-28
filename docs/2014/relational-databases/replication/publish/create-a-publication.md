@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022506"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
@@ -31,7 +31,7 @@ ms.locfileid: "53365967"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Veröffentlichung und definieren Artikel mit:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53365967"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ", \, /, \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
+-   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
 ###  <a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  

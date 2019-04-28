@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871955"
 ---
 # <a name="detach-a-database"></a>Trennen einer Datenbank
   In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]getrennt wird. Die getrennten Dateien bleiben gespeichert und können mithilfe von CREATE DATABASE (mit der FOR ATTACH- oder FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "54134640"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So trennen Sie eine Datenbank mit**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54134640"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner".  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>So trennen Sie eine Datenbank  
   
@@ -78,14 +78,14 @@ ms.locfileid: "54134640"
      Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
-     Zeigt einen der folgenden Status an: **Bereit** oder **nicht bereit**.  
+     Zeigt einen der folgenden Zustände: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
   
      **MessageBox**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_**Aktive Verbindung(en)** - zum Beispiel: **1 aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_**Aktive Verbindung(en)** - zum Beispiel: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 09797eac229a4b3b92f94a60b6e1c06c9ec12f08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919502"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Behandlung von LOB-Parametern (Large Object) in der CLR-Routine
   Verwenden Sie `SqlBytes` und `SqlChars`, um binäre LOB-Parameter (`varbinary(max)`) bzw. LOB-Zeichenparameter (`nvarchar(max)`) zu übergeben. Mithilfe dieser Parameter können die LOB-Werte von der Datenbank an die CLR-Routine (Common Language Runtime) in einem Strom übergeben werden, sodass nicht der gesamte Wert in einen verwalteten Bereich kopiert werden muss. `SqlBinary` und `SqlString` dürden nur für kleine Binär- und Zeichenfolgenwerte verwendet werden.  

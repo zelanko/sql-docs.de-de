@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926311"
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
   Attribute sind Objekte, die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Entitäten enthalten sind. Attributwerte beschreiben die Elemente der Entität. Ein Attribut kann verwendet werden, um ein Blattelement, ein konsolidiertes Element oder eine Auflistung zu beschreiben.  
@@ -58,7 +58,7 @@ ms.locfileid: "52748062"
 -   Bei einem mithilfe von Gleitkommazahlen berechneten Wert liefert eine *Gegenprobe* möglicherweise ein abweichendes Ergebnis. Der Begriff Roundtrip wird in Bezug auf einen Wert verwendet, wenn ein Vorgang eine ursprüngliche Gleitkommazahl in ein anderes Format konvertiert, ein umgekehrter Vorgang das konvertierte Format zurück zu einer Gleitkommazahl überträgt und die endgültige Gleitkommazahl mit der ursprünglichen Gleitkommazahl übereinstimmt. Der Roundtrip kann fehlschlagen, wenn eine oder mehrere Ziffern am Ende des Werts bei der Konvertierung verloren gehen oder geändert werden.  
   
 ## <a name="attribute-examples"></a>Attributbeispiele  
- Im folgenden Beispiel verfügt die Entität über die Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Im folgenden Beispiel weist die Entität die folgenden Attribute auf: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
  ![Entitätstabelle für Fahrradprodukte](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   

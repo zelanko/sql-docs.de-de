@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733459"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Clustering-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48190280"
 > [!NOTE]  
 >  Die Varianz repräsentiert die Gesamtvarianz des Clusters. Wenn der Varianzwert klein ist, bedeutet dies, dass die meisten Werte der Spalte relativ nah am Mittelwert liegen. Um die Standardabweichung zu erhalten, berechnen Sie die Quadratwurzel der Varianz.  
   
- Beachten Sie, dass für jedes Attribut einer `Missing` Werttyp, der anzeigt, wie vielen Fällen keine Daten für das Attribut gegeben war. Fehlende Daten können signifikant sein und die Berechnungen je nach Datentyp auf verschiedene Weise beeinflussen. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Beachten Sie, dass jedes Attribut den Werttyp `Missing` enthält, der anzeigt, in wie vielen Fällen kein Wert für das Attribut gegeben war. Fehlende Daten können signifikant sein und die Berechnungen je nach Datentyp auf verschiedene Weise beeinflussen. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)vordefinierten Modellierungsflags können Plug-Ins eines Drittanbieters über eigene Modellierungsflags verfügen.  
   
 ## <a name="model-content-for-a-clustering-model"></a>Modellinhalt eines Clusteringmodells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Clusteringmodelle relevant sind.  
@@ -149,7 +149,7 @@ ms.locfileid: "48190280"
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung. Diese Beschriftung kann nicht geändert werden.  
   
- **Übergeordneter Knoten** Der Typ des Modells: Clusteringmodell.  
+ **Übergeordneter Knoten** vom Typ des Modells: Clustermodell  
   
  **Clusterknoten** Der Name des Clusters. Beispiel: Cluster 1.  
   
@@ -160,8 +160,8 @@ ms.locfileid: "48190280"
 >  Struktur und Inhalt des Modells werden weder durch die verwendete Clusteringmethode noch die Parameter beeinflusst.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Datamining-Modell-Viewer](data-mining-model-viewers.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining-Modell-Viewer](data-mining-model-viewers.md)   
  [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   

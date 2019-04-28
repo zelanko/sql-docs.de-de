@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889213"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -49,7 +49,7 @@ ms.locfileid: "58393638"
   
 -   [Sonstiges](#Misc)  
   
--   [Sicherheit](#Security)  
+-   [Security](#Security)  
   
 -   [Transaktionen](#Transactions)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "58393638"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |`Configurations`|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
-|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften dieses Objektmodells erstellen, nicht nur für die im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)**, um einen Ausdruck zu ändern und auszuwerten.|  
+|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften erstellen, die Objekt-Modell enthält, nicht nur im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)**, um einen Ausdruck zu ändern und auszuwerten.|  
 |`ForceExecutionResult`|Das Ausführungsergebnis des Pakets. Mögliche Werte sind `None`, `Success`, `Failure` und `Completion`. Der Standardwert dieser Eigenschaft ist `None`. Weitere Informationen finden Sie unter T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.|  
 |`LoggingMode`|Ein Wert, der das Protokollierungsverhalten des Pakets angibt. Mögliche Werte sind `Disabled`, `Enabled` und `UseParentSetting`. Der Standardwert dieser Eigenschaft ist `UseParentSetting`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
@@ -139,7 +139,7 @@ ms.locfileid: "58393638"
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`. installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert der von einem untergeordneten Container angeforderten `IsolationLevel`-Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Der `Snapshot`-Wert der `IsolationLevel`-Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Daher können Sie die `IsolationLevel`-Eigenschaft nicht verwenden, um die Isolationsstufe von Pakettransaktionen auf `Shapshot` festzulegen. Verwenden Sie stattdessen eine SQL-Abfrage, um Pakettransaktionen auf `Snapshot` festzulegen. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`. installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert der von einem untergeordneten Container angeforderten `IsolationLevel`-Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Die `Snapshot` Wert, der die `IsolationLevel` -Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Daher können Sie die `IsolationLevel`-Eigenschaft nicht verwenden, um die Isolationsstufe von Pakettransaktionen auf `Shapshot` festzulegen. Verwenden Sie stattdessen eine SQL-Abfrage, um Pakettransaktionen auf `Snapshot` festzulegen. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte sind `NotSupported`, `Supported`, `Required`. Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Version  

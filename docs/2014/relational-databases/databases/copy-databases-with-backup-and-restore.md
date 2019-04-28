@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917467"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie eine neue Datenbank erstellen, indem Sie die Sicherung einer Benutzerdatenbank wiederherstellen, die mithilfe von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version erstellt wurde. Sicherungen der **master**-, **model** - und **msdb** -Datenbank, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht wiederhergestellt werden. Außerdem können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Sicherungen nicht mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden.  

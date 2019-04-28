@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011650"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Übersicht über die SQL Server-Wartungsinstallation
   Sie können ein Update auf eine beliebige vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Komponente mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Wartungsupdate anwenden. Wenn die Versionsebene einer vorhandenen Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neuer ist als die Versionsebene des Updates, schließt das Setupprogramm diese Komponente vom Update aus. Weitere Informationen zur Anwendung eines Wartungsupdates aktualisieren, finden Sie unter [installieren Sie SQL Server 2014-Wartungsupdates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53369062"
 ## <a name="requirements-and-known-issues"></a>Anforderungen und bekannte Probleme  
  Der empfohlene erforderliche Speicherplatz beträgt etwa das 2,5-fache der Paketgröße, um das Paket installieren, herunterladen und extrahieren zu können. Nach dem Installieren eines Service Packs können Sie das heruntergeladene Paket entfernen. Die temporären Dateien werden automatisch entfernt.  
   
- **Überprüfen Sie die bekannten Probleme:** Weitere Informationen zu den bekannten Problemen in der aktuellen Version entnehmen Sie bitte den entsprechenden Versionshinweisen unter: [Versionsanmerkungen zu SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Überprüfen Sie die bekannten Probleme:** Weitere Informationen zu den bekannten Problemen für die aktuelle Version finden Sie unter den entsprechenden Versionshinweisen: [Versionsanmerkungen zu SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Übersicht über die Installation  
  In diesem Abschnitt wird die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installation für kumulierte Updates und Service Packs einschließlich der folgenden Themen beschrieben:  
@@ -88,15 +88,15 @@ ms.locfileid: "53369062"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Starten eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Updates  
  Um ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Update zu installieren, führen Sie die selbst extrahierende Paketdatei aus.  
   
- Kumulatives Updatepaket (CU): \<SQLServer2014 > - KBxxxxxx -*PPP*.exe  
+ Kumulatives Updatepaket (CU): \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Service Pack-Paket (PCU): \<SQLServer2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
+ Service Pack-Paket (PCU): \<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x gibt die Nummer des Service Packs an.  
   
 -   PPP gibt die spezifische Plattform an.  
   
--   "LLL" steht für die Abkürzung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprache, z. B. "ENU" im Fall von Englisch.  
+-   LLL gibt die Abkürzung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sprache, z. B.: LLL für Englisch ist ENU.  
   
  Informationen zum Anwenden von Updates auf Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], die Teil eines Failoverclusters sind, finden Sie im Abschnitt zur Failoverclusterinstallation. Weitere Informationen über das Ausführen einer Updateinstallation im unbeaufsichtigten Modus finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

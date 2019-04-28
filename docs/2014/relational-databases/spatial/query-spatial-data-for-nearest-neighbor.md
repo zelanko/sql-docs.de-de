@@ -10,11 +10,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025809"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
   Eine häufig für räumliche Daten verwendete Abfrage ist die Nächster Nachbar-Abfrage. Mithilfe von Nächster Nachbar-Abfragen werden die räumlichen Objekte gesucht, die einem bestimmten räumlichen Objekt am nächsten liegen. Beispielsweise muss von einer Filialsuche auf einer Website häufig die Filiale bestimmt werden, die dem Standort des Kunden am nächsten liegt.  

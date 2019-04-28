@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836451"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Analysis Services)
   Auf der Seite **Analysis Services** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verbindungs-Manager angeben, die zu verarbeitenden Analyseobjekte auswählen und die Verarbeitungs- und Fehlerbehandlungsoptionen festlegen.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380898"
  **Neu**  
  Erstellen Sie einen neuen Analysis Services-Verbindungs-Manager.  
   
- **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md), [Analysis Services-Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
  |Eigenschaft|Description|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380898"
  **Auswirkungsanalyse**  
  Führen Sie für das ausgewählte Objekt eine Auswirkungsanalyse aus.  
   
- **Verwandte Themen:** [Auswirkungen auf die im Dialogfeld Analyse &#40;Analysis Services – mehrdimensionale Daten&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Zusammenfassung der Batcheinstellungen**  
  |Eigenschaft|Description|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380898"
  **Einstellungen ändern**  
  Ändern Sie die Verarbeitungsoptionen und die Fehlerbehandlung bei Dimensionsschlüsseln.  
   
- **Verwandte Themen:** [Ändern Sie im Dialogfeld Einstellungen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Verwandte Themen:** [Dialogfeld „Einstellungen ändern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

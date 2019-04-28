@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912185"
 ---
 # <a name="state-property-sqlservice-class"></a>State-Eigenschaft (SqlService-Klasse)
   Ruft den aktuellen Zustand des Diensts ab oder legt diesen fest.  

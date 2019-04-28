@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892658"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -375,7 +375,7 @@ ms.locfileid: "58394588"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Fehler 0x%1!8.8X! beim Vorbereiten zum Laden des Pakets. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|Fehler bei der Validate-Methode für den Task. Der Fehlercode 0x%1!8.8X! (%2) wurde zurückgegeben. Die Validate-Methode muss erfolgreich sein und das Ergebnis mithilfe eines Ausgabeparameters anzeigen.|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|Die Execute-Methode für den Task hat den Fehlercode 0x%1!8.8X! (%2) wurde zurückgegeben. Die Execute-Methode muss erfolgreich sein und das Ergebnis mithilfe eines Ausgabeparameters anzeigen.|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Task "%1" ist ein Fehler aufgetreten: 0x%2!8.8X! beim Abrufen von Abhängigkeiten. Die Laufzeitumgebung hat Abhängigkeiten von der Abhängigkeitsauflistung des Tasks abgerufen, als der Fehler auftrat. Möglicherweise hat der Task eine der Abhängigkeitsschnittstellen falsch implementiert.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Fehler beim Task „%1“: 0x%2!8.8X! beim Abrufen von Abhängigkeiten. Die Laufzeitumgebung hat Abhängigkeiten von der Abhängigkeitsauflistung des Tasks abgerufen, als der Fehler auftrat. Möglicherweise hat der Task eine der Abhängigkeitsschnittstellen falsch implementiert.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Fehler bei der Tasküberprüfung.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|Ungültiges Format der Verbindungszeichenfolge. Sie muss aus mindestens einer Komponente im Format X=Y bestehen, getrennt durch Semikolons. Dieser Fehler tritt auf, wenn im Datenbankverbindungs-Manager eine Verbindungszeichenfolge mit 0 (null) Komponenten festgelegt wird.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Die Komponenten der Verbindungszeichenfolge dürfen keine Semikolons ohne Anführungszeichen enthalten. Falls für den Wert ein Semikolon erforderlich ist, schließen Sie den gesamten Wert in Anführungszeichen ein. Dieser Fehler tritt auf, wenn Werte in der Verbindungszeichenfolge Semikolons ohne Anführungszeichen enthalten, z. B. die InitialCatalog-Eigenschaft.|  
@@ -568,7 +568,7 @@ ms.locfileid: "58394588"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|Die angegebene Skriptsprache ist ungültig.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Der Einstiegspunkt wurde nicht gefunden.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|Die Skriptsprache ist nicht angegeben. Überprüfen Sie, ob eine gültige Skriptsprache angegeben wurde.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisierung der Benutzeroberfläche: Der Task ist null.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisierung der Benutzeroberfläche: Der Task ist NULL.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|Die Skripttask-Benutzeroberfläche ist mit einem falschen Task initialisiert.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|Ein Empfänger wurde nicht angegeben.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|Der SMTP (Simple Mail Transfer Protocol)-Server ist nicht angegeben. Stellen Sie einen gültigen Namen oder eine gültige IP-Adresse für den SMTP-Server bereit.|  
@@ -789,7 +789,7 @@ ms.locfileid: "58394588"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Mindestens eine Quelldatei muss angegeben werden.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Die Datei "%1" wurde in der "%2"-Quelldatenbank nicht gefunden.|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|Der angeforderte Vorgang ist in mit U.S. FIPS 140-2 konformen Systemen unzulässig. FIPS 140-2 kompatiblen Systemen unzulässig.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Fehler beim Ausführen der Abfrage "%1": "%2". Mögliche Ursachen: Probleme mit der Abfrage "ResultSet"-Eigenschaft nicht ordnungsgemäß festgelegt, nicht richtig festgelegte Parameter oder nicht richtig hergestellte Verbindung.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Fehler beim Ausführen der Abfrage "%1": "%2". Mögliche Fehlerursachen: Probleme bei der Abfrage, nicht richtig festgelegte „ResultSet“-Eigenschaft, nicht richtig festgelegte Parameter oder nicht richtig hergestellte Verbindung.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Fehler beim Lesen der Namen gespeicherter Prozeduren aus der XML-Datei.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Ungültiger Datenknoten für den Task Gespeicherte Prozeduren übertragen.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|Die Verbindung "%1" ist nicht vom Typ "SMOServer".|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "58394588"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Der Wert %1!d! , der für den scale-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, liegt außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen muss zwischen %3!d! und „%4!d!“ liegen. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und darf nicht negativ sein.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Der Wert %1!d! , der für den length-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, ist negativ und deshalb ungültig. Der Wert für die Länge muss positiv sein.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 kann kein negativer Wert zugewiesen werden.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Datentyp der Spalte muss eine der folgenden sein:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, or DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Folgende Spaltendatentypen sind möglich:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, or DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" kann nicht erneut angefügt werden. Löschen Sie den Pfad, fügen Sie einen neuen Pfad hinzu, und fügen Sie das Objekt an.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|Die %1-Funktion erfordert %2!d!-Parameter, nicht %3!d!-Parameter . Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|Die %1-Funktion erfordert %2!d!-Parameter, Parameter, und nicht %3!d! Parameter auf. Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
@@ -1236,14 +1236,14 @@ ms.locfileid: "58394588"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|Die Transformation für Suche hat eine Abbruchanforderung vom Benutzer erhalten.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Die Verarbeitung von Zeichen oder BLOB-Daten (Binary Large Object) wurde beendet, da das Limit von 4 GB erreicht wurde.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|Die verwaltete Pipelinekomponente "%1" konnte nicht geladen werden.  Die Ausnahme war: %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS-Fehlercode ' dts_e_oledb_excel_not_supported ': Der Excel-Verbindungs-Manager wird in der 64-Bit-Version von SSIS nicht unterstützt, da kein OLE DB-Anbieter verfügbar ist.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS-Fehlercode DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: Der Excel-Verbindungs-Manager wird in der 64-Bit-Version von SSIS nicht unterstützt, da kein OLE DB-Anbieter verfügbar ist.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|Die Cachedatei ist beschädigt, oder die Datei wurde nicht mithilfe des Cacheverbindungs-Managers erstellt.  Stellen Sie eine gültige Cachedatei bereit.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|Der SQL-Befehl wurde nicht richtig festgelegt. Überprüfen Sie die SQLCommand-Eigenschaft.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Informationen zum COM-Fehlerobjekt sind verfügbar.  Quelle: "%1" Fehlercode: 0x%2!8.8X!  Beschreibung: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Informationen zum COM-Fehlerobjekt sind verfügbar.  Quelle: „%1“ Fehlercode: 0x%2!8.8X!  Beschreibung: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Auf die erforderlichen Verbindungen kann nicht zugegriffen werden.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|Die Spaltenanzahl ist falsch.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|Die Spalte "%1" wurde in der Datenquelle nicht gefunden.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Ein OLE DB-Datensatz ist verfügbar.  Quelle: "%1" Hresult: 0x%2!8.8X!  Beschreibung: "%3".|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Ein OLE DB-Datensatz ist verfügbar.  Quelle: „%1“ Hresult: 0x%2!8.8X!  Beschreibung: "%3".|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS-Fehlercode DTS_E_OLEDBERROR.  OLE DB-Fehler. Fehlercode: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|Die Komponente ist bereits verbunden. Die Komponente muss getrennt werden, bevor eine Verbindung mit dieser Komponente hergestellt werden kann.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|Der Wert der Eigenschaft "%1" ist falsch.|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "58394588"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Der Wert "%1" für die Komponente "%2" wurde nicht gefunden. Der CurrentVersion-Wert für die Komponente wurde nicht gefunden. Dieser Fehler tritt auf, wenn in der Komponente für die Registrierungsinformationen kein CurrentVersion-Wert im DTSInfo-Abschnitt festgelegt ist. Die Meldung wird während der Komponentenentwicklung angezeigt, oder wenn die Komponente in einem Paket verwendet wird, wenn die Komponente nicht ordnungsgemäß registriert ist.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Der Puffer-Manager konnte einen temporären Dateinamen nicht abrufen.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Der Puffer-Manager konnte eine temporäre Datei im Pfad "%1" nicht erstellen. Der Pfad wird nicht mehr für den temporären Speicher berücksichtigt.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warnung: Globalen freigegebenen Speicher für die Kommunikation mit dem Leistungs-DLL konnte nicht geöffnet werden. Datenfluss-Leistungsindikatoren sind nicht verfügbar.  Führen Sie dieses Paket als Administrator oder auf der Systemkonsole aus, um dieses Problem zu beheben.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warnung: Der globale freigegebene Speicher konnte nicht geöffnet werden, um mit der Leistungs-DLL zu kommunizieren. Es sind keine Leistungsindikatoren für Datenfluss verfügbar.  Führen Sie dieses Paket als Administrator oder auf der Systemkonsole aus, um dieses Problem zu beheben.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Das Ende der Datei weist eine unvollständige Zeile auf.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|Beim Lesen des Headers wurde das Ende der Datendatei erreicht. Stellen Sie sicher, dass das Kopfzeilentrennzeichen und die Anzahl von auszulassenden Kopfzeilen richtig sind.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Die Codepageinformationen für die Spalte können nicht vom OLE DB-Anbieter abgerufen werden.  Falls die Eigenschaft "%1" von der Komponente unterstützt wird, wird die Codepage dieser Eigenschaft verwendet.  Ändern Sie den Wert der Eigenschaft, falls die aktuellen Codepagewerte falsch sind.  Falls die Eigenschaft nicht von der Komponente unterstützt wird, wird die Codepage des Gebietsschemabezeichners der Komponente verwendet.|  

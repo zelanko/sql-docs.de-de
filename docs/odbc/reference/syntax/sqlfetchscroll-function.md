@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982183"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLFetchScroll** angegebene Rowset von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück. Rowsets können an eine absolute oder relative Position oder durch Lesezeichen angegeben werden.  
@@ -77,7 +77,7 @@ SQLRETURN SQLFetchScroll(
  Die Nummer der Zeile abgerufen. Die Interpretation dieses Arguments hängt des Werts des der *FetchOrientation* Argument. Weitere Informationen finden Sie unter "Positionierung der Cursor" im Abschnitt "Kommentare".  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFetchScroll** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem HandleType von SQL_HANDLE_STMT auf, und ein Handle StatementHandle. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLFetchScroll** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben. Wenn es sich bei Auftreten eines Fehlers in einer einzelnen Spalte **SQLGetDiagField** kann mit einem DiagIdentifier SQL_DIAG_COLUMN_NUMBER auf die Spalte zu bestimmen, der Fehler aufgetreten ist, aufgerufen werden und **SQLGetDiagField** aufgerufen werden kann mit einem DiagIdentifier SQL_DIAG_ROW_NUMBER Bestimmen der Zeile, die diese Spalte enthält.  
@@ -88,9 +88,9 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Zeichenfolgen- oder Binärdaten, die für eine Spalte zurückgegeben, führte das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL. Falls es sich um einen Zeichenfolgenwert handelt, war es, rechts abgeschnitten.|  
-|01 S 01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, kann es ignoriert werden.)|  
+|01S01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, kann es ignoriert werden.)|  
 |01S06|Versucht, Daten abzurufen, bevor das Resultset das erste Rowset zurückgegeben.|Das angeforderte Rowset überlappende Anfang des Resultsets FetchOrientation wurde SQL_FETCH_PRIOR, die aktuelle Position wurde nach der ersten Zeile und die Anzahl der aktuellen Zeile ist kleiner als oder gleich der Rowsetgröße.<br /><br /> Das angeforderte Rowset überlappende Anfang des Resultsets bei FetchOrientation SQL_FETCH_PRIOR war, die aktuelle Position hinter dem Ende des Resultsets wurde und die Rowsetgröße größer als die Größe des Resultsets.<br /><br /> Das angeforderte Rowset überlappende Anfang des Resultsets FetchOrientation wurde SQL_FETCH_RELATIVE, FetchOffset negativ war und der Absolute Wert des FetchOffset war kleiner oder gleich der Rowsetgröße.<br /><br /> Das angeforderte Rowset überlappende Anfang des Resultsets FetchOrientation wurde SQL_FETCH_ABSOLUTE, FetchOffset negativ war und der Absolute Wert des FetchOffset war größer als die Größe des Resultsets, aber kleiner oder gleich der Größe des Rowsets.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset konnte nicht konvertiert werden, um den angegebenen Datentyp *TargetType* in **SQLBindCol**.<br /><br /> Spalte 0 wurde mit dem Datentyp SQL_C_BOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde.<br /><br /> Spalte 0 wurde mit dem Datentyp SQL_C_VARBOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut nicht auf SQL_UB_VARIABLE festgelegt wurde.|  
 |07009|Ungültiger Deskriptorindex|Der Treiber wurde von einer ODBC 2.*.x* Treiber, der nicht unterstützt. **SQLExtendedFetch**, und eine Spaltennummer in der Bindung für eine Spalte angegeben wurde, 0.<br /><br /> Spalte 0 gebunden wurde, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
@@ -195,7 +195,7 @@ SQLRETURN SQLFetchScroll(
 |*BeforeStart und FetchOffset < = 0*|*Vor dem start*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*Vor dem start*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Vor dem start*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<LastResultRow =*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Nach Ende*|  
 |*Nach dem Ende und FetchOffset > = 0*|*Nach Ende*|  
@@ -211,7 +211,7 @@ SQLRETURN SQLFetchScroll(
   
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow und &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Vor dem start*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow und &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Vor dem start*|  
@@ -229,7 +229,7 @@ SQLRETURN SQLFetchScroll(
   
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
-|*Alle*|*1*|  
+|*Any*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  Die folgenden Regeln gelten.  

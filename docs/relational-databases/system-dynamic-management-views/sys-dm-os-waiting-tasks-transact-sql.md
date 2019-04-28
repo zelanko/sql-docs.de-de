@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998003"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47629518"
   
  **Ressourcenbesitzer des Threadpools:**  
   
--   Threadpool-Id = Scheduler\<Hex-Address >  
+-   threadpool id=scheduler\<hex-address>  
   
  **Ressourcenbesitzer der parallelen Abfrage:**  
   
--   ExchangeEvent-Id = {Port | Pipe}\<Hex-Address > Wartetyp =\<Exchange-Wait-Type >-Knoten-ID =\<Exchange-Knoten-Id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange-Wait-Type:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47629518"
   
  **Der Besitzer der Lock-Ressource:**  
   
--   \<Type-Specific-Description > Id = Sperre\<Lock-Hex-Address > Modus =\<Modus > AssociatedObjectId =\<verknüpfte-Obj-Id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<Type-Specific-Description > kann sein:**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47629518"
   
  **Besitzer der allgemeinen Ressource:**  
   
--   TransactionMutex TransactionInfo Arbeitsbereich =\<Arbeitsbereich-Id >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47629518"
   
 -   \<GUID>  
   
--   \<latchklasse > (\<Latch-Address >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Berechtigungen
 

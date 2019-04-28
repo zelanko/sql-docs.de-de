@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 733161f1ec2bf80830316b285e7d488983eaf446
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990116"
 ---
 # <a name="use-the-distributed-replay-utility-to-prepare-for-upgrades"></a>Vorbereiten von Upgrades mit dem Distributed Replay-Hilfsprogramm
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility kann mithilfe mehrerer Computern Wiedergeben von Ablaufverfolgungsdaten und eine unternehmenswichtige arbeitsauslastung simulieren. Durch Ausführen einer Wiedergabe auf einem Testserver vor und nach einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrade können Sie Leistungsunterschiede messen und nach Inkompatibilitäten der Anwendung suchen, die möglicherweise durch das Upgrade verursacht werden. Weitere Informationen finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  

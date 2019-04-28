@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2522 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 2522 (Database Engine error)
 ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
@@ -13,19 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696a7d536dc3fbb64e08ae9ccef21adbc4d9954d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914922"
 ---
 # <a name="mssqlserver2522"></a>MSSQLSERVER_2522
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Details  
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2522|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -33,23 +34,22 @@ ms.locfileid: "48129681"
 |Meldungstext|Der I_NAME-Index der O_NAME-Tabelle kann nicht verarbeitet werden, da die Dateigruppe F_NAME ungültig ist.|  
   
 ## <a name="explanation"></a>Erklärung  
- Diese Informationsmeldung gibt an, dass der Index nicht überprüft werden kann, da eine der Dateigruppen-IDs, die in den Metadaten des Indexes gespeichert ist, nicht vorhanden ist. Die ungültige Dateigruppen-ID bezieht sich möglicherweise auf die Daten selbst, auf die LOB-Daten (Large Object) oder auf die Zeilenüberlaufdaten.  
+Diese Informationsmeldung gibt an, dass der Index nicht überprüft werden kann, da eine der Dateigruppen-IDs, die in den Metadaten des Indexes gespeichert ist, nicht vorhanden ist. Die ungültige Dateigruppen-ID bezieht sich möglicherweise auf die Daten selbst, auf die LOB-Daten (Large Object) oder auf die Zeilenüberlaufdaten.  
   
- Wenn keine Probleme vorhanden sind, werden alle anderen Indizes des gleichen Objekts überprüft.  
+Wenn keine Probleme vorhanden sind, werden alle anderen Indizes des gleichen Objekts überprüft.  
   
 ## <a name="user-action"></a>Benutzeraktion  
   
 ### <a name="look-for-hardware-failure"></a>Hardwarefehlersuche  
- Führen Sie eine Hardwarediagnose aus, und beheben Sie alle Probleme. Überprüfen Sie auch das Systemprotokoll und das Anwendungsprotokoll von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sowie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll, um festzustellen, ob der Fehler aufgrund eines Hardwarefehlers aufgetreten ist. Beheben Sie alle hardwarebedingten Probleme, die in den Protokollen enthalten sind.  
+Führen Sie eine Hardwarediagnose aus, und beheben Sie alle Probleme. Überprüfen Sie auch das Systemprotokoll und das Anwendungsprotokoll von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sowie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll, um festzustellen, ob der Fehler aufgrund eines Hardwarefehlers aufgetreten ist. Beheben Sie alle hardwarebedingten Probleme, die in den Protokollen enthalten sind.  
   
- Lagern Sie verschiedene Hardwarekomponenten aus, um das Problem zu isolieren, falls Beschädigungsprobleme bei permanenten Daten auftreten. Stellen Sie sicher, dass beim System der Schreibcache auf dem Datenträgercontroller nicht aktiviert ist. Wenden Sie sich an Ihren Hardwarehersteller, falls Sie beim Schreibcache das Problem vermuten.  
+Lagern Sie verschiedene Hardwarekomponenten aus, um das Problem zu isolieren, falls Beschädigungsprobleme bei permanenten Daten auftreten. Stellen Sie sicher, dass beim System der Schreibcache auf dem Datenträgercontroller nicht aktiviert ist. Wenden Sie sich an Ihren Hardwarehersteller, falls Sie beim Schreibcache das Problem vermuten.  
   
- Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem wechseln. Der Wechsel kann die Neuformatierung der Laufwerke und eine Neuinstallation des Betriebssystems beinhalten.  
+Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem wechseln. Der Wechsel kann die Neuformatierung der Laufwerke und eine Neuinstallation des Betriebssystems beinhalten.  
   
 ### <a name="restore-from-backup"></a>Sicherungswiederherstellung  
- Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
+Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden.  
-  
+Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden.  
   

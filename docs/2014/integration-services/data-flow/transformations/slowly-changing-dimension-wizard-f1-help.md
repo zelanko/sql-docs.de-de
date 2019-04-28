@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900016"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Assistent für langsam veränderliche Dimensionen (F1-Hilfe)
   Konfigurieren Sie mithilfe des **Assistenten für langsam veränderliche Dimensionen** das Laden von Daten in verschiedene Typen langsam veränderlicher Dimensionen. Dieser Abschnitt enthält die F1-Hilfe für Seiten des **Assistenten für langsam veränderliche Dimensionen**. In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
