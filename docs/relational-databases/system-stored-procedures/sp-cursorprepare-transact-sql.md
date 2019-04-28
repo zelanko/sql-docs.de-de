@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724135"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|Erfolgreich|  
 |0x0001|Failure|  
-|1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: Der Grund liegt darin, dass die Anweisung kein Resultset erzeugt; es handelt sich z. B. um eine INSERT-Anweisung oder DDL-Anweisung.|  
+|1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: Der Grund dafür ist, dass die Anweisung ein Resultset nicht generiert. Beispielsweise ist es eine INSERT- oder DDL-Anweisung.|  
   
 ## <a name="examples"></a>Beispiele  
  Wenn *Stmt* ist parametrisiert, und die *Scrollopt* PARAMETERIZED_STMT-Wert ist auf, die das Format der Zeichenfolge lautet wie folgt:  
@@ -122,9 +122,9 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  {  *\<Namens der lokalen Variablen > **\<Datentyp >* } [,... *n* ]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [Sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864497"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++-Erweiterungen für ADO
 Die bevorzugte Methode für das Programmieren von ADO mit Visual C++ verwendet den **#import** Richtlinie, wie unter [Microsoft Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md). Frühere Versionen von ADO jedoch geliefert, mit einer alternativen Methode der Programmierung mit Visual C++: Visual C++-Erweiterungen. Dieser Abschnitt beschreibt diese Funktion für diejenigen, die Erweiterungen der Visual C++-Code verwalten müssen, aber neuer ADO-Code mit # geschrieben werden soll**importieren**.

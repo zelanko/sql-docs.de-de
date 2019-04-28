@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699213"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
   Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionaler und Data Mining-Modus** unterstützt herkömmliches OLAP und Datamining. **Im tabellarischen Modus** unterstützt tabellarische Modelle. **Integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als PowerPivot für SharePoint – wird verwendet, die für das Laden und Abfragen von Excel- oder PowerPivot-Datenmodellen innerhalb einer Arbeitsmappe installiert wurde.  

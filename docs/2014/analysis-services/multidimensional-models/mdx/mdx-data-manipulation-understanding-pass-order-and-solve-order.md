@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725476"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX)
   Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  

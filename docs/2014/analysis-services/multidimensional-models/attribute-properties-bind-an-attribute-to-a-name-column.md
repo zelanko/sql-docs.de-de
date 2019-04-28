@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701756"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>Binden eines Attributs an eine Namensspalte
   In diesem Verfahren wird beschrieben, wie Sie ein Attribut manuell an eine Namensspalte binden, indem Sie den Bereich **Attribute** im Dimensions-Designer und das Dialogfeld **Objektbindung** verwenden.  

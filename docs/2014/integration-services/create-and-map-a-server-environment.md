@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828737"
 ---
 # <a name="create-and-map-a-server-environment"></a>Erstellen und Zuordnen einer Serverumgebung
   Sie erstellen eine Serverumgebung, um Laufzeitwerte für Pakete festzulegen, die in einem auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekt enthalten sind. Anschließend können Sie die Umgebungsvariablen Parametern für ein bestimmtes Paket, für Einstiegspunktpakete oder für alle Pakete in einem angegebenen Projekt zuordnen. Ein Einstiegspunktpaket ist in der Regel ein übergeordnetes Paket, von dem ein untergeordnetes Paket ausgeführt wird.  

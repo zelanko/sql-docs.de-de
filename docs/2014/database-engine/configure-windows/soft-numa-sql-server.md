@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809034"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
 Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen. Erhöht sich mit Prozessoren, die 10 oder mehr Kernen pro Socket enthält, verwenden die Software NUMA (Soft-NUMA), um die Hardware-NUMA-Knoten in der Regel aufgeteilt, Skalierbarkeit und Leistung.   

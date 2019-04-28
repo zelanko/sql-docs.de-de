@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13afa5437c0628092ee5c0d09f1fc61e0298bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722182"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
   Beim Generieren einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen mit neuen Daten anhand der im Modell befindlichen Muster vornimmt.  
@@ -39,9 +39,9 @@ ms.locfileid: "48094680"
  [Erstellen von Vorhersagen für einen diskreten Wert](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Abrufen von Informationen zum logistischen Regressionsmodell  
- Logistische Regressionsmodelle werden mithilfe des Microsoft Neural Network-Algorithmus mit einer speziellen Menge von Parametern erstellt. Daher verfügt das logistische Regressionsmodell über einige der Informationen, die auch das neuronale Netzwerk enthält, ist jedoch weniger komplex. Weitere Informationen zur Struktur des Inhaltsmodells und dazu, in welchen Knotentypen welche Arten von Informationen gespeichert sind, finden Sie unter [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Logistische Regressionsmodelle werden mithilfe des Microsoft Neural Network-Algorithmus mit einer speziellen Menge von Parametern erstellt. Daher verfügt das logistische Regressionsmodell über einige der Informationen, die auch das neuronale Netzwerk enthält, ist jedoch weniger komplex. Weitere Informationen zur Struktur des Inhaltsmodells und dazu, in welchen Knotentypen welche Arten von Informationen gespeichert sind, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- Für die Abfrageszenarios können Sie ein logistisches Regressionsmodell erstellen, wie im folgenden Abschnitt des Data Mining-Tutorials für Fortgeschrittene beschrieben: [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+ Um in den Abfrageszenarien folgen zu können, können Sie ein Logistisches Regressionsmodell erstellen, wie im folgenden Abschnitt der fortgeschrittene Data Mining-Lernprogramm beschrieben: [Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
  Sie können auch die Miningstruktur Targeted Mailing aus dem [Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)verwenden.  
   
@@ -135,7 +135,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 ||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Weitere Informationen zu Wahrscheinlichkeit, Unterstützung und Standardabweichung der Werte in der geschachtelten NODE_DISTRIBUTION-Tabelle finden Sie unter [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Weitere Informationen zu Wahrscheinlichkeit, Unterstützung und Standardabweichung der Werte in der geschachtelten NODE_DISTRIBUTION-Tabelle finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Erstellen von Vorhersagen für einen diskreten Wert  
  Die logistische Regression wird normalerweise in Szenarien verwendet, in denen die Faktoren analysiert werden sollen, die zu einem binären Ergebnis beitragen. Obwohl das im Tutorial verwendete Modell den kontinuierlichen Wert **ServiceGrade**in einem realistischen Szenario vorhersagt, möchten Sie möglicherweise das Modell für die Vorhersage einrichten, ob die Dienstqualität einem bestimmten diskretisierten Zielwert entsprochen hat. Alternativ könnten Sie die Vorhersagen mit einem kontinuierlichen Wert ausgeben, später jedoch die vorhergesagten Ergebnisse in **Gut**, **Durchschnittlich**oder **Schlecht**gruppieren.  
@@ -209,10 +209,10 @@ NATURAL PREDICTION JOIN
 >  Für neuronale Netzwerk- und logistische Regressionsmodelle gibt die Funktion [PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx) einen einzelnen Wert zurück, der die Größe des Trainingssatzes für das gesamte Modell repräsentiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](data-mining-queries.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)   
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
- [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

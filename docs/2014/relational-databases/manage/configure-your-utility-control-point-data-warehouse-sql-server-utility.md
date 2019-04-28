@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805936"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Konfigurieren des Data Warehouses für den Steuerungspunkt für das Hilfsprogramm (SQL Server-Hilfsprogramm)
   Die von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen gesammelten Daten werden im UMDW (Utility Management Data Warehouse) gespeichert. Der UMDW-Dateiname lautet sysutility_mdw.  
@@ -28,7 +28,7 @@ ms.locfileid: "52804042"
   
 -   Uploadhäufigkeit des Sammlungssatzes: Alle 15 Minuten.  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk >: \Programme\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, wobei \<Systemlaufwerk > ist normalerweise Laufwerk C:\. Die Protokolldatei „Sysutility_mdw_\<GUID>_LOG“ befindet sich im selben Verzeichnis.  
+ Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk >: \Programme\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, wobei \<Systemlaufwerk > ist normalerweise C:\ Laufwerk. Die Protokolldatei „Sysutility_mdw_\<GUID>_LOG“ befindet sich im selben Verzeichnis.  
   
 > [!NOTE]  
 >  Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

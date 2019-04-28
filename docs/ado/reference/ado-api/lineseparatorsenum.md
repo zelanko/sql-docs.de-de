@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aaf41bcc3759fe52cc1d15abb980227055f2de5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864637"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Gibt das Zeichen als Zeilentrennzeichen in Text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|Gibt an, Carriage return, Wagenrücklauf.|  
 |**adCRLF**|-1|Standard. Gibt an, Carriage return Line Feed, CRLF.|  

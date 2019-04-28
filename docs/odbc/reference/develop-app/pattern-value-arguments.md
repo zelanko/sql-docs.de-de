@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861727"
 ---
 # <a name="pattern-value-arguments"></a>Argumente des Musterwerts
 Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTables**, Suchmuster akzeptieren. Diese Argumente akzeptieren, Suchmuster, wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE; festgelegt ist Sie sind bezeichnerargumente, die einem Suchmuster nicht akzeptiert werden, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  
@@ -37,7 +37,7 @@ Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTa
   
 |Suchmuster|Description|  
 |--------------------|-----------------|  
-|%A %|Alle Bezeichner, die mit dem Buchstaben A|  
+|%A%|Alle Bezeichner, die mit dem Buchstaben A|  
 |ABC_|Alle aus vier Buchstaben bestehende Bezeichner ab, die mit ABC|  
 |ABC\\_|Der Bezeichner ABC_, vorausgesetzt das Escapezeichen ist ein umgekehrter Schrägstrich (\\)|  
 |\\\\%|Alle IDs beginnen mit einem umgekehrten Schrägstrich (\\), sofern das Escapezeichen ist ein umgekehrter Schrägstrich|  

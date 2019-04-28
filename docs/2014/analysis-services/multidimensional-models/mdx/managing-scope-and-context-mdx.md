@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5bcaff42dd71f1c278c390d06240657f5f80f112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725675"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Verwalten von Gültigkeitsbereich und Kontext (MDX)
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]kann ein MDX-Skript (Multidimensional Expressions) für den gesamten Cube oder, an bestimmten Stellen in der Ausführung des Skripts, für bestimmte Bereiche des Cubes gelten. Ein MDX-Skript kann, indem Berechnungsdurchläufe verwendet werden, einen mehrstufigen Ansatz für Berechnungen in einem Cube haben.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118110"
 > [!NOTE]  
 >  Weitere Informationen über die Auswirkungen von Berechnungsdurchläufe auf Berechnungen finden Sie unter [Grundlegendes zu Durchlauf- und Lösungsreihenfolge &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
- Um den Berechnungsdurchlauf, Bereich und Kontext in einem MDX-Skript zu steuern, verwenden Sie speziell die CACULATE-Anweisung, die `This` -Funktion, und die SCOPE-Anweisung.  
+ Um den Berechnungsdurchlauf, den Gültigkeitsbereich und den Kontext in einem MDX-Skript zu steuern, verwenden Sie speziell die CACULATE-Anweisung, die `This`-Funktion und die SCOPE-Anweisung.  
   
 ## <a name="using-the-calculate-statement"></a>Verwenden der CALCULATE-Anweisung  
  Die CALCULATE-Anweisung füllt jede Zelle im Cube mit aggregierten Daten auf. Im MDX-Standardskript gibt es z. B. eine einzelne CALCULATE-Anweisung am Anfang des Skripts.  
@@ -42,13 +42,13 @@ ms.locfileid: "48118110"
 >  Enthält das Skript eine SCOPE-Anweisung, die eine CALCULATE-Anweisung enthält, wertet MDX die CALCULATE-Anweisung nicht für den gesamten Cube, sondern im Kontext des Teilcubes aus, der durch die SCOPE-Anweisung definiert ist.  
   
 ## <a name="using-the-this-function"></a>Verwenden der This-Funktion  
- Mit der `This`-Funktion können Sie in einem MDX-Skript den aktuellen Teilcube abrufen. Sie können die `This` Funktion die Werte von Zellen im aktuellen Teilcube auf einen MDX-Ausdruck festzulegen. Verwenden Sie häufig die `This` -Funktion in Verbindung mit der SCOPE-Anweisung, um den Inhalt eines bestimmten Teilcubes während eines bestimmten Berechnungsdurchlaufs zu ändern.  
+ Mit der `This`-Funktion können Sie in einem MDX-Skript den aktuellen Teilcube abrufen. Sie können die `This`-Funktion dazu verwenden, die Werte von Zellen im aktuellen Teilcube auf einen MDX-Ausdruck festzulegen. Die `This`-Funktion wird häufig zusammen mit der SCOPE-Anweisung verwendet, um den Inhalt eines bestimmten Teilcubes im Verlauf eines bestimmten Berechnungsdurchlaufs zu ändern.  
   
 > [!NOTE]  
->  Das Skript eine SCOPE-Anweisung enthält, eine `This` -Funktion wertet MDX die `This` Funktion im Kontext des Teilcubes aus, durch die SCOPE-Anweisung nicht für den gesamten Cube definiert.  
+>  Enthält das Skript eine SCOPE-Anweisung, die eine `This`-Funktion enthält, wertet MDX die `This`-Funktion nicht für den gesamten Cube, sondern im Kontext des Teilcubes aus, der durch die SCOPE-Anweisung definiert ist.  
   
 ### <a name="this-function-example"></a>Beispiel zur This-Funktion  
- Im folgenden Beispiel eines MDX-Skript verwendet die `This` Funktion, um den Wert des Amount-Measures, in der Finance-Measuregruppe des erhöhen die [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] Beispielcubes um 10 % zu erhöhen, für die untergeordneten Elemente des Redmond-Elements in der Customer-Dimension:  
+ Im folgenden Beispiel eines MDX-Skriptbefehls wird die `This`-Funktion dazu verwendet, den Wert des Amount-Measures (in der Finance-Measuregruppe des [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]-Beispielcubes) für die untergeordneten Elemente des Redmond-Elements in der Customer-Dimension um 10 % zu erhöhen:  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -117,6 +117,6 @@ END SCOPE;
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Sprachreferenz &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Grundlegendes MDX-Skript &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   
