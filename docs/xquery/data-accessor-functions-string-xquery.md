@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934734"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Data Accessor-Funktionen – string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-string-function"></a>A. Verwenden der Zeichenfolgenfunktion  
- Die folgende Abfrage ruft den untergeordneten <`Features`>-Elementknoten des <`ProductDescription`>-Elements ab.  
+ Die folgende Abfrage ruft die <`Features`> untergeordneten Elementknoten des der <`ProductDescription`> Element.  
   
 ```  
 SELECT CatalogDescription.query('  

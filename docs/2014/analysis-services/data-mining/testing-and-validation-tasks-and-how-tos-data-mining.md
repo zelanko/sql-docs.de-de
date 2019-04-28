@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732841"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tasks und Anweisungen für Test und Überprüfung (Data Mining)
   Sie können die Registerkarte **Mininggenauigkeitsdiagramm** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Vorhersagegenauigkeit der Miningmodelle in Ihrer Miningstruktur zu vergleichen.  

@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924147"
 ---
 # <a name="install-master-data-services"></a>Installieren von Master Data Services
   Der folgende Workflow bietet eine Übersicht über die Installation und Konfiguration von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Installation besteht aus drei Teilen:  
   
--   [Installationsvorbereitung](#preinstall): Überprüfen Sie vor der Installation die Systemanforderungen [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+-   [Vor der Installation:](#preinstall) Überprüfen Sie vor der Installation die Systemanforderungen [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 -   [Installationsvorgänge](#install): Installieren Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup oder über die Eingabeaufforderung.  
   
--   [Aufgaben nach der Installation](#postinstall): Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] um Vorgänge zur installationsnachbereitung abzuschließen. Erstellen und konfigurieren Sie die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und die Webdienste, und stellen Sie ein Beispielmodell bereit.  
+-   [Nach der Installation:](#postinstall) Open [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] um Vorgänge zur installationsnachbereitung abzuschließen. Erstellen und konfigurieren Sie die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und die Webdienste, und stellen Sie ein Beispielmodell bereit.  
   
 ##  <a name="preinstall"></a> Installationsvorbereitung  
   
 |Aktion|Details|Verwandte Themen|  
 |------------|-------------|--------------------|  
 |Überprüfen der Installationsanforderungen|Der Computer, auf dem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausführen, muss Mindestanforderungen für folgende Komponenten erfüllen:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup<br /><br /> Die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und die Webdienste<br /><br /> Die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, wenn Sie die Datenbank auf dem gleichen Computer wie die Webanwendung hosten<br /><br /> Beachten Sie, dass Sie den Webservercomputer und Datenbankservercomputer trennen können, indem Sie Setup auf dem Webservercomputer ausführen und erstellen die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Datenbank auf einem Remotecomputer befindet, der eine unterstützte Version und Edition von ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Anforderungen für die Webanwendung &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [Datenbankanforderungen &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
-|Konfigurieren der erforderlichen Rollen, Rollendienste und Funktionen|Bevor Sie das Setup ausführen, müssen Sie den Computer mit den erforderlichen Windows-Rollen, Rollendiensten und Funktionen konfigurieren.<br /><br /> Hinweis: Sie können diesen Schritt zwar auch zu einem späteren Zeitpunkt im Workflow ausführen, es ist jedoch hilfreich, diese Konfiguration vor dem Setup auszuführen, damit Sie direkt nach der Installation mit den Webkonfigurationstasks beginnen können.|[Anforderungen für die Webanwendung &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
+|Konfigurieren der erforderlichen Rollen, Rollendienste und Funktionen|Bevor Sie das Setup ausführen, müssen Sie den Computer mit den erforderlichen Windows-Rollen, Rollendiensten und Funktionen konfigurieren.<br /><br /> Hinweis: Obwohl Sie diesen Schritt später im Workflow ausführen können, ist es hilfreich, diese Konfiguration vor Ausführen des Setups, damit Sie die Web-Konfigurationstasks, die direkt nach der Installation ausführen können.|[Anforderungen für die Webanwendung &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
 |Überprüfen der Sprachunterstützung|Bestimmen Sie die Sprache, in der Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installieren und ausführen möchten.|[Mehrsprachige und globale Bereitstellungen &#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Installationsvorgänge  

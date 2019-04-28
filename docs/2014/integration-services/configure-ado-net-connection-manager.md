@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834487"
 ---
 # <a name="configure-adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager konfigurieren
   Verwenden Sie das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** , um einer Datenquelle, auf die mithilfe eines .NET Framework-Datenanbieters (z. B. des SqlClient-Anbieters) zugegriffen werden kann, eine Verbindung hinzuzufügen. Der Verbindungs-Manager kann eine vorhandene Verbindung verwenden, oder Sie können eine neue erstellen.  

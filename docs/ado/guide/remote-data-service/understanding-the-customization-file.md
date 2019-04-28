@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955803"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern (**[]**), die einen Typ und die Parameter enthält. Die vier Abschnitt sind gekennzeichnet durch die Literalzeichenfolgen **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist der literalen Zeichenfolge, die Standardeinstellung, eine vom Benutzer angegebenen Bezeichner oder "nothing".  

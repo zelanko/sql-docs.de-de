@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f1014578527684e9e9e5b66065a5166941f16f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733850"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Auswählen eines Miningmodell- und Data Mining-Viewers
   Zum Durchsuchen eines Miningmodells können Sie einen der Viewer auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers verwenden. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  
   
 -   Das Dropdown-Listenfeld **Miningmodell** der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält eine Liste aller Miningmodelle, die sich in der aktuellen Miningstruktur befinden.  
   
--   Für jeden Modelltyp werden angepasste Viewer bereitgestellt. Einen Überblick über alle benutzerdefinierten Viewer finden Sie unter [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md). Eine exemplarische Vorgehensweise zur Verwendung des benutzerdefinierten Viewers, um ein Modell zu verstehen, finden Sie unter [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
+-   Für jeden Modelltyp werden angepasste Viewer bereitgestellt. Einen Überblick über alle benutzerdefinierten Viewer finden Sie unter [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md). Eine exemplarische Vorgehensweise zum benutzerdefinierten Viewer zu verwenden, um ein Modell zu verstehen, finden Sie unter [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Basic Datamining-Lernprogramm&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
   
 -   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content-Viewer zeigt die durch den Algorithmus erkannten Muster in einer Standarddarstellung von Knoten in einem Baum an. Obwohl die generische Baumansicht den gesamten Inhalt für das Modell mit umfassenden Details anzeigt, ist sie schwieriger zu interpretieren. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   

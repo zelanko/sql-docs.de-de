@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842478"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>Verwenden von TRY...CATCH in systemintern kompilierten gespeicherten Prozeduren
   Sie können Try/Catch-Blöcke in einer systemintern kompilierten gespeicherten Prozedur verwenden. Die folgenden Konstrukte werden unterstützt:  

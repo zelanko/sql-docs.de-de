@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736200"
 ---
 # <a name="create-check-constraints"></a>Erstellen von CHECK-Einschränkungen
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in einer Tabelle eine CHECK-Einschränkung erstellen, um die Datenwerte anzugeben, die in einer oder mehreren Spalten in [!INCLUDE[tsql](../../includes/tsql-md.md)]akzeptiert werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "52814412"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine neue CHECK-Einschränkung mit:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52814412"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert ALTER-Berechtigungen für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>So erstellen Sie eine neue CHECK-Einschränkung  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52814412"
   
 #### <a name="to-create-a-new-check-constraint"></a>So erstellen Sie eine neue CHECK-Einschränkung  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

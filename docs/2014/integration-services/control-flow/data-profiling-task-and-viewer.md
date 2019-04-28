@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832576"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
   Der Datenprofilerstellungs-Task bietet Funktionen zur Datenprofilerstellung beim Extrahieren, Transformieren und Laden von Daten. Mit dem Datenprofilerstellungs-Task können Sie die folgenden Vorteile erzielen:  
@@ -55,7 +55,7 @@ ms.locfileid: "58379231"
 ## <a name="integration-services-and-data-profiling"></a>SQL Server Integration Services und Datenprofilerstellung  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]besteht der Prozess der Datenprofilerstellung aus den folgenden Schritten:  
   
- **Schritt 1: Das Einrichten des Datenprofilerstellungs-Tasks**  
+ **Schritt 1: Einrichten des Datenprofilerstellungs-Tasks**  
  Der Datenprofilerstellungs-Task ist ein Task, den Sie verwenden können, um die Profile zu konfigurieren, die Sie berechnen möchten. Sie führen dann das Paket aus, das den Datenprofilerstellungs-Task enthält, um die Profile zu berechnen. Der Task speichert die Profilausgabe im XML-Format in einer Datei oder Paketvariablen.  
   
  **Weitere Informationen:** [Einrichten von Datenprofilerstellungs-Tasks](data-profiling-task.md)  

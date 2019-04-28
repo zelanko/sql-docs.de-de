@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835186"
 ---
 # <a name="conditional-split-transformation-editor"></a>Transformations-Editor für bedingtes Teilen
   Mithilfe des Dialogfelds **Transformations-Editor für bedingtes Teilen** können Sie Ausdrücke erstellen, die Reihenfolge festlegen, in der Ausdrücke ausgewertet werden, und die Ausgaben des bedingten Teilens benennen. Dieses Dialogfeld schließt Funktionen und Operatoren für mathematische Berechnungen, Zeichenfolgen und Datum/Uhrzeit ein, die Sie für das Erstellen von Ausdrücken verwenden können. Die erste Bedingung, bei der die Auswertung den Wert TRUE ergibt, bestimmt die Ausgabe, an die eine Zeile geleitet wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "58392961"
   
  Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.  
   
- **Verwandte Themen:**  [Integrationsdienste &#40;SSIS&#41; Ausdrücke](expressions/integration-services-ssis-expressions.md), [Operatoren &#40;SSIS-Ausdruck&#41;](expressions/operators-ssis-expression.md), und [Funktionen &#40;SSIS-Ausdruck&#41;](expressions/functions-ssis-expression.md)  
+ **Verwandte Themen:**  [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatoren &#40;SSIS-Ausdruck&#41;](expressions/operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](expressions/functions-ssis-expression.md)  
   
  **Standardausgabename**  
  Geben Sie einen Namen für die Standardausgabe ein, oder verwenden Sie den Standardnamen.  

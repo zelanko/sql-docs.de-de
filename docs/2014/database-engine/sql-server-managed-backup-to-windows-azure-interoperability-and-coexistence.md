@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842907"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz
   In diesem Thema wird [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Interoperabilität und -Koexistenz mit mehreren Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] beschrieben. Zu diesen Funktionen gehören folgende: AlwaysOn-Verfügbarkeitsgruppen, Datenbankspiegelung, Wartungspläne für Sicherungen, Protokollversand, Ad-hoc-Sicherungen, Datenbank trennen und Datenbank löschen.  

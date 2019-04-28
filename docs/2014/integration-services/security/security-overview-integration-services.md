@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927088"
 ---
 # <a name="security-overview-integration-services"></a>Sicherheitsübersicht (Integration Services)
   Sicherheit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] besteht aus mehreren Ebenen, die eine umfangreiche und flexible Sicherheitsumgebung bereitstellen. Diese Sicherheitsebenen umfassen die Verwendung digitaler Signaturen, Paketeigenschaften, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen und Betriebssystemberechtigungen. Die meisten dieser Sicherheitsfunktionen können den Kategorien Identität und Zugriffssteuerung zugeordnet werden.  

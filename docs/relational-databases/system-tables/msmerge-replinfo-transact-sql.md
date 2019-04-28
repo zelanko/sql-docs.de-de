@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903320"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "52775422"
 |**validation_level**|**int**|Überprüfungstyp, der für das Abonnement durchgeführt wird. Die angegebene Überprüfungsebene kann einen der folgenden Werte haben:<br /><br /> **0** = keine Überprüfung.<br /><br /> **1** = nur Überprüfung der Zeilenanzahl.<br /><br /> **2** = Überprüfung der Zeilenanzahl und Prüfsumme.<br /><br /> **3** = Überprüfung der Zeilenzählung und binären Prüfsumme.|  
 |**resync_gen**|**bigint**|Die Generierungsnummer, die für die erneute Synchronisierung des Abonnements verwendet wird. Der Wert **-1** gibt an, dass das Abonnement nicht für die erneute Synchronisierung markiert ist.|  
 |**login_name**|**sysname**|Der Name des Benutzers, der das Abonnement erstellt hat.|  
-|**Hostname**|**sysname**|Der Wert, der beim Generieren der Partition für das Abonnement von den parametrisierten Zeilenfiltern verwendet wird.|  
-|**der Standard**|**'binary(16)'**|Die ID des Mergeauftrags für dieses Abonnement.|  
+|**hostname**|**sysname**|Der Wert, der beim Generieren der Partition für das Abonnement von den parametrisierten Zeilenfiltern verwendet wird.|  
+|**merge_jobid**|**binary(16)**|Die ID des Mergeauftrags für dieses Abonnement.|  
 |**sync_info**|**int**|Intern-nur zur Verwendung.|  
   
 ## <a name="see-also"></a>Siehe auch  

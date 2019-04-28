@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89cab313736a8d5acf2f7796ea79fb5649f85ab2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028129"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Gibt die Gruppe von Datensätzen, die von gefiltert werden eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Gibt die Gruppe von Datensätzen, die von gefiltert werden eine [Recordset](../.
 |**adFilterPendingRecords**|1|Filter für das Anzeigen von Datensätzen, die geändert haben, aber noch nicht an den Server gesendet wurden. Gilt nur für den Modus "Batch-Update".|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

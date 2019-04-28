@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0cab4451b78b662a426612aee0f0a72aae8cf80
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896060"
 ---
 # <a name="additional-script-component-examples"></a>Zusätzliche Skriptkomponentenbeispiele
   Bei der Skriptkomponente handelt es sich um ein konfigurierbares Tool, das Sie im Datenfluss eines Pakets verwenden können, um nahezu allen Anforderungen gerecht zu werden, die von den Quellen, Transformationen und Zielen nicht erfüllt werden, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind. Dieser Abschnitt enthält Skriptkomponentencodebeispiele, in denen die verschiedenen verfügbaren Funktionsarten veranschaulicht werden.  

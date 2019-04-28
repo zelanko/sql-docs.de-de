@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921955"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Verwalten der suspect_pages-Tabelle (SQL Server)
   In diesem Thema wird beschrieben, wie Sie die **suspect_pages** -Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwalten. Die **suspect_pages** -Tabelle, die zum Verwalten von Informationen über fehlerverdächtige Seiten verwendet wird, ist hilfreich für die Entscheidung, ob eine Wiederherstellung erforderlich ist. Die [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) -Tabelle befindet sich in der [msdb](../databases/msdb-database.md)-Datenbank.  
@@ -58,7 +58,7 @@ ms.locfileid: "48053500"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -166,7 +166,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [Wiederherstellung von Seiten &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [Suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

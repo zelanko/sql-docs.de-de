@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998310"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|none|Der Abonnent besitzt bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen.<br /><br /> Hinweis: Diese Option wurde als veraltet markiert. Verwenden Sie stattdessen replication support only.|  
+|none|Der Abonnent besitzt bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen.<br /><br /> Hinweis: Diese Option ist veraltet. Verwenden Sie stattdessen replication support only.|  
 |automatic (Standard)|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
 |replication support only|Stellt auf dem Abonnenten das automatische Generieren von benutzerdefinierten gespeicherten Prozeduren für Artikel und Trigger bereit, die ggf. das Aktualisieren von Abonnements unterstützen. Setzt voraus, dass der Abonnent bereits über das Schema und die Anfangsdaten für veröffentlichte Tabellen verfügt. Stellen Sie beim Konfigurieren einer Peer-zu-Peer-Transaktionsreplikationstopologie sicher, dass die Daten in allen Knoten der Topologie identisch sind. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Für Abonnements von nicht - SQL Server-Veröffentlichungen unterstützt nicht.*|  
 |initialize with backup|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden von einer Sicherung der Veröffentlichungsdatenbank abgerufen. Es wird davon ausgegangen, dass der Abonnent über Zugriff auf eine Sicherung der Veröffentlichungsdatenbank verfügt. Der Speicherort der Sicherung und der Medientyp-Typ für die Sicherung werden von angegeben *Backupdevicename* und *Backupdevicetype*. Wenn Sie diese Option verwenden, muss eine Peer-zu-Peer-Transaktionsreplikationstopologie während der Konfiguration nicht deaktiviert werden.<br /><br /> *Für Abonnements von nicht - SQL Server-Veröffentlichungen unterstützt nicht.*|  
@@ -223,7 +223,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Sie müssen ein Kennwort angeben, wenn *Dts_package_name* angegeben ist.  
   
- [ @dts_package_location=] '*Dts_package_location*"  
+ [ @dts_package_location= ] '*dts_package_location*'  
  Gibt den Paketspeicherort an. *Dts_package_location* ist eine **nvarchar(12)**, hat den Standardwert des VERTEILERS. Der Speicherort des Pakets kann distributor oder subscriber sein.  
   
  [ @distribution_job_name=] '*distribution_job _name*"  

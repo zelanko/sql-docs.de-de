@@ -1,5 +1,5 @@
 ---
-title: fulltext_stopwords (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fulltext_stopwords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8395d9fe246d70843415079cdf188ac00817f51f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008501"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47832048"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID der Stoppliste, zu der das **stopword** gehört. Diese ID ist innerhalb der Datenbank eindeutig.|  
-|**stopword**|**Nvarchar(64)**|Der Ausdruck, der für eine Stoppwortübereinstimmung berücksichtigt werden muss.|  
-|**Sprache**|**sysname**|Der Wert des Alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)entsprechend dem Wert des Gebietsschemabezeichners (**LCID**), oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
+|**stopword**|**nvarchar(64)**|Der Ausdruck, der für eine Stoppwortübereinstimmung berücksichtigt werden muss.|  
+|**language**|**sysname**|Der Wert des Alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)entsprechend dem Wert des Gebietsschemabezeichners (**LCID**), oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
 |**language_id**|**int**|Die für die Wörtertrennung verwendete LCID.|  
   
 ## <a name="permissions"></a>Berechtigungen  

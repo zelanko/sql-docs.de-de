@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8c41b7f9c42628f4310c3f1a54dc24a7f124202
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004970"
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Meldet die Anzahl der Zeilen, die von den Vorgängen betroffen sind, die seit dem letzten Neustart der Datenbank für die einzelnen [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Objekte ausgeführt wurden. Die Statistiken werden aktualisiert, wenn der Vorgang ausgeführt wird, und zwar unabhängig davon, ob für die Transaktion ein Commit oder Rollback ausgeführt wurde.  
+  Meldet die Anzahl der Zeilen, die von den Vorgängen betroffen sind, die seit dem letzten Neustart der Datenbank für die einzelnen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekte ausgeführt wurden. Die Statistiken werden aktualisiert, wenn der Vorgang ausgeführt wird, und zwar unabhängig davon, ob für die Transaktion ein Commit oder Rollback ausgeführt wurde.  
   
  Mithilfe von sys.dm_db_xtp_object_stats können Sie ermitteln, welche speicheroptimierten Tabellen am häufigsten geändert werden. Sie können selten oder nicht verwendete Tabellenindizes entfernen, da jeder Index die Leistung beeinflusst. Bei Verwendung von Hashindizes sollte die Bucketanzahl regelmäßig neu ausgewertet werden. Weitere Informationen finden Sie unter [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
   

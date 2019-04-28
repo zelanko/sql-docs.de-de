@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025763"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager)
   Auf der Seite Sicherheit können Sie die Systemrollenzuweisungen anzeigen, die den Zugriff auf die Berichtsserversite steuern. Systemrollenzuweisungen sind außerhalb des Gültigkeitsbereichs des Berichtsserver-Namespace oder der Ordnerhierarchie vorhanden. Systemrollenzuweisungen sind global und für alle Elemente gleich. Die durch Systemrollenzuweisungen unterstützten Vorgänge schließen das Erstellen und Verwenden freigegebener Zeitpläne, das Verwenden des Berichts-Managers und das Festlegen von Standardwerten für einige Serverfunktionen ein.  

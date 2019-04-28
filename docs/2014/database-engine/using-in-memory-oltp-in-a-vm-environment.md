@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843060"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Verwenden von In-Memory OLTP in einer VM-Umgebung
   Servervirtualisierung kann durch eine verbesserte Anwendungsbereitstellung, Wartung, Verfügbarkeit sowie Sicherungs- und Wiederherstellungsprozesse das IT-Kapital und die Betriebskosten Ihres Unternehmens senken und die IT-Effizienz steigern. Dank der neuesten technologischen Entwicklungen können komplexe Datenbankarbeitslasten mithilfe der Virtualisierung leichter konsolidiert werden. Dieses Thema enthält bewährte Methoden zur Verwendung von [!INCLUDE[hek_1](../includes/hek-1-md.md)] in einer virtualisierten Umgebung.  

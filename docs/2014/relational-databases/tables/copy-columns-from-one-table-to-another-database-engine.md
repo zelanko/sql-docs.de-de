@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736353"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)
   In diesem Thema wird beschrieben, wie Sie Spalten einer Tabelle in eine andere Tabelle kopieren. Dabei kopieren Sie entweder nur die Spaltendefinition oder die Definition und Daten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden.  
@@ -29,7 +29,7 @@ ms.locfileid: "52794622"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So kopieren Sie Spalten mit:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52794622"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>So kopieren Sie Spaltendefinitionen von einer Tabelle in eine andere  
   

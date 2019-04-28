@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729994"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installations- oder -Wiederherstellungsvorgänge sind erst abgeschlossen, nachdem ein solider Überprüfungstestlauf ausgeführt wurde, durch den die Einsatzbereitschaft der Dienste und Daten bestätigt wird. In diesem Artikel erfahren Sie, wie Sie diese Schritte mit Windows PowerShell ausführen. Jeder Schritt wird in einem eigenen Abschnitt behandelt, sodass Sie direkt zu einer bestimmten Aufgabe wechseln können. Führen Sie z. B. das Skript im Abschnitt [Datenbanken](#bkmk_databases) dieses Themas aus, um die Namen von Dienstanwendung und Inhaltsdatenbanken zu überprüfen, wenn Sie Wartungen oder Sicherungen für sie planen möchten.  
   
 |||  
@@ -29,7 +29,7 @@ ms.locfileid: "55087789"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **In diesem Thema**: Die mit Buchstaben gekennzeichneten Elemente im folgenden Inhaltsverzeichnis beziehen sich auf die Bereiche des Diagramms. Das Diagramm veranschaulicht  
+ **In diesem Thema**: Die mit Buchstaben gekennzeichneten Elemente im folgenden Inhaltsverzeichnis beziehen sich auf Bereiche des Diagramms. Das Diagramm veranschaulicht  
   
 |||  
 |-|-|  
@@ -286,7 +286,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  Mit dem folgenden Befehl wird das Windows-Ereignisprotokoll nach Ereignissen durchsucht, die sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz im SharePoint-Modus beziehen. Informationen zum Deaktivieren von Ereignissen oder Ändern der Ereignisebene finden Sie unter [konfigurieren und Anzeigen von SharePoint-Protokolldateien und-diagnoseprotokollierung &#40;PowerPivot für SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
- **Dienstname:** MSOLAP$POWERPIVOT  
+ **Dienstname:** MSOLAP$ POWERPIVOT  
   
  **Anzeigename in Windows-Diensten:** SQL Server Analysis Services (POWERPIVOT)  
   

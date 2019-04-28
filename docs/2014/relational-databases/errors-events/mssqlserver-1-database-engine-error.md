@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc558a0a0f5b8bd05f2ff461cc45a73aafa6da23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916397"
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
     
@@ -32,7 +32,7 @@ ms.locfileid: "48096950"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name||  
-|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann dieser Fehler dadurch verursacht worden sein, dass die Standardeinstellungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Remoteverbindungen zulassen. (Anbieter: SQL Network Interfaces, Fehler: 28 – Das angeforderte Protokoll wird vom Server nicht unterstützt) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Fehler: -1).|  
+|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann dieser Fehler dadurch verursacht worden sein, dass die Standardeinstellungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Remoteverbindungen zulassen. (Anbieter: SQL Network Interfaces, Fehler: 28 - Server angeforderte Protokoll nicht unterstützt) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Fehler: -1)|  
   
 ## <a name="explanation"></a>Erklärung  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client kann keine Verbindung mit dem Server herstellen. Dieser Fehler kann auf einen der folgenden Gründe zurückzuführen sein:  

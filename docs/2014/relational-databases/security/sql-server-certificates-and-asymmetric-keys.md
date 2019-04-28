@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025799"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
   Die Verschlüsselung mit öffentlichen Schlüsseln (Public Key Cryptography, PKI) ist eine Form der Nachrichtenverschlüsselung, bei der ein Benutzer einen *öffentlichen* Schlüssel und einen *privaten* Schlüssel erstellt. Der private Schlüssel wird geheim gehalten, der öffentliche Schlüssel kann an andere verteilt werden. Zwar sind die Schlüssel mathematisch miteinander verknüpft, jedoch kann der private Schlüssel nicht einfach aus dem öffentlichen Schlüssel abgeleitet werden. Der öffentliche Schlüssel wird verwendet, um Daten zu verschlüsseln und der private Schlüssel wird verwendet, um Daten zu entschlüsseln. Eine mit dem öffentlichen Schlüssel verschlüsselte Nachricht kann nur mit dem korrekten privaten Schlüssel wieder entschlüsselt werden. Da es sich um zwei verschiedene Schlüssel handelt, werden diese Schlüssel als *asymmetrisch*bezeichnet.  

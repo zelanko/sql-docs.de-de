@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Zeitdimension durch Generieren einer Zeittabelle | Microsoft Docs
+title: Erstellen eine Zeitdimension durch Generieren einer Zeittabelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867054"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Erstellen einer Zeitdimension durch Generieren einer Zeittabelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34022047"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Erstellen einer datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
+ [Erstellen einer Datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [Eigenschaften von Datenbankdimensionen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  

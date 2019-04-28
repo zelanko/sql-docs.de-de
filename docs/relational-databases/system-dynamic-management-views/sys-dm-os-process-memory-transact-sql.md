@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 03830b00df02332069383e496c0b22d198b95d7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013017"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47597023"
 |**total_virtual_address_space_kb**|**bigint**|Gibt die Gesamtgröße des Benutzermodusteils im virtuellen Adressraum an. Lässt keine NULL-Werte zu.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Gibt die Gesamtmenge des vom Prozess reservierten virtuellem Adressraums an. Lässt keine NULL-Werte zu.|  
 |**virtual_address_space_committed_kb**|**bigint**|Gibt die Menge des reservierten virtuellen Adressraums an, für die ein Commit oder eine Zuordnung zu physischen Seiten besteht. Lässt keine NULL-Werte zu.|  
-|**virtual_address_space_available_kb**|**bigint**|Gibt die Menge an virtuellen Adressräumen an, die gerade frei sind. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** frei von Regionen, die kleiner sind als die zuordnungsgranularität vorhanden sein kann. Diese Bereiche sind für Zuordnungen nicht verfügbar.|  
+|**virtual_address_space_available_kb**|**bigint**|Gibt die Menge an virtuellen Adressräumen an, die gerade frei sind. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis**: Freie Bereiche, die kleiner als die zuordnungsgranularität können vorhanden sein. Diese Bereiche sind für Zuordnungen nicht verfügbar.|  
 |**page_fault_count**|**bigint**|Gibt die Anzahl der Seitenfehler an, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess verursacht wurden. Lässt keine NULL-Werte zu.|  
 |**memory_utilization_percentage**|**int**|Gibt den Prozentwert des Arbeitsspeichers an, für den ein Commit ausgeführt wurde und der sich im Workingset befindet. Lässt keine NULL-Werte zu.|  
 |**available_commit_limit_kb**|**bigint**|Gibt den Arbeitsspeicher an, der für den Commit durch den Prozess verfügbar ist. Lässt keine NULL-Werte zu.|  
@@ -57,7 +57,7 @@ ms.locfileid: "47597023"
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   

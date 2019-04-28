@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028377"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
   Die ObjectType-Spalte wird für eine Vielzahl von Ablaufverfolgungsereignissen verwendet. In diesem Thema werden die möglichen Werte dieser Spalte und eine Definition des jeweiligen Wertes aufgeführt.  

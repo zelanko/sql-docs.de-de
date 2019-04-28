@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730483"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0
   In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
@@ -108,12 +108,12 @@ ms.locfileid: "53363722"
 > [!NOTE]  
 >  Achten Sie darauf, die Blockierung der Ports in der Windows-Firewall aufzuheben, um Clientverbindungen zu einem Analysis Services-Remoteserver zuzulassen. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Schritt 1: Kopieren der MSMDPUMP-Dateien in einen Ordner auf dem Webserver  
+##  <a name="bkmk_copy"></a>Schritt 1: Kopieren der MSMDPUMP-Dateien in einen Ordner auf dem Webserver  
  Jeder erstellte HTTP-Endpunkt muss über eine eigene MSMDPUMP-Dateigruppe verfügen. In diesem Schritt kopieren Sie die ausführbare MSMDPUMP-Datei, die Konfigurationsdatei und den Ressourcenordner aus den Analysis Services-Programmordnern in einen neuen virtuellen Verzeichnisordner, den Sie im Dateisystem des Computers erstellen, auf dem IIS ausgeführt wird.  
   
  Das Laufwerk muss für das NTFS-Dateisystem formatiert sein. Der Pfad zum Ordner, den Sie erstellen, darf keine Leerzeichen enthalten.  
   
-1.  Kopieren Sie die folgenden Dateien, finden Sie unter \<Laufwerk >: \Programme\Microsoft SQL Server\\< Instanz\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI und einen Ordner namens Resources.  
+1.  Kopieren Sie die folgenden Dateien, finden Sie unter \<Laufwerk >: \Programme\Microsoft SQL Server\\< Instanz\>\OLAP\bin\isapi: MSMDPUMP. MSMDPUMP-DLL. INI, sowie einen Ressourcenordner.  
   
      ![Datei-Explorer die Dateien befinden, kopieren Sie](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Datei-Explorer mit der Dateien kopiert")  
   
@@ -121,15 +121,15 @@ ms.locfileid: "53363722"
   
 3.  Fügen Sie die zuvor kopierten Dateien in diesen neuen Ordner ein.  
   
-4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf Ihrem Webserver die folgenden Elemente enthält: MSMDPUMP.DLL, MSMDPUMP.INI und einen Ordner namens Resources. Die Ordnerstruktur sollte wie folgt aussehen:  
+4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf dem Webserver Folgendes enthält: MSMDPUMP. MSMDPUMP-DLL. INI, sowie einen Ressourcenordner. Die Ordnerstruktur sollte wie folgt aussehen:  
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
+##  <a name="bkmk_appPool"></a>Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
  Als Nächstes erstellen Sie einen Anwendungspool und einen Endpunkt für die Datapump.  
   
 #### <a name="create-an-application-pool"></a>Erstellen eines Anwendungspools  
@@ -165,7 +165,7 @@ ms.locfileid: "53363722"
 > [!NOTE]  
 >  Frühere Versionen dieser Anweisungen enthalten Schritte zum Erstellen eines virtuellen Verzeichnisses. Dieser Schritt ist nicht mehr erforderlich.  
   
-##  <a name="bkmk_auth"></a> Schritt 3: Konfigurieren der IIS-Authentifizierung und Hinzufügen der Erweiterung  
+##  <a name="bkmk_auth"></a>Schritt 3: Konfigurieren der IIS-Authentifizierung und Hinzufügen der Erweiterung  
  In diesem Schritt führen Sie die Konfiguration des soeben erstellten virtuellen SSAS-Verzeichnisses fort. Sie geben eine Authentifizierungsmethode an und fügen dann eine Skriptzuordnung hinzu. Folgende Authentifizierungsmethoden werden für Analysis Services über HTTP unterstützt:  
   
 -   Windows-Authentifizierung (Kerberos oder NTLM)  
@@ -182,7 +182,7 @@ ms.locfileid: "53363722"
   
  Die**anonyme Authentifizierung** wird häufig in anfänglichen Testverfahren verwendet, weil sie einfach zu konfigurieren ist und hilft, die HTTP-Verbindung mit Analysis Services schnell zu überprüfen. In wenigen Schritten können Sie ein eindeutiges Benutzerkonto als Identität zuweisen, die Kontoberechtigungen in Analysis Services erteilen, über das Konto den Datenzugriff in einer Clientanwendung überprüfen und die anonyme Authentifizierung wieder deaktivieren, wenn die Tests abgeschlossen sind.  
   
- Sie können die anonyme Authentifizierung auch in einer Produktionsumgebung verwenden, wenn die Benutzer keine Windows-Benutzerkonten besitzen. Dabei sollten Sie jedoch die im folgenden Artikel beschriebenen bewährten Methoden befolgen und die Berechtigungen für das Hostsystem sperren: [Aktivieren der anonymen Authentifizierung (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Achten Sie darauf, die Authentifizierung für das virtuelle Verzeichnis und nicht für die übergeordnete Website festzulegen, um die Kontozugriffsebene weiter einzuschränken.  
+ Sie können auch die anonyme Authentifizierung in einer produktionsumgebung verwenden, wenn Ihre Benutzer sich nicht auf Windows-Benutzerkonten müssen, aber beschriebenen in diesem Artikel befolgen und bewährte Methoden von Berechtigungen für das Hostsystem sperren: [Aktivieren der anonymen Authentifizierung (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Achten Sie darauf, die Authentifizierung für das virtuelle Verzeichnis und nicht für die übergeordnete Website festzulegen, um die Kontozugriffsebene weiter einzuschränken.  
   
  Falls die anonyme Authentifizierung aktiviert ist, kann jeder Benutzer als anonymer Benutzer eine Verbindung mit dem HTTP-Endpunkt herstellen. Sie sind nicht in der Lage, einzelne benutzerverbindungen zu überwachen oder verwenden die Identität des Benutzers, Daten aus einem Modell auszuwählen. Folglich wirkt sich die Verwendung eines anonymen Kontos nicht nur auf den Modellentwurf, sondern auch auf die Datenaktualisierung und den Datenzugriff aus. Wenn Benutzer anfänglich jedoch keine Windows-Benutzeranmeldung besitzen, besteht in der Verwendung des anonymen Kontos u. U. Ihre einzige Alternative.  
   

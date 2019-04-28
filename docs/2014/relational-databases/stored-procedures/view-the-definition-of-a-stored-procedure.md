@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856515"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Anzeigen der Definition einer gespeicherten Prozedur
     
@@ -28,18 +28,18 @@ ms.locfileid: "48063850"
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **Anzeigen der Definition einer Prozedur unter Verwendung von:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Anzeigen die Definition einer Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Gespeicherte Systemprozedur: `sp_helptext`  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Definitionen von Systemobjekten sind öffentlich sichtbar. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION.  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Definitionen von Systemobjekten sind öffentlich sichtbar. Die Definition von Benutzerobjekten ist für den Besitzer des Objekts oder berechtigte mit einer der folgenden Berechtigungen sichtbar: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION.  
   
  Systemfunktion: `OBJECT_DEFINITION`  
- Definitionen von Systemobjekten sind öffentlich sichtbar. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Über diese Berechtigungen verfügen implizit Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** .  
+ Definitionen von Systemobjekten sind öffentlich sichtbar. Die Definition von Benutzerobjekten ist für den Besitzer des Objekts oder berechtigte mit einer der folgenden Berechtigungen sichtbar: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Über diese Berechtigungen verfügen implizit Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** .  
   
  Objektkatalogsicht: `sys.sql_modules`  
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48063850"
   
 2.  Erweitern Sie **Datenbanken**, erweitern Sie die Datenbank, zu der die Prozedur gehört, und erweitern Sie dann **Programmierbarkeit**.  
   
-3.  Erweitern Sie **Gespeicherte Prozeduren**, klicken Sie mit der rechten Maustaste auf die Prozedur, und klicken Sie anschließend auf **Skript für gespeicherte Prozeduren als**. Klicken Sie dann auf eine der folgenden Optionen: **Create To**, **Alter To**oder **Drop and Create in**.  
+3.  Erweitern Sie **gespeicherte Prozeduren**mit der rechten Maustaste auf die Prozedur, und klicken Sie dann auf **Skript für gespeicherte Prozeduren als**, und klicken Sie dann auf einen der folgenden: **Erstellen Sie zu**, **Alter in**, oder **löschen und erstellen in**.  
   
 4.  Wählen Sie **Neues Abfrage-Editor-Fenster**aus. Daraufhin wird die Prozedurdefinition angezeigt.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063850"
   
 2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie im Abfragefenster die folgende Anweisung, die `sp_helptext` gespeicherten Systemprozedur. Ändern Sie den Datenbanknamen und den Namen der gespeicherten Prozedur so, dass diese auf die gewünschte Datenbank und die gespeicherte Prozedur verweisen.  
+3.  Geben Sie im Abfragefenster die folgende Anweisung ein, die die gespeicherte Systemprozedur `sp_helptext` verwendet. Ändern Sie den Datenbanknamen und den Namen der gespeicherten Prozedur so, dass diese auf die gewünschte Datenbank und die gespeicherte Prozedur verweisen.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063850"
   
 2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie im Abfragefenster die folgenden Anweisungen, mit denen die `sys.sql_modules` -Katalogsicht angezeigt. Ändern Sie den Datenbanknamen und den Namen der gespeicherten Prozedur so, dass diese auf die gewünschte Datenbank und die gespeicherte Prozedur verweisen.  
+3.  Geben Sie im Abfragefenster die folgenden Anweisungen ein, die die `sys.sql_modules`-Katalogsicht verwenden: Ändern Sie den Datenbanknamen und den Namen der gespeicherten Prozedur so, dass diese auf die gewünschte Datenbank und die gespeicherte Prozedur verweisen.  
   
     ```  
     USE AdventureWorks2012;  

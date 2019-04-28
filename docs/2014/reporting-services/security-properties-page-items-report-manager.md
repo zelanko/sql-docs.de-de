@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025732"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Sicherheit (Eigenschaftenseite) (Elemente, Berichts-Manager)
   Mithilfe der Eigenschaftenseite für Sicherheit können Sie die Sicherheitseinstellungen für den Zugriff auf Ordner, Berichte, Modelle, Ressourcen und freigegebene Datenquellen anzeigen und ändern. Diese Seite steht für Elemente zur Verfügung, für die Sie die Berechtigung zur Änderung der Sicherheitseinstellungen besitzen.  

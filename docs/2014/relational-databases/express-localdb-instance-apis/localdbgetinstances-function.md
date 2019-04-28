@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032251"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances-Funktion
   Gibt alle SQL Server Express LocalDB-Instanzen mit der angegebenen Version zurück.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831620"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  

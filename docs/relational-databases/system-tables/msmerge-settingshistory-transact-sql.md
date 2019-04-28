@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026556"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "52817302"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**EventTime**|**datetime**|Die Uhrzeit, zu der das Ereignis aufgetreten ist|  
+|**eventtime**|**datetime**|Die Uhrzeit, zu der das Ereignis aufgetreten ist|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für eine bestimmte Veröffentlichung|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**EventType**|**tinyint**|Gibt den Ereignistyp an, der aufgezeichnet wird. Es kann einer der folgenden Typen sein:<br /><br /> **1** -ursprüngliche veröffentlichungsebenen-eigenschaftseinstellung.<br /><br /> **2** -veröffentlichungseigenschaft ändern.<br /><br /> **101** -ursprüngliche.<br /><br /> **102** -Artikeleigenschaft ändern.|  
+|**eventtype**|**tinyint**|Gibt den Ereignistyp an, der aufgezeichnet wird. Es kann einer der folgenden Typen sein:<br /><br /> **1** -ursprüngliche veröffentlichungsebenen-eigenschaftseinstellung.<br /><br /> **2** -veröffentlichungseigenschaft ändern.<br /><br /> **101** -ursprüngliche.<br /><br /> **102** -Artikeleigenschaft ändern.|  
 |**propertyname**|**sysname**|Der Name der festgelegten oder geänderten Eigenschaft|  
 |**previousvalue**|**sysname**|Der vorhergehende Eigenschaftswert, falls eine Eigenschaft geändert wurde|  
-|**newValue**|**sysname**|Der Wert, zu dem die Eigenschaft geändert oder mit dem die Eigenschaft erstellt wurde|  
-|**eventText**|**Datentyp nvarchar(2000)**|Die Zeichenfolge, die das Ereignis beschreibt|  
+|**newvalue**|**sysname**|Der Wert, zu dem die Eigenschaft geändert oder mit dem die Eigenschaft erstellt wurde|  
+|**eventtext**|**nvarchar(2000)**|Die Zeichenfolge, die das Ereignis beschreibt|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

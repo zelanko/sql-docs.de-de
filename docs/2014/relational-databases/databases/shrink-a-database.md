@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917007"
 ---
 # <a name="shrink-a-database"></a>Verkleinern einer Datenbank
   In diesem Thema wird beschrieben, wie eine Datenbank mit dem Objekt-Explorer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verkleinert wird.  
@@ -61,7 +61,7 @@ ms.locfileid: "52784023"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52784023"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nachdem Sie eine Datenbank verkleinert haben  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Verkleinern einer Datenbank  
  Die zum Verkleinern einer Datei verschobenen Daten können an beliebigen freien Platz in der Datei verschoben werden. Dies führt zur Indexfragmentierung und kann die Leistung von Abfragen, die einen Bereich des Indexes suchen, verlangsamen. Zur Vermeidung von Fragmentierung sollten die Dateiindizes nach der Verkleinerung neu erstellt werden.  
   
 ## <a name="see-also"></a>Siehe auch  

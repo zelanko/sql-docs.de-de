@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856161"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Erstellen der Miningmodellstruktur "Targeted Mailing" (Basic Data Mining-Lernprogramm)
   Der erste Schritt beim Erstellen eines Targeted Mailing-Szenarios besteht darin, mit dem Data Mining-Assistenten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine neue Miningstruktur und ein Entscheidungsstruktur-Miningmodell zu erstellen.  

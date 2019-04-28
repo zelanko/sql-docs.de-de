@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834566"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS-Protokolle konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **SSIS-Protokolle konfigurieren** , um Protokollierungsoptionen für ein Paket zu definieren.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375212"
  **Configuration**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
- Verwandte Themen: , . [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md) Manager [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)  
+ Verwandte Themen: [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)  
   
  **Delete**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf **Löschen**.  

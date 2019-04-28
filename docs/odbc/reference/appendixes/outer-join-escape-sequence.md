@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018368"
 ---
 # <a name="outer-join-escape-sequence"></a>Escapesequenz für äußere Verknüpfungen
 ODBC verwendet Escapesequenzen für äußere Joins. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -40,14 +40,14 @@ ODBC verwendet Escapesequenzen für äußere Joins. Die Syntax dieser Escape-Seq
   
  ÄUßERER JOIN {*Tabellenname* [*Korrelationsname*] &#124; *äußere Join*} ON  
   
- *Suche:*  
+ *search-*  
   
- *Bedingung*  
+ *condition*  
   
- *Korrelationsname* :: = *definiert-Benutzername*  
+ *correlation-name* ::= *user-defined-name*  
   
- *Initiator der ODBC-esc* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC-esc-Terminator* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
  Um zu bestimmen, welche Teile der diese Anweisung unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_OJ_CAPABILITIES-Informationen. Für äußere Joins *Suchbedingung* darf nur die Join-Bedingung zwischen den angegebenen *Tabellennamen*.

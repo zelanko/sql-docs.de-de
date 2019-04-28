@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022556"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern
   Auch nach dem Konfigurieren eines Oracle-Verlegers und dem Einrichten der Replikationsmechanismen zur Änderungsnachverfolgung können Administratoren von Oracle-Datenbanksystemen noch die üblichen Oracle-Datenbankhilfsprogamme nutzen und typische Systemverwaltungsaufgaben ausführen. Dabei sollte jedoch berücksichtigt werden, wie sich die Ausführung bestimmter Verwaltungsaufgaben auf die veröffentlichten Daten auswirkt.  

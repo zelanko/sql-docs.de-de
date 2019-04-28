@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 253e29ffb6b0723d672fdbf4de8a3cd6aff334d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007979"
 ---
 # <a name="null-handling-sqlxml-40"></a>Behandlung von NULL (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML-Syntax deutet NULL als eine Abwesenheit. Wenn ein Attribut- oder Elementwert beispielsweise NULL ist, ist das Attribut bzw. Element nicht in dem XML-Dokument vorhanden. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, die **updg: NullValue** Attribut ermöglicht die Angabe von NULL für ein Element oder Attribut-Wert.  
+  XML-Syntax deutet NULL als eine Abwesenheit. (Z. B. wenn ein Attribut- oder Elementwert Wert NULL ist, das Attribut bzw. Element nicht vorhanden ist aus dem XML-Dokument.) In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, die **updg: NullValue** Attribut ermöglicht die Angabe von NULL für ein Element oder Attribut-Wert.  
   
  Z. B. das folgende Updategram stellt sicher, dass die **Titel** -Wert eines Kontakts mit **ContactID** von 64 NULL ist, und aktualisiert dann die **Titel** Wert auf "Mr." auf "Mr.".  
   

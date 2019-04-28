@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844161"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Optionen (Text-Editor – Seite „Dateierweiterung“)
   Mithilfe des Dialogfelds **Optionen** legen Sie fest, wie alle Dateien mit bestimmten Dateierweiterungen von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verarbeitet werden. Für jede von Ihnen eingegebene Erweiterung können Sie einen Editor auswählen. Damit wählen Sie aus, in welchem [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Editor Dokumente eines bestimmten Typs geöffnet werden. Zum Öffnen der Optionen für die Dateierweiterung klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Text-Editor**, und klicken Sie dann auf **Dateierweiterung**.  

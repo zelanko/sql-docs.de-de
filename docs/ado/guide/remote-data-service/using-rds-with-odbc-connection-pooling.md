@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955753"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Option in Internet Information Services (IIS), um Behandlung Clientauslastung hohe Leistung zu erzielen. Verbindungspooling ist die Ressourcen-Manager für Verbindungen, verwalten den Zustand "geöffnet" häufig verwendete Verbindung.  
@@ -43,7 +43,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 ### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>Die TCP/IP-Sockets-Netzwerkbibliothek für SQL Server-Computers angeben  
   
-### <a name="in-microsoft-sql-server-65"></a>Microsoft SQL Server 6.5 gilt Folgendes:  
+### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 6.5, und klicken Sie dann auf SQL-Setup.  
   
@@ -84,7 +84,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 4.  Klicken Sie auf "erfolgt, um die Änderungen zu speichern und beenden Sie das Dienstprogramm".  
   
-### <a name="for-microsoft-sql-server-70"></a>Für Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 7.0, und klicken Sie dann auf SQL Server-Clientkonfiguration.  
   
@@ -112,7 +112,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 6.  Klicken Sie auf "Fertig".  
   
-### <a name="for-microsoft-sql-server-70"></a>Für Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 7.0, und klicken Sie dann auf Clientkonfigurations-Hilfsprogramm.  
   

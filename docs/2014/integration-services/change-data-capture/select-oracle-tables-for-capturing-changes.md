@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b962db5e005837a2e9d3fe68564fceb5bfc253
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835265"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen
   Verwenden Sie dieses Dialogfeld, um die Tabellen auszuwählen, die in der CDC-Instanz enthalten sind. Die ausgewählten Tabellen werden im Assistenten für neue Instanzen der Liste auf der Seite **Select Tables and Columns** hinzugefügt. In diesem Dialogfeld können Sie die folgenden Schritte ausführen.  
@@ -27,14 +27,14 @@ ms.locfileid: "58390858"
  **So suchen Sie nach bestimmten Tabellen**  
  Geben Sie die Suchkriterien wie folgt ein, und klicken Sie dann auf **Suchen**:  
   
--   **Schema**: Wählen Sie aus der Liste ein Datenbankschema. In der Liste werden nur Tabellen aufgeführt, die über dieses Schema verfügen.  
+-   **Schema**: Wählen Sie in der Liste ein Datenbankschema aus. In der Liste werden nur Tabellen aufgeführt, die über dieses Schema verfügen.  
   
--   **Table Name Pattern**: Geben Sie eine beliebige Zeichenfolge von Zeichen ein. Es werden nur Tabellen angezeigt, die die eingegebene Zeichenfolge enthalten.  
+-   **Table Name Pattern**: Geben Sie eine beliebige Zeichenfolge ein. Es werden nur Tabellen angezeigt, die die eingegebene Zeichenfolge enthalten.  
   
 > [!NOTE]  
 >  Sie können Kriterien in eines der Felder oder beide Felder eingeben.  
   
--   **Zeigen Sie die ersten 1000 übereinstimmenden Tabellen**: Standardmäßig ist dieses Kontrollkästchen aktiviert. Diese Option beschränkt die Anzeige auf die ersten 1000 übereinstimmenden Tabellen. Wenn Sie das Kontrollkästchen deaktivieren, werden alle Tabellen angezeigt, die zu einer Übereinstimmung führen. Falls eine große Anzahl von Tabellen vorhanden ist, kann es relativ lange dauern, bis die Liste angezeigt wird.  
+-   **Display first 1000 matching tables**: Standardmäßig ist dieses Kontrollkästchen aktiviert. Diese Option beschränkt die Anzeige auf die ersten 1000 übereinstimmenden Tabellen. Wenn Sie das Kontrollkästchen deaktivieren, werden alle Tabellen angezeigt, die zu einer Übereinstimmung führen. Falls eine große Anzahl von Tabellen vorhanden ist, kann es relativ lange dauern, bis die Liste angezeigt wird.  
   
  **So wählen Sie die Tabellen aus, die in die CDC-Instanz eingeschlossen werden sollen**  
  Aktivieren Sie das Kontrollkästchen neben einer beliebigen Tabelle, die Sie einschließen möchten, und klicken Sie dann auf **Hinzufügen**. Die Tabellen werden im Assistenten für neue Instanzen der Liste auf der Seite **Select Tables and Columns** hinzugefügt.  

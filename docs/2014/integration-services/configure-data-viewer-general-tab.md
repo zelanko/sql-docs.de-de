@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834352"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Daten-Viewer konfigurieren (Registerkarte Allgemein)
   Ein Daten-Viewer zeigt die Daten beim Durchlaufen des Pfads während der Paketausführung an, der zwei Datenflusskomponenten verbindet.  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898898"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
   Wenn Eigenschaftsausdrücke Werte aus einer Liste von Enumeratorelementen enthalten, müssen die Ausdrücke den numerischen Wert des Enumeratorelements anstelle des Anzeigenamens des Elements verwenden. Wenn z. B. ein Ausdruck die `LoggingMode`-Eigenschaft festlegt, müssen Sie den numerischen Wert 2 anstelle des Anzeigenamens Disabled verwenden.  

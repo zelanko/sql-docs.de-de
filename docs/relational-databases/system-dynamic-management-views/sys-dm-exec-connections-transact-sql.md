@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013492"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47774228"
 |session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |most_recent_session_id|**int**|Stellt die Sitzungs-ID für die letzte Anforderung dar, die dieser Verbindung zugeordnet ist. (SOAP-Verbindungen können von einer anderen Sitzung erneut verwendet werden.) Lässt NULL-Werte zu.|  
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|net_transport|**nvarchar(40)**|Gibt immer **Sitzung** bei eine Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.<br /><br /> **Hinweis:** beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
+|net_transport|**nvarchar(40)**|Gibt immer **Sitzung** bei eine Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.<br /><br /> **Hinweis**: Beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
 |protocol_type|**nvarchar(40)**|Gibt den Protokolltyp der Nutzlast an. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
 |protocol_version|**int**|Die Version des Datenzugriffsprotokolls, das dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |endpoint_id|**int**|Ein Bezeichner, der beschreibt, um welchen Verbindungstyp es sich handelt. Dieser endpoint_id-Wert kann zum Abfragen der sys.endpoint-Sicht verwendet werden. Lässt NULL-Werte zu.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47774228"
 |last_read|**datetime**|Zeitstempel für den letzten Lesevorgang, der über diese Verbindung erfolgt ist. Lässt NULL-Werte zu.|  
 |last_write|**datetime**|Zeitstempel für den letzten Schreibvorgang, der über diese Verbindung erfolgt ist. Lässt keine NULL-Werte zu.|  
 |net_packet_size|**int**|Netzwerkpaketgröße, die für die Informations- und Datenübertragung verwendet wird. Lässt NULL-Werte zu.|  
-|client_net_address|**varchar(48)**|Hostadresse des Clients, der die Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.<br /><br /> Vorgängerversionen von V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], diese Spalte gibt immer NULL zurück.|  
+|client_net_address|**varchar(48)**|Hostadresse des Clients, der die Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.<br /><br /> In Vorgängerversionen von V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], gibt diese Spalte immer NULL zurück.|  
 |client_tcp_port|**int**|Portnummer auf dem Clientcomputer, die dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
 |local_net_address|**varchar(48)**|Stellt die IP-Adresse auf dem Server dar, die die Zieladresse dieser Verbindung ist. Ist nur für Verbindungen verfügbar, die den TCP-Transportanbieter verwenden. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
 |local_tcp_port|**int**|Stellt den Server-TCP-Port dar, der der Zielport dieser Verbindung ist, falls die Verbindung den TCP-Transport verwendet. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  

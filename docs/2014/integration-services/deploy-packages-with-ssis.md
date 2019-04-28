@@ -1,5 +1,5 @@
 ---
-title: 'SSIS-Tutorials: Bereitstellen von Paketen | Microsoft-Dokumentation'
+title: 'SSIS-Tutorial: Bereitstellen von Paketen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899008"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>SSIS-Tutorials: Bereitstellen von Paketen
+# <a name="ssis-tutorial-deploying-packages"></a>SSIS-Tutorial: Bereitstellen von Paketen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.  
   
  Zuerst führen Sie Aufgaben aus, um die Bereitstellung vorzubereiten. Sie erstellen zunächst ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und fügen diesem vorhandene Pakete und Datendateien hinzu. Sie erstellen keine neuen Pakete. Stattdessen arbeiten Sie nur mit fertigen Paketen, die speziell für dieses Lernprogramm erstellt wurden. Sie nehmen in diesem Lernprogramm keine Änderung der Funktionalität der Pakete vor. Nachdem Sie die Pakete dem Projekt hinzugefügt haben, sollten Sie sie jedoch im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer öffnen und ihren Inhalt überprüfen. Durch Untersuchen der Pakete erhalten Sie Informationen zu Paketabhängigkeiten wie Protokolldateien und weiteren interessanten Funktionen der Pakete.  
@@ -72,7 +72,7 @@ ms.locfileid: "58379718"
   
  Wenn Sie die Pakete auf demselben Computer bereitstellen möchten wie dem, auf dem Sie das Bereitstellungspaket erstellen, muss dieser Computer die Anforderungen sowohl des Quell- als auch des Zielcomputers erfüllen.  
   
- **Ungefähre Dauer dieses Lernprogramms:** 2 Stunden  
+ **Geschätzte Zeit zum Bearbeiten dieses Tutorials:** 2 Stunden  
   
 ## <a name="lessons-in-this-tutorial"></a>Lektionen in diesem Lernprogramm  
  [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  

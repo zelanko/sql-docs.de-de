@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920729"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
   In diesem Thema werden die Konzepte, die Anforderungen und die Komponenten eingeführt, die notwendig sind, um den Windows Azure-BLOB-Speicherdienst als Sicherungsziel zu verwenden. Die Sicherungs- und Wiederherstellungsfunktion sind gleich oder ähnlich wie beim Verwenden von DISK oder TAPE, mit wenigen Unterschieden. Die Unterschiede und alle wichtigen Ausnahmen sowie einige Codebeispiele werden in diesem Thema erörtert.  
@@ -61,7 +61,7 @@ ms.locfileid: "53359292"
 ###  <a name="Blob"></a> Windows Azure-Blob-Speicherdienst  
  **Speicherkonto:** Das Speicherkonto ist der Ausgangspunkt für alle Speicherdienste. Um auf den Windows Azure-BLOB-Speicherdienst zuzugreifen, erstellen Sie zunächst ein Windows Azure-Speicherkonto. Der **storage account name** und die zugehörigen **access key** -Eigenschaften sind für die Authentifizierung beim Windows Azure-BLOB-Speicherdienst und dessen Komponenten erforderlich.  
   
- **Container:** In einem Container können mehrere BLOBs gruppiert und eine unbegrenzte Anzahl von BLOBs gespeichert werden. Damit eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in den Windows Azure-BLOB-Dienst geschrieben werden kann, muss mindestens der Stammcontainer erstellt werden.  
+ **Container:** Ein Container dient zur Gruppierung eines Satzes von Blobs, und es kann eine unbegrenzte Anzahl von Blobs speichern. Damit eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in den Windows Azure-BLOB-Dienst geschrieben werden kann, muss mindestens der Stammcontainer erstellt werden.  
   
  **BLOB:** Eine Datei eines beliebigen Typs und beliebiger Größe. Es gibt zwei Arten von BLOBs, die im Windows Azure-BLOB-Speicherdienst gespeichert werden können: Block- und Seitenblobs. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung werden Seitenblobs als Blobtyp verwendet. BLOBs sind im folgende URL-Format adressierbar: https://\<Speicherkonto >.blob.core.windows.net/\<Container > /\<Blob >  
   
@@ -79,7 +79,7 @@ ms.locfileid: "53359292"
   
  Hier ist ein Beispiel-URL-Wert: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER > /\<Dateiname.bak >. HTTPS ist zwar nicht erforderlich, aber empfehlenswert.  
   
- **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind.  Hier werden Anmeldeinformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Windows Azure-BLOB-Speicherdienst zu authentifizieren. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen zum Anzeigen, Kopieren oder erneuten Generieren von **access keys**für Speicherkonten finden Sie unter [Zugriffsschlüssel für Speicherkonten](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind.  Hier werden Anmeldeinformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Windows Azure-BLOB-Speicherdienst zu authentifizieren. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen zum Anzeigen, Kopieren oder erneuten Generieren von **access keys**für Speicherkonten finden Sie unter [Zugriffsschlüssel für Speicherkonten](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Schritt-für-Schritt-Anweisungen zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen finden Sie im Beispiel [Create a Credential](#credential) weiter unten in diesem Thema.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "53359292"
   
  Die folgenden Schritte beschreiben die Änderungen, die am Task Datenbank sichern vorgenommen wurde, um das Sichern im Windows Azure-Speicher zu ermöglichen:  
   
-1.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Instanz her.  Wählen Sie eine Datenbank zu sichern, und klicken Sie mit der rechten Maustaste auf **Aufgaben**, und wählen Sie **sichern...** . Daraufhin wird das Dialogfeld Datenbank sichern geöffnet.  
+1.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Instanz her.  Wählen Sie eine Datenbank zu sichern, und klicken Sie mit der rechten Maustaste auf **Aufgaben**, und wählen Sie **sichern...** . Daraufhin wird das Dialogfeld Datenbank sichern.  
   
 2.  Auf der Seite **Allgemein** wird die Option URL verwendet, um eine Sicherung im Windows Azure-Speicher zu erstellen. Wenn Sie diese Option auswählen, werden weitere Optionen auf dieser Seite aktiviert:  
   
@@ -229,7 +229,7 @@ ms.locfileid: "53359292"
   
     3.  **Azure-Speichercontainer:** Der Name des Windows Azure-Speichercontainers, um die Sicherungsdateien zu speichern.  
   
-    4.  **URL-Präfix:** Dieses wird automatisch mit den Informationen erstellt, die in den Feldern angegeben werden, die in den vorherigen Schritten beschrieben wurden. Wenn Sie diesen Wert manuell bearbeiten, stellen Sie sicher, dass er mit den anderen Informationen übereinstimmt, die Sie zuvor bereitgestellt haben. Wenn Sie beispielsweise die Speicher-URL ändern, sollten Sie sicherstellen, dass die SQL-Anmeldeinformationen für die Authentifizierung beim gleichen Speicherkonto festgelegt wurden.  
+    4.  **URL-Präfix:** Dies wird erstellt, automatisch mit den Informationen in den Feldern in den vorherigen Schritten beschrieben werden angegeben. Wenn Sie diesen Wert manuell bearbeiten, stellen Sie sicher, dass er mit den anderen Informationen übereinstimmt, die Sie zuvor bereitgestellt haben. Wenn Sie beispielsweise die Speicher-URL ändern, sollten Sie sicherstellen, dass die SQL-Anmeldeinformationen für die Authentifizierung beim gleichen Speicherkonto festgelegt wurden.  
   
  Wenn Sie eine URL als Ziel auswählen, sind bestimmte Optionen auf der Seite **Medienoptionen** deaktiviert.  Die folgenden Themen enthalten weitere Informationen zum Dialogfeld Datenbank sichern:  
   
@@ -279,7 +279,7 @@ ms.locfileid: "53359292"
 ###  <a name="credential"></a> Erstellen von Anmeldeinformationen  
  Im folgenden Beispiel werden Anmeldeinformationen erstellt, in denen die Authentifizierungsinformationen für den Windows Azure-Speicher gespeichert werden.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "53359292"
 ###  <a name="complete"></a> Sichern einer vollständigen Datenbank  
  Im folgenden Beispiel wird die AdventureWorks2012-Datenbank im Windows Azure-BLOB-Speicherdienst gesichert.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "53359292"
 ###  <a name="databaselog"></a> Sichern der Datenbank und Protokoll  
  Im folgenden Beispiel wird die AdventureWorks2012-Beispieldatenbank gesichert, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird. Zur Unterstützung von Protokollsicherungen wird die AdventureWorks2012-Datenbank geändert, sodass sie das vollständige Wiederherstellungsmodell verwendet. Im Beispiel wird eine vollständige Datenbanksicherung im Windows-Azure-BLOB erstellt. Nach einer Reihe von Updates wird das Protokoll gesichert. In diesem Beispiel wird für eine Sicherungsdatei ein Name mit einem Datums-/Zeitstempel erstellt.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "53359292"
 ###  <a name="filebackup"></a> Erstellen einer vollständigen dateisicherung der primären Dateigruppe  
  Im folgenden Beispiel wird eine vollständige Dateisicherung der primären Dateigruppe erstellt.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "53359292"
 ###  <a name="differential"></a> Erstellen einer differenziellen dateisicherung der primären Dateigruppe  
  Im folgenden Beispiel wird eine differenzielle Dateisicherung der primären Dateigruppe erstellt.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "53359292"
 ###  <a name="restoredbwithmove"></a> Wiederherstellen einer Datenbank und Verschieben von Dateien  
  Zum Wiederherstellen einer vollständigen Datenbanksicherung und Verschieben der wiederhergestellten Datenbank in das Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data führen Sie die folgenden Schritte aus.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "53359292"
 ###  <a name="PITR"></a> Wiederherstellen eines bestimmten Zeitpunkts mithilfe von STOPAT  
  Im folgenden Beispiel wird der Zustand einer Datenbank zu einem bestimmten Zeitpunkt wiederhergestellt und ein Wiederherstellungsvorgang veranschaulicht.  
   
-1.  **TSQL**  
+1.  **Tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
@@ -877,6 +877,6 @@ ms.locfileid: "53359292"
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure-Blob-Speicherdienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

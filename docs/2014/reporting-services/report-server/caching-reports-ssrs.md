@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016925"
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
   Ein Berichtsserver kann eine Kopie eines verarbeiteten Berichts zwischenspeichern und diese anzeigen, wenn ein Benutzer den Bericht öffnet. Für den Benutzer ist der einzige Hinweis darauf, dass es sich bei dem Bericht um eine zwischengespeicherte Kopie handelt, das Datum und die Uhrzeit des Berichts. Wenn der Bericht kein aktuelles Datum oder keine aktuelle Uhrzeit aufweist und es sich um keine Momentaufnahme handelt, wurde der Bericht aus dem Cache abgerufen.  

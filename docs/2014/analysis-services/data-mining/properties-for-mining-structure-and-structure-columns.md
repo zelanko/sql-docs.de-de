@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732968"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
   Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
@@ -40,7 +40,7 @@ ms.locfileid: "48190010"
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss festgelegt werden `KeepTrainingCases` um Drillthroughs und Zurückgehaltene Daten zu aktivieren.|  
+|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss festgelegt werden, um `KeepTrainingCases` um Drillthroughs und Zurückgehaltene Daten zu aktivieren.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
@@ -59,8 +59,8 @@ ms.locfileid: "48190010"
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
 |**Inhalt**|Der Inhaltstyp der Spalte.|  
 |**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
-|**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur aktiviert, wenn der Inhaltstyp, um festgelegt ist `Discretized`.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
-|**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur aktiviert, wenn der Inhaltstyp, um festgelegt ist `Discretized`.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
+|**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
+|**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  
 |**ID**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
 |**IsKey**|Gibt an, ob es sich bei der Spalte um eine Schlüsselspalte handelt.|  

@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955770"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: Nutzbarmachen von DataControl (RDS-Tutorial)
 Das zurückgegebene **Recordset** Objekt für die Verwendung verfügbar ist. Sie können überprüfen, navigieren Sie oder bearbeiten Sie sie, wie jede andere **Recordset**. Was Sie tun können, mit der **Recordset** hängt von Ihrer Umgebung. Visual Basic und Visual C++, haben Sie visuelle Steuerelemente, mit dem eine **Recordset** direkt oder indirekt mit Hilfe des Steuerelements ein aktivieren.  
   
 > [!IMPORTANT]

@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838003"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -80,9 +80,9 @@ ms.locfileid: "53355116"
   
 |Ressource|Zielgruppe|  
 |--------------|--------------|  
-|[SQL Server-Entwicklercenter](https://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
+|[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
 |[XML-Entwicklercenter](https://go.microsoft.com/fwlink/?LinkId=42458)|Entwickler von Websites und Anwendungen, deren Sites und Anwendungen XML für die Datenspeicherung und -bearbeitung verwenden.|  
-|[SQL Server-TechNet-Website](https://technet.microsoft.com/sqlserver/dn135309)|Administratoren und Operatoren, die Systeme planen, verwalten, und unterstützen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden.|  
+|[SQL Server TechNet Site](https://technet.microsoft.com/sqlserver/dn135309)|Administratoren und Operatoren, die Systeme planen, verwalten, und unterstützen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden.|  
   
 ## <a name="additional-online-information"></a>Zusätzliche Onlineinformationen  
  Auf diesen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Websites sind zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)]-Informationen verfügbar.  

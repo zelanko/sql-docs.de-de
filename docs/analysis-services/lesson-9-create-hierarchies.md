@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017261"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lektion 9: Erstellen von Hierarchien
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ In dieser Lektion erstellen Sie Hierarchien. Hierarchien sind Gruppen von Spalte
   
 Verwenden Sie zum Erstellen von Hierarchien den Modell-Designer in *Diagrammansicht*. Erstellen und Verwalten von Hierarchien wird in der Datensicht nicht unterstützt.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 8: Erstellen von Perspektiven](../analysis-services/lesson-8-create-perspectives.md).  
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 8: Erstellen von Perspektiven](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Erstellen von Hierarchien  
   
@@ -45,7 +45,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 5.  Mit der rechten Maustaste die **ModelName** Spalte > **zur Hierarchie hinzufügen**, und wählen Sie dann **Kategorie**. Gleiches gilt für **EnglishProductName**. Benennen Sie diese Spalten in der Hierarchie **Modell** und **Produkt**.  
 
-    ![als-tabellarische-lesson9-Kategorie](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>So erstellen Sie Hierarchien in der DimDate-Tabelle  
   

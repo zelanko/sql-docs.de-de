@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844408"
 ---
 # <a name="trace-template-properties-general-tab"></a>Eigenschaften der Ablaufverfolgungsvorlage (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Um auf dieses Dialogfeld zuzugreifen, zeigen Sie in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Datei** auf **Vorlagen**, und klicken Sie dann auf **Neue Vorlage**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servertyp auswählen**  
  Geben Sie den Servertyp an, für den die Vorlage verwendet wird.  
   

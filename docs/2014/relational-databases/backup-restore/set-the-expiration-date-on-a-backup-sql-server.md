@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877301"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>Festlegen des Ablaufdatums für eine Sicherung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie das Ablaufdatum für eine Sicherung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festlegen.  

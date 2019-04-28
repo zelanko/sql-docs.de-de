@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997086"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @Action=] '*Aktion*"  
+ [ @Action= ] '*action*'  
  Beschreibt die von der Prozedur durchzuführende Aktion. *Aktion* ist **varchar(10)**. *Aktion* kann einen der folgenden Werte aufweisen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|**Auto_fix**|Verknüpft einen Benutzereintrag in der sys.database_principals-Systemkatalogsicht in der aktuellen Datenbank mit einem gleichlautenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Ist kein gleichlautender Anmeldename vorhanden, wird er erstellt. Überprüfen Sie das Ergebnis der **Auto_Fix** Anweisung, um sicherzustellen, dass tatsächlich der richtige Link erstellt wurde. Verwenden Sie **Auto_Fix** in sicherheitskritischen Situationen.<br /><br /> Bei Verwendung von **Auto_Fix**, Sie müssen angeben, *Benutzer* und *Kennwort* der Anmeldename nicht bereits vorhanden ist, andernfalls müssen Sie angeben *Benutzer*aber *Kennwort* ignoriert werden. *Anmeldung* muss NULL sein. *Benutzer* muss ein gültiger Benutzer in der aktuellen Datenbank sein. Dem Anmeldenamen kann kein anderer Benutzer zugeordnet werden.|  
+|**Auto_Fix**|Verknüpft einen Benutzereintrag in der sys.database_principals-Systemkatalogsicht in der aktuellen Datenbank mit einem gleichlautenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Ist kein gleichlautender Anmeldename vorhanden, wird er erstellt. Überprüfen Sie das Ergebnis der **Auto_Fix** Anweisung, um sicherzustellen, dass tatsächlich der richtige Link erstellt wurde. Verwenden Sie **Auto_Fix** in sicherheitskritischen Situationen.<br /><br /> Bei Verwendung von **Auto_Fix**, Sie müssen angeben, *Benutzer* und *Kennwort* der Anmeldename nicht bereits vorhanden ist, andernfalls müssen Sie angeben *Benutzer*aber *Kennwort* ignoriert werden. *Anmeldung* muss NULL sein. *Benutzer* muss ein gültiger Benutzer in der aktuellen Datenbank sein. Dem Anmeldenamen kann kein anderer Benutzer zugeordnet werden.|  
 |**Bericht**|Listet die Benutzer und entsprechenden Sicherheits-IDs (SIDs) in der aktuellen Datenbank auf, die mit keinem Anmeldenamen verknüpft sind. *Benutzer*, *Anmeldung*, und *Kennwort* muss NULL sein oder nicht angegeben.<br /><br /> Um die Berichtsoption mit einer Abfrage, die Verwendung der Systemtabellen zu ersetzen, vergleichen Sie die Einträge in **server_prinicpals** mit den Einträgen in **Sys. database_principals**.|  
 |**Update_One**|Verknüpft den angegebenen *Benutzer* in der aktuellen Datenbank zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Anmeldung*. *Benutzer* und *Anmeldung* muss angegeben werden. *Kennwort* muss NULL sein oder nicht angegeben.|  
   
  [ @UserNamePattern=] '*Benutzer*"  
  Der Name eines Benutzers in der aktuellen Datenbank. *Benutzer* ist **Sysname**, hat den Standardwert NULL.  
   
- [ @LoginName=] '*Anmeldung*"  
+ [ @LoginName= ] '*login*'  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [ @Password=] '*Kennwort*"  
@@ -124,7 +124,7 @@ GO
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [Sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

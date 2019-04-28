@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922171"
 ---
 # <a name="backup-encryption"></a>Verschlüsseln der Sicherung
   Dieses Thema bietet eine Übersicht über die Verschlüsselungsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen. Es enthält Details zur Verwendung, zu den Vorteilen und empfohlenen Vorgehensweisen beim Verschlüsseln bei der Sicherung.  
@@ -26,20 +26,20 @@ ms.locfileid: "48055830"
   
  Um während der Sicherung eine Verschlüsselung durchzuführen, müssen Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsmethode angeben, um den Verschlüsselungsschlüssel zu sichern. Folgende Verschlüsselungsoptionen werden unterstützt:  
   
--   **Verschlüsselungsalgorithmus:** Die unterstützten Verschlüsselungsalgorithmen sind: AES 128, AES, AES 192 256 und Triple DES  
+-   **Verschlüsselungsalgorithmus:** Die unterstützten Verschlüsselungsalgorithmen sind: AES 128, AES 192, AES 256 und Triple DES  
   
--   **Verschlüsselung:** ein Zertifikat oder ein asymmetrischer Schlüssel  
+-   **Encryptor:** Ein Zertifikat oder asymmetrischer Schlüssel  
   
 > [!CAUTION]  
 >  Es ist sehr wichtig, das Zertifikat oder den asymmetrischen Schlüssel zu sichern – vorzugsweise an einem anderen Speicherort als die Sicherungsdatei, die zum Verschlüsseln verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel können Sie keine Sicherung wiederherstellen, sodass die Sicherungsdatei unbrauchbar ist.  
   
- **Wiederherstellen der verschlüsselten Sicherung:** Die SQL Server-Wiederherstellung erfordert keine Verschlüsselungsparameter, die während der Wiederherstellung angegeben werden müssen. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über `VIEW DEFINITION`-Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
+ **Wiederherstellen der verschlüsselten Sicherung:** SQL Server-Wiederherstellung erfordert keine Verschlüsselungsparameter, die während der Wiederherstellung angegeben werden. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über `VIEW DEFINITION`-Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
   
  Wenn Sie eine Sicherung von einer TDE-verschlüsselten Datenbank wiederherstellen, sollte das TDE-Zertifikat auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgen soll.  
   
 ##  <a name="Benefits"></a> Vorteile  
   
-1.  Das Verschlüsseln der Datenbanksicherungen trägt zum Schutz der Daten bei: SQL Server bietet die Option, die Sicherungsdaten beim Erstellen einer Sicherung zu verschlüsseln.  
+1.  Verschlüsseln der datenbanksicherungen trägt zum Schutz der Daten: SQL Server bietet die Möglichkeit, die Sicherungsdaten beim Erstellen einer Sicherung zu verschlüsseln.  
   
 2.  Verschlüsselung kann auch für Datenbanken verwendet werden, die mithilfe von TDE verschlüsselt werden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055830"
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Voraussetzungen zum Verschlüsseln einer Sicherung:  
   
-1.  **Erstellen eines Datenbank-Hauptschlüssels für die Masterdatenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von in der Datenbank vorhandenen privaten Schlüsseln von Zertifikaten und asymmetrischen Schlüsseln verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Erstellen Sie ein Datenbank-Hauptschlüssel für die master-Datenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Erstellen Sie ein Zertifikat oder einen asymmetrischen Schlüssel, der für die Sicherungsverschlüsselung verwendet wird. Weitere Informationen zum Erstellen eines Zertifikats finden Sie unter [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Weitere Informationen zum Erstellen eines asymmetrischen Schlüssels finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48055830"
 ##  <a name="Permissions"></a> Berechtigungen  
  **So verschlüsseln Sie eine Sicherung oder stellen Daten aus einer verschlüsselten Sicherung wieder her:**  
   
- `VIEW DEFINITION` Berechtigung für das Zertifikat oder asymmetrischen Schlüssel, der zum Verschlüsseln der Sicherung verwendet wird.  
+ `VIEW DEFINITION`-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, der verwendet wird, um die Datenbanksicherung zu verschlüsseln.  
   
 > [!NOTE]  
 >  Der Zugriff auf das TDE-Zertifikat ist nicht erforderlich, um eine durch TDE geschützte Datenbank zu sichern oder wiederherzustellen.  

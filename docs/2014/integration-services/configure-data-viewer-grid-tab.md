@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 293624979236d8507d53d86668554041eed76c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834428"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Daten-Viewer konfigurieren (Registerkarte Raster)
   Verwenden Sie die Registerkarte **Raster** des Dialogfelds **Daten-Viewer konfigurieren** , um die anzuzeigenden Spalten anzugeben. In einem Rasterdiagramm werden Datensätze als Zeilen in einem Raster angezeigt. Das Diagramm spiegelt jeweils nur den Inhalt eines Puffers wider.  

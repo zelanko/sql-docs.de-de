@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926600"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor für den Task Aufträge übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Aufträge übertragen** können Sie den Task Aufträge übertragen benennen und beschreiben. Weitere Informationen zum Task Aufträge übertragen finden Sie unter [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

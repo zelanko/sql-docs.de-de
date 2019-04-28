@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f46fbc99145f9a372a2c1bf5d40919b87c782454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021680"
 ---
 # <a name="publication-properties-articles"></a>Veröffentlichungseigenschaften (Registerkarte Artikel)
   Die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften** enthält Informationen zu den in einer Veröffentlichung enthaltenen Artikeln. Auf dieser Seite können Sie Artikel per Drag und Drop aus vorhandenen Veröffentlichungen hinzufügen sowie Artikeleigenschaften und Filtereinstellungen für Spalten ändern.  

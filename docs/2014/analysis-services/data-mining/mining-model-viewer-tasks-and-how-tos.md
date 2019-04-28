@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733408"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tasks und Anweisungen für Miningmodell-Viewer
   Der Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält mehrere Tools zum Durchsuchen von Miningmodellen. Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen zum Durchführen von Aufgaben, die im Zusammenhang mit der **Mining Model-Viewer** -Registerkarte im Designer verwendet werden.  
@@ -42,12 +42,12 @@ ms.locfileid: "48189671"
   
 -   [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Anzeigen der Formel für ein Zeitreihenmodell Modell &#40;Datamining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Ändern der im Data Mining-Viewer verwendeten Farben](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Datamining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Lernprogramm zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

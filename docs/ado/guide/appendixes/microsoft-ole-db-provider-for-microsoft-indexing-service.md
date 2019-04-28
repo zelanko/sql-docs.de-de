@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855852"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft, die Indizierung Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst ermöglicht programmgesteuerten schreibgeschützten Zugriff auf System- und Webdaten indiziert, die vom Microsoft Indexdienst-Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Informationen ausgeben.
@@ -75,9 +75,9 @@ MSIDXS
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|immer **"adOpenStatic"**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|
@@ -87,7 +87,7 @@ MSIDXS
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lese-/Schreibzugriff|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Schreibgeschützt|
 |[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lese-/Schreibzugriff|
-|[Status](../../../ado/reference/ado-api/state-property-ado.md)|Schreibgeschützt|
+|[Zustand](../../../ado/reference/ado-api/state-property-ado.md)|Schreibgeschützt|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Schreibgeschützt|
 
  \*Lesezeichen müssen aktiviert sein, auf den Anbieter in der Reihenfolge für dieses Feature, auf die **Recordset**.
@@ -96,23 +96,23 @@ MSIDXS
 
 |Methode|Verfügbar?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|nein|
-|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Benutzerkontensteuerung|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|nein|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|nein|
-|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Benutzerkontensteuerung|
-|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Benutzerkontensteuerung|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Benutzerkontensteuerung|
-|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Benutzerkontensteuerung|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Benutzerkontensteuerung|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Benutzerkontensteuerung|
-|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Benutzerkontensteuerung|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Benutzerkontensteuerung|
-|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|Benutzerkontensteuerung|
-|[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Benutzerkontensteuerung|
-|[Update](../../../ado/reference/ado-api/update-method.md)|nein|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|
+|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Ja|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Ja|
+|[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|
+|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|
 
  Bestimmte Implementierungsdetails und funktionalen Informationen zu den Microsoft OLE DB-Anbieter für Microsoft Indexdienst, finden Sie in der [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oder besuchen Sie die Web Services-Seite von den Windows NT Server-Webdienst Website.
 

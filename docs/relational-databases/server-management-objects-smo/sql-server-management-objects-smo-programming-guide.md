@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 85636b46c0296d8499124128928ff9c91bc21596
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943446"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server Management Objects (SMO)-Programmierungshandbuch
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47856148"
 |Thema|Description|  
 |-----------|-----------------|
 |[Erste Schritte in SMO](getting-started-in-smo.md)|Enthält Informationen zum Einstieg in die Entwicklung einer SMO-Anwendung
-|[Erstellen von SMO-Programmen](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Programming Specific Tasks](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Stellt Informationen zum Programmieren von SMO-Objekten in Folgendem bereit: Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi, and Microsoft.SqlServer.Management.Trace namespaces.<br /><br /> Dies umfasst Anweisungen zum Schreiben von Programmen, die Datenbanken zu definieren und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können SMO verwenden, zum Erstellen von Datenbanken, Sicherungen durchführen, Aufträge erstellen, konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Zuweisen von Berechtigungen, und viele andere Administrationsaufgaben durchführen.|  
+|[Erstellen von SMO-Programmen](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Programming Specific Tasks](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Stellt Informationen zum Programmieren von SMO-Objekten in Folgendem bereit: Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi, and Microsoft.SqlServer.Management.Trace namespaces.<br /><br /> Dies schließt Anleitungen ein, Programme zu schreiben, mit denen Datenbanken definiert werden und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwaltet wird. Mit SMO können Sie Datenbanken erstellen, Sicherungen durchführen, Aufträge erstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren, Berechtigungen erteilen und andere Verwaltungsaufgaben ausführen.|  
 |[Entwicklerhandbuch (Replikation)](../../relational-databases/replication/concepts/replication-developer-documentation.md)|Stellt Informationen über das Programmieren der RMO-Objekte im Microsoft.SqlServer.Replication-Namespace bereit.|  
   
 ## <a name="see-also"></a>Siehe auch  

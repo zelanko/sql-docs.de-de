@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919589"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
   Eine Skalarwertfunktion gibt einen einzelnen Wert wie eine Zeichenfolge, eine ganze Zahl oder einen Bitwert zurück. Außerdem können Sie mithilfe einer beliebigen .NET Framework-Programmiersprache benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Weitere Informationen zu den Vorteilen von CLR-Integration "und" Auswählen zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)], finden Sie unter [Overview of CLR Integration](../clr-integration/clr-integration-overview.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48157360"
 >  Markieren Sie eine benutzerdefinierte Funktion nicht als deterministisch, wenn die Funktion bei denselben Eingabewerten und demselben Datenbankzustand nicht immer dieselben Ausgabewerte erzeugt. Markieren eine Funktion als deterministisch, kann Wenn die Funktion nicht wirklich deterministisch ist zu beschädigten indizierten Sichten und berechneten Spalten führen. Sie markieren eine Funktion als deterministisch, indem Sie die `IsDeterministic`-Eigenschaft auf true festlegen.  
   
 ### <a name="table-valued-parameters"></a>Tabellenwertparameter  
- Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Tabellenwertparametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Tabellenwertparametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Beispiel für eine CLR-Skalarwertfunktion  
  Es folgt eine einfache Skalarwertfunktion, die auf Daten zugreift und einen ganzzahligen Wert zurückgibt:  

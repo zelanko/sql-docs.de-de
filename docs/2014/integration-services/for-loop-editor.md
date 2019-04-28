@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da5e5c2a748a2bd38d0337b70e9d2a3da312df43
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894478"
 ---
 # <a name="for-loop-editor"></a>For-Schleifen-Editor
   Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** können Sie eine Schleife konfigurieren, durch die ein Workflow wiederholt wird, bis eine bestimmte Bedingung mit False ausgewertet wird.  

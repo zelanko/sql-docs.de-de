@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010741"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  

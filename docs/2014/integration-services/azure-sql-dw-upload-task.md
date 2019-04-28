@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1e5e39f8049a5f2832e7a37381c4d22ef2483b62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836377"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 Der **Azure SQL DW-Uploadtask** ermöglicht einem SSIS-Paket, lokale Daten in eine Tabelle in Azure SQL Data Warehouse (DW) hochzuladen. Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung. Der Hochladevorgang folgt den effizienten PolyBase-Ansatz. Insbesondere werden Daten zunächst in Azure Blob Storage und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich, um diesen Task zu verwenden.

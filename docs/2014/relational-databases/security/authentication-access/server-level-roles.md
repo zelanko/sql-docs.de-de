@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011926"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Rollen auf Serverebene bereit, um Sie beim Verwalten der Berechtigungen auf einem Server zu unterstützen. Bei diesen Rollen handelt es sich um Sicherheitsprinzipale, in denen andere Prinzipale gruppiert sind. Der Geltungsbereich der Berechtigungen von Rollen auf Serverebene erstreckt sich auf den gesamten Server. (*Rollen* entsprechen den *Gruppen* im Betriebssystem Windows.)  
@@ -57,7 +57,7 @@ ms.locfileid: "58531852"
  Jede feste Serverrolle besitzt bestimmte Berechtigungen. Eine Übersicht der Berechtigungen, die Serverrollen zugewiesen sind, finden Sie unter [Feste Serverrollen und feste Datenbankrollen der Datenbank-Engine](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Die Berechtigung `CONTROL SERVER` ist ähnlich, aber nicht identisch mit der festen Serverrolle `sysadmin`. Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. `CONTROL SERVER` impliziert keine Mitgliedschaft der festen Serverrolle `sysadmin`.) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 im gespeicherter Systemprozeduren, die erfordern `sysadmin` Mitgliedschaft, finden Sie im folgenden Blogbeitrag von Andreas wolter: [CONTROL SERVER gegen Sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Berechtigungen Escalation - Vorbehalte](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Die Berechtigung `CONTROL SERVER` ist ähnlich, aber nicht identisch mit der festen Serverrolle `sysadmin`. Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. `CONTROL SERVER` impliziert keine Mitgliedschaft in der `sysadmin` -Serverrolle sein.) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 im gespeicherter Systemprozeduren, die erfordern `sysadmin` Mitgliedschaft, finden Sie im folgenden Blogbeitrag von Andreas wolter: [CONTROL SERVER gegen Sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Berechtigungen Escalation - Vorbehalte](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Berechtigung auf Serverebene  
  Benutzerdefinierten Serverrollen können nur Berechtigungen auf Serverebene hinzugefügt werden. Führen Sie zum Auflisten der Berechtigungen auf Serverebene die folgende Anweisung aus. Folgende Berechtigungen gelten auf Serverebene:  

@@ -15,28 +15,28 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843122"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informationen zu den SQL Server-Lizenzbedingungen
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien geschrieben werden: % ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\license oder % ProgramFiles(x86) % \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Begriffe\\.  
   
  Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Name der Datei Lizenzbedingungen besitzt folgendes Format: SQLServer2014_License_Edition_\<TYPE > _\<LCID > RTF. Zum Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Name der Datei Lizenzbedingungen hat das Format: SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. Zum Beispiel:  
   
 -   SQLServer2014_License_DEV_1033.rtf[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] für  Developer in der Sprachversion Englisch.  
   
--   SQLServer2014_License_EXPR_1033.rtf[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] für  Express in der Sprachversion Englisch.  
+-   SQLServer2014_License_EXPR_1033.rtf für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express in der Sprachversion Englisch.  
   
  TYPE gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Edition an. Die folgenden Dateinamensegmente werden zum Identifizieren der Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet:  
   
--   ENT – Enterprise Edition: Server/Clientzugriffslizenz-Lizenzierung  
+-   ENT – Enterprise Edition: Server und Client Zugriff auf Clientzugriffslizenz (CAL)-Lizenzierung  
   
--   ENTCORE – Enterprise Edition: Core-based Licensing  
+-   ENTCORE – Enterprise Edition: Core-basierte Lizenzierung  
   
 -   BI – Business Intelligence  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a46570a30254341fede1fb96fd368e94a09e58ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910295"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52791662"
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
 |**action**|**tinyint**|Bezeichnet die erforderliche kompensierende Aktion.|  
 |**generation**|**bigint**|Der Wert der Generierung, für die die kompensierende Aktion benötigt wird.|  
-|**geändert**|**int**|Intern-nur zur Verwendung.|  
+|**changed**|**int**|Intern-nur zur Verwendung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -13,16 +13,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919294"
 ---
 # <a name="assembly-properties-general-page"></a>Assemblyeigenschaften (Seite Allgemein)
   Mithilfe dieser Seite können Sie die für die Assembly festgelegten Eigenschaften anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **AssemblyName**  
  Zeigt den Assemblynamen an, der immer mit dem Namen der CLR-Assembly übereinstimmt.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48103270"
  Geben Sie den Besitzernamen oder Schemanamen ein, oder wählen Sie einen aus der Liste aus.  
   
  **Berechtigungssatz**  
- Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sicher**, **Externer Zugriff**und **Uneingeschränkt** .  
+ Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sichere**, **externen Zugriff**, und **Unsafe** Zugriff.  
   
  **Pfad zur assembly**  
  Geben Sie den Pfad zur Assemblydatei ein.  

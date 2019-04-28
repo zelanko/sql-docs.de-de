@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844270"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Registerkarte "Editor" und Statusleiste)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Registerkarte ' Editor ' und Statusleiste)
   Auf der Seite **Registerkarte "Editor" und Statusleiste** können Sie die von den [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren angezeigten Informationen anpassen. Sie können die Ebene der Informationen angeben, die auf der Registerkarte und der Statusleiste des Abfrage-Editor-Fensters angezeigt werden, sowie festlegen, ob die Statusleiste im Editor-Fenster oben oder unten angezeigt wird.  
   
 ## <a name="option-settings-by-editor"></a>Optionseinstellungen nach Editor  
@@ -38,7 +38,7 @@ ms.locfileid: "48055450"
  **Keine**  
  Die Statusleiste zeigt keine Zeitinformationen an.  
   
- **Ende**  
+ **End**  
  Auf der Statusleiste wird während der Skriptausführung die aktuelle Uhrzeit angezeigt. Bei Abschluss des Skripts wird die Uhrzeit angezeigt, zu der das Skript abgeschlossen wurde.  
   
  **Verstrichen**  
@@ -71,7 +71,7 @@ ms.locfileid: "48055450"
  **Top**  
  Die Statusleiste wird am oberen Rand des Abfrage-Editor-Fensters angezeigt.  
   
- **nach unten**  
+ **Bottom**  
  Die Statusleiste wird am unteren Rand des Abfrage-Editor-Fensters angezeigt.  
   
 ## <a name="tab-text"></a>Registerkartentext  

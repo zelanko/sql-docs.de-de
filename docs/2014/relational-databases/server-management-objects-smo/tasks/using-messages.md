@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e67d8818fb20d339c4166f606d15e0f7dbceced
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015262"
 ---
 # <a name="using-messages"></a>Verwenden von Meldungen
   In SMO werden Systemmeldungen durch das <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>-Objekt dargestellt, das zum `Server`-Objekt gehört. Da die Systemmeldungen nicht geändert werden können, sind `SystemMessage`-Objekteigenschaften schreibgeschützt.  

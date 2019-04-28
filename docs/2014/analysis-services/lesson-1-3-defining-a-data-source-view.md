@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730323"
 ---
 # <a name="defining-a-data-source-view"></a>Definieren einer Datenquellensicht
   Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md).  

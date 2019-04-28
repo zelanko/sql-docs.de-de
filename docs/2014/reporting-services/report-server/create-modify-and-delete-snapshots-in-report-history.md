@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8232f701a8702965b35277ffab4f92459f32c063
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010709"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf
   Der Berichtsverlauf ist eine Auflistung von Berichtsmomentaufnahmen. Zum Verwalten des Berichtsverlaufs können Sie Momentaufnahmen hinzufügen und löschen oder Eigenschaften zur Speicherung des Berichtsverlaufs ändern. Der Berichtsverlauf kann manuell oder nach einem Zeitplan erstellt werden.  

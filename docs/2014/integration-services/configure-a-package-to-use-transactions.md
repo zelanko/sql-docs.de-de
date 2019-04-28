@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcbe13bd63284cdeeba219eb0a0cbcdc4084d4b1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835215"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Konfigurieren eines Pakets für die Verwendung von Transaktionen
   Beim Konfigurieren eines Pakets zur Verwendung von Transaktionen stehen zwei Optionen zur Verfügung:  

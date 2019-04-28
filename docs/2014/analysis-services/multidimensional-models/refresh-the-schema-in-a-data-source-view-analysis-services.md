@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737094"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services)
   Nachdem eine Datenquellensicht (data source view; DSV) in einem Projekt oder einer Datenbank von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] definiert wurde, kann sich das Schema in einer zugrunde liegenden Datenquelle ändern. In einem Entwicklungsprojekt werden diese Änderungen nicht automatisch erkannt oder aktualisiert. Wenn Sie das Projekt auf einem Server bereitgestellt haben, werden darüber hinaus Verarbeitungsfehler auftreten, wenn Analysis Services keine Verbindung mehr mit der externen Datenquelle herstellen kann.  

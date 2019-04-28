@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842429"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte 'Ereignisauswahl')
   Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Ablaufverfolgung von Ereignissen oder Datenspalten anzeigen und angeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Spalte**Ereignisse**   
- Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. Die**Ereignisse** sind nach Ereigniskategorien angeordnet. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. Die**Ereignisse** sind nach Ereigniskategorien angeordnet. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Datenspalten  
  Gibt die Datenspalten an, für die eine Ablaufverfolgung ausgeführt wird, indem das Kontrollkästchen für das Ereignis und die benötigte Datenspalte aktiviert wird. Alle relevanten Ereignisspalten sind für die in der Ablaufverfolgung enthaltenen Ereignisse standardmäßig aktiviert.  

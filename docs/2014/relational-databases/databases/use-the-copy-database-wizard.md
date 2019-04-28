@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871137"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
   Mit dem Assistenten zum Kopieren von Datenbanken können Sie Datenbanken und zugehörige Objekte von einem Server auf einen anderen ohne Serverausfallzeiten verschieben oder kopieren. Sie können auch Datenbanken von einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Mit diesem Assistenten können Sie folgende Aktionen ausführen:  
@@ -59,7 +59,7 @@ ms.locfileid: "52759112"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Verwenden des Assistenten zum Kopieren einer Datenbank an:**  
   
@@ -278,7 +278,7 @@ ms.locfileid: "52759112"
      **MessageBox**  
      Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Aktualisieren einer SQL Server-Datenbank  
  Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

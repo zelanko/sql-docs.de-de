@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856332"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Um ein Data Mining-Modell zu erstellen, müssen Sie zuerst mithilfe des Data Mining-Assistenten eine neue Miningstruktur auf Grundlage der neuen Datenquellensicht erstellen. In diesem Task erstellen Sie mit dem Assistenten eine Miningstruktur und zugleich ein zugehöriges Miningmodell auf Grundlage des [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus.  

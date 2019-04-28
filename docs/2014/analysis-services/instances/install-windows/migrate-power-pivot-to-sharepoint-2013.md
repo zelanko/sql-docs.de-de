@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729922"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrieren von PowerPivot zu SharePoint 2013
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368372"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Beheben von Problemen beim Einbinden von Datenbanken  
  In diesem Abschnitt sind mögliche Probleme zusammengefasst, die beim Einbinden der Datenbank auftreten können.  
   
-1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler auftreten, überprüfen Sie den Authentifizierungsmodus, der von den Quellwebanwendungen verwendet wird. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
+1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler angezeigt wird, überprüfen Sie den Authentifizierungsmodus der Source-Webanwendungen verwenden. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
   
 2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender PowerPivot-DLLs angezeigt werden die **spPowerPivot.msi** wurde nicht installiert oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstool zur Konfiguration von PowerPivot nicht verwendet wurde.  
   

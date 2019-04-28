@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843076"
 ---
 # <a name="technical-reference-database-engine"></a>Technische Referenz (Datenbank-Engine)
   Suchen Sie nach den Tools, den Sprachen und der Referenzdokumentation für die Verwaltungsprogrammierung für das [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

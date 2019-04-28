@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929890"
 ---
 # <a name="rds-tutorial"></a>RDS-Tutorial
 Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zuerst beschreibt es die erforderlichen Schritte zum Ausführen dieser Aufgabe. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für die Windows Foundation Classes (ADO/WFC)) wiederholt.  
@@ -55,20 +55,20 @@ Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfr
   
  In diesem Tutorial enthält die folgenden Themen.  
   
--   [Schritt 1: Serverprogramm angeben (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Schritt 1: Geben Sie eine Serverprogramm (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Schritt 2: Rufen Sie die Server-Anwendung (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
 -   [Schritt 3: Server erhält ein Recordset (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Schritt 4: Server gibt das Recordset zurück (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Schritt 4: Server gibt das Recordset (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
 -   [Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schritt 1: Serverprogramm (RDS-Tutorial) angeben.](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Schritt 1: Geben Sie eine Serverprogramm (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

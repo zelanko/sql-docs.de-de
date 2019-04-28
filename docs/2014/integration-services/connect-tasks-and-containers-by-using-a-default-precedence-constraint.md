@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834052"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung
   Mit Rangfolgeneinschränkungen werden zwei ausführbare Dateien miteinander verbunden. Bei einer ausführbaren Datei kann es sich um einen Task oder einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer handeln. In diesem Verfahren wird beschrieben, wie Sie das Standardverhalten für Rangfolgeneinschränkungen festlegen, und wie Sie ausführbare Dateien mithilfe der Standardrangfolgeneinschränkungen verbinden.  

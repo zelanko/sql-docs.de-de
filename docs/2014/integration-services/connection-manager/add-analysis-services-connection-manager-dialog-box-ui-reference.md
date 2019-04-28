@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833753"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
   Mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** können Sie eine Verbindung mit einem Server herstellen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder die Verbindungseigenschaften ändern.  

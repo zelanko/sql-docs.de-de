@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900319"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Daten für ihre Eingaben. Die Eingabedaten müssen physisch sortiert werden, und die Sortierungsoptionen müssen für die Ausgaben und die Ausgabespalten in der Quelle oder Upstreamtransformation festgelegt werden. Wenn die Sortierungsoptionen anzeigen, dass die Daten sortiert sind, dies jedoch in Wirklichkeit nicht der Fall ist, sind die Ergebnisse des Vorgangs der Zusammenführung oder des Zusammenführungsjoins nicht vorhersagbar.  

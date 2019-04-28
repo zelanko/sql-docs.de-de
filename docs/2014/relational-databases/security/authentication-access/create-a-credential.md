@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012007"
 ---
 # <a name="create-a-credential"></a>Create a Credential
   In diesem Thema wird beschrieben, wie Anmeldeinformationen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt werden.  
@@ -34,7 +34,7 @@ ms.locfileid: "52519033"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen von Anmeldeinformationen mit**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52519033"
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Erstellen oder Ändern von Anmeldeinformationen ist eine ALTER ANY CREDENTIAL-Berechtigung erforderlich. Damit eine Anmeldung Anmeldeinformationen zugeordnet werden kann, ist die ALTER ANY LOGIN-Berechtigung erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-credential"></a>Erstellen von Anmeldeinformationen  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52519033"
   
 ###  <a name="Credential"></a> Erstellen von Anmeldeinformationen  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

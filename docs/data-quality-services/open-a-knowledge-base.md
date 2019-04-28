@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019267"
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
 
@@ -81,7 +81,7 @@ ms.locfileid: "56027171"
 ##  <a name="State"></a> Status einer Wissensdatenbank  
  Das Statusfeld gibt an, in welcher Phase einer Aktivität sich die Wissensdatenbank befindet. Wenn Sie die Wissensdatenbank öffnen, wird sie in dieser Phase geöffnet.  
   
--   **\<Leer>**: Das Statusfeld einer Wissensdatenbank ist leer, wenn sie veröffentlicht wird, indem in der Domänenverwaltungsaktivität auf **Veröffentlichen** und **Yes – Publish the knowledge base and exit** (Ja – Wissensdatenbank veröffentlichen und beenden) geklickt wird.  
+-   **\<Empty>**: Das Statusfeld einer Wissensdatenbank ist leer, wenn sie veröffentlicht wird, indem in der Domänenverwaltungsaktivität auf **Veröffentlichen** und **Yes – Publish the knowledge base and exit** (Ja – Wissensdatenbank veröffentlichen und beenden) geklickt wird.  
   
 -   **In Arbeit:** Die Arbeit an der Wissensdatenbank wurde durch Klicken auf **Veröffentlichen** in der Domänenverwaltungsaktivität und auf **No – Save the work on the knowledge base and exit** (Nein – Wissensdatenbank speichern und beenden) gespeichert.  
   

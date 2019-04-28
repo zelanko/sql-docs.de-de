@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86e2e1793693527ee96ea4057061ade98b70884d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833080"
 ---
 # <a name="control-flow-tab"></a>Ablaufsteuerung (Registerkarte)
   Verwenden Sie die Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers, um die Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets zu erstellen.  

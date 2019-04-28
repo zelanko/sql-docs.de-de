@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844927"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Extras / Optionen (Seite Allgemein)
   Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="display-options"></a>Anzeigeoptionen  
  **Schriftartname**  
@@ -61,7 +61,7 @@ ms.locfileid: "48113060"
  Legt fest, dass Sie beim Öffnen einer Ablaufverfolgungsdatei von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] zur Bestätigung aufgefordert werden, bevor eine Rolloverdatei hinzugefügt wird.  
   
  **Nachfolgende Rolloverdateien niemals laden**  
- Verhindert, dass [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] beim Öffnen einer Ablaufverfolgungsdatei nachfolgende Rolloverdateien lädt.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] beim Öffnen einer Ablaufverfolgungsdatei nachfolgende Rolloverdateien lädt.  
   
 ### <a name="replay-options"></a>Wiedergabeoptionen  
  **Standardanzahl von Wiedergabethreads**  
@@ -74,8 +74,8 @@ ms.locfileid: "48113060"
  Gibt das Abrufinterval für die Systemüberwachung während der Wiedergabe in Sekunden an. Der Standardwert ist 60 Sekunden. Mit diesem Wert kann der Benutzer konfigurieren, wie oft die Systemüberwachung Informationen zu potenziell zu beendenden Vorgängen abruft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Starten eine Ablaufverfolgung automatisch nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Legen Sie Ablaufverfolgungsanzeige &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Wiedergeben einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Wiedergeben einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Wiedergeben von Ablaufverfolgungen](../tools/sql-server-profiler/replay-traces.md)   

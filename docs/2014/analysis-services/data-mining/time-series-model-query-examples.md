@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733530"
 ---
 # <a name="time-series-model-query-examples"></a>Abfragebeispiel Zeitreihenmodell
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Eine Inhaltsabfrage für ein Zeitreihenmodell bietet möglicherweise zusätzliche Angaben zu den erkannten periodischen Strukturen, wohingegen eine Vorhersageabfrage Vorhersagen für die nächsten 5 bis 10 Zeitscheiben bietet. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -67,7 +67,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10 "," PERIODICITY_HINT ={1,3},...|  
+|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},....|  
   
  Der Standardperiodizitätshinweis ist {1} und wird in allen Modellen angezeigt. Dieses Beispielmodell wurde mit einem zusätzlichen Hinweis erstellt, der möglicherweise nicht im endgültigen Modell vorhanden ist.  
   
@@ -100,7 +100,7 @@ WHERE NODE_NAME = 'TA00000007'
   
 |Kurze Gleichung|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   

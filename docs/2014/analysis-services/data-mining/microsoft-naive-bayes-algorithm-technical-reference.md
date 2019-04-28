@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734823"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein Klassifikationsalgorithmus, der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Verwenden bei der Vorhersagemodellierung bereitgestellt wird. Der Algorithmus berechnet die bedingte Wahrscheinlichkeit zwischen Eingabespalten und vorhersagbaren Spalten und setzt die Unabhängigkeit der Spalten voraus. Diese Annahme der Unabhängigkeit führt zum Namen Naive Bayes.  
@@ -82,7 +82,7 @@ ms.locfileid: "53376932"
   
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: fehlender und vorhandener Wert. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
+|MODEL_EXISTENCE_ONLY|Bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann behandelt werden: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  

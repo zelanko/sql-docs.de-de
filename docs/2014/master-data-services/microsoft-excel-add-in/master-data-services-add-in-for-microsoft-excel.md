@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924088"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
   Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], für alle Benutzer in Ihrer Organisation, die Excel verwenden können masterlisten mit Verweisdaten verteilt werden. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  

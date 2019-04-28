@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911369"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Tritt ein Fehler auf, wird ein Fehler während der Ausführung von-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält mindestens ein Fehler, die beschreiben, was aufgetreten ist.  
@@ -68,7 +68,7 @@ End Function
 |Eigenschaftenname|Description|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
-|**HelpContext-und HelpFile**|Bezieht sich auf die Hilfe-Thema und in der Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
+|**HelpContext, HelpFile**|Bezieht sich auf die Hilfe-Thema und in der Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
 |**NativeError**|Die anbieterspezifischen-Fehlernummer.|  
 |**Anzahl**|Eine lange ganze Zahl, der angibt (aufgeführt der **ErrorValueEnum**) des aufgetretenen Fehlers.|  
 |**Quelle**|Gibt den Namen des Objekts oder der Anwendung, einen Fehler generiert hat.|  

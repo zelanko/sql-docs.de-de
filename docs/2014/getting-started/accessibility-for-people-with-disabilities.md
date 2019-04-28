@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842751"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] hat es sich zur Aufgabe gemacht, die Verwendung seiner Produkte und Dienste für alle Benutzer zu vereinfachen. Unter diesem Thema finden Sie Informationen zu den folgenden Funktionen, Produkten und Diensten, die den Zugriff auf Produkte der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server-Produktfamilie für Personen mit Behinderungen vereinfachen.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855488"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Jet-Übersicht
 Der OLE DB-Anbieter für Microsoft Jet können ADO auf Microsoft Jet-Datenbanken zugreifen.
@@ -92,7 +92,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Anbieterspezifische Recordset und Befehlseigenschaften
  Der Jet-Anbieter unterstützt auch mehrere anbieterspezifische **Recordset** und **Befehl** Eigenschaften. Diese Eigenschaften werden abgerufen, und legen Sie über die **Eigenschaften** Auflistung von der **Recordset** oder **Befehl** Objekt. Die Tabelle enthält die Namen der ADO-Eigenschaft und dem entsprechenden Namen der OLE DB-Eigenschaft in Klammern angegeben.
 
-|Eigenschaftsname|Description|
+|Eigenschaftenname|Description|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk-Transaktionen (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Gibt an, ob die SQL-Massenvorgänge durchgeführt werden. Umfangreichen Massenvorgängen können fehlschlagen, wenn transaktiven aufgrund von Verzögerungen bei der Ressource.|
 |Jet OLEDB: Enable Fat Cursor (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Gibt an, ob mehrere Zeilen beim Auffüllen eines Recordsets für remote Zeilenquellen Jet zwischengespeichert werden soll.|
@@ -133,10 +133,10 @@ Microsoft.Jet.OLEDB.4.0
 |Spaltendefinition|DBPROP_COLUMNDEFINITION|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|RÜCKGABEWERT|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
-|DBMS-Version|DBPROP_DBMSVER|
+|DBMS Version|DBPROP_DBMSVER|
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|
 |Bezeichner Groß-/Kleinschreibung|DBPROP_IDENTIFIERCASE|
@@ -147,14 +147,14 @@ Microsoft.Jet.OLEDB.4.0
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modus|DBPROP_INIT_MODE|
 |Mehrere Parametersätze|DBPROP_MULTIPLEPARAMSETS|
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|
 |Mehrere Speicherobjekte|DBPROP_MULTIPLESTORAGEOBJECTS|
 |Aktualisierung mehrerer Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|

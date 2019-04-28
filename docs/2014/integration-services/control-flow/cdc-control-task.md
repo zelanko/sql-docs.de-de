@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832882"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
   Der CDC-Steuerungstask wird verwendet, um den Lebenszyklus von Change Data Capture-Paketen (CDC) zu steuern. Er behandelt die CDC-Paketsynchronisierung mit dem Paket des erstmaligen Ladens, also die Verwaltung der Bereiche von Protokollfolgenummern (LSNs), die bei einer Ausführung eines CDC-Pakets verarbeitet werden. Außerdem wird der CDC-Steuerungstask für Fehlerszenarien und für die Wiederherstellung verwendet.  
@@ -40,14 +40,14 @@ ms.locfileid: "58392808"
 |Vorgang|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|Dieser Vorgang wird vor dem Aufrufen des Datenflusses verwendet, der den CDC-Quelldatenfluss nutzt. Dabei wird ein Bereich von LSNs eingerichtet, der vom CDC-Quelldatenfluss nach dem Aufrufen gelesen wird. Der Bereich wird in einer SSIS-Paketvariablen gespeichert, die von der CDC-Quelle während der Datenflussverarbeitung verwendet wird.<br /><br /> Weitere Informationen zu den gespeicherten Status finden Sie unter [Definieren einer Statusvariablen](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|decodiert werden: Dieser Vorgang wird nach jeder CDC-Ausführung (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die vollständig verarbeitet war in der CDC-Ausführung ausgeführt. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
+|MarkProcessedRange|decodiert werden: Dieser Vorgang wird nach jeder CDC-Ausführung ausgeführt (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die bei der CDC-Ausführung vollständig verarbeitet wurde. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Behandeln von CDC-Statuspersistenz  
  Der CDC-Steuerungstask behält zwischen Aktivierungen einen persistenten Status bei. Die im CDC-Status gespeicherten Informationen werden verwendet, um den Verarbeitungsbereich für das CDC-Paket zu bestimmen und zu verwalten und Fehlerzustände zu erkennen. Der persistente Status wird als Zeichenfolge gespeichert. Weitere Informationen finden Sie unter [Definieren einer Statusvariablen](../data-flow/define-a-state-variable.md).  
   
  Der CDC-Steuerungstask unterstützt zwei Typen der Statuspersistenz:  
   
--   Manuelle Statuspersistenz: In diesem Fall der CDC-Steuerungstask verwaltet den Zustand, der in einer Paketvariablen gespeichert aber Paketentwickler muss die Variable aus einem persistenten Speicher lesen, vor dem Aufrufen der CDC-Steuerung und dann schreiben sie in diesen persistenten Speicher zurück, nachdem der CDC-Steuerung zuletzt aufgeführt wird aufgerufen und der CDC-Ausführung abgeschlossen ist.  
+-   Manuelle Statuspersistenz: In diesem Fall verwaltet der CDC-Steuerungstask den in einer Paketvariablen gespeicherten Status. Der Paketentwickler muss die Variable vor dem Aufrufen der CDC-Steuerung jedoch aus einem persistenten Speicher lesen und dann in diesen persistenten Speicher zurückschreiben, nachdem die CDC-Steuerung zuletzt aufgerufen und die CDC-Ausführung abgeschlossen wurde.  
   
 -   Automatische Statuspersistenz: Der CDC-Status wird in einer Tabelle in einer Datenbank gespeichert. Der Status wird unter einem in der **StateName** -Eigenschaft angegebenen Namen in einer Tabelle gespeichert, die in der **Tabelle für Speicherstatus** -Eigenschaft angegeben ist. Sie befindet sich in einem ausgewählten Verbindungs-Manager zum Speichern des Status. Die Standardeinstellung ist der Quellverbindungs-Manager, aber häufig wird der Zielverbindungs-Manager verwendet. Der CDC-Steuerungstask aktualisiert den Statuswert in der Statustabelle, und dafür wird als Teil der Ambient-Transaktion ein Commit ausgeführt.  
   

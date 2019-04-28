@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733773"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
   Ein *Miningmodell* wird erstellt, indem ein Algorithmus auf Daten angewendet wird. Dabei handelt es sich jedoch um mehr als einen Algorithmus oder einen Metadatencontainer, vielmehr um einen Satz von Daten, Statistiken und Muster, die auf neue Daten angewendet werden können, um Vorhersagen zu generieren und Rückschlüsse auf Beziehungen zu ziehen.  

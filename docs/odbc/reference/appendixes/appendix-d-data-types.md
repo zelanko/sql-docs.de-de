@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026774"
 ---
 # <a name="appendix-d-data-types"></a>Anhang D: Datentypen
 ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen angeben, den Datentyp, der in der Datenquelle gespeicherten Daten. C-Datentypen angeben, den Datentyp der im Anwendungspuffer gespeicherten Daten.  

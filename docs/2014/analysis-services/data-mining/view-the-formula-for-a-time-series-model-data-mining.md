@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733679"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Anzeigen der Formel für ein Zeitreihenmodell (Data Mining)
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer InData Mining-Designer bietet die einfachste Möglichkeit zum Anzeigen der Details in einem Zeitreihenmodell verwendeten Regressionsformel.  
@@ -79,8 +79,8 @@ ms.locfileid: "48164000"
 5.  Wenn die **Mininglegende** nicht verfügbar ist, klicken Sie mit der rechten Maustaste auf den Knoten, und wählen Sie **Legende anzeigen**aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Beispiele für Abfragen von Zeitreihenmodellen](time-series-model-query-examples.md)  
   
   

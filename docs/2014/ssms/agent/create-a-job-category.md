@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856126"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
@@ -38,7 +38,7 @@ ms.locfileid: "54130850"
   
 
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-job-category"></a>So erstellen Sie eine Auftragskategorie  
   

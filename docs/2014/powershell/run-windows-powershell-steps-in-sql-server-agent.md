@@ -11,25 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922897"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ausführen von Windows PowerShell-Schritten in SQL Server-Agent
   Führen Sie die SQL Server PowerShell-Skripts mithilfe des SQL Server-Agent nach Zeitplan aus.  
   
-1.  **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions)  
+1.  **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions)  
   
-2.  **Um die Ausführung von PowerShell von SQL Server-Agent mit:**  [PowerShell-Auftragsschritts](#PShellJob), [Auftragsschritt für die Eingabeaufforderung](#CmdExecJob)  
+2.  **So führen Sie PowerShell in SQL Server Agent mit folgenden Auftragsschritten aus:**  [PowerShell-Auftragsschritt](#PShellJob), [Eingabeaufforderungs-Auftragsschritt](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Es gibt mehrere Typen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Auftragsschritten. Jeder Typ ist einem Subsystem zugeordnet, das eine bestimmte Umgebung implementiert, wie eine Replikations-Agent- oder Eingabeaufforderungsumgebung. Sie können Windows PowerShell-Skripts schreiben und die Skripts dann mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent in Aufträge integrieren, die zu festgelegten Zeiten oder in Reaktion auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ereignisse ausgeführt werden. Windows PowerShell-Skripts können mit entweder einem Eingabeaufforderungs-Auftragsschritt oder einem PowerShell-Auftragsschritt ausgeführt werden.  
   
 1.  Verwenden Sie einen PowerShell-Auftragsschritt, damit das Subsystem des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Agent das Hilfsprogramm `sqlps` ausführt, das PowerShell 2.0 startet und das `sqlps`-Modul importiert.  
   
-2.  Verwenden Sie einen Auftragsschritt an einer Eingabeaufforderung, um <ui>PowerShell.exe</ui> auszuführen, und geben Sie ein Skript an, das das `sqlps`-Modul importiert.  
+2.  Verwenden Sie einen Auftragsschritt an einer Eingabeaufforderung, um &lt;ui&gt;PowerShell.exe&lt;/ui&gt; auszuführen, und geben Sie ein Skript an, das das `sqlps`-Modul importiert.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
   

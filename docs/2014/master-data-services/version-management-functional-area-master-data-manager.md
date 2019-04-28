@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ced43d5008531f540bd9985a817794baa88705fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922861"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Funktionsbereich "Versionsverwaltung" (Master Data Manager)
   Im Funktionsbereich "Versionsverwaltung" können Administratoren Daten validieren, Transaktionen überprüfen und umkehren, Versionskopien von Daten erstellen und Versionen von Daten für abonnierende Systeme markieren. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  

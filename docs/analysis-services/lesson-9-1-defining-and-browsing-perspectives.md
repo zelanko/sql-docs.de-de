@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von Perspektiven | Microsoft Docs
+title: Definieren und Durchsuchen von Perspektiven | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017382"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lektion 9-1: definieren und Durchsuchen von Perspektiven
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lektion 9 – 1: definieren und Durchsuchen von Perspektiven
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Mithilfe von Perspektiven kann die Ansicht eines Cubes für bestimmte Zwecke vereinfacht werden. Standardmäßig können Benutzer alle Elemente in einem Cube sehen, für den sie die entsprechenden Berechtigungen besitzen. Wenn Benutzer einen ganzen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube anzeigen, wird ihnen die Standardperspektive des Cubes angezeigt. Die Ansicht des gesamten Cubes kann auf Benutzer äußerst komplex wirken, vor allem dann, wenn sie nur mit einem kleinen Teil des Cubes arbeiten, um ihre Anforderungen hinsichtlich Business Intelligence und Berichterstellung zu erfüllen.  
@@ -34,13 +34,13 @@ Im Rahmen der Tasks in diesem Thema definieren Sie verschiedene Perspektiven und
   
     Alle Objekte und ihre Objekttypen werden im Bereich **Perspektiven** angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-    ![Perspektivenbereich des Cube-Designers](../analysis-services/media/l9-perspectives-1.gif "perspektivenbereich des Cube-Designer")  
+    ![Perspektivenbereich des Cube-Designer](../analysis-services/media/l9-perspectives-1.gif "perspektivenbereich des Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
     In der **Perspektivenname** -Spalte wird eine neue Perspektive mit dem Standardnamen **Perspektive**angezeigt, wie in der folgenden Abbildung dargestellt. Die Kontrollkästchen aller Objekte sind so lange aktiviert, bis Sie eines der Kontrollkästchen für ein Objekt deaktivieren. Diese Perspektive entspricht der Standardperspektive dieses Cubes.  
   
-    ![Neue Perspektive in der Spalte "Name der Perspektive"](../analysis-services/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Name der Perspektive\"")  
+    ![Neue Perspektive in der Spalte "Perspektivenname"](../analysis-services/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Perspektivenname\"")  
   
 3.  Ändern Sie den Perspektivennamen zu **Internet Sales**.  
   
@@ -175,7 +175,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie verschiedene Perspektiven und
   
 5.  Alternativ können Sie Excel vom Windows-Startmenü aus starten, eine Verbindung mit der Analysis Services Tutorial-Datenbank auf localhost definieren und eine Perspektive im Datenverbindungs-Assistenten auswählen, wie in der folgenden Abbildung dargestellt.  
   
-    ![Datenverbindungs-Assistenten in Excel](../analysis-services/media/l9-perspectives-3b.gif "Datenverbindungs-Assistenten in Excel")  
+    ![Datenverbindungs-Assistent in Excel](../analysis-services/media/l9-perspectives-3b.gif "Datenverbindungs-Assistenten in Excel")  
   
 6.  Wählen Sie in der Liste **Perspektive** den Eintrag **Internet Sales** aus, und überprüfen Sie die Measures und Dimensionen im Metadatenbereich.  
   
@@ -191,7 +191,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie verschiedene Perspektiven und
   
     ![Internet Sales und Reseller Sales-Measures](../analysis-services/media/l9-perspectives-4.gif "Internet Sales und Reseller Sales-Measures")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren und Durchsuchen von Übersetzungen](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Siehe auch  

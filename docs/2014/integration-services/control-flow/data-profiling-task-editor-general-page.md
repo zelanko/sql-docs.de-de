@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832220"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor für den Datenprofilerstellungs-Task (Seite "Allgemein")
   Verwenden Sie die Seite **Allgemein** im **Editor für den Datenprofilerstellungs-Task** , um die folgenden Optionen zu konfigurieren:  
@@ -52,8 +52,8 @@ ms.locfileid: "58385351"
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**FileConnection**|Speichert die Profilausgabe in einer Datei an dem in einem Dateiverbindungs-Manager angegebenen Speicherort.<br /><br /> Hinweis: Angabe, welcher Dateiverbindungs-Manager für die Verwendung in der **Ziel** Option.|  
-|**Variable**|Speichert die Profilausgabe in einer Paketvariablen.<br /><br /> Hinweis: Angabe, welche Paketvariable verwendet in der **Ziel** Option.|  
+|**FileConnection**|Speichert die Profilausgabe in einer Datei an dem in einem Dateiverbindungs-Manager angegebenen Speicherort.<br /><br /> Hinweis: Sie geben mit der Option **Ziel** an, welcher Dateiverbindungs-Manager verwendet werden soll.|  
+|**Variable**|Speichert die Profilausgabe in einer Paketvariablen.<br /><br /> Hinweis: Sie geben mit der Option **Ziel** an, welche Paketvariable verwendet werden soll.|  
   
  **Ziel**  
  Geben Sie an, welcher Dateiverbindungs-Manager oder welche Paketvariable die Datenprofilausgabe enthält:  

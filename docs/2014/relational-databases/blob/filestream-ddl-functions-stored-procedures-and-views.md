@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920439"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten
   Listet die Transact-SQL-Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die FILESTREAM unterstützen.  

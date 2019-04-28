@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731955"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Allgemein (Dialogfeld Partitionseigenschaften) (SSMS)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Partitionseigenschaften** in SQL Server Management Studio können Sie die allgemeinen Eigenschaften einer Partition in einer Measuregruppe für einen Cube in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Aggregationsentwurfs-ID**|Zeigt den Bezeichner des von der Partition verwendeten Aggregationsentwurfs an.|  
 |**Aggregationspräfix**|Zeigt das Standardpräfix von Aggregationsinstanzen an, die in der Partition enthalten sind.|  
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung der Partition an.|  
-|**Aktueller Speichermodus**|Zeigt den aktuellen Speichermodus der Partition an.<br /><br /> Hinweis: Dieser Modus kann in Abhängigkeit von den für die Partition geltenden Einstellungen für das proaktive Zwischenspeichern variieren. Weitere Informationen zum proaktiven Zwischenspeichern finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
+|**Aktueller Speichermodus**|Zeigt den aktuellen Speichermodus der Partition an.<br /><br /> Hinweis: In diesem Modus kann je nach den Einstellungen für das proaktiven Zwischenspeichern für die Partition variieren. Weitere Informationen zum proaktiven Zwischenspeichern finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Beschreibung**|Hier können Sie per Eingabe die Beschreibung der Partition ändern.|  
 |**Geschätzte Zeilen**|Geben Sie die geschätzte Anzahl an Zeilen in der zugrunde liegenden Datenquelle an, die durch die Partition dargestellt wird. Dieser Wert wird während der Verarbeitung verwendet, um die für die Verarbeitung der Partition erforderliche Zeit und den erforderlichen Speicherplatz zu schätzen.|  
 |**Geschätzte Größe**|Zeigt die geschätzte Größe der Partition an.|  
@@ -42,8 +42,8 @@ ms.locfileid: "48211100"
 |**Remotedatenquellen-ID**|Zeigt den Bezeichner der Remotedatenquelle an, von der die Quelldaten für die Partition abgerufen werden.<br /><br /> Hinweis: Diese Eigenschaft enthält nur einen Wert für Remotepartitionen.|  
 |**Slice**|Zeigt den Ausdruck an, durch den der Datenslice identifiziert wird, den die Partition darstellt.|  
 |**Quelle**|Zeigt die Tabelle oder die Abfrage an, durch die der Partition die Quelldaten bereitgestellt werden.|  
-|**Status**|Zeigt den aktuellen Verarbeitungsstatus der Partition an.|  
-|**Speicherort**|Zeigt den Ordner an, in dem die Daten für die Partition gespeichert sind.<br /><br /> Hinweis: Diese Eigenschaft enthält nur dann einen Wert, wenn für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz ein anderer Speicherort als der Standardspeicherort angegeben wurde.|  
+|**Zustand**|Zeigt den aktuellen Verarbeitungsstatus der Partition an.|  
+|**Speicherort**|Zeigt den Ordner an, in dem die Daten für die Partition gespeichert sind.<br /><br /> Hinweis: Diese Eigenschaft enthält einen Wert nur dann, wenn ein anderer Speicherort als dem Standardspeicherort für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz angegeben ist.|  
 |**Typ**|Zeigt den Typ der Partition an.|  
   
 ## <a name="see-also"></a>Siehe auch  

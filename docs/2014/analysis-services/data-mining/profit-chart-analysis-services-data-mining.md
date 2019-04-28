@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732943"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gewinndiagramm (Analysis Services – Data Mining)
   Ein Gewinndiagramm zeigt die geschätzte Gewinnsteigerung an, die sich aus der Verwendung eines Miningmodells ergibt. Nehmen wir beispielsweise an, dass Ihr Modell vorhersagt, welche Kunden ein Unternehmen in einem Geschäftsszenario kontaktieren sollte. In diesem Fall würden Sie dem Gewinndiagramm Informationen hinzufügen, wie hoch die Kosten einer solchen zielgerichteten Mailingkampagne sind. Das fertige Diagramm enthält die geschätzte Gewinnsteigerung, die darauf basiert, dass die Kunden gezielt und nicht nach dem Zufallsprinzip angesprochen werden.  

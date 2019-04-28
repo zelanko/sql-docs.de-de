@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989991"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   Ibcpsession2:: Bcpsetbulkmode bietet eine Alternative zum [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Im Gegensatz zu ibcpsession:: BCPColFmt, bei dem einzelne spaltenformatattribute festgelegt, werden alle Attribute ibcpsession2:: Bcpsetbulkmode fest.  
@@ -361,6 +361,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [IBCPSession2 &#40;OLE-DB&#41;](ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

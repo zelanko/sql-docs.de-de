@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842515"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ziele für erweiterte Ereignisse sind Ereignisconsumer. Ziele können in eine Datei schreiben, Ereignisdaten in einem Arbeitsspeicherpuffer speichern oder Ereignisdaten aggregieren. Ziele können Daten synchron oder asynchron verarbeiten.  
+  Ziele für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind Ereignisconsumer. Ziele können in eine Datei schreiben, Ereignisdaten in einem Arbeitsspeicherpuffer speichern oder Ereignisdaten aggregieren. Ziele können Daten synchron oder asynchron verarbeiten.  
   
  Durch das Design von Extended Events wird sichergestellt, dass Ziele garantiert nur einmal pro Sitzung Ereignisse empfangen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48163670"
   
      Wird eingesetzt, um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ereignisse mit Ereignisdaten von Anwendungen oder des Windows-Betriebssystems zu korrelieren. Dies ist ein synchrones Ziel.  
   
--   [Histogramm](../../2014/database-engine/histogram-target.md)  
+-   [Histogram](../../2014/database-engine/histogram-target.md)  
   
      Dient dazu, die Häufigkeit eines bestimmten Ereignisses auf Grundlage einer bestimmten Ereignisspalte oder Aktion zu zählen. Dies ist ein asynchrones Ziel.  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Ausführen ein MDX-Skripts in SQL Server Datatools | Microsoft Docs
+title: Erstellen und Ausführen ein MDX-Skripts in SQL Server Datatools | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b63c72053445875eda3afd007d1235ef87c9ff53
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866890"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Erstellen und Ausführen eines MDX-Skripts in SQL Server-Datentools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "34025297"
 4.  Sie müssen den Cube mit den neuen MDX-Skriptänderungen bereitstellen und verarbeiten, um das MDX-Skript ausführen zu können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Die grundlegende MDX-Skripts & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Grundlegendes zu MDX-Skripts & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX-Skriptanweisungen & #40; MDX & #41;](../../mdx/mdx-scripting-statements-mdx.md)  
+ [Grundlegendes MDX-Skript &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX-Skriptanweisungen &#40;MDX&#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   

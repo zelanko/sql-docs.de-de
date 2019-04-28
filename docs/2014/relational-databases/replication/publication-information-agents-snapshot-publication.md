@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021789"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Veröffentlichungsinformationen, Agents (Momentaufnahmeveröffentlichung)
   Auf der Registerkarte **Agents** werden Zusammenfassungsinformationen zum Momentaufnahme-Agent für die ausgewählte Veröffentlichung angezeigt.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135750"
 ## <a name="options"></a>Optionen  
  Ausführliche Informationen und die Aufträge für den Momentaufnahme-Agent können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
--   **Sortierung**: Sortieren Sie nach einer oder mehreren Spalten in der **Sortierspalten** Dialogfeld.  
+-   **Sortieren:** Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren**.  
   
--   **Anzuzeigende Spalten auswählen**: Wählen Sie die anzuzeigenden Spalten sowie die Reihenfolge, in der anzeigen in der **Spalten auswählen** Dialogfeld.  
+-   **Anzuzeigende Spalten auswählen:** Wählen Sie die anzuzeigenden Spalten sowie die Reihenfolge aus, in der diese im Dialogfeld **Spalten auswählen** angezeigt werden sollen.  
   
--   **Filter**: Filtern Sie Zeilen im Raster auf Grundlage der Spaltenwerte in die **Filtereinstellungen** Dialogfeld.  
+-   **Filtern:** Filtern Sie Zeilen im Raster auf Grundlage der Spaltenwerte im Dialogfeld **Filtereinstellungen**.  
   
--   **Filter löschen**: Deaktivieren Sie alle filtereinstellungen für das Raster an.  
+-   **Filter löschen:** Löschen Sie alle Filtereinstellungen für das Raster.  
   
  Filtereinstellungen sind rasterspezifisch. Die Spaltenauswahl und -sortierung wird auf alle Raster desselben Typs angewendet, z. B. das Veröffentlichungsraster für jeden Verleger.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54135750"
 -   Abgeschlossen  
   
  **Agent**  
- Der Momentaufnahme-Agent. Das ist der einzige Agent, der einer Momentaufnahmeveröffentlichung zugeordnet ist. Der Verteilungs-Agent ist den Abonnements dieser Veröffentlichung zugeordnet. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Der Momentaufnahme-Agent. Das ist der einzige Agent, der einer Momentaufnahmeveröffentlichung zugeordnet ist. Der Verteilungs-Agent ist den Abonnements dieser Veröffentlichung zugeordnet. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent zuletzt gestartet wurde.  
@@ -60,7 +60,7 @@ ms.locfileid: "54135750"
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)  
   
   

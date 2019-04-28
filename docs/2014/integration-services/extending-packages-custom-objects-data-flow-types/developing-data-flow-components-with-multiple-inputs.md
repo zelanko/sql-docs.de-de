@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896030"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Entwickeln von Datenflusskomponenten mit mehreren Eingaben
   Eine Datenflusskomponente mit mehreren Eingaben verbraucht möglicherweise übermäßig viel Arbeitsspeicher, wenn die Eingaben unregelmäßig Daten erzeugen. Wenn Sie eine benutzerdefinierte Datenflusskomponente entwickeln, die mindestens zwei Eingaben unterstützt, können Sie diese hohe Speicherauslastung verwalten, indem Sie die folgenden Elemente im Namespace „Microsoft.SqlServer.Dts.Pipeline“ verwenden:  

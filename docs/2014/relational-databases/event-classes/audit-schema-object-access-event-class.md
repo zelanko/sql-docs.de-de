@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017162"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access (Ereignisklasse)
   Die **Audit Schema Object Access** -Ereignisklasse tritt auf, wenn eine Objektberechtigung (wie SELECT) verwendet wird.  

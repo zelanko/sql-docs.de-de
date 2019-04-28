@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 999eb43304150c9af8d61be591f3c4c0ab62566f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929843"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM
 Benutzerdefinierte Geschäftsobjekte müssen sicherstellen, dass es sich bei die Clientseite ihren Programmnamen (ProgId), eine ID (CLSID) zugeordnet werden kann, die über DCOM verwendet werden kann. Aus diesem Grund muss die ProgID des DCOM-Objekte werden in der Registrierung der clientseitigen und die Klassen-ID des Objekts serverseitige zugeordnet. Für die anderen unterstützten Protokolle (HTTP, HTTPS und in-Process) ist dies nicht erforderlich.  

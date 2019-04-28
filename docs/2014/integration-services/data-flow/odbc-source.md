@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901105"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
   Die ODBC-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, Sicht oder SQL-Anweisung aus einer Datenbank mit ODBC-Unterstützung.  
@@ -37,9 +37,9 @@ ms.locfileid: "58382076"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die ODBC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Die Anzahl, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Der Wert, der dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
   
 -   Die Spalten mit den Standardausgabedaten.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "58382076"
 ## <a name="extract-options"></a>Extrahierungsoptionen  
  Die ODBC-Quelle arbeitet entweder im Modus **Batch** oder **Zeile für Zeile** . Der verwendete Modus wird mithilfe der **FetchMethod** -Eigenschaft bestimmt. Die Modi werden in der folgenden Liste beschrieben:  
   
--   **Batch**: Die Komponente versucht, die effizienteste Abrufmethode basierend auf den erkannten Funktionen des ODBC-Anbieters zu verwenden. Für die meisten modernen ODBC-Anbieter ist dies SQLFetchScroll mit Arraybindung (wobei die Arraygröße von der **BatchSize** -Eigenschaft bestimmt wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
+-   **Batch**: Die Komponente versucht, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Abrufmethode zu verwenden. Für die meisten modernen ODBC-Anbieter ist dies SQLFetchScroll mit Arraybindung (wobei die Arraygröße von der **BatchSize** -Eigenschaft bestimmt wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
--   **Zeile für Zeile**: Die Komponente mithilfe von SQLFetch einzeln die Zeilen ab.  
+-   **Zeile für Zeile**: Die Komponente ruft die Zeilen mithilfe von SQLFetch einzeln ab.  
   
  Weitere Informationen zur **FetchMethod** -Eigenschaft finden Sie unter [ODBC Source Custom Properties](odbc-source-custom-properties.md).  
   

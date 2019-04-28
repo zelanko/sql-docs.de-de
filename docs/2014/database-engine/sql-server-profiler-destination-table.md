@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842741"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - Zieltabelle
   Mithilfe des Dialogfelds **Zieltabelle** können Sie angeben, in welcher Tabelle die Ablaufverfolgung gespeichert werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL Server**  
  Gibt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an, zu der zurzeit eine Verbindung besteht. Dieses Feld wird automatisch ausgefüllt und kann nicht aktualisiert werden. Wenn Sie den Server ändern möchten, klicken Sie auf **Abbrechen** , und stellen Sie eine Verbindung zu der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] her, in der die Ablaufverfolgungstabelle gespeichert werden soll.  
   

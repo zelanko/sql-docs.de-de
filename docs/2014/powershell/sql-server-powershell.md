@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922584"
 ---
-# <a name="sql-server-powershell"></a>SQL Server-PowerShell
+# <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unterstützt Windows PowerShell, ein leistungsstarkes Skriptshell, mit der Administratoren und Entwickler die Serververwaltung und die Anwendungsbereitstellung automatisieren können. Die Windows PowerShell-Sprache unterstützt komplexere Logik als [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts und ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Administratoren dadurch die Erstellung stabiler Verwaltungsskripts. Windows PowerShell-Skripts können außerdem dazu verwendet werden, andere [!INCLUDE[msCoName](../includes/msconame-md.md)] -Serverprodukte zu verwalten. So steht Administratoren eine serverübergreifende allgemeine Skriptsprache zur Verfügung.  
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell-Komponenten  

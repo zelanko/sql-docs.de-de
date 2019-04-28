@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843734"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
   Bevor Sie die Funktionen der in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrierten Quellcodeverwaltung nutzen können, sollten Sie die Quellcodeverwaltungsoptionen für die unterschiedlichen Umgebungen konfigurieren, in denen Sie arbeiten.  
@@ -86,7 +86,7 @@ ms.locfileid: "53589894"
      Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheckvorgang ändern möchten, klicken Sie auf die **Optionen** Pfeil in der **Einchecken** (Dialogfeld), und deaktivieren Sie die **ausgecheckt lassen** Kontrollkästchen.  
   
      **Eingecheckte Elemente**  
-     Zeigt eine Liste der Optionen an, durch die das Verhalten von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angegeben wird, wenn Sie ein nicht ausgechecktes Element zu bearbeiten versuchen. In den folgenden Tabellen werden die verfügbaren Optionen beschrieben.  
+     Zeigt eine Liste der Optionen, die angeben, wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sollte Verhalten, wenn Sie versuchen, ein Element zu bearbeiten, die nicht ausgecheckt. Die folgenden Tabellen beschreiben die verfügbaren Optionen.  
   
      **Speichern**  
   

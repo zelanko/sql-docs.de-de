@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731711"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Drillthroughaktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Drillthroughaktionsformular-Editors** auf der Registerkarte **Aktionen** des Cube-Designers können Sie die im Bereich **Aktionsplaner** ausgewählte Drillthroughaktion ändern. Weitere Informationen zu Drillthroughaktionen finden Sie unter [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "48213230"
 > [!NOTE]  
 >  Durch die Drillthroughaktionen wird kein Drilldown zum zugrunde liegenden Datenspeicher mehr ausgeführt. Die Informationen, auf die die Drillthroughaktionen zugreifen, müssen im Cube mithilfe von Dimensions- oder Hierarchieelementen definiert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **name**  
  Geben Sie den Namen der Aktion ein.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48213230"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
 |Interaktiv|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
@@ -98,13 +98,13 @@ ms.locfileid: "48213230"
   
  Geben Sie den MDX-Ausdruck (Multidimensional Expressions) ein, der eine Zeichenfolge für die Beschriftung zurückgibt, wenn **Beschriftung ist MDX** auf **TRUE**festgelegt ist.  
   
- **Beschriftung ist MDX**  
+ **Caption Is MDX**  
  Wählen Sie **FALSE** aus, um anzuzeigen, dass **Beschriftung** eine Literalzeichenfolge enthält, die eine Beschriftung darstellt, welche für die Aktion in der Clientanwendung angezeigt werden soll.  
   
  Wählen Sie **True** aus, um anzuzeigen, dass **Beschriftung** einen MDX-Ausdruck enthält, der eine Zeichenfolge mit einer Beschriftung zurückgibt, die für die Aktion in der Clientanwendung angezeigt werden soll. Der MDX-Ausdruck muss aufgelöst werden, bevor die Aktion an die Clientanwendung zurückgegeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; Verweis](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Aktionen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Symbolleiste &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Aktionsplaner &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

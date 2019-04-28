@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836860"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Verbindung zu SQL Server zum Löschen
   Wenn eine Anmeldung ohne Datenbankrolle, die über die Schreibberechtigung für die MSXDBCDC-Datenbank verfügt (z.B. die Rolle **db_owner**), versucht, eine Oracle CDC-Instanz zu löschen, wird das Dialogfeld „Verbindung mit SQL Server herstellen“ angezeigt.  
@@ -32,16 +32,16 @@ ms.locfileid: "58392938"
   
 -   **Windows-Authentifizierung**  
   
--   **SQL Server-Authentifizierung**: Wenn Sie diese Option auswählen, geben Sie die **Anmeldung** und **Kennwort** für den Benutzer in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt.  
+-   **SQL Server-Authentifizierung**: Wenn Sie diese Option auswählen, müssen Sie den **Benutzernamen** und das **Kennwort** für den Benutzer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeben, mit dem Sie eine Verbindung herstellen.  
   
  **Optionen**  
  Klicken Sie auf den Pfeil, um die verfügbaren Optionen anzuzeigen, die konfiguriert werden sollen. Sie können für diese Optionen auch die Standardwerte unverändert lassen. Verfügbare Optionen:  
   
--   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) das Programm wartet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung hergestellt werden, bevor ein Timeoutfehler eintritt. Der Standardwert lautet **15**.  
+-   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange das Programm auf die Herstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung warten soll, bevor ein Timeoutfehler eintritt. Der Standardwert lautet **15**.  
   
--   **Timeout für berichtsausführung**: Geben Sie den Zeitraum (in Sekunden), den das Programm wartet, bis SQL-befehlsausführung abgeschlossen ist, bevor ein Timeoutfehler eintritt. Der Standardwert ist **30**.  
+-   **Ausführungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange das Programm auf die Beendigung der SQL-Befehlsausführung warten soll, bevor ein Timeoutfehler eintritt. Der Standardwert ist **30**.  
   
--   **Verbindung verschlüsseln**: Wählen Sie **Verbindung verschlüsseln** um sicherzustellen, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird, verschlüsselte Verbindung um Datenschutz zu gewährleisten.  
+-   **Verbindung verschlüsseln**: Aktivieren Sie **Verbindung verschlüsseln**, um sicherzustellen, dass die hergestellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung verschlüsselt wird, um Datenschutz zu gewährleisten.  
   
 -   **Erweitert**: Klicken Sie auf **Erweitert** , und geben Sie ggf. zusätzliche Verbindungseigenschaften in das Dialogfeld „Erweiterte Verbindungseigenschaften“ ein.  
   

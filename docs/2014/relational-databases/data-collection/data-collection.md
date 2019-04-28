@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919044"
 ---
 # <a name="data-collection"></a>Datensammlung
   Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  

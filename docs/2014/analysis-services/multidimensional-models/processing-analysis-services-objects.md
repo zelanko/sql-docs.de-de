@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736788"
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
   Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48050970"
   
  Bei der Dimensionsverarbeitung werden keine auf Cubeebene definierten berechneten Elemente erstellt oder aktualisiert. Die berechneten Elemente werden beim Update der Cubedefinition berücksichtigt. Bei der Dimensionsverarbeitung werden auch keine Aggregationen erstellt oder aktualisiert. Die Dimensionsverarbeitung kann jedoch verursachen, dass Aggregationen gelöscht werden. Aggregationen werden ausschließlich während der Verarbeitung von Partitionen erstellt oder aktualisiert.  
   
- Beim Verarbeiten einer Dimension ist zu beachten, dass die Dimension eventuell in mehreren Cubes verwendet wird. Wenn Sie eine Dimension verarbeiten, werden diese Cubes als unverarbeitet markiert und sind nicht mehr für Abfragen verfügbar. Um sowohl die Dimension als auch die damit verbundenen Cubes zur gleichen Zeit zu verarbeiten, sollten Sie entsprechende Stapelverarbeitungseinstellungen verwenden. Weitere Informationen finden Sie unter [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ Beim Verarbeiten einer Dimension ist zu beachten, dass die Dimension eventuell in mehreren Cubes verwendet wird. Wenn Sie eine Dimension verarbeiten, werden diese Cubes als unverarbeitet markiert und sind nicht mehr für Abfragen verfügbar. Um sowohl die Dimension als auch die damit verbundenen Cubes zur gleichen Zeit zu verarbeiten, sollten Sie entsprechende Stapelverarbeitungseinstellungen verwenden. Weitere Informationen finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Verarbeiten einer Measuregruppe  
  Beim Verarbeiten einer Measuregruppe verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmte oder alle Partitionen in der Measuregruppe und alle unverarbeiteten Dimensionen, die Teil der Measuregruppe sind. Die Einzelheiten des Verarbeitungsauftrags hängen davon ab, welche Verarbeitungsoptionen Sie ausgewählt haben. Sie können eine oder mehrere Measuregruppen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verarbeiten, ohne dass sich dies auf andere Measuregruppen eines Cubes auswirkt.  

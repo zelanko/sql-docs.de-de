@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844286"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)
   In diesem Dialogfeld können Sie das Tabulatorverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie anschließend den **Text-Editor**. Erweitern Sie als Nächstes **Nur-Text**, und klicken Sie anschließend auf **Tabstopps**.  
@@ -33,7 +33,7 @@ ms.locfileid: "48074765"
  **Block**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile automatisch so weit ein wie die vorige Zeile.  
   
- **Intelligente**  
+ **Smart**  
  Im Nur-Text-Editor wird diese Formatierungsart nicht unterstützt.  
   
 ## <a name="tabs"></a>Tabstopps  

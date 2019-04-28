@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004242"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,23 +37,23 @@ ms.locfileid: "47607358"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, zu dem dieser Index gehört.|  
 |**name**|**sysname**|Der Name des Indexes. **Namen** ist nur innerhalb des Objekts eindeutig.<br /><br /> NULL = Heap|  
-|**index_id**|**int**|Die ID des Index. **Index_id** ist nur innerhalb des Objekts eindeutig.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = Nicht gruppierter Index|  
+|**index_id**|**int**|Die ID des Index. **Index_id** ist nur innerhalb des Objekts eindeutig.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = nicht gruppierter Index|  
 |**type**|**tinyint**|Typ des Index:<br /><br /> 0 = Heap<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Nicht gruppiert<br /><br /> 3 = XML<br /><br /> 4 = Räumlich<br /><br /> 5 = gruppierter columnstore-Index. **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = nicht gruppierter columnstore-Index. **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = nicht gruppierter Hashindex. **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> GRUPPIERTE COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nicht gruppierte COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH: Der nicht gruppierte Hashindizes werden nur auf Speicheroptimierte Tabellen unterstützt. Die sys.hash_indexes-Sicht zeigt die aktuellen Hashindizes und Hasheigenschaften an. Weitere Informationen finden Sie unter [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> GRUPPIERTE COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nicht gruppierte COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NICHT GRUPPIERTER HASH: Nicht gruppierte Hashindizes werden nur auf Speicheroptimierte Tabellen unterstützt. Die sys.hash_indexes-Sicht zeigt die aktuellen Hashindizes und Hasheigenschaften an. Weitere Informationen finden Sie unter [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_unique**|**bit**|1 = Der Index ist eindeutig.<br /><br /> 0 = Der Index ist nicht eindeutig.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**data_space_id**|**int**|ID des Datenspeicherplatzes für diesen Index. Der Datenspeicherplatz ist entweder eine Dateigruppe oder ein Partitionsschema.<br /><br /> 0 = **Object_id** ist eine Funktion mit Tabellenrückgabe oder der Index im Arbeitsspeicher.|  
-|**IGNORE_DUP_KEY**|**bit**|1 = IGNORE_DUP_KEY ist ON.<br /><br /> 0 = IGNORE_DUP_KEY ist OFF.|  
+|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY ist ON.<br /><br /> 0 = IGNORE_DUP_KEY ist OFF.|  
 |**is_primary_key**|**bit**|1 = Der Index ist Teil einer PRIMARY KEY-Einschränkung.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**is_unique_constraint**|**bit**|1 = Der Index ist Teil einer UNIQUE-Einschränkung.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
-|**Fill_Factor auf den Wert**|**tinyint**|> 0 = FILLFACTOR-Prozentsatz, der beim Erstellen oder Neuerstellen des Index verwendet wurde.<br /><br /> 0 = Standardwert<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
+|**fill_factor**|**tinyint**|> 0 = FILLFACTOR-Prozentsatz verwendet, wenn der Index erstellt oder neu erstellt wurde.<br /><br /> 0 = Standardwert<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**is_padded**|**bit**|1 = PADINDEX ist ON.<br /><br /> 0 = PADINDEX ist OFF.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**is_disabled**|**bit**|1 = Der Index ist deaktiviert.<br /><br /> 0 = Der Index ist nicht deaktiviert.|  
 |**is_hypothetical**|**bit**|1 = Der Index ist hypothetisch und kann nicht direkt als Datenzugriffspfad verwendet werden. Hypothetische Indizes enthalten Statistiken auf Spaltenebene.<br /><br /> 0 = Der Index ist nicht hypothetisch.|  
 |**allow_row_locks**|**bit**|1 = Der Index lässt Zeilensperren zu.<br /><br /> 0 = Der Index lässt Zeilensperren nicht zu.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**allow_page_locks**|**bit**|1 = Der Index lässt Seitensperren zu.<br /><br /> 0 = Der Index lässt Seitensperren nicht zu.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**has_filter**|**bit**|1 = Index hat einen Filter und enthält nur Zeilen, die der Filterdefinition entsprechen.<br /><br /> 0 = Index hat keinen Filter.|  
-|**filter_definition-Spalten**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.<br /><br /> NULL für Heap oder nicht gefilterten Index.|  
-|**"auto_created"**|**bit**|1 = der Index wurde von der automatischen Optimierung erstellt.<br /><br />0 = der Index wurde vom Benutzer erstellt.
+|**filter_definition**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.<br /><br /> NULL für Heap oder nicht gefilterten Index.|  
+|**auto_created**|**bit**|1 = der Index wurde von der automatischen Optimierung erstellt.<br /><br />0 = der Index wurde vom Benutzer erstellt.
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

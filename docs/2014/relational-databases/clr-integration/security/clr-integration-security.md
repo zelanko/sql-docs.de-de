@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918990"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
   Das Sicherheitsmodell von der [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) verwaltet und sichert den Zugriff zwischen verschiedenen Typen von CLR und nicht-CLR-Objekten, die auf [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] -Anweisung oder einer anderen CLR-Objekt, auf dem Server ausgeführt wird. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  

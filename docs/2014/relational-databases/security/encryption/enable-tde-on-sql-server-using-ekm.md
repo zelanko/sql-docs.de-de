@@ -16,11 +16,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011509"
 ---
 # <a name="enable-tde-using-ekm"></a>Aktivieren von TDE mit EKM
   In diesem Thema wird beschrieben, wie die transparente Datenverschlüsselung (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aktiviert wird, um einen Verschlüsselungsschlüssel für die Datenbank mithilfe eines asymmetrischen in einem erweiterbaren Schlüsselverwaltungsmodul mit (EKM) [!INCLUDE[tsql](../../../includes/tsql-md.md)]gespeicherten Schlüssels zu aktivieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "48125080"
   
 -   [So aktivieren Sie TDE unter Verwendung von EKM, mithilfe von Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48125080"
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keinen Anbieter für erweiterbare Schlüsselverwaltung zur Verfügung. Jeder Anbieter für erweiterbare Schlüsselverwaltung kann über andere Prozeduren zum Installieren, Konfigurieren und Autorisieren von Benutzern verfügen.  Schlagen Sie in der Dokumentation Ihres Anbieters für erweiterbare Schlüsselverwaltung nach, um diesen Schritt auszuführen.  
   
-3.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+3.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 4.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

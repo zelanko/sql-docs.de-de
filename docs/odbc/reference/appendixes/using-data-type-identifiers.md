@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735129"
 ---
 # <a name="using-data-type-identifiers"></a>Verwenden von Datentypbezeichnern
 Anwendungen verwenden-Datentypbezeichner gibt es zwei Möglichkeiten: um ihre Puffer an den Treiber zu beschreiben, und klicken Sie zum Abrufen von Metadaten über das Resultset aus dem Treiber, damit sie feststellen können, welche Art von C puffert, um zum Speichern der Daten zu verwenden. Anwendungen rufen Sie die folgenden Funktionen zum Ausführen dieser Aufgaben:  

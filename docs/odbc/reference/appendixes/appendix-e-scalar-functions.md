@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026683"
 ---
 # <a name="appendix-e-scalar-functions"></a>Anhang E: Skalarfunktionen
 ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Informationen zu den einzelnen Funktionstypen in den entsprechenden Abschnitten in diesem Anhang bereitgestellt. Zugeordnete Syntax wird von die Beschreibungen der Funktionen einschließen.  

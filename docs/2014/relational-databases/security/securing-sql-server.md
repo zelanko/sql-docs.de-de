@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992357"
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
   Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
@@ -100,7 +100,7 @@ GO
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Die Verschlüsselungshierarchie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verschlüsselungshierarchie](encryption/encryption-hierarchy.md)|  
-|Implementieren sicherer Verbindungen|[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
+|Implementieren sicherer Verbindungen|[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
 |Verschlüsselungsfunktionen|[Kryptografiefunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)|  
   
  Zertifikate sind "Softwareschlüssel", die für zwei Server freigegeben sind, durch die eine sichere Kommunikation über starke Authentifizierung möglich ist. Zertifikate können in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Erweitern der Objekt- und Verbindungssicherheit erstellt und verwendet werden. Die folgende Tabelle enthält Informationen zum Verwenden von Zertifikaten mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

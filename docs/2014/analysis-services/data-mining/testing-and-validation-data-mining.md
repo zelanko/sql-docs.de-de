@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732908"
 ---
 # <a name="testing-and-validation-data-mining"></a>Tests und Überprüfung (Data Mining)
   Die Überprüfung ist der Prozess des Bewertens, welche Leistung die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
@@ -87,13 +87,13 @@ ms.locfileid: "48077750"
 |Thema|Links|  
 |------------|-----------|  
 |Erfahren Sie mehr darüber, wie Sie ein Testdataset mithilfe eines Assistenten oder mit DMX-Befehlen einrichten können.|[Trainings- und Testdatasets](training-and-testing-data-sets.md)|  
-|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Übergreifende Überprüfung &#40;Analysis Services – Datamining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Erfahren Sie mehr über die Typen von Genauigkeitsdiagrammen in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Prognosegütediagramm &#40;Analysis Services – Datamining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Datamining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Datamining&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifikationsmatrix &#40;Analysis Services – Datamining&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr über die Typen von Genauigkeitsdiagrammen in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Tools](data-mining-tools.md)   
- [Datamining-Lösungen](data-mining-solutions.md)   
- [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Data Mining-Tools](data-mining-tools.md)   
+ [Data Mining-Projektmappen](data-mining-solutions.md)   
+ [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

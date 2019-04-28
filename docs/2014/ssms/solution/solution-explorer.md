@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025724"
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
   Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  

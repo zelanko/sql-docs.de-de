@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736939"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Unäre Operatoren in über- und untergeordneten Dimensionen
   In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  

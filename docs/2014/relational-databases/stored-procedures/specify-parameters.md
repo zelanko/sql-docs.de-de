@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736363"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
   Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  

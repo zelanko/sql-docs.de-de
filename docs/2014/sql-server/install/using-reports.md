@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989767"
 ---
 # <a name="using-reports"></a>Verwenden von Berichten
   Für jede Komponente wird ein separater Bericht generiert und bei Bedarf für jede Instanz, die der Analyse-Assistent des Upgrade Advisors auf einem Server analysiert. Der Bericht enthält Details über bekannte Probleme, die eine Aktualisierung beeinflussen. Er enthält zudem Links zu Informationen und Maßnahmenvorschlägen zur Behebung der identifizierten Probleme.  

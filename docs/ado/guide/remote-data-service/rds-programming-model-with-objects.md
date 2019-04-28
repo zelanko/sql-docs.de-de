@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931418"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
 Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über einen Vermittler, z. B. IIS. Das Programmiermodell gibt an, die Abfolge von Aktivitäten erforderlich, dieses Ziel zu erreichen. Das Objektmodell gibt an, die Objekte, deren Methoden und Eigenschaften das Programmiermodell beeinflussen.  
@@ -44,11 +44,11 @@ Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über 
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Modell: Zusammenfassung](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

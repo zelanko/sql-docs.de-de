@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023502"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0)-Ereignisklasse
   Die **Lock:Timeout (timeout > 0)**-Ereignisklasse gibt an, dass für die Anforderung einer Sperre für eine Ressource, z.B. eine Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Diese Ereignisklasse unterscheidet sich von der **Lock:Timeout** -Ereignisklasse nur dadurch, dass sie keine Ereignisse einschließt, in denen der Timeoutwert gleich 0 (null) ist.  

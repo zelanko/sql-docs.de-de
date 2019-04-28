@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856445"
 ---
 # <a name="stored-procedure-properties-general-page"></a>Eigenschaften der gespeicherten Prozedur (Seite Allgemein)
   Zeigt Informationen zu einer gespeicherten Prozedur an. Alle Informationen sind schreibgeschützt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenbank**  
  Name der Datenbank, die diese Prozedur enthält.  
   

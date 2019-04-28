@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876863"
 ---
 # <a name="back-up-database-backup-options-page"></a>Datenbank sichern (Seite 'Sicherungsoptionen')
   Auf der Seite  **Sicherungsoptionen** des Dialogfelds **Datenbank sichern** können Sie die Optionen zur Sicherung der Datenbank anzeigen und ändern.  
@@ -35,7 +35,7 @@ ms.locfileid: "48060350"
 > [!NOTE]  
 >  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="backup-set"></a>Sicherungssatz  
  Mit den Optionen des Bereichs **Sicherungssatz** können Sie optionale Informationen zu dem durch den Sicherungsvorgang erstellten Sicherungssatz angeben.  

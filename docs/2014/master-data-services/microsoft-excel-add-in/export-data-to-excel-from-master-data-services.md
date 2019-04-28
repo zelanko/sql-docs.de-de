@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e15b0a4d2cb4e6aef865cd01c81568e6762db3ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923861"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Laden von Daten aus MDS in Excel
   In der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], müssen Sie Daten aus dem MDS-Repository laden, um damit zu arbeiten.  

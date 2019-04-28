@@ -18,18 +18,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999564"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
   Im Geschäftslogikhandler können Sie eine Assembly in verwaltetem Code schreiben, die während des Mergesynchronisierungsvorgangs aufgerufen wird. Die Assembly enthält Geschäftslogik, die auf viele Bedingungen während der Synchronisierung reagieren kann: Datenänderungen, Konflikte und Fehler. Das Geschäftslogikhandler-Framework stellt ein einfaches Programmiermodell bereit. Dabei weisen die Daten, die der Mergeprozess an Ihre Assembly übergibt, das Format eines ADO.NET-Datasets auf. Auf diese Weise können Sie auf Ihren Kenntnissen von ADO.NET aufbauen und müssen sich mit keiner neuen proprietären Schnittstelle vertraut machen. Weitere Informationen zum Programmieren von Geschäftslogikhandlern finden Sie hier:  
   
 -   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Anweisungen zum Implementieren eines geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   In den Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Verwendungsmöglichkeiten für Geschäftslogikhandler  
  Bei der Mergesynchronisierung können Geschäftslogikhandler für folgende Zwecke aufgerufen werden:  

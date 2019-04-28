@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927225"
 ---
 # <a name="system-variables"></a>Systemvariablen
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Reihe von Systemvariablen bereit, mit denen Informationen zum ausgeführten Paket und dessen Objekten gespeichert werden. Diese Variablen können in Ausdrücken und Eigenschaftsausdrücken verwendet werden, um Pakete, Container, Tasks und Ereignishandler anzupassen.  
@@ -89,7 +89,7 @@ ms.locfileid: "58391258"
 |**ProgressCountHigh**|Int32|Der obere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
 |`ProgressCountLow`|Int32|Der untere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
 |**ProgressDescription**|Zeichenfolge|Die Beschreibung des Status.|OnProgress-Ereignishandler|  
-|`Propagate`|Boolean|Gibt an, ob das Ereignis an einen Ereignishandler auf höherer Ebene weitergegeben wird.<br /><br /> Hinweis: Der Wert der `Propagate`-Variablen wird während der Überprüfung des Pakets ignoriert.<br /><br /> Wenn Sie `Propagate` in einem untergeordneten Paket auf `False` festlegen, wird ein Ereignis dennoch an das übergeordnete Paket weitergegeben.|Alle Ereignishandler|  
+|`Propagate`|Boolean|Gibt an, ob das Ereignis an einen Ereignishandler auf höherer Ebene weitergegeben wird.<br /><br /> Hinweis: Der Wert des der `Propagate` -Variablen wird während der Überprüfung des Pakets ignoriert.<br /><br /> Wenn Sie `Propagate` in einem untergeordneten Paket auf `False` festlegen, wird ein Ereignis dennoch an das übergeordnete Paket weitergegeben.|Alle Ereignishandler|  
 |`SourceDescription`|Zeichenfolge|Die Beschreibung der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
 |`SourceID`|Zeichenfolge|Der eindeutige Bezeichner der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
 |**SourceName**|Zeichenfolge|Der Name der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  

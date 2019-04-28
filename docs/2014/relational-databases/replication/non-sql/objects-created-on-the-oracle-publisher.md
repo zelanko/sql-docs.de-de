@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022150"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
   Die[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation installiert Datenbankobjekte auf dem Oracle-Verleger, um die Änderungsnachverfolgung und -weitergabe zu ermöglichen ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert dabei keinerlei Binärdateien auf dem Oracle-Verleger). Die folgende Tabelle enthält eine Übersicht über die Objekte, die auf dem Oracle-Verleger erstellt werden, wenn dieser auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifiziert wird. Die Beschreibung der Objekte dient nur zu Informationszwecken. Diese Objekte dürfen nicht geändert werden.  

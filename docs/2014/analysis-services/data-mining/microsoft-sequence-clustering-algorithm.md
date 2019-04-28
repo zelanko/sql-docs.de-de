@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733694"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering-Algorithmus
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein sequenzanalysealgorithmus gebotenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sie können diesen Algorithmus zum Durchsuchen von Daten, die Ereignisse enthält, die durch folgepfade, verknüpft werden können oder *Sequenzen*. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen durch Gruppierung oder Clustering identischer Sequenzen. Im Folgenden finden Sie einige Beispiele für Daten, die Sequenzen enthalten, die für ein Data Mining geeignet sind und einen Einblick in allgemeine Probleme oder Geschäftsszenarien ermöglichen:  
@@ -78,9 +78,9 @@ ms.locfileid: "48190780"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Sequence Clustering-Modellabfragebeispiele](clustering-model-query-examples.md)   
- [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Sequenz Clustering-Modellabfragebeispiele](clustering-model-query-examples.md)   
+ [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

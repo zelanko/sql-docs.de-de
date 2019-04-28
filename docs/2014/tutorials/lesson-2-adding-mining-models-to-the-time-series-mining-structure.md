@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855720"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur
   In dieser Lektion fügen Sie ein neues Miningmodell, Miningstruktur, die Sie gerade erstellt, in haben [Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
@@ -91,7 +91,7 @@ WITH DRILLTHROUGH
 -   Ändern der Algorithmusparameter zur Verwendung anderer Analyse- und Vorhersagemethoden  
   
 ## <a name="adding-an-arima-time-series-model-to-the-structure"></a>Hinzufügen eines ARIMA-Zeitreihenmodells zur Struktur  
- Im ersten Schritt fügen Sie der bestehenden Struktur ein neues <legacyBold>Forecasting</legacyBold>-Miningmodell hinzu. Zeitreihen-Miningmodelle werden vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus standardmäßig mit den Algorithmen ARIMA und ARTXP erstellt, und die Ergebnisse werden kombiniert. Sie können jedoch auch angeben, dass nur ein Algorithmus verwendet wird, oder Sie können die exakte Kombination der Algorithmen festlegen. In diesem Schritt fügen Sie ein neues Modell hinzu, das nur den ARIMA-Algorithmus verwendet. Dieser Algorithmus ist für die langfristige Vorhersage optimiert.  
+ Im ersten Schritt fügen Sie der bestehenden Struktur ein neues &lt;legacyBold&gt;Forecasting&lt;/legacyBold&gt;-Miningmodell hinzu. Zeitreihen-Miningmodelle werden vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus standardmäßig mit den Algorithmen ARIMA und ARTXP erstellt, und die Ergebnisse werden kombiniert. Sie können jedoch auch angeben, dass nur ein Algorithmus verwendet wird, oder Sie können die exakte Kombination der Algorithmen festlegen. In diesem Schritt fügen Sie ein neues Modell hinzu, das nur den ARIMA-Algorithmus verwendet. Dieser Algorithmus ist für die langfristige Vorhersage optimiert.  
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>So fügen Sie ein ARIMA-Zeitreihen-Miningmodell hinzu  
   

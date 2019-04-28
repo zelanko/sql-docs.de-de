@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736798"
 ---
 # <a name="parent-child-hierarchy"></a>Über-/ Unterordnungshierarchie
   Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Standarddimension, die ein übergeordnetes Attribut enthält. Ein übergeordnetes Attribut beschreibt eine *auf sich selbst verweisende Beziehung*oder einen *Selbstjoin*innerhalb einer Dimensionstabelle. Über-/Unterordnungshierarchien werden von einem einzelnen übergeordneten Attribut erstellt. Nur eine Ebene ist einer Über-/Unterordnungshierarchie zugewiesen, da die in der Hierarchie vorhandenen Ebenen aus den Über-/Unterordnungsbeziehungen zwischen Elementen, die mit dem übergeordneten Attribut verknüpft sind, abgerufen werden. Die Position eines Elements in einer Über-/Unterordnungshierarchie wird durch die Eigenschaften `KeyColumns` und `RootMemberIf` des übergeordneten Attributs bestimmt, die Position eines Elements in einer Ebene wird hingegen durch die `OrderBy`-Eigenschaft des übergeordneten Attributs bestimmt. Weitere Informationen zu den Attributeigenschaften finden Sie unter [Attribute und Attributhierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

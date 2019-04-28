@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730601"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Globalisierungsszenarien für Analysis Services Multidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] speichert und bearbeitet mehrsprachige Daten und Metadaten in tabellarischen und mehrdimensionalen Datenmodellen. Die Datenspeicherung erfolgt in Unicode (UTF-16) in Zeichensätzen, die Unicode-Codierung verwenden. Wenn Sie ANSI-Daten in ein Datenmodell laden, werden Zeichen mit entsprechenden Unicode-Codepunkten gespeichert.  

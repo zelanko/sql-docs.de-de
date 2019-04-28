@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027950"
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
 Ruft mehrere Datensätze aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in ein Array.  
@@ -39,13 +39,13 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parameter  
  *Zeilen*  
- Optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **AdGetRowsRest**.  
+ Dies ist optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **AdGetRowsRest**.  
   
- *Starten*  
- Optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
+ *Start*  
+ Dies ist optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
   
  *Fields*  
- Optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
+ Dies ist optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **GetRows** Methode zum Kopieren der Datensätze aus einer **Recordset** in ein zweidimensionales Array. Der erste Index identifiziert das Feld und die zweite die Datensatznummer. Die *Array* Variable automatisch der richtige dimensioniert ist Größe, wenn die **GetRows** Methode gibt die Daten zurück.  

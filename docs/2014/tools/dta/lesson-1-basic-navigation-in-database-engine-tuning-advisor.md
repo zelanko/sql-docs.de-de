@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010747"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber
   Im Datenbankoptimierungsratgeber werden Optimierungssitzungen und Berichte zu Optimierungsempfehlungen über eine grafische Benutzeroberfläche angezeigt. In dieser Lektion erfahren Sie, wie Sie das Tool starten und die Anzeige konfigurieren. Am Ende der Lektion kennen Sie verschiedene Möglichkeiten zum Starten des Tools. Sie wissen, wie Sie die Anzeige konfigurieren, sodass die Optimierungsaufgaben unterstützt werden, die Sie regelmäßig ausführen.  

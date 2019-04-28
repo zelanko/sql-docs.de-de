@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833558"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
-  Der Azure Storage-Verbindungs-Manager ermöglicht einem SSIS-Paket für die Verbindung mit Azure Storage-Konto, mit den Werten, die Sie angeben, für die Eigenschaften an: Speicherkontoname und Kontoschlüssel.  
+  Der Azure Storage-Verbindungs-Manager ermöglicht einem SSIS-Paket für die Verbindung mit Azure Storage-Konto, mit den Werten, die Sie angeben, für die Eigenschaften an: „Speicherkontoname“ und „Kontoschlüssel“.  
   
 1.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **AzureStorage**aus, und klicken Sie auf **Hinzufügen**.  
   

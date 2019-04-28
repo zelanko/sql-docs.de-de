@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842500"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - Suchen (Dialogfeld)
   Mithilfe des Dialogfelds **Suchen** können Sie eine Ablaufverfolgung nach bestimmten Zeichen oder Wörtern durchsuchen. Um einen Suchvorgang abzubrechen, drücken Sie ESC.  
   
  Um das Dialogfeld in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] zu öffnen, klicken Sie im Menü **Bearbeiten** auf **Suchen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Suchen nach**  
  Geben Sie den Text ein, nach dem gesucht werden soll. Die Suche entspricht jeder Zeichenfolge, die die angegebene Zeichenfolge enthält. Die Suche nach "Completed" entspricht beispielsweise "SQL:BatchCompleted". Platzhalterzeichen (*, ? usw.) werden nicht unterstützt.  
   

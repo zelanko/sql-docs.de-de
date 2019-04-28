@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916882"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
   Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  

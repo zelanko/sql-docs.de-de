@@ -1,25 +1,27 @@
 ---
 title: Aktualisieren des Auftragsaktivitätsmonitors | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
-- sql12.swb.jobactivitymon.refresh.f1
+- sql13.swb.jobactivitymon.refresh.f1
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44490a19763f69a4ed88d15aacdfba853db8c040
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856478"
 ---
 # <a name="job-activity-monitor-refresh"></a>Aktualisieren des Auftragsaktivitätsmonitors
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds **Aktualisierungseinstellungen** können Sie konfigurieren, wie oft durch den Auftragsaktivitätsmonitor neue Informationen zur Serveraktivität abgerufen werden. Der Auftragsaktivitätsmonitor muss Abfragen an die überwachten Server ausführen, um Informationen für das Raster des Auftragsaktivitätsmonitors zu erhalten. Wenn für das Intervall für die automatische Aktualisierung weniger als 30 Sekunden festgelegt ist, kann die für die Ausführung der Abfragen benötigte Zeit die Serverleistung beeinträchtigen.  
   
  Zum Öffnen dieses Dialogfelds klicken Sie im Abschnitt **Status**des Auftragsaktivitätsmonitors auf **Aktualisierungseinstellungen anzeigen** .  

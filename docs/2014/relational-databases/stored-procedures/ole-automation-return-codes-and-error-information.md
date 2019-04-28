@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011270"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
-  Der OLE-Automatisierung gespeicherten Systemprozeduren geben eine `int` -Rückgabecode zurück, das HRESULT, der von der zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich NULL ist ein OLE-Fehlercode im hexadezimalen Format 0 x 800*Nnnnn*, als ein `int` Wert in einer gespeicherten Prozedur Rückgabecode weist dem Format 214*Nnnnnnn*.  
+  Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen `int`-Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich NULL ist ein OLE-Fehlercode im hexadezimalen Format 0 x 800*Nnnnn*, als ein `int` Wert in einer gespeicherten Prozedur Rückgabecode weist dem Format 214*Nnnnnnn*.  
   
  Übergabe eines ungültigen Objektnamens (SQLDMO. XYZZY) an die Sp_OACreate bewirkt, dass das Verfahren zum Zurückgeben einer `int` HRESULT von 2147221005, was im hexadezimalen Format 0x800401f3 entspricht.  
   

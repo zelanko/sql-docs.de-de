@@ -1,5 +1,5 @@
 ---
-title: dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60a93e4add862a1dca67e329a15fb575ad9a1292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026526"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,10 +56,10 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Db_id ("*Database_name*")  
+ db_id('*database_name*')  
  Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID zurück, die von sys.dm_fts_index_keywords_by_document für die Suche nach der angegebenen Datenbank verwendet wird. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
- Object_id ("*Table_name*")  
+ object_id('*table_name*')  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  

@@ -1,5 +1,5 @@
 ---
-title: Perspektivische Darstellung (tabellarisch) | Microsoft Docs
+title: Perspektivische Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019305"
 ---
 # <a name="perspective-representation-tabular"></a>Perspektivische Darstellung (tabellarisch)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Eine Perspektive ist ein Mechanismus, um das Modell zu vereinfachen oder einen kleineren Teil davon für die Clientanwendung zu fokussieren.  
   
- Finden Sie unter [perspektivische Darstellung (tabellarisch)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) für eine ausführliche Erläuterung zum Erstellen und Bearbeiten der perspektivendarstellung.  
+ Finden Sie unter [perspektivische Darstellung (tabellarisch)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der perspektivendarstellung.  
   
 > [!WARNING]  
 >  Perspektiven sind kein Sicherheitsmechanismus; auf Objekte außerhalb der Perspektive kann immer noch vom Benutzer über andere Schnittstellen zugegriffen werden.  

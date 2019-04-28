@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011959"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
   In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Berechtigungen für einen Prinzipal in [!INCLUDE[tsql](../../../includes/tsql-md.md)]gewähren können.  
@@ -28,7 +28,7 @@ ms.locfileid: "54134920"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erteilen Sie eine Berechtigung für einen Prinzipal mit**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54134920"
 ####  <a name="Permissions"></a> Berechtigungen  
  Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) muss entweder über die Berechtigung selbst mit GRANT OPTION oder über eine höhere Berechtigung verfügen, in der die erteilte Berechtigung impliziert ist. Mitglieder der festen Serverrolle **sysadmin** können beliebige Berechtigungen erteilen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   

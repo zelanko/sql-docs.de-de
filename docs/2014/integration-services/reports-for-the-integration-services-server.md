@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889802"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Berichte für den Integration Services-Server
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar, die zum Überwachen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten hilfreich sind, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Mit diesen Berichten können Sie den Paketstatus und -verlauf anzeigen und ggf. die Ursache von Paketausführungsfehlern identifizieren.  

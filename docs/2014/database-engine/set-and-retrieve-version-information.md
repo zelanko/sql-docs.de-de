@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843481"
 ---
 # <a name="set-and-retrieve-version-information"></a>Festlegen und Abrufen von Versionsinformationen
   Zu den Versionsinformationen zählen der Verlauf und der aktuelle Status einer Datei unter Quellcodeverwaltung. Für jede Datei unter Quellcodeverwaltung verwaltet [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe umfassende Verlaufsdaten. Dadurch können Sie die Entwicklung einer oder mehrerer Dateien über einen bestimmten Zeitraum verfolgen. Sie können diese Informationen auch dazu verwenden, um eine lokale Kopie einer beliebigen Version der Datei abzurufen oder zwei beliebige Versionen miteinander zu vergleichen.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955843"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio)
   Mithilfe der Replikation können Sie verschlüsselte Spaltendaten veröffentlichen. Zum Entschlüsseln und Verwenden dieser Daten auf dem Abonnenten muss der zum Verschlüsseln der Daten auf dem Verleger verwendete Schlüssel auch auf dem Abonnenten vorhanden sein. Die Replikation bietet keinen sicheren Mechanismus zum Transportieren von Verschlüsselungsschlüsseln. Sie müssen den Verschlüsselungsschlüssel auf dem Abonnenten manuell neu erstellen. In diesem Thema wird veranschaulicht, wie Sie eine Spalte auf dem Verleger verschlüsseln und wie Sie sicherstellen, dass der Verschlüsselungsschlüssel auf dem Abonnenten verfügbar ist.  

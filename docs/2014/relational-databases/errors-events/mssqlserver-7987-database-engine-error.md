@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913277"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -25,12 +25,12 @@ ms.locfileid: "48130497"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7987|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Meldungstext|Vorabüberprüfungen für Systemtabelle: Die Objekt-ID O_ID besitzt eine nicht übereinstimmende Kettenverknüpfung. P_ID1->next = P_ID2, aber P_ID2->prev = P_ID3. Die CHECK-Anweisung wurde aufgrund eines irreparablen Fehlers beendet.|  
+|Meldungstext|Vorabüberprüfungen für Systemtabelle: Objekt-ID O_ID besitzt eine nicht übereinstimmende kettenverknüpfung. P_ID1->next = P_ID2, aber P_ID2->prev = P_ID3. Die CHECK-Anweisung wurde aufgrund eines irreparablen Fehlers beendet.|  
   
 ## <a name="explanation"></a>Erklärung  
  Die erste Phase eines DBCC CHECKDB beinhaltet einfache Überprüfungen der Datenseiten kritischer Systemtabellen. Gefundene Fehler können nicht repariert werden. Daher wird DBCC CHECKDB sofort beendet.  

@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874118"
 ---
 # <a name="getting-started-with-clr-integration"></a>Erste Schritte mit der CLR-Integration
   Dieses Thema enthält eine Übersicht über die erforderlichen Namespaces und Bibliotheken zum Kompilieren von Datenbankobjekten mit dem die [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] Integration in die .NET Framework common Language Runtime (CLR). In diesem Thema wird außerdem erläutert, wie eine einfache gespeicherte CLR-Prozedur in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben, kompiliert und ausgeführt wird.  
@@ -142,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Nach dem Erstellen der Prozedur kann diese wie eine normale, in [!INCLUDE[tsql](../../../includes/tsql-md.md)] geschriebene gespeicherte Prozedur ausgeführt werden. Führen Sie den folgenden Befehl ein:  
+ Nach dem Erstellen der Prozedur kann diese wie eine normale, in [!INCLUDE[tsql](../../../includes/tsql-md.md)] geschriebene gespeicherte Prozedur ausgeführt werden. Führen Sie den folgenden Befehl aus:  
   
 ```  
 DECLARE @J nchar(25)  

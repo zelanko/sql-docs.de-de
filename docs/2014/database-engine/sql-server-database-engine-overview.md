@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843794"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server-Datenbank-Engine
   [!INCLUDE[ssDE](../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. [!INCLUDE[ssDE](../includes/ssde-md.md)] ermöglicht einen gesteuerten Zugriff und eine schnelle Transaktionsverarbeitung, um auch den Anforderungen der anspruchsvollsten Datenverarbeitungsanwendungen in Ihrem Unternehmen gerecht zu werden.  

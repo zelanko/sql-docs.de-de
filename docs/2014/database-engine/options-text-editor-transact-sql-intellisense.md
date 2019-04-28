@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55484629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844349"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Options (Text Editor-Transact-SQL-IntelliSense)
   Im Dialogfeld **Optionen** können Sie die IntelliSense-Einstellungen für den [!INCLUDE[ssDE](../includes/ssde-md.md)]-Abfrage-Editor ändern. Diese Einstellungen sind verfügbar, wenn Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie den Ordner **Text-Editor**, erweitern Sie den Ordner **Transact-SQL**, und klicken Sie anschließend auf **Erweitert**.  

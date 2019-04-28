@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022245"
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
   Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  
@@ -69,7 +69,7 @@ ms.locfileid: "52763222"
   
 -   Wenn ein Artikel einer Veröffentlichung hinzugefügt oder aus einer Veröffentlichung gelöscht wird, müssen Abonnements für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erneut initialisiert werden.  
   
--   Nur zwei Einschränkungen für alle unterstützten nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abonnenten sind: NULL und NOT NULL. PRIMARY KEY-Einschränkungen werden als eindeutige Indizes repliziert.  
+-   Bei allen Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten werden nur zwei Einschränkungen unterstützt: NULL und NOT NULL. PRIMARY KEY-Einschränkungen werden als eindeutige Indizes repliziert.  
   
 -   Der Wert NULL wird von den verschiedenen Datenbanken unterschiedlich behandelt. Das wirkt sich darauf aus, wie ein leerer Wert, eine leere Zeichenfolge oder NULL dargestellt werden. Dies wiederum wirkt sich auf das Verhalten von Werten aus, die in Spalten mit definierten UNIQUE-Einschränkungen eingefügt werden. Oracle lässt z. B. mehrere NULL-Werte in einer eindeutigen Spalte zu, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nur einen einzigen NULL-Wert in einer eindeutigen Spalte zulässt.  
   

@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bdcb3a3f5106a3a674ba8247b0315cf5461c3881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734801"
 ---
-# <a name="global-settings-dialogs-mysqltosql"></a>Globale Einstellungen (Dialogfelder) (MySQLToSQL))
+# <a name="global-settings-dialogs-mysqltosql"></a>Global Settings (Dialogs) (MySQLToSQL)
 Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Angeben der Standardaktion für Benutzer und die Einstellungen für die Warnung für SSMA.  
   
 Um die Einstellungen des Dialogfelds auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **-Dialogfelder**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Warnung vor dem Überschreiben von Objekten**  
 Wenn SSMA Objekte in SQL Server konvertiert, möglicherweise einige Objekte in SQL Server-Metadaten des Projekts bereits vorhanden. Diese Objekte möglicherweise bereits konvertiert wurden, oder die Objekte möglicherweise einfach denselben Namen in das Zielschema als Objekte, die Sie konvertieren möchten.  
   

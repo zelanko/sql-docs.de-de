@@ -1,27 +1,27 @@
 ---
 title: Audit Broker Conversation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
-topic_type:
-- apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912194"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation-Ereignisklasse
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Broker Conversation** -Ereignis, um Überwachungsmeldungen in Bezug auf die Dialogsicherheit von Service Broker zu melden.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Datenspalten der Audit Broker Conversation-Ereignisklasse  
@@ -48,7 +48,7 @@ ms.locfileid: "52795187"
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
-|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|Ja|  
+|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> <br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|Ja|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   

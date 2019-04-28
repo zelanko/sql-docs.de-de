@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab57e69118edfe4a647d6baeedf5a10ee8460247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026455"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "52796253"
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner.|  
 |**tablenick**|**int**|Spitzname der Tabelle|  
 |**type**|**tinyint**|Der Typ des Löschvorgangs:<br /><br /> 1 = Löschvorgang durch Benutzer.<br /><br /> 5 = Zeile gehört nicht mehr zur gefilterten Partition.<br /><br /> 6 = Löschvorgang durch System.|  
-|**Datenherkunft**|**varbinary(249)**|Zeigt die Version des Datensatzes an, der gelöscht wurde, und die Updates, die bekannt waren, als der Datensatz gelöscht wurde. Ermöglicht Regeln für eine konsistente Auflösung eines Konflikts, wenn ein Abonnent eine Zeile aktualisiert, während diese auf einem anderen Abonnenten gelöscht wird.|  
-|**generation**|**int**|Wird zugewiesen, wenn eine Zeile gelöscht wird. Wenn ein Abonnent die Generierung N anfordert, werden nur Tombstones mit Generierung >= N gesendet.|  
+|**lineage**|**varbinary(249)**|Zeigt die Version des Datensatzes an, der gelöscht wurde, und die Updates, die bekannt waren, als der Datensatz gelöscht wurde. Ermöglicht Regeln für eine konsistente Auflösung eines Konflikts, wenn ein Abonnent eine Zeile aktualisiert, während diese auf einem anderen Abonnenten gelöscht wird.|  
+|**generation**|**int**|Wird zugewiesen, wenn eine Zeile gelöscht wird. Wenn ein Abonnent, Generierung N, nur Tombstones mit Generierung anfordert > = N gesendet.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifiziert den logischen Datensatz, zu dem eine gelöschte Zeile gehört hat.|  
-|**logical_record_lineage**|**varbinary(501)**|Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Löschungen für den logischen Datensatz, zu dem diese Zeile gehört, verwendet werden.|  
+|**logical_record_lineage**|**Varbinary(501)**|Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Löschungen für den logischen Datensatz, zu dem diese Zeile gehört, verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
