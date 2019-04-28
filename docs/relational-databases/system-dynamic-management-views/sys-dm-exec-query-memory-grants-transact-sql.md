@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013237"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52413411"
 |**session_id**|**smallint**|ID (SPID) der Sitzung, in der die Abfrage ausgeführt wird.|  
 |**request_id**|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig.|  
 |**scheduler_id**|**int**|ID des Zeitplanungsmoduls, der diese Abfrage plant.|  
-|**Grad an Parallelität**|**smallint**|Grad an Parallelität für diese Abfrage.|  
+|**dop**|**smallint**|Grad an Parallelität für diese Abfrage.|  
 |**request_time**|**datetime**|Datum und Uhrzeit, zu der die Abfrage die Arbeitsspeicherzuweisung angefordert hat.|  
 |**grant_time**|**datetime**|Datum und Uhrzeit, zu der die Arbeitsspeicherzuweisung für die Abfrage erfolgt ist. NULL, wenn noch kein Arbeitsspeicher zugewiesen wurde.|  
 |**requested_memory_kb**|**bigint**|Insgesamt angeforderter Arbeitsspeicher in Kilobytes.|  
@@ -53,9 +53,9 @@ ms.locfileid: "52413411"
 |**max_used_memory_kb**|**bigint**|Der bis zu diesem Zeitpunkt verwendete maximale physische Arbeitsspeicher in Kilobytes.|  
 |**query_cost**|**float**|Die geschätzten Abfragekosten.|  
 |**timeout_sec**|**int**|Timeout in Sekunden, nach dem die Abfrage die Anforderung der Arbeitsspeicherzuweisung aufgibt.|  
-|**resource_semaphore_id**|**smallint**|Nicht eindeutige ID des Ressourcensemaphors, auf das die Abfrage wartet.<br /><br /> **Hinweis**: Diese ID ist in Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor Version [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eindeutig. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
+|**resource_semaphore_id**|**smallint**|Nicht eindeutige ID des Ressourcensemaphors, auf das die Abfrage wartet.<br /><br /> **Hinweis**: Diese ID ist eindeutig in Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter sind als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
 |**queue_id**|**smallint**|ID der Warteschlange, in der die Abfrage auf Arbeitsspeicherzuweisungen wartet. NULL, wenn der Arbeitsspeicher bereits zugewiesen wurde.|  
-|**wait_order**|**int**|Sequenzielle Position wartender Abfragen innerhalb des angegebenen **Queue_id**. Der Wert kann sich für eine Abfrage ändern, wenn andere Abfragen Arbeitsspeicherzuweisungen erhalten oder für diese ein Timeout eintritt. NULL, wenn bereits Arbeitsspeicher zugewiesen wurde.|  
+|**wait_order**|**int**|Sequenzielle Position wartender Abfragen innerhalb des angegebenen **Queue_id**. Dieser Wert kann für eine bestimmte Abfrage ändern, wenn andere Abfragen arbeitsspeicherzuweisungen oder ein Timeout auftreten. NULL, wenn bereits Arbeitsspeicher zugewiesen wurde.|  
 |**is_next_candidate**|**bit**|Kandidat für die nächste Arbeitsspeicherzuweisung.<br /><br /> 1 = Ja<br /><br /> 0 = Nein<br /><br /> NULL = Arbeitsspeicher wurde bereits zugewiesen|  
 |**wait_time_ms**|**bigint**|Wartezeit in Millisekunden. NULL, wenn der Arbeitsspeicher bereits zugewiesen wurde.|  
 |**plan_handle**|**varbinary(64)**|Bezeichner für diesen Abfrageplan. Verwendung **Sys. dm_exec_query_plan** um die tatsächlichen XML-Plan zu extrahieren.|  
@@ -116,7 +116,7 @@ Auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], erfordert die `VIEW D
  Mit der Ressourcenkontrollen-Funktion kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], jeden Pool verhält sich wie eine kleine unabhängige Serverinstanz und erfordert 2 Semaphore. Die Anzahl der Zeilen, die von zurückgegeben werden **Sys. dm_exec_query_resource_semaphores** können nicht mit bis zu 20-Mal länger als die Zeilen, die in zurückgegebenen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

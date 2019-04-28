@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913737"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -25,12 +25,12 @@ ms.locfileid: "48115050"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7904|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_FILE|  
-|Meldungstext|Tabellenfehler: Die FileStream-Datei für Spalten-ID C_ID, ROWGUID RG_ID, in Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID wurde nicht gefunden.|  
+|Meldungstext|Tabellenfehler: Die Filestream-Datei für die Spalten-ID C_ID, ROWGUID RG_ID, in Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID ist nicht gefunden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Ein Spaltenwert einer Partition hat keine übereinstimmende FILESTREAM-Datei im entsprechenden FILESTREAM-Spaltenverzeichnis.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918443"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
   Eine Datenebenenanwendung (DAC) unterstützt die am häufigsten verwendeten [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Objekte.  
@@ -38,20 +38,20 @@ ms.locfileid: "53361912"
   
 |||  
 |-|-|  
-|DATABASE ROLE|FUNKTION: Inline-Tabellenwertfunktion|  
-|FUNKTION: Tabellenwertfunktion|FUNKTION: Skalarwert|  
-|INDEX: Gruppiert|INDEX: Nicht gruppierte|  
+|DATABASE ROLE|FUNCTION: Inline-Tabellenwertfunktion|  
+|FUNCTION: Tabellenwertfunktion mit mehreren Anweisungen|FUNCTION: skalare|  
+|INDEX: Gruppiert|INDEX: nicht gruppiert|  
 |INDEX: Räumlich|INDEX: Eindeutig|  
 |Anmeldung|Berechtigungen|  
 |Rollenmitgliedschaften|SCHEMA|  
-|Statistik|GESPEICHERTE PROZEDUR: Transact-SQL|  
-|Synonyme|TABELLE: CHECK-Einschränkung|  
-|TABELLE: Sortierung|TABELLE: Spalte, einschließlich berechneter Spalten|  
-|TABELLE: Einschränkung, Standard|TABELLE: Foreign Key-Einschränkung|  
-|TABELLE: Index-Einschränkung|TABELLE: Primary Key-Einschränkung|  
-|TABELLE: Einschränkung, eindeutig|TRIGGER: DML|  
-|TYP: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYP: User-defined Data Type|  
-|TYP: Benutzerdefinierten Tabellentyp|Benutzer|  
+|Statistik|STORED PROCEDURE: Transact-SQL|  
+|Synonyme|TABLE: CHECK-Einschränkung|  
+|TABLE: Sortierung|TABLE: Spalte, einschließlich berechneter Spalten|  
+|TABLE: Einschränkung, Standard|TABLE: Einschränkung, Fremdschlüssel|  
+|TABLE: Einschränkung, Index|TABLE: Einschränkung, Primärschlüssel|  
+|TABLE: Einschränkung, Eindeutig|TRIGGER: DML|  
+|TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: benutzerdefinierter Datentyp|  
+|TYPE: benutzerdefinierter Tabellentyp|Benutzer|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Unterstützung von Datenebenenanwendungen durch die Versionen von SQL Server  
@@ -82,32 +82,32 @@ ms.locfileid: "53361912"
 ##  <a name="DeploymentLimitations"></a> Beschränkungen für die Datenbereitstellung  
  Beachten Sie diese Genauigkeitseinschränkungen in der DAC Framework-Datenbereitstellungs-Engine in SQL Server 2012 SP1. Die Beschränkungen gelten für die folgenden DAC-Framework-Aktionen: Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei.  
   
-1.  Verlust von Metadaten unter bestimmten Bedingungen und für bestimmte Basistypen innerhalb von sql_variant-Spalten. In den jeweiligen Fällen wird eine Warnung mit der folgenden Meldung angezeigt:  **Bestimmte Eigenschaften für spezifische Datentypen, die innerhalb einer Sql_variant-Spalte verwendet werden nicht beibehalten werden, bei der Bereitstellung durch DAC-Framework.**  
+1.  Verlust von Metadaten unter bestimmten Bedingungen und für bestimmte Basistypen innerhalb von sql_variant-Spalten. In betroffenen Fällen wird eine Warnung mit der folgenden Meldung angezeigt:  **Bestimmte Eigenschaften für spezifische Datentypen, die innerhalb einer sql_variant-Spalte verwendet werden, werden bei der Bereitstellung durch DAC-Framework nicht beibehalten.**  
   
-    -   MONEY, SMALLMONEY, NUMERIC, DECIMAL Basistypen:  Genauigkeit wird nicht beibehalten.  
+    -   Basistypen MONEY, SMALLMONEY, NUMERIC und DECIMAL:  Genauigkeit wird nicht beibehalten.  
   
         -   Basistypen DECIMAL/NUMERIC mit der Genauigkeit 38: Die sql_variant-Metadaten für „TotalBytes“ sind immer auf 21 festgelegt.  
   
-    -   Alle textbasistypen:  Die standardsortierung der Datenbank, die für den gesamten Text angewendet wird.  
+    -   Alle Textbasistypen:  Die Standardsortierung der Datenbank wird auf sämtlichen Text angewendet.  
   
-    -   BINARY-Datentypen:  MaxLength-Eigenschaft wird nicht beibehalten.  
+    -   BINARY-Basistypen:  Die MaxLength-Eigenschaft wird nicht beibehalten.  
   
-    -   Zeit, "DateTimeOffset"-Basistypen:  Genauigkeit ist immer auf 7 festgelegt.  
+    -   Basistypen TIME und DATETIMEOFFSET:  Genauigkeit wird immer auf „7“ festgelegt.  
   
-2.  Verlust von Daten innerhalb von sql_variant-Spalten. In den jeweiligen Fällen wird eine Warnung mit der folgenden Meldung angezeigt:  **Fallen Datenverlust bei ein Wert in einer Sql_variant-DATETIME2-Spalte mit mehr als 3 Dezimalstellen von DAC-Framework bereitgestellt wird. Der DATETIME2-Wert ist während der Bereitstellung auf drei Dezimalstellen begrenzt.**  
+2.  Verlust von Daten innerhalb von sql_variant-Spalten. Wenn betroffen, wird eine Warnung mit der folgenden Meldung angezeigt:  **Wenn DAC-Framework in einer sql_variant-Spalte einen DATETIME2-Wert mit mehr als drei Dezimalstellen bereitstellt, tritt ein Datenverlust auf. Der DATETIME2-Wert ist während der Bereitstellung auf drei Dezimalstellen begrenzt.**  
   
     -   Basistyp DATETIME2 mit mehr als drei Dezimalstellen: Die Anzahl der Dezimalstellen ist auf 3 beschränkt.  
   
-3.  Der Bereitstellungsvorgang schlägt unter den folgenden Bedingungen innerhalb von sql_variant-Spalten fehl. In den jeweiligen Fällen wird ein Dialogfeld mit folgender Meldung angezeigt:  **Fehler beim Vorgang aufgrund von datenbeschränkungen in DAC-Framework.**  
+3.  Der Bereitstellungsvorgang schlägt unter den folgenden Bedingungen innerhalb von sql_variant-Spalten fehl. In betroffenen Fällen wird ein Dialogfeld mit der folgenden Meldung angezeigt:  **Operation failed due to data limitations in the DAC Framework.** (Der Vorgang ist aufgrund von Datenbeschränkungen im DAC-Framework fehlgeschlagen.)  
   
-    -   Datetime2, SMALLDATETIME und DATE-Basistypen:  Wenn der Wert außerhalb des Bereichs der DATETIME - z. B. ist das Jahr kleiner als 1753.  
+    -   Basistypen DATETIME2, SMALLDATETIME und DATE:  Wenn der Wert außerhalb des DATETIME-Bereichs liegt, z. B., wenn die Jahresangabe unter 1753 liegt.  
   
     -   Basistypen DECIMAL, NUMERIC: Wenn die Genauigkeit des Werts größer als 28 ist.  
   
 ##  <a name="Considerations"></a> Zusätzliche Überlegungen zu Bereitstellungsaktionen  
  Beachten Sie Folgendes bei DAC-Framework-Datenbereitstellungsaktionen:  
   
--   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z. B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Der Benutzer wird auch die folgende zusammenfassungsmeldung im Protokoll angezeigt:  **Diese Einschränkungen haben keine Auswirkungen auf die Genauigkeit der Datentypen und Werte, die im DAC-Framework erstellten DAC-Paket gespeichert; Sie gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets in einer Datenbank ergeben. Weitere Informationen zu den davon betroffenen Daten und zur Umgehung dieser Beschränkung finden Sie unter** [in diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z. B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Dem Benutzer wird außerdem die folgende Zusammenfassungsmeldung im Protokoll angezeigt:  **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Einschränkungen nicht beeinträchtigt; die Einschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den davon betroffenen Daten und zur Umgehung dieser Beschränkung finden Sie unter** [in diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Bereitstellen/Veröffentlichen/Importieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird – z.B. Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei – sind diese Beschränkungen gültig. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird zwar durch Fehler blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
   

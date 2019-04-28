@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959610"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +38,20 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publisher** =] **"***Verleger***"**  
+ [**@publisher** = ] **'***publisher***'**  
  Der Name des nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger zu dem der Auftrag gehört. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Auftragsnummer**|**int**|Die Nummer des Oracle-Auftrags.|  
-|**Letztes Datum**|**varchar(22)**|Das Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
+|**jobnumber**|**int**|Die Nummer des Oracle-Auftrags.|  
+|**lastdate**|**varchar(22)**|Das Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
 |**thisdate**|**varchar(22)**|Der Zeitpunkt der Änderung.|  
-|**NextDate**|**varchar(22)**|Das nächste Datum, an dem der Auftrag ausgeführt wird.|  
-|**unterbrochen**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
-|**Intervall**|**varchar(200)**|Das Intervall für den Auftrag.|  
-|**Fehler bei der**|**int**|Die Anzahl Fehler für den Auftrag.|  
+|**nextdate**|**varchar(22)**|Das nächste Datum, an dem der Auftrag ausgeführt wird.|  
+|**broken**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
+|**interval**|**varchar(200)**|Das Intervall für den Auftrag.|  
+|**failures**|**int**|Die Anzahl Fehler für den Auftrag.|  
 |**xactsetjobwhat**|**varchar(200)**|Der Name der Prozedur, die von dem Auftrag ausgeführt wird.|  
 |**xactsetjob**|**varchar(1)**|Der Status des Auftrags, der einen der folgenden Werte haben kann:<br /><br /> **1** -der Auftrag aktiviert ist.<br /><br /> **0** -der Auftrag ist deaktiviert.|  
 |**xactsetlonginterval**|**int**|Das lange Intervall für den Auftrag.|  
@@ -72,6 +72,6 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

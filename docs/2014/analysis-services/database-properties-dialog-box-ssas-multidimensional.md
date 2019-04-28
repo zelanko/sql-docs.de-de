@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732548"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Datenbankeigenschaften (Dialogfeld, SSAS – mehrdimensional)
   Mithilfe des Dialogfelds **Datenbankeigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften einer Datenbank in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen. Klicken Sie zum Anzeigen des Dialogfelds **Datenbankeigenschaften** im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank, und wählen Sie **Eigenschaften**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  

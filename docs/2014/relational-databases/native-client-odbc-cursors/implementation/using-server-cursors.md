@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011840"
 ---
 # <a name="using-server-cursors"></a>Verwenden von Servercursorn
   Wenn eine ODBC-Anwendung eines ODBC-Cursorattribut auf etwas anderes als die Standardeinstellungen, setzt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber fordert der Server ein API-Servercursor desselben Typs zu implementieren. Durch die Verwendung von API-Servercursorn wird auf dem Client Arbeitsspeicher freigegeben, und zudem kann der Netzwerkdatenverkehr zwischen dem Client und dem Server erheblich reduziert werden.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e386aa60489fe3edb2caac3cb49ebad263ffdfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026620"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Verhaltensänderungen und ODBC 3.x-Treiber
 Umgebungsattributs gibt SQL_ATTR_ODBC_VERSION an den Treiber an, ob sie ODBC 2. aufweisen muss. *x* Verhalten oder ODBC 3.*.x* Verhalten. Wie umgebungsattributs SQL_ATTR_ODBC_VERSION festgelegt wird, hängt von der Anwendung ab. ODBC 3.*.x* müssen Anwendungen Aufrufen **SQLSetEnvAttr** , dieses Attribut festzulegen, nachdem sie rufen **SQLAllocHandle** ein Umgebungshandle und vor dem Aufruf von  **SQLAllocHandle** ein Verbindungshandle zuordnen. Wenn sie nicht dies tun, gibt der Treiber-Manager SQLSTATE HY010 (Funktion Sequenzfehler) auf dem letzten Aufruf von **SQLAllocHandle**.  

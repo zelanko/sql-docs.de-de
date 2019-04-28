@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876189"
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
   Die Onlinewiederherstellung wird nur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition unterstützt. In dieser Edition erfolgen Datei- und Seitenwiederherstellungen sowie schrittweise Wiederherstellungen standardmäßig online. Dieses Thema ist nur für Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten (und unter dem einfachen Wiederherstellungsmodell nur für schreibgeschützte Dateigruppen).  
@@ -77,7 +77,7 @@ ms.locfileid: "48060273"
 > [!NOTE]  
 >  Die Syntax für eine Onlinewiederherstellungssequenz ist dieselbe wie bei einer Offlinewiederherstellungssequenz.  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48060273"
   
 -   [Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;Vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   

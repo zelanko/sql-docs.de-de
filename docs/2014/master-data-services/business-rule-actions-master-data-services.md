@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877194"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Geschäftsregelaktionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sind Geschäftsregelaktionen die Folge von Geschäftsregel-Bedingungsauswertungen. Wenn eine Bedingung erfüllt ist (TRUE), wird die Aktion initiiert.  
@@ -50,7 +50,7 @@ ms.locfileid: "53357721"
 |**Ist erforderlich**|Das ausgewählte Attribut **ist erforderlich**, es kann also nicht NULL lauten oder leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**ist ungültig**|Das ausgewählte Attribut **ist ungültig**.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Muss das Muster enthalten**|Das ausgewählte Attribut **muss das Muster enthalten** , das angegeben ist. Verwenden Sie reguläre Ausdrücke von .NET Framework, um das Muster anzugeben.<br /><br /> Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.<br /><br /> Diese Aktion ist für Text- und Linkwerte gültig.|  
-|**Muss eindeutig sein**|Das ausgewählte Attribut **muss eindeutig sein** , und zwar unabhängig von definierten Attributen oder in Kombination mit ihnen.<br /><br /> **Bewährte Methode:** Kombinieren Sie diese Aktion mit einer verbindlichen Bedingung, um sicherzustellen, dass gültig Indexfelder in abonnementsystemen.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
+|**Muss eindeutig sein**|Das ausgewählte Attribut **muss eindeutig sein** , und zwar unabhängig von definierten Attributen oder in Kombination mit ihnen.<br /><br /> **Bewährte Methode:** Kombinieren Sie diese Aktion mit einer verbindlichen Bedingung, um sicherzustellen, dass Indexfelder in Abonnementsystemen gültig sind.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Muss einen der folgenden Werte aufweisen**|Das ausgewählte Attribut **muss einen der folgenden Werte aufweisen** , die in einer Liste angegeben sind.<br /><br /> Diese Aktion ist für Textwerte gültig.|  
 |**Muss größer sein als**|Das ausgewählte Attribut **muss größer sein als** ein bestimmtes Attribut oder ein bestimmter Attributwert bzw. muss leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen- und Datumswerte gültig.|  
 |**Muss gleich sein**|Das ausgewählte Attribut **muss gleich sein** , und zwar mit einem definierten Attributwert oder einem anderen Attribut bzw. es muss leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  

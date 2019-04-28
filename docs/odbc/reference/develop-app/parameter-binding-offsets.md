@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998922"
 ---
 # <a name="parameter-binding-offsets"></a>Offsets der Parameterbindung
 Einer Anwendung angegeben werden, dass ein Offset hinzugefügt wird, um die pufferadressen Parameter und den entsprechenden Längenindikator gebunden Puffer behandelt, wenn **SQLExecDirect** oder **SQLExecute** aufgerufen wird. Das Ergebnis dieser Ergänzungen bestimmt, die Adressen, die bei diesen Vorgängen verwendet wird.  

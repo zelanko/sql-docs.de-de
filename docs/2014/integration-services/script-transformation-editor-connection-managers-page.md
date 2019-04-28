@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889243"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  

@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922917"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codierung und Decodierung von SQL Server-Bezeichnern
   Begrenzungsbezeichner von SQL Server können Zeichen enthalten, die in Windows PowerShell-Pfaden nicht unterstützt werden. Diese Zeichen können angegeben werden, indem ihre Hexadezimalwerte codiert werden.  
   
-1.  **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions)  
+1.  **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions)  
   
 2.  **Zum Verarbeiten von Sonderzeichen:**  [Codieren eines Bezeichners](#EncodeIdent), [Decodieren eines Bezeichners](#DecodeIdent)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "52753152"
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Zeichen**|\|/|decodiert werden:|%|\<|>|*|?|[|]|&#124;|  
+|**Zeichen**|\ |/|decodiert werden:|%|\<|>|*|?|[|]|&#124;|  
 |**Hexadezimale Codierung**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Codieren eines Bezeichners  

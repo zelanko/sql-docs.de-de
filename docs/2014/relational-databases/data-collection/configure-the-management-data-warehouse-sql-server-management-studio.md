@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918820"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie das Verwaltungs-Data Warehouse für die Unterstützung der Datenspeicherung für einzelne oder mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, die den Datensammler verwenden, konfigurieren müssen Diese Instanzen können sich auf dem gleichen Server oder auf verschiedenen Servern befinden. In diesem Thema sind auch Beschreibungen der Benutzeroberfläche des Dialogfelds [Assistent für die Konfiguration des Verwaltungs-Data Warehouses](#Wizard) enthalten. Weitere Informationen zum Konfigurieren eines Datensammlers finden Sie unter [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  

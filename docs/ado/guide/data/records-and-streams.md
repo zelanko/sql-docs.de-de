@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910449"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO bietet derzeit die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als das primäre Mittel für den Zugriff auf Informationen in den Datenquellen, z. B. relationalen Datenbanken. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte als alternative oder Ergänzung-Objekte, die mit dem Daten von Anbietern bearbeitet werden können. Einzelheiten zur **Datensatz** Verhalten, finden Sie in der Dokumentation des Anbieters.  

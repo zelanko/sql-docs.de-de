@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011374"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>Abgleichen eines Datenbankdiagramms mit einer geänderten Datenbank (Visual Database Tools)
   Ein Datenbankdiagramm wird gespeichert, wenn die Datenbank mit dem Diagramm aktualisiert werden soll. Wenn die Datenbank jedoch von anderen Benutzern aktualisiert wurde, während Ihr Diagramm geöffnet war, können sich die Änderungen der anderen Benutzer auf Ihr Diagramm auswirken und umgekehrt.  

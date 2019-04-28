@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919671"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Unzulässige Typen und Elemente in "System.dll"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programmierung der Common Language-Integration (CLR) lässt die Verwendung von einem Typ oder Member, die eine `HostProtectionAttribute` , der angibt eine `System.Security.Permissions.HostProtectionResource` Enumeration mit einem Wert von `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, oder `UI`. In der folgenden Tabelle sind die Elemente und Typen der System.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  

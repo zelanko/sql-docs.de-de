@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0783f096db469c27a7f820f1a4594673ffe7e48f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893149"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP-Verbindungs-Manager-Editor (Seite Proxy)
   Auf der Registerkarte **Proxy** des Dialogfelds **HTTP-Verbindungs-Manager-Editor** können Sie den HTTP-Verbindungs-Manager für die Verwendung eines Proxyservers konfigurieren. Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913285"
 ---
 # <a name="mssqlserver7932"></a>MSSQLSERVER_7932
     
@@ -25,12 +25,12 @@ ms.locfileid: "48140880"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7932|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Meldungstext|Tabellenfehler: Die FileStream-Verzeichnis-ID ID F_ID für die Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID befindet sich in der Dateigruppe FG_ID1, sollte jedoch in der Dateigruppe FG_ID2 enthalten sein.|  
+|Meldungstext|Tabellenfehler: Die FileStream-Verzeichnis-ID F_ID für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID befindet sich in der Dateigruppe FG_ID1, sollte jedoch in Dateigruppe FG_ID2 enthalten sein.|  
   
 ## <a name="explanation"></a>Erklärung  
  Während DBCC CHECKDB wurde die FILESTREAM-Speicherung für das angegebene Objekt in der falschen Dateigruppe erkannt. Dabei handelt es sich möglicherweise um eine Beschädigung der Metadaten des Objekts.  

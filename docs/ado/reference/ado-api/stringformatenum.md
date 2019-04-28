@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2740c7fb25b71e3588bebb924ea9d5f907e3560
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910899"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Gibt das Format an, beim Abrufen von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|Grenzt die Zeilen nach *RowDelimiter*, Spalten, indem *ColumnDelimiter*, und null-Werte von *NullExpr*. Diese drei Parameter, der die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) Methode sind nur gültig mit einer *StringFormat* von **AdClipString**.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

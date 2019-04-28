@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997099"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das vom Merge-Agent verwendete Kennwort für die Herstellung einer Verbindung mit dem Webserver, der die Websynchronisierung hostet, wobei die Verbindung über die Standardauthentifizierung erfolgt.|  
 |**internet_security_mode**|**1**|Verwendet für die Websynchronisierung die integrierte Windows-Authentifizierung. Wir empfehlen, bei der Websynchronisierung die Standardauthentifizierung zu verwenden. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Für die Websynchronisierung ist eine SSL-Verbindung mit dem Webserver erforderlich.|  
+||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Websynchronisierung erfordert eine SSL-Verbindung an den Webserver.|  
 |**internet_timeout**||Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
 |**internet_url**||URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
 |**merge_job_login**||Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird.|  

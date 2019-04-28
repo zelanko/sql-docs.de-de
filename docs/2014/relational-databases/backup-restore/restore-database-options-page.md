@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875632"
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
   Verwenden Sie im Dialogfeld **Datenbank wiederherstellen** die Seite **Optionen** , um das Verhalten und das Ergebnis des Wiederherstellungsvorgangs zu ändern.  
@@ -31,13 +31,13 @@ ms.locfileid: "48149360"
 > [!NOTE]  
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen Wiederherstellungstask angeben, können Sie ein entsprechendes [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript generieren, das die RESTORE-Anweisungen für diesen Wiederherstellungsvorgang enthält. Zum Generieren des Skripts klicken Sie auf **Skript** , und wählen Sie dann ein Ziel für das Skript aus. Informationen zur RESTORE-Syntax finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="restore-options"></a>Wiederherstellungsoptionen  
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  
   
  **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
- Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in**auf der Seite [Allgemein](../../integration-services/general-page-of-integration-services-designers-options.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](/sql/t-sql/statements/restore-statements-arguments-transact-sql) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in** auf der Seite [Allgemein](../../integration-services/general-page-of-integration-services-designers-options.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](/sql/t-sql/statements/restore-statements-arguments-transact-sql) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Verwenden Sie diese Option nur nach sorgfältiger Überlegung. Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
@@ -52,7 +52,7 @@ ms.locfileid: "48149360"
  Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
- Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**verfügbar.  
+ Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
   
  Das Auswählen dieser Option entspricht der Verwendung der Option RESTRICTED_USER in einer RESTORE-Anweisung.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48149360"
   
  Mithilfe dieser Option können Sie eine Wiederherstellungssequenz nach der Wiederherstellung einer beliebigen Sicherung anhalten. Diese Option ist insbesondere dann hilfreich, wenn Sie Bänder für verschiedene Mediensätze wechseln müssen, z. B. wenn der Server nur über ein Bandmedium verfügt. Klicken Sie auf **OK**, wenn der Vorgang fortgesetzt werden soll.  
   
- Sie können eine Wiederherstellungssequenz unterbrechen, indem Sie auf **Nein**klicken. Dadurch wird die Datenbank im Wiederherstellungsstatus belassen. Sie können die Wiederherstellungssequenz ggf. später fortsetzen, indem Sie die nächste Sicherung gemäß der Beschreibung im Dialogfeld **Wiederherstellung fortsetzen** fortsetzen. Die Prozedur zum Wiederherstellen der nächsten Sicherung ist wie folgt davon abhängig, ob sie Daten oder ein Transaktionsprotokoll enthält:  
+ Sie können eine Wiederherstellungssequenz unterbrechen, indem Sie auf **Nein** klicken. Dadurch wird die Datenbank im Wiederherstellungsstatus belassen. Sie können die Wiederherstellungssequenz ggf. später fortsetzen, indem Sie die nächste Sicherung gemäß der Beschreibung im Dialogfeld **Wiederherstellung fortsetzen** fortsetzen. Die Prozedur zum Wiederherstellen der nächsten Sicherung ist wie folgt davon abhängig, ob sie Daten oder ein Transaktionsprotokoll enthält:  
   
 -   Wenn die nächste Sicherung eine vollständige oder differenzielle Sicherung ist, verwenden Sie den Task **Datenbank wiederherstellen** erneut.  
   

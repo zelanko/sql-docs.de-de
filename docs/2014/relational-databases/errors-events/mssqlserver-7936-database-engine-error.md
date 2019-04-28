@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949e3ef39b0c3ef7b4fec6b3f99735dec287d5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913364"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
     
@@ -25,12 +25,12 @@ ms.locfileid: "48123188"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7936|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Das FileStream-Verzeichnis ist für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID vorhanden, aber diese Spalte ist keine FileStream-Spalte.|  
+|Meldungstext|Tabellenfehler: FileStream-Verzeichnis vorhanden ist, für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, jedoch ist diese Spalte keine Filestream-Spalte.|  
   
 ## <a name="explanation"></a>Erklärung  
  Während DBCC CHECKDB wurde ein FILESTREAM-Verzeichnis für die angegebene Spalte gefunden; bei der Spalte handelt es sich jedoch nicht um eine Spalte vom Typ `FILESTREAM`.  

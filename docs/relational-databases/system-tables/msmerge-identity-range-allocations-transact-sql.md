@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910186"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +34,16 @@ ms.locfileid: "52809692"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**nvarchar(128)**|Der Name der Veröffentlichungsdatenbank.|  
-|**Veröffentlichung**|**nvarchar(128)**|Der Name der Veröffentlichung.|  
+|**publication**|**nvarchar(128)**|Der Name der Veröffentlichung.|  
 |**article**|**nvarchar(128)**|Der Name des Artikels.|  
 |**subscriber**|**nvarchar(128)**|Den Namen des Abonnenten.|  
 |**subscriber_db**|**nvarchar(128)**|Der Name der Abonnementdatenbank.|  
 |**is_pub_range**|**bit**|Zeigt an, ob der Identitätsbereich einem Verleger zugewiesen ist.|  
-|**' ranges_allocated '**|**tinyint**|Die Anzahl zugewiesener Identitätsbereiche.|  
-|**' range_begin '**|**numeric(38)**|Der Anfangswert des Bereichs.|  
-|**' range_end '**|**numeric(38)**|Der letzte Wert des Bereichs.|  
-|**' next_range_begin '**|**numeric(38)**|Der Anfangswert des nächsten zuzuweisenden Bereichs.|  
-|**' next_range_end '**|**numeric(38)**|Der letzte Wert des nächsten zuzuweisenden Bereichs.|  
+|**ranges_allocated**|**tinyint**|Die Anzahl zugewiesener Identitätsbereiche.|  
+|**range_begin**|**numeric(38)**|Der Anfangswert des Bereichs.|  
+|**range_end**|**numeric(38)**|Der letzte Wert des Bereichs.|  
+|**next_range_begin**|**numeric(38)**|Der Anfangswert des nächsten zuzuweisenden Bereichs.|  
+|**next_range_end**|**numeric(38)**|Der letzte Wert des nächsten zuzuweisenden Bereichs.|  
 |**max_used**|**numeric(38)**|Der höchste verwendete Identitätswert.|  
 |**time_of_allocation**|**datetime**|Der Zeitpunkt, zu dem die Zuweisung erfolgte.|  
   

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 446705799f117c23786799789657e9fa89f9fa39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956052"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Entfernen einer Servergruppe (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie eine Servergruppe in Registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]entfernen. Sie können eine Servergruppe jederzeit löschen. Wenn die Servergruppe nicht leer ist, werden auch alle in der gelöschten Servergruppe enthaltenen Server oder Servergruppen gelöscht. Vor dem Löschen einer Servergruppe sollten Sie alle Server oder Servergruppen, die beibehalten werden sollen, in eine neue Servergruppe verschieben.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734131"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, der Ihnen dabei hilft, eine lineare Beziehung zwischen einer abhängigen und einer unabhängigen Variablen zu berechnen und diese zur Vorhersage zu verwenden.  
@@ -78,9 +78,9 @@ ms.locfileid: "48180410"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877701"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Programmgesteuertes Arbeiten mit Verbindungs-Managern
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist die AcquireConnection-Methode der zugehörigen Verbindungs-Manager-Klasse die Methode, die Sie am häufigsten aufrufen, wenn Sie mit Verbindungs-Managern in verwaltetem Code arbeiten. Wenn Sie verwaltete Codes schreiben, müssen Sie zur Verwendung der Funktionalität eines Verbindungs-Managers die AcquireConnection-Methode aufrufen. Sie müssen diese Methode unabhängig davon, ob Sie einen verwalteten Code in einem Skripttask, einer Skriptkomponente, einem benutzerdefinierten Objekt oder einer benutzerdefinierten Anwendung schreiben, aufrufen.  

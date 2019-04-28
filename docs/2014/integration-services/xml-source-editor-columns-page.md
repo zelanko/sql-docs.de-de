@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877593"
 ---
 # <a name="xml-source-editor-columns-page"></a>Quellen-Editor für XML (Seite Spalten)
   Mithilfe des Knotens **Spalten** im Dialogfeld **Quellen-Editor für XML** können Sie einer externen (Quell-)Spalte eine Ausgabespalte zuordnen.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72b8eda95def001cbb97bc6a91401a7765a6b8cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020325"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)
   Sie können bestimmen, ob eine statische Zeile wie eine Gruppenkopfzeile oder -fußzeile mit dynamischen Zeilen gerendert werden soll, die mit einer Gruppe in einem Tablix-Datenbereich verknüpft sind.  

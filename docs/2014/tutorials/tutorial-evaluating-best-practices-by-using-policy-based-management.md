@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
+title: 'Tutorial: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,13 +20,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956163"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Lernprogramm: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm "Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung". Dieses Lernprogramm richtet sich an Benutzer, die zwar mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], jedoch nicht mit der richtlinienbasierten Verwaltung vertraut sind. Die richtlinienbasierte Verwaltung ist ein System zum Definieren von Richtlinien, die zum Durchsetzen von Standards zur Websiteverwaltung verwendet werden können. Die richtlinienbasierte Verwaltung umfasst eine Reihe von Best Practices-Richtlinien, die Sie verwenden können, um eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu analysieren und zu bestimmen, ob die Instanz Richtlinien und Empfehlungen für Best Practices erfüllt.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  

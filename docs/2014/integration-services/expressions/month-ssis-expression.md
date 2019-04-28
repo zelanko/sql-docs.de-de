@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897527"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für die Monatsangabe in einem Datum darstellt.  

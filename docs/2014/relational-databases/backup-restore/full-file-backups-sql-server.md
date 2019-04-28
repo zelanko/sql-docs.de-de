@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876135"
 ---
 # <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten.  
@@ -99,7 +99,7 @@ ms.locfileid: "48097500"
 ## <a name="see-also"></a>Siehe auch  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](file-restores-simple-recovery-model.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   

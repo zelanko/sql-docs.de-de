@@ -31,11 +31,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900315"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  

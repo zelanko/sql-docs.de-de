@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735006"
 ---
 # <a name="call-level-interfaces"></a>Call-Level-Interface
 Das letzte Verfahren für das Senden von SQL-Anweisungen für das DBMS ist mit einer Call-Level-Interface (CLI). Eine Call-Level-Interface bietet es sich um eine Bibliothek mit DBMS-Funktionen, die von der Anwendung aufgerufen werden kann. Folglich ähnelt anstatt zu versuchen, die eine andere Programmiersprache SQL überblendet, einer Call-Level-Interface routinemäßigen Bibliotheken, die meisten Programmierer vertraut sind, zu verwenden, z. B. die Zeichenfolge, die e/a- oder die mathematische Bibliotheken im c-Hinweis, DBMS-Systeme, die eingebettete SQL unterstützen verfügen Sie bereits eine Aufrufebene-Schnittstelle, die Aufrufe an die von der vorkompilierten generiert werden. Allerdings sind diese Aufrufe nicht dokumentierte und können ohne vorherige Ankündigung geändert.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62895019"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Vergleich zwischen Skripttask und Skriptkomponente
   Der Skripttask, der im Fenster „Ablaufsteuerung“ des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Designers zur Verfügung steht, und die Skriptkomponente im Fenster „Datenfluss“ dienen in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket völlig unterschiedlichen Zwecken. Der Task stellt ein allgemeines Ablaufsteuerungstool dar, während die Komponente als Quelle, Transformation oder Ziel im Datenfluss dient. Trotz ihres unterschiedlichen Zwecks verfügen der Skripttask und die Skriptkomponente jedoch über Gemeinsamkeiten hinsichtlich der verwendeten Codierungstools sowie der Objekte im Paket, die sie dem Entwickler bereitstellen. Die Unterschiede und Gemeinsamkeiten zu kennen, kann Ihnen dabei helfen, Task und Komponente effektiver einzusetzen.  

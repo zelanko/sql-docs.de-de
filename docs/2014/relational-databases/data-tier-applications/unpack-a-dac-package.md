@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917990"
 ---
 # <a name="unpack-a-dac-package"></a>Entpacken eines DAC-Pakets
   Verwenden Sie das Dialogfeld Datenebenenanwendung entpacken, um die Skripts und die Dateien aus einem Datenebenenanwendungs-Paket (DAC) zu entzippen. Die Skripts und Dateien werden in einem Ordner abgelegt, in dem sie überprüft werden können, bevor das Paket für die Bereitstellung der DAC in einem Produktionssystem verwendet wird. Der Inhalt einer DAC kann auch mit dem Inhalt eines anderen Pakets verglichen werden, das in einen anderen Ordner entpackt wurde.  
   
 1.  **Vorbereitungen:**  [Sicherheit](#Security)  
   
-2.  **So entpacken Sie eine DAC mit:**  [Dialogfeld "Data-Tier-Anwendung" Entpacken](#UnpackDACDial), [Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
+2.  **So entpacken Sie ein DAC-Paket mit:**  [dem Dialogfeld „Unpack Data-Tier Application Dialog“ (Datenebenenanwendung entpacken)](#UnpackDACDial), [dem Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sicherheit  
  Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, sollten Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereitstellen, die DAC entpacken und den Code, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, untersuchen.  

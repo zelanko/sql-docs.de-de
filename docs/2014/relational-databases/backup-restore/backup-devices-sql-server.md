@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922196"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
   Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  

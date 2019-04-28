@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010694"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools)
   In einer Mehrbenutzerumgebung können mehrere Benutzer gleichzeitig Änderungen an ein und demselben Objekt vornehmen. Diese Situation kann auftreten, wenn Sie an der Struktur des Objekts im Tabellen-Designer oder im Datenbankdiagramm-Designer arbeiten, oder bei Ergebniswerten, die im Ergebnisbereich des Abfrage- und Sicht-Designers zurückgegeben werden. Dies kann Konflikte verursachen, die aufgelöst werden sollten.  

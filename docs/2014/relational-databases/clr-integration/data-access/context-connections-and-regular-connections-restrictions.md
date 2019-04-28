@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919170"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen
   In diesem Thema wird erläutert, die Einschränkungen im Zusammenhang mit der Ausführung von Code in die [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] -Prozess durch kontextverbindungen und reguläre Verbindungen.  
@@ -30,7 +30,7 @@ ms.locfileid: "48163320"
   
 -   MARS (Multiple Active Result Set) wird in einer Kontextverbindung nicht unterstützt.  
   
--   Die `SqlBulkCopy` -Klasse funktioniert in kontextverbindungen nicht.  
+-   Die `SqlBulkCopy`-Klasse funktioniert in Kontextverbindungen nicht.  
   
 -   Die Batchverarbeitung von Updates wird in Kontextverbindungen nicht unterstützt  
   
@@ -40,16 +40,16 @@ ms.locfileid: "48163320"
   
 -   Wenn "context connection=true" verwendet wird, können keine anderen Schlüsselwörter in Verbindungszeichenfolgen angegeben werden.  
   
--   Die `SqlConnection.DataSource` Eigenschaft gibt null, wenn die Verbindungszeichenfolge für die `SqlConnection` ist "kontextverbindung = True", anstelle des Namens der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Die `SqlConnection.DataSource`-Eigenschaft gibt NULL zurück, wenn in der Verbindungszeichenfolge für `SqlConnection` "context connection=true" statt des Namens der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz angegeben wird.  
   
 -   Die Festlegung der `SqlCommand.CommandTimeout`-Eigenschaft hat keine Auswirkungen, wenn der Befehl für eine Kontextverbindung ausgeführt wird.  
   
 ## <a name="restrictions-on-regular-connections"></a>Einschränkungen für reguläre Verbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für reguläre Verbindungen gelten:  
   
--   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Einschließlich "Async = True" in der Verbindungszeichenfolge einen Befehl, und klicken Sie dann Ausführen des Befehls dazu, dass `System.NotSupportedException` ausgelöst wird. Die folgende Meldung wird angezeigt: "Die asynchrone Verarbeitung wird bei einer Ausführung im Rahmen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozesses nicht unterstützt".  
+-   Die asynchrone Befehlsausführung mit internen Servern wird nicht unterstützt. Wenn in der Verbindungszeichenfolge eines Befehls "async=true" angegeben wird, dann führt die Ausführung des Befehls dazu, dass die `System.NotSupportedException`-Ausnahme ausgelöst wird. Diese Meldung wird angezeigt: "Asynchroner Verarbeitung wird nicht unterstützt, wenn die Ausführung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Prozess."  
   
--   `SqlDependency` Objekt wird nicht unterstützt.  
+-   Das `SqlDependency`-Objekt wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kontextverbindung](context-connection.md)  

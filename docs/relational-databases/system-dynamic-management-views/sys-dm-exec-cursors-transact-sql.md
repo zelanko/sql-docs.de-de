@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013421"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|ID der Sitzung, die diesen Cursor enthält.|  
 |**cursor_id**|**int**|ID des Cursorobjekts.|  
 |**name**|**nvarchar(256)**|Name des Cursors gemäß der Definition durch den Benutzer.|  
-|**Eigenschaften**|**nvarchar(256)**|Gibt die Eigenschaften des Cursors an. Die Werte der folgenden Eigenschaften werden zu einem Wert dieser Spalte verkettet:<br />Deklarationsschnittstelle<br />Cursortyp <br />Cursorparallelität<br />Cursorbereich<br />Cursorschachtelungsebene<br /><br /> Der in dieser Spalte zurückgegebene Wert kann z. B., "TSQL &#124; dynamische &#124; Optimistic &#124; Global (0)".|  
+|**properties**|**nvarchar(256)**|Gibt die Eigenschaften des Cursors an. Die Werte der folgenden Eigenschaften werden zu einem Wert dieser Spalte verkettet:<br />Deklarationsschnittstelle<br />Cursortyp <br />Cursorparallelität<br />Cursorbereich<br />Cursorschachtelungsebene<br /><br /> Der in dieser Spalte zurückgegebene Wert kann z. B., "TSQL &#124; dynamische &#124; Optimistic &#124; Global (0)".|  
 |**sql_handle**|**varbinary(64)**|Handle zum Text des Batches, durch den der Cursor deklariert wurde.|  
-|**statement_start_offset**|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung beginnt. Kann verwendet werden, zusammen mit der **Sql_handle**, **Statement_end_offset**, und die [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamische Verwaltungsfunktion zum Abrufen der derzeit Anweisung für die Anforderung wird ausgeführt.|  
+|**statement_start_offset**|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung beginnt. Kann zusammen mit **sql_handle**, **statement_end_offset**und der dynamischen Verwaltungsfunktion [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
 |**statement_end_offset**|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung endet. Kann zusammen mit **sql_handle**, **statement_start_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
 |**plan_generation_num**|**bigint**|Eine Sequenznummer, anhand der nach einer Neukompilierung zwischen einzelnen Instanzen von Plänen unterschieden werden kann.|  
 |**creation_time**|**datetime**|Der Timestamp, wann dieser Cursor erstellt wurde.|  
@@ -66,7 +66,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Cursorposition innerhalb des Fetchpuffers.|  
 |**worker_time**|**bigint**|Der Zeitaufwand in Mikrosekunden zum Ausführen dieses Cursors durch den Arbeitsthread.|  
 |**reads**|**bigint**|Anzahl von Lesevorgängen, die der Cursor ausgeführt hat.|  
-|**Schreibt**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
+|**writes**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
 |**dormant_duration**|**bigint**|Millisekunden seit dem Start der letzten Abfrage (Öffnen oder Abrufen) für diesen Cursor.|  
   
 ## <a name="permissions"></a>Berechtigungen  

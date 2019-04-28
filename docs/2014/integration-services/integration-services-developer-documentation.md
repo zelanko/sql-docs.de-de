@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892411"
 ---
 # <a name="developer39s-guide-integration-services"></a>Entwickler&#39;Benutzerhandbuch (Integrationsservices)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst ein völlig neu konzipiertes Objektmodell mit vielen verbesserten Funktionen, um das Erweitern und Programmieren von Paketen einfacher, flexibler und leistungsstärker zu gestalten. Entwickler haben die Möglichkeit, fast jeden Aspekt von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen zu erweitern und zu programmieren.  

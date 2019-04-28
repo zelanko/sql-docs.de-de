@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896322"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
   Komponentenentwickler können für eine Komponente eine benutzerdefinierte Benutzeroberfläche bereitstellen, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird, wenn die Komponente bearbeitet wird. Bei der Implementierung einer benutzerdefinierten Benutzeroberfläche werden Ihnen Benachrichtigungen bereitgestellt, wenn die Komponente zur Datenflusstask hinzugefügt oder aus diesem gelöscht wird und wenn für die Komponente Hilfe angefordert wird.  

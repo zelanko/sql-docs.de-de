@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875099"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream
   Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein FILESTREAM binary large Object (BLOB), die im Dateisystem gespeichert sind. Das Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), oder [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7bf47347967dcc4344ee71ee131951923df47713
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020228"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Lokale Cubes (Analysis Services - Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50148465"
   
 -   Es werden nur die berechneten Elemente, benannten Mengen und Zuweisungen im lokalen Cube angezeigt, die auf Measures und Dimensionen beruhen, die dem lokalen Cube hinzugefügt wurden. Ungültige berechnete Elemente, benannte Mengen und Zuweisungen werden automatisch ausgeschlossen.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
  In der Reihenfolge für einen Benutzer für einen lokalen Cube von einem Servercube zu erstellen, muss der Benutzer gewährt werden **Drillthrough und lokaler Cube** Berechtigungen für den Servercube. Weitere Informationen finden Sie unter [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Lokale Cubes werden nicht wie Servercubes mithilfe von Rollen gesichert. Alle Benutzer mit Zugriff auf Dateiebene auf eine lokale Cubedatei können die darin enthaltenen Cubes abfragen. Können Sie die **Verschlüsselungskennwort** Connection-Eigenschaft für eine lokale Cubedatei, ein Kennwort für die lokale Cubedatei festzulegen. Zum Festlegen eines Kennworts für eine lokale Cubedatei ist es erforderlich, dass für alle zukünftigen Verbindungen mit der lokalen Cubedatei dieses Kennwort verwendet wird, damit die Datei abgefragt werden kann.  

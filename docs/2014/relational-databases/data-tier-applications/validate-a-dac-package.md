@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917914"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
   
-1.  **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites)  
+1.  **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
-2.  **So aktualisieren Sie eine DAC mit:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen von Datenbankänderungen](#ViewDBChanges), [Anzeigen von Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
+2.  **So aktualisieren Sie eine DAC:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen der Datenbankänderungen](#ViewDBChanges), [Anzeigen der Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  

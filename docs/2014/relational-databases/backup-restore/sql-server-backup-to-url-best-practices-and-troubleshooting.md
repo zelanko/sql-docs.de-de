@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877092"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
   In diesem Thema werden bewährte Methoden und Tipps zur Problembehandlung beschrieben, die sich auf SQL Server-Sicherungs- und Wiederherstellungsvorgänge im Windows Azure-BLOB-Dienst beziehen.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349989"
   
 -   [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Storage-Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure-Blob-Speicherdienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Verwalten von Sicherungen  
  Die folgende Liste enthält allgemeine Empfehlungen zur Verwaltung von Sicherungen:  
@@ -98,15 +98,15 @@ ms.locfileid: "53349989"
   
          Um diesen Fehler zu beheben, übergeben Sie die `BACKUP`-Anweisung erneut mit `BLOCKSIZE = 65536`.  
   
--   Fehler bei der Sicherung aufgrund von Blobs, die aktive Leasedauer verfügen: Eine fehlerhafte sicherungsaktivität kann dazu führen, dass Blobs mit aktiven Leases.  
+-   Fehler während der Sicherung aufgrund von Blobs mit aktiver Lease: Eine fehlerhafte Sicherungsaktivität kann zu Blobs mit aktiven Leases führen.  
   
      Wenn die BACKUP-Anweisung erneut ausgeführt wird, kann ein Sicherungsvorgang einen Fehler mit etwa folgendem Wortlaut verursachen:  
   
-     **Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (412) ist derzeit eine Lease für das Blob und keine Lease-ID wurde in der Anforderung angegebene**.  
+     **Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (412) ist derzeit eine Lease für das Blob und keine Lease-ID wurde in der Anforderung angegebene**.  
   
      Wenn versucht wird, eine RESTORE-Anweisung für eine BLOB-Sicherungsdatei mit aktiver Leasedauer auszuführen, wird eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt:  
   
-     **Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (409) Konflikt...**  
+     **Ausnahmemeldung: The remote server returned an error: (409) Konflikt...**  
   
      Wenn dieser Fehler auftritt, müssen die BLOB-Dateien gelöscht werden. Weitere Informationen zu diesem Szenario und Lösungsvorschläge finden Sie unter [Löschen von Sicherungsblobdateien mit aktiver Lease](deleting-backup-blob-files-with-active-leases.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349989"
   
  Proxyserver können über Einstellungen verfügen, die die Anzahl der Verbindungen pro Minute begrenzen. Der URL-Sicherungsprozess ist ein Multithreadprozess und kann diese Begrenzung folglich überschreiten. In diesem Fall wird die Verbindung vom Proxyserver abgebrochen. Um das Problem zu beheben, ändern Sie die Proxyeinstellungen, damit der Proxy von SQL Server nicht verwendet wird.   Im Folgenden einige Beispiele für Fehlertypen oder -meldungen, die im Fehlerprotokoll angezeigt werden können:  
   
--   Schreiben Sie auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Fehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
+-   Schreiben Sie auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Fehler: URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
   
 -   Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53349989"
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
- In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (407)*  **Proxyauthentifizierung erforderlich**.  
+ In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (407)*  **Proxyauthentifizierung erforderlich**.  
   
  Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Konfigurationsdatei, durch die beim URL-Sicherungsprozess die Standardproxyeinstellungen verwendet werden können:  
   

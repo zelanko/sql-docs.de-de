@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913174"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
     
@@ -25,12 +25,12 @@ ms.locfileid: "48227870"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7934|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID F_ID für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID wurde nicht gefunden.|  
+|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID F_ID für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID ist nicht gefunden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Während DBCC CHECKDB wurde eine Partition gefunden; das entsprechende FILESTREAM-Rowsetverzeichnis im FILESTREAM-Datenspeicher wurde nicht gefunden.  

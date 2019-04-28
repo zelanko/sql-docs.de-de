@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027904"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel und Mode Eigenschaften – Beispiel (VC++)
 Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive-Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, isoliert von anderen Transaktionen.  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **Verbindungsmodus ist exklusiv.**  
 **Transaktion ist isoliert**  
 **Die ausgelastet Executive des Datenbank-für - Unternehmen**  
-**Mit Computern Kochen: Surreptitious Bilanzen - Unternehmen**  
+**Kochen mit Computern: Surreptitious Bilanzen - Unternehmen**  
 **Sie können Computer Stress Bekämpfung! -Unternehmen**  
 **Gerade reden-Computer – business**  
 **Silicon Valley Durchreisen behandelt - mod_cook**  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **Jedoch ist es Benutzer geeignet? -Popular_comp**  
 **Geheime Schlüssel des Silicon Valley - popular_comp**  
 **NET-Konventionen - popular_comp**  
-**Computer Phobic und nicht-Phobic Einzelpersonen: Verhalten Variationen - self_help**  
+**Computer Phobic und nicht-Phobic Personen: Verhalten Variationen - self_help**  
 **Ist Wut Ihr Feind? -Self_help**  
 **Lebensdauer, ohne zu befürchten - self_help**  
-**Längere Daten Besserung: Vier Fallstudien – self_help**  
-**Emotionaler Security: Ein neuer Algorithmus - self_help**  
-**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer - Trad_cook**  
+**Längere Besserung: Vier Fallstudien – self_help**  
+**Emotionaler Sicherheit: Ein neuer Algorithmus - self_help**  
+**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer - trad_cook**  
 **50 Jahre in Buckingham Palace Keller-- trad_cook**  
 **Sushi, jede Person? -Trad_cook**   
 ## <a name="see-also"></a>Siehe auch  

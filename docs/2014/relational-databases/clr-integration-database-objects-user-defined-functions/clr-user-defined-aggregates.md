@@ -16,14 +16,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 59666e90a47d88762c6fc3bd1fabc0e71ea18f94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919582"
 ---
 # <a name="clr-user-defined-aggregates"></a>Benutzerdefinierte CLR-Aggregate
-  Aggregatfunktionen führen Berechnungen für eine Wertemenge durch und geben einen einzelnen Wert zurück. In der Vergangenheit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über nur integrierte Aggregatfunktionen unterstützt, z. B. `SUM` oder `MAX`, die auf einen Satz von skalaren Eingabewerten basieren und einen einzelnen Aggregatwert aus diesem Satz generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR) ermöglicht Entwicklern, benutzerdefinierte Aggregatfunktionen in verwaltetem Code erstellen jetzt ein, und stellen diese Funktionen zugegriffen werden kann, um [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderem verwalteten Code.  
+  Aggregatfunktionen führen Berechnungen für eine Wertemenge durch und geben einen einzelnen Wert zurück. In der Vergangenheit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über nur integrierte Aggregatfunktionen unterstützt, z. B. `SUM` oder `MAX`, die auf einen Satz von skalaren Eingabewerten basieren und einen einzelnen Aggregatwert aus diesem Satz generieren. Die Integration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-CLR (Common Language Runtime) ermöglicht Entwicklern jetzt, benutzerdefinierte Aggregatfunktionen in verwaltetem Code zu erstellen und diese Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] und anderen verwalteten Code zur Verfügung zu stellen.  
   
  In der folgenden Tabelle sind die Themen dieses Abschnitts aufgeführt.  
   

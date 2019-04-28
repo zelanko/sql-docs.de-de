@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872719"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
   Sie können eine Datenebenenanwendung entweder mit dem Assistenten zum Löschen von Datenebenenanwendungen oder mit einem Windows PowerShell-Skript löschen. Sie können angeben, ob die zugeordnete Datenbank beibehalten, getrennt oder gelöscht wird.  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **So aktualisieren Sie eine DAC mit:**  [Die Assistenten zum Registrieren von datenebenenanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **So aktualisieren Sie eine DAC:**  [dem Assistenten zum Registrieren von Datenschichtanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Wenn Sie eine Instanz einer Datenebenenanwendung (Data-Tier Application, DAC) löschen, legen Sie mit einer von drei Optionen fest, wie mit der der Datenebenenanwendung zugeordneten Datenbank verfahren werden soll. Durch alle drei Optionen werden die Metadaten der DAC-Definition gelöscht. Die Optionen unterscheiden sich in der Art, wie mit der Datenbank, die der Datenebenenanwendung zugeordnet ist, verfahren wird. Der Assistent löscht keine der Objekte auf Instanzebene, wie Anmeldenamen, die der DAC oder Datenbank zugeordnet sind.  

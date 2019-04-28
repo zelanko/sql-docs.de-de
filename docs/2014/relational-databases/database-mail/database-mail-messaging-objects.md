@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917703"
 ---
 # <a name="database-mail-messaging-objects"></a>Messagingobjekte für Datenbank-E-Mail
   Die **msdb** -Datenbank ist die Hostdatenbank der Datenbank-E-Mail. Diese Datenbank enthält die gespeicherten Prozeduren und Messagingobjekte für Datenbank-E-Mail. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält den Assistenten zum Konfigurieren von Datenbank-E-Mail, um Datenbank-E-Mail zu aktivieren, Profile und Konten zu erstellen und zu verwalten sowie Datenbank-E-Mail-Optionen zu konfigurieren.  

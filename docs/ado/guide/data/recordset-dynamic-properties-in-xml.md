@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910889"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Dynamische Recordseteigenschaften in XML
 Die folgenden Eigenschaften des Recordsetziels anbieterspezifische (aus der Client-Cursor-Engine) werden derzeit in der XML-Format gespeichert:  

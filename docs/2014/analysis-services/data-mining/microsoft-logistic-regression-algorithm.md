@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733748"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft Logistic Regression-Algorithmus
   Die logistische Regression ist ein gängiges statistisches Verfahren, das zum Modellieren von binären Ergebnissen verwendet wird.  
@@ -80,8 +80,8 @@ ms.locfileid: "48179390"
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Beispiele für logistische Regressionsmodellabfragen](logistic-regression-model-query-examples.md)  
+ [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Logistische Regressionsmodell-Abfragebeispiele](logistic-regression-model-query-examples.md)  
   
   

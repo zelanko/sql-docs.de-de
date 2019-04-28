@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911142"
 ---
 # <a name="supports-method-example-vb"></a>Supports-Methode – Beispiel (VB)
 Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die DisplaySupport Verfahren ist erforderlich, damit dieses Verfahren ausführen.  
@@ -163,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

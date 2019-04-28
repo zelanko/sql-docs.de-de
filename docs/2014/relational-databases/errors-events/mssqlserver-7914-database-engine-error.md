@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 098fc44f4a46a821c3e0f6d17d150d34f3d0d967
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913142"
 ---
 # <a name="mssqlserver7914"></a>MSSQLSERVER_7914
     
@@ -25,12 +25,12 @@ ms.locfileid: "48113380"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7914|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|Meldungstext|Reparaturvorgang: Die PAGE_TYPE-Seite bei P_ID wurde neu erstellt.|  
+|Meldungstext|Reparaturvorgang: PAGE_TYPE-Seite bei P_ID wurde neu erstellt.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dies ist eine Informationsmeldung von REPAIR, die besagt, dass eine GAM- oder eine SGAM-Seite mithilfe von Daten der PFS-Seite neu erstellt wurde.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022097"
 ---
 # <a name="non-sql-server-publishers"></a>Nicht-SQL Server-Verleger
   Es ist möglich, Daten aus Quellen außerhalb von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu veröffentlichen und so die Daten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu konsolidieren. Mit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie Momentaufnahme- oder Transaktionsdaten abonnieren, die aus einer Oracle-Datenbank veröffentlicht werden. Weitere Informationen zum Veröffentlichen mit Oracle finden Sie unter [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md).  

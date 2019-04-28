@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47140db35618143522ad217f5eda2aa3d4b7507b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898413"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für den Tag eines Datums darstellt.  

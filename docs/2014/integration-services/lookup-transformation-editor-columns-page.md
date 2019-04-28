@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63410531bcb0af8a254b2d2a5c6c650423cb9a1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890516"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  

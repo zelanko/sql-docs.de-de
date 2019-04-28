@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903691"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52817322"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Die ID des Verteilungs-Agents.|  
-|**RunStatus**|**int**|Der Status wird ausgeführt:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
+|**runstatus**|**int**|Der Status wird ausgeführt:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
 |**start_time**|**datetime**|Der Zeitpunkt, zu dem mit der Ausführung des Auftrags begonnen wird.|  
-|**Uhrzeit**|**datetime**|Der Zeitpunkt der Protokollierung der Meldung.|  
+|**time**|**datetime**|Der Zeitpunkt der Protokollierung der Meldung.|  
 |**duration**|**int**|Die Dauer der Meldungssitzung in Sekunden.|  
-|**Kommentare**|**nvarchar(4000)**|Der Meldungstext.|  
+|**comments**|**nvarchar(4000)**|Der Meldungstext.|  
 |**xact_seqno**|**varbinary(16)**|Die Sequenznummer der zuletzt verarbeiteten Transaktion.|  
 |**current_delivery_rate**|**float**|Die durchschnittliche Anzahl der Befehle, die seit dem letzten Verlaufseintrag pro Sekunde übermittelt wurden.|  
 |**current_delivery_latency**|**int**|Die Latenzzeit zwischen dem Eintritt des Befehls in die Verteilungsdatenbank und seiner Anwendung auf den Abonnenten seit dem letzten Verlaufseintrag. In Millisekunden|  
@@ -49,7 +49,7 @@ ms.locfileid: "52817322"
 |**delivery_rate**|**float**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
 |**delivery_latency**|**int**|Die Latenzzeit zwischen dem Eintritt des Befehls in die Verteilungsdatenbank und seiner Anwendung auf den Abonnenten. In Millisekunden|  
 |**total_delivered_commands**|**bigint**|Die Gesamtzahl der seit der Erstellung des Abonnements übermittelten Befehle.|  
-|**Fehler-ID**|**int**|Die ID des Fehlers in der **MSrepl_error** -Systemtabelle.|  
+|**error_id**|**int**|Die ID des Fehlers in der **MSrepl_error** -Systemtabelle.|  
 |**updateable_row**|**bit**|Legen Sie auf **1** Wenn die Verlaufszeile überschrieben werden kann.|  
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
   

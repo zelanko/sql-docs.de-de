@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902672"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Arbeiten mit den Beispielskriptdateien der Konsole (SybaseToSQL)
 Einige Beispieldateien wurden für die Benutzer-Verweis und die Verwendung zusammen mit dem Produkt bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts entsprechend die Anforderungen der Endbenutzer leicht anpassen.  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von benannten Mengen | Microsoft Docs
+title: Erstellen von benannten Mengen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020062"
 ---
 # <a name="create-named-sets"></a>Erstellen von benannten Mengen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34021577"
  **Name**  
  Wählt den Namen der benannten Menge aus. Dieser Name wird Endbenutzern angezeigt, wenn sie den Cube durchsuchen.  
   
- **expression**  
+ **Ausdruck**  
  Gibt den Ausdruck an, der die benannte Menge erzeugt. Dieser Ausdruck kann in MDX geschrieben werden. Der Ausdruck kann Folgendes enthalten:  
   
 -   Datenausdrücke, die für Cubekomponenten wie Dimensionen, Ebenen, Measures usw. stehen.  
@@ -39,7 +39,7 @@ ms.locfileid: "34021577"
  Sie können Cubekomponenten von der Registerkarte **Metadaten** des Bereichs **Berechnungstools** in das Feld **Ausdruck** im Bereich des **Formular-Editors für benannte** Mengen kopieren oder ziehen. Sie können Funktionen von der Registerkarte **Funktionen** des Bereichs **Berechnungstools** in das Feld **Ausdruck** im Bereich des **Formular-Editors für benannte** Mengen kopieren oder ziehen.  
   
 > [!IMPORTANT]  
->  Wenn Sie Mengenausdrucks durch explizite Benennung der Elemente in der Gruppe erstellen, schließen Sie die Liste der Elemente in einem Paar von geschweiften Klammern ({}).  
+>  Wenn Sie Mengenausdrucks durch explizite Benennung der Elemente in der Gruppe erstellen, schließen Sie die Liste der Elemente in ein paar geschweifter Klammern ({}).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berechnungen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  

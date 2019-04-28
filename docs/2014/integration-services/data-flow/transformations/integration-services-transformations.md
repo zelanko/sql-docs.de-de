@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900292"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  

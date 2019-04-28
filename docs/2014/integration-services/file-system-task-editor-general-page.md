@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894521"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor für den Task 'Dateisystem' (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Dateisystem'** können Sie den Dateisystemvorgang konfigurieren, der durch den Task ausgeführt wird.  
@@ -88,7 +88,7 @@ ms.locfileid: "58377278"
  **DestinationVariable**  
  Wählen Sie den Variablennamen aus der Liste aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
@@ -102,7 +102,7 @@ ms.locfileid: "58377278"
  **SourceVariable**  
  Wählen Sie den Variablennamen aus der Liste aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  

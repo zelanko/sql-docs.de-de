@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911359"
 ---
 # <a name="preparing-and-executing-commands"></a>Vorbereiten und Ausführen von Befehlen
 Befehle sind Anweisungen, die zu einem Anbieter ausgestellt werden, zum Durchführen bestimmter Vorgänge für die zugrunde liegenden Datenquelle. Eine SQL-Anweisung ist z. B. einen Befehl an den Microsoft SQL-Datenanbieter. In ADO, Befehle in der Regel durch dargestellt **Befehl** Objekte aufweist, obwohl der einfache Befehle auch ausgegeben werden können, können Sie über **Verbindung** oder **Recordset** Objekte.  

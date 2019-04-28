@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Datamining-Lösungen für frühere Versionen von SQLServer | Microsoft Docs
+title: Bereitstellen von Datamining-Lösungen für frühere Versionen von SQLServer | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011026"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "34015097"
  Wenn es sich beim Provider, der als Datenquelle des Modells verwendet wird, um SQL Client Data Provider 10 handelt, müssen Sie auch die Datenquellendefinition ändern, um die vorherige Version von SQL Server Native Client anzugeben. Andernfalls wird von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert, wenn sie angeben, dass der Anbieter nicht registriert wird.  
   
 ##  <a name="bkmk_Holdout"></a> Bereitstellen von Modellen mit Zurückhaltung  
- Wenn Sie eine Miningstruktur, die eine zurückhaltungspartition zum Testen von Datamining-Modelle enthält erstellen, kann die Miningstruktur mit einer Instanz von SQL Server 2005 bereitgestellt werden, aber die Partitionierungsdaten gehen verloren.  
+ Wenn Sie eine Miningstruktur, die eine zurückhaltungspartition zum Testen von Datamining-Modelle enthält erstellen, kann die Mining-Struktur mit einer Instanz von SQL Server 2005 bereitgestellt werden, aber die Partitionierungsdaten gehen verloren.  
   
  Wenn Sie die Miningstruktur in SQL Server 2005 Analysis Services öffnen, wird in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert und die Struktur zum Entfernen der Zurückhaltungspartition neu erstellt.  
   
- Nach der Neuerstellung der Struktur ist die Größe der zurückhaltungspartition nicht mehr im Eigenschaftenfenster verfügbar. allerdings den Wert \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) möglicherweise immer noch in der ASSL-Skriptdatei vorhanden.  
+ Nachdem die Struktur neu erstellt wurde, ist die Größe der zurückhaltungspartition nicht mehr im Eigenschaftenfenster verfügbar; allerdings den Wert \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) möglicherweise immer noch in der ASSL-Skriptdatei vorhanden.  
   
 ##  <a name="bkmk_Filter"></a> Bereitstellen von Modellen mit Filtern  
  Wenn Sie einen Filter auf ein Miningmodell anwenden, kann das Modell mit einer Instanz von SQL Server 2005 bereitgestellt werden, aber der Filter wird nicht angewendet werden.  
@@ -70,6 +70,6 @@ ms.locfileid: "34015097"
  Wenn Sie versuchen, eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank zu synchronisieren, gibt der Server einen Fehler zurück, und die Datenbanksynchronisierung schlägt fehl.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services – Abwärtskompatibilität](../../analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

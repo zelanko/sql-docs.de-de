@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011332"
 ---
 # <a name="choose-an-authentication-mode"></a>Auswählen eines Authentifizierungsmodus
-  Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: den Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
+  Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
   
 ## <a name="configuring-the-authentication-mode"></a>Konfigurieren des Authentifizierungsmodus  
  Bei Auswahl der Authentifizierung im gemischten Modus während des Setups müssen Sie ein sicheres Kennwort für das vordefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung sa angeben und dann bestätigen. Das sa-Konto stellt eine Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung her.  

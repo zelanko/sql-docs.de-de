@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917592"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
   Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb** -Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
   
 -   **Vorbereitungen:**  , [Voraussetzungen](#Prerequisites), [Empfehlungen](#Recommendations), [Berechtigungen](#Permissions)  
   
--   **Zum Archivieren von Datenbank-Mail-Nachrichten und-Protokollen mithilfe:**  [SQL Server-Agent](#Process_Overview)  
+-   **Archivieren von Datenbank-E-Mail-Nachrichten und -Protokollen mithilfe von:**  [SQL Server-Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   

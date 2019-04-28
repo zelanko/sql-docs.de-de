@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876111"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] haben Sie die Möglichkeit, trotz erkannter Fehler eine Datenbank wiederherzustellen. Ein wichtiger neuer Fehlererkennungsmechanismus ist die optionale Erstellung einer Sicherungsprüfsumme, die von einem Sicherungsvorgang erstellt und von einem Wiederherstellungsvorgang überprüft wird. Sie können steuern, ob vom Vorgang auf Fehler geprüft wird, und ob der Vorgang beim Auftreten eines Fehlers beendet oder fortgesetzt wird. Wenn eine Sicherung eine Sicherungsprüfsumme enthält, kann mithilfe von RESTORE- und RESTORE VERIFYONLY-Anweisungen auf Fehler hin geprüft werden.  

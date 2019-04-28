@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891789"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und konfigurieren ein Flat File Connection Manager
   In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
   
  Sie müssen einen neuen Verbindungs-Manager für Flatfiles für jedes Dateiformat erstellen, mit dem Sie arbeiten. Weil in diesem Lernprogramm Daten aus mehreren Flatfiles mit genau dem gleichen Datenformat extrahiert werden, müssen Sie für Ihr Paket nur einen Verbindungs-Manager für Flatfiles hinzufügen und konfigurieren.  

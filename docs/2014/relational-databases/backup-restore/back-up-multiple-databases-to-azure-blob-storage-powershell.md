@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922574"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Windows Azure-BLOB-Speicherdienst
   Dieses Thema enthält Beispielskripts, die verwendet werden können, um Sicherungen im Windows Azure-BLOB-Speicherdienst mit PowerShell-Cmdlets zu automatisieren.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519543"
   
  Folgende Überlegungen sind bei Beispielskripts zu bedenken:  
   
-1.  **Navigieren durch SQL Server PowerShell-Pfade:** Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie der von einem PowerShell-Anbieter unterstützten Objekte darstellt. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
+1.  **Navigieren in SQL Server PowerShell-Pfaden:** Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie von Objekten darstellt, die von einem PowerShell-Anbieter unterstützt werden. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
   
 2.  `Get-ChildItem` -Cmdlet: Die zurückgegebenen Informationen den `Get-ChildItem` hängt vom Speicherort in einem SQL Server PowerShell-Pfad. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das `Get-ChildItem`-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
   

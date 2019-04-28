@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 600d5b5dfc42e52c4d4c04912530bf586fb569f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923791"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel)
   Speichern Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]eine Shortcutabfragedatei, wenn Sie häufig auf den gleichen Satz Daten zugreifen müssen.  
@@ -29,7 +29,7 @@ ms.locfileid: "52768172"
   
 1.  Klicken Sie in der Gruppe **Speichern und senden** unter **Abfrage speichern** auf den Pfeil, und klicken Sie auf **Als Abfrage speichern**.  
   
-2.  Dies ist optional. Um die Abfrage umzubenennen, klicken Sie auf den Pfeil unter **Abfrage speichern** und dann auf **Abfragen verwalten**. Wählen Sie die Abfrage aus, und klicken Sie auf **Umbenennen**.  
+2.  Optional. Um die Abfrage umzubenennen, klicken Sie auf den Pfeil unter **Abfrage speichern** und dann auf **Abfragen verwalten**. Wählen Sie die Abfrage aus, und klicken Sie auf **Umbenennen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   

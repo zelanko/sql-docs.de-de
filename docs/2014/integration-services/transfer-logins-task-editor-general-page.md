@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926489"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor für den Task Anmeldungen übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Anmeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben. Weitere Informationen zu diesem Task finden Sie unter [Transfer Logins Task](control-flow/transfer-logins-task.md).  

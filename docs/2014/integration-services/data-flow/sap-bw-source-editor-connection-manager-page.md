@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901108"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für SAP BW** können Sie den SAP BW-Verbindungs-Manager für die SAP BW-Quelle auswählen. Auf dieser Seite wählen Sie außerdem den Ausführungsmodus und die Parameter aus, mit denen Sie die Daten aus dem SAP NetWeaver BW-System extrahieren.  

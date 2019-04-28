@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875075"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Dateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]auf einem neuen Speicherort wiederherstellen können.  
@@ -89,7 +89,7 @@ ms.locfileid: "58527912"
     |**Wiederherstellen**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Log**, oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
-    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Logischer Name der Datei**|Der logische Name der Datei.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  

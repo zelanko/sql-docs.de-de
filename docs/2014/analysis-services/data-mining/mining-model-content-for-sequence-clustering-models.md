@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733429"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erklärung der auf die Miningmodellinhalte bezogenen allgemeinen und statistischen Terminologie, die für alle Modelltypen gilt, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  Die folgende Tabelle zeigt die Ergebnisse aus der NODE_DISTRIBUTION-Tabelle und die gerundeten Wahrscheinlichkeitswerte, die im grafischen Viewer angezeigt werden.  
   
-|Product|Unterstützung (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (aus Diagramm)|  
+|Produkt|Unterstützung (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (NODE_DISTRIBUTION-Tabelle)|Wahrscheinlichkeit (aus Diagramm)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(nicht angezeigt)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Informationen darüber, wie Sie eine Liste der beobachteten Pfade durch die Abfrage des Modellinhalts erhalten, und weitere Beispiele für Abfragen eines Sequence Clustering-Modells finden Sie unter [Abfragebeispiele für Sequenzclusteringmodelle](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
- [Beispiele für Abfragen von Sequenzclustermodellen](clustering-model-query-examples.md)  
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Abfragebeispiele für Sequenzclusteringmodelle](clustering-model-query-examples.md)  
   
   

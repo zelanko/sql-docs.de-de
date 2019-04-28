@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f46c31e3590098e3b58bb02e802991f686f2d568
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735823"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Aktualisieren von Anmeldeinformationen in Berichtsdatenquellen von einer SharePoint-Website
   In diesem Thema wird beschrieben, wie sich in Berichte eingebettete Datenquellen und freigegebene Datenquellen, die in einer SharePoint-Dokumentbibliothek gespeichert sind, aktualisieren lassen.  

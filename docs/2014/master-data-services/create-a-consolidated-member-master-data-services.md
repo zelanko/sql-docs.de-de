@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925316"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ein konsolidiertes Element, wenn Sie einen übergeordneten Knoten für eine explizite Hierarchie wollen. Konsolidierte Elemente können eigene Attribute aufweisen. Sie werden zum Gruppieren verwendet. Wie im folgenden Beispiel gezeigt, können konsolidierte Elemente zum Gruppieren von Konten verwendet werden, die Konten unter sich haben.  
@@ -49,7 +49,7 @@ ms.locfileid: "59582583"
   
 7.  Vervollständigen Sie im Bereich rechts die Felder.  
   
-8.  Optional. Geben Sie im Feld **Anmerkungen** einen Kommentar dazu ein, warum das Element hinzugefügt wurde. Alle Benutzer, die Zugriff auf das Element haben, können die Anmerkung anzeigen.  
+8.  Dies ist optional. Geben Sie im Feld **Anmerkungen** einen Kommentar dazu ein, warum das Element hinzugefügt wurde. Alle Benutzer, die Zugriff auf das Element haben, können die Anmerkung anzeigen.  
   
 9. Klicken Sie auf **OK**.  
   

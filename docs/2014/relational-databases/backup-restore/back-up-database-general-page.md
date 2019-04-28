@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877059"
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
   Verwenden Sie im Dialogfeld **Datenbank sichern** die Seite **Allgemein** , um die Einstellungen für einen Sicherungsvorgang der Datenbank anzuzeigen und zu ändern.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050077"
   
 -   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL verwenden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="source"></a>Source  
  Mithilfe der Optionen des Bereichs **Quelle** werden die Datenbank identifiziert und der Sicherungstyp und die Sicherungskomponente für den Sicherungsvorgang angegeben.  
@@ -88,7 +88,7 @@ ms.locfileid: "48050077"
 |||  
 |-|-|  
 |**Datenträger**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
-|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Hinweis: Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**URL**|Sichert im Windows Azure-BLOB-Speicher.|  
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  

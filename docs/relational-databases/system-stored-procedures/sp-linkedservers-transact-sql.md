@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957135"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +47,25 @@ sp_linkedservers
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Name des Verbindungsservers|  
-|**SRV_PROVIDERNAME**|**Nvarchar (** 128 **)**|Der Anzeigename des OLE DB-Anbieters, der den Zugriff auf den angegebenen Verbindungsserver verwaltet.|  
-|**SRV_PRODUCT**|**Nvarchar (** 128 **)**|Der Produktname des Verbindungsservers.|  
-|**SRV_DATASOURCE**|**Nvarchar (** 4000 **)**|Die Eigenschaft der OLE DB-Datenquelle für den angegebenen Verbindungsserver.|  
-|**SRV_PROVIDERSTRING**|**Nvarchar (** 4000 **)**|Die Zeichenfolgeneigenschaft des OLE DB-Anbieters für den angegebenen Verbindungsserver.|  
-|**SRV_LOCATION**|**Nvarchar (** 4000 **)**|Die Eigenschaft des OLE DB-Standorts für den angegebenen Verbindungsserver.|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Der Anzeigename des OLE DB-Anbieters, der den Zugriff auf den angegebenen Verbindungsserver verwaltet.|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|Der Produktname des Verbindungsservers.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Die Eigenschaft der OLE DB-Datenquelle für den angegebenen Verbindungsserver.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Die Zeichenfolgeneigenschaft des OLE DB-Anbieters für den angegebenen Verbindungsserver.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Die Eigenschaft des OLE DB-Standorts für den angegebenen Verbindungsserver.|  
 |**SRV_CAT**|**sysname**|Die Eigenschaft des OLE DB-Katalogs für den angegebenen Verbindungsserver.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [Sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [Sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [Sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilte Abfragen, gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   

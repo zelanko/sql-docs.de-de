@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014722"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,25 +32,25 @@ ms.locfileid: "51660569"
   
 |Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|–|nein|Name der Datenquelle zurückgegebene **SQLDataSources**. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
-|DRIVER|–|nein|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treibername ist {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
+|DSN|Nicht zutreffend|Nein|Name der Datenquelle zurückgegebene **SQLDataSources**. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
+|DRIVER|Nicht zutreffend|Nein|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treibername ist {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
 ## <a name="level-2"></a>Ebene 2  
   
 |Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Benutzerkontensteuerung|nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
-|UID|nein|Benutzerkontensteuerung|Benutzeranmelde-ID.|  
-|PWD|nein|Ja (vom Benutzer abhängig)|Vom Benutzer angegebenes Kennwort.|  
-|APP|nein|Benutzerkontensteuerung|Name der aufrufenden Anwendung **SQLBrowseConnect**.|  
-|WSID|nein|Benutzerkontensteuerung|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
+|SERVER|Ja|Nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
+|UID|Nein|Ja|Benutzeranmelde-ID.|  
+|PWD|Nein|Ja (vom Benutzer abhängig)|Vom Benutzer angegebenes Kennwort.|  
+|APP|Nein|Ja|Name der aufrufenden Anwendung **SQLBrowseConnect**.|  
+|WSID|Nein|Ja|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
   
 ## <a name="level-3"></a>Ebene 3  
   
 |Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Benutzerkontensteuerung|Benutzerkontensteuerung|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
-|LANGUAGE|Benutzerkontensteuerung|Benutzerkontensteuerung|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
+|DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
+|LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
   
  **SQLBrowseConnect** ignoriert die Werte der Schlüsselwörter DATABASE und LANGUAGE in den ODBC-Datenquellendefinitionen gespeichert. Wenn die Datenbank oder in der Verbindungszeichenfolge angegebene Sprache an übergeben **SQLBrowseConnect** ist ungültig, **SQLBrowseConnect** gibt SQL_NEED_DATA sowie die Verbindungsattribute der Ebene 3.  
   

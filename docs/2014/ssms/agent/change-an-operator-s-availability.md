@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017096"
 ---
 # <a name="change-an-operator39s-availability"></a>Ändern der Verfügbarkeit eines Operators
   In diesem Thema wird beschrieben, wie der Zeitplan für den Empfang von Warnmeldungen für einen Operator in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert wird.  
@@ -36,7 +36,7 @@ ms.locfileid: "54135680"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie die Verfügbarkeit eines Operators mit**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54135680"
 ####  <a name="Permissions"></a> Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-an-operators-availability"></a>So ändern Sie die Verfügbarkeit eines Operators  
   

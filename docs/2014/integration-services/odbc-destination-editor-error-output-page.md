@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890751"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Ziel-Editor für ODBC (Seite "Fehlerausgabe")
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für ODBC** können Sie Optionen für die Fehlerbehandlung auswählen.  

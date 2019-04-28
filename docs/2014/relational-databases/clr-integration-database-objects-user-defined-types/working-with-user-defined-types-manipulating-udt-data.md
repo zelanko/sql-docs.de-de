@@ -30,11 +30,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874304"
 ---
 # <a name="manipulating-udt-data"></a>Bearbeiten von UDT-Daten
   [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  

@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e13a99684d9395b51c5ccfe32b8e7ee229175c03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025423"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>XDR-Schemas mit Anmerkungen (in SQLXML 4.0 veraltet)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

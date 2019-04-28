@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899814"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
@@ -46,7 +46,7 @@ ms.locfileid: "58377228"
  **Neue Abfrage erstellen**  
  Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
   
- **Verwandte Themen:** [Datamining-Abfrage](control-flow/data-mining-query.md)  
+ **Verwandte Themen:** [Data Mining-Abfrage](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
  **Parametername**  

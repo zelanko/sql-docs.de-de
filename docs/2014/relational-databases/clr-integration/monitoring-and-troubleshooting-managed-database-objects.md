@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918929"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
   In diesem Thema erhalten Sie Informationen zu den Tools, die zum Überwachen und zur Problembehandlung von verwalteten Datenbankobjekten und Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden können.  
@@ -63,7 +63,7 @@ ms.locfileid: "48090650"
 |[sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|Gibt Informationen über die Assemblydateien zurück, die in der Datenbank registriert sind.|  
 |[sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|Identifiziert die benutzerdefinierten Typen (UDTs), die von einer Assembly definiert sind.|  
 |[sys.module_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql)|Identifiziert die Assemblys, in denen CLR-Module definiert sind.|  
-|[parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql)|Identifiziert die Assembly, in der CLR-Trigger definiert ist.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)|Identifiziert die DDL-Trigger auf Serverebene auf einem Server, einschließlich der CLR-Trigger.|  
 |[sys.type_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql)|Identifiziert die Assemblys, in denen benutzerdefinierten Typen definiert sind.|  

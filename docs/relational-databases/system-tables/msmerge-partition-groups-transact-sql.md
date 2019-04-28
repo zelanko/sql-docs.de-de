@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911249"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_partition_groups** -Tabelle speichert eine Zeile für jede Partition in einer bestimmten Datenbank berechnet. Neben den aufgelisteten Spalten wird dieser Tabelle eine Spalte für jede Funktion hinzugefügt, die in einem parametrisierten Zeilenfilter verwendet wird. Z. B. eine Spalte, die mit dem Namen **HOST_NAME_FN** zur Tabelle hinzugefügt wird, wenn ein Filter verwendet das [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion. Eine Zeile wird für jeden eindeutigen Funktionswertesatz gespeichert, der mit diesem Verleger synchronisiert wurde. Wenn mindestens zwei Abonnenten mit genau dem gleichen Wert für alle diese Funktionen synchronisiert werden, nutzen sie gemeinsam dieselbe Zeile in dieser Tabelle und deshalb auch die gleiche Partitions-ID. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
+  Die **MSmerge_partition_groups** -Tabelle speichert eine Zeile für jede Partition in einer bestimmten Datenbank berechnet. Neben den aufgelisteten Spalten wird dieser Tabelle eine Spalte für jede Funktion hinzugefügt, die in einem parametrisierten Zeilenfilter verwendet wird. Z. B. eine Spalte, die mit dem Namen **HOST_NAME_FN** zur Tabelle hinzugefügt wird, wenn ein Filter verwendet das [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion. Eine Zeile wird für jeden eindeutigen Funktionswertesatz gespeichert, der mit diesem Verleger synchronisiert wurde. Mindestens zwei Abonnenten mit genau den gleichen Wert für alle diese Funktionen synchronisiert werden nutzen Sie gemeinsam dieselbe Zeile in dieser Tabelle und wird daher die gleiche Partitions-Id. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

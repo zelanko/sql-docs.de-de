@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878203"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Festlegen der Eigenschaften von benutzerdefinierten Variablen
   Sie können eine der folgenden Funktionen verwenden, um die Eigenschaften einer benutzerdefinierten Variable in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] festzulegen:  
   
 -   Fenster "Variablen".  
   
--   Eigenschaftenfenster. Die **Eigenschaften** Fenster werden Eigenschaften zum Konfigurieren von Variablen, die in nicht verfügbar sind die **Variablen** Fenster: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType und IncludeInDebugDump.  
+-   Eigenschaftenfenster. Im Fenster **Eigenschaften** werden Eigenschaften zum Konfigurieren von Variablen aufgelistet, die im Fenster **Variablen** nicht verfügbar sind: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType und IncludeInDebugDump.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt außerdem eine Gruppe von Systemvariablen bereit, deren Eigenschaften, mit Ausnahme der RaiseChangedEvent-Eigenschaft, nicht aktualisiert werden können.  

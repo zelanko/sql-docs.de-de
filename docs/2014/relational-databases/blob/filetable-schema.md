@@ -13,24 +13,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920124"
 ---
 # <a name="filetable-schema"></a>FileTable-Schema
   Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
-|Name des Dateiattributs|Typ|Größe|Default|Description|Barrierefreiheit für das Dateisystem|  
+|Name des Dateiattributs|Typ|Größe|Standard|Description|Barrierefreiheit für das Dateisystem|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
-|**path_locator**|`hierarchyid`|variable|Ein `hierarchyid` , die die Position dieses Elements identifiziert.|Die Position dieses Knotens im hierarchischen FileNamespace.<br /><br /> Primärschlüssel für die Tabelle.|Kann durch Festlegen der Windows-Pfadwerte erstellt und geändert werden.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||Ein Rückgabewert von der `NEWID()` Funktion.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht verfügbar.|  
+|**path_locator**|`hierarchyid`|variable|Ein `hierarchyid`, der die Position dieses Elements identifiziert.|Die Position dieses Knotens im hierarchischen FileNamespace.<br /><br /> Primärschlüssel für die Tabelle.|Kann durch Festlegen der Windows-Pfadwerte erstellt und geändert werden.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||Ein von der `NEWID()`-Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht verfügbar.|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|variable|NULL|Enthält die FILESTREAM-Daten.|Nicht verfügbar.|  
 |**file_type**|`nvarchar(255)`|variable|NULL.<br /><br /> Durch einen Erstellungs- bzw. Umbenennungsvorgang im Dateisystem wird der Dateierweiterungswert aus dem Namen übernommen.|Stellt den Typ der Datei dar.<br /><br /> Diese Spalte kann als `TYPE COLUMN` verwendet werden, wenn Sie einen Volltextindex erstellen.<br /><br /> **file_type** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
 |**Name**|`nvarchar(255)`|variable|GUID-Wert.|Der Datei- oder Verzeichnisname.|Kann mit Windows-APIs erstellt oder geändert werden.|  
-|**parent_path_locator**|`hierarchyid`|variable|Ein `hierarchyid`, der das Verzeichnis identifiziert, das dieses Element enthält.|Die `hierarchyid` des enthaltenden Verzeichnisses.<br /><br /> **parent_path_locator** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
-|**cached_file_size**|`bigint`|||Die Größe der FILESTREAM-Daten in Byte.<br /><br /> **cached_file_size** ist eine persistente berechnete Spalte.|Obwohl die zwischengespeicherte Dateigröße automatisch auf dem aktuellen Stand gehalten wird, kann sie unter außergewöhnlichen Umständen möglicherweise nicht synchronisiert sein. Um die genaue Größe zu berechnen, verwenden die `DATALENGTH()` Funktion.|  
+|**parent_path_locator**|`hierarchyid`|variable|Ein `hierarchyid`, der das Verzeichnis identifiziert, das dieses Element enthält.|Der `hierarchyid` des enthaltenden Verzeichnisses.<br /><br /> **parent_path_locator** ist eine persistente berechnete Spalte.|Automatisch berechnet. Kann nicht festgelegt werden.|  
+|**cached_file_size**|`bigint`|||Die Größe der FILESTREAM-Daten in Byte.<br /><br /> **cached_file_size** ist eine persistente berechnete Spalte.|Obwohl die zwischengespeicherte Dateigröße automatisch auf dem aktuellen Stand gehalten wird, kann sie unter außergewöhnlichen Umständen möglicherweise nicht synchronisiert sein. Verwenden Sie die `DATALENGTH()`-Funktion, um die genaue Größe zu berechnen.|  
 |**creation_time**|`datetime2(4)`<br /><br /> `not null`|8 Byte|Aktuelle Zeit.|Datum und Uhrzeit der Erstellung der Datei.|Automatisch berechnet. Kann auch mit Windows-APIs festgelegt werden.|  
 |**last_write_time**|`datetime2(4)`<br /><br /> `not null`|8 Byte|Aktuelle Zeit.|Datum und Uhrzeit des letzten Updates der Datei.|Automatisch berechnet. Kann auch mit Windows-APIs festgelegt werden.|  
 |**last_access_time**|`datetime2(4)`<br /><br /> `not null`|8 Byte|Aktuelle Zeit.|Datum und Uhrzeit des letzten Zugriffs auf die Datei.|Automatisch berechnet. Kann auch mit Windows-APIs festgelegt werden.|  

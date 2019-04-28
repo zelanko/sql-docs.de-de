@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920016"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
-  Wenn eine Transaktion aktiv ist, an dem Punkt, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eingegeben haben, wird die Transaktion über verfügbar gemacht der `System.Transactions.Transaction` Klasse. Die `Transaction.Current` Eigenschaft wird verwendet, um die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET `Transaction.Current` automatisch, wenn die `Connection.Open` Methode wird aufgerufen, und trägt die Verbindung in dieser Transaktion (es sei denn, die `Enlist` Schlüsselwort in der Verbindungszeichenfolge nicht false festgelegt ist).  
+  Wenn zu dem Zeitpunkt eine Transaktion aktiv ist, zu dem mit der Ausführung von in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auszuführendem CLR-Code begonnen wird, dann wird die Transaktion durch die `System.Transactions.Transaction`-Klasse verfügbar gemacht. Mit der `Transaction.Current`-Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET `Transaction.Current` automatisch beim Aufruf der `Connection.Open`-Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort `Enlist` in der Verbindungszeichenfolge nicht false angegeben wurde).  
   
- Möglicherweise möchten Sie verwenden die `Transaction` Objekt direkt in den folgenden Szenarien:  
+ In den folgenden Szenarien sollten Sie das `Transaction`-Objekt direkt verwenden:  
   
 -   Wenn Sie eine Ressource eintragen möchten, die nicht automatisch eingetragen wird oder die aus irgendeinem Grund während der Initialisierung nicht eingetragen wurde.  
   
@@ -45,26 +45,26 @@ ms.locfileid: "48181420"
   
 -   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme, die von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie `ROLLBACK TRANSACTION`.  
   
--   Die verwaltete Prozedur oder Funktion Abbrechen die aktuelle Transaktion durch Aufrufen der `Transaction.Rollback` Methode, wenn eine bestimmte Bedingung erfüllt ist.  
+-   Die verwaltete Prozedur oder die Funktion kann die aktuelle Transaktion durch einen Aufruf der `Transaction.Rollback`-Methode abbrechen, wenn eine bestimmte Bedingung erfüllt wird.  
   
- Wenn sie innerhalb einer verwalteten Prozedur oder Funktion aufgerufen wird die `Transaction.Rollback` Methode löst eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und kann in einem Try/Catch-Block eingebunden werden. Die Fehlermeldung lautet wie folgt oder ähnlich:  
+ Beim Aufruf innerhalb einer verwalteten Prozedur oder Funktion löst die `Transaction.Rollback`-Methode eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und kann in einen try/catch-Block eingebunden werden. Die Fehlermeldung lautet wie folgt oder ähnlich:  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
 Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting.  
 ```  
   
- Diese Ausnahme wird erwartet und der try/catch-Block ist notwendig, damit die Codeausführung fortgesetzt wird. Wenn kein try/catch-Block vorhanden ist, wird die Ausnahme sofort der aufrufenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur übergeben und der verwaltete Code wird zu Ende ausgeführt. Wenn die Ausführung des verwalteten Codes beendet ist, wird eine andere Ausnahme ausgelöst.  
+ Diese Ausnahme wird erwartet und der try/catch-Block ist notwendig, damit die Codeausführung fortgesetzt wird. Wenn kein try/catch-Block vorhanden ist, wird die Ausnahme sofort der aufrufenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur übergeben und der verwaltete Code wird zu Ende ausgeführt. Wenn die Ausführung des verwalteten Codes beendet ist, wird eine andere Ausnahme ausgelöst.  
   
 ```  
 Msg 3991, Level 16, State 1, Procedure uspRollbackFromProc, Line 1   
 The context transaction which was active before entering user defined routine, trigger or aggregate " uspRollbackFromProc " has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting. The statement has been terminated.  
 ```  
   
- Diese Ausnahme ist ebenfalls zu erwarten, und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, welche die den Trigger auslösenden Aktion ausführt, muss in einen try/catch-Block eingeschlossen werden, damit die Ausführung fortgesetzt wird. Trotz der zwei ausgelösten Ausnahmen wird ein Rollback für die Transaktion ausgeführt, und für die Änderungen in der Tabelle wird kein Commit ausgeführt.  
+ Diese Ausnahme ist ebenfalls zu erwarten, und die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, welche die den Trigger auslösenden Aktion ausführt, muss in einen try/catch-Block eingeschlossen werden, damit die Ausführung fortgesetzt wird. Trotz der zwei ausgelösten Ausnahmen wird ein Rollback für die Transaktion ausgeführt, und für die Änderungen in der Tabelle wird kein Commit ausgeführt.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den Try/Catch-Block, um die `Transaction.Rollback` -Methode in verwaltetem Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, die die `EXEC uspRollbackFromProc` Anweisung in einem Try/Catch-Block umschlossen ist, sodass die Ausnahme wird ausgelöst, wenn die Ausführung der verwaltete Prozedur beendet abgefangen wird.  
+ Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den try/catch-Block um die `Transaction.Rollback`-Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, die die `EXEC uspRollbackFromProc` Anweisung in einem Try/Catch-Block umschlossen ist, sodass die Ausnahme wird ausgelöst, wenn die Ausführung der verwaltete Prozedur beendet abgefangen wird.  
   
 ```csharp  
 using System;  

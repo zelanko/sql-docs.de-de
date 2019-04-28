@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922941"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
   In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen.  

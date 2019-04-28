@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872206"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen.  
@@ -52,7 +52,7 @@ ms.locfileid: "53979136"
   
 -   Aktivieren Sie auf der Seite **Profile und Konten verwalten** , aktivieren Sie die Option **Neues Profil erstellen** , und klicken Sie auf **Weiter**.  
   
--   Auf der **neues Profil** Seite Geben Sie den Profilnamen, Beschreibung und Hinzufügen von Konten im Profil enthalten sein, und klicken Sie auf **Weiter**.  
+-   Geben Sie auf der Seite **Neues Profil** den Profilnamen und die Beschreibung ein, und fügen Sie die ins Profil einzuschließenden Konten hinzu. Klicken Sie anschließend auf **Weiter**.  
   
 -   Überprüfen Sie auf der Seite **Assistenten abschließen** die auszuführenden Aktionen, und klicken Sie auf **Fertig stellen** , um die Erstellung des neuen Profils abzuschließen.  
   

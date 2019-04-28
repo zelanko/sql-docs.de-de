@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3865407fce809380900408b079a026f3d1eba75d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898452"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Dimensionsverarbeitung** können Sie eine Zuordnung von Eingabe- zu Dimensionsspalten vornehmen.  

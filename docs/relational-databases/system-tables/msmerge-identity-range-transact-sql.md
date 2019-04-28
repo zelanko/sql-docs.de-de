@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62904756"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "52791552"
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Die eindeutige ID für ein bestimmtes Abonnement.|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**' range_begin '**|**numeric(38)**|Der Identitätswert am Anfang des aktuellen Bereichs.|  
-|**' range_end '**|**numeric(38)**|Der Identitätswert am Ende des aktuellen Bereichs.|  
-|**' next_range_begin '**|**numeric(38)**|Der Identitätswert am Anfang des neuen Bereichs, der zugewiesen werden soll.|  
-|**' next_range_end '**|**numeric(38)**|Der Identitätswert am Ende des neuen Bereichs, der zugewiesen werden soll.|  
+|**range_begin**|**numeric(38)**|Der Identitätswert am Anfang des aktuellen Bereichs.|  
+|**range_end**|**numeric(38)**|Der Identitätswert am Ende des aktuellen Bereichs.|  
+|**next_range_begin**|**numeric(38)**|Der Identitätswert am Anfang des neuen Bereichs, der zugewiesen werden soll.|  
+|**next_range_end**|**numeric(38)**|Der Identitätswert am Ende des neuen Bereichs, der zugewiesen werden soll.|  
 |**is_pub_range**|**bit**|Der Wert **1** , wenn die Veröffentlichung der Identitätsbereich zugewiesen wird.|  
 |**max_used**|**numeric(38)**|Der maximale Identitätswert, der zugewiesen werden kann.|  
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902606"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrahieren von Daten mithilfe der OLE DB-Quelle
   Um eine OLE DB-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  

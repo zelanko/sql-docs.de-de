@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e65a05d590ca3492d1330d66fbc6bdfda8324b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915086"
 ---
 # <a name="mssqlserver18752"></a>MSSQLSERVER_18752
     
@@ -25,7 +25,7 @@ ms.locfileid: "48134548"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|18752|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  

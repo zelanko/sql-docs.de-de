@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892243"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS)-Parameter
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
@@ -102,6 +102,6 @@ ms.locfileid: "58377978"
  [Festlegen von Parameterwerten nach der Bereitstellung des Projekts](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [SSIS-Quicktipp: Erforderliche Parameter](https://go.microsoft.com/fwlink/?LinkId=239781), auf mattmasson.com.  
+ Blogeintrag, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), auf mattmasson.com.  
   
   

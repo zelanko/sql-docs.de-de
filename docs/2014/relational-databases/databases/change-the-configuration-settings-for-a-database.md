@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 05dc6188a46e0e2d43b7a4bc3275fae7d4cd8da6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917549"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>Ändern der Konfigurationseinstellungen für eine Datenbank
   In diesem Thema wird beschrieben, wie Optionen auf Datenbankebene in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert werden. Diese Optionen sind für jede Datenbank eindeutig und haben keinen Einfluss auf andere Datenbanken.  
@@ -30,7 +30,7 @@ ms.locfileid: "52822824"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie die Optionseinstellungen für eine Datenbank mit:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52822824"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>So ändern Sie die Optionseinstellungen für eine Datenbank  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65067452553f3a0c44259e12b294bc795baa9d12
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931409"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS gibt &quot;Stream nicht lesen&quot; Fehler
 "Das Stream-Objekt konnte nicht gelesen werden, da es leer ist oder die aktuelle Position am Ende der Stream ist. Legen Sie für nicht leere Datenströme die aktuelle Position mit der Eigenschaft "Position" ein. Um festzustellen, ob ein Stream leer ist, überprüfen Sie die Size-Eigenschaft."  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924540"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Explizite Hierarchien (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden in expliziten Hierarchien Elemente aus einer einzelnen Entität auf eine von Ihnen angegebene Weise organisiert. Die Struktur kann unregelmäßig sein, und im Gegensatz zu abgeleiteten Hierarchien beruhen explizite Hierarchien nicht auf domänenbasierten Attributbeziehungen.  
@@ -69,7 +69,7 @@ ms.locfileid: "52809272"
 |Kann unregelmäßig sein|Enthält immer eine konsistente Anzahl an Ebenen|  
   
 ## <a name="explicit-hierarchy-example"></a>Beispiel einer expliziten Hierarchie  
- Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} und BK-R650 {Straße-650}.  
+ Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450}, and BK-R650 {Road-650}.  
   
  Um diese Blattelemente an bestimmten Konsolidierungspunkten zusammenzufassen, können Sie konsolidierte Elemente in der Product-Entität erstellen. Fügen Sie die konsolidierten Elemente auf den Ebenen der Hierarchiestruktur ein, auf denen Sie die Blattelemente zusammenfassen möchten. Es gibt keine Einschränkung hinsichtlich der Einfügung konsolidierter Elemente. Jedes Element (Blattelement oder konsolidiertes Element) darf jedoch nur einmal verwendet werden.  
   

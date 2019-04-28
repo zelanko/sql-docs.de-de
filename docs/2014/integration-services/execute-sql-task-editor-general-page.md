@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898838"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor für den Task 'SQL ausführen' (Seite Allgemein)
   Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
@@ -55,7 +55,7 @@ ms.locfileid: "58382274"
  **ConnectionType**  
  Wählen Sie den Typ des Verbindungs-Managers aus, der zum Herstellen der Verbindung mit der Datenquelle verwendet werden soll. Zu den verfügbaren Verbindungstypen zählen: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** und **SQLMOBILE**.  
   
- **Verwandte Themen:** [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [ODBC Connection Manager](connection-manager/odbc-connection-manager.md), [ADO Connection Manager](connection-manager/ado-connection-manager.md), [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition Connection Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), [ADO-Verbindungs-Manager-](connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Verbindung**  
  Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie zum Erstellen einer neuen Verbindung auf \<**Neue Verbindung...**>.  
@@ -110,7 +110,7 @@ ms.locfileid: "58382274"
  **SourceVariable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

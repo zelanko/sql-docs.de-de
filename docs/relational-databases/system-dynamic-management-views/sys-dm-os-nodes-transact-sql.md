@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013074"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ Die folgende Tabelle enthält Informationen zu diesen Knoten.
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID des Knotens.|  
-|node_state_desc|**nvarchar(256)**|Beschreibung des Knotenzustands. Die Werte werden zuerst mit den sich gegenseitig ausschließenden Werten angezeigt, gefolgt von den kombinierbaren Werten. Zum Beispiel:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Es gibt vier sich gegenseitig ausschließende Node_state_desc-Werte. Sie können mit ihren Beschreibungen sind unten aufgeführt.<br /><ul><li>ONLINE: Knoten ist online<li>OFFLINE: Knoten ist offline<li>Im Leerlauf: Knoten verfügt über keine ausstehenden arbeitsanforderungen und hat einen Leerlaufzustand angenommen.<li>IDLE_READY: Knoten verfügt über keine ausstehenden arbeitsanforderungen und ist bereit für den Leerlauf wechselt.</li></ul><br />Es gibt drei kombinierbare Node_state_desc-Werte, die unten aufgeführten, mit ihren Beschreibungen aufgeführt.<br /><ul><li>DAC: Dieser Knoten ist reserviert für die [dedizierte Verwaltungsverbindung](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Keine neuen Threads können auf diesem Knoten aufgrund einer Bedingung für geringen Arbeitsspeicher erstellt werden.<li>HOT ADDED: Gibt an, die Knoten hinzugefügt wurden, als Reaktion auf ein Hinzufügen von CPUS.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Beschreibung des Knotenzustands. Die Werte werden zuerst mit den sich gegenseitig ausschließenden Werten angezeigt, gefolgt von den kombinierbaren Werten. Zum Beispiel:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Es gibt vier sich gegenseitig ausschließende Node_state_desc-Werte. Sie können mit ihren Beschreibungen sind unten aufgeführt.<br /><ul><li>ONLINE: Knoten ist online<li>OFFLINE: Knoten ist offline<li>IDLE: Knoten verfügt über keine ausstehenden arbeitsanforderungen und hat einen Leerlaufzustand angenommen.<li>IDLE_READY: Knoten verfügt über keine ausstehenden arbeitsanforderungen und ist bereit für den Leerlauf wechselt.</li></ul><br />Es gibt drei kombinierbare Node_state_desc-Werte, die unten aufgeführten, mit ihren Beschreibungen aufgeführt.<br /><ul><li>DAC: Dieser Knoten ist reserviert für die [dedizierte Verwaltungsverbindung](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Keine neuen Threads können aufgrund einer Bedingung für geringen Arbeitsspeicher auf diesem Knoten erstellt werden.<li>IM LAUFENDEN SYSTEMBETRIEB HINZUGEFÜGT: Gibt an, die Knoten hinzugefügt wurden, als Reaktion auf ein Hinzufügen von CPUS.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Adresse des Speicherobjekts ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [Sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
 |memory_clerk_address|**varbinary(8)**|Adresse des Speicherclerks ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Adresse des Arbeitsthreads ist dem E/A-Abschluss für diesen Knoten zugewiesen. 1: 1-Beziehung zu [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  

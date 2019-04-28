@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Kopieren des Pakets aus Lektion 4 | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Pakets aus Lektion 4 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891170"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets namens „Lesson 4.dtsx“. Alternativ können Sie dem Projekt auch das im Tutorial enthaltene, abgeschlossene Paket aus Lektion 4 hinzufügen und anschließend eine Kopie dieses Pakets erstellen. Sie werden diese neue Kopie in der gesamten Lektion 5 verwenden.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>So kopieren Sie das Paket aus Lektion 4  

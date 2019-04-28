@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992367"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades
   Mit dem Upgrade Advisor von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Upgrades auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vorbereiten. Upgrade Advisor analysiert die installierten Komponenten früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und generiert einen Bericht mit den Problemen, die entweder vor oder nach dem Upgrade behoben werden müssen.  

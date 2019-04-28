@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876170"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Löschen von BLOB-Sicherungsdateien mit aktiver Lease
   Wenn Sicherungs- oder Wiederherstellungsvorgänge im Windows Azure-Speicher ausgeführt werden, reserviert SQL Server eine Lease für eine unbegrenzte Dauer, um den exklusiven Zugriff auf das BLOB zu gewährleisten. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige BLOBs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das BLOB erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben und das BLOB gelöscht wird.  
@@ -29,9 +29,9 @@ ms.locfileid: "53352662"
 ## <a name="managing-orphaned-blobs"></a>Verwalten verwaister BLOBs  
  In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicherungs- oder Wiederherstellungsvorgang ein Cleanup ausgeführt wird. Sämtliche Schritte können mithilfe von PowerShell-Skripts ausgeführt werden. Im folgenden Abschnitt finden Sie ein Codebeispiel:  
   
-1.  **Identifizieren von Blobs, die über Leases verfügen:** Wenn Sie über ein Skript oder ein Prozess, der der Sicherungsvorgänge verfügen, können Sie Sie möglicherweise den Fehler innerhalb des Skripts oder Prozesses zu erfassen und zu verwenden, um die Blobs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
+1.  **Identifizieren von Blobs, die über Leases verfügen:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die Blobs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
   
-2.  **Das Abbrechen der Lease:** Eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Das Abbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -80,7 +80,7 @@ ms.locfileid: "53352662"
   
      **Leases werden unterbrochen**  
   
-     **Die Lease für \<Blob-URL > ist eine wiederherstellungslease: Sie sehen diese Meldung, nur dann, wenn Sie einen Blob mit einer wiederherstellungslease angezeigt, die immer noch aktiv ist.**  
+     **Bei der Lease für die \<Blob-URL> handelt es sich um eine Wiederherstellungslease: Diese Meldung wird nur bei einem Blob mit einer Wiederherstellungslease angezeigt, die noch aktiv ist.**  
   
      **Die Lease für die \<Blob-URL> ist keine Wiederherstellungslease. Die Lease für \<Blob-URL> wird unterbrochen.**  
   

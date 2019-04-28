@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017188"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
   Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  

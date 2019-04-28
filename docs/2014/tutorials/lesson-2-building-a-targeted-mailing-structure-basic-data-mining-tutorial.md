@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931506"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lektion 2: Erstellen einer Targeted Mailing-Struktur (Lernprogramm zu Datamining-Grundlagen)
   Die Marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] möchte den Umsatz steigern, indem bestimmte Kunden mit einer Mailing-Kampagne angesprochen werden. Die Unternehmensdatenbank enthält eine Liste früherer Kunden sowie eine Liste potenzieller Neukunden. Durch die Prüfung der Merkmale früherer Kunden, hofft das Unternehmen Muster zu ermitteln, die es bei potenziellen Neukunden anwenden können. Sie können z. B. früherer Trends verwenden, um vorherzusagen, welche potenziellen Kunden am wahrscheinlichsten ein Fahrrad von kaufen werden [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], Kundensegmente für zukünftige Werbekampagnen.  

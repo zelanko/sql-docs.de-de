@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cd9f8912ff167e70caf601d4816d2d92f1af04c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874797"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten
   Listet die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die zur Unterstützung der FileTable-Funktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hinzugefügt oder geändert wurden.  
@@ -40,7 +40,7 @@ ms.locfileid: "48154336"
   
 |Objekt|Status|Weitere Informationen|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Hinzugefügt**|[Verwenden von Verzeichnissen und Pfaden in FileTables](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Hinzugefügt**|[Arbeiten mit Verzeichnissen und Pfaden in FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Hinzugefügt**|[Verwenden von Verzeichnissen und Pfaden in FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Hinzugefügt**|[Arbeiten mit Verzeichnissen und Pfaden in FileTables](work-with-directories-and-paths-in-filetables.md)|  
   

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874928"
 ---
 # <a name="designing-assemblies"></a>Entwerfen von Assemblys
   In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
@@ -39,7 +39,7 @@ ms.locfileid: "48196240"
 -   Wenn verwalteter Code höhere Berechtigungen verlangt, ist es besser, diesen Code in einer anderen Assembly als den Code zu speichern, für den die höheren Berechtigungen nicht erforderlich sind.  
   
 ## <a name="managing-assembly-security"></a>Verwalten der Assemblysicherheit  
- Sie können steuern, im welchem Umfang eine Assembly auf Ressourcen zugreifen kann, die durch .NET Code Access Security geschützt ist, wenn diese verwalteten Code ausführt. Sie geben zu diesem Zweck einen von drei Berechtigungssätzen an, wenn Sie eine Assembly erstellen oder ändern: SAFE, EXTERNAL_ACCESS oder UNSAFE.  
+ Sie können steuern, im welchem Umfang eine Assembly auf Ressourcen zugreifen kann, die durch .NET Code Access Security geschützt ist, wenn diese verwalteten Code ausführt. Dazu müssen Sie einen von drei Berechtigungssätzen angeben, wenn Sie beim Erstellen oder Ändern einer Assembly: SAFE, EXTERNAL_ACCESS oder UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE ist der Standardberechtigungssatz und die restriktivste Einstellung. Code, der von einer Assembly mit SAFE-Berechtigungen ausgeführt wird, kann nicht auf externe Systemressourcen wie z. B. Dateien, das Netzwerk, Umgebungsvariablen oder die Registrierung zugreifen. SAFE-Code kann auf Daten aus den lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken zugreifen oder Berechnungen und Geschäftslogik ausführen, für die kein Zugriff auf Ressourcen außerhalb der lokalen Datenbanken erforderlich ist.  

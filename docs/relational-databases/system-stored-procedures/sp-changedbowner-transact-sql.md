@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994246"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @loginame=] '*Anmeldung*"  
+ [ @loginame= ] '*login*'  
  Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss ein bereits vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder Windows-Benutzer. *Anmeldung* kann nicht der Besitzer der aktuellen Datenbank werden, wenn er bereits Zugriff auf die Datenbank über ein vorhandenes Benutzersicherheitskonto innerhalb der Datenbank. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
   
  [ @map=] *Remap_alias_flag*  
@@ -77,10 +77,10 @@ EXEC sp_changedbowner 'Albert';
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [Sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

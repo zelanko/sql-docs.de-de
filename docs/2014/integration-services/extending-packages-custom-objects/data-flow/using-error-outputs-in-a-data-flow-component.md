@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a330fea71ce84e7af82dd2bd92fc2e14f0883a0c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896050"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Verwenden von Fehlerausgaben in einer Datenflusskomponente
   Spezielle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>-Objekte, die als Fehlerausgaben bezeichnet werden, können zu Komponenten hinzugefügt werden, sodass die Komponente Zeilen, die bei der Ausführung nicht verarbeitet werden können, umleiten kann. Die Probleme, die bei einer Komponente auftreten können, lassen sich meist in Fehler oder abgeschnittene Daten einteilen und sind komponentenspezifisch. Komponenten, die Fehlerausgaben bereitstellen, bieten den Benutzern der Komponente die Flexibilität, Fehlerbedingungen durch Herausfiltern von Fehlerzeilen aus dem Resultset, durch Behandeln der Komponente als fehlerhaft, wenn ein Problem auftritt, oder durch Ignorieren von Fehlern und Fortsetzen des Vorgangs zu behandeln.  

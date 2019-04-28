@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873738"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
   Die common Language Runtime (CLR) unterstützt ein Sicherheitsmodell namens Codezugriffssicherheit für verwalteten Code. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. Weitere Informationen finden Sie im Abschnitt "Codezugriffsicherheit" im .NET Framework Software Development Kit.  
   
  Die Sicherheitsrichtlinie, die die Berechtigungen für Assemblys bestimmt, wird an drei verschiedenen Stellen definiert:  
   
--   Computerrichtlinie: Diese Richtlinie gilt für den gesamten verwalteten Code auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert ist.  
+-   Computerrichtlinie: Dies gilt die Richtlinie für den gesamten verwalteten Code auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert ist.  
   
--   Benutzerrichtlinie: Diese Richtlinie ist für verwalteten Code gültig, der von einem Prozess gehostet wird. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst wird ausgeführt.  
+-   Benutzerrichtlinie: Dies ist die Richtlinie wirksam für verwalteten Code, die von einem Prozess gehostet wird. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst wird ausgeführt.  
   
--   Hostrichtlinie: Diese Richtlinie wird vom Host der CLR (in diesem Fall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) eingerichtet, die für den verwalteten Code gültig ist, der auf diesem Host ausgeführt wird.  
+-   Hostrichtlinie: Dies ist die Richtlinie einrichten, die vom Host der CLR (in diesem Fall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), die in Kraft für verwalteten Code, die auf diesem Host ausgeführt wird.  
   
  Der von der CLR unterstützte Codezugriffs-Sicherheitsmechanismus basiert auf der Annahme, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die CLR-Codezugriffssicherheit geschützten Ressourcen werden von verwalteten Anwendungsprogrammierschnittstellen kennen, Requirethe für die entsprechende Berechtigung vor dem Zugriff auf die Ressource in der Regel eingeschlossen. Die Demandfor die Berechtigung, die erfüllt wird, nur, wenn alle aufrufenden Prozesse (auf Assemblyebene) in der Aufrufliste über die entsprechende Ressourcenberechtigung verfügen.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076001"
 |Berechtigung|Wert(e)/Beschreibung|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` Berechtigung zur Ausführung von verwaltetem Code.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Es kann nur die Kontextverbindung verwendet werden, und die Verbindungszeichenfolge kann nur den Wert "context connection=true" oder "context connection=yes" angeben.<br /><br /> **AllowBlankPassword = False:** leere Kennwörter sind nicht zulässig.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Nur die kontextverbindung verwendet werden kann und die Verbindungszeichenfolge nur Sie den Wert geben kann "Context Connection = True" oder "kontextverbindung = Yes".<br /><br /> **AllowBlankPassword = False:**  Leere Kennwörter sind nicht zulässig.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS-Assemblys über die gleichen Berechtigungen wie `SAFE` Assemblys, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen wie Dateien, Netzwerke, Webdienste, Umgebungsvariablen und die Registrierung zugreifen.  
@@ -107,10 +107,10 @@ ms.locfileid: "48076001"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
-|`Programming model restrictions`|Benutzerkontensteuerung|Benutzerkontensteuerung|Keine Einschränkungen|  
-|`Verifiability requirement`|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|`Local data access`|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|`Ability to call native code`|nein|nein|Benutzerkontensteuerung|  
+|`Programming model restrictions`|Ja|Ja|Keine Einschränkungen|  
+|`Verifiability requirement`|Ja|Ja|Nein|  
+|`Local data access`|Ja|Ja|Ja|  
+|`Ability to call native code`|Nein|Nein|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit der CLR-Integration](clr-integration-security.md)   

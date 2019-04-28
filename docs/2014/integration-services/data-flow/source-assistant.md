@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900799"
 ---
 # <a name="source-assistant"></a>Quellen-Assistent
   Mithilfe der Quellen-Assistenten-Komponente können Sie eine Quellkomponente und einen Verbindungs-Manager erstellen. Die Komponente befindet sich im Abschnitt **Favoriten** der SSIS-Toolbox.  

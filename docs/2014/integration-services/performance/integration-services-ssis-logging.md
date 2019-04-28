@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889810"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -96,7 +96,7 @@ ms.locfileid: "58394309"
 |Operator|Die Identität des Benutzers, der das Paket gestartet hat.|  
 |SourceName|Der Name des Containers oder des Tasks, für den das Protokollereignis auftrat.|  
 |SourceID|Der eindeutige Bezeichner des Pakets; der For-Schleifen-, Foreach-Schleifen- oder Sequenz-Container; oder der Task, für den das Protokollereignis auftrat.|  
-|ExecutionID|Die GUID der Paketausführungsinstanz.<br /><br /> Hinweis: Beim Ausführen eines einzelnen Pakets werden möglicherweise Protokolleinträge mit anderen Werten für das ExecutionID-Element erstellt. Wenn Sie ein Paket beispielsweise in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ausführen, werden in der Überprüfungsphase möglicherweise Protokolleinträge mit einem ExecutionID-Element erstellt, das [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]entspricht. In der Ausführungsphase werden jedoch unter Umständen Protokolleinträge mit einem ExecutionID-Element erstellt, das dtshost.exe entspricht. Um ein weiteres Beispiel zu geben, können Sie ein Paket ausführen, das Tasks vom Typ "Paket ausführen" enthält, wobei von jedem dieser Tasks ein untergeordnetes Paket ausgeführt wird. Diese untergeordneten Pakete erstellen möglicherweise Protokolleinträge mit einem anderen ExecutionID-Element als in den vom übergeordneten Paket erstellten Protokolleinträgen.|  
+|ExecutionID|Die GUID der Paketausführungsinstanz.<br /><br /> Hinweis: Ausführen eines einzelnen Pakets möglicherweise Protokolleinträge mit anderen Werten für das ExecutionID-Element erstellt. Wenn Sie ein Paket beispielsweise in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ausführen, werden in der Überprüfungsphase möglicherweise Protokolleinträge mit einem ExecutionID-Element erstellt, das [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]entspricht. In der Ausführungsphase werden jedoch unter Umständen Protokolleinträge mit einem ExecutionID-Element erstellt, das dtshost.exe entspricht. Um ein weiteres Beispiel zu geben, können Sie ein Paket ausführen, das Tasks vom Typ "Paket ausführen" enthält, wobei von jedem dieser Tasks ein untergeordnetes Paket ausgeführt wird. Diese untergeordneten Pakete erstellen möglicherweise Protokolleinträge mit einem anderen ExecutionID-Element als in den vom übergeordneten Paket erstellten Protokolleinträgen.|  
 |MessageText|Eine dem Protokolleintrag zugeordnete Meldung.|  
 |DataBytes|Ein für den Protokolleintrag spezifisches Bytearray. Die Bedeutung dieses Felds variiert je nach Protokolleintrag.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58394309"
   
 1.  Aktivieren Sie das Paket und seine Tasks für die Protokollierung. Die Protokollierung kann auf Paket-, Container- und Taskebene stattfinden. Sie können verschiedene Protokolle für Pakete, Container und Tasks angeben.  
   
-2.  Wählen Sie einen Protokollanbieter aus, und fügen Sie ein Protokoll für das Paket hinzu. Protokolle können nur auf Paketebene erstellt werden, und ein Task oder Container muss eines der für das Paket erstellten Protokolle verwenden. Jedes Protokoll ist eine der folgenden Protokollanbieter zugeordnet: Textdatei [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows-Ereignisprotokoll oder XML-Datei. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Wählen Sie einen Protokollanbieter aus, und fügen Sie ein Protokoll für das Paket hinzu. Protokolle können nur auf Paketebene erstellt werden, und ein Task oder Container muss eines der für das Paket erstellten Protokolle verwenden. Jedes Protokoll ist einem der folgenden Protokollanbieter zugeordnet: Textdatei, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows-Ereignisprotokoll oder XML-Datei. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Wählen Sie die Ereignisse und die Protokollschemainformationen zu jedem Ereignis aus, das Sie im Protokoll erfassen möchten. Weitere Informationen finden Sie unter [Konfigurieren der Protokollierung mithilfe einer gespeicherten Konfigurationsdatei](../configure-logging-by-using-a-saved-configuration-file.md).  
   

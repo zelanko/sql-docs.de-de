@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917090"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](move-user-databases.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "54136100"
     GO  
     ```  
   
-2.  Kopieren Sie die Datenbankdateien (AdventureWorks208R2_Data.mdf und AdventureWorks208R2_log) mithilfe der Methode Ihrer Wahl, um: C:\MySQLServer\AdventureWorks208R2_Data.mdf und C:\MySQLServer\AdventureWorks208R2_Log.ldf, bzw.  
+2.  Kopieren Sie die Datenbankdateien („AdventureWorks208R2_Data.mdf“ und „AdventureWorks208R2_log“) an die folgenden Speicherorte: C:\MySQLServer\AdventureWorks208R2_Data.mdf und C:\MySQLServer\AdventureWorks208R2_Log.ldf.  
   
     > [!IMPORTANT]  
     >  Platzieren Sie Datenbank und Transaktionsprotokoll bei einer Produktionsdatenbank auf separaten Datenträgern.  

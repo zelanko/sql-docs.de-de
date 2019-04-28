@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023451"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (Ereignisklasse)
   Die Mount Tape-Ereignisklasse tritt auf, wenn eine Anforderung zum Bandeinlegen empfangen wird. Verwenden Sie diese Ereignisklasse, um Anforderungen zum Bandeinlegen sowie deren Erfolg oder Misserfolg zu überwachen.  

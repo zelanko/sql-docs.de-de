@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894078"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach-Schleifen-Editor (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können Sie Namen und Beschreibung für einen Foreach-Schleifencontainer angeben, der mithilfe eines festgelegten Enumerators den gleichen Workflow für alle Elemente einer Auflistung wiederholt.  

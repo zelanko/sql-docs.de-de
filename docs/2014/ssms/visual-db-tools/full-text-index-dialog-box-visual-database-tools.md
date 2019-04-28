@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028413"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie einen Volltextindex für Volltextsuchen in textbasierten Spalten von Datenbanktabellen erstellen. Da ein Volltextindex auf einem regulären Index basiert, müssen Sie zuerst einen regulären Index erstellen. Der reguläre Index muss für eine einzelne Nicht-NULL-Spalte erstellt werden. Am besten wählen Sie eine Spalte mit kleinen Werten anstatt einer Spalte mit großen Werten aus.  
@@ -63,7 +63,7 @@ ms.locfileid: "52822744"
  Gibt an, ob Sie zurzeit mit diesem Volltextindex eine Volltextsuche ausführen können.  
   
  **Einstellung für das Nachverfolgen von Änderungen**  
- Beschreibt den Status der änderungsnachverfolgung für diesen Index an: Manuell, automatisch oder aus.  
+ Beschreibt den Status der Änderungsnachverfolgung für den Index: Manuell, Automatisch oder Aus.  
   
  **Die Durchforstung ist abgeschlossen**  
  Zeigt an, ob die zuletzt gestartete Durchforstung abgeschlossen ist. Wenn der Wert dieser Eigenschaft No ist, wird gerade eine Durchforstung ausgeführt.  
@@ -87,7 +87,7 @@ ms.locfileid: "52822744"
  Zeigt Datum und Zeit des nächsten Durchforstungsstarts an.  
   
  **Typ der aktuellen oder letzten Durchforstung**  
- Zeigt den Typ der aktuellen oder letzten Durchforstung an: Vollständig, inkrementell, aktualisieren oder Automatische Propagierung.  
+ Zeigt den Typ der aktuellen oder letzten Durchforstung an: Vollständig, Inkrementell, Aktualisieren oder Automatische Propagierung.  
   
  **Eindeutiger Indexname**  
  Zeigt eine Liste der Namen aller Spalten in dieser Datenbank an, die einen eindeutigen, einspaltigen Index haben. Diese Spalten können verwendet werden, um einen Volltextindex zu erstellen.  

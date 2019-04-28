@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872666"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -32,22 +32,22 @@ ms.locfileid: "53360702"
  [Tutorial: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  Dieses Lernprogramm veranschaulicht die Verwendung des Ratgebers und zeigt, wie Abfragen verarbeitet und Empfehlungen zur Verbesserung der Abfrageleistung umgesetzt werden.  
   
- [Tutorial: Verwenden des Hierarchyid-Datentyp](tables/tutorial-using-the-hierarchyid-data-type.md)  
+ [Tutorial: Verwenden des hierarchyid-Datentyps](tables/tutorial-using-the-hierarchyid-data-type.md)  
  Dieses Lernprogramm vermittelt, wie eine Tabelle in eine hierarchische Struktur konvertiert und anschließend die Daten in der Tabelle verwaltet werden.  
   
  [Tutorial: Signieren von gespeicherten Prozeduren mit einem Zertifikat](tutorial-signing-stored-procedures-with-a-certificate.md)  
  In diesem Lernprogramm wird erläutert, wie gespeicherte Prozeduren mit einem Zertifikat signiert werden können, das von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]generiert wurde.  
   
- [Tutorial: Besitzketten und Kontextwechsel](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Ownership Chains and Context Switching (Besitzketten und Kontextwechsel)](tutorial-ownership-chains-and-context-switching.md)  
  Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
- [Tutorial: Verwalten von Servern mit richtlinienbasierten Verwaltung](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
+ [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien zur Durchsetzung von Standards zur Websiteverwaltung erstellen.  
   
  [Tutorial: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien erstellen, um [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanzen auf bekannte Probleme zu untersuchen.  
   
- [Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure-Blob-Speicherdienst](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  In diesem Lernprogramm wird veranschaulicht, wie Sie eine SQL Server-Sicherung und -Wiederherstellung im Lernprogramm für den Windows Azure-BLOB-Speicherdienst ausführen.  
   
  [Tutorial: SQL Server-Datendateien im Windows Azure Storage-Dienst](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "53360702"
   
 ## <a name="see-also"></a>Siehe auch  
  [Tutorials für SQLServer 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet-WIKI: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet Wiki: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

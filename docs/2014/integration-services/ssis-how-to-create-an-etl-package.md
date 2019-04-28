@@ -1,5 +1,5 @@
 ---
-title: 'SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets | Microsoft-Dokumentation'
+title: 'SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878282"
 ---
-# <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets
+# <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) ist eine Plattform zum Erstellen leistungsfähiger datenintegrationslösungen, z. B. extrahieren, Transformieren und laden (ETL)-Paketen für Data Warehouses. SSIS enthält grafische Tools und Assistenten zum Erstellen und Debuggen von Paketen; Tasks zum Ausführen von Workflowfunktionen wie z. B. FTP-Vorgänge, Ausführen von SQL-Anweisungen und Senden von E-Mails; Datenquellen und Ziele zum Extrahieren und Laden von Daten; Transformationen zum Bereinigen, Aggregieren, Zusammenführen und Kopieren von Daten; einen Verwaltungsdienst, den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Verwalten der Paketausführung und -speicherung; und Anwendungsprogrammierschnittstellen (APIs, Application Programming Interfaces) zum Programmieren des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodells.  
   
  In diesem Tutorial lernen Sie die Verwendung des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers zum Erstellen eines einfachen Pakets in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Das von Ihnen erstellte Paket übernimmt Daten aus einer Flatfile, formatiert die Daten und fügt die neu formatierten Daten in eine Faktentabelle ein. In den folgenden Lektionen wird das Paket erweitert, um Schleifen, Paketkonfigurationen, Protokollierung und Fehlerfluss zu demonstrieren.  

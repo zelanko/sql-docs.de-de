@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891822"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Schritt 3: Testen des bereitgestellten Pakets
+# <a name="step-3-testing-the-deployed-packages"></a>Schritt 3: Testen der bereitgestellten Pakete
   In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitgestellt haben.  
   
  In anderen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials haben Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Entwicklungsumgebung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], mithilfe des Befehls **Debuggen starten** im Menü **Debuggen** ausgeführt. Dieses Mal führen Sie die Pakete auf andere Weise aus.  

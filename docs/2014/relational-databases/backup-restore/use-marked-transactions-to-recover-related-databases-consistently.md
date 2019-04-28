@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877069"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen (vollständiges Wiederherstellungsmodell)
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  

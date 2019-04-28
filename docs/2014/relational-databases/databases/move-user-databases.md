@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871719"
 ---
 # <a name="move-user-databases"></a>Verschieben von Benutzerdatenbanken
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Sie die Daten-, Protokoll- und Volltextkatalogdateien einer Benutzerdatenbank an einen neuen Speicherort verschieben, indem Sie den neuen Dateispeicherort in der FILENAME-Klausel der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung angeben. Diese Methode ermöglicht das Verschieben von Datenbankdateien innerhalb derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Datenbank auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen Server verschieben möchten, verwenden Sie [Sicherungs- und Wiederherstellungs-](../backup-restore/back-up-and-restore-of-sql-server-databases.md) oder [Trennungs- und Anfügungsoperationen](move-a-database-using-detach-and-attach-transact-sql.md).  

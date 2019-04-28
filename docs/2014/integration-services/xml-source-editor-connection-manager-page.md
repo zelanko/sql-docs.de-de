@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877416"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Quellen-Editor für XML (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** in **Quellen-Editor für XML** können Sie eine XML-Datei und die XML-Schemadefinition (XSD) angeben, mit der die XML-Daten transformiert werden.  

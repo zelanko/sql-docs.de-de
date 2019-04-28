@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab94977bcd3bf5a9b0b26ac7be76cb67d58e0755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913986"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
     
@@ -30,7 +30,7 @@ ms.locfileid: "48135510"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Meldungstext|Die folgenden Transaktionen müssen auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unter Momentaufnahmeisolation zugreifen: RepeatableRead-Transaktionen, serialisierbare Transaktionen und Transaktionen, die auf Tabellen zugreifen, die nicht in der RepeatableRead- oder serialisierbaren Isolationsstufe speicheroptimiert sind.|  
+|Meldungstext|Die folgenden Transaktionen müssen unter Verwendung der Momentaufnahmeisolation auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen: RepeatableRead-Transaktionen, Serializable-Transaktionen und Transaktionen, die auf Tabellen zugreifen, die in der RepeatableRead-Isolation oder der Serializable-Isolation nicht speicheroptimiert sind.|  
   
 ## <a name="explanation"></a>Erklärung  
  Es gibt Einschränkungen für den Benutzer der höheren Isolationsstufen zwischen datenträgerbasierten Transaktionen und XTP-Transaktionen.  

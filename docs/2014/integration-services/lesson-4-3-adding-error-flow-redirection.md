@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891402"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen der Fehlerflussumleitung
+# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen von Fehlerflussumleitungen
   Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
   
  Anstatt ein Fehlschlagen der Transformation zuzulassen, können Sie die Komponente so konfigurieren, dass die fehlerverursachende Zeile mithilfe der Fehlerausgabe in einen anderen Verarbeitungspfad umgeleitet wird. Die Verwendung eines separaten Fehlerverarbeitungspfades gibt Ihnen die Möglichkeit, mehrere Vorgänge auszuführen. Sie können beispielsweise die Daten säubern und dann die fehlerhafte Zeile erneut verarbeiten. Oder Sie speichern die fehlerhafte Zeile zusammen mit zusätzlichen Fehlerinformationen zum späteren Überprüfen und erneutem Verarbeiten.  

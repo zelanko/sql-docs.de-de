@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923141"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Überlappende Benutzer- und Gruppenberechtigungen (Master Data Services)
   Benutzerberechtigungen basieren auf:  
@@ -50,7 +50,7 @@ ms.locfileid: "52799262"
   
  Gruppe 2 verfügt **schreibgeschützte** Berechtigung für die Product-Entität.  
   
- Ergebnis: Effektive Berechtigung des Benutzers ist **Update** für die Product-Entität.  
+ Ergebnis: Die geltende Berechtigung des Benutzers für die Entität „Product“ lautet **Aktualisieren**.  
   
 ## <a name="example-2"></a>Beispiel 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799262"
   
  Gruppe 2 verfügt für die Entität „Product“ über die Berechtigung **Verweigern** .  
   
- Ergebnis: Effektive Berechtigung des Benutzers ist **Verweigern** für die Product-Entität.  
+ Ergebnis: Die geltende Berechtigung des Benutzers für die Entität „Product“ lautet **Verweigern**.  
   
 ## <a name="example-3"></a>Beispiel 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "52799262"
   
  Gruppe 2 verfügt **schreibgeschützte** Berechtigung für eine Gruppe von Elementen unter einem Hierarchieknoten.  
   
- Ergebnis: Effektive Berechtigung des Benutzers ist **Update** auf die Member.  
+ Ergebnis: Die geltende Berechtigung des Benutzers für die Elemente lautet **Aktualisieren**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

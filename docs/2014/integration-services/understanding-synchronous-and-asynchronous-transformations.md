@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878060"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
   Den Unterschied zwischen einer synchronen und asynchronen Transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] versteht man am besten, wenn man die Grundzüge einer synchronen Transformation kennt. Wenn eine synchrone Transformation Ihre Anforderungen nicht erfüllt, könnte Ihr Design eine asynchrone Transformation erfordern.  

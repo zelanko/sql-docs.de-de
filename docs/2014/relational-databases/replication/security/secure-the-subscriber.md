@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960818"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
   Merge-Agents und Verteilungs-Agents stellen Verbindungen mit dem Abonnenten her. Diese Verbindungen können im Kontext einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung oder einer Windows-Anmeldung erfolgen. Es ist wichtig, eine geeignete Anmeldung für diese Agents bereitzustellen, ohne dass dabei der Grundsatz verletzt wird, dass nur so viele Rechte erteilt werden sollten, wie unbedingt erforderlich sind. Außerdem muss der Aufbewahrungsort für die Kennwörter geschützt sein. Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "54125426"
     > [!IMPORTANT]  
     >  Verwenden Sie für Verbindungen zu Abonnenten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung, und geben Sie für die Verbindungen mit den einzelnen Abonnenten jeweils ein eigenes Konto an. Bei Verwendung eines Pullabonnements wird von der Replikation in jedem Fall die Verwendung der Windows-Authentifizierung durchgesetzt, da die Replikation bei dieser Art von Abonnements nicht auf die Metadaten auf dem Abonnenten zugreifen kann, die für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung erforderlich sind. Ändern Sie in diesem Fall nach dem Konfigurieren des Abonnements die Verbindung so, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird.  
   
-     Weitere Informationen finden Sie unter Vorgehensweise: Erstellen Sie ein aktualisierbares Abonnement für eine Transaktionsveröffentlichung (SQL Server Management Studio) und [anzeigen und Ändern von Replikationssicherheitseinstellungen](view-and-modify-replication-security-settings.md).  
+     Weitere Informationen finden Sie unter „Vorgehensweise: Erstellen eines Aktualisierungsabonnements für eine Transaktionsveröffentlichung (SQL Server Management Studio)“ und [Anzeigen und Ändern von Replikationssicherheitseinstellungen](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

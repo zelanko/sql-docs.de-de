@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915050"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -25,7 +25,7 @@ ms.locfileid: "48050161"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|207|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -115,7 +115,7 @@ ms.locfileid: "48050161"
     GROUP BY Year;  
     ```  
   
--   Die WHEN NOT MATCHED BY SOURCE-Klausel in der MERGE-Anweisung verweist auf einen Wert, auf den zugegriffen werden kann. Ändern Sie die MERGE-Anweisung so, dass die Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel mindestens eine Zeile zurückgibt. Möglicherweise müssen Sie z. B. die für die Klausel angegebene Suchbedingung hinzufügen oder überarbeiten. Wahlweise können Sie die Klausel so ändern, dass diese einen Wert angibt, der nicht auf die Quelltabelle verweist. Beispiel: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
+-   Die WHEN NOT MATCHED BY SOURCE-Klausel in der MERGE-Anweisung verweist auf einen Wert, auf den zugegriffen werden kann. Ändern Sie die MERGE-Anweisung so, dass die Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel mindestens eine Zeile zurückgibt. Möglicherweise müssen Sie z. B. die für die Klausel angegebene Suchbedingung hinzufügen oder überarbeiten. Wahlweise können Sie die Klausel so ändern, dass diese einen Wert angibt, der nicht auf die Quelltabelle verweist. Beispiel: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   

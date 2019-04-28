@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918122"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) kann vom **Hilfsprogramm-Explorer** und **Objekt-Explorer** zusammen mit Systemsichten und -tabellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  

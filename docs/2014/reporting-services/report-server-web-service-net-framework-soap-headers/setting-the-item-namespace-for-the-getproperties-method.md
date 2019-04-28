@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012278"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Festlegen des Elementnamespaces für die GetProperties-Methode
   Sie können den <xref:ReportService2010.ItemNamespaceHeader>SOAP-Header[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwenden, um die Elementeigenschaften über zwei verschiedene Elementbezeichner abzurufen: über den vollständigen Pfad des Elements oder die ID des Elements.  

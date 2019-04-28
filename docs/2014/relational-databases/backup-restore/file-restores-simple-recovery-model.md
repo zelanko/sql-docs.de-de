@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921822"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Dateiwiederherstellungen (einfaches Wiederherstellungsmodell)
   Dieses Thema betrifft nur Datenbanken, die auf dem einfachen Wiederherstellungsmodell basieren und mindestens eine schreibgeschützte sekundäre Dateigruppe enthalten.  
@@ -46,7 +46,7 @@ ms.locfileid: "54126900"
      Informationen zur Unterstützung von Onlinewiederherstellungen von Seiten und Dateien finden Sie unter [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Weitere Informationen zur Onlinewiederherstellung finden Sie unter [Onlinewiederherstellung &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Wenn Sie die Datenbank für eine dateiwiederherstellung offline schalten möchten, schalten Sie die Datenbank offline, bevor Sie die Wiederherstellungssequenz starten, indem Sie Folgendes ausführen [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) Anweisung: ALTER DATABASE *Database_name* SET OFFLINE.  
+    >  Wenn Sie möchten, dass die Datenbank für eine Dateiwiederherstellung offline ist, können Sie die Datenbank vor dem Starten der Wiederherstellungssequenz offline schalten, indem Sie die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)-Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE  
   
 
   
@@ -76,7 +76,7 @@ ms.locfileid: "54126900"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;einfachen Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;einfaches Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Beispiel: Offlinewiederherstellung der primären Dateigruppe und einer weiteren Dateigruppe &#40;vollständiges Wiederherstellungsmodell&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54126900"
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQLServer&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vollständige Dateisicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   

@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871573"
 ---
 # <a name="file-states"></a>Dateistatus
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird der Status einer Datenbankdatei unabhängig vom Status der Datenbank verwaltet. Eine Datei befindet sich immer in einem bestimmten Status, wie ONLINE oder OFFLINE. Um den aktuellen Status einer Datei anzuzeigen, verwenden Sie die Katalogsicht [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) oder [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Wenn die Datenbank offline ist, kann der Status der Dateien über die [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) -Katalogsicht angezeigt werden.  

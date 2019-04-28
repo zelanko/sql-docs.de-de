@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023579"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -25,12 +25,12 @@ ms.locfileid: "52753782"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|21797|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name||  
-|Meldungstext|"%s" muss eine gültige Windows-Anmeldung in der Form sein: 'MACHINE\Login' oder 'DOMAIN\Login'. Lesen Sie die Dokumentation zu '%3!s!'.|  
+|Meldungstext|"%s" muss eine gültige Windows-Anmeldung in der Form sein: "MACHINE Login" oder "DOMAIN Login". Lesen Sie die Dokumentation zu '%3!s!'.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dieser Fehler wird von folgenden gespeicherten Replikationsprozeduren ausgelöst, wenn der für **@job_login** angegebene Parameter Null oder ungültig ist. Dieser Fehler kann auftreten, wenn ein Mitglied der festen Datenbankrolle **db_owner** Skripts aus vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführt. Das Sicherheitsmodell wurde in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]geändert, daher müssen die Skripts aktualisiert werden.  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015282"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren
   In diesem Abschnitt werden mehrere Probleme beim Erstellen von systemintern kompilierten gespeicherten Prozeduren erläutert.  

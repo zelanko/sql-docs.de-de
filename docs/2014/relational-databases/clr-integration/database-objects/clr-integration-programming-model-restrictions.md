@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873817"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
   Wenn Sie eine verwaltete gespeicherte Prozedur oder anderes verwaltetes Datenbankobjekt erstellen, es gibt bestimmte codeprüfungen ausgeführt werden, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt Überprüfungen der verwalteten Codeassembly, wenn es zuerst in der Datenbank registriert wird mithilfe der `CREATE ASSEMBLY` -Anweisung, und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen an, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly, als registriert wurde `SAFE`, `EXTERNAL_ACCESS`, oder `UNSAFE`, `SAFE` ist die strengste Anforderung, und sind unten aufgeführt.  

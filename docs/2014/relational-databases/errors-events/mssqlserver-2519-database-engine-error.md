@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec6663028f2c0e133996053a31acfc0e04b49738
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914679"
 ---
 # <a name="mssqlserver2519"></a>MSSQLSERVER_2519
     
@@ -25,7 +25,7 @@ ms.locfileid: "48169253"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2519|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  

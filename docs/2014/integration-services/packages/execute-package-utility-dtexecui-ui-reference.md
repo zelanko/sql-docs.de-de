@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890203"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketausführungs-Hilfsprogramms (DtExecUI)
   Verwenden Sie das **Paketausführungshilfsprogramm**, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die aus geöffnet werden kann [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingabe `dtexecui` an einer Eingabeaufforderung ist eine Alternative zum Ausführen von Paketen mithilfe der **DTExec** eingabeaufforderungs-Hilfsprogramm.  

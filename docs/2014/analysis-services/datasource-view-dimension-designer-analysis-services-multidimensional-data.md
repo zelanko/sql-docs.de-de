@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732544"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die der ausgewählten Dimension zugeordnet ist. Dieser Bereich wird zum Erstellen von Attributen, Elementeigenschaften, Hierarchien und Ebenen verwendet. Dazu werden Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Attribute** oder **Hierarchien und Ebenen** gezogen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquellensicht**  
  Zeigt die der ausgewählten Dimension zugeordnete Datenquellensicht an.  
   

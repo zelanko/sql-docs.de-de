@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892120"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Schritt 3: Hinzufügen von Paketen und weiteren Dateien
   In diesem Schritt fügen Sie dem im vorherigen Schritt erstellten Deployment Tutorial-Projekt vorhandene Pakete, Hilfsdateien zur Unterstützung einzelner Pakete und eine Infodatei hinzu. Sie fügen z. B. eine XML-Datendatei hinzu, die die Daten für ein Paket und eine Textdatei enthält, von der Infodateiinformationen zu allen Paketen im Projekt bereitgestellt werden.  

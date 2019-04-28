@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012361"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats-Ereignisklasse
   Die **Auto Stats** -Ereignisklasse zeigt an, dass ein automatisches Update der Index- und Spaltenstatistiken ausgeführt wurde.  
@@ -37,7 +37,7 @@ ms.locfileid: "52775762"
 |**Fehler**|**int**|Fehlernummer eines bestimmten Ereignisses. Dies ist häufig die in der **sys.messages** -Katalogsicht gespeicherte Fehlernummer.|31|Ja|  
 |**EventClass**|**int**|Ereignistyp = 58.|27|Nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
-|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse:<br /><br /> 1: Die Statistiken synchron erstellte/aktualisierte; **TextData** Spalte gibt an, welche Statistiken und gibt an, ob sie erstellt oder aktualisiert wurden.<br /><br /> 2: Asynchrones Statistikupdate; Auftrag in Warteschlange.<br /><br /> 3: Asynchrones Statistikupdate; Auftrag wird gestartet.<br /><br /> 4: Asynchrones Statistikupdate; Auftrag abgeschlossen.|21|Ja|  
+|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse:<br /><br /> 1: Die Statistiken synchron erstellte/aktualisierte; **TextData** Spalte gibt an, welche Statistiken und gibt an, ob sie erstellt oder aktualisiert wurden.<br /><br /> 2: Asynchrones statistikupdate; Auftrag in Warteschlange.<br /><br /> 3: Asynchrones statistikupdate; der Auftrag ab.<br /><br /> 4: Asynchrones statistikupdate; Auftrag wurde beendet.|21|Ja|  
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |**IndexID**|**int**|Die ID für den Index-/Statistikeintrag des Objekts, das von dem Ereignis betroffen ist. Um die Index-ID für ein Objekt zu ermitteln, verwenden Sie die **index_id** -Spalte der Katalogsicht **sys.indexes** .|24|Ja|  
