@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023414"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow-Ereignisklasse
   Die **Log File Auto Grow** -Ereignisklasse gibt an, dass die Protokolldatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Protokolldatei explizit mit ALTER DATABASE vergrößert wird.  

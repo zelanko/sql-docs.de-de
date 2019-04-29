@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027626"
 ---
 # <a name="state-property-example-vb"></a>State-Eigenschaft – Beispiel (VB)
 Dieses Beispiel verwendet die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft, um eine Meldung angezeigt, während asynchrone Verbindungen öffnen und asynchrone Befehle ausgeführt werden.  
@@ -109,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

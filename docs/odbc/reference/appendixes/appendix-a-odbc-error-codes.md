@@ -1,5 +1,5 @@
 ---
-title: 'Anhang A: ODBC-Fehlercodes | Microsoft-Dokumentation'
+title: 'Anhang A: ODBC-Fehlercodes | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026791"
 ---
-# <a name="appendix-a-odbc-error-codes"></a>Anhang A: ODBC-Fehlercodes
+# <a name="appendix-a-odbc-error-codes"></a>Anhang A: ODBC-Fehlercodes
 Dieses Thema beschreibt den SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten, finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
   
- **SQLGetDiagRec** oder **SQLGetDiagField** SQLSTATE-Werten zurückgibt, gemäß der Open Group *Datenverwaltung: (SQL = Structured Query Language), Version 2* (März 1995). SQLSTATE-Werte sind Zeichenfolgen, die fünf Zeichen enthalten. Die folgende Tabelle enthält den SQLSTATE-Werten, die ein Treiber für zurückgeben können **SQLGetDiagRec**.  
+ **SQLGetDiagRec** oder **SQLGetDiagField** SQLSTATE-Werten zurückgibt, gemäß der Open Group *Datenverwaltung: Structured Query Language (SQL), Version 2* (März 1995). SQLSTATE-Werte sind Zeichenfolgen, die fünf Zeichen enthalten. Die folgende Tabelle enthält den SQLSTATE-Werten, die ein Treiber für zurückgeben können **SQLGetDiagRec**.  
   
  Der Zeichenfolgenwert, der für ein SQLSTATE zurückgegeben besteht aus einem zwei Zeichen-Wert, gefolgt von einem Wert von drei Zeichen bestehende-Unterklasse. Der Klassenwert "01" gibt eine Warnung an und wird von den Rückgabecode SQL_SUCCESS_WITH_INFO begleitet. Andere Klassenwerte als "01", mit Ausnahme der Klasse "," einen Fehler hin und werden von der Rückgabewert SQL_ERROR begleitet. Die Klasse bezieht sich "IM" auf Warnungen und Fehler, die von der Implementierung von ODBC selbst abgeleitet werden. Der Unterklasse-Wert "000" in jeder Klasse gibt an, dass keine für diese SQLSTATE-Unterklasse. Die Zuweisung von Klassen und Unterklassen wird vom SQL-92 definiert.  
   
@@ -38,14 +38,14 @@ Dieses Thema beschreibt den SQLSTATE-Werten für ODBC 3. *x*. Weitere Informatio
 |01001|Konflikt beim Cursorvorgang|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01002|Fehler beim Trennen|**SQLDisconnect**|  
 |01003|NULL-Wert in der Set-Funktion entfernt|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
-|01004|Zeichenfolgendaten Sie, rechts abgeschnitten|**SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLDataSources**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLDrivers**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLGetEnvAttr**<br /><br /> **SQLGetInfo**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNative**<br /><br /> **SQL-SQLParamData**<br /><br /> **SQLPutData**<br /><br /> **SQLSetCursorName**|  
+|01004|Zeichenfolgendaten Sie, rechts abgeschnitten|**SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLDataSources**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLDrivers**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLGetEnvAttr**<br /><br /> **SQLGetInfo**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNative**<br /><br /> **Sql SQLParamData**<br /><br /> **SQLPutData**<br /><br /> **SQLSetCursorName**|  
 |01006|Berechtigung nicht aufgehoben.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01007|Berechtigung wurde nicht erteilt|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01S00|Ungültiges Attribut der Verbindungszeichenfolge|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
-|01 S 01|Fehler in Zeile|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
+|01S01|Fehler in Zeile|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
 |01S02|Optionswert geändert|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |01S06|Versucht, Daten abzurufen, bevor das Resultset das erste Rowset zurückgegeben.|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
-|01 S 07|Teilbereiche wurden abgeschnitten|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
+|01S07|Teilbereiche wurden abgeschnitten|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01S08|Fehler beim Speichern der Datei-DSN|**SQLDriverConnect**|  
 |01S09|Ungültiges Schlüsselwort|**SQLDriverConnect**|  
 |07001|Falsche Anzahl von Parametern|**SQLExecDirect**<br /><br /> **SQLExecute**|  
@@ -112,7 +112,7 @@ Dieses Thema beschreibt den SQLSTATE-Werten für ODBC 3. *x*. Weitere Informatio
 |HY017|Ungültige Verwendung von einer automatisch zugeordneten Deskriptorhandles|**SQLFreeHandle**<br /><br /> **SQLSetStmtAttr**|  
 |HY018|Cancel-Anforderung wurde vom Server abgelehnt|**SQLCancel**|  
 |HY019|Nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen versandt|**SQLPutData**|  
-|HY020 ES WURDE|Versucht, einen null-Wert zu verketten.|**SQLPutData**|  
+|HY020|Versucht, einen null-Wert zu verketten.|**SQLPutData**|  
 |HY021|Inkonsistente deskriptorinformation|**SQLBindParameter**<br /><br /> **SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY024|Ungültiger Attributwert|**SQLSetConnectAttr**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLConnect**<br /><br /> **SQLDataSources**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLDrivers**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetInfo**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNativeSql**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  

@@ -10,17 +10,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027543"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Überwachen der Appliance mit der Admin Console - Analytics Platform System
 Die Verwaltungskonsole ist eine SQL Server-PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen angezeigt. Herstellen einer Verbindung auf die Verwaltungskonsole über Internet Explorer.  
   
 ## <a name="About"></a>Informationen zur Verwaltungskonsole  
-![Anwendungskonsole, Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
 Home  
@@ -44,7 +44,7 @@ Zeigt aktive Sitzungen von PDW-Benutzer. Dies kann helfen, für die Überwachung
 Abfragen  
 Zeigt eine Liste der ausgeführten Abfragen und kürzlich abgeschlossenen Abfragen. Verwandte Fehler werden angezeigt, sofern vorhanden. Außerdem bietet die Möglichkeit zum Anzeigen von Details der Ausführungsinformationen für die Abfrage Ausführung planen und Knoten aus.  
   
-Lädt  
+Loads  
 Zeigt geladen werden Plänen, die den aktuellen Zustand der PDW-Ladevorgänge sowie verknüpfte Fehler, falls vorhanden.  
   
 Sicherung und Wiederherstellung  
@@ -85,7 +85,7 @@ Die Verwaltungskonsole bietet die Möglichkeit, folgende Aspekte überwachen:
 |-|-|  
 |**Informationstyp**|**Wie Sie in der Verwaltungskonsole zuzugreifen.**|  
 |Gesamtstatus des Geräts|Klicken Sie auf **Anwendungszustand** in der oberen Menüleiste oder **Startseite**.|  
-|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin-Konsole Warnungen &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Benachrichtigungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin-Konsole Warnungen &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Appliance-Komponenten und deren status|Klicken Sie auf **Anwendungszustand** in der oberen Menüleiste oder **Startseite**.|  
 |Monitor-Anforderungen (einschließlich Abfragen, lädt, Sicherungen und Wiederherstellungen)|Klicken Sie auf **Sitzungen** derzeit aktive oder aktuelle Sitzungen angezeigt.<br /><br />Klicken Sie auf **Abfragen** derzeit aktive oder aktuelle Abfragen angezeigt. Für Abfragen angezeigte Informationen enthält, lädt, Sicherungen und Wiederherstellungen.<br /><br />Klicken Sie auf **Sperren** zu aktiven Sperren finden Sie unter.|  
 |Überwachen Sie zusätzliche Informationen für Lasten, Sicherungen und Wiederherstellungen.|Klicken Sie auf **lädt** oder **Sicherung und Wiederherstellung**.|  

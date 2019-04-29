@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032338"
 ---
 # <a name="parameter-and-result-metadata"></a>Parameter- und Ergebnismetadaten
   In diesem Thema wird beschrieben, was in den IPD- und IRD-Feldern (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) für Datums- und Uhrzeitdatentypen zurückgegeben wird.  

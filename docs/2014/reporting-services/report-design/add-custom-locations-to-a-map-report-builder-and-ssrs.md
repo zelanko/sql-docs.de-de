@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020871"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Hinzufügen benutzerdefinierter Orte zu einer Karte (Berichts-Generator und SSRS)
   Nachdem Sie einem Bericht eine Karte hinzugefügt haben, können Sie eigene Punktpositionen hinzufügen.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023444"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning-Ereignisklasse
   Mithilfe der **Bitmap Warning** -Ereignisklasse kann die Verwendung von Bitmapfiltern in Abfragen überwacht werden. Die Ereignisunterklasse kann verwendet werden, um zu melden, wenn Bitmapfilter in einer Abfrage deaktiviert wurden.  

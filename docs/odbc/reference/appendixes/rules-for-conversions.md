@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032922"
 ---
 # <a name="rules-for-conversions"></a>Regeln für Konvertierungen
 Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang mit numerischen Literalen. Für die Zwecke dieser Regeln ist werden die folgenden Begriffe definiert:  
   
--   *Store-Zuweisung:* beim Senden von Daten in eine Tabellenspalte in einer Datenbank. Dies geschieht bei Aufrufen von **SQLExecute**, **SQLExecDirect**, und **SQLSetPos**. Bei der Zuweisung von Speicher "Target" bezieht sich auf eine Datenbankspalte, und "Quelle" bezieht sich auf die Daten in die Anwendungspuffer.  
+-   *Store-Zuweisung:* Beim Senden von Daten in eine Tabellenspalte in einer Datenbank. Dies geschieht bei Aufrufen von **SQLExecute**, **SQLExecDirect**, und **SQLSetPos**. Bei der Zuweisung von Speicher "Target" bezieht sich auf eine Datenbankspalte, und "Quelle" bezieht sich auf die Daten in die Anwendungspuffer.  
   
--   *Abrufen von Zuweisung:* beim Abrufen von Daten aus der Datenbank in die Anwendungspuffer. Dies geschieht bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, und **SQLSetPos**. Bei der Zuordnung abrufen "Target" bezieht sich auf den Anwendungspuffer, und "Quelle" bezieht sich auf die Datenbankspalte.  
+-   *Abrufen von rollenzuweisung:* Wenn Sie Daten aus der Datenbank in Anwendungspuffer abrufen zu können. Dies geschieht bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, und **SQLSetPos**. Bei der Zuordnung abrufen "Target" bezieht sich auf den Anwendungspuffer, und "Quelle" bezieht sich auf die Datenbankspalte.  
   
--   *CS:* den Wert in der Zeichenquelle.  
+-   *CS:* Der Wert in der Zeichenquelle.  
   
--   *NT:* den Wert in das numerische Ziel.  
+-   *NT:* Der Wert in das numerische Ziel.  
   
--   *NS:* den Wert in der numerischen Quelle.  
+-   *NS:* Der Wert in der numerischen Quelle.  
   
--   *CT:* den Wert in der Ziel-Zeichen.  
+-   *CT:* Der Wert in der Ziel-Zeichen.  
   
 -   Genauigkeit eines genauen numerischen Literals: die Anzahl der Ziffern, die sie enthält.  
   
@@ -76,7 +76,7 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang 
   
     -   Wenn NS kleiner als 0 ist, dann können Sie Y, die das Ergebnis sein:  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          wobei "&#124;&#124;" der Operator für zeichenfolgenverkettungen ist.  
   

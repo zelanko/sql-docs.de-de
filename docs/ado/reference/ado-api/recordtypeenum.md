@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 195f76043cf65801289d081e497e28a41aff3209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033412"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Gibt den Typ der [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|Gibt eine *einfache* Datensatz (enthält keine untergeordneten Knoten).|  
 |**adCollectionRecord**|1|Gibt eine *Auflistung* Datensatz (untergeordnete Knoten enthält).|  

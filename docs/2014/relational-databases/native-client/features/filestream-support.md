@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046262"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
   Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen über die verbesserte FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48068280"
   
  Es ist auch möglich, mit Windows-Dateisystem-APIs auf FILESTREAM-Spalten zuzugreifen und diese zu aktualisieren.  
   
- Weitere Informationen finden Sie in folgenden Themen:  
+ Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [FILESTREAM-Unterstützung &#40;OLE-DB&#41;](../ole-db/filestream-support-ole-db.md)  
   

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032835"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
 Eine ODBC 3.*.x* Anwendung über die ODBC 3.*.x* -Treiber-Manager funktioniert mit einer ODBC 2. *X* Treiber, solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und Änderungen am Verhalten, allerdings wirken sich die Möglichkeit, die die ODBC 3. *x* Anwendung funktioniert in einer ODBC 2. *X* Treiber. Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, wird der Treiber-Manager die folgenden ODBC 3. zugeordnet. *X* -Funktionen, die eine oder mehrere ODBC 2. ersetzt haben. *X* -Funktionen in die entsprechenden ODBC 2. *X* Funktionen.  
@@ -417,7 +417,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLColAttribute** mit der *ColumnNumber* Argument auf 0 festgelegt, der Treiber-Manager gibt den *FieldIdentifier* Werte in der folgenden Tabelle aufgeführt.  
   
-|*FieldIdentifier*|value|  
+|*FieldIdentifier*|Wert|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -449,14 +449,14 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLDescribeCol** mit der *ColumnNumber* Argument auf 0 festgelegt, gibt der Treiber-Manager in der folgenden Tabelle aufgeführten Werte zurück.  
   
-|Puffer|value|  
+|Puffer|Wert|  
 |------------|-----------|  
 |ColumnName|"" (leere Zeichenfolge)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber wird den folgenden Aufruf **SQLGetData** ein Lesezeichens abgerufen:  

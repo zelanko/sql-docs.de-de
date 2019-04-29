@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910862"
 ---
 # <a name="type-property-example-property-vc"></a>Type-Eigenschaft – Beispiel (Property) (VC++)
 Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Hilfsprogramm zum Auflisten von Namen und Typen, die einer Auflistung, z. B. ein Modell [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  

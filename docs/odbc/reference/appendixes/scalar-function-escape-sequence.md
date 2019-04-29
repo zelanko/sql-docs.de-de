@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032843"
 ---
 # <a name="scalar-function-escape-sequence"></a>Skalarfunktion-Escapesequenz
 ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -32,16 +32,16 @@ ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escape-S
 ## <a name="remarks"></a>Hinweise  
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-Skalar-Funktion-Escapesequenz* :: =  
+ *ODBC-scalar-function-escape* ::=  
   
  *Initiator der ODBC-esc* fn *-Skalarfunktion ODBC-esc-Terminator*  
   
- *-Skalarfunktion* :: = *Funktionsname-* (*Argumentliste*)  
+ *scalar-function* ::= *function-name* (*argument-list*)  
   
- (Die Definitionen für die Nichtterminale *Funktionsname-* und *Funktionsname-* (*Argumentliste*) abgeleitet werden, aus der Liste von Skalarfunktionen in [ Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Die Definitionen für die Nichtterminale *Funktionsname-* und *Funktionsname-* (*Argumentliste*) abgeleitet werden, aus der Liste von Skalarfunktionen in [ Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *Initiator der ODBC-esc* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC-esc-Terminator* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
- Um zu bestimmen, ob die Datenquelle, Verfahren unterstützt und der Treiber die Aufrufsyntax des ODBC-Prozedur unterstützt, eine Anwendung aufrufen kann **SQLGetInfo**. Weitere Informationen finden Sie unter [Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Um zu bestimmen, ob die Datenquelle, Verfahren unterstützt und der Treiber die Aufrufsyntax des ODBC-Prozedur unterstützt, eine Anwendung aufrufen kann **SQLGetInfo**. Weitere Informationen finden Sie unter [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

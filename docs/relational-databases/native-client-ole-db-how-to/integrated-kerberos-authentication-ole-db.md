@@ -13,22 +13,22 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cdc506836eb1dea86c12225286a62802f586c21f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016256"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Beispiel wird gezeigt, wie gegenseitigen Kerberos-Authentifizierung abgerufen werden, mithilfe von OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  Dieses Beispiel zeigt, wie gegenseitige Kerberos-Authentifizierung mithilfe von OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client eingerichtet wird. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
  Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei „MyServer“ in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) befindet.  
+ Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei "MyServer" in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) befindet.  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   

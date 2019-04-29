@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982309"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLFetch** des nächsten Rowsets von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück.  
@@ -47,7 +47,7 @@ SQLRETURN SQLFetch(
  [Eingabe] Anweisungshandle.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFetch** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf [SQLGetDiagRec-Funktion](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLFetch** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben. Bei einem für eine einzelne Spalte Fehler, [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_COLUMN_NUMBER, um die Spalte zu bestimmen, der Fehler aufgetreten ist, und  **SQLGetDiagField** kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_ROW_NUMBER Bestimmen der Zeile, die diese Spalte enthält.  
@@ -58,8 +58,8 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Zeichenfolgen- oder Binärdaten, die für eine Spalte zurückgegeben, führte das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL. Falls es sich um einen Zeichenfolgenwert handelt, war es, rechts abgeschnitten.|  
-|01 S 01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, kann es ignoriert werden.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthalten, wurden der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S01|Fehler in Zeile|Fehler beim Abrufen von ein oder mehrere Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, kann es ignoriert werden.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthalten, wurden der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset konnte nicht konvertiert werden, um den angegebenen Datentyp *TargetType* in **SQLBindCol**.<br /><br /> Spalte 0 wurde mit dem Datentyp SQL_C_BOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde.<br /><br /> Spalte 0 wurde mit dem Datentyp SQL_C_VARBOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut nicht auf SQL_UB_VARIABLE festgelegt wurde.|  
 |07009|Ungültiger Deskriptorindex|Der Treiber wurde von einer ODBC 2.*.x* Treiber, der nicht unterstützt. **SQLExtendedFetch**, und eine Spaltennummer in der Bindung für eine Spalte angegeben wurde, 0.<br /><br /> Spalte 0 gebunden wurde, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|Die Zeile wurde erfolgreich abgerufen und wurde nicht geändert, seit sie zuletzt in diesem Resultset abgerufen wurde. Allerdings wurde eine Warnung zur Zeile zurückgegeben.|  
 |SQL_ROW_ERROR|Fehler beim Abrufen der Zeile.|  
 |SQL_ROW_UPDATED [1], [2] und [3]|Die Zeile wurde erfolgreich abgerufen, und es hat sich seit dem letzten aus dieses Resultset Abruf geändert. Wenn die Zeile erneut aus der dieses Resultset abgerufen oder, indem aktualisiert wird **SQLSetPos**, der Status wird geändert, um den neuen Status der Zeile.|  
-|SQL_ROW_DELETED [3]|Die Zeile wurde seit dem letzten aus dieses Resultset Abruf gelöscht.|  
-|SQL_ROW_ADDED [4]|Die Zeile eingefügt wurde, indem **SQLBulkOperations**. Wenn die Zeile erneut aus der dieses Resultset abgerufen oder, indem aktualisiert wird **SQLSetPos**, dessen Status ist SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|Die Zeile wurde seit dem letzten aus dieses Resultset Abruf gelöscht.|  
+|SQL_ROW_ADDED[4]|Die Zeile eingefügt wurde, indem **SQLBulkOperations**. Wenn die Zeile erneut aus der dieses Resultset abgerufen oder, indem aktualisiert wird **SQLSetPos**, dessen Status ist SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|Das Rowset überlappende das Ende des Resultsets und keine Zeile zurückgegeben wurde, dass, die für dieses Element von der zeilenstatusarray entsprach.|  
   
  [1] für Keyset, gemischten und dynamische Cursor, wenn ein Schlüssel-Wert aktualisiert wird, gilt die Zeile der Daten gelöscht wurden und eine neue Zeile hinzugefügt.  

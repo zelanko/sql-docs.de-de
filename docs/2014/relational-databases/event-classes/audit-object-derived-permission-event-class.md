@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015935"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission-Ereignisklasse
   Die **Audit Object Derived Permission** -Ereignisklasse zeichnet das Ausstellen von CREATE-, ALTER- oder DROP-Befehlen für ein angegebenes Objekt auf. Dieses Ereignis tritt nur auf, wenn dem Objekt keine Berechtigungen oder Besitzer direkt zugeordnet sind.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032811"
 ---
 # <a name="executing-a-statement"></a>Ausführen einer Anweisung
 Es gibt vier Möglichkeiten zum Ausführen einer Anweisung abhängig ist, wenn sie kompiliert werden (vorbereitet), indem Sie die Datenbank-Engine und, die sie definiert:  

@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045992"
 ---
 # <a name="soapexception-errors-table"></a>Tabelle für SoapException-Fehler
   Der Berichtsserver generiert die Fehler und Fehlermeldungen in der SOAP-Ausnahme ausgehend von Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. In folgender Tabelle sehen Sie die Fehler, die über Methoden durch eine **SoapException** im Berichtsserver-Webdienst zugänglich sind. Die Tabelle ist nach den Methoden geordnet, die die Ausnahme auslösen.  

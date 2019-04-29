@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013554"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Argumente  
 *plan_handle*  
-Führt eine eindeutige Identifizierung eines Abfrageausführungsplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary(64)**.   
+Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen Batch, die ausgeführt wurde und dessen Plan sich im Plancache befindet. *plan_handle* ist **varbinary(64)**   
 
 *plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
   
@@ -64,7 +64,7 @@ Führt eine eindeutige Identifizierung eines Abfrageausführungsplans für einen
 |**cacheobjtype**|**nvarchar(50)**|Der Typ der Plan Cache-Objekt. NULL-Werte sind in der Spalte nicht zulässig. Folgende Werte sind möglich:<br /><br /> Ausführbarer Plan<br /><br /> CLR-kompilierte Funktion<br /><br /> CLR-kompilierte Prozedur<br /><br /> Cursor|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
+ Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
   
 ## <a name="physical-joins"></a>Physische Joins  
  ![Attributbeziehungsdiagramm](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "Beziehungsdiagramm")  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020766"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listen (Berichts-Generator und SSRS)
   Ein Listendatenbereich wird mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen. Sie können Listen definieren, die beliebig viele Berichtselemente enthalten. Listen können ineinander geschachtelt werden, um mehrere Datengruppen bereitzustellen.  

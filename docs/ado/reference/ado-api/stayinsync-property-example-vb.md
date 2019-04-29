@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027507"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft ermöglicht den Zugriff auf Zeilen in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -92,5 +92,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync-Eigenschaft](../../../ado/reference/ado-api/stayinsync-property.md)

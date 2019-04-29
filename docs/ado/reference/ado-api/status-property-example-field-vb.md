@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caf016190e585aa64ee24f81fdcc0c18a4dab93f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027583"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
 Im folgende Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff geöffnet. die [Internet Publishing-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) Eigenschaft eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird zunächst festgelegt **AdFieldPendingInsert**, und klicken Sie dann auf aktualisiertwerden**AdFieldOk**.  
@@ -94,5 +94,5 @@ Attribute VB_Name = "StatusField"
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

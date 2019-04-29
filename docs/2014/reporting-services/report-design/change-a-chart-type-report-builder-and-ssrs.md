@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020835"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Ändern eines Diagrammtyps (Berichts-Generator und SSRS)
   Wenn Sie ein Diagramm in einen Bericht einfügen, wird zuerst das Dialogfeld **Diagrammtyp auswählen** angezeigt. Wenn Sie dieses Dialogfeld abbrechen, wird standardmäßig der Säulendiagrammtyp hinzugefügt.  
