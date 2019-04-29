@@ -16,22 +16,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132320"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Erstellen von Skriptdateien (MySqlToSql)
 Der erste Schritt vor dem Starten der Anwendung der SSMA-Konsole die Skriptdatei erstellt werden, und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindungsdatei erstellen.  
   
 Die Skriptdatei kann viz in drei Abschnitte unterteilt werden..,:  
   
-1.  **Konfiguration:** Ermöglicht dem Benutzer die Konfigurationsparameter für die Konsolenanwendung festgelegt.  
+1.  **config:** Ermöglicht dem Benutzer die Konfigurationsparameter für die Konsolenanwendung festgelegt.  
   
 2.  **Server:** Ermöglicht den Benutzer, die Quelle/Ziel-Serverdefinitionen festzulegen. Dies kann auch in einem separaten Server-Verbindungsdatei sein.  
   
-3.  **Skript-Befehle:** Ermöglicht dem Benutzer zum Ausführen von Befehlen der SSMA-Workflow.  
+3.  **script-commands:** Ermöglicht dem Benutzer zum Ausführen von Befehlen der SSMA-Workflow.  
   
 Jeder Abschnitt wird unten im Detail beschrieben:  
   
@@ -89,9 +89,9 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     Nur ein oder anderen angegebenen Attributs kann z. B. verwendet werden:  
   
-    - Source-Verwendung – zuletzt verwendete = "True" (Standard) oder die Quellserver = "Source_servername"  
+    - source-use-last-used="true" (default) or source-server="source_servername"  
   
-    - Ziel-Verwendung – zuletzt verwendete = "True" (Standard) oder Ziel-Server = "Target_servername"  
+    - target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Beispiel:**  
   
@@ -153,7 +153,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     Die erneute Verbindung Modi sind:  
   
-    -   erneut eine Verbindung herstellen und letzten-verwendet-Server: Wenn die Verbindung nicht aktiv ist, wird versucht, mit dem letzten maximal 5 Mal verwendete Server verbinden.  
+    -   reconnect-to-last-used-server: Wenn die Verbindung nicht aktiv ist, wird versucht, mit dem letzten maximal 5 Mal verwendete Server verbinden.  
   
     -   Generieren einer-Fehler: Wenn die Verbindung nicht aktiv ist, wird ein Fehler generiert.  
   
@@ -201,7 +201,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     -   Fehler: Die Konsole zeigt einen Fehler an und hält die Ausführung.  
   
-    -   Überschreiben: Überschreibt vorhandene Werte des Objekts an. Standardmäßig ist diese Aktion erfolgt.  
+    -   overwrite: Überschreibt vorhandene Werte des Objekts an. Standardmäßig ist diese Aktion erfolgt.  
   
     -   wie folgt überspringen: Die Konsole überspringt die Objekte, die bereits vorhanden, für die Datenbank  
   

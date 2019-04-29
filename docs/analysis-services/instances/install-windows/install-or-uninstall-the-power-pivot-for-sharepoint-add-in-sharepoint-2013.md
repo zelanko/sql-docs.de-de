@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055265"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52418511"
   
 -   In einer einzelnen Serverbereitstellung, die SharePoint 2013 und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im SharePoint-Modus umfasst, ist das Add-In nicht erforderlich. Wenn Sie einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus installieren, sind die durch das Add-In installierten Komponenten bereits enthalten. Diagramme von Bereitstellungsbeispielen mit dem Add-In finden Sie unter [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
- **Hinweis**: In diesem Thema wird das Installieren der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Lösungsdateien sowie des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstools beschrieben. Nach der Installation finden Sie im folgenden Thema Informationen zu Konfigurationstool und zusätzlichen Funktionen: [Konfigurieren von PowerPivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ **Hinweis**: Dieses Thema beschreibt die Installation von der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Lösungsdateien und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool. Nach der Installation finden Sie im folgenden Thema Informationen zu Konfigurationstool und zusätzlichen Funktionen: [Konfigurieren von PowerPivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  Informationen zum Herunterladen von **spPowerPivot.msi**finden Sie unter [Microsoft® SQL Server® 2014 PowerPivot® für Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52418511"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Management Objects.  
   
--   **Back-End-Dienste:** Wenn Sie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel verwenden, um Arbeitsmappen mit analytischen Daten zu erstellen, müssen Sie Excel Services mit einem BI-Server konfigurieren, auf dem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wird, um in einer Serverumgebung auf die betreffenden Daten zuzugreifen. Sie können SQL Server-Setup auf einem Computer ausführen, auf dem SharePoint Server 2013 installiert ist, oder auf einem anderen Computer, der keine SharePoint-Software enthält. Zwischen Analysis Services und SharePoint bestehen keine Abhängigkeiten.  
+-   **Back-End-Dienste:** Bei Verwendung von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel-Arbeitsmappen zu erstellen, die analytische Daten enthalten, müssen Sie Excel Services mit einem BI-Server mit [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im SharePoint-Modus, den Zugriff auf diese Daten in einer serverumgebung. Sie können SQL Server-Setup auf einem Computer ausführen, auf dem SharePoint Server 2013 installiert ist, oder auf einem anderen Computer, der keine SharePoint-Software enthält. Zwischen Analysis Services und SharePoint bestehen keine Abhängigkeiten.  
   
      Weitere Informationen zum Installieren, Deinstallieren und Konfigurieren der Back-End-Dienste finden Sie unter:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52418511"
   
 -   Ein Server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Modus. Excel Services verwenden die SQL Server Analysis Services-Instanz als [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Server. Analysis Services können auf dem lokalen oder einem Remotecomputer ausgeführt werden.  
   
--   **Berechtigungen:** Zur Installation von [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] muss der aktuelle Benutzer über Administratorrechte auf dem Computer verfügen und Mitglied der Gruppe "Administratoren" in der SharePoint-Farm sein.  
+-   **Berechtigungen:** So installieren Sie [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)], der aktuelle Benutzer muss ein Administrator auf dem Computer und einer SharePoint-Farmadministratoren-Gruppe sein.  
   
 -   Weitere Informationen zu den [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Anforderungen und erforderlichen Komponenten finden Sie unter [Hardware- und Softwareanforderungen für Analysis Services-Server im SharePoint-Modus](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f).  
   

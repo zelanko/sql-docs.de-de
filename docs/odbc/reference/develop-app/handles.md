@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061440"
 ---
 # <a name="handles"></a>Ziehpunkte
 Handles sind nicht transparenten, 32-Bit-Werten, die ein bestimmtes Element zu identifizieren. in ODBC kann dieses Element aus einer Umgebung, Verbindung, Anweisung oder Deskriptor sein. Wenn die Anwendung ruft **SQLAllocHandle**, wird der Treiber-Manager oder der Treiber erstellt ein neues Element vom angegebenen Typ und sein Handle an die Anwendung zurück. Die Anwendung weiter unten verwendet das Handle zum Identifizieren dieses Elements, beim Aufrufen von ODBC-Funktionen. Der Treiber-Manager und der Treiber verwenden das Handle, um Informationen über das Element zu suchen.  

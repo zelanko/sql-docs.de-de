@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047167"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,17 +68,17 @@ sp_depends [ @objname = ] '<object>'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**Nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
+|**name**|**nvarchar(257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar(16)**|Der Elementtyp.|  
-|**aktualisiert**|**nvarchar(7)**|Gibt an, ob das Element aktualisiert ist.|  
-|**ausgewählt**|**nvarchar(8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
+|**updated**|**nvarchar(7)**|Gibt an, ob das Element aktualisiert ist.|  
+|**selected**|**nvarchar(8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
 |**column**|**sysname**|Spalte oder Parameter, für die bzw. den die Abhängigkeit vorhanden ist.|  
   
  Das folgende Resultset zeigt die Objekte, die von abhängen  *\<Objekt >*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**Nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
+|**name**|**nvarchar(257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar(16)**|Der Elementtyp.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -87,7 +87,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. Auflisten der Abhängigkeiten von einer Tabelle  
- Im folgende Beispiel werden die Datenbankobjekte aufgelistet, die von abhängen der `Sales.Customer` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank. Sowohl Schemaname als auch Tabellenname sind angegeben.  
+ Im folgenden Beispiel werden die Datenbankobjekte aufgelistet, die von der `Sales.Customer` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank abhängen. Sowohl Schemaname als auch Tabellenname sind angegeben.  
   
 ```  
 USE AdventureWorks2012;  

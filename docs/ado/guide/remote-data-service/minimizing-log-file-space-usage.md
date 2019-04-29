@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134398"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimieren des Verbrauchs an Protokolldatei-Speicherplatz
 Eine Protokolldatei kann schnell füllen (daher den Server verlangsamen) Wenn eine große Anzahl von Aktivitäten auf einer SQL Server-Datenbank vorhanden ist. Legen Sie die Protokolldatei auf **Protokoll bei Prüfpunkt abschneiden** erheblich die Lebensdauer der Protokolldatei für eine Datenbank zu erweitern.  

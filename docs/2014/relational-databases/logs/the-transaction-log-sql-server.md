@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144616"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
   Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen aufgezeichnet werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
@@ -41,7 +41,7 @@ ms.locfileid: "52807012"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile: Vom Transaktionsprotokoll unterstützte Operationen  
+##  <a name="Benefits"></a> Vorteile: Vorgänge, die durch das Transaktionsprotokoll unterstützt  
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
   
 -   Wiederherstellen einzelner Transaktionen.  
@@ -93,7 +93,7 @@ ms.locfileid: "52807012"
 |12|-|Nur interne Verwendung|  
 |13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u. U. älter als die Prüfpunkt-LSN. In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
-|16|XTP_CHECKPOINT|Wenn eine Datenbank eine speicheroptimierte Dateigruppe aufweist, wird das Transaktionsprotokoll möglicherweise nicht vor der Auslösung des automatischen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Prüfpunkts gekürzt (was immer nach Anwachsen des Protokolls um 512 MB erfolgt).<br /><br /> Hinweis: Um das Transaktionsprotokoll vor Erreichen der 512 MB-Größe zu kürzen, lösen Sie den Befehl „Checkpoint“ für die fragliche Datenbank manuell aus.|  
+|16|XTP_CHECKPOINT|Wenn eine Datenbank eine speicheroptimierte Dateigruppe aufweist, wird das Transaktionsprotokoll möglicherweise nicht vor der Auslösung des automatischen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Prüfpunkts gekürzt (was immer nach Anwachsen des Protokolls um 512 MB erfolgt).<br /><br /> Hinweis: Um Transaktionsprotokolls, bevor die Größe von 512 MB abzuschneiden, lösen Sie den Checkpoint-Befehl für die fragliche Datenbank manuell.|  
   
 ##  <a name="MinimallyLogged"></a> Vorgänge, die minimal protokolliert werden können  
  Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten Wiederherstellungsmodell minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  

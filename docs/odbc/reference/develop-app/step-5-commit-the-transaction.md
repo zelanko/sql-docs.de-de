@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 5: Committen die Transaktion | Microsoft-Dokumentation'
+title: 'Schritt 5: Commit für die Transaktion | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148941"
 ---
-# <a name="step-5-commit-the-transaction"></a>Schritt 5: Ausführen eines Commits für die Transaktion
+# <a name="step-5-commit-the-transaction"></a>Schritt 5: Committen der Transaktion
 Der nächste Schritt ist die Transaktion, wie in der folgenden Abbildung dargestellt.  
   
  ![Zeigt, wie Commit eine Transaktion](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132714"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Übereinstimmung mit Standards**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [Ausgabe] Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben *LpszPathOut*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbPathOutMax*, den Ausgabepfad in *LpszPathOut* wird abgeschnitten, um *CbPathOutMax* minus der NULL-Terminierungszeichen. Die *PcbPathOut* Argument kann ein null-Zeiger sein.  
   
- *Häufigsten*  
+ *fRequest*  
  [Eingabe] Typ der Anforderung. Die *häufigsten* Argument muss einen der folgenden Werte enthalten:  
   
  ODBC_INSTALL_INQUIRY: Erkundigen Sie sich, ein Treiber installiert werden können.  
@@ -102,7 +102,7 @@ BOOL SQLInstallDriverEx(
   
  _Treiber-Desc_ **\\**0Driver**=**_-Treiber-DLL-Dateiname_ **\\**0 [Setup**=**_-Setup-DLL-Dateiname_<b>\\</b>0]  
   
- [_-Treiber-Attr-Schlüsselwort1_**=**_value1_<b>\\</b>0] [_-Treiber-Attr-Schlüsselwort2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  \0 ist, in dem ein null-Byte und *-Treiber-Attr-Keywordn* wird jedem Attribut-Driver-Schlüsselwort. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für formatierten Text-Dateien separate Treiber und -Setup-DLLs verfügt, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058133"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services-Konfigurationsoptionen (SSRS)
   Auf der Seite **Reporting Services-Konfiguration** des Installations-Assistenten für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie die Optionen für das Installieren und Konfigurieren eines Berichtsservers angeben. Die Verfügbarkeit einer Installationsoption ist von den Optionen abhängig, die Sie auf der Seite **Funktionsauswahl** ausgewählt haben, und richtet sich danach, ob Sie gleichzeitig mit dem Berichtsserver auch eine lokale Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] installieren.  
@@ -60,7 +60,7 @@ ms.locfileid: "53375682"
   
 -   [Installieren von Reporting Services im SharePoint-Modus als einzelne Serverfarm](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
   
--   [Reporting Services-Berichtsserver (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
+-   [Reporting Services Report Server (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>Installieren des Reporting Services-Add-Ins für SharePoint-Technologien  
  Das Add-In kann ab Version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als Teil der SQL Server-Installation auf der Seite für die Funktionsauswahl des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden.  

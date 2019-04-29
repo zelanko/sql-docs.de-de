@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061003"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit Sybase (SybaseToSQL)
 Verwenden der **Herstellen einer Verbindung mit Sybase** im Dialogfeld Verbindung mit der Sybase Adaptive Server Enterprise (ASE)-Instanz, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit Sybase**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung in Sybase**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie einen von der installierten Anbieter auf dem Computer, für die Verbindung mit der Sybase-Servers.  
   
@@ -73,7 +73,7 @@ Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen. Die Namen der Par
     |Treibername|Treiber|  
     |Servername|Server|  
     |Benutzername|Benutzer-ID|  
-    |Kennwort|PWD|  
+    |Kennwort|Pwd|  
     |Portnummer|Port|  
   
     Für Sybase ASE 12,5 oder 15 ist eine Beispiel-Verbindungszeichenfolge wie folgt:  
@@ -86,7 +86,7 @@ Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen. Die Namen der Par
     |-----------|-----------------------------|  
     |Servername|Server|  
     |Benutzername|Benutzer-ID|  
-    |Kennwort|PWD|  
+    |Kennwort|Pwd|  
     |Portnummer|Port|  
   
     Ein Beispiel für die Verbindungszeichenfolge für die ADO NET-Anbieter ist wie folgt:  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040826"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Erwerben Sie und konfigurieren Sie einen backup-Server Parallel Data Warehouse
 Dieser Artikel beschreibt, wie Sie ein Windows-System nicht zur Appliance gehört als Sicherungsserver für die Verwendung mit der Funktionen zum Sichern und Wiederherstellen in Analytics Platform System (APS) und Parallel Data Warehouse (PDW) zu konfigurieren.  
@@ -35,7 +35,7 @@ Der Sicherungsserver:
   
 -   Hostet eine Sicherungsdatei-Freigabe, einer Windows-Dateifreigabe handelt, die das Netzwerkprotokoll für Server Message Block (SMB) auf Anwendungsebene verwendet. Die Freigabeberechtigungen für die Sicherungsdatei geben einen Windows-Domänenbenutzer (in der Regel ist dies eine dedizierte sicherungsbenutzer) die Möglichkeit, sicherungs- und Wiederherstellungsvorgänge Vorgänge für die Freigabe auszuführen. Der Benutzername und Kennwort-Anmeldeinformationen von der Windows-Domänenbenutzer sind in PDW gespeichert, sodass PDW kann sicherungs- und Wiederherstellungsvorgänge Vorgänge für die Freigabe der Sicherungsdatei auszuführen.  
   
-## <a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
+## <a name="Step1"></a>Schritt 1: Bestimmen der Kapazitätsanforderungen  
 Die Systemanforderungen für den Backup-Server hängt der eigenen arbeitsauslastung, fast vollständig. Vor dem Kauf oder einen backup-Server-Bereitstellung müssen Sie herausfinden, welche kapazitätsanforderungen. Die Backup-Server muss nicht nur für Sicherungen dedizierte werden, solange sie die Leistung und Speicher die Anforderungen Ihrer Workload behandeln soll. Sie können auch mehrere Server zum Sichern und Wiederherstellen jeder Datenbank auf einen von mehreren Servern verwenden.  
   
 Verwenden der [Backup Server Worksheet zur kapazitätsplanung eines](backup-capacity-planning-worksheet.md) um zu ermitteln, welche kapazitätsanforderungen.  
@@ -61,7 +61,7 @@ Obwohl nicht zwingend erforderlich, ist InfiniBand den empfohlenen Verbindungsty
   
 3.  Erwerben Sie 2 ein FDR InfiniBand-Kabel für eine Karte mit zwei Ports bzw. 1 ein FDR InfiniBand-Kabel für einen einzelnen Port-Karte. Die Kabel ein FDR InfiniBand werden den Laden von Server mit Appliance InfiniBand-Netzwerk verbunden. Die Länge der Kabel hängt von den Abstand zwischen dem Server geladen und die Einheiten InfiniBand-Switches, gemäß Ihrer Umgebung ab.  
   
-## <a name="Step3"></a>Schritt 3: Verbinden Sie den Server mit den InfiniBand-Netzwerken  
+## <a name="Step3"></a>Schritt 3: Verbinden Sie den Server mit InfiniBand-Netzwerke  
 Verwenden Sie diese Schritte, um den Server Laden mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server nicht das InfiniBand-Netzwerk verwendet wird, überspringen Sie diesen Schritt.  
   
 1.  Rack Server nah an das Gerät, damit Sie das Gerät InfiniBand-Netzwerk hergestellt werden können.  
@@ -76,7 +76,7 @@ Verwenden Sie diese Schritte, um den Server Laden mit dem InfiniBand-Netzwerk zu
   
 5.  Konfigurieren Sie InfiniBand und DNS-Einstellungen für die Netzwerkadapter. Konfigurationsanweisungen, finden Sie unter [InfiniBand-Netzwerkadapter konfigurieren](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Schritt 4: Konfigurieren der sicherungsdateifreigabe  
+## <a name="Step4"></a>Schritt 4: Konfigurieren Sie die backup-Datei-Freigabe  
 PDW wird den backup-Server über einen UNC-Dateifreigabe zugreifen. So richten die Dateifreigabe aus:  
   
 1.  Erstellen Sie einen Ordner auf dem Sicherungsserver für das Speichern von Sicherungen.  
@@ -122,7 +122,7 @@ Weitere Informationen finden Sie in den folgenden Themen:
   
 -   [DATENBANK SICHERN](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [DATENBANK WIEDERHERSTELLEN](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Security-Hinweise  
 Der backup-Server ist nicht mit der privaten Domäne für die Anwendung verknüpft. Es ist in Ihrem eigenen Netzwerk, und es besteht keine Vertrauensstellung zwischen Ihrer eigenen Domäne und den privaten Appliance-Domäne.  
@@ -147,7 +147,7 @@ Um alle in SQL Server PDW gespeicherten Netzwerkanmeldeinformationen aufzulisten
 Vorgänge auf dem Server laden können einen UNC-Pfad, um Daten von außerhalb des internen vertrauenswürdigen Netzwerks. Ein Angreifer im Netzwerk oder mit der Möglichkeit, die namensauflösung zu beeinflussen kann abfangen oder Datenübertragungen an den PDW geändert werden. Dies stellt ein Risiko der Offenlegung von Manipulationen und Informationen. Um das Risiko von Manipulationen zu verringern:
 
 - Erfordern Sie eine Anmeldung für die Verbindung. 
-- Legen Sie auf dem Server beim Laden die folgenden Gruppe Richtlinienoption in Sicherheitseinstellungen\Lokale Richtlinien\sicherheitsoptionen: Microsoft-Netzwerkclient: Kommunikation digital signieren (immer): aktiviert.  
+- Legen Sie die folgende Gruppenrichtlinie-Option in Sicherheitseinstellungen\Lokale Richtlinien\sicherheitsoptionen, auf dem Server geladen:  Microsoft-Netzwerkclient: Signieren Sie Kommunikation digital (immer): aktiviert.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Sichern und Wiederherstellen](backup-and-restore-overview.md)  

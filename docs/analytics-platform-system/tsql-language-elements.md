@@ -1,6 +1,6 @@
 ---
-title: 'T-SQL - Sprachelemente: Parallel Data Warehouse | Microsoft Docs'
-description: T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+title: T-SQL-Sprachelemente – Parallel Data Warehouse | Microsoft-Dokumentation
+description: T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035001"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>T-SQL-Sprachelemente für Parallel Data Warehouse
-T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
-## <a name="core-elements"></a>Zentrale Elemente
+## <a name="core-elements"></a>Kernelemente
 * [Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-* [Objekt-Benennungsregeln](../relational-databases/databases/database-identifiers.md)
+* [Benennungsregeln für Objekte](../relational-databases/databases/database-identifiers.md)
 * [Reservierte Schlüsselwörter](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [Sortierungen](https://msdn.microsoft.com/library/ff848763.aspx)
-* [Kommentare](../t-sql/language-elements/comment-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Datentypen](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [Ausdrücke](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Problemumgehung für IDENTITY-Eigenschaft](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -58,7 +58,7 @@ T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel 
 * [= (Ist gleich)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (Größer als)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (Kleiner als)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (Great als oder gleich)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = (größer als oder gleich)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (kleiner als oder gleich)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Ungleich)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Ungleich)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
@@ -225,7 +225,7 @@ T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel 
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transaktionen
-* [Transaktionen](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Diagnosesitzungen
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

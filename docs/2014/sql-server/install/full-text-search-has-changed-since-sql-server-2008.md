@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127071"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>Die Volltextsuche wurde seit SQL Server 2008 geändert.
   Der Upgrade Advisor hat erkannt, dass für die Volltextsuche ein Upgrade vorgesehen ist. Viele Volltextsuchoptionen und -einstellungen haben sich geändert. Aus diesem Grund kann es erforderlich sein, einige Einstellungen zu ändern, wenn Sie ein Upgrade auf die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Volltextsuche durchführen.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150348"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
   Bevor Sie die Distributed Replay-Funktion von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
@@ -29,7 +29,7 @@ ms.locfileid: "53350826"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen der Controller, der Client und der Ziel-SQL-Server auf demselben Computer ausgeführt werden.<br /><br /> **\*\* Sicherheitshinweis \*\*** Dieses Konto sollte nicht Mitglied der Windows-Gruppe „Administratoren“ sein.|  
 |Interaktives Benutzerkonto, das verwendet wird, um das Distributed Replay-Verwaltungstool auszuführen|Kann entweder ein lokales Benutzerkonto oder ein Domänenbenutzerkonto sein. Um ein lokales Benutzerkonto zu verwenden, müssen das Verwaltungstool und der Controller auf demselben Computer ausgeführt werden.|  
   
- **Wichtige**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+ **Wichtige**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie eine oder mehrere Benutzerkonten angeben, die zum Ausführen der Distributed Replay Client-Dienste verwendet werden. Die folgenden Kontotypen werden unterstützt:  
   
 -   Domänenbenutzerkonto  
   

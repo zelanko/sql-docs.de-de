@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126862"
 ---
 # <a name="navigating-through-data"></a>Navigieren durch Daten
 **Recordset** unterstützt verschiedene Methoden und Eigenschaften zum Navigieren durch das resultierende Dataset. Untersuchen wir diese Funktionalität, indem Sie einige Szenarien mit diesem Beispiel durchlaufen **Recordset** Objekte.  

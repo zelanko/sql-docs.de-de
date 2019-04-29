@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155848"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
   In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen beschrieben. Durch die Formatdatei werden die Felder der Datendatei den Spalten der Tabelle zugeordnet.  Sie können eine Nicht-XML- oder eine XML-Formatdatei für den Massenimport von Daten verwenden, wenn Sie dazu einen **bcp**-Befehl bzw. die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehle BULK INSERT oder INSERT ...SELECT * FROM OPENROWSET(BULK...) verwenden.  
@@ -36,12 +36,12 @@ ms.locfileid: "53364082"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**BCP** ... **in**|**-f** *Formatdatei*|  
+|**bcp** ... **in**|**-f** *Formatdatei*|  
   
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden gesendet, in der Clientcodepage oder in der durch die Sortierung implizierten Codeseite), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet), oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
+>  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt zeigen, wie Formatdateien mit dem Befehl **bcp** bzw. mit BULK INSERT- und INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisungen per Massenimport übertragen werden. Bevor Sie eines der Beispiele für den Massenimport nachvollziehen können, müssen Sie eine entsprechende Tabelle, eine Datendatei und eine Formatdatei für das Beispiel erstellen.  

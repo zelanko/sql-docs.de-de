@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069699"
 ---
 # <a name="odbc-core-subkey"></a>Unterschlüssel für ODBC-Kernkomponenten
 Der Wert unter dem Unterschlüssel für ODBC Core bietet den Verwendungszähler für die Core-Komponenten (Treiber-Manager, Cursor-Bibliothek, Installationsprogramm-DLL und So weiter). Das Format dieses Werts wird in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|UsageCount|REG_DWORD-WERT|*count*|  
+|UsageCount|REG_DWORD|*count*|  
   
  Nehmen wir beispielsweise an, dass die ODBC-Kernkomponenten von die Setupprogramme für drei verschiedene Anwendungen und zwei verschiedenen Treiber installiert wurden. Es wäre der Wert unter dem Unterschlüssel für ODBC Core:  
   

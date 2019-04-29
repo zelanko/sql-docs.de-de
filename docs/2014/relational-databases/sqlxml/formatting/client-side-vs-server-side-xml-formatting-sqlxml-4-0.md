@@ -1,5 +1,5 @@
 ---
-title: Clientseitiger und Serverseitige XML-Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
+title: Clientseitig vs. Serverseitige XML-Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131172"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitiger und Serverseitige XML-Formatierung (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitig vs. Serverseitige XML-Formatierung (SQLXML 4.0)
   In diesem Thema werden die allgemeinen Unterschiede zwischen clientseitiger und serverseitiger XML-Formatierung in SQLXML beschrieben.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Keine Unterstützung von mehreren Rowset-Abfragen bei der clientseitigen Formatierung  
@@ -42,7 +42,7 @@ ms.locfileid: "52822434"
   
  Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Bei Angabe von Abfragen in zwei separate  **\<SQL: Query >** Blöcken, erhalten Sie die gewünschten Ergebnisse.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Unterschiedliche timestamp-Zuordnungen bei der client- und serverseitigen Formatierung  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Unterschiedliche Timestamp-Zuordnungen bei der Client-und. Serverseitigen Formatierung  
  Bei der serverseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs dem i8 XDR-Typ zugeordnet (wenn die XMLDATA-Option in der Abfrage angegeben wurde).  
   
  Bei der clientseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs entweder dem `uri`- oder dem `bin.base64` XDR-Typ zugeordnet. (Dies ist davon abhängig, ob die Binär-base64-Option in der Abfrage angegeben wurde.) Der `bin.base64` XDR-Typ ist vor allem dann nützlich, wenn Sie die updategram- und bulkload-Funktionen verwenden, da dieser Typ in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp`-Typ konvertiert wird. Auf diese Art werden die Einfüge-, Update- oder Löschvorgänge erfolgreich abgeschlossen.  
@@ -50,7 +50,7 @@ ms.locfileid: "52822434"
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Bei serverseitiger Formatierung werden tiefe VARIANTs verwendet  
  Bei der serverseitigen XML-Formatierung werden tiefe Typen eines VARIANT-Typs verwendet. Bei der clientseitigen XML-Formatierung werden die Varianten in Unicode-Zeichenfolgen konvertiert und die Untertypen von VARIANT werden nicht verwendet.  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED-Modus im Vergleich zum AUTO-Modus.  
+## <a name="nested-mode-vs-auto-mode"></a>GESCHACHTELTE Modus im Vergleich AUTO-Modus.  
  Der NESTED-Modus des clientseitigen FOR XML ähnelt dem AUTO-Modus des serverseitigen FOR XML. Ausnahmen:  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>Wenn Sie Sichten mit AUTO-Modus serverseitig abfragen, wird der Sichtname als Elementname in der resultierenden XML zurückgegeben.  
@@ -75,7 +75,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Wenn Sie die Vorlage ausführen, wird die folgende XML zurückgegeben. (Es werden nur partielle Ergebnisse angezeigt.) Beachten Sie, dass die Elementnamen die Namen der Sichten sind, für die die Abfrage ausgeführt wird.  
+ Wenn Sie die Vorlage ausführen, wird die folgende XML zurückgegeben. (Nur partielle Ergebnisse werden angezeigt.) Beachten Sie, dass die Elementnamen die Namen der Ansichten für die die Abfrage ausgeführt wird.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -131,7 +131,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Wenn Sie den NESTED-Modus des clientseitigen FOR XML verwenden, werden die Tabellennamen als Elementnamen in der resultierenden XML zurückgegeben. (Tabellenaliasse, die in der Abfrage angegeben werden, werden nicht verwendet.) Betrachten Sie z. B. die folgende Vorlage:  
+ Wenn Sie den NESTED-Modus des clientseitigen FOR XML verwenden, werden die Tabellennamen als Elementnamen in der resultierenden XML zurückgegeben. (Tabellenaliasse, die in der Abfrage angegeben sind, werden nicht verwendet.) Betrachten Sie z. B. die folgende Vorlage:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -203,7 +203,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>Clientseitiger und serverseitiger XPath  
+### <a name="client-side-vs-server-side-xpath"></a>Clientseitig vs. Serverseitiger XPath  
  Clientseitiger XPath und serverseitiger XPath funktionieren gleichermaßen, weisen jedoch die folgenden Unterschiede auf:  
   
 -   Die Datenkonvertierungen, die angewendet werden, wenn Sie clientseitige XPath-Abfragen verwenden, unterscheiden sich von jenen, die angewendet werden, wenn Sie serverseitige XPath-Abfragen verwenden. Clientseitiger XPath verwendet CAST anstelle von CONVERT-Modus 126.  

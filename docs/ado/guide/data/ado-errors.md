@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063036"
 ---
 # <a name="ado-run-time-errors"></a>ADO-Laufzeitfehler
 ADO-Fehler werden mit dem Programm als Laufzeitfehler gemeldet. Sie können den Mechanismus zum Abfangen von Fehlern Ihre bevorzugte Programmiersprache verwenden, abfangen und behandeln. In Visual Basic verwenden, z. B. die **On Error** Anweisung. In Visual C++ hängt von der Methode, die Sie verwenden, um die ADO-Bibliotheken zugreifen. Mit #import, verwenden eine **Try / Catch** Block. Andernfalls müssen die C++-Programmierer explizit das Fehlerobjekt, das durch den Aufruf abrufen **GetErrorInfo**. Die folgende Visual Basic-Sub-Prozedur veranschaulicht einen ADO-Fehler abfangen:

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035702"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (Ereignisklasse)
   Die QN:Dynamics-Ereignisklasse übermittelt Informationen zu Hintergrundaktivitäten, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zur Unterstützung von Abfragebenachrichtigungen durchgeführt werden. In [!INCLUDE[ssDE](../../includes/ssde-md.md)]werden Abonnementtimeouts, auszulösende ausstehende Abonnements und das Löschen von Parametertabellen in einem Hintergrundthread überwacht.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365872"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |EventClass|`int`|Ereignistyp = 202|27|Nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Die Uhr Ausführung gestartet: Gibt an, dass der Hintergrundthread in [!INCLUDE[ssDE](../../includes/ssde-md.md)], mit dem abgelaufene Parametertabellen für den Cleanup geplant werden, gestartet wurde.<br /><br /> Die Uhr fertig ausgeführt: Gibt an, dass der Hintergrundthread in [!INCLUDE[ssDE](../../includes/ssde-md.md)], mit dem abgelaufene Parametertabellen für den Cleanup geplant werden, beendet wurde.<br /><br /> Master Cleanuptask gestartet: Gibt an, wann der Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements beginnt.<br /><br /> Master Cleanuptask Started: Gibt an, wann der Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements endet.<br /><br /> Master Cleanuptask übersprungen: Gibt an, dass von [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|Ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Die Uhr Ausführung gestartet: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen geplant für die Bereinigung gestartet wurde.<br /><br /> Die Uhr fertig ausgeführt: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen geplant für die Bereinigung abgeschlossen ist.<br /><br /> Master Cleanuptask gestartet: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements beginnt.<br /><br /> Master Cleanuptask Started: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements endet.<br /><br /> Master Cleanuptask übersprungen: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|Ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  

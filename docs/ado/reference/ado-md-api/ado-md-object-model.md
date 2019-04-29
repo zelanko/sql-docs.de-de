@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062693"
 ---
 # <a name="ado-md-object-model"></a>ADO MD-Objektmodell
 In diesem Thema wird beschrieben, wie Objekte dargestellt, und beziehen in ADO MD.  
@@ -39,6 +39,6 @@ In diesem Thema wird beschrieben, wie Objekte dargestellt, und beziehen in ADO M
  [ADO MD-Methoden](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD-Objekte](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)   
- [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

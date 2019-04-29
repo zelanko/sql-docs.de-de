@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061608"
 ---
 # <a name="features-to-watch-for"></a>Zu überwachende Funktionen
 Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Entwickler häufig sehen. In der Tat wird diese Features in der Unterstützung und die Art und Weise der Unterstützung für DBMS variieren; Fehler beim Code dafür ist wahrscheinlich in interoperablen Anwendungen ausführen zu Problemen führen.  

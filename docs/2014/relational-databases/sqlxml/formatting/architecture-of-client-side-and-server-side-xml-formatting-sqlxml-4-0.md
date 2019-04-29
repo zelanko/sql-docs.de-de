@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131430"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architektur clientseitiger und serverseitiger XML-Formatierung (SQLXML 4.0)
   Die folgende Abbildung zeigt die Architektur der XML-Formatierung auf Serverseite:  
@@ -40,7 +40,7 @@ ms.locfileid: "52750352"
   
  ![Architektur der XML-Formatierung auf Clientseite. ](../../../database-engine/dev-guide/media/clientsidexml.gif "Architektur der XML-Formatierung auf Clientseite.")  
   
- In diesem Beispiel verwendet der Client den SQLXMLOLEDB-Anbieter. In der Verbindungszeichenfolge muss die Datenanbieter-Eigenschaft SQLOLEDB festgelegt werden. (Dies ist der einzige in SQLXML 4.0 akzeptierte Wert.) Der auf dem Client ausgeführte Befehl wird an den Server gesendet. Das auf dem Server generierte Rowset wird an den Client gesendet. Die Formatierung des XML-Dokuments aus dem Rowset wird auf dem Client ausgeführt.  
+ In diesem Beispiel verwendet der Client den SQLXMLOLEDB-Anbieter. In der Verbindungszeichenfolge muss die Datenanbieter-Eigenschaft SQLOLEDB festgelegt werden. (Dies ist der einzige in SQLXML 4.0 akzeptierte Wert.) Der Befehl, der auf dem Client ausgeführt wird, wird an den Server gesendet. Das auf dem Server generierte Rowset wird an den Client gesendet. Die Formatierung des XML-Dokuments aus dem Rowset wird auf dem Client ausgeführt.  
   
  In SQLXML 4.0 kann entweder der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) oder der SQLOLEDB-Anbieter als Datenanbieter verwendet werden. Sie können potenziell auf jede Datenquelle zugreifen. Vorausgesetzt, die Abfrage gibt ein einzelnes Rowset zurück, kann die XML-Transformation auf dem Client angewendet werden.  
   

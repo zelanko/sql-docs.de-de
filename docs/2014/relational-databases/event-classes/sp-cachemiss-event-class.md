@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050926"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss-Ereignisklasse
   Von der SP:CacheMiss-Ereignisklasse wird angegeben, dass die Prozedur nicht im Cache gefunden wurde. Wenn die SP:CacheMiss-Ereignisklasse häufig auftritt, kann das ein Hinweis darauf sein, dass für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mehr Arbeitsspeicher bereitgestellt werden sollte, um die Größe des Prozedurcaches zu erhöhen.  

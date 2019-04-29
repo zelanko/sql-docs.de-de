@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062194"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
   In Rowsets und als Parameterwerte stellt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten über die folgenden OLE DB definierten Datentypen, die in den Funktionen gemeldet **IColumnsInfo:: GetColumnInfo** und  **ICommandWithParameters:: GetParameterInfo**.  
@@ -89,7 +89,7 @@ ms.locfileid: "52766042"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten abgerufen werden als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT ist.<br /><br /> VARIANT_TRUE: Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben, in der Fall der Puffer die SSVARIANT-Struktur enthalten soll.<br /><br /> VARIANT_FALSE: Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer müssen VARIANT-Struktur.|  
+|SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten abgerufen werden als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT ist.<br /><br /> VARIANT_TRUE: Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben, in der Fall der Puffer die SSVARIANT-Struktur enthalten soll.<br /><br /> VARIANT_FALSE: Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer müssen VARIANT-Struktur.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;OLE-DB&#41;](data-types-ole-db.md)  

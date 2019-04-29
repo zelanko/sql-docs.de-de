@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164328"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für Berichts-Designer
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer
   Beim Entwerfen von Berichten verwendet der Berichts-Designer Datenverarbeitungserweiterungen zum Abruf und zur Verarbeitung von Daten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichts-Designer als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichts-Designers RSReportDesigner.config vornehmen.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>So stellen Sie eine Assembly für Datenverarbeitungserweiterungen bereit  

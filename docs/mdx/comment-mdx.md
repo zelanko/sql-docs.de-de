@@ -1,5 +1,5 @@
 ---
-title: Kommentar (MDX) | Microsoft Docs
+title: Kommentar (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181569"
 ---
-# <a name="comment-mdx"></a>Kommentar (MDX)
+# <a name="comment-mdx"></a>Comment (MDX)
 
 
   Zeigt vom Benutzer bereitgestellten Kommentartext an.  
@@ -33,7 +33,7 @@ ms.locfileid: "34740719"
  Die Zeichenfolge, die den Text des Kommentars enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Server wertet nicht den Text zwischen den Kommentarzeichen / * und \*/. Kommentare können sowohl in einer eigenen Zeile als auch innerhalb einer MDX-Anweisung (Multidimensional Expressions) eingefügt werden. Mehrzeilige Kommentare müssen angegeben werden, indem Sie /\* und \*/.  
+ Der Server nicht ausgewertet den Text zwischen den Kommentarzeichen / * und \*/. Kommentare können sowohl in einer eigenen Zeile als auch innerhalb einer MDX-Anweisung (Multidimensional Expressions) eingefügt werden. Mehrzeilige Kommentare müssen angegeben werden, indem Sie /\* und \*/.  
   
  Es gibt keine Maximallänge für Kommentare. Kommentare können geschachtelt sein; so ist `/* Test /*Comment*/ Text*/` ein Beispiel für einen geschachtelten Kommentar.  
   
@@ -54,7 +54,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [&#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [-- &#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

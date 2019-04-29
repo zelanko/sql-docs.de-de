@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063066"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Neusortieren von Ausgabespalten (Visual Database Tools)
   Die Reihenfolge, in der Datenspalten einer Auswahlabfrage hinzugefügt werden, legt deren Reihenfolge in den angezeigten Ergebnissen fest. Die erste zur Abfrage hinzugefügte Spalte wird in den Ergebnissen ganz links angezeigt, die zweite Spalte rechts daneben usw.  

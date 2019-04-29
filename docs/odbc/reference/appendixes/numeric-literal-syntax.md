@@ -16,39 +16,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181281"
 ---
 # <a name="numeric-literal-syntax"></a>Syntax von numerischen Literalen
 Die folgende Syntax wird für numerische Literale in ODBC verwendet:  
   
- *numerischen Literalen* :: = *signiert-numerische-Literal &#124; unsigned-numerische-Literal*  
+ *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
   
  *signiert-numerische-Literal* :: = [*anmelden*] *unsigned-numerische-Literal*  
   
- *unsigned-numerische-Literal* :: = *exakte numerische-literalen &#124; ungefähren numerischen-Literalen*  
+ *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
   
- *exakte numerische-literalen* :: = *unsigned Integer* [*Zeitraum*[*unsigned Integer*]]  *&#124;Zeitraum des unsigned Integer*  
+ *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *Anmeldung* :: = *Pluszeichen &#124; Minuszeichen (-)*  
+ *sign* ::= *plus-sign &#124; minus-sign*  
   
  *Ungefähre numerische-literalen* :: = *Mantisse E Exponent*  
   
- *Mantisse* :: = *exakte numerische-literalen*  
+ *mantissa* ::= *exact-numeric-literal*  
   
- *Exponent* :: = *Ganzzahl mit Vorzeichen*  
+ *exponent* ::= *signed-integer*  
   
  *signierte Ganzzahl* :: = [*anmelden*] *einer Ganzzahl ohne Vorzeichen*  
   
  *nicht signierte Ganzzahl* :: = *Ziffer...*  
   
- *Pluszeichen (+)* :: = *+*  
+ *plus-sign* ::= *+*  
   
- *Minuszeichen (-)* :: = -  
+ *minus-sign* ::= -  
   
- *Ziffer* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *Zeitraum* :: =.

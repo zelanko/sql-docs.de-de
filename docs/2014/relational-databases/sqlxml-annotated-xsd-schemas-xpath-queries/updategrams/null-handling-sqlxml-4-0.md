@@ -16,14 +16,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 59110e6686307e9555355fb72fefdbf6099bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060109"
 ---
 # <a name="null-handling-sqlxml-40"></a>Behandlung von NULL (SQLXML 4.0)
-  XML-Syntax deutet NULL als eine Abwesenheit. Wenn ein Attribut- oder Elementwert beispielsweise NULL ist, ist das Attribut bzw. Element nicht in dem XML-Dokument vorhanden. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML aktiviert das `updg:nullvalue`-Attribut die Möglichkeit, NULL für einen Attribut- oder Elementwert anzugeben.  
+  XML-Syntax deutet NULL als eine Abwesenheit. (Z. B. wenn ein Attribut- oder Elementwert Wert NULL ist, das Attribut bzw. Element nicht vorhanden ist aus dem XML-Dokument.) In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, die `updg:nullvalue` Attribut ermöglicht die Angabe von NULL für ein Element oder Attribut-Wert.  
   
  Z. B. das folgende Updategram stellt sicher, dass die **Titel** -Wert eines Kontakts mit **ContactID** von 64 NULL ist, und aktualisiert dann die **Titel** Wert auf "Mr." auf "Mr.".  
   

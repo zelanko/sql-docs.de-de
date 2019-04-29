@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157961"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
   Gibt an, ob Sie ein neues erstellen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] eine Speicheroptimierte Tabelle oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten Tabelle migrieren, ist es wichtig, dass der Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie den Server mit ausreichend bereitstellen können Arbeitsspeicher. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Informationen zur Funktionsweise von Hashindizes in speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Tabellen finden Sie unter [Hashindizes](../../database-engine/hash-indexes.md).  
   
- **Hinweis**: Sie können die Arraygröße des Hashindexes nicht spontan ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
+ **Hinweis**: Sie können nicht die Arraygröße des Hash-Index im Handumdrehen ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
   
  **Die Arraygröße der Hash-Index festlegen**  
   

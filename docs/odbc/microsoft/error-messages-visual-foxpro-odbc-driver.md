@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127985"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Fehlermeldungen (Visual FoxPro-ODBC-Treiber)
 Wenn ein Fehler auftritt, wird von der Visual FoxPro-Treiber die folgenden Informationen zurückgegeben:  
@@ -43,14 +43,14 @@ Wenn ein Fehler auftritt, wird von der Visual FoxPro-Treiber die folgenden Infor
 ## <a name="syntax"></a>Syntax  
  Fehlermeldungen weisen folgendes Format:  
   
- **[** *Hersteller* **] [** *ODBC_component* **]** *Error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  Die Präfixe in eckige Klammern ([]) ermitteln die Ursache des Fehlers, wie in der folgenden Tabelle definiert.  
   
-|Datenquelle|Präfix|value|  
+|Datenquelle|Präfix|Wert|  
 |-----------------|------------|-----------|  
-|Treiber-Manager|[Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[ODBC-Treiber-Manager]<br />–|  
-|Visual FoxPro-Treiber|Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[Visual FoxPro-ODBC-Treiber]<br />–|  
+|Treiber-Manager|[Hersteller]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC-Treiber-Manager]<br />Nicht zutreffend|  
+|Visual FoxPro-Treiber|Hersteller]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Visual FoxPro-ODBC-Treiber]<br />Nicht zutreffend|  
   
  Wenn die Datei nützlich in der Visual FoxPro-ODBC-Treiber nicht finden konnte, kann es z. B. die folgende Fehlermeldung zurück:  
   

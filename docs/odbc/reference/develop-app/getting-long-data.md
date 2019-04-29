@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061598"
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, wie z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings kann es zu lange im Arbeitsspeicher, z. B. langer Text-Dateien oder Bitmaps gespeichert sein. Da solche Daten nicht in einem einzigen Puffer gespeichert werden können, wird sie abgerufen, Webparts mit dem Treiber **SQLGetData** nach die anderen Daten in die Zeile abgerufen wurde.  
@@ -30,7 +30,7 @@ Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über
 > [!NOTE]  
 >  Eine Anwendung kann eigentlich jeden Datentyp mit abrufen **SQLGetData**, Daten, nicht nur lange, obwohl nur Zeichen- und Binärdaten in Teilen abgerufen werden können. Wenn die Daten klein genug, um in einen einzelnen Puffer zu passen, gibt es ist jedoch im Allgemeinen kein Grund für die Verwendung **SQLGetData**. Es ist viel einfacher, binden einen Puffer an die Spalte und des Treibers die Daten im Puffer zurück.  
   
- Zum Abrufen von long-Daten aus einer Spalte Ruft eine Anwendung zuerst **SQLFetchScroll** oder **SQLFetch** in eine Zeile verschieben, und die Daten für die gebundenen Spalten abzurufen. Die Anwendung ruft dann **SQLGetData**. **SQLGetData** hat die gleichen Argumente wie **SQLBindCol**: ein Anweisungshandle; eine Spaltennummer; der C Typ, Adresse und Byte Datenlänge einer Anwendungsvariablen; und die Adresse des ein Längen-/Indikatorpuffer. Beide Funktionen haben die gleichen Argumenten, da sie im Wesentlichen die gleiche Aufgabe ausführen: beide eine Anwendungsvariablen an den Treiber zu beschreiben und anzugeben, dass die Daten für eine bestimmte Spalte in der Variablen zurückgegeben werden sollen. Die Hauptunterschiede sind, die **SQLGetData** wird aufgerufen, nachdem eine Zeile abgerufen wird (und wird manchmal als *späte Bindung* aus diesem Grund) und dass die Bindung von angegebene **SQLGetData**  so lange beibehalten wird nur für die Dauer des Aufrufs.  
+ Zum Abrufen von long-Daten aus einer Spalte Ruft eine Anwendung zuerst **SQLFetchScroll** oder **SQLFetch** in eine Zeile verschieben, und die Daten für die gebundenen Spalten abzurufen. Die Anwendung ruft dann **SQLGetData**. **SQLGetData** hat die gleichen Argumente wie **SQLBindCol**: ein Anweisungshandle; eine Spaltennummer; der C Typ, Adresse und Byte Datenlänge einer Anwendungsvariablen; und die Adresse des ein Längen-/Indikatorpuffer. Beide Funktionen haben die gleichen Argumenten, da sie im Wesentlichen die gleiche Aufgabe ausführen: Beide eine Anwendungsvariablen an den Treiber zu beschreiben und anzugeben, dass die Daten für eine bestimmte Spalte in der Variablen zurückgegeben werden sollen. Die Hauptunterschiede sind, die **SQLGetData** wird aufgerufen, nachdem eine Zeile abgerufen wird (und wird manchmal als *späte Bindung* aus diesem Grund) und dass die Bindung von angegebene **SQLGetData**  so lange beibehalten wird nur für die Dauer des Aufrufs.  
   
  Im Hinblick auf eine einzelne Spalte **SQLGetData** verhält sich wie **SQLFetch**: Ruft die Daten für die Spalte ab, konvertiert sie in den Typ der Anwendungsvariablen und wird in dieser Variablen zurückgegeben. Es gibt auch die Bytelänge der Daten in den Längen-/Indikatorpuffer zurück. Weitere Informationen dazu, wie **SQLFetch** gibt Daten finden Sie unter [Abrufen einer Zeile mit Daten](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   

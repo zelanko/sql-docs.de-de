@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184774"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
 Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und Sicherheit (ADOX) ist eine Erweiterung der ADO-Objekte und -Programmiermodell verwendet. ADOX enthält Objekte für die Schema-Erstellung und Änderung sowie Sicherheit. Da es sich um eine schemabearbeitung Vorgehensweise objektbasiert ist, können Sie Code schreiben, die für verschiedene Datenquellen unabhängig von deren systemeigenen Syntax verwendet werden.  
@@ -52,5 +52,5 @@ Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und S
  [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADO-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../../../ado/guide/ado-programmer-s-guide.md)

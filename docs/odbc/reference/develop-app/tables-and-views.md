@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9949332d33f2d2a07e485bc0ff06c5c489df6440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148887"
 ---
 # <a name="tables-and-views"></a>Tabellen und Sichten
 In ODBC-Funktionen sind die Tabellen und Sichten austauschbar. Der Begriff *Tabelle* wird verwendet, für die Tabellen und Sichten, mit Ausnahme des Speicherorts der Begriff *Ansicht* explizit verwendet wird.

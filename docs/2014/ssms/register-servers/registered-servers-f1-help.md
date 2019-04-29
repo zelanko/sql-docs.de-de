@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049306"
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfethemen zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

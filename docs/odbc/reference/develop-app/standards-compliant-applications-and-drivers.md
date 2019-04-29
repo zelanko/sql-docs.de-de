@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148915"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Standardkonforme Anwendungen und Treiber
-Eine Standards kompatible Anwendung oder der Treiber ist eine, die die Open Group CAE-Spezifikation "Data Management: SQL Call-Level-Interface (CLI)" und dem ISO/IEC 9075 entspricht-3:1995 (E)-Call-Level-Interface (SQL/CLI).  
+Eine Standards kompatible Anwendung oder der Treiber ist eine, die die Open Group CAE-Spezifikation entspricht "Datenverwaltung: SQL-Call-Level-Interface (CLI)"und dem ISO/IEC 9075-3:1995 (E)-Call-Level-Interface (SQL/CLI).  
   
  ODBC 3.*.x* garantiert die folgenden Funktionen:  
   
@@ -37,7 +37,7 @@ Eine Standards kompatible Anwendung oder der Treiber ist eine, die die Open Grou
   
 -   Wenn eine Standards kompatible Anwendung aufruft, **SQLAllocEnv** (das kann auftreten, weil **SQLAllocEnv** ist eine gültige Funktion in der Open Group und ISO-CLI), der Aufruf zugeordnet ist  **SQLAllocHandleStd** zum Zeitpunkt der Kompilierung. Zur Laufzeit ruft die Anwendung daher **SQLAllocHandleStd**. Im Verlauf der Verarbeitung dieser Aufruf wird der Treiber-Manager das SQL_ATTR_ODBC_VERSION-Umgebung-Attribut auf SQL_OV_ODBC3 fest. Ein Aufruf von **SQLAllocHandleStd** ist gleichbedeutend mit einem Aufruf von **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV und einem Aufruf von **SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC3 festgelegt.  
   
--   Wenn eine Standards kompatible Anwendung aufruft, **SQLBindParam** (das kann auftreten, weil **SQLBindParam** ist eine gültige Funktion in der Open Group und ISO-CLI), die ODBC 3.*.x* Treiber-Manager, ordnet den Aufruf an den entsprechenden Aufruf in **SQLBindParameter**. (Finden Sie unter [SQLBindParam-Zuordnung](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.)  
+-   Wenn eine Standards kompatible Anwendung aufruft, **SQLBindParam** (das kann auftreten, weil **SQLBindParam** ist eine gültige Funktion in der Open Group und ISO-CLI), die ODBC 3.*.x* Treiber-Manager, ordnet den Aufruf an den entsprechenden Aufruf in **SQLBindParameter**. (Finden Sie unter [SQLBindParam-Zuordnung](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) in Anhang G: Treiber-Richtlinien für Abwärtskompatibilität.)  
   
 -   Die ISO-CLI die ODBC 3. ausgerichtet *.x* Headerdateien enthalten Aliase für Informationstypen, die in Aufrufen verwendet **SQLGetInfo**. Eine Standards kompatible Anwendung kann diese Aliase verwenden, anstatt die ODBC 3.*.x* Informationstypen. Weitere Informationen finden Sie im nächste Thema, [Headerdateien](../../../odbc/reference/develop-app/header-files.md).  
   

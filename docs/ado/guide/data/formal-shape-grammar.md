@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161416"
 ---
 # <a name="formal-shape-grammar"></a>Formale Grammatik für Strukturen
 Dies ist die formale Grammatik für die Erstellung von Shape-Befehlen:  
@@ -43,30 +43,30 @@ Dies ist die formale Grammatik für die Erstellung von Shape-Befehlen:
 |Begriff|Definition|  
 |----------|----------------|  
 |\<shape-command>|Form vom Typ [\<Tabelle-"exp" > [[AS] \<Alias >]] [\<Form Action->]|  
-|\<table-exp>|{\<Anbieter Befehlstext >}&#124;<br /><br /> (\<Shape-Befehl >)&#124;<br /><br /> Tabelle \<in Anführungszeichen-Name >&#124;<br /><br /> \<in Anführungszeichen-Name >|  
-|\<Shape-Action >|APPEND \<Alias-Feld-List >&#124;<br /><br /> COMPUTE- \<Alias-Feld-List > [BY \<Feldliste >]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> Tabelle \<in Anführungszeichen-Name >&#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|APPEND \<Alias-Feld-List >&#124;<br /><br /> COMPUTE- \<Alias-Feld-List > [BY \<Feldliste >]|  
 |\<aliased-field-list>|\<Alias-Feld > [, \<Alias-Feld >]|  
 |\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<Beziehung: "exp" >)&#124;<br /><br /> \<berechnet "exp" >&#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
 |<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<Beziehung-Cond-List >|  
 |\<relation-cond-list>|\<Relation-Cond-> [, \<Beziehung Cond >...]|  
 |\<relation-cond>|\<Feld-Name > für \<untergeordnete-Ref->|  
-|\<child-ref>|\<Feld-Name >&#124;<br /><br /> PARAMETER \<Param-Ref->|  
-|\<param-ref>|\<Anzahl >|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMETER \<Param-Ref->|  
+|\<param-ref>|\<number>|  
 |\<field-list>|\<Feld-Name > [, \<Feld-Name >]|  
-|\<aggregate-exp>|SUM (\<qualifizierten-Feld-Name >)&#124;<br /><br /> AVG (\<qualifizierten-Feld-Name >)&#124;<br /><br /> MIN (\<qualifizierten-Feld-Name >)&#124;<br /><br /> MAX (\<qualifizierten-Feld-Name >)&#124;<br /><br /> COUNT (\<qualifizierten-Alias > &#124; \<qualifizierte Name >)&#124;<br /><br /> STDEV (\<qualifizierten-Feld-Name >)&#124;<br /><br /> Alle (\<qualifizierten-Feld-Name >)|  
+|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
 |\<calculated-exp>|CALC (\<Ausdruck >)|  
-|\<qualifizierte-Feld-Name >|\<Alias >. [\<Alias >...] \<Feldnamen >|  
-|\<alias>|\<in Anführungszeichen-Name >|  
-|\<Feld-Name >|\<in Anführungszeichen-Name > [[AS] \<Alias >]|  
-|\<in Anführungszeichen-Name >|"\<String >"&#124;<br /><br /> "\<String >"&#124;<br /><br /> [\<Zeichenfolge >]&#124;<br /><br /> \<Name >|  
-|\<Vollständiger Name >|Alias [.alias...]|  
-|\<Name >|Alpha [Alpha &#124; Ziffer &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<Anzahl >|Ziffer [Ziffer...]|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<in Anführungszeichen-Name > [[AS] \<Alias >]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|Alias [.alias...]|  
+|\<name>|Alpha [Alpha &#124; Ziffer &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<number>|Ziffer [Ziffer...]|  
 |\<new-exp>|NEUE \<Feldtyp > [(\<Anzahl > [, \<Anzahl >])]|  
 |\<field-type>|Ein OLE DB oder ADO-Datentyp.|  
-|\<Zeichenfolge >|Unicode-Zeichen [Unicode-Zeichen...]|  
-|\<Ausdruck >|Eine Visual Basic für Applikationen-Ausdruck, deren Operanden andere nicht-CALC-Spalten in der gleichen Zeile sind.|  
+|\<string>|Unicode-Zeichen [Unicode-Zeichen...]|  
+|\<expression>|Eine Visual Basic für Applikationen-Ausdruck, deren Operanden andere nicht-CALC-Spalten in der gleichen Zeile sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

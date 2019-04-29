@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065107"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Native Fehlermeldungen des Visual FoxPro-ODBC-Treibers
 Die folgenden Tabellen enthalten die Fehlermeldungen, die in der Visual FoxPro-ODBC-Treiber.  
@@ -280,7 +280,7 @@ Die folgenden Tabellen enthalten die Fehlermeldungen, die in der Visual FoxPro-O
   
 |||  
 |-|-|  
-|802|SQL: Die Tabelle kann nicht gefunden werden.|  
+|802|SQL: Tabelle wurde nicht gefunden.|  
 |872|Zu viele Spalten.|  
 |879|Kein Primärschlüssel.|  
 |884|Die Eindeutigkeit des Indexes *Wert* verletzt wird.|  
@@ -297,7 +297,7 @@ Die folgenden Tabellen enthalten die Fehlermeldungen, die in der Visual FoxPro-O
 |902|Fehler bei der ausdrucksauswertung.|  
 |903|Zeichenfolge ist zu lang.|  
 |904|** oder ^ Domänenfehler.|  
-|905|Log(): 0 (null) oder eine negative Zahl, die als Argument verwendet.|  
+|905|LOG(): 0 (null) oder eine negative Zahl, die als Argument verwendet.|  
 |906|Sqrt()-Argument darf nicht negativ sein.|  
 |912|Vorgang ist unzulässig für ein Allgemein.|  
 |914|Codepagenummer ist ungültig.|  

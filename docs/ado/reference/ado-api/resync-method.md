@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68ca8ac6d223100f437a7ba0ca8bf7776953d40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062268"
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten in der aktuellen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt oder [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt, aus der zugrunde liegenden Datenbank.  
@@ -38,10 +38,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der bestimmt, wie viele Datensätze der **Resync** Methode wirkt sich auf. Der Standardwert ist **AdAffectAll**. Dieser Wert ist nicht verfügbar, mit der **Resync** -Methode der der **Felder** Auflistung von einem **Datensatz** Objekt.  
+ Dies ist optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der bestimmt, wie viele Datensätze der **Resync** Methode wirkt sich auf. Der Standardwert ist **AdAffectAll**. Dieser Wert ist nicht verfügbar, mit der **Resync** -Methode der der **Felder** Auflistung von einem **Datensatz** Objekt.  
   
  *ResyncValues*  
- Optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) Wert, der angibt, ob die zugrunde liegende Werte überschrieben werden. Der Standardwert ist **AdResyncAllValues**.  
+ Dies ist optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) Wert, der angibt, ob die zugrunde liegende Werte überschrieben werden. Der Standardwert ist **AdResyncAllValues**.  
   
 ## <a name="remarks"></a>Hinweise  
   

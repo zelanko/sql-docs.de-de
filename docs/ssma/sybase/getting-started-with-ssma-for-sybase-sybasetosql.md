@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126632"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Erste Schritte mit SSMA für SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für SAP ASE können Sie schnell, konvertieren Sie Datenbankschemas SAP Adaptive Server Enterprise (ASE), um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Schemas, Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank und Migrieren von Daten aus SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
@@ -64,7 +64,7 @@ Können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL A
 Weitere Informationen finden Sie unter [konvertiert Datenbankobjekte in SQL Server laden &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
 ### <a name="metadata"></a>Metadaten  
-Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Beispielsweise wenn Sie eine Tabelle in der Sybase-Metadaten-Explorer auswählen, die sechs Registerkarten angezeigt: **Tabelle**, **SQL**, **Type Mapping**, **Daten**,  **Eigenschaften**, und **Bericht**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht mit dem ausgewählten Objekt erstellt. Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, drei Registerkarten angezeigt: **Tabelle**, **SQL**, und **Daten**.  
+Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Wenn Sie eine Tabelle in der Sybase-Metadaten-Explorer auswählen, werden z. B. sechs Registerkarten angezeigt: **Tabelle**, **SQL**, **Typzuordnung**, **Daten**, **Eigenschaften**, und **Bericht**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht mit dem ausgewählten Objekt erstellt. Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, drei Registerkarten angezeigt: **Tabelle**, **SQL**, und **Daten**.  
   
 Die meisten Metadateneinstellungen für die sind schreibgeschützt. Allerdings können Sie die folgende Metadaten ändern:  
   

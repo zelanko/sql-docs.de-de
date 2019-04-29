@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184837"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Beibehaltungsszenario für XML-Recordsets
 In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die den Inhalt von einem Recordset-Objekt direkt in das ASP-Response-Objekt speichert.  
@@ -41,7 +41,7 @@ In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die d
 ## <a name="step-1-set-up-the-application"></a>Schritt 1: Einrichten der Anwendung  
  Erstellen Sie ein virtuelles IIS-Verzeichnis mit dem Namen "XMLPersist" mit der Skripterstellung für Berechtigungen. Erstellen Sie zwei neue Textdateien im Ordner "auf das das virtuelle Verzeichnis, eine benannte"XMLResponse.asp,"die anderen benannten""default.htm"."zeigt"  
   
-## <a name="step-2-get-the-data"></a>Schritt 2: Abrufen der das  
+## <a name="step-2-get-the-data"></a>Schritt 2: Abrufen der Daten  
  In diesem Schritt schreiben Sie Code zum Öffnen eines ADO-Recordsets und vorbereiten, um es an den Client zu senden. Öffnen Sie die Datei XMLResponse.asp mit einem Text-Editor wie Editor, und fügen Sie den folgenden Code.  
   
 ```  
@@ -70,7 +70,7 @@ In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die d
   
  Lassen Sie die Datei, geöffnet, und fahren Sie mit dem nächsten Schritt.  
   
-## <a name="step-3-send-the-data"></a>Schritt 3: Senden von Daten  
+## <a name="step-3-send-the-data"></a>Schritt 3: Die Daten senden  
  Nun, da Sie ein Recordset verfügen, müssen Sie diese beim Speichern als XML an das ASP-Response-Objekt an den Client senden. Fügen Sie den folgenden Code am Ende XMLResponse.asp.  
   
 ```  

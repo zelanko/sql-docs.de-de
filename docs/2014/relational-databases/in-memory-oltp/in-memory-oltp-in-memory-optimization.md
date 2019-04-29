@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158023"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]wurde in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] neu eingeführt und kann die Leistung der OLTP-Datenbank erheblich verbessern. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ist eine speicheroptimierte Datenbank-Engine, die in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine integriert und für OLTP optimiert wurde.  
   
 |||  
 |-|-|  
-|![Azure VM](../../master-data-services/media/azure-virtual-machine.png "virtuellen Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
   
  Zur Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]definieren Sie eine Tabelle, auf die viel zugegriffen wird, als speicheroptimiert. Speicheroptimierte Tabellen sind vollständig transaktionsfähig und dauerhaft, und der Zugriff erfolgt genau wie bei datenträgerbasierten Tabellen über [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Eine Abfrage kann sowohl auf speicheroptimierte Tabellen als auch auf datenträgerbasierte Tabellen verweisen. Eine Transaktion kann Daten in speicheroptimierten Tabellen und in datenträgerbasierten Tabellen aktualisieren. Gespeicherte Prozeduren, die nur auf speicheroptimierte Tabellen verweisen, können zur weiteren Leistungsverbesserung systemintern in Computercode kompiliert werden. Die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Engine ist für außerordentlich hohe Sitzungsparallelität für Transaktionen vom OLTP-Typ konzipiert, die von einer hochgradigen Skalierung auf mittlerer Ebene gesteuert werden. Um dies zu erreichen, werden Datenstrukturen ohne Latches, jedoch mit Multiversionsverwaltung und optimistischer Nebenläufigkeitssteuerung verwendet. Das Ergebnis ist eine vorhersehbare niedrige Latenz unter einer Millisekunde sowie ein hoher Durchsatz mit linearer Skalierung für Datenbanktransaktionen. Der tatsächliche Leistungszuwachs hängt von vielen Faktoren ab, jedoch kann mit Leistungsverbesserungen um das 5- bis 20-fache gerechnet werden.  
   

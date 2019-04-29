@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035419"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (Hilfsprogramm)
   Das Hilfsprogramm **SQLDiag** listet allgemeine Diagnoseinformationen auf und kann als Konsolenanwendung oder Dienst ausgeführt werden. Mithilfe von **SQLDiag** können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. **SQLDiag** dient dazu, das Sammeln von Diagnoseinformationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Services zu beschleunigen und zu vereinfachen.  
@@ -111,7 +111,7 @@ ms.locfileid: "53590254"
 > [!NOTE]  
 >  **SQLDiag** fügt beim Starten die Ausgabe nicht an den aktuellen Ausgabeordner an. Das Programm kann nur den Standardausgabeordner überschreiben (Option 1) oder den Ordner umbenennen (Option 2) und dann die Ausgabe in den neuen Standardausgabeordner namens SQLDIAG schreiben.  
   
- **/ M** _machine1_ [ *"machine2" ** MachineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  Überschreibt die in der Konfigurationsdatei angegebenen Computer. Standardmäßig ist die Konfigurationsdatei SQLDiag.Xml oder wird mit dem **/I** -Parameter festgelegt. Wenn Sie mehr als einen Computer angeben möchten, verwenden Sie Leerzeichen zum Trennen der Computernamen.  
   
  Durch Verwenden von *@machinelistfile* wird ein Computerlistendateiname angegeben, der in der Konfigurationsdatei gespeichert werden sollte.  
@@ -151,7 +151,7 @@ ms.locfileid: "53590254"
   
  Beachten Sie, dass **SQLDiag** die lokale Zeit auf dem Computer verwendet, auf dem das Hilfsprogramm ausgeführt wird.  
   
- **/ A** _SQLdiag_application_name_  
+ **/A** _SQLdiag_application_name_  
  Ermöglicht das Ausführen mehrerer Instanzen des Hilfsprogramms **SQLDiag** für dieselbe Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Jeder *SQLDiag_application_name* identifiziert eine andere Instanz von **SQLDiag**. Zwischen einer Instanz von *SQLDiag_application_name* und einem Instanznamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] besteht keine Beziehung.  
@@ -366,6 +366,6 @@ SQLDIAG START /A Instance1
 >  Zum Sammeln von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsinformationen aus gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen auf dem Cluster administrative Freigaben (ADMIN$) aktiviert sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Attributen zu Dimensionen | Microsoft Docs
+title: Hinzufügen von Attributen zu Dimensionen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046012"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lektion 2 – 3 – Hinzufügen von Attributen zu Dimensionen
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lektion 2 – 3: Hinzufügen von Attributen zu Dimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Nachdem Sie Dimensionen definiert haben, können Sie sie jetzt mit Attributen auffüllen, die die einzelnen Datenelemente in der Dimension darstellen. Attribute basieren normalerweise auf Feldern einer Datenquellensicht. Wenn Sie einer Dimension Attribute hinzufügen, können Sie Felder einer beliebigen Tabelle in die Datenquellensicht einschließen.  
@@ -123,7 +123,7 @@ In dieser Aufgabe verwenden Sie den Dimensions-Designer, um der Customer-Dimensi
   
 5.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Überprüfen von Cube- und Dimensionseigenschaften](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143074"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
   In dieser Aufgabe konvertieren Sie die **Zustand** Attribut der **Lieferanten** Entität als ein **domänenbasiertes Attribut**. Nach dem Konfigurieren der State-Attribut, um einen domänenbasierten werden, und veröffentlichen es in MDS, eine neue Entität mit dem Namen **Zustand** auf MDS-Server mit allen Werten in der Spalte erstellt werden und die **Zustand** Attribut der **Lieferanten** Entität gefüllt mit Werten aus der **Zustand** Entität. Jetzt die **Lieferanten** Modell sollten zwei Entitäten haben: **Lieferanten** und **Zustand** , in denen die **Zustand** Attribut der **Lieferanten** Entität ist ein domänenbasiertes Attribut, von denen abhängt **Zustand** Entität.  
   
 1.  Wechseln Sie zur **Excel** Fenster mit **Cleansed and Matched Suppliers.xlsx** zu öffnen.  

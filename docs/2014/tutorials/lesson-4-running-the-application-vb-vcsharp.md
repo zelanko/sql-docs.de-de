@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137485"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>Lektion 4: Ausführen der Anwendung (VB-VC#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bietet einige Methoden zum Erstellen und Ausführen einer Konsolenanwendung von der integrierten Entwicklungsumgebung (IDE, Integrated Development Environment) aus, beispielsweise:  

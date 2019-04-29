@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126169"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Massenkopieren ohne Formatdatei (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren eine Datendatei im systemeigenen Modus erstellt werden kann, ohne eine Formatdatei zu verwenden. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

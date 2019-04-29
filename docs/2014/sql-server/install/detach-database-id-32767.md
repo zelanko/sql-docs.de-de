@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131062"
 ---
 # <a name="detach-database-id-32767"></a>Datenbank-ID 32767 trennen
   Der Updateratgeber hat eine Datenbank mit der Datenbank-ID&nbsp;32767 gefunden. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher ist diese Datenbank-ID reserviert. Trennen Sie die Datenbank vor der Aktualisierung. Sie können die Datenbank nach der Aktualisierung anfügen.  

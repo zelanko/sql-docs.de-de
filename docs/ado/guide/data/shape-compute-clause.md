@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062816"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
 Eine Shape COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; optional, deren Inhalt neue Kapitel oder berechnete Spalten werden, Spalten oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten von den untergeordneten **Recordset** in aufgeführt die optionale BY-Klausel.  
@@ -138,7 +138,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   

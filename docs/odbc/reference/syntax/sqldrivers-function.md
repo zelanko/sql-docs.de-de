@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061898"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC 2.0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLDrivers** enthält Beschreibungen der Treiber und Treiber-Attribut-Schlüsselwörter. Diese Funktion ist nur vom Treiber-Manager implementiert werden.  
@@ -79,7 +79,7 @@ SQLRETURN SQLDrivers(
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte) zurückgegeben. verfügbar für die zurückzugebenden in \* *DriverAttributes*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *BufferLength2*, die Liste der Attribut-Wert-Paare im \* *DriverAttributes* auf abgeschnitten  *BufferLength2* abzüglich der Länge des Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDrivers** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_ENV und *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDrivers** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

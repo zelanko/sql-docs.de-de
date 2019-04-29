@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042756"
 ---
 # <a name="copying-descriptors"></a>Kopieren von Deskriptoren
 Die **SQLCopyDesc** Funktion wird aufgerufen, um die Felder der einen Deskriptor auf einem anderen Deskriptor zu kopieren. Felder können nur für einen Anwendungsdienst-Deskriptor oder einem IPD, aber nicht für eine IRD kopiert werden. Felder können von jeder Art von Deskriptor kopiert werden. Nur die Felder, die für die Quell- und Zieldateien Deskriptoren definiert sind, werden kopiert. **SQLCopyDesc** Feld SQL_DESC_ALLOC_TYPE wird nicht kopiert werden, da ein Deskriptor der Zuordnungstyp nicht geändert werden kann. Kopierte Felder überschreiben die vorhandenen Felder.  

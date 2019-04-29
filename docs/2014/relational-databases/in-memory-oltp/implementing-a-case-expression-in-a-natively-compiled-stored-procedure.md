@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157935"
 ---
 # <a name="implementing-a-case-statement"></a>Implementieren einer CASE-Anweisung
   CASE-Anweisungen werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität einer CASE-Anweisung in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  

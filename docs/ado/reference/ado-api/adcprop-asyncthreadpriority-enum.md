@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065303"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt die Ausführungspriorität des asynchronen Threads, die Daten abruft.  
   
  Verwenden Sie diese Konstanten mit dem **Recordset** "**Hintergrundpriorität Thread**" dynamische Eigenschaft, die im Index ADO, OLE DB dynamische Eigenschaft verwiesen wird und Sie finden Sie unter der [ Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dokumentation.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Legt die Priorität zwischen normalen und die höchste fest.|  
 |**adPriorityBelowNormal**|2|Legt die Priorität zwischen dem niedrigsten und den normalen fest.|  
@@ -37,7 +37,7 @@ Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md
 |**adPriorityNormal**|3|Legt die Priorität auf Normal fest.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

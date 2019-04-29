@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042516"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lektion 3: Laden Sie eine Berichtsdefinition vom Berichtsserver
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver
   Nachdem Sie Ihr Projekt erstellt und die Klassen aus dem RDL-Schema generiert haben, können Sie eine Berichtsdefinition vom Berichtsserver laden.  
   
 ### <a name="to-load-a-report-definition"></a>So laden Sie eine Berichtsdefinition  
@@ -97,7 +97,7 @@ ms.locfileid: "56025641"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Finden Sie unter [Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Siehe [Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

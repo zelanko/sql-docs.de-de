@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158170"
 ---
 # <a name="implementing-an-outer-join"></a>Implementieren eines äußeren Joins
   Äußere Joins werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines linken äußeren Joins in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  

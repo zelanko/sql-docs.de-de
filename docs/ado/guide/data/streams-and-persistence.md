@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062628"
 ---
 # <a name="streams-and-persistence"></a>Datenströme und Persistenz
 Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [speichern](../../../ado/reference/ado-api/save-method.md) Methode speichern, oder *beibehalten*, **Recordset** in einer Datei, und die [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methode stellt der **Recordset** aus dieser Datei.  
@@ -163,5 +163,5 @@ function GetRs()
   
 ## <a name="see-also"></a>Siehe auch  
  [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

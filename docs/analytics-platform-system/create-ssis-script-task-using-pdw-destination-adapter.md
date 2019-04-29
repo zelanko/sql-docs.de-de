@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Skripttask mit SSIS PDW-Zieladapter | Microsoft Docs
+title: Erstellen Sie einen Skripttask mit SSIS PDW-Zieladapter | Microsoft-Dokumentation
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142302"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen Sie einen Skripttask, der SSIS-Parallel Data Warehouse-Zieladapter verwendet.
-Diese Skriptcode der SSIS-Paket ist ein Codebeispiel für den SSIS-PDW-Zieladapter verwenden.  Integration Services-Skripttask können Sie praktisch jeder Vorgang, der durchgeführt werden können in einer .NET-Anwendung innerhalb des Kontexts, der eine ablaufsteuerung des SSIS-ausführen. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen Sie einen Skripttask, der SSIS-Parallel Data Warehouse-Ziel-Adapter verwendet
+Dieser SSIS-Pakets-Skript-Code ist ein Codebeispiel für die Verwendung des SSIS PDW-Zieladapter.  Integration Services-Skripttask können Sie praktisch alle Vorgänge, die ausgeführt werden kann in einer .NET-Anwendung innerhalb des Kontexts, der eine ablaufsteuerung des SSIS-ausführen. 
   
 ## <a name="sample-code"></a>Beispielcode  
   
@@ -25,11 +25,11 @@ Diese Skriptcode der SSIS-Paket ist ein Codebeispiel für den SSIS-PDW-Zieladapt
   
 2.  Öffnen Sie die Aufgabe in der **Skripttask-Editor**, und klicken Sie auf **Bearbeitungsskript**.  
   
-3.  Bearbeiten Sie das Skript aus, um den unten stehenden Code verwenden. Das Skript in Ihrer Umgebung durch folgende Änderungen angepasst:  
+3.  Bearbeiten Sie das Skript, um den unten angegebenen Code verwenden. Das Skript für Ihre Umgebung wird durch folgende Änderungen angepasst:  
   
-    -   Bewahren Sie den Namespace des Skripts, die vom Skripttask erstellt. Notieren Sie den Namen des Namespaces `namespace ST_<GUID>` und bearbeiten Sie das Skript unten ändern *ST_<GUID>*  mit dem ursprünglichen *GUID* des Skripttasks.  
+    -   Sie müssen den Namespace des vom Skript erstellt, die vom Skripttask aufgerufen wurden beibehalten. Notieren Sie den Namen des Namespace `namespace ST_<GUID>` und bearbeiten Sie das folgende Skript, Ändern von *ST_<GUID>*  auf den ursprünglichen *GUID* des Skripttasks.  
   
-    -   Ersetzen Sie vier Vorkommen von den Platzhalterwert *XXXXXXXX* mit den Werten, die für Ihre Umgebung und die beabsichtigte Aktion geeignet.  
+    -   Ersetzen Sie den Platzhalterwert vier Vorkommen *XXXXXXXX* mit der entsprechenden Werte für Ihre Umgebung und die beabsichtigte Aktion.  
   
     ```c#  
     #region Help:  Introduction to the script task  

@@ -1,5 +1,5 @@
 ---
-title: Median (MDX) | Microsoft Docs
+title: Median (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e962507d6e437974708aa042919ea6fb7bd632d0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048524"
 ---
 # <a name="median-mdx"></a>Median (MDX)
 
@@ -32,7 +32,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  

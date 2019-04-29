@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignis-Instanziierung: Visual Basic | Microsoft-Dokumentation'
+title: 'ADO-Ereignisinstanziierung: Visual Basic | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0223d4d4346f26ff9339fce3cbc43be9bfcbe82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062936"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO-Ereignisinstanziierung: Visual Basic
 Um ADO-Ereignisse in Microsoft® Visual Basic® behandeln zu können, müssen Sie deklarieren, einem auf Modulebene Variablen mithilfe der **WithEvents** Schlüsselwort. Die Variable kann nur als Teil eines Moduls Klasse deklariert werden und muss auf der Modulebene deklariert werden. Dies ist nicht so restriktiv wie es, aber scheint da Visual Basic **Formular** Objekte sind ebenfalls Klassen. Die einfachste Möglichkeit zum Behandeln von ADO-Ereignissen wird zum Deklarieren einer Variablen mit **WithEvents**. Das folgende Beispiel verarbeitet die **ConnectComplete** -Ereignis für eine **Verbindung** Objekt:  

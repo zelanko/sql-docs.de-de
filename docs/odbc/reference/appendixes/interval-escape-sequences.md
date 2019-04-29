@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81481db74d973da0e54bc6bf9e70550fa3cc0c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188886"
 ---
 # <a name="interval-escape-sequences"></a>Intervall-Escapesequenzen
 ODBC verwendet Escape-Sequenzen, für die Intervall-Literale. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
   
- {*Intervall-Literal*}  
+ {*interval-literal*}  
   
  Informationen zur BNF-Syntax von *Intervall-Literal*, finden Sie unter den [Intervall Literal-Syntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) weiter unten in diesem Anhang.  
   

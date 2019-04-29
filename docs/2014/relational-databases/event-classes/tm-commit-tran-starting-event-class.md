@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061357"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting (Ereignisklasse)
   Die TM: Commit Tran Starting-Ereignisklasse zeigt an, dass eine COMMIT TRANSACTION-Anforderung gestartet wird. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Commit der aktuellen Transaktion gestartet wird.  

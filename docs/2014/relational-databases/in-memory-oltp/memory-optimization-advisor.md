@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158001"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
   Das Berichtstool für Transaktionsleistung (siehe [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche Tabellen in der Datenbank von einer Portierung zu In-Memory OLTP profitieren. Nachdem Sie eine Tabelle identifiziert haben, die Sie zur Verwendung In-Memory OLTP portieren möchten, können Sie den Ratgeber für die Speicheroptimierung verwenden, der Sie bei der Migration der datenträgerbasierten Datenbanktabelle zu In-Memory OLTP unterstützt.  

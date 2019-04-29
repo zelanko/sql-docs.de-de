@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057063"
 ---
 # <a name="configure-auto-statistics"></a>Statistiken automatisch konfigurieren
 
@@ -32,7 +32,7 @@ Statistiken automatisch sind Statistiken, die die Abfrageoptimierer erstellt und
 Statistiken automatisch umfasst die folgenden drei Einstellungen: 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-Wenn das automatische Erstellen der Statistik, AUTO_CREATE_STATISTICS ist ON, der Abfrageoptimierer erstellt Statistiken für einzelne Spalten im Abfrageprädikat, nach Bedarf, um kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
+Ist die Option AUTO_CREATE_STATISTICS zum automatischen Erstellen von Statistiken aktiviert, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 Wenn die AUTO_UPDATE_STATISTICS-Option zur automatischen Aktualisierung von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.

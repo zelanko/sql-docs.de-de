@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) | Microsoft Docs
+title: StripCalculatedMembers (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150201"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
 
@@ -33,7 +33,7 @@ StripCalculatedMembers(Set_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **StripCalculatedMembers** -Funktion entfernt berechnete Elemente aus einem Satz. Berechnete Elemente können auf eine Gruppe hinzugefügt werden, mithilfe der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) Funktion, die berechnete Elemente, die auf dem Server definiert sind oder berechnete Elemente, die in der Abfrage selbst mithilfe der WITH MEMBER-Syntax hinzugefügt wurden.  
+ Die **StripCalculatedMembers** -Funktion entfernt berechnete Elemente aus einem Satz. Berechnete Elemente können auf eine Gruppe hinzugefügt werden, mithilfe der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion, die gibt berechnete Elemente, die auf dem Server definiert sind oder berechnete Elemente, die in der Abfrage selbst mithilfe der WITH hinzugefügt wurden MEMBER-Syntax.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden alle berechneten Elemente aus der Abfrage entfernt.  

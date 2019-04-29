@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155720"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für systemintern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,13 +81,13 @@ ms.locfileid: "58527142"
 ##  <a name="bfncsp"></a> Integrierte Funktionen in systemintern kompilierten gespeicherten Prozeduren  
  Die folgenden Funktionen werden in Standardeinschränkungen in speicheroptimierten Tabellen und in systemintern kompilierten gespeicherte Prozeduren unterstützt.  
   
--   Mathematische Funktionen: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE und TAN.  
+-   Mathematische Funktionen: ACOS, ASIN, ATAN, ATN2, COS, COT, Grad, "exp", LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, "SQRT", QUADRAT und TAN  
   
--   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
+-   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, Tag, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und Jahr.  
   
 -   Zeichenfolgenfunktionen: LEN, LTRIM, RTRIM und SUBSTRING  
   
--   Identitätsfunktionen: SCOPE_IDENTITY  
+-   Identity-Funktion: SCOPE_IDENTITY  
   
 -   NULL-Funktionen: ISNULL  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527142"
 ##  <a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) kann [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
   
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Msg 41398, Level 16, Status 1, Prozedur  *\<Prozedurname >*, Zeile  *\<Zeilennummer >* der Operator TOP kann maximal 8192 Zeilen zurückgeben  *\<Anzahl >* angefordert wurde.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, erhalten Sie die Fehlermeldung angezeigt: **Msg 41398, Level 16, Status 1, Prozedur  *\<Prozedurname >*, Zeile  *\<Zeilennummer >* der Operator TOP kann maximal 8192 Zeilen zurückgeben  *\<Anzahl >* angefordert wurde.**  
   
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
   
  Wenn keine ORDER BY-Klausel verwendet wird, können Sie jeden ganzzahligen Wert mit dem TOP-Operator verwenden.  
   
- Beispiel mit TOP N = 8192: Wird kompiliert  
+ Beispiel mit TOP N = 8192: Kompiliert  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  Die Einschränkung auf 8192 Zeilen gilt nur für `TOP N` , wobei `N` wie in den Beispielen oben eine Konstante ist.  Wenn `N` größer als 8192 sein muss, können Sie den Wert einer Variablen zuweisen und die Variable mit `TOP`verwenden.  
   
- Beispiel mit einer Variablen: Wird kompiliert  
+ Beispiel für die Verwendung einer Variablenverweis: Kompiliert  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden kann, verringert wird:  
+ **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen, die u. u. die Anzahl von Zeilen verringert, die vom TOP-Operator zurückgegeben werden können:  
   
 -   Verwenden von JOINs in der Abfrage  Die Auswirkungen von JOINs auf die Einschränkung sind vom Abfrageplan abhängig.  
   

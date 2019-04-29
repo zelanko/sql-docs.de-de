@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065618"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
   Das Ausführen von Änderungsvorgängen (ALTER) in speicheroptimierten Tabellen wird nicht unterstützt. Hierzu zählen beispielsweise das Ändern von bucket_count, das Hinzufügen oder Entfernen eines Indexes und das Hinzufügen oder Entfernen einer Spalte. Dieses Thema stellt Richtlinien zum Aktualisieren speicheroptimierter Tabellen bereit.  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134952"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
 Diese Anweisungen führen Sie durch die Schritte zur Verwendung der Windows Server Update Services (WSUS)-Konfigurations-Assistent zum Konfigurieren von WSUS für Analytics Platform System. Sie müssen zum Konfigurieren von WSUS, bevor Sie Softwareupdates auf das Gerät anwenden können. WSUS ist bereits auf dem VMM-virtuellen Computer des Geräts installiert.  
@@ -63,7 +63,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     4.  Wenn das erste Mal haben Sie den WSUS-Konfigurationsassistenten ausführen, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates konfigurieren. `C:\wsus` ist Sie ein geeigneten Speicherort. Sie können jedoch einen anderen Pfad bereitstellen.  
   
-        ![WSUS-Pfad](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
+        ![WSUS path](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
     5.  Überprüfen Sie die **Vorbemerkungen** Liste von Elementen, die abgeschlossen werden, bevor Sie den Assistenten abzuschließen.  
   
@@ -133,7 +133,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     Wählen Sie **Englisch**, und klicken Sie dann auf **Weiter**.  
   
-    ![Wählen Sie die Sprachen](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Choose languages](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Wählen Sie die Produkte.  
   

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164754"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Abfrageparameter definieren (Dialogfeld) (Berichts-Generator)
   Im Dialogfeld **Abfrageparameter definieren** können Sie Parameterwerte angeben, wenn Sie in einem Abfrage-Designer zur Entwurfszeit eine Abfrage ausführen, um Beispieldaten anzuzeigen. Mit Abfrageparameter werden Daten der Datenquelle gefiltert und die Datenmenge, die ein Bericht verarbeitet, beschränkt. Diese Werte werden nicht in der Berichtsdefinition gespeichert.  

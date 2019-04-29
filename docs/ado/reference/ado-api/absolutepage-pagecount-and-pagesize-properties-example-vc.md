@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155211"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel (VC++)
 Dieses Beispiel verwendet die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), und [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) Eigenschaften, die den Anzeigenamen und Einstellungsdaten aus der ***Mitarbeiter*** Tabelle fünf Datensätzen zu einem Zeitpunkt.  

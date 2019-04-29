@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137512"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Automatische Seitenreparatur (für Verfügbarkeitsgruppen und Datenbankspiegelung)
   Automatische Seitenreparatur wird von Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützt. Wenn bestimmte Fehlertypen eine Seite beschädigen und sie unlesbar machen, versucht ein Datenbank-Spiegelungspartner (Prinzipal oder Spiegel) oder ein Verfügbarkeitsreplikat (primär oder sekundär), die Seite automatisch wiederherzustellen. Der Partner/das Replikat, der/das die Seite nicht lesen kann, fordert eine neue Kopie der Seite von seinem Partner oder einem anderen Replikat an. Wenn die Anforderung erfolgreich ist, wird die nicht lesbare Seite durch die lesbare Kopie ersetzt. Dadurch wird der Fehler normalerweise behoben.  
@@ -52,7 +52,7 @@ ms.locfileid: "48070584"
   
 -   Seite 9 (die Startseite der Datenbank)  
   
--   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
+-   Zuordnungsseiten: Global Allocation Map (GAM) Seiten, freigegeben Global Allocation Map SGAM () und Seite Free Space (PFS) Seiten.  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070584"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> So wird es gemacht: Die automatischen Seitenreparatur-Versuche anzeigen  
  Die folgenden dynamischen Verwaltungssichten geben Zeilen für die letzten automatischen Seitenreparatur-Versuche auf einer angegebenen Verfügbarkeitsdatenbank oder gespiegelten Datenbank mit einem Maximum von 100 Zeilen pro Datenbank zurück.  
   
 -   **AlwaysOn-Verfügbarkeitsgruppen:**  

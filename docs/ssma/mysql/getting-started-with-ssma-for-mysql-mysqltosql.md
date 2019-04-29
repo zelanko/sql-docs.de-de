@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187151"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL können Sie schnell Konvertieren von MySQL-Datenbankschemas in SQL Server oder Azure SQL-Datenbank-Schemas, die resultierenden Schemas in SQL Server oder Azure SQL-Datenbank hochzuladen und Migrieren von Daten aus MySQL nach SQL Server oder Azure SQL-Datenbank.  
@@ -76,7 +76,7 @@ Sie können dieser Metadaten-Explorer, wählen Sie die konvertierten Objekte der
 Weitere Informationen finden Sie unter [Synchronisierung (MySQL zu SQL Server / Azure SQL-Datenbank)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadaten  
-Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Beispielsweise wenn Sie eine Tabelle in der MySQL-Metadaten-Explorer auswählen, neun Registerkarten werden angezeigt: **Tabelle**, **SQL**, **Type Mapping**, **Daten**,  **Einstellungen**, **Charset-Zuordnung**, **SQL-Modi**, **Eigenschaften**, und **Bericht**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht erstellen, die das ausgewählte Objekt enthält. Wenn Sie eine Tabelle in SQL Server-Metadaten-Explorer auswählen, werden die drei Registerkarten angezeigt: **Tabelle**, **SQL** und **Daten**.  
+Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Wenn Sie eine Tabelle in der MySQL-Metadaten-Explorer auswählen, werden z. B. neun Registerkarten angezeigt: **Tabelle**, **SQL**, **Typzuordnung**, **Daten**, **Einstellungen**, **Charset-Zuordnung**, **SQL-Modi**, **Eigenschaften**, und **Bericht**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht erstellen, die das ausgewählte Objekt enthält. Wenn Sie eine Tabelle in SQL Server-Metadaten-Explorer auswählen, werden drei Registerkarten angezeigt: **Tabelle**, **SQL** und **Daten**.  
   
 Die meisten Metadateneinstellungen für die sind schreibgeschützt. Allerdings können Sie die folgende Metadaten ändern:  
   
@@ -97,7 +97,7 @@ Die folgende Tabelle zeigt die Migration der Symbolleistenbefehle:
   
 |||  
 |-|-|  
-|**Schaltfläche "**|**Funktion**|  
+|**Button** (Schaltfläche)|**Funktion**|  
 |**Bericht erstellen**|Konvertiert die ausgewählten MySQL-Objekten in SQL Server oder Azure SQL-Datenbank-Objekte, und erstellt dann einen Bericht, der zeigt, wie erfolgreich die Konvertierung war.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, die Objekte in der MySQL-Metadaten-Explorer ausgewählt werden.|  
 |**Schema konvertieren**|Konvertiert die ausgewählten MySQL-Objekten auf SQL Server oder Azure SQL-Datenbank-Objekte.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, die Objekte in der MySQL-Metadaten-Explorer ausgewählt werden.|  
 |**Migrieren von Daten**|Werden Daten aus der Datenbank für MySQL zu SQL Server oder Azure SQL-Datenbank migriert. Bevor Sie diesen Befehl ausführen müssen Sie die MySQL-Schemas in SQL Server oder Azure SQL-Datenbank-Schemas konvertieren und dann die Objekte in SQL Server oder Azure SQL-Datenbank laden.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, die Objekte in der MySQL-Metadaten-Explorer ausgewählt werden.|  

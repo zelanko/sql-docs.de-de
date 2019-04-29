@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072753"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] bietet vollständige Dauerhaftigkeit für speicheroptimierte Tabellen. Wenn für eine Transaktion, durch die eine speicheroptimierte Tabelle geändert wurde, ein Commit ausgeführt wird, gewährleistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (genauso wie bei datenträgerbasierten Tabellen), dass die Änderungen dauerhaft sind (bei einem Neustart der Datenbank erhalten bleiben), vorausgesetzt der zugrunde liegende Speicher ist verfügbar. Die Dauerhaftigkeit basiert auf zwei Hauptmechanismen: der Transaktionsprotokollierung und der dauerhaften Speicherung von Datenänderungen auf einem Datenträger.  
@@ -111,7 +111,7 @@ ms.locfileid: "52392024"
  Bei Bedarf eine manuelle Zusammenführung explizit erfolgen kann durch Aufrufen von [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Lebenszyklus eines CFP  
- CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Die CFPs befinden sich zu jedem Zeitpunkt in einer der folgenden Phasen: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE oder TOMBSTONE. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Die CFPs befinden sich auf einem beliebigen Zeitpunkt in einem der folgenden Phasen: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE und TOMBSTONE. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Nach Berücksichtigung des von CFPs mit den verschiedenen Statusphasen belegten Speichers kann der insgesamt von dauerhaften speicheroptimierten Tabellen belegte Speicher deutlich mehr als das Doppelte der Größe der Tabellen im Arbeitsspeicher betragen. Die DMV [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) abgefragt werden kann, um alle CFPs in einer speicheroptimierten Dateigruppe sowie deren Phase aufzulisten. Der Übergang von CFPs vom MERGE SOURCE-Status zum TOMBSTONE-Status und die abschließende Garbage Collection können bis zu fünf Prüfpunkte beanspruchen, wobei auf jeden Prüfpunkt eine Transaktionsprotokollsicherung folgt, wenn die Datenbank für das vollständige oder massenprotokollierte Wiederherstellungsmodell konfiguriert ist.  
   

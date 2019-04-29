@@ -1,5 +1,5 @@
 ---
-title: StDev (MDX) | Microsoft Docs
+title: StDev (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150249"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
@@ -32,11 +32,11 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Stdev** -Funktion verwendet die ausgewogene Auffüllung Formel, während die [StdevP](../mdx/stdevp-mdx.md) Funktion der Formel für die unausgewogene Auffüllung verwendet.  
+ Die **Stdev** -Funktion verwendet die ausgewogene Auffüllung Formel, während die ["StDevP"](../mdx/stdevp-mdx.md) -Funktion verwendet die Formel für die unausgewogene Auffüllung berechnet wurde.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Standardabweichung für Internet Order Quantity, ausgewertet über die ersten drei Monate des Kalenderjahres 2003, mithilfe der Formel für die ausgewogene Auffüllung zurückgegeben.  

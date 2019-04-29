@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Cube- und Teilcubeausdrücke | Microsoft Docs
+title: Verwenden von Cube- und Teilcubeausdrücke | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f13d92c114783646bbeab9451c3d212ff01b8f8c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125426"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Verwenden von Cube- und Teilcubeausdrücken
 
@@ -70,7 +70,7 @@ ms.locfileid: "34743379"
  Ein teilcubebezeichner wird als *Subcube_Name*. in BNF-Schreibweisebeschreibungen von MDX-Anweisungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegende MDX-Abfrage &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [Die grundlegende MDX-Abfrage &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Erstellen von Teilcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [CREATE SUBCUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)   

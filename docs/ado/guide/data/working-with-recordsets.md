@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184826"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen – wie z. B. mit der die [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft: die Struktur der Datenquelle selbst.  
@@ -90,7 +90,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
   
 -   *Operator* muss eine der folgenden sein: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oder **wie**.  
   
--   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen ('), mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%)-Platzhalter, die Zeichen sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
+-   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen ('), mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%) Platzhalterzeichen sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
   
     > [!NOTE]
     >  Einfache Anführungszeichen (') in den Filter eingeschlossen *Wert*, verwenden Sie zwei einfache Anführungszeichen, um einen darstellen. Beispielsweise einen Filter für *Malley*, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einzelne Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge in Nummernzeichen (#). Beispielsweise einen Filter für *'1'*, die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  

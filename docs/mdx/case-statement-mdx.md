@@ -1,5 +1,5 @@
 ---
-title: CASE-Anweisung (MDX) | Microsoft Docs
+title: CASE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181593"
 ---
 # <a name="case-statement-mdx"></a>CASE-Anweisung (MDX)
 
@@ -64,7 +64,7 @@ END
  Ist keine ELSE-Klausel angegeben, und werden alle WHEN-Klauseln zu FALSE ausgewertet, ist das Ergebnis eine leere Zelle.  
   
 ## <a name="simple-case-expression"></a>Einfache CASE-Ausdrücke  
- MDX wertet einen einfachen Case-Ausdruck, durch das Auflösen der *Input_expression* in einen skalaren Wert. Dieser Skalarwert wird dann mit der Skalarwert von verglichen, die *When_expression*. Wenn die beiden Skalarwerte übereinstimmen, wird die CASE-Anweisung gibt den Wert der die *When_true_expression*. Wenn die beiden Skalarwerte nicht übereinstimmen, wird die nächste WHEN-Klausel ausgewertet. Wenn alle von den WHEN-Klauseln ausgewertet werden auf "false", den Wert der *Else_result_expression* aus der ELSE-Klausel, sofern vorhanden, zurückgegeben wird.  
+ MDX wertet einen einfachen Case-Ausdruck durch Auflösen der *Input_expression* in einen skalaren Wert. Dieser Skalarwert wird dann mit der Skalarwert von verglichen die *When_expression*. Wenn die beiden Skalarwerte übereinstimmen, gibt die CASE-Anweisung den Wert des der *When_true_expression*. Wenn die beiden Skalarwerte nicht übereinstimmen, wird die nächste WHEN-Klausel ausgewertet. Wenn alle von den WHEN-Klauseln ausgewertet werden auf "false", den Wert der *Else_result_expression* aus der ELSE-Klausel, sofern vorhanden, zurückgegeben wird.  
   
  Im folgenden Beispiel wird das Reseller Order Count-Measure für mehrere WHEN-Klauseln ausgewertet und als Ergebnis der Wert des Reseller Order Count-Measures für jedes Jahr zurückgegeben. Für Reseller Order Count-Werte, die einen skalaren Wert im angegebenen nicht entsprechen einem *When_expression* in einer WHEN-Klausel der Skalarwert von der *Else_result_expression* zurückgegeben wird.  
   
@@ -89,7 +89,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>Komplexe CASE-Ausdrücke  
  Verwenden Sie komplexe CASE-Ausdrücke, wenn Sie komplexere Auswertungen mithilfe von CASE-Ausdrücken durchführen möchten. Mit dieser Variante des Suchausdrucks können Sie auswerten, ob ein Eingabeausdruck innerhalb eines bestimmten Wertebereichs liegt. MDX wertet die WHEN-Klauseln in der Reihenfolge aus, in der die Klauseln in der CASE-Anweisung vorliegen.  
   
- Im folgenden Beispiel wird das Reseller Order Count-Measure ausgewertet gegen den angegebenen *Boolean_expression* aller mehrere WHEN-Klauseln. Als Ergebnis wird der Wert des Reseller Order Count-Measures für jedes Jahr zurückgegeben. Da WHEN-Klausel in der Reihenfolge ausgewertet werden, in der sie vorliegen, können alle Werte, die größer als 6 sind, problemlos dem Wert "VERY LARGE" zugewiesen werden, ohne jeden einzelnen Wert explizit angeben zu müssen. Für Reseller Order Count-Werte, die nicht in einer WHEN-Klausel der Skalarwert von angegeben sind die *Else_result_expression* zurückgegeben wird.  
+ Im folgenden Beispiel wird das Reseller Order Count-Measure ausgewertet für das angegebene *Boolean_expression* für die einzelnen mehrere WHEN-Klauseln. Als Ergebnis wird der Wert des Reseller Order Count-Measures für jedes Jahr zurückgegeben. Da WHEN-Klausel in der Reihenfolge ausgewertet werden, in der sie vorliegen, können alle Werte, die größer als 6 sind, problemlos dem Wert "VERY LARGE" zugewiesen werden, ohne jeden einzelnen Wert explizit angeben zu müssen. Für Reseller Order Count-Werte, die nicht in einer WHEN-Klausel der Skalarwert von angegeben sind die *Else_result_expression* zurückgegeben wird.  
   
 ```  
 WITH MEMBER [Measures].x AS   

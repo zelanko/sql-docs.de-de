@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155151"
 ---
 # <a name="supported-data-types"></a>Unterstützte Datentypen
   Die folgenden Datentypen sind **unterstützt** in speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren:  
@@ -53,8 +53,8 @@ ms.locfileid: "48075300"
   
 |Datentyp|Weitere Informationen finden Sie unter|  
 |---------------|--------------------------|  
-|date|[Datum &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
-|Uhrzeit|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
+|date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  

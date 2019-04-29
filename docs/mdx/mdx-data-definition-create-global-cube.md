@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie GLOBAL CUBE-Anweisung (MDX) | Microsoft Docs
+title: Erstellen von GLOBAL CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181441"
 ---
-# <a name="mdx-data-definition---create-global-cube"></a>MDX-Datendefinition - globalen CUBE erstellen
+# <a name="mdx-data-definition---create-global-cube"></a>MDX-Datendefinition – CREATE GLOBAL CUBE
 
 
   Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
@@ -105,7 +105,7 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Der Name der Dimension im lokalen Cube.  
   
- AUS \<dim from-Klausel >  
+ VON \<dim from-Klausel >  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
  NOT_RELATED_TO_FACTS  
@@ -115,9 +115,9 @@ FROM source_cube_name (<param list>)
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine lokale Cubedatei ist eigene Begriffe der Measures und Definitionen, die ihn definieren. Es gibt zwei Typen von Dimensionen.  
+ Ein lokaler Cube ist, eigene Bedingungen der Measures und Definitionen, die sie definieren. Es gibt zwei Typen von Dimensionen.  
   
--   Quelldimensionen – sind diese Dimensionen, die Teil eines oder mehrerer Quellcubes waren.  
+-   Quelldimensionen – sind diese Dimensionen, die Teil von einer oder mehrerer Quellcubes waren.  
   
 -   Abgeleitete Dimensionen – Hierbei handelt es sich um Dimensionen, die neue Analysefunktionen bereitstellen. Bei einer abgeleiteten Dimension kann es sich um eine reguläre Dimension handeln, die basierend auf einer Quelldimension definiert wird, die entweder vertikal oder horizontal in Slices aufgeteilt ist oder die eine benutzerdefinierte Gruppierung von Dimensionselementen enthält. Eine abgeleitete Dimension kann auch eine Data Mining-Dimension sein, die auf einem Data Mining-Modell basiert.  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  Die CREATE GLOBAL CUBE-Anweisung hält die folgenden Regeln ein:  
   
--   Mit der CREATE GLOBAL CUBE-Anweisung werden automatisch alle Befehle, z. B. berechnete Measures oder Aktionen, in den lokalen Cube kopiert. Enthält ein Befehl einen MDX-Ausdruck (Multidimensional Expression), der explizit auf den übergeordneten Cube verweist, kann dieser Befehl nicht vom lokalen Cube ausgeführt werden. Verwenden Sie zur Vermeidung dieses Problems die **CURRENTCUBE** Schlüsselwort der MDX-Ausdrücken für Befehle zu definieren. Die **CURRENTCUBE** -Schlüsselwort verwendet den aktuellen Cubekontext aus, wenn Sie einen Cube innerhalb eines MDX-Ausdrucks zu verweisen.  
+-   Mit der CREATE GLOBAL CUBE-Anweisung werden automatisch alle Befehle, z. B. berechnete Measures oder Aktionen, in den lokalen Cube kopiert. Enthält ein Befehl einen MDX-Ausdruck (Multidimensional Expression), der explizit auf den übergeordneten Cube verweist, kann dieser Befehl nicht vom lokalen Cube ausgeführt werden. Um dieses Problem zu vermeiden, verwenden die **CURRENTCUBE** Schlüsselwort beim Definieren von MDX-Ausdrücken für Befehle. Die **CURRENTCUBE** -Schlüsselwort verwendet den aktuellen Cubekontext aus, wenn Sie einen Cube in einer MDX-Ausdruck zu verweisen.  
   
 -   Ein globaler Cube, der aus einem vorhandenen globalen Cube in einer lokalen Cubedatei erstellt wurde, kann nicht in derselben lokalen Cubedatei gespeichert werden. Angenommen, Sie erstellen einen globalen Cube mit dem Namen SalesLocal1 und speichern ihn in der Datei C:\SalesLocal.cub. Sie können dann eine Verbindung zur Datei C:\SalesLocal.cub herstellen und einen zweiten globalen Cube mit dem Namen SalesLocal2 erstellen. Wenn Sie nun versuchen, den globalen Cube SalesLocal2 in der Datei C:\SalesLocal.cub zu speichern, erhalten Sie eine Fehlermeldung. Sie können den globalen Cube SalesLocal2 allerdings in einer anderen lokalen Cubedatei speichern.  
   

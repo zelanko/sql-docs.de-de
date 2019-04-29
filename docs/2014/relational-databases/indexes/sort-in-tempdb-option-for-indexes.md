@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035599"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>SORT_IN_TEMPDB-Option für Indizes
   Wenn Sie einen Index erstellen oder neu erstellen, indem Sie die SORT_IN_TEMPDB-Option auf ON setzen, wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] angewiesen, zum Speichern der Zwischenergebnisse der Sortierung für die Erstellung eines Indexes **tempdb** zu verwenden. Obwohl durch diese Option die Menge an Speicherplatz erhöht wird, die zur Indexerstellung verwendet wird, kann dadurch die Zeit verringert werden, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zu **tempdb**finden Sie unter [Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043335"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber
 Eine Anwendung kann auf eine beliebige Anzahl von Treibern und Datenquellen verbunden werden. Dies können eine Vielzahl von Treibern und Datenquellen, denselben Treiber und eine Vielzahl von Datenquellen oder sogar mehrere Verbindungen, die denselben Treiber und die Datenquellensicht sein.  

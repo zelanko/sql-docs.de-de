@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057782"
 ---
 # <a name="odbc-glossary"></a>ODBC-Glossar
 ## <a name="a"></a>A  
@@ -38,7 +38,7 @@ ms.locfileid: "47693948"
  **API**  
  Application-Programmierschnittstelle. Ein Satz von Routinen, die eine Anwendung verwendet, um anzufordern, und führen Sie die Low-Level-Dienste. Der ODBC-API besteht aus der ODBC-Funktionen.  
   
- **Anwendung**  
+ **application**  
  Ein ausführbares Programm, das Funktionen der ODBC-API aufruft.  
   
  **anwendungsparameterdeskriptor (APD)**  
@@ -60,7 +60,7 @@ ms.locfileid: "47693948"
  **Binary large Object (BLOB)**  
  Beliebige binären Daten über eine bestimmte Anzahl von Bytes, beispielsweise 255. In der Regel viel länger. Diese Daten in der Regel an gesendet und abgerufen werden, aus der Datenquelle in Teilen. Auch bekannt als *long-Daten*.  
   
- **Bindung**  
+ **binding**  
  Als Verb, das Act eine Spalte in einem Resultset oder ein Parameter in einer SQL-Anweisung mit einer Anwendungsvariablen verknüpft. Als ein Nomen, die Zuordnung.  
   
  **Offset der Bindung**  
@@ -69,7 +69,7 @@ ms.locfileid: "47693948"
  **Blockcursor**  
  Ein Cursor kann mehr als eine Zeile mit Daten zu einem Zeitpunkt abrufen.  
   
- **Puffer**  
+ **buffer**  
  Einen Speicherbereich Anwendung verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Puffer treten häufig paarweise: eine *Datenpuffer* und *Länge des Datenpuffers*.  
   
  **byte**  
@@ -85,10 +85,10 @@ ms.locfileid: "47693948"
  **Katalogfunktion**  
  Eine ODBC-Funktion zum Abrufen von Informationen aus der Datenbank-Katalog verwendet wird.  
   
- **BEFEHLSZEILENSCHNITTSTELLE**  
+ **CLI**  
  *Finden Sie unter* API.  
   
- **Client/server**  
+ **client/server**  
  Eine Zugriffsstrategie für die Datenbank in dem einen oder mehrere Clients Daten über einen Server zugreifen. Die Clients implementieren in der Regel die Benutzeroberfläche, während die Serversteuerelemente Access-Datenbank.  
   
  **column**  
@@ -97,7 +97,7 @@ ms.locfileid: "47693948"
  **commit**  
  Um die Änderungen in einer Transaktion permanent zu machen.  
   
- **Parallelität**  
+ **concurrency**  
  Die Fähigkeit von mehr als eine Transaktion, die Zugriff auf die gleichen Daten zur gleichen Zeit.  
   
  **Übereinstimmungsebene**  
@@ -155,22 +155,22 @@ ms.locfileid: "47693948"
  **DDL**  
  Die Datendefinitionssprache. Diese Anweisungen in SQL, die nicht an, um zu bearbeiten, müssen Daten zu definieren. Z. B. **CREATE TABLE**, **CREATE INDEX**, **GRANT**, und **widerrufen**.  
   
- **Begrenzungsbezeichner**  
+ **delimited identifier**  
  Ein Bezeichner, der in Anführungszeichen für Bezeichner eingeschlossen ist, sodass Schlüsselwörter (auch bekannt als aus einem Bezeichner in Anführungszeichen entsprechen) oder Sonderzeichen enthalten kann.  
   
- **Sicherheitsbeschreibung**  
+ **descriptor**  
  Eine Datenstruktur, die Informationen über die Spaltendaten oder dynamischen Parametern enthält. Die physikalische Darstellung des Deskriptors ist nicht definiert. Anwendungen erhalten direkten Zugriff auf den Deskriptor eines nur durch die Felder bearbeiten von Aufrufen von ODBC-Funktionen, mit dem Deskriptorhandle.  
   
  **Desktop-Datenbank**  
  Ein DBMS auf einem PC ausgeführt werden soll. Im Allgemeinen diese bieten einer eigenständige Datenbank-Engine keine DBMS und Zieltreiber müssen durch einen dateibasierten Treibers zugegriffen werden. Die Triebwerke in diese Treiber eingeschränkte Unterstützung für SQL und Transaktionen in der Regel. Z. B. dBASE, Paradox, Btrieve oder Microsoft® FoxPro®.  
   
- **Diagnose**  
+ **diagnostic**  
  Ein Datensatz mit diagnostischen Angaben über die letzte Funktion, die aufgerufen wird, verwendet ein bestimmtes Handle. DiagnoseDatensätze sind Umgebung "," Verbindung "," Anweisung "und" Deskriptorhandles zugeordnet.  
   
  **DML**  
  Datenbearbeitungssprache. Diese Anweisungen in SQL, die nicht an, um zu definieren, Daten zu bearbeiten. Z. B. **einfügen**, **UPDATE**, **löschen**, und **wählen**.  
   
- **Treiber**  
+ **driver**  
  Eine routinemäßige-Bibliothek, die die Funktionen der ODBC-API verfügbar macht. Treiber sind spezifisch für eine einzelne DBMS.  
   
  **Treiber-Manager**  
@@ -189,7 +189,7 @@ ms.locfileid: "47693948"
  **Embedded SQL**  
  SQL-Anweisungen, die direkt in einem Programm, das in einer anderen Sprache, z. B. COBOL oder C. ODBC enthalten sind embedded SQL nicht verwendet. *Siehe auch* statische SQL-Anweisungen *und* dynamischem SQL.  
   
- **Umgebung**  
+ **environment**  
  Einem globalen Kontext in dem für den Datenzugriff der Umgebung zugeordnet ist, alle Informationen, die global in der Art, z. B. eine Liste aller Verbindungen in dieser Umgebung ist.  
   
  **Umgebungshandles**  
@@ -205,7 +205,7 @@ ms.locfileid: "47693948"
  **FAT cursor**  
  *Finden Sie unter* Blockcursor.  
   
- **Abrufen**  
+ **fetch**  
  Um eine oder mehrere Zeilen aus einem Resultset abgerufen werden.  
   
  **field**  
@@ -224,7 +224,7 @@ ms.locfileid: "47693948"
  Ein Cursor, der nur vorwärts durch die Ergebnisse und in der Regel verschieben kann ruft nur eine Zeile zu einem Zeitpunkt ab. Die meisten relationale Datenbanken unterstützen nur Vorwärtscursor.  
   
 ## <a name="h"></a>H  
- **Handle**  
+ **handle**  
  Ein Wert, der eindeutig etwas wie eine Datei oder -Struktur identifiziert. Handles sind sinnvoll, nur für die Software, die erstellt und verwendet sie jedoch durch eine andere Software, die Elemente identifizieren übergeben werden. ODBC definiert Handles für Umgebungen, die Verbindungen, Anweisungen und Deskriptoren.  
   
 ## <a name="i"></a>I  
@@ -243,7 +243,7 @@ ms.locfileid: "47693948"
  **Interface-Konformitätsgrad**  
  Die Ebene der von einem Treiber unterstützten 3.7 der ODBC-Schnittstelle Hierbei kann es sich um Core, Level 1 und Ebene 2 sein.  
   
- **Interoperabilität**  
+ **interoperability**  
  Die Fähigkeit einer Anwendung auf den gleichen Code verwenden, beim Zugriff auf Daten in anderen DBMS.  
   
  **IPD**  
@@ -256,14 +256,14 @@ ms.locfileid: "47693948"
  Internationale Standards Organisation/Internationalen Elektrotechnischen Kommission. Der ODBC-API basiert auf der ISO/IEC-Call-Level-Schnittstelle.  
   
 ## <a name="j"></a>J  
- **Join**  
+ **join**  
  Ein Vorgang in einer relationalen Datenbank, die die Zeilen in zwei oder mehr Tabellen verknüpft, indem Sie passende Werte in bestimmte Spalten dient.  
   
 ## <a name="k"></a>K  
  **key**  
  Eine Spalte oder Spalten, deren Werte eine Zeile zu identifizieren. *Siehe auch* Fremdschlüssel *und* Primärschlüssel.  
   
- **Keyset**  
+ **keyset**  
  Ein Satz von Schlüsseln, die von einem gemischten oder keysetgesteuerte Cursor verwendet, um die Zeilen erneut abzurufen.  
   
  **keysetgesteuerter cursor**  
@@ -273,10 +273,10 @@ ms.locfileid: "47693948"
  **literal**  
  Eine breitzeichendarstellung eines Werts der tatsächlichen Daten in einer SQL­Anweisung.  
   
- **Sperren**  
+ **locking**  
  Der Prozess, mit dem ein DBMS den Zugriff auf eine Zeile in einer mehrbenutzerumgebung beschränkt. Das DBMS in der Regel legt ein bit auf eine Zeile oder die physische Seite mit je einer Zeile, die die Zeile gibt an, oder Seite ist gesperrt.  
   
- **Long-Daten**  
+ **long data**  
  Alle Binär- oder Zeichendatentypen Daten über eine bestimmte Länge, wie z. B. 255 Bytes oder Zeichen. In der Regel viel länger. Diese Daten in der Regel an gesendet und abgerufen werden, aus der Datenquelle in Teilen. Auch bekannt als *BLOB*s oder *CLOB*s.  
   
 ## <a name="m"></a>M  
@@ -286,7 +286,7 @@ ms.locfileid: "47693948"
  **Manualcommit-Modus**  
  Eine Transaktion Commit-Modus in der Transaktionen werden explizit ein durch den Aufruf Commit müssen **SQLTransact**.  
   
- **Metadaten**  
+ **metadata**  
  Daten, die einen Parameter in einer SQL-Anweisung oder eine Spalte in einem Resultset zu beschreiben. Z. B. den-Datentyp, Länge in Byte, und die Genauigkeit eines Parameters.  
   
  **Treiber mit mehreren Ebenen**  
@@ -297,7 +297,7 @@ ms.locfileid: "47693948"
  Wenn kein Wert explizit zugewiesen. Ein NULL-Wert unterscheidet sich vor allem eine 0 (null) oder ein Leerzeichen.  
   
 ## <a name="o"></a>O  
- **Oktett**  
+ **octet**  
  Acht Bits oder ein Byte. *Siehe auch* Byte.  
   
  **Oktettlänge**  
@@ -306,26 +306,26 @@ ms.locfileid: "47693948"
  **ODBC**  
  Öffnen Sie die Datenbankverbindung an. Eine Spezifikation für eine API, die einen standardmäßigen Satz von Routinen definiert, mit denen eine Anwendung Daten in einer Datenquelle zugreifen können.  
   
- **ODBC-Administrator**  
+ **ODBC Administrator**  
  Ein ausführbares Programm, das das Installationsprogramm-DLL für die Konfiguration von Datenquellen aufruft.  
   
  Gruppe öffnen  
  Ein Unternehmen, die Standards veröffentlicht. Insbesondere veröffentlicht es SQL Access Group (SAG)-Standards.  
   
- **vollständige Parallelität**  
+ **optimistic concurrency**  
  Eine Strategie zur Steigerung der Parallelität in dem Zeilen nicht gesperrt werden. Bevor sie aktualisiert oder gelöscht werden, überprüft ein Cursor stattdessen, um festzustellen, ob sie geändert wurden, seit sie zuletzt gelesen wurden. Wenn dies der Fall ist, schlägt fehl, die Update- oder Delete. *Siehe auch* pessimistische Parallelität.  
   
  **äußere Joins**  
  Ein join, bei die entsprechenden und nicht übereinstimmenden Zeilen zurückgegeben werden. Die Werte aller Spalten aus der nicht übereinstimmenden Tabelle in nicht übereinstimmenden Zeilen werden auf NULL festgelegt.  
   
- **Besitzer**  
+ **owner**  
  Der Besitzer einer Tabelle.  
   
 ## <a name="p"></a>P  
  **parameter**  
  Eine Variable in einer SQL­Anweisung mit einer parametermarkierung oder ein Fragezeichen (?) markiert. Parameter sind gebunden, an Anwendungsvariablen und deren Werte abgerufen werden, wenn die Anweisung ausgeführt wird.  
   
- **Parameterdeskriptor**  
+ **parameter descriptor**  
  Ein Deskriptor, der beschreibt, die Laufzeit-Parameter, die in eine SQL-Anweisung entweder vor der Konvertierung von der Anwendung (einen Anwendungsdienst-Deskriptor-Parameter oder APD) oder nach der Konvertierung angegeben, die von der Anwendung (eine Implementierung angegeben verwendet Parameterdeskriptor oder Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor).  
   
  **Parameterarray-Vorgang**  
@@ -346,7 +346,7 @@ ms.locfileid: "47693948"
  **positionierte Delete-Anweisung**  
  Eine SQL-Anweisung verwendet, um die aktuelle Zeile gelöscht wird.  
   
- **Vorbereiten**  
+ **prepare**  
  Um eine SQL-Anweisung zu kompilieren. Ein Zugriffsplan wird durch die Vorbereitung einer SQL-Anweisung erstellt.  
   
  **Primärschlüssel**  
@@ -359,7 +359,7 @@ ms.locfileid: "47693948"
  Ein Argument in einem Prozeduraufruf, der von einer Prozedur oder eine Spalte in einem Resultset, die von einer Prozedur erstellten zurückgegebene Wert.  
   
 ## <a name="q"></a>Q  
- **Qualifizierer**  
+ **qualifier**  
  Eine Datenbank, die eine oder mehrere Tabellen enthält.  
   
  **query**  
@@ -369,10 +369,10 @@ ms.locfileid: "47693948"
  Ein Bezeichner, der in Anführungszeichen für Bezeichner eingeschlossen ist, damit Schlüsselwörtern (die auch in SQL-92, als durch Trennzeichen getrennten Bezeichner bezeichnet werden) entsprechen oder Sonderzeichen enthalten kann.  
   
 ## <a name="r"></a>R  
- **Basis**  
+ **radix**  
  Die Basis eines Systems Anzahl. In der Regel 2 "oder" 10 ".  
   
- **Datensatz**  
+ **record**  
  *Finden Sie unter* Zeile.  
   
  **Resultset**  
@@ -384,7 +384,7 @@ ms.locfileid: "47693948"
  **Zurücksetzen**  
  Um die Werte geändert, die von einer Transaktion an den ursprünglichen Zustand zurück.  
   
- **Zeile**  
+ **row**  
  Ein Satz von verknüpften Spalten, die eine bestimmte Entität zu beschreiben. Auch bekannt als eine *Datensatz*.  
   
  **Zeile Deskriptor**  
@@ -396,7 +396,7 @@ ms.locfileid: "47693948"
  **zeilenstatusarray**  
  Ein Array mit den Status einer Zeile nach einem Aufruf von **SQLFetch**, **SQLFetchScroll**, oder **SQLSetPos**.  
   
- **Rowset**  
+ **rowset**  
  Der Satz von Zeilen, die in einen einzelnen Abruf von einem Blockcursor zurückgegeben.  
   
  **Rowset-Puffer**  
@@ -415,7 +415,7 @@ ms.locfileid: "47693948"
  **bildlauffähige cursor**  
  Ein Cursor, der über das Resultset vorwärts oder rückwärts bewegen kann.  
   
- **Serialisierbarkeit**  
+ **serializability**  
  Gibt an, ob zwei Transaktionen gleichzeitig ausgeführt werden zu einem Ergebnis, das gleiche wie die serielle (oder nacheinander) Ausführung dieser Transaktionen ist. Serializable-Transaktionen sind erforderlich, um die Datenbankintegrität zu verwalten.  
   
  **Server-Datenbank**  
@@ -473,19 +473,19 @@ ms.locfileid: "47693948"
  **table**  
  Eine Auflistung von Zeilen.  
   
- **Thunking**  
+ **thunking**  
  Die Konvertierung von 16-Bit-Adressen auf 32-Bit-Adressen (oder umgekehrt), wenn 16-Bit-Anwendungen mit 32-Bit-ODBC-Treiber verwendet werden.  
   
- **Transaktion**  
+ **transaction**  
  Eine unteilbare Arbeitseinheit. Die Arbeit in einer Transaktion muss als Ganzes abgeschlossen werden; Wenn Sie einen beliebigen Teil der Transaktion ein Fehler auftritt, schlägt die gesamte Transaktion fehl.  
   
  **Transaktionsisolation**  
  Der Vorgang eine Transaktion vor den Auswirkungen von allen anderen Transaktionen isoliert.  
   
  **Transaktionsisolationsstufe**  
- Ein Maß, wie gut eine Transaktion isoliert ist. Es gibt fünf Isolationsstufen von Transaktionen: Read Uncommitted Read Committed, Repeatable Read, Serializable und Versionsverwaltung.  
+ Ein Maß, wie gut eine Transaktion isoliert ist. Es gibt fünf Isolationsstufen von Transaktionen: Read Uncommitted Committed, Repeatable Read, serialisierbar und Versionsverwaltung zu lesen.  
   
- **Translator-DLL**  
+ **translator DLL**  
  Eine DLL verwendet, um Daten aus einem Zeichensatz in eine andere zu übersetzen.  
   
  **Translator-Setup-DLL**  
@@ -498,5 +498,5 @@ ms.locfileid: "47693948"
  Ein ganzzahliger Wert übergeben oder von einer ODBC-Funktion an, dass der Datentyp von einer Anwendungsvariablen, Parameter oder einer Spalte zurückgegeben. ODBC definiert typindikatoren für C- und SQL-Datentypen.  
   
 ## <a name="v"></a>B  
- **Anzeigen**  
+ **view**  
  Eine alternative Möglichkeit der Blick auf die Daten in einer oder mehreren Tabellen. Eine Sicht ist in der Regel eine Teilmenge der Spalten aus einer oder mehreren Tabellen erstellt. In ODBC sind Ansichten in der Tabellen in der Regel entspricht.

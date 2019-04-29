@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed14ba8b72fba1713003d5fed7005dc01d4ce84b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186846"
 ---
 # <a name="rds-fundamentals"></a>Grundlegendes zu RDS
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.locfileid: "51560250"
 ## <a name="see-also"></a>Siehe auch  
  [Lösungen für Remotedatenzugriff](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057588"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services-Konfigurations-Manager (einheitlicher Modus)
   Sie konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installationen mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager im einheitlichen Modus. Wenn Sie einen Berichtsserver mit der Option für die ausschließliche Datei-Installation installiert haben, muss der Server mithilfe des Konfigurations-Managers konfiguriert werden, bevor er verwendet werden kann. Wenn Sie einen Berichtsserver mit der Standardkonfigurationsoption der Installation installiert haben, können Sie mit dem Konfigurations-Manager die während der Installation festgelegten Einstellungen überprüfen oder ändern. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie eine lokale Berichtsserverinstanz eine oder Remote-Berichtsserverinstanz konfigurieren.  
@@ -39,10 +39,10 @@ ms.locfileid: "48209790"
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Beschreibt das Konfigurieren von URLs, die für den Zugriff auf den Report Server-Webdienst und den Berichts-Manager verwendet werden.  
   
- [Erstellen eine Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  Beschreibt das Erstellen einer Berichtsserver-Datenbank, die für das Speichern von Server-Metadaten und -Objekten erforderlich ist.  
   
- [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Beschreibt das Ändern der Verbindungszeichenfolge, die vom Berichtsserver zum Herstellen einer Verbindung mit der Berichtsserver-Datenbank verwendet wird.  
   
  [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "48209790"
  Bietet Schritt-für-Schritt-Anweisungen für häufige Aufgaben.  
   
  [Reporting Services-Konfigurations-Manager-F1-Hilfethemen &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Enthält die Hilfethemen für Seiten in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool.  
+ Bietet Hilfethemen für die Seiten im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool.  
   
  **In diesem Thema:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48209790"
   
 -   Konfigurieren des Berichtsserver-Dienstkontos. Das Konto wird während der Installation konfiguriert, kann aber mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager geändert werden, wenn Sie das Kennwort aktualisieren oder ein anderes Konto verwenden möchten.  
   
--   Erstellen und Konfigurieren von URLs. Der Berichtsserver und Berichts-Manager [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Anwendungen erfolgt über URLs. Die Berichtsserver-URL stellt Zugriff auf die SOAP-Endpunkte vom Berichtsserver bereit. Die Berichts-Manager-URL wird zum Öffnen des Berichts-Managers verwendet. Sie können eine einzelne URL oder mehrere URLs für jede Anwendung konfigurieren.  
+-   Erstellen und Konfigurieren von URLs. Der Berichtsserver und der Berichts-Manager sind [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, auf die über URLs zugegriffen wird. Die Berichtsserver-URL stellt Zugriff auf die SOAP-Endpunkte vom Berichtsserver bereit. Die Berichts-Manager-URL wird zum Öffnen des Berichts-Managers verwendet. Sie können eine einzelne URL oder mehrere URLs für jede Anwendung konfigurieren.  
   
 -   Erstellen und Konfigurieren der Berichtsserver-Datenbank. Der Berichtsserver ist ein statusloser Server, der für die interne Speicherung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank benötigt. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie eine Verbindung mit der Berichtsserverdatenbank erstellen und konfigurieren. Sie können auch eine bereits vorhandene Berichtsserver-Datenbank auswählen, die bereits den zu verwendenden Inhalt enthält.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48209790"
  Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Eine vollständige Bereitstellung setzt voraus, dass Sie auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um zusätzliche Funktionen zu aktivieren oder Standardwerte zu ändern, sowie den Berichts-Manager, um Benutzerzugriff auf den Server zu gewähren.  
   
 ##  <a name="bkmk_requirements"></a> Anforderungen  
- Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager ist versionsspezifisch. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, der mit dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, können keine früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]konfiguriert werden. Wenn Sie frühere und aktuelle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen parallel auf einem Computer ausführen, müssen Sie die jeweilige Version des Reporting Services-Konfigurations-Managers verwenden, um Einstellungen für die entsprechende Instanz vorzunehmen.  
+ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ist versionsspezifisch. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, der mit dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, können keine früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]konfiguriert werden. Wenn Sie frühere und aktuelle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen parallel auf einem Computer ausführen, müssen Sie die jeweilige Version des Reporting Services-Konfigurations-Managers verwenden, um Einstellungen für die entsprechende Instanz vorzunehmen.  
   
  Um den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager zu verwenden, müssen folgende Bedingungen erfüllt sein:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48209790"
   
     -   Geben Sie im Windows-Startbildschirm **Reporting** ein, und wählen Sie in den Suchergebnissen **Konfigurations-Manager für Reporting Services** aus.  
   
-    -   Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und zeigen Sie dann auf **Konfigurationstools**.  
+    -   Zeigen Sie im Menü **Start**auf **Alle Programme**und anschließend auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie auf **Konfigurationstools**.  
   
-         Wenn Sie eine Berichtsserver-Instanz einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren möchten, öffnen Sie den Programmordner für diese Version. Zeigen Sie z. B. auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] anstelle von [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , öffnen Sie die Konfigurationstools für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Server-Komponenten.  
+         Wenn Sie eine Berichtsserver-Instanz einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren möchten, öffnen Sie den Programmordner für diese Version. Zeigen Sie beispielsweise auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] anstelle von [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , um die Konfigurationstools für Serverkomponenten von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] zu öffnen.  
   
          Klicken Sie auf **Reporting Services-Manager**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48209790"
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

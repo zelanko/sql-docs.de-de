@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8094271c765b9e211f724b7c18a72862f70a1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042276"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update- und CancelUpdate-Methode – Beispiel (VC++)
 Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  

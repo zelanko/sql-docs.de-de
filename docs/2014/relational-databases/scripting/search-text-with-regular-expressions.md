@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136184"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
   Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### <a name="to-find-using-regular-expressions"></a>So können Sie Suchvorgänge mithilfe von regulären Ausdrücken ausführen  
   
-1.  So aktivieren Sie die Verwendung von regulären Ausdrücken in der **Suchen nach** Feld während **Schnellsuche**, **Dateien suchen**, **Schnellersetzung**, oder  **In Dateien ersetzen** Vorgänge, wählen die **verwenden** option **Suchoptionen** , und wählen Sie **reguläre Ausdrücke**.  
+1.  Wenn Sie die Verwendung von regulären Ausdrücken im Feld **Suchen nach** bei den Vorgängen **Quick Find** (Schnellsuche), **Find in Files** (In Dateien suchen), **Quick Replace** (Schnellersetzung) oder **Replace in Files** (In Dateien ersetzen) aktivieren möchten, wählen Sie unter **Find Options** (Suchoptionen) die Option **Verwendung** und dann **Regular expressions** (Reguläre Ausdrücke) aus.  
   
 2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53328313"
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
-|n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. Z. B. [0-9] ^ 4 entspricht einer beliebigen Folge von vier Ziffern.|  
+|n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. [0-9]^4 entspricht z. B. einer beliebigen Zeichenfolge aus vier Zahlen.|  
 |Gruppieren|()|Gruppiert einen untergeordneten Ausdruck.|  
 |n-markierter Text|\n|Gibt in einem **Suchen und Ersetzen** -Ausdruck den Text an, der dem n-ten markierten Ausdruck entspricht, wobei n eine Zahl von 1 bis 9 ist.<br /><br /> In einem **Ersetzen** -Ausdruck wird mit „\0“ der gesamte übereinstimmende Text eingefügt.|  
 |Rechtsbündig ausgerichtetes Feld|\\(w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach rechts aus.|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033472"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Benachrichtigung nach dem Speichervorgang (Dialogfeld) (Visual Database Tools)
   Dieses Dialogfeld wird angezeigt, wenn beim Versuch, eine Tabelle zu speichern, Fehler auftreten. In diesem Dialogfeld werden die erfolgreich in der Datenbank gespeicherten Objekte, die nicht gespeicherten Objekte und die aufgetretenen Fehler aufgeführt.  

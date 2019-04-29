@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8bf2f1b58a40118d64673a7464a242e6821e4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050168"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Kernebene  
+ ODBC-API-Übereinstimmung: Kern-Ebene  
   
  Speicherplatz für eine Ergebnisspalte zugewiesen und gibt den Typ des Ergebnisses. Wenn [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) oder [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) wird aufgerufen, der Treiber die Daten für alle gebundenen Spalten an den zugewiesenen Standorten platziert. Finden Sie unter [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) für die Zuordnung zwischen, und Visual FoxPro-ODBC-Datentypen.  
   

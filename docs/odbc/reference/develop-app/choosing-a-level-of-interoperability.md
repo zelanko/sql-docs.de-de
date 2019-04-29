@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125416"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Auswählen einer Interoperabilitätsebene
-Vorausgesetzt, dass die Anwendung die ODBC verwendet wird, besteht der nächste Schritt, um zu bestimmen, welche Maß an Interoperabilität erforderlich ist. Das grundlegende Maß an Interoperabilität ist in der Regel eine Funktion des Anwendungstyps: benutzerdefinierte Anwendungen sind tendenziell nicht interoperabel, vertikale Anwendungen sind tendenziell Interoperabilität zwischen einer begrenzten Anzahl von DBMS und allgemeine Anwendungen sind tendenziell interoperable zwischen allen DBMS.  
+Vorausgesetzt, dass die Anwendung die ODBC verwendet wird, besteht der nächste Schritt, um zu bestimmen, welche Maß an Interoperabilität erforderlich ist. Das grundlegende Maß an Interoperabilität ist in der Regel eine Funktion des Anwendungstyps: Benutzerdefinierte Anwendungen sind meist nicht interoperabel, vertikale Anwendungen sind tendenziell Interoperabilität zwischen einer begrenzten Anzahl von DBMS und allgemeine Anwendungen sind tendenziell Interoperabilität zwischen allen DBMS.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

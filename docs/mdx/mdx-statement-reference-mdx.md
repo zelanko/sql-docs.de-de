@@ -1,5 +1,5 @@
 ---
-title: MDX-Anweisungsreferenz (MDX) | Microsoft Docs
+title: MDX-Anweisungsreferenz (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048494"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX-Anweisungsreferenz (MDX)
 

@@ -1,6 +1,6 @@
 ---
-title: GRANT-T-SQL-Berechtigungen - Parallel Data Warehouse | Microsoft Docs
-description: GRANT-T-SQL-Berechtigungen für Datenbankvorgängen in Parallel Data Warehouse.
+title: 'GRANT-T-SQL-Berechtigungen: Parallel Data Warehouse | Microsoft-Dokumentation'
+description: GRANT-T-SQL-Berechtigungen für Datenbankvorgänge in Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157511"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>GRANT-T-SQL-Berechtigungen für Parallel Data Warehouse
-GRANT-T-SQL-Berechtigungen für Datenbankvorgängen in Parallel Data Warehouse.
+GRANT-T-SQL-Berechtigungen für Datenbankvorgänge in Parallel Data Warehouse.
 
-## <a name="grant-permissions-to-submit-database-queries"></a>Erteilen Sie Berechtigungen zum Übermitteln von Datenbankabfragen
-Dieser Abschnitt beschreibt, wie zum Gewähren von Berechtigungen für Datenbankrollen und Benutzer zum Abfragen von Daten auf der SQL Server PDW Appliance.  
+## <a name="grant-permissions-to-submit-database-queries"></a>Gewähren von Berechtigungen für Abfragen zu übermitteln.
+Dieser Abschnitt beschreibt das Gewähren von Berechtigungen für Datenbankrollen und Benutzern zum Abfragen von Daten auf der SQL Server-PDW-Appliance.  
   
-Die Anweisungen zum Erteilen von Berechtigungen zum Abfragen von Daten hängt von den Bereich der gewünschten Zugriffsberechtigung ab. Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen KimAbercrombie, die auf das Gerät zugreifen können, erstellen einen Datenbankbenutzer namens KimAbercrombie in der **AdventureWorksPDW2012** Datenbank, eine Datenbankrolle mit dem Namen PDWQueryData erstellen, fügt die Verwendung Grundlage, dass KimAbercrombie in der PDWQueryData-Rolle, und klicken Sie dann Optionen zum Gewähren des Zugriffs für Abfragen, anzeigen, ob der Zugriff auf das Objekt oder Datenbankebene gewährt wird.  
+Die Anweisungen zum Gewähren von Berechtigungen zum Abfragen von Daten ist abhängig von den Bereich des gewünschten Zugriffs. Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen KimAbercrombie, die auf das Gerät zugreifen können, erstellen ein Datenbankbenutzers KimAbercrombie in werden die **AdventureWorksPDW2012** Datenbank, eine Datenbankrolle mit dem Namen PDWQueryData erstellen, fügt die Verwendung Grundlage, dass KimAbercrombie PDWQueryData-Rolle und klicken Sie dann Optionen zum Gewähren des Zugriffs für Abfragen, anzeigen, ob der Zugriff auf das Objekt oder Datenbankebene gewährt wird.  
   
 ```sql  
 USE master;  
@@ -58,12 +58,12 @@ GRANT SELECT ON OBJECT::AdventureWorksPDW2012..DimEmployee TO KimAbercrombie;
 GO  
 ```  
   
-## <a name="grant-permissions-to-use-the-admin-console"></a>Erteilen von Berechtigungen für die Verwendung der Verwaltungskonsole
-Dieser Abschnitt beschreibt, wie mithilfe der Verwaltungskonsole auf Anmeldungen gewähren.  
+## <a name="grant-permissions-to-use-the-admin-console"></a>Gewähren von Berechtigungen für die Admin-Konsole verwenden
+In diesem Abschnitt wird beschrieben, wie zum Gewähren von Berechtigungen zu Anmeldungen die Admin-Konsole verwendet wird.  
   
 **Verwenden Sie die Admin-Konsole**  
   
-Mithilfe der Admin-Konsole erfordert eine Anmeldung Serverebene **VIEW SERVER STATE** Berechtigung. Die folgende SQL-Anweisung erteilt die **VIEW SERVER STATE** Berechtigung für die Anmeldung `KimAbercrombie` sodass Sven die-Verwaltungskonsole zum Überwachen der SQL Server PDW Appliance verwenden kann.  
+Verwenden Sie die Verwaltungskonsole erfordert eine Anmeldung Serverebene **VIEW SERVER STATE** Berechtigung. Die folgende SQL-Anweisung erteilt die **VIEW SERVER STATE** -Berechtigung `KimAbercrombie` sodass Sven die Admin-Konsole verwenden kann, überwachen die SQL Server-PDW-Appliance.  
   
 ```sql  
 USE master;  
@@ -81,9 +81,9 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ```  
   
 ## <a name="grant-permissions-to-load-data"></a>Erteilen von Berechtigungen zum Laden von Daten
-Dieser Abschnitt beschreibt, wie zum Laden von Daten auf dem SQL Server-PDWappliance Datenbankbenutzer und Datenbankrollen Berechtigungen.  
+In diesem Abschnitt wird beschrieben, wie zum Gewähren von Berechtigungen für Datenbankrollen und Datenbankbenutzer zum Laden von Daten auf dem SQL Server-PDWappliance wird.  
   
-Das folgende Skript zeigt, welche Berechtigungen für jede einzelne Option Laden erforderlich sind. Sie können diese Option, um Ihre speziellen Anforderungen ändern.  
+Das folgende Skript zeigt, welche Berechtigungen für die einzelnen Optionen laden erforderlich sind. Sie können diese Option, um Ihre speziellen Anforderungen ändern.  
   
 ```sql  
 -- Create server login for the examples that follow.  
@@ -123,17 +123,17 @@ EXEC sp_addrolemember 'db_datareader','BI_ETLUser';
 EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';  
 ```  
   
-## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>Gewähren von Berechtigungen für das Kopieren von Daten aus der Anwendung
-Dieser Abschnitt beschreibt die Vorgehensweise zum Kopieren von Daten aus der SQL Server PDW-Anwendung auf einen Benutzer oder eine Datenbankrolle gewähren.  
+## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>Gewähren von Berechtigungen für das Kopieren von Daten nicht auf dem Gerät
+Dieser Abschnitt beschreibt, wie Berechtigungen für einen Benutzer oder Datenbankrolle zum Kopieren von Daten aus der SQL Server-PDW-Appliance zu gewähren.  
   
 Zum Verschieben von Daten an einen anderen Speicherort erfordert **wählen** -Berechtigung für die Tabelle mit den Daten verschoben werden soll.  
   
-Wenn das Ziel für die Daten einer anderen SQL Server PDW ist, kann der Benutzer benötigt **CREATE TABLE** Berechtigung am Ziel und **ALTER SCHEMA** -Berechtigung für das Schema, das die Tabelle enthalten ist.  
+Wenn das Ziel für die Daten einer anderen SQL Server PDW ist, kann der Benutzer benötigen **CREATE TABLE** Berechtigung am Ziel und **ALTER SCHEMA** -Berechtigung für das Schema, das die Tabelle enthalten soll.  
   
 ## <a name="grant-permissions-to-manage-databases"></a>Erteilen von Berechtigungen zum Verwalten von Datenbanken
-Dieser Abschnitt beschreibt das Gewähren von Berechtigungen für Datenbankbenutzer in einer Datenbank auf dem SQL Server PDW-Anwendung verwalten.  
+In diesem Abschnitt wird beschrieben, gewähren Sie Berechtigungen für einen Datenbankbenutzer zum Verwalten einer Datenbank auf der SQL Server-PDW-Appliance.  
   
-In einigen Situationen weist ein Unternehmen einen für eine Datenbank-Manager. Der Manager steuert den Zugriff, den andere Anmeldenamen mit der Datenbank als auch die Daten und Objekte in der Datenbank haben. Zum Verwalten aller Objekte, Rollen und Benutzer in einer Datenbank gewähren Sie dem Benutzer die **Steuerelement** Berechtigung für die Datenbank. Die folgende Anweisung erteilt die **Steuerelement** -Berechtigung für die **AdventureWorksPDW2012** Datenbank für den Benutzer `KimAbercrombie`.  
+In einigen Fällen weist ein Unternehmen einen Manager für eine Datenbank. Der Manager steuert den Zugriff, den andere Anmeldungen auf die Datenbank als auch die Daten und Objekte in der Datenbank verfügen. Zum Verwalten aller Objekte, Rollen und Benutzer in einer Datenbank gewähren Sie dem Benutzer die **Steuerelement** Berechtigung für die Datenbank. Die folgende Anweisung erteilt die **Steuerelement** -Berechtigung für die **AdventureWorksPDW2012** Datenbank für den Benutzer `KimAbercrombie`.  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -141,17 +141,17 @@ GO
 GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;  
 ```  
   
-Um einem Benutzer die Berechtigung für alle Datenbanken auf dem Gerät steuern erteilen der **ALTER ANY DATABASE** -Berechtigung in der master-Datenbank.  
+Um eine Person die Berechtigung für alle Datenbanken auf dem Gerät steuern gewähren, gewähren dem **ALTER ANY DATABASE** -Berechtigung in der master-Datenbank.  
   
-## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen, Benutzer und -Datenbankrollen
-Dieser Abschnitt beschreibt, wie Berechtigungen zur Verwaltung von Anmeldungen, Datenbankbenutzer und Datenbankrollen gewähren.  
+## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen, Benutzer und Datenbankrollen
+In diesem Abschnitt wird beschrieben, wie zum Gewähren von Berechtigungen zum Verwalten von Anmeldungen, Datenbankbenutzer und Datenbankrollen werden.  
   
-### <a name="PermsAdminConsole"></a>Erteilen von Berechtigungen zum Verwalten der Anmeldenamen  
+### <a name="PermsAdminConsole"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen  
 **Hinzufügen oder Verwalten von Anmeldungen**  
   
-Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen KimAbercrombie, die neue Anmeldungen erstellen kann die [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) Anweisung und bereits vorhandener Anmeldungen ändern, indem die [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) Anweisung.  
+Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen KimAbercrombie, die neue Anmeldungen erstellen kann die [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) Anweisung und ändern Sie die vorhandene Anmeldungen mithilfe der [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) Anweisung.  
   
-Die **ALTER ANY LOGIN** Berechtigung bietet die Möglichkeit zum Erstellen neuer Anmeldenamen und löschen vorhandene. Sobald eine Anmeldung vorhanden ist, kann die Anmeldung von Anmeldungen mit verwaltet werden die **ALTER ANY LOGIN** Berechtigung oder die **ALTER** Berechtigung für diesen Anmeldenamen. Ein Anmeldename kann das Kennwort und einer Standarddatenbank für seine eigene Anmeldung ändern.  
+Die **ALTER ANY LOGIN** Berechtigung gewährt, die Möglichkeit, neue Anmeldenamen zu erstellen und löschen vorhandene. Sobald eine Anmeldung vorhanden ist, kann die Anmeldung verwaltet werden, von Anmeldungen mit der **ALTER ANY LOGIN** Berechtigung oder die **ALTER** Berechtigung für diesen Anmeldenamen. Eine Anmeldung kann das Kennwort und einer Standarddatenbank für seine eigene Anmeldung ändern.  
   
 ```sql 
 CREATE LOGIN KimAbercrombie   
@@ -163,8 +163,8 @@ GO
 GRANT ALTER ANY LOGIN TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permissions-to-manage-login-sessions"></a>Gewähren von Berechtigungen für die Anmeldung Sitzungen zu verwalten  
-Erfordert die haben der Möglichkeit zum Anzeigen von allen Sitzungen auf dem Server die **VIEW SERVER STATE** Berechtigung. Das Beenden von Sitzungen in der anderen Anmeldungen erfordert die **ALTER ANY CONNECTION** Berechtigung. Im folgenden Beispiel wird die `KimAbercrombie` Anmeldung, die zuvor erstellt haben.  
+### <a name="grant-permissions-to-manage-login-sessions"></a>Gewähren von Berechtigungen für die Anmeldung Sitzungen verwalten  
+Um die Möglichkeit haben, zeigen Sie alle Sitzungen auf dem Server müssen die **VIEW SERVER STATE** Berechtigung. Beenden die Sitzungen, die von anderen Anmeldungen erforderlich, dass die **ALTER ANY CONNECTION** Berechtigung. Im folgenden Beispiel wird die `KimAbercrombie` Anmeldung, die zuvor erstellt haben.  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -175,7 +175,7 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permission-to-manage-database-users"></a>Erteilen der Berechtigung zum Verwalten von Datenbankbenutzern  
-Erstellen und Löschen von Datenbankbenutzern erfordert die **ALTER ANY USER** Berechtigung. Verwalten von vorhandenen Benutzern erfordert die **ALTER ANY USER** Berechtigung oder die **ALTER** Berechtigung für diesen Benutzer. Im folgenden Beispiel wird die `KimAbercrombie` Anmeldung, die zuvor erstellt haben.  
+Erstellen und Löschen von Datenbankbenutzern erfordert die **ALTER ANY USER** Berechtigung. Verwalten von vorhandenen Benutzern muss die **ALTER ANY USER** Berechtigung oder die **ALTER** Berechtigung für diesen Benutzer. Im folgenden Beispiel wird die `KimAbercrombie` Anmeldung, die zuvor erstellt haben.  
   
 ```sql  
 -- Create a user  
@@ -197,18 +197,18 @@ GO
 GRANT ALTER ANY ROLE TO KimAbercrombie;  
 ```  
   
-### <a name="login-user-and-role-permission-charts"></a>Anmeldung, Benutzer und Rollen Berechtigung Diagramme  
-Die folgenden Diagramme können verwirrend sein, aber wie höhere Hebel Berechtigungen (z. B.-Steuerelement) zeigen enthalten spezifischere Berechtigungen, die separat (z. B. ALTER) erteilt werden können. Es wird empfohlen, immer die geringstmöglichen Berechtigungen für eine Person ihre erforderlichen Aufgaben auszuführen zu gewähren. Zu diesem Zweck spezifischere Berechtigungen, anstelle der obersten Ebene Berechtigungen zu gewähren.  
+### <a name="login-user-and-role-permission-charts"></a>Anmeldenamen, Benutzer und Rolle Berechtigung Diagramme  
+Die folgenden Diagramme können verwirrend sein, aber darin wird veranschaulicht, wie höhere Hebel Berechtigungen (z.B.) präziser Berechtigungen, die separat (z. B. ALTER) erteilt werden können. Es ist eine bewährte Methode, die die geringste Menge an Berechtigungen für eine Person, die notwendigen Aufgaben immer gewähren. Gewähren Sie spezifischere Berechtigungen anstelle der Berechtigungen auf oberster Ebene, zu diesem Zweck.  
   
 **Login-Berechtigungen verfügen:**  
   
 ![APS-sicherheitsanmeldeberechtigungen](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
-**Berechtigungen des Benutzers:**  
+**Benutzerberechtigungen:**  
   
 ![APS-sicherheitsbenutzerberechtigungen](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
-**Rollenberechtigungen:**  
+**Berechtigungen für die Rolle:**  
   
 ![APS-Sicherheitsrollenberechtigungen](./media/grant-permissions/APS_security_role_perms.png "APS_security_role_perms")  
   
@@ -217,11 +217,11 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
   
 -->
 
-## <a name="grant-permissions-to-monitor-the-appliance"></a>Gewähren von Berechtigungen für die Anwendung überwachen
-Die SQL Server PDW-Anwendung kann mithilfe der Verwaltungskonsole oder der SQL Server PDW-Systemsichten überwacht werden. Anmeldungen müssen Serverebene **VIEW SERVER STATE** über die Berechtigung zum Überwachen der Appliance. Anmeldungen müssen die **ALTER ANY CONNECTION** Berechtigung, um Verbindungen mit der Verwaltungskonsole zu beenden oder die **KILL** Befehl. Informationen über ausreichende Berechtigungen zum Verwenden der Verwaltungskonsole finden Sie unter [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
+## <a name="grant-permissions-to-monitor-the-appliance"></a>Gewähren von Berechtigungen für das Überwachen der Appliance
+Die SQL Server-PDW-Appliance kann mithilfe der Admin-Verwaltungskonsole oder SQL Server-PDW-Systemsichten überwacht werden. Anmeldungen sind erforderlich, die auf Serverebene **VIEW SERVER STATE** über die Berechtigung zum Überwachen der Appliance. Anmeldungen der **ALTER ANY CONNECTION** Berechtigung für die Verbindungen zu beenden, indem Sie mit der Verwaltungskonsole oder der **KILL** Befehl. Weitere Informationen zu Berechtigungen erforderlich, um die Verwaltungskonsole zu verwenden, finden Sie unter [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von Systemsichten  
-Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen `monitor_login` und erteilt ihm die **VIEW SERVER STATE** über die Berechtigung zum der `monitor_login` Anmeldung.  
+### <a name="PermsAdminConsole"></a>Erteilen von Berechtigungen zum Überwachen der Appliance mithilfe von Systemansichten  
+Folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen `monitor_login` und gewährt der **VIEW SERVER STATE** Berechtigung für die `monitor_login` Anmeldung.  
   
 ```sql  
 USE master;  
@@ -231,8 +231,8 @@ GRANT VIEW SERVER STATE TO monitor_login;
 GO  
 ```  
   
-### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Erteilen von Berechtigungen zum Überwachen der Appliance mithilfe von Systemsichten und Verbindungen beenden  
-Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen `monitor_and_terminate_login` und erteilt ihm die **VIEW SERVER STATE** und **ALTER ANY CONNECTION** Berechtigungen für die `monitor_and_terminate_login` Anmeldung.  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Erteilen von Berechtigungen zum Überwachen der Appliance mithilfe von Systemansichten und Verbindungen beendet.  
+Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen `monitor_and_terminate_login` und gewährt der **VIEW SERVER STATE** und **ALTER ANY CONNECTION** Berechtigungen für die `monitor_and_terminate_login` Anmeldung.  
   
 ```sql  
 USE master;  
@@ -246,7 +246,7 @@ GO
 Admin-Anmeldungen erstellen zu können, finden Sie unter [fester Serverrollen](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Siehe auch
-[ANMELDUNGSERSTELLUNG](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)  
-[ERSTELLEN DER ROLLE ""](../t-sql/statements/create-role-transact-sql.md)  
-[Auslastungstest](load-overview.md)  
+[ROLLE ERSTELLEN](../t-sql/statements/create-role-transact-sql.md)  
+[Load](load-overview.md)  

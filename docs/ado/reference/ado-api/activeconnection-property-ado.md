@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065538"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu dem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt das angegebene [Befehl](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt derzeit gehört.  
@@ -60,7 +60,7 @@ Gibt an, zu dem [Verbindung](../../../ado/reference/ado-api/connection-object-ad
 > [!NOTE]
 >  **Remote Datendienstnutzung** bei Verwendung für eine clientseitige **Recordset** Objekt, diese Eigenschaft kann nur auf eine Verbindungszeichenfolge oder (in Microsoft Visual Basic oder Visual Basic Scripting Edition) festgelegt werden *"Nothing"* .  
   
-## <a name="record"></a>Aufzeichnung (Record)  
+## <a name="record"></a>Datensatz  
  Diese Eigenschaft ist Lese-/Schreibzugriff bei der **Datensatz** -Objekt geschlossen ist, und eventuell eine Verbindungszeichenfolge oder einen Verweis auf ein offenes **Verbindung** Objekt. Diese Eigenschaft ist schreibgeschützt und wann die **Datensatz** Objekt geöffnet ist, und enthält einen Verweis auf ein offenes **Verbindung** Objekt.  
   
  Ein **Verbindung** Objekt wird implizit erstellt, wenn die **Datensatz** Objekt über eine URL geöffnet wird. Öffnen der **Datensatz** öffnen Sie mit einem vorhandenen **Verbindung** Objekt durch Zuweisen der **Verbindung** Objekt für diese Eigenschaft oder mithilfe der **Verbindung** Objekt als Parameter in der [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methodenaufruf. Wenn die **Datensatz** wird geöffnet, aus einer vorhandenen **Datensatz** oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), ist es automatisch zugeordnet **Datensatz** oder  **Recordset** des Objekts **Verbindung** Objekt.  

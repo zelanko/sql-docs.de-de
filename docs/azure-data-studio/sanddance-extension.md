@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dd63f490ed1c635abfb6bef6972363cfba3c96bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142192"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance für Azure Data Studio (Vorschau)
 Azure Data Studio bietet nun eine Möglichkeit, schnelle Visualisierungen für die CSV und TSV-Dateien zu erstellen, an dem Sie arbeiten. Dies schließt lokale Dateien oder Dateien in HDFS in den SQL Server 2019 Big Data-Cluster an. Diese Erweiterung ist hilfreich, wenn Sie versuchen, Sie haben eine kurze, sehen Sie sich die Daten und zu verstehen, was vor sich geht. Wir verwenden eine Technologie namens SandDance von Microsoft Research, die für ein direktes Visualisierungen der Daten generieren können.
@@ -30,7 +30,7 @@ Smooth animierten Übergänge zwischen den Ansichten können Sie Kontext beibeha
 
 ## <a name="usage"></a>Verwendung
 
-Mit der rechten Maustaste auf eine lokale CSV- oder TSV-Datei, und wählen Sie *Ansicht SandDance*.
+Verwenden Sie beginnend mit dem Menü "Datei" Ordner öffnen "oder" [STRG + K, STRG + O], öffnen Sie das Verzeichnis mit der. CSV-Datei.  Als Nächstes von innerhalb des Bereichs Explorer mit der rechten Maustaste auf das CSV- oder TSV-Datei und *Ansicht SandDance*.
 
 Mit der rechten Maustaste auf eine CSV- oder TSV-Datei in HDFS an, wenn Sie mit SQL Server 2019 Big Data-Cluster verbunden sind, und wählen Sie *Ansicht SandDance*.
 

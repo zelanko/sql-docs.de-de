@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7a99f6c2960600d62a789471f68c1f5da89ae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148871"
 ---
 # <a name="trace-dll"></a>Ablaufverfolgungs-DLL
 Die DLL, die Ablaufverfolgung ist eine ODBC-Kernkomponenten. Die Ablaufverfolgung, die DLL derzeit bereitgestellt wird, wie eine DLL-Beispiel in der ODBC-Komponente des Windows SDK und wurde, enthalten früher Microsoft Data Access Components (MDAC) SDK. Aus diesem Grund sind die Registrierungseintrag, Benutzeroberfläche und Beispielcode für die Ablaufverfolgung DLL verfügbar. Diese DLL-Datei kann von einer Ablaufverfolgung erzeugten entweder eine ODBC-Benutzer oder ein Drittanbieter-DLL ersetzt werden. Eine benutzerdefinierte DLL-Ablaufverfolgung sollte einen anderen Namen als die ursprüngliche Beispiel Ablaufverfolgung DLL angegeben werden. Trace-DLLs im Verzeichnis Systems installiert werden, oder sie können nicht geladen. Die Verbindungszeichenfolgen werden nicht in die Ablaufverfolgung DLL vom Treiber-Manager übergeben.  

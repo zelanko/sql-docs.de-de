@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149071"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData und Blockcursor
 **SQLGetData** greift auf eine einzelne Spalte aus einer einzelnen Zeile und ein Array mit Daten aus mehreren Zeilen kann nicht abgerufen werden. Dies ist, da die primäre Verwendung von **SQLGetData** wird zum Abrufen von long-Daten in Teilen, und es ist wenig oder keinen Grund dafür für mehr als eine Zeile zu einem Zeitpunkt.  

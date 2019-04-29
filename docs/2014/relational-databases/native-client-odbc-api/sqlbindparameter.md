@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067816"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` kann der Aufwand der Datenkonvertierung, wenn verwendet, um das Bereitstellen von Daten für beseitigen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, was zu deutlichen Leistungszuwachs für sowohl die Client- und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
   
 > [!NOTE]  
->  Beim Einfügen von Daten vom Typ `char` und `wchar` in eine <legacyBold>image</legacyBold>-Spalte wird die Größe verwendet, in der die Daten weitergegeben werden, nicht die Größe der Daten nach der Konvertierung in ein binäres Format.  
+>  Beim Einfügen von Daten vom Typ `char` und `wchar` in eine &lt;legacyBold&gt;image&lt;/legacyBold&gt;-Spalte wird die Größe verwendet, in der die Daten weitergegeben werden, nicht die Größe der Daten nach der Konvertierung in ein binäres Format.  
   
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber einen Fehler in einem einzelnen Arrayelement eines Parameterarrays entdeckt, setzt der Treiber die Ausführung der Anweisung für die verbleibenden Arrayelemente fort. Wenn die Anwendung ein Array mit Parameterstatuselementen für die Anweisung gebunden hat, können die Zeilen der Parameter, die Fehler generieren, aus dem Array ermittelt werden.  
   

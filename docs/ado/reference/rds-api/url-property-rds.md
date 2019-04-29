@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d4093321edfca7d1176c4b5be18ee876888b1a2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184764"
 ---
 # <a name="url-property-rds"></a>URL-Eigenschaft (RDS)
 Gibt eine Zeichenfolge, die eine relative oder absolute URL enthält.  

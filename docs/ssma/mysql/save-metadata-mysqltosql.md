@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154570"
 ---
 # <a name="save-metadata--mysqltosql"></a>Speichern von Metadaten (MySqlToSql)
 Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  
   
 Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten fehlt wird, die **speichern Metadaten** Dialogfeld.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Name**  
 Der Name jeder Datenbank im Projekt.  
   

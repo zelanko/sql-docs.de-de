@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045500"
 ---
 # <a name="processing-a-sql-statement"></a>Verarbeiten von SQL-Anweisungen
 Ehe wir näher auf die Techniken für die Verwendung von SQL programmgesteuert, ist es erforderlich, die erläutern, wie eine SQL-Anweisung verarbeitet wird. Die Schritte gelten für alle drei Verfahren, zur Verfügung, obwohl jedes Verfahren sie zu unterschiedlichen Zeitpunkten führt. Die folgende Abbildung zeigt die Schritte beteiligt, bei der Verarbeitung einer SQL-Anweisung, die den Rest dieses Abschnitts erläutert werden.  

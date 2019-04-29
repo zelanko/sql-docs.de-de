@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181289"
 ---
 # <a name="odbc-appendixes"></a>ODBC-Anhänge
 Technische Details im Zusammenhang mit Microsoft ODBC-Schnittstelle befinden sich in den folgenden Anhängen:  
@@ -27,9 +27,9 @@ Technische Details im Zusammenhang mit Microsoft ODBC-Schnittstelle befinden sic
   
 -   [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Anhang D:-Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
 -   [Anhang F: ODBC-Cursorbibliothek](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   

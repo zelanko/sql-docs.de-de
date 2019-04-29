@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036195"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
   In diesem Thema wird beschrieben, wie die Eigenschaften eines Indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert werden.  
@@ -39,7 +39,7 @@ ms.locfileid: "54130190"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie die Eigenschaften eines Indexes mithilfe von:**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "54130190"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Die folgenden Optionen werden sofort auf den Index angewendet, mit der SET-Klausel in der ALTER INDEX-Anweisung: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE.  
+-   Die folgenden Optionen werden sofort auf den Index angewendet, indem die SET-Klausel in der ALTER INDEX-Anweisung verwendet wird: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE.  
   
--   Die folgenden Optionen können festgelegt werden, wenn Sie einen Index mithilfe von ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING neu erstellen: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP und DROP_EXISTING (nur CREATE INDEX).  
+-   Die folgenden Optionen können beim Neuerstellen eines Indexes mithilfe von ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING festgelegt werden: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP und DROP_EXISTING (nur CREATE INDEX).  
   
 ###  <a name="Security"></a> Sicherheit  
   

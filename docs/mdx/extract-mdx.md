@@ -1,5 +1,5 @@
 ---
-title: Extrahieren (MDX) | Microsoft Docs
+title: Extrahieren (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155210"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -39,12 +39,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **extrahieren** -Funktion eine Menge, die aus Tupeln aus den extrahierten Hierarchieelementen besteht zurück. Zu jedem Tupel in der angegebenen Menge werden die Elemente der angegebenen Hierarchien in neue Tupel im Resultset extrahiert. Doppelte Tupel werden von der Funktion immer entfernt.  
+ Die **extrahieren** Funktionsergebnis ist eine Gruppe, die aus Tupeln aus den extrahierten Hierarchieelementen besteht. Zu jedem Tupel in der angegebenen Menge werden die Elemente der angegebenen Hierarchien in neue Tupel im Resultset extrahiert. Doppelte Tupel werden von der Funktion immer entfernt.  
   
  Die **extrahieren** Funktion führt die umkehraktion der [Crossjoin](../mdx/crossjoin-mdx.md) Funktion.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt, wie die **extrahieren** Funktion für eine Menge von Tupeln, die zurückgegeben werden, indem Sie die **NonEmpty** Funktion:  
+ Die folgende Abfrage zeigt, wie Sie mit der **extrahieren** Funktion auf eine Menge von Tupeln, die zurückgegeben werden, indem die **NonEmpty** Funktion:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   

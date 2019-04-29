@@ -1,5 +1,5 @@
 ---
-title: 'Senden der Updates: UpdateBatch-Methode | Microsoft-Dokumentation'
+title: 'Senden von Updates: UpdateBatch-Methode | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062876"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Senden der Updates: UpdateBatch-Methode
+# <a name="sending-the-updates-updatebatch-method"></a>Senden von Updates: UpdateBatch-Methode
 Der folgende Code wird ein Recordset im Modus "Batch" durch Festlegen der LockType-Eigenschaft auf AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte und ruft dann UpdateBatch zum Senden, dass die Änderungen an die Datenquelle zurück.  
   
 ## <a name="remarks"></a>Hinweise  

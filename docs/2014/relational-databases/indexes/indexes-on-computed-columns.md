@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162451"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
   Sie können Indizes für berechnete Spalten definieren, sofern die folgenden Anforderungen erfüllt sind:  
@@ -70,7 +70,7 @@ ms.locfileid: "48049570"
   
 -   Es handelt sich um keinen Ausdruck des `float`- oder `real`-Datentyps.  
   
--   Es verwendet keine `float` oder `real` -Datentyp in der Definition. Beispielsweise in der folgenden Anweisung Spalte `y` ist `int` und deterministisch, aber nicht präzise.  
+-   In der Definition des Ausdrucks wird kein `float`- oder `real`-Datentyp verwendet. Beispielsweise ist in der folgenden Anweisung die `y`-Spalte vom `int`-Datentyp und deterministisch, aber nicht präzise.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049570"
     ```  
   
 > [!NOTE]  
->  Alle `float` oder `real` Ausdruck gilt als unpräzise, und kann kein Schlüssel eines Indexes, ein `float` oder `real` -Ausdruck kann in einer indizierten Sicht, jedoch nicht als Schlüssel verwendet werden. Dies gilt auch für berechnete Spalten. Jede Funktion, Ausdruck oder eine benutzerdefinierte Funktion gilt als unpräzise, wenn es enthält `float` oder `real` Ausdrücke. Das gilt auch für logische (Vergleiche).  
+>  Jeder `float`- oder `real`-Ausdruck gilt als nicht präzise und kann nicht als Schlüssel eines Indexes verwendet werden; ein `float`- oder `real`-Ausdruck kann in einer indizierten Sicht, jedoch nicht als Schlüssel verwendet werden. Dies gilt auch für berechnete Spalten. Jede Funktion, jeder Ausdruck oder jede benutzerdefinierte Funktion gilt als unpräzise, wenn Sie `float`- oder `real`-Ausdrücke enthält. Das gilt auch für logische (Vergleiche).  
   
  Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Ausdruck einer berechneten Spalte ( *computed_column_expression* ) präzise ist.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049570"
   
 -   Die *Computed_column_expression* definiert, für die berechnete Spalte werden, um ausgewertet kann die `text`, `ntext`, oder `image` -Datentypen.  
   
--   Berechnete Spalten, die von abgeleiteten `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, und `xml` Datentypen können indiziert werden, solange der Datentyp der berechneten Spalte als indexschlüsselspalte zulässig ist.  
+-   Berechnete Spalten, die aus den Datentypen `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` und `xml` abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
   
--   Berechnete Spalten, die von abgeleiteten `image`, `ntext`, und `text` Datentypen können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, solange der Datentyp der berechneten Spalte als nichtschlüssel-Indexspalte zulässig ist.  
+-   Berechnete Spalten, die aus `image`-, `ntext`- und `text`-Datentypen abgeleitet sind, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüsseldatenspalten zulässig ist.  
   
  **SET Option Requirements**  
   

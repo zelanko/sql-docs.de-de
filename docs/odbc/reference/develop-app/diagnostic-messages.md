@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034917"
 ---
 # <a name="diagnostic-messages"></a>Diagnosemeldungen
 Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTATE wird häufig mit einer Anzahl von unterschiedlichen Nachrichten zurückgegeben. SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) wird z. B. für die meisten Fehler im SQL-Syntax zurückgegeben. Jede Syntaxfehler ist jedoch wahrscheinlich durch eine andere Meldung beschrieben werden.  
@@ -33,21 +33,21 @@ Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTAT
   
  Wenn die Quelle der Warnung oder ein Fehler einer Komponente selbst ist, muss die diagnosemeldung diese erläutern. Der Text der Nachrichten hat daher zwei verschiedene Formate. Für Fehler und Warnungen, die nicht in einer Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
   
- **[** *Hersteller-ID* **] [** *ODBC-Komponenten-ID* **]** *Komponente bereitgestellten Text*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  Für Fehler und Warnungen, die in einer Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
   
- **[** *Hersteller-ID* **] [** *ODBC-Komponenten-ID* **] [** *datenquellenbezeichner*  **]** *Data-Source-bereitgestellten-Text*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  Die folgende Tabelle zeigt die Bedeutung der einzelnen Elemente.  
   
 |Element|Bedeutung|  
 |-------------|-------------|  
-|*Hersteller-ID*|Gibt den Hersteller der Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
-|*ODBC-Komponenten-ID*|Identifiziert die Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
-|*Data-Source-identifier*|Identifiziert die Datenquelle an. Für dateibasierte Treiber, dies ist normalerweise ein Dateiformat, z. B. Xbase [1] für die DBMS-basierten Treibern, ist dies das DBMS-Produkt.|  
-|*Komponente bereitgestellten text*|Von der ODBC-Komponente generiert.|  
-|*Data-Source-bereitgestellten-text*|Von der Datenquelle generiert.|  
+|*vendor-identifier*|Gibt den Hersteller der Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
+|*ODBC-component-identifier*|Identifiziert die Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
+|*data-source-identifier*|Identifiziert die Datenquelle an. Für dateibasierte Treiber, dies ist normalerweise ein Dateiformat, z. B. Xbase [1] für die DBMS-basierten Treibern, ist dies das DBMS-Produkt.|  
+|*component-supplied-text*|Von der ODBC-Komponente generiert.|  
+|*data-source-supplied-text*|Von der Datenquelle generiert.|  
   
  [1] In diesem Fall wird der Treiber als sowohl der Treiber und der Datenquelle verwendet.  
   

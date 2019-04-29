@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063117"
 ---
 # <a name="deleting-database-objects"></a>Löschen von Datenbankobjekten
   Sie könnten einfach nur die Datenbank löschen, um dieses Lernprogramm vollständig zu entfernen. In diesem Thema führen Sie jedoch die erforderlichen Schritte aus, um jede Aktion rückgängig zu machen, die Sie im Lernprogramm ausgeführt haben.  
@@ -100,7 +100,7 @@ ms.locfileid: "48092308"
  Damit ist das Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen beendet. Beachten Sie, dass dieses Lernprogramm nur eine kurze Übersicht bietet und darin nicht alle Optionen der verwendeten Anweisungen beschrieben werden. Das Entwerfen und Erstellen einer effizienten Datenbankstruktur und das Konfigurieren des sicheren Zugriffs auf die Daten erfordern eine komplexere Datenbank als in diesem Lernprogramm gezeigt.  
   
 ## <a name="return-to-sql-server-tools-portal"></a>Zurück zum Portal für SQL Server-Tools  
- [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

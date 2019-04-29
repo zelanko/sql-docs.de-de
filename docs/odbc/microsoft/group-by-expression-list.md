@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 254145059e56adc0283ea53f79b1719bebba7601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127361"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY-Ausdrucksliste
 GROUP BY unterstützt sowohl eine Liste mit Ausdrücken als auch einen Spaltennamen an. Die Auswahlliste einer SELECT-Anweisung, die eine GROUP BY-Klausel kann nur Ausdrücke aus der GROUP BY-Klausel enthalten oder Funktionen festlegen.

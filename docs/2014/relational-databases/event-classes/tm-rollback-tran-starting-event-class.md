@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061253"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting-Ereignisklasse
+# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting (Ereignisklasse)
   Die TM: Rollback Tran Starting-Ereignisklasse gibt an, dass eine ROLLBACK TRANSACTION-Anforderung gestartet wird. Der Client sendet die Anforderung über die Schnittstelle zur Transaktionsverwaltung. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Rollback der aktuellen Transaktion gestartet wird.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting-Ereignisklasse-Datenspalten  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cae5cfd4c047041437180ced7bf93c4a75cce00
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032931"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID des Fehlers.|  
-|**Uhrzeit**|**datetime**|Zeitpunkt, zu der Fehler aufgetreten ist.|  
+|**time**|**datetime**|Zeitpunkt, zu der Fehler aufgetreten ist.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Typ-ID der Fehlerquelle.|  
 |**source_name**|**nvarchar(100)**|Name der Fehlerquelle.|  

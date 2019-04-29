@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054795"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installieren von Analysis Services im PowerPivot-Modus
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52527752"
 ###  <a name="bkmk_sqleditions"></a> Anforderungen für die SQL Server-Edition  
  Nicht alle Business Intelligence-Funktionen sind in allen Editionen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verfügbar. Weitere Informationen finden Sie unter [von den Editionen von SQL Server 2016 unterstützte Analysis Services Funktionen](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) und [Editionen und Komponenten von SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-##  <a name="InstallSQL"></a> Schritt 1: Installieren von PowerPivot für SharePoint  
+##  <a name="InstallSQL"></a>Schritt 1: Installieren von PowerPivot für SharePoint  
  In diesem Schritt führen Sie das SQL Server-Setup aus, um einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus zu installieren. In einem anschließenden Schritt konfigurieren Sie Excel Services so, dass dieser Server für Arbeitsmappen-Datenmodelle verwendet wird.  
   
 1.  Führen Sie den Installations-Assistenten für SQL Server (Setup.exe) aus.  
@@ -139,7 +139,7 @@ ms.locfileid: "52527752"
   
 3.  Stellen Sie eine Verbindung mit der Analysis Services-Instanz her, beispielsweise **[Servername]\POWERPIVOT**. Wenn Sie eine Verbindung mit der Instanz herstellen können, ist sichergestellt, dass der Dienst ausgeführt wird.  
   
-##  <a name="bkmk_config"></a> Schritt 2: Konfigurieren Sharepoint-Integration von Basic Analysis Services  
+##  <a name="bkmk_config"></a>Schritt 2: Konfigurieren Sie die grundlegende Analysis Services-SharePoint-Integration  
  In den folgenden Schritten werden die erforderlichen Konfigurationsänderungen beschrieben, die die Interaktion mit erweiterten Excel-Datenmodellen innerhalb einer SharePoint-Dokumentbibliothek ermöglichen. Führen Sie diese Schritte nach der Installation von SharePoint Server und SQL Server Analysis Services aus.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527752"
   
     ```  
   
-##  <a name="bkmk_verify"></a> Schritt 3: Überprüfen der Integration  
+##  <a name="bkmk_verify"></a>Schritt 3: Überprüfen der Integration  
  In den folgenden Schritten erfahren Sie, wie eine neue Arbeitsmappe erstellt und hochgeladen wird, um zu überprüfen, ob die Analysis Services-Integration erfolgreich war. Sie benötigen für diese Schritte eine SQL Server-Datenbank.  
   
-1.  **Hinweis**: Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie sie in die SharePoint-Dokumentbibliothek hochladen und überprüfen, ob Sie in der Lage sind, mit den Slicern und Filtern in der Dokumentbibliotheksansicht zu interagieren.  
+1.  **Hinweis**: Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie diese in Ihrer SharePoint-Dokumentbibliothek hochladen und überprüfen Sie, ob Sie mit den Slicern und Filtern interagieren über die Ansicht der Dokumentbibliothek.  
   
 2.  Starten Sie in Excel eine neue Arbeitsmappe.  
   

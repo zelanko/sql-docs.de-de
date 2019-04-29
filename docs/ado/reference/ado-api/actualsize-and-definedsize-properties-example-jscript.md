@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d16ef9737201956d80c5ad70f3e9281bf7fb6edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065368"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize- und DefinedSize-Eigenschaft – Beispiel (JScript)
 Dieses Beispiel verwendet die [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften, die die definierte Größe und die tatsächliche Größe eines Felds angezeigt. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **ActualSizeJS.asp**.  

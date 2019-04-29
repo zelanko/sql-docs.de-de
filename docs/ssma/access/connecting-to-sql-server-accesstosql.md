@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139021"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Herstellen einer Verbindung mit SQLServer (AccessToSQL)
 Migrieren von Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen mit der Zielinstanz von verbinden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Verbindung herstellen, erhält der SSMA Metadaten zu den Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zeigt Sie Datenbank-Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer. SSMA speichert Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie verbunden sind, jedoch werden keine Kennwörter gespeichert.  
@@ -65,7 +65,7 @@ Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, 
   
     -   Wenn Sie die zu einer benannten Instanz herstellen, geben Sie den Namen des Computers, einen umgekehrten Schrägstrich und den Namen der Instanz. Zum Beispiel: MyServer\MyInstance.  
   
-    -   Verbindung mit einer aktiven Benutzerinstanz von [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], eine Verbindung herstellen über named Pipes-Protokoll und Angeben des Pipenamens, z. B. \\ \\.\pipe\sql\query. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Verbindung mit einer aktiven Benutzerinstanz von [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], eine Verbindung herstellen über named Pipes-Protokoll und Angeben des Pipenamens, z. B. \\ \\.\pipe\sql\query. Weitere Informationen finden Sie unter den [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] Dokumentation.  
   
 3.  Wenn Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert ist annehmen von Verbindungen über einen nicht-Standardport, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst.  
   
@@ -98,12 +98,12 @@ Es ist zulässig, eine Verbindung herstellen/sich auf höhere Versionen von SQL 
 ||||||||
 |-|-|-|-|-|-|-|
 |**Projekt-Typ und VERSION des ZIELSERVERS**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Benutzerkontensteuerung|Benutzerkontensteuerung||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Benutzerkontensteuerung||
-|SQL Azure||||||Benutzerkontensteuerung|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Ja|Ja|Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Ja|Ja|Ja|Ja||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Ja|Ja|Ja||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Ja|Ja||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Ja||
+|SQL Azure||||||Ja|
   
 > [!IMPORTANT]  
 > Konvertierung der Datenbankobjekte wird gemäß den Projekttyp, aber nicht gemäß der Version von SQL Server verbunden durchgeführt. Bei SQL Server 2005-Projekt wird Konvertierung gemäß SQL Server 2005 durchgeführt, obwohl Sie mit einer höheren Version von SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) verbunden sind.  

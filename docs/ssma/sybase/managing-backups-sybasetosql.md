@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132309"
 ---
 # <a name="managing-backups-sybasetosql"></a>Verwalten von Sicherungen (SybaseToSQL)
 Sybase-Sicherungsverwaltung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  

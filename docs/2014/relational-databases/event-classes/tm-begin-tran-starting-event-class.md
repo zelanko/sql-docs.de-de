@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061346"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM: BEGIN Tran Starting (Ereignisklasse)
+# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting (Ereignisklasse)
   Die TM: BEGIN Tran Starting-Ereignisklasse gibt an, dass eine BEGIN TRANSACTION-Anforderung gestartet wird. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: BEGIN Tran Starting-Ereignisklasse-Datenspalten  

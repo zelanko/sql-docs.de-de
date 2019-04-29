@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132697"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3,81 Standardkompatibilität: ODBC  
+ Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLGetPoolID** Ruft die Pool-ID  
@@ -43,7 +43,7 @@ SQLRETURN  SQLGetPoolID (
  [Ausgabe] Die Pool-ID, die verwendet wird, um eine Gruppe von Verbindungen zu identifizieren, die austauschbar verwendet werden können (möglicherweise muss eine zusätzliche zurückgesetzt).  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Bei der **SQLGetPoolID** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  

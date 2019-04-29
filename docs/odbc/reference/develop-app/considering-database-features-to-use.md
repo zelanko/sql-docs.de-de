@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042186"
 ---
 # <a name="considering-database-features-to-use"></a>Erwägen der zu verwendenden Datenbankfunktionen
 Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die von der Anwendung verwendeten Funktionen der Datenbank berücksichtigt werden. Werden die Anwendung wird z. B. welche SQL-Anweisungen ausgeführt? Verwendet die Anwendung scrollfähige Cursor? Transaktionen? Verfahren? Long-Daten? Weitere Ideen darüber, welche Funktionen möglicherweise nicht von allen DBMS unterstützt wird, finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) Beschreibungen der Funktionen und [ Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die Funktionen, die von einer Anwendung benötigt möglicherweise einige DBMS-Systeme in der Liste der Ziel-DBMS vermieden. Sie können auch zeigen, dass die Anwendung viele Datenbankmanagementsysteme problemlos ausgeführt werden kann.  
   
- Z. B. wenn die erforderlichen Features einfach sind, können sie in der Regel mit einem hohen Grad an Interoperabilität implementiert werden. Eine Anwendung, die eine einfache führt **wählen** -Anweisung und ruft Ergebnisse mit einem Vorwärtscursor ist wahrscheinlich aufgrund seiner Einfachheit hochgradig interoperabel: fast alle Treiber und DBMS-Systeme unterstützen die Funktionalität es muss.  
+ Z. B. wenn die erforderlichen Features einfach sind, können sie in der Regel mit einem hohen Grad an Interoperabilität implementiert werden. Eine Anwendung, die eine einfache führt **wählen** -Anweisung und ruft Ergebnisse mit einem Vorwärtscursor ist wahrscheinlich aufgrund seiner Einfachheit hochgradig interoperabel sein: Fast alle Treiber und DBMS-Systeme unterstützen die benötigten Funktionen.  
   
  Aber wenn die erforderlichen Features komplexer sein, z. B. scrollfähige Cursor, positioniertes Update und Delete-Anweisungen und Prozeduren sind, müssen vor-und Nachteile häufig vorgenommen werden. Es gibt mehrere Möglichkeiten:  
   

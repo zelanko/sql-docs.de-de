@@ -1,5 +1,5 @@
 ---
-title: Verkettungsoperatoren | Microsoft Docs
+title: Verkettungsoperatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8eacfc08fdeb0f92874758d0f95e5cde3e6b295a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181487"
 ---
 # <a name="concatenation-operators"></a>Operator für Verkettungen
 

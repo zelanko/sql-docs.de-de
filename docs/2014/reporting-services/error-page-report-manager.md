@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164664"
 ---
 # <a name="error-page-report-manager"></a>Fehler (Seite, Berichts-Manager)
   Auf der Seite Fehler können Sie Details zu einer Fehlerbedingung anzeigen. Server-basierten oder sitzungsbasierte Fehler, die auf dieser Seite angezeigt werden. Überprüfungsfehler, die sich auf spezifische Steuerelemente der Seite beziehen, werden inline neben dem Steuerelement angezeigt.  

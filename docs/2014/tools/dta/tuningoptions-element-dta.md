@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061064"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions-Element (DTA)
   Enthält die Optimierungsoptionen für eine bestimmte Optimierungssitzung.  
@@ -41,7 +41,7 @@ ms.locfileid: "53348756"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Dies ist optional. Kann bei Verwendung nur einmalig pro `DTAInput`-Element verwendet werden.|  
+|**Vorkommen**|Optional. Kann bei Verwendung nur einmalig pro `DTAInput`-Element verwendet werden.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

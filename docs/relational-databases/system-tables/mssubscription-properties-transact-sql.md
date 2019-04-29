@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032990"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "52779772"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **2** = Merge.|  
 |**publisher_login**|**sysname**|Die Anmelde-ID, die verwendet werden, auf dem Verleger für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**publisher_password**|**nvarchar(524)**|Das (verschlüsselte) Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**publisher_security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server-Authentifizierung.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.<br /><br /> **2** = der Synchronisierungstrigger verwenden einen statischen **Sysservers** -Eintrag für einen Remoteprozeduraufruf (RPC), und *Verleger* muss definiert werden, der **Sysservers**-Tabelle als Remoteserver oder Verbindungsserver.|  
-|**Verteiler**|**sysname**|Der Name des Verteilers.|  
+|**distributor**|**sysname**|Der Name des Verteilers.|  
 |**distributor_login**|**sysname**|Die Anmelde-ID, die auf dem Verteiler für SQL Server-Authentifizierung verwendet.|  
 |**distributor_password**|**nvarchar(524)**|Das Kennwort (verschlüsselt), das auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**distributor_security_mode**|**int**|Der auf dem Verteiler implementierte Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.<br /><br /> **1** = Windows-Authentifizierung.|  
@@ -59,16 +59,16 @@ ms.locfileid: "52779772"
 |**dynamic_snapshot_location**|**nvarchar(255)**|Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden.|  
 |**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTP synchronisiert werden kann. Der Wert **1** bedeutet, dass dieses Feature aktiviert ist.|  
 |**internet_url**|**nvarchar(260)**|Die URL, die den Speicherort der Replikationsüberwachung für die Websynchronisierung darstellt.|  
-|**sich**|**sysname**|Der Anmeldename, der der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
+|**internet_login**|**sysname**|Der Anmeldename, der der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**internet_password**|**nvarchar(524)**|Das Kennwort für die Anmeldung, die der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet ein Wert von **1** bedeutet, dass Windows-Authentifizierung und einen Wert von **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Authentifizierung.|  
 |**internet_timeout**|**int**|Die Zeit in Sekunden, nach der eine Websynchronisierungsanforderung abläuft.|  
-|**Hostname**|**sysname**|Gibt den Wert für **HOST_NAME** Wenn diese Funktion verwendet wird, der **, in denen** -Klausel eines joinfilters oder logischen datensatzbeziehung.|  
+|**hostname**|**sysname**|Gibt den Wert für **HOST_NAME** Wenn diese Funktion verwendet wird, der **, in denen** -Klausel eines joinfilters oder logischen datensatzbeziehung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   

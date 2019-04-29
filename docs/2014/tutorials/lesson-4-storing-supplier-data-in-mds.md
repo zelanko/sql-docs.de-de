@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eea9f96939f61da77262b549e2ec966ae9a957b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137438"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lektion 4: Speichern von Lieferantendaten in MDS
   Master Data Services (MDS) sind die SQL Server-Lösung für die Masterdatenverwaltung. Master Data Management (MDM) beschreibt die Anstrengungen einer Organisation, nicht transaktionale Listen mit Daten zu ermitteln und zu definieren.  
   
  Modelle stellen die höchste Organisationsebene in Master Data Services dar und organisieren die Struktur der Masterdaten. Eine MDS-Implementierung kann ein oder viele Modelle aufweisen, wobei jedes Modell ähnliche Daten gruppiert. Die Masterdaten werden im Allgemeinen in vier Kategorien unterteilt: Personen, Orte, Gegenstände oder Begriffe. Sie können z. B. ein Produktmodell erstellen, das produktbezogene Daten enthält, oder ein Kundenmodell, das kundenbezogene Daten enthält. Finden Sie unter [Modelle (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) Weitere Details.  
   
- Ein Modell kann eine oder mehrere Entitäten enthalten. Jede Entität hat Attribute (Spalten) und Elemente (Zeilen). Die Zeilen enthalten die Masterdaten. In dieser Lektion erstellen Sie ein Lieferantenmodell (Suppliers) mit zwei Entitäten namens "Supplier" und "State". Die Entität "Supplier" verfügt über die folgenden Attribute: Code, Name, Contact First Name, Contact Last Name, Contact Email Address, Address Line, City, State, Zip und Country. Finden Sie unter [Attribute (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) Weitere Informationen zu Attributen in der Regel. Die Attribute "Code" und "Name" entsprechen den Spalten "SupplierID" und "Supplier Name" in der Excel-Datei "Cleansed and Matched Suppliers".  
+ Ein Modell kann eine oder mehrere Entitäten enthalten. Jede Entität hat Attribute (Spalten) und Elemente (Zeilen). Die Zeilen enthalten die Masterdaten. In dieser Lektion erstellen Sie ein Lieferantenmodell (Suppliers) mit zwei Entitäten namens "Supplier" und "State". Die Entität "Supplier" werden die folgenden Attribute verfügen: Code, Name, Kontakt-Vorname, Nachname des Kontakts, wenden Sie sich an e-Mail-Adresse, Adresszeile, Ort, Bundesland, PLZ und Land. Finden Sie unter [Attribute (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) Weitere Informationen zu Attributen in der Regel. Die Attribute "Code" und "Name" entsprechen den Spalten "SupplierID" und "Supplier Name" in der Excel-Datei "Cleansed and Matched Suppliers".  
   
  Ein domänenbasiertes Attribut weist Werte auf, die mit Elementen einer anderen Entität aufgefüllt werden. Domänenbasierte Attribute verhindern, dass Benutzer ungültige Attributwerte eingeben. Ein Attributwert kann nur aus der Dropdownliste ausgewählt werden, die von einer anderen Entität aufgefüllt wird. In diesem Lernprogramm ist das Attribut "State" der Entität "Supplier" ein domänenbasiertes Attribut mit Werten aus der Entität "State". Sie können den Wert des Attributs "State" der Entität "Supplier" nur in einen der Werte in der Entität "State" ändern. Finden Sie unter [domänenbasierte Attribute](../master-data-services/domain-based-attributes-master-data-services.md) Weitere Details.  
   

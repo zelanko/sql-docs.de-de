@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046152"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Beheben von Fehlern in einer Volltextauffüllung (Durchforstung)  
  Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standard-Durchforstungsprotokolle für eine bestimmte Instanz in diesem Fall die erste Instanz, in %ProgramFiles%\Microsoft SQL Server\MSSQL12 befinden. MSSQLSERVER\MSSQL\LOG-Ordner. Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  
   
- SQLFT\<DatabaseID >\<Volltext >. LOG [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  Die ID einer Datenbank. <`dbid`> ist eine fünfstellige Zahl mit führenden Nullen.  

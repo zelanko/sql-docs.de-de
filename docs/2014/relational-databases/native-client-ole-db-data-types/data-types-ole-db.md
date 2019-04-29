@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062138"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
   Zum Ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen und verarbeiten die Ergebnisse mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, Sie müssen wissen, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Zuordnungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu OLE DB-Datentypen beim Binden Parameter oder Spalten in einem Rowset, und wenn es verwendet die **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

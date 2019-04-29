@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181759"
 ---
 # <a name="behavioral-changes"></a>Verhaltensänderungen
 Änderungen am Verhalten werden diese Änderungen für die die *Syntax* der Schnittstelle bleibt gleich, aber die *Semantik* geändert haben. Für diese Änderungen der Funktionalität in ODBC 2. verwendet. *x* verhält sich anders als die gleiche Funktionalität in ODBC 3. *X*.  
   
  Gibt an, ob eine Anwendung ODBC 2. weist. *x* Verhalten oder ODBC 3. *X* Verhalten wird durch das Attribut der SQL_ATTR_ODBC_VERSION Umgebung bestimmt. Dieser 32-Bit-Wert wird auf SQL_OV_ODBC2 zu ODBC 2. festgelegt. *x* Verhalten und SQL_OV_ODBC3 zu ODBC 3. *X* Verhalten.  
   
- SQL_ATTR_ODBC_VERSION umgebungsattributs wird festgelegt, durch einen Aufruf von **SQLSetEnvAttr**. Nachdem eine Anwendung ruft **SQLAllocHandle** um ein Umgebungshandle zuzuordnen, muss er Aufrufen**SQLSetEnvAttr** sofort auf das Verhalten festgelegt, es weist. (Daher besteht ein neue Umgebung Zustand, beschreiben Sie das Umgebungshandle in ein zugeordnetes, aber versionless, Status.) Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ SQL_ATTR_ODBC_VERSION umgebungsattributs wird festgelegt, durch einen Aufruf von **SQLSetEnvAttr**. Nachdem eine Anwendung ruft **SQLAllocHandle** um ein Umgebungshandle zuzuordnen, muss er Aufrufen**SQLSetEnvAttr** sofort auf das Verhalten festgelegt, es weist. (Daher besteht ein neue Umgebung Zustand, beschreiben Sie das Umgebungshandle in ein zugeordnetes, aber versionless, Status.) Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Eine Anwendung gibt an, welches Verhalten, die sie mit dem Umgebungsattribut SQL_ATTR_ODBC_VERSION, aber das Attribut weist keine Auswirkungen auf die Verbindung der Anwendung mit einer ODBC 2. hat. *x* oder ODBC-3. *X* Treiber. Eine ODBC-3. *x* Anwendung verbinden kann, entweder einer ODBC 2. *X* oder 3. *X* -Treiber verwenden, unabhängig davon, welche die Einstellung des umgebungsattributs.  
   

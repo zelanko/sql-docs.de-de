@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042126"
 ---
 # <a name="cursors"></a>Cursor
-Eine Anwendung ruft Daten mit einem *Cursor*. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist die Menge der Zeilen, die bestimmten Suchkriterien entspricht, die während ein Cursors auf die Software ist, die die Zeilen der Anwendung zurückgegeben. Der Name *Cursor* angewendet auf Datenbanken, wahrscheinlich des blinkenden Cursors auf einem Terminalserver Computer stammt. Genau wie dem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die eingegebene Wörter weiter angezeigt wird, gibt einen Cursor in einem Resultset die aktuelle Position im Resultset und welche Zeile neben zurückgegeben werden soll an.  
+Eine Anwendung ruft Daten mit einem *Cursor*. Ein Cursor unterscheidet sich aus einem Resultset: Ein Resultset ist die Menge der Zeilen, die bestimmten Suchkriterien entspricht, während ein Cursor, die Software ist, die diese Zeilen an die Anwendung zurückgibt. Der Name *Cursor* angewendet auf Datenbanken, wahrscheinlich des blinkenden Cursors auf einem Terminalserver Computer stammt. Genau wie dem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die eingegebene Wörter weiter angezeigt wird, gibt einen Cursor in einem Resultset die aktuelle Position im Resultset und welche Zeile neben zurückgegeben werden soll an.  
   
  Das Cursormodell in ODBC basiert auf das Cursormodell in embedded SQL. Ein deutlicher Unterschied zwischen diesen Modellen ist, dass die Möglichkeit Cursor geöffnet werden. In embedded SQL muss ein Cursor explizit deklariert und geöffnet werden, bevor sie verwendet werden kann. In ODBC ist ein Cursor implizit geöffnet, wenn eine Anweisung, die ein Resultset erstellt ausgeführt wird. Wenn der Cursor geöffnet wird, wird es vor der ersten Zeile des Resultsets positioniert. In embedded SQL und ODBC muss ein Cursor geschlossen werden, nach die Anwendung verwenden.  
   

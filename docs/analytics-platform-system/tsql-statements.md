@@ -10,22 +10,22 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034937"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>T-SQL-Anweisungen für Parallel Data Warehouse
 Transact-SQL (T-SQL)-Anweisungen für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
-* [DATENBANK ÄNDERN](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [SCHEMA ÄNDERN](../t-sql/statements/alter-schema-transact-sql.md)
-* [ÄNDERN DER TABELLE](../t-sql/statements/alter-table-transact-sql.md)
-* [COLUMNSTORE-INDEX ERSTELLEN](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [ERSTELLEN SIE DATENBANKBEZOGENE ANMELDEINFORMATIONEN](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
@@ -85,7 +85,7 @@ Transact-SQL (T-SQL)-Anweisungen für Analytics Platform System (APS) SQL Server
 * [Unterabfragen](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Sicherheitsanweisungen
-* Berechtigungen: [GRANT](../t-sql/statements/grant-transact-sql.md), [Verweigern](../t-sql/statements/deny-transact-sql.md), [widerrufen](../t-sql/statements/revoke-transact-sql.md)
+* Berechtigungen: [GRANT](../t-sql/statements/grant-transact-sql.md), [VERWEIGERN](../t-sql/statements/deny-transact-sql.md), [WIDERRUFEN](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ZERTIFIKAT ÄNDERN](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -97,7 +97,7 @@ Transact-SQL (T-SQL)-Anweisungen für Analytics Platform System (APS) SQL Server
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [ZERTIFIKAT ERSTELLEN](../t-sql/statements/create-certificate-transact-sql.md)
 * [VERSCHLÜSSELUNGSSCHLÜSSEL FÜR DATENBANK ERSTELLEN](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [ERSTELLEN DER ANMELDUNG](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
 * [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [ROLLE ERSTELLEN](../t-sql/statements/create-role-transact-sql.md)
 * [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)

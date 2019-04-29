@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065762"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
   Es wird empfohlen, für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei, die Sonderzeichen oder Zeichen aus dem Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält, das Unicode-Zeichenformat zu verwenden. Mit dem Unicode-Zeichenformat können Daten von einem Server mithilfe einer Codepage exportiert werden, wenn sich diese Codepage von der Codepage unterscheidet, die der Client verwendet, der den Vorgang ausführt. In solchen Fällen bietet die Verwendung des Unicode-Zeichenformats folgende Vorteile:  
@@ -32,9 +32,9 @@ ms.locfileid: "48191770"
 > [!IMPORTANT]  
 >  Damit eine Formatdatei mit einer Datendatei mit Unicode-Zeichen verwendet werden kann, müssen alle Eingabefelder Unicode-Textzeichenfolgen sein (d. h., entweder Unicode-Zeichenfolgen einer festen Länge oder Unicode-Zeichenfolgen mit Abschlusszeichen).  
   
- Die `sql_variant` Daten, die in einer Datendatei für Unicode-Zeichenformat gespeichert sind, verhalten sich auf die gleiche Weise, die sie ausgeführt, in eine Datendatei im Zeichenformat wird, außer dass die Daten, als gespeichert werden `nchar` anstelle von `char` Daten. Weitere Informationen zum Zeichenformat finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
+ Die `sql_variant`-Daten, die in einer Datendatei im Unicode-Zeichenformat gespeichert sind, verhalten sich wie Daten in einer Datendatei im Zeichenformat, außer dass die Daten als `nchar`-Daten und nicht als `char`-Daten gespeichert sind. Weitere Informationen zum Zeichenformat finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
   
- Um einen Feld- oder Zeilenabschlusszeichen als die standardmäßig wird mit Unicode-Zeichenformat zu verwenden, finden Sie unter [angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
+ Wenn Sie andere Feld- und Zeilenabschlusszeichen als die standardmäßig durch das Unicode-Zeichenformat vorgegebenen verwenden möchten, informieren Sie sich unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Befehlsoptionen für das Unicode-Zeichenformat  
  Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT ... SELECT \* FROM OPENROWSET(BULK...). Für einen **bcp**-Befehl oder eine BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
@@ -46,16 +46,16 @@ ms.locfileid: "48191770"
 |**bcp**|**-w**|Verwendet das Unicode-Zeichenformat|  
 |BULK INSERT|DATAFILETYPE **='** widechar **'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  
   
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen den Massenexport von Unicode-Zeichendaten mithilfe von **bcp** und den Massenimport derselben Daten mithilfe von BULK INSERT.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
- Die Beispiele erfordern, dass eine Tabelle namens `myTestUniCharData` in die Tabelle erstellt werden die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank unter dem `dbo` Schema. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie Folgendes aus, um diese Tabelle im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor zu erstellen:  
+ Für die Beispiele muss in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank unter dem `myTestUniCharData`-Schema eine Tabelle namens `dbo` erstellt werden. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie Folgendes aus, um diese Tabelle im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor zu erstellen:  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |Qualifizierer|Description|  
 |----------------|-----------------|  
 |**-w**|Gibt das Unicode-Zeichenformat an|  
-|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Die Standard-Feldabschlusszeichen ist die Registerkarte Unicode-Zeichen (\t). Weitere Informationen finden Sie unter [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Das standardmäßige Feldabschlusszeichen ist das Unicode-Zeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Im folgenden Beispiel wird ein Massenexport von Daten im Unicode-Zeichenformat aus der `myTestUniCharData`-Tabelle in eine neue Datendatei ausgeführt. Diese Datendatei heißt `myTestUniCharData-w.Dat` und verwendet das Komma (`,`) als Feldabschlusszeichen. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  

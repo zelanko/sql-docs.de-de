@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 433f5d279e638e3ccdf7ba3a7bb2590f80b04a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062368"
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt durch erneutes Ausführen der Abfrage, die auf dem das Objekt basiert.  
@@ -35,8 +35,8 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *enthalten*  
- Optional. Eine Bitmaske, die enthält [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) und [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte, die diesen Vorgang beeinflussen.  
+ *Optionen*  
+ Dies ist optional. Eine Bitmaske, die enthält [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) und [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte, die diesen Vorgang beeinflussen.  
   
 > [!NOTE]
 >  Wenn *Optionen* nastaven NA hodnotu **AdAsyncExecute**, dieser Vorgang wird asynchron ausgeführt und ein [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) Ereignis wird ausgelöst werden, wenn es endet. Die **ExecuteOpenEnum** Werte **AdExecuteNoRecords** oder **AdExecuteStream** sollte nicht verwendet werden, mit **Requery**.  

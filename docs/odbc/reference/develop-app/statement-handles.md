@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149001"
 ---
 # <a name="statement-handles"></a>Anweisungshandles
 Ein *Anweisung* ist am einfachsten vorstellen als SQL-Anweisung, wie z. B. **wählen \* aus Mitarbeiter**. Allerdings wird eine Anweisung ist mehr als nur eine SQL-Anweisung – Es besteht aus der alle Informationen, SQL-Anweisung, wie z. B. alle Resultsets, die von der Anweisung erstellt und in der Ausführung der Anweisung verwendeten Parametern zugeordnet. Eine Anweisung muss auch nicht um eine Anwendung definierte SQL-Anweisung zu erhalten. Wenn ein Katalog funktionieren wie z. B. **SQLTables** ausgeführt wird in einer Anweisung, führt es eine vordefinierte SQL-Anweisung, die eine Liste der Tabellennamen zurückgibt.  

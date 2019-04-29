@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043505"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue-Eigenschaft
 Gibt den aktuellen Wert von einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt in der Datenbank.  
@@ -38,7 +38,7 @@ Gibt den aktuellen Wert von einem [Feld](../../../ado/reference/ado-api/field-ob
   
  Bei Verwendung dieser Eigenschaft mit dem **OriginalValue** -Eigenschaft, können Sie Konflikte von BatchUpdates beheben.  
   
-## <a name="record"></a>Aufzeichnung (Record)  
+## <a name="record"></a>Datensatz  
  Für [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekten, die diese Eigenschaft ist für Felder hinzugefügt, bevor leer, [Update](../../../ado/reference/ado-api/update-method.md) aufgerufen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
@@ -47,5 +47,5 @@ Gibt den aktuellen Wert von einem [Feld](../../../ado/reference/ado-api/field-ob
 ## <a name="see-also"></a>Siehe auch  
  [OriginalValue und UnderlyingValue – Beispiel (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue und UnderlyingValue – Beispiel (VC++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)

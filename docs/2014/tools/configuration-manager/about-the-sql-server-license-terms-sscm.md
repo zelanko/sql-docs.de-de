@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035319"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informationen zu den SQL Server-Lizenzbedingungen (SSCM)
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in geschrieben: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ oder % ProgramFiles (x86) %\Microsoft SQL Server\110\License Lizenzbedingungen\\.  
@@ -24,7 +24,7 @@ ms.locfileid: "56407502"
   
  Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Zum Beispiel:  
   
--   License_DEV_ENU.txt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für  Developer in der Sprachversion Englisch.  
+-   License_DEV_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer in der Sprachversion Englisch.  
   
 -   License_STD_ITA.txt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für  Standard in der Sprachversion Italienisch.  
   

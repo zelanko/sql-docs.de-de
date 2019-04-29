@@ -1,5 +1,5 @@
 ---
-title: ClosingPeriod (MDX) | Microsoft Docs
+title: ClosingPeriod (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181581"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 
@@ -38,18 +38,18 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion ist hauptsächlich zur Verwendung mit einer Dimension des Typ Time vorgesehen, kann jedoch auch mit beliebigen anderen Dimensionen verwendet werden.  
   
--   Wenn ein Ebenenausdruck angegeben wird, die **ClosingPeriod** -Funktion verwendet die Dimension, die die angegebene Ebene enthält, und gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten des Standardelements auf der angegebenen Ebene zurück.  
+-   Wenn ein Ebenenausdruck angegeben wird, die **ClosingPeriod** -Funktion verwendet die Dimension, die die angegebene Ebene enthält, und gibt Sie das letzte gleichgeordnete Element unter den nachfolgenden Werten des Standardelements auf der angegebenen Ebene zurück.  
   
--   Wenn sowohl ein Ebenenausdruck als auch ein Elementausdruck angegeben sind, die **ClosingPeriod** Funktion gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten eines angegebenen Elements auf der angegebenen Ebene zurück.  
+-   Wenn sowohl ein Ebenenausdruck als auch ein Elementausdruck angegeben sind, die **ClosingPeriod** Funktion gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten des angegebenen Elements auf der angegebenen Ebene zurück.  
   
--   Wenn weder ein Ebenenausdruck noch ein Elementausdruck angegeben ist, die **ClosingPeriod** Funktion verwendet die Standardebene und Mitglied der Dimension (sofern vorhanden) in den Cube mit den Typ Time.  
+-   Wenn weder ein Ebenenausdruck noch ein Elementausdruck angegeben ist, die **ClosingPeriod** Funktion verwendet die Standardebene und-Element der Dimension (sofern vorhanden) in den Cube mit den Typ Time.  
   
  Die **ClosingPeriod** -Funktion ist gleichbedeutend mit der folgenden MDX-Anweisung:  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`installiert haben.  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`. installiert haben.  
   
 > [!NOTE]  
->  Die [OpeningPeriod](../mdx/openingperiod-mdx.md) Funktion ist vergleichbar mit der **ClosingPeriod** -Funktion, außer dass die **OpeningPeriod** Funktion gibt das erste gleichgeordnete Element statt des letzten gleichgeordneten zurück.  
+>  Die [OpeningPeriod](../mdx/openingperiod-mdx.md) Funktion ist vergleichbar mit der **ClosingPeriod** ordnungsgemäß verwendet werden, außer dass die **OpeningPeriod** Funktion gibt das erste gleichgeordnete Element statt der letzten zurück. gleichgeordnetes Element.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Wert des Standardmeasures für das FY2007-Element der Date-Dimension (die den semantischen Typ Time aufweist) zurückgegeben. Dieses Element wird zurückgegeben, weil die Fiscal Year-Ebene der erste nachfolgende Wert der [All]-Ebene ist. Die Fiscal-Hierarchie ist die Standardhierarchie, weil sie die erste benutzerdefinierte Hierarchie in der Hierarchie-Auflistung darstellt, und das FY 2007-Element ist das letzte gleichgeordnete Element in dieser Hierarchie auf dieser Ebene.  

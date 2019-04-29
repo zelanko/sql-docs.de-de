@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065053"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>ADO-Codebeispiele in Microsoft JScript
 Verwenden Sie die folgenden Codebeispielen, Informationen zum Verwenden der ADO-Methoden, Eigenschaften und Ereignisse, die beim Schreiben in JScript.  

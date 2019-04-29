@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035284"
 ---
 # <a name="choosing-a-network-protocol"></a>Auswählen eines Netzwerkprotokolls
   Um eine Verbindung mit [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] herzustellen, müssen Sie ein aktiviertes Netzwerkprotokoll haben. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Anforderungen für mehrere Protokolle gleichzeitig bedienen. Clients stellen eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über ein einzelnes Protokoll her. Wenn dem Clientprogramm nicht bekannt ist, auf welches Protokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelauscht wird, konfigurieren Sie den Client so, dass er nacheinander das Verwenden mehrerer Protokolle versucht. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um Netzwerkprotokolle zu aktivieren, zu deaktivieren oder zu konfigurieren.  

@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8cb55701446d9a532cf57cccbba0aa1f11be416a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050491"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Gibt an, ein Lesezeichen, das angibt, an der der Vorgang beginnen soll.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Beginnt in den aktuellen Datensatz.|  
 |**adBookmarkFirst**|1|Beginnt in den ersten Datensatz.|  
 |**adBookmarkLast**|2|Beginnt in den letzten Datensatz.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

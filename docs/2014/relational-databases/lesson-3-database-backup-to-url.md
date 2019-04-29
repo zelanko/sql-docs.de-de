@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181994"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lektion 4: Erstellen einer Datenbank im Windows Azure-Speicher
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lektion 4: Erstellen einer Datenbank in Microsoft Azure Storage
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank mit der Funktion für SQL Server-Datendateien in Windows Azure erstellen. Vor dieser Lektion müssen Sie Lektion 1, 2 und 3 abschließen. Lektion 3 ist ein sehr wichtiger Schritt, da Sie die Informationen über Ihren Windows Azure-Speichercontainer und den zugehörigen Richtliniennamen und SAS-Schlüssel vor Lektion 4 im SQL Server-Anmeldeinformationsspeicher speichern müssen.  
   
  Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen. Anschließend können Sie eine neue Datenbank im Windows Azure-Speicher erstellen.  
@@ -86,7 +86,7 @@ ms.locfileid: "48063010"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Hinweis:** Wenn aktive Verweise auf Datendateien in einem Container vorhanden sind, führen alle Versuche, die zugeordneten SQL Server-Anmeldeinformationen zu löschen, zu einem Fehler. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
+ **Hinweis**: Wenn aktive Verweise auf Datendateien in einem Container wird alle Versuche, die zugeordneten SQL Server-Anmeldeinformationen zu löschen schlägt fehl. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
   
  Mit dieser neuen Funktion können Sie SQL Server so konfigurieren, dass jede CREATE DATABASE-Anweisung standardmäßig eine Cloud-fähige Datenbank generiert. Das heißt, Sie können Standarddaten und Protokollspeicherorte in SQL Server Management Studio Server-Instanzeigenschaften festlegen. Immer wenn Sie eine Datenbank erstellen, werden dann alle Datenbankdateien (.mdf, .ld) als Seiten-BLOBs im Windows Azure-Speicher erstellt.  
   

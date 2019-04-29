@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154674"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Data Migration Assistant über die Befehlszeile
 Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, werden auch installiert dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Verwenden Sie dmacmd.exe zu, um Ihre Datenbanken in einem unbeaufsichtigten Modus zu bewerten, und geben Sie das Ergebnis in JSON oder CSV-Datei. Diese Methode ist besonders nützlich, wenn mehrere Datenbanken oder große Datenbanken zu bewerten. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Wie Sie mit der dmacmd.exe-Hilfetext        | N
 |`/AssessmentName`     |   Name des Bewertungsprojekts   | J
 |`/AssessmentDatabases`     | Leerzeichen getrennte Liste von Verbindungszeichenfolgen. Datenbanknamen (Anfangskatalog) wird die Groß-/Kleinschreibung beachtet. | J
-|`/AssessmentSourcePlatform`     | Source-Plattform für die Bewertung, unterstützte Werte: SqlOnPrem, RdsSqlServer. Bereitschaftstest für Ziel auch unterstützt als Source-Plattform Cassandra. Der Standardwert ist SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | Die Zielplattform für die Bewertung, unterstützte Werte: "Azuresqldatabase", ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 und SqlServerWindows2017. Bereitschaftstest für die Ziel auch unterstützt als Zielplattform COSMOS DB. Der Standardwert ist SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | Source-Plattform für die Bewertung: <br>Unterstützte Werte für die Bewertung: SqlOnPrem, RdsSqlServer (Standard) <br>Unterstützte Werte für die Ziel-Bereitschaftsbewertung: SqlOnPrem, RdsSqlServer (Standard), Cassandra (Vorschauversion)   | N
+|`/AssessmentTargetPlatform`     | Die Zielplattform für die Bewertung:  <br> Unterstützte Werte für die Bewertung: "Azuresqldatabase" "," ManagedSqlServer "," SqlServer2012 "," SqlServer2014 "," SqlServer2016 "," SqlServerLinux2017 "und" SqlServerWindows2017 (Standard)  <br> Unterstützte Werte für die Ziel-Bereitschaftsbewertung: ManagedSqlServer (Standard), COSMOS DB (Vorschau)   | N
 |`/AssessmentEvaluateFeatureParity`  | Featureparitätsregeln auszuführen. Wenn Source-Plattform RdsSqlServer ist, wird-featureevaluierung Parität für die Zielplattform "azuresqldatabase" nicht unterstützt  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Führen Sie Kompatibilitätsregeln  | J <br> (Entweder AssessmentEvaluateCompatibilityIssues oder AssessmentEvaluateRecommendations ist erforderlich.)
 |`/AssessmentEvaluateRecommendations`     | Führen Sie die Vorschläge zu Features        | J <br> (AssessmentEvaluateCompatibilityIssues oder AssessmentEvaluateRecommendationsis erforderlich)

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d8969e2a299f501fb35eb56a435c6a2e56a5bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127030"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio-Webbrowser
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] hostet eine Version von [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Mit diesem Webbrowser können Sie URLs durchsuchen und Hilfethemen der MSDN Library anzeigen, ohne [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zu verlassen. Zum Aufrufen des Webbrowsers zeigen Sie im Menü **Ansicht** auf **Webbrowser** , und klicken Sie dann auf die Option zum **Anzeigen des Browsers**.  

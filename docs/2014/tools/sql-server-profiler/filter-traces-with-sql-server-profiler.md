@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035249"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtern von Ablaufverfolgungen mit SQL Server Profiler
   Sie können Filter für Datenspalten für [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsereignisse definieren, damit Informationen nur für relevante Ereignisse aufgezeichnet werden. Ablaufverfolgungsfilter reduzieren die Auswirkungen der Ablaufverfolgung auf die Systemleistung, da weniger Ereignisse aufgezeichnet werden. Durch das Filtern gestaltet sich außerdem die Überwachungsausgabe übersichtlicher, da weniger Ereignisse durchsucht werden müssen.  

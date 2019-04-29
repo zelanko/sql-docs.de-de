@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d6b24bfdcd9f6b4634a5a66ab43223285b0e3f36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127603"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ausführen von SQL-Abfragen mithilfe der 'ExecuteXMLReader'-Methode
   Anstatt die ExecuteToStream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode der SqlXmlCommand-Objekt zum Ausführen von Befehlen. Diese Methode gibt ein XmlReader-Objekt, das für die weitere Verarbeitung des Ergebnisses (das in diesem Beispiel den Namen der Element- oder Attributnamen und die Werte druckt) verwendet werden kann.  
@@ -69,7 +69,7 @@ using System.Xml;
   
 1.  Stellen Sie sicher, dass [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework auf dem Computer installiert ist.  
   
-2.  Speichern Sie den in diesem Thema bereitgestellten C#-Code (<legacyBold>DocSample.cs</legacyBold>) in einem Ordner.  
+2.  Speichern Sie den in diesem Thema bereitgestellten C#-Code (&lt;legacyBold&gt;DocSample.cs&lt;/legacyBold&gt;) in einem Ordner.  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

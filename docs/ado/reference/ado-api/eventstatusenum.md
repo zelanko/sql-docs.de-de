@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070864"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Gibt den aktuellen Status der Ausführung eines Ereignisses an.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Fordert das Abbrechen des Vorgangs, der das Ereignis ausgelöst hat.|  
 |**adStatusCantDeny**|3|Gibt an, dass der Vorgang nicht Abbrechen des ausstehenden Vorgangs anfordern kann.|  
@@ -35,7 +35,7 @@ Gibt den aktuellen Status der Ausführung eines Ereignisses an.
 |**adStatusUnwantedEvent**|5|Verhindert, dass nachfolgende Benachrichtigungen vor der Ereignismethode ausgeführt wurde.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

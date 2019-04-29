@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126328"
 ---
 # <a name="column-wise-binding"></a>Spaltenbezogenes Binden
 Wenn Sie spaltenbezogene Bindungen verwenden zu können, bindet eine Anwendung eine oder zwei ist, oder in einigen Fällen drei, Arrays für die einzelnen Spalten, die für die Daten zurückgegeben werden. Das erste Array hält die Datenwerte, und das zweite Array hält Längenindikator/Puffer. Indikatoren und Längenwerte können in separaten Puffer gespeichert werden, durch die deskriptorfelder SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR auf unterschiedliche Werte festlegen; Wenn dies geschehen ist, wird ein drittes Array gebunden. Jedes Array enthält so viele Elemente als Zeilen im Rowset vorhanden sind.  

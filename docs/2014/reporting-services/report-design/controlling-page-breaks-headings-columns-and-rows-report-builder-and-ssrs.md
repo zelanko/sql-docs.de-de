@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186509"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen (Berichts-Generator und SSRS)
   Ein Seitenumbruch unterteilt einen Bericht in getrennte Seiten, damit dieser einfacher angezeigt und gedruckt werden kann. Seitenumbrüche legen fest, wie der Inhalt für die optimale Anzeige bei der Vorschau eines Berichts oder beim Exportieren in ein anderes Dateiformat an eine Berichtsseite angepasst wird.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040816"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
 Schreibt alle ausstehenden BatchUpdates auf den Datenträger.  
@@ -36,10 +36,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **UpdateBatch** Methode wirkt sich auf.  
+ Dies ist optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **UpdateBatch** Methode wirkt sich auf.  
   
  *PreserveStatus*  
- Optional. Ein **booleschen** -Wert, der angibt, ob lokale geändert wird, wie durch die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft Commit ausgeführt werden soll. Wenn dieser Wert, um festgelegt ist **"true"**, **Status** Eigenschaft jedes Datensatzes bleibt unverändert, nachdem das Update abgeschlossen ist.  
+ Dies ist optional. Ein **booleschen** -Wert, der angibt, ob lokale geändert wird, wie durch die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft Commit ausgeführt werden soll. Wenn dieser Wert, um festgelegt ist **"true"**, **Status** Eigenschaft jedes Datensatzes bleibt unverändert, nachdem das Update abgeschlossen ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **UpdateBatch** Methode, die beim Ändern einer **Recordset** Objekt im Modus "Batch-Update", übertragen alle Änderungen, die einer **Recordset** Objekt, das der zugrunde liegenden Datenbank.  

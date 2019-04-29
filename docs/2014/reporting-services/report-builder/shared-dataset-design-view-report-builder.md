@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155733"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   Das Entwurfsfenster für freigegebene Datasets dient zum Erstellen von Datasetabfragen, die Sie für andere Benutzer freigeben können. Im Fenster können Sie eine freigegebene Datenquelle auswählen, Eigenschaften für das freigegebene Dataset angeben und im Abfrage-Designer eine Abfrage erstellen.  

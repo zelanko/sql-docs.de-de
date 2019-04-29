@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150031"
 ---
 # <a name="sql-type-identifiers"></a>SQL-Typenbezeichner
 Jede Datenquelle definiert eine eigene SQL-Datentypen. ODBC definiert Typ-IDs und beschreibt die allgemeinen Eigenschaften der SQL-Datentypen, die jeden Typ-ID zugeordnet werden können. Es ist eine treiberspezifische wie jeden Datentyp in der zugrunde liegenden Datenquelle eine SQL-Typ-ID von ODBC zugeordnet wird.  
@@ -31,4 +31,4 @@ Jede Datenquelle definiert eine eigene SQL-Datentypen. ODBC definiert Typ-IDs un
   
  ODBC definiert eine Vielzahl von SQL-Typ-IDs. Der Treiber ist jedoch nicht erforderlich, können alle diese Bezeichner verwenden. Stattdessen wird nur diese Bezeichner, die die SQL-Datentypen unterstützt verfügbar machen muss von der zugrunde liegenden Datenquelle verwendet. Wenn die zugrunde liegenden Datenquelle unterstützt die SQL-Datentypen zu welche kein Typ-ID entspricht, der Treiber kann zusätzliche Typ-IDs definieren. Weitere Informationen finden Sie unter [treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Eine vollständige Beschreibung der SQL-Typ-IDs, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.
+ Eine vollständige Beschreibung der SQL-Typ-IDs, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D: Datentypen.

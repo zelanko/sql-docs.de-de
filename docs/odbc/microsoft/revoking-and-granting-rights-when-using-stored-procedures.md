@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127965"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Widerrufen und Erteilen von Berechtigungen beim Verwenden gespeicherter Prozeduren
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47792228"
   
  Der Microsoft ODBC-Treiber für Oracle wird die folgende Fehlermeldung zurück, wenn Benutzerrechte gewährt und Sie dann für eine Tabelle, die von einer gespeicherten Prozedur zugegriffen widerrufen werden:  
   
- SQL_ERROR =-1  
+ SQL_ERROR=-1  
   
  von SQLDiagRec() = "Falsche Anzahl von Parametern [Microsoft] [ODBC-Treiber für Oracle]"  
   

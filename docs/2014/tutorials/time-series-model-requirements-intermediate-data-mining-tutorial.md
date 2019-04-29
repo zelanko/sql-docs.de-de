@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043063"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Grundlegendes zu den Anforderungen für ein Zeitreihenmodell (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Vorbereitung von Daten für ein Prognosemodell müssen Sie sicherstellen, dass die Daten eine Spalte enthalten, mit der Sie die Schritte in der Zeitreihe identifizieren können. Diese Spalte wird zur `Key Time`-Spalte bestimmt. Da es sich um einen Schlüssel handelt, muss die Spalte eindeutige numerische Werte enthalten.  

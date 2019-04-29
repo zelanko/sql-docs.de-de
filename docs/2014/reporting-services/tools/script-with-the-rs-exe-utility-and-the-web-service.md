@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158273"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  

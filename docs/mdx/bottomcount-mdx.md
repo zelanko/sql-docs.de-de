@@ -1,5 +1,5 @@
 ---
-title: BottomCount-Funktion (MDX) | Microsoft Docs
+title: BottomCount-Funktion (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181631"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
 
@@ -32,19 +32,19 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Anzahl*  
+ *Count*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn ein numerischer Ausdruck angegeben wird, sortiert die Funktion die Tupel in der angegebenen Menge nach dem Wert des angegebenen Ausdrucks, ausgewertet über die Menge, in aufsteigender Reihenfolge. Die **BottomCount** Funktion gibt dann die angegebene Anzahl von Tupeln mit dem niedrigsten Wert zurück.  
   
 > [!IMPORTANT]  
->  Die **BottomCount** Funktion, wie auch die [TopCount](../mdx/topcount-mdx.md) funktionieren, unterbricht immer die Hierarchie.  
+>  Die **BottomCount** ordnungsgemäß verwendet werden, wie z. B. die [TopCount](../mdx/topcount-mdx.md) funktionieren, unterbricht immer die Hierarchie.  
   
- Wenn ein numerischer Wert nicht angegeben ist, die Funktion gibt die Menge der Elemente in natürlicher Reihenfolge ohne Sortierung, verhält sich wie die [Tail (MDX)](../mdx/tail-mdx.md) Funktion.  
+ Wenn ein numerischer Ausdruck nicht angegeben wird, die Funktion gibt die Menge der Elemente in natürlicher Reihenfolge ohne Sortierung, verhält, wie die [Tail (MDX)](../mdx/tail-mdx.md) Funktion.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das Reseller Order Quantity-Measure für jedes Kalenderjahr für die fünf geringsten Product SubCategory-Umsätze in der vom Reseller Sales Amount-Measure vorgegebenen Reihenfolge zurückgegeben.  

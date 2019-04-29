@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95a71e977f56932d28b9ca0382829d6a30c7b212
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042496"
 ---
 # <a name="rds-objects"></a>RDS-Objekte
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51600260"
 |||  
 |-|-|  
 |[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Eine Datenabfrage bindet **Recordset** an einen oder mehrere Steuerelemente (z. B. ein Textfeld, ein Grid-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.<br /><br /> Die **DataControl** Objekt für die Skripterstellung sicher ist.|  
-|[Data Factory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementiert Methoden, die Lese-/Schreibzugriff-Datenzugriff zu ermöglichen, angegeben von Datenquellen für clientseitige Anwendungen.<br /><br /> Die **DataFactory** Objekt ist nicht sicher für Skripting.|  
+|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementiert Methoden, die Lese-/Schreibzugriff-Datenzugriff zu ermöglichen, angegeben von Datenquellen für clientseitige Anwendungen.<br /><br /> Die **DataFactory** Objekt ist nicht sicher für Skripting.|  
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Erstellt die clientbasierten Proxys an benutzerdefinierte Geschäftsobjekte, die sich auf der mittleren Ebene befinden.<br /><br /> Die **DataSpace** Objekt für die Skripterstellung sicher ist.|  
 |[IRDSService-Schnittstelle (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Macht die [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) -Methode, die verwendet wird, um einen Zeiger auf eine leistungsfähigere Version des Objekts auf die angeforderte Schnittstelle zurückzugeben.|  
   

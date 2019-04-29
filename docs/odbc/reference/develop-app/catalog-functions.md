@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125581"
 ---
 # <a name="catalog-functions"></a>Katalogfunktionen
 Alle Datenbanken verfügen über eine Struktur, die beschreibt, wie Daten in der Datenbank gespeichert werden. Eine einfache Verkaufsauftrag-Datenbank möglicherweise z. B. die Struktur, in der folgenden Abbildung, in der die ID-Spalten, zum Verknüpfen der Tabellen verwendet werden dargestellt.  

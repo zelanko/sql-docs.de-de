@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061528"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>Beispiel für die Diagnose des dateibasierten Treibers
 Einen dateibasierten Treibers fungiert sowohl als einen ODBC-Treiber als auch als Datenquelle. Sie können daher Fehler und Warnungen, die sowohl als Komponente in eine ODBC-Verbindung und als Datenquelle generieren. Da es auch die Komponente, die mit dem Treiber-Manager-Schnittstellen, formatiert und gibt die Argumente für **SQLGetDiagRec**.  

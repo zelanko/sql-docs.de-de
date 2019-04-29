@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046705"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
   Verbesserungen in der Datenbank-Engine ab mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLNumParams auf genauere Beschreibungen der erwarteten Ergebnisse erhalten können. Diese genaueren Ergebnisse unterscheiden sich möglicherweise aus den Werten, die vom SQLNumParams in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

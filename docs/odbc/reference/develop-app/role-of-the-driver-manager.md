@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127222"
 ---
 # <a name="role-of-the-driver-manager"></a>Rolle des Treiber-Managers
 Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die es generiert. Insbesondere bestimmt, welcher Datensatz, hat den höchsten Rang, und zuerst zurückgegeben werden soll. Der Treiber ist verantwortlich für die Sortierung der Statusdatensätze, die es generiert. Wenn sowohl der Treiber-Manager als auch der Treiber Statusdatensätze bereitgestellt werden, ist der Treiber-Manager für ihre Anordnung verantwortlich. Weitere Informationen finden Sie unter [Sequenz der Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
   
  Der Treiber-Manager ist so viel fehlerüberprüfung wie möglich. Dadurch werden alle Treiber bei der Überprüfung für die gleichen Fehler. Angenommen, ein Funktionsargument akzeptiert eine diskrete Anzahl von Werten, z.B. *Vorgang* in **SQLSetPos**, der Treiber-Manager überprüft, ob der angegebene Wert zulässig ist.  
   
- Die folgenden Abschnitte beschreiben die Typen von Bedingungen, die vom Treiber-Manager überprüft. Sie sind nicht vorgesehen, umfassendes Ergebnis können; für eine vollständige Liste mit den SQLSTATEs des Treiber-Managers zurückgibt, finden Sie im Abschnitt "Diagnose" für jede Funktion; die Beschreibung der einzelnen Überprüfung vom Treiber-Manager beginnt mit den Buchstaben "(DM)." Siehe auch den Übergang Statustabellen in [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); Fehler in Klammern angezeigt werden vom Treiber-Manager erkannt.  
+ Die folgenden Abschnitte beschreiben die Typen von Bedingungen, die vom Treiber-Manager überprüft. Sie sind nicht vorgesehen, umfassendes Ergebnis können; für eine vollständige Liste mit den SQLSTATEs des Treiber-Managers zurückgibt, finden Sie im Abschnitt "Diagnose" für jede Funktion; die Beschreibung der einzelnen Überprüfung vom Treiber-Manager beginnt mit den Buchstaben "(DM)." Siehe auch den Übergang Statustabellen in [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); Fehler in Klammern angezeigt werden vom Treiber-Manager erkannt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

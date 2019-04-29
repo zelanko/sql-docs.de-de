@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (MDX) | Microsoft Docs
+title: UnknownMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065043"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -44,15 +44,15 @@ Hierarchy_Expression.UnknownMember
   
 -   Auf der obersten Ebene für nicht aggregierte Attributhierarchien.  
   
--   Bei der ersten Ebene unter der **alle** -Ebene für natürliche Hierarchien.  
+-   Klicken Sie auf der ersten Ebene unter der **alle** -Ebene für natürliche Hierarchien.  
   
 -   Auf jeder Ebene für unnatürliche Hierarchien.  
   
  Wenn ein Elementausdruck angegeben ist, die **UnknownMember** Funktion gibt das unbekannte untergeordnete Element des angegebenen Elements zurück. Wenn das angegebene Element nicht vorhanden ist, gibt die Funktion den Wert NULL zurück.  
   
- Wenn ein Hierarchieausdruck angegeben wird, die **UnknownMember** -Funktion das unbekannte Element auf der obersten Ebene zurückgegeben, falls vorhanden.  
+ Wenn ein Hierarchieausdruck angegeben wird, die **UnknownMember** Funktion gibt das unbekannte Element auf der obersten Ebene zurück, falls vorhanden.  
   
- Wenn das unbekannte Element nicht, auf der Ebene oder einem Element vorhanden ist, das **UnknownMember** -Funktion erstellt ein null-Element.  
+ Wenn das unbekannte Element nicht, auf die Ebene oder einem Element vorhanden ist, das **UnknownMember** -Funktion erstellt ein null-Element.  
   
 > [!NOTE]  
 >  Wenn kein unbekanntes Element in der Hierarchie oder für das Element vorhanden ist, wird ein Fehler generiert.  

@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035384"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Die `sqlcmd` Dienstprogramm ermöglicht Ihnen die Eingabe [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung Dateien **Abfrage-Editor** im SQLCMD-Modus, in einer Windows-Skriptdatei oder in einem Auftragsschritt Betriebssystems (Cmd.exe), der eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Auftrag. Dieses Hilfsprogramm verwendet zum Ausführen von [!INCLUDE[tsql](../includes/tsql-md.md)]-Batches ODBC.  
@@ -95,7 +95,7 @@ ms.locfileid: "53591924"
  Der Name einer Arbeitsstation. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDWORKSTATION festgelegt. Der Name der Arbeitsstation wird in der **hostname**-Spalte der **sys.processes**-Katalogsicht aufgeführt, und der Name kann mithilfe der gespeicherten Prozedur **sp_who** zurückgegeben werden. Wenn diese Option nicht angegeben ist, wird standardmäßig der Name des aktuellen Computers angenommen. Mithilfe dieses Namens können verschiedene `sqlcmd`-Sitzungen identifiziert werden.  
   
  **-K** _Anwendungszweck_  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
  Geben Sie immer `-M` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `-M` gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn `-M` nicht angegeben ist, wird `-M` deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)], finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), und [aktive sekundäre Replikate: Lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
@@ -260,7 +260,7 @@ ms.locfileid: "53591924"
  Wird `-b` zusammen mit dieser Option angegeben, wird `sqlcmd` mit einem Fehler beendet. Der Schalter `-b` wird weiter unten in diesem Thema beschrieben.  
   
  **-t** _Abfragetimeout_  
- Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDSTATTIMEOUT festgelegt. Wenn für *Abfragetimeout* kein Wert angegeben ist, tritt für den Befehl kein Timeout ein. Der Wert für *query**time_out* muss eine Zahl zwischen 1 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `sqlcmd` eine Fehlermeldung.  
+ Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt. Diese Option wird die `sqlcmd` -Skriptvariable sqlcmdstattimeout festgelegt. Wenn für *Abfragetimeout* kein Wert angegeben ist, tritt für den Befehl kein Timeout ein. Der Wert für *query**time_out* muss eine Zahl zwischen 1 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `sqlcmd` eine Fehlermeldung.  
   
 > [!NOTE]  
 >  Der tatsächliche Timeoutwert kann einige Sekunden von dem für *Timeout* angegebenen Wert abweichen.  
@@ -320,11 +320,11 @@ ms.locfileid: "53591924"
  **-Y** _feste_Länge_Typ_Anzeigebreite_  
  Legt die `sqlcmd`-Skriptvariable SQLCMDMAXFIXEDTYPEWIDTH fest. Der Standardwert ist 0 (unbegrenzt). Er begrenzt die Anzahl der zurückgegebenen Zeichen für die folgenden Datentypen:  
   
--   `char(` *n* `)`, wobei 1 < = n < = 8000  
+-   `char(` *n* `)`, where 1<=n<=8000  
   
 -   `nchar(n` *n* `)`, wobei 1 < = n < = 4000  
   
--   `varchar(n` *n* `)`, wobei 1 < = n < = 8000  
+-   `varchar(n` *n* `)`, where 1<=n<=8000  
   
 -   `nvarchar(n` *n* `)`, wobei 1 < = n < = 4000  
   
@@ -499,7 +499,7 @@ ms.locfileid: "53591924"
  Gibt den Inhalt des Anweisungscaches aus.  
   
  **Variablen**  
-  **: Setvar** \< **Var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **"*`value`*"** ]  
  Definiert `sqlcmd`-Skriptvariablen. Skriptvariablen haben das folgende Format: `$(VARNAME)`.  
   
  Bei Variablennamen wird die Groß- und Kleinschreibung nicht beachtet.  
@@ -531,7 +531,7 @@ ms.locfileid: "53591924"
   
  **Ausgabebefehle**  
   **:Error**   
- **_\<_** _FileName_ **_>|_ STDERR | "STDOUT"**  
+ **_\<_** _FileName_  **_>|_ STDERR | "STDOUT"**  
  Leitet die gesamte Fehlerausgabe in die mit *Dateiname*angegebene Datei, in **stderr** oder in **stdout**um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr**gesendet.  
   
  *file name*  
@@ -550,7 +550,7 @@ ms.locfileid: "53591924"
  Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
-  **: Bei einem Fehler**[ `exit`  |  `ignore`]  
+  **:On Error**[ `exit` | `ignore`]  
  Legt die Aktion fest, die ausgeführt werden soll, wenn ein Fehler während der Skript- oder Batchausführung auftritt.  
   
  Wird die Option `exit` verwendet, wird `sqlcmd` mit dem entsprechenden Fehlerwert beendet.  
@@ -560,7 +560,7 @@ ms.locfileid: "53591924"
  [**:**] **QUIT**  
  Bewirkt, dass `sqlcmd` beendet wird.  
   
- [**:**] **BEENDEN**[ **(*`statement`*)** ]  
+ [**:**] **EXIT**[ **(*`statement`*)** ]  
  Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von `sqlcmd` zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax lautet:  
   
  `:EXIT(query)`  

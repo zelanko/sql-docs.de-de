@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9f73710f1cdb13477736d3b7496fb26b76f90e3
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184495"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>Winsockproxykonfiguration nicht unterstützt
   Der Winsockproxy kann nicht konfiguriert werden, mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools.  

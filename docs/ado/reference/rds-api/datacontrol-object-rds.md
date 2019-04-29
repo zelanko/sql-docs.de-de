@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134414"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
 Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an einen oder mehrere Steuerelemente (z. B. ein Textfeld, ein Grid-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.  
@@ -70,7 +70,7 @@ Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-ob
   
 -   Festlegen von **Befehl** oder [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) Eigenschaften.  
   
--   Mithilfe von **AdCmdTableDirect**.  
+-   Using **adCmdTableDirect**.  
   
  Die **RDS. DataControl** Objekt standardmäßig im asynchronen Modus ausgeführt wird. Wenn Sie die synchrone Ausführung für Ihre Anwendung benötigen, legen Sie die [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) Parameter gleich **AdcExecSync** und [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) Parameter gleich **AdcFetchUpFront**, wie im folgenden Beispiel gezeigt.  
   

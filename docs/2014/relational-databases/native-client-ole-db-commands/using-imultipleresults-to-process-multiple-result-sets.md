@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e160733e01c3df2063a57d61bb8178438d383e1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155026"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets
   Consumer verwenden die **IMultipleResults** Schnittstelle zum Verarbeiten von zurückgegebenen Ergebnisse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befehlsausführung für Native Client OLE DB-Anbieter. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter sendet einen Befehl zur Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Anweisungen aus und gibt die Ergebnisse zurück.  

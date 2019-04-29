@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135351"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Starten des Hilfsprogramms "sqlcmd"
   Damit Sie mit der Verwendung von `sqlcmd` beginnen können, müssen Sie zunächst das Hilfsprogramm starten und eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Sie können die Verbindung mit einer Standardinstanz oder mit einer benannten Instanz herstellen. Der erste Schritt besteht darin, das Hilfsprogramm `sqlcmd` zu starten.  
@@ -33,7 +33,7 @@ ms.locfileid: "48228350"
   
 1.  Klicken Sie im **Startmenü** auf **Ausführen**. Geben Sie im Feld **Öffnen** den Befehl **cmd**ein, und klicken Sie auf **OK** , um ein Eingabeaufforderungsfenster zu öffnen.  
   
-2.  Geben Sie an der Eingabeaufforderung den Befehl `sqlcmd`.  
+2.  Geben Sie an der Eingabeaufforderung `sqlcmd` ein:  
   
 3.  Drücken Sie die EINGABETASTE.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48228350"
   
 2.  Drücken Sie die EINGABETASTE.  
   
-     Die Eingabeaufforderung `sqlcmd` (1>) zeigt an, dass Sie mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind.  
+     Die `sqlcmd` Eingabeaufforderung (1 >) gibt an, dass Sie mit der angegebenen Instanz verbunden sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Eingegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einem Puffer gespeichert. Sie werden als Batch ausgeführt, wenn der Befehl "GO" erkannt wird.  

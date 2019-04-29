@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046605"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Arrays für Parameterwerte für anweisungsausführungen gebunden, gibt `SQLRowCount` gibt SQL_ERROR zurück, wenn eine Zeile mit Parameterwerten eine fehlerbedingung bei der anweisungsausführung generiert. Kein Wert wird durch das *RowCountPtr* -Argument der Funktion zurückgegeben.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130210"
 ---
 # <a name="persisting-data"></a>Beibehalten von Daten
 Tragbare Computer (z. B. mit Laptops) hat die Notwendigkeit für Anwendungen erstellt werden, die in einem verbundenen sowie im getrennten Zustand ausgeführt werden kann. ADO wurde Unterstützung für dieses hinzugefügt, indem dem Entwickler die Möglichkeit zum Speichern eines Clientcursors **Recordset** auf dem Datenträger, und Laden Sie es später erneut.  

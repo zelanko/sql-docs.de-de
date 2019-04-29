@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bad1706e7283c0b0a5111e93c9dfd7ae494c8ef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125496"
 ---
 # <a name="commit-and-rollback-behavior"></a>Commit- und Rollbackverhalten
 Ein gemeinsames Verhalten für Server-DBMS ist zum Schließen der Cursor und vorbereitete Anweisungen zu verwerfen, wenn eine Anweisung ein Commit oder Rollback ausgeführt. Desktopdatenbanken sind eher Cursor geöffnet ist und Beibehalten von vorbereiteten Anweisungen. Weitere Informationen finden Sie unter den SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR Optionen in der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung und [Auswirkung von Transaktionen auf Cursor und vorbereitete Anweisungen](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).

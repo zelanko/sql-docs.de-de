@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148929"
 ---
 # <a name="testing-interoperable-applications"></a>Testen von interoperablen Anwendungen
 Testen von interoperablen Anwendungen ist bestenfalls ein zeitraubender Geschäfts- und im schlimmsten Fall nicht möglich, da auf dem Markt ständig neue Treiber angezeigt werden. Eine angemessene Maß an Tests ist jedoch möglich. Anwendungen mit niedrigen darf maximal Interoperabilität müssen nur für Treiber getestet werden, die sie unterstützen garantiert. Sie müssen jedoch vollständig für diese Treiber getestet werden.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab3348906affc9a1c1a4b5471de861831992dc32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126801"
 ---
 # <a name="command-object-ado"></a>Command-Objekt (ADO)
 Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möchten.  
@@ -81,4 +81,4 @@ objCmd(0)
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

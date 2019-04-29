@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065264"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für einen aktualisierbaren [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -39,10 +39,10 @@ recordset.AddNew FieldList, Values
  Ein **Recordset** Objekt.  
   
  *FieldList*  
- Optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
+ Dies ist optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
   
  *Werte*  
- Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *Fieldlist* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen.  
+ Dies ist optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *Fieldlist* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **AddNew** Methode zum Erstellen und initialisieren einen neuen Datensatz. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md) -Methode mit **AdAddNew** (eine [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) Wert) zu überprüfen, ob Sie Datensätze, mit dem aktuellen hinzufügen können **Recordset**Objekt.  

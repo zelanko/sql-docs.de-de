@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043885"
 ---
 # <a name="connecting-using-file-data-sources"></a>Herstellen einer Verbindung mithilfe von Dateidatenquellen
 Die Verbindungsinformationen für eine Datenquelle wird in einer DSN-Datei gespeichert. Daher kann die Verbindungszeichenfolge wiederholt durch einen einzelnen Benutzer verwendet oder von mehreren Benutzern gemeinsam genutzt, wenn sie den entsprechenden Treiber installiert haben. Die Datei enthält ein Treibername (oder einen anderen Datenquellennamen im Fall von eine Dateidatenquelle) und optional eine Verbindungszeichenfolge, die von verwendet werden kann **SQLDriverConnect**. Der Treiber-Manager erstellt die Verbindungszeichenfolge für den Aufruf von **SQLDriverConnect** in den Schlüsselwörtern in der Datei ".DSN".  

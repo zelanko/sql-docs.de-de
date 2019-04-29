@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137466"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Programmgesteuertes Update der Berichtsdefinition
   Nachdem die Berichtsdefinition vom Berichtsserver geladen wurde und mit dem Berichtsfelds ein Verweis darauf vorhanden ist, müssen Sie die Berichtsdefinition aktualisieren. Im folgenden Beispiel wird die `Description`-Eigenschaft für den Bericht aktualisiert.  
   
 ### <a name="to-update-the-report-definition"></a>So aktualisieren Sie die Berichtsdefinition  
@@ -88,7 +88,7 @@ ms.locfileid: "56012701"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion speichern Sie die aktualisierte Berichtsdefinition wieder auf dem Berichtsserver. Finden Sie unter [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ In der nächsten Lektion speichern Sie die aktualisierte Berichtsdefinition wieder auf dem Berichtsserver. Siehe [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

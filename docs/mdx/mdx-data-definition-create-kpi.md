@@ -1,5 +1,5 @@
 ---
-title: CREATE KPI-Anweisung (MDX) | Microsoft Docs
+title: CREATE KPI-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181530"
 ---
-# <a name="mdx-data-definition---create-kpi"></a>MDX-Datendefinition - KPI erstellen
+# <a name="mdx-data-definition---create-kpi"></a>MDX-Datendefinition – CREATE KPI
 
 
   Erstellt einen Key Performance Indicator (KPI). Ein KPI ist eine Auflistung von Berechnungen, die einer Measuregruppe in einem Cube zugeordnet sind und zur Auswertung der Geschäfts- oder Szenarioerfolge verwendet werden.  
@@ -36,7 +36,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *KPI_Value*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
- *Eigenschaftsname*  
+ *Property_name*  
  Eine gültige Zeichenfolge, die den Namen einer KPI-Eigenschaft bereitstellt.  
   
  *Property_Value*  
@@ -59,7 +59,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Ein gültiger MDX-Ausdruck, der ein Element in der Zeitdimension zurückgibt. CURRENT_TIME_MEMBER legt den Bezugspunkt für alle relativen Zeitfunktionen fest.|  
 |PARENT_KPI|Eine Zeichenfolge, die den Namen für den übergeordneten KPI bereitstellt.|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für den KPI verwendet wird.|  
-|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;), um die Ordner zu trennen|  
+|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) um den Ordner zu trennen|  
 |ASSOCIATED_MEASURE_GROUP|Eine Zeichenfolge, die den Namen der Measuregruppe angibt, auf die alle MDX-Berechnungen verweisen sollen.|  
   
  Die Werte für die Eigenschaften GOAL, STATUS und TREND sind MDX-Ausdrücke, die zu einem Wert zwischen -1 und 1 ausgewertet werden sollen. Allerdings wird der tatsächliche Wertebereich für die Eigenschaften von der Clientanwendung definiert. Bei Verwendung von Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Durchsuchen von KPIs Werte kleiner als-1 wie-1 behandelt werden, und Werte größer als 1 wie 1 behandelt.  
@@ -67,11 +67,11 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  Sowohl STATUS_GRAPHIC als auch TREND_GRAPHIC sind Zeichenfolgenwerte, mit denen die Clientanwendung die korrekte Gruppe der anzuzeigenden Bilder identifiziert. Diese Zeichenfolgen definieren auch das Verhalten der Anzeigefunktion. Dieses Verhalten umfasst die Anzahl von anzuzeigenden Status (normalerweise eine ungerade Anzahl) sowie die für jeden einzelnen Status zu verwendenden Bilder.  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>KPI-Grafiken in SQL Server-Datentools  
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können KPI-Grafiken entweder über drei oder fünf Status verfügen. In der folgenden Tabelle werden die Werte für jeden einzelnen Status definiert.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können KPI-Grafiken entweder über drei oder fünf Status verfügen. In der folgende Tabelle definiert die Werte für die einzelnen Status aufgelistet.  
   
 |Anzahl von Status für KPI-Grafik|Wert dieser Status|  
 |--------------------------------------|---------------------------|  
-|3|Ungültig = -1 bis -0,5<br /><br /> OK =-0,4999 bis 0.4999<br /><br /> Gut = 0,50 bis 1|  
+|3|Ungültig = -1 bis -0,5<br /><br /> OK =-0.4999 auf "0.4999"<br /><br /> Gut = 0,50 bis 1|  
 |5|Ungültig = -1 bis -0,75<br /><br /> Risiko = -0,7499 bis -0,25<br /><br /> OK = -0,2499 bis 0,2499<br /><br /> Steigend = 0,25 bis 0,7499<br /><br /> Gut = 0,75 bis 1|  
   
 > [!NOTE]  

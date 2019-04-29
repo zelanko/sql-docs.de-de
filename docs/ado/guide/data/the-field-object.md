@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062667"
 ---
 # <a name="the-field-object"></a>Das Field-Objekt
 Jede **Feld** Objekt in der Regel entspricht einer Spalte in einer Datenbanktabelle. Allerdings eine **Feld** können auch einen Zeiger auf einen anderen darstellen **Recordset**, als Kapitel bezeichnet. Ausnahmen, z. B. die Kapitelspalten, werden weiter unten in diesem Handbuch behandelt.  

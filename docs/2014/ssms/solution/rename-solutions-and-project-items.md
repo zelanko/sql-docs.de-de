@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035579"
 ---
 # <a name="rename-solutions-and-project-items"></a>Umbenennen von Projektmappen und Projektelementen
   Im Projektmappen-Explorer können Sie eine Projektmappe und deren Projektelemente umbenennen.  

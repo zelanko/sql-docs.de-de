@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131806"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) werden die Objekte für die programmgesteuerte Verwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
@@ -73,7 +73,7 @@ ms.locfileid: "52788162"
   
  **Instanzklassen**  
   
- Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z.&nbsp;B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
+ Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z.&amp;nbsp;B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
   
  Die SMO-Instanzobjekte bilden eine Hierarchie, die die Hierarchie eines Datenbankservers darstellt. Ganz oben sind die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gefolgt von den Datenbanken, gefolgt von den Tabellen, Spalten, Triggern usw. Ist eine 1:n-Beziehung zwischen den über- und untergeordneten Elementen logisch, etwa im Fall einer Tabelle mit mehreren Spalten, wird das untergeordnete Element durch eine Objektauflistung dargestellt. Andernfalls wird das untergeordnete Element nur durch ein Objekt dargestellt.  
   
@@ -134,14 +134,14 @@ ms.locfileid: "52788162"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das Scripter`Scripter`-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des -Objekts übergeben. Darüber hinaus kann ein URN angegeben werden, für die **GetSmoObject** Methode der `Server` Objekt. Damit wird eine Instanz des SMO-Objekts erstellt.  
+ Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das &lt;legacyBold&gt;Scripter&lt;/legacyBold&gt;-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des `Scripter`-Objekts übergeben. Darüber hinaus kann ein URN angegeben werden, für die **GetSmoObject** Methode der `Server` Objekt. Damit wird eine Instanz des SMO-Objekts erstellt.  
   
-## <a name="new-sql-server-features-represented-in-smo"></a>Neue SQL&nbsp;Server-Features in SMO  
+## <a name="new-sql-server-features-represented-in-smo"></a>Neue SQL Server-Features in SMO  
  **Tabellen- und Indexpartitionierung**  
   
  Mithilfe der Indextabellenpartitionierung können Sie die Spannweite von Daten in Tabellen und Indizes dateigruppenübergreifend verwalten. Diese neue Funktion wird durch SMO-Objekte dargestellt.  
   
- **Endpunkte**  
+ **EndPoints**  
   
  SOAP- und Datenbankspiegelungs-Anforderungen werden von Endpunkten verarbeitet, die das <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekt verwenden.  
   
