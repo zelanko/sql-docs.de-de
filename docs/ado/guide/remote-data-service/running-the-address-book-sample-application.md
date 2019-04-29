@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a3b973d0c09d272e8960b2d5bf0d2b438260b74
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191785"
 ---
 # <a name="running-the-address-book-sample-application"></a>Ausführen der Adress Book-Beispielanwendung
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51558647"
   
 2.  Geben Sie in Microsoft Internet Explorer 4.0 oder höher, die folgende Adresse:  
   
-     **https://** *Webserver* **/RDS/AddressBook/AddrBook.asp**  
+     **https://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
      wo *Webserver* ist der Name des Webservers, auf dem die RDS-Server-Komponenten installiert sind.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191761"
 ---
 # <a name="concurrency-control"></a>Parallelitätssteuerung
 *Parallelität* ist die Fähigkeit von zwei Transaktionen, die die gleichen Daten zur gleichen Zeit verwenden und mit höheren Transaction Isolation in der Regel weniger ist. Dies ist da Transaktionsisolation normalerweise durch Sperren von Zeilen implementiert wird und wie weitere Zeilen gesperrt sind, weniger Transaktionen abgeschlossen werden, können ohne durch eine gesperrte Zeile zumindest vorübergehend blockiert. Während reduzierter Parallelität in der Regel als ein Kompromiss für höheren Isolationsstufen von Transaktionen beibehalten Datenbankintegrität akzeptiert wird, kann es ein Problem bei der interaktiven Anwendungen, mit hoher Lese-/Schreibzugriff-Aktivität, die Cursor verwendet werden.  

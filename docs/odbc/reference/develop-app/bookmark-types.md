@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5c5a126ea220f055349ad00dc950281606ed4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199242"
 ---
 # <a name="bookmark-types"></a>Textmarkentypen
 Alle Lesezeichen in ODBC 3.*.x* variabler Länge, die Lesezeichen. Dadurch wird eine primary key- oder eines eindeutigen Indexes einer Tabelle, die als Lesezeichen verwendet werden zugeordnet. Das Lesezeichen kann auch eine 32-Bit-Wert sein, wie in ODBC 2. verwendet wurde. *x*. Um anzugeben, dass ein Lesezeichen erstellt einen Cursor, eine ODBC-3 werden *.x* Anwendung verwendet wird, legt das SQL_ATTR_USE_BOOKMARK-Anweisungsattribut auf SQL_UB_VARIABLE fest. Ein Lesezeichen variabler Länge wird automatisch verwendet.  

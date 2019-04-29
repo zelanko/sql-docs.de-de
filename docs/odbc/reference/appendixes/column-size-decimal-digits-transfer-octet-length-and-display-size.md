@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213304"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße - ODBC
 Datentypen sind gekennzeichnet durch ihre Größe Spalte (oder Parameter), Dezimalstellen, Länge und Größe angezeigt. Die folgenden ODBC-Funktionen werden diese Attribute für einen Parameter in einer SQL-Anweisung oder eine SQL-Datentyp in einer Datenquelle zurück. Jede ODBC-Funktion gibt einen anderen Satz von diesen Attributen wie folgt aus:  

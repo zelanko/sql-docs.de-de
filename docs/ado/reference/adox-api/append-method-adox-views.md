@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184215"
 ---
 # <a name="append-method-adox-views"></a>Append-Methode (ADOX-Sichten)
 Erstellt ein neues [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) -Objekt und fügt es an der [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung.  

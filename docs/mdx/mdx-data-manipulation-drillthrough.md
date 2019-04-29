@@ -1,5 +1,5 @@
 ---
-title: DRILLTHROUGH-Anweisung (MDX) | Microsoft Docs
+title: DRILLTHROUGH-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187656"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>Datenbearbeitung für MDX - DRILLTHROUGH
+# <a name="mdx-data-manipulation---drillthrough"></a>MDX-Datenbearbeitung – DRILLTHROUGH
 
 
   Ruft die zugrunde liegenden Tabellenzeilen ab, die zum Erstellen einer bestimmten Zelle in einem Cube verwendet wurden.  
@@ -48,11 +48,11 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
 > [!IMPORTANT]  
 >  Die Drillthrough-Sicherheit basiert auf den für den Cube definierten allgemeinen Sicherheitsoptionen. Erhält ein Benutzer auf bestimmte Daten keinen Zugriff über MDX, ist sein Zugriff über Drillthrough auf genau die gleiche Weise eingeschränkt.  
   
- Eine MDX-Anweisung gibt die betreffende Zelle an. Der Wert von der **MAXROWS** Argument gibt die maximale Anzahl von Zeilen, die von der sich ergebende Rowset zurückgegeben werden soll.  
+ Eine MDX-Anweisung gibt die betreffende Zelle an. Der Wert von der **MAXROWS** Argument gibt die maximale Anzahl von Zeilen, die durch das sich ergebende Rowset zurückgegeben werden sollen.  
   
- Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass, wenn Sie lassen **MAXROWS** nicht angegeben wurde, erhalten Sie 10.000 Zeilen oder weniger. Wenn dieser Wert für Ihr Szenario zu niedrig ist, legen Sie **MAXROWS** auf eine höhere Zahl wie z. B. `MAXROWS 20000`. Wenn sie insgesamt zu niedrig ist, können Sie die Standardeinstellung steigern, durch Ändern der **OLAP\Query\DefaultDrillthroughMaxRows** Servereigenschaft. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Servereigenschaften in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass, wenn Sie lassen **MAXROWS** nicht angegeben ist, erhalten Sie 10.000 Zeilen oder weniger. Wenn dieser Wert für Ihr Szenario zu niedrig ist, legen Sie **MAXROWS** auf eine höhere Zahl ein, z. B. `MAXROWS 20000`. Wenn es insgesamt zu niedrig ist, können Sie den Standardwert erhöhen, durch Ändern der **OLAP\Query\DefaultDrillthroughMaxRows** Servereigenschaft. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Servereigenschaften in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- Sofern nicht anders angegeben, enthalten die zurückgegebenen Spalten alle Granularitätsattribute aller Dimensionen, die mit der Measuregruppe des angegebenen Measures verbunden sind und keine m:n-Dimensionen sind. Cubedimensionen ist zur Unterscheidung von Dimensionen und Measuregruppen ein $-Zeichen vorangestellt. Die **zurückgeben** -Klausel wird verwendet, um die von der Drillthroughabfrage zurückgegebenen Spalten anzugeben. Die folgenden Funktionen kann angewendet werden, um ein einzelnes Attribut oder measure der **zurückgeben** Klausel.  
+ Sofern nicht anders angegeben, enthalten die zurückgegebenen Spalten alle Granularitätsattribute aller Dimensionen, die mit der Measuregruppe des angegebenen Measures verbunden sind und keine m:n-Dimensionen sind. Cubedimensionen ist zur Unterscheidung von Dimensionen und Measuregruppen ein $-Zeichen vorangestellt. Die **zurückgeben** -Klausel wird verwendet, um die von der Drillthroughabfrage zurückgegebenen Spalten anzugeben. Die folgenden Funktionen können auf einem einzelnen Attribut angewendet werden oder ein measure, durch die **zurückgeben** Klausel.  
   
  Name(attribute_name)  
  Gibt den Namen des angegebenen Attributelements zurück.  

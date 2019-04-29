@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161655"
 ---
 # <a name="named-commands"></a>Benannte Befehle
 [Erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit, einen Befehl auszuführen. Es ist eine weitere Möglichkeit: Sie können es einen benannten Befehl, und rufen Sie dann diese benannte Befehl, die direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft der **Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Namen** Eigenschaft eine **Befehl** Objekt. Beispiel:  

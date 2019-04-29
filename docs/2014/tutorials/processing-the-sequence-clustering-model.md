@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188146"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Verarbeiten des Sequenzclustermodells
   Nachdem Sie eine neue Miningstruktur erstellt haben, müssen Sie die Änderungen an der Data Mining-Lösung bereitstellen und die Struktur verarbeiten. Im Anschluss an die Verarbeitung der neuen Struktur und des Miningmodells können Sie das Miningmodell durchsuchen.  

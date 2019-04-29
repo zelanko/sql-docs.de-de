@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192303"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint
   In diesem Thema werden allgemeine Topologien zum Installieren der SQL Server-Business Intelligence-Funktionen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] in der SharePoint 2010- und der SharePoint 2013-Umgebung beschrieben. Dazu gehören Installationen mit einem Einzelserver und Installationen mit drei Ebenen.  
@@ -169,7 +169,7 @@ ms.locfileid: "53365762"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> Drei Ebenen Horizontal skalierte Bereitstellung  
  Diese Topologie veranschaulicht eine Bereitstellung für horizontales Skalieren, die den gleichen gemeinsamen Dienst auf mehreren Servern ausführt, und somit ein größeres Volumen von Anforderungen bearbeitet und eine höhere Rechenleistung für PowerPivot-Daten oder Reporting Services-Berichte bereitstellt. Im untenstehenden Diagramm gibt es drei Anwendungsservercluster, die alle eine andere Kombination gemeinsamer Dienste ausführen. In einer SharePoint-Umgebung werden Dienstermittlung und -verfügbarkeit in die Farm eingebaut. Lastenausgleich über mehrere physische Server, die die gleiche freigegebene Dienstanwendung ausführen, ist Teil der Architektur des gemeinsamen Diensts.  
   
- Wenn Sie eine Farm mit mehreren Servern bereitstellen, achten Sie darauf, dass Sie die Anweisungen in diesem SharePoint-Artikel: [Mehrere Server für eine dreistufige Farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ Wenn Sie eine multiserverfarm bereitstellen, achten Sie darauf, dass Sie die Anweisungen in diesem SharePoint-Artikel befolgen: [Mehrere Server für eine dreistufige Farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![5-Server-Topologie mit](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-Server-Topologie mit")  
   

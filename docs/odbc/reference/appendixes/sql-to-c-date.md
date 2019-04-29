@@ -1,5 +1,5 @@
 ---
-title: 'SQL zu C: Datum | Microsoft-Dokumentation'
+title: 'SQL in C: Datum | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151271"
 ---
-# <a name="sql-to-c-date"></a>SQL zu C: Datum
+# <a name="sql-to-c-date"></a>SQL in C: date
 Der Bezeichner für die Date-ODBC-SQL-Datentyp ist:  
   
  SQL_TYPE_DATE  
@@ -31,11 +31,11 @@ Der Bezeichner für die Date-ODBC-SQL-Datentyp ist:
   
 |C-Typ-ID|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> 11 < = *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 11|data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|10<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> 11 < = *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 11|data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|10<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|data<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Keine [a]|data|6: [c#]|–|  
-|SQL_C_TYPE_TIMESTAMP|Keine [a]|Daten [b]|16 [c]|–|  
+|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> 11 < = *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 11|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|10<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> 11 < = *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 11|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|10<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Keine [a]|Daten|6[c]|–|  
+|SQL_C_TYPE_TIMESTAMP|Keine [a]|Daten [b]|16[c]|–|  
   
  [a] den Wert der *Pufferlänge* für diese Konvertierung ignoriert wird. Der Treiber setzt voraus, dass die Größe des **TargetValuePtr* ist die Größe der C-Datentyp.  
   

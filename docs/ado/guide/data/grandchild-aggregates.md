@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1bff3c8a155e1e9378acbb659f00817f478382e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161607"
 ---
 # <a name="grandchild-aggregates"></a>Untergeordnete Aggregate
 In einer Klausel ein Shape-Befehl erstellte Kapitelspalte zugewiesen werden kann eine *Kapitel-Aliasnamen* (in der Regel mit dem AS-Schlüsselwort). Sie können eine beliebige Spalte in den Kapiteln des der geformten identifizieren **Recordset** mit einem vollständig qualifizierten Namen, der das untergeordnete Element mit der Spalte identifiziert. Angenommen, wenn das übergeordnete Kapitel Kap1, untergeordnete Kapitel chap2, enthält, die eine Mengenspalte "Amt" hat und dann der qualifizierte Name wäre chap1.chap2.amt. Der qualifizierte Name kann dann als Argument für einen der Aggregatfunktionen (SUM, AVG, MAX, MIN, COUNT, STDEV oder alle) verwendet werden.  

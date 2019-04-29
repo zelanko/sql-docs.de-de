@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5af3cad39739c3b85a0c6298d682d8e75a5918d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151222"
 ---
 # <a name="updating-deleting-or-fetching-by-bookmark"></a>Aktualisieren, Löschen oder Abrufen durch Textmarke
 Lesezeichen können verwendet werden, zum Identifizieren von Daten im Resultset, aus dem Ergebnis festgelegt oder abgerufen, die aus dem Resultset in der Rowset-Puffer gelöscht, aktualisiert werden. Diese Vorgänge werden durch einen Aufruf von **SQLBulkOperations** mit einer *Option* Argument SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK oder SQL_FETCH_BY_BOOKMARK. Lesezeichen verwendet diese Vorgänge werden in Spalte 0, der die Rowset-Puffer gespeichert. Bei der Aktualisierung durch Lesezeichen werden die Daten, die Spalten zu aktualisiert, wird von den Puffern Rowset abgerufen. Weitere Informationen finden Sie unter [Aktualisieren von Daten mit SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).

@@ -1,5 +1,5 @@
 ---
-title: SetToArray (MDX) | Microsoft Docs
+title: SetToArray (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149301"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 
@@ -35,7 +35,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -51,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  Der Rückgabetyp der **SetToArray** Funktion ist der VARIANT-Typ VT_ARRAY. Aus diesem Grund die Ausgabe der **SetToArray** Funktion sollte nur als Eingabe für eine benutzerdefinierte Funktion verwendet werden.  
+>  Der Rückgabetyp der **SetToArray** -Funktion ist der VARIANT-Typ VT_ARRAY. Aus diesem Grund die Ausgabe der **SetToArray** Funktion sollte nur als Eingabe für eine benutzerdefinierte Funktion verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Array zurückgegeben.  

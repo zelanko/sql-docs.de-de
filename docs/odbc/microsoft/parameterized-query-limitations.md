@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d394dea5af4f2602918dc4b85b21e0cc4704eaba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200654"
 ---
 # <a name="parameterized-query-limitations"></a>Einschränkungen für parametrisierte Abfragen
-Wenn die Microsoft Access-Treiber verwendet wird, eine parametrisierte Abfrage kann aufgerufen werden mithilfe der folgenden Syntax: Rufen Sie *Abfragename* [(*Parameter*[,*Parameter*]...)].
+Wenn die Microsoft Access-Treiber verwendet wird, kann eine parametrisierte Abfrage mit der folgenden Syntax aufgerufen werden: Rufen Sie *Abfragename* [(*Parameter*[,*Parameter*]...)].

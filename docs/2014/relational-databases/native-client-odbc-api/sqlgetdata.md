@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193306"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** wird verwendet, um Resultsetdaten ohne bindende Spaltenwerte abzurufen. **SQLGetData** können nacheinander aufgerufen werden, in der gleichen Spalte zum Abrufen großer Datenmengen aus einer Spalte mit einem **Text**, **Ntext**, oder **Image** -Datentyp.  
@@ -95,7 +95,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetData-Funktion](https://go.microsoft.com/fwlink/?LinkId=59350)   
+ [SQLGetData Function](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

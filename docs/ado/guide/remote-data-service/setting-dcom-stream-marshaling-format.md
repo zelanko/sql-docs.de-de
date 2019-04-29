@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6b68071c379d61af64c71f5507281c127d9158a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191751"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Festlegen des DCOM-Datenstrom-Marshalling-Formats
 Ein Clientcomputer mithilfe von Komponenten von RDS 1.5 oder früher ist nicht kompatibel ist, mit dem Server über die Komponenten von RDS-2.0 oder höher. Wenn DCOM als zugrunde liegendes Protokoll verwendet wird, wird die Unterstützung für RDS-2.0 oder höher eine effizientere Transport [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Wenn der Client die Komponenten von RDS 1.5 oder früher ausgeführt wird, können Sie Ihre Server für mit der vorherigen RDS-Unterstützung (RDS-1.0 bezeichnet) oder die neuere RDS-Unterstützung (RDS 2.0 oder höher) festlegen. Legen Sie entweder die folgenden Registrierungseinträge an:  

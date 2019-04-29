@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f55c1fb1b90f676f3e1867c6aefdd13889c2cce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188377"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Neuer verknüpfter Bericht (Seite) (Berichts-Manager)
   Auf der Seite Neuer verknüpfter Bericht können Sie einen verknüpften Bericht erstellen. Als verknüpfter Bericht wird ein Bericht mit eigenen Einstellungen und Eigenschaften bezeichnet, der jedoch mit der Berichtsdefinition eines anderen Berichts verknüpft ist. Verwenden Sie verknüpfte Berichte, wenn Sie über einen Basisbericht verfügen, der für spezifische Gruppen oder Benutzer unterschiedlich angezeigt werden soll. Dies kann z. B. ein regionaler Bericht sein, der auf der Grundlage einer Regionalkennzahl, die Sie als Parameter angeben, unterschiedliche Daten zurückgibt. Ein verknüpfter Bericht wird in der Regel aus einem parametrisierten Bericht erstellt, den Sie variieren und für den Sie anschließend unterschiedliche Parameterwerte für jede einzelne Berichtsinstanz speichern. Sie können aus jedem beliebigen Bericht, auf den Sie zugreifen können, einen verknüpften Bericht erstellen.  

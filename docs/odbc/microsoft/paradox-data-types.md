@@ -19,29 +19,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208406"
 ---
 # <a name="paradox-data-types"></a>Paradox-Datentypen
 Die ODBC-Paradox-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die folgende Tabelle listet alle Paradox-Datentypen und zeigt die ODBC-SQL-Datentypen, die, denen Sie zugeordnet sind.  
   
 |Paradox-Datentyp|ODBC-Datentyp|  
 |-----------------------|--------------------|  
-|ALPHANUMERISCH|SQL_VARCHAR|  
-|AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
-|BYTES [1]|SQL_BINARY|  
+|ALPHANUMERIC|SQL_VARCHAR|  
+|AUTOINCREMENT[1]|SQL_INTEGER|  
+|BCD[1]|SQL_DOUBLE|  
+|BYTES[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE ' [2]|SQL_LONGVARBINARY|  
-|LOGISCHE [1]|SQL_BIT|  
-|LONG-WERT [1]|SQL_INTEGER|  
-|MEMO [2]|SQL_LONGVARCHAR|  
+|LOGICAL[1]|SQL_BIT|  
+|LONG[1]|SQL_INTEGER|  
+|MEMO[2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|KURZE|SQL_SMALLINT|  
+|SHORT|SQL_SMALLINT|  
 |ZEIT [1]|SQL_TIMESTAMP|  
 |TIMESTAMP [1]|SQL_TIMESTAMP|  
   
@@ -56,7 +56,7 @@ Die ODBC-Paradox-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die f
   
 |Datentyp|Description|  
 |---------------|-----------------|  
-|ALPHANUMERISCH|Erstellen eine ALPHANUMERISCHE Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255-Byte-Spalte zurück.|  
+|ALPHANUMERIC|Erstellen eine ALPHANUMERISCHE Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255-Byte-Spalte zurück.|  
 |BYTES|Wenn Sie NULL in einer binären Spalte mit dem Treiber Paradox5 einfügen, wird es auf 0 geändert.|  
 |LONG|Der maximale negative Wert von Paradox-Treiber für den Datentyp "Long" Paradox 5 unterstützt. *x* ist kein-2 ^ 31 (-2147483648), so sollte es sich seit langer Zuordnungen in die ODBC-sein SQL_INTEGER geben. Der Maximalwert der negative für Long-Wert unterstützt, ist tatsächlich-2 ^ 31 + 1 (-2147483647).|  
 |timestamp|Wenn ein Wert wird von den Paradox-Treiber in eine TIMESTAMP-Spalte eingefügt und anschließend anschließend aus der Spalte abgerufen, abweichen der abgerufene Wert von der eingefügte Wert durch mehr als 1 Sekunde aufgrund der Rundung.|  

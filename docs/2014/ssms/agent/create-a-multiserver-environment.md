@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192962"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
   Die Multiserververwaltung erfordert, dass Sie einen Masterserver (MSX) und einen oder mehrere Zielserver (TSX) einrichten. Aufträge, die auf allen Zielservern verarbeitet werden, müssen zuerst auf dem Masterserver definiert werden, und dann zu den Zielservern heruntergeladen werden.  
@@ -35,14 +35,14 @@ ms.locfileid: "52795614"
 ## <a name="considerations-for-multiserver-environments"></a>Überlegungen zu Multiserverumgebungen  
  Details zu den unterstützten MSX-/TSX-Konfigurationen finden Sie in der folgenden Tabelle.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
-|**MSX = 8.0 &LT; SP3**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
+|**MSX = 8.0 < SP3**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
 |**MSX = 8.0 SP3 oder höher**|Nein|Nein|Ja|Ja|Ja|Ja|Ja|  
 |**MSX = 9.0**|Nein|Nein|Nein|Ja|Ja|Ja|Ja|  
 |**MSX = 10.0**|Nein|Nein|Nein|Nein|Ja|Ja|Ja|  
-|**MSX = 10,5**|Nein|Nein|Nein|Nein|Nein|Ja|Ja|  
+|**MSX = 10.5**|Nein|Nein|Nein|Nein|Nein|Ja|Ja|  
 |**MSX = 11.0**|Nein|Nein|Nein|Nein|Nein|Nein|Ja|  
   
  Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:  
@@ -65,7 +65,7 @@ ms.locfileid: "52795614"
 |Beschreibt, wie ein Zielserver bei einem Masterserver eingetragen wird.|[Eintragen eines Zielservers bei einem Masterserver](enlist-a-target-server-to-a-master-server.md)|  
 |Beschreibt, wie der Austritt eines Zielservers aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts eines Zielservers aus einem Masterserver](defect-a-target-server-from-a-master-server.md)|  
 |Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](defect-multiple-target-servers-from-a-master-server.md)|  
-|Beschreibt, wie der Status eines Zielservers überprüft wird.|[Sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [Sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Problembehandlung von proxybasierten Multiserveraufträgen](troubleshoot-multiserver-jobs-that-use-proxies.md)  

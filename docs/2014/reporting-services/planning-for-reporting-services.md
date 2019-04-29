@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d6784f2b0bd6c54241558c72933e296e7546337
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188348"
 ---
 # <a name="planning"></a>Planung
   Diese Themen sollen Sie dabei unterstützen, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]besser zu verstehen. Erfahren Sie, wie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Umgebung installiert und konfiguriert wird, damit sie Ihren Anforderungen am besten entspricht.  

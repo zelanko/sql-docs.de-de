@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dc6ab85f562aa4a2149e6471b13422e97d7fc7c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063326"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
   Verwenden Sie die Schritte in diesem Thema, um eine ursprüngliche Installation von PowerPivot für SharePoint zu konfigurieren. Die einfachste Möglichkeit zur Konfiguration einer ursprünglichen Installation ist die Verwendung des PowerPivot-Konfigurationstools. Dieses Tool automatisiert alle unten beschriebenen Konfigurationsschritte.  
@@ -37,7 +37,7 @@ ms.locfileid: "53353426"
   
  Sie müssen Farmadministrator sein, um der Farm PowerPivot für SharePoint hinzuzufügen. Um der Farm Server und Anwendungen hinzuzufügen, müssen Sie die Passphrase kennen.  
   
-##  <a name="deploywsp"></a> Schritt 1: Bereitstellen von PowerPivot-Lösungen  
+##  <a name="deploywsp"></a>Schritt 1: Bereitstellen von PowerPivot-Lösungen  
  Es gibt zwei Lösungen, die installiert und bereitgestellt werden müssen: eine Farmlösung und eine Webanwendungslösung.  
   
  **Installieren und Bereitstellen der Farmlösung**  
@@ -80,8 +80,8 @@ ms.locfileid: "53353426"
   
 7.  Wiederholen Sie die Schritte für andere SharePoint-Webanwendungen, die den PowerPivot-Datenzugriff ebenfalls unterstützen.  
   
-##  <a name="Geneva"></a> Schritt 2: Starten von Diensten auf dem Server  
- Eine PowerPivot für SharePoint-Bereitstellung erfordert, dass die Farm die folgenden Dienste umfasst: Dienste für Excel-Berechnungen, Secure Store Service und Forderungen an den Windows-Tokendienst.  
+##  <a name="Geneva"></a>Schritt 2: Starten von Diensten auf dem Server  
+ Eine PowerPivot für SharePoint-Bereitstellung erfordert, dass es sich bei die Farm die folgenden Dienste umfasst: Dienste für Excel-Berechnungen, Secure Store Service und Forderungen an Windows-Tokendienst.  
   
  Der Claims to Windows Token Service ist für Excel Services und PowerPivot für SharePoint erforderlich. Er wird verwendet, um Verbindungen zu externen Datenquellen herzustellen, die die Windows-Identität des aktuellen SharePoint-Benutzers verwenden. Dieser Dienst muss auf jedem SharePoint-Server ausgeführt werden, auf dem Excel Services oder PowerPivot für SharePoint aktiviert ist. Wenn der Dienst noch nicht gestartet wurde, müssen Sie ihn jetzt starten, um Excel Services zu aktivieren, damit authentifizierte Anforderungen an den PowerPivot-Systemdienst weitergeleitet werden können.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53353426"
   
 5.  Überprüfen Sie, ob sowohl SQL Server Analysis Services als auch der SQL Server PowerPivot-Systemdienst gestartet wurden.  
   
-##  <a name="createapp"></a> Schritt 3: Erstellen einer PowerPivot-Dienstanwendung  
+##  <a name="createapp"></a>Schritt 3: Erstellen einer PowerPivot-Dienstanwendung  
  Der nächste Schritt besteht darin, eine PowerPivot-Dienstanwendung zu erstellen.  
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
@@ -141,7 +141,7 @@ ms.locfileid: "53353426"
   
 9. Klicken Sie auf die Excel Services-Anwendung, die Sie gerade erstellt haben.  
   
-10. Klicken Sie auf **Vertrauenswürdige Dateispeicherorte** und auf dieser Seite Wählen Sie den vertrauenswürdigen Speicherort. (Dies wird in der Regel als aufgeführt **http://** in der Spalte Adresse.) Um sicherzustellen, dass sowohl der Excel Services- als auch PowerPivot-Dienst Zugriff auf die Arbeitsmappe haben, müssen Sie SharePoint als Speicherort einschließen, dem von Excel Services vertraut wird. Der PowerPivot-Systemdienst kann nicht auf Arbeitsmappen zugreifen, die außerhalb einer SharePoint-Farm gespeichert sind.  
+10. Klicken Sie auf **Vertrauenswürdige Dateispeicherorte** und auf dieser Seite Wählen Sie den vertrauenswürdigen Speicherort. (Dies wird in der Regel als aufgeführt **http://** in der Spalte Adresse.) Um sicherzustellen, dass sowohl Excel Services und PowerPivot-Dienst Zugriff auf die Arbeitsmappe verfügen, müssen Sie SharePoint als einen vertrauenswürdigen Speicherort für Excel Services einschließen. Der PowerPivot-Systemdienst kann nicht auf Arbeitsmappen zugreifen, die außerhalb einer SharePoint-Farm gespeichert sind.  
   
 11. Legen Sie die Eigenschaften der Arbeitsmappe im Bereich **maximale Arbeitsmappengröße** auf 50.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "53353426"
  PowerPivot für SharePoint erfordert den Secure Store Service zum Speichern von Anmeldeinformationen und das Konto für die unbeaufsichtigte Ausführung zur Datenaktualisierung. Sie können feststellen, ob Secure Store Service bereits aktiviert ist, indem Sie überprüfen, ob er in der Liste der Dienstanwendungen angezeigt wird.  
   
 > [!IMPORTANT]  
->  Wenn Secure Store Service aktiviert ist, sollten Sie trotzdem überprüfen, ob ein Hauptschlüssel dafür generiert wurde. Anweisungen hierzu finden Sie in Teil 2: Generieren des Hauptschlüssels in der folgenden Prozedur.  
+>  Wenn Secure Store Service aktiviert ist, sollten Sie trotzdem überprüfen, ob ein Hauptschlüssel dafür generiert wurde. Anleitungen hierzu finden Sie in Teil 2: Generieren des Hauptschlüssels in der folgenden Prozedur.  
   
  Wenn Secure Store Service nicht aufgeführt ist, führen Sie folgende Schritte aus, um ihn jetzt zu aktivieren. Arbeitsmappenautoren und Dokumentbesitzer können auf einen breiteren Bereich von Datenquellenverbindungsoptionen zugreifen, indem sie Einmaliges Anmelden aktivieren, wenn sie eine Datenaktualisierung für ihre veröffentlichten Arbeitsmappen planen.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "53353426"
   
 5.  Klicken Sie auf **OK**.  
   
-##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Teil 3: Konfigurieren des unbeaufsichtigten Datenaktualisierungskontos für PowerPivot  
+##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Teil 3: Konfigurieren des Kontos für die unbeaufsichtigte PowerPivot-Datenaktualisierung  
  Häufig muss ein Konto für die unbeaufsichtigte Datenaktualisierung für den PowerPivot-Datenzugriff erstellt werden, damit während der Datenaktualisierung auf externe Daten zugegriffen werden kann. Wenn Kerberos z. B. nicht aktiviert ist, müssen Sie ein unbeaufsichtigtes Konto erstellen, über das der PowerPivot-Dienst eine Verbindung mit externen Datenquellen herstellen kann.  
   
  Anweisungen zum Erstellen für die unbeaufsichtigte PowerPivot-Daten für Aktualisierung von-Konto oder andere gespeicherte Anmeldeinformationen, die verwendet werden Daten zu aktualisieren, finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
@@ -202,7 +202,7 @@ ms.locfileid: "53353426"
  PowerPivot für SharePoint erfasst Informationen zur PowerPivot-Verwendung überall in der Farm mithilfe der Infrastruktur zur Sammlung von SharePoint-Verwendungsdaten. Obwohl Verwendungsdaten immer Teil einer SharePoint-Installation sind, müssen sie möglicherweise aktiviert werden, damit sie verwendet werden können. Anweisungen hierzu finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
 ##  <a name="Upload"></a> Schritt 7: Vergrößern der maximalen Uploadgröße für SharePoint-Webanwendungen und Excel Services  
- Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateigröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße, die konfiguriert werden müssen: Maximale Uploadgröße für die Webanwendung und die Maximalgröße der Arbeitsmappe in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen hierzu finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateigröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße konfigurieren: Maximale Uploadgröße für die Webanwendung und maximale Arbeitsmappengröße in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen hierzu finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 ##  <a name="activatePP"></a> Schritt 8: Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen  
  Die Funktionsaktivierung auf der Ebene der Websitesammlung stellt Anwendungsseiten und Vorlagen zur Verfügung, z. B. Konfigurationsseiten für geplante Datenaktualisierungen und Anwendungsseiten für den PowerPivot-Katalog und Datenfeedbibliotheken.  
@@ -223,7 +223,7 @@ ms.locfileid: "53353426"
   
  Weitere Informationen finden Sie unter [PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration aktivieren](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
-##  <a name="bkmk_redist"></a> Schritt 9: Installieren der SQL Server 2008 R2-Version des OLE DB-Anbieters auf einer SQL Server 2012 PowerPivot für SharePoint-Instanz  
+##  <a name="bkmk_redist"></a> Schritt 9: Installieren Sie die SQL Server 2008 R2-Version des OLE DB-Anbieters auf einer SQL Server 2012 PowerPivot für SharePoint-Instanz  
  Wenn Sie ältere und neuere Versionen von PowerPivot-Arbeitsmappen parallel auf demselben Server ausführen möchten, müssen Sie den im Lieferumfang von SQL Server 2008 R2 enthaltenen Analysis Services OLE-DB-Anbieter auf einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot für SharePoint-Server installieren.  
   
  Durch die Installation des Anbieters funktionieren Arbeitsmappen, die in der Datenverbindungszeichenfolge auf MSOLAP.4 verweisen, erwartungsgemäß auf einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Server. Die Installation des SQL Server 2008 R2 OLE DB-Anbieters ist eine alternative Methode zum Aktualisieren der in einer früheren Version von PowerPivot für Excel erstellten Arbeitsmappen.  
@@ -266,7 +266,7 @@ ms.locfileid: "53353426"
 9. Überprüfen Sie im Computerdateisystem den folgenden Ordner, um zu bestimmen, ob Dateien auf dem Datenträger zwischengespeichert wurden. Das Vorhandensein zwischengespeicherter Dateien ist eine weitere Bestätigung, dass die Bereitstellung betriebsbereit ist. Um den Dateicache anzuzeigen, wechseln Sie zum Ordner \Programme\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup.  
   
 ##  <a name="nextsteps"></a> Schritte nach der Installation  
- Nachdem Sie die Installation überprüft haben, beenden Sie die Dienstkonfiguration durch das Erstellen eines PowerPivot-Katalogs oder durch Anpassen einzelner Konfigurationseinstellungen. Um die soeben erstellten Serverkomponenten vollständig zu nutzen, können Sie [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] herunterladen und dann Ihre erste PowerPivot-Arbeitsmappe erstellen und veröffentlichen.  
+ Nachdem Sie die Installation überprüft haben, beenden Sie die Dienstkonfiguration durch das Erstellen eines PowerPivot-Katalogs oder durch Anpassen einzelner Konfigurationseinstellungen. Um die Serverkomponenten, die Sie gerade installiert haben, vollständig zu nutzen, können Sie [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] herunterladen und dann Ihre erste PowerPivot-Arbeitsmappe erstellen und veröffentlichen.  
   
 ### <a name="install-data-providers-used-for-data-refresh"></a>Installieren von für die Datenaktualisierung verwendeten Datenanbietern  
  Wenn Sie die Datenaktualisierung aktiviert haben, benötigt der Server die gleichen Datenanbieter für den externen Datenzugriff, die auch von der PowerPivot-Clientanwendung zum Importieren der ursprünglichen Daten verwendet wurden. Wenn die Daten beispielsweise ursprünglich mit einem 32-Bit-Anbieter importiert wurden, ist für die serverseitige Datenaktualisierung auch ein 32-Bit-Anbieter erforderlich, wenn sie auf die gleiche externe Datenquelle zugreift. Weitere Informationen finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
@@ -275,7 +275,7 @@ ms.locfileid: "53353426"
  Sie müssen ADO.NET Data Services 3.5 SP1 installieren, wenn Sie SharePoint-Listen als Datenfeeds exportieren möchten. Anweisungen hierzu finden Sie unter [Installieren von ADO.NET Data Services zur Unterstützung von datenfeedexporte von SharePoint-Listen](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
 ### <a name="create-a-powerpivot-gallery"></a>Erstellen eines PowerPivot-Katalogs  
- Beim PowerPivot-Katalog handelt es sich um eine Bibliothek, die Vorschau- und Präsentationsoptionen zum Anzeigen von PowerPivot-Arbeitsmappen auf einer SharePoint-Site enthält. Das Verwenden des PowerPivot-Katalogs zum Veröffentlichen und Anzeigen von PowerPivot-Arbeitsmappen wird für die Vorschaufunktion empfohlen. Wenn Sie überdies auch Reporting Services auf dem gleichen SharePoint-Server bereitgestellt haben, bietet ein PowerPivot-Katalog Benutzerfreundlichkeit beim Erstellen von Berichten. Sie können den Berichts-Generator innerhalb des PowerPivot-Katalogs starten, um als Grundlage für einen neuen Bericht eine veröffentlichte PowerPivot-Arbeitsmappe zu verwenden. Weitere Informationen zum Erstellen und Verwenden der Bibliotheks finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) und [Verwenden des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
+ Der PowerPivot-Katalog ist eine Bibliothek, die Vorschau- und Präsentationsoptionen zum Anzeigen von PowerPivot-Arbeitsmappen auf einer SharePoint-Website enthält. Das Verwenden des PowerPivot-Katalogs zum Veröffentlichen und Anzeigen von PowerPivot-Arbeitsmappen wird für die Vorschaufunktion empfohlen. Wenn Sie überdies auch Reporting Services auf dem gleichen SharePoint-Server bereitgestellt haben, bietet ein PowerPivot-Katalog Benutzerfreundlichkeit beim Erstellen von Berichten. Sie können den Berichts-Generator innerhalb des PowerPivot-Katalogs starten, um als Grundlage für einen neuen Bericht eine veröffentlichte PowerPivot-Arbeitsmappe zu verwenden. Weitere Informationen zum Erstellen und Verwenden der Bibliotheks finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) und [Verwenden des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Erstellen von zusätzlichen vertrauenswürdigen Websites in Excel Services  
  Sie können vertrauenswürdige Websites in Excel Services hinzufügen, um die Berechtigungen und Konfigurationseinstellungen auf Websites zu variieren, die Excel-Arbeitsmappen und PowerPivot-Daten bereitstellen. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209712"
 ---
 # <a name="disable-resource-governor"></a>Deaktivieren der Ressourcenkontrolle
   Sie können die Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL deaktivieren.  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **Zum Deaktivieren der Ressourcenkontrolle mit:**  [Objekt-Explorer](#RGOffObjEx), [Eigenschaften des Resource Governors](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **So deaktivieren Sie den Resource Governor mit:**  [dem Objekt-Explorer](#RGOffObjEx), [Resource Governor-Eigenschaften](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie die Ressourcenkontrolle deaktivieren, geschieht Folgendes:  

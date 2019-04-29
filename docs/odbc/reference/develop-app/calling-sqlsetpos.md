@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199449"
 ---
 # <a name="calling-sqlsetpos"></a>Aufrufen von SQLSetPos
 In ODBC 2. *x*, der Zeiger auf die zeilenstatusarray wurde ein Argument für **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber auf die Tatsache, die dieses Array nicht zwischen ändert basierten **SQLExtendedFetch** und **SQLSetPos**. In ODBC 3. *x*, der Zeiger auf die Statusarray wird einem Beschreibungsfeld und aus diesem Grund die Anwendung kann ganz einfach ändern, damit auf ein anderes Array zu verweisen. Dies kann ein Problem, wenn eine ODBC-3 sein. *x* Anwendung arbeitet mit einer ODBC 2. *X* Treiber jedoch ist der Aufruf **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf **SQLFetchScroll** zum Abrufen von Daten. Der Treiber-Manager wird es als eine Sequenz von Aufrufen an zugeordnet **SQLExtendedFetch**. Im folgenden Code wird ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager das zweite entspricht **SQLSetStmtAttr** rufen Sie bei der Arbeit mit einer ODBC 2.*.x* Treiber:  

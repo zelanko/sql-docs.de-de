@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157108"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
   Die richtlinienbasierte Verwaltung ist ein System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Richtlinienadministratoren die richtlinienbasierte Verwaltung einsetzen, verwenden sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Erstellen von Richtlinien, mit denen Entitäten auf dem Server verwaltet werden, beispielsweise die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, Datenbanken oder andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte.  

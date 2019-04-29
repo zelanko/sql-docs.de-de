@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156725"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Durchführen eines Upgrades aller Zielserver vor dem Upgrade des Masterservers
   Führen Sie vor dem Upgrade des Masterservers ein Upgrade aller Computer aus, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen und als Zielserver konfiguriert sind.  
@@ -37,7 +37,7 @@ ms.locfileid: "48061944"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Wenn Sie vor dem Upgrade des Masterservers nicht alle Zielserver aktualisieren können, müssen Sie alle Zielserver austragen und nach dem Upgrade wieder eintragen.  
   
- Weitere Informationen finden Sie in den Themen "Automatisieren der Verwaltung in einem Unternehmen", "Vorgehensweise: Austragen eines Zielservers bei einem Masterserver", und "Vorgehensweise: Eintragen eines Zielservers als Masterserver" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Weitere Informationen finden Sie in den Themen "Automatisieren der Verwaltung in einem Unternehmen," unter "Vorgehensweise: Vollziehen des Austritts eines Zielservers aus einem Masterserver"und" Vorgehensweise: Eintragen ein Zielservers bei einem Masterauftrag für den"im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Upgradeprobleme für SQL Server-Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

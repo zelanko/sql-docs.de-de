@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213346"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 Gibt an, wie Objekte mit festgelegten Berechtigungen erben [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Sowohl Objekte als auch andere Container, der das primäre Objekt enthalten sind, erben den Eintrag.|  
 |**adInheritContainers**|2|Andere Container, die das primäre Objekt enthalten sind, erben den Eintrag.|  

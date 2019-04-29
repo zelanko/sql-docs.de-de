@@ -1,6 +1,6 @@
 ---
-title: Wiederherstellen einer Datenbank durch TDE - Parallel Data Warehouse geschützt | Microsoft Docs
-description: Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die mithilfe von transparente datenverschlüsselung in Parallel Data Warehouse Analytics Platform System verschlüsselt wird.
+title: 'Wiederherstellen eine Datenbank mit TDE: Parallel Data Warehouse geschützt | Microsoft-Dokumentation'
+description: Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die in Analytics Platform System Parallel Data Warehouse mithilfe von transparente datenverschlüsselung verschlüsselt wird.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157018"
 ---
-# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Stellen Sie eine durch TDE in Parallel Data Warehouse geschützte Datenbank wieder her
-Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die mit transparenter datenverschlüsselung verschlüsselt wird.  
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Wiederherstellen einer Datenbank mit TDE in Parallel Data Warehouse geschützt
+Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die mithilfe der transparenten datenverschlüsselung verschlüsselt wird.  
   
-Die [Transparent Data Encryption verwenden](transparent-data-encryption.md#using-tde) Beispiel enthält Code zum Aktivieren von TDE auf die `AdventureWorksPDW2012` Datenbank. Im folgende Code wird, beispielsweise durch eine Sicherung der Datenbank auf dem ursprünglichen Analytics Platform System (APS)-Gerät erstellen und dann wiederherstellen, das Zertifikat und die Datenbank auf einer anderen Einheit fortgesetzt.  
+Die [Transparent Data Encryption mithilfe von](transparent-data-encryption.md#using-tde) Beispiel enthält Code zum Aktivieren von TDE für die `AdventureWorksPDW2012` Datenbank. Der folgende Code wird dieses Beispiel erstellen eine Sicherung der Datenbank auf dem ursprünglichen Analytics Platform System (APS)-Gerät, und klicken Sie dann wiederherstellen, das Zertifikat und die Datenbank auf einem anderen Gerät fortgesetzt.  
   
-Der erste Schritt ist zum Erstellen einer Sicherung der Quelldatenbank.  
+Der erste Schritt ist die Erstellung eine Sicherung der Quelldatenbank.  
   
 ```sql  
 BACKUP DATABASE AdventureWorksPDW2012   
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-Vorbereiten der neuen SQL Server PDW TDE durch einen Hauptschlüssel erstellen, Aktivieren der Verschlüsselung und Erstellen von Netzwerkanmeldeinformationen.  
+Vorbereiten der neuen SQL Server PDW für TDE durch einen Hauptschlüssel erstellen, Aktivieren der Verschlüsselung und Erstellen von Netzwerkanmeldeinformationen an.  
   
 ```sql  
 USE master;  
@@ -45,7 +45,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-Die letzten beiden Schritten erstellen Sie das Zertifikat mithilfe der Sicherungen aus der ursprünglichen SQL Server PDW neu. Verwenden Sie das Kennwort, das Sie beim Erstellen der Sicherung des Zertifikats verwendet.  
+Die letzten beiden Schritte erstellen Sie das Zertifikat mit die Sicherungen der ursprünglichen SQL Server PDW neu. Verwenden Sie das Kennwort, das Sie bei der Erstellung der Sicherung des Zertifikats verwendet haben.  
   
 ```sql  
 -- Create certificate in master  
@@ -59,10 +59,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[DATENBANK SICHERN](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [Sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [ZERTIFIKAT ERSTELLEN](../t-sql/statements/create-certificate-transact-sql.md)  
-[STELLEN SIE DIE DATENBANK WIEDER HER.](../t-sql/statements/restore-database-parallel-data-warehouse.md)
+[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

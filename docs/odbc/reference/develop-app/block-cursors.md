@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199289"
 ---
 # <a name="block-cursors"></a>Blockcursor
 Viele Anwendungen verbringen viel Zeit, die Daten über das Netzwerk eingebunden. Teil dieser Zeit aufgewendet tatsächlich die Daten über das Netzwerk eingebunden und Teil davon ist für die netzwerkbelastung, aufgewendet, z. B. des Aufrufs durch den Treiber, um eine Zeile mit Daten anzufordern. Die letztere Zeit reduziert werden kann, wenn die Anwendung effizient nutzt *Block* oder *Fat,* *Cursorn* die kann mehr als eine Zeile zurückgeben, zu einem Zeitpunkt.  

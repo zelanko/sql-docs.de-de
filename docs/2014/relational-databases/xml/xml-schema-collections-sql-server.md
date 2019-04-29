@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193037"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
   Im Thema beschriebene [Xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server bietet systemeigene Speicherung von XML-Daten mithilfe der `xml` -Datentyp. Sie können optional XSD-Schemas zuordnen, mit der eine Variable oder eine Spalte mit `xml` Typ über eine XML-schemaauflistung. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  

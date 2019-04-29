@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199212"
 ---
 # <a name="c-data-types-in-odbc"></a>C-Datentypen in ODBC
 ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihren entsprechenden Typ-IDs verwendet werden. Diese werden von den Puffern verwendet, die Resultset-Spalten und Parameter gebunden sind. Nehmen wir beispielsweise an, dass eine Anwendung Daten zum Abrufen von Daten aus einer Resultsetspalte im Zeichenformat vorliegen. Deklariert eine Variable mit der SQLCHAR *-Datentyp, und diese Variable an die Resultsetspalte mit einem Typbezeichner SQL_C_CHAR gebunden. Eine vollständige Liste der C-Datentypen und Typ-IDs, finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

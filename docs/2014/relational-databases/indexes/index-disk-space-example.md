@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161794"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
   Für jeden Erstellungs-, Neuerstellungs- oder Löschvorgang eines Indexes ist Speicherplatz für die alten (Quellindex) und neuen (Zielindex) Strukturen in den entsprechenden Dateien und Dateigruppen erforderlich. Die Zuordnung der alten Struktur wird erst aufgehoben, nachdem die Indexerstellungstransaktion den Commitvorgang ausgeführt hat. Außerdem ist möglicherweise weiterer temporärer Speicherplatz auf dem Datenträger für Sortiervorgänge erforderlich. Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -109,10 +109,10 @@ ms.locfileid: "52542708"
   
 |Indexvorgang|Speicherplatzanforderungen für die Speicherorte der folgenden Strukturen|  
 |---------------------|---------------------------------------------------------------------------|  
-|Offlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1018 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **Tempdb**: 202 MB *<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
-|Offlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 816 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB *<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
-|Onlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1058 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -**Tempdb** (einschließlich Zuordnungsindex): 242 MB *<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
-|Onlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 856 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB *<br /><br /> – Temporärer Zuordnungsindex: 40 MB\*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
+|Offlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1018 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
+|Offlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 816 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
+|Onlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1058 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -**Tempdb** (einschließlich Zuordnungsindex): 242 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
+|Onlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 856 MB:<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Temporärer Zuordnungsindex: 40 MB\*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Nach Abschluss des Vorgangs Erforderlicher Speicherplatz: 453 MB|  
   
  *Die Zuordnung dieses Speicherplatzes wird aufgehoben, nachdem ein Commit für den Indexvorgang ausgeführt wurde.  
   

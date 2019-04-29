@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188196"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Verwenden Sie das Dialogfeld **Eigenschaften von Platzhalter** , um den Wert, die QuickInfo und die Markupoptionen eines Platzhalters innerhalb eines Textfelds zu ändern.  

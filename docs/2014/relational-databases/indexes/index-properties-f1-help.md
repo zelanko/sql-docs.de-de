@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161901"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
   In den Abschnitten dieses Themas werden verschiedene Indexeigenschaften beschrieben, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Dialogfeldern verfügbar sind.  
@@ -52,7 +52,7 @@ ms.locfileid: "48084701"
  Zeigt den Namen des Indexes an. Dieses Feld ist bei einem vorhandenen Index schreibgeschützt. Wenn ein neuer Index erstellt wird, geben Sie den Namen des Indexes an.  
   
  **Indextyp**  
- Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore**oder **Nicht gruppierter Columnstore**.  
+ Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können sein: **Gruppierte**, **nicht gruppierten**, **Primär-XML**, **Sekundär-XML**, **räumliche**, **gruppiert Columnstore**, oder **Nonclustered Columnstore**.  
   
  **Hinweis** Es ist nur ein gruppierter Index pro Tabelle zulässig. Pro Tabelle ist nur ein speicheroptimierter xVelocity-columnstore-Index zulässig.  
   
@@ -135,13 +135,13 @@ ms.locfileid: "48084701"
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
  **Dateigruppe**  
- Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
+ Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../databases/database-files-and-filegroups.md).  
   
  **FILESTREAM-Dateigruppe**  
  Gibt die Dateigruppe für FILESTREAM-Daten an. Diese Liste zeigt nur FILESTREAM-Dateigruppen an. Die Standardlistenauswahl ist die Dateigruppe PRIMARY FILESTREAM. Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Partitionsschema**  
- Speichert den Index in einem Partitionsschema. Wenn Sie auf **Partitionsschema** klicken, wird das unten stehende Raster aktiviert. Die Standardlistenauswahl ist das für das Speichern der Tabellendaten verwendete Partitionsschema. Bei Auswahl eines anderen Partitionsschemas in der Liste werden die im Raster angezeigten Informationen aktualisiert. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+ Speichert den Index in einem Partitionsschema. Wenn Sie auf **Partitionsschema** klicken, wird das unten stehende Raster aktiviert. Die Standardlistenauswahl ist das für das Speichern der Tabellendaten verwendete Partitionsschema. Bei Auswahl eines anderen Partitionsschemas in der Liste werden die im Raster angezeigten Informationen aktualisiert. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../partitions/partitioned-tables-and-indexes.md).  
   
  Die Option Partitionsschema ist nicht verfügbar, wenn in der Datenbank keine Partitionsschemas vorhanden sind.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48084701"
 >  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
   
  **Onlineverarbeitung von DML-Anweisungen während der Indexverschiebung zulassen**  
- Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes. Weitere Informationen finden Sie unter [Perform Index Operations Online](perform-index-operations-online.md).  
+ Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](perform-index-operations-online.md) .  
   
 > [!NOTE]  
 >  Diese Option ist für XML-Indizes nicht verfügbar. Das gilt auch, wenn der Index ein deaktivierter gruppierter Index ist.  
@@ -199,7 +199,7 @@ ms.locfileid: "48084701"
  Gibt das Mosaikschema für den Index an. Folgende Mosaikschemas werden unterstützt.  
   
  **Geometrieraster**  
- Gibt an, das geometrierastermosaikschema, die für eine Spalte gilt die `geometry` -Datentyp.  
+ Gibt das Mosaikschema für das Geometrieraster an, das für eine Spalte mit dem Datentyp `geometry` gilt.  
   
  **Automatisches Geometrieraster**  
  Diese Option wird für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aktiviert, wenn der Datenbank-Kompatibilitätsgrad auf 110 oder höher festgelegt wird.  
@@ -233,7 +233,7 @@ ms.locfileid: "48084701"
  Die Dichte des Rasters der vierten Ebene.  
   
 ##  <a name="Filter"></a> Seite "Filter"  
- Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [Create Filtered Indexes](create-filtered-indexes.md).  
+ Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](create-filtered-indexes.md).  
   
  **Filterausdruck**  
  Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  

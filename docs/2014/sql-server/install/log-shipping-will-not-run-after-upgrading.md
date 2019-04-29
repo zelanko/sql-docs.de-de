@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195085"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Protokollversand wird nach Update nicht ausgeführt
   Der Upgrade Advisor hat festgestellt, dass Sie den Protokollversand verwenden. Der Protokollversand in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ist nicht mit dem Protokollversand in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kompatibel und kann nicht direkt aktualisiert werden. Konfigurieren Sie nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]den Protokollversand mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe gespeicherter Prozeduren neu.  

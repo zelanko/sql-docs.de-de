@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199080"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Abrufen von Ausgabeparametern mithilfe von SQLGetData
 Bevor Sie ODBC 3.8 konnte eine Anwendung nur die Output-Parameter, der eine Abfrage mit einer gebundenen Ausgabepuffer abrufen. Allerdings ist es schwierig, die einen sehr großen Puffer zuzuweisen, wenn die Größe des Parameterwerts sehr groß ist (z. B. ein großes Bild). ODBC 3.8 bietet neue Möglichkeiten zum Abrufen von Ausgabeparametern in Teilen. Eine Anwendung kann jetzt Aufrufen **SQLGetData** mit einem kleinen Puffer mehrere Male auf, um einen großen Parameterwert abzurufen. Dies ist für das Abrufen von großen Spaltendaten vergleichbar.  
@@ -112,7 +112,7 @@ Bevor Sie ODBC 3.8 konnte eine Anwendung nur die Output-Parameter, der eine Abfr
   
  Anwendungen können weiterhin **SQLSetDescField** oder **SQLSetDescRec** Bindungsinformationen über die festgelegt. Feld Zuordnung wird nicht geändert werden. Felder innerhalb der Deskriptor können jedoch neue Werte zurückgeben. SQL_DESC_PARAMETER_TYPE könnte es sich beispielsweise um SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM zurückgeben.  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Verwendungsszenario: Abrufen eines Bilds in Teilen aus einem Resultset  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Beispielszenario für die Verwendung: Abrufen eines Bilds in Teilen aus einem Resultset  
  **SQLGetData** können verwendet werden, um das Abrufen von Daten in Teilen, wenn eine gespeicherte Prozedur gibt ein Resultset, das eine Zeile mit Metadaten zu einem Bild enthält, und das Bild wird in einem großen Output-Parameter zurückgegeben.  
   
 ```  
@@ -194,7 +194,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Verwendungsszenario: Senden und Empfangen von ein großes Objekt als eine gestreamte Eingabe-/Ausgabeparameter  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Beispielszenario für die Verwendung: Senden und Empfangen von ein großes Objekt als eine gestreamte Eingabe-/Ausgabeparameter  
  **SQLGetData** abrufen und Senden von Daten in Teilen, wenn eine gespeicherte Prozedur ein großes Objekt bewegt wird als Eingabe/Ausgabe-Parameter, den Wert in und aus der Datenbank-streaming verwendet werden können. Sie müssen nicht alle Daten im Speicher gespeichert.  
   
 ```  

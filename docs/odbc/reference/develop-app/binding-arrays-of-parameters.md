@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76f756b96a62a174e329614f9ab1baf634937522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199645"
 ---
 # <a name="binding-arrays-of-parameters"></a>Binden von Parameterarrays
 Anwendungen, die Arrays von Parametern verwenden binden die Arrays, an die Parameter in der SQL-Anweisung. Es gibt zwei Bindung Formate ein:  

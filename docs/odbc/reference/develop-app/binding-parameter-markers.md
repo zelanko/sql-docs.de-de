@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199394"
 ---
 # <a name="binding-parameter-markers"></a>Binden von Parametermarkern
 Die Anwendung bindet Parameter durch den Aufruf **SQLBindParameter**. **SQLBindParameter** bindet einen Parameter zu einem Zeitpunkt. Es gibt die Anwendung Folgendes an:  
@@ -28,7 +28,7 @@ Die Anwendung bindet Parameter durch den Aufruf **SQLBindParameter**. **SQLBindP
   
 -   Der Parametertyp (Eingabe, Eingabe/Ausgabe- oder Ausgabe). Mit Ausnahme von Parametern in Prozeduraufrufen sind alle Parameter Eingabeparameter an. Weitere Informationen finden Sie unter [Prozedurparameter](../../../odbc/reference/develop-app/procedure-parameters.md)weiter unten in diesem Abschnitt.  
   
--   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an den Parameter gebunden werden. Der Treiber muss in der Lage, die Daten aus der C-Datentyp in der SQL-Datentyp zu konvertieren, oder ein Fehler zurückgegeben. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D:-Datentypen.  
+-   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an den Parameter gebunden werden. Der Treiber muss in der Lage, die Daten aus der C-Datentyp in der SQL-Datentyp zu konvertieren, oder ein Fehler zurückgegeben. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
   
 -   Die SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters selbst.  
   

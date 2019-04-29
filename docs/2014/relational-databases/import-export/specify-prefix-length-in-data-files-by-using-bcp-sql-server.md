@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156692"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
   Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im nativen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen*bezeichnet.  
@@ -36,7 +36,7 @@ ms.locfileid: "48058760"
 >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Übersicht über die Präfixlänge  
- Zum Speichern der Präfixlänge eines Felds muss eine ausreichende Anzahl von Bytes vorhanden sein, um die maximale Länge des Felds darzustellen. Die erforderliche Anzahl von Byte hängt auch ab vom Dateispeichertyp, der NULL-Zulässigkeit einer Spalte und davon, ob die Daten in der Datendatei im systemeigenen Format oder im Zeichenformat gespeichert werden. Z. B. eine `text` oder `image` Datentyp erfordert vier Präfixzeichen, um die Feldlänge zu speichern, aber eine `varchar` Datentyp erfordert zwei Zeichen. In der Datendatei werden diese Längenpräfixzeichen im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert.  
+ Zum Speichern der Präfixlänge eines Felds muss eine ausreichende Anzahl von Bytes vorhanden sein, um die maximale Länge des Felds darzustellen. Die erforderliche Anzahl von Byte hängt auch ab vom Dateispeichertyp, der NULL-Zulässigkeit einer Spalte und davon, ob die Daten in der Datendatei im systemeigenen Format oder im Zeichenformat gespeichert werden. Beispielsweise erfordert der Datentyp `text` oder `image` vier Präfixzeichen, um die Feldlänge zu speichern, während der Datentyp `varchar` zwei Zeichen erfordert. In der Datendatei werden diese Längenpräfixzeichen im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert.  
   
 > [!IMPORTANT]  
 >  Beim Verwenden des systemeigenen Formats sollten Sie anstelle von Feldabschlusszeichen eher Längenpräfixe verwenden. Systemeigene Formatdaten können zu Konflikten mit Abschlusszeichen führen, weil eine Datendatei im systemeigenen Format im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert wird.  
@@ -50,7 +50,7 @@ ms.locfileid: "48058760"
   
  Verwenden Sie die in der folgenden Tabelle gezeigten Präfixlängen, wenn Sie einen Massenexport von Daten vornehmen und diese in systemeigenen Datentypen oder im Zeichenformat speichern.  
   
-|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
+|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |`char`|2|2|2|2|  
 |`varchar`|2|2|2|2|  

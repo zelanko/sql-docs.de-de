@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164053"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Prüfen des Sequenzclustermodells (Data Mining-Lernprogramm)
   Nun, dass Sie erstellt haben die **Sequenzcluster mit Region** Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer auf die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer enthält fünf Registerkarten: **Clusterdiagramm**, **Clusterprofile**, **Cluster Merkmale**, **ClusterDiscrimination**, und **Statusübergänge**. Weitere Informationen zum Verwenden des Viewers finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "56024996"
   
 4.  Eine Übergangszeile enthält den Text Übergang in die **Variablen** Spalte und eine Kombination sequenzieller Attributwerte in die **Wert** Spalte. Die Sequenz kann auch Anfangspunkte und fehlende Werte enthalten.  
   
-     Nehmen Sie z. B. an, dass der Übergang den Wert "[Start] -> Road Tire Tube" hat. Dies bedeutet, dass Kunden in diesem Cluster häufig "Road Tire Tube" zuerst in den Warenkorb gelegt haben. Dies kann anzeigen, dass das Produkt ein häufiges Element ist, das Kunden als Erstes suchen, oder es kann anzeigen, dass das Produkt einfach auf der Einkaufswebsite zu finden ist.  
+     Nehmen wir beispielsweise an, die der Übergang hat den Wert [Start] -> Road Tire Tube. Dies bedeutet, dass Kunden in diesem Cluster häufig "Road Tire Tube" zuerst in den Warenkorb gelegt haben. Dies kann anzeigen, dass das Produkt ein häufiges Element ist, das Kunden als Erstes suchen, oder es kann anzeigen, dass das Produkt einfach auf der Einkaufswebsite zu finden ist.  
   
 5.  In der Liste aus, bis Sie den ersten Übergang finden, die nicht **[Start]** oder **fehlende** darin.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024996"
   
 8.  Klicken Sie auf den Knoten für "Touring Tire" und verschieben Sie das Schieberegler-Steuerelement zurück zur mittleren Position.  
   
-     Zunächst werden zahlreiche Übergangszeilen angezeigt, die "Touring Tire" mit anderen Produkten verbinden. Wenn Sie jedoch den Wahrscheinlichkeitsschwellenwert erhöhen, werden die weniger wahrscheinlichen Übergänge aus dem Diagramm entfernt, sodass nur der Übergang "Touring Tire > Touring Tire Tube" übrig bleibt. Dieser Übergang zeigt, dass, wenn ein Kunde einen "Touring Tire" in den Warenkorb legt, eine hohe Wahrscheinlichkeit besteht, dass der Kunde als Nächstes einen "Touring Tire Tube" in den Warenkorb legen wird.  
+     Zunächst gibt es zahlreiche übergangszeilen Touring Tire mit anderen Produkten verbinden, aber wenn Sie den wahrscheinlichkeitsschwellenwert erhöhen, werden die weniger wahrscheinlichen Übergänge aus dem Diagramm, sodass nur der Übergang, Touring Tire entfernt > "Touring Tire Tube". Dieser Übergang zeigt, dass, wenn ein Kunde einen "Touring Tire" in den Warenkorb legt, eine hohe Wahrscheinlichkeit besteht, dass der Kunde als Nächstes einen "Touring Tire Tube" in den Warenkorb legen wird.  
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   

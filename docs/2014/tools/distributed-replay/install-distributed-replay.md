@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149737"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installieren von Distributed Replay von der Eingabeaufforderung
   Wenn Sie eine neue Distributed Replay-Instanz mithilfe der Eingabeaufforderung installieren, können Sie angeben, welche Funktionen installiert und wie diese konfiguriert werden sollen. Die Installation an der Eingabeaufforderung unterstützt das Installieren, Reparieren, Aktualisieren und Deinstallieren der Distributed Replay Utility-Komponenten. Beim Installieren über die Eingabeaufforderung unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus.  

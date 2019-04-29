@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200044"
 ---
 # <a name="freeing-a-statement-handle"></a>Freigeben eines Anweisungshandles
   Es ist effizienter, Anweisungshandles wieder zu verwenden, als sie zu löschen und neu zuzuordnen. Vor dem Ausführen einer neuen SQL-Anweisung für ein Anweisungshandle sollten Anwendungen überprüfen, ob die aktuellen Anweisungseinstellungen korrekt sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im allgemeinen Parameter und Resultsets legt fest, für die alte SQL-Anweisung aufgehoben werden muss, durch den Aufruf [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) mit dem SQL_RESET_PARAMS und SQL_UNBIND "Optionen", und klicken Sie dann die Bindung erneut für die neue SQL-Anweisung.  

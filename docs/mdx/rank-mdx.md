@@ -1,5 +1,5 @@
 ---
-title: Rang (MDX) | Microsoft Docs
+title: Rang (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1d234f02c8dfcd36073059210c1999cb95f5ab0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200664"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 
@@ -35,18 +35,18 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion bestimmt den einsbasierten Rang für das angegebene Tupel durch das Auswerten des angegebenen numerischen Ausdrucks für das Tupel. Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion Tupeln mit doppelten Werten in der Menge denselben Rang zugewiesen. Die Zuweisung desselben Ranges an doppelte Werte wirkt sich auf die Rangwerte nachfolgender Tupel in der Menge aus. Eine Menge besteht beispielsweise aus folgenden Tupeln: `{(a,b), (e,f), (c,d)}`. Das Tupel `(a,b)` weist denselben Wert auf wie das Tupel `(c,d)`. Wenn das Tupel `(a,b)` den Rang "1" aufweist, liegt für `(a,b)` und `(c,d)` der Rang "1" vor. Das Tupel `(e,f)` verfügt jedoch über den Rang "3". In diesem Satz kann kein Tupel mit dem Rang "2" vorhanden sein.  
+ Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion bestimmt den einsbasierten Rang für das angegebene Tupel, indem der angegebene numerische Ausdruck für das Tupel ausgewertet. Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion Tupeln mit doppelten Werten in der Menge denselben Rang zugewiesen. Die Zuweisung desselben Ranges an doppelte Werte wirkt sich auf die Rangwerte nachfolgender Tupel in der Menge aus. Eine Menge besteht beispielsweise aus folgenden Tupeln: `{(a,b), (e,f), (c,d)}`. Das Tupel `(a,b)` weist denselben Wert auf wie das Tupel `(c,d)`. Wenn das Tupel `(a,b)` den Rang "1" aufweist, liegt für `(a,b)` und `(c,d)` der Rang "1" vor. Das Tupel `(e,f)` verfügt jedoch über den Rang "3". In diesem Satz kann kein Tupel mit dem Rang "2" vorhanden sein.  
   
  Wenn ein numerischer Ausdruck nicht angegeben wird, die **Rang** Funktion gibt die einsbasierte Ordnungsposition des angegebenen Tupels zurück.  
   
  Die **Rang** -Funktion sortiert die Menge nicht.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel gibt die Menge von Tupeln, die mit Kunden- und Kaufdaten, mithilfe der **Filter**, **NonEmpty**, **Element**, und **Rang** Funktionen, um das letzte Datum gefunden werden, dass jeder Kunde einen Kauf vorgenommen.  
+ Das folgende Beispiel gibt die Menge der Tupel, die mit von Kunden und Kaufdaten mithilfe der **Filter**, **NonEmpty**, **Element**, und **Rang** Funktionen, um das Datum der letzten feststellen, dass es sich bei jeder Kunde einen Einkauf getätigt haben.  
   
 ```  
 WITH SET MYROWS AS FILTER  
@@ -63,7 +63,7 @@ MYROWS ON 1
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird die **Reihenfolge** -Funktion, statt über das **Rang** -Funktion verwendet, um die Elemente der City-Hierarchie rank basierend auf dem Reseller Sales Amount-Measure, und klicken Sie dann in der Rangreihenfolge angezeigt. Mithilfe der **Reihenfolge** -Funktion zum vorsortieren der Menge der Elemente der City-Hierarchie, die Sortierung nur einmal ausgeführt und anschließend ein linearer Scan, bevor angezeigt wird, der Sortierreihenfolge.  
+ Im folgenden Beispiel wird die **Reihenfolge** -Funktion, statt auf den **Rang** -Funktion verwendet, um die Elemente der City-Hierarchie Rangfolge basierend auf dem Reseller Sales Amount-Measure und klicken Sie dann in der Rangreihenfolge angezeigt. Mithilfe der **Reihenfolge** -Funktion zum vorsortieren der Menge der Elemente der City-Hierarchie, die Sortierung nur einmal durchgeführt und anschließend ein linearer Scan vor der Anzeige der Sortierreihenfolge.  
   
 ```  
 WITH   

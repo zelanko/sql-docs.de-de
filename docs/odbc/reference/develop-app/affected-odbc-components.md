@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186256"
 ---
 # <a name="affected-odbc-components"></a>Betroffene ODBC-Komponenten
 Abwärtskompatibilität wird beschrieben, wie Anwendungen, Treiber-Manager und Treiber durch die Einführung einer neuen Version des Treiber-Managers betroffen sind. Dies wirkt sich auf Anwendungen und Treiber, wenn eine oder beide Angaben in der alten Version bleiben. Es gibt daher drei Arten von Abwärtskompatibilität berücksichtigt werden, wie in der folgenden Tabelle gezeigt.  

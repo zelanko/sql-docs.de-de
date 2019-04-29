@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151448"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP / IP-Eigenschaften (Registerkarte "IP-Adressen")
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll** für alle Adressen sofort konfiguriert werden.  
   
- Änderungen werden erst dann wirksam, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde. Weitere Informationen zum Starten und Beenden des SQL Server-Browserdiensts finden Sie unter Vorgehensweise: Starten und Beenden von SQL Server-Browser-Dienst in der Onlinedokumentation.  
+ Änderungen werden erst dann wirksam, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde. Informationen zum Starten und beenden den SQL Server-Browser-Dienst finden Sie unter Vorgehensweise: Starten Sie und beenden Sie den SQL Server-Browser-Dienst in der Onlinedokumentation Online.  
   
 ## <a name="static-vs-dynamic-ports"></a>Statische und Dynamische Ports  
  Die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht für eingehende Verbindungen an Port 1433. Der Port kann aus Sicherheitsgründen oder wegen Anforderungen von Clientanwendungen geändert werden. Standardmäßig werden benannte Instanzen (einschließlich SQL Server Express) zur Überwachung von dynamischen Ports konfiguriert. Lassen Sie das Feld **Dynamische TCP-Ports** leer, und geben Sie eine verfügbare Portnummer in das Feld **TCP-Port** ein, um einen statischen Port zu konfigurieren. Weitere Informationen zum Öffnen von Ports in der Firewall finden Sie unter "Konfigurieren der Windows-Firewall für den SQL Server-Zugriff" in der Onlinedokumentation.  
@@ -51,7 +51,7 @@ ms.locfileid: "52747972"
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
   
- Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation.  
+ Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren Sie die Datenbank-Engine zum Überwachen mehrerer TCP-Ports"in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Hinzufügen und Entfernen von IP-Adressen  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager zeigt die IP-Adressen an, die zum Zeitpunkt der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar waren. Die verfügbaren IP-Adressen können sich ändern, wenn Netzwerkkarten hinzugefügt oder entfernt werden, wenn dynamisch zugewiesene IP-Adressen ablaufen, wenn die Netzwerkstruktur neu konfiguriert wird oder wenn der physische Standort des Computers geändert wird, z. B. bei einem Laptop, über das von einem anderen Gebäude aus eine Verbindung mit dem Netzwerk hergestellt wird. Zum Ändern der IP-Adresse bearbeiten Sie das Feld **IP-Adresse**, und starten Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  

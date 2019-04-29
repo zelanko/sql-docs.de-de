@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206444"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
   Claims to Windows Token Service (c2WTS) von SharePoint ist erforderlich, mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus sollten Sie Windows-Authentifizierung für Datenquellen verwenden, die außerhalb der SharePoint-Farm liegen. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
@@ -41,7 +41,7 @@ ms.locfileid: "53354359"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 > [!NOTE]  
->  Hinweis: Einige der Konfigurationsschritte ändern sich möglicherweise oder funktionieren nicht in bestimmten Farmtopologien. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
+>  Hinweis: Einige der Konfigurationsschritte ändern möglicherweise oder funktionieren möglicherweise nicht in bestimmten farmtopologien. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Grundlegende Schritte für die c2WTS-Konfiguration  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53354359"
   
      c2WTS erfordert explizit die Identitäten der 'Aufrufer' in der Konfigurationsdatei aufgelisteten **c2wtshost.exe.config**. c2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, es sei denn, sie zu diesem Zweck konfiguriert ist. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Ordner gespeichert:  
   
-     **\Programme\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
+     **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      Im folgenden Beispiel wird die Konfigurationsdatei gezeigt:  
   

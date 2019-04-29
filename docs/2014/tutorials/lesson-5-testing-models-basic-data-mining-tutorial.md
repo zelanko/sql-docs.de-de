@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185423"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lektion 5: Testen von Modellen (Lernprogramm zu Datamining-Grundlagen)
   Nachdem Sie das Modell mit dem Trainingssatz für das Targeted Mailing-Szenario verarbeitet haben, können Sie die Modelle mit dem Testsatz überprüfen. Die Überprüfung ist ein wichtiger Schritt im Data Mining-Prozess. Sie sollten wissen, welche Leistung Ihre Miningmodelle für Targeted Mailing mit echten Daten erzielen, bevor Sie die Modelle in Ihrer Produktionsumgebung bereitstellen.  

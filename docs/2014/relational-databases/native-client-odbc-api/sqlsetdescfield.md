@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188674"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField kann verwendet werden, um deskriptorfelder für Tabellenwertparameter und Tabellenwertparameter-Spalten festzulegen. Weitere Informationen zu den verfügbaren Feldern finden Sie unter [Deskriptorfelder für Tabellenwertparameter-Parameter](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) und [Deskriptorfelder für Tabellenwertparameter-Parameter enthaltene Spalten](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  

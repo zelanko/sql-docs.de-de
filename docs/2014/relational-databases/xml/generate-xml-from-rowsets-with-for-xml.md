@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204985"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generieren von XML aus Rowsets mit FOR XML
   Sie können generieren eine `xml` -Datentypinstanz aus einem Rowset mithilfe von FOR XML mit dem neuen **Typ** Richtlinie.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529062"
   
  Die neue **FOR XML TYPE** -Direktive kann verwendet werden, um schreibgeschützte XML-Sichten für relationale Daten mit SQL-Syntax zu definieren. Die Sicht kann mit SQL-Anweisungen und eingebettetem XQuery abgefragt werden, wie das im folgenden Beispiel gezeigt wird. Sie können auf diese SQL-Sichten auch in gespeicherten Prozeduren verweisen.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Beispiel: SQL-Ansicht zum Zurückgeben des generiertem Xml-Datentyp  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Beispiel: SQL-Ansicht zum Zurückgeben des generierten xml-Datentyps  
  Die folgende SQL-Sichtdefinition erstellt eine XML-Sicht für eine relationale Spalte pk und ruft die Buchautoren aus einer XML-Spalte ab.  
   
 ```  

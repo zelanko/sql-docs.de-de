@@ -1,5 +1,5 @@
 ---
-title: MDX-Datenbearbeitungsanweisungen (MDX) | Microsoft Docs
+title: MDX-Datenbearbeitungsanweisungen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187647"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX-Datenbearbeitungsanweisungen (MDX)
 

@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) | Microsoft Docs
+title: AddCalculatedMembers (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201612"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -33,7 +33,7 @@ AddCalculatedMembers(Set_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig schließt MDX berechnete Elemente beim Auflösen von Mengenfunktionen aus. Die **AddCalculatedMembers** -Funktion untersucht den Mengenausdruck *Set_Expression,* und schließt berechnete Elemente, die gleichgeordnete Elemente enthalten, die innerhalb des Bereichs der sind dieses Mengenausdrucks.  
+ Standardmäßig schließt MDX berechnete Elemente beim Auflösen von Mengenfunktionen aus. Die **AddCalculatedMembers** Funktion untersucht den Mengenausdruck *Set_Expression,* und schließt berechnete Elemente, die gleichgeordnete Elemente der Elemente im Bereich dieser Menge enthalten sind. -Ausdruck.  
   
 > [!NOTE]  
 >  Die Funktion kann nur mit eindimensionalen Mengenausdrücken verwendet werden.  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- Das folgende Beispiel gibt die `Measures.[Unit Price]` -Element zusätzlich zu allen berechneten Elementen in der **Measures** Dimension, aus der **Adventure Works** Cube.  
+ Das folgende Beispiel gibt die `Measures.[Unit Price]` -Element zusätzlich zu allen berechneten Elementen in der **Measures** -Dimension, aus der **Adventure Works** Cube.  
   
 ```  
 SELECT  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183091"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Typzuordnung (MySqlToSql)
 Die **Bearbeiten der Typzuordnung** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet werden.  
@@ -28,7 +28,7 @@ Sie können dieses Dialogfeld an mehreren Stellen zugreifen:
   
 -   Tabelle-spezifische Zuordnungen für Projekte replikationsdatentyp-Zuordnungen und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Project-Zuordnungen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ##### <a name="source-type"></a>Quelltyp  
 Wählen Sie den Quelltyp für die Daten in einen SQL Server-Datentyp zugeordnet.  

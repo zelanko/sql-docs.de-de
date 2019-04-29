@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157243"
 ---
 # <a name="supported-sql-server-features"></a>Unterstützte SQL Server-Funktionen
   In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekte unterstützt bzw. nicht unterstützt wird.  
@@ -59,11 +59,11 @@ ms.locfileid: "53375032"
   
 -   Service Broker, mit Einschränkungen. Kann über eine systemintern kompilierte gespeicherte Prozedur nicht auf eine Warteschlange zugreifen. Kann in einer Transaktion, die auf speicheroptimierte Tabellen zugreift, nicht auf eine Warteschlange in einer Remotedatenbank zugreifen.  
   
--   Failoverclustering: Als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn-Angebots nutzen AlwaysOn-Failoverclusterinstanzen Windows Server Failover Clustering (WSFC)-Funktionen, um lokale hochverfügbarkeit durch Redundanz auf den Server-Instanz auf einen Failovercluster -Instanz (FCI). Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Failover-Clusterunterstützung: Als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn-Angebots nutzen AlwaysOn-Failoverclusterinstanzen Windows Server Failover Clustering (WSFC)-Funktionen, um lokale hochverfügbarkeit durch Redundanz auf den Server-Instanz auf einen Failovercluster -Instanz (FCI). Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Integration in AlwaysOn: In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind mehrere Optionen zum Einrichten von Hochverfügbarkeit für einen Server oder eine Datenbank, einschließlich AlwaysOn, verfügbar. Weitere Informationen finden Sie unter [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Protokollversand: Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollversand können Sie Transaktionsprotokollsicherungen von einer primären Datenbank auf einer primären Serverinstanz automatisch an eine oder mehrere sekundäre Datenbanken auf getrennten sekundären Serverinstanzen senden. Weitere Informationen finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Protokollversand: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie automatisch transaktionsprotokollsicherungen von einer primären Datenbank auf einer primären Serverinstanz eine oder mehrere sekundäre Datenbanken auf getrennten sekundären Serverinstanzen an. Weitere Informationen finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   Die Transaktionsreplikation in speicheroptimierte Tabellen auf Abonnenten wird eingeschränkt unterstützt. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../replication/replication-to-memory-optimized-table-subscribers.md).  
   

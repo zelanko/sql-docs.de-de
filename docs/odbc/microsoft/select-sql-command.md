@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127874"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -126,7 +126,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |--------------|----------------|  
 |=|Gleich|  
 |==|Genau gleich.|  
-|LIKE|SQL-ÄHNLICHEN|  
+|LIKE|SQL LIKE|  
 |<>, !=, #|Ungleich|  
 |>|Mehr als|  
 |>=|Größer als oder gleich|  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- Die filterbedingung für jedes Feld, das entspricht sucht *cExpression*. Sie können das Prozentzeichen (%) und Unterstrich (_)-Platzhalterzeichen als Teil des *cExpression*. Der Unterstrich stellt ein unbekanntes einzelnes Zeichen in der Zeichenfolge dar.  
+ Die filterbedingung für jedes Feld, das entspricht sucht *cExpression*. Sie können die Prozentzeichen (%) verwenden. und Platzhalterzeichen Unterstrich (_), als Teil des *cExpression*. Der Unterstrich stellt ein unbekanntes einzelnes Zeichen in der Zeichenfolge dar.  
   
  GROUP BY *GroupColumn* [, *GroupColumn* ...]  
  Gruppiert die Zeilen in der Abfrage basierend auf Werten in einer oder mehreren Spalten. *GroupColumn* kann einen der folgenden sein:  

@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164069"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung auf einem Berichtsserver
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
   Berichtsserver verwenden Datenverarbeitungserweiterungen zum Abrufen und Verarbeiten von Daten in gerenderten Berichten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichtsserver als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichtsservers RSReportServer.config vornehmen.  
   
 ## <a name="procedures"></a>Vorgehensweisen  

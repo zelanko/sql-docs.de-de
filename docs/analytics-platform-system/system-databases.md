@@ -1,5 +1,5 @@
 ---
-title: -Systemdatenbanken – Parallel Data Warehouse | Microsoft Docs
+title: -Systemdatenbanken – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Systemdatenbanken in Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eafd857bdc4e9b997b8bc3bca587843f6dff30f7
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157002"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Systemdatenbanken in Parallel Data Warehouse (PDW)
-Systemdatenbanken werden Datenbanken, in denen SQL Server PDW zum Verwalten von Benutzern, Datenbanken und temporären Daten. SQL Server PDW enthält die folgenden Systemdatenbanken: Master "und" Tempdb.  
+Systemdatenbanken werden Datenbanken, die SQL Server PDW zum Verwalten von Benutzern, Datenbanken und temporären Daten verwendet. SQL Server PDW enthält die folgenden Systemdatenbanken: Master und Tempdb.  
   
 ## <a name="system-database-topics"></a>System-Datenbank-Themen  
   

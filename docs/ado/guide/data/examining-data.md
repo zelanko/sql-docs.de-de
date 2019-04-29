@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161595"
 ---
 # <a name="examining-data"></a>Untersuchen von Daten
 Die [Abrufen von Daten](../../../ado/guide/data/getting-data.md) Abschnitt wurde erläutert, wie Daten aus einer Datenquelle abgerufen werden, als ein oder mehrere **Recordset** Objekte. In diesem Abschnitt wird erläutert **Recordset** im Detail, wie Sie zum Navigieren durch die **Recordset** und seine Daten.  

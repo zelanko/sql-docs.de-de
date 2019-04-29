@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188388"
 ---
 # <a name="new-folder-page-report-manager"></a>Neuer Ordner (Seite) (Berichts-Manager)
   Auf der Seite Neuer Ordner können Sie einen neuen Ordner in der Ordnerhierarchie des Berichtsservers erstellen. Der erstellte Ordner ist ein virtueller Ordner, der in einer Berichtsserver-Datenbank gespeichert wird. Der Ordner wird nicht im Dateisystem des Computers erstellt.  

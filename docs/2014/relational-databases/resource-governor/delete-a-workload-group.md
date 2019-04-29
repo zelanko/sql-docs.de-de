@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215803"
 ---
 # <a name="delete-a-workload-group"></a>Löschen von Arbeitsauslastungsgruppen
   Eine Arbeitsauslastungsgruppe oder einen Ressourcenpool können Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL löschen.  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **Zum Löschen einer Arbeitsauslastungsgruppe zu gruppieren, verwenden:**  [Objekt-Explorer](#DelWGObjEx), [Eigenschaften des Resource Governors](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **So löschen Sie eine Arbeitsauslastungsgruppe mit:**  [dem Objekt-Explorer](#DelWGObjEx), [Resource Governor-Eigenschaften](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Sie können keine Arbeitsauslastungsgruppe löschen, die aktive Sitzungen enthält.  

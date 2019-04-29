@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185649"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
   Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Eine Beschreibung der Vorbereitung der Daten in Abhängigkeit vom ausgewählten Diagrammtyp finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  

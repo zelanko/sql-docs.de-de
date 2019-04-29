@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185398"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lektion 6: Erstellen und Verwenden von Vorhersagen (Lernprogramm zu Datamining-Grundlagen)
   Sie haben die Data Mining-Modelle, die Sie erstellt haben, trainiert, getestet und untersucht. Jetzt können Sie mithilfe der Modelle ermitteln, welche Personen sich am wahrscheinlichsten von der neuen zielgerichteten Mailingkampagne angesprochen fühlen.  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156771"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren
   Für systemintern kompilierte gespeicherte Prozeduren gilt Folgendes:  
@@ -48,7 +48,7 @@ ms.locfileid: "48048530"
   
  Die Verwendung von (ineffizienten) benannten Parametern mit systemintern kompilierten gespeicherten Prozeduren kann über das XEvent `hekaton_slow_parameter_passing`, mit `reason=named_parameters`, erkannt werden.  
   
- Auf ähnliche Weise können Sie erkennen, die Verwendung von nicht übereinstimmenden Typen über dasselbe XEvent `hekaton_slow_parameter_passing`, mit `reason=parameter_conversion`.  
+ Auf ähnliche Weise können Sie die Verwendung von nicht übereinstimmenden Typen über dasselbe XEvent `hekaton_slow_parameter_passing`, mit `reason=parameter_conversion`, erkennen.  
   
  Da Sie bei der Verwendung speicheroptimierter Tabellen (in vielen Fällen) Wiederholungslogik implementieren und bestimmte Funktionseinschränkungen umgehen müssen, können Sie eine von einem Wrapper interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur erstellen. Ein Beispiel finden Sie unter [Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen](memory-optimized-tables.md).  
   

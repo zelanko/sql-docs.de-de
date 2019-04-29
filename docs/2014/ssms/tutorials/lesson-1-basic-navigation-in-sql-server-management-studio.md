@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151523"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ein leistungsstarkes und flexibles Tool. Benutzer, für die Microsoft Visual Studio noch neu ist, haben jedoch manchmal Probleme, den schnellsten Weg für den Zugriff auf die gewünschten Funktionen zu finden. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  

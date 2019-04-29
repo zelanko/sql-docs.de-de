@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201178"
 ---
 # <a name="report-designer-f1-help"></a>Berichts-Designer (F1-Hilfe)
   Dieser Abschnitt stellt F1-Hilfe für die Assistenten, Ansichten und Dialogfelder des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Designers bereit. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  

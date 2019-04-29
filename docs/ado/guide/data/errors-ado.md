@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161610"
 ---
 # <a name="errors-ado"></a>Fehler (ADO)
 Alle Vorgänge im Zusammenhang mit ADO-Objekte kann ein oder mehrere Anbieterfehler generieren. Sobald ein Fehler auftritt, eine oder mehrere **Fehler** Objekte befinden sich der **Fehler** Auflistung von der **Verbindung** Objekt. Weitere Informationen zur Behandlung von Warnungen und Fehler in der ADO-Anwendung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  

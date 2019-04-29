@@ -1,5 +1,5 @@
 ---
-title: CALCULATE-Anweisung (MDX) | Microsoft Docs
+title: CALCULATE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 389c5f470cb3bf00cfe668a9405e36cd4ac8950e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187626"
 ---
-# <a name="mdx-scripting---calculate"></a>MDX-Skripts - berechnen
+# <a name="mdx-scripting---calculate"></a>MDX-Skripts – CALCULATE
 
 
   Füllt jede Zelle in einem Cube mit einem Aggregatwert auf.  
@@ -29,7 +29,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Die CALCULATE-Anweisung wird beim Erstellen eines Cubes mithilfe von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] automatisch als erste Anweisung in das MDX-Skript des Cubes eingefügt. Die CALCULATE-Anweisung weist alle Zellen im Cube an, beim Aggregieren mit Zellen geringerer Granularität zu beginnen. Wenn nach dem Aggregieren einer Zelle anschließend Zellen geringerer Granularität mithilfe von Ausdrücken aufgefüllt werden, hat dies Auswirkungen auf die aggregierten Werte von Zellen höherer Granularität. Diese Aggregation ist in der Regel erwünscht, Sie können jedoch die Anweisung bei Bedarf entfernen oder andere Anweisungen vor dieser ausführen lassen.  
@@ -41,7 +41,7 @@ CALCULATE
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX-Skripts Grundlagen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Definieren von Zuweisungen und anderen Skriptbefehlen](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

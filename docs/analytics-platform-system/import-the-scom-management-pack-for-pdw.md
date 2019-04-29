@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149585"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importieren Sie das SCOM-Management Pack - Analytics Platform System
 Um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System (APS) importieren, gehen Sie wie folgt vor. Die Management Packs müssen Parallel Data Warehouse von SCOM überwacht. 
@@ -62,7 +62,7 @@ Die Management Packs müssen installiert sein. Finden Sie unter [die SCOM-Manage
   
 2.  Wählen Sie **von Datenträger hinzufügen**...  
   
-    ![Mit der rechten Maustaste in Management Packs](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
+    ![Right-click Management Packs](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
   
 3.  Wechseln Sie zu dem Speicherort, in dem Sie die SQL Server PDW-Management Packs extrahiert, und wählen Sie die drei Management Packs, die im Abschnitt "Ausgewählte Management packs importieren" sind. Dies ist möglich, indem Sie die erste Vorlage, UMSCHALT auf und die letzte Vorlage. Nachdem sie alle ausgewählt sind, klicken Sie auf **öffnen**.  
   

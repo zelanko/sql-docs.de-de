@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200212"
 ---
 # <a name="autotranslation-of-character-data"></a>Automatische Übersetzung der Zeichendaten
   Zeichendaten, wie z. B. ANSI-Zeichen mit SQL_C_CHAR deklarierte Variablen oder Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der **Char**, **Varchar**, oder **Text** -Datentypen können Stellen Sie nur eine begrenzte Anzahl von Zeichen dar. Mit einem Byte pro Zeichen gespeicherte Zeichendaten können nur 256 Zeichen darstellen. Die in SQL_C_CHAR-Variablen gespeicherten Werte werden mithilfe der ANSI-Codepage (ACP) auf dem Clientcomputer interpretiert. Gespeicherte Werte **Char**, **Varchar**, oder **Text** Datentypen auf dem Server werden mithilfe der ACP des Servers ausgewertet.  

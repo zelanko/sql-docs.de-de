@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150644"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
@@ -353,7 +353,7 @@ ms.locfileid: "53356386"
  **Zuletzt geöffnete Dateien**  
  Geben Sie eine SQL-Skript- oder Ablaufverfolgungsdatei für eine Arbeitsauslastung an. Geben Sie Pfad und Dateinamen im zugehörigen Textfeld an. Der Datenbankoptimierungsratgeber setzt voraus, dass die Ablaufverfolgungsdatei für die Arbeitsauslastung eine Rolloverdatei ist. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Tabelle**  
+ **Table**  
  Geben Sie eine Ablaufverfolgungstabelle für die Arbeitsauslastung an. Geben Sie den voll gekennzeichneten Namen der Ablaufverfolgungstabelle folgendermaßen in das zugehörige Textfeld ein:  
   
 ```  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  Empfehlungen werden nur zum Hinzufügen indizierter Sichten eingeschlossen. Für gruppierte und nicht gruppierte Indizes werden keine Empfehlungen gegeben.  
   
  **Gefilterte Indizes einschließen**  
- Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option ist verfügbar, wenn Sie eine dieser physischen Entwurfsstrukturen auswählen: **Indizes und indizierte Sichten**, **Indizes**, oder **nicht gruppierte Indizes**.  
+ Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option steht zur Verfügung, wenn Sie eine der folgenden Strukturen für ein physisches Design auswählen: **Indizes und indizierte Sichten**, **Indizes** oder **nicht gruppierter Indizes**.  
   
  **Indizes**  
  Empfehlungen werden nur zum Hinzufügen gruppierter und nicht gruppierter Indizes eingeschlossen. Für indizierte Sichten werden keine Empfehlungen gegeben.  
