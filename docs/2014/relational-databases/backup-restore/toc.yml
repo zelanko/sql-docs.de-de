@@ -233,5 +233,5 @@
   items:
     - name: Wiederherstellen der master-Datenbank (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: 'Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung'
+- name: 'Sichern und Wiederherstellen: Interoperabilität und Koexistenz'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

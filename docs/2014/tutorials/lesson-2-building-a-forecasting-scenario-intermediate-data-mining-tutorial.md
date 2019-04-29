@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931528"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lektion 2: Erstellen eines Planungserstellungsszenarios (Datamining-Lernprogramm für fortgeschrittene)
   Als Sales Analyst für [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]wurden Sie aufgefordert, den Verkauf von Produkten für das nächste Jahr zu prognostizieren. Sie wurden insbesondere angehalten, Prognosen für unterschiedliche Regionen und Produktlinien zu vergleichen. Darüber hinaus sollen Sie feststellen, ob der Verkauf verschiedener Produkte je nach Jahreszeit Schwankungen unterliegt.  

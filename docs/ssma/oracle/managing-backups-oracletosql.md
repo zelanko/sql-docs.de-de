@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816509"
 ---
 # <a name="managing-backups-oracletosql"></a>Verwalten von Sicherungskopien (OracleToSQL)
 Oracle-Sicherungsverwaltung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  

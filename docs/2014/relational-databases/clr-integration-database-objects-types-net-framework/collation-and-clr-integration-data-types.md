@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874846"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Sortierung und Datentypen für die CLR-Integration
-  In der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], `CompareInfo` Objekt verarbeitet die Sortierungen. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Application programming Interfaces (APIs) verwenden eine Zeichenfolge der `CompareInfo` zugeordnete Eigenschaft die `CultureInfo` Objekt des aktuellen Threads um Zeichenfolgenvergleiche durchzuführen. Die Standardeinstellung des `CultureInfo`-Objekts basiert auf der Einstellung für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema des Computers, auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Dadurch wird bestimmt die standardvergleichssemantik, wenn keine explizite `CultureInfo` angegeben wird, bei Vergleichen von `System.String` Werte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nimmt keine explizite Änderung der `CompareInfo` Eigenschaft, um die Datenbank- oder serversortierung. Wenn erforderlich, müssen Benutzer die entsprechenden legen `CompareInfo` -Eigenschaft in ihren Routinen.  
+  In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] werden Sortierungen vom `CompareInfo`-Objekt gehandhabt. Die Zeichenfolgen-APIs (Application Programming Interface, API) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] verwenden die `CompareInfo`-Eigenschaft zusammen mit dem `CultureInfo`-Objekt des aktuellen Threads, um Zeichenfolgenvergleiche durchzuführen. Die Standardeinstellung des `CultureInfo`-Objekts basiert auf der Einstellung für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema des Computers, auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Dies bestimmt die Standardvergleichssemantik bei Vergleichen von `CultureInfo`-Werten, wenn `System.String` nicht explizit angegeben wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert die `CompareInfo`-Eigenschaft nicht explizit in die Datenbank- oder Serversortierung. Falls erforderlich, müssen Benutzer die entsprechende `CompareInfo`-Eigenschaft in ihren Routinen festlegen.  
   
 ## <a name="parameter-collation"></a>Parametersortierung  
  Wenn Sie eine CLR-Routine (Common Language Runtime) erstellen, und ein an die Routine gebundener Parameter einer CLR-Methode den Typ `SQLString` aufweist, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Instanz des Parameters mit der Standardsortierung der Datenbank, die die aufrufende Routine enthält. Wenn ein Parameter nicht vom Typ `SqlType` ist (beispielsweise `String`, nicht `SQLString`), werden die Sortierungsinformationen der Datenbank nicht mit dem Parameter verknüpft.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733165"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
@@ -226,6 +226,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
  [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

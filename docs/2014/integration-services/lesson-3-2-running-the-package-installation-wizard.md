@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891578"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Schritt 2: Ausführen des Paketinstallations-Assistenten
   In diesem Schritt führen Sie den Paketinstallations-Assistenten aus, um die Pakete aus dem Deployment Tutorial-Projekt auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitzustellen. In der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können nur Pakete installiert werden. Die unterstützenden Dateien, die das Bereitstellungspaket enthält, werden im Dateisystem bereitgestellt.  
@@ -81,11 +81,11 @@ ms.locfileid: "58385538"
   
      Da die Werte der Umgebungsvariablen auf dem Zielcomputer von den Werten der Umgebungsvariablen auf dem Entwicklungscomputer abweichen, werden auf der Seite zur Paketüberprüfung mehrere Warnungen angezeigt. Vier Warnungen sollten angezeigt werden:  
   
-    -   Die Konfigurationsdatei: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\DataTransferConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   
-    -   Die Konfigurationsdatei: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   

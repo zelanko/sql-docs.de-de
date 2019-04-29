@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680398"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Herstellen einer Verbindung mit einem Data Mining-Server
   ![Schaltfläche "Verbindungen"](media/misc-connection.gif "Schaltfläche \"Verbindungen\"")  

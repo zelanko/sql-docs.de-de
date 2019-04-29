@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: SQL Server Management Studio | Microsoft Docs'
+title: 'Tutorial: SQL Server Management Studio | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753452"
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Lernprogramm: SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   Das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Lernprogramm bietet eine Einführung in die integrierte Umgebung zum Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Lernprogramm, wie Sie die von Ihren Anwendungen, z. B. Datenbanken und Data Warehouses, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
@@ -42,10 +42,10 @@ ms.locfileid: "48167310"
  [Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  In dieser Lektion erfahren Sie, wie Sie die Komponenten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwenden, wie das Umgebungslayout neu konfiguriert wird und wie Sie das Standardlayout wiederherstellen.  
   
- [Lektion 2: Schreiben von Transact-SQL-Code](lesson-2-writing-transact-sql.md)  
+ [Lektion 2: Schreiben von Transact-SQL](lesson-2-writing-transact-sql.md)  
  In dieser Lektion erfahren Sie, wie der Abfrage-Editor geöffnet wird, wie Code verwaltet wird und wie weitere, neue Funktionen des Abfrage-Editors verwendet werden.  
   
- [Lektion 3: Verwenden von Vorlagen, Lösungen und Skriptprojekten](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lektion 3: Arbeiten mit Vorlagen, Lösungen und Skriptprojekte](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  In dieser Lektion erfahren Sie, wie Sie Vorlagen verwenden und Skripts in Lösungen und Projekten organisieren.  
   
 ## <a name="requirements"></a>Anforderungen  

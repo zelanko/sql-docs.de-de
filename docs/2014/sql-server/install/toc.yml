@@ -27,17 +27,17 @@
 - name: Themen zur Vorgehensweise für den Upgrade Advisor
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Vorgehensweise: Installieren des Upgrade Advisors'
+    - name: 'Gewusst wie: Installieren des Upgrade Advisors'
       href: how-to-install-upgrade-advisor.md
-    - name: 'Vorgehensweise: Starten des Upgrade Advisors'
+    - name: 'Gewusst wie: Starten des Upgrade Advisors'
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors'
+    - name: 'Gewusst wie: Ausführen des Analyse-Assistenten des Upgrade Advisors'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors'
+    - name: 'Gewusst wie: Anzeigen eines Berichts des Upgrade Advisors'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Vorgehensweise: Filtern von Berichten'
+    - name: 'Gewusst wie: Filtern von Berichten'
       href: how-to-filter-reports.md
-    - name: 'Vorgehensweise: Exportieren von Berichten'
+    - name: 'Gewusst wie: Exportieren von Berichten'
       href: how-to-export-reports.md
 - name: Referenz zur Benutzeroberfläche
   href: upgrade-advisor-user-interface-reference.md

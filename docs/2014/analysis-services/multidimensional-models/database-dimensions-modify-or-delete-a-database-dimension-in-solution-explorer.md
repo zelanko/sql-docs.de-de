@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a994b87e8be4b8ca527cb3b0863af4a1a4a1e1a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726504"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Ändern oder Löschen einer Datenbankdimension im Projektmappen-Explorer
   Dimensionen können mithilfe des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert oder gelöscht werden. Wenn Sie eine Dimension ändern, sind Ihre Änderungen erst nach dem Verarbeiten für die Benutzer verfügbar. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](processing-a-multidimensional-model-analysis-services.md).  

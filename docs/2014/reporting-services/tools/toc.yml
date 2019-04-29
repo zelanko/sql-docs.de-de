@@ -1,6 +1,6 @@
 - name: Tools
   href: reporting-services-tools.md
-- name: 'Lernprogramm: So suchen und starten Sie Reporting Services-Tools'
+- name: 'Lernprogramm: Suchen und Starten von Reporting Services-Tools'
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Reporting Services in SQL Server-Datentools
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: Neues Modell (Seite)
           href: ../new-model-page-report-manager.md
-        - name: 'Neue Rollenzuweisung: Rollenzuweisung bearbeiten (Seite)'
+        - name: 'Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“'
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: 'Neuer Zeitplan: Zeitplan bearbeiten (Seite)'
+        - name: 'Neuer Zeitplan: Seite „Zeitplan bearbeiten“'
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: Neues Abonnement oder Abonnement bearbeiten (Seite)
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: 'Neue Systemrollenzuweisung: Systemrollenzuweisung bearbeiten (Seite)'
+        - name: 'Neue Systemrollenzuweisungen: Systemrollenzuweisungen bearbeiten (Seite)'
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: Parameter (Eigenschaftenseite)
           href: ../parameters-properties-page-report-manager.md

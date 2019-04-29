@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814501"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
@@ -82,7 +82,7 @@ ms.locfileid: "53359242"
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (optional):**  Ein Satz von zwei oder drei Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus (falls zutreffend) konfiguriert sind. Ein Failover mit synchronem Commit ist nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Innerhalb einer angegebenen Verfügbarkeitsgruppe der Satz aller Verfügbarkeitsreplikate, deren Betriebszustand gerade ONLINE ist, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**  Innerhalb einer angegebenen Verfügbarkeitsgruppe der Satz aller Verfügbarkeitsreplikate, deren Betriebszustand gerade ONLINE ist, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
   
  Wenn Sie ein Verfügbarkeitsreplikat für synchrone Commits mit automatischem Failover konfigurieren, wird das Verfügbarkeitsreplikat Teil von [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Ob jedoch der Satz wirksam wird, hängt vom aktuellen primären Element ab. Die Failovertypen, die tatsächlich zu einem bestimmten Zeitpunkt möglich sind, hängen davon ab, welche Failoversätze aktuell wirksam sind.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "53359242"
 ###  <a name="WhyFFoPostForcedQuorum"></a> Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist  
  Nachdem Sie das Quorum (*erzwungenes Quorum*) im WSFC-Cluster erzwungen haben, müssen Sie für jede Verfügbarkeitsgruppe ein Failover erzwingen (mit möglichem Datenverlust). Das Erzwingen eines Failovers ist erforderlich, da der wirkliche Status der WSFC-Clusterwerte verloren gegangen sein könnte. Normale Failover müssen nach einem erzwungenen Quorum verhindert werden, da ein nicht synchronisiertes sekundäres Replikat andernfalls im neu konfigurierten WSFC-Cluster als synchronisiert angezeigt werden könnte.  
   
- Betrachten Sie beispielsweise einen WSFC-Cluster, der eine verfügbarkeitsgruppe auf drei Knoten hostet:  Knoten A hostet das primäre Replikat und Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
+ Betrachten Sie beispielsweise einen WSFC-Cluster, der eine Verfügbarkeitsgruppe auf drei Knoten hostet:  Knoten A hostet das primäre Replikat, und Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
   
  Wenn das Quorum verloren geht und dann auf Knoten A erzwungen wird, sollte der Synchronisierungsstatus der Verfügbarkeitsgruppe im WSFC-Cluster richtig sein. Das sekundäre Replikat auf Knoten C sollte den Status UNSYNCHRONIZED aufweisen. Wenn jedoch ein Quorum auf Knoten C erzwungen wird, ist die Synchronisierung der Verfügbarkeitsgruppe falsch. Der Synchronisierungsstatus im Cluster entspricht dem Status, als Knoten C getrennt wurde. Das sekundäre Replikat auf Knoten C weist *fälschlicherweise* den Status SYNCHRONIZED auf. Da geplante manuelle Failover die Sicherheit der Daten gewährleisten, darf eine Verfügbarkeitsgruppe nach dem Erzwingen eines Quorums nicht wieder online geschaltet werden.  
   

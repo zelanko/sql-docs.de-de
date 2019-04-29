@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842884"
 ---
 # <a name="view-event-session-data"></a>Anzeigen von Ereignissitzungsdaten
   In diesem Thema wird beschrieben, wie Sie mithilfe der Anzeigebenutzeroberfläche erweiterte Ereignisdaten anzeigen und analysieren:  
@@ -45,7 +45,7 @@ ms.locfileid: "49120297"
   
 -   Zeigen Sie für ein event_file-Ziel die Dateizieldaten (XEL-Datei) mithilfe einer der folgenden Methoden an:  
   
-    -   Verwenden Sie "Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]".  
+    -   Verwenden Sie eine Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Verschieben Sie die Dateien mit Drag &amp; Drop in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923917"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Laden von Daten (MDS-Add-In für Excel)
   In der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], müssen Sie Daten laden aus dem MDS-Repository in ein aktives Excel-Arbeitsblatt, bevor Sie damit arbeiten können. Wenn Sie mit der Arbeit an den Daten fertig sind, veröffentlichen Sie sie im MDS-Repository, sodass andere Benutzer sie freigeben können.  

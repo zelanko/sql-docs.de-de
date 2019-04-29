@@ -22,9 +22,9 @@
     - name: Bereitstellen von Datenverarbeitungserweiterungen
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver'
+        - name: 'Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver'
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer'
+        - name: 'Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer'
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: Debuggen von Code für Datenverarbeitungserweiterungen
       href: data-processing/debugging-data-processing-extension-code.md

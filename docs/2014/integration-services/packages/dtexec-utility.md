@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890206"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Die `dtexec` eingabeaufforderungs-Hilfsprogramm dient zum Konfigurieren und ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete. Das Hilfsprogramm `dtexec` ermöglicht den Zugriff auf alle Funktionen der Paketkonfiguration und -ausführung, z. B. auf Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Die `dtexec` -Dienstprogramm können Sie das Laden von Paketen aus diesen Quellen: die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server, einer ispac-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket Store und dem Dateisystem.  
@@ -158,10 +158,10 @@ dtexec /option [value] [/option [value]]...
                   Dies ist optional. Gibt weitere Informationen für eine Paketausführung an. Wenn Sie mit dem SQL Server-Agent ein Paket ausführen, legt der Agent dieses Argument fest, um anzuzeigen, dass die Paketausführung vom SQL Server-Agent aufgerufen wird. Dieser Parameter wird ignoriert, wenn das Hilfsprogramm `dtexec` in der Befehlszeile ausgeführt wird.  
   
 -   **/CheckF[ile]** _filespec_:   
-                  Optional. Legt die `CheckpointFileName` -Eigenschaft des Pakets auf den Pfad und Dateinamen bzw. in *Dateiangabe*. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die `CheckpointFileName`-Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
+                  Dies ist optional. Legt die `CheckpointFileName` -Eigenschaft des Pakets auf den Pfad und Dateinamen bzw. in *Dateiangabe*. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die `CheckpointFileName`-Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
   
 -   **/ CheckP [Ointing]** _{On\off}_:   
-                  Dies ist optional. Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet die Runtime-Engine die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
+                  Optional. Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet die Runtime-Engine die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
   
      Der Standardwert ist "on", wenn die Option ohne Angabe eines Wertes deklariert wird. Die Paketausführung erzeugt einen Fehler, wenn der Wert auf "on" festgelegt wurde und die Prüfpunktdatei nicht gefunden werden kann. Wenn diese Option nicht angegeben wird, wird der im Paket festgelegte Wert beibehalten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](restart-packages-by-using-checkpoints.md).  
   
@@ -181,7 +181,7 @@ dtexec /option [value] [/option [value]]...
   
      Sie können zur Laufzeit die Option **/Connection** verwenden, um Paketkonfigurationen von einem anderen Speicherort als dem zur Entwurfszeit angegebenen Speicherort zu laden. Die Werte dieser Konfigurationen ersetzen dann die Werte, die ursprünglich angegeben wurden. Sie können die Option **/Connection** jedoch nur für Konfigurationen verwenden, die einen Verbindungs-Manager verwenden (z.B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen). Um zu verstehen, wie Paketkonfigurationen angewendet werden, finden Sie unter [Paketkonfigurationen](../package-configurations.md) und [Verhaltensänderungen von Integration Services-Funktionen in SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
--   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: Optional. Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
+-   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: Dies ist optional. Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
   
     > [!NOTE]  
     >  Beim Ausführen eines Pakets auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server mithilfe der `/ISSERVER` Parameter, die Konsolenausgabe begrenzt, und die meisten ist die **/Cons [OleLog]** -Optionen sind nicht anwendbar. Alle Ausführungsprotokolle können in den verwandten Sichten vom Server oder über Standardberichte in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../reports-for-the-integration-services-server.md).  
@@ -252,7 +252,7 @@ dtexec /option [value] [/option [value]]...
      Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
 -   **/DumpOnError**:   
-                  Optional. Erstellt die debugdumpdateien mdmp und TMP, wenn ein Fehler auftritt, während das Paket ausgeführt wird.  
+                  Dies ist optional. Erstellt die debugdumpdateien mdmp und TMP, wenn ein Fehler auftritt, während das Paket ausgeführt wird.  
   
      In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
@@ -339,10 +339,10 @@ dtexec /option [value] [/option [value]]...
                   Optional. Gibt die Anzahl von ausführbaren Dateien an, die das Paket gleichzeitig ausführen kann. Der angegebene Wert muss entweder eine nicht negative ganze Zahl oder -1 sein. Ein Wert von „-1“ bedeutet, dass [!INCLUDE[ssIS](../../includes/ssis-md.md)] eine maximale Anzahl gleichzeitig aktiver ausführbarer Dateien zulässt, die der Gesamtanzahl von Prozessoren plus zwei des Computers entspricht, auf dem das Paket ausgeführt wird.  
   
 -   **/Pack[age]** _PackageName_:  
-                  Dies ist optional. Gibt das Paket an, das ausgeführt wird. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
+                  Optional. Gibt das Paket an, das ausgeführt wird. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
   
 -   **/P[assword]** _password_:  
-                  Optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
+                  Dies ist optional. Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -372,12 +372,12 @@ dtexec /option [value] [/option [value]]...
     ```  
   
 -   **/Proj[ect]** _ProjectFile_:  
-                  Optional. Gibt das Projekt an, von dem das ausgeführte Paket abgerufen wird. Das *Projektdatei* -Argument gibt den ISPAC-Dateinamen an. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
+                  Dies ist optional. Gibt das Projekt an, von dem das ausgeführte Paket abgerufen wird. Das *Projektdatei* -Argument gibt den ISPAC-Dateinamen an. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ausführen.  
   
 -   **/Rem** _comment_:  
                   Dies ist optional. Schließt einen Kommentar in die Befehlszeile oder in Befehlsdateien ein. Das Argument ist optional. Der Wert für *Kommentar* ist eine Zeichenfolge, die entweder in Anführungszeichen eingeschlossen werden muss oder keine Leerzeichen enthalten darf. Wird kein Argument angegeben, wird eine leere Zeile eingefügt. Während der Befehlsermittlungsphase werden*Kommentar* -Werte nicht berücksichtigt.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Dies ist optional. Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
+-   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Optional. Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
   
      **N** Keine Berichterstellung.  
   
@@ -430,7 +430,7 @@ dtexec /option [value] [/option [value]]...
      Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, finden Sie unter [Paketkonfigurationen](../package-configurations.md) und [Verhaltensänderungen von Integration Services-Funktionen in SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   `/Ser[ver]` *server*:  
-                  Optional. Wenn die Option `/SQL` oder `/DTS` verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option `/Server` nicht angeben, die Option `/SQL` oder `/DTS` jedoch angegeben wird, wird versucht, das Paket von dem lokalen Server auszuführen. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
+                  Dies ist optional. Wenn die Option `/SQL` oder `/DTS` verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option `/Server` nicht angeben, die Option `/SQL` oder `/DTS` jedoch angegeben wird, wird versucht, das Paket von dem lokalen Server auszuführen. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
      Die Option `/Ser[ver]` ist erforderlich, wenn die Option `/ISServer` angegeben wird.  
   
@@ -461,7 +461,7 @@ dtexec /option [value] [/option [value]]...
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va[lidate]**:  
-                  Optional. Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung zu verwenden, der die **/warnaserror** bewirkt `dtexec` eine Warnung wie einen Fehler behandelt daher ein Paketfehler auftritt, wenn während des Überprüfens eine Warnung auftritt.  
+                  Dies ist optional. Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung zu verwenden, der die **/warnaserror** bewirkt `dtexec` eine Warnung wie einen Fehler behandelt daher ein Paketfehler auftritt, wenn während des Überprüfens eine Warnung auftritt.  
   
 -   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: Dies ist optional. Überprüft die Buildnummer eines Pakets anhand der Buildnummern, die während der Überprüfungsphase mit den Argumenten *Hauptversion*, *Nebenversion*und *Build* angegeben wurden. Stimmen die Buildnummern nicht überein, wird das Paket nicht ausgeführt.  
   
@@ -487,7 +487,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyV[ersionID]** _versionID_: Dies ist optional. Überprüft die Versions-GUID eines auszuführenden Pakets; diese wird mit dem Wert verglichen, der während der Paketüberprüfungsphase im *Versions-ID* -Argument angegeben wurde.  
   
--   **/VLog** _[Filespec]_: Dies ist optional. Schreibt alle Integration Services-Paketereignisse an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden. Geben Sie im *Dateiangabe* -Parameter einen Pfad- und Dateinamen an, damit Integration Services einen Protokollanbieter für Textdateien aktiviert und Protokollereignisse in eine festgelegte Textdatei schreibt.  
+-   **/VLog** _[Filespec]_: Optional. Schreibt alle Integration Services-Paketereignisse an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden. Geben Sie im *Dateiangabe* -Parameter einen Pfad- und Dateinamen an, damit Integration Services einen Protokollanbieter für Textdateien aktiviert und Protokollereignisse in eine festgelegte Textdatei schreibt.  
   
      Wenn Sie den *Dateiangabe* -Parameter nicht einschließen, aktiviert Integration Services keinen Protokollanbieter für Textdateien. Integration Services schreibt dann Protokollereignisse nur an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden.  
   

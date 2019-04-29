@@ -1,5 +1,5 @@
 ---
-title: 'Anhang B: ODBC-Übergang Statustabellen | Microsoft-Dokumentation'
+title: 'Anhang B: ODBC-Übergang Statustabellen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026896"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Übergang Statustabellen
+# <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
 Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der Umgebung, Verbindung, -Anweisung und Deskriptor Status führen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Sicherheitsbeschreibung schreibt in der Regel vor, wenn Funktionen, mit denen den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Descriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in den folgenden Abbildungen dargestellt. Z. B. die genaue Überlappung der Verbindung gibt C5 und C6 und Anweisung gibt an, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen, die zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnt und Deskriptor Zustand D1i (implizit Deskriptor zugeordnet) abhängig ist. auf den Zustand der Anweisung, die der Deskriptor zugeordnet ist, ist beim Status D1e (explizit Deskriptor zugeordnet) zum unabhängig vom Status-Anweisungen. Eine Beschreibung der einzelnen Status, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungsübergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
   
  Die umgebungs- und verbindungsstatuswerte überlappen wie folgt aus:  
@@ -67,7 +67,7 @@ Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der 
 |d|Benötigen Sie Daten an. Der Funktion zurückgegebene SQL_NEED_DATA zurück.|  
 |e|Error (Fehler). Der Funktion zurückgegebene SQL_ERROR zurück.|  
 |i|Ungültige Zeile. Der Cursor positioniert wurde in einer Zeile im Resultset Satz und die Zeile hatte wurde gelöscht oder in einem Vorgang in der Zeile ist ein Fehler aufgetreten. Wenn die zeilenstatusarray vorhanden war, wurde der Wert in der zeilenstatusarray für die Zeile SQL_ROW_DELETED oder SQL_ROW_ERROR. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|Nf|Nicht gefunden. Der Funktion zurückgegebene SQL_NO_DATA zurückgibt. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
+|nf|Nicht gefunden. Der Funktion zurückgegebene SQL_NO_DATA zurückgibt. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
 |np|Nicht vorbereitet. Die Anweisung wurde nicht vorbereitet.|  
 |Nr.|Keine Ergebnisse. Die Anweisung nicht der Fall ist, oder ein Resultset nicht erstellt wurde.|  
 |o|Andere Funktion. Eine andere Funktion wurde asynchron ausgeführt.|  

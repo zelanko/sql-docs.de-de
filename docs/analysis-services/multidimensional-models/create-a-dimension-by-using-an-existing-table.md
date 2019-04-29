@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Dimension anhand einer vorhandenen Tabelle | Microsoft Docs
+title: Erstellen einer Dimension anhand einer vorhandenen Tabelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70291e20f318830ca8cf83d48b5ee2e21f5cc6ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866951"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,16 +34,16 @@ ms.locfileid: "34023891"
 >  Ausführliche Anweisungen zu den in diesem Thema enthaltenen Informationen finden Sie unter [Erstellen einer Dimension mit dem Dimensions-Assistenten](../../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md).  
   
 ## <a name="specifying-the-source-information"></a>Angeben der Quellinformationen  
- Zum Angeben der Quellinformationen verwenden Sie die Seite **Quellinformationen angeben** . Zunächst wählen Sie die Datenquellensicht aus, die die Tabelle enthält, auf der die Dimension basieren soll. Anschließend geben Sie die Hauptdimensionstabelle für die zu definierende Dimension an. Die Hauptdimensionstabelle ist die Tabelle, die direkt mit der Faktentabelle verknüpft ist. Beispielsweise können Sie eine Product-Tabelle als Haupttabelle für eine Products-Dimension oder eine Employee-Tabelle für eine Employees-Dimension angeben. Der Assistent wählt automatisch eine Schlüsselspalte aus, die auf dem Primärschlüssel in der Datenquellensicht basiert. Sie können die Schlüsselspalte jedoch wie gewünscht ändern. Über die Schlüsselspalte werden die Elemente der Dimension bestimmt. Für eine Product-Dimension würden Sie z. B. ProductKey als Schlüsselspalte definieren.  
+ Zum Angeben der Quellinformationen verwenden Sie die Seite **Quellinformationen angeben** . Zunächst wählen Sie die Datenquellensicht aus, die die Tabelle enthält, auf der die Dimension basieren soll. Anschließend geben Sie die Hauptdimensionstabelle für die zu definierende Dimension an. Die Hauptdimensionstabelle ist die Tabelle, die direkt mit der Faktentabelle verknüpft ist. Beispielsweise können Sie eine <localizedText>Product</localizedText>-Tabelle als Haupttabelle für eine <localizedText>Products</localizedText>-Dimension oder eine <localizedText>Employee</localizedText>-Tabelle für eine <localizedText>Employees</localizedText>-Dimension angeben. Der Assistent wählt automatisch eine Schlüsselspalte aus, die auf dem Primärschlüssel in der Datenquellensicht basiert. Sie können die Schlüsselspalte jedoch wie gewünscht ändern. Über die Schlüsselspalte werden die Elemente der Dimension bestimmt. Für eine <localizedText>Product</localizedText>-Dimension würden Sie z. B. <localizedText>ProductKey</localizedText> als Schlüsselspalte definieren.  
   
- Optional können Sie eine Spalte definieren, die den Elementnamen enthält. Der Elementname, der den Benutzern angezeigt wird, ist standardmäßig der Wert aus der Schlüsselspalte. Die Werte in einer Schlüsselspalte, z. B. ProductID oder EmployeeID, sind häufig eindeutige, vom System generierte Schlüssel, die für die Benutzer nicht aussagekräftig sind. Häufig können Sie den Benutzern aussagekräftigere Informationen bereitstellen, indem Sie den Namen, den die Benutzer sehen, in einen entsprechenden Wert in einer anderen Spalte der Dimension ändern. Beispielsweise können Sie eine Elementnamensspalte definieren, die Produkt- oder Mitarbeiternamen enthält. Wenn Sie den Elementnamen ändern, wird den Benutzern ein aussagekräftiger Name angezeigt. In Abfragen werden jedoch weiterhin die Werte aus der Schlüsselspalte verwendet, um zwischen Elementen mit gleichem Namen unterscheiden zu können. Wenn Sie für die Schlüsselspalte einen zusammengesetzten Schlüssel angeben, müssen Sie auch die Spalte angeben, die die Elementwerte für das Schlüsselattribut bereitstellt. Weitere Informationen zum Konfigurieren von Attributeigenschaften finden Sie unter [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  
+ Optional können Sie eine Spalte definieren, die den Elementnamen enthält. Der Elementname, der den Benutzern angezeigt wird, ist standardmäßig der Wert aus der Schlüsselspalte. Die Werte in einer Schlüsselspalte, z. B. <localizedText>ProductID</localizedText> oder <localizedText>EmployeeID</localizedText>, sind häufig eindeutige, vom System generierte Schlüssel, die für die Benutzer nicht aussagekräftig sind. Häufig können Sie den Benutzern aussagekräftigere Informationen bereitstellen, indem Sie den Namen, den die Benutzer sehen, in einen entsprechenden Wert in einer anderen Spalte der Dimension ändern. Beispielsweise können Sie eine Elementnamensspalte definieren, die Produkt- oder Mitarbeiternamen enthält. Wenn Sie den Elementnamen ändern, wird den Benutzern ein aussagekräftiger Name angezeigt. In Abfragen werden jedoch weiterhin die Werte aus der Schlüsselspalte verwendet, um zwischen Elementen mit gleichem Namen unterscheiden zu können. Wenn Sie für die Schlüsselspalte einen zusammengesetzten Schlüssel angeben, müssen Sie auch die Spalte angeben, die die Elementwerte für das Schlüsselattribut bereitstellt. Weitere Informationen zum Konfigurieren von Attributeigenschaften finden Sie unter [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  
   
 ## <a name="selecting-related-tables"></a>Auswählen von verknüpften Tabellen  
   
 > [!NOTE]  
 >  Dieser Schritt wird vom Assistenten ausgelassen, falls die Hauptdimensionstabelle keine in der Datenquellensicht definierte Beziehungen zu anderen Dimensionstabellen besitzt.  
   
- Wenn Sie eine Schneeflockendimension erstellen, geben Sie auf der Seite **Verknüpfte Tabellen auswählen** die verknüpften Tabellen an, aus denen zusätzliche Attribute definiert werden. Angenommen, Sie erstellen eine Customer-Dimension, in der Sie eine Customer Geography-Tabelle definieren möchten. In diesem Fall können Sie eine Geography-Tabelle als verknüpfte Tabelle definieren.  
+ Wenn Sie eine Schneeflockendimension erstellen, geben Sie auf der Seite **Verknüpfte Tabellen auswählen** die verknüpften Tabellen an, aus denen zusätzliche Attribute definiert werden. Angenommen, Sie erstellen eine <localizedText>Customer</localizedText>-Dimension, in der Sie eine <localizedText>Customer Geography</localizedText>-Tabelle definieren möchten. In diesem Fall können Sie eine <localizedText>Geography</localizedText>-Tabelle als verknüpfte Tabelle definieren.  
   
 ## <a name="selecting-dimension-attributes"></a>Auswählen von Dimensionsattributen  
  Nachdem Sie die Dimensionstabellen ausgewählt haben, geben Sie auf der Seite **Dimensionsattribute auswählen** die Attribute an, die Sie in der Dimension aus diesen Tabellen einschließen möchten. Alle zugrunde liegenden Spalten dieser Tabellen sind als potenzielle Dimensionsattribute verfügbar. Das Dimensionsschlüsselattribut muss ausgewählt und zum Durchsuchen aktiviert werden.  
@@ -71,7 +71,7 @@ ms.locfileid: "34023891"
 -   In der Spalte **Integrierte Kontotypen** sind die vom Server unterstützten Standardkontotypen aufgelistet. Wenn die Quelldaten Standardnamen verwenden, ordnet der Assistent automatisch den Quelltyp dem Servertyp zu und füllt die Spalte **Integrierte Kontotypen** mit diesen Informationen auf. Wenn der Server die Kontotypen nicht zuordnet oder Sie die Zuordnung ändern möchten, wählen Sie einen anderen Typ in der Liste in der Spalte **Integrierte Kontotypen** aus.  
   
 > [!NOTE]  
->  Wenn die Kontotypen beim Erstellen einer Accounts-Dimension durch den Assistenten nicht zugeordnet sind, können Sie diese Zuordnungen mit dem Business Intelligence-Assistenten konfigurieren, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Kontointelligenz zu einer Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
+>  Wenn die Kontotypen beim Erstellen einer <localizedText>Accounts</localizedText>-Dimension durch den Assistenten nicht zugeordnet sind, können Sie diese Zuordnungen mit dem Business Intelligence-Assistenten konfigurieren, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Kontointelligenz zu einer Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="completing-the-wizard"></a>Abschließen des Assistenten  
  Der Assistent durchsucht Dimensionstabellen nach Beziehungen. In Schneeflockendimensionen erstellt der Assistent automatisch Attributbeziehungen zwischen Schlüsselattributen.  
