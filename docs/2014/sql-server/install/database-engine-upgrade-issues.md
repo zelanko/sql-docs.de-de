@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162479"
 ---
 # <a name="database-engine-upgrade-issues"></a>Probleme beim Upgrade der Datenbank-Engine
   Die Themen in diesem Abschnitt beschreiben die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Probleme, die das Upgrade auf auswirken [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Die folgenden Themen beschreiben die Aktionen, die Sie ergreifen können, um die Auswirkungen dieser Änderungen auf Ihre Umgebung zu minimieren.  

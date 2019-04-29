@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065458"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat **Bcp_colfmt** gibt das Format einer vorhandenen Datendatei verwendet, die als Quelle der Daten in einem Massenkopiervorgang in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Bei Verwendung als Zielformat die Datendatei wird erstellt mithilfe der mit angegebenen Spaltenformate **Bcp_colfmt**.  
@@ -61,7 +61,7 @@ idxServerCol
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *idxUserDataCol*  
@@ -102,9 +102,9 @@ idxServerCol
   
  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen *CbUserData* bcp_length_variable, bcp_length_null, 0 oder ein positiver Wert sein kann. Wenn *CbUserData* auf sql_varlen_data festgelegt, verwendet das System entweder den Längenindikator, sofern vorhanden, oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn *CbUserData* auf sql_varlen_data festgelegt, die Daten der Typ ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen oder Binärtyp, und weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
   
- Wenn *CbUserData* 0 oder ein positiver Wert sein, das System verwendet *CbUserData* als maximale Datenlänge. Allerdings If, zusätzlich zu einem positiven *CbUserData*, ein Länge Längenindikator oder eine abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mithilfe der Methode, die sich ergibt die geringste Menge an Daten, die kopiert wird.  
+ Wenn *cbUserData* 0 oder ein positiver Wert ist, verwendet das System *cbUserData* als maximale Datenlänge. Wenn jedoch zusätzlich zu einem positiven *cbUserData*-Wert ein Längenindikator oder eine Abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mit der Methode, die zu der kleineren zu kopierenden Datenmenge führt.  
   
- Die *CbUserData* Wert stellt die Anzahl der Datenbytes dar. Wenn Zeichendaten durch Unicode-Zeichen, und klicken Sie dann auf ein positives Ergebnis dargestellt werden *CbUserData* Parameterwert darstellt, die Anzahl der Zeichen multipliziert mit der Größe der einzelnen Zeichen in Bytes.  
+ Der *cbUserData* -Wert stellt die Anzahl der Datenbytes dar. Werden Zeichendaten durch Unicode-Zeichen dargestellt, repräsentiert ein positiver *cbUserData* -Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Byte) der einzelnen Zeichen.  
   
  *pUserDataTerm*  
  Die Abschlusszeichensequenz, die für diese Spalte verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.  

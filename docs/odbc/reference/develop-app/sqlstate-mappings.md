@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148883"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE-Zuordnungen
 Dieses Thema beschreibt den SQLSTATE-Werten für ODBC 2. *x* und ODBC 3. *X*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -31,7 +31,7 @@ Dieses Thema beschreibt den SQLSTATE-Werten für ODBC 2. *x* und ODBC 3. *X*. We
   
  Wenn umgebungsattributs SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC2 festgelegt ist, sendet der Treiber ODBC 2. an. *x* SQLSTATEs anstelle von ODBC 3. *X* SQLSTATEs beim **SQLGetDiagField** oder **SQLGetDiagRec** aufgerufen wird. Eine bestimmte Zuordnung kann bestimmt werden, durch die ODBC 2. Beachten *.x* SQLSTATE in Spalte 1 in der folgenden Tabelle, die die ODBC 3. entspricht. *X* SQLSTATE in Spalte 2.  
   
-|ODBC-2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Kommentare|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|Kommentare|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131194"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>XSD-Schemas mit Anmerkungen in SQLXML 4.0
   Dieser Abschnitt enthält Informationen zum Verwenden von XSD-Schemas mit Anmerkungen in SQLXML 4.0. In früheren Versionen von SQLXML wurde eine ähnliche Funktionalität mit XDR-Schemas (XML-Data Reduced) bereitgestellt. Dieser Abschnitt enthält ebenfalls XDR-Informationen für ältere Anwendungen.  
@@ -48,7 +48,7 @@ ms.locfileid: "52810862"
   
 -   XML Schema Part 0: Einführung, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML-Schema, Teil 1: Strukturen, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Strukturen, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
   

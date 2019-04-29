@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060306"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
   Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz der  **\<nach >** Block, jedoch nicht in den entsprechenden  **\<vor >** Block. In diesem Fall fügt das Updategram den Datensatz in die  **\<nach >** -Block in der Datenbank.  
