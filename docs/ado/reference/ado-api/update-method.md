@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042236"
 ---
 # <a name="update-method"></a>Update-Methode
 Speichert alle Änderungen an der aktuellen Zeile eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt oder die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
@@ -36,10 +36,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parameter  
  *Fields*  
- Optional. Ein **Variant** , die einen eindeutigen Namen, darstellt oder **Variant** Array, das darstellt, Namen oder die Positionen der Felder, die Sie ändern möchten.  
+ Dies ist optional. Ein **Variant** , die einen eindeutigen Namen, darstellt oder **Variant** Array, das darstellt, Namen oder die Positionen der Felder, die Sie ändern möchten.  
   
  *Werte*  
- Optional. Ein **Variant** , die einen einzelnen Wert darstellt oder **Variant** Array, das Werte für das Feld oder Felder in den neuen Eintrag darstellt.  
+ Dies ist optional. Ein **Variant** , die einen einzelnen Wert darstellt oder **Variant** Array, das Werte für das Feld oder Felder in den neuen Eintrag darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -62,7 +62,7 @@ record.Fields.Update
   
  Der aktuelle Datensatz bleibt die aktuelle aufzurufen, nachdem Sie die **Update** Methode.  
   
-## <a name="record"></a>Aufzeichnung (Record)  
+## <a name="record"></a>Datensatz  
  Die **Update** Methode schließt Hinzufügungen, löschungen und Aktualisierungen von Feldern in der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem **Datensatz** Objekt.  
   
  Z. B. Felder, die gelöscht werden, mit der **löschen** Methode sofort zum Löschen markiert sind, aber bleiben in der Auflistung. Die **Update** -Methode muss aufgerufen werden, um diese Felder aus der Auflistung des Anbieters tatsächlich zu löschen.  

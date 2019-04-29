@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062408"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
 **Übereinstimmung mit Standards**  
@@ -93,7 +93,7 @@ SQLRETURN SQLDriverConnect(
  (Weitere Informationen finden Sie auf "Kommentare".)  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDriverConnect** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *fHandleType*SQL_HANDLE_DBC auf, und ein *hHandle* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLDriverConnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -145,13 +145,13 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Kommentare  
  Eine Verbindungszeichenfolge weist die folgende Syntax:  
   
- *Verbindungszeichenfolge* :: = *leeren Zeichenfolge*[;] &#124; *Attribut*[;] &#124; *Attribut*; *Verbindungszeichenfolgen*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *leeren Zeichenfolge* :: =*Attribut* :: = *-Schlüsselwort*=*Attribut / Wert* &#124; DRIVER = {[}] *Attribut-Wert*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *Attribut-Schlüsselwort* :: DSN = &#124; UID &#124; PWD &#124; *-Treiber-definierten-Attribut-Schlüsselwort*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
- *Attribut-Wert* :: = *-Zeichenfolge*  
+ *attribute-value* ::= *character-string*  
   
  *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*  
   

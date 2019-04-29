@@ -1,5 +1,5 @@
 ---
-title: Reservierte Schlüsselwörter (MDX-Syntax) | Microsoft Docs
+title: Reservierte Schlüsselwörter (MDX Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149855"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Reservierte Schlüsselwörter (MDX-Syntax)
 
 
-  Analysis Services reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung. Eine Liste der reservierten Schlüsselwörter finden Sie [MDX reservierte Wörter](../mdx/mdx-reserved-words.md).  
+  Analysis Services reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung. Eine Liste der reservierten Schlüsselwörter finden Sie [MDX-reservierte Wörter](../mdx/mdx-reserved-words.md).  
   
  Für reservierte Schlüsselwörter gelten folgende Richtlinien:  
   

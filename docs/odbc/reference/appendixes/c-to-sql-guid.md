@@ -1,5 +1,5 @@
 ---
-title: 'C to SQL: GUID | Microsoft-Dokumentation'
+title: 'C in SQL: GUID | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159350"
 ---
-# <a name="c-to-sql-guid"></a>C zu SQL: GUID
+# <a name="c-to-sql-guid"></a>C in SQL: GUID
 Der Bezeichner für den GUID-ODBC-C-Datentyp ist:  
   
  SQL_C_GUID  

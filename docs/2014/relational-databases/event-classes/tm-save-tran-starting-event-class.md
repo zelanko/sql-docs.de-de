@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061342"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting (Ereignisklasse)
   Die TM: Speichern Sie Tran Starting-Ereignisklasse zeigt an, dass eine SAVE TRANSACTION-Anforderung gestartet wird. Die Anforderung wird vom Client über eine Schnittstelle zur Transaktionsverwaltung gesendet.  

@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188903"
 ---
 # <a name="interval-data-types"></a>Intervalldatentypen
 Ein Intervall wird als die Differenz zwischen zwei Datumsangaben und Uhrzeiten definiert. Intervalle werden in zwei unterschiedliche Arten ausgedrückt werden. Eine ist ein *Jahr-Monat* Intervall, die Intervalle in Jahren und eine ganzzahlige Anzahl von Monaten ausdrückt. Die andere ist eine *Day-Time-* Intervall, die Intervalle in Tagen, Minuten und Sekunden ausdrückt. Diese beiden Arten von Intervallen zielteilmengen verschieden und können nicht kombiniert werden, da Monate unterschiedliche Anzahl von Tagen haben können.  

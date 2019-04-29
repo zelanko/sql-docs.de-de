@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee3d8a80598e3f41bd6bfaf9a493639ee36cd3ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161366"
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
-Die typische Standardcursortyp, bezeichnet einen Cursor vorwärts-(oder nicht bildlauffähige), kann über das Resultset nur vorwärts bewegen. Ein Vorwärtscursor unterstützt nicht das Durchführen eines Bildlaufs (die Möglichkeit zum Verschieben von vorwärts und rückwärts im Resultset); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Mit einigen Vorwärtscursor (z. B. mit der SQL Server-Cursor Library), werden alle INSERT-, Update- und Delete-Anweisungen wird hergestellt, indem der aktuelle Benutzer (oder anderer Benutzer ausgeführt werden), dass die Auswirkungen von Zeilen im Resultset angezeigt werden, wie die Zeilen abgerufen werden. Da sich der Cursor nicht rückwärts gescrollt werden kann, sind jedoch Änderungen an Zeilen in der Datenbank vorgenommen wurden, nachdem die Zeile abgerufen wurde nicht über den Cursor sichtbar.  
+Die typische Standardcursortyp, bezeichnet einen Cursor vorwärts-(oder nicht bildlauffähige), kann über das Resultset nur vorwärts bewegen. Ein Vorwärtscursor unterstützt nicht das Durchführen eines Bildlaufs (die Möglichkeit zum Verschieben von vorwärts und rückwärts im Resultset); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Mit einigen Vorwärtscursor (z. B. mit der SQL Server-Cursor Library), werden alle INSERT-, Update- und Delete-Anweisungen wird hergestellt, indem der aktuelle Benutzer (oder anderer Benutzer ausgeführt werden), dass die Auswirkungen von Zeilen im Resultset angezeigt werden, wie die Zeilen abgerufen werden. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar.  
   
- Nachdem die Daten für die aktuelle Zeile verarbeitet wurde, gibt die Vorwärtscursor die Ressourcen, die verwendet wurden, zum Speichern dieser Daten frei. Vorwärtscursor werden Standardeinstellung dynamisch, was bedeutet, dass alle Änderungen erkannt werden, während die aktuelle Zeile verarbeitet wird. Dies bietet schnellere Cursor geöffnet und ermöglicht die Resultsets an den zugrunde liegenden Tabellen vorgenommene Updates anzuzeigen.  
+ Nachdem die Daten für die aktuelle Zeile verarbeitet wurde, gibt die Vorwärtscursor die Ressourcen, die verwendet wurden, zum Speichern dieser Daten frei. Vorwärtscursor sind standardmäßig dynamisch, d. h. dass alle Änderungen ermittelt werden, während die aktuelle Zeile verarbeitet wird. Damit kann der Cursor schneller gestartet werden, und Updates an den zugrunde liegenden Tabellen können im Resultset angezeigt werden.  
   
  Während Vorwärtscursor rückwärts-scrollen nicht unterstützen, kann Ihre Anwendung auf den Anfang des Resultsets durch Schließen und erneuten Öffnen des Cursors zurück. Dies ist ein effektives Verfahren zum Arbeiten mit kleinen Datenmengen. Als Alternative können kann Ihre Anwendung das Resultset auf einmal lesen, Daten lokal zwischengespeichert und navigieren Sie dann auf den lokalen Datencache.  
   
