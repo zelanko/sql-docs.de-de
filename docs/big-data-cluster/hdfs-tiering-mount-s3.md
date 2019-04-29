@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317119"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330595"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount S3 für HDFS-Staffelung in einem big Data-cluster
 
 Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit einer Datenquelle für die S3-Speicher HDFS zu konfigurieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Bereitgestellte big Data-cluster](deployment-guidance.md)
 - [Big Data-tools](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit 
 - Erstellen und Hochladen von Daten in einem S3-bucket 
   - Hochladen von CSV oder Parquet-Dateien in Ihrem S3-Bucket. Dies ist die externe HDFS-Daten, die in HDFS in die big Data-Cluster bereitgestellt werden.
 
-## <a name="access-keys"></a>Zugriffsschlüssel
+## <a name="access-keys"></a>Zugriffstasten
 
 1. Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können.
 
@@ -42,7 +42,7 @@ Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit 
    ```
 
    > [!TIP]
-   > Weitere Informationen zum Erstellen des S3-Zugriffsschlüssel (`<s3-access-key>`), finden Sie unter [S3-Zugriffsschlüssel](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Weitere Informationen zum Erstellen von Zugriffstasten für S3 finden Sie unter [S3-Zugriffsschlüssel](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Bereitstellen der HDFS-Remotespeicher
 

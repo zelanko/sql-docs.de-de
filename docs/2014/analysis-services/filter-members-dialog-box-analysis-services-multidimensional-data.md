@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c8ec7fa93dd583b0f79de00f70451eef24976dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731283"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Elemente filtern' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Elemente filtern** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Dimensionselemente nach Elementbeschriftung, Elementnamen, eindeutigen Elementnamen, Schlüsselspaltenwert oder Wertspaltenwert für die aktuelle Ebene filtern, während Sie eine Dimension auf der Registerkarte **Browser** von **Dimensions-Designer**durchsuchen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Filter-Ausdruck**|Zeigt ein Raster von Eigenschaften, Operatoren und Werten an, die zum Erstellen eines Filterausdrucks verwendet werden. Nachdem eine Zeile hinzugefügt wurde, kann sie nicht mehr entfernt werden. Sie müssen das Dialogfeld schließen und erneut öffnen, um einen neuen Filterausdruck anzugeben. Das Raster enthält die folgenden Spalten:<br /><br /> **Eigenschaft**: Wählen Sie die Eigenschaft des für den Filterausdruck verwendeten Elements.<br /><br /> **Operator**: Wählen Sie den für den Filterausdruck verwendeten Operator.<br /><br /> **Wert**: Geben Sie den Wert der Eigenschaft im ausgewählten **Eigenschaft** auszuwertende mithilfe des Operators, der im angegebenen **Operator**.|  
+|**Filter-Ausdruck**|Zeigt ein Raster von Eigenschaften, Operatoren und Werten an, die zum Erstellen eines Filterausdrucks verwendet werden. Nachdem eine Zeile hinzugefügt wurde, kann sie nicht mehr entfernt werden. Sie müssen das Dialogfeld schließen und erneut öffnen, um einen neuen Filterausdruck anzugeben. Das Raster enthält die folgenden Spalten:<br /><br /> **Eigenschaft**: Wählen Sie die Eigenschaft des für den Filterausdruck verwendeten Elements aus.<br /><br /> **Operator**: Wählen Sie den für den Filterausdruck verwendeten Operator aus.<br /><br /> **Wert**: Geben Sie den Wert für die unter **Eigenschaft** ausgewählte Eigenschaft ein, die mithilfe des unter **Operator**ausgewählten Operators ausgewertet werden soll.|  
 |**Testbereich**|Wenn Sie auf **Testen** klicken, werden in diesem Bereich die durch den Filterausdruck zurückgegebenen Elemente angezeigt. Wenn für die unter **Filterausdruck**angegebenen Kriterien keine Elemente zurückgegeben werden, wird eine Warnung angezeigt.|  
 |**Testen**|Klicken Sie auf diese Option, um die unter **Filterausdruck**angegebenen Kriterien zu testen.|  
   

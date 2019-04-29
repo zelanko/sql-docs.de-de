@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023435"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock (Ereignisklasse)
   Nach dem abgebrochenen Versuch, eine Sperre abzurufen, wird die Lock:Deadlock-Ereignisklasse erstellt, weil dieser Versuch Teil einer Deadlocksituation war und als Deadlockopfer ausgewählt wurde.  

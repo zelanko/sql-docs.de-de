@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728671"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
   Von Benutzern wird manchmal der Wunsch geäußert, Measures nach Datenelementen dimensionieren zu können, die sich in der Faktentabelle befinden, oder die Faktentabelle nach bestimmten zusätzlichen verknüpften Informationen durchsuchen zu können, beispielsweise Rechnungsnummern oder Auftragsbestätigungsnummern, die mit bestimmten Verkaufsfakten verknüpft sind. Wenn Sie eine Dimension basierend auf einem solchen Faktentabellenelement definieren, wird diese Dimension als *Faktendimension*bezeichnet. Eine Faktendimension wird auch als degenerierte Dimension bezeichnet. Faktendimensionen sind für das Gruppieren verknüpfter Faktentabellenzeilen nützlich, beispielsweise aller Zeilen, die sich auf eine bestimmte Rechnungsnummer beziehen. Obwohl Sie diese Informationen in einer separaten Dimensionstabelle in der relationalen Datenbank speichern können, stellt das Erstellen einer separaten Dimensionstabelle für die Informationen keinen Vorteil dar, weil die Dimensionstabelle genauso schnell wachsen würde wie die Faktentabelle und nur zu doppelt vorhandenen Daten und unnötiger Komplexität führen würde.  
@@ -66,7 +66,7 @@ ms.locfileid: "52530678"
   
 14. In der **Attribute** Bereich des Dimensions-Designers für die **Internet Sales Order Details** Dimension wählen **Sales Order Number**, und ändern Sie dann die  **Namen** Eigenschaft im Eigenschaftenfenster an `Item Description.`  
   
-15. In der **NameColumn** Eigenschaft Zelle, klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld Namensspalte den Eintrag Produkt in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
+15. In der **NameColumn** Eigenschaft Zelle, klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   

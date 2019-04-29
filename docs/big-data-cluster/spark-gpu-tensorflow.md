@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 564d1afd9ca8839eae4a16b234111c3f42a5bb44
+ms.sourcegitcommit: 22716798e963ebc335fa540b0c04569baa9db7ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473303"
+ms.lasthandoff: 04/25/2019
+ms.locfileid: "64417136"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Bereitstellen eines big Data-Clusters mit GPU-Unterstützung, und führen Sie TensorFlow
 
@@ -23,7 +23,7 @@ ms.locfileid: "63473303"
 
 In diesem Artikel wird veranschaulicht, wie einen big Data-Cluster in Azure Kubernetes Service (AKS) bereitstellen, die GPU-fähiger knotenpools für rechenintensive Workloads unterstützt wird. Anschließend führen Sie die Beispiel-Notebooks in Azure Data Studio, die bildklassifizierung mit TensorFlow für GPU ausgeführt wird.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Big Data-Tools](deploy-big-data-tools.md):
   - **mssqlctl**
@@ -69,7 +69,7 @@ Die folgenden Schritte können, dass der Azure-Befehlszeilenschnittstelle um ein
 
 1. Verwendung **"kubectl"** zum Erstellen eines Kubernetes-Namespace mit dem Namen `gpu-resources`.
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,75 +122,37 @@ Die folgenden Schritte können, dass der Azure-Befehlszeilenschnittstelle um ein
 
 1. Verwenden der "kubectl" gelten Befehl aus, um das DaemonSet zu erstellen. **NVIDIA-Gerät--Plug-in-ds.yaml** im Arbeitsverzeichnis werden muss, wenn Sie den folgenden Befehl ausführen:
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>Die big Data-Cluster bereitstellen
 
-Um eine SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen, der GPUs unterstützt, müssen Sie von einem bestimmten Docker-Registrierung und das Repository bereitstellen. Insbesondere verwenden Sie unterschiedliche Werte für **DOCKER_REGISTRY**, **DOCKER_REPOSITORY**, **DOCKER_USERNAME**, **DOCKER_PASSWORD**, und **DOCKER_EMAIL**. Die folgenden Abschnitte enthalten Beispiele zum Festlegen der Umgebungsvariablen. Verwenden Sie die Windows oder Linux-Abschnitte abhängig von der Plattform des Clients, die Sie verwenden, um die big Data-Cluster bereitstellen.
+Um eine SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen, der GPUs unterstützt, müssen Sie von einem bestimmten Docker-Registrierung und das Repository bereitstellen. Die folgenden Umgebungsvariablen unterscheiden sich für eine GPU-Bereitstellung:
 
-### <a name="windows"></a>Windows
+| Umgebungsvariable | Wert |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. Konfigurieren Sie die folgenden Umgebungsvariablen mit einem CMD-Fenster (nicht PowerShell). Verwenden Sie nicht die Werte in Anführungszeichen ein.
+Verwendung **Mssqlctl** zum Bereitstellen der Cluster, wählen Sie die Konfiguration des Aks-Dev-test.json und bereitstellen, die die benutzerdefinierten Werte oben, wenn Sie aufgefordert werden.
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> Der Standardname der big Data-Cluster ist `mssql-cluster`.
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. Stellen Sie die big Data-Cluster bereit:
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. Die folgenden Umgebungsvariablen zu initialisieren. In bash bleibt können Sie jeden Wert in Anführungszeichen.
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. Stellen Sie die big Data-Cluster bereit:
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+Sie können auch Ihre Bereitstellung weiter anpassen, durch eine benutzerdefinierte Bereitstellungskonfigurationsdatei übergeben. Weitere Informationen finden Sie unter den [bereitstellungsanleitung](deployment-guidance.md#customconfig).
 
 ## <a name="run-the-tensorflow-example"></a>Führen Sie das TensorFlow-Beispiel
 
 Die folgenden zwei beispielnotebooks veranschaulichen Training zwei Modellen zur bildklassifizierung auf einem einzelnen Knoten des Spark-Clusters mit TensorFlow für GPU.
 
-| Notebook-download | Description |
+| Notebook-download | Beschreibung |
 |---|---|
 | [**tf-cuda8.ipynb**](https://aka.ms/AA4jdgd) | Wird verwendet, die CUDA 8 und CUDNN 6 TensorFlow 1.4.0.  |
 | [**tf-cuda9.ipynb**](https://aka.ms/AA4ixzr) | Wird verwendet, die CUDA 9 und CUDNN 7 TensorFlow 1.12.0. |
@@ -198,7 +160,7 @@ Die folgenden zwei beispielnotebooks veranschaulichen Training zwei Modellen zur
 Legen Sie die entsprechenden Notebook-Datei auf Ihrem lokalen Computer, und klicken Sie dann öffnen Sie, und führen Sie es in Azure Data Studio PySpark3-Kernel verwenden. Wählen Sie CUDA 9/CUDNN 7/TensorFlow 1.12.0, es sei denn, Sie haben eine ältere Version von CUDA oder TensorFlow benötigen. Weitere Informationen zur Verwendung von Notebooks mit big Data-Clustern finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Beachten Sie, dass die Notebooks-Software in Speicherorte im Dateisystem installiert. Dies ist möglich, da Notebooks mit Berechtigungen auf Stammebene in CTP 2.4 derzeit ausgeführt werden.
+> Beachten Sie, dass die Notebooks-Software in Speicherorte im Dateisystem installiert. Dies ist möglich, da die Notebooks mit Stammberechtigungen im CTP-Version 2.5 derzeit ausgeführt werden.
 
 Nach der Installation von NVIDIA-GPU-Bibliotheken und TensorFlow für GPU, Liste der Notebooks GPU-Geräte zur Verfügung stehen. Klicken sie dann anpassen und bewerten ein TensorFlow-Modells zur Erkennung von handgeschriebener Ziffern, die mit dem MNIST-DataSet. Nach der Überprüfung freier Speicherplatz verfügbar, sie herunterladen, und führen Sie das CIFAR-10-Image Classification-Beispiel aus [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Durch das CIFAR-10-Beispiel in Clustern mit verschiedenen GPUs ausführen, können Sie beobachten, die Erhöhung der Geschwindigkeit von für jede Generation von GPU in Azure verfügbaren angeboten.
 
@@ -206,7 +168,7 @@ Nach der Installation von NVIDIA-GPU-Bibliotheken und TensorFlow für GPU, Liste
 
 Um die big Data-Cluster zu löschen, verwenden Sie den folgenden Befehl aus:
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

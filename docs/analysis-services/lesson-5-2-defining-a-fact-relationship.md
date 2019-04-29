@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752687"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lektion 5-2: Definieren einer Faktenbeziehung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ In den Aufgaben dieses Themas fügen Sie eine neue Cubedimension basierend auf d
   
 14. Wählen Sie im Bereich **Attributes** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie anschließend die **Name** -Eigenschaft im Fenster Eigenschaften in **Item Description**.  
   
-15. In der **NameColumn** Eigenschaft Zelle, klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld Namensspalte den Eintrag Produkt in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
+15. In der **NameColumn** Eigenschaft Zelle, klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   

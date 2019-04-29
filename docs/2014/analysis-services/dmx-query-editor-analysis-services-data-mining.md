@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 063e78a15a4bd365c4eb061cc54454fb6e6637c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731610"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>DMX-Abfrage-Editor (Analysis Services &ndash; Data Mining)
   Mithilfe des DMX-Abfrage-Editors können Sie in der DMX-Sprache (Data Mining Extensions) geschriebene Anweisungen entwerfen und ausführen.  
   
-## <a name="features"></a>Funktionen  
+## <a name="features"></a>Features  
   
 -   Im Abfrage-Editorfenster des DMX-Abfrage-Editors können Sie Skripts eingeben.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48153240"
 |Begriff|Definition|  
 |----------|----------------|  
 |**Verbinden**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer Instanz von Analysis Service hergestellt werden kann.|  
-|**Trennen**|Trennt die Verbindung zwischen dem DMX-Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Trennen**|Trennt die Verbindung zwischen dem DMX-Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Verbindung ändern**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer anderen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.|  
 |**Neue Abfrage mit aktueller Verbindung**|Öffnet ein neues DMX-Abfrage-Editorfenster mithilfe der Verbindungsinformationen des aktuellen DMX-Abfrage-Editorfensters.|  
 |**Verfügbare Datenbanken**|Ändert die Verbindung zu einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank innerhalb derselben Instanz.|  
@@ -54,17 +54,17 @@ ms.locfileid: "48153240"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Abfrage-Editor-Fenster**|Hier können Sie DMX-Anweisungen und -Skripts eingeben, die vom DMX-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden**: kopiert die aktuelle Auswahl in die Zwischenablage und entfernt Sie aus dem Abfrage-Editorfenster.<br /><br /> **Kopieren:** Kopiert die aktuelle Auswahl in die Zwischenablage.<br /><br /> **Fügen Sie**: Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl.<br /><br /> **Verbinden:** Öffnet das Dialogfeld **Verbindung mit Server herstellen**, in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br /><br /> **Trennen Sie**: trennt die Verbindung der aktuellen Abfrage-Editor aus einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br /><br /> **Alle Abfragen trennen**: trennt die Verbindung aller geöffneten Abfrage-Editoren.<br /><br /> **Verbindung ändern**: Öffnet die **Herstellen einer Verbindung mit Server** im Dialogfeld zum Herstellen einer Verbindung zu einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br /><br /> **Öffnen Sie im Objekt-Explorer den Server**: Öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz, die mit der aktuellen Abfrage-Editor, in verbunden ist **Objekt-Explorer**.<br /><br /> **Führen Sie**: führt den ausgewählten Code aus, oder wenn kein Code ausgewählt ist, der gesamte Code in der aktuellen Abfrage-Editor ausgeführt.<br /><br /> **Fenster "Eigenschaften"**: Zeigt die **Eigenschaften** -Fensters im [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für das aktuelle Abfragefenster.<br /><br /> **Abfrageoptionen**: Zeigt die **Abfrageoptionen** Dialogfeld.|  
+|**Abfrage-Editor-Fenster**|Hier können Sie DMX-Anweisungen und -Skripts eingeben, die vom DMX-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden:** Kopiert die aktuelle Auswahl in die Zwischenablage und entfernt sie dabei aus dem Abfrage-Editorfenster.<br /><br /> **Kopieren:** Kopiert die aktuelle Auswahl in die Zwischenablage.<br /><br /> **Einfügen:** Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl ein.<br /><br /> **Verbinden:** Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br /><br /> **Trennen:** Trennt die Verbindung zwischen dem aktuellen Abfrage-Editor und einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Alle Abfragen trennen:** Trennt die Verbindung aller geöffneten Abfrage-Editoren.<br /><br /> **Verbindung ändern:** Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem eine Verbindung mit einer anderen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br /><br /> **Server in Objekt-Explorer öffnen:** Öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, mit der der aktuelle Abfrage-Editor in **Objekt-Explorer**verbunden ist.<br /><br /> **Ausführen:** Führt den ausgewählten Code aus. Wenn kein Code ausgewählt ist, wird der gesamte Code im aktuellen Abfrage-Editor ausgeführt.<br /><br /> **Eigenschaftenfenster:** Zeigt in **das Fenster** Eigenschaften [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für das aktuelle Abfragefenster an.<br /><br /> **Abfrageoptionen:** Zeigt das Dialogfeld **Abfrageoptionen** an.|  
 |**Fenster Metadaten**|Zeigt Metadaten für die aktuell verbundene [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank an.|  
 |**Cube**|Wählen Sie einen Cube in der aktuell verbundenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank aus, um die zugehörigen Metadaten des Cubes auf der Registerkarte **Metadaten** anzuzeigen.|  
 |**Metadaten**|Zeigt die Metadaten für den unter **Cube**ausgewählten Cube an, einschließlich Measuregruppen und Measures, Key Performance Indicators, Dimensionen, Hierarchien, Ebenen, Elementen und Elementeigenschaften. Zum Abrufen des voll gekennzeichneten Schlüssels eines Objekts führen Sie einen der beiden folgenden Schritte aus:<br /><br /> Ziehen Sie das Objekt von der Registerkarte **Metadaten** in das Abfragefenster.<br /><br /> Oder:<br /><br /> Klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **Kopieren**aus. Klicken Sie anschließend mit der rechten Maustaste in das Abfragefenster, und wählen Sie **Einfügen**aus.|  
-|**Funktionen**|Zeigt die Metadaten für DMX-Funktionen an, die für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank so verfügbar sind, wie sie aus DMSCHEMA_MINING_FUNCTIONS-Schemarowset abgerufen wurden.<br /><br /> Zum Abrufen der Syntax einer Funktion führen Sie einen der beiden folgenden Schritte aus:<br /><br /> Ziehen Sie das Objekt von der Registerkarte **Funktionen** in das Abfragefenster.<br /><br /> Oder:<br /><br /> Klicken Sie mit der rechten Maustaste auf die Funktion, und wählen Sie **Kopieren**aus. Klicken Sie anschließend mit der rechten Maustaste in das Abfragefenster, und wählen Sie **Einfügen**aus.|  
+|**Funktionen**|Zeigt die Metadaten für DMX-Funktionen an, die für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank so verfügbar sind, wie sie aus DMSCHEMA_MINING_FUNCTIONS-Schemarowset abgerufen wurden.<br /><br /> Zum Abrufen der Syntax einer Funktion führen Sie einen der beiden folgenden Schritte aus:<br /><br /> Ziehen Sie das Objekt von der Registerkarte **Funktionen** in das Abfragefenster.<br /><br /> Oder:<br /><br /> Klicken Sie mit der rechten Maustaste auf die Funktion, und wählen Sie **Kopieren**aus. Klicken Sie anschließend mit der rechten Maustaste in das Abfragefenster, und wählen Sie **Einfügen**aus.|  
 |**Fenster "Ergebnisse"**|Zeigt die Ergebnisse einer DMX-Anweisung in einem Raster an.|  
 |**Meldungsfenster**|Zeigt Informationen zur Art der Ausführung einer DMX-Anweisung an. In diesem Fenster werden beispielsweise während der Ausführung alle auftretenden Fehler bzw. wird nach der Ausführung die Anzahl der abgerufenen Zellen angezeigt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)   
  [MDX-Abfrage-Editor &#40;Analysis Services – mehrdimensionale Daten&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [XMLA-Abfrage-Editor &#40;Analysis Services – mehrdimensionale Daten&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

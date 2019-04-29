@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a09af051826fc771f37a912f5266554f7d98fe1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021073"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
   Ein Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an. Das einfache Balkendiagramm ist eng mit dem Säulendiagramm und dem Bereichsbalkendiagramm verbunden. Das Säulendiagramm zeigt Reihen als Sätze vertikaler Balken an, während das Bereichsbalkendiagramm Reihen als Sätze horizontaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt.  

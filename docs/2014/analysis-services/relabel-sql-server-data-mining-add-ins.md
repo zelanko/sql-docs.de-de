@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748323"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Neu bezeichnen (SQL Server Data Mining-Add-Ins)
   ![Office 13-Symbol für das Tool neu bezeichnen](media/dm13-relabel.gif "Office 13-Symbol für Tool neu bezeichnen")  
