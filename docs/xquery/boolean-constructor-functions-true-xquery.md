@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047614"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Boolesche Konstruktorfunktionen – true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- Im folgenden Beispiel wird die Abfrage angegeben für eine typisierte **Xml** Spalte. Der `if`-Ausdruck überprüft den typisierten booleschen Wert des <`ROOT`>-Elements und gibt den konstruierten XML-Code entsprechend zurück. Das Beispiel führt die folgenden Aktionen aus:  
+ Im folgenden Beispiel wird die Abfrage angegeben für eine typisierte **Xml** Spalte. Die `if` -Ausdruck überprüft den typisierten booleschen Wert, der die <`ROOT`>-Element und gibt Sie den konstruierten XML-Code entsprechend zurück. Das Beispiel führt die folgenden Aktionen aus:  
   
--   Erstellt eine XML-Schemaauflistung, die das <`ROOT`>-Element des xs:boolean-Typs definiert.  
+-   Erstellt eine XML-schemaauflistung, die definiert die <`ROOT`>-Element des Typs xs: Boolean.  
   
 -   Erstellt eine Tabelle mit typisierter **Xml** Spalte, indem Sie die XML-schemaauflistung.  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050936"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings (Ereignisklasse)
   Die Sort Warnings-Ereignisklasse gibt an, dass der Arbeitsspeicher für Sortiervorgänge nicht ausreicht. Darin eingeschlossen sind keine Sortiervorgänge, die die Indexerstellung beinhalten, sondern nur Sortiervorgänge innerhalb einer Abfrage (z. B. eine ORDER BY-Klausel in einer SELECT-Anweisung).  

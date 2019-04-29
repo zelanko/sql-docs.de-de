@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061558"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Funktionszuordnung im Treiber-Manager
 Der Treiber-Manager unterstützt zwei Einstiegspunkte für Funktionen, die Zeichenfolgenargumente verwenden. Der nicht ergänzten-Funktion (**SQLDriverConnect**) ist die ANSI-Form der Funktion. Das Unicode-Formular mit ergänzt wird eine *W* (**SQLDriverConnectW**.)  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23c66eb3ca786df27f856539e8bba026d2b1ea71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140189"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
 Löscht eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -36,10 +36,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichenfolge** -Wert mit einer URL identifiziert die Entität (z. B. die Datei oder Verzeichnis) gelöscht werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Entität, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird gelöscht. Wenn der Datensatz einen Datensatz für die Sammlung ist (["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md) von **AdCollectionRecord**, z. B. einem Verzeichnis) alle untergeordneten Elemente (z. B. Unterverzeichnissen) werden ebenfalls gelöscht.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert mit einer URL identifiziert die Entität (z. B. die Datei oder Verzeichnis) gelöscht werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Entität, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird gelöscht. Wenn der Datensatz einen Datensatz für die Sammlung ist (["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md) von **AdCollectionRecord**, z. B. einem Verzeichnis) alle untergeordneten Elemente (z. B. Unterverzeichnissen) werden ebenfalls gelöscht.  
   
  *Async*  
- Optional. Ein **booleschen** -Wert, wenn **"true"**, gibt an, dass der Löschvorgang asynchrone ist.  
+ Dies ist optional. Ein **booleschen** -Wert, wenn **"true"**, gibt an, dass der Löschvorgang asynchrone ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Vorgänge für das Objekt, das dargestellt durch diese **Datensatz** kann fehlschlagen, nachdem diese Methode ausgeführt wird. Nach dem Aufruf **DeleteRecord**, wird die **Datensatz** sollte geschlossen werden, da das Verhalten der **Datensatz** können unvorhersehbare je nach der Anbieter wann aktualisiert werden kann die **Datensatz** mit der Datenquelle.  

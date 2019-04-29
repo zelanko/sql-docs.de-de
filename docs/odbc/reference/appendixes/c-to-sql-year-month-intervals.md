@@ -1,5 +1,5 @@
 ---
-title: 'C to SQL: Jahr-Monat-Intervalle | Microsoft-Dokumentation'
+title: 'C in SQL: Jahr-Monat-Intervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159288"
 ---
-# <a name="c-to-sql-year-month-intervals"></a>C zu SQL: Jahr-Monat-Intervalle
+# <a name="c-to-sql-year-month-intervals"></a>C in SQL: Jahr-Monat-Intervalle
 Der Bezeichner für die Jahr-Monat-Intervall ODBC C-Datentypen sind:  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  
@@ -32,9 +32,9 @@ Der Bezeichner für die Jahr-Monat-Intervall ODBC C-Datentypen sind:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Spalte-Byte-Länge > = Zeichen-Byte-Länge<br /><br /> Byte-Länge der Spalte < Zeichen Länge in Byte [a]<br /><br /> Datenwert ist es sich nicht um ein gültiges Intervall-Literale|–<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Spalte Zeichenlänge > = Zeichenlänge der Daten<br /><br /> Spaltenlänge für die Zeichen < Zeichen Länge der Daten [a]<br /><br /> Datenwert ist es sich nicht um ein gültiges Intervall-Literale|–<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Konvertierung von einem Intervall von einem einzigen Feld führten nicht Abschneiden von ganzen Zahlen<br /><br /> Konvertierung führte Abschneiden von ganzen Zahlen|–<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Spalte-Byte-Länge > = Zeichen-Byte-Länge<br /><br /> Byte-Länge der Spalte < Zeichen Länge in Byte [a]<br /><br /> Datenwert ist es sich nicht um ein gültiges Intervall-Literale|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Spalte Zeichenlänge > = Zeichenlänge der Daten<br /><br /> Spaltenlänge für die Zeichen < Zeichen Länge der Daten [a]<br /><br /> Datenwert ist es sich nicht um ein gültiges Intervall-Literale|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Konvertierung von einem Intervall von einem einzigen Feld führten nicht Abschneiden von ganzen Zahlen<br /><br /> Konvertierung führte Abschneiden von ganzen Zahlen|–<br /><br /> 22003|  
 |SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|Der Datenwert wurde ohne Abschneiden von Feldern konvertiert.<br /><br /> Ein oder mehrere Felder der Datenwert wurde während der Konvertierung abgeschnitten.|–<br /><br /> 22015|  
   
  [a] alle C-Interval-Datentypen können in einen Zeichendatentyp konvertiert werden.  

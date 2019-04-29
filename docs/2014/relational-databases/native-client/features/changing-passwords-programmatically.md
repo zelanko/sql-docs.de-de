@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046252"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Verwaltung von abgelaufenen Kennwörtern sowohl programmgesteuert über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und über Änderungen an der **SQL Server-Anmeldung** Dialogfelder.  
@@ -40,12 +40,12 @@ ms.locfileid: "53370492"
 |SQL Server-Fehlercode|Fehlermeldung|  
 |---------------------------|-------------------|  
 |15113|Fehler bei der Anmeldung für Benutzer ' %. * ls. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
-|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort kann zurzeit nicht verwendet werden.|  
-|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
-|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
-|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Unerwarteter Fehler während der Kennwortüberprüfung.|  
+|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Das Kennwort kann zurzeit nicht verwendet werden.|  
+|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
+|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
+|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der kennwortänderung. Unerwarteter Fehler während der Kennwortüberprüfung.|  
 |18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos ist abgelaufen.|  
 |18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
   

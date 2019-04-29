@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044095"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Testen eines gefilterten Modells (Lernprogramm zu Data Mining-Grundlagen)
   Nun, da Sie festgestellt haben, dass die `TM_Decision_Tree` Modell ist die höchste Genauigkeit bietet, passen Sie das Modell, um den Anforderungen besser entsprechen den [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] targeted mailing-Kampagne. Die Marketingabteilung möchte insbesondere ermitteln, ob Unterschiede zwischen männlichen und weiblichen Kunden vorliegen. Die Informationen können sie entscheiden, welche Zeitschriften für Werbung verwendet und welche Produkte ihre Mailings Funktion.  

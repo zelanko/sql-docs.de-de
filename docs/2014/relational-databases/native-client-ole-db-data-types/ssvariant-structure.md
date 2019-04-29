@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062498"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT-Struktur
   Die `SSVARIANT`-Struktur, die in sqlncli.h definiert ist, entspricht einem DBTYPE_SQLVARIANT-Wert im OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -54,7 +54,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
 |Member|OLE DB-Typindikator|OLE DB-C-Datentyp|vt-Wert|Kommentare|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Gibt den Typ des Werts in der `SSVARIANT`-Struktur an.|  
+|vt|SSVARTYPE|||Gibt den Typ des Werts in der `SSVARIANT`-Struktur an.|  
 |bTinyIntVal|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|Unterstützt den `tinyint`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sShortIntVal|DBTYPE_I2|`SHORT`|`VT_SS_I2`|Unterstützt den `smallint`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |lIntVal|DBTYPE_I4|`LONG`|`VT_SS_I4`|Unterstützt den `int`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -68,13 +68,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|Unterstützt den `date`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|Unterstützt die Datentypen `smalldatetime`, `datetime` und `datetime2` von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Unterstützt den `time`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) gibt an, für die Dezimalstellen *tTime2Val* Wert.|  
-|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Unterstützt den `datetime2`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *TsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) gibt an, für die Dezimalstellen *TsDataTimeVal* Wert.|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Unterstützt den `datetimeoffset`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *TsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) gibt an, für die Dezimalstellen *TsoDateTimeOffsetVal* Wert.|  
+|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Unterstützt den `datetime2`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) gibt an, für die Dezimalstellen *TsDataTimeVal* Wert.|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Unterstützt den `datetimeoffset`-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) gibt an, für die Dezimalstellen *TsoDateTimeOffsetVal* Wert.|  
 |NCharVal|Kein entsprechender OLE DB-Typindikator.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Unterstützt die `nchar` und **Nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (`SHORT`) gibt an, die tatsächliche Länge der Zeichenfolge, mit der *PwchNCharVal* Punkte. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (`SHORT`) gibt die maximale Länge für die Zeichenfolge, die die *PwchNCharVal* Punkte.<br /><br /> *PwchNCharVal* (`WCHAR` \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member: *RgbReserved*, *DwReserved*, und *PwchReserved*.|  
 |CharVal|Kein entsprechender OLE DB-Typindikator.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Unterstützt die `char` und **Varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (`SHORT`) gibt an, die tatsächliche Länge der Zeichenfolge, mit der *PchCharVal* Punkte. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (`SHORT`) gibt die maximale Länge für die Zeichenfolge, die die *PchCharVal* Punkte.<br /><br /> *PchCharVal* (`CHAR` \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member:<br /><br /> *RgbReserved*, *DwReserved*, und *PwchReserved*.|  
 |BinaryVal|Kein entsprechender OLE DB-Typindikator.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Unterstützt die `binary` und **Varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (`SHORT`) gibt an, die tatsächliche Länge der Daten auf die *PrgbBinaryVal* Punkte.<br /><br /> *sMaxLength* (`SHORT`) gibt die maximale Länge für die Daten auf die *PrgbBinaryVal* Punkte.<br /><br /> *PrgbBinaryVal* (`BYTE` \*) Zeiger auf die binären Daten.<br /><br /> Nicht verwendete Member: *DwReserved*.|  
 |UnknownType|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|  
-|"Blobtype"|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|  
+|BLOBType|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;OLE-DB&#41;](data-types-ole-db.md)  

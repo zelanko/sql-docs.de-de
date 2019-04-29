@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061241"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile (Ereignisklasse)
   Die SQL:StmtRecompile-Ereignisklasse zeigt Neukompilierungen auf Anweisungsebene an, die durch jegliche Arten von Batches, durch gespeicherte Prozeduren, durch Trigger, durch Ad-hoc-Batches sowie durch Abfragen verursacht wurden. Abfragen können über sp_executesql, dynamische SQL-Anweisungen, Prepare-Methoden, Execute-Methoden oder ähnliche Schnittstellen gesendet werden. Die SQL:StmtRecompile-Ereignisklasse sollte anstelle der SP:Recompile-Ereignisklasse verwendet werden.  

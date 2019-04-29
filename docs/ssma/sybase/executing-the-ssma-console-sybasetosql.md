@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126303"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ausführen der SSMA-Konsole (SybaseToSQL)
 Microsoft bietet einen robusten Satz von Skript Befehle zum Ausführen und Steuerungsaktivitäten SSMA Datei. Die folgenden Abschnitte enthalten Informationen identisch.  
@@ -35,14 +35,14 @@ Die Konsolenanwendung verwendet bestimmte standard Skriptbefehle für die Datei 
 ## <a name="project-commands"></a>Projektbefehle  
 Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beenden von Projekten.  
   
-### <a name="create-new-project"></a>Neues-Projekt erstellen  
+### <a name="create-new-project"></a>create-new-project  
 Dieser Befehl erstellt ein neues SSMA-Projekt.  
   
 -   `project-folder` Gibt den Ordner des Projekts erstellt.  
   
 -   `project-name` Gibt den Namen des Projekts. {string}  
   
--   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
+-   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {boolean}  
   
 -   `project-type:`Optionales Attribut. Gibt den Projekttyp, der "Sql Server 2005" Projekt oder "Sql Server 2008" Projekt "Sql Server 2012", Projekt oder "Sql Server 2014", Projekt oder "Sql Azure"-Projekt ist. Standardwert ist "Sql-Server-2008."  
   
@@ -113,7 +113,7 @@ Die Verbindung mit Datenbank-Befehle können mit der Datenbank herstellen.
 > - Die **Durchsuchen** Feature der Benutzeroberfläche wird in der Konsole nicht unterstützt.  
 > - Weitere Informationen zu "Erstellen von Skriptdateien", finden Sie unter [Skriptdateien erstellen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>Connect-Source-Datenbank  
+### <a name="connect-source-database"></a>connect-source-database  
 Mit diesem Befehl wird die Verbindung mit der Quelldatenbank und lädt hochrangige Metadaten von der Quelldatenbank, jedoch nicht alle Metadaten.
   
 Wenn die Verbindung mit der Datenquelle hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.
@@ -143,7 +143,7 @@ Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenpara
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>Verbindung-Source-Datenbank  
+### <a name="reconnect-source-database"></a>reconnect-source-database  
 Dieser Befehl erneut eine Verbindung herstellt, für die Datenbank jedoch keine Metadaten im Gegensatz zu den Connect-Source-Database-Befehl wird nicht geladen.  
   
 Ein Fehler wird generiert, wenn die Verbindung mit der Datenquelle hergestellt werden kann, und die Konsolenanwendung beendet die Ausführung weiter.  
@@ -154,7 +154,7 @@ Ein Fehler wird generiert, wenn die Verbindung mit der Datenquelle hergestellt w
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>Connect-Zieldatenbank  
+### <a name="connect-target-database"></a>connect-target-database  
 Mit diesem Befehl eine Verbindung mit SQL Server-Zieldatenbank her und lädt hochrangige Metadaten der Zieldatenbank, aber nicht die Metadaten vollständig.  
   
 Wenn die Verbindung mit dem Ziel hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung weiter beendet die Ausführung.  
@@ -167,7 +167,7 @@ Definition des Servers werden aus dem Namensattribut für jede Verbindung im Ser
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>Verbindung-Zieldatenbank  
+### <a name="reconnect-target-database"></a>reconnect-target-database  
   
 Mit diesem Befehl erneut eine Verbindung herstellt, in die Zieldatenbank aber keine Metadaten, im Gegensatz zu den Connect-Ziel-Database-Befehl wird nicht geladen.  
   
@@ -251,7 +251,7 @@ oder
 ## <a name="migration-commands"></a>Migrationsbefehle  
 Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver.  
   
-### <a name="convert-schema"></a>Convert-schema  
+### <a name="convert-schema"></a>convert-schema  
 Mit diesem Befehl wird die schemakonvertierung aus der Quelle in das Zielschema.  
   
 Wenn die Quelle oder Ziel-datenbankverbindung wird nicht vor dem Ausführen dieses Befehls ausgeführt, oder die Verbindung mit der Quelle oder Ziel-Datenbank-Server ein Fehler, während der Ausführung des Befehls auftritt, wird ein Fehler generiert, und die Konsolenanwendung wird beendet.  
@@ -312,7 +312,7 @@ oder
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>Migrieren von Daten  
+### <a name="migrate-data"></a>migrate-data  
 Mit diesem Befehl werden die Quelldaten zum Ziel migriert.  
   
 -   `object-name:` Gibt an, die Source-Objekte, die für die Migration als Daten (einzelne unterstützt-Objektnamen oder einen Gruppennamen für das Objekt).  
@@ -372,7 +372,7 @@ Der Befehl Vorbereiten der Migration initiiert schemazuordnung zwischen den Quel
 > [!NOTE]  
 > Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
-### <a name="map-schema"></a>Map-schema  
+### <a name="map-schema"></a>map-schema  
 Dieser Befehl stellt die schemazuordnung von der Quelldatenbank mit dem Zielschema.  
   
 -   `source-schema` Gibt das Quellschema aus, um zu migrieren.  
@@ -408,9 +408,9 @@ Wenn die Verbindung mit der Zieldatenbank wird nicht ausgeführt, bevor Sie dies
   
     -   Bericht insgesamt als Warnung  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fehler-Skript  
+    -   fail-script  
   
 -   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Synchronisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **TargetSynchronizationReport.XML** erstellt wird.  
   
@@ -454,7 +454,7 @@ oder
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>Refresh-aus-Datenbank  
+### <a name="refresh-from-database"></a>refresh-from-database  
 Dieser Befehl aktualisiert die Quellobjekte in der Datenbank.  
   
 Wenn dieser Befehl für die Zieldatenbank ausgeführt wird, wird ein Fehler generiert.  
@@ -469,9 +469,9 @@ Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenpara
   
     -   Bericht insgesamt als Warnung  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fehler-Skript  
+    -   fail-script  
   
 -   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Aktualisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **SourceDBRefreshReport.XML** erstellt wird.  
   
@@ -514,7 +514,7 @@ oder
 ## <a name="script-generation-commands"></a>Befehle des Skripts generieren  
 Dual-Aufgaben mit die Befehle für die Generierung von Skripts: sie helfen, speichern Sie die Konsolenausgabe in einer Skriptdatei, und notieren Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
   
-### <a name="save-as-script"></a>Save-als-script  
+### <a name="save-as-script"></a>save-as-script  
 Mit diesem Befehl wird zum Speichern der Skripts für die Objekte in eine Datei bereits erwähnt, wenn Metabase = Target. Dies ist eine Alternative zum Befehl zur abonnementsynchronisierung, wir der Skripts abrufen, und führen Sie in der Zieldatenbank identisch.  
   
 Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenparameter an.  
@@ -562,7 +562,7 @@ oder
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>Convert-Sql-Anweisung
+### <a name="convert-sql-statement"></a>convert-sql-statement
 Dieser Befehl konvertiert die SQL-Anweisung.  
   
 -   `context` Gibt den Schemanamen an.  

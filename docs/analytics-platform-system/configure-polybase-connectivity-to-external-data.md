@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057810"
 ---
 # <a name="what-is-polybase"></a>Was ist PolyBase?
 PolyBase ermöglicht Ihre Analytics Platform System (APS) zum Verarbeiten von Transact-SQL-Abfragen, die Lesen von Daten aus und Schreiben von Daten mit externen Datenquellen können. Die gleichen Abfragen, die Zugriff auf externe Daten können auch Beziehung Tabellen in Ihrem APS einschließen. Dadurch können Sie Daten aus externen Quellen mit hohem Wert relationalen Daten in Ihren APS-Datenbanken zu kombinieren.
@@ -26,7 +26,7 @@ PolyBase für Zugriffspunkte unterstützt das Lesen und Schreiben in HDFS (Hadoo
 > [!NOTE]
 > APS unterstützt derzeit nur standard Allgemein v1 lokal redundant (LRS) Azure Blob Storage.
 
-## <a name="features-and-limitations"></a>Funktionen und Einschränkungen
+## <a name="features-and-limitations"></a>Features und Einschränkungen
 Finden Sie unter [Funktionen und Einschränkungen für](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary) für eine Zusammenfassung der PolyBase verfügbare und bekannte Einschränkungen für Zugriffspunkten und anderen SQL Server-Produkte bietet.
 
 > [!NOTE] 
@@ -34,6 +34,6 @@ Finden Sie unter [Funktionen und Einschränkungen für](https://docs.microsoft.c
 
 ## <a name="see-also"></a>Siehe auch
 - [Hadoop](polybase-configure-hadoop.md)
-- [Azure-Blobspeicher](polybase-configure-azure-blob-storage.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

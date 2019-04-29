@@ -1,5 +1,5 @@
 ---
-title: Installieren von Analysis Services | Microsoft Docs
+title: Installieren von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054529"
 ---
 # <a name="install-sql-server-analysis-services"></a>Installieren von SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  SQL Server Analysis Services ist ein analytischer Datenbankserver, der hostet tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Kalkulationstabellen und Dashboards zugreifen können.  
+  SQL Server Analysis Services ist ein analytischer Datenbankserver, auf dem gehostet wird, tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Tabellenkalkulationen und Dashboards zugreifen können.  
   
- Analysis Services ist mit mehreren Instanzen, was bedeutet, dass Sie die mehr als eine Kopie auf einem einzelnen Computer zu installieren oder neue und alte Versionen-Seite-an-Seite ausführen können. Jede von Ihnen installierte Instanz wird in einem von drei Modi entsprechend den Setupeinstellungen ausgeführt: „Mehrdimensional und Data Mining“, „Tabellarisch“ oder „SharePoint“. Wenn Sie mehrere Modi verwenden möchten, benötigen Sie für jeden Modus eine separate Instanz.  
+ Analysis Services ist mit mehreren Instanzen, was bedeutet, dass Sie mehr als eine Kopie auf einem einzelnen Computer installieren können, oder führen Sie neue und alte Versionen-Seite-an-Seite. Jede Instanz, die Sie installieren wird in einem von drei Modi ausgeführt, während des Setups bestimmt: Mehrdimensionale und Data Mining tabellarischen oder SharePoint. Wenn Sie mehrere Modi verwenden möchten, benötigen Sie für jeden Modus eine separate Instanz.  
   
  Nach der Installation des Servers in einem bestimmten Modus können Sie ihn zum Hosten von Projektmappen nutzen, die mit dem Modus kompatibel sind. Ein Server im tabellarischen Modus ist beispielsweise erforderlich, um den Zugriff auf Daten im tabellarischen Modell über das Netzwerk zu ermöglichen.  
   
@@ -31,22 +31,22 @@ ms.locfileid: "34708078"
   
 -   [Herunterladen von SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- Sie benötigen sowohl SSMS und SSDT zum Arbeiten mit Analysis Services-Instanzen und Daten. Tools können überall installiert werden, aber Achten Sie darauf, dass Sie Ports auf dem Server zu konfigurieren, bevor Sie versuchen, eine Verbindung herzustellen. Siehe [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+ Sie benötigen sowohl SSMS und SSDT zum Arbeiten mit Analysis Services-Instanzen und Daten. Tools können überall installiert werden, aber Achten Sie darauf, dass Sie Ports auf dem Server zu konfigurieren, bevor Sie versuchen, eine Verbindung. Siehe [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="install-using-a-wizard"></a>Installieren mithilfe eines Assistenten  
  Die folgende Liste enthält die Seiten im SQL Server-Installations-Assistenten, die zum Installieren von Analysis Services verwendet werden:  
   
 1.  Wählen Sie in der Funktionsstruktur des Setups **Analysis Services** aus.  
   
-     ![Setup-Funktionsstruktur mit Funktionsstruktur Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Setup-Funktionsstruktur Funktionsstruktur Dienste anzeigen")  
+     ![Setup-Funktionsstruktur mit Funktionsstruktur Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Funktionsstruktur Dienste mit Setup-Funktionsstruktur")  
   
-2.  Wählen Sie einen Modus, auf der Seite "Analysis Services-Konfiguration". Im tabellarischer Modus ist die Standardeinstellung...  
+2.  Wählen Sie auf der Seite Analysis Services-Konfiguration einen Modus aus. Im tabellarischer Modus ist die Standardeinstellung...  
   
      ![Setupseite mit Analysis Services-Konfigurationsoptionen](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Setupseite mit Analysis Services-Konfigurationsoptionen")  
   
-  Der tabellarische Modus verwendet das xVelocity in-Memory-Modul (VertiPaq), das ist der Standardspeicher für tabellarische Modelle. Nach dem Sie tabellarische Modelle auf dem Server bereitstellen, können Sie selektiv tabellarische Projektmappen Verwendung von DirectQuery-Festplattenspeicher als Alternative zu arbeitsspeichergebundenem Speicher konfigurieren.  
+  Der tabellarische Modus verwendet die xVelocity-in-Memory-Engine (VertiPaq), handelt es sich im Standardspeicher für tabellarische Modelle. Nach der Sie tabellarische Modelle auf dem Server bereitstellen, können Sie selektiv tabellarische Lösungen zum Verwenden von DirectQuery-Festplattenspeicher als Alternative zu arbeitsspeichergebundenem Speicher konfigurieren.  
  
- Mehrdimensionale und Data Mining-Modus verwendet MOLAP als Standardspeicher für Modelle in Analysis Services bereitgestellt. Nach der Bereitstellung auf dem Server können Sie eine Projektmappe für die Verwendung von ROLAP konfigurieren, wenn Abfragen direkt gegen die relationale Datenbank ausgeführt werden sollen, anstatt Abfragedaten in eine mehrdimensionalen Analysis Services-Datenbank zu speichern.  
+ Mehrdimensionaler und Data Mining-Modus verwendet MOLAP als Standardspeicher für Modelle in Analysis Services bereitgestellt. Nach der Bereitstellung auf dem Server können Sie eine Projektmappe für die Verwendung von ROLAP konfigurieren, wenn Abfragen direkt gegen die relationale Datenbank ausgeführt werden sollen, anstatt Abfragedaten in eine mehrdimensionalen Analysis Services-Datenbank zu speichern.  
   
 
   
@@ -66,7 +66,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Bei**ASSERVERMODE** wird die Groß- und Kleinschreibung berücksichtigt.  Alle Werte müssen in Großbuchstaben angegeben werden. In der folgenden Tabelle werden die gültigen Werte für **ASSERVERMODE**beschrieben.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |TABULAR|Dies ist der Standardwert. Wenn Sie nicht festlegen **ASSERVERMODE**, der Server im tabellarischen Modus installiert ist.|
 |MULTIDIMENSIONAL|Dieser Wert ist optional.|  

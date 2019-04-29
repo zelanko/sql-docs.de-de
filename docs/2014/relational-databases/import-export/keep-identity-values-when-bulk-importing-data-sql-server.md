@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064582"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
   Datendateien, die Identitätswerte enthalten, können per Massenimport in eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übertragen werden. Standardmäßig werden die Werte für die Identitätsspalte in der importierten Datendatei ignoriert, und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden automatisch eindeutige Werte zugewiesen. Die eindeutigen Werte basieren auf dem Ausgangswert und den inkrementellen Werten, die bei der Tabellenerstellung angegeben werden.  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Weitere Informationen zum Erstellen einer Formatdatei finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Mit "bcp" und unter Beibehaltung der Identitätswerte  
- Anhand des nachfolgenden Beispiels wird veranschaulicht, wie Identitätswerte beibehalten werden können, wenn `bcp` für den Massenimport von Daten verwendet wird. Die `bcp` Befehl verwendet die Formatdatei `myDepartment-f-n-x.Xml`, und verfügt über folgende Schalter:  
+ Anhand des nachfolgenden Beispiels wird veranschaulicht, wie Identitätswerte beibehalten werden können, wenn `bcp` für den Massenimport von Daten verwendet wird. Der Befehl `bcp` verwendet die Formatdatei `myDepartment-f-n-x.Xml` und enthält folgende Schalter:  
   
 |Qualifizierer|Description|  
 |----------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignis-Instanziierung: Visual C++ | Microsoft-Dokumentation'
+title: 'ADO-Ereignisinstanziierung: Visual C++ | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062946"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignisinstanziierung: Visual C++
 Dies ist eine schematische Darstellung Beschreibung der ADO-Ereignisse in Microsoft® Visual C++® zu instanziieren. Finden Sie unter [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) für eine vollständige Beschreibung.  

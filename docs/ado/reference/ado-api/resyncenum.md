@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060967"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Gibt an, ob die zugrunde liegende Werte überschrieben werden, durch einen Aufruf von [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Standard. Daten werden überschrieben, und ausstehende Updates werden abgebrochen.|  
 |**adResyncUnderlyingValues**|1|Daten nicht überschrieben, und ausstehende Updates nicht abgebrochen werden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071136"
 ---
 # <a name="execute-method-ado-connection"></a>Execute-Methode (ADO-Verbindung)
 Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder Anbieter-spezifischen Text.  
@@ -39,14 +39,14 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Gibt eine [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) Objektverweis.  
   
 #### <a name="parameters"></a>Parameter  
- *CommandText-Eigenschaft*  
+ *CommandText*  
  Ein **Zeichenfolge** Wert, der die SQL-Anweisung, gespeicherte Prozedur, eine URL oder Anbieter-spezifischen Text zum Ausführen enthält. **Optional**, Tabellennamen können jedoch nur verwendet werden, wenn der Anbieter SQL bewusst ist. Wenn z. B. einen Tabellennamen "Kunden" verwendet wird, voranstellen ADO die SQL-Select-Standardsyntax bilden, und übergeben "SELECT * FROM Customers" als eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung an den Anbieter.  
   
  *RecordsAffected*  
- Optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen.  
+ Dies ist optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen.  
   
- *enthalten*  
- Optional. Ein **lange** Wert, der angibt, wie der Anbieter die CommandText-Argument ausgewertet werden soll. Eine Bitmaske aus einem oder mehreren möglich [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte.  
+ *Optionen*  
+ Dies ist optional. Ein **lange** Wert, der angibt, wie der Anbieter die CommandText-Argument ausgewertet werden soll. Eine Bitmaske aus einem oder mehreren möglich [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte.  
   
  **Beachten Sie** verwenden die **ExecuteOptionEnum** Wert **AdExecuteNoRecords** zur Verbesserung der Leistung durch Minimierung der internen Verarbeitung und für Anwendungen, die Sie von Visual Basic 6.0 portieren.  
   

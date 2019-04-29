@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 072373adbca54132b3f1f34284d12c31f721e7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127925"
 ---
 # <a name="scalar-functions"></a>Skalarfunktionen
 Der Microsoft ODBC Desktop-Datenbanktreiber unterstützen die folgenden skalaren Funktionen:  
@@ -32,7 +32,7 @@ Der Microsoft ODBC Desktop-Datenbanktreiber unterstützen die folgenden skalaren
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|Benutzer|  
+|DATABASE|LSCHNEIDEN|Benutzer|  
 |DAYOFMONTH|MOD|YEAR|  
 |TAGDERWOCHE|MONTH||  
   

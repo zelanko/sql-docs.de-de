@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061328"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed-Ereignisklasse
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed (Ereignisklasse)
   Die TM: Rollback Tran Completed-Ereignisklasse gibt an, dass eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Rollback der aktuellen Transaktion gestartet wird.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed-Ereignisklasse-Datenspalten  

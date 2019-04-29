@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047190"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "47794318"
 |**file_version**|**varchar(23)**|Version der Datei. Hält das folgende Format ein:<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|Version des Produkts. Hält das folgende Format ein:<br /><br /> x.x:x.x|  
 |**debug**|**bit**|1 = Modul ist eine Debugversion des geladenen Moduls.|  
-|**gepatcht**|**bit**|1 = Modul wurde gepatcht.|  
+|**patched**|**bit**|1 = Modul wurde gepatcht.|  
 |**prerelease**|**bit**|1 = Modul ist eine Vorabversion des geladenen Moduls.|  
 |**private_build**|**bit**|1 = Modul ist ein privater Build des geladenen Moduls.|  
 |**special_build**|**bit**|1 = Modul ist ein spezieller Build des geladenen Moduls.|  
-|**Sprache**|**int**|Sprache der Versionsinformationen des Moduls.|  
-|**Unternehmen**|**nvarchar(256)**|Name des Unternehmens, von dem das Modul erstellt wurde.|  
+|**language**|**int**|Sprache der Versionsinformationen des Moduls.|  
+|**company**|**nvarchar(256)**|Name des Unternehmens, von dem das Modul erstellt wurde.|  
 |**description**|**nvarchar(256)**|Beschreibung des Moduls.|  
 |**name**|**nvarchar(255)**|Name des Moduls. Schließt den vollständigen Pfad des Moduls ein.|  
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  

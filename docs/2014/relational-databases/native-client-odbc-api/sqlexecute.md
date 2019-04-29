@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067496"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   Wenn das Anweisungsattribut SQL_SOPT_SS_PARAM_FOCUS auf 0 (null) SQLExecute nicht festgelegt ist, wird SQL_ERROR zurück und einen Diagnosedatensatz mit SQLSTATE generiert = HY024 und der Meldung "Ungültiger Attributwert, SQL_SOPT_SS_PARAM_FOCUS (muss bei Ausführungszeit NULL sein)". Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS finden Sie unter [SQLSetStmtAttr](sqlsetstmtattr.md).  

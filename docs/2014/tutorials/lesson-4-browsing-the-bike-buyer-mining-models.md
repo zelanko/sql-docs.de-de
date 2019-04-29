@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070889"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen der Bike Buyer-Miningmodells
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen des Bike Buyer-Miningmodells
   In dieser Lektion verwenden Sie die [SELECT (DMX)](/sql/dmx/select-dmx) Anweisung zum Untersuchen des Inhalts in der Decision Tree- und clustering-Miningmodelle modelliert, die Sie im erstellten [Lektion 2: Hinzufügen von Miningmodellen zur der Vorhersageminingstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Die in einem Miningmodell enthaltenen Spalten entsprechen nicht den Spalten, die durch die Miningstruktur definiert werden; stattdessen handelt es sich um eine bestimmte Gruppe von Spalten, die die vom Algorithmus ermittelten Tendenzen und Muster beschreiben. Diese Miningmodellspalten werden beschrieben, der [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) -Schemarowsets. Beispielsweise enthält die MODEL_NAME-Spalte im Schemarowset für den Inhalt den Namen des Miningmodells. Für ein Clustering-Miningmodell enthält die NODE_CAPTION-Spalte den Namen des jeweiligen Clusters und die NODE_DESCRIPTION-Spalte eine Beschreibung der Merkmale des jeweiligen Clusters. Sie können diese Spalten durchsuchen, indem Sie mit der SELECT FROM \<Modell >. Inhalt in DMX-Anweisung. Sie können diese Anweisung auch verwenden, um die zum Erstellen des Miningmodells verwendeten Daten zu durchsuchen. Drillthrough muss in der Miningstruktur aktiviert sein, um diese Anweisung verwenden zu können. Weitere Informationen zur Anweisung finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  

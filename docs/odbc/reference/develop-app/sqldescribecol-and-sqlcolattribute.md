@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149031"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol und SQLColAttribute
 **SQLDescribeCol** und **SQLColAttribute** werden verwendet, um die resultsetmetadaten abzurufen. Der Unterschied zwischen diesen beiden Funktionen besteht darin, die **SQLDescribeCol** gibt immer die gleichen fünf Angaben (eines Spaltenwerts Namen, Datentyp, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit), während **SQLColAttribute** gibt ein einzelnes Stück von der Anwendung angeforderten Informationen. Allerdings **SQLColAttribute** kann eine viel umfangreichere Auswahl von Metadaten, einschließlich eines Spaltenwerts Groß-/Kleinschreibung zurückgegeben, Größe, aktualisierbarkeit und Auffindbarkeit anzuzeigen.  

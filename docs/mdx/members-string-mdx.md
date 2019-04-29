@@ -1,5 +1,5 @@
 ---
-title: Members (Zeichenfolge) (MDX) | Microsoft Docs
+title: Members (Zeichenfolge) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 302445cadc829de35eca28db2888aaa01673ca75
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048450"
 ---
 # <a name="members-string-mdx"></a>Members (Zeichenfolge) (MDX)
 
@@ -33,10 +33,10 @@ Members(Member_Name)
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Members (Zeichenfolge)** Funktion gibt ein einzelnes Element mit dem angegebenen Namen zurück. Normalerweise verwenden Sie die **Members (Zeichenfolge)** -Funktion mit externen Funktionen verwendet, auf die **Members (Zeichenfolge)** -Funktion eine Zeichenfolge, die ein Element kennzeichnet und den **Members (Zeichenfolge)** Funktion gibt den Wert für dieses Element angegeben.  
+ Die **Members (Zeichenfolge)** Funktionsergebnis ist ein einzelnes Element, dessen Name angegeben ist. Normalerweise verwenden Sie die **Members (Zeichenfolge)** -Funktion mit externen Funktionen verwendet, auf die **Members (Zeichenfolge)** -Funktion eine Zeichenfolge, die ein Element identifiziert und die **Members (Zeichenfolge)**  Funktion gibt den Wert für dieses Element angegeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die **Members (Zeichenfolge)** Funktion, um die angegebene Zeichenfolge in ein gültiges Element zu konvertieren, und klicken Sie dann das Standardmeasure für das in der Zeichenfolge angegebene Element zurückgegeben. Die angegebene Zeichenfolge ist in einfache Anführungszeichen eingeschlossen. Das Standardmeasure entspricht dem Reseller Sales Amount-Measure.  
+ Im folgenden Beispiel wird die **Members (Zeichenfolge)** -Funktion zum Konvertieren von der angegebenen Zeichenfolge in ein gültiges Element und gibt dann das Standardmeasure für das in der Zeichenfolge angegebene Element zurück. Die angegebene Zeichenfolge ist in einfache Anführungszeichen eingeschlossen. Das Standardmeasure entspricht dem Reseller Sales Amount-Measure.  
   
 ```  
 SELECT Members ('[Geography].[Geography].[Country].&[United States] ') ON 0  

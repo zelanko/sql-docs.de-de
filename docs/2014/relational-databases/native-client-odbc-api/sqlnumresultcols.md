@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046755"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Bei ausgeführten Anweisungen geht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ist nicht besuchen Sie den Server aus, um die Anzahl der Spalten in einem Resultset zu melden. In diesem Fall `SQLNumResultCols` bewirkt nicht, dass ein Server-Roundtrip erstellt. Wie [SQLDescribeCol](sqldescribecol.md) und [SQLColAttribute](sqlcolattribute.md), wird beim Aufruf `SQLNumResultCols` für vorbereitete aber nicht ausgeführte Anweisungen ein Server-Roundtrip erstellt.  
@@ -29,7 +29,7 @@ ms.locfileid: "53372612"
  Verbesserungen in der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLNumResultCols abrufen genauere Beschreibungen der erwarteten Ergebnisse zu ermöglichen. Diese genaueren Ergebnisse unterscheiden sich möglicherweise aus den Werten, die vom SQLNumResultCols in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLNumResultCols-Funktion](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols Function](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

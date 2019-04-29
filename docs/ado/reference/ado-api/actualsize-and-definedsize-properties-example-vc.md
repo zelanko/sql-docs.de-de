@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065465"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize und DefinedSize – Beispiel (VC++)
 Dieses Beispiel verwendet die [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften, die die definierte Größe und die tatsächliche Größe eines Felds angezeigt.  
@@ -130,22 +130,22 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
  **Store-Name: Eric Bücher lesen**  
-**Definiert Größe: 40**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 19**  
-**Name des Store: Der Barnum**  
-**Definiert Größe: 40**  
+**Store-Name: Barnum's**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 8**  
 **Store-Name: Nachrichten & Brews**  
-**Definiert Größe: 40**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 12**  
 **Store-Name: Doc-U-Mat: Qualität Wäsche und Büchern**  
-**Definiert Größe: 40**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 36**  
 **Store-Name: Fricative Bookshop**  
-**Definiert Größe: 40**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 18**  
 **Store-Name: Bookbeat**  
-**Definiert Größe: 40**  
+**Definierte Größe: 40**  
 **Tatsächliche Größe: 8**   
 ## <a name="see-also"></a>Siehe auch  
  [ActualSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

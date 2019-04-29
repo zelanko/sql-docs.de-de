@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062866"
 ---
 # <a name="service-providers-and-components"></a>Dienstanbieter und -komponenten
 Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbieter erweitern, durch die Implementierung von erweiterter Schnittstellen, die nicht nativ vom Datenspeicher unterstützt werden.  

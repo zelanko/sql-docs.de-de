@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065186"
 ---
 # <a name="ado-api-reference"></a>ADO – API-Referenz
 In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Objekt, Sammlung, Eigenschaft, dynamische Eigenschaft, Methode, Ereignis und -Enumeration. Darüber hinaus enthält es sich um eine Liste von ADO – Syntaxindizes mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  
@@ -49,5 +49,5 @@ In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Ob
  [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

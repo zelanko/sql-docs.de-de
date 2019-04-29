@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049966"
 ---
 # <a name="data-buffer-type"></a>Datenpuffertyp
 Die C-Datentyp eines Puffers, die von der Anwendung angegeben ist. Mit einer einzelnen Variablen geschieht dies, wenn die Anwendung die Variable weist. Mit generischen Arbeitsspeicher - Speicher verweist einen Zeiger vom Typ "void" - tritt auf, d. h. dies, wenn die Anwendung den Arbeitsspeicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt, dieser Typ gibt es zwei Möglichkeiten:  

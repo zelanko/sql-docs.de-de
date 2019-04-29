@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046525"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Richtlinien zur Unterstützung für SQL Server Native Client
   In diesem Thema wird die Verwendung verschiedener Datenzugriffskomponenten mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert.  
@@ -29,9 +29,9 @@ ms.locfileid: "48142480"
 |SQL Server Native Client-Version|Unterstützte Betriebssysteme|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|– Microsoft Windows 2000 Service Pack 4 oder höher<br />– Microsoft Windows Server 2003 oder höher<br />– Microsoft Windows XP Service Pack 1 oder höher<br />– Microsoft Windows Vista (erfordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicepack 2 oder höher)<br />– Microsoft Windows Server 2008 (erfordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicepack 2 oder höher)|  
-|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|– Microsoft Windows Server 2003 Service Pack 2 oder höher<br />– Microsoft Windows XP Service Pack 2 oder höher<br />– Microsoft Windows Vista<br />-Microsoft Windows Server 2008|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|– Microsoft Windows Server 2003 Service Pack 2 oder höher<br />– Microsoft Windows XP Service Pack 2 oder höher<br />– Microsoft Windows Vista<br />-Microsoft Windows Server 2008<br />– Microsoft Windows 7|  
-|SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|– Microsoft Windows Vista<br />-Microsoft Windows Server 2008<br />– Microsoft Windows 7<br />– Microsoft Windows 8<br />-Microsoft Windows Server 2012|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|– Microsoft Windows Server 2003 Service Pack 2 oder höher<br />– Microsoft Windows XP Service Pack 2 oder höher<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|– Microsoft Windows Server 2003 Service Pack 2 oder höher<br />– Microsoft Windows XP Service Pack 2 oder höher<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7|  
+|SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7<br />-   Microsoft Windows 8<br />-Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>Richtlinien zur ADO-Unterstützung  
  ADO-Anwendungen können den zum Lieferumfang von Windows gehörenden SQLOLEDB OLE DB-Anbieter verwenden, sofern sie keine Funktionen von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher benötigen.  

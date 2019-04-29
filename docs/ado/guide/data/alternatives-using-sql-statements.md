@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063106"
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternativen: Verwenden von SQL-Anweisungen
 ADO kann auch mithilfe der Befehle als Alternative zu den integrierten Eigenschaften und Methoden zum Bearbeiten von Daten. Abhängig von Ihrem Anbieter, können alle Vorgänge, die in diesem Abschnitt aufgeführten auch erreichen, indem Befehle an die Datenquelle übergeben. Z. B. für die SQL UPDATE-Anweisungen verwendet werden können, zum Ändern von Daten ohne Verwendung der **Wert** Eigenschaft eine **Feld**. SQL-INSERT-Anweisungen können verwendet werden, um neue Datensätze zu einer Datenquelle, statt die ADO-Methode hinzufügen **AddNew**. Weitere Informationen zu SQL oder der Datenbearbeitungssprache Ihres Anbieters finden Sie in der Dokumentation zu Ihrer Datenquelle.  

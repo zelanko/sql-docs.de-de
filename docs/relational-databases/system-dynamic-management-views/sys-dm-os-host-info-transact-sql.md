@@ -1,5 +1,5 @@
 ---
-title: dm_os_host_info (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047225"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>dm_os_host_info (Transact-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Gibt eine Zeile, in dem Versionsinformationen zum Betriebssystem angezeigt.  

@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049439"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Verwaltung und Wartung von Failoverclusterinstanzen
-  Wartungsaufgaben wie das Hinzufügen oder Entfernen von Knoten aus einer vorhandenen AlwaysOn-Failoverclusterinstanz (FCI) werden erreicht, mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup-Programm. Andere Verwaltungsaufgaben wie das Ändern der IP-Adressressource oder das Wiederherstellen nach bestimmten FCI-Szenarien werden mit dem Failovercluster-Manager-Snap-In ausgeführt, welches das Verwaltungs-Snap-In für den WSFC (Windows Server Failover Clustering)-Dienst darstellt.  
+  Wartungsaufgaben wie das Hinzufügen oder Entfernen von Knoten aus einer vorhandenen AlwaysOn-Failoverclusterinstanz (FCI) werden mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setupprogramms ausgeführt. Andere Verwaltungsaufgaben wie das Ändern der IP-Adressressource oder das Wiederherstellen nach bestimmten FCI-Szenarien werden mit dem Failovercluster-Manager-Snap-In ausgeführt, welches das Verwaltungs-Snap-In für den WSFC (Windows Server Failover Clustering)-Dienst darstellt.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Warten einer Failoverclusterinstanz  
  Nachdem Sie eine FCI installiert haben, können Sie sie mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramms ändern oder reparieren. Beispielsweise können Sie einer FCI zusätzliche Knoten hinzufügen, eine FCI als eigenständige Instanz ausführen oder einen Knoten aus einer FCI-Konfiguration entfernen.  
@@ -50,14 +50,14 @@ ms.locfileid: "48110540"
 > [!IMPORTANT]  
 >  Verwenden Sie nicht dasselbe Konto für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto und das WSFC-Dienstkonto. Wenn das Kennwort für das WSFC-Dienstkonto geändert wird, verursacht die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation einen Fehler.  
   
- Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Verwalten einer Failoverclusterinstanz  
   
 |Taskbeschreibung|Themenlink|  
 |----------------------|----------------|  
 |Beschreibt, wie Abhängigkeiten zu einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource hinzugefügt werden.|[Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos ist ein Netzwerkauthentifizierungsprotokoll, das entwickelt wurde, um strenge Authentifizierung für Client/Server-Anwendungen bereitzustellen. Kerberos bietet die Grundlagen für Interoperabilität und verbessert gleichzeitig die Sicherheit der unternehmensweiten Netzwerkauthentifizierung. Sie können die Kerberos-Authentifizierung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eigenständige Instanzen oder mit Always On-FCIs.|[Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)(Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen)|  
+|Kerberos ist ein Netzwerkauthentifizierungsprotokoll, das entwickelt wurde, um strenge Authentifizierung für Client/Server-Anwendungen bereitzustellen. Kerberos bietet die Grundlagen für Interoperabilität und verbessert gleichzeitig die Sicherheit der unternehmensweiten Netzwerkauthentifizierung. Sie können die Kerberos-Authentifizierung mit eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder mit AlwaysOn-FCIs verwenden.|[Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)(Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen)|  
 |Stellt Links zu Inhalten mit Beschreibungen dazu bereit, wie die Kerberos-Authentifizierung aktiviert wird.||  
 |Beschreibt das Verfahren zum Wiederherstellen nach einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster-Fehler.|[Wiederherstellen nach einem Fehler der Failoverclusterinstanz](recover-from-failover-cluster-instance-failure.md)|  
 |Beschreibt das Verfahren zum Ändern der IP-Adressressource für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz.|[Ändern der IP-Adresse einer Failoverclusterinstanz](change-the-ip-address-of-a-failover-cluster-instance.md)|  

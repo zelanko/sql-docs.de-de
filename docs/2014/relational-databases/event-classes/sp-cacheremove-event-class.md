@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058086"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove-Ereignisklasse
   Die SP:CacheRemove-Ereignisklasse zeigt an, dass die gespeicherte Prozedur aus dem Plancache entfernt wurde.  

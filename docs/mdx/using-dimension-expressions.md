@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Dimensionsausdrücken | Microsoft Docs
+title: Verwenden von Dimensionsausdrücken | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125532"
 ---
 # <a name="using-dimension-expressions"></a>Verwenden von Dimensionsausdrücken
 
@@ -38,7 +38,7 @@ ms.locfileid: "34743909"
   
  `FROM [Adventure Works]`  
   
- Ein dimensionsbezeichner wird als *Dimension_Name* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen.  
+ Ein dimensionsbezeichner wird als *Dimension_Name* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen verwendet.  
   
 ## <a name="hierarchy-expressions"></a>Hierarchieausdrücke  
  Ein Hierarchieausdruck enthält entweder einen Hierarchiebezeichner oder eine Hierarchiefunktion. Im folgenden Beispiel wird der Hierarchieausdruck [Date].[Calendar] in Verbindung mit der .Levels- und der .Count-Funktion verwendet, um die Anzahl der Ebenen in der Calendar-Hierarchie der Date-Dimension zurückzugeben:  
@@ -59,7 +59,7 @@ ms.locfileid: "34743909"
   
  `FROM [Adventure Works]`  
   
- Ein hierarchiebezeichner wird als *Dimension_Name **.** Hierarchiename* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen.  
+ Ein hierarchiebezeichner wird als *Dimension_Name **.** Hierarchiename* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  

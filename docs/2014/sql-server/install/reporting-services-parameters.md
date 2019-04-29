@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662fe968faadf9d5a5bba10b934c421a5d3c3e95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057578"
 ---
 # <a name="reporting-services-parameters"></a>Reporting Services-Parameter
   Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], geben Sie eine Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , und geben Sie Informationen zum Herstellen einer Verbindung mit dieser Instanz.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Reporting Services-Instanzname**  
  Wählen Sie eine Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aus der Liste aus.  
   

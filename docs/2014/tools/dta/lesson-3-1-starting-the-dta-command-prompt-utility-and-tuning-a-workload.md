@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048967"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung
   In dieser Aufgabe erfahren Sie, wie Sie das Hilfsprogramm **dta** starten, die dazugehörige Hilfe anzeigen und es anschließend zur Optimierung einer Arbeitsauslastung von der Eingabeaufforderung aus verwenden. Dabei wird die Arbeitsauslastung MyScript.sql verwendet, die Sie in der Übung zur grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)angelegt haben.  
@@ -63,7 +63,7 @@ ms.locfileid: "48171110"
   
 -   [dta Utility](dta-utility.md) enthält Referenzmaterial zum Eingabeaufforderungs-Hilfsprogramm und der optionalen XML-Datei, mit der Sie die Ausführung des Hilfsprogramms steuern können.  
   
- Gehen Sie auf die Seite [Tutorial: Datenbankoptimierungsratgeber](tutorial-database-engine-tuning-advisor.md), um zum Anfang des Tutorials zurückzukehren.  
+ Um auf den Anfang des Tutorials zurückzukehren, finden Sie unter [Lernprogramm: Datenbankoptimierungsratgeber](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)  

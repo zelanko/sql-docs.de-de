@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065763"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
   Das Zeichenformat wird für den Massenexport von Daten in eine Textdatei empfohlen, die in einem anderen Programm verwendet werden sollen, oder für den Massenimport von Daten aus einer Textdatei, die von einem anderen Programm generiert werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "48078440"
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Jedes Datenwerts wird in konvertiert `char` Format gemäß den Regeln der impliziten Datenkonvertierung. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem Datentyp außer `sql_variant`, die Daten werden von konvertiert `char` mithilfe der impliziten Konvertierung. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das `char`-Format konvertiert. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als `sql_variant` werden die Daten von `char` mithilfe der impliziten Konvertierung konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   Die **Bcp** Hilfsprogramm Exporte `money` Werte wie Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne alle Symbole wie z. B. Kommas als Trennzeichen. So wird z. B. eine `money`-Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48078440"
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen, wie Zeichendaten mithilfe von **bcp** massenexportiert und die gleichen Daten mithilfe von BULK INSERT massenimportiert werden.  
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Qualifizierer|Description|  
 |----------------|-----------------|  
 |**-c**|Gibt das Zeichenformat an.|  
-|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Das Standard-Feldabschlusszeichen ist das Tabstoppzeichen (\t). Weitere Informationen finden Sie unter [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Die Standard-Feldabschlusszeichen ist das Tabstoppzeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Im folgenden Beispiel wird ein Massenexport von Daten im Zeichenformat aus der `myTestCharData`-Tabelle in eine neue Datendatei ausgeführt. Diese Datendatei heißt `myTestCharData-c.Dat` und verwendet das Komma (,) als Feldabschlusszeichen. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  

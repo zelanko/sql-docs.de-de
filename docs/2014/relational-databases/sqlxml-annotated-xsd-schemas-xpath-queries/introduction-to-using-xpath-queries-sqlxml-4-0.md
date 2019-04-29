@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127702"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
   XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorlage angegeben werden. Das Zuordnungsschema bestimmt die Struktur des resultierenden Fragments, und die Werte werden aus der Datenbank abgerufen. Dieser Vorgang ähnelt prinzipiell dem Erstellen von Sichten mit der CREATE VIEW-Anweisung und dem Schreiben von SQL-Abfragen für diese Sichten.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753372"
   
  Bei der Angabe von XPath-Abfragen in einer Vorlage ist Folgendes zu beachten:  
   
--   XPath kann Zeichen wie < oder & enthalten, die in XML (und eine Vorlage ist ein XML-Dokument) eine spezielle Bedeutung haben. Sie müssen diese Zeichen mittels XML &-Codierung mit Escapezeichen versehen oder XPath in der URL angeben.  
+-   XPath kann Zeichen enthalten, z. B. < oder &, die eine besondere Bedeutung in XML-Datei (und Vorlage ist ein XML-Dokument). Sie müssen diese Zeichen mithilfe von XML mit Escapezeichen versehen &-Codierung, oder geben Sie den XPath in der URL.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von XPath-Abfragen in SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073929"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt zwei Funktionen bereit, mit denen Änderungen in einer Datenbank nachverfolgt werden: [Change Data Capture](#Capture) und [Änderungsnachverfolgung](#Tracking). Mit diesen Funktionen können Anwendungen die DML-Änderungen (Einfüge-, Aktualisierungs- und Löschvorgänge) ermitteln, die an Benutzertabellen in einer Datenbank vorgenommen wurden. Change Data Capture und die Änderungsnachverfolgung können auf derselben Datenbank aktiviert werden, d. h., es sind keine zusätzlichen Überlegungen erforderlich. Für die Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Change Data capture und änderungsnachverfolgung, unterstützen, finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "53351702"
   
 -   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. In der Dokumentation für [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], das Thema "Vorgehensweise: SQL Server die Änderungsnachverfolgung verwenden"enthält ausführliche Informationen und Codebeispiele.  
+     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. In der [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]-Dokumentation finden Sie im Thema „How to: Use SQL Server Change Tracking“ (Vorgehensweise: Verwenden der SQL Server-Änderungsnachverfolgung) detaillierte Informationen und Codebeispiele.  
   
   
 ## <a name="related-tasks-required"></a>Verwandte Aufgaben (erforderlich)  
