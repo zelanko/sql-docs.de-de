@@ -1,5 +1,5 @@
 ---
-title: 'Task 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz von Daten | Microsoft-Dokumentation'
+title: 'Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz von Daten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250106"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Task 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Datensatzes
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](https://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  
   
 1.  Starten Sie die neue Instanz der **Excel**. Klicken Sie auf **starten**, zeigen Sie auf **ausführen**, Typ **Excel**, und klicken Sie auf **OK**.  
@@ -30,7 +30,7 @@ ms.locfileid: "56014278"
   
 4.  Daraufhin sollte die **Master Data Explorer** rechts. Wenn Sie die Master Data Explorer nicht angezeigt werden, klicken Sie auf **Explorer anzeigen** Schaltfläche auf dem Menüband.  
   
-5.  In der **Master Data Explorer** , wählen Sie im Fenster **Lieferanten** in der Dropdown-Liste für die **Modell**. Für das Modell sollte eine Entität angezeigt werden: **Lieferanten**.  
+5.  In der **Master Data Explorer** , wählen Sie im Fenster **Lieferanten** in der Dropdown-Liste für die **Modell**. Sollte angezeigt werden, dass das Modell eine Entität verfügt: **Lieferanten**.  
   
      ![Excel – Master Data Explorer-Fenster](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel – Master Data Explorer-Fenster")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56014278"
   
 25. Klicken Sie auf **OK**.  
   
-26. Der Abgleichsprozess sollte ein Duplikat für den Lieferanten mit folgendem Code identifizieren: **S1**.  
+26. Der Abgleichsprozess sollte ein Duplikat identifizieren, für den Lieferanten mit **Code: S1**.  
   
      ![Excel – Abgleichsergebnisse](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel – Abgleichsergebnisse")  
   

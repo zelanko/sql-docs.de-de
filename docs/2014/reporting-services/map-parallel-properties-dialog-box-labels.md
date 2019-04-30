@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968266"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462103"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Paralleleneigenschaften von Karten (Dialogfeld), Bezeichnungen
   Verwenden der **MapParallel Eigenschaften** im Dialogfeld Optionen für Bezeichnungen für das horizontale Raster im kartenviewport zu ändern. Eine Parallele stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  

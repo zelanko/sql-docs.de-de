@@ -4,18 +4,18 @@ description: Dieser Artikel enthält die Anmerkungen zu dieser Version und die u
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
-ms.translationtype: MT
+ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566569"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455146"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 
@@ -24,7 +24,7 @@ ms.locfileid: "58566569"
 Die folgenden Versionshinweise gelten für SQL Server-2019 Vorschau unter Linux ausgeführt wird. In diesem Artikel wird für jede Version in Abschnitte unterteilt. Jede Version verfügt über einen Link zu einer Support-Artikel beschreiben die CU Änderungen sowie Links zu den Paketdownloads Linux.
 
 > [!TIP]
-> Weitere Informationen zu neuen Linux-Funktionen in SQL Server-2019 finden Sie unter [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> Weitere Informationen zu neuen Linux-Funktionen in SQL Server-2019 finden Sie unter [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 

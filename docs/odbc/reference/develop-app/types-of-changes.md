@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631818"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473173"
 ---
 # <a name="types-of-changes"></a>Änderungstypen
 Drei Arten von Änderungen werden in ODBC 3. vorgenommen. *x* (und alle ODBC-Version). Jeder dieser wirkt sich unterschiedlich auf Abwärtskompatibilität und in eine andere Weise behandelt wird. Diese Änderungen werden in der folgenden Tabelle beschrieben.  

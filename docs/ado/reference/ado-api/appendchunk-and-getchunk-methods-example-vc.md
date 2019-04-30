@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45853fc31ef6e18c3d64afacf9d5e998e6fc7855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248169"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk- und GetChunk-Methode – Beispiel (VC++)
 Dieses Beispiel verwendet die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden für ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207009"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457623"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (SQL-Befehl)
 Programmgesteuertes Ändern der Struktur einer Tabelle.  
@@ -70,7 +70,7 @@ ALTER TABLE TableName1
  ALTER [Spalte] *FieldName1*  
  Gibt den Namen eines vorhandenen Felds ändern.  
   
- *Feldtyp* [( *nFieldWidth* [, *nPrecision*]])  
+ *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
  Gibt den Feldtyp, Feldbreite und Feld-Genauigkeit (Anzahl der Dezimalstellen) für eine neue oder geänderte Feld an.  
   
  *Feldtyp* ist ein einzelner Buchstabe verwendet, der des Felds des angibt [Datentyp](../../odbc/microsoft/visual-foxpro-field-data-types.md). Einige Felddatentypen erfordern die Angabe *nFieldWidth* oder *nPrecision* oder beides.  
@@ -85,7 +85,7 @@ ALTER TABLE TableName1
  Überprüfen Sie *lExpression1*  
  Gibt eine Überprüfungsregel für das Feld. *lExpression1* muss zu einem logischen Ausdruck ausgewertet und kann eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zulässt.  
   
- Fehler *cMessageText1*  
+ ERROR *cMessageText1*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert.  
   
  Standard *eExpression1*  
@@ -128,7 +128,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  SET-CHECK *lExpression2*  
  Gibt eine neue Überprüfungsregel für ein vorhandenes Feld. *lExpression2* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- Fehler *cMessageText2*  
+ ERROR *cMessageText2*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
  DROP DEFAULT  
@@ -145,7 +145,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  SET-CHECK *lExpression3*  
  Gibt die Validierungsregel für die Tabelle an. *lExpression3* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- Fehler *cMessageText3*  
+ ERROR *cMessageText3*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel für die Tabelle einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
  LÖSCHEN SIE DIE KONTROLLKÄSTCHEN  

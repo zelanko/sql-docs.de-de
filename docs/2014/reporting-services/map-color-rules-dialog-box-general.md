@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963696"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461872"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Farbregeln der Karte (Dialogfeld), Allgemein
   Wählen Sie **Allgemein** im **Dialogfeld für Farbregeleigenschaften** aus, um Farboptionen für Kartenelemente in dieser Ebene zu definieren. Kartenelemente sind Polygone, Linien und Punkte. Farbregeln können angewendet werden, wenn Sie auf der Grundlage räumlicher Daten und analytischer Daten in einem Datasetfeld oder in einem räumlichen Datenquellenfeld eine Beziehung zwischen Kartenelementen erstellt haben.  

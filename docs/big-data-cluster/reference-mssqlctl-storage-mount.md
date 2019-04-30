@@ -1,20 +1,20 @@
 ---
 title: Mssqlctl Storage Mount-Referenz
 titleSuffix: SQL Server big data clusters
-description: Der Referenzartikel für die Speicherbefehle Mssqlctl.
+description: Der Referenzartikel für die Mssqlctl Storage Mount-Befehle.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 523253e8d1ff2d621d9f7a5ef90dbc957fba82ec
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860291"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473484"
 ---
 # <a name="mssqlctl-storage-mount"></a>mssqlctl-Speicherbereitstellung
 
@@ -22,98 +22,102 @@ ms.locfileid: "58860291"
 
 Der folgende Artikel bietet Referenz für die **Speicher bereitstellen** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
-## <a id="commands"></a> Befehle
-
-|||
-|---|---|
-| [create](#create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS. |
-| [delete](#delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS. |
-| [status](#status) | Status des Mount(s). |
-
-## <a id="create"></a> Erstellen Sie Mssqlctl Speicher bereitstellen
-
+## <a name="commands"></a>Befehle
+|     |     |
+| --- | --- |
+[Erstellen Sie Mssqlctl Speicher bereitstellen](#mssqlctl-storage-mount-create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS.
+[Mssqlctl Speicher Bereitstellung löschen](#mssqlctl-storage-mount-delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS.
+[Mssqlctl Storage-Bereitstellungsstatus](#mssqlctl-storage-mount-status) | Status des Mount(s).
+## <a name="mssqlctl-storage-mount-create"></a>Erstellen Sie Mssqlctl Speicher bereitstellen
 Erstellen Sie Bereitstellungen von remote-speichern in HDFS.
-
+```bash
+mssqlctl storage mount create --remote-uri 
+                              --mount-path  
+                              [--credential-file]
 ```
-mssqlctl storage mount create
-   --local-path
-   --remote-uri
-   [--credential-file]
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--local-path** | HDFS-Pfad, in dem Bereitstellungspunkt (Ziel der Bereitstellung) erstellt werden muss. Erforderlich. |
-| **--remote-uri** | Der URI der Remotespeicher, die bereitgestellte (Quelle Mount) verwendet werden soll. Erforderlich. |
-| **--credential-file** | Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet. |
-
 ### <a name="examples"></a>Beispiele
-
-Zum Bereitstellen der Container "Daten" in ADLS Gen 2-Konto "adlsv2example" HDFS-Pfad `/mounts/adlsv2/data` den gemeinsam verwendeten Schlüssel verwenden:
-
+Container "Daten" in ADLS Gen 2-Konto "adlsv2example" auf den gemeinsam verwendeten Schlüssel mit HDFS-Pfad-/mounts/adlsv2/data bereitstellen
+```bash
+mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
+    --mount-path /mounts/adlsv2/data --credentials credential_file
 ```
-mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/ --local-path /mounts/adlsv2/data --credentials credential_file
+Zum Bereitstellen von eines Remotecluster mit HDFS (Hdfs://namenode1:8080 /) auf lokales HDFS Pfad /mounts/Hdfs /
+```bash
+mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
-
-Zum Bereitstellen von eines Remotecluster mit HDFS (`hdfs://namenode1:8080/`) im lokalen HDFS-Pfad `/mounts/hdfs/`:
-
-```
-mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --local-path /mounts/hdfs/
-```
-
-## <a id="delete"></a> Mssqlctl Speicher Bereitstellung löschen
-
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--remote-uri`
+Der URI der Remotespeicher, die bereitgestellte (Quelle Mount) verwendet werden soll.
+#### `--mount-path`
+HDFS-Pfad, in denen bereitstellen (Ziel der Bereitstellung) erstellt werden muss.
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--credential-file`
+Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-storage-mount-delete"></a>Mssqlctl Speicher Bereitstellung löschen
 Löschen Sie Bereitstellungen von remote-speichern in HDFS.
-
+```bash
+mssqlctl storage mount delete --mount-path 
+                              
 ```
-mssqlctl storage mount delete
-   --local-path
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--local-path** | Der HDFS-Pfad für die Bereitstellung, die gelöscht werden. Erforderlich. |
-
 ### <a name="examples"></a>Beispiele
-
 Löschen Sie bereitstellen, die auf /mounts/adlsv2/data für ein ADLS-Gen-2-Speicherkonto erstellt.
-
+```bash
+mssqlctl storage mount delete --mount-path /mounts/adlsv2/data
 ```
-mssqlctl storage mount delete --local-path /mounts/adlsv2/data
-```
-
-## <a id="status"></a> Mssqlctl Storage-Bereitstellungsstatus
-
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--mount-path`
+Der HDFS-Pfad für die Bereitstellung, die gelöscht werden.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-storage-mount-status"></a>Mssqlctl Storage-Bereitstellungsstatus
 Status des Mount(s).
-
+```bash
+mssqlctl storage mount status [--mount-path] 
+                              
 ```
-mssqlctl storage mount status
-   --local-path
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--mount-path** | Der Bereitstellungspfad. Erforderlich. |
-
 ### <a name="examples"></a>Beispiele
-
 Bereitstellungsstatus anhand des Pfads abrufen
-
-```
+```bash
 mssqlctl storage mount status --mount-path /mounts/hdfs
 ```
-
 Status alle Bereitstellungen zu erhalten.
-
-```
+```bash
 mssqlctl storage mount status
 ```
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--mount-path`
+Der Bereitstellungspfad.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

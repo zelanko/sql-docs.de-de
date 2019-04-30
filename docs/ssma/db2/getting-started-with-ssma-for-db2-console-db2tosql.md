@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668299"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453313"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Erste Schritte mit SSMA für DB2-Konsole (DB2ToSQL)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der DB2-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
@@ -57,7 +57,7 @@ Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums- und Zeitstempel, an den Benutzer|  
-|White|Datei Skriptbefehle, Nachrichtentyp|  
+|Weiß|Datei Skriptbefehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Green|Eingabeaufforderung für Benutzereingaben|  
 |Cyan|Start, Ende und das Ergebnis eines Vorgangs|  

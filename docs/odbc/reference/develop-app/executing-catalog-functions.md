@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc53e265ffa25c5ec598187f62505f18436f1c69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248334"
 ---
 # <a name="executing-catalog-functions"></a>Ausführen von Katalogfunktionen
 Da eine Katalogfunktion auf ein Resultset erstellt wird, ist es gleichbedeutend mit dem Ergebnis generieren mit dem Satz von SQL-Anweisungen ausführen. Katalogfunktionen werden in der Tat häufig implementiert, indem Sie vordefinierte SQL-Anweisungen ausführen oder vordefinierte Schritte ausführen, die mit dem Treiber oder DBMS geliefert werden. Fast alles, das gilt für SQL-Anweisungen, die Resultsets erstellen gilt auch für Katalogfunktionen. Das Anweisungsattribut SQL_ATTR_MAX_ROWS beschränkt z. B. die Anzahl der Zeilen, die von der Katalogfunktion zurückgegeben, genau, wie sie die Anzahl der zurückgegebenen Zeilen beschränkt eine **wählen** Anweisung.  

@@ -5,16 +5,16 @@ description: Der Referenzartikel für die Speicherbefehle Mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860616"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473195"
 ---
 # <a name="mssqlctl-storage"></a>mssqlctl-Speicher
 
@@ -22,11 +22,10 @@ ms.locfileid: "58860616"
 
 Der folgende Artikel bietet Referenz für die **Storage** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
-## <a id="commands"></a> Befehle
-
-|||
-|---|---|
-| [mount](reference-mssqlctl-storage-mount.md) | Bereitstellen von remote-speichern in HDFS zu verwalten. |
+## <a name="commands"></a>Befehle
+|     |     |
+| --- | --- |
+[Mssqlctl Speicher bereitstellen](reference-mssqlctl-storage-mount.md) | Bereitstellen von remote-speichern in HDFS zu verwalten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

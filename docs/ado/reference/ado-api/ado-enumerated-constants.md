@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249054"
 ---
 # <a name="ado-enumerated-constants"></a>ADO – Enumerationskonstanten
 Um das Debuggen zu erleichtern, Listen die ADO-Enumerationen einen Wert für jede Konstante. Allerdings wird dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO auf einen anderen ändern. Ihr Code sollte nur auf den Namen, die nicht der tatsächliche Wert, der jede Enumerationskonstante abhängen.  

@@ -1,5 +1,5 @@
 ---
-title: UND (MDX) | Microsoft Docs
+title: UND (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249879"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -39,7 +39,7 @@ Expression1 AND Expression2
  Ein boolescher Wert, der gibt "true", wenn beide Parameter ausgewertet **"true"** ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **AND** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0, als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Konjunktion ausführt. Die folgende Tabelle verdeutlicht, wie die **AND** -Operator führt die logische Konjunktion.  
+ Die **und** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Konjunktion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **und** -Operator führt die logische Konjunktion.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  

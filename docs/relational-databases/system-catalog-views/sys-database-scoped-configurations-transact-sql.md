@@ -19,14 +19,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947654"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473738"
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Konfiguration. 
@@ -38,15 +38,14 @@ ms.locfileid: "51947654"
 |**value**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat.|  
 |**value_for_secondary**|**sqlvariant**|Der Wert für diese Konfigurationsoption für die sekundären Replikate.|  
 |**is_value_default**|**bit** |Gibt an, ob der festgelegte Wert der Standardwert ist.|
-|**datenbankweit gültige elevate_resumable**|nvarchar(60)|Die datenbankweit gültige Standardsatz für die resumable-Option für Indexvorgänge| 
   
 ##  <a name="Permissions"></a> Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  
+Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn NULL zurückgegeben wird, als Wert für **Value_for_secondary**, dies bedeutet, dass die sekundäre Datenbank zur primären festgelegt ist.  
+Wenn NULL zurückgegeben wird, als Wert für **Value_for_secondary**, dies bedeutet, dass die sekundäre Datenbank zur primären festgelegt ist.  
  
- Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
+Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

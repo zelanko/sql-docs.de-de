@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243801"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Workload von Verwaltungsaufgaben in Analytics Platform System
 Workload-Verwaltungsaufgaben in Analytics Platform System.
@@ -47,7 +47,7 @@ In der Ressourcenzuordnung aufgelisteten [Workloadverwaltung](workload-managemen
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>Ändern Sie die Systemressourcen auf eine Anforderung
 Beschreibt, wie Sie herausfinden, welche Ressource Klasse, die eine SQL Server-PDW-Anforderung unter ausgeführt wird, und dann auf die Systemressourcen für diese Anforderung zu ändern. Ändern die Ressourcen aus, für eine Anforderung erfordert eine Änderung der Ressource Mitgliedschaft des Anmeldenamens übermitteln der Anforderung, mit der [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) Anweisung.  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Schritt 1: Bestimmen Sie die Ressourcenklasse für die Anmeldung, die Anforderung wird ausgeführt.  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Schritt 1: Bestimmen Sie die Ressourcenklasse für die Anmeldung, die Anforderung wird ausgeführt.  
 Diese Abfrage zeigt die Anmeldungen, die Elemente der serverrollenmitgliedschaften Resource-Klasse. Es gibt drei Ressourcenklassen, **"mediumrc"**, **"largerc"**, und **"xlargerc"**.  
   
 > [!IMPORTANT]  

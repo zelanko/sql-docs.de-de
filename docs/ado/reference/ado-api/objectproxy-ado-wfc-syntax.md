@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678508"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459404"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO/WFC-Syntax)
 Ein **ObjectProxy** Objekt steht für einen Server, und wird zurückgegeben, indem die **CreateObject** Methode der [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt. Die ObjectProxy-Klasse verfügt über eine Methode, **Aufrufen**, das Aufrufen einer Methode auf dem Server und ein Objekt, das durch diesen Aufruf zurückgeben können.  
   
- **Paket com.ms.wfc.data**  
+ **package com.ms.wfc.data**  
   
 ## <a name="methods"></a>Methoden  
   
@@ -46,8 +46,8 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Ein **ObjectProxy** -Objekt, das den Server darstellt.  
   
- *Methode*  
+ *method*  
  Eine Zeichenfolge, mit dem Namen der Methode, die auf dem Server aufgerufen werden soll.  
   
  *args*  
- Optional. Ein Array von Objekten, die Argumente der Methode auf dem Server sind. Java-Datentypen werden in Datentypen, die für die Verwendung auf dem Server geeignet automatisch konvertiert.
+ Dies ist optional. Ein Array von Objekten, die Argumente der Methode auf dem Server sind. Java-Datentypen werden in Datentypen, die für die Verwendung auf dem Server geeignet automatisch konvertiert.

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie | Microsoft-Dokumentation'
+title: 'Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250294"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichrichtlinie
   In dieser Aufgabe testen und veröffentlichen die **Remove Duplicate Suppliers** Abgleichsrichtlinie.  
   
 1.  In der **Abgleichsergebnisse** auf **starten** um die gesamte Richtlinie zu testen. In diesem Fall enthält die Richtlinie nur eine Regel, daher sollten die Testergebnisse für die Regel und die Richtlinie identisch sein.  
   
 2.  Prüfen Sie alle übereinstimmenden Datensätze und ihre Treffergenauigkeit im Listenfeld. Ein Datensatz mit einem **Grün** zugeordnete Symbol ist ein Duplikat des pivotdatensatzes, der ihm vorausgeht. Hier einige Beispiele:  
   
-    1.  Der Datensatz mit der **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Bewertung: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)**, **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
+    1.  Der Datensatz mit **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Bewertung: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)**, **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
   
     2.  Der Datensatz **1000023** ist eine Übereinstimmung des Datensatzes **1000022** mit die treffergenauigkeit: 93 %, da die beiden Datensätze die gleichen Werte für haben **SupplierID (Voraussetzung)** und **Lieferantenname** Spalten aber unterschiedliche Werte für die **ContactEmailAddress** die Spalte.  
   
-    3.  Führen Sie einen Bildlauf zum Ende der Liste durch, um zwei Datensätze mit folgenden Datensatz-IDs anzuzeigen: **1000051** und **1000052**. Datensatz **1000052** als Übereinstimmung mit einer treffergenauigkeit **91 %** da die beiden Datensätze die gleichen Werte für die **SupplierID** und  **ContactEmailAddress** Spalten aber unterschiedliche Werte für die **Lieferantenname** Spalte.  
+    3.  Führen Sie einen Bildlauf zum unteren Rand der Liste aus, um zwei Datensätze mit IDs anzuzeigen: **1000051** und **1000052**. Datensatz **1000052** als Übereinstimmung mit einer treffergenauigkeit **91 %** da die beiden Datensätze die gleichen Werte für die **SupplierID** und  **ContactEmailAddress** Spalten aber unterschiedliche Werte für die **Lieferantenname** Spalte.  
   
      ![Richtliniendefinition – Richtlinienergebnisse](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "Richtliniendefinition – Richtlinienergebnisse")  
   

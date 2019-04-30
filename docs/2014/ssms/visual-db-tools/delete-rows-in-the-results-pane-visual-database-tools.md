@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812662"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460019"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Löschen von Zeilen im Ergebnisbereich (Visual Database Tools)
   Löschen Sie Zeilen im Ergebnisbereich, wenn Sie Datensätze in der Datenbank löschen möchten. Wenn Sie sämtliche Zeilen löschen möchten, können Sie eine Löschabfrage verwenden. Weitere Informationen finden Sie unter [Erstellen von Löschabfragen &#40;Visual Database Tools&#41;](visual-database-tools.md). Wenn Sie nur einige Zeilen aus dem Ergebnisbereich entfernen möchten, ändern Sie die Abfragekriterien. Weitere Informationen finden Sie unter [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249554"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigenschaften zum Hinzufügen der **Eigenschaften** Auflistungen von nicht geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte. Ein angegebenen Anbieter kann auch weitere Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften finden Sie in der [ADO – dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) Abschnitt. Mehr finden Sie unter den jeweiligen Anbietern in der [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) Abschnitt.  
@@ -40,10 +40,10 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|  
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|  
 |Datenquelle|DBPROP_INIT_DATASOURCE|  
-|Datenquellenname|RÜCKGABEWERT|  
+|Datenquellenname|DBPROP_DATASOURCENAME|  
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|  
 |Der DBMS-Name|DBPROP_DBMSNAME|  
-|DBMS-Version|DBPROP_DBMSVER|  
+|DBMS Version|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|  
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|  
@@ -57,7 +57,7 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|  
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modus|DBPROP_INIT_MODE|  
 |Mehrere Parametersätze|DBPROP_MULTIPLEPARAMSETS|  
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|  
 |Mehrere Speicherobjekte|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -65,7 +65,7 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|  
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB-Diensten|DBPROP_INIT_OLEDBSERVICES|  
-|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|  
+|OLE DB Version|DBPROP_PROVIDEROLEDBVER|  
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|  
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|  
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|  
@@ -115,7 +115,7 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |IRowsetIdentity|DBPROP_IROWSETIDENTITY|  
 |IRowsetInfo|DBPROP_IROWSETINFO|  
 |IRowsetLocate|DBPROP_IROWSETLOCATE|  
-|IRowsetRefresh abgelöst|DBPROP_IROWSETREFRESH|  
+|IRowsetRefresh|DBPROP_IROWSETREFRESH|  
 |IRowsetResynch||  
 |IRowsetScroll|DBPROP_IROWSETSCROLL|  
 |IRowsetUpdate|DBPROP_IROWSETUPDATE|  

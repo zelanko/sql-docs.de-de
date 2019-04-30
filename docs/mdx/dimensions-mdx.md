@@ -1,5 +1,5 @@
 ---
-title: Dimensionen (MDX) | Microsoft Docs
+title: Dimensionen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2703122b67debf0749abcd2ea01114fb6ecaa06
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248153"
 ---
 # <a name="dimensions-mdx"></a>Dimensionen (MDX)
 
@@ -36,19 +36,19 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Number*  
  Ein gültiger numerischer Ausdruck, der eine Hierarchienummer angibt.  
   
- *Hierarchiename*  
+ *Hierarchy_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Hierarchienamen angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Hierarchienummer angegeben wird, die **Dimensionen** Funktion gibt eine Hierarchie, deren nullbasierte Position innerhalb des Cubes ist angegebenen Hierarchienummer entspricht.  
+ Wenn eine Hierarchienummer angegeben wird, die **Dimensionen** Funktionsergebnis ist eine Hierarchie, deren nullbasierte Position innerhalb des Cubes ist angegebenen Hierarchienummer entspricht.  
   
  Wenn ein Hierarchiename angegeben wird, die **Dimensionen** Funktion die angegebene Hierarchie zurück. Normalerweise verwenden Sie diese Zeichenfolgenversion der **Dimensionen** -Funktion mit benutzerdefinierten Funktionen.  
   
 > [!NOTE]  
->  Die **Measures** Dimension immer dargestellte `Dimensions(0)`.  
+>  Die **Measures** Dimension wird immer durch dargestellt `Dimensions(0)`.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele verwenden die **Dimensionen** -Funktion Name, der die Anzahl der Ebenen und der Anzahl von Elementen einer angegebenen Hierarchie, die mithilfe eines numerischen Ausdrucks und einem Zeichenfolgenausdruck zurück.  
+ Die folgenden Beispiele verwenden die **Dimensionen** Funktion Name, der Anzahl der Ebenen und der Anzahl von Elementen einer angegebenen Hierarchie, die mithilfe eines numerischen Ausdrucks und einem Zeichenfolgenausdruck zurück.  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  

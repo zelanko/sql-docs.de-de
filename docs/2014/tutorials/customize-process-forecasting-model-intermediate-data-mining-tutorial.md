@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249403"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Anpassen und Verarbeiten des Forecasting-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus umfasst mehrere Parameter, die sich darauf auswirken, wie ein Modell angelegt und wie die Zeitdaten analysiert werden. Eine Änderung dieser Eigenschaften kann sich wesentlich auf die Methode auswirken, mit der das Miningmodell Vorhersagen trifft.  

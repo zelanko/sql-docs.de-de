@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669298"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473113"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Auf Ebene 2  
+ ODBC-API-Übereinstimmung: Ebene 2  
   
  Die Cursorposition in einem Rowset festgelegt. Sie können **SQLSetPos** mit [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) um Zeilen von ungebundenen Spalten abzurufen, nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset.  
   

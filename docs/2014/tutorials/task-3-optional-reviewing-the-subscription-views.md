@@ -1,5 +1,5 @@
 ---
-title: 'Task 3 (Optional): Überprüfung der Abonnementsichten | Microsoft-Dokumentation'
+title: 'Aufgabe 3 (optional): Überprüfung der Abonnementsichten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250000"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Task 3 (Optional): Überprüfung der Abonnementsichten
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Aufgabe 3 (optional): Überprüfung der Abonnementsichten
   In dieser Aufgabe bestätigen Sie, dass die SQL-Ansichten mit SQL Server Management Studio erstellt werden.  
   
 1.  Starten Sie **SQL Server Management Studio**. Klicken Sie auf die **starten** , zeigen Sie auf **Programme**, klicken Sie auf **Microsoft SQL Server 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  

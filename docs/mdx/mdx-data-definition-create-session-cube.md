@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SESSION CUBE-Anweisung (MDX) | Microsoft Docs
+title: CREATE SESSION CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248198"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>Datendefinition der MDX - SITZUNGSCUBE erstellen
+# <a name="mdx-data-definition---create-session-cube"></a>MDX-Datendefinition – CREATE SESSION CUBE
 
 
   Erstellt einen Sitzungscube aus einem vorhandenen Servercube und füllt ihn auf. Der Sitzungscube ist nur innerhalb der aktuellen Sitzung sichtbar. Er kann nicht durchsucht oder aus einer anderen Sitzung abgefragt werden. Der Sitzungscube wird beim Beenden der Sitzung implizit gelöscht.  
@@ -102,7 +102,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Der Name der Dimension im Sitzungscube.  
   
- AUS \<dim from-Klausel >  
+ VON \<dim from-Klausel >  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
  NOT_RELATED_TO_FACTS  
@@ -125,7 +125,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Im Sitzungscube vorhandene Dimensionen entfernen  
   
--   Hinzufügen oder Entfernen von Hierarchien aus einer Dimension.  
+-   Fügen Sie hinzu oder entfernen Sie die Hierarchien einer Dimension.  
   
 -   Measuregruppen oder bestimmte Measures entfernen  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250550"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen
   Vorausberechnete Partitionen dienen der Leistungsoptimierung und können mit gefilterten Mergeveröffentlichungen verwendet werden. Vorausberechnete Partitionen sind darüber hinaus eine Anforderung für die Verwendung logischer Datensätze bei gefilterten Veröffentlichungen. Weitere Informationen zu logischen Datensätzen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](group-changes-to-related-rows-with-logical-records.md).  

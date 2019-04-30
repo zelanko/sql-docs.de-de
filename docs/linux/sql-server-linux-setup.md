@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280624"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455087"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Installationsanleitung für SQL Server unter Linux
 
@@ -109,7 +109,7 @@ Diese Befehle Laden Sie das neueste Paket herunter, und Ersetzen Sie die Binärd
 
 Verwenden Sie zum Zurücksetzen oder Herabstufen von SQL Server auf einer früheren Version die folgenden Schritte aus:
 
-1. Identifizieren Sie die Versionsnummer für das SQL Server-Paket, die, dem Sie auf herabstufen möchten. Eine Liste der Paket-Zahlen, finden Sie unter den [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+1. Identifizieren Sie die Versionsnummer für das SQL Server-Paket, die, dem Sie auf herabstufen möchten. Eine Liste der Paket-Zahlen, finden Sie unter den [Anmerkungen zu dieser Version](../linux/sql-server-linux-release-notes.md).
 
 1. Ein Downgrade durchführen Sie, um eine frühere Version von SQL Server. Ersetzen Sie in den folgenden Befehlen `<version_number>` mit der SQL Server-Versionsnummer, die Sie in Schritt 1 identifiziert haben.
 
@@ -178,7 +178,7 @@ Wenn Ihr Linux-Computer Zugriff auf die onlinerepositorys verwendet keinen der [
 > [!TIP]
 > Wenn Sie sich mit den Schritten in den Schnellstarts zum erfolgreich installiert, müssen Sie nicht herunterladen oder die SQL Server-Pakete manuell installieren. Dieser Abschnitt gilt nur für das Offlineszenario.
 
-1. **Das Datenbank-Engine-Paket für Ihre Plattform herunterladen**. Finden Sie Links für Paketdownloads im Detailabschnitt des Pakets die [– Anmerkungen zu dieser](sql-server-linux-release-notes.md).
+1. **Das Datenbank-Engine-Paket für Ihre Plattform herunterladen**. Finden Sie Links für Paketdownloads im Detailabschnitt des Pakets die [– Anmerkungen zu dieser](../linux/sql-server-linux-release-notes.md).
 
 1. **Verschieben Sie das heruntergeladene Paket in Ihrem Linux-Computer**. Wenn Sie einen anderen Computer verwendet, um die Pakete herunterzuladen, ist eine Möglichkeit, verschieben Sie die Pakete auf Ihren Linux-Computer mit der **scp** Befehl.
 

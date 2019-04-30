@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745858"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473040"
 ---
 # <a name="unicode-drivers"></a>Unicode-Treiber
 Ob ein Treiber einen Unicode-Treiber oder ein Treiber ANSI sein soll, hängt ganz von der Art der Datenquelle. Wenn die Datenquelle Unicode-Daten unterstützt, muss der Treiber einen Unicode-Treiber. Wenn die Datenquelle nur ANSI-Daten unterstützt, sollte der Treiber ein ANSI-Treiber bleiben.  

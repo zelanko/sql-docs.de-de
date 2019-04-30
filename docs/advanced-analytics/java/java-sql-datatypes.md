@@ -1,20 +1,20 @@
 ---
-title: Java-Datentypen in SQL Server-2019 – SQL Server-Machine Learning-Dienste unterstützt
+title: Java-Datentypen in SQL Server-2019 - Spracherweiterungen für SQL Server unterstützt
 description: Zuordnen von Java-Datentypen in SQL Server für Eingabe-und Ausgabedaten Strukturen und für die Eingabeparameter für die Sp_execute_external_script an.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c0f691b8bb389c2da2001d19f0684b7f928f707
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 14a2bc5594b16610dfb8278ab82a9e7b8b22fea6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017816"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473601"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java und SQL Server-Datentypen
 
@@ -24,25 +24,26 @@ In diesem Artikel ordnet SQL Server-Datentypen in Java-Datentypen, Datenstruktur
 
 Die folgenden SQL- und Java-Datentypen werden derzeit für Eingabe und Ausgabe-Datasets unterstützt.
 
+
 | SQL-Datentyp        | Java-Datentyp | Anmerkung | |
-| ------------- |-------------|-|
-| bit      | boolean | |
-| Tinyint      | short      | |
-| Smallint | short      | |
-| int | ssNoversion      | |
-| Real | FLOAT      | |
-| Bigint | long      | |
-| FLOAT | double      | |
-| nchar(n) | Zeichenfolge      | |
-| nvarchar(n) | Zeichenfolge  | |
-| binary(n) | byte[]      | |
-| varbinary(n) | byte[]      | |
-| nvarchar(max) | Zeichenfolge | |
-| varbinary(max) | byte[] | |
-| UNIQUEIDENTIFIER | Zeichenfolge | |
-| char(n) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt |
-| varchar (n) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt |
-| varchar(max) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt |
+| ------------- |-------------|-|-|
+| bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| int | ssNoversion      | | |
+| Real | FLOAT      | | |
+| Bigint | long      | | |
+| FLOAT | double      | | |
+| nchar(n) | Zeichenfolge      | | |
+| nvarchar(n) | Zeichenfolge      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | Zeichenfolge      | | |
+| varbinary(max) | byte[]      | | |
+| UNIQUEIDENTIFIER | Zeichenfolge | | |
+| char(n) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt | |
+| varchar (n) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt | |
+| varchar(max) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt | |
 
 ## <a name="data-types-for-input-parameters"></a>Datentypen für Eingabeparameter
 
@@ -68,7 +69,7 @@ Die folgenden SQL- und Java-Datentypen werden derzeit für Eingabeparameter unte
 | varchar (n) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt | |
 | varchar(max) | Zeichenfolge | Nur UTF8-Zeichenfolge, die unterstützt | |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="next-steps"></a>Nächste Schritte
 
 + [Gewusst wie: Aufrufen von Java in SQL Server](howto-call-java-from-sql.md)
 + [Java-Beispiel in SQL Server](java-first-sample.md)

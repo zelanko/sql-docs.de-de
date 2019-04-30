@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248328"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes- und Name-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet den [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft, um die Namen der einzelnen anzuzeigen **Feld** und **Eigenschaft** Objekt.  

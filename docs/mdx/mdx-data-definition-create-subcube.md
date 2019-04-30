@@ -1,5 +1,5 @@
 ---
-title: CREATE SUBCUBE-Anweisung (MDX) | Microsoft Docs
+title: CREATE SUBCUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248311"
 ---
-# <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition - Erstellen von TEILCUBES
+# <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition – CREATE SUBCUBE
 
 
   Definiert den Cuberaum eines angegebenen Cubes oder Teilcubes neu zu einem angegebenen Teilcube. Diese Anweisung ändert den scheinbaren Cuberaum für nachfolgende Operationen.  
@@ -43,11 +43,11 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 |Ursprüngliches Standardelement|Kann aggregiert werden|Untergeordneter SELECT-Ausdruck|Geändertes Standardelement|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|ja|{Time.Year.2003}|Keine Änderung|  
-|Time.Year. [1997]|ja|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|nein|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
+|Time.Year.All|Ja|{Time.Year.2003}|Keine Änderung|  
+|Time.Year.[1997]|Ja|{Time.Year.2003}|Time.Year.All|  
+|Time.Year.[1997]|Nein|{Time.Year.2003}|Time.Year.[2003]|  
+|Time.Year.[1997]|Ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year.[1997]|Nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
   
  [All]-Elemente sind immer in einem Teilcube vorhanden.  
   
@@ -56,7 +56,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  Weitere Informationen zu Teilcubes finden Sie unter [Erstellen von Teilcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Teilcube erstellt, der den scheinbaren Cuberaum auf Elemente einschränkt, die gemeinsam mit dem Land Kanada vorhanden sind. Es verwendet dann die **Elemente** Funktion, um alle Elemente der Country von der Geography eine benutzerdefinierte Hierarchie zurückzugeben, wobei lediglich das Land Kanada zurückgegeben.  
+ Im folgenden Beispiel wird ein Teilcube erstellt, der den scheinbaren Cuberaum auf Elemente einschränkt, die gemeinsam mit dem Land Kanada vorhanden sind. Anschließend wird mithilfe der **Mitglieder** Funktion, um alle Elemente des Lands, das von der Geography eine benutzerdefinierte Hierarchie zurückzugeben, wobei lediglich das Land Kanada zurückgegeben.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  

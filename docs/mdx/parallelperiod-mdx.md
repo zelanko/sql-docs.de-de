@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) | Microsoft Docs
+title: ParallelPeriod (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742369"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473078"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -39,11 +39,11 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Obwohl ähnelt der [Cousin](../mdx/cousin-mdx.md) -Funktion, die **ParallelPeriod** -Funktion enger mit Zeitreihen. Die **ParallelPeriod** Funktion nimmt den Vorgänger des angegebenen Elements auf der angegebenen Ebene, sucht nach dem Vorgänger gleichgeordnete Element mit der angegebenen Verzögerung und schließlich die parallele Periode des angegebenen Elements unter den nachfolgenden Werten des nebengeordneten Elements zurückgegeben.  
+ Zwar ähnlich wie die [Cousin](../mdx/cousin-mdx.md) -Funktion, die **ParallelPeriod** -Funktion enger mit Zeitreihen. Die **ParallelPeriod** Funktion nimmt den Vorgänger des angegebenen Elements auf der angegebenen Ebene, sucht nach den Vorgänger des gleichgeordnetes Element mit der angegebenen Verzögerung und gibt schließlich die parallele Periode des angegebenen Elements unter den die nachfolgenden Elemente des nebengeordneten Elements.  
   
- Die **ParallelPeriod** Funktion weist die folgenden Standardwerte:  
+ Die **ParallelPeriod** Funktion besitzt die folgenden Standardwerte:  
   
--   Wenn weder ein Ebenenausdruck noch ein Elementausdruck angegeben ist, wird als standardelementwert das aktuelle Element der ersten Hierarchie auf der ersten Dimension vom Typ *Zeit* in der Measuregruppe.  
+-   Wenn weder ein Ebenenausdruck noch ein Elementausdruck angegeben ist, wird als standardelementwert das aktuelle Element der ersten Hierarchie auf der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
   
 -   Wenn ein Ebenenausdruck angegeben ist, aber ein Elementausdruck nicht angegeben ist, wird als standardelementwert *Level_Expression*. **Hierarchy.CurrentMember**.  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242752"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
@@ -36,19 +36,19 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichenfolge** -Wert, eine URL identifiziert enthält, die **Datensatz** verschoben werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge und das Objekt, das dargestellt durch diese **Datensatz** verschoben wird. Z. B. wenn die **Datensatz** stellt eine Datei, die den Inhalt der Datei werden in den vom angegebenen Speicherort verschoben *Ziel*.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert, eine URL identifiziert enthält, die **Datensatz** verschoben werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge und das Objekt, das dargestellt durch diese **Datensatz** verschoben wird. Z. B. wenn die **Datensatz** stellt eine Datei, die den Inhalt der Datei werden in den vom angegebenen Speicherort verschoben *Ziel*.  
   
  *Ziel*  
- Optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* verschoben werden.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* verschoben werden.  
   
  *UserName*  
- Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
   
  *Kennwort*  
  Optional. Ein **Zeichenfolge** , enthält das Kennwort, das bei Bedarf bestätigt *Benutzername*.  
   
- *enthalten*  
- Optional. Ein [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) Wert, dessen Standardwert **AdMoveUnspecified**. Gibt das Verhalten dieser Methode.  
+ *Optionen*  
+ Dies ist optional. Ein [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) Wert, dessen Standardwert **AdMoveUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  
  Optional. Ein **booleschen** -Wert, wenn **"true"**, gibt dieser Vorgang muss asynchron sein.  

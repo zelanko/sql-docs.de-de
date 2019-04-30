@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583403"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472168"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Was ist der Controller auf einem SQL Server-big Data-Cluster?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Den Controller hostet die grundlegende Logik für die Bereitstellung und Verwaltung von big Data-Cluster. Es übernimmt alle Interaktionen mit Kubernetes, SQL Server-Instanzen, die Teil des Clusters und andere Komponenten wie HDFS und Spark. 
+Den Controller hostet die grundlegende Logik für die Bereitstellung und Verwaltung von big Data-Cluster. Es übernimmt alle Interaktionen mit Kubernetes, SQL Server-Instanzen, die Teil des Clusters und andere Komponenten wie HDFS und Spark.
 
 Der Controller-Dienst bietet die folgenden Kernfunktionen:
 
@@ -31,9 +31,10 @@ Der Controller-Dienst bietet die folgenden Kernfunktionen:
 - Verwalten von Pools für Datenverarbeitung, Daten und Speicher
 - Machen Sie Überwachungstools, um zu beobachten, die Zustand des Clusters
 - Bereitstellen von Tools zur Problembehandlung, um zu erkennen und Reparieren unerwartete Probleme
-- Verwalten von Clustersicherheit: sichere Cluster-Endpunkte stellen Sie sicher, Benutzern und Rollen verwalten, konfigurieren Sie Anmeldeinformationen für die Kommunikation innerhalb des Clusters
-- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (in CTP 2.4 nicht verfügbar)
-- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (in CTP 2.4 nicht verfügbar)
+- Verwalten von Clustersicherheit:
+  - Stellen Sie sicher sichere Cluster-Endpunkte
+  - Verwalten von Benutzern und Rollen
+  - Konfigurieren von Anmeldeinformationen für die Kommunikation innerhalb des Clusters
 
 ## <a name="deploying-the-controller-service"></a>Bereitstellen des Controller-Diensts
 

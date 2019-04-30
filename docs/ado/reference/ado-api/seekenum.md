@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772728"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459334"
 ---
 # <a name="seekenum"></a>SeekEnum
 Gibt den Typ der [Seek](../../../ado/reference/ado-api/seek-method.md) ausgeführt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Sucht den ersten Schlüssel gleich *KeyValues*.|  
 |**adSeekLastEQ**|2|Sucht den letzte Schlüssel gleich *KeyValues*.|  
@@ -36,7 +36,7 @@ Gibt den Typ der [Seek](../../../ado/reference/ado-api/seek-method.md) ausgefüh
 |**adSeekBefore**|32|Kurz vor dem Ausführen sucht einen Schlüssel, wenn eine Übereinstimmung mit *KeyValues* würde aufgetreten sind.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

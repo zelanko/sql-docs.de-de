@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245985"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
@@ -56,7 +56,7 @@ ms.locfileid: "52773772"
 |Eigenschaften anzeigen|Nein|Ja|Ja|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nein <sup>4</sup>|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Ja|Nicht verfügbar|  
   
  <sup>1</sup> Auftragsbesitz nicht ändern.  
@@ -84,7 +84,7 @@ ms.locfileid: "52773772"
 |Eigenschaften bearbeiten|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|Nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nein <sup>4</sup>|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
  <sup>1</sup> Auftragsbesitz nicht ändern.  
@@ -134,7 +134,7 @@ ms.locfileid: "52773772"
  [Implementieren von SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md)   
  [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
  [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
- [Sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
- [Sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

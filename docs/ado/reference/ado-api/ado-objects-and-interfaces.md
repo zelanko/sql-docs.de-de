@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248898"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -39,7 +39,7 @@ Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmode
 |[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Spalte mit einem gemeinsamen Datentyp.|  
 |[Parameter](../../../ado/reference/ado-api/parameter-object.md)|Stellt einen Parameter oder die zugeordnete Argument ein **Befehl** -Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur.<br /><br /> Die **Parameter** Objekt ist nicht sicher für Skripting.|  
 |[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Repräsentiert eine dynamische Eigenschaft eines ADO-Objekts, das vom Anbieter definiert ist.|  
-|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile einer **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile einer **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt die Gruppe von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Zu jedem Zeitpunkt den **Recordset** -Objekt verweist auf nur einen einzelnen Datensatz in der Gruppe als aktuellen Datensatz.<br /><br /> Die **Recordset** Objekt für die Skripterstellung sicher ist.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Die **Stream** Objekt für die Skripterstellung sicher ist.|  
   

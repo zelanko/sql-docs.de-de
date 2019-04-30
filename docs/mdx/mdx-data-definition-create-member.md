@@ -1,5 +1,5 @@
 ---
-title: CREATE MEMBER-Anweisung (MDX) | Microsoft Docs
+title: CREATE MEMBER-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250206"
 ---
-# <a name="mdx-data-definition---create-member"></a>MDX-Datendefinition - Element zu erstellen
+# <a name="mdx-data-definition---create-member"></a>MDX-Datendefinition – CREATE MEMBER
 
 
   Erstellt ein berechnetes Element.  
@@ -41,18 +41,18 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *MDX_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions).  
   
- *Eigenschaftsname*  
+ *Property_name*  
  Eine gültige Zeichenfolge, die den Namen der Eigenschaft eines berechneten Elements bereitstellt.  
   
  *Property_Value*  
  Ein gültiger Skalarausdruck, der den Wert der Eigenschaft eines berechneten Elements definiert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die CREATE MEMBER-Anweisung definiert berechnete Elemente, die während der gesamten Sitzung verfügbar sind und somit in mehreren Abfragen im Verlauf der Sitzung verwendet werden können. Weitere Informationen finden Sie unter [Creating Session-Scoped berechnete Elemente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ Die CREATE MEMBER-Anweisung definiert berechnete Elemente, die während der gesamten Sitzung verfügbar sind und somit in mehreren Abfragen im Verlauf der Sitzung verwendet werden können. Weitere Informationen finden Sie unter [mithilfe von berechneten Elementen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [Creating Query-Scoped berechnete Elemente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [mithilfe von berechneten Elementen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
   
- *Property_name* auf entweder standard oder optionale berechnete Elementeigenschaften verweisen. Standardelementeigenschaften sind in diesem Thema weiter unten aufgelistet. Berechnete Elemente erstellen, die mit CREATE MEMBER ohne einen **SITZUNG** Indexschlüsselwert Sitzungsbereich. Außerdem müssen Zeichenfolgen, die in der Definition eines berechneten Elements stehen, in doppelte Anführungszeichen gesetzt werden. Dies unterscheidet sich von der für OLE DB definierten Methode, die angibt, dass Zeichenfolgen in einfachen Anführungszeichen stehen müssen.  
+ *Property_name* können auf beiden standardmäßige oder auf optionale berechnete Elementeigenschaften verweisen. Standardelementeigenschaften sind in diesem Thema weiter unten aufgelistet. Berechnete Elemente, die mit CREATE MEMBER ohne erstellt eine **SITZUNG** Wert haben Sitzungsbereich. Außerdem müssen Zeichenfolgen, die in der Definition eines berechneten Elements stehen, in doppelte Anführungszeichen gesetzt werden. Dies unterscheidet sich von der für OLE DB definierten Methode, die angibt, dass Zeichenfolgen in einfachen Anführungszeichen stehen müssen.  
   
  Die Angabe eines anderen als des aktuell verbundenen Cubes verursacht einen Fehler. Daher sollten Sie den aktuellen Cube mithilfe von CURRENTCUBE statt mit dem Cubenamen angeben.  
   
@@ -62,18 +62,18 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Ein berechnetes Element kann in einem der Gültigkeitsbereiche auftreten, die in der folgenden Tabelle aufgeführt sind.  
   
  Bereich einer Abfrage  
- Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Abfrage beschränkt. Das berechnete Element ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [Creating Query-Scoped berechnete Elemente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Abfrage beschränkt. Das berechnete Element ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [mithilfe von berechneten Elementen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
   
  Bereich einer Sitzung  
- Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Sitzung beschränkt, in der das Element erstellt wurde. (Die Lebensdauer ist geringer als die Dauer der Sitzung, wenn eine DROP MEMBER-Anweisung für das berechnete Element ausgegeben wird.) Die CREATE MEMBER-Anweisung erstellt ein berechnetes Element im Sitzungsbereich.  
+ Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Sitzung beschränkt, in der das Element erstellt wurde. (Die Lebensdauer ist geringer als die Dauer der Sitzung, wenn eine DROP MEMBER-Anweisung für das berechnete Element ausgegeben wird.) CREATE MEMBER-Anweisung erstellt ein berechnetes Element mit Sitzungsbereich.  
   
 ### <a name="scope-isolation"></a>Bereichsisolation  
  Wenn ein MDX-Cubeskript (Multidimensional Expressions) berechnete Elemente enthält, werden die berechneten Elemente standardmäßig aufgelöst, bevor Berechnungen im Sitzungsbereich aufgelöst werden und bevor abfragedefinierte Berechnungen aufgelöst werden.  
   
 > [!NOTE]  
->  In bestimmten Szenarien die [Aggregate (MDX)](../mdx/aggregate-mdx.md) Funktion und die [VisualTotals (MDX)](../mdx/visualtotals-mdx.md) Funktion tritt dieses Verhalten nicht auf.  
+>  In bestimmten Szenarien ist die [Aggregate (MDX)](../mdx/aggregate-mdx.md) Funktion und die [VisualTotals (MDX)](../mdx/visualtotals-mdx.md) Funktion führen Sie dieses Verhalten nicht zeigen.  
   
- Durch das Verhalten können in generischen Clientanwendungen Cubes mit komplexen Berechnungen verwendet werden, ohne dass die spezielle Implementierung der Berechnungen berücksichtigt werden muss. Allerdings sollten Sie in bestimmten Szenarien, Sitzung oder im Bereich einer Abfrage berechnete Elemente vor bestimmten Berechnungen in den Cube, und weder ausgeführt der **aggregieren** Funktion noch die **VisualTotals** -Funktion sind anwendbar. Um das zu erreichen, verwenden Sie die SCOPE_ISOLATION-Berechnungseigenschaft.  
+ Durch das Verhalten können in generischen Clientanwendungen Cubes mit komplexen Berechnungen verwendet werden, ohne dass die spezielle Implementierung der Berechnungen berücksichtigt werden muss. Allerdings in bestimmten Szenarien kann ausgeführt werden soll-Sitzung oder im Bereich einer Abfrage berechnete Elemente vor bestimmten Berechnungen in den Cube, und weder der **aggregieren** Funktion noch die **VisualTotals** -Funktion sind anwendbar. Um das zu erreichen, verwenden Sie die SCOPE_ISOLATION-Berechnungseigenschaft.  
   
 #### <a name="example"></a>Beispiel  
  Das folgende Skript stellt ein Beispiel für ein Szenario dar, in dem die SCOPE_ISOLATION-Berechnungseigenschaft erforderlich ist, damit das richtige Ergebnis entsteht.  
@@ -106,18 +106,18 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Standardeigenschaften  
- Jedes berechnete Element hat eine Reihe von Standardeigenschaften. Wenn eine Clientanwendung mit verbunden ist [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Standardeigenschaften sind entweder unterstützt oder verfügbar ist, unterstützt werden müssen, wie der Administrator wählt.  
+ Jedes berechnete Element hat eine Reihe von Standardeigenschaften. Wenn eine Client-Anwendung verbunden ist, um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Standardeigenschaften sind entweder unterstützt oder verfügbar ist, unterstützt werden müssen, wie der Administrator wählt.  
   
  Abhängig von der Cubedefinition sind möglicherweise weitere Elementeigenschaften verfügbar. Die folgenden Eigenschaften enthalten Informationen, die für die Dimensionsebene im Cube relevant sind.  
   
 |Eigenschaftsbezeichner|Bedeutung|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|Die Reihenfolge, in der das berechnete Element in Fällen gelöst wird, in denen ein berechnetes Element auf ein anderes berechnetes Element verweist (also in Fällen, in denen berechnete Elemente sich überschneiden).|  
-|FORMAT_STRING|Eine Office Stil Formatzeichenfolge, die die Clientanwendung beim Anzeigen von Zellwerten verwenden kann.|  
+|FORMAT_STRING|Ein Office Style-Formatzeichenfolge, die die Clientanwendung beim Anzeigen von Zellwerten verwenden können.|  
 |VISIBLE|Ein Wert, der bestimmt, ob das berechnete Element in einem Schemarowset sichtbar ist. Sichtbare berechnete Elemente hinzugefügt werden können, um eine Gruppe, die [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) Funktion. Ein Wert ungleich 0 zeigt an, dass das berechnete Element sichtbar ist. Der Standardwert für diese Eigenschaft ist *Visible*.<br /><br /> Berechnete Elemente, die nicht sichtbar sind (für die dieser Wert auf 0 festgelegt ist), werden üblicherweise als Zwischenschritte in komplexeren berechneten Elementen verwendet. Auf diese berechneten Elemente können auch andere Arten von Elementen (z. B. Measures) verweisen.|  
-|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> **\*\* Warnung \* \***  diese Eigenschaft ist veraltet. Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie unter [Veraltete Analysis Services-Funktionen in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).|  
+|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> **\*\* Warnung \* \***  diese Eigenschaft ist veraltet. Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie unter [Veraltete Analysis Services-Funktionen in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md) .|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für das Element verwendet wird.|  
-|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
+|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  
   
 ## <a name="see-also"></a>Siehe auch  

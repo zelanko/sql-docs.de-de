@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582097"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474276"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Gibt die Darstellung der letzten bekannten tatsächlicher Ausführungsplan für einen zuvor zwischengespeicherten Abfrageplan zurück. 
 
@@ -64,7 +64,7 @@ Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen B
 ## <a name="remarks"></a>Hinweise
 Dieser Systemfunktion steht ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss.   
+Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss. Beginnend mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-Version 2.5 und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], um dies auf Datenbankebene zu erreichen, finden Sie unter der Option LAST_QUERY_PLAN_STATS in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Dieser Systemfunktion funktioniert die **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -80,7 +80,7 @@ Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup>**  Showpla
     **AND**    
 -   Die Abfrage ist recht einfach und in der Regel als Teil einer OLTP-Workload kategorisiert.
 
-<sup>1</sup> Dies bezieht sich auf einen Showplan erstellen, die nur den Stamm-Knoten-Operator (auswählen) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 nur Dies bezieht sich auf den zwischengespeicherten Plan als dm_exec_cached_plans erhältlich.
+<sup>1</sup> ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-Version 2.5, dies bezieht sich auf einen Showplan erstellen, die nur den Stamm-Knoten-Operator (auswählen) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 Dies bezieht sich auf den zwischengespeicherten Plan als über `sys.dm_exec_cached_plans`.
 
 Unter den folgenden Bedingungen **wird keine Ausgabe zurückgegeben** aus **sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>D. Zwischengespeicherter Ereignisse für trigger
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>Siehe auch
   [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

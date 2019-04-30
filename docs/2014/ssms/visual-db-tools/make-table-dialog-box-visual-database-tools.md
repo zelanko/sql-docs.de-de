@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810692"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459979"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Tabelle erstellen (Dialogfeld) (Visual Database Tools)
   Ermöglicht das Benennen einer erstellten Tabelle, in die Zeilen kopiert werden. Dieses Dialogfeld wird angezeigt, wenn Sie einen Abfragetyp in eine MAKE TABLE-Abfrage ändern. Um einen Abfragetyp zu ändern, zeigen Sie im Menü **Abfrage-Designer** auf **Typ ändern**, und klicken Sie dann auf **Tabelle erstellen**.  

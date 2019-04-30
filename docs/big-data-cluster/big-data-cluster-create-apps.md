@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582445"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472233"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-big Data-Cluster (Vorschau)
 
@@ -45,7 +45,7 @@ Die folgenden Arten von apps werden unterstützt:
 
 ## <a name="capabilities"></a>Funktionen
 
-In SQL Server 2019 (Vorschau) CTP 2.4 Sie erstellen, löschen, zu beschreiben, initialisiert werden können, Liste ausgeführt, und aktualisieren Sie Ihre Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl**.
+In SQL Server 2019 (Vorschau) CTP-Version 2.5 Sie erstellen, löschen, zu beschreiben, initialisiert werden können, Liste ausgeführt, und aktualisieren Sie Ihre Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl**.
 
 |Befehl |Description |
 |:---|:---|
@@ -68,19 +68,19 @@ In den folgenden Abschnitten werden diese Befehle im Detail beschrieben.
 
 ## <a name="sign-in"></a>Anmelden
 
-Bevor Sie bereitstellen oder mit Anwendungen interagieren, melden Sie sich beim big Data-cluster mit SQL Server die `mssqlctl login` Befehl. Geben Sie die externe IP-Adresse der `endpoint-service-proxy` Dienst (z. B.: `https://ip-address:30777`) zusammen mit den Benutzernamen und das Kennwort für den Cluster.
+Bevor Sie bereitstellen oder mit Anwendungen interagieren, melden Sie sich beim big Data-cluster mit SQL Server die `mssqlctl login` Befehl. Geben Sie die externe IP-Adresse der `mgmtproxy-svc-external` Dienst (z. B.: `https://ip-address:30777`) zusammen mit den Benutzernamen und das Kennwort für den Cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="aks"></a>AKS
 
-Wenn Sie ACS verwenden, müssen Sie den folgenden Befehl zum Abrufen der IP-Adresse Ausführen der `endpoint-service-proxy` Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+Wenn Sie ACS verwenden, müssen Sie den folgenden Befehl zum Abrufen der IP-Adresse Ausführen der `mgmtproxy-svc-external` Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm oder Minikube

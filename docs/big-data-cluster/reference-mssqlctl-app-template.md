@@ -5,16 +5,16 @@ description: Der Referenzartikel für die Befehle für Mssqlctl app-Vorlage.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 0b4cbae0ba35c0cef777b3535b2012ab78f8e6da
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860101"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473443"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl-App-Vorlage
 
@@ -22,81 +22,79 @@ ms.locfileid: "58860101"
 
 Der folgende Artikel bietet Referenz für die **-app-Vorlage** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
-## <a id="commands"></a> Befehle
-
-|||
-|---|---|
-| [list](#list) | Rufen Sie die unterstützte Vorlagen. |
-| [pull](#pull) | Download unterstützt Vorlagen. |
-
-## <a id="list"></a> Liste der Mssqlctl app-Vorlage
-
-Rufen Sie die unterstützte Vorlagen.
-
+## <a name="commands"></a>Befehle
+|     |     |
+| --- | --- |
+[Liste der Mssqlctl app-Vorlage](#mssqlctl-app-template-list) | Rufen Sie die unterstützte Vorlagen.
+[Mssqlctl app-Vorlage pull](#mssqlctl-app-template-pull) | Download unterstützt Vorlagen.
+## <a name="mssqlctl-app-template-list"></a>Liste der Mssqlctl app-Vorlage
+Rufen Sie die unterstützten Vorlagen unter dem angegebenen [URL]-Github-Repository.
+```bash
+mssqlctl app template list [--url -u] 
+                           
 ```
-mssqlctl app template list
-   --url
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/sql-server-samples.git. |
-
 ### <a name="examples"></a>Beispiele
-
 Rufen Sie alle Vorlagen unter dem Standardspeicherort des Repositorys Vorlage.
-
-```
+```bash
 mssqlctl app template list
 ```
-
 Rufen Sie alle Vorlagen unter einem anderen Repository-Speicherort ab.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
-## <a id="pull"></a> Mssqlctl app-Vorlage pull
-
-Download unterstützt Vorlagen.
-
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--url -u`
+Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-template-pull"></a>Mssqlctl app-Vorlage pull
+Laden Sie die unterstützten Vorlagen unter dem angegebenen [URL]-Github-Repository herunter.
+```bash
+mssqlctl app template pull [--name -n] 
+                           [--url -u]  
+                           [--destination -d]
 ```
-mssqlctl app template pull
-   --destination
-   --name
-   --url
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--Destination -d.** | Position, an die Skelett-Anwendungsvorlage platzieren.  Standardwert:. / Vorlagen. |
-| **--name -n** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
-| **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standard:
-https://github.com/Microsoft/sql-server-samples.git. installiert haben. |
-
 ### <a name="examples"></a>Beispiele
-
 Laden Sie alle Vorlagen unter dem Standardspeicherort des Repositorys Vorlage herunter.
-
-```
+```bash
 mssqlctl app template pull
 ```
-
 Laden Sie alle Vorlagen unter einem anderen Repository-Speicherort herunter.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
 Laden Sie einzelne Vorlage anhand des Namens.
-
+```bash
+mssqlctl app template pull --name ssis            
 ```
-mssqlctl app template pull --name ssis
-```
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--name -n`
+Name der Vorlage. Eine vollständige Liste deaktiviert unterstützten Vorlage namesrun `mssqlctl app template list`
+#### `--url -u`
+Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+#### `--destination -d`
+Position, an die Skelett-Anwendungsvorlage platzieren.
+`./templates`
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250268"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server-Replikation-Abonnementeigenschaften 
 Dieser Abschnitt enthält Informationen zu den **Abonnementeigenschaften** Dialogfeld. 
@@ -38,12 +38,12 @@ Dieser Abschnitt enthält Informationen zu den **Abonnementeigenschaften** Dialo
 
   
 ### <a name="options-for-all-subscriptions"></a>Optionen für alle Abonnements  
- **Sicherheit**  
+ **Security**  
  Klicken Sie in der Zeile **Agentprozesskonto** auf die **Schaltfläche mit den drei Punkten**, um das Konto zu ändern, unter dem Verteilungs-Agent oder Merge-Agent auf dem Verteiler ausgeführt werden. Wenn Sie das Konto ändern möchten, unter dem Verteilungs-Agent oder Merge-Agent eine Verbindung mit dem Abonnenten herstellen, klicken Sie auf **Abonnentenverbindung**, und klicken Sie dann auf die **Schaltfläche mit den drei Punkten**.  
   
  Weitere Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>Publisher-Optionen für Transaktionsabonnements  
+### <a name="publisher-options-for-transactional-subscriptions"></a>Verlegeroptionen für Transaktionsabonnements  
  **Transaktionsschleifen verhindern**  
  Legt fest, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet. Diese Option wird bei der bidirektionalen Transaktionsreplikation verwendet. Weitere Informationen finden Sie unter [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
   
@@ -52,7 +52,7 @@ Dieser Abschnitt enthält Informationen zu den **Abonnementeigenschaften** Dialo
   
 ### <a name="options-for-merge-subscriptions"></a>Optionen für Mergeabonnements  
  **Partitionsdefinition (HOST_NAME)**  
- Für eine Veröffentlichung mit parametrisierten Filtern, wertet die Mergereplikation eine von zwei Funktionen (oder beide, sofern die Filter auf beide Funktionen verweisen) während der Synchronisierung die Daten zu ermitteln, die ein Abonnent empfangen soll: **SUSER_SNAME()** oder **HOST_NAME()**. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Wenn Sie eine Mergereplikation für eine Veröffentlichung mit parametrisierten Filtern ausführen, wird bei der Synchronisierung eine von zwei Systemfunktionen (oder beide, sofern die Filter auf beide Funktionen verweisen) ausgewertet, um festzulegen, welche Daten der Abonnent empfangen soll. Bei diesen Systemfunktionen handelt es sich um **SUSER_SNAME()** und **HOST_NAME()**. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Abonnementtyp** und **Priorität**  
  Zeigt an, ob es sich bei dem Abonnement um ein Client- oder Serverabonnement handelt (kann nach Erstellen des Abonnements nicht mehr geändert werden). Bei Serverabonnements können Daten erneut für andere Abonnenten veröffentlicht und eine Priorität für die Konfliktlösung festgelegt werden.  
@@ -95,7 +95,7 @@ Dieser Abschnitt enthält Informationen zu den **Abonnementeigenschaften** Dialo
  **Synchronisierungsverwaltung von Windows verwenden**  
  Bestimmt, ob dieses Abonnement mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager synchronisiert werden kann.  
   
- **Sicherheit**  
+ **Security**  
  Klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann auf die **Schaltfläche mit den drei Punkten**, um das Konto zu ändern, unter dem der Verteilungs-Agent oder der Merge-Assistent auf dem Abonnenten ausgeführt werden. Die Sicherheitsoptionen für Verbindungen sind vom Typ des Abonnements abhängig:  
   
 -   Für Abonnements einer Transaktionsveröffentlichung: Sie können das Konto, unter dem der Verteilungs-Agent Verbindungen mit dem Verteiler erstellt, ändern, indem Sie auf **Verteilerverbindung**und anschließend auf die **Schaltfläche mit den drei Punkten**klicken.    
@@ -110,7 +110,7 @@ Dieser Abschnitt enthält Informationen zu den **Abonnementeigenschaften** Dialo
   
 ### <a name="options-for-merge-subscriptions"></a>Optionen für Mergeabonnements  
  **Partitionsdefinition (HOST_NAME)**  
- Für eine Veröffentlichung mit parametrisierten Filtern, wertet die Mergereplikation eine von zwei Funktionen (oder beide, sofern die Filter auf beide Funktionen verweisen) während der Synchronisierung die Daten zu ermitteln, die ein Abonnent empfangen soll: **SUSER_SNAME()** oder **HOST_NAME()**. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Wenn Sie eine Mergereplikation für eine Veröffentlichung mit parametrisierten Filtern ausführen, wird bei der Synchronisierung eine von zwei Systemfunktionen (oder beide, sofern die Filter auf beide Funktionen verweisen) ausgewertet, um festzulegen, welche Daten der Abonnent empfangen soll. Bei diesen Systemfunktionen handelt es sich um **SUSER_SNAME()** und **HOST_NAME()**. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Abonnementtyp** und **Priorität**  
  Zeigt an, ob es sich bei dem Abonnement um ein Client- oder Serverabonnement handelt (kann nach Erstellen des Abonnements nicht mehr geändert werden). Bei Serverabonnements können Daten erneut für andere Abonnenten veröffentlicht und eine Priorität für die Konfliktlösung festgelegt werden.  

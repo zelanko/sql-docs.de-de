@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687208"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63464715"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner-Methode (ADOX)
 Gibt zurück, den Besitzer eines Objekts in eine [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -45,7 +45,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Ein **lange** Wert möglich von der [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) Konstanten, der angibt, den Typ des Objekts, für das den Besitzer abgerufen.  
   
  *ObjectTypeId*  
- Optional. Ein **Variant** Wert, der angibt, die GUID für eine Anbieterobjekttyp nicht durch OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Dies ist optional. Ein **Variant** Wert, der angibt, die GUID für eine Anbieterobjekttyp nicht durch OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Anbieter, zurückgegebene Objektbesitzer nicht unterstützt wird, tritt ein Fehler auf.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934126"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472190"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
@@ -30,9 +30,9 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 April 2019 |0.12.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 April 2019 |0.12.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 April 2019 |0.12.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 April 2019 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 April 2019 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 April 2019 |0.12.1
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 
@@ -44,7 +44,7 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
 1. Nach den Abhängigkeiten die abgeschlossen Sie Installation, schließen Sie und erneut öffnen Sie Studio für Azure Data. Die **SQL Server-big Data-Cluster** Verbindungstyp ist nicht verfügbar, solange Sie Azure Data Studio neu starten.
 
-## <a name="changes-in-release-012"></a>Änderungen in Version 0.12
+## <a name="changes-in-release-0121"></a>Änderungen in Version 0.12.1
 
 * Die **SQL Server-big Data-Cluster** Verbindungstyp wurde in dieser Version entfernt. Alle Funktionen, die zuvor von SQL Server-Verbindung für die big Data-Cluster zur Verfügung steht jetzt in der SQL Server-Verbindung.
 * Durchsuchen von HDFS finden Sie unter den **Datendienste** Ordner

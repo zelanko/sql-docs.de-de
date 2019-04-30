@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245996"
 ---
 # <a name="specify-job-responses"></a>Angeben von Auftragsantworten
   Auftragsantworten geben Aktionen an, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst nach Abschluss eines Auftrags ausführt. Sie stellen sicher, dass Datenbankadministratoren wissen, wann Aufträge fertig gestellt sind und wie oft diese ausgeführt werden. Zu den typischen Auftragsantworten gehören folgende:  
@@ -43,7 +43,7 @@ ms.locfileid: "52771672"
 |-|-|  
 |**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Operator über den Auftragsstatus benachrichtigt wird.|[Benachrichtigen eines Operators über den Auftragsstatus](notify-an-operator-of-job-status.md)|  
-|Beschreibt, wie der Auftragsstatus in das Windows-Anwendungsprotokoll ausgegeben wird.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|Beschreibt, wie der Auftragsstatus in das Windows-Anwendungsprotokoll ausgegeben wird.|[Schreiben des Auftragsstatus in das Windows-Anwendungsprotokoll](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen und Reagieren auf Ereignisse](monitor-and-respond-to-events.md)  

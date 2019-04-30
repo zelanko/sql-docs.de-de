@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408317"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473530"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executing the SSMA Console ausführen (AccessToSQL)
 Microsoft bietet Ihnen eine Reihe zuverlässiger Skriptbefehle für die Datei "und"-Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  
@@ -25,7 +25,7 @@ Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beend
   
 **Befehl**  
   
-Neues-Projekt erstellen: Erstellt ein neues SSMA-Projekt an.  
+create-new-project: Erstellt ein neues SSMA-Projekt an.  
   
 **Skript**  
   
@@ -33,19 +33,19 @@ Neues-Projekt erstellen: Erstellt ein neues SSMA-Projekt an.
   
 -   `project-name` Gibt den Namen des Projekts. {string}  
   
--   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
+-   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {boolean}  
   
 -   `project-type` ist ein optionales Attribut.  Die folgenden Optionen sind für den Projekttyp verfügbar:  
   
-    -   SQL Server 2005  
+    -   sql-server-2005  
   
-    -   SQL-Server-2008  
+    -   sql-server-2008  
   
-    -   SQL-Server-2012  
+    -   sql-server-2012  
   
-    -   SQL-Server – 2014  
+    -   sql-server-2014  
   
-    -   SQL Server 2016  
+    -   sql-server-2016  
   
     -   sql-azure  
   
@@ -132,7 +132,7 @@ Weitere Informationen zu "Erstellen von Skriptdateien", finden Sie unter [Skript
   
 **Befehl**  
   
-Connect-Source-Datenbank  
+connect-source-database  
   
 -   Führt die Verbindung mit der Quelldatenbank und lädt die Metadaten für die hohe auf die Quelldatenbank, aber nicht alle Metadaten.  
   
@@ -149,7 +149,7 @@ Server-Definition wird aus dem Namensattribut für jede Verbindung im Server-Abs
 ```  
 **Befehl**  
   
-Load-Access-Datenbank: Zum Laden von Access-Datenbankdateien verwendet  
+load-access-database: Zum Laden von Access-Datenbankdateien verwendet  
   
 **Skript**  
   
@@ -203,7 +203,7 @@ oder
 ```  
 **Befehl**  
   
-Verbindung-Source-Datenbank  
+reconnect-source-database  
   
 -   Verbindung mit der Quelldatenbank, aber keine Metadaten im Gegensatz zu den Connect-Source-Database-Befehl wird nicht geladen.  
   
@@ -218,7 +218,7 @@ Verbindung-Source-Datenbank
 ```  
 **Befehl**  
   
-Connect-Zieldatenbank  
+connect-target-database  
   
 -   Stellt eine Verbindung her, in die Zieldatenbank für SQL Server oder SQL Azure und high Level Metadaten der Zieldatenbank, aber nicht die Metadaten vollständig geladen.  
   
@@ -235,7 +235,7 @@ Definition des Servers wird aus dem Namensattribut für jede Verbindung im Serve
 ```  
 **Befehl**  
   
-Verbindung-Zieldatenbank  
+reconnect-target-database  
   
 -   Verbindung mit der Zieldatenbank, aber alle Metadaten, im Gegensatz zu den Connect-Ziel-Database-Befehl wird nicht geladen.  
   
@@ -329,7 +329,7 @@ Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist
   
 **Befehl**  
   
-Convert-schema  
+convert-schema  
   
 -   Führt die schemakonvertierung aus der Quelle in das Zielschema.  
   
@@ -394,7 +394,7 @@ oder
 ```  
 **Befehl**  
   
-Migrieren von Daten  
+migrate-data  
   
 1.  Werden die Quelldaten zum Ziel migriert.  
   
@@ -508,7 +508,7 @@ Der Befehl Vorbereiten der Migration initiiert schemazuordnung zwischen den Quel
   
 **Befehl**  
   
-Map-Schema: Schemazuordnung der Quelldatenbank mit dem Zielschema.  
+map-schema: Schemazuordnung der Quelldatenbank mit dem Zielschema.  
   
 **Skript**  
   
@@ -549,9 +549,9 @@ Synchronisieren von Ziel
   
     -   Bericht insgesamt als Warnung  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fehler-Skript  
+    -   fail-script  
   
 4.  `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben wird, klicken Sie dann Datei anhand des Namens **TargetSynchronizationReport.XML** erstellt wird.  
   
@@ -596,7 +596,7 @@ oder
 ```  
 **Befehl**  
   
-Refresh-aus-Datenbank  
+refresh-from-database  
   
 -   Aktualisiert die Source-Objekte aus der Datenbank.  
   
@@ -614,9 +614,9 @@ Ist eine oder mehrere Metabase-Knoten als Befehlszeilenparameter erforderlich.
   
     -   Bericht insgesamt als Warnung  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fehler-Skript  
+    -   fail-script  
   
 4.  `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Aktualisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben wird, klicken Sie dann Datei anhand des Namens **SourceDBRefreshReport.XML** erstellt wird.  
   
@@ -661,7 +661,7 @@ Die Generierung von Skripts, die Befehle hilft beim Speichern der Konsolenausgab
   
 **Befehl**  
   
-Save-als-script  
+save-as-script  
   
 Speichern die Skripts für die Objekte in einer Datei, die bereits erwähnt, wenn zum Metabase = Ziel, dies ist eine Alternative zum Befehl zur abonnementsynchronisierung in wir Abrufen der Skripts und führen Sie in der Zieldatenbank identisch.  
   

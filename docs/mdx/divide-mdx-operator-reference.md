@@ -1,5 +1,5 @@
 ---
-title: (Division) (MDX) | Microsoft Docs
+title: (Division) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248176"
 ---
 # <a name="divide---mdx-operator-reference"></a>Divide - MDX-Operatorreferenz
 
@@ -39,9 +39,9 @@ Dividend / Divisor
  Ein Wert vom Datentyp des Parameters, der in der Rangfolge höher eingestuft ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Der tatsächliche Wert zurückgegeben, durch die **/ (Division)** Operator entspricht dem Quotienten aus dem ersten Ausdruck geteilt durch den zweiten Ausdruck.  
+ Den eigentlichen Rückgabewert, der von der **/ (Division)** Operator entspricht dem Quotienten aus dem ersten Ausdruck geteilt durch den zweiten Ausdruck.  
   
- Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn *Divisor* einen null-Wert, der Operator löst einen Fehler ergibt. Wenn beide *Divisor* und *Dividend* auswerten auf den Wert null, gibt der Operator einen null-Wert zurück.  
+ Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn *Divisor* einen null-Wert, löst der Operator einen Fehler ergibt. Wenn beide *Divisor* und *Dividend* ausgewertet, ein null-Wert, der Operator gibt einen null-Wert zurück.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieses Operators.  

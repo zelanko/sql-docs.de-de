@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244606"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC-Fehlercodes (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle enthält Visual FoxPro-Fehlercodes, die den ODBC-Fehler Code SQLSTATE-Werten zugeordnet werden. Die zugeordneten SQLSTATE-Werte stammen aus [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) und [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Keine anderen SQLSTATE-Werte aus anderen ODBC-API zugeordnet werden, da **SQLExecDirect** und **SQLPrepare** sind die einzigen Funktionen, die auf die Visual FoxPro-Engine zugreifen.  

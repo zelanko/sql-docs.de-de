@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 2: Manuelles Hinzufügen von Domänenwerten | Microsoft-Dokumentation'
+title: 'Aufgabe 2: Manuelles Hinzufügen von Domänenwerten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244672"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Aufgabe 2: Manuelles Hinzufügen von Domänenwerten
+# <a name="task-2-adding-domain-values-manually"></a>Aufgabe 2: Manuelles Hinzufügen von Domänenwerten
   In dieser Aufgabe fügen Sie einen Wert für die **Land** Domäne manuell. Finden Sie unter [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) Weitere Informationen zu den Feldern auf dieser Seite.  
   
 1.  Klicken Sie auf **Land** Domäne in der **Domänenliste**.  

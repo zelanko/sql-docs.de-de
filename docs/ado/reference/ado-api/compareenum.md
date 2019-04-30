@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839600"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459873"
 ---
 # <a name="compareenum"></a>CompareEnum
 Gibt die relative Position von zwei Datensätzen von Textmarken dargestellt werden.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Gibt an, dass die Lesezeichen gleich sind.|  
 |**adCompareGreaterThan**|2|Gibt an, dass das erste Lesezeichen nach der zweiten ist.|  
@@ -35,7 +35,7 @@ Gibt die relative Position von zwei Datensätzen von Textmarken dargestellt werd
 |**adCompareNotEqual**|3|Gibt an, dass die Textmarken nicht gleich und nicht sortiert sind.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248838"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
 Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen **Datensatz** Objekt von einem OLE DB **Zeile** Objekts in einer C/C++-Anwendung.  
@@ -72,7 +72,7 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
  Ein ADO **Datensatz** Objekt kann auch erstellt werden, aus dem Container des OLE DB **Zeile** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Version:** ADO 2.0 und höher  
+ **Version:** ADO, 2.0 und höher  
   
  **Bibliothek:** "MSADO15.dll"  
   

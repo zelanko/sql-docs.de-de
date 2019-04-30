@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249032"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
 Fügt ein Objekt einer Auflistung an. Wenn die Auflistung [Felder](../../../ado/reference/ado-api/fields-collection-ado.md), ein neues [Feld](../../../ado/reference/ado-api/field-object.md) Objekt kann erstellt werden, bevor es der Auflistung angehängt wird.  
@@ -35,7 +35,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Auflistung*  
+ *collection*  
  Ein Auflistungsobjekt.  
   
  *fields*  
@@ -51,13 +51,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, dessen Standardwert **AdEmpty**, der den Datentyp des neuen Felds angibt. Die folgenden Datentypen werden nicht unterstützt, die für ADO und sollte nicht werden verwendet, wenn anfügen neuer Felder zu einer [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **AdIDispatch**, **AdIUnknown**, **AdVariant**.  
   
  *DefinedSize*  
- Optional. Ein **lange** Wert, der die definierte Größe in Zeichen oder Bytes, des neuen Felds darstellt. Der Standardwert für diesen Parameter wird von abgeleiteten *Typ*. Felder mit einem *DefinedSize* größer als 255 Byte als Spalten variabler Länge behandelt werden. Der Standardwert für *DefinedSize* ist nicht angegeben.  
+ Dies ist optional. Ein **lange** Wert, der die definierte Größe in Zeichen oder Bytes, des neuen Felds darstellt. Der Standardwert für diesen Parameter wird von abgeleiteten *Typ*. Felder mit einem *DefinedSize* größer als 255 Byte als Spalten variabler Länge behandelt werden. Der Standardwert für *DefinedSize* ist nicht angegeben.  
   
  *Attrib*  
- Optional. Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) Wert, dessen Standardwert **AdFldDefault**, die Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben ist, wird das Feld enthalten Attribute, die von abgeleiteten *Typ*.  
+ Dies ist optional. Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) Wert, dessen Standardwert **AdFldDefault**, die Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben ist, wird das Feld enthalten Attribute, die von abgeleiteten *Typ*.  
   
  *FieldValue*  
- Optional. Ein **Variant** , das den Wert für das neue Feld darstellt. Wenn nicht angegeben, wird das Feld einen null-Wert angefügt.  
+ Dies ist optional. Ein **Variant** , das den Wert für das neue Feld darstellt. Wenn nicht angegeben, wird das Feld einen null-Wert angefügt.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -79,7 +79,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Wird ein Laufzeitfehler auftreten, wenn die **Append** Methode wird aufgerufen, auf die **Felder** Auflistung eines geöffneten **Recordset**, oder auf eine **Recordset** in denen die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft festgelegt wurde. Sie können nur Felder zum Anfügen einer **Recordset** , ist nicht geöffnet und noch nicht mit einer Datenquelle verbunden wurde. Dies ist normalerweise der Fall bei einer **Recordset** Objekt wird erstellt, mit der [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) Methode oder einer Objektvariablen zugewiesen.  
   
-## <a name="record"></a>Aufzeichnung (Record)  
+## <a name="record"></a>Datensatz  
  Ein Laufzeitfehler nicht durchgeführt, falls die **Append** Methode wird aufgerufen, auf die **Felder** Auflistung eines geöffneten **Datensatz**. Wird das neue Feld hinzugefügt werden, um die **Felder** Auflistung von der **Datensatz** Objekt. Wenn die **Datensatz** abgeleitet wurde eine **Recordset**, das neue Feld wird nicht angezeigt, der **Felder** Auflistung von der **Recordset** Objekt.  
   
  Ein nicht vorhandenes Feld erstellt und angefügt werden kann, die **Felder** Auflistung, indem Sie der Field-Objekt einen Wert zuweisen, als ob sie in der Auflistung bereits vorhanden waren. Die Zuweisung löst die automatische Erstellung von und Anhängen von der **Feld** -Objekt, und klicken Sie dann auf die Zuweisung wird abgeschlossen.  
