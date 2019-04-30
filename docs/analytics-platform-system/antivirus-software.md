@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199614"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Antivirus-Software für Analytics Platform System
 Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien, um die antivirus-Software in Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software nicht installiert, es sei denn, es sich um eine feste Anforderung Ihres Rechenzentrums ist.  
@@ -62,15 +62,15 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-**_Appliance_domain_– VMM**  
+**_appliance_domain_-VMM**  
   
 -   Keine Einschränkungen  
   
-**_Appliance_domain_- WDS**  
+**_appliance_domain_-WDS**  
   
 -   Keine Einschränkungen  
   
-**_Appliance_domain_-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193245"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
   Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um, das den allgemeinen Bezeichner \<row> besitzt, oder in den optional bereitgestellten Elementnamen. Standardmäßig wird jeder Spaltenwert im Rowset, der nicht NULL ist, einem Attribut des \<row>-Elements zugeordnet. Wenn der FOR XML-Klausel die ELEMENTS-Direktive hinzugefügt wird, wird jeder Spaltenwert einem Unterelement des \<row>-Elements zugeordnet. Zusammen mit der ELEMENTS-Direktive können Sie optional die Option XSINIL angeben, um NULL-Spaltenwerte im Resultset einem Element zuzuordnen, das das Attribut xsi:nil=`"`true`"`besitzt.  
@@ -37,17 +37,17 @@ ms.locfileid: "58537042"
   
 -   [Beispiel: Abrufen von Produktmodellinformationen als XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Direktive](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Anweisung](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Beispiel: Abrufen von Binärdaten](example-retrieving-binary-data.md)  
   
--   [Beispiel: Umbenennen der &#60;Zeile&#62; Element](example-renaming-the-row-element.md)  
+-   [Beispiel: Umbenennen des &#60;row&#62;-Elements](example-renaming-the-row-element.md)  
   
--   [Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Beispiel: Angeben eines Stammelements für den mit FOR XML generierten XML-Code](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Beispiel: Abfragen von Spalten](example-querying-xmltype-columns.md)  
+-   [Beispiel: Abfragen von Spalten des Typs XML](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

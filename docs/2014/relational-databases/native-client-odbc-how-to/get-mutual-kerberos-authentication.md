@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200411"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Einrichten der gegenseitigen Kerberos-Authentifizierung
   Dieses Beispiel zeigt, wie gegenseitige Kerberos-Authentifizierung mithilfe von ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client eingerichtet wird.  

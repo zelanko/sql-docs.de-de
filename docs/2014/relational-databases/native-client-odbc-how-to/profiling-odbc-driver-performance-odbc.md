@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200283"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Themen zur Vorgehensweise zur Profilerstellung für die Treiberleistung (ODBC)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber verfügt über zwei treiberspezifische Optionen für die profilerstellung für die Leistung des Treibers.  
+  Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei treiberspezifische Optionen zur Profilerstellung für die Treiberleistung.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber kann Leistungsstatistiken in einer Datei protokollieren. Die Protokolldatei ist eine durch Tabstopps getrennte Datei, die in jeder Tabellenkalkulation analysiert werden kann, die durch Tabstopps getrennte Dateien unterstützt, beispielsweise Microsoft Excel.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ODBC-Treiber kann Leistungsstatistiken in einer Datei protokollieren. Die Protokolldatei ist eine durch Tabstopps getrennte Datei, die in jeder Tabellenkalkulation analysiert werden kann, die durch Tabstopps getrennte Dateien unterstützt, beispielsweise Microsoft Excel.  
   
  Der Treiber kann auch langwierige Abfragen protokollieren (Abfragen, die innerhalb eines gewissen Zeitraums keine Antwort vom Server erhalten). Diese Abfragen können später von Programmierern und Datenbankadministratoren analysiert werden.  
   

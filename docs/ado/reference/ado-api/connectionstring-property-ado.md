@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140363"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
 Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet.  
@@ -40,7 +40,7 @@ Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenq
 |*Dateiname =*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Daten Quellobjekt), die vordefinierten Verbindungsinformationen enthält.|  
 |*Remoteanbieter =*|Gibt den Namen eines Anbieters verwenden, wenn eine Client-Side-Verbindung öffnen. (Nur Remotedaten-Dienst.)|  
 |*Remoteserver =*|Gibt den Pfadnamen des Servers, verwenden Sie beim Öffnen einer Client-Side-Verbindung an. (Nur Remotedaten-Dienst.)|  
-|*URL =*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
+|*URL=*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
   
  Nach dem Festlegen der **"ConnectionString"** -Eigenschaft, und öffnen Sie die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ist, wird der Anbieter ändert ggf. den Inhalt der Eigenschaft, z. B. durch Zuordnen von ADO definierten Argumentnamen zu ihren Entsprechungen für den bestimmten Anbieter.  
   
@@ -60,7 +60,7 @@ Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenq
 |Standard-ADO-Anbieter|Windows-Betriebssystem|  
 |--------------------------|------------------------------|  
 |MSDASQL<br /><br /> (Um die Lesbarkeit des Quellcodes zu verbessern, explizit angeben der Name des Anbieters in der Verbindungszeichenfolge angegeben.)|Windows 2000 (32-Bit)<br /><br /> Windows XP (32-Bit)<br /><br /> Windows 2003 Server (32-Bit)<br /><br /> Windows Vista (32-Bit)<br /><br /> Windows Vista Service Pack 1 oder höher (32-Bit- und 64-Bit)<br /><br /> Windows-Versionen nach Windows Vista (32-Bit- und 64-Bit)|  
-|Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung auf eins der folgenden Betriebssysteme ausgeführt wird, und den Anbieter nicht explizit geben, ADO folgender Fehler zurückgegeben: "ADODB. Verbindung: Anbieter wird nicht angegeben, und es wurde kein angegebene Standardanbieter "|Windows 2000 (64-Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64-Bit)<br /><br /> Windows Vista (64-Bit)|  
+|Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung auf eins der folgenden Betriebssysteme ausgeführt wird, und den Anbieter nicht explizit geben, ADO mit folgender Fehler zurückgegeben: "ADODB. Verbindung: Anbieter wird nicht angegeben, und es wurde kein angegebene Standardanbieter "|Windows 2000 (64-Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64-Bit)<br /><br /> Windows Vista (64-Bit)|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,4 +68,4 @@ Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenq
 ## <a name="see-also"></a>Siehe auch  
  [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

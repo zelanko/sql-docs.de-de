@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184886"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
 Im folgende Visual Basic for Applications-Funktionen können in Data shaping CALC-Ausdrücken verwendet werden:  

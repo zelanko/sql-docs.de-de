@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181232"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC-Cursorbibliothek – Fehlercodes
 > [!IMPORTANT]  
@@ -38,10 +38,10 @@ ms.locfileid: "47691128"
 |01000|Die Cursorbibliothek nicht verwendet. Nicht genügend treiberunterstützung.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Die Cursorbibliothek nicht verwendet. Versionskonflikt mit Treiber-Manager.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Treiber hat SQL_SUCCESS_WITH_INFO zurückgegeben. Die Warnmeldung ist verloren gegangen.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Allgemeiner Fehler: nicht Dateipuffer erstellt.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Allgemeiner Fehler: kann nicht aus Dateipuffer gelesen werden.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Allgemeiner Fehler: nicht in der Dateipuffer schreiben.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Allgemeiner Fehler: nicht schließen, oder Entfernen des Dateipuffers.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|Allgemeiner Fehler: Erstellen des Dateipuffers nicht möglich.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Allgemeiner Fehler: Kann nicht aus Dateipuffer gelesen werden.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Allgemeiner Fehler: Schreiben in Dateipuffer kann nicht ausgeführt werden.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Allgemeiner Fehler: Kann nicht zu schließen, oder Entfernen des Dateipuffers.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|Positionierte Anforderung kann nicht ausgeführt werden, da keine durchsuchbaren Spalten gebunden wurden.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|Positionierte Anforderung konnte nicht ausgeführt werden, da Resultset mit einer Join-Bedingung erstellt wurde.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|Gebundenen Puffer überschreitet die maximale Segmentgröße.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

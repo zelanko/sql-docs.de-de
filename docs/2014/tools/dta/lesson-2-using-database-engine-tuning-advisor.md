@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188574"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lektion 2: Verwenden des Datenbankoptimierungsratgebers
   Der Datenbankoptimierungsratgeber ermöglicht Ihnen das Optimieren von Datenbanken, Verwalten von Optimierungssitzungen und das Anzeigen von Empfehlungen zur Optimierung. Benutzer, die erweiterte Kenntnisse in physischen Entwurfsstrukturen haben, können mit diesem Tool eine Analyse der Datenbankoptimierung ausführen. Benutzer, die mit der Datenbankoptimierung noch nicht vertraut sind, können mithilfe dieses Tools die beste Konfiguration physischer Entwurfsstrukturen für die Arbeitsauslastung herausfinden, die sie optimieren. Diese Lektion umfasst grundlegende, praktische Hinweise für Datenbankadministratoren, die mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers noch nicht vertraut sind, sowie für Systemadministratoren, die möglicherweise keine umfassenden Kenntnisse physischer Entwurfsstrukturen haben.  

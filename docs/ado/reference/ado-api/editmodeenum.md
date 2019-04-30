@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181099"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Gibt den Bearbeitungsstatus eines Datensatzes an.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Gibt an, dass keine Bearbeitungsvorgang ausgeführt wird.|  
 |**adEditInProgress**|1|Gibt an, dass die Daten im aktuellen Datensatz geändert, aber nicht gespeichert wurde.|  
@@ -34,7 +34,7 @@ Gibt den Bearbeitungsstatus eines Datensatzes an.
 |**adEditDelete**|4|Gibt an, dass der aktuelle Datensatz gelöscht wurde.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199866"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Zusammenfassung der ODBC-Tabellenwertparameter-API
   In diesem Thema werden die ODBC-Funktionen aufgeführt, die verbessert wurden, sodass nun Tabellenwertparameter unterstützt werden.  

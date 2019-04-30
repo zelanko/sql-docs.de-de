@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208475"
 ---
 # <a name="using-sqlbindcol"></a>Verwenden von SQLBindCol
 Die Anwendung bindet Spalten durch den Aufruf **SQLBindCol**. Diese Funktion wird eine Spalte zu einem Zeitpunkt gebunden. Es gibt die Anwendung Folgendes an:  
   
 -   Die Spaltennummer. Spalte 0 ist die Lesezeichenspalte. Diese Spalte ist in einigen Resultsets nicht enthalten. Alle anderen Spalten werden beginnend mit der Zahl 1 nummeriert. Es ist ein Fehler auf eine höhere-Spalte binden, als Spalten im Resultset vorhanden sind. Dieser Fehler nicht erkannt werden, bis das Resultset erstellt wurde, damit sie von zurückgegeben wird **SQLFetch**, nicht **SQLBindCol**.  
   
--   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an die Spalte gebunden werden. Es ist ein Fehler an einen C-Datentyp, in dem der SQL-Datentyp der Spalte konvertiert werden kann. Dieser Fehler möglicherweise nicht erkannt werden, bis das Resultset erstellt wurde, damit sie von zurückgegeben wird **SQLFetch**, nicht **SQLBindCol**. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D:-Datentypen. Informationen über die Länge in Byte, finden Sie unter [Datenpufferlänge](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an die Spalte gebunden werden. Es ist ein Fehler an einen C-Datentyp, in dem der SQL-Datentyp der Spalte konvertiert werden kann. Dieser Fehler möglicherweise nicht erkannt werden, bis das Resultset erstellt wurde, damit sie von zurückgegeben wird **SQLFetch**, nicht **SQLBindCol**. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D: Datentypen. Informationen über die Länge in Byte, finden Sie unter [Datenpufferlänge](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
 -   Die Adresse des ein Längen-/Indikatorpuffer. Die Längen-/Indikatorpuffer ist optional. Es wird verwendet, um die Bytelänge der Binär- oder Zeichendaten oder return SQL_NULL_DATA zurückzugeben, wenn die Daten NULL sind. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185808"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Verweise auf DataSources- und DataSets-Auflistungen (Berichts-Generator und SSRS)
   Die `DataSources`-Auflistung enthält alle in einem Bericht verwendeten Datenquellen. Die `DataSets`-Auflistung enthält alle Datasets für alle Datenquellen in einem Bericht. Verwenden Sie den Bereich **Berichtsdaten** für eine hierarchische Sicht von Berichtsdatasets, die unter der Datenquelle organisiert werden, auf die sie verweisen. Wenn Sie Verweise auf diese Auflistungen einschließen, werden bei der Vorschau des Berichts keine Werte angezeigt. Die Auflistungen sind erst verfügbar, nachdem der Bericht auf einem Berichtsserver veröffentlicht wurde.  

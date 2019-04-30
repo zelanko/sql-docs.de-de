@@ -1,5 +1,5 @@
 ---
-title: Teilmenge (MDX) | Microsoft Docs
+title: Teilmenge (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 07d813587dc530924becbb187a970f78022e5476
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136093"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 
@@ -32,14 +32,14 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Starten*  
+ *Start*  
  Ein gültiger numerischer Ausdruck, der die Position des ersten zurückzugebenden Tupels angibt.  
   
- *Anzahl*  
+ *Count*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Aus dem angegebenen Satz der **Teilmenge** Funktion gibt eine Teilmenge, die angegebene Anzahl von Tupeln enthält, beginnend an der angegebenen Startposition, zurück. Die Startposition basiert auf einem nullbasierten Index, d. h., null (0) entspricht dem ersten Tupel in der Menge, 1 entspricht dem zweiten Tupel usw.  
+ Aus der angegebenen Menge der **Teilmenge** Funktionsergebnis ist eine Teilmenge, die die angegebene Anzahl von Tupeln, beginnend mit der angegebenen Startposition enthält. Die Startposition basiert auf einem nullbasierten Index, d. h., null (0) entspricht dem ersten Tupel in der Menge, 1 entspricht dem zweiten Tupel usw.  
   
  Wenn *Anzahl* nicht angegeben ist, wird die Funktion gibt alle Tupel von *starten* bis zum Ende des Satzes.  
   

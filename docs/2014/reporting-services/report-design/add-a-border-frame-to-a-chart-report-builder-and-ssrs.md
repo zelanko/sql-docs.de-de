@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185962"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)
   Sie können die visuelle Wirkung eines Diagramms verbessern, indem Sie einen Rahmen um das Diagramm ziehen. Sie können einen Rahmen im Dialogfeld **Diagrammeigenschaften** oder im Bereich Eigenschaften auswählen. Die Diagrammrahmen können nicht für einen beliebigen anderen Datenbereich übernommen werden.  

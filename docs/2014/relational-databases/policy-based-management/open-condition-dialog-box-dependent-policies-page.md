@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182930"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'
   Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen, finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  

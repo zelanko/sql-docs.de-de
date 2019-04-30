@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190338"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
   Bevor Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
@@ -47,7 +47,7 @@ ms.locfileid: "53355795"
   
     -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart durchgeführt wird, ist für das [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Setup die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart erfolgt, ist für das Setup von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ein einzige Replikat die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
   
     -   .NET Framework 4: In einem Clusterbetriebssystem wird .NET Framework 4 von Setup installiert. Um die Installationsdauer zu reduzieren, können Sie .NET Framework 4 installieren, bevor Sie das Setup ausführen.  
   

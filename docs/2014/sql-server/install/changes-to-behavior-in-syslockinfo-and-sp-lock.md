@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214994"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Änderungen am Verhalten von 'syslockinfo' und 'sp_lock'
   **Syslockinfo** und **Sp_lock** möglicherweise unerwartete Werte zurück. Sie können auch zusätzliche Zeilen zurückgeben, während vorherige Versionen von **Syslockinfo** und **Sp_lock** maximal zwei Zeilen je Lock-Ressource zurückgegeben.  

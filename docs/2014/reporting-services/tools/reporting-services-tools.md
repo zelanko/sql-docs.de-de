@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201742"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Satz von grafischen Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184924"
 ---
 # <a name="using-bookmarks"></a>Verwenden von Textmarken
 Es ist häufig nützlich, um direkt zu einem bestimmten Datensatz zurückgegeben wird, nach dem verschoben haben, der **Recordset** ohne zu scrollen Sie durch jeden Datensatz und Vergleichen von Werten. Z. B., wenn Sie versuchen, suchen Sie für einen Datensatz mit den **finden** -Methode, aber die Suche keine Datensätze zurückgibt, wird automatisch am Ende des der **Recordset**. Wenn Ihr Anbieter unterstützt werden, können Lesezeichen verwendet werden, markieren Sie Ihre aktuelle Position vor der Verwendung der **finden** Methode, sodass Sie für Ihren Standort wiederherstellen können. Ein Lesezeichen ist ein **Variant** Typwert, die eindeutig einen Datensatz in einem **Recordset** Objekt.  

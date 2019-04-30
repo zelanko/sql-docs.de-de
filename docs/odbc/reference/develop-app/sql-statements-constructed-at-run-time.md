@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149131"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>SQL-Anweisungen, die zur Laufzeit erstellt werden
 Anwendungen, die ad-hoc-Analysen häufig ausführen werden SQL-Anweisungen zur Laufzeit erstellen. Eine Tabelle kann z. B. einen Benutzer die Auswahl von Spalten, aus denen zum Abrufen von Daten zulassen:  

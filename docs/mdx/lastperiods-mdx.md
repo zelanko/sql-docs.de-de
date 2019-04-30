@@ -1,5 +1,5 @@
 ---
-title: LastPeriods (MDX) | Microsoft Docs
+title: LastPeriods (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58e94b5128760dfd1d179ecad3cae7bbf065ee10
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205296"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -36,9 +36,9 @@ LastPeriods(Index [ ,Member_Expression ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die angegebene Anzahl von Zeiträumen positiv ist, wird die **LastPeriods** Funktion gibt eine Menge von Elementen, die mit dem Element beginnen, die zurückliegen *Index* -1 aus dem angegebenen Elementausdruck befindet und endet mit dem angegebenen Element. Die Anzahl der von der Funktion zurückgegebenen Elemente entspricht *Index*.  
+ Wenn die angegebene Anzahl von Zeiträumen positiv ist die **LastPeriods** Funktionsergebnis ist eine Menge von Elementen, die mit dem Element beginnen, das hinterherhinkt *Index* -1 aus dem angegebenen Elementausdruck befindet, und endet mit dem angegebene Member. Die Anzahl der Elemente, die von der Funktion zurückgegebene ist gleich *Index*.  
   
- Wenn die angegebene Anzahl von Zeiträumen negativ ist, wird die **LastPeriods** Funktion gibt eine Menge von Elementen, die mit dem angegebenen Element beginnt und endet mit dem Element, das führt (- *Index* - 1) aus den angegebenen Member auf. Die Anzahl der von der Funktion zurückgegebenen Elemente gleich den absoluten Wert des *Index*.  
+ Wenn die angegebene Anzahl von Zeiträumen negativ ist, ist die **LastPeriods** Funktion gibt eine Menge von Elementen, die mit dem angegebenen Element beginnt und endet mit dem Element, das führt (- *Index* - 1) aus dem angegebenen Member. Die Anzahl der Elemente, die von der Funktion zurückgegebene ist gleich dem absoluten Wert des *Index*.  
   
  Wenn die angegebene Anzahl von Zeiträumen NULL ist, ist die **LastPeriods** Funktion die leere Menge zurück. Dies ist im Gegensatz zu den **Lag** -Funktion, die das angegebene Element zurück, wenn 0 angegeben wird.  
   

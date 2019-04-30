@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213449"
 ---
 # <a name="keyset-driven-cursors"></a>Keysetgesteuerte Cursor
-Ein keysetgesteuerter Cursor befindet sich zwischen einer statischen und eines dynamischen Cursors in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor erkennt es nicht immer Änderungen an die Mitgliedschaft und Reihenfolge des Resultsets. Wie einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset (je nach die Isolationsstufe der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt).  
+Ein keysetgesteuerter Cursor befindet sich zwischen einer statischen und eines dynamischen Cursors in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor ermittelt er nicht immer Änderungen an der Mitgliedschaft und Reihenfolge des Resultsets. Wie einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset (je nach die Isolationsstufe der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt).  
   
  Wenn ein keysetgesteuerter Cursor geöffnet wird, werden die Schlüssel für das gesamte Resultset gespeichert; Dies behebt die scheinbare Mitgliedschaft und Reihenfolge des Resultsets. Wenn der Cursor über das Resultset einen Bildlauf durchführt, verwendet es die Schlüssel in diesem *Keyset* zum Abrufen der aktuellen Datenwerte für jede Zeile. Nehmen wir beispielsweise an ein keysetgesteuerter Cursor abruft, eine Zeile und eine andere Anwendung wird diese Zeile aktualisiert. Wenn der Cursor die Zeile refetches, sind die Werte, die erkennt neue, da sie die Zeile mit dem Schlüssel erneut abgerufen. Aus diesem Grund erkennen die keysetgesteuerte Cursor immer von sich selbst und anderen Benutzern vorgenommene Änderungen.  
   
- Wenn der Cursor versucht, eine Zeile abzurufen, das gelöscht wurde, wird diese Zeile als einer "Lücke" im Resultset angezeigt: der Schlüssel für die Zeile vorhanden ist, im Keyset, aber die Zeile im Resultset nicht mehr vorhanden ist. Wenn die Schlüsselwerte in einer Zeile aktualisiert werden, gilt die Zeile als gelöscht wurden und dann eingefügt werden, damit solche Zeilen auch als Lücken im Resultset angezeigt werden. Während ein keysetgesteuerten Cursors immer von anderen Benutzern gelöschte Zeilen erkennen kann, können sie optional entfernen, auf die Schlüssel für die Zeilen löscht selbst über das Keyset. Keysetgesteuerte Cursor, die dazu ihre eigenen Löschvorgänge nicht erkannt werden. Gibt an, ob ein bestimmter keysetgesteuerter Cursor einen eigenen Löschvorgänge erkennt wird gemeldet, über die Feedbackoption im SQL_STATIC_SENSITIVITY in **SQLGetInfo**.  
+ Wenn der Cursor versucht, eine Zeile abzurufen, die gelöscht wurde, wird diese Zeile als einer "Lücke" im Resultset angezeigt: Der Schlüssel für die Zeile ist im Keyset enthalten, aber die Zeile ist nicht mehr im Resultset vorhanden. Wenn die Schlüsselwerte in einer Zeile aktualisiert werden, gilt die Zeile als gelöscht wurden und dann eingefügt werden, damit solche Zeilen auch als Lücken im Resultset angezeigt werden. Während ein keysetgesteuerten Cursors immer von anderen Benutzern gelöschte Zeilen erkennen kann, können sie optional entfernen, auf die Schlüssel für die Zeilen löscht selbst über das Keyset. Keysetgesteuerte Cursor, die dazu ihre eigenen Löschvorgänge nicht erkannt werden. Gibt an, ob ein bestimmter keysetgesteuerter Cursor einen eigenen Löschvorgänge erkennt wird gemeldet, über die Feedbackoption im SQL_STATIC_SENSITIVITY in **SQLGetInfo**.  
   
  Zeilen, die von anderen Benutzern eingefügt sind nie in einen Keyset-gesteuerten Cursor sichtbar, da keine Schlüssel für diese Zeilen im Keyset vorhanden sind. Ein keysetgesteuerter Cursor kann jedoch optional hinzufügen, die Schlüssel für die Zeilen fügt sich selbst um das Keyset. Keysetgesteuerte Cursor, die diesem Zweck können eigene einfügungen ermittelt werden. Gibt an, ob ein bestimmter keysetgesteuerter Cursor eine eigene einfügungen erkennt, wird gemeldet, über die Feedbackoption im SQL_STATIC_SENSITIVITY in **SQLGetInfo**.  
   

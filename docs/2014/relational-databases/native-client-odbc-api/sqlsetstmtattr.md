@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188687"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das gemischte Cursormodell (keysetgesteuert/dynamisch) nicht. Der Versuch, die Keysetgröße mit SQL_ATTR_KEYSET_SIZE festzulegen, schlägt fehl, wenn der festgelegte Wert ungleich 0 (null) ist.  

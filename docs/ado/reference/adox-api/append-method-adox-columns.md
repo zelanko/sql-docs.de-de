@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98ff605c2fb701f2451e3df4ba2068da6729ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206287"
 ---
 # <a name="append-method-adox-columns"></a>Append-Methode (ADOX-Spalten)
 Fügt ein neues [Spalte](../../../ado/reference/adox-api/column-object-adox.md) -Objekt an die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  
@@ -39,10 +39,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  Die **Spalte** anzufügende Objekt oder den Namen der Spalte zu erstellen und anfügen.  
   
  *Typ*  
- Optional. Ein **lange** Wert, der den Datentyp der Spalte angibt. Die *Typ* Parameter entspricht der [Typ](../../../ado/reference/adox-api/type-property-column-adox.md) Eigenschaft eine **Spalte** Objekt.  
+ Dies ist optional. Ein **lange** Wert, der den Datentyp der Spalte angibt. Die *Typ* Parameter entspricht der [Typ](../../../ado/reference/adox-api/type-property-column-adox.md) Eigenschaft eine **Spalte** Objekt.  
   
  *DefinedSize*  
- Optional. Ein **lange** Wert, der die Größe der Spalte angibt. Die *DefinedSize* Parameter entspricht der [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) Eigenschaft eine **Spalte** Objekt.  
+ Dies ist optional. Ein **lange** Wert, der die Größe der Spalte angibt. Die *DefinedSize* Parameter entspricht der [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) Eigenschaft eine **Spalte** Objekt.  
   
 > [!NOTE]
 >  Beim Anfügen, wird ein Fehler auftreten. ein **Spalte** auf die **Spalten** Auflistung von ein [Index](../../../ado/reference/adox-api/index-object-adox.md) Wenn die **Spalte** ist nicht in einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) , ist bereits angefügt, um die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung.  

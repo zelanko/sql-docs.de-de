@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206960"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards
   Einige Typen von richtlinienbasierten Verwaltungsrichtlinien können Trigger erstellen, um die zukünftige Einhaltung der Richtlinie zu erzwingen. In dieser Lektion erstellen Sie eine Richtlinie, die einen Benennungsstandard für Tabellen erzwingt. Anschließend testen Sie die Richtlinie, indem Sie versuchen, eine Tabelle zu erstellen, die gegen die Richtlinie verstößt.  

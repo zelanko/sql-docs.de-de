@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207035"
 ---
 # <a name="conversions-from-sql-to-c"></a>Konvertierungen von SQL in C
   In der folgenden Tabelle werden Probleme aufgelistet, die zu berücksichtigen sind, wenn Sie Datum-/Uhrzeit-Typen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in C-Typen konvertieren.  

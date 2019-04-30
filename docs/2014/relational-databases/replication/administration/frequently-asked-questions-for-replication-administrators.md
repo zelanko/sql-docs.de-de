@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207067"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
   Die folgenden Fragen und Antworten bieten einen Leitfaden für zahlreiche Aufgaben, die Administratoren von replizierten Datenbanken ausführen müssen.  
@@ -42,7 +42,7 @@ ms.locfileid: "54125851"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Wenn ein Abonnement verfügbar ist, wann kann dann die Abonnementdatenbank verwendet werden?  
  Ein Abonnement ist verfügbar, nachdem die Momentaufnahme auf die Abonnementdatenbank angewendet wurde. Obgleich auch vorher auf die Abonnementdatenbank zugegriffen werden kann, sollte die Datenbank erst verwendet werden, nachdem die Momentaufnahme angewendet wurde. Überprüfen Sie den Status der Momentaufnahmeerstellung mithilfe des Replikationsmonitors:  
   
--   Die Momentaufnahme wird durch den Momentaufnahme-Agent erstellt. Im Replikationsmonitor können Sie den Status der Momentaufnahmeerstellung auf der Registerkarte **Agents** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Die Momentaufnahme wird durch den Momentaufnahme-Agent erstellt. Im Replikationsmonitor können Sie den Status der Momentaufnahmeerstellung auf der Registerkarte **Agents** anzeigen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Die Momentaufnahme wird vom Verteilungs-Agent oder vom Merge-Agent angewendet. Im Replikationsmonitor können Sie den Status der Momentaufnahmeanwendung auf der Seite **Verteilungs-Agent** oder **Merge-Agent** anzeigen. 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125851"
   
 -   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
--   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank >. \<Schema >. \<Objekt >. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
+-   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank>. \<Schema>. \<Objekt>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
   
 -   Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125851"
  Ja. Da alle Daten auf einem Datenträgersatz im Cluster gespeichert sind, sind keine besonderen Überlegungen erforderlich.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsverwaltung – häufig gestellte Fragen](frequently-asked-questions-for-replication-administrators.md)   
+ [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188756"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField und SQLGetDescRec (Cursorbibliothek)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47765018"
   
  Führt die Cursorbibliothek **SQLGetDescRec** Lesezeichenspalten Metadaten zurückgegeben. Führt die Cursorbibliothek **SQLGetDescField** zurückzugebenden die gleichen Felder, die vom **SQLGetDescRec**, welche sind SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ Länge, SQL_DESC_PRECISION, SQL_DESC_SCALE und SQL_DESC_NULLABLE. Aus Gründen der Konsistenz **SQLGetDescField** sql_desc_unnamed darf auch zurück.  
   
- Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, zurückgeben, der Wert der folgenden Felder, die zum Binden von Lesezeichenspalten festgelegt sind: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR, und SQL_DESC_LENGTH.  
+ Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, zurückgeben, der Wert der folgenden Felder, die zum Binden von Lesezeichenspalten festgelegt sind: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_LENGTH.  
   
  Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, um den Wert des Felds SQL_DESC_BIND_OFFSET_PTR SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE oder SQL_DESC_ROW_STATUS_PTR zurückzugeben. Diese Felder können für jede Zeile wird nicht nur die Lesezeichen-Zeile zurückgegeben werden.  
   

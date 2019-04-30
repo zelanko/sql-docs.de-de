@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192310"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>Einschränkungen der Verwendung keysetgesteuerter Cursor
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668108"
  Auch wenn Ihre Anwendung Tabellenaliase verwendet, funktioniert keysetgesteuerte Cursor nicht. vorwärts gerichtete oder statische Cursortypen sind erforderlich. Verwenden das Keyset Cursortyp mit Tabellenaliasnamen führt dazu, dass den folgenden Fehler: "[Microsoft] [ODBC-Treiber für Oracle] können keine keysetgesteuerten Cursors auf die Verknüpfung mit Union, intersect oder minus oder einem schreibgeschützten Resultset."  
   
 > [!NOTE]  
->  Aufgrund der Art und Weise der Treiber führt die SQL-Anweisung, die mit dem Oracle-Server gesendet wird, gibt die Oracle intern die folgende Fehlermeldung angezeigt: "ORA-00964: Tabelle Name nicht in der Liste."
+>  Aufgrund der Art und Weise, die der Treiber die SQL-Anweisung führt, die mit dem Oracle-Server gesendet wird, gibt der Oracle intern die folgende Fehlermeldung zurück: "ORA-00964: Tabelle Name nicht in der Liste."

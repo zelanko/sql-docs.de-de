@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200280"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Verwenden von Tabellenwertparametern (ODBC)
   In diesem Beispiel wird veranschaulicht, wie mit Tabellenwertparametern mehrere Zeilen mit mehreren Spalten und einem Aufruf des Servers eingefügt werden.  
@@ -23,7 +23,7 @@ ms.locfileid: "48138461"
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für basieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  
   
  Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   

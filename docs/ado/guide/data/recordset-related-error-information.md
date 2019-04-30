@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187799"
 ---
 # <a name="recordset-related-error-information"></a>Fehlerinformationen in Bezug auf Recordsets
 Während der Stapelverarbeitung der **Status** Eigenschaft der **Recordset** -Objekt stellt Informationen über die einzelnen Datensätze in der **Recordset**. Bevor eine Batchaktualisierung stattfindet, die **Status** Eigenschaft der **Recordset** gibt Informationen zu Datensätzen hinzugefügt, geändert und gelöscht werden. Nach dem **UpdateBatch** aufgerufen wurde, die **Status** Eigenschaft gibt an, den Erfolg oder Misserfolg des Vorgangs. Wie Sie von Datensatz zu Datensatz, in verschoben der **Recordset**, den Wert des der **Status** eigenschaftsänderungen, um den Status des aktuellen Datensatzes beschreiben.

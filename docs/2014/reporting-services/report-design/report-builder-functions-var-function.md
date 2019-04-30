@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215279"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var-Funktion (Berichts-Generator und SSRS)
   Gibt die Varianz aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  

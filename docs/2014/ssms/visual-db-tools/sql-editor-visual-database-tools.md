@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194917"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
   Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](visual-database-tools.md) des Abfrage-Designers.  

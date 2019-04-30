@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200357"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
   Dieses Beispiel zeigt die ODBC-treiberspezifischen Optionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Protokollieren von Abfragen mit langer Ausführungszeit. Bei der Ausführung des Beispiels wird die Datei Odbcqry.log erstellt, die eine Liste von Abfragen enthält, deren Ausführung ein von der Anwendung festgelegtes Intervall überschreitet. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

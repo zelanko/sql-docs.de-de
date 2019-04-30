@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b19a138e9e4d479e7fb9cb3f8b4e140838b43e8a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188524"
 ---
 # <a name="rds-object-model-summary"></a>Zusammenfassung zum RDS-Objektmodell
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ ms.locfileid: "51558407"
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

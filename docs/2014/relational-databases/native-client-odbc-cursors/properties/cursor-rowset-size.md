@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207168"
 ---
 # <a name="cursor-rowset-size"></a>Cursorrowsetgröße
   ODBC-Cursor sind nicht darauf beschränkt, nur jeweils eine Zeile abzurufen. Sie können mehrere Zeilen in jedem Aufruf von abrufen **SQLFetch** oder [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Bei einer Client-/Serverdatenbank, wie Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ist es effizienter, mehrere Zeilen gleichzeitig abzurufen. Die Anzahl der Zeilen, die bei einem Abrufvorgang zurückgegebenen ist Rowsetgröße bezeichnet und wird angegeben, indem Sie mit SQL_ATTR_ROW_ARRAY_SIZE von [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  

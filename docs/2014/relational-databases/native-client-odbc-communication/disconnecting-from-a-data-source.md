@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205678"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Trennen der Verbindung mit einer Datenquelle
   Wenn eine Anwendung mithilfe einer Datenquelle abgeschlossen ist, ruft er **SQLDisconnect**. **SQLDisconnect** gibt alle Anweisungen, die bei der Verbindung zugeordnet sind frei und trennt den Treiber aus der Datenquelle. Nach dem Trennen der Verbindung kann die Anwendung aufrufen kann [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) um das Verbindungshandle freizugeben. Vor dem Beenden, ruft eine Anwendung auch **SQLFreeHandle** um das Umgebungshandle freizugeben.  

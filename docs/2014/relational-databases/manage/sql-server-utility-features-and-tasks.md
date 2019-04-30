@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190427"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kunden möchten ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung als Ganzes verwalten. Diese Anforderung wird in dieser Version mithilfe des Konzepts der Anwendungs- und Multiserververwaltung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm erfüllt.  

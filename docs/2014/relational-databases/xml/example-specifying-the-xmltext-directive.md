@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der XMLTEXT-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der XMLTEXT-Anweisung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205098"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Anweisung
   Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der `XMLTEXT`-Direktive in einer `SELECT`-Anweisung im EXPLICIT-Modus verarbeitet werden.  

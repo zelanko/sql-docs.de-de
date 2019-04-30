@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205311"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Verwenden mehrerer Versionen und Instanzen von SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können auf ein und demselben Computer mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwaltet werden. Darüber hinaus können Sie frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, auf dem bereits frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen installiert sind. Unterstützte Upgradeszenarien finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "52762733"
 ### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Von allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Bestimmte Komponenten werden von allen Instanzen aller installierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Wenn Sie unterschiedliche Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer parallel installieren, werden diese Komponenten automatisch auf die neueste Version aktualisiert. Solche Komponenten werden im Allgemeinen automatisch deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstalliert wird.  
   
- Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS-Writer.  
+ Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.  
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Von allen Instanzen derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen, die die gleiche Hauptversion aufweisen, werden einige Komponenten von allen Instanzen gemeinsam genutzt. Wenn die freigegebenen Komponenten während des Upgrades ausgewählt werden, werden die vorhandenen Komponenten auf die neueste Version aktualisiert.  
@@ -68,7 +68,7 @@ ms.locfileid: "52762733"
 ### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen unabhängige Komponenten  
  Bestimmte Komponenten werden während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installiert, aber sind von den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unabhängig. Sie werden möglicherweise von Hauptversionen oder von allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gemeinsam genutzt.  
   
- Beispiele: Microsoft Sync Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+ Beispiele: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Installation, finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Weitere Informationen zur Deinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact finden Sie unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   

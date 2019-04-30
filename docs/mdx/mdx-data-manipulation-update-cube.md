@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187621"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX-Datenbearbeitung – UPDATE CUBE
 
@@ -60,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
   
  Im folgenden finden eine Beschreibung der Methoden der Zuordnung.  
   
- **USE_EQUAL_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt wird derselbe Wert basierend auf den folgenden Ausdruck zugewiesen werden.  
+ **USE_EQUAL_ALLOCATION:** Jeder Blattzelle, die zur aktualisierten Zelle beiträgt, wird derselbe Wert basierend auf den folgenden Ausdruck zugewiesen werden.  
   
 ```  
 <leaf cell value> =   
@@ -75,13 +75,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt zugewiesen wird derselbe Wert, der auf dem folgenden Ausdruck basiert.  
+ **USE_WEIGHTED_ALLOCATION:** Jeder Blattzelle, die zur aktualisierten Zelle beiträgt wird derselbe Wert zugewiesen, der auf den folgenden Ausdruck basiert.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt, wird entsprechend dem folgenden Ausdruck geändert werden.  
+ **USE_WEIGHTED_INCREMENT:** Jeder Blattzelle, die zur aktualisierten Zelle beiträgt, wird entsprechend dem folgenden Ausdruck geändert werden.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   

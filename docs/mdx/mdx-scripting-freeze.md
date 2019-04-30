@@ -1,5 +1,5 @@
 ---
-title: FREEZE-Anweisung (MDX) | Microsoft Docs
+title: FREEZE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cd652a9f308bd7a564a61d165f9c47875a900737
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187564"
 ---
-# <a name="mdx-scripting---freeze"></a>MDX-Skripts - fixiert werden soll
+# <a name="mdx-scripting---freeze"></a>MDX-Skripts – FREEZE
 
 
   Fixiert die Zellenwerte eines angegebenen Teilcubes auf die aktuellen Werte. Wenn die Zellenwerte fixiert sind, wirken sich Änderungen an anderen Zellen nicht auf die fixierten Zellen aus.  
@@ -33,7 +33,7 @@ FREEZE Subcube_Expression
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen Teilcube zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **FIXIEREN** -Anweisung fixiert die Werte von Zellen in einem angegebenen Teilcube, sodass nachfolgende Anweisungen in einem MDX Skript ändern ihrer Werte in nachfolgenden Berechnungsdurchläufen übergibt.  
+ Die **FIXIEREN** -Anweisung sperrt die Werte der Zellen in einem angegebenen Teilcube, sodass nachfolgende Anweisungen in einem MDX-Skript aus, ändern die Werte in den nachfolgenden Berechnungsdurchläufen übergibt.  
   
  Im folgenden Beispiel stellen A und B Teilcubes in einem MDX-Berechnungsskript dar:  
   
@@ -45,7 +45,7 @@ B = 3
   
  An diesem Punkt ist sowohl A als auch B gleich 3.  
   
- Wir fügen Sie nun die **fixieren** Funktion, die Zellen im Teilcube A zu sperren:  
+ Wir fügen Sie nun die **fixieren** Funktion, die die Zellen im Teilcube A zu sperren:  
   
 ```  
 B = 2;  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198329"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Die Microsoft Open Database Connectivity (ODBC)-Schnittstelle ist eine C-Sprache Programmierschnittstelle, die für Anwendungen, um Daten aus einer Vielzahl von Datenbank-Managementsystemen (DBMS) zugreifen kann. ODBC ist eine Schnittstelle auf niedriger Ebene hohe Leistung, die speziell für relationale Datenspeicher entworfen wurde.  
@@ -44,7 +44,7 @@ Die Microsoft Open Database Connectivity (ODBC)-Schnittstelle ist eine C-Sprache
   
  Definiert die Bedingungen, die relevant für ODBC.  
   
- [ODBCCONF. EXE-DATEI](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  Beschreibt das Befehlszeile-Hilfsprogramm für die Konfiguration der Treiber und Namen von Datenquellen.  
   

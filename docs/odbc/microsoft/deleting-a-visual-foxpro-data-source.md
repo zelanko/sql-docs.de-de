@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198271"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Löschen einer Visual FoxPro-Datenquelle
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>So löschen Sie eine Visual FoxPro-Datenquelle  

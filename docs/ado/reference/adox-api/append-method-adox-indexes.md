@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206271"
 ---
 # <a name="append-method-adox-indexes"></a>Append-Methode (ADOX-Indizes)
 Fügt ein neues [Index](../../../ado/reference/adox-api/index-object-adox.md) -Objekt an die [Indizes](../../../ado/reference/adox-api/indexes-collection-adox.md) Auflistung.  
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  Die **Index** anzufügende Objekt oder den Namen des Indexes zum Erstellen und anfügen.  
   
  *Spalten*  
- Optional. Ein **Variant** Wert, der die Namen der zu indizierenden Spalten angibt. Die *Spalten* Parameter entspricht den Werten der der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte.  
+ Dies ist optional. Ein **Variant** Wert, der die Namen der zu indizierenden Spalten angibt. Die *Spalten* Parameter entspricht den Werten der der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte.  
   
 ## <a name="remarks"></a>Hinweise  
  Die *Spalten* Parameter kann entweder der Name einer Spalte oder ein Array von Spaltennamen haben.  

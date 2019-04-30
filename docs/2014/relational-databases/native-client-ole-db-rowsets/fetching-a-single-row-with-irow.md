@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183665"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Abrufen einer einzelnen Zeile mit IRow
   Die **IRow** -schnittstellenimplementierung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter wurde vereinfacht, um die Leistung zu steigern. **IRow** lässt den direkten Zugriff auf Spalten eines einzelnen Zeilenobjekts zu. Wenn Sie vorab wissen, dass das Ergebnis einer Befehlsausführung genau eine Zeile erzeugt, dann lassen sich mit **IRow** die Spalten dieser Zeile abrufen. Wenn das Resultset mehrere Zeilen umfasst, macht **IRow** nur die erste Zeile verfügbar.  
   
- Die **IRow**-Implementierung lässt keine Navigation in der Zeile zu. Mit folgender Ausnahme wird auf jede Spalte der Zeile nur ein einziges Mal zugegriffen: Einmal kann zur Ermittlung der Spaltenbreite auf eine Spalte zugegriffen werden, und dann kann nochmals zum Abruf der Daten auf die Spalte zugegriffen werden.  
+ Die **IRow**-Implementierung lässt keine Navigation in der Zeile zu. Jede Spalte in der Zeile erfolgt nur einmal mit einer Ausnahme: Eine Spalte kann nur einmal auf die Spaltengröße zu ermitteln und wieder zum Abrufen der Daten zugegriffen werden.  
   
 > [!NOTE]  
 >  **IRow::Open** unterstützt nur das Öffnen von Objekten des Typs DBGUID_STREAM und DBGUID_NULL.  

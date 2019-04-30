@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209271"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
   Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Bericht, Teilen in anderen Berichten und von anderen Benutzern wieder verwendet, wenn sie die entsprechenden Berechtigungen verfügen und auf Berichtsservern veröffentlicht werden können.  

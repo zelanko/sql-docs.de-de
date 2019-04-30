@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193338"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
@@ -157,17 +157,17 @@ ms.locfileid: "58532833"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** Primäre International  
+-   **BankName:** Primary International  
   
 -   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
--   **Spezielle:** Straße  
+-   **Specialty:** Straße  
   
 -   **SquareFeet:** 38000  
   
--   **Marken:** 3  
+-   **Brands:** 3  
   
 -   **Internet:** DSL  
   

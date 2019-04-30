@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188431"
 ---
 # <a name="model-item-security-page-report-manager"></a>Modellelementsicherheit (Seite) (Berichts-Manager)
   Verwenden Sie diese Seite, um Teile eines Modells zu sichern, indem Sie schreibgeschützte Berechtigungen für bestimmte Elemente erteilen oder aufheben. Die Modellelementsicherheit hat Auswirkungen auf die Ad-hoc-Durchsuchung von Daten zur Laufzeit und die Möglichkeit, Teile eines veröffentlichten Modells bei der Erstellung von Berichten im Berichts-Generator zu verwenden. Sie müssen über Inhalts-Manager-Berechtigungen verfügen, um diese Funktion zu verwenden.  

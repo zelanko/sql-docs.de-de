@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192940"
 ---
 # <a name="upgrade-lookup-transformations"></a>Aktualisieren von Transformationen für die Suche
   Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sollten Sie die Pakete ggf. ändern, um die Vorteile der neuen Funktionen in der Transformation für Suche zu nutzen. Die Transformation unterstützt die in [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] verfügbaren Zwischenspeicherungstypen und Datenausgabeoptionen. Weitere Informationen zu zusätzlichen der zwischenspeicherungstypen und Datenausgabeoptionen finden Sie unter [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md).  

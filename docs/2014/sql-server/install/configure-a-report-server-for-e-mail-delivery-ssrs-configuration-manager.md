@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190235"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802446"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Konfigurationsoptionen für die Einstellung der auf: Felds in einer Nachricht  
+##  <a name="bkmk_setting_TO_field"></a> Konfigurationsoptionen für die Einstellung der auf: Feld in einer Nachricht  
  Benutzerdefinierte Abonnements, die gemäß den durch den Task **Einzelne Abonnements verwalten** erteilten Berechtigungen erstellt werden, enthalten einen vorher festgelegten Benutzernamen, der auf dem Domänenbenutzerkonto basiert. Wenn der Benutzer das Abonnement erstellt, wird der Empfängername im **An:** -Feld mit dem Domänenbenutzerkonto der Person ausgefüllt, die das Abonnement erstellt.  
   
  Bei Verwendung eines SMTP-Servers bzw. einer Weiterleitung, der bzw. die E-Mail-Konten verwendet, die mit dem Domänenbenutzerkonto nicht übereinstimmen, erzeugt die Berichtsübermittlung einen Fehler, wenn der SMTP-Server den Bericht an diesen Benutzer übermitteln will.  
@@ -180,15 +180,15 @@ ms.locfileid: "56802446"
   
 2.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
-3.  Überprüfen Sie, ob <`UrlRoot`> auf die URL-Adresse des Berichtsservers festgelegt ist. Dieser Wert wird beim Konfigurieren des Berichtsservers festgelegt und sollte bereits ausgefüllt sein. Geben Sie andernfalls die URL-Adresse des Berichtsservers ein.  
+3.  Überprüfen Sie, ob <`UrlRoot`> auf URL-Adresse des Berichtsservers festgelegt ist. Dieser Wert wird beim Konfigurieren des Berichtsservers festgelegt und sollte bereits ausgefüllt sein. Geben Sie andernfalls die URL-Adresse des Berichtsservers ein.  
   
-4.  Suchen Sie im Abschnitt „Delivery“ nach <`ReportServerEmail`>.  
+4.  Suchen Sie im Abschnitt Delivery <`ReportServerEmail`>.  
   
-5.  Geben Sie in <`SMTPServer`> den Namen des SMTP-Servers an. Bei diesem Wert kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Firmenintranet oder um einen vollqualifizierten Domänennamen handeln.  
+5.  In <`SMTPServer`>, geben Sie den Namen des SMTP-Servers. Bei diesem Wert kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Firmenintranet oder um einen vollqualifizierten Domänennamen handeln.  
   
 6.  Überprüfen Sie, ob <`SendUsing`> auf 2 festgelegt ist. Bei einem anderen Wert ist der Berichtsserver nicht für die Verwendung eines Remote-SMTP-Diensts konfiguriert.  
   
-7.  Geben Sie in <`From`> den Namen eines Kontos ein, das über die Berechtigung zum Senden von E-Mail vom SMTP-Server verfügt.  
+7.  In <`From`>, geben Sie den Namen eines Kontos mit der Berechtigung zum Senden von E-mail vom SMTP-Server.  
   
 8.  Speichern Sie die Datei.  
   

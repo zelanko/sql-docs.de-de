@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214793"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Konfigurieren von RDS unter Windows 2000
 Gehen folgendermaßen Sie vor, um das Problem zu beheben, wenn erste RDS ordnungsgemäß nach einem upgrade auf Windows 2000 Probleme auftreten, haben:  

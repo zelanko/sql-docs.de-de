@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180613"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB **RowPosition** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von **Put_RowPosition** Festlegen der **RowPosition** -Objekt, das resultierende **Recordset** -Objekt verwendet die **RowPosition** -Objekt Bestimmen der aktuellen Zeile.  

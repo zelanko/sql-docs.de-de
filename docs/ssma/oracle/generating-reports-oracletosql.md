@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192382"
 ---
 # <a name="generating-reports-oracletosql"></a>Generieren von Berichten (OracleToSQL)
 Die Berichte bestimmte Aktivitäten, die mithilfe der Befehle ausgeführt werden in der SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -33,12 +33,12 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
     ||||  
     |-|-|-|  
     |**Sl. Nein.**|**Befehl**|**Titel des Berichts**|  
-    |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;. XML|  
-    |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;. XML|  
-    |4|Convert-Sql-Anweisung|ConvertSQLReport&lt;n&gt;. XML|  
+    |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;.XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
+    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
     |5|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|Refresh-aus-Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich von Bewertungsbericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, Letzteres ist ein XML-Bericht für die programmgesteuerte Nutzung.  
@@ -50,8 +50,8 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
     ||||  
     |-|-|-|  
     |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Ausgabe-Beschreibung**|  
-    |1|Ausführliche = "false"|Generiert einen zusammenfassenden Bericht der Aktivität.|  
-    |2|Ausführliche = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität an.|  
+    |1|verbose="false"|Generiert einen zusammenfassenden Bericht der Aktivität.|  
+    |2|verbose="true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität an.|  
   
     > [!NOTE]  
     > Die oben angegebenen Einstellungen für die Ausführlichkeit gelten für generieren – Bewertungsbericht "," Convert-Schema "," Migrieren von Daten "," Convert-Sql-Anweisung Befehle zur Verfügung.  
@@ -61,8 +61,8 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
     ||||  
     |-|-|-|  
     |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Ausgabe-Beschreibung**|  
-    |1|Fehlerberichte – = "false"|Keine Details zu Fehler / Warnung / Info-Nachrichten.|  
-    |2|Fehlerberichte – = "true"|Detaillierter Fehler / Warnung / Info-Nachrichten.|  
+    |1|report-errors="false"|Keine Details zu Fehler / Warnung / Info-Nachrichten.|  
+    |2|report-errors="true"|Detaillierter Fehler / Warnung / Info-Nachrichten.|  
   
     > [!NOTE]  
     > Die Einstellungen für Fehlerberichterstattung oben angegebenen gelten für generieren – Bewertungsbericht "," Convert-Schema "," Migrieren von Daten "," Convert-Sql-Anweisung Befehle zur Verfügung.  
@@ -103,17 +103,17 @@ Der Befehl **synchronisieren-Ziel** hat **Bericht-Fehler-to** -Parameter, der de
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** Gibt an, die Objekte, die für die Synchronisierung (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
+**object-name:** Gibt an, die Objekte, die für die Synchronisierung (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
-**Fehler:** Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
+**on-error:** Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   
--   Bericht-each-als-Warnung  
+-   report-each-as-warning  
   
--   Fehler-Skript  
+-   fail-script  
   
-### <a name="refresh-from-database"></a>Aktualisieren von Datenbank:  
+### <a name="refresh-from-database"></a>refresh-from-database:  
 Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird erstellt, an der angegebenen Position, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
 **Hinweis**: Wenn der Ordnerpfad angegeben ist, wird 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls".  
@@ -131,15 +131,15 @@ Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, 
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** Gibt an, die Objekte, die für aktualisieren (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
+**object-name:** Gibt an, die Objekte, die für aktualisieren (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
-**Fehler:** Gibt an, ob die datenaktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
+**on-error:** Gibt an, ob die datenaktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   
--   Bericht-each-als-Warnung  
+-   report-each-as-warning  
   
--   Fehler-Skript  
+-   fail-script  
   
 ## <a name="see-also"></a>Siehe auch  
 [Executing the SSMA Console ausführen (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  

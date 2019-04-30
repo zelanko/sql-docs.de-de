@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195127"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Data-at-Execution und Text-, ntext- oder Imagespalten
   ODBC verfügt über eine Funktion namens Data-at-Execution (Daten bei Ausführung), die es Anwendungen ermöglicht, sehr große Datenmengen in gebundenen Spalten oder Parametern zu verarbeiten. Beim Abrufen sehr großer **Text**, **Ntext**, oder **Image** Spalten, eine Anwendung möglicherweise nicht einfach einen sehr umfangreichen Puffer zuzuordnen, binden Sie die Spalte in den Puffer und Abrufen die Zeile. Beim Aktualisieren sehr großer **Text**, **Ntext**, oder **Image** Spalten, die Anwendung möglicherweise nicht einfach einen sehr umfangreichen Puffer zuzuordnen, binden es an eine parametermarkierung in einer SQL -Anweisung, und führen Sie die Anweisung. In diesen Fällen muss die Anwendung mithilfe [SQLGetData](../native-client-odbc-api/sqlgetdata.md) oder [SQLPutData](../native-client-odbc-api/sqlputdata.md) mit der Data-at-Execution-Optionen.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c4eae0608e433ed3ca7888091a7c658726192d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214777"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Gewähren von Gastberechtigungen für einen Webservercomputer
 Das anonyme Konto der Web-Server (IUSR_*ComputerName*) muss hinzugefügt werden, zur lokalen Gruppe Gäste auf dem Webservercomputer von RDS.  

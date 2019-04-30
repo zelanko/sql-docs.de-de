@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198757"
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
 Nachdem Sie einen ODBC-Treiber vom Setupprogramm vom Treiber installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellenname (DSN) sollte eine eindeutige Beschreibung des ausgewählten angeben; z. B. *Gehaltsabrechnungen* oder *Accounts Payable*. Die Benutzer und System-Datenquellen, die für alle Treiber installierten definiert sind, finden Sie in der **Benutzer-DSN** oder **System-DSN** Registerkarten der **ODBC-Datenquellenadministrator**Dialogfeld. In einem Verzeichnis die Datei-Datenquellen finden Sie in der **Datei-DSN** Registerkarte Verzeichnis angezeigt werden wird eingegeben in die **Suchen in** im Feld der **Datei-DSN** Registerkarte.  

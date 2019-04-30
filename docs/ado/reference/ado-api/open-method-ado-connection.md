@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217680"
 ---
 # <a name="open-method-ado-connection"></a>Open-Methode (ADO-Verbindung)
 Öffnet eine Verbindung mit einer Datenquelle.  
@@ -37,16 +37,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Optional. Ein **Zeichenfolge** -Wert, der Verbindungsinformationen enthält. Finden Sie unter den ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft für Informationen zu gültigen Einstellungen.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert, der Verbindungsinformationen enthält. Finden Sie unter den ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft für Informationen zu gültigen Einstellungen.  
   
  *UserID*  
- Optional. Ein **Zeichenfolge** Wert, der einen Benutzernamen ein, verwenden Sie beim Herstellen der Verbindung enthält.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der einen Benutzernamen ein, verwenden Sie beim Herstellen der Verbindung enthält.  
   
  *Kennwort*  
- Optional. Ein **Zeichenfolge** -Wert, ein Kennwort beim Herstellen der Verbindung enthält.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert, ein Kennwort beim Herstellen der Verbindung enthält.  
   
- *enthalten*  
- Optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) Wert, der bestimmt, ob diese Methode nach dem zurückgeben soll (synchron) oder vor (asynchron) die Verbindung hergestellt wird.  
+ *Optionen*  
+ Dies ist optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) Wert, der bestimmt, ob diese Methode nach dem zurückgeben soll (synchron) oder vor (asynchron) die Verbindung hergestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
  Mithilfe der **öffnen** Methode für eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt stellt die physische Verbindung mit einer Datenquelle her. Nach dem erfolgreichen dieser Methode Abschluss ist die Verbindung, und Sie können Befehle für diese und die Ergebnisse zu verarbeiten.  

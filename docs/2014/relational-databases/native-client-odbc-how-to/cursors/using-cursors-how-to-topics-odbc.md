@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200430"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Verwenden von Cursorn (Vorgehensweisen) (ODBC)
   Um Cursor zu verwenden, müssen Sie zuerst die Verbindungs- und Anweisungsattribute festlegen, die das Verhalten der ODBC-Cursor steuern. Cursor ermöglichen einer Anwendung, bei jedem Abrufvorgang mehrere Zeilen abzurufen, und an der aktuellen Cursorposition UPDATE-, INSERT- oder DELETE-Anweisungen auszuführen.  

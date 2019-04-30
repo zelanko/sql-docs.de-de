@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db7dc5482347ad9b7f194b3c9c8c6cd7fc3f9f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199597"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (Cursorbibliothek)
 > [!IMPORTANT]  
@@ -62,7 +62,7 @@ ms.locfileid: "47677428"
 |Cursortyp|Abrufen von Typen|  
 |-----------------|-----------------|  
 |Vorwärtscursor|SQL_FETCH_NEXT|  
-|STATIC-Cursor|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|Statisch|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
 ## <a name="errors"></a>Fehler  
  Wenn **SQLFetchScroll** aufgerufen wird und einen der Aufrufe **SQLFetch** gibt SQL_ERROR zurück, das Cursor-Bibliothek durchgeführt wird, die wie folgt. Wenn sie diese Schritte abgeschlossen ist, wird die Cursorbibliothek die Verarbeitung fortgesetzt.  

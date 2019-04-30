@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214778"
 ---
 # <a name="customization-file-userlist-section"></a>UserList-Abschnitt der Anpassungsdatei
 Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem gleichen *Bezeichner* Parameter.  
@@ -32,7 +32,7 @@ Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem 
 ## <a name="syntax"></a>Syntax  
  Ein Eintrag des Benutzers Zugriff hat das Format:  
   
- _Benutzername_ **=**   
+ _userName_ **=**   
  **_accessRights_**  
   
 |Teil|Description|  

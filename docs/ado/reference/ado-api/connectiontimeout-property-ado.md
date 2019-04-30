@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5cb3e6e1cc4266551bfeabf09bde1a65fea032f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140262"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout-Eigenschaft (ADO)
 Gibt an, wie lange warten, die beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.  

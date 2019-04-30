@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee8a14763479d48dfa2ea1c572222134693efaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206241"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD-Codebeispiele
 Verwenden Sie die folgenden Codebeispielen, erfahren Sie, wie die ADO MD-Objekte, Methoden und Eigenschaften verwenden. Diese Beispiele sind eine Teilmenge der Beispielanwendungen, die mit Microsoft SQL Server-OLAP-Services für SQL Server 7.0 installiert.  

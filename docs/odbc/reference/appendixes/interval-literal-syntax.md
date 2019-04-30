@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188814"
 ---
 # <a name="interval-literal-syntax"></a>Syntax von Intervallliteralen
 Die folgende Syntax wird für Intervall-Literale in ODBC verwendet.  
   
  *Intervall-Literals:: = Intervall* [+*&#124;*-] *Interval-Zeichenfolge Intervall-Qualifizierer*  
   
- *Interval-Zeichenfolge* :: = *Anführungszeichen* { *Jahr-Monat-Literal* &#124; *Day-Time-Literal* } *Anführungszeichen*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *Jahr-Monat-Literal* :: = *Jahren-Wert* &#124; [*Jahren-Wert* -] *Monate-Wert*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *Day-Time-Literal* :: = *Tag-Zeitintervall* &#124; *Zeitintervall*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
  *Tag-Zeitintervall* :: = *Wert Tage* [*Stundenwert* [:*Minutenwert*[:*Sekundenwert*]]]  
   
@@ -39,41 +39,41 @@ Die folgende Syntax wird für Intervall-Literale in ODBC verwendet.
   
  &#124;*Minutenwert* [:*Sekundenwert* ]  
   
- &#124;*Wert für die Sekunden*  
+ &#124; *seconds-value*  
   
- *Der Jahreswert* :: = *Datetime-Wert*  
+ *years-value* ::= *datetime-value*  
   
- *Wert für die Monate* :: = *Datetime-Wert*  
+ *months-value* ::= *datetime-value*  
   
- *Wert für die Tage* :: = *Datetime-Wert*  
+ *days-value* ::= *datetime-value*  
   
  *Wert für die Stunden* :: = *Datetime-Wert*  
   
- *Wert Minuten* :: = *Datetime-Wert*  
+ *minutes-value* ::= *datetime-value*  
   
  *Wert für die Sekunden* :: = *Sekunden Ganzzahlwert* [. [ *Sekundenbruchteils*]]  
   
- *Sekunden Ganzzahlwert* :: = *einer Ganzzahl ohne Vorzeichen*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *Sekundenbruchteils* :: = *einer Ganzzahl ohne Vorzeichen*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *DateTime-Wert* :: = *einer Ganzzahl ohne Vorzeichen*  
+ *datetime-value* ::= *unsigned-integer*  
   
- *Intervall-Qualifizierer* :: = *Start-Feld* für *End-Feld* &#124; *Single-Datetime-Feld*  
+ *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
  *Start-Feld* :: = *nicht-Sekunde-Datetime-Feld* [(*Intervall führende-Feld-mit einfacher Genauigkeit* )]  
   
- *End-Feld* :: = *nicht-Sekunde-Datetime-Feld* &#124; zweite [(*Intervall--Sekunden-sekundenbruchteilgenauigkeit*)]  
+ *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
   
  *Single-Datetime-Feld* :: = *nicht-Sekunde-Datetime-Feld* [(*Intervall führende-Feld-mit einfacher Genauigkeit*)] &#124; zweite [(*Intervall führende-Feld-mit einfacher Genauigkeit*  [, (*Intervall--Sekunden-sekundenbruchteilgenauigkeit*)]  
   
- *DateTime-Feld* :: = *nicht-Sekunde-Datetime-Feld* &#124; zweite  
+ *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
   
  *nicht-Sekunde-Datetime-Feld* :: = Jahr &#124; Monat &#124; Tag &#124; Stunde &#124; MINUTE  
   
- *Intervall--Sekunden-sekundenbruchteilgenauigkeit* :: = *einer Ganzzahl ohne Vorzeichen*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *Intervall-führende-Feld-Genauigkeit* :: = *einer Ganzzahl ohne Vorzeichen*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
  *Anführungszeichen* :: = '  
   

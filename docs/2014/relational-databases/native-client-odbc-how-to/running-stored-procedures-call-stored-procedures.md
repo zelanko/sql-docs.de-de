@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200263"
 ---
 # <a name="call-stored-procedures-odbc"></a>Aufrufen von gespeicherten Prozeduren (ODBC)
   Wenn Ruft eine SQL-Anweisung eine gespeicherte Prozedur mithilfe der ODBC CALL Escape-Klausel, die Microsoft?? SqlServer??? Treiber sendet die Prozedur in SQL Server mithilfe des Mechanismus der remote gespeicherten Prozedur Remoteprozeduraufruf (RPC) verwendet wird. RPC-Anforderungen umgehen größtenteils das Analysieren der Anwendungen und die Parameterverarbeitung in SQL Server und sind schneller als die Transact-SQL EXECUTE-Anweisung.  

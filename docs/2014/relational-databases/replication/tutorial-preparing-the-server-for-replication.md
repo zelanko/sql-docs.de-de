@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Vorbereiten des Servers für die Replikation | Microsoft-Dokumentation'
+title: 'Tutorial: Vorbereiten des Servers für die Replikation | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199064"
 ---
-# <a name="tutorial-preparing-the-server-for-replication"></a>Lernprogramm: Vorbereiten des Servers für die Replikation
+# <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Vorbereiten des Servers für die Replikation
   Es ist wichtig, einen Sicherheitsplan zu erstellen, bevor Sie die Replikationstopologie konfigurieren. In diesem Lernprogramm erfahren Sie, wie Sie eine Replikationstopologie besser sichern und die Verteilung konfigurieren können. Dieser Vorgang stellt den ersten Schritt für die Replikation von Daten dar. Es ist erforderlich, dieses Lernprogramm vor allen anderen Lernprogrammen abzuschließen.  
   
 > [!NOTE]  
@@ -35,7 +35,7 @@ ms.locfileid: "54125380"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert.  
   
- **Ungefähre Dauer dieses Lernprogramms: 30 Minuten.**  
+ **Ungefähre Dauer dieses Tutorials: 30 Minuten.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Lektionen in diesem Lernprogramm  
   

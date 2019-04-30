@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209967"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern
 > [!IMPORTANT]  
@@ -44,23 +44,23 @@ ms.locfileid: "47752928"
   
  In Windows auf Windows (16-Bit zu 32-Bit-thunking) eine zusätzliche thunking-DLL, die mit dem Namen Ds32gt.dll konvertiert, die 16-Bit-Argument-Werte über eine 32-Bit-Setup übergeben DLL zurück an 16-Bit.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Komponenten  
  Die ODBC-Komponente von MDAC 2.8 SP1 SDK enthält die folgenden Dateien für die Ausführung von 16-Bit-Anwendungen mit 32-Bit-Treiber. Diese Komponenten sind im Verzeichnis \Redist.  
   
 |Dateiname|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16-Bit-ODBC-generische thunking-DLL|  
 |Odbc32gt.dll|32-Bit-ODBC-generische thunking-DLL|  
-|ODBCCP32.dll|32-Bit-Installationsprogramm-DLL|  
+|Odbccp32.dll|32-Bit-Installationsprogramm-DLL|  
 |Odbcad32.exe|32-Bit-Programm|  
 |Odbcinst.hlp|Installer-Hilfedatei|  
 |Ds16gt.dll|generische thunking DLL 16-Bit-Treiber-setup|  
-|CTL3D32.dll|dreidimensionale Fenster 32-Bit-Bibliothek|  
+|Ctl3d32.dll|dreidimensionale Fenster 32-Bit-Bibliothek|  
   
  Darüber hinaus die folgenden Dateien zusammen mit der 16-Bit-2.10-ODBC-Treiber-Manager, die nicht Teil von ODBC 3.51 sind, sind erforderlich und sollte mit der 16-Bit-Anwendung installiert werden.  
   
 |Dateiname|Description|  
 |---------------|-----------------|  
-|ODBC|16-Bit-Treiber-Manager|  
-|Die Datei ODBCINST.dll|16-Bit-Installationsprogramm-DLL|  
+|Odbc.dll|16-Bit-Treiber-Manager|  
+|Odbcinst.dll|16-Bit-Installationsprogramm-DLL|  
 |Odbcadm.exe|16-Bit-ODBC-Administratorprogramm|

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195217"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und die Xml-Datentypen als binary large Objects (BLOBs ). Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  

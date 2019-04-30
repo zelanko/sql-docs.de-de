@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 808bb63a527e8c08063d934fd6a378e1955b7617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205090"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>Clientzertifikate auf der Berichtsserver-Website (Upgrade Advisor)
   Der Upgrade Advisor hat ein oder mehrere Clientzertifikate auf der IIS-Website gefunden, die die virtuellen Verzeichnisse des Berichtsservers oder des Berichts-Managers hostet.  

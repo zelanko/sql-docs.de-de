@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6381c9bcf919c012e215be13285cb2b096db281e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195304"
 ---
 # <a name="license-terms"></a>Lizenzbedingungen
   Nehmen Sie auf der Seite mit den Lizenzbedingungen die Lizenzbedingungen für diese Version an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Um mit der Installation fortzufahren, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Lizenzbedingungen annehmen.  
   
  Mithilfe der Schaltfläche **Drucken** können Sie eine Kopie der Lizenzbedingungen für diese Version ausdrucken. Klicken Sie zum Beenden der Installation auf **Abbrechen**.  

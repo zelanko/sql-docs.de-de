@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191883"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente
   SharePoint stellt integrierte Sicherheitsfunktionen bereit, mit denen Sie von SharePoint-Websites und -Bibliotheken auf Berichtsserverelemente zugreifen können. Wenn Sie Benutzern bereits Berechtigungen für Websites und Listen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen SharePoint und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge.  
