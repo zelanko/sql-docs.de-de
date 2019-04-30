@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751742"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460138"
 ---
 # <a name="create-a-project"></a>Erstellen eines Projekts
   Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte erstellen.  
@@ -94,7 +94,7 @@ ms.locfileid: "52751742"
   
 4.  Klicken Sie auf **OK**.  
   
- Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingegen werden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festgelegt und können nicht geändert werden. Sie können die Laufwerk- und Pfadspezifikation für den gemeinsamen Ordnersatz mit dem Dialogfeld **Neues Projekt hinzufügen** konfigurieren. Klicken Sie mit der rechten Maustaste auf das Projektmappensymbol im **Projektmappen-Explorer**, und klicken Sie dann auf **Hinzufügen**. Der Standardspeicherort für skriptprojektordner lautet: C:\Documents and Settings\\*Benutzername*\My Documents\SQL Server Management Studio\Projects\\.  
+ Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingegen werden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festgelegt und können nicht geändert werden. Sie können die Laufwerk- und Pfadspezifikation für den gemeinsamen Ordnersatz mit dem Dialogfeld **Neues Projekt hinzufügen** konfigurieren. Klicken Sie mit der rechten Maustaste auf das Projektmappensymbol im **Projektmappen-Explorer**, und klicken Sie dann auf **Hinzufügen**. Der Standardpfad für Skriptprojektordner lautet folgendermaßen: C:\Documents and Settings\\*Benutzername*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Projektmappen-Explorer](solution-explorer.md)   

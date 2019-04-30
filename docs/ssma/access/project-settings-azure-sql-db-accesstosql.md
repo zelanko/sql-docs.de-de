@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402125"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453471"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Project Settings (Azure SQL-Datenbank) (AccessToSQL)
 Die SQL Azure-projekteinstellungen können Sie konfigurieren das SQL Azure-Datenbank-Suffix in das Dialogfeld "Verbindung" hinzugefügt werden und auch erlauben taktmechanismus in Verbindung mit SQL Azure implementieren.  

@@ -1,5 +1,5 @@
 ---
-title: + (Positiv) (MDX) | Microsoft Docs
+title: + (Positiv) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30162cbc63d64f9c5224fd2d030e1dbc50f5dae1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742509"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456577"
 ---
 # <a name="-positive-mdx"></a>+ (Positiv) (MDX)
 
@@ -29,7 +29,7 @@ ms.locfileid: "34742509"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  

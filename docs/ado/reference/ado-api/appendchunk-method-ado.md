@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ac0174a223571e29973ad854f9350a6e60f1de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248290"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk-Methode (ADO)
 Fügt Daten an eine große Text- oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md), oder auf eine [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt.  
@@ -38,7 +38,7 @@ object.AppendChunk Data
  *object*  
  Ein **Feld** oder **Parameter** Objekt.  
   
- *Daten*  
+ *Data*  
  Ein **Variant** enthält die Daten, auf das Objekt angefügt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  

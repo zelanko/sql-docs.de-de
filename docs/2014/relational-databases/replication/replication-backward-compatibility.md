@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250487"
 ---
 # <a name="replication-backward-compatibility"></a>Abwärtskompatibilität von Replikationen
   In den Themen zur Abwärtskompatibilität werden Änderungen im Verhalten von Replikationen zwischen den verschiedenen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben. Es ist wichtig die Abwärtskompatibilität zu verstehen, wenn Sie ein Upgrade ausführen, oder wenn Sie über mehrere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Replikationstopologie verfügen.  

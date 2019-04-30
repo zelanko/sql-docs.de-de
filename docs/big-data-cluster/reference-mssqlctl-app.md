@@ -5,16 +5,16 @@ description: Der Referenzartikel für die Mssqlctl app Befehle.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 850964adc9cd790a27cf69e3e0f5229cdaf589c8
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860651"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473265"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl-App
 
@@ -22,275 +22,251 @@ ms.locfileid: "58860651"
 
 Der folgende Artikel bietet Referenz für die **app** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
-## <a id="commands"></a> Befehle
-
-|||
-|---|---|
-| [create](#create) | Erstellen Sie die Anwendung. |
-| [delete](#delete) | Löschen Sie die Anwendung. |
-| [describe](#describe) | Beschreiben Sie die Anwendung. |
-| [init](#init) | KickStart neue Anwendung Gerüst. |
-| [list](#list) | Auflisten von Anwendungen. |
-| [run](#run) | Führen Sie die Anwendung. |
-| [update](#update) | Aktualisieren Sie die Anwendung. |
-| [template](reference-mssqlctl-app-template.md) | Vorlage-Befehle. |
-
-## <a id="create"></a> Mssqlctl-app erstellen
-
-Erstellen Sie die Anwendung.
-
+## <a name="commands"></a>Befehle
+|     |     |
+| --- | --- |
+[Mssqlctl-app-Vorlage](reference-mssqlctl-app-template.md) | Vorlagen.
+[Mssqlctl app init](#mssqlctl-app-init) | KickStart neue Anwendung Gerüst.
+[Mssqlctl-app erstellen](#mssqlctl-app-create) | Erstellen Sie die Anwendung.
+[Aktualisieren der Mssqlctl-app](#mssqlctl-app-update) | Aktualisieren Sie die Anwendung.
+[Mssqlctl app-Liste](#mssqlctl-app-list) | Auflisten von Anwendungen.
+[mssqlctl app delete](#mssqlctl-app-delete) | Löschen Sie die Anwendung.
+[Mssqlctl-app-Ausführung](#mssqlctl-app-run) | Führen Sie die Anwendung.
+[mssqlctl app describe](#mssqlctl-app-describe) | Beschreiben Sie die Anwendung.
+## <a name="mssqlctl-app-init"></a>Mssqlctl app init
+Können Sie neue Anwendung-Gerüst Kickstart bzw. Spec-Dateien basierend auf Laufzeitumgebungen.
+```bash
+mssqlctl app init [--spec -s] 
+                  [--name -n]  
+                  [--version -v]  
+                  [--template -t]  
+                  [--destination -d]  
+                  [--url -u]
 ```
-mssqlctl app create
-   --assets
-   --code
-   --description
-   --entrypoint
-   --inputs
-   --name
-   --outputs
-   --runtime
-   --spec
-   --version
-   --yes
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **– Objekte – ein** | Liste der zusätzlichen Datei Anwendungsressourcen eingeschlossen werden sollen. |
-| **--code -c** | Pfad zum R oder Python-Codedatei. |
-| **--description -d** | Beschreibung der Anwendung. |
-| **--entrypoint** |  |
-| **--inputs** | Schema für Eingabeparameter. |
-| **--name -n** | Anwendungsname |
-| **--outputs** | Schema der Ausgabe-Parameter. |
-| **--Common Language Runtime - r** | Laufzeit der Anwendung.  Zulässige Werte: Mleap, Python, R, SSIS. |
-| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
-| **--Version - V** | Version der Anwendung. |
-| **--yes -y** | Keine Aufforderung zur Bestätigung beim Erstellen einer Anwendung aus der CWD spec.yaml-Datei. |
-
 ### <a name="examples"></a>Beispiele
-
-Erstellen einer neuen Anwendung über spec.yaml (empfohlen).
-
-```
-mssqlctl app create --spec /path/to/dir/with/spec/yaml
-```
-
-Erstellen Sie eine neue Python-app-Inline mit Argumenten.
-
-```
-mssqlctl app create --name add --version v1 --inputs x=float, y=float --outputs result=float --runtime Python --code add.py  --init init.py
-```
-
-Erstellen Sie eine neue R-Anwendung-Inline mit Argumenten.
-
-```
-mssqlctl app create --name add --version v1 --inputs x=numeric, y=numeric --outputs result=numeric --runtime R --code add.R  --init init.R
-```
-
-Erstellen Sie Inline eine neue R-Anwendung, mit zusätzlichen Dateiressourcen eingeschlossen werden sollen.
-
-```
-mssqlctl app create --name add --version v1 --runtime R --code  add.R --assets file.RData,/path/to/more/files
-```
-
-## <a id="delete"></a> Mssqlctl app löschen
-
-Löschen Sie die Anwendung.
-
-```
-mssqlctl app delete
-   --name
-   --version
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--name -n** | Anwendungsname |
-| **--Version - V** | Version der Anwendung. |
-
-### <a name="examples"></a>Beispiele
-
-Löschen Sie die Anwendung nach Name und Version.
-
-```
-mssqlctl app delete --name reduce --version v1
-```
-
-## <a id="describe"></a> Beschreiben Sie Mssqlctl-app
-
-Beschreiben Sie die Anwendung.
-
-```
-mssqlctl app describe
-   --name
-   --spec
-   --version
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--name -n** | Anwendungsname |
-| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
-| **--Version - V** | Version der Anwendung. |
-
-### <a name="examples"></a>Beispiele
-
-Eine Beschreibung der Anwendung.
-
-```
-mssqlctl app describe --name reduce --version v1
-```
-
-## <a id="init"></a> Mssqlctl app init
-
-KickStart neue Anwendung Gerüst.
-
-```
-mssqlctl app init
-   --destination
-   --name
-   --spec
-   --template
-   --url
-   --version
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--Destination -d.** | Die Position, um das Gerüst für die Anwendung zu platzieren. Standard: Aktuelles Arbeitsverzeichnis. |
-| **--name -n** | Anwendungsname |
-| **--spec -s** | Generieren Sie nur eine Anwendung spec.yaml. |
-| **--template -t** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
-| **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/sql-server-samples.git. |
-| **--Version - V** | Version der Anwendung. |
-
-### <a name="examples"></a>Beispiele
-
 Erstellen des Gerüsts für einer neuen Anwendung `spec.yaml` nur.
-
-```
+```bash
 mssqlctl app init --spec
 ```
-
 Erstellen des Gerüsts für eine neue R-Anwendung Anwendung Gerüst basierend auf den `r` Vorlage.
-
-```
+```bash
 mssqlctl app init --name reduce --template r
 ```
-
 Erstellen ein neues Python-Anwendung Anwendung Gerüsts basierend auf den `python` Vorlage.
-
-```
+```bash
 mssqlctl app init --name reduce --template python
 ```
-
 Erstellen Sie ein neues SSIS-Anwendung Anwendung Grundgerüst basierend auf den `ssis` Vorlage.
-
+```bash
+mssqlctl app init --name reduce --template ssis            
 ```
-mssqlctl app init --name reduce --template ssis
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--spec -s`
+Generieren Sie nur eine Anwendung spec.yaml.
+#### `--name -n`
+Anwendungsname
+#### `--version -v`
+Version der Anwendung.
+#### `--template -t`
+Name der Vorlage. Eine vollständige Liste deaktiviert unterstützten Vorlagennamen ausführen `mssqlctl app template list`
+#### `--destination -d`
+Die Position, um das Gerüst für die Anwendung zu platzieren. Standard: Aktuelles Arbeitsverzeichnis.
+#### `--url -u`
+Geben Sie einen andere Vorlage Repository-Speicherort. Standardwert: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-create"></a>Mssqlctl-app erstellen
+Erstellen einer Anwendung.
+```bash
+mssqlctl app create --spec -s 
+                    
 ```
-
-## <a id="list"></a> Mssqlctl app-Liste
-
-Auflisten von Anwendungen.
-
-```
-mssqlctl app list
-   --name
-   --version
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--name -n** | Anwendungsname |
-| **--Version - V** | Version der Anwendung. |
-
 ### <a name="examples"></a>Beispiele
-
-Listen Sie die Anwendung nach Name und Version.
-
+Erstellen Sie eine neue Anwendung aus einem Verzeichnis mit einer gültigen spec.yaml Bereitstellung-Spezifikation.
+```bash
+mssqlctl app create --spec /path/to/dir/with/spec/yaml
 ```
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--spec -s`
+Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-update"></a>Aktualisieren der Mssqlctl-app
+Aktualisieren einer Anwendung.
+```bash
+mssqlctl app update [--spec -s] 
+                    [--yes -y]
+```
+### <a name="examples"></a>Beispiele
+Aktualisieren Sie eine vorhandene Anwendung aus einem Verzeichnis mit einer gültigen spec.yaml Bereitstellung-Spezifikation.
+```bash
+mssqlctl app update --spec /path/to/dir/with/spec/yaml    
+```
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--spec -s`
+Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt.
+#### `--yes -y`
+Keine Aufforderung zur Bestätigung bei der Aktualisierung einer Anwendung aus der CWD spec.yaml-Datei.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-list"></a>Mssqlctl app-Liste
+Auflisten einer Anwendung(en).,
+```bash
+mssqlctl app list [--name -n] 
+                  [--version -v]
+```
+### <a name="examples"></a>Beispiele
+Listen Sie die Anwendung nach Name und Version.
+```bash
 mssqlctl app list --name reduce  --version v1
 ```
-
 Alle Anwendungsprogrammversionen nach Name auflisten.
-
-```
+```bash
 mssqlctl app list --name reduce
 ```
-
-Listen Sie alle Anwendungen.
-
-```
+Alle Anwendungsprogrammversionen nach Name auflisten.
+```bash
 mssqlctl app list
 ```
-
-## <a id="run"></a> Mssqlctl-app-Ausführung
-
-Führen Sie die Anwendung.
-
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--name -n`
+Anwendungsname
+#### `--version -v`
+Version der Anwendung.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-delete"></a>Mssqlctl app löschen
+Eine Anwendung zu löschen.
+```bash
+mssqlctl app delete --name -n 
+                    --version -v
 ```
-mssqlctl app run
-   --name
-   --version
-   --inputs
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--name -n** | Anwendungsname |
-| **--Version - V** | Version der Anwendung. |
-| **--inputs** | Parameter in eine CSV-Datei der eingabeanwendung `name=value` Format. |
-
 ### <a name="examples"></a>Beispiele
-
-Führen Sie Anwendung ohne Eingabeparameter aus.
-
+Löschen Sie die Anwendung nach Name und Version.
+```bash
+mssqlctl app delete --name reduce --version v1    
 ```
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--name -n`
+Anwendungsname
+#### `--version -v`
+Version der Anwendung.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-run"></a>Mssqlctl-app-Ausführung
+Eine Anwendung ausführen.
+```bash
+mssqlctl app run --name -n 
+                 --version -v  
+                 [--inputs]
+```
+### <a name="examples"></a>Beispiele
+Führen Sie Anwendung ohne Eingabeparameter aus.
+```bash
 mssqlctl app run --name reduce --version v1
 ```
-
 Führen Sie Anwendung mit 1 Eingabeparameter an.
-
-```
+```bash
 mssqlctl app run --name reduce --version v1 --inputs x=10
 ```
-
 Die Anwendung mit mehreren Eingabeparametern ausführen.
-
+```bash
+mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--name -n`
+Anwendungsname
+#### `--version -v`
+Version der Anwendung.
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--inputs`
+Parameter in eine CSV-Datei der eingabeanwendung `name=value` Format.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
+## <a name="mssqlctl-app-describe"></a>Beschreiben Sie Mssqlctl-app
+Beschreiben einer Anwendung.
+```bash
+mssqlctl app describe [--spec -s] 
+                      [--name -n]  
+                      [--version -v]
 ```
-
-## <a id="update"></a> Aktualisieren der Mssqlctl-app
-
-Aktualisieren Sie die Anwendung.
-
+### <a name="examples"></a>Beispiele
+Eine Beschreibung der Anwendung.
+```bash
+mssqlctl app describe --name reduce --version v1    
 ```
-mssqlctl app update
-   --spec
-   --yes
-```
-
-### <a name="parameters"></a>Parameter
-
-| Parameter | Description |
-|---|---|
-| **--spec -s** | Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt. |
-| **--yes -y** | Keine Aufforderung zur Bestätigung bei der Aktualisierung einer Anwendung aus der CWD spec.yaml-Datei. |
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--spec -s`
+Der Pfad zu einem Verzeichnis mit einer Spezifikation YAML-Datei, die die Anwendung beschreibt.
+#### `--name -n`
+Anwendungsname
+#### `--version -v`
+Version der Anwendung.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Erhöht die protokollierungsausführlichkeit, sodass alle Debugprotokolle angezeigt.
+#### `--help -h`
+Zeigen Sie diese hilfemeldung an und beendet.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
+#### `--verbose`
+Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

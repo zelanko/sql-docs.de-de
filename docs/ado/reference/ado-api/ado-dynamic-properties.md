@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249051"
 ---
 # <a name="ado-dynamic-properties"></a>ADO – dynamische Eigenschaften
 Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, wie z. B. die [OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, wie z. B. die [Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Finden Sie in der entsprechenden Datenanbieter oder die Dokumentation von Service Provider für Weitere Informationen zu einer bestimmten dynamische Eigenschaft.  
@@ -31,7 +31,7 @@ Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../.
 |||  
 |-|-|  
 |[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index für dieses Feld erstellt werden soll.|  
-|[Eingabeaufforderung](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB-Anbieter, den Benutzer zur Initialisierung auffordert.|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB-Anbieter, den Benutzer zur Initialisierung auffordert.|  
 |[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt einen Namen für die **Recordset** Objekt.|  
 |[Resync-Befehl](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt an, ein benutzerdefinierten Befehl-Zeichenfolge, die **Resync** Probleme der Methode zum Aktualisieren der Daten in der Tabelle, die mit dem Namen in der **eindeutige Tabelle** dynamische Eigenschaft.|  
 |[Unique Table, Unique Schema und Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Eindeutige Tabelle** gibt den Namen der Basistabelle, auf denen Updates, einfügungen und löschungen zulässig sind.<br /><br /> **Eindeutiges Schema** gibt an, das Schema oder die Namen des Besitzers der Tabelle.<br /><br /> **Eindeutige Katalogressource** gibt an, den Katalog oder die Namen der Datenbank, die die Tabelle enthält.|  

@@ -4,18 +4,18 @@ description: Dieser Artikel beschreibt, wie SQL Server unter Linux ausgeführt w
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408877"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457363"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
 
@@ -26,25 +26,25 @@ SQL Server ab SQL Server 2017 unter Linux ausgeführt werden. Es ist die gleiche
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server-2019 Vorschau unter Linux ausgeführt wird. Es ist die gleiche SQL Server-Datenbankmodul, viele ähnliche Features und-Dienste unabhängig von Ihrem Betriebssystem. Weitere Informationen zu dieser Version finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+SQL Server-2019 Vorschau unter Linux ausgeführt wird. Es ist die gleiche SQL Server-Datenbankmodul, viele ähnliche Features und-Dienste unabhängig von Ihrem Betriebssystem. Weitere Informationen zu dieser Version finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [Vorschau der SQL Server-2019](sql-server-linux-overview.md?view=sql-server-ver15) wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [Vorschau der SQL Server-2019](sql-server-linux-overview.md?view=sql-server-ver15) wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [Vorschau der SQL Server-2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [Vorschau der SQL Server-2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> Vorschau der SQL Server-2019 wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> Vorschau der SQL Server-2019 wurde veröffentlicht! Um herauszufinden, was für Linux in der aktuellen Version neu ist, finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installieren
 
 Installieren von SQL Server unter Linux mit einer der folgenden schnellstartanleitungen zum Einstieg:
 
@@ -99,7 +99,7 @@ Wenn Sie bereits mit SQL Server unter Linux vertraut sind, überprüfen Sie die 
 Sehen Sie sich die neuerungen:
 
 - [Was ist neu in SQL Server 2017](sql-server-linux-whats-new.md)
-- [What's new for SQL Server-2019-Vorschauversion unter Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [What's new for SQL Server-2019-Vorschauversion unter Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

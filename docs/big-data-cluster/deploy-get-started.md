@@ -5,16 +5,16 @@ description: Erfahren Sie die Schritte und Ressourcen zum Bereitstellen von SQL 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860431"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472250"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Erste Schritte mit SQL Server-big Data-Cluster
 
@@ -45,21 +45,23 @@ Big Data-Cluster werden bereitgestellt, als eine Reihe von zusammenhängenden Co
 
 - **Minikube**: Minikube können Sie lokale Ausführung von Kubernetes auf einem einzelnen Server. Es ist eine gute Option, wenn Sie, sich big Data-Cluster versuchen, oder für die Verwendung in einem Szenario mit Test- oder Entwicklungszwecken benötigen. Weitere Informationen zur Verwendung von Minikube finden Sie unter den [Minikube Dokumentation](https://kubernetes.io/docs/setup/minikube/). Bestimmte Anforderungen für die Verwendung von Minikube mit big Data-Clustern finden Sie unter [Minikube für SQL Server-2019 big Data-Cluster-Bereitstellungen konfigurieren](deploy-on-minikube.md).
 
-## <a name="deployment-scripts"></a>Bereitstellungsskripts
-
-Bereitstellungsskripts können sowohl Kubernetes und big Data-Cluster in einem einzigen Schritt bereitstellen. Sie bieten oft auch Standardwerte für die erforderlichen Umgebungsvariablen. Ein Beispiel für ein Bereitstellungsskript für big Data-Cluster in Azure Kubernetes Service (AKS), finden Sie unter [Bereitstellen einer SQL Server-2019 big Data-mit einem Bereitstellungsskript (AKS Cluster)](quickstart-big-data-cluster-deploy.md).
-
-Sie können jedes Bereitstellungsskript anpassen, erstellen Sie Ihre eigene Version, die die Umgebungsvariablen für big Data-Cluster anders konfiguriert.
-
 ## <a name="deploy-a-big-data-cluster"></a>Bereitstellen von Big Data-Clustern
 
-Zum Bereitstellen von Kubernetes-Clusters für eine big Data-Cluster in AKS mit einem einzigen Skript finden Sie im folgende Beispiel aus:
+Nach dem Konfigurieren von Kubernetes wird, die Sie Bereitstellen eines big Data-Clusters mit der `mssqlctl cluster create` Befehl. Bei der Bereitstellung können Sie verschiedene Ansätze nutzen.
 
-- [Bereitstellen eines SQL Server-2019 big Data-Clusters mit einem Bereitstellungsskript (AKS)](quickstart-big-data-cluster-deploy.md)
+- Wenn Sie in einer Dev / Test-Umgebung bereitstellen, können Sie eine der verwenden die [Standardkonfigurationen](deployment-guidance.md#deploy) gebotenen **Mssqlctl**.
 
-Ausführliche Anleitung für die Bereitstellung für die Bereitstellung von big Data-Cluster mit AKS, Kubeadm und MiniKube finden Sie im folgenden Artikel:
+- Informationen zum Anpassen der Bereitstellung können Sie erstellen und verwenden Sie Ihren eigenen [bereitstellungskonfigurationsdateien](deployment-guidance.md#configfile). 
 
-- [Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen](deployment-guidance.md)
+- Für eine vollständig unbeaufsichtigte Installation können Sie alle anderen Einstellungen in Umgebungsvariablen übergeben. Weitere Informationen finden Sie unter [unbeaufsichtigte Bereitstellungen](deployment-guidance.md#unattended).
+
+## <a name="deployment-scripts"></a>Bereitstellungsskripts
+
+Bereitstellungsskripts können sowohl Kubernetes und big Data-Cluster in einem einzigen Schritt bereitstellen. Sie bieten oft auch Standardwerte für big Data-Clustereinstellungen an. Ein Beispiel für ein Bereitstellungsskript für big Data-Cluster in Azure Kubernetes Service (AKS) finden Sie im folgenden Artikel:
+
+[Bereitstellen einer SQL Server-2019 big Data-mit einem Bereitstellungsskript (AKS Cluster)](quickstart-big-data-cluster-deploy.md).
+
+Sie können jedes Bereitstellungsskript anpassen, erstellen Sie Ihre eigene Version, die die Umgebungsvariablen für big Data-Cluster anders konfiguriert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

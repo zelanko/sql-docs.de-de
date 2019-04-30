@@ -5,17 +5,17 @@ description: Informationen Sie zum Konfigurieren von Minikube für SQL Server-20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860691"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473495"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Minikube für SQL Server-big Data-Cluster-Bereitstellungen
 
@@ -27,7 +27,7 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
 
 - 32 GB RAM (empfohlene 64 GB).
 
-- Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#env) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
+- Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#configfile) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
 
 - VT-X- oder AMD-V-Virtualisierung muss im BIOS des Computers aktiviert werden.
 
@@ -44,7 +44,7 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
    - Installieren unter Linux [VirtualBox](https://www.virtualbox.org/wiki/Downloads) oder [KVM](https://www.linux-kvm.org/).
    - Installieren Sie für Windows, [VirtualBox](https://www.virtualbox.org/wiki/Downloads) oder [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). Wenn Sie keinen externen Switch in hyper-V konfiguriert haben, erstellen Sie das externe Netzwerk zugreifen kann.  Finden Sie unter Vorgehensweise [Erstellen von externen Switches in hyper-V für Minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
-## <a name="install-minikube"></a>Installieren von Minikube
+## <a name="install-minikube"></a>Installieren von minikube
 
 Installieren von Minikube gemäß den Anweisungen für die [v0.28.2 Version](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Die SQL Server-2019 big Data-Cluster (Vorschau) funktioniert nur mit Version v0.24.1 oder höher.
 

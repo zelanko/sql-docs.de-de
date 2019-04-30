@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248344"
 ---
 # <a name="establishing-a-connection"></a>Herstellen einer Verbindung
-Nach dem Zuweisen der umgebungs- und Verbindungshandles und Verbindungsattribute festlegen, ist die Anwendung bereit für die Datenquelle oder der Treiber die Verbindung. Es gibt drei verschiedene Funktionen, die die Anwendung zu diesem Zweck verwenden kann: **SQLConnect** (Core Konformitätsgrad Schnittstelle), **SQLDriverConnect** (Core), und **SQLBrowseConnect**(Stufe 1). Jeder der drei wird in ein anderes Szenario verwendet werden soll. Bevor Sie eine Verbindung herstellen, kann die Anwendung ermitteln, welche dieser Funktionen mit unterstützt wird die **ConnectFunctions** Schlüsselwort zurückgegebenes **SQLDrivers**.  
+Nach dem Zuweisen der umgebungs- und Verbindungshandles und Verbindungsattribute festlegen, ist die Anwendung bereit für die Datenquelle oder der Treiber die Verbindung. Es gibt drei verschiedene Funktionen, die die Anwendung zu diesem Zweck verwenden kann: **SQLConnect** (Core Konformitätsgrad Schnittstelle), **SQLDriverConnect** (Core), und **SQLBrowseConnect** (Stufe 1). Jeder der drei wird in ein anderes Szenario verwendet werden soll. Bevor Sie eine Verbindung herstellen, kann die Anwendung ermitteln, welche dieser Funktionen mit unterstützt wird die **ConnectFunctions** Schlüsselwort zurückgegebenes **SQLDrivers**.  
   
 > [!NOTE]  
 >  Einige Treiber zu begrenzen die Anzahl der aktiven Verbindungen, die sie unterstützen. Ruft die Anwendung **SQLGetInfo** mit der Option SQL_MAX_DRIVER_CONNECTIONS, um zu bestimmen, wie viele aktive Verbindungen ein bestimmter Treiber unterstützt.  

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich | Microsoft-Dokumentation'
+title: 'Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250021"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt für die Abgleichsaktivität, und führen den Abgleichsprozess für bereinigte Lieferantendaten durch, um Duplikate in den Daten zu entfernen.  
   
 1.  Klicken Sie auf der Hauptseite des **DQS-Client**, klicken Sie auf **neuen Data Quality-Projekt**.  

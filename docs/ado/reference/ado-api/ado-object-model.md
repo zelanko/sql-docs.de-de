@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c15f9e01f24a3c4a9fb41b577f3c51e4d0230d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249012"
 ---
 # <a name="ado-object-model"></a>ADO-Objektmodell
 Die folgenden Abbildungen zeigen die ADO-Objekte und Auflistungen.  

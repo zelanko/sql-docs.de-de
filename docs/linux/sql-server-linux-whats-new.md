@@ -4,18 +4,18 @@ description: In diesem Artikel werden die Neuigkeiten für SQL Server 2017 unter
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160528"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456734"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Was ist neu in SQL Server unter Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "53160528"
 
 Dieser Artikel beschreibt die wichtigsten Funktionen und-Dienste verfügbar für SQL Server 2017 unter Linux ausgeführt wird.
 
-Vorschau der SQL Server-2019 wurde veröffentlicht. Dieser Artikel deckt nicht die Preview-Versionen von SQL Server-2019. Weitere Informationen zu SQL Server-2019 Preview finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+Vorschau der SQL Server-2019 wurde veröffentlicht. Dieser Artikel deckt nicht die Preview-Versionen von SQL Server-2019. Weitere Informationen zu SQL Server-2019 Preview finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 > [!NOTE]
 > Abgesehen von diesen Funktionen in diesem Artikel werden die kumulativen Updates in regelmäßigen Abständen nach dem Allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen über die neueste CU-Version finden Sie unter [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Paketdownloads und bekannte Probleme finden Sie in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).

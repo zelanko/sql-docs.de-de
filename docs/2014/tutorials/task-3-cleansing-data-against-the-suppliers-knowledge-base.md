@@ -1,5 +1,5 @@
 ---
-title: "Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank ' Suppliers ' | Microsoft-Dokumentation"
+title: "Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank ' Suppliers ' | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250142"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank 'Suppliers'
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank „Suppliers“
   In dieser Aufgabe führen Sie den computerunterstützten Bereinigungsprozess aus. DQS verwendet erweiterte Algorithmen und Vertrauensgrade auf Grundlage der angegebenen Schwellenwerte, um die Daten im Hinblick auf die ausgewählte Wissensdatenbank zu analysieren und dann zu bereinigen. Finden Sie unter [(Bereinigung Daten verwenden internem) DQS-wissen](https://msdn.microsoft.com/library/hh213061.aspx) Weitere Details.  
   
 1.  Klicken Sie auf **starten** um den computerunterstützten Bereinigungsprozess zu starten.  
   
      ![Bereinigen Sie auf der Seite des Bereinigungsprozesses](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "auf der Seite des Bereinigungsprozesses zu bereinigen")  
   
-2.  Wenn der Prozess abgeschlossen ist, überprüfen Sie **Statistiken** in die **Profiler** Registerkarte. Die Quellstatistiken geben die Anzahl der verarbeiteten Datensätze, die Anzahl der korrekten Datensätze, die Anzahl der Datensätze, die DQS korrigiert, die Anzahl der Datensätze mit von DQS vorgeschlagenen Änderungen und die Anzahl der ungültigen Datensätze an. Im Listenfeld rechts werden die korrigierten und vorgeschlagenen Werte sowie die Vollständigkeit (Ausmaß, in dem Daten vorhanden sind) und Genauigkeit (Ausmaß, in dem die Daten für geplante Zwecke verwendet werden können) der Werte für jede Domäne im Bereinigungsprozess angezeigt.  
+2.  Wenn der Prozess abgeschlossen ist, überprüfen Sie **Statistiken** in die **Profiler** Registerkarte. Die geben der Anzahl der verarbeiteten Datensätze, die Anzahl der Datensätze, die gefunden werden, korrekt, Anzahl der Datensätze, die DQS korrigiert, Anzahl der Datensätze, die von DQS vorgeschlagene Änderungen und die Anzahl der Datensätze, die ungültig sind. Im Listenfeld rechts werden die korrigierten und vorgeschlagenen Werte sowie die Vollständigkeit (Ausmaß, in dem Daten vorhanden sind) und Genauigkeit (Ausmaß, in dem die Daten für geplante Zwecke verwendet werden können) der Werte für jede Domäne im Bereinigungsprozess angezeigt.  
   
      ![Bereinigungsergebnisse](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "Bereinigungsergebnisse")  
   

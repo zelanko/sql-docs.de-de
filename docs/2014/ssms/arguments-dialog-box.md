@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245405"
 ---
 # <a name="arguments-dialog-box"></a>Argumente (Dialogfeld)
   Im Dialogfeld **Argumente** werden neue oder vorhandene Argumente für ein Tool angegeben. Dieses Dialogfeld wird angezeigt, wenn Sie ein externes Tool starten, für das die Option **Zur Argumenteingabe auffordern** im Dialogfeld **Externe Tools** ausgewählt ist.  

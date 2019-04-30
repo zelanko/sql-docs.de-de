@@ -5,17 +5,17 @@ description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582914"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473476"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Ausführen des Bereitstellungsskripts
 
-Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungsskripts. Dieses Skript ein AKS-Diensts in Azure erstellen und dann einen SQL Server-2019 big Data-Cluster in AKS bereitstellen. Sie können auch ändern, das Skript mit anderen [Umgebungsvariablen](deployment-guidance.md#env) zum Erstellen einer benutzerdefinierten Bereitstellung.
+Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungsskripts. Dieses Skript ein AKS-Diensts in Azure erstellen und dann einen SQL Server-2019 big Data-Cluster in AKS bereitstellen. Sie können auch ändern, das Skript mit anderen [Umgebungsvariablen](deployment-guidance.md#configfile) zum Erstellen einer benutzerdefinierten Bereitstellung.
 
 1. Führen Sie das Skript mit dem folgenden Befehl ein:
 
@@ -114,7 +114,7 @@ Nach 10 bis 20 Minuten sollten Sie eine Benachrichtigung über der Pod Controlle
 ```
 
 > [!IMPORTANT]
-> Die gesamte Bereitstellung dauert sehr lange aufgrund der Zeitaufwand für die Container-Images für die Komponenten der big Data-Cluster herunterladen. Er sollte jedoch nicht mehrere Stunden dauern. Wenn Sie Probleme bei der Bereitstellung auftreten, finden Sie unter den [Problembehandlung bei der Bereitstellung](deployment-guidance.md#troubleshoot) Abschnitt im Artikel für die Bereitstellung.
+> Die gesamte Bereitstellung dauert sehr lange aufgrund der Zeitaufwand für die Container-Images für die Komponenten der big Data-Cluster herunterladen. Er sollte jedoch nicht mehrere Stunden dauern. Wenn Sie Probleme bei der Bereitstellung auftreten, finden Sie unter [Überwachung und Problembehandlung für SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Überprüfen Sie den cluster
 
@@ -149,20 +149,20 @@ Jederzeit während der Bereitstellung können Sie "kubectl" oder das Verwaltungs
    ```
 
 > [!TIP]
-> Weitere Informationen zum Überwachen und Problembehandlung bei einer Bereitstellung finden Sie unter den [Problembehandlung bei der Bereitstellung](deployment-guidance.md#troubleshoot) Abschnitt im Artikel für die Bereitstellung.
+> Weitere Informationen zum Überwachen und Problembehandlung bei einer Bereitstellung finden Sie unter [Überwachung und Problembehandlung für SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).
 
 ### <a name="use-the-cluster-administration-portal"></a>Verwenden Sie das Cluster-Verwaltungsportal
 
-Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `endpoint-service-proxy` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
+Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `mgmtproxy-svc-external` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
 
-Erhalten Sie die IP-Adresse der **Endpunkt-Dienst-Proxy** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+Sie können die IP-Adresse Abrufen der **Mgmtproxy-svc-External** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In der CTP-Version 2.4 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
+> In der CTP-Version 2.5 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
 
 ## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 

@@ -1,5 +1,5 @@
 ---
-title: CurrentOrdinal (MDX) | Microsoft Docs
+title: CurrentOrdinal (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248197"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -33,10 +33,10 @@ Set_Expression.CurrentOrdinal
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Durchlaufen einer Menge an, wie z. B. mit der [Filter (MDX)](../mdx/filter-mdx.md) oder [Generate (MDX)](../mdx/generate-mdx.md) Funktionen, die **CurrentOrdinal** -Funktion die Iterationsnummer zurück.  
+ Beim Durchlaufen der einen Satz an, wie z. B. mit der [Filter (MDX)](../mdx/filter-mdx.md) oder [Generate (MDX)](../mdx/generate-mdx.md) Funktionen, die **CurrentOrdinal** Funktion gibt die Iterationsnummer zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende einfache Beispiel zeigt wie **CurrentOrdinal** genutzt werden **generieren** gibt eine Zeichenfolge mit dem Namen jedes Elements in einer Menge mit seiner Position im Satz zurück:  
+ Das folgende einfache Beispiel zeigt wie **CurrentOrdinal** kann verwendet werden, mit **generieren** gibt eine Zeichenfolge, die mit dem Namen jedes Elements in einem Satz mit seiner Position in der Gruppe zurück:  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -48,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- Die praktische Nutzen von CurrentOrdinal beschränkt sich auf sehr komplexe Berechnungen. Im folgende Beispiel gibt die Anzahl der Produkte in der Gruppe, die eindeutig sind, mithilfe der **Reihenfolge** Funktion, um die Reihenfolge der nicht leeren Tupel vor Verwendung der **Filter** Funktion. Die **CurrentOrdinal** Funktion zu vergleichen und Ausschließen von Gleichrangigkeit verwendet wird.  
+ Die praktische Nutzen von CurrentOrdinal beschränkt sich auf sehr komplexe Berechnungen. Das folgende Beispiel gibt die Anzahl der Produkte in der Gruppe, die eindeutig ist, mit der **Reihenfolge** Funktion, um die Reihenfolge der nicht leeren Tupel vor Verwendung der **Filter** Funktion. Die **CurrentOrdinal** Funktion zum Vergleichen und Ausschließen von Gleichrangigkeit verwendet wird.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  

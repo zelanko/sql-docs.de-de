@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250539"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
   Das **SQLServer:HTTP_STORAGE_OBJECT** -Leistungsobjekt umfasst Leistungsindikatoren, mit denen das Microsoft Azure-Speicherkonto überwacht wird. Mithilfe von [SQL Server-Datendateien in Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) Feature, können Sie Datenbankdateien in Windows Azure Storage-Blobs speichern. Dieses Leistungsobjekt behandelt jedes Windows Azure-Speicherkonto als getrenntes Laufwerk.  

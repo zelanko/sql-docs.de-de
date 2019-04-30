@@ -1,5 +1,5 @@
 ---
-title: Aktuelle (MDX) | Microsoft Docs
+title: Aktuelle (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249667"
 ---
 # <a name="current-mdx"></a>Current (MDX)
 
@@ -35,13 +35,13 @@ Set_Expression.Current
 ## <a name="remarks"></a>Hinweise  
  Bei jedem Schritt einer Iteration ist das gerade bearbeitete Tupel das aktuelle Tupel. Die **aktuelle** Funktion gibt dieses Tupel zurück. Diese Funktion ist nur während einer Iteration über eine Menge gültig.  
   
- MDX-Funktionen, die einen Satz durchlaufen enthalten die [generieren](../mdx/generate-mdx.md) Funktion.  
+ MDX-Funktionen, die Durchlaufen einer Gruppe gehören die [generieren](../mdx/generate-mdx.md) Funktion.  
   
 > [!NOTE]  
 >  Diese Funktion ist nur mit benannten Mengen ausführbar, d. h. beim Verwenden eines Mengen-Alias oder Definieren einer benannten Menge.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie Sie die **aktuelle** -Funktion **generieren**:  
+ Das folgende Beispiel zeigt, wie Sie mit der **aktuelle** -Funktion **generieren**:  
   
  `WITH`  
   

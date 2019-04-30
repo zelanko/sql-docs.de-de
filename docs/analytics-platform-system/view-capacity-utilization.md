@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243811"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Anzeigen der Kapazitätsauslastung in Analytics Platform System
 In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Server-PDW-Appliance an.  
@@ -22,7 +22,7 @@ In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Serv
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Kapazitätsauslastung mithilfe der Verwaltungskonsole anzeigen  
 Um den belegten Speicherplatz anzuzeigen, öffnen Sie die Verwaltungskonsole, und klicken Sie auf die **Storage** Registerkarte. Es gibt eine **Storage** Registerkarte für die PDW-Region.  
   
-![PDW-Verwaltungskonsole, Speicher](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>So zeigen Sie mithilfe von Abfragen zur Kapazitätsauslastung  
 Um zu verstehen, ob ein Knoten auf dem Speicherplatz knapp wird, überwacht der SQL Server-PDW-Health-Überwachungssystem bereits den freien Speicherplatz für alle Volumes innerhalb eines jeden Knotens.  

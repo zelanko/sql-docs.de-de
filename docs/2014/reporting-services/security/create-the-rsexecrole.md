@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242848"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens `RSExecRole`, um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die `RSExecRole` Rolle wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf ein neues oder anderes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und MSDB neu erstellen.  
