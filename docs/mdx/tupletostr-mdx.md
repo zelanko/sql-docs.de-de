@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208464"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -36,7 +36,7 @@ TupleToStr(Tuple_Expression)
  Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung eines Tupels an eine externe Funktion zur Analyse verwendet. Die Zeichenfolge, die zurückgegeben wird, wird in geschweifte Klammern eingeschlossen {} und jedes Element, wenn mehr als eine ausdrücklich im Tupel definiert ist, wird durch ein Komma getrennt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Zeichenfolge ([Datum].[Kalenderjahr].&[2001],[Geography].[Geography].[Country].&[United States]) zurückgegeben:  
+ Das folgende Beispiel gibt die Zeichenfolge zurück. ([Date]. [ Calendar Year]. & [2001], [Geography]. [Geography]. [Country]. & [United States]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

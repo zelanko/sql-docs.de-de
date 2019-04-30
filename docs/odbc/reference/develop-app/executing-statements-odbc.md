@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96e28a50e58693bbb297bd1e80335482cdd9e82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213278"
 ---
 # <a name="executing-statements-odbc"></a>Ausführen von ODBC-Anweisungen
 ODBC-Anwendungen werden fast alle Datenbankzugriff durch Ausführen von SQL-Anweisungen ausführen. Die allgemeine Abfolge der Ereignisse ist ein Anweisungshandle zuordnen, Anweisungsattribute festlegt, führen Sie die Anweisung, alle Ergebnisse abgerufen und das Anweisungshandle freizugeben.  

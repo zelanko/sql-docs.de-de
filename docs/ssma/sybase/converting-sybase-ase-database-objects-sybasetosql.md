@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3734c2efaaefae44a17381cab46029f2d57666a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207846"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Konvertieren von SAP ASE-Datenbankobjekten (SybaseToSQL)
 Nachdem Sie in SAP Adaptive Server Enterprise (ASE) eine Verbindung hergestellt haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL und Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie Datenbankobjekte SAP Adaptive Server Enterprise (ASE) konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank -Objekte.  
@@ -59,7 +59,7 @@ Klicken Sie zum ASE-Datenbankobjekten zu konvertieren, wählen Sie zuerst die Ob
 ||||  
 |-|-|-|  
 |**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**INTTOHEX**|**substring_nvarchar**|  
+|**char_length_varchar**|**inttohex**|**substring_nvarchar**|  
 |**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
 |**charindex_varchar**|**hextoint**|**substring_varchar**|  
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  

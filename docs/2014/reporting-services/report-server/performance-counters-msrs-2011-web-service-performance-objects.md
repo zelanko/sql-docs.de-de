@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7d28e597d36305b9c4df7c8b4a499dc507b1ed31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191202"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows-Dienst, Leistungsobjekte (einheitlicher Modus)
   In diesem Thema werden Leistungsindikatoren für die Leistungsobjekte `MSRS 2014 Web Service` und `MSRS 2014 Windows Service` beschrieben.  

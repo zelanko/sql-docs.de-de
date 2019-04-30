@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161747"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ADO verwendet verschiedene Methoden, um eine Anwendung der Fehler zu benachrichtigen, die auftreten. Dieser Abschnitt beschreibt die Arten von Fehlern, die auftreten können, bei Verwendung von ADO und wie Ihre Anwendung benachrichtigt wird. Es schließt seine Untersuchung mit Empfehlungen dazu, wie Sie diesen Fehler zu behandeln.  

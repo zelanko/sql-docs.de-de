@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186037"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager-Funktion
 **Übereinstimmung mit Standards**  
@@ -81,13 +81,13 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32. DLL|  
-|DATEI ODBCCR32. DLL|ODBC16GT. DLL|  
-|ODBCCU32. DLL|ODBC32GT. DLL|  
-|ODBCINT. DLL|DS16GT. DLL|  
-|ODBCTRAC. DLL|DS32GT. DLL|  
-|MSVCRT40. DLL|ODBCAD32. EXE-DATEI|  
-|ODBCCP32. CPL||  
+|ODBC32DLL|ODBCCP32.DLL|  
+|ODBCCR32.DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT.DLL|  
+|ODBCTRAC.DLL|DS32GT.DLL|  
+|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager** wird auch als Teil eines Upgradevorgangs bezeichnet. Wenn eine Anwendung erkennt, dass sie ein Upgrade durchführen und den Treiber wurde bereits installierte, sollte der Treiber entfernt und anschließend neu installiert werden.  
   

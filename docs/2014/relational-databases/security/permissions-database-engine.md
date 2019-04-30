@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128767"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
   Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. Dieses Thema enthält die folgenden Informationen:  
@@ -364,7 +364,7 @@ ms.locfileid: "53355012"
   
 -   **Berechtigungsbereich**  
   
-     Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](permissions-hierarchy-database-engine.md).  
+     Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](permissions-hierarchy-database-engine.md).  
   
 -   **Erforderliche Berechtigung**  
   
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &amp;#40;Datenbank-Engine &amp;#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

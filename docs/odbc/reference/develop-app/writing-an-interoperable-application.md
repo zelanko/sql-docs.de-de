@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208578"
 ---
 # <a name="writing-an-interoperable-application"></a>Schreiben einer interoperablen Anwendung
 Wenn eine Anwendung den gleichen Code für mehrere Treiber verwendet, muss dieser Code zwischen Treiber interoperabel sein. In den meisten Fällen ist dies eine einfache Aufgabe. Beispielsweise ist der Code zum Abrufen von Zeilen mit einem Vorwärtscursor für alle Treiber identisch. In einigen Fällen kann dies schwieriger sein. Beispielsweise muss der Code zum Erstellen von Bezeichnern für die Verwendung in SQL-Anweisungen Groß-und Kleinschreibung, Anführungszeichen und ein- und zweiteilige dreiteiligen Benennungskonventionen berücksichtigen.  

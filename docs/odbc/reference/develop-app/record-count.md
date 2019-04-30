@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151230"
 ---
 # <a name="record-count"></a>Anzahl der Datensätze
 Das Headerfeld SQL_DESC_COUNT ein Deskriptor ist die 1-basierte Index des höchsten Datensatzes, der Daten enthält. Dieses Feld ist nicht die Anzahl der allen Spalten oder Parametern, die gebunden sind. Wenn ein Deskriptor zugeordnet ist, ist der Anfangswert des SQL_DESC_COUNT 0.  

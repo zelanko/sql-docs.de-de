@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217873"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für Callcentermodelle (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie Informationen zu Interaktionen zwischen Arbeitsschichten, der Anzahl der Telefonisten und Anrufe sowie der Dienstqualität gesammelt haben, können Sie einige Vorhersageabfragen für Geschäftsanalysen und Planungen erstellen. Sie erstellen zunächst einige Vorhersagen über das explorative Modell, um bestimmte Annahmen zu testen. Als Nächstes erstellen Sie massenvorhersagen mithilfe des logistischen Regressionsmodells.  
@@ -183,9 +183,9 @@ ms.locfileid: "56025411"
 ## <a name="remarks"></a>Hinweise  
  Die Data Mining-Add-Ins für Excel 2007 stellen einen Logistic Regression-Assistenten bereit, mit dem komplexe Fragen einfach beantwortet werden können, beispielsweise wie viele Operatoren der Ebene 2 benötigt werden, um die Dienstqualität für eine bestimmte Schicht auf ein Zielniveau anzuheben. Die Data Mining-Add-Ins können kostenlos heruntergeladen werden und enthalten Assistenten, die auf dem neuronalen Netzwerk oder den Logistic Regression-Algorithmen basieren. Weitere Informationen finden Sie unter den folgenden Links:  
   
--   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Szenarienanalysen „Zielsuche“ und „Was-wäre-wenn“  
+-   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Zielsuche und was-wäre-wenn Szenarienanalyse  
   
--   [SQL Server 2008 Data Mining-Add-Ins für Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Szenarienanalyse „Zielsuche“, Szenarienanalyse „Was-wäre-wenn“ und Vorhersagerechner  
+-   [SQL Server 2008 Data Mining-Add-Ins für Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Analyse von Zielsucheszenarien, was geschieht, wenn Szenarienanalyse und Vorhersagerechner  
   
 ## <a name="conclusion"></a>Schlussbemerkung  
  Sie haben gelernt, Miningmodelle zu erstellen, anzupassen und zu interpretieren, die auf dem Microsoft Neural Network-Algorithmus und dem Microsoft Logistic Regression-Algorithmus basieren. Diese Modelltypen bieten sehr umfassende Möglichkeiten und erlauben nahezu unendlich viele Variationen bei der Analyse. Ihre Verwendung kann daher komplex und schwierig sein.  

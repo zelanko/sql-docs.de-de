@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186114"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLPutData** ermöglicht es einer Anwendung zum Senden von Daten für einen Parameter oder eine Spalte für den Treiber während der Ausführung der Anweisung. Diese Funktion kann verwendet werden, zum Senden von Zeichen- oder Binärdaten-Werten in Teilen auf eine Spalte mit einem Zeichen oder den binären datenquellenspezifische-Datentyp (z. B. Parameter der Typen SQL_LONGVARBINARY oder SQL_LONGVARCHAR). **SQLPutData** unterstützt die Bindung an eine Unicode-C-Datentyp, selbst wenn die zugrunde liegenden Treiber Unicode-Daten nicht unterstützt.  
@@ -63,7 +63,7 @@ SQLRETURN SQLPutData(
  Für alle anderen Typen von C-Daten Wenn *StrLen_or_Ind* ist kein SQL_NULL_DATA oder SQL_DEFAULT_PARAM der Treiber setzt voraus, dass die Größe des der \* *DataPtr* Puffer ist die Größe des angegebenen C-Datentyp mit *ValueType* oder *TargetType* und sendet den gesamten Datenwert. Weitere Informationen finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLPutData** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLPutData** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -89,7 +89,7 @@ SQLRETURN SQLPutData(
 |HY010|Fehler in der Funktionsreihenfolge|(DM) der vorherigen Funktionsaufruf war keinem Aufruf von **SQLPutData** oder **SQLParamData**.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese asynchronen Funktion wurde noch ausgeführt werden, wenn die SQLPutData-Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY019|Nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen versandt|**SQLPutData** war aufgerufen mehr als einmal für einen Parameter oder eine Spalte, und es war nicht verwendet wird, zum Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder zum Senden von Binärdaten C an eine Spalte mit einem Zeichen , Binär- oder Data Source-spezifische-Datentyp.|  
-|HY020 ES WURDE|Versucht, einen null-Wert zu verketten.|**SQLPutData** mehr als einmal aufgerufen wurde, seit dem Aufruf, der SQL_NEED_DATA zurückgegeben, und klicken Sie in einem dieser Aufrufe, die *StrLen_or_Ind* Argument enthalten, SQL_NULL_DATA oder SQL_DEFAULT_PARAM.|  
+|HY020|Versucht, einen null-Wert zu verketten.|**SQLPutData** mehr als einmal aufgerufen wurde, seit dem Aufruf, der SQL_NEED_DATA zurückgegeben, und klicken Sie in einem dieser Aufrufe, die *StrLen_or_Ind* Argument enthalten, SQL_NULL_DATA oder SQL_DEFAULT_PARAM.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Das Argument *DataPtr* war nicht, ein null-Zeiger ist, und das Argument *StrLen_or_Ind* war kleiner als 0, aber nicht gleich SQL_NTS lauten oder SQL_NULL_DATA.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

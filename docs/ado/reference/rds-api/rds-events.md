@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efd6a03b4d31301e63b4ad87882ed49718620b2e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213263"
 ---
 # <a name="rds-events"></a>RDS-Ereignisse
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "51601250"
   
 |||  
 |-|-|  
-|[OnError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.|  
-|["onreadystatechange" (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert des der **ReadyState** eigenschaftenänderungen.|
+|[onError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.|  
+|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert des der **ReadyState** eigenschaftenänderungen.|
 
 

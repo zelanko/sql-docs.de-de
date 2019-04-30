@@ -1,6 +1,6 @@
 ---
-title: Hardwareinstallation – Analytics Platform System | Microsoft Docs
-description: Dieser Artikel beschreibt, wie verschieben, entpacken und die Hardware für die SQL Server PDW Appliance zu installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Anwendung sollte entpackt, installiert werden, und überprüft, bevor sie Ihnen über aktiviert ist. Kunden die Teilnahme ist erforderlich, damit Elemente wie z. B. Daten zugreifen, Stromversorgung und Ethernet-Verbindungen zu zentrieren.
+title: Hardwareinstallation - Analytics Platform System | Microsoft-Dokumentation
+description: Dieser Artikel beschreibt, wie Sie verschieben, entpacken und installieren Sie die Hardware für Ihre SQL Server-PDW-Appliance. In diesem Artikel dient nur zu Informationszwecken und soll Ihnen ein Verständnis des Prozesses. Ihr Gerät sollte ausgepackt, installiert werden, und überprüft, bevor sie über für Sie aktiviert ist. Kunden die Teilnahme ist erforderlich, damit Elemente wie z. B. Daten center Zugriff, Stromversorgung und Ethernet-Verbindungen.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,56 +10,56 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157316"
 ---
-# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Hardwareinstallation Analytics Platform System-Einheit
-Dieser Artikel beschreibt, wie verschieben, entpacken und die Hardware für die SQL Server PDW Appliance zu installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Anwendung sollte entpackt, installiert werden, und überprüft, bevor sie Ihnen über aktiviert ist. Kunden die Teilnahme ist erforderlich, damit Elemente wie z. B. Daten zugreifen, Stromversorgung und Ethernet-Verbindungen zu zentrieren.  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Hardwareinstallation für Analytics Platform System appliance
+Dieser Artikel beschreibt, wie Sie verschieben, entpacken und installieren Sie die Hardware für Ihre SQL Server-PDW-Appliance. In diesem Artikel dient nur zu Informationszwecken und soll Ihnen ein Verständnis des Prozesses. Ihr Gerät sollte ausgepackt, installiert werden, und überprüft, bevor sie über für Sie aktiviert ist. Kunden die Teilnahme ist erforderlich, damit Elemente wie z. B. Daten center Zugriff, Stromversorgung und Ethernet-Verbindungen.  
   
 ## <a name="BeforeMoving"></a>Bevor Sie alle Komponenten von der Ladestation verschieben  
-Führen Sie die folgenden Aufgaben aus, bevor Sie verschieben, entpacken oder rack Appliance-Komponenten.  
+Führen Sie die folgenden Aufgaben aus, verschieben, entpacken, oder Sie Komponenten Gerät Auspacken.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |--------|---------------|  
-|Stellen Sie sicher, dass alle Komponenten angekommen sind|Verwenden Sie die Rechnung von Materialien (BOM), um sicherzustellen, dass alle Komponenten angekommen und befinden sich auf ihre Paletten am empfangenden Dock für Ihr Datencenter.|  
-|Stellen Sie sicher, dass das Rechenzentrum alle für das Gerät erfüllt|Starten Sie diesen Task, indem Hardwarespezifikationen überprüfen und Verkabelung Diagramme, die von Ihrem IHV bereitstellen. Die nächsten Schritte finden Sie Einzelheiten zu Rack erforderliche Speicherplatz und Konnektivität.|  
-|Stellen Sie sicher, dass das Rechenzentrum ordnungsgemäße Rack Speicherplatz verfügt|Stellen Sie sicher, dass das Rechenzentrum genügend Speicherplatz für alle von der Einheit Racks verfügt.<br /><br />Stellen Sie sicher, dass das Gestell Platz leer sind und für die Appliance Racks den Empfang bereit ist.|  
-|Stellen Sie sicher, dass das Rechenzentrum Konnektivität erfüllt|Stellen Sie sicher, dass das Rechenzentrum die Verkabelung in den Diagrammen Verkabelung erfüllt.<br /><br />Stellen Sie sicher, dass sich Platz für alle Kabel und Netzkabel nach Appliance Knoten eingerichtet werden.|  
-|Überprüft, ob die Etagen zwischen Docks und den Regalen Gewichtung Anforderungen erfüllen|Stellen Sie sicher, dass alle Material zwischen Paletten und den Regalen die Gewichtung der Knoten Appliance, besonders in Rechenzentren mit ausgelöste Etagen unterstützen kann.<br /><br />Wenden Sie sich an Ihrem IHV Informationen für die Gewichtung der einzelnen Komponenten.|  
-|Sichern Sie das Rechenzentrum Gestell|Sichern Sie das Rechenzentrum Rack über zusätzliche Geräte nach Bedarf für Ihre rechenzentrumstandorts, z. B. Erdbeben Schultergurte in geografischen Bereichen anfällig für Erdbeben durchgeführt.|  
-|Unterstützung für das Transportieren von Komponenten vorbereiten|Im Voraus bestimmen Sie, welche um Unterstützung zu erhalten, Geräte und Tools, die jede Komponente auf sichere Weise und ohne dass Schäden verursacht behandelt werden sollen.|  
+|Stellen Sie sicher, dass alle Komponenten angekommen sind|Verwenden Sie die Rechnung von Materialien (BOM), um sicherzustellen, dass alle Komponenten empfangen und auf ihre Paletten am empfangenden Dock für Ihr Rechenzentrum.|  
+|Stellen Sie sicher, dass das Rechenzentrum alle Anforderungen für die Appliance erfüllt|Starten Sie diese Aufgabe durch Überprüfen der Hardwarespezifikationen und Verkabelung der Diagramme, die von Ihrem unabhängigen Hardwarehersteller bereitgestellt. Die nächsten Schritte finden Sie Einzelheiten zu Gestell Platz und verbindungsanforderungen an.|  
+|Stellen Sie sicher, dass der Data Center richtigen Rackplatz hat|Stellen Sie sicher, dass das Rechenzentrum genügend Speicherplatz für alle von der Appliance Racks verfügt.<br /><br />Stellen Sie sicher, dass die Rackplatz leer und für die Appliance Racks den Empfang bereit ist.|  
+|Stellen Sie sicher, dass das Rechenzentrum Konnektivitätsanforderungen erfüllt|Stellen Sie sicher, dass das Rechenzentrum in den Diagrammen Verkabelung die Verkabelung erfüllt.<br /><br />Stellen Sie sicher, dass es Platz für alle Kabel und Netzkabel geben wird, nachdem die applianceknoten installiert werden.|  
+|Stellen Sie sicher, dass die Stockwerken zwischen dem Dock und Racks Gewichtung Anforderungen zu erfüllen|Stellen Sie sicher, dass alle Bodenbeläge zwischen Paletten und Racks die Gewichtung der Einheit von Knoten, vor allem in Rechenzentren mit ausgelösten Stockwerke unterstützen kann.<br /><br />Wenden Sie sich an Ihrem unabhängigen Hardwarehersteller Informationen auf der Gewichtung der einzelnen Komponenten.|  
+|Sichern Sie das Rechenzentrum rack|Sichern Sie das Rechenzentrum Rack an Stelle mithilfe zusätzlichen Komponenten nach Bedarf für Ihre Datencenter-Speicherort, z. B. Erdbeben Schultergurte in geografischen Bereichen anfällig für Erdbeben.|  
+|Vorbereiten Sie für die Unterstützung bei der Übertragung von Komponenten|Im Voraus bestimmen Sie, welche Unterstützung zu erhalten, Geräte und Tools, die Sie jede Komponente zu behandeln, sicher und ohne dort Schaden anrichten können müssen.|  
   
-## <a name="Moving"></a>Verschieben Sie die Regalen von der Ladestation in das Rechenzentrum  
-Jede Palette enthält alle Komponenten für eine Einheit Rack, einschließlich der Knoten, Kabel, Kabel usw. an.  
+## <a name="Moving"></a>Verschieben Sie den Racks von der Ladestation ins Datenzentrum  
+Jeder Palette enthält alle Komponenten für die ein Gerät Rack, einschließlich der Knoten, Kabel, Kabel usw. an.  
   
-Verwenden Sie die folgende Checkliste, um jedes Rack Einheit aus der Palette an der Ladestation an ihrem Speicherort Rack im Datencenter zu verschieben. Verschieben Sie zunächst das Gestell Steuerelement, und verschieben Sie die Appliance Daten Racks.  
+Verwenden Sie die folgende Checkliste, um jedes Rack Gerät aus der Palette an der Ladestation an ihrem Speicherort Rack im Datencenter zu verschieben. Verschieben Sie zunächst das Steuerelement Rack, und klicken Sie dann verschieben Sie das Gerät Daten Racks zu.  
   
 > [!WARNING]  
-> Um diese Schritte genau wie beschrieben ausführen kann Bestimmung Schäden, Schäden an der SQL Server PDW Appliance oder anderen Problemen kommen.  
+> Diese Schritte genau wie beschrieben ausführen könnten Bestimmung Schäden, Schäden an Ihre SQL Server-PDW-Appliance oder anderen Problemen führen.  
 >   
-> Nie Versuch, heben oder ein Knoten Appliance oder andere starker Komponente ohne Unterstützung nach "oder mit einem richtigen Gerät zu verschieben. Wenden Sie sich an Ihrem IHV Informationen für die Gewichtung der einzelnen Komponenten, damit Sie im Voraus ermitteln können, welche um Unterstützung zu erhalten, Geräte und Tools, die jede Komponente auf sichere Weise und ohne dass Schäden verursacht behandelt werden sollen.  
+> Nie wurde versucht, heben oder eine Appliance-Knoten oder eine andere hohe Komponente ohne Unterstützung zu erhalten oder geeignete Ausrüstung zu verschieben. Wenden Sie sich an Ihrem unabhängigen Hardwarehersteller Informationen auf der Gewichtung der einzelnen Komponenten, damit Sie im Voraus bestimmen können, welche Unterstützung zu erhalten, Geräte und Tools, die Sie jede Komponente zu behandeln, sicher und ohne dort Schaden anrichten können müssen.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |--------|---------------|  
-|Stellen Sie sicher, dass die Palette Ebene ist.|Bevor Sie beginnen, zu verschieben, oder Entpacken die Palette, achten Sie darauf, dass er sich auf Ebene Ground befindet.|  
-|Unbolt einen Knoten aus der Palette|Starten oben auf der Palette, unbolt den obersten Knoten aus der Palette.|  
-|Verschieben Sie den Knoten zu einem Nachläuferachse oder der Einkaufswagen, die die Gewichtung unterstützen kann|Verwenden Sie Rampen und Techniken für den richtigen Aufhebung/verschieben, verschieben den Knoten zu einem Nachläuferachse oder der Einkaufswagen, die die Gewichtung unterstützen kann.|  
-|Den Knoten in dem Rechenzentrum Transport|Verwenden Sie ordnungsgemäße Aufhebung/verschieben-Techniken, um die Knoten in der Position in der Data Center Gestell verschoben werden.|  
-|Sichern Sie den Knoten im Rechenzentrum Gestell|Sichern Sie den Knoten direkt in das Rechenzentrum Gestell.|  
-|Wiederholen Sie diese Schritte für den nächsten Knoten oder Komponente|Wiederholen Sie diese Schritte aus, um den nächsten Knoten oder eine andere Einheit-Komponente in das Rechenzentrum zu verschieben.|  
+|Stellen Sie sicher, dass die Palette Ebene ist.|Bevor Sie beginnen, verschieben oder zu packen, achten Sie darauf, dass es auf der Ebene von Grund auf neu ist.|  
+|Unbolt einen Knoten aus der Palette|Beginnen Sie am oberen Rand der Palette, unbolt den obersten Knoten aus der Palette.|  
+|Verschieben Sie den Knoten, in eine Transportwagen oder Warenkorb, der die Gewichtung unterstützen kann|Verwenden Sie Rampen und Techniken für den richtigen anheben/verschieben, verschieben den Knoten, in eine Transportwagen oder Warenkorb, der die Gewichtung unterstützen kann.|  
+|Den Knoten in das Rechenzentrum übertragen|Verwenden Sie ordnungsgemäße anheben/Verschieben von Techniken, um den Knoten an Position in der Datencenter-Racks zu verschieben.|  
+|Sichern Sie den Knoten im Rechenzentrum rack|Sichern Sie den Knoten direkt in das Rechenzentrum Rack.|  
+|Wiederholen Sie diese Schritte für den nächsten Knoten oder Komponente|Wiederholen Sie die folgenden Schritte aus, um den nächsten Knoten oder eine andere Komponente der Anwendung in das Rechenzentrum verschieben.|  
   
-## <a name="AfterMoving"></a>Weitere Komponenten installieren  
+## <a name="AfterMoving"></a>Zusätzliche Komponenten installieren  
 Verwenden Sie die folgende Checkliste, um die zusätzlichen Komponenten zu installieren.  
   
-|Task|Description||  
+|Aufgabe|Description||  
 |--------|---------------|-|  
-|Entpacken und rack-Netzwerkswitches und PDUs|Verwenden Sie die Rack Diagramme, um die Netzwerkswitches und PDUs am richtigen Speicherort in das Gestell einzufügen.||  
-|Verbinden Sie die Infiniband und Ethernet-Kabel gemäß der Kabel Bezeichnungen|Betrachten Sie hierzu die Verkabelung Diagramm. Jedes Kabel hat die Bezeichnung an jedem Ende, der angibt, in denen er verbunden sein muss.||  
-|Schließen Sie alle Netzkabel|Betrachten Sie hierzu die Verkabelung Diagramm.||  
-|Aktivieren Sie die Stromversorgung erneut mit den Regalen und die PDUs|Verbinden Sie die Stromversorgung erneut mit den Regalen und aus den Regalen an die PDUs. **Schalten Sie nicht auf einem anderen Gerät Komponenten zu diesem Zeitpunkt.**||  
+|Entpacken und rack-Netzwerkswitches und PDUs|Verwenden Sie die Rack-Diagramme, um die Netzwerkswitches und PDUs am richtigen Speicherort in das Gestell zu platzieren.||  
+|Schließen Sie die Infiniband und Ethernet-Kabel gemäß den Bezeichnungen Kabel|Finden Sie unter Verkabelungsdiagramm. Jedes Kabel hat die Bezeichnung an beiden Enden, der angibt, in denen er verbunden sein muss.||  
+|Schließen Sie alle Netzkabel|Finden Sie unter Verkabelungsdiagramm.||  
+|Aktivieren Sie die Stromversorgung erneut mit den Racks und der PDUs|Verbinden Sie die Stromversorgung erneut mit den Racks und aus den Racks an die PDUs. **Schalten Sie nicht auf einem anderen Gerät Komponenten zu diesem Zeitpunkt.**||  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

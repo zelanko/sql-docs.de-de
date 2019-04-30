@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186279"
 ---
 # <a name="data-sources"></a>Projektmappen-Explorer
 Ein *Datenquelle* ist einfach die Quelle der Daten. Es kann eine Datei, die eine bestimmte Datenbank auf ein DBMS oder sogar einem live-Datenfeed sein. Daten können sich auf demselben Computer wie die Anwendung oder auf einem anderen Computer an einer beliebigen Stelle in einem Netzwerk sein. Eine Datenquelle kann z. B. eine Oracle-DBMS auf einem OS/2® Operating System, auf die von Novell® Netware zugegriffen werden; Ein IBM DB2-DBMS erfolgt über ein Gateway; eine Auflistung der Xbase-Dateien in einem Serververzeichnis; oder einer lokalen Microsoft® Access-Datenbankdatei.  

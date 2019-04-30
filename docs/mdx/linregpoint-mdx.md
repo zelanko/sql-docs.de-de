@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc47b5910f0d5323b1b7e29cd3313b36d615265c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136074"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 
 
-  Berechnet die lineare Regression einer Menge und gibt den Wert der *y-Intercept* in der regressionsgleichung y = Ax + b für einen bestimmten Wert von X.  
+  Berechnet die lineare Regression einer Menge und gibt den Wert des der *y-Achsenabschnitt* in der regressionsgleichung y = Ax + b für einen bestimmten Wert von X.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,11 +42,11 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt. Die vom Ausdruck zurückgegebene Zahl stellt den Wert für die X-Achse dar.  
   
 ## <a name="remarks"></a>Hinweise  
- Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b das Konstante Glied:  
+ Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b ist das Konstante Glied:  
   
  y = ax+b  
   
- Die **LinRegPoint** Funktion wertet die angegebene Menge für den zweiten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Menge für den dritten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn kein dritter numerischer Ausdruck angegeben wird, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die X-Achse. Das x-Achsen-Argument nicht angeben wird häufig mit der Time-Dimension verwendet.  
+ Die **LinRegPoint** Funktion wertet die angegebene Menge für den zweiten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion die angegebene Menge für den dritten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn kein dritter numerischer Ausdruck angegeben wird, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die X-Achse. Das x-Achsen-Argument nicht angegeben, wird häufig mit der Time-Dimension verwendet.  
   
  Nach Abschluss der Berechnung der linearen Regressionsgeraden wird das Ergebnis der Gleichung für den ersten numerischen Ausdruck berechnet und zurückgegeben.  
   

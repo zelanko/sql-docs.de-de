@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191766"
 ---
 # <a name="securing-rds-applications"></a>Schützen von RDS-Anwendungen
 Dieses Thema enthält Informationen zur Sicherheit für RDS.  
@@ -42,6 +42,6 @@ Dieses Thema enthält Informationen zur Sicherheit für RDS.
  Daher kann der IIS-Windows NT Challenge/Response-Authentifizierungsmodus HTML-Seiten, ohne dass der Benutzer aufgefordert zu werden explizit für die Benutzer-ID und Kennwort erforderlichen Informationen zum Melden Sie sich mit der Datenbank erstellt werden. Wenn die IIS-Standardauthentifizierung verwendet wurden, klicken Sie dann wäre diese auch erforderlich.  
   
 ## <a name="password-authentication"></a>Kennwort-Authentifizierung  
- RDS mit IIS-Webserver ausgeführt wird, in einem der drei Modi Kennwortauthentifizierung kommunizieren kann: anonym, Standard, oder die NT-Abfrage/Rückmeldung-Authentifizierung (integrierte Windows-Authentifizierung in Windows 2000 genannt). Diese Einstellungen definieren, wie ein Webserver-Steuerelemente Zugriff über, beispielsweise, dass die expliziten Zugriffsberechtigungen auf dem NT-Webserver verfügen über einen Clientcomputer.
+ RDS kann mit IIS-Webserver ausgeführt wird, in einem der drei Modi Kennwortauthentifizierung kommunizieren: Anonymous, Basic oder NT-Abfrage/Rückmeldung-Authentifizierung (integrierte Windows-Authentifizierung in Windows 2000 genannt). Diese Einstellungen definieren, wie ein Webserver-Steuerelemente Zugriff über, beispielsweise, dass die expliziten Zugriffsberechtigungen auf dem NT-Webserver verfügen über einen Clientcomputer.
 
 

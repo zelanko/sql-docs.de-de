@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162027"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA MySQL-Syntax in SQL Server oder SQL Azure-Syntax konvertiert.  
@@ -79,7 +79,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |-|-|  
 |**Begriff**|**Definition**|  
 |**Standardkonvertierung-Funktion**|Gibt an, ob es sich bei Funktionen konvertiert werden sollen in der Standardeinstellung werden T-SQL-Funktionen oder gespeicherte Prozeduren.<br /><br />**Im Modus Standard**:  Konvertieren in Funktion<br /><br />**Vollständige**:  Konvertieren in Funktion<br /><br />**Vollständiger Modus**:  Konvertieren in Funktion|  
-|**SET XACT_ABORT auf generieren**|Gibt an, ob SET XACT_ABORT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
+|**Generate SET XACT_ABORT ON**|Gibt an, ob SET XACT_ABORT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
 |**Generieren von SET NOCOUNT auf**|Gibt an, ob SET NOCOUNT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
   
 ### <a name="spatial-data-types"></a>Räumliche Datentypen  
@@ -87,7 +87,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Standardmäßig die Dichte des Rasters für räumliche Indizes**|Definiert Standardwert für LEVEL_1, LEVEL_2, LEVEL_3 und LEVEL_4, der die Dichte des Rasters in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständige**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständigen-Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard|  
   
 ### <a name="transactions"></a>Transaktionen  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215457"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First-Funktion (Berichts-Generator und SSRS)
   Gibt den ersten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.  

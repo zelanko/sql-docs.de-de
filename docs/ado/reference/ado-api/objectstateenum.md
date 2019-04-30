@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217724"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Gibt an, ob ein Objekt offen oder geschlossen ist, Herstellen einer Verbindung mit einer Datenquelle Ausführen eines Befehls oder Abrufen von Daten.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Gibt an, dass das Objekt beendet wird.|  
 |**adStateOpen**|1|Gibt an, dass das Objekt geöffnet ist.|  
@@ -35,7 +35,7 @@ Gibt an, ob ein Objekt offen oder geschlossen ist, Herstellen einer Verbindung m
 |**adStateFetching**|8|Gibt an, dass die Zeilen des Objekts abgerufen werden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213373"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in Parallel Data Warehouse
 Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.  
@@ -77,7 +77,7 @@ Anschließend werden die Daten von Integration Services in SQL Server-PDW-Datent
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIME2|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIMEOFFSET|DT_WSTR|  
-|DECIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
+|DEZIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |GLEITKOMMAZAHL|DT_R4, DT_R8|  
 |INT|DT_I1, DTI2, DT_I4, DT_UI1, DT_UI2|  
 |MONEY|DT_CY|  
@@ -220,7 +220,7 @@ Geben Sie das Ziel für den Datenfluss.
   
     InfiniBand-Verbindungen **Servernamen**: Geben Sie < Appliance-Name >-SQLCTL01, 17001.  
   
-    Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse des Steuerelement-Knoten-Cluster, Komma, Port 17001. Z. B. 10.192.63.134,17001.  
+    Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse des Steuerelement-Knoten-Cluster, Komma, Port 17001 aus. Z. B. 10.192.63.134,17001.  
   
     **Benutzer:**`user1`  
   
@@ -250,7 +250,7 @@ Führen Sie das Paket auf dem Integration Services-Computer.
 [Erstellen Sie einen Skripttask, der den Zieladapter SSIS PDW verwendet.](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [Entwerfen und Implementieren von Paketen (Integrationsservices)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Lernprogramm: Erstellen eines einfachen Pakets mithilfe eines Assistenten](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Tutorial: Erstellen eines einfachen Pakets mithilfe eines Assistenten](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Erste Schritte (Integrationsservices)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamische Generierung (Paketbeispiel)](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [Entwerfen Ihre SSIS-Pakete für Parallelität (SQL Server-Video)](https://msdn.microsoft.com/library/dd795221.aspx)  

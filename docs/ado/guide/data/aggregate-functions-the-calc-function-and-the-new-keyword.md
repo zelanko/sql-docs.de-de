@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063096"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Strukturieren von Daten unterstützt die folgenden Funktionen. Zugewiesene finden Sie im Kapitel mit der Spalte verwendet werden. Name ist der *Kapitel-Alias*.  
@@ -35,7 +35,7 @@ Strukturieren von Daten unterstützt die folgenden Funktionen. Zugewiesene finde
 |MAX (*Kapitel-Alias*. *Spaltenname*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
 |MIN (*Kapitel-Alias*. *Spaltenname*)|Berechnet den Mindestwert in der angegebenen Spalte an.|  
 |COUNT (*Kapitel-Alias*[. *Spaltenname*])|Zählt die Anzahl der Zeilen in den angegebenen Alias. Wenn eine Spalte angegeben wird, sind nur Zeilen, die für die diese Spalte ungleich Null ist in der Zählung enthalten.|  
-|STDEV (*Kapitel-Alias*. *Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte an.|  
+|STDEV(*chapter-alias*.*column-name*)|Berechnet die Standardabweichung in der angegebenen Spalte an.|  
 |Alle (*Kapitel-Alias*. *Spaltenname*)|Ein Wert der angegebenen Spalte. Alle hat einen vorhersagbaren Wert nur, wenn der Wert der Spalte für alle Zeilen im Kapitel identisch ist.<br /><br /> **Beachten Sie** Wenn die Spalte nicht den gleichen Wert für alle Zeilen in das Kapitel enthält, gibt die SHAPE-Befehl nach dem Zufallsprinzip einen der Werte auf den Wert der ANY-Funktion.|  
   
 |berechneter Ausdruck|Description|  
@@ -60,10 +60,10 @@ Strukturieren von Daten unterstützt die folgenden Funktionen. Zugewiesene finde
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|AdBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
 |DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
-|DBTYPE_NUMERIC|Type|  
+|DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  

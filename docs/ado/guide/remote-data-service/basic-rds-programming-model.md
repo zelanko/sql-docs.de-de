@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214807"
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegendes RDS-Programmiermodell
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- RDS Adressen Anwendungen, die in der folgenden Umgebung vorhanden sind: eine Clientanwendung gibt an, ein Programm, das auf einem Server und die Parameter erforderlich, um die gewünschten Informationen zurückzugeben ausgeführt wird. Das Programm aufgerufen wird, auf dem Server verschafft sich Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, optional verarbeitet die Daten, und klicken Sie dann die resultierende Informationen an die Clientanwendung in ein Formular, das einfach zu verwendenden zurückgegeben. RDS bietet das bedeutet, dass Sie die folgende Sequenz von Aktionen ausführen:  
+ RDS werden Anwendungen, die in der folgenden Umgebung vorhanden sind: Eine Clientanwendung gibt ein Programm, das auf einem Server und die Parameter erforderlich, um die gewünschten Informationen zurückzugeben ausgeführt wird. Das Programm aufgerufen wird, auf dem Server verschafft sich Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, optional verarbeitet die Daten, und klicken Sie dann die resultierende Informationen an die Clientanwendung in ein Formular, das einfach zu verwendenden zurückgegeben. RDS bietet das bedeutet, dass Sie die folgende Sequenz von Aktionen ausführen:  
   
 -   Geben Sie das Programm auf dem Server aufgerufen werden, und rufen Sie eine Möglichkeit, die vom Client darauf verweisen. (Dieser Verweis bezeichnet ein *Proxy*. Es stellt das Programm Remoteservers dar. Die Clientanwendung wird "den Proxy aufrufen" als ob es ein lokales Programm wurden, aber tatsächlich er das Programm Remoteservers ruft.)  
   
@@ -47,8 +47,8 @@ ms.locfileid: "51558497"
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Programmiermodell im Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

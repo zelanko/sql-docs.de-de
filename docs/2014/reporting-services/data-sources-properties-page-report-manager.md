@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165363"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Datenquellen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite "Datenquellen" können Sie definieren, wie der aktuelle Bericht eine Verbindung mit einer externen Datenquelle herstellt. Sie können die ursprünglich mit dem Bericht veröffentlichten Informationen zur Datenquellenverbindung überschreiben. Falls mehrere Datenquellen in einem Bericht verwendet werden, hat jede Datenquelle einen eigenen Abschnitt auf der Eigenschaftenseite. Datenquellen werden in der Reihenfolge aufgeführt, in der sie im Bericht definiert sind.  

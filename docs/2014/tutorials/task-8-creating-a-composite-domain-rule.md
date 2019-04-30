@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 8: Erstellen einer Verbunddomänenregel | Microsoft-Dokumentation'
+title: 'Aufgabe 8: Erstellen einer Verbunddomänenregel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: douglaslms
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217802"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Aufgabe 8: Erstellen einer Verbunddomänenregel
+# <a name="task-8-creating-a-composite-domain-rule"></a>Aufgabe 8: Erstellen einer Verbunddomänenregel
   In dieser Aufgabe erstellen Sie eine Regel für die **Address Validation** verbunddomäne. Sie definieren eine domänenübergreifende Regel: Wenn **City** ist **Berlin**, **Zustand** muss **Zertifizierungsstelle** , in denen **City** und **Zustand** zwei Domänen sind.  
   
 1.  Wechseln Sie im rechten Bereich die **VD-Regeln** Registerkarte.  

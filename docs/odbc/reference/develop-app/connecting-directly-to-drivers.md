@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f5818d67659769ae104b3e98248c26f5b9fe8a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151241"
 ---
 # <a name="connecting-directly-to-drivers"></a>Herstellen einer Verbindung direkt mit Treibern
 Wie in beschrieben wurde [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)weiter oben in diesem Abschnitt einige Anwendungen möchten nicht an eine Datenquelle verwenden. Stattdessen möchten sie direkt auf einen Treiber zu verbinden. **SQLDriverConnect** bietet eine Möglichkeit für die Anwendung direkt zu einem Treiber herstellen, ohne eine Datenquelle angeben. Vom Konzept her ist eine temporäre Datenquelle zur Laufzeit erstellt.  

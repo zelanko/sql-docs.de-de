@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156983"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Nachverfolgen von appliancewarnungen in Analytics Platform System
 In diesem Thema wird erläutert, wie Sie mit der Verwaltungskonsole und Systemsichten zum Nachverfolgen von Warnungen in einer SQL Server-PDW-Appliance.  
@@ -27,7 +27,7 @@ SQL Server PDW protokolliert Warnungen in der [sys.dm_pdw_component_health_alert
 ### <a name="view-alerts-by-using-the-admin-console"></a>Anzeigen von Warnungen mithilfe der Verwaltungskonsole  
 Es gibt eine **Warnungen** Registerkarte für die PDW-Region und für den Fabric-Bereich des Geräts. Nach dem Failover auftritt, ist das failoverereignis in die Anzahl der Warnungen auf der Seite enthalten. Eine Seite, die für die PDW-Region und für den Fabric-Bereich des Geräts ist vorhanden. Jede Seite "Integrität" verfügt über eine Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf die **Integrität** Seite die **Warnungen** Registerkarte, und klicken Sie dann auf eine Warnung.  
   
-![PDW-Verwaltungskonsole, Warnungen](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Auf der **Warnungen** Seite:  
   

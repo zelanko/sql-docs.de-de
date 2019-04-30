@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161773"
 ---
 # <a name="editing-data"></a>Bearbeiten von Daten
 Wir haben erläutert wie ADO verwenden, um eine Verbindung mit einer Datenquelle herstellen, einen Befehl ausführen, erhalten die Ergebnisse einem **Recordset** Objekt aus, und navigieren Sie in der **Recordset**. Dieser Abschnitt konzentriert sich auf den nächsten grundlegende ADO-Vorgang: Bearbeiten von Daten.  
@@ -92,4 +92,4 @@ End Function
   
 -   [Deleting Records Using the Delete Method (Löschen von Datensätzen mit der Delete-Methode)](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternatives: Using SQL Statements (Alternative: Verwenden von SQL-Anweisungen)](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternativen: Mithilfe von SQL­Anweisungen](../../../ado/guide/data/alternatives-using-sql-statements.md)

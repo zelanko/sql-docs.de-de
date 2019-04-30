@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151502"
 ---
 # <a name="summary-basic-navigation"></a>Zusammenfassung: Grundlagen zur Navigation
   Die Entwurfsoberfläche von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann angepasst werden, sodass sie Ihren privaten und beruflichen Anforderungen entspricht.  
@@ -31,6 +31,6 @@ ms.locfileid: "48086480"
 -   Verwenden Sie die Option **Beim Start** , um das Standardlayout benutzerspezifisch anzupassen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Schreiben von Transact-SQL-Code](lesson-2-writing-transact-sql.md)  
+ [Lektion 2: Schreiben von Transact-SQL](lesson-2-writing-transact-sql.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214879"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Deadlocks mit Read Repeatable-Isolationsstufe
 Wenn ein benutzerdefiniertes Geschäftsobjekt eine Isolationsstufe repeatable Read, verwendet um den Zugriff auf eine SQL-Server und das Geschäftsobjekt, das gleichzeitig von zwei Clients, die eine Abfrage senden und aktualisieren Sie in der gleichen Transaktion aufgerufen wird, ist ein Deadlock möglich. Remote Data Service wurde entwickelt, um einen der Prozesse zu einem Timeout, um den Deadlock zu ermöglichen, aber das Update für diesen Client fehl.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184277"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools)
   Sie können im Datenbank-Designer Beziehungen zwischen den Spalten in verschiedenen Tabellen erstellen, indem Sie Spalten zwischen Tabellen ziehen.  
@@ -28,7 +28,7 @@ ms.locfileid: "52781622"
   
 2.  Ziehen Sie die Spalte(n) auf die zugehörige Tabelle.  
   
-3.  Es werden zwei Dialogfelder angezeigt: **Foreign Key-Beziehung** und **Tabellen und Spalten**, wobei der letztere angezeigt wird im Vordergrund.  
+3.  Es werden zwei Dialogfelder angezeigt: **Fremdschlüsselbeziehung** und **Tabellen und Spalten**, wobei letzteres im Vordergrund angezeigt wird.  
   
 4.  Unter**Beziehungsname** wird ein vom System bereitgestellter Name im Format FK_*localtable*_*foreigntable*angegeben. Sie können diesen Wert ändern.  
   

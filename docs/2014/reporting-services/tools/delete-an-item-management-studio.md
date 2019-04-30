@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95e274940f0ab963653b95409b44cc1604dd15af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217977"
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
   Bei der Herstellung einer Verbindung mit einer Berichtsserverinstanz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Rollendefinitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  

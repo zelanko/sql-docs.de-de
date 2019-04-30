@@ -1,5 +1,5 @@
 ---
-title: Aggregat (MDX) | Microsoft Docs
+title: Aggregate (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200624"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -32,17 +32,17 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn eine Menge von leeren Tupeln oder eine leere Menge angegeben wird, gibt die Funktion einen leeren Wert zurück.  
   
- In der folgenden Tabelle wird beschrieben, wie die **aggregieren** Funktion verhält sich bei verschiedenen Aggregationsfunktionen.  
+ In der folgende Tabelle wird beschrieben, wie die **aggregieren** Funktion verhält sich bei verschiedenen Aggregationsfunktionen.  
   
 |Aggregationsoperator|Ergebnis|  
 |--------------------------|------------|  
-|SUM|Gibt die Summe der Werte über die Menge zurück.|  
+|Summe|Gibt die Summe der Werte über die Menge zurück.|  
 |Count|Gibt die Anzahl der Werte über die Menge zurück.|  
 |Max|Gibt den Maximalwert über die Menge zurück.|  
 |Min|Gibt den Minimalwert über die Menge zurück.|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Zuweisungen|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003 in der `Date` Dimension, aus der **Adventure Works** Cube.  
+ Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -124,13 +124,13 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>Siehe auch  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Untergeordnete Elemente &#40;MDX&#41;](../mdx/children-mdx.md)   
- [HIERARCHIZE &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Anzahl &#40;festgelegt&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Eigenschaften &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

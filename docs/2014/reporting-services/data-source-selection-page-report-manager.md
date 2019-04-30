@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165012"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Seite zur Datenquellenauswahl (Berichts-Manager)
   Mithilfe der Seite zur Datenquellenauswahl können Sie ein vorhandenes freigegebenes Datenquellenelement zur Verwendung in einem Bericht oder einem Berichtsmodell auswählen. Außerdem können Sie diese Seite verwenden, um eine andere Datenquelle auszuwählen. Um den Typ der Datenquelle oder deren Verbindungszeichenfolge anzuzeigen, müssen Sie zu der entsprechenden freigegebenen Datenquelle navigieren und deren Eigenschaftsseite öffnen.  

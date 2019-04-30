@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184951"
 ---
 # <a name="using-a-connection-object"></a>Verwenden eines Connection-Objekts
 Vor dem Öffnen einer **Verbindung** Objekt ist, müssen Sie bestimmte Informationen über die Datenquelle und die Art von Verbindung definieren. Frei, die meisten dieser Informationen wird die *"ConnectionString"* Parameter der [Open-Methode](../../../ado/reference/ado-api/open-method-ado-connection.md) auf die **Verbindung** -Objekt, oder durch die ["ConnectionString" Eigenschaft](../../../ado/reference/ado-api/connectionstring-property-ado.md) auf die **Verbindung** Objekt. Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren, die getrennt durch Semikolons getrennt, mit den Werten, die in einfache Anführungszeichen eingeschlossen. Zum Beispiel:  

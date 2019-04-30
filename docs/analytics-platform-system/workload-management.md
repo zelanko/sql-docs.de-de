@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157470"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Verwaltung von arbeitsauslastungen in Analytics Platform System
 
@@ -61,9 +61,9 @@ Die folgende Tabelle beschreibt die Ressourcenklassen und die ressourcenzuweisun
 |Ressourcenklasse|Anfordern von Bedeutung|Maximaler Arbeitsspeicher Nutzung *|Parallelitätsslots (maximale = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Medium|400 MB|1|Standardmäßig ist jeder Anmeldung eine kleine Menge von Arbeitsspeicher und Parallelitätsressourcen für ihre Anforderungen zulässig.<br /><br />Wenn ein Anmeldename einer Ressourcenklasse hinzugefügt wird, hat die neue Klasse Vorrang vor. Wenn eine Anmeldung aus allen Ressourcenklassen gelöscht wird, wird die Anmeldung auf die standardzuweisung für die Ressource zurückgesetzt.|  
-|"Mediumrc"|Medium|1200 MB|3|Beispiele für Anforderungen, die möglicherweise bei mittelgroßen Ressourcenklasse:<br /><br />CTAS-Vorgänge, die großen hashjoins.<br /><br />Auswählen von Vorgängen, die mehr Arbeitsspeicher nicht auf dem Datenträger zwischengespeichert wird.<br /><br />Laden von Daten in gruppierten columnstore-Indizes ein.<br /><br />Erstellen, Neuerstellen und Organisieren von gruppierten columnstore-Indizes für kleinere Tabellen mit 10 bis 15 Spalten.|  
+|MediumRC|Medium|1200 MB|3|Beispiele für Anforderungen, die möglicherweise bei mittelgroßen Ressourcenklasse:<br /><br />CTAS-Vorgänge, die großen hashjoins.<br /><br />Auswählen von Vorgängen, die mehr Arbeitsspeicher nicht auf dem Datenträger zwischengespeichert wird.<br /><br />Laden von Daten in gruppierten columnstore-Indizes ein.<br /><br />Erstellen, Neuerstellen und Organisieren von gruppierten columnstore-Indizes für kleinere Tabellen mit 10 bis 15 Spalten.|  
 |"Largerc"|High|2,8 GB|7|Beispiele für Anforderungen, die möglicherweise bei der großen Ressourcenklasse:<br /><br />Sehr große CTAS-Vorgänge, die große hashjoins oder große Aggregationen, z.B. große ORDER BY- oder GROUP BY-Klauseln enthalten.<br /><br />Wählen Sie die Vorgänge, die sehr große Mengen an Arbeitsspeicher für Vorgänge wie hashjoins oder Aggregationen wie z. B. die ORDER BY oder GROUP BY-Klausel erfordern.<br /><br />Laden von Daten in gruppierten columnstore-Indizes ein.<br /><br />Erstellen, Neuerstellen und Organisieren von gruppierten columnstore-Indizes für kleinere Tabellen mit 10 bis 15 Spalten.|  
-|"xlargerc"|High|8.4 GB|22|Die größte Ressourcenklasse ist für Anforderungen, die eine sehr große Ressourcenverbrauch zur Laufzeit erfordern.|  
+|xlargerc|High|8.4 GB|22|Die größte Ressourcenklasse ist für Anforderungen, die eine sehr große Ressourcenverbrauch zur Laufzeit erfordern.|  
   
 <sup>*</sup>Maximale speicherauslastung ist eine Annäherung an.  
   
@@ -140,7 +140,7 @@ SQL-Anweisungen und über Ressourcenklassen gesteuerte Vorgänge:
 ## <a name="Limits"></a>Einschränkungen  
 Die Ressourcenklassen gesteuert, die Speicher- und parallelitätsgrenzwerte Zuordnungen.  Sie ist nicht e/a-Vorgänge steuern.  
   
-## <a name="Metadata"></a>Metadaten  
+## <a name="Metadata"></a>Metadata  
 DMVs, die Informationen zu Ressourcenklassen und Resource-Klasse, Elemente enthalten.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -157,11 +157,11 @@ Verwandte Systemsichten verfügbar gemacht werden, mithilfe der SQL Server-DMVs 
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodes_resource_governor_workload_groups  
+-   sys.dm_pdw_nodes_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   sys.dm_pdw_nodws_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_exec_sessions  
   

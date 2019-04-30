@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140447"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
   Es gibt zwei Methoden, Resultsets oder Daten von einer Prozedur an ein aufrufendes Programm zurückzugeben: Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu beiden Ansätzen.  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Prozeduren können den `cursor` -Datentyp nur für OUTPUT-Parameter. Wenn die `cursor` -Datentyp angegeben, für einen Parameter für diesen Parameter in der Prozedurdefinition sowohl das VARYING als auch die Ausgabe angegeben werden. Parameter kann nur OUTPUT angegeben werden, aber wenn das Schlüsselwort VARYING in der Parameterdeklaration angegeben ist, muss des Datentyps `cursor` und muss auch das Schlüsselwort OUTPUT angegeben werden.  
   
 > [!NOTE]  
->  Die `cursor` -Datentyp kann nicht durch Datenbank-APIs wie z. B. OLE DB, ODBC, ADO und DB-Library an Anwendungsvariablen gebunden werden. Da OUTPUT-Parameter gebunden werden müssen, bevor eine Anwendung eine Prozedur Prozeduren mit ausführen, kann `cursor` OUTPUT-Parameter können nicht aus der Datenbank-APIs aufgerufen werden. Diese Prozeduren können aufgerufen werden [!INCLUDE[tsql](../../../includes/tsql-md.md)] batches, Prozeduren oder Trigger nur, wenn die `cursor` OUTPUT-Variable zugewiesen wird eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] lokalen `cursor` Variable.  
+>  Der `cursor`-Datentyp kann nicht durch Datenbank-APIs, wie z. B. OLE DB, ODBC, ADO und DB-Library, an Anwendungsvariablen gebunden werden. Da OUTPUT-Parameter gebunden werden müssen, bevor eine Anwendung eine Prozedur ausführen kann, können Prozeduren mit `cursor`-OUTPUT-Parametern nicht aus den Datenbank-APIs heraus aufgerufen werden. Diese Prozeduren können von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batches, Prozeduren oder Triggern heraus aufgerufen werden, wenn die `cursor`-OUTPUT-Variable einer lokalen [!INCLUDE[tsql](../../../includes/tsql-md.md)]-`cursor`-Variablen zugewiesen wird.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Regeln für Cursorausgabeparameter  
- Die folgenden Regeln beziehen sich auf `cursor` Ausgabeparameter enthalten, wenn die Prozedur ausgeführt wird:  
+ Folgende Regeln gelten für Ausgabeparameter vom `cursor`-Datentyp, wenn die Prozedur ausgeführt wird:  
   
 -   Bei einem Vorwärtscursor werden im Resultset des Cursors nur die Zeilen zurückgegeben, die sich am Ende der Ausführung der Prozedur an und hinter der Cursorposition befinden. Beispiel:  
   

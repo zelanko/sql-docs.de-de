@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128666"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute stehen `SQLGetConnectAttr`, und die Funktion wird verwendet, um ihre aktuellen Einstellungen zu melden. Die Werte gemeldete für diese Attribute erst garantiert sind, nachdem eine Verbindung hergestellt wurde, oder das Attribut wurde festgelegt mit [SQLSetConnectAttr](sqlsetconnectattr.md).  

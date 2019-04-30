@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188497"
 ---
 # <a name="procedure-call-escape-sequence"></a>Prozeduraufruf-Escapesequenz
 ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -29,17 +29,17 @@ ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape
   
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-Prozedur-Escapesequenz* :: =  
+ *ODBC-procedure-escape* ::=  
   
  &#124;*Initiator der ODBC-esc* [? =] aufrufen *Prozedur ODBC-esc-Terminator*  
   
- *Prozedur* :: = *Prozedurname* &#124; *Prozedurname* (*Prozedurparameterliste*)  
+ *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
   
- *Prozedur-ID* :: = *definiert-Benutzername*  
+ *procedure-identifier* ::= *user-defined-name*  
   
- *Name der Prozedur* :: = *Prozedur-ID*  
+ *procedure-name* ::= *procedure-identifier*  
   
- &#124;*Besitzernamen*. *Prozedur-ID*  
+ &#124; *owner-name*.*procedure-identifier*  
   
  &#124;*Katalognamen Katalogtrennzeichen* *Prozedur-ID*  
   
@@ -47,25 +47,25 @@ ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape
   
  (Die dritte Syntax ist nur gültig, wenn die Datenquelle Besitzer nicht unterstützt.)  
   
- *Besitzername* :: = *definiert-Benutzername*  
+ *owner-name* ::= *user-defined-name*  
   
- *Katalogname* :: = *definiert-Benutzername*  
+ *catalog-name* ::= *user-defined-name*  
   
- *Katalogtrennzeichen* :: = {*implementierungsdefinierte*}  
+ *catalog-separator* ::= {*implementation-defined*}  
   
  (Das Katalogtrennzeichen zurückgegeben wurde **SQLGetInfo** mit der Option SQL_CATALOG_NAME_SEPARATOR Informationen.)  
   
- *Prozedur-Parameter-List* :: = *-Parameter der Prozedur*  
+ *procedure-parameter-list* ::= *procedure-parameter*  
   
- &#124;*Prozedurparameter*, *Prozedurparameterliste*  
+ &#124; *procedure-parameter*, *procedure-parameter-list*  
   
- *Prozedurparameter* :: = *dynamische Parameter* &#124; *literal* &#124; *leeren Zeichenfolge*  
+ *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   
- *leeren Zeichenfolge* :: =  
+ *empty-string* ::=  
   
- *Initiator der ODBC-esc* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC-esc-Terminator* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
  (Wenn Parameter einer Prozedur eine leere Zeichenfolge ist, verwendet die Prozedur den Standardwert für diesen Parameter.)  
   

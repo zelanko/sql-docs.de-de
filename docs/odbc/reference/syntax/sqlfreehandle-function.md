@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061478"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLFreeHandle** gibt ein bestimmtes Umgebung, Verbindung, Anweisung oder Deskriptor Handle zugeordneten Ressourcen frei.  
@@ -50,15 +50,15 @@ SQLRETURN SQLFreeHandle(
  *HandleType*  
  [Eingabe] Der Typ des Handles freigegeben werden, indem **SQLFreeHandle**. Dabei muss es sich um einen der folgenden Werte sein:  
   
--   SQL_HANDLE_DBC AUF  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
 -   SQL_HANDLE_DESC  
   
--   SQL_HANDLE_ENV AUF  
+-   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT AUF  
+-   SQL_HANDLE_STMT  
   
  SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur von der Treiber-Manager und Treiber verwendet. Anwendungen sollten nicht mit dieser Handletyp verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   

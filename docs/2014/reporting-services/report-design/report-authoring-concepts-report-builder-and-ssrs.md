@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215430"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
   In diesem Abschnitt werden die in der Dokumentation zum Berichts-Generator und Berichts-Designer verwendeten Schlüsselkonzepte kurz definiert. Definitionen bestimmter Wörter oder Begriffe finden Sie im [Glossar &#40;Berichts-Generator&#41;](../report-builder/glossary-report-builder.md).  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061498"
 ---
 # <a name="generic-applications"></a>Allgemeine Anwendungen
 Allgemeine Anwendungen manchmal eine hartcodierte Aufgabe ausführen, z. B. als Kalkulationstabelle, die Abrufen von Daten aus einer Datenbank. Sie können auch eine Vielzahl von benutzerdefinierten Aufgaben, z. B. eine Standardabfrage-Anwendung, die der Benutzer zum eingeben und Ausführen einer SQL-Anweisung ausführen. Was allgemeine Anwendungen gemeinsam haben, ist, dass sie mit einer Vielzahl von verschiedenen DBMS-Systeme funktionieren müssen und der Entwickler nicht im Voraus weiß, welche diese DBMS werden.  

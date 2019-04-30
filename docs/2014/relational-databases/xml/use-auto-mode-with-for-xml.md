@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193264"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Verwenden des AUTO-Modus mit FOR XML
   Wie in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)beschrieben, gibt der AUTO-Modus Abfrageergebnisse als geschachtelte XML-Elemente zurück. Damit ist jedoch keine genaue Steuerungsmöglichkeit über die Form des XML-Codes gegeben, der aus einem Abfrageergebnis generiert wird. Die AUTO-Modusabfragen sind nützlich, wenn Sie einfache Hierarchien generieren möchten. Allerdings können Sie durch [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md) und [Verwenden des PATH-Modus mit FOR XML](use-path-mode-with-for-xml.md) bessere Steuerungsmöglichkeiten und eine höhere Flexibilität in Bezug auf die Form des aus einem Abfrageergebnis generierten XML-Codes erzielen.  
@@ -136,7 +136,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [AUTO-Modus-Heuristik beim Ermitteln der Form des zurückgegebenen XML-Codes](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Beispiele: Verwenden des Automodus](examples-using-auto-mode.md)  
+-   [Beispiele: Verwenden des AUTO-Modus](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

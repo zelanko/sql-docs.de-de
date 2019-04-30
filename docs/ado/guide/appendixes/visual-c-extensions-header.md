@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217662"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
 Der folgende Header, **icrsint.h**, erläutert, die Schnittstelle, die Clients zum Abrufen von Feldern aus zu ermöglichen eine **Recordset** in Variablen, die in einer Klasse abgeleitet definiert **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  

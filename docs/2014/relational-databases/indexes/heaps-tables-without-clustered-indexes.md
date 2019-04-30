@@ -13,20 +13,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162152"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
-  Ein Heap ist eine Tabelle ohne gruppierten Index. Ein oder mehrere nicht gruppierte Indizes können für Tabellen erstellt werden, die als Heap gespeichert sind. Daten werden ohne bestimmte Reihenfolge im Heap gespeichert. Normalerweise werden Daten anfänglich in der Reihenfolge gespeichert, in der die Zeilen in die Tabelle eingefügt werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Daten jedoch im Heap verschieben, um die Zeilen effizienter zu speichern; daher kann die Reihenfolge der Daten nicht vorhergesagt werden. Um die Reihenfolge der von einem Heap zurückgegebene Zeilenreihenfolge zu garantieren, müssen Sie verwenden die `ORDER BY` Klausel. Um die Reihenfolge zum Speichern der Zeilen anzugeben, erstellen Sie für eine Tabelle einen gruppierten Index, damit es sich bei der Tabelle nicht um einen Heap handelt.  
+  Ein Heap ist eine Tabelle ohne gruppierten Index. Ein oder mehrere nicht gruppierte Indizes können für Tabellen erstellt werden, die als Heap gespeichert sind. Daten werden ohne bestimmte Reihenfolge im Heap gespeichert. Normalerweise werden Daten anfänglich in der Reihenfolge gespeichert, in der die Zeilen in die Tabelle eingefügt werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Daten jedoch im Heap verschieben, um die Zeilen effizienter zu speichern; daher kann die Reihenfolge der Daten nicht vorhergesagt werden. Um die von einem Heap zurückgegebene Zeilenreihenfolge zu garantieren, müssen Sie die `ORDER BY`-Klausel verwenden. Um die Reihenfolge zum Speichern der Zeilen anzugeben, erstellen Sie für eine Tabelle einen gruppierten Index, damit es sich bei der Tabelle nicht um einen Heap handelt.  
   
 > [!NOTE]  
 >  In bestimmten Fällen gibt es gute Gründe, eine Tabelle als einen Heap zu belassen, statt einen gruppierten Index zu erstellen. Die effektive Verwendung von Heaps ist jedoch Benutzern mit fortgeschrittenen Kenntnissen vorbehalten. Die meisten Tabellen sollten über einen sorgfältig ausgewählten gruppierten Index verfügen, es sei denn, es gibt gute Gründe, die Tabelle als Heap beizubehalten.  
   
 ## <a name="when-to-use-a-heap"></a>Verwendungsbereiche für Heaps  
- Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
+ Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
   
  Wenn eine Tabelle als Heap gespeichert wird, werden einzelne Zeilen durch einen Zeilenbezeichner (RID, Row Identifier) gekennzeichnet, der aus der Dateinummer, der Datenseitennummer und einem Slot auf der Seite besteht. Die Zeilen-ID ist eine kleine und effiziente Struktur. In einigen Fällen verwenden Datenarchitekten Heaps, wenn immer über nicht gruppierte Indizes auf Daten zugegriffen wird und die RID kleiner als ein Schlüssel des gruppierten Indexes ist.  
   

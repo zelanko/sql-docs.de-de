@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cefdb81aa9e9a1a5f7ad7ba1f6db86d1ae95e2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161732"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Trennen und erneutes Herstellen einer Verbindung mit dem Recordset
 Eines der leistungsstärksten Features finden Sie in ADO ist die Möglichkeit, öffnen Sie ein Recordset clientseitige aus einer Datenquelle, und trennen Sie dann das Recordset aus der Datenquelle. Sobald das Recordset getrennt wurde, kann die Verbindung mit der Datenquelle geschlossen werden, und Freigabe der Ressourcen auf dem Server verwendet, um ihn zu verwalten. Sie können weiterhin anzeigen und bearbeiten die Daten im Recordset, während er getrennt ist und später wieder mit der Datenquelle herstellen und senden Ihre Updates im Batchmodus ausgeführt.  

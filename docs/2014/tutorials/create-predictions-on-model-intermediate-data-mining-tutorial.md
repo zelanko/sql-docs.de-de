@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217743"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für ein Sequenzclustermodell (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie das Sequenzclustermodell durch Navigieren sie in der Ereignisanzeige verstanden haben, können Sie Vorhersageabfragen erstellen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** -Registerkarte im Data Mining-Designer. Um eine Vorhersage zu erstellen, wählen Sie zuerst das Sequenzclustermodell und dann die Eingabedaten aus. Sie können eine externe Datenquelle als Eingabe verwenden, oder Sie können eine SINGLETON-Abfrage erstellen und Werte in einem Dialogfeld angeben.  

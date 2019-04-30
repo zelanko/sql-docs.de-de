@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 4 b: Abrufen der Zeilenanzahl | Microsoft-Dokumentation'
+title: 'Schritt 4b: Die Anzahl der Zeilen abrufen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149151"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Schritt 4b: Abrufen der Zeilenanzahl
 Der nächste Schritt ist zum Abrufen der Zeilenanzahl liegt, wie in der folgenden Abbildung dargestellt.  

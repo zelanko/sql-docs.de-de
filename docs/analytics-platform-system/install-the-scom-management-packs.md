@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215522"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installieren von SQL Server Operations Manager (SCOM) Management Packs für Analytics Platform System
 Führen Sie diese Schritte zum Herunterladen und installieren die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. Die Management Packs sind zum Überwachen von SQL Server PDW von SCOM erforderlich.  
@@ -33,7 +33,7 @@ Bei älteren Versionen von PDW ohne APS Herunterladen der[System Center Monitori
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Schritt 2: Installieren Sie die Management Packs  
+## <a name="Step2"></a>Schritt 2: Die Management Packs  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Installieren Sie das SQL Server-Gerät-Basis-Management Pack  
   
@@ -76,7 +76,7 @@ Bei älteren Versionen von PDW ohne APS Herunterladen der[System Center Monitori
     ![Installation abgeschlossen](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Nun, da Sie die Management Packs installiert haben, weiterhin mit dem nächsten Schritt: [importieren Sie die SCOM-Management Packs für PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
+Nun, da Sie die Management Packs installiert haben, fahren Sie mit dem nächsten Schritt fort: [Importieren des SCOM Management Packs für PDW &#40;Analytics-Plattformsystem&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

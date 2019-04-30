@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214751"
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
 Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Clientbefehlszeichenfolge ersetzt enthalten. Wenn keine SQL-Zeichenfolge in den Abschnitt vorhanden ist, wird der Abschnitt ignoriert.  

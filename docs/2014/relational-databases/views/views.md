@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191261"
 ---
-# <a name="views"></a>Sichten
+# <a name="views"></a>Ansichten
   Eine Sicht ist eine virtuelle Tabelle, deren Inhalt durch eine Abfrage definiert wird. Wie bei einer Tabelle besteht auch eine Sicht aus einem Satz benannter Spalten und Zeilen mit Daten. Wenn sie nicht indiziert ist, liegt eine Sicht jedoch nicht als gespeicherter Satz von Datenwerten in einer Datenbank vor. Die Zeilen und Spalten mit Daten stammen aus Tabellen, auf die in der die Sicht definierenden Abfrage verwiesen wird. Diese Datenzeilen und -spalten werden dynamisch erstellt, wenn auf die Sicht verwiesen wird.  
   
  Eine Sicht dient als Filter für die zugrunde liegenden Tabellen, auf die in der Sicht verwiesen wird. Die Abfrage, die die Sicht definiert, kann Daten aus einer oder mehreren Tabellen oder aus anderen Sichten in der aktuellen Datenbank oder anderen Datenbanken verwenden. Sie können darüber hinaus verteilte Abfragen verwenden, um Sichten zu definieren, die Daten aus mehreren heterogenen Quellen verwenden. Dies kann z. B. dann hilfreich sein, wenn Sie Daten mit gleicher Struktur kombinieren möchten, die sich jedoch auf unterschiedlichen Servern befinden, wobei auf jedem Server die Daten für einen anderen Bereich Ihrer Organisation gespeichert sind.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f7d21a1166868603f9389ab4ef5c5b3448b0312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199530"
 ---
 # <a name="bound-descriptor-records"></a>Gebundene Deskriptordatensätze
 Wenn die Anwendung das SQL_DESC_DATA_PTR-Feld von einem anwendungsparameterdeskriptor-Datensatz wird, sodass sie nicht mehr auf einen null-Wert enthält, der Datensatz gilt als *gebunden*.  

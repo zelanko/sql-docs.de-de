@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188509"
 ---
 # <a name="new-data-source-page-report-manager"></a>Neue Datenquelle (Seite) (Berichts-Manager)
   Mithilfe der Seite Neue Datenquelle können Sie ein freigegebenes Datenquellenelement erstellen. Eine freigegebene Datenquelle definiert eine Verbindung mit einer externen Datenquelle. Mithilfe einer freigegebenen Datenquelle können Sie die Einstellungen für die Verbindung mit der Datenquelle getrennt von den Berichten, Modellen und datengesteuerten Abonnements festlegen und verwalten, die diese Datenquelle verwenden.  

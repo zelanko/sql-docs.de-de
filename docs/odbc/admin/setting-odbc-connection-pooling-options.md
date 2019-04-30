@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198543"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Festlegen von Optionen für ODBC-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung erneut hergestellt werden müssen. Können Sie die **Verbindungspooling** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld aktivieren und Deaktivieren der Überwachung der Anwendungsleistung. Doppelklicken Sie auf ein Treibername den Timeoutzeitraum festlegen.  

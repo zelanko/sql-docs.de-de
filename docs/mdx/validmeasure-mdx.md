@@ -1,5 +1,5 @@
 ---
-title: ValidMeasure (MDX) | Microsoft Docs
+title: ValidMeasure (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140243"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -33,13 +33,13 @@ ValidMeasure(Tuple_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Tupel zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **ValidMeasure** Funktion gibt den Wert eines Tupels, ignoriert Attribute, die keine Beziehung mit der Measuregruppe des Measures, dessen Wert verfügen das Tupel zurückgibt. Ein Attribut kann aus zwei Gründen mit einem Measure nicht verbunden sein:  
+ Die **ValidMeasure** Funktion gibt den Wert eines Tupels, ignoriert Attribute, die keine Beziehung mit der Measuregruppe des Measure, dessen Wert verfügen das Tupel zurückgibt. Ein Attribut kann aus zwei Gründen mit einem Measure nicht verbunden sein:  
   
 -   Die Dimension des Attributs verfügt über keine Beziehung mit der Measuregruppe des Measure im Tupel.  
   
 -   Die Dimension des Attributs verfügt über keine Beziehung mit der Measuregruppe im Measure, aber das Granularitätsattribut ist nicht das Schlüsselattribut, und das Granularitätsattribut verfügt über keine direkte Beziehung mit dem Attribut im Tupel.  
   
- Das Verhalten dieser Funktion ist das Standardverhalten für die serverseitige und wird gesteuert, indem die **IgnoreUnrelatedDimensions** -Eigenschaft für das measuregruppenobjekt.  
+ Das Verhalten dieser Funktion das serverseitige Standardverhalten und wird gesteuert, indem die **IgnoreUnrelatedDimensions** Eigenschaft für das measuregruppenobjekt.  
   
  Für alle Attribute im angegebenen Tupel mit Granularität (wenn das Element im Tupel nicht das Alle-Element ist) wird die aktuelle Koordinate für jedes einzelne dieser Attribute wie folgt verschoben:  
   

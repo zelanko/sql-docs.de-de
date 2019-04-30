@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213485"
 ---
 # <a name="level-1-interface-conformance"></a>Schnittstellenübereinstimmung auf Ebene 1
 Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Core-Standards auf Funktionen der Benutzeroberfläche sowie auf zusätzliche Funktionen, z. B. Transaktionen, die in der Regel in einer OLTP-relationale DBMS verfügbar sind. Ein Level 1-Schnittstelle-konformen Treiber kann die Anwendung, zusätzlich zu den Features in der Core-Schnittstelle-Konformitätsgrad Folgendes:  
