@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259011"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Arbeiten mit der Konsole Beispielskriptdateien (DB2ToSQL)
 Einige Beispieldateien wurden für die Benutzer-Verweis und die Verwendung zusammen mit dem Produkt bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts entsprechend die Anforderungen der Endbenutzer leicht anpassen.  

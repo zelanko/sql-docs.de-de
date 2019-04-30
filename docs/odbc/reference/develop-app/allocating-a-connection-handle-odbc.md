@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288314"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Zuordnen eines ODBC-Verbindungshandles
 Bevor die Anwendung an eine Datenquelle oder der Treiber eine Verbindung herstellen kann, muss sie wie folgt ein Verbindungshandle zuordnen:  
@@ -41,6 +41,6 @@ Bevor die Anwendung an eine Datenquelle oder der Treiber eine Verbindung herstel
   
  Der Treiber-Manager wird nicht aufgerufen. **SQLAllocHandle** im Treiber auf dieser Zeit, da er nicht, welcher Treiber weiß für das aufrufen. Erfolgt eine Verzögerung, Aufrufen **SQLAllocHandle** im Treiber, bis die Anwendung eine Funktion für die Verbindung mit einer Datenquelle aufruft. Weitere Informationen finden Sie unter [Treiber-Manager-Rolle in der Verbindungsprozess](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)weiter unten in diesem Abschnitt.  
   
- Es ist wichtig zu beachten, dass Zuordnen eines Verbindungshandles nicht identisch mit einen Treiber zu laden. Der Treiber wurde nicht geladen werden, bis eine Verbindungsfunktion aufgerufen wird. Somit sind nach dem Zuordnen eines Verbindungshandles und vor dem Herstellen einer Verbindung mit dem Treiber oder der Datenquelle, die die einzigen Funktionen, die die Anwendung kann mit dem Verbindungshandle Aufrufen **SQLSetConnectAttr**, **SQLGetConnectAttr**, oder **SQLGetInfo** mit der Option SQL_ODBC_VER. Aufruf anderer Funktionen mit dem Verbindungshandle, z. B. **SQLEndTran**, gibt der SQLSTATE 08003 (Verbindung nicht geöffnet). Ausführliche Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Es ist wichtig zu beachten, dass Zuordnen eines Verbindungshandles nicht identisch mit einen Treiber zu laden. Der Treiber wurde nicht geladen werden, bis eine Verbindungsfunktion aufgerufen wird. Somit sind nach dem Zuordnen eines Verbindungshandles und vor dem Herstellen einer Verbindung mit dem Treiber oder der Datenquelle, die die einzigen Funktionen, die die Anwendung kann mit dem Verbindungshandle Aufrufen **SQLSetConnectAttr**, **SQLGetConnectAttr**, oder **SQLGetInfo** mit der Option SQL_ODBC_VER. Aufruf anderer Funktionen mit dem Verbindungshandle, z. B. **SQLEndTran**, gibt der SQLSTATE 08003 (Verbindung nicht geöffnet). Ausführliche Informationen finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Weitere Informationen zu Verbindungshandles, finden Sie unter [Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md).

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280701"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
@@ -69,7 +69,7 @@ ms.locfileid: "52514666"
  Beim Erstellen eines Volltextindex müssen Sie für jede Spalte einen gültigen Sprachennamen angeben. Wenn ein Sprachenname gültig ist, von der Katalogsicht [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) jedoch nicht zurückgegeben wird, greift die Volltextsuche, falls vorhanden, auf einen ähnlichen Sprachennamen der jeweiligen Sprachengruppe zurück. Andernfalls verwendet die Volltextsuche die neutrale Wörtertrennung. Dieses Verhalten kann sich ggf. auf die Genauigkeit der Rückrufe auswirken. Es ist daher sehr zu empfehlen, dass Sie beim Erstellen eines Volltextindex für jede Spalte einen gültigen und verfügbaren Sprachennamen angeben.  
   
 > [!NOTE]  
->  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. `char` oder `nchar`). Auch wenn die Sortierreihenfolge einer Spalte vom Typ `char`, `varchar` oder `text` auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
+>  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&amp;nbsp;B. `char` oder `nchar`). Auch wenn die Sortierreihenfolge einer Spalte vom Typ `char`, `varchar` oder `text` auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
   
 
   

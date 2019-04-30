@@ -1,5 +1,5 @@
 ---
-title: 'Prüfliste für die Bereitstellung: Multiserverinstallation von PowerPivot für SharePoint 2010 | Microsoft-Dokumentation'
+title: 'Bereitstellungsprüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237916"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Prüfliste für die Bereitstellung: Multiserverinstallation von PowerPivot für SharePoint 2010
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Bereitstellungsprüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010
   Diese Prüfliste führt Sie durch die Schritte zum Hinzufügen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zu einer dreistufigen SharePoint 2010-Farm, die Sie von Grund auf werden erstellen. Eine dreistufige Farm enthält Datenbank-, Anwendungs- und Webebenen. Hinzufügen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für diese Topologie erfordert, dass Sie SQL Server-Setup zum Installieren ausführen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf der Anwendungsebene. Wenn Sie die Bereitstellung-Lösung für die web-werden PowerPivot-Programmdateien der Webebene, sondern nur als Task nach der Installation hinzugefügt. Es gibt Bereitstellungsschritte, jedoch keinen separaten Installationsschritt auf der Webebene oder Datenebene, die Sie ausführen müssen. Der einzige Installationsschritt, die Sie ausführen müssen, wird installiert [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf den Anwendungsservern.  
   
 ||  
@@ -221,13 +221,13 @@ ms.locfileid: "53350542"
 10. Überprüfen Sie im Computerdateisystem den folgenden Ordner, um zu bestimmen, ob Dateien auf dem Datenträger zwischengespeichert wurden. Das Vorhandensein zwischengespeicherter Dateien ist eine weitere Bestätigung, dass die Bereitstellung betriebsbereit ist. Um den Dateicache anzuzeigen, wechseln Sie zum Ordner \Programme\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup.  
   
 ##  <a name="nextsteps"></a> Schritte nach der Installation  
- Nachdem Sie die Installation überprüft haben, beenden Sie die Dienstkonfiguration durch das Erstellen eines PowerPivot-Katalogs oder durch Anpassen einzelner Konfigurationseinstellungen. Um die soeben erstellten Serverkomponenten vollständig zu nutzen, können Sie [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] herunterladen und dann Ihre erste PowerPivot-Arbeitsmappe erstellen und veröffentlichen.  
+ Nachdem Sie die Installation überprüft haben, beenden Sie die Dienstkonfiguration durch das Erstellen eines PowerPivot-Katalogs oder durch Anpassen einzelner Konfigurationseinstellungen. Um die Serverkomponenten, die Sie gerade installiert haben, vollständig zu nutzen, können Sie [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] herunterladen und dann Ihre erste PowerPivot-Arbeitsmappe erstellen und veröffentlichen.  
   
 ####  <a name="bkmk_disk"></a> Festlegen Sie oberer Grenzwerte für Datenträger-Speicherplatz  
  Sie können eine maximale Grenze festlegen, wie viel Speicherplatz für PowerPivot-Datendateien verwendet wird, die auf dem Datenträger zwischengespeichert werden. Standardmäßig wird der gesamte verfügbare Speicherplatz verwendet. Anweisungen dazu, wie Sie die Speicherplatzverwendung einschränken, finden Sie unter [Konfigurieren der Speicherplatzverwendung &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
 ####  <a name="Upload"></a> Erhöhen der maximalen Dateiuploadgröße für SharePoint-Webanwendungen  
- Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateiuploadgröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße, die konfiguriert werden müssen: Maximale Uploadgröße für die Webanwendung und die Maximalgröße der Arbeitsmappe in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen hierzu finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateiuploadgröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße konfigurieren: Maximale Uploadgröße für die Webanwendung und maximale Arbeitsmappengröße in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen hierzu finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Gewähren von SharePoint-Berechtigungen für Arbeitsmappenbenutzer  
  Benutzer benötigen SharePoint-Berechtigungen, bevor sie Arbeitsmappen veröffentlichen oder anzeigen können. Achten Sie darauf, dass Sie gewähren **Ansicht** Berechtigungen für Benutzer, die veröffentlichte Arbeitsmappen anzeigen müssen und **mitwirken** Berechtigungen für Benutzer, die Arbeitsmappen veröffentlichen oder verwalten. Sie müssen Websitesammlungsadministrator sein, um Berechtigungen erteilen zu können.  
@@ -259,7 +259,7 @@ ms.locfileid: "53350542"
  Die serverseitige Datenaktualisierung ermöglicht Benutzern das erneute Importieren aktualisierter Daten in ihre Arbeitsmappen in unbeaufsichtigtem Modus. Für die erfolgreiche Ausführung der Datenaktualisierung muss auf dem Server der gleiche Datenanbieter wie für den ursprünglichen Import der Daten vorhanden sein. Darüber hinaus sind für das Benutzerkonto, unter dem die Datenaktualisierung ausgeführt wird, oft Leseberechtigungen für die externen Datenquellen erforderlich. Überprüfen Sie die Anforderungen für das Aktivieren und Konfigurieren der Datenaktualisierung, um ein erfolgreiches Ergebnis sicherzustellen. Weitere Informationen finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 #### <a name="create-a-powerpivot-gallery"></a>Erstellen eines PowerPivot-Katalogs  
- Beim PowerPivot-Katalog handelt es sich um eine Bibliothek, die Vorschau- und Präsentationsoptionen zum Anzeigen von PowerPivot-Arbeitsmappen auf einer SharePoint-Site enthält. Das Verwenden des PowerPivot-Katalogs zum Veröffentlichen und Anzeigen von PowerPivot-Arbeitsmappen wird für die Vorschaufunktion empfohlen. Wenn Sie überdies auch Reporting Services auf dem gleichen SharePoint-Server bereitgestellt haben, bietet ein PowerPivot-Katalog Benutzerfreundlichkeit beim Erstellen von Berichten. Sie können den Berichts-Generator innerhalb des PowerPivot-Katalogs starten, um als Grundlage für einen neuen Bericht eine veröffentlichte PowerPivot-Arbeitsmappe zu verwenden. Weitere Informationen zum Erstellen und Verwenden der Bibliotheks finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) und [Verwenden des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
+ Der PowerPivot-Katalog ist eine Bibliothek, die Vorschau- und Präsentationsoptionen zum Anzeigen von PowerPivot-Arbeitsmappen auf einer SharePoint-Website enthält. Das Verwenden des PowerPivot-Katalogs zum Veröffentlichen und Anzeigen von PowerPivot-Arbeitsmappen wird für die Vorschaufunktion empfohlen. Wenn Sie überdies auch Reporting Services auf dem gleichen SharePoint-Server bereitgestellt haben, bietet ein PowerPivot-Katalog Benutzerfreundlichkeit beim Erstellen von Berichten. Sie können den Berichts-Generator innerhalb des PowerPivot-Katalogs starten, um als Grundlage für einen neuen Bericht eine veröffentlichte PowerPivot-Arbeitsmappe zu verwenden. Weitere Informationen zum Erstellen und Verwenden der Bibliotheks finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) und [Verwenden des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
   
 #### <a name="tune-configuration-settings"></a>Optimieren von Konfigurationseinstellungen  
  Eine PowerPivot-Dienstanwendung wird mit Standardeigenschaften und -werten erstellt. Sie können Konfigurationseinstellungen für einzelne Dienstanwendungen ändern, um die Methodik zu ändern, anhand der die Anforderungen zugeordnet werden. Außerdem können Sie Servertimeouts festlegen, die Schwellenwerte für Abfrageantwortberichtsereignisse ändern oder festlegen, wie lange die Verwendungsdaten beibehalten werden sollen. Weitere Informationen zur Konfiguration in der Zentraladministration oder zum Verwenden von PowerPivot-Funktionen in SharePoint-Webanwendungen finden Sie unter [PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  

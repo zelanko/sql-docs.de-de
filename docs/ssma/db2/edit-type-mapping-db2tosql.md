@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299258"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Bearbeiten der Typzuordnung (DB2ToSQL)
 Die **Bearbeiten der Typzuordnung** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet werden.  
@@ -28,7 +28,7 @@ Sie können dieses Dialogfeld an mehreren Stellen zugreifen:
   
 Tabelle-spezifische Zuordnungen für Projekte replikationsdatentyp-Zuordnungen und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Project-Zuordnungen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Quelltyp**  
 Wählen Sie den Quelltyp für die Daten zuordnen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305771"
 ---
 # <a name="unicode-data"></a>Unicode-Daten
 SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Unicode-Format nativ auf DBMS befindet. Ein C-Unicode-Datentyp wird bereitgestellt, um eine Anwendung so binden Sie Daten in einen Unicode-Puffer zu ermöglichen. Der Treiber-Manager können Daten aus einem Unicode-C-Typ (SQL_C_WCHAR), um es zu machen konvertieren-Funktion mit einem ANSI-Treiber.  

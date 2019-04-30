@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238403"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
   Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql)-Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)-Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, und die [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), das ist neu in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "52502838"
   
  |  
   
- (*Search_term* [,... *n* ]) [, < Maximum_distance > [, < Match_order >]]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   

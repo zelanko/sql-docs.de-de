@@ -12,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298823"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installieren des SharePoint-Modus von Reporting Services für SharePoint 2013
   In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers im SharePoint-Modus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus. Außerdem können Sie sich in diesem Thema auch über einzelne Verfahren zum Aktualisieren einer vorhandenen Installation informieren, beispielsweise um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **beachten:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus wird **nicht** mehrinstanzenfähigkeit von SharePoint-Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Note:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus wird **nicht** mehrinstanzenfähigkeit von SharePoint-Server.|  
   
  Informationen darüber, wie Sie einer vorhandenen Farm weitere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server hinzufügen, finden Sie unter:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53359842"
   
      Eine bewährte Sicherheitsmethode besteht darin, die Administratorkonten der SharePoint-Farm nicht gleichzeitig als Administratorkonten des lokalen Betriebssystems festzulegen. Wenn Sie der lokalen Administratorgruppe während der Installation ein Farmadministratorkonto hinzufügen, wird empfohlen, das Konto nach Ende der Installation aus der lokalen Administratorgruppe zu entfernen.  
   
-##  <a name="bkmk_install_SSRS"></a> Schritt 1: Installieren eines Reporting Services-Berichtsservers in SharePoint  
+##  <a name="bkmk_install_SSRS"></a>Schritt 1: Installieren von Reporting Services-Berichtsserver im SharePoint-Modus  
  In diesem Schritt werden ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im SharePoint-Modus und das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert. Abhängig von bereits auf dem Computer installierten Komponenten werden einige der in den folgenden Schritten beschriebenen Installationsseiten u. U. nicht angezeigt.  
   
 1.  Führen Sie den Installations-Assistenten für SQL Server (Setup.exe) aus.  
@@ -161,7 +161,7 @@ ms.locfileid: "53359842"
   
 20. Die Installation dauert mehrere Minuten. Die Seite **Abgeschlossen** wird mit einer Liste der Funktionen und dem Status der einzelnen Funktionen angezeigt. Möglicherweise werden Sie in einem Informationsdialogfeld darauf hingewiesen, dass der Computer neu gestartet werden muss.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Schritt 2: Registrieren und starten des SharePoint Service für Reporting Services  
+##  <a name="bkmk_install_SSRS_sharedservice"></a>Schritt 2: Registrieren Sie und starten Sie den Reporting Services-SharePoint-Dienst  
  ![PowerShell-Inhalt](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ ms.locfileid: "53359842"
     > [!IMPORTANT]  
     >  Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
     >   
-    >  Install-SPRSService : Der Begriff 'Install-SPRSService' **wird nicht erkannt** wie die  
+    >  Install-SPRSService: Der Begriff 'Install-SPRSService' **wird nicht erkannt** wie die  
     > Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt. Überprüfen Sie die  
     > Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten),  
     > und wiederholen Sie den Vorgang.  
@@ -222,7 +222,7 @@ ms.locfileid: "53359842"
     > [!NOTE]  
     >  Wenn der Reporting Services-Dienst im Status **Wird gestartet** bleibt und sich nicht in **Gestartet** ändert, stellen Sie sicher, dass der Dienst der SharePoint 2013-Administration im Windows Server-Manager gestartet wurde.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Schritt 3: Erstellen einer neuen Reporting Services-Dienstanwendung  
+##  <a name="bkmk_create_serrviceapplication"></a>Schritt 3: Erstellen einer Reporting Services-Dienstanwendung  
  Dieser Abschnitt enthält die Schritte zum Erstellen einer Dienstanwendung und eine Beschreibung der Eigenschaften, wenn Sie eine vorhandene Dienstanwendung überprüfen.  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten**.  

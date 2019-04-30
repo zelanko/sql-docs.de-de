@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242313"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx-Funktion
 **Übereinstimmung mit Standards**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  Die **Translator** und **Setup** Schlüsselwörter enthalten sein müssen, der *LpszTranslator* Zeichenfolge. Die Übersetzung DLL wird aufgeführt, mit der **Translator** -Schlüsselwort und die Translator-Setup, die DLL wird aufgeführt, mit der **Setup** Schlüsselwort. Jedes Paar wird mit NULL Byte beendet, und die gesamte Liste wird mit einem Byte NULL beendet. (D. h., markieren Sie zwei NULL-Bytes am Ende der Liste.) Das Format der *LpszTranslator* lautet wie folgt:  
   
- \0Translator=*Translator-DLL-Dateiname*\0[Setup=*-Setup-DLL-Dateiname*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [Eingabe] Vollständiger Pfad der, in denen das Konvertierungsprogramm installiert werden oder ein null-Zeiger. Wenn *LpszPath* ist ein null-Zeiger im Systemverzeichnis der Übersetzer installiert werden.  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [Ausgabe] Gesamtzahl der Bytes, die für die Rückgabe in verfügbar *LpszPathOut*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbPathOutMax*, den Ausgabepfad in *LpszPathOut* wird abgeschnitten, um *PcbPathOutMax* minus der NULL-Terminierungszeichen. Die *PcbPathOut* Argument kann ein null-Zeiger sein.  
   
- *Häufigsten*  
+ *fRequest*  
  [Eingabe] Typ der Anforderung. *Häufigsten* muss einen der folgenden Werte enthalten:  
   
  ODBC_INSTALL_INQUIRY: Erkundigen Sie sich, ein Übersetzer installiert werden können.  

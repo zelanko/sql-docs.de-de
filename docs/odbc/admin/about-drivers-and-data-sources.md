@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294450"
 ---
 # <a name="about-drivers-and-data-sources"></a>Informationen zu Treibern und Datenquellen
 *Treiber* sind die Komponenten, die ODBC-Anforderungen verarbeitet und Daten an die Anwendung zurück. Ggf. Ändern der Treiber die Anforderung einer Anwendung in ein Format, das von der Datenquelle erkannt wird. Sie müssen den Treiber des Setup-Programm verwenden, zum Hinzufügen oder Löschen einen Treiber auf Ihrem Computer.  
@@ -29,7 +29,7 @@ ms.locfileid: "47776048"
 |-----------------|-----------------|  
 |Benutzer|Benutzer-DSNs werden lokal auf einem Computer und können nur durch den aktuellen Benutzer verwendet werden. Sie werden in der Teilstruktur der HKEY_CURRENT_USER-Registrierung registriert.|  
 |System|System-DSNs werden lokal auf einem Computer statt für einen Benutzer bestimmt. Das System oder alle Benutzer mit Berechtigungen können eine Datenquelle mit einer System-DSN einrichten. System-DSNs werden in der HKEY_LOCAL_MACHINE-Registrierungsunterstruktur registriert.|  
-|File|Datei-DSNs werden dateibasierte Datenquellen, die freigegeben werden können, von allen Benutzern, die die gleichen Treiber installiert haben und daher Zugriff auf die Datenbank. Diese Datenquellen müssen nicht ausschließlich für einen Benutzer noch lokal auf einem Computer sein. Datei-Datenquellennamen werden nicht durch dedizierte Registrierungseinträge bezeichnet. Stattdessen werden sie durch einen Dateinamen mit der Erweiterung ".DSN" identifiziert.|  
+|Datei|Datei-DSNs werden dateibasierte Datenquellen, die freigegeben werden können, von allen Benutzern, die die gleichen Treiber installiert haben und daher Zugriff auf die Datenbank. Diese Datenquellen müssen nicht ausschließlich für einen Benutzer noch lokal auf einem Computer sein. Datei-Datenquellennamen werden nicht durch dedizierte Registrierungseinträge bezeichnet. Stattdessen werden sie durch einen Dateinamen mit der Erweiterung ".DSN" identifiziert.|  
   
  Benutzer und System-Datenquellen werden zusammen als bezeichnet *Computer* -Datenquellen, da sie sich lokal auf einem Computer befinden.  
   

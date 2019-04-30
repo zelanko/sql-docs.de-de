@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288366"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Herstellen einer Verbindung mit SQL Server (OracleToSQL)
 Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Sie zum migrieren möchten. Für den Zugriff auf die **Herstellen einer Verbindung mit SQL Server** Dialogfeld auf die **Datei** Menü klicken Sie auf **Herstellen einer Verbindung mit SQL Server**.  

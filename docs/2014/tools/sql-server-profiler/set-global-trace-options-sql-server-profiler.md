@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267405"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die für alle Ablaufverfolgungen gelten, die mit einer bestimmten Instanz von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]erstellt werden.  

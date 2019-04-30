@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240279"
 ---
 # <a name="determining-installed-oracle-components"></a>Bestimmen der installierten Oracle-Komponenten
 > [!IMPORTANT]  
 >  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Um zu bestimmen, die Oracle-Komponenten, die auf Ihrem System (und deren Versionen) installiert, navigieren Sie zum Verzeichnis \Orainst das Oracle home-Verzeichnis. Öffnen Sie eine der folgenden Dateien: Nt.rgs Win95.rgs oder Win98.rgs.  
+ Um zu bestimmen, die Oracle-Komponenten, die auf Ihrem System (und deren Versionen) installiert, navigieren Sie zum Verzeichnis \Orainst das Oracle home-Verzeichnis. Öffnen Sie eine der folgenden Dateien: NT.RGS, Win95.rgs oder Win98.rgs.  
   
  Das Dateiformat ist ähnlich der folgenden:  
   

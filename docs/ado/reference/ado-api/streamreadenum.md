@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26ccabf3e73a67c14e7201f26e4ebf739a6352cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311854"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Gibt an, ob der gesamte Datenstrom oder die nächste Zeile aus gelesen werden sollen eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adReadAll**|-1|Standard. Liest alle Bytes aus dem Stream, aus der aktuellen Position oder höher auf dem [EOS](../../../ado/reference/ado-api/eos-property.md) Marker. Dies ist der einzige gültige **StreamReadEnum** Wert mit binären Datenströmen ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeBinary**).|  
 |**adReadLine**|-2|Liest die nächste Zeile aus dem Stream (gekennzeichnet durch die [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) Eigenschaft).|  

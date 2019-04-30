@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der ID- und IDREFS-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ID- und IDREFS-Anweisungen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288877"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Beispiel: Angeben der ID- und IDREFS-Anweisungen
   Ein Elementattribut kann als Attribut vom Typ `ID` angegeben werden, wobei das `IDREFS`-Attribut dann verwendet werden kann, um darauf zu verweisen. Dies ermöglicht dokumentinterne Links. Das Verfahren ist der Beziehung zwischen Primärschlüssel und Fremdschlüssel in relationalen Datenbanken ähnlich.  

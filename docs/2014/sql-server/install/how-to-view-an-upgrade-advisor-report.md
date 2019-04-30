@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen eine Berichts des Upgrade Advisors | Microsoft-Dokumentation'
+title: 'Gewusst wie: Anzeigen eines Berichts der Upgrade Advisor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294548"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Gewusst wie: Anzeigen eines Berichts des Upgrade Advisors
   Der Upgrade Advisor erstellt Berichte für alle Komponenten, die Sie zur Analyse auswählen. In diesem Thema wird beschrieben, wie Sie einen Bericht des Upgrade Advisors über die Startseite des Upgrade Advisors anzeigen.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ ms.locfileid: "48201930"
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Exportieren von Berichten](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

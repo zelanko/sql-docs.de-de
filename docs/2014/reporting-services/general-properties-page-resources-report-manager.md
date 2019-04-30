@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260669"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Ressourcen können Sie eine Ressource umbenennen, löschen, verschieben oder ersetzen. Informationen zum Benutzer, der die Ressource hinzugefügt oder ihre Eigenschaften geändert hat, werden oben auf der Seite angezeigt.  

@@ -1,5 +1,5 @@
 ---
-title: Bewirkt, dass (MDX) | Microsoft Docs
+title: / / Blätter (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270452"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
@@ -35,7 +35,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>Hinweise  
  Blattelemente sind Tupel, die durch der Cross Join der niedrigsten Ebene aller Attributhierarchien gebildet werden. Berechnete Elemente sind ausgeschlossen.  
   
--   Wenn ein Dimensionsname angegeben wird, die **verlässt** Funktion gibt eine Menge mit die Blattelementen des Schlüsselattributs für die angegebene Dimension zurück.  
+-   Wenn ein Dimensionsname angegeben wird, die **verlässt** Funktionsergebnis ist eine Gruppe, die den Blattelementen des Schlüsselattributs für die angegebene Dimension zurück.  
   
 -   Wenn die Dimension mit mehreren Measuregruppen verknüpft ist, wird die des Measure im aktuellen Geltungsbereich verwendet.  
   

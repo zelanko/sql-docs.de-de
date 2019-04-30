@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238014"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Datums- und Uhrzeit- sowie Schemarowsets
   Dieses Thema enthält Informationen über das COLUMNS-Rowset und das PROCEDURE_PARAMETERS-Rowset. Diese Informationen beziehen sich auf die OLE DB-Verbesserungen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in Bezug auf Datum und Uhrzeit.  
@@ -28,7 +28,7 @@ ms.locfileid: "52774752"
 |Spaltentyp|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Löschen|0|  
-|Uhrzeit|DBTYPE_DBTIME2|Legen Sie|0..7|  
+|time|DBTYPE_DBTIME2|Legen Sie|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Löschen|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Löschen|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Legen Sie|0..7|  
@@ -64,9 +64,9 @@ ms.locfileid: "52774752"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Typ -><br /><br /> Spalte|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Typ -><br /><br /> Spalte|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -78,7 +78,7 @@ ms.locfileid: "52774752"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -91,6 +91,6 @@ ms.locfileid: "52774752"
  OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen, weshalb die Verwendung dieser Spalten für time, datetime2 und datetimeoffset durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht standardmäßig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadaten &#40;OLE-DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

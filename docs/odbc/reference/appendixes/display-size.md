@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241249"
 ---
 # <a name="display-size"></a>Anzeigegröße
 Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. In der folgende Tabelle definiert die Größe für jede ODBC-SQL-Datentyp.  

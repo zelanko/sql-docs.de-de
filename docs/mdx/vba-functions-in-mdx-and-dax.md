@@ -1,5 +1,5 @@
 ---
-title: VBA-Funktionen in MDX und DAX | Microsoft Docs
+title: VBA-Funktionen in MDX und DAX | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251550"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 
 
-  Dieses Dokument enthält Querverweise aller VBA-Funktionen in [Visual Basic für Applikationen-Funktionen](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) , die in MDX unterstützt werden; die Liste enthält zudem einen Hinweis, wenn eine funktionale Äquivalenz mit der DAX-Sprache vorhanden ist .  
+  Dieses Dokument enthält Querverweise aller VBA-Funktionen, die in verfügbaren [Visual Basic for Applications-Funktionen](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) , die in MDX unterstützt werden; die Liste enthält auch einen Hinweis, wenn funktionaler Äquivalenz mit der DAX-Sprache vorhanden ist .  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referenz zu VBA (Visual Basic für Applikationen)-Funktionen  
   
@@ -51,8 +51,8 @@ ms.locfileid: "34743889"
 |CurDir|Nicht unterstützt||  
 |ZVariant|Nur MDX||  
 |CVErr|Nicht unterstützt||  
-|date|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die Funktion DATE (Year, Month, Day) verwendet, um einen datumstypwert zu generieren, aus den angegebenen Argumenten|  
-|DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die DATEADD (\<Datumsangaben >, < Number_of_intervals >,\<Intervall >)-Funktion wird verwendet, um bestimmten Datumsangaben verschoben um eine Anzahl von Intervallen angegeben|  
+|date|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die Funktion DATE (Year, Month, Day) verwendet, um aus den angegebenen Argumenten einen datumstypwert zu generieren|  
+|DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die DATEADD (\<Datumsangaben >, < Number_of_intervals >,\<Interval >)-Funktion wird verwendet, um bestimmten Datumsangaben verschoben um eine Anzahl von Intervallen|  
 |DateDiff]|Nur MDX||  
 |DatTeil|Nur MDX||  
 |DatSeriell|Nur MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743889"
 |FileAttr|Nicht unterstützt||  
 |FileDateTime|Nicht unterstützt||  
 |FileLen|Nicht unterstützt||  
-|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (Set_Expression, Logical_Expression)-Funktion gibt die Menge, die daraus resultiert einen bestimmter Satz basierend auf einer Suchbedingung aus den angegebenen Argumenten zurück.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (\<Tabelle >,\<Filter >)-Funktion gibt eine Tabelle, die einen Teil einer anderen Tabelle oder einen Ausdruck aus den angegebenen Argumenten darstellt.|  
+|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (Set_Expression, Logical_Expression)-Funktion gibt den Satz, der daraus resultiert einen bestimmter Satz basierend auf einer Suchbedingung aus den angegebenen Argumenten zurück.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (\<Tabelle >,\<Filter >)-Funktion gibt eine Tabelle, die eine Teilmenge einer anderen Tabelle oder einen Ausdruck aus den angegebenen Argumenten darstellt|  
 |Fix|Nur MDX||  
 |Format (Visual Basic für Applikationen)|DAX, MDX||  
 |FormatWährung|Nicht unterstützt||  
@@ -118,9 +118,9 @@ ms.locfileid: "34743889"
 |MonthName|Nicht unterstützt||  
 |Meldung|Nicht unterstützt||  
 |jetzt|DAX, MDX||  
-|Zzr]|Nur MDX||  
+|NPer]|Nur MDX||  
 |NBW|Nur MDX||  
-|Oct|Nur MDX||  
+|Oktober|Nur MDX||  
 |Partition|Nur MDX||  
 |RMZ|Nur MDX||  
 |KAPZ|Nur MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "34743889"
 |Str|Nur MDX||  
 |StrVgl|Nur MDX||  
 |StrKonv|Nur MDX||  
-|Zeichenfolge]|Nur MDX||  
+|String]|Nur MDX||  
 |StrReverse|Nicht unterstützt||  
 |Schalter|Nur MDX||  
 |DIA|Nur MDX||  
@@ -160,7 +160,7 @@ ms.locfileid: "34743889"
 |TypName|Nur MDX||  
 |UBound|Nicht unterstützt||  
 |Großbst|Nur MDX||  
-|Val|Nur MDX||  
+|val|Nur MDX||  
 |VarType|Nicht unterstützt||  
 |Arbeitstag|DAX, MDX||  
 |WeekdayName|Nicht unterstützt||  

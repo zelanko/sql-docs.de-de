@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294620"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Inkompatible Serversortierung für Datenbank-Engine (Upgrade Advisor)
   Upgrade Advisor hat erkannt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mithilfe einer Instanz von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die mit einer inkompatiblen serversortierung konfiguriert ist.  
@@ -37,7 +37,7 @@ ms.locfileid: "53356767"
   
 -   **Groß-/Kleinschreibung**  
   
--   **Binär-Codepunkt**  
+-   **Binary-codepoint**  
   
  Da die aktuelle [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Serversortierung nicht kompatibel ist, werden Upgrades blockiert.  
   

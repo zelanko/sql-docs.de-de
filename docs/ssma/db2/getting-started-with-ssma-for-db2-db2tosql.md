@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298866"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Erste Schritte mit SSMA für DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2 können Sie schnell, konvertieren Sie DB2-Datenbankschemas, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas, Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Migrieren von Daten aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,13 +54,13 @@ DB2-Metadaten-Explorer zeigt Informationen zu DB2-Schemas. Mithilfe von DB2-Meta
   
 -   Wählen Sie die Tabellen für die Datenmigration aus, und klicken Sie dann die Daten aus diesen Tabellen zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [DB2-Datenbanken zu SQL Server Migration &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server-Metadaten-Explorer  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer zeigt Informationen zu einer Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie die Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA Ruft Metadaten zu dieser Instanz ab und speichert sie in der Projektdatei.  
   
 Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, wählen die konvertierte DB2-Datenbankobjekte aus, und klicken Sie dann die Objekte zu synchronisieren, mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="metadata"></a>Metadaten  
-Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Beispielsweise wenn Sie eine Tabelle in DB2-Metadaten-Explorer auswählen, sechs Registerkarten werden angezeigt: **Tabelle**, **SQL**, **Type Mapping, Bericht**, **Eigenschaften**, und **Daten**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht erstellen, die das ausgewählte Objekt enthält. Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, die drei Registerkarten angezeigt werden: **Tabelle**, **SQL**, und **Daten**.  
+Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Wenn Sie eine Tabelle in DB2-Metadaten-Explorer auswählen, werden z. B. sechs Registerkarten angezeigt: **Tabelle**, **SQL**, **Typenzuordnung, Bericht**, **Eigenschaften**, und **Daten**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht erstellen, die das ausgewählte Objekt enthält. Bei Auswahl eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, die drei Registerkarten angezeigt werden: **Tabelle**, **SQL**, und **Daten**.  
   
 Die meisten Metadateneinstellungen für die sind schreibgeschützt. Allerdings können Sie die folgende Metadaten ändern:  
   

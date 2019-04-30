@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275891"
 ---
 # <a name="status-property-ado-recordset"></a>Status-Eigenschaft (ADO-Recordset)
 Gibt den Status des aktuellen Datensatzes in Bezug auf die Batch-Updates oder andere Massenvorgänge an.  

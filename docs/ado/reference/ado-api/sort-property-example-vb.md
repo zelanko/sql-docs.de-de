@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314790"
 ---
 # <a name="sort-property-example-vb"></a>Sort-Eigenschaft – Beispiel (VB)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [sortieren](../../../ado/reference/ado-api/sort-property.md) Eigenschaft, um die Zeilen der neu anordnen einer **Recordset** abgeleitet der ***Autoren*** Tabelle die ***Pubs*** Datenbank. Eine sekundäre Dienstprogrammroutine gibt jede Zeile aus.  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)

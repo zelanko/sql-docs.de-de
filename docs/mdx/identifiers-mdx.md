@@ -1,5 +1,5 @@
 ---
-title: Bezeichner (MDX) | Microsoft Docs
+title: Bezeichner (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224953"
 ---
 # <a name="identifiers-mdx"></a>Bezeichner (MDX)
 
@@ -33,13 +33,13 @@ ms.locfileid: "34740809"
   
 1.  Das erste Zeichen muss eines der folgenden Zeichen sein:  
   
-    -   Ein Buchstabe gemäß Unicode Standard 2.0. Neben Buchstaben aus anderen Sprachen enthält die Unicode-Definition von Buchstaben die lateinischen Buchstaben von a bis z und von A bis Z.  
+    -   Ein Buchstabe gemäß Unicode-Standard 2.0. Neben Buchstaben aus anderen Sprachen enthält die Unicode-Definition von Buchstaben die lateinischen Buchstaben von a bis z und von A bis Z.  
   
     -   Der Unterstrich (_).  
   
 2.  Im Anschluss daran können die folgenden Zeichen verwendet werden:  
   
-    -   Buchstaben in Unicode Standard 2.0 definiert.  
+    -   Buchstaben, wie in Unicode-Standard 2.0 definiert.  
   
     -   Dezimalzahlen aus dem lateinischen Grundalphabet oder anderen nationalen Schriften.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34740809"
   
 -   Wenn der Name eines Objekts oder ein Teil des Namens ein reserviertes Wort ist.  
   
-     Es wird empfohlen, dass reservierte Schlüsselwörter nicht als Objektnamen verwendet werden. Datenbanken, die ein Upgrade von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die in der früheren Version nicht reservierten Wörter enthalten, jedoch sind jetzt reserviert. So lange, bis Sie den Bezeichner des Objekts ändern können, können Sie mit dem Begrenzungsbezeichner auf das Objekt verweisen.  
+     Es wird empfohlen, dass reservierte Schlüsselwörter nicht als Objektnamen verwendet werden. Datenbanken, die ein Upgrade von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die keine reservierten Wörter in der früheren Version enthalten, aber nun reserviert sind. So lange, bis Sie den Bezeichner des Objekts ändern können, können Sie mit dem Begrenzungsbezeichner auf das Objekt verweisen.  
   
 -   Wenn für den Namen eines Objekts Zeichen verwendet werden, die nicht als qualifizierte Bezeichner aufgeführt sind.  
   

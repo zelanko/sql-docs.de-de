@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287150"
 ---
 # <a name="application-and-driver-compatibility"></a>Anwendungs- und Treiberkompatibilität
 ODBC-Anwendungen und Treiber fallen in eine Anzahl von Kategorien auch ihre Version. Einige dieser Anwendungen sind nicht kompatibel mit einige Treiber. in anderen Fällen möglicherweise der Typ der Anwendung oder Treiber einen Einfluss auf die Abwärtskompatibilität Probleme zwischen ihnen.  

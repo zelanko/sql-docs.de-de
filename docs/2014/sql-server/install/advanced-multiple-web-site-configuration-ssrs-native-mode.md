@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226010"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus)
   In diesem Dialogfeld können Sie die URLs erstellen und verwalten, mit denen Sie einen Berichtsserver oder den Berichts-Manager aufrufen. Im Dialogfeld **Erweiterte Konfiguration mehrerer Websites** können Sie weitere URLs erstellen, benutzerdefinierte URLs, die einen Hostheadernamen enthalten oder in denen eine IP-Adresse im Format IPv4 oder IPv6 angegeben ist.  
@@ -27,11 +27,11 @@ ms.locfileid: "48185370"
   
  Die Erstellung mehrerer URLs ist nützlich, wenn Sie verschiedene Möglichkeiten konfigurieren möchten, um auf einen Berichtsserver zugreifen zu können. Beispielsweise erfordert der Zugriff auf einen Berichtsserver über eine Intranet- und Extranet-Verbindung normalerweise für jede Art der Verbindung andere URLs.  
   
- Öffnen der **erweiterte Konfiguration für mehrere Websites** im Dialogfeld klicken Sie auf **erweitert** auf die **Webdienst-URL** oder die **Report Manager URL**auf der Seite die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager. Wenn das Dialogfeld **Erweiterte Konfiguration mehrerer Websites** offen ist, können Sie auf **Hinzufügen** oder **Bearbeiten** klicken, um neue URLs zu definieren oder vorhandene URLs zu ändern.  
+ Um das Dialogfeld **Erweiterte Konfiguration für mehrere Websites** zu öffnen, klicken Sie auf der Seite **Webdienst-URL** oder **Berichts-Manager-URL** im **-Konfigurations-Manager auf** Erweitert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Wenn das Dialogfeld **Erweiterte Konfiguration mehrerer Websites** offen ist, können Sie auf **Hinzufügen** oder **Bearbeiten** klicken, um neue URLs zu definieren oder vorhandene URLs zu ändern.  
   
  Klicken Sie auf **OK** , um die Änderungen zu speichern. Wenn Sie URLs hinzufügen oder entfernen, jedoch dann das Dialogfeld ohne Klicken auf **OK**schließen, werden die Änderungen nicht gespeichert.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **IP-Adresse**  
  Gibt den Berichtsserver-Computer im TCP/IP-Netzwerk an. Gültige Werte sind:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185370"
  Entfernen Sie eine URL aus der Liste.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

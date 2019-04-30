@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283590"
 ---
 # <a name="reporting-services-site-collection-features"></a>Funktion zur Reporting Services-Websitesammlung
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus umfasst drei SharePoint-Websitesammlung-Funktionen. Die Funktionen unterstützen Folgendes: die allgemeine Berichterstellungsumgebung des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], eine Funktion des [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins für [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition und Verwaltungsvorgänge für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in der SharePoint-Zentraladministration.  

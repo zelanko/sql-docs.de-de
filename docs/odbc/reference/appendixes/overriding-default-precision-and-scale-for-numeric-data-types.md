@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278311"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Dezimalstellenanzahl für numerische Datentypen
 Wenn das SQL_DESC_TYPE-Feld in einer ARD durch Aufrufen von entweder auf SQL_C_NUMERIC, festgelegt ist **SQLBindCol** oder **SQLSetDescField**SQL_DESC_SCALE Felds in die ARD auf 0 festgelegt ist, und das Feld "SQL_DESC_PRECISION" festgelegt ist um den treiberdefinierten standardgenauigkeit. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC, festgelegt ist, durch Aufrufen von entweder **SQLBindParameter** oder **SQLSetDescField**. Dies gilt für Eingabe-, Eingabe/Ausgabe oder Output-Parameter.  

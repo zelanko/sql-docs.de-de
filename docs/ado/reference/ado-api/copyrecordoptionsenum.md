@@ -1,5 +1,5 @@
 ---
-title: CopyRecordOptionsEnum | Microsoft-Dokumentation
+title: CopyRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe0b12053b9ac7203253e81fa3300d2e4109a129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308897"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Gibt das Verhalten der [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) Methode.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Gibt an, dass die *Quelle* -Anbieter versucht, simulieren die Kopie über herunterladen und Hochladen Vorgänge aus, wenn diese Methode schlägt, da fehl *Ziel*wird auf einem anderen Server oder von einem anderen gewartet wird -Anbieter als *Quelle*. Beachten Sie, dass unterschiedliche Anbieter möglicherweise behindern die Leistung oder Daten verloren gehen.|  
 |**adCopyNonRecursive**|2|Kopiert das aktuelle Verzeichnis, aber keines seiner Unterverzeichnisse an das Ziel an. Der Kopiervorgang ist nicht rekursiv.|  
 |**adCopyOverWrite**|1|Überschreibt die Datei oder das Verzeichnis, wenn die *Ziel* verweist auf eine vorhandene Datei oder ein Verzeichnis.|  
-|**adCopyUnspecified**|-1|Standard. Die Standard-Kopie durchführt: der Vorgang fehl, wenn die Zieldatei oder das Verzeichnis bereits vorhanden ist, und der Vorgang rekursiv kopiert.|  
+|**adCopyUnspecified**|-1|Standard. Führt den Standard-Kopiervorgang aus: Der Vorgang fehl, wenn die Zieldatei oder das Verzeichnis bereits vorhanden ist, und der Vorgang rekursiv kopiert.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Diese Konstanten keine ADO/WFC-Entsprechungen.  

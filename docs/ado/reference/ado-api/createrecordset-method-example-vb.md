@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308710"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset-Methode – Beispiel (VB)
 Sie erstellen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, und geben Sie die Spalteninformationen. Sie können dann Einfügen von Daten in die **Recordset** Objekt; die zugrunde liegenden Rowsets Puffer einfügungen.  

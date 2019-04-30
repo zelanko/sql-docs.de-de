@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240745"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Ausdrucksverweis (Berichts-Generator und SSRS)
   Berichtsausdrücke unterstützen eine Vielzahl von Verweisen auf integrierte Funktionen und integrierte Auflistungen. Ausdrücke müssen über eine gültige [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Syntax verfügen, bevor ein Bericht veröffentlicht oder verarbeitet werden kann.  

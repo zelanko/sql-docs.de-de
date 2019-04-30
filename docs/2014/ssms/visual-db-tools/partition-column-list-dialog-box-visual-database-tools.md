@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280376"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
   Wenn einer Tabelle ein Partitionsschema zugeordnet ist, können Sie in diesem Dialogfeld auswählen, auf welche Spalte(n) die Partitionsfunktion angewendet wird. Damit die Funktion ordnungsgemäß ausgeführt wird, muss der Datentyp der ausgewählten Spalte dem Datentyp der Spalte entsprechen, die in der Partitionsfunktion definiert ist.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308617"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
 Erstellt ein neues [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt mit den angegebenen Eigenschaften.  
@@ -42,16 +42,16 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Optional. Ein **Zeichenfolge** -Wert, der den Namen des enthält die **Parameter** Objekt.  
   
  *Typ*  
- Optional. Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, der angibt, den den Datentyp des der **Parameter** Objekt.  
+ Dies ist optional. Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, der angibt, den den Datentyp des der **Parameter** Objekt.  
   
  *Richtung*  
- Optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) Wert, der angibt, den Typ des **Parameter** Objekt.  
+ Dies ist optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) Wert, der angibt, den Typ des **Parameter** Objekt.  
   
  *Größe*  
  Optional. Ein **lange** Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
- *ReplTest1*  
- Optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
+ *Wert*  
+ Dies ist optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **CreateParameter** Methode zum Erstellen eines neuen **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert. Alle Werte, die Sie in den Argumenten übergeben werden geschrieben, mit der entsprechenden **Parameter** Eigenschaften.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0272c7598e34d7ba920484b3d2b9c504587212cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261316"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installation, Deinstallation und Unterstützung des Berichts-Generators
   Der Berichts-Generator ist ein Berichterstellungstool, das Sie zum Erstellen, Aktualisieren und Freigeben von Berichten, Berichtsteilen und freigegebenen Datasets verwenden können. Der Berichts-Generator ist in zwei Versionen verfügbar: als eigenständige Version und als [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]-Version. Die eigenständige Version wird von Ihnen oder einem Administrator auf dem Computer installiert. Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version wird automatisch mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] installiert und vom Berichts-Manager oder von einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website auf den Computer heruntergeladen.  

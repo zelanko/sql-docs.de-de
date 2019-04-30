@@ -1,5 +1,5 @@
 ---
-title: Ebenen (MDX) | Microsoft Docs
+title: Ebenen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269952"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -39,11 +39,11 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Number*  
  Ein gültiger numerischer Ausdruck, der eine Ebenennummer angibt.  
   
- *Ebenenname*  
+ *Level_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Ebenennamen angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Ebenennummer angegeben wird, die **Ebenen** zurückgegeben, die auf der angegebenen nullbasierten Position zugeordnet.  
+ Wenn eine Ebenennummer angegeben wird, die **Ebenen** Funktion gibt zurück, die auf der angegebenen nullbasierten Position zugeordnet.  
   
  Wenn ein Ebenenname angegeben wird, die **Ebenen** Funktion die angegebene Ebene zurück.  
   
@@ -51,7 +51,7 @@ Hierarchy_Expression.Levels( Level_Name )
 >  Verwenden Sie die Syntaxvariante mit dem Zeichenfolgenausdruck für benutzerdefinierte Funktionen.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen aller der **Ebenen** Syntaxen-Funktion.  
+ In den folgenden Beispielen veranschaulicht die **Ebenen** Syntaxen funktionieren.  
   
 ### <a name="numeric"></a>Numerisch  
  Im folgenden Beispiel wird die Country-Ebene zurückgegeben:  

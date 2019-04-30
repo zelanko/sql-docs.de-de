@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316149"
 ---
 # <a name="design-tables-visual-database-tools"></a>Entwerfen von Tabellen (Visual Database Tools)
   Im Tabellen-Designer ist ein Fenster zur Gestaltung individuell angepasster Tabellen verfügbar. In den Themen dieses Abschnitts wird erläutert, wie Datenbanktabellen mit dem Tabellen-Designer erstellt und geändert werden.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224471"
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Spalte (oder Parameter) die Größe der numerischen Datentypen wird als die maximale Anzahl von Ziffern durch den Datentyp der Spalte oder Parameter oder die Genauigkeit der Daten definiert. Für Zeichentypen handelt ist dies die Länge in Zeichen, der Daten; für binäre Datentypen wird die Spaltengröße als die Länge in Bytes der Daten definiert. Für die Zeit, Timestamp und alle Interval-Datentypen ist dies die Anzahl der Zeichen in die Darstellung dieser Daten. Die Größe der Spalte für jeden präzise SQL-Datentyp definiert, wird in der folgenden Tabelle angezeigt.  
@@ -30,17 +30,17 @@ Die Spalte (oder Parameter) die Größe der numerischen Datentypen wird als die 
 |-------------------------|-----------------|  
 |Alle Typen mit Zeichen [a] [b].|Die definierten oder maximale Spaltenlänge Größe in Zeichen der Spalte oder des Parameters (wie in das Deskriptorfeld SQL_DESC_LENGTH enthalten). Die Spaltengröße einer Single-Byte-Zeichen-Spalte, die als CHAR(10) definiert ist z. B. 10.|  
 |SQL_DECIMAL SQL_NUMERIC|Die festgelegte Anzahl von Ziffern. Die Genauigkeit einer Spalte, die als NUMERIC(10,3) definiert ist z. B. 10.|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 (falls mit Vorzeichen) oder 20 (falls ohne Vorzeichen)|  
-|SQL_REAL [c]|7|  
-|SQL_FLOAT [c]|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 (falls mit Vorzeichen) oder 20 (falls ohne Vorzeichen)|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |Alle binären Typen [a] [b].|Die definiert oder maximale Länge in Bytes der Spalte oder des Parameters. Die Länge einer Spalte, die als Binary(10)-Wert definiert ist z. B. 10.|  
-|SQL_TYPE_DATE [c]|10 (die Anzahl der Zeichen in der *jjjj-mm-tt* Format).|  
-|SQL_TYPE_TIME [c]|8 (die Anzahl der Zeichen in der *Hh-mm-ss* Format), oder 9 + *s* (die Anzahl der Zeichen in der *hh: mm:*[: ss. fff...]-Format, in denen *s*ist die Genauigkeit, Sekunden).|  
+|SQL_TYPE_DATE[c]|10 (die Anzahl der Zeichen in der *jjjj-mm-tt* Format).|  
+|SQL_TYPE_TIME[c]|8 (die Anzahl der Zeichen in der *Hh-mm-ss* Format), oder 9 + *s* (die Anzahl der Zeichen in der *hh: mm:*[: ss. fff...]-Format, in denen *s*ist die Genauigkeit, Sekunden).|  
 |SQL_TYPE_TIMESTAMP|16 (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm* Format)<br /><br /> 19 (die Anzahl der Zeichen in der *jjjj-mm-tt* *hh: mm:* Format)<br /><br /> oder<br /><br /> 20 + *s* (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm:*[: ss. fff...]-Format, in denen *s* ist die Genauigkeit, Sekunden).|  
 |SQL_INTERVAL_SECOND|Wo *p* ist die Genauigkeit für anführenden Intervallwert und *s* ist die Genauigkeit, *p* (Wenn *s*= 0) oder *p* + *s*+ 1 (Wenn *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|In denen *p* ist die Genauigkeit für anführenden Intervallwert und *s* ist die Genauigkeit, 9 +*p* (Wenn *s*= 0) oder 10 +*p* + *s* (Wenn *s*> 0). [ d]|  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269986"
 ---
 # <a name="setting-project-options-db2tosql"></a>Festlegen von Projektoptionen (DB2ToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben objektkonvertierung, Objekt laden, Benutzer-Schnittstelle und migrationseinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -37,7 +37,7 @@ SSMA verfügt über fünf verschiedene projekteinstellungen:
   
 Es verfügt auch über vier Modi zum Konfigurieren dieser Einstellungen:  
   
--   Default  
+-   Standard  
   
 -   Optimistisch  
   

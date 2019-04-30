@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281940"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen, um dieses Verhalten. Z. B., wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und dann in der Standardeinstellung keine Verbindungen hergestellt werden konnte.  
@@ -57,7 +57,7 @@ connectionString
 |Teil|Description|  
 |----------|-----------------|  
 |**Verbinden**|Eine Literalzeichenfolge, die dies weist darauf hin, ist ein Eintrag der Verbindungszeichenfolge.|  
-|**_"ConnectionString"_**|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  
+|**_connectionString_**|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  
 |**Zugriff**|Eine Literalzeichenfolge, die dies weist darauf hin ist ein Zugriffseintrag.|  
 |**_accessRight_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-   **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
   

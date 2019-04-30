@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224521"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.8  
+ Eingeführt in Version: ODBC 3.8  
   
- Einhaltung von Standards: keine  
+ Einhaltung von Standards: None  
   
  **Zusammenfassung**  
  **SQLAsyncNotificationCallback** können Treiber für die zurück an den Treiber-Manager aufrufen, wenn der Fortschritt für den aktuellen asynchronen Vorgang vorhanden ist, nachdem der Treiber SQL_STILL_EXECUTING zurückgibt. **SQLAsyncNotificationCallback** können nur vom Treiber aufgerufen.  

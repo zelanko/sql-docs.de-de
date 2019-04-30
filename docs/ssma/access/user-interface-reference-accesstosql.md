@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299428"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referenz zur Benutzeroberfläche (AccessToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff.  
@@ -37,8 +37,8 @@ Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes
 |[Find suchen Sie Databases Wizard (Option-Dateien)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)|Verwenden der Seite "Dateien auswählen" des Assistenten für Datenbanken finden Sie auf die Access-Datenbanken der SSMA-Projekt hinzu.|  
 |[Find suchen Sie Databases Wizard (Option Standorte)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)|Verwenden Sie die Speicherorte auswählen-Seite des Assistenten Datenbanken finden Sie an Speicherorten für Dateien der Access-Datenbanken in einem Netzwerk, das auf einem Computer oder in einem Ordner zu suchen, die Suchkriterien entsprechen.|  
 |[Find Databases Wizard (Verify Selection) (Suchen des Assistenten für Datenbanken (Auswahl überprüfen))](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)|Mithilfe der Seite "Auswahl überprüfen" des Assistenten für Datenbanken finden Sie bestätigen, welche Datenbanken in der SSMA-Projekt hinzugefügt werden.|  
-|[Globale Einstellungen &#40;Editor&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-editor-accesstosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
-|[Globale Einstellungen &#40;Dialogfelder&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-dialogs-accesstosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** konfigurieren – Dialogfeld "und" Warnung Einstellungen im Dialogfeld.|  
+|[Global Settings &#40;Editor&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-editor-accesstosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
+|[Global Settings &#40;Dialogs&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-dialogs-accesstosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** konfigurieren – Dialogfeld "und" Warnung Einstellungen im Dialogfeld.|  
 |[Globale Einstellungen &#40;Protokollierung&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-logging-accesstosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
 |[Globale Einstellungen &#40;Ausgabefenster&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-output-window-accesstosql.md)|Fenster "Ausgabe" auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Anzeige der Ausgabebereich und Fehler Fensterbereich.|  
 |[Migration Wizard (Migrations-Assistent)](migration-wizard-accesstosql.md)|Verwenden Sie den Assistenten, die Sie bei der Migration führen.|  
@@ -48,7 +48,7 @@ Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes
 |[Project Settings (Migration) (Projekteinstellungen (Migration))](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Verwenden die Seite für die Migration von der **Projekteinstellungen** Dialogfeld Geben Sie die Batchgröße für die Migration, Tabellensperre, Überprüfung von Einschränkungen, Einfügung auslösen, Identität und Behandlung von null-Wert und wie Datumsangaben verarbeiten, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bereich.|  
 |[Project Settings (Type Mapping) (Projekteinstellungen (Typzuordnung))](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Type Mapping auf der Seite des der **Projekteinstellungen** im Dialogfeld die standardtypmappings für alle Datenbanken und Datenbankobjekte in der SSMA-Projekt angeben.|  
 |[Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Verwenden Sie die SQL Azure-Seite von der **Projekteinstellungen** im Dialogfeld, um das Suffix für die Datenbank und auch die Taktintervalls anzugeben.|  
-|[Speichern von Metadaten &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|Die **speichern Metadaten** Dialogfeld wird angezeigt, wenn Sie ein Projekt speichern, die Metadaten nicht vorhanden ist.|  
+|[Save Metadata &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|Die **speichern Metadaten** Dialogfeld wird angezeigt, wenn Sie ein Projekt speichern, die Metadaten nicht vorhanden ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SQL Server Migration Assistant für Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

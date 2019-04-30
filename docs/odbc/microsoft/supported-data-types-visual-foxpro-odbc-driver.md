@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cb48c5a763162685060a95e8d352ebddd8b0032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270897"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber)
 Die Liste der Datentypen, die vom Treiber unterstützt werden angezeigt, über die ODBC-API und in Microsoft Query.  

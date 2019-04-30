@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316107"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Tabelle löschen (Dialogfeld) (Visual Database Tools)
   This dialog box allows you to specify the table from which to delete records. This dialog box appears if more than one table is displayed in the Diagram pane when you change the type of a query to a DELETE query.  

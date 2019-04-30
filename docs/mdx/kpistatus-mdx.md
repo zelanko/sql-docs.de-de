@@ -1,5 +1,5 @@
 ---
-title: KPIStatus (MDX) | Microsoft Docs
+title: KPIStatus (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c0824a9235aa7fd949910800d1e8ce20eab709e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272903"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 
@@ -36,7 +36,7 @@ KPIStatus(KPI_Name)
  Der Statuswert ist im Allgemeinen ein normalisierter Wert zwischen -1 und 1.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel gibt die KPI-Wert des KPI-Ziels, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
+ Das folgende Beispiel gibt die KPI-Wert, KPI-Ziel, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
   
 ```  
 SELECT  

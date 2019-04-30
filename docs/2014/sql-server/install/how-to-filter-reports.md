@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Filtern von Berichten | Microsoft-Dokumentation'
+title: 'Gewusst wie: Filtern von Berichten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294850"
 ---
-# <a name="how-to-filter-reports"></a>Vorgehensweise: Filtern von Berichten
+# <a name="how-to-filter-reports"></a>Gewusst wie: Filtern von Berichten
   In diesem Thema wird beschrieben, wie Sie den Upgrade Advisor-Berichts-Viewer zum Anwenden von Filtern zu einem Bericht verwenden können.  
   
 ### <a name="to-filter-reports"></a>So filtern Sie Berichte  
   
-1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie filtern möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts für Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie filtern möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts der Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  In der **filtern, indem** wählen Sie eine Art des Problems an:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222140"
     -   **Ungelöste Probleme**. Damit werden alle Probleme angezeigt, die noch nicht gelöst wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

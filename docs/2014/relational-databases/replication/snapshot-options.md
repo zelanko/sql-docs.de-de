@@ -1,5 +1,5 @@
 ---
-title: Ändern Sie Optionen für die Initialisierung für SQL-Replikation | Microsoft-Dokumentation
+title: Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270259"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern Sie Optionen für die Initialisierung für SQL-Replikation
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation
 
 In diesem Artikel wird erläutert, wie so ändern Sie eine Anzahl von Optionen, wenn [Initialisieren eines Abonnements mit einer Momentaufnahme](initialize-a-subscription-with-a-snapshot.md).
 
@@ -40,7 +40,7 @@ Geben Sie die standardmäßigen Momentaufnahmespeicherorts (SQL Server Managemen
   
  Ändern Sie den standardmäßigen Momentaufnahmespeicherort im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Verleger**. Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md). Bestimmen Sie den Momentaufnahmeordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-#### <a name="modify-the-default-snapshot-location"></a>Ändern Sie den standardmäßigen momentaufnahmespeicherort  
+#### <a name="modify-the-default-snapshot-location"></a>Ändern des Standardspeicherorts für Momentaufnahmen  
   
 1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften – \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten (**...**) für den Verleger, dessen standardmäßiger Momentaufnahmespeicherort geändert werden soll.    
 2.  Geben Sie im Dialogfeld **Verlegereigenschaften - \<Publisher>** einen Wert für die Eigenschaft **Standardmomentaufnahmeordner** ein.
@@ -80,7 +80,7 @@ Auf der Seite **Momentaufnahme** können Sie im Dialogfeld **Veröffentlichungse
 2.  Wählen Sie **Momentaufnahmedateien in diesem Ordner komprimieren**aus.    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Ausführen von Skripts vor und nach dem Momentaufnahme angewendet wird
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme
 
  Sie können angeben, ob Skripts auf dem Abonnenten vor oder nach dem Anwenden der Momentaufnahme ausgeführt werden. Skripts können für verschiedene Zwecke verwendet werden, z. B. zum Erstellen von Anmeldungen und Schemas (Objektbesitzer) auf den einzelnen Abonnenten.  
   

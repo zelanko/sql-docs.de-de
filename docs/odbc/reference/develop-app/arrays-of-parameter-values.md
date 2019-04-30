@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288413"
 ---
 # <a name="arrays-of-parameter-values"></a>Arrays für Parameterwerte
 Es ist häufig nützlich für Anwendungen, die zum Übergeben von Arrays von Parametern. Verwenden Sie z. B. Arrays von Parametern und einer parametrisierten **einfügen** -Anweisung, eine Anwendung kann eine Anzahl von Zeilen auf einmal einfügen. Es gibt mehrere Vorteile gegenüber der Verwendung von Arrays. Zunächst wird der Netzwerkverkehr reduziert, da die Daten für mehrere Anweisungen in einem einzelnen Paket gesendet werden (wenn die Datenquelle Parameterarrays nativ unterstützt). Zweitens können einige Datenquellen Arrays schneller als das Ausführen der gleichen Anzahl von unterschiedlichen SQL-Anweisungen mit SQL-Anweisungen ausführen. Abschließend, wenn die Daten in einem Array gespeichert werden, wie häufig der Fall für die Bildschirmdaten ist, die Anwendung kann gebunden werden alle Zeilen in einer bestimmten Spalte mit einem einzigen Aufruf **SQLBindParameter** und aktualisieren, indem Sie Ausführung einer einzelnen Anweisung.  

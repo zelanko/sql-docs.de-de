@@ -22,14 +22,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238134"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
-  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](sql-server-audit-database-engine.md).  
+  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "48222990"
 |DATABASE_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Das Ereignis wird immer dann ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Entspricht der [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Das Ereignis wird ausgelöst, wenn sich der Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet. Entspricht der Audit Database Logout-Ereignisklasse.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Das Ereignis wird für Berichtsüberwachungsmeldungen zur Transportsicherheit der Datenbankspiegelung ausgelöst. Entspricht der [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird jedes Mal ausgelöst, wenn auf Datenbankobjekte, z. B. Nachrichtentyp, Assembly, Vertrag, zugegriffen wird.<br /><br /> Dieses Ereignis wird für jeden Zugriff auf eine Datenbank ausgelöst. **Hinweis:** Dies kann potenziell zu sehr vielen Überwachungsdatensätzen führen. <br /><br /> Entspricht der [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte, z. B. Schemas, ausgeführt wird. Dieses Ereignis wird immer dann ausgelöst, wenn ein Datenbankobjekt erstellt, geändert oder gelöscht wird. **Hinweis:** Dies kann zu sehr großen Anzahl an Überwachungsdatensätzen führen. <br /><br /> Entspricht der [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird jedes Mal ausgelöst, wenn auf Datenbankobjekte, z. B. Nachrichtentyp, Assembly, Vertrag, zugegriffen wird.<br /><br /> Dieses Ereignis wird für jeden Zugriff auf eine Datenbank ausgelöst. **Hinweis**:  Dies kann zu großen Überwachungsdatensätzen führen. <br /><br /> Entspricht der [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte, z. B. Schemas, ausgeführt wird. Dieses Ereignis wird immer dann ausgelöst, wenn ein Datenbankobjekt erstellt, geändert oder gelöscht wird. **Hinweis**:  Dies kann zu sehr großen Anzahl an Überwachungsdatensätzen führen. <br /><br /> Entspricht der [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn der Besitzer für Objekte im Datenbankbereich geändert wird. Das Ereignis wird für eine Objektbesitzänderung in einer beliebigen Datenbank auf dem Server ausgelöst. Entspricht der [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn für Datenbankobjekte, z. B. Assemblys und Schemas, eine GRANT-, REVOKE- oder DENY-Anweisung ausgegeben wurde. Das Ereignis wird für eine Objektberechtigungsänderung für eine beliebige Datenbank auf dem Server ausgelöst. Entspricht der [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Das Ereignis wird ausgelöst, wenn Datenbankvorgänge auftreten, z. B. Prüfpunkt- oder Abonnement-Abfragebenachrichtigungen. Das Ereignis wird bei jedem Datenbankvorgang in einer Datenbank ausgelöst. Entspricht der [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md).|  
@@ -160,7 +160,7 @@ ms.locfileid: "48222990"
 |SELECT|Dieses Ereignis wird immer dann ausgelöst, wenn SELECT ausgegeben wird.|  
 |UPDATE|Dieses Ereignis wird immer dann ausgelöst, wenn UPDATE ausgegeben wird.|  
 |INSERT|Dieses Ereignis wird immer dann ausgelöst, wenn INSERT ausgegeben wird.|  
-|Delete|Dieses Ereignis wird immer dann ausgelöst, wenn DELETE ausgegeben wird.|  
+|DELETE|Dieses Ereignis wird immer dann ausgelöst, wenn DELETE ausgegeben wird.|  
 |Führen Sie|Dieses Ereignis wird immer dann ausgelöst, wenn EXECUTE ausgegeben wird.|  
 |RECEIVE|Dieses Ereignis wird immer dann ausgelöst, wenn RECEIVE ausgegeben wird.|  
 |REFERENCES|Dieses Ereignis wird immer dann ausgelöst, wenn eine REFERENCES-Berechtigung überprüft wird.|  
@@ -177,7 +177,7 @@ ms.locfileid: "48222990"
   
 |Aktionsgruppenname|Description|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> -CREATE SERVER AUDIT<br />-ALTER SERVER AUDIT<br />-&AMP; DROP SERVER AUDIT<br />-SERVERÜBERWACHUNGSSPEZIFIKATION ERSTELLEN<br />-ALTER SERVER AUDIT SPECIFICATION<br />-&AMP; DROP SERVER AUDIT SPECIFICATION<br />– ERSTELLEN VON DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-ALTER DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-&AMP; DROP-DATENBANK-ÜBERWACHUNGSSPEZIFIKATION|  
+|AUDIT_ CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> -CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-&AMP; DROP SERVER AUDIT<br />-SERVERÜBERWACHUNGSSPEZIFIKATION ERSTELLEN<br />-ALTER SERVER AUDIT SPECIFICATION<br />-&AMP; DROP SERVER AUDIT SPECIFICATION<br />– ERSTELLEN VON DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-ALTER DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-&AMP; DROP-DATENBANK-ÜBERWACHUNGSSPEZIFIKATION|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md)  

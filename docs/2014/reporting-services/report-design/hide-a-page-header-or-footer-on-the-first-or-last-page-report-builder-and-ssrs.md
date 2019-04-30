@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224975"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS)
   Ein Bericht kann eine Seitenkopf- und Seitenfußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Nachdem Sie eine Kopf- bzw. Fußzeile hinzugefügt haben, können Sie sie selektiv auf der ersten und letzten Seite des Berichts ausblenden.  

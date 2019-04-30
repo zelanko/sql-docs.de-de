@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298123"
 ---
 # <a name="instant-file-initialization-configuration"></a>Instant File Initialization-Konfiguration
 Sofortige dateiinitialisierung ist eine SQL Server-Funktion, mit dem Daten-Dateivorgänge, schneller ausgeführt werden kann. Überprüfen das Kontrollkästchen, um die sofortige Dateiinitialisierung einschalten steigert die Leistung von SQL Server PDW. Aber wenn dies ein Sicherheitsrisiko Business für Sie darstellt, dann lassen Sie das Kontrollkästchen deaktiviert.  

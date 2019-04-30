@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312149"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lektion 4: Untersuchen der Targeted Mailing-Modelle (Lernprogramm zu Datamining-Grundlagen)
   Nachdem die Modelle im Projekt verarbeitet wurden, können Sie sie auf interessante Trends untersuchen. Da Muster bei bloßer Betrachtung der Zahlen komplex und schwierig erscheinen können, bietet SQL Server Data Mining visuelle Tools, mit deren Hilfe die Daten untersucht und die Regeln und Beziehungen, die von den Algorithmen innerhalb der Daten ermittelt wurden, interpretiert werden können. Sie können auch verschiedene Genauigkeitstests verwenden, um das Dataset zu überprüfen bzw. um vor der Bereitstellung festzustellen, welches Modell am besten geeignet ist.  

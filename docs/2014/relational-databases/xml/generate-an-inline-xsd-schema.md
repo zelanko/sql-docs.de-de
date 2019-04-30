@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287483"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
   In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  

@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298528"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Bericht zur Datenmigration (SybaseToSQL)
 Die **Data Migration Report** Dialogfeld wird angezeigt, nach dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Status**  
 Zeigt den Status der Datenmigration aus der Quelldatenbank in die Zieldatenbank.  
   
@@ -36,7 +36,7 @@ Die Anzahl von Zeilen mit Daten in der Quelltabelle.
 **Anzahl der erfolgreich migrierte Zeilen**  
 Die Anzahl von Zeilen mit Daten wurden erfolgreich in die Zieltabelle migriert.  
   
-**Verhältnis**  
+**Ratio**  
 Der Prozentsatz der Zeilen wurden erfolgreich migriert.  
   
 **Details**  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d4f819a92885cf5d173bcdda53ebf3291c958eac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270108"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Removing SSMA for DB2 Components (DB2ToSQL) entfernen
 Nach Abschluss des Migrieren von Datenbanken aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], empfiehlt es sich um SSMA-Komponenten zu deinstallieren. Sie können die Clientkomponenten jederzeit deinstallieren. Allerdings sollten Sie nicht das Erweiterungspaket aus Deinstallieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, Ihre migrierten Datenbanken nicht mehr Funktionen in der **ssma_DB2** Schema der **Sysdb** Datenbank.  

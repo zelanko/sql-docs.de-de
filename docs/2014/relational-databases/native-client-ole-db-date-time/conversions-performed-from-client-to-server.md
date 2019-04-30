@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237967"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
-  Dieses Thema beschreibt die Datums-/Uhrzeit-Konvertierungen zwischen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE&nbsp;DB und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) entwickelten Clientanwendungen.  
+  Dieses Thema beschreibt die Datums-/Uhrzeit-Konvertierungen zwischen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE&amp;nbsp;DB und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) entwickelten Clientanwendungen.  
   
 ## <a name="conversions"></a>Konvertierungen  
  In diesem Thema werden die auf dem Client durchgeführten Konvertierungen beschrieben. Wenn der Client Bruchsekundengenauigkeit für einen Parameter angibt, die von der auf dem Server definierten abweicht, schlägt die Clientkonvertierung in Fällen, in denen der Server eine erfolgreiche Konvertierung zugelassen hätte, möglicherweise fehl. Insbesondere behandelt der Client jedes Abschneiden von Sekundenbruchteilen als Fehler, wohingegen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeitwerte auf die nächste ganze Sekunde rundet.  
   
  Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, werden DBTYPE_DBTIMESTAMP-Bindungen konvertiert, als wären sie `datetime2`.  
   
-|To -><br /><br /> Von|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|Auf -><br /><br /> Von|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
@@ -49,7 +49,7 @@ ms.locfileid: "52748730"
 |------------|-------------|  
 |-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: CreateAccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in zurückgegeben *RgStatus*. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
 |Nicht zutreffend|Nicht verfügbar.|  
-|1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d.&nbsp;h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
+|1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d. h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
 |2|Zeitfelder werden ignoriert.|  
 |3|Sekundenbruchteile müssen 0 sein, oder es wird DBSTATUS_E_DATAOVERFLOW festgelegt.|  
 |4|Die Datumskomponente wird ignoriert.|  
@@ -57,12 +57,12 @@ ms.locfileid: "52748730"
 |6|Die Uhrzeit wird auf 0 (Null) festgelegt.|  
 |7|Das Datum wird auf das aktuelle Datum festgelegt.|  
 |8|Die Zeit wird zu UTC konvertiert. Wenn während dieser Konvertierung ein Fehler auftritt, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt.|  
-|9|Die Zeichenfolge wird als ISO-Literal analysiert und in den Zieltyp konvertiert. Falls dies fehlschlägt, wird die Zeichenfolge als OLE-Datumsliteral analysiert (welches gleichfalls Zeitkomponenten enthält) und vom OLE-Datumstyp (DBTYPE_DATE) in den Zieldatumstyp konvertiert.<br /><br /> Wenn der Zieltyp DBTIMESTAMP, `smalldatetime`, `datetime` oder `datetime2` ist, muss die Zeichenfolge mit der Syntax für Datums-, Uhrzeit- oder `datetime2`-Literalen oder der von OLE erkannten Syntax konform sein. Wenn die Zeichenfolge ein Datumsliteral ist, werden alle Uhrzeitkomponenten auf&nbsp;0 festgelegt. Wenn die Zeichenfolge ein Uhrzeitliteral ist, wird das Datum auf das aktuelle Datum festgelegt.<br /><br /> Für alle anderen Zieltypen muss die Zeichenfolge der Syntax für Literale des Zieltyps entsprechen.|  
+|9|Die Zeichenfolge wird als ISO-Literal analysiert und in den Zieltyp konvertiert. Falls dies fehlschlägt, wird die Zeichenfolge als OLE-Datumsliteral analysiert (welches gleichfalls Zeitkomponenten enthält) und vom OLE-Datumstyp (DBTYPE_DATE) in den Zieldatumstyp konvertiert.<br /><br /> Wenn der Zieltyp DBTIMESTAMP, `smalldatetime`, `datetime` oder `datetime2` ist, muss die Zeichenfolge mit der Syntax für Datums-, Uhrzeit- oder `datetime2`-Literalen oder der von OLE erkannten Syntax konform sein. Wenn die Zeichenfolge ein Datumsliteral ist, werden alle Uhrzeitkomponenten auf 0 festgelegt. Wenn die Zeichenfolge ein Uhrzeitliteral ist, wird das Datum auf das aktuelle Datum festgelegt.<br /><br /> Für alle anderen Zieltypen muss die Zeichenfolge der Syntax für Literale des Zieltyps entsprechen.|  
 |10|Wenn das Abschneiden von Sekundenbruchteilen Datenverlust verursacht, wird DBSTATUS_E_DATAOVERFLOW festgelegt. Für Zeichenfolgenkonvertierungen ist eine Überlaufprüfung nur möglich, wenn die Zeichenfolge der ISO-Syntax entspricht. Wenn es sich bei der Zeichenfolge um ein OLE-Datumsliteral handelt, werden Sekundenbruchteile gerundet.<br /><br /> Für die Konvertierung von DBTIMESTAMP (Datetime) in Smalldatetime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wird im Hintergrund den Sekundenwert ab, statt den Fehler dbstatus_e_dataoverflow auszulösen abgeschnitten.|  
-|11|Die Anzahl der Dezimalziffern für Sekundenbruchteile (Dezimalstellen) wird anhand der Größe der Zielspalte gemäß der folgenden Tabelle ermittelt. Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> Wenn jedoch der Quelltyp DBTIMESTAMP ist, und Sekundenbruchteile auf 0 gesetzt wurden, werden keine Dezimalstellen für Sekundenbruchteile und kein Dezimaltrennzeichen generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren OLE&nbsp;DB-Anbietern entwickelt wurden.<br /><br /> Eine Spaltengröße von ~0 impliziert unbegrenzte Größe in OLE&nbsp;DB (9 Ziffern, sofern nicht die 3-Ziffern-Regel für DBTIMESTAMP gilt).<br /><br /> **DBTIME2** - 8, 10..18 (Länge in Zeichen); 0, 1..9 (skalieren)<br /><br /> **DBTIMESTAMP** - 19, 21..29 (Länge in Zeichen); 0, 1..9 (skalieren)<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36 (Länge in Zeichen); 0, 1..9 (skalieren)|  
-|12|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für DBTYPE_DATE wird beibehalten. Die Sekundenbruchteile werden zu&nbsp;0 abgeschnitten.|  
+|11|Die Anzahl der Dezimalziffern für Sekundenbruchteile (Dezimalstellen) wird anhand der Größe der Zielspalte gemäß der folgenden Tabelle ermittelt. Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&amp;nbsp;DB zugelassene Maximum.<br /><br /> Wenn jedoch der Quelltyp DBTIMESTAMP ist, und Sekundenbruchteile auf 0 gesetzt wurden, werden keine Dezimalstellen für Sekundenbruchteile und kein Dezimaltrennzeichen generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren OLE DB-Anbietern entwickelt wurden.<br /><br /> Eine Spaltengröße von ~0 impliziert unbegrenzte Größe in OLE&amp;nbsp;DB (9 Ziffern, sofern nicht die 3-Ziffern-Regel für DBTIMESTAMP gilt).<br /><br /> **DBTIME2** - 8, 10..18 (Länge in Zeichen); 0, 1..9 (skalieren)<br /><br /> **DBTIMESTAMP** - 19, 21..29 (Länge in Zeichen); 0, 1..9 (skalieren)<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36 (Länge in Zeichen); 0, 1..9 (skalieren)|  
+|12|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für DBTYPE_DATE wird beibehalten. Die Sekundenbruchteile werden zu&amp;nbsp;0 abgeschnitten.|  
 |13|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für DBTYPE_FILETIME wird beibehalten. Wenn Sie die Windows-FileTimeToSystemTime-API verwenden, ist die Genauigkeit für Sekundenbruchteile auf eine Millisekunde beschränkt.|  
-|14|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für `smalldatetime` wird beibehalten. Die Sekunden werden auf&nbsp;0 festgelegt.|  
+|14|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für `smalldatetime` wird beibehalten. Die Sekunden werden auf&amp;nbsp;0 festgelegt.|  
 |15|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für `datetime` wird beibehalten. Sekunden werden zum nächstem 300stel einer Sekunde gerundet.|  
 |16|Das Konvertierungsverhalten eines in eine SSVARIANT-Clientstruktur eingebetteten Werts (eines bestimmten Typs) ist mit dem Verhalten desselben Werts und Typs identisch, wenn er nicht eingebettet ist.|  
   

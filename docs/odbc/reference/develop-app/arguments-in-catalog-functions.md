@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287744"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumente in Katalogfunktionen
 Alle Katalogfunktionen akzeptieren Argumente, die mit denen eine Anwendung den Bereich der zurückgegebenen Daten einschränken kann. Z. B. die erste und zweite Aufrufe **SQLTables** Zurückgeben von Resultsets, die Informationen zu allen Tabellen enthält, während der dritte Aufruf gibt Informationen über die Orders-Tabelle zurück, in den folgenden Code:  
@@ -36,16 +36,16 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
 |Funktion|Argument|Geben Sie bei SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|Geben Sie bei SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
-|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID-ID-ID-ID|  
-|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA BW, BW PV|ID-ID-ID-ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName*  *FKTableName*|OA OA OA OA OA OA|ID-ID-ID-ID-ID-ID|  
-|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID-ID-ID|  
-|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA BW, BW PV|ID-ID-ID-ID|  
-|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID-ID-ID|  
-|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID-ID-ID|  
-|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID-ID-ID|  
-|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID-ID-ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *für TableType*|BW, BW PV VL|ID-ID ID VL|  
+|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID ID|  
+|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA BW, BW PV|ID ID ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
+|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA BW, BW PV|ID ID ID ID|  
+|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID ID ID|  
+|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID ID ID|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID  VL|  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

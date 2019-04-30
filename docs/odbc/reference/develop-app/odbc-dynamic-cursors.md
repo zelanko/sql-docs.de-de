@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312873"
 ---
 # <a name="odbc-dynamic-cursors"></a>Dynamische ODBC-Cursor
-Ein dynamischer Cursor handelt es sich um: dynamische. Sie können erkennen, dass alle Änderungen an der Mitgliedschaft, Reihenfolge und Werte des Resultsets nach der der Cursor geöffnet wird. Nehmen wir beispielsweise an ein dynamischer Cursor ruft zwei Zeilen und einer anderen Anwendung klicken Sie dann eine der Zeilen aktualisiert und löscht die andere. Wenn der dynamische Cursor anschließend versucht, diese Zeilen erneut abzurufen, die gelöschte Zeile nicht gefunden, aber neue Werte für die aktualisierte Zeile zurück.  
+Ein dynamischer Cursor handelt es sich um: dynamische. Sie können erkennen, dass alle Änderungen an der Mitgliedschaft, Reihenfolge und Werte des Resultsets nach der der Cursor geöffnet wird. Angenommen ein dynamischer Cursor ruft zwei Zeilen ab, und eine andere Anwendung aktualisiert daraufhin eine dieser Zeilen und löscht die andere. Wenn der dynamische Cursor anschließend versucht, diese Zeilen erneut abzurufen, die gelöschte Zeile nicht gefunden, aber neue Werte für die aktualisierte Zeile zurück.  
   
  Dynamische Cursor erkennen alle Updates, Lösch- und Einfügevorgänge, sowohl ihre eigenen und die von anderen Benutzern. (Dies unterliegt die Isolation von der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt.) Zeilenstatusarray, die vom Attribut SQL_ATTR_ROW_STATUS_PTR-Anweisung angegebenen diese Änderungen und SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED und SQL_ROW_ADDED enthalten kann. Es kann nicht SQL_ROW_DELETED zurückgegeben, da ein dynamic-Cursor keinen gelöschten Zeilen, die außerhalb des Rowsets zurückgibt und daher nicht mehr das Vorhandensein von die gelöschte Zeile im Resultset oder das entsprechende Element in der zeilenstatusarray erkennt. SQL_ROW_ADDED wird nur zurückgegeben, wenn eine Zeile, durch einen Aufruf von aktualisiert wird **SQLSetPos**, nicht verwendet werden, wenn sie von einem anderen Cursor aktualisiert wird.  
   

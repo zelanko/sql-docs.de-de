@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301371"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Ändern und Verarbeiten des Market Basket-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
   Bevor Sie das Association-Miningmodell, das Sie erstellt haben verarbeiten, müssen Sie die Standardwerte von zwei der Parameter ändern: *Unterstützung* und *Wahrscheinlichkeit*.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241169"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate-Methode (ADO)
 Bricht alle Änderungen an der aktuellen oder der neuen Zeile ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt vor dem Aufruf der [Update ](../../../ado/reference/ado-api/update-method.md) Methode.  
@@ -42,7 +42,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Wenn Sie im Bearbeitungsmodus befindet und Sie den aktuellen Datensatz verschoben werden soll (z. B. durch Verwendung der [verschieben](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), oder [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methoden), können Sie  **CancelUpdate** , alle ausstehenden Änderungen abzubrechen. Sie müssen möglicherweise dazu, wenn das Update erfolgreich an die Datenquelle gebucht werden kann. Z. B. eine versuchte löschen, ein Fehler auftritt, aufgrund von Verletzungen der referenziellen Integrität zu lassen, werden die **Recordset** im Bearbeitungsmodus befindet, nach einem Aufruf von [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
-## <a name="record"></a>Aufzeichnung (Record)  
+## <a name="record"></a>Datensatz  
  Die **CancelUpdate** -Methode bricht alle ausstehenden einfügungen oder löschungen von [Feld](../../../ado/reference/ado-api/field-object.md) Objekte aufweist, und bricht ausstehende Updates vorhandener Felder ab und stellt diese auf ihre ursprünglichen Werte wieder her. Die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft aller Felder in der **Felder** Auflistung nastaven NA hodnotu **AdFieldOK**.  
   
 ## <a name="applies-to"></a>Gilt für  

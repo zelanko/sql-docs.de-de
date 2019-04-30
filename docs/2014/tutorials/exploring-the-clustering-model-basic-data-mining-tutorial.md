@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280429"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Untersuchen des Clustering-Modells (Lernprogramm zu Data Mining-Grundlagen)
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus gruppiert Fälle in Clustern, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  

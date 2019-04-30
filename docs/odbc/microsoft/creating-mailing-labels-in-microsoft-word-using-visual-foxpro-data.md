@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312534"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Erstellen von Adressetiketten in Microsoft Word mithilfe von Visual FoxPro-Daten
 Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Windows 98-Dokument verwenden. Beispielsweise empfiehlt es sich zum Erstellen von Adressetiketten aus die Kundeninformationen in einer Visual FoxPro-Tabelle gespeichert.  

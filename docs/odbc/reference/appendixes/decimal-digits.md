@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240994"
 ---
 # <a name="decimal-digits"></a>Dezimalstellen
 Die *Dezimalstellen* decimal und numeric-Daten-Typen als die maximale Anzahl von Ziffern rechts vom Dezimaltrennzeichen und die Skalierung der Daten definiert ist. Für die ungefähre Anzahl Gleitkomma-Spalten oder Parameter sind keine Dezimalstellen definiert, da die Anzahl der Ziffern rechts neben dem Dezimalzeichen nicht festgelegt ist. Für "DateTime" oder das Intervall-Daten, die eine Komponente für Sekunden enthält, wird als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in die Sekundenkomponente der Daten die Dezimalstellen definiert.  

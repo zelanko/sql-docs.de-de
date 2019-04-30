@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228379"
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
 Alle Cursor werden temporäre Ressourcen zum Speichern der Daten verwendet. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Dateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* -Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert sind. Der Cursor wird aufgerufen, eine *serverseitige* -Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  

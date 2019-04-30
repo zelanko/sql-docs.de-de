@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239389"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
 
@@ -96,8 +96,8 @@ Im folgenden sind die Tastenkombinationen, um schnell in das integrierte Termina
 
 Key|Befehl
 ---|---
-**STRG +'**|Integriertes Terminal anzeigen
-**STRG + UMSCHALT + "**|Erstellen Sie neues terminal
+**STRG +'**| Integriertes Terminal anzeigen
+**STRG + UMSCHALT +'**| Erstellen Sie neues terminal
 **STRG + nach-oben**|Bildlauf nach oben
 **STRG + nach-unten**|Scrollen Sie nach unten
 **Strg + Bild**|Seite nach oben Scrollen

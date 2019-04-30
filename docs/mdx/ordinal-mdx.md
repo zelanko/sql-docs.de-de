@@ -1,5 +1,5 @@
 ---
-title: Ordinalzahl (MDX) | Microsoft Docs
+title: Ordinalzahl (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83036ec2ee0fa69c9ebb8cc2a905361eeae0aafa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278117"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
 
@@ -33,7 +33,7 @@ Level_Expression.Ordinal
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Ordinal** -Funktion wird häufig in Verbindung mit der **IIF** und **CurrentMember** Funktionen, um unterschiedliche Werte bedingt auf verschiedenen Hierarchieebenen anzuzeigen auf Grundlage der Position der einzelnen speziellen Zellen im Abfrageergebnis vorhergesagt. Beispielsweise können Sie die **Ordnungszahl** -Funktion Berechnungen auf bestimmten Ebenen ausführen und den Standardwert "N/v" auf anderen Ebenen angezeigt.  
+ Die **Ordnungszahl** Funktion wird häufig verwendet, in Verbindung mit der **IIF** und **CurrentMember** Funktionen, um unterschiedliche Werte bedingt auf verschiedenen anzeigen Hierarchieebenen, basierend auf der Position der einzelnen speziellen Zellen im Abfrageergebnis. Beispielsweise können Sie die **Ordnungszahl** -Funktion zum Ausführen von Berechnungen auf bestimmten Ebenen und den Standardwert "N/v" auf anderen Ebenen anzeigen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Ordinalzahl für die Calendar Quarter-Ebene in der Calendar-Hierarchie zurückgegeben.  

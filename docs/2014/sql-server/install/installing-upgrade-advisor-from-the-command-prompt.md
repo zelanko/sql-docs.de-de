@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301335"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installieren des Upgrade Advisors von der Eingabeaufforderung aus
   Sie können den Upgrade Advisor entweder mithilfe des Setup-Assistenten oder an der Eingabeaufforderung installieren. Die Eingabeaufforderung ermöglicht unbeaufsichtigte und automatisierte Installationen.  
@@ -35,9 +35,9 @@ ms.locfileid: "53589864"
   
 |Argument|Description|  
 |--------------|-----------------|  
-|/ q [n&#124;b&#124;r&#124;f]|Legt die Benutzeroberflächenebene fest:<br /><br /> n = keine Benutzeroberfläche<br /><br /> b = grundlegende Benutzeroberfläche (nur Status, keine Eingabeaufforderungen)<br /><br /> r = reduzierte Benutzeroberfläche (Dialogfeld am Ende der Installation)<br /><br /> f = Vollständige Benutzeroberfläche|  
+|/q[n&#124;b&#124;r&#124;f]|Legt die Benutzeroberflächenebene fest:<br /><br /> n = keine Benutzeroberfläche<br /><br /> b = grundlegende Benutzeroberfläche (nur Status, keine Eingabeaufforderungen)<br /><br /> r = reduzierte Benutzeroberfläche (Dialogfeld am Ende der Installation)<br /><br /> f = Vollständige Benutzeroberfläche|  
 |/L|Gibt Protokolldateioptionen an. Um alle Meldungen in *Log_file_name*, verwenden Sie **-L\*v**_Log_file_name_. Um nur Fehlermeldungen zu protokollieren, verwenden `-Le` *Log_file_name*.|  
-|ADDLOCAL = ALL&AMP;#124; ENTFERNEN = ALL&AMP;#124;REINSTALL = ALL|Gibt an, dass der Upgrade Advisor installiert (ADDLOCAL), entfernt (REMOVE) oder neu installiert (REINSTALL) wird.|  
+|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Gibt an, dass der Upgrade Advisor installiert (ADDLOCAL), entfernt (REMOVE) oder neu installiert (REINSTALL) wird.|  
 |UAINSTALLDIR=path|Installiert den Upgrade Advisor am von "path" angegebenen Speicherort.|  
   
 ## <a name="installation-examples"></a>Installationsbeispiele  

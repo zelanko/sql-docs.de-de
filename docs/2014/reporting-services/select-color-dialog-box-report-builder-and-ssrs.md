@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223471"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Farbe auswählen (Dialogfeld) (Berichts-Generator und SSRS)
   Im Dialogfeld **Farbe auswählen** können Sie Farboptionen für den Hintergrund einer einzelnen Zelle oder mehrerer Zellen innerhalb eines Datenbereichs, eines Textfelds oder eines Diagramms angeben.  

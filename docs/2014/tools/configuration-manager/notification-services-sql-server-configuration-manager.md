@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 663e313ad64ecc3f27a4004fb47ea2f4abfe46f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254490"
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Notification Services (SQL Server-Konfigurations-Manager)
   Dieser Dienst unterstützt [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Um die Diensteigenschaften anzuzeigen, klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Eigenschaften**.  

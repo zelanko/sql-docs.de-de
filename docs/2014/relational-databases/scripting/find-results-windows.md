@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225250"
 ---
 # <a name="find-results-windows"></a>Fenster Suchergebnisse
   In den beiden Fenstern mit der Bezeichnung Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  

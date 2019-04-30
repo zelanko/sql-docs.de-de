@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281092"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Konstruieren von interoperablen SQL­-Anweisungen
 Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen ausführen können, die ODBC-SQL-Grammatik verwenden. Eine Reihe von zusätzlichen Problemen werden jedoch über die Verwendung dieser Grammatik von interoperablen Anwendungen konfrontiert. Was tun z. B. eine Anwendung, um eine Funktion, z. B. outer Join verwenden, die von allen Datenquellen nicht unterstützt wird?  

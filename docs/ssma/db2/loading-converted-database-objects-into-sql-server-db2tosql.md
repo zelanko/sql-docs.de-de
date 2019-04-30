@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 21962c8849204db6f3e5f114b6f8f86994d53b35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298844"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Loading Converted Database Objects into SQLServer (DB2ToSQL)
 Nachdem Sie die DB2-Schemas zu konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie die resultierende Datenbankobjekte in laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können entweder SSMA, die die Objekte zu erstellen, oder Sie können Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Metadaten mit den eigentlichen Inhalt der aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  

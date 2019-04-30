@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299482"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten der Access-Datenbanken für die Migration (AccessToSQL)
 Bevor Sie die Access-Datenbanken migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen bestimmen, welche Datenbanken migrieren, und stellen Sie sicher, dass diese Datenbanken für die Migration bereit sind.  

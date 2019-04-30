@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264721"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Initialisieren von Objekten benutzerdefinierter Assemblys
   In einigen Fällen müssen Sie die Werte der Eigenschaften und Felder in Ihren benutzerdefinierten Assemblyklassen beim Instanziieren initialisieren. Wahrscheinlich müssen Sie die benutzerdefinierten Klassen mit den Werten initialisieren, die Ihnen von den globalen Objektauflistungen des Berichts zur Verfügung stehen. Hierzu überschreiben Sie die **OnInit**-Methode des **Code**-Objekts eines Berichts. Verwenden Sie das **Code**-Element der Berichtsdefinition, um auf **OnInit** zuzugreifen. Es gibt zwei Techniken zum Initialisieren von Eigenschaft oder Feldwerte der Klassen in einer benutzerdefinierten Assembly, die Sie in Ihrem Bericht verwenden möchten: Sie können entweder deklarieren und erstellen Sie eine neue Instanz Ihrer Klasse verwenden **OnInit**, oder Sie rufen eine öffentlich verfügbare Methode mit **OnInit**.  

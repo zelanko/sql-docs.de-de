@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Verwenden Sie den Transact-SQL-Editor zum Erstellen von Datenbankobjekten'
+title: 'Tutorial: Verwenden Sie den Transact-SQL-Editor zum Erstellen von Datenbankobjekten'
 titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL zu vereinfachen.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240904"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Erstellen und Ausführen von Abfragen, werden gespeicherte Prozeduren, Skripts usw. Datenbankexperten die zentralen Aufgaben. Dieses Tutorial veranschaulicht die wichtigsten Funktionen der T-SQL-Editor, um Datenbankobjekte zu erstellen.
 
@@ -68,7 +68,7 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. 
 
 2. Typ **Sql** im Editor, Pfeil nach unten bis zum **SqlCreateStoredProcedure**, und drücken Sie die *Registerkarte* Schlüssel (oder *EINGABETASTE*) beim Laden des gespeicherten erstellen Ausschnitt einer Prozedur.
 
-   ![Codeausschnitt-Liste](./media/tutorial-sql-editor/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Der Codeausschnitt der erstellen-gespeicherte Prozedur enthält zwei Felder, die richten Sie für schnelle Bearbeitung *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName*, mit der rechten Maustaste, und wählen **ändern alle Vorkommen**. Geben Sie nun *GetCustomer* und alle *StoredProcedureName* Einträge zu ändern, um *GetCustomer*.
 

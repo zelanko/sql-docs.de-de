@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d92d2784649e4366113b3070b54598df585370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240304"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Leistungsprobleme bei Desktop-Datenbanktreibern
 Um Kompatibilität mit vorhandenen ANSI-Anwendungen zu gewährleisten, werden die Datentypen SQL_WCHAR, SQL_WVARCHAR und SQL_WLONGVARCHAR als SQL_CHAR und SQL_VARCHAR, SQL_LONGVARCHAR für Microsoft Access 4.0 oder höher Datenquellen verfügbar gemacht. Die Datenquellen keine WIDE-CHAR-Datentypen zurückgeben aber die Daten noch müssen gesendet werden Jet im Formular Wide-Char. Es ist wichtig zu verstehen, dass die Konvertierung erfolgt, wenn eine Spalte des Typs SQL_C_CHAR, Parameter oder ein Ergebnis in eine SQL_CHAR-Datentyp in eine ANSI-Anwendung gebunden ist.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225468"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
   Der erste Schritt zur Verarbeitung der Ergebnisse in einer OLE DB-Anwendung besteht darin, die Merkmale des Resultsets zu bestimmen. Anschließend werden die Daten in Programmvariablen abgerufen. Wenn der Befehl eine gespeicherte Prozedur ausführt, müssen Sie außerdem wissen, wie die Rückgabecodes und Ausgabeparameter der gespeicherten Prozeduren verarbeitet werden.  

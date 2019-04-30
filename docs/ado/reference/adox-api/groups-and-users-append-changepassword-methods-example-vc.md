@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3f0929cc55fcf529e14ec17912f0a474f6e2257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311878"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Append- und ChangePassword-Methode für Gruppen und Benutzer – Beispiel (VC++)
 Dieses Beispiel zeigt die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), als auch die [Anfügen](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode der [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) durch Hinzufügen einer neuen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und ein neues [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) an das System. Die neue **Gruppe** wird angefügt, um die **Gruppen** -Sammlung der neuen **Benutzer**. Daher ist die neue **Benutzer** hinzugefügt wird die **Gruppe**. Darüber hinaus die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode dient zum Angeben der **Benutzer** Kennwort.  

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Mengenfunktionen | Microsoft Docs
+title: Verwenden von Mengenfunktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251590"
 ---
 # <a name="using-set-functions"></a>Verwenden von Mengenfunktionen
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743669"
   
  Mengenfunktionen sind, wie Elementfunktionen und Tupelfunktionen, wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in Analysis Services zu finden sind. Mengenfunktionen sind außerdem unverzichtbar zum Erzielen von Ergebnissen aus MDX-Abfragen (Multidimensional Expressions), weil Mengenausdrücke die Achsen einer MDX-Abfrage definieren.  
   
- Eine der meistverwendeten Mengenfunktionen ist die [Elemente &#40;festgelegt&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) -Funktion, die eine Menge aller Elemente aus einer Dimension, Hierarchie oder Ebene mit abgerufen. Das folgende Beispiel veranschaulicht ihre Verwendung in einer Abfrage:  
+ Eine der meistverwendeten Mengenfunktionen ist die [Mitglieder &#40;festgelegt&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) -Funktion, die eine Gruppe, die alle Elemente aus einer Dimension, Hierarchie oder Ebene enthält abruft. Das folgende Beispiel veranschaulicht ihre Verwendung in einer Abfrage:  
   
  `SELECT`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34743669"
   
  `FROM [Adventure Works]`  
   
- Die [Nachfolger &#40;MDX&#41; ](../mdx/descendants-mdx.md) -Funktion gleicht der **Kinder** funktionsfähig, jedoch ist somit leistungsstärker. Es gibt die Nachfolger eines beliebigen Elements auf einer oder mehreren Ebenen in einer Hierarchie zurück:  
+ Die [Nachfolger &#40;MDX&#41; ](../mdx/descendants-mdx.md) -Funktion gleicht der **untergeordnete Elemente** funktionieren, aber leistungsfähiger ist. Es gibt die Nachfolger eines beliebigen Elements auf einer oder mehreren Ebenen in einer Hierarchie zurück:  
   
  SELECT  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34743669"
   
  DESCENDANTS(  
   
- [Date].[Calendar].[Calendar Year].&[2004]  
+ [Date]. [Calendar]. [Kalenderjahr]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34743669"
   
  FROM [Adventure Works]  
   
- Die [Reihenfolge &#40;MDX&#41; ](../mdx/order-mdx.md) -Funktion können Sie den Inhalt einer Menge in aufsteigender oder absteigender Reihenfolge nach einem bestimmten numerischen Ausdruck zu sortieren. Die folgende Abfrage gibt dieselben Elemente in Zeilen zurück wie die vorherige Abfrage, ordnet diese aber nach dem Internet Sales Amount-Measure:  
+ Die [Reihenfolge &#40;MDX&#41; ](../mdx/order-mdx.md) -Funktion ermöglicht Ihnen, um den Inhalt einer Menge in aufsteigender oder absteigender Reihenfolge nach einem bestimmten numerischen Ausdruck zu sortieren. Die folgende Abfrage gibt dieselben Elemente in Zeilen zurück wie die vorherige Abfrage, ordnet diese aber nach dem Internet Sales Amount-Measure:  
   
  `SELECT`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34743669"
   
  Diese Abfrage veranschaulicht, wie die von einer Mengenfunktion (DESCENDANTS) zurückgegebene Menge als Parameter an eine andere Mengenfunktion, (ORDER) übergeben wird.  
   
- Filtert eine Menge nach bestimmten Kriterien ist sehr nützlich, beim Schreiben von Abfragen und zu diesem Zweck können Sie die [Filter &#40;MDX&#41; ](../mdx/filter-mdx.md) Funktion, wie im folgenden Beispiel dargestellt:  
+ Filtert eine Menge nach bestimmten Kriterien ist sehr nützlich, beim Schreiben von Abfragen und zu diesem Zweck können Sie die [Filter &#40;MDX&#41; ](../mdx/filter-mdx.md) Funktion, wie im folgenden Beispiel gezeigt:  
   
  `SELECT`  
   
@@ -151,7 +151,7 @@ ms.locfileid: "34743669"
   
  `FROM [Adventure Works]`  
   
- Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Z. B. die folgende Abfrage zeigt die [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) Funktion gibt die obersten n Elemente einer Menge zurück:  
+ Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Z. B. die folgende Abfrage zeigt die [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) Funktion gibt die ersten n Elemente in einem Satz zurück:  
   
  `SELECT`  
   
@@ -217,7 +217,7 @@ ms.locfileid: "34743669"
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Verwenden von Elementfunktionen](../mdx/using-member-functions.md)   
+ [Verwenden von Memberfunktionen](../mdx/using-member-functions.md)   
  [Using Tuple Functions (Verwenden von Tupelfunktionen)](../mdx/using-tuple-functions.md)  
   
   

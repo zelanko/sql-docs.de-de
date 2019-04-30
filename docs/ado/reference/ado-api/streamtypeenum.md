@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8337e439f1187857636396f8d07613cca157e846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311826"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Gibt den Typ der Daten in einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Gibt Binärdaten an.|  
 |**adTypeText**|2|Standard. Gibt an, die Textdaten, die im Zeichensatz angegeben ist [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  

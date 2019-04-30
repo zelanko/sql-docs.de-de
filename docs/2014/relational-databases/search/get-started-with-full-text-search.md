@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273218"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Datenbanken standardmäßig volltextfähig. Wenn Sie jedoch einen Volltextindex für eine Tabelle verwenden möchten, müssen Sie die Volltextindizierungsfunktion für die Spalten der Tabellen einrichten, auf die Sie mit der Volltext-Engine zugreifen möchten.  

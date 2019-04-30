@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224480"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
 Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, ruft der Treiber die Daten aus der Datenquelle. Bei Bedarf die Daten aus dem Datentyp konvertiert sie in dem der Treiber, die den angegebenen Datentyp abgerufen die *TargetType* -Argument in **SQLBindCol** oder **SQLGetData.** Zum Schluss speichert die Daten in den Speicherort verweist die *TargetValuePtr* -Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld, der die ARD).  
@@ -53,24 +53,24 @@ Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, 
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [SQL to C: Character (SQL zu C: Zeichen)](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL zu C: Zeichen](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL to C: Numeric (SQL zu C: Numerisch)](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL zu C: Numerisch](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL to C: Bit (SQL zu C: Bit)](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL zu C: Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL to C: Binary (SQL zu C: Binär)](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL zu C: Binary](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL to C: Date (SQL zu C: Datum)](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL zu C: Datum](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL to C: GUID (SQL zu C: GUID)](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL zu C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL to C: Time (SQL zu C: Zeit)](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL zu C: Zeit](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL to C: Timestamp (SQL zu C: Zeitstempel)](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL zu C: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL to C: Year-Month Intervals (SQL zu C: Jahr-Monat-Intervalle)](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL zu C: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL to C: Day-Time Intervals (SQL zu C: Taginvervalle)](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL zu C: Tag-Zeitintervalle](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL to C Data Conversion Examples (Beispiele für die Datenkonvertierung von SQL zu C)](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

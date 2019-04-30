@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313863"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Enterprise Information Management mit SSIS, MDS und DQS [Lernprogramm]
   Das Verwalten von Informationen in einem Unternehmen schließt in der Regel die Integration von Daten im gesamten Unternehmen und darüber hinaus ein, außerdem Bereinigen der Daten, Abgleichen der Daten zum Entfernen aller Duplikate, Standardisieren der Daten, Erweitern der Daten, Sicherstellen, dass die Daten gesetzliche und Kompatibilitätsanforderungen erfüllen, und Speichern der Daten an einem zentralen Ort mit allen erforderlichen Sicherheitseinstellungen.  
@@ -48,7 +48,7 @@ ms.locfileid: "56035401"
   
     3.  Data Quality Services (DQS)  
   
-    4.  SQL Server Datatools  
+    4.  SQL Server Data Tools  
   
          Finden Sie unter [SQL Server 2012-Installationshandbuch](../database-engine/install-windows/installation-for-sql-server.md) ausführliche Informationen zum Installieren des Produkts.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "56035401"
 |[Lesson 5: Automatisierung der Bereinigung und Abgleich mit SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|In dieser Lektion erstellen Sie eine SSIS-Lösung, die Eingabedaten mithilfe von DQS bereinigt, die bereinigten Daten abgleicht, um Duplikate zu entfernen, und die bereinigten und abgeglichenen Daten automatisch in MDS speichert.|75|  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Um das Lernprogramm zu starten, fahren Sie mit der ersten Lektion fort: [Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
+ Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion: [Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   

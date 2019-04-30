@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298634"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
   Für Tabellen, die Sparsespalten aufweisen, können Sie einen Spaltensatz festlegen, der alle Sparsespalten in der Tabelle zurückgibt. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Wie auch berechnete Spalten werden Spaltensätze nicht physisch in der Tabelle gespeichert. Der Unterschied zwischen einem Spaltensatz und einer berechneten Spalte besteht darin, dass der Spaltensatz direkt aktualisiert werden kann.  

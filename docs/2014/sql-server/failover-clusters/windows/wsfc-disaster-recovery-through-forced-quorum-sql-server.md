@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224627"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
   Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
   
--   **Bevor Sie beginnen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
+-   **Vorbereitung:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
   
 -   **WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren** [WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren](#Main)  
   

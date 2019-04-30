@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297501"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VC++)
 Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code setzt voraus, das Vorhandensein der Gruppe Accounting (finden Sie unter den [Gruppen und Benutzer Append, ChangePassword Methods Example (VC++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) zu erfahren, wie Sie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle mit Produktkategorien, die in das Buchhaltungszahlenformat festgelegt ist.  

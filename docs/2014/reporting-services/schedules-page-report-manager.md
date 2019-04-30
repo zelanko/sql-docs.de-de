@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237833"
 ---
 # <a name="schedules-page-report-manager"></a>Zeitpläne (Seite) (Berichts-Manager)
   Auf der Seite Zeitpläne können Sie freigegebene Zeitpläne erstellen, ändern, löschen, anhalten oder fortsetzen. Ein freigegebener Zeitplan ist ein von Ihnen erstellter benannter Zeitplan, den Sie getrennt von Berichten, Abonnements und anderen Prozessen verwalten, die Zeitplaninformationen verwenden. Benutzer können die von Ihnen bereitgestellten Zeitpläne auswählen.  

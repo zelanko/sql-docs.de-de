@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Exportieren Sie die Ergebnisse der Abgleichsaktivität in eine Excel-Datei | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Exportieren Sie die Ergebnisse der Abgleichsaktivität in eine Excel-Datei | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250891"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Aufgabe 4: Exportieren der Ergebnisse der Abgleichsaktivität in eine Excel-Datei
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Aufgabe 4: Exportieren der Ergebnisse der Abgleichaktivität in eine Excel-Datei
   In dieser Aufgabe exportieren Sie die Ergebnisse aus der Abgleichsaktivität in eine Excel-Datei.  
   
 1.  In der **exportieren** Seite **Excel-Datei** für die **Zieltyp**.  
@@ -30,11 +30,11 @@ ms.locfileid: "56020441"
   
 5.  Überprüfen Sie, ob **Pivotdatensatz** ausgewählt ist, für die **Survivorship-Regel**. Wenn Sie diese Option wählen, wird der Pivotdatensatz für jeden Cluster für die Ausgabe aus einem Cluster ausgewählt. Die anderen Optionen für die Survivorship-Regel sind:  
   
-    1.  **Vollständigster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl ausgefüllter Felder.  
+    1.  **Vollständigster Datensatz:** Der Survivor-Datensatz ist der mit der größten Anzahl ausgefüllter Felder.  
   
-    2.  **Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl von Begriffen in Quellfeldern.  
+    2.  **Längster Datensatz:** Der Survivor-Datensatz ist der mit der größten Anzahl von Begriffen in Quellfeldern.  
   
-    3.  **Vollständigster und Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl ausgefüllter Felder und mit der größten Anzahl von Begriffen in jedem Feld.  
+    3.  **Vollständigster und Längster Datensatz:** Der Survivor-Datensatz ist der Datensatz mit der größten Anzahl ausgefüllter Felder und verfügt über die größte Anzahl von Begriffen in jedem Feld.  
   
      ![Exportieren von Ergebnissen aus der Seite "übereinstimmend"](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "Exportieren von Ergebnissen aus der Seite \"übereinstimmend\"")  
   

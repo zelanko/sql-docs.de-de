@@ -1,5 +1,5 @@
 ---
-title: KPIGoal-Element (MDX) | Microsoft Docs
+title: KPIGoal (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6b85136e5fde72635f5691b5172232e7d601a24
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272826"
 ---
 # <a name="kpigoal-mdx"></a>KPIGoal (MDX)
 
@@ -35,7 +35,7 @@ KPIGoal(KPI_Name)
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel gibt die KPI-Wert des KPI-Ziels, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
+ Das folgende Beispiel gibt die KPI-Wert, KPI-Ziel, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
   
 ```  
 SELECT  

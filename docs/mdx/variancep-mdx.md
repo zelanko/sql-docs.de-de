@@ -1,5 +1,5 @@
 ---
-title: VarianceP (MDX) | Microsoft Docs
+title: VarianceP (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58987cc301b3ee329be841d9c97d9a7e8e42d88d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251523"
 ---
 # <a name="variancep-mdx"></a>VarianceP (MDX)
 

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232069"
 ---
 # <a name="configdriver-function"></a>ConfigDriver-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 2.5  
+ Eingeführt in Version: ODBC 2.5  
   
  **Zusammenfassung**  
  **ConfigDriver** können Sie ein Setup-Programm installieren und deinstallieren Sie die Funktionen ohne das Programm aufrufen **ConfigDSN**. Diese Funktion führt treiberspezifische Funktionen, wie z. B. treiberspezifische Systeminformationen zu erstellen und DSN-Konvertierung auszuführen, während der Installation, sowie Informationen systemmodifizierungen bereinigen, während der Deinstallation. Diese Funktion wird durch den Setup-DLL für Treiber oder eine separate Setup-DLL verfügbar gemacht.  
@@ -52,12 +52,12 @@ BOOL ConfigDriver(
  *hwndParent*  
  [Eingabe] Handle des übergeordneten Fensters. Die Funktion wird keine Dialogfelder angezeigt, wenn das Handle null ist.  
   
- *Häufigsten*  
+ *fRequest*  
  [Eingabe] Typ der Anforderung. Die *häufigsten* Argument muss einen der folgenden Werte enthalten:  
   
- ODBC_INSTALL_DRIVER: Installieren Sie einen neuen Treiber.  
+ ODBC_INSTALL_DRIVER: Einen neuen Treiber zu installieren.  
   
- ODBC_REMOVE_DRIVER: Entfernen eines Treibers.  
+ ODBC_REMOVE_DRIVER: Treiber zu entfernen.  
   
  Diese Option kann auch sein treiberspezifische, in diesem Fall die *häufigsten* Argument für die erste Option muss über ODBC_CONFIG_DRIVER_MAX + 1 starten. Die *häufigsten* Argument für eine zusätzliche Option muss auch aus einem Wert größer als ODBC_CONFIG_DRIVER_MAX + 1 beginnen.  
   

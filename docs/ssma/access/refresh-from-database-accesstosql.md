@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299122"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Refresh from Database (AccessToSQL) aktualisieren
 Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte aus der Access-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  

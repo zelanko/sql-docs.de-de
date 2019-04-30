@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278485"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -36,7 +36,7 @@ MemberToStr(Member_Expression)
  Diese Funktion gibt eine Zeichenfolge zurück, die den eindeutigen Namen eines Elements enthält. Es wird normalerweise verwendet, eines Members Uniquename an eine externe Funktion zu übergeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Zeichenfolge [Geography].[Geography].[Country].&[United States] zurückgegeben:  
+ Das folgende Beispiel gibt die Zeichenfolge [Geography] zurück. [Geography]. [Country]. & [United States]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   

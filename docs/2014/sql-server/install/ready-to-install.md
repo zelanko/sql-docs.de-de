@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276088"
 ---
 # <a name="ready-to-install"></a>Bereit zur Installation
   Die Seite Installationsbereit enthält eine Zusammenfassung der Funktionen, die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert oder geändert werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Auf dieser Seite stehen Ihnen die folgenden Optionen zur Verfügung:  
   
 -   Um mit dem Setup fortzufahren, klicken Sie auf **Installieren**.  

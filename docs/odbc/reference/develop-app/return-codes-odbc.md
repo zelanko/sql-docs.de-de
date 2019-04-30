@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254142"
 ---
 # <a name="return-codes-odbc"></a>ODBC-Rückgabecodes
 Jede Funktion in der ODBC gibt einen Code, bekannt als die *Rückgabecode,* gibt den Erfolg oder Fehler bei der Funktion an. Die Programmlogik basiert im Allgemeinen auf Rückgabecodes.  
@@ -51,6 +51,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|Die Funktion wurde erfolgreich abgeschlossen, möglicherweise mit einem nicht schwerwiegenden Fehler (Warnung). Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen.|  
 |SQL_ERROR|Fehler bei der Funktion. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen. Der Inhalt der Ausgabeargumente an die Funktion ist nicht definiert.|  
 |SQL_INVALID_HANDLE|Fehler bei der Funktion aufgrund eines ungültigen Handles für Umgebung "," Verbindung ","-Anweisung "oder"-Deskriptor. Dies weist einen Programmierungsfehler hin. Keine zusätzlichen Informationen steht in **SQLGetDiagRec** oder **SQLGetDiagField**. Dieser Code wird zurückgegeben, nur, wenn das Handle ein null-Zeiger ist oder den falschen Typ hat, z. B. wenn ein Anweisungshandle für ein Argument übergeben wird, die ein Verbindungshandle erforderlich sind.|  
-|SQL_NO_DATA|Es war keine weiteren Daten verfügbar. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen. Einen oder mehrere treiberdefinierten Statusdatensätze in der Klasse 02xxx können zurückgegeben werden. **Hinweis:** In ODBC 2. *X*, damit die Code hieß SQL_NO_DATA_FOUND zurückgegeben.|  
-|SQL_NEED_DATA ZURÜCKGEGEBEN.|Mehr Daten erforderlich ist, z. B. wenn die Parameterdaten zum Zeitpunkt der Ausführung gesendet wird, oder zusätzliche Verbindungsinformationen ist erforderlich. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen, ggf. abzurufen.|  
+|SQL_NO_DATA|Es war keine weiteren Daten verfügbar. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen. Einen oder mehrere treiberdefinierten Statusdatensätze in der Klasse 02xxx können zurückgegeben werden. **Hinweis**:  In ODBC 2. *x*, damit die Code hieß SQL_NO_DATA_FOUND zurückgegeben.|  
+|SQL_NEED_DATA|Mehr Daten erforderlich ist, z. B. wenn die Parameterdaten zum Zeitpunkt der Ausführung gesendet wird, oder zusätzliche Verbindungsinformationen ist erforderlich. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen, ggf. abzurufen.|  
 |SQL_STILL_EXECUTING|Eine Funktion, die asynchron gestartet wurde, wird weiterhin ausgeführt. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen, ggf. abzurufen.|

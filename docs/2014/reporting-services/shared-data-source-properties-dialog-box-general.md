@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222956"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Eigenschaften der freigegebenen Datenquelle (Dialogfeld), Allgemein
   Im Dialogfeld **Eigenschaften der freigegebenen Datenquelle** können Sie die Verbindungsinformationen für eine freigegebene Datenquelle im Bericht anzeigen und ändern.  

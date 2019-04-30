@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298543"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase-ASE (SybaseToSQL)
 Zum Migrieren von Sybase Adaptive Server Enterprise (ASE) Datenbanken auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, Sie müssen eine Verbindung mit dem Adaptive Server mit den Datenbanken, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken auf dem adaptiven Server ab und zeigt Datenbankmetadaten in der Sybase-Metadaten-Explorer-Bereich. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
@@ -29,21 +29,21 @@ Metadaten für die Adaptive Server wird nicht automatisch aktualisiert. Stattdes
 ## <a name="required-ase-permissions"></a>Erforderliche ASE-Berechtigungen  
 Das Konto, das verwendet wird, für die Verbindung, die ASE muss zumindest **öffentliche** Zugriff auf die master-Datenbank und alle Quelldatenbanken für die Migration zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Darüber hinaus muss der Benutzer zum Auswählen von Berechtigungen für Tabellen, die migriert werden, SELECT-Berechtigungen für die folgenden Systemtabellen verfügen:  
   
--   [Source_db].dbo.sysobjects  
+-   [source_db].dbo.sysobjects  
   
--   [Source_db].dbo.syscolumns  
+-   [source_db].dbo.syscolumns  
   
--   [Source_db].dbo.sysusers  
+-   [source_db].dbo.sysusers  
   
--   [Source_db].dbo.systypes  
+-   [source_db].dbo.systypes  
   
--   [Source_db].dbo.sysconstraints  
+-   [source_db].dbo.sysconstraints  
   
--   [Source_db].dbo.syscomments  
+-   [source_db].dbo.syscomments  
   
--   [Source_db].dbo.sysindexes  
+-   [source_db].dbo.sysindexes  
   
--   [Source_db].dbo.sysreferences  
+-   [source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   

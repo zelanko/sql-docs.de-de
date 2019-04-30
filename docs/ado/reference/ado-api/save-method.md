@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 55ba7b2fc9e1b6ea0eaeb44989e1bfb64b44d9d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315210"
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -36,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameter  
  *Ziel*  
- Optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
+ Dies ist optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
   
  *PersistFormat*  
- Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
+ Dies ist optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
   
 ## <a name="remarks"></a>Hinweise  
  Die [Methode speichern](../../../ado/reference/ado-api/save-method.md) Methode kann nur aufgerufen werden, auf einem geöffneten **Recordset**. Verwenden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode, um spätere Wiederherstellung der **Recordset** aus *Ziel*.  

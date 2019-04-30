@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283561"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Arbeiten mit SSMA-Projekten (OracleToSQL)
 Migrieren von Oracle-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei mit den folgenden Informationen an:  
@@ -100,7 +100,7 @@ Wenn Sie ein Projekt speichern, behält SSMA den projekteinstellungen und option
   
         Speichern von Metadaten kann mehrere Minuten dauern. Wenn Sie noch keine Metadaten speichern möchten, Sie keine Kontrollkästchen aktivieren.  
   
-    2.  Klicken Sie auf die **speichern** Schaltfläche.  
+    2.  Klicken Sie auf die Schaltfläche **Speichern**.  
   
         SSMA analysiert die Oracle-Schemas und speichern Sie die Metadaten zu der Projektdatei.  
   

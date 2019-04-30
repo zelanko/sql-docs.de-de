@@ -24,26 +24,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239146"
 ---
 # <a name="monitor-memory-usage"></a>Überwachen der Speicherauslastung
   Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten regelmäßig überwacht werden, um sicherzustellen, dass sich die Speicherauslastung im normalen Bereich bewegt.  
   
  Um den Arbeitsspeicherstatus niedrig zu halten, verwenden Sie bei der Überwachung folgende Objektleistungsindikatoren:  
   
--   **Arbeitsspeicher: Verfügbare Bytes**  
+-   **Arbeitsspeicher: Verfügbare Byte**  
   
--   **Arbeitsspeicher: Seiten/Sekunde**  
+-   **Arbeitsspeicher: Seiten/s**  
   
  Der **Verfügbare Bytes** -Leistungsindikator gibt an, wie viele Bytes an Arbeitsspeicher derzeit für die Verwendung durch Prozesse verfügbar sind. Der Indikator **Seiten/s** gibt die Anzahl der Seiten an, die entweder aufgrund von harten Seitenfehlern vom Datenträger abgerufen oder auf den Datenträger geschrieben wurden, um Speicherplatz im Arbeitssatz aufgrund von Seitenfehlern freizugeben.  
   
- Niedrige Werte für den **Verfügbare Bytes** -Leistungsindikator können ein Anzeichen dafür sein, dass insgesamt zu wenig Arbeitsspeicher auf dem Computer vorhanden ist oder dass eine Anwendung keinen Arbeitsspeicher freigibt. Ein hoher Wert für den Indikator **Seiten/s** kann auf überhöhte Auslagerungen hindeuten. Überwachen Sie den **Speicher: Seitenfehler/s** Zähler, um sicherzustellen, dass die Datenträgeraktivität nicht durch Auslagern verursacht wird.  
+ Niedrige Werte für den **Verfügbare Bytes** -Leistungsindikator können ein Anzeichen dafür sein, dass insgesamt zu wenig Arbeitsspeicher auf dem Computer vorhanden ist oder dass eine Anwendung keinen Arbeitsspeicher freigibt. Ein hoher Wert für den Indikator **Seiten/s** kann auf überhöhte Auslagerungen hindeuten. Überwachen der **Arbeitsspeicher: Seitenfehler/s**-Zähler, um sicherzustellen, dass die Datenträgeraktivität nicht durch Paging verursacht wird.  
   
- Ein geringes Maß an Auslagerungen (und somit an Seitenfehlern) ist normal, selbst wenn der Computer über ausreichend Arbeitsspeicher verfügt. Der Microsoft-Manager für virtuellen Arbeitsspeicher (VMM, Virtual Memory Manager) entnimmt Seiten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Prozessen, um die Größen der Workingsets dieser Prozesse anzupassen. Infolge der VMM-Aktivität kommt es häufig zu Seitenfehlern. Um zu ermitteln, ob die überhöhten Auslagerungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einem anderen Prozess verursacht werden, sollten Sie den **Prozess: Seitenfehler/s** Leistungsindikator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozessinstanz.  
+ Ein geringes Maß an Auslagerungen (und somit an Seitenfehlern) ist normal, selbst wenn der Computer über ausreichend Arbeitsspeicher verfügt. Der Microsoft-Manager für virtuellen Arbeitsspeicher (VMM, Virtual Memory Manager) entnimmt Seiten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Prozessen, um die Größen der Workingsets dieser Prozesse anzupassen. Infolge der VMM-Aktivität kommt es häufig zu Seitenfehlern. Um zu bestimmen, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einem anderen Prozess die Ursache für die überhöhten auslagerungen der **Prozess: Seitenfehler/s**-Zähler der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessinstanz überprüfen.  
   
  Weitere Informationen zum Auflösen überhöhter Auslagerungen finden Sie in der Dokumentation des Windows-Betriebssystems.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "52801562"
   
  Um die Menge des von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Arbeitsspeichers zu überwachen, sollten Sie die folgenden Leistungsindikatoren überprüfen:  
   
--   **Prozess: Workingset**  
+-   **Prozess: Arbeitssatz**  
   
--   **SQLServer: Puffer-Manager: Puffercache-Trefferquote**  
+-   **SQL Server: Puffer-Manager: Puffercache-Trefferquote**  
   
--   **SQLServer: Puffer-Manager: Datenbankseiten**  
+-   **SQL Server: Puffer-Manager: Datenbankseiten**  
   
--   **SQLServer: Speicher-Manager: Serverspeicher gesamt (KB)**  
+-   **SQL Server: Speicher-Manager: Serverspeicher gesamt (KB)**  
   
  Der Indikator **WorkingSet** gibt die Menge an Arbeitsspeicher an, die von einem Prozess verwendet wird. Wenn dieser Wert konstant unter der Menge an Arbeitsspeicher liegt, die in den Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** festgelegt ist, wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass zu viel Arbeitsspeicher beansprucht wird.  
   

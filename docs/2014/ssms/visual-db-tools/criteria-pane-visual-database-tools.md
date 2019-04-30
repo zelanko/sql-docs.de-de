@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270595"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
   Im Kriterienbereich können Sie Abfrageoptionen angeben, d.h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
@@ -60,7 +60,7 @@ ms.locfileid: "52797912"
 |Spalte|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt entweder einen alternativen Namen für eine Spalte an oder den Namen, den Sie für eine berechnete Spalte verwenden können.|  
 |Tabelle|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt den Namen der Tabelle oder des Objekts mit Tabellenstruktur für die zugeordnete Datenspalte an. Diese Spalte ist bei berechneten Spalten leer.|  
-|Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br /> Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte in Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
+|Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br /> Hinweis: Wenn die Datenbank zulässig ist, können eine Datenspalte für Sortier- oder Suchklauseln Sie ohne diese in das Resultset anzuzeigen.|  
 |Sortiertyp|SELECT, INSERT FROM|Gibt an, dass die zugeordnete Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird. Zeigt außerdem an, ob aufsteigend oder absteigend sortiert wird.|  
 |Sortierreihenfolge|SELECT, INSERT FROM|Gibt die Sortierpriorität für Datenspalten an, die zum Sortieren des Resultsets verwendet werden. Wenn Sie die Sortierreihenfolge für eine Datenspalte ändern, wird die Sortierreihenfolge für alle anderen Spalten entsprechend aktualisiert.|  
 |Gruppieren nach|SELECT, INSERT FROM, MAKE TABLE|Gibt an, dass die zugeordnete Datenspalte zum Erstellen einer Aggregatabfrage verwendet wird. Diese Datenblattspalte wird nur angezeigt, wenn Sie im Menü **Extras** die Option **Gruppieren nach** ausgewählt oder im SQL-Bereich eine GROUP BY-Klausel hinzugefügt haben.<br /><br /> In der Standardeinstellung ist der Wert dieser Spalte auf **Gruppieren nach**gesetzt, und die Spalte ist Teil der GROUP BY-Klausel.<br /><br /> Wenn Sie in eine Zelle in dieser Spalte wechseln und eine Aggregatfunktion auf die zugeordnete Datenspalte anwenden, wird für den sich ergebenden Ausdruck eine Ausgabespalte zum Resultset hinzugefügt.|  

@@ -1,5 +1,5 @@
 ---
-title: Order (MDX) | Microsoft Docs
+title: Order (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277844"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -39,19 +39,19 @@ Order(Set_Expression, String_Expression
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
  *String_Expression*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um einen gültigen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, der eine als Zeichenfolge ausgedrückte Zahl zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Reihenfolge** Funktion kann entweder hierarchisch sein (angegeben mit der **ASC** oder **"DESC"** Flag) oder hierarchisch (angegeben mit der **BASC** oder **BDESC** kennzeichnen; die **B** steht für "Break Hierarchy"). Wenn **ASC** oder **"DESC"** angegeben wird, die **Reihenfolge** Funktion zuerst ordnet die Elemente entsprechend ihrer Position in der Hierarchie, und sortiert dann jede Ebene. Wenn **BASC** oder **BDESC** angegeben wird, die **Reihenfolge** Funktion ordnet die Elemente in der Menge ungeachtet der Hierarchie. Kein Flag angegeben ist, **ASC** ist die Standardeinstellung.  
+ Die **Reihenfolge** Funktion kann entweder hierarchisch sein (angegeben mit der **ASC** oder **DESC** Flag) oder hierarchisch (angegeben mit der **BASC**  oder **BDESC** kennzeichnen; die **B** steht für "Break Hierarchy"). Wenn **ASC** oder **DESC** angegeben wird, die **Reihenfolge** -Funktion zuerst ordnet die Elemente entsprechend ihrer Position in der Hierarchie und sortiert dann jede Ebene. Wenn **BASC** oder **BDESC** angegeben wird, die **Reihenfolge** Funktion ordnet die Elemente in der Menge ungeachtet der Hierarchie. Kein Flag angegeben ist, **ASC** ist die Standardeinstellung.  
   
- Wenn die **Reihenfolge** Funktion mit einem Satz verwendet wird, in denen zwei oder mehr Hierarchien kreuzverknüpft sind, sind und die **"DESC"** Flag verwendet wird, ist nur die Elemente der letzten Hierarchie im Satz befohlen. Dies ist eine Änderung im Vergleich zu Analysis Services 2000, wo alle Hierarchien im Satz befohlen wurden.  
+ Wenn die **Reihenfolge** Funktion mit einem Satz verwendet wird, in denen zwei oder mehr Hierarchien kreuzverknüpft sind, sind und die **DESC** Flag verwendet wird, werden nur die Elemente der letzten Hierarchie im Satz sortiert. Dies ist eine Änderung im Vergleich zu Analysis Services 2000, wo alle Hierarchien im Satz befohlen wurden.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird zurückgegeben, aus der **Adventure Works** cube die Anzahl der Bestellungen des Wiederverkäufers für alle Kalenderquartale der Kalenderhierarchie der Date-Dimension. Die **Reihenfolge** -Funktion ordnet den Satz für die ROWS-Achse neu. Die **Reihenfolge** -Funktion sortiert die Menge von `[Reseller Order Count]` hierarchische absteigend von bestimmt die `[Calendar]` Hierarchie.  
+ Im folgende Beispiel wird von der **Adventure Works** cube die Anzahl der Bestellungen des Wiederverkäufers für alle Kalenderquartale der Kalenderhierarchie auf der Date-Dimension. Die **Reihenfolge** Funktion ordnet den Satz für die ROWS-Achse. Die **Reihenfolge** -Funktion sortiert die Menge von `[Reseller Order Count]` hierarchische absteigend, laut der `[Calendar]` Hierarchie.  
   
  `SELECT`  
   
@@ -69,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Beachten Sie, dass in diesem Beispiel bei der **"DESC"** Flag "" wird geändert, um **BDESC**, die Hierarchie unterbrochen wird und die Liste der Kalenderquartale wird ohne Beachtung der Hierarchie zurückgegeben:  
+ Beachten Sie, dass wie in diesem Beispiel ist bei der **DESC** Flag geändert wird, um **BDESC**, die Hierarchie unterbrochen wird, und die Liste der Kalenderquartale wird ohne Beachtung der Hierarchie zurückgegeben:  
   
  `SELECT`  
   
@@ -87,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Im folgenden Beispiel wird das Reseller Sales-Measure für die fünf bestverkauften Produktunterkategorien unabhängig von der Hierarchie basierend auf Reseller Gross Profit zurückgegeben. Die **Teilmenge** Funktion wird verwendet, um nur die ersten 5 Tupeln in der Menge zurück, nach dem Sortieren des Ergebnisses mithilfe der **Reihenfolge** Funktion.  
+ Im folgenden Beispiel wird das Reseller Sales-Measure für die fünf bestverkauften Produktunterkategorien unabhängig von der Hierarchie basierend auf Reseller Gross Profit zurückgegeben. Die **Teilmenge** Funktion verwendet, um nur die ersten 5 Tupeln in der Gruppe zurückzugeben, nach dem Sortieren des Ergebnisses mithilfe der **Reihenfolge** Funktion.  
   
  `SELECT Subset`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Im folgenden Beispiel wird die **Rang** Funktion, um die Elemente der City-Hierarchie, rank basierend auf dem Reseller Sales Amount-Measure und klicken Sie dann in der Rangreihenfolge anzeigt. Mithilfe der **Reihenfolge** -Funktion zum vorsortieren der Menge der Elemente der City-Hierarchie, die Sortierung nur einmal ausgeführt und anschließend ein linearer Scan, bevor angezeigt wird, der Sortierreihenfolge.  
+ Im folgenden Beispiel wird die **Rang** Funktion, um die Elemente der City-Hierarchie Rangfolge basierend auf dem Reseller Sales Amount-Measure, und Sie anschließend in der Rangreihenfolge. Mithilfe der **Reihenfolge** -Funktion zum vorsortieren der Menge der Elemente der City-Hierarchie, die Sortierung nur einmal durchgeführt und anschließend ein linearer Scan vor der Anzeige der Sortierreihenfolge.  
   
 ```  
 WITH   
@@ -127,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- Im folgende Beispiel gibt die Anzahl der Produkte in der Gruppe, die eindeutig sind, mithilfe der **Reihenfolge** Funktion, um die Reihenfolge der nicht leeren Tupel vor Verwendung der **Filter** Funktion. Die **CurrentOrdinal** Funktion zu vergleichen und Ausschließen von Gleichrangigkeit verwendet wird.  
+ Das folgende Beispiel gibt die Anzahl der Produkte in der Gruppe, die eindeutig ist, mit der **Reihenfolge** Funktion, um die Reihenfolge der nicht leeren Tupel vor Verwendung der **Filter** Funktion. Die **CurrentOrdinal** Funktion zum Vergleichen und Ausschließen von Gleichrangigkeit verwendet wird.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -161,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- Um zu verstehen, wie die **"DESC"** flag mit Sätzen von Tupeln funktioniert, betrachten Sie zuerst die Ergebnisse der folgenden Abfrage:  
+ Um zu verstehen wie das **DESC** flag mit Sätzen von Tupeln funktioniert, betrachten Sie zuerst die Ergebnisse der folgenden Abfrage:  
   
 ```  
   
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- Auf der Zeilenachse sehen Sie, dass die Vertriebsgebietsgruppen in absteigender Reihenfolge des Steuerbetrags wie folgt sortiert wurden: Nordamerika, Europa, Pazifik, NA. Sehen Sie sich nun was geschieht, wenn wir Crossjoin aus dem Satz der Vertriebsgebietsgruppen mit dem Satz von Produktunterkategorien und Anwenden der **Reihenfolge** -Funktion auf die gleiche Weise wie folgt:  
+ Auf der Zeilenachse sehen Sie sich, dass die Vertriebsgebietsgruppen in absteigender Reihenfolge nach Steuerbetrag wie folgt angeordnet wurden: Nordamerika, Europa, Pazifik, Na Jetzt finden Sie unter Was geschieht, wenn wir Crossjoin aus dem Satz der Vertriebsgebietsgruppen mit den Produktunterkategorien Kreuzverknüpfen und Anwenden der **Reihenfolge** -Funktion auf die gleiche Weise wie folgt:  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- Während der Satz von Produktunterkategorien in absteigender, hierarchischer Reihenfolge angeordnet wurde, werden die Vertriebsgebietsgruppen jetzt nicht sortiert und werden in der Reihenfolge angezeigt, in der sie auf der Hierarchie angezeigt werden: Europa, NA, Nordamerika und Pazifik. Das liegt daran, dass nur die letzte Hierarchie im Satz von Tupeln, Produktunterkategorien, sortiert ist. Um das Verhalten von Analysis Services 2000 zu reproduzieren, verwenden Sie eine Reihe von geschachtelten **generieren** Funktionen für jeden Satz zu sortieren, bevor er kreuzverknüpft sind, z. B. ist:  
+ Während der Satz von Produktunterkategorien in absteigender, hierarchischen Reihenfolge angeordnet wurde die Vertriebsgebietsgruppen jetzt nicht sortiert sind, und werden in der Reihenfolge, die sie in der Hierarchie angezeigt werden: Europa, NA, Nordamerika und Pazifik. Das liegt daran, dass nur die letzte Hierarchie im Satz von Tupeln, Produktunterkategorien, sortiert ist. Um das Verhalten von Analysis Services 2000 zu reproduzieren, verwenden Sie eine Reihe von geschachtelten **generieren** Funktionen, um jeden Satz zu sortieren, bevor er kreuzverknüpft wird, z. B. ist:  
   
 ```  
   

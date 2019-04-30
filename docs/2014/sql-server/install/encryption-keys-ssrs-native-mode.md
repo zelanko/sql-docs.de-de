@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223246"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Verschlüsselungsschlüssel (einheitlicher SSRS-Modus)
   Verwenden Sie die Seite "Verschlüsselungsschlüssel", um den symmetrischen Schlüssel zu verwalten, der zum Ver- und Entschlüsseln von Daten auf einem Berichtsserver verwendet wird. Die Verwaltung der Verschlüsselungsschlüssel ist ein wichtiger Teil der Berichtsserverkonfiguration. Der symmetrische Schlüssel wird automatisch beim Erstellen der Berichtsserver-Datenbank erstellt und angewendet. Erstellen Sie eine Sicherungskopie des symmetrischen Schlüssels, sodass Routinewartungsvorgänge durchgeführt werden können. Für die folgenden Wartungsaufgaben ist es erforderlich, dass Sie über eine gültige Kopie des symmetrischen Schlüssels verfügen:  
   
 -   Ändern des Dienstkontos für den Berichtsserver-Dienst.  
   
--   Migration einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation zu einem anderen Computer.  
+-   Migration einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation zu einem anderen Computer.  
   
 -   Konfigurieren einer neuen Berichtsserverinstanz, um eine bereits vorhandene Berichtsserver-Datenbank gemeinsam zu nutzen oder zu verwenden.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48144230"
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
   
- Das Wiederherstellen des symmetrischen Schlüssels ist notwendig, wenn Sie das Benutzerkonto des Berichtsserver-Diensts aktualisiert haben (und ein anderes Tool als der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager zum Ändern des Kontos verwendet wurde) oder wenn Sie eine Berichtsserverinstallation zu einem neuen Server migrieren.  
+ Das Wiederherstellen des symmetrischen Schlüssels ist notwendig, wenn Sie das Benutzerkonto des Berichtsserver-Diensts aktualisiert haben (und ein anderes Tool als der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager zum Ändern des Kontos verwendet wurde) oder wenn Sie eine Berichtsserverinstallation zu einem neuen Server migrieren.  
   
  Um den symmetrischen Schlüssel vor unbefugtem Zugriff zu schützen, wird der symmetrische Schlüssel mithilfe des privaten Schlüssels des Berichtsserver-Diensts verschlüsselt. Nur der Berichtsserver-Dienst kann die Sperre des symmetrischen Schlüssels aufheben und ihn zum Speichern sensibler Daten in der Berichtsserver-Datenbank verwenden. Wenn Sie die Identität des Berichtsserver-Diensts ändern oder den Berichtsserver zu einem neuen Computer migrieren, kann der private Schlüssel des Berichtsserver-Diensts die Sperre des symmetrischen Schlüssels nicht mehr aufheben. Für den Zugriff auf den symmetrischen Schlüssel verschlüsseln Sie den symmetrischen Schlüssel unter Verwendung des privaten Schlüssels der neuen Identität des Berichtsserver-Diensts erneut. Die Wiederherstellung des symmetrischen Schlüssels ist das Verfahren, in dem die erneute Verschlüsselung erfolgt.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "48144230"
 > [!IMPORTANT]  
 >  Das Löschen und Neuerstellen des symmetrischen Schlüssels kann nicht umgekehrt oder rückgängig gemacht werden. Das Löschen oder Neuerstellen des Schlüssels kann sich erheblich auf die aktuelle Installation auswirken. Wenn Sie den Schlüssel löschen, werden alle vorhandenen, durch den symmetrischen Schlüssel verschlüsselten Daten ebenfalls gelöscht. Zu den gelöschten Daten zählen Verbindungszeichenfolgen zu externen Berichtsdatenquellen, gespeicherte Verbindungszeichenfolgen und einige Abonnementinformationen.  
   
- Um diese Seite zu öffnen, starten die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Tastatur  
- **Sicherung**  
+## <a name="options"></a>Optionen  
+ **Backup**  
  Kopiert den symmetrischen Schlüssel in eine von Ihnen angegebene Datei. Der symmetrische Schlüssel wird nie als Nur-Text-Datei gespeichert. Sie müssen ein Kennwort eingeben, um die Datei zu schützen.  
   
  **Restore**  

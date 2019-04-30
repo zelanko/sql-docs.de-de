@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258800"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDescRec** gibt den aktuellen Einstellungen oder Werten aus mehreren Feldern, die von einem anwendungsparameterdeskriptor-Datensatz zurück. Die zurückgegebenen Felder beschrieben, die Namen, Datentyp und Speicherung von Daten für Spalte oder des Parameters.  
@@ -89,7 +89,7 @@ SQLRETURN SQLGetDescRec(
  [Ausgabe] Ein Zeiger auf einen Puffer, in dem den Wert des Felds "SQL_DESC_NULLABLE" für den anwendungsparameterdeskriptor-Datensatz zurückgegeben.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA zurückgibt oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
  SQL_NO_DATA zurückgegeben wird, wenn *RecNumber* ist größer als die aktuelle Anzahl der deskriptordatensätze.  
   

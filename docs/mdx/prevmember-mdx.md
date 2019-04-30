@@ -1,5 +1,5 @@
 ---
-title: PrevMember (MDX) | Microsoft Docs
+title: PrevMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278038"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
@@ -48,7 +48,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** und **DrillDownLevel** Funktionen zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet werden. Die **PrevMember** Funktion wird verwendet, um den aktuellen Zeitraum mit dem vorherigen Zeitraum zu vergleichen.  
+ Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** und **DrillDownLevel** Funktionen zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet werden. Die **PrevMember** Funktion wird verwendet, um den aktuellen Zeitraum und dem vorherigen Zeitraum zu vergleichen.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   

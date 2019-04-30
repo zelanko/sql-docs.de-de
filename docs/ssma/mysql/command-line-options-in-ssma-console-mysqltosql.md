@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253211"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (MySqlToSql)
 Microsoft bietet Ihnen eine stabile Set-Optionen über die Befehlszeile auszuführen und zu steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  

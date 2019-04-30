@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305670"
 ---
 # <a name="type-identifiers"></a>Typenbezeichner
 Um SQL- und C-Datentypen zu beschreiben, ODBC definiert zwei Sätze von *Typenbezeichner*. Ein Typ-ID beschreibt den Typ der SQL-Spalte oder einem C-Puffer. Es ist ein **#define** Wert und in der Regel als ein Funktionsargument übergeben oder in den Metadaten zurückgegebenen.  

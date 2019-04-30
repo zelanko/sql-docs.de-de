@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283634"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Anzeigen von Testfallberichten (OracleToSQL)
 Der Testfall-Bericht zeigt die Testergebnisse für die Überprüfung und allgemeine Testinformationen. Im Fall eines Testfehlers wird auch Informationen zur nicht übereinstimmenden Daten in überprüften Objekten angezeigt.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301975"
 ---
 # <a name="alter-table-statement-limitations"></a>Einschränkungen der ALTER TABLE-Anweisung
 Wenn die dBASE- oder einer Paradox-Treiber verwendet wird, nachdem ein Index erstellt wurde und ein neuer Datensatz hinzugefügt, die die Struktur der Tabelle an, die von der ALTER TABLE-Anweisung geändert werden kann, es sei denn, der Index gelöscht wird, und der Inhalt der Tabelle gelöscht werden.  

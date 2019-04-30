@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284578"
 ---
 # <a name="procedure-calls"></a>Prozeduraufrufe
 Ein *Prozedur* ein ausführbares Objekt in der Datenquelle gespeichert ist. In der Regel handelt es sich dabei um eine oder mehrere vorkompilierte SQL-Anweisungen. Die-Escapesequenz zum Aufrufen einer Prozedur ist.  

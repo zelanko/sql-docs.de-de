@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253511"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)
   Wenn Sie in einer Auswahlabfrage eine Spalte verwenden, die Sie im Resultset nicht anzeigen lassen bzw. der Auswahlliste der Abfrage nicht hinzufügen möchten, können Sie diese aus der Ausgabe entfernen. Die aus den Abfrageergebnissen entfernte Spalte können Sie zum Festlegen von Suchbedingungen oder für Sortierzwecke weiter verwenden.  

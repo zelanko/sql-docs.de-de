@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287724"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
 Verwenden der **Herstellen einer Verbindung mit Oracle** im Dialogfeld Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten.  
@@ -51,7 +51,7 @@ Geben Sie die Oracle connect Bezeichner. Dies ist der Alias der Datenbank, wie i
   
 Dies ist eine Option für TNSNAME Modus.  
   
-**Oracle-SID**  
+**Oracle SID**  
 Geben Sie die SID für die Datenbank ein. Die SID ist ein Bezeichner, der die Oracle-Datenbank auf einem Computer unterscheidet. Der Standard-SID für eine Datenbank ist die ersten acht Zeichen des Datenbanknamens.  
   
 Dies ist ein Modus "Standard"-Option.  

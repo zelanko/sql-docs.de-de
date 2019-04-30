@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265977"
 ---
 # <a name="contents-page-report-manager"></a>Inhalt (Seite, Berichts-Manager)
   Mithilfe der Seite Inhalt können Sie den Inhalt des aktuellen Ordners anzeigen, Elemente zur Ansicht auswählen oder zu anderen Ordnern wechseln. Diese Seite wird geöffnet, wenn Sie einen Ordner auswählen. Sie ist zudem die Startseite des Berichts-Managers.  

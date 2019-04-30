@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297426"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Einstellungen für die Datenmigration (SybaseToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51658134"
   
 Es befinden sich zwei Schaltflächen, die vorhanden viz.:  
   
--   **Anwenden:** klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
+-   **Gelten:** Klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
   
--   **Abbrechen:** klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
+-   **Abbrechen:** Klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase-Daten zu SQL Server/SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  

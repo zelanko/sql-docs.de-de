@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de493cc42980390fee94ca4d86efc8f5cd40646c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242307"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 2.5, als veraltet markiert  
+ Eingeführt in Version: ODBC 2.5, als veraltet markiert  
   
  **Zusammenfassung**  
  In ODBC 3.0 **SQLInstallTranslator** wurde ersetzt durch [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Aufrufe von **SQLInstallTranslator** zugeordnet **SQLInstallTranslatorEx**. Weitere Informationen finden Sie unter **SQLInstallTranslatorEx**.  

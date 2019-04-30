@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286530"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
   Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwalten.  
@@ -125,7 +125,7 @@ ms.locfileid: "52823484"
 |**SourceDatabaseID**|62|Die ID der Datenbank, in der die Quelle des Objekts vorhanden ist.|  
 |**SPID**|12|Die Serverprozess-ID (SPID), die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
 |**SqlHandle**|63|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
-|**"StartTime"** <sup>1</sup>|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
+|**StartTime** <sup>1</sup>|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
 |**Zustand**|30|Fehlerzustandscode.|  
 |**Success**|23|Gibt an, ob das Ereignis erfolgreich war. Mögliche Werte sind:<br /><br /> **1** = Erfolg<br /><br /> **0** = Fehler<br /><br /> Eine **1** bedeutet z. B. eine erfolgreiche Berechtigungsüberprüfung, und **0** bedeutet einen Fehler bei dieser Überprüfung.|  
 |**TargetLoginName**|42|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), der Anmeldename, auf den abgezielt wird.|  

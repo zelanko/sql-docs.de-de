@@ -1,5 +1,5 @@
 ---
-title: PeriodsToDate (MDX) | Microsoft Docs
+title: PeriodsToDate (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e33ac5562e7304b71779134b02488733b9d576a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277484"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -36,7 +36,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Innerhalb des Bereichs der angegebenen Ebene der **PeriodsToDate** -Funktion die Menge der Zeiträume auf derselben Ebene wie die angegebenen Member auf, angefangen mit der ersten Periode und endend mit angegebenen Element zurück.  
+ Innerhalb des Bereichs der angegebenen Ebene der **PeriodsToDate** Funktion gibt den Satz von Punkten auf der gleichen Ebene wie das angegebene Element ab, beginnend mit der ersten Periode und endend mit angegebenen Element zurück.  
   
 -   Wenn eine Ebene angegeben ist, wird das aktuelle Element der Hierarchie abgeleitet *Hierarchie*. **CurrentMember**, wobei *Hierarchie*ist die Hierarchie der angegebenen Ebene.  
   
@@ -47,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003 in der `Date` Dimension, aus der **Adventure Works** Cube.  
+ Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

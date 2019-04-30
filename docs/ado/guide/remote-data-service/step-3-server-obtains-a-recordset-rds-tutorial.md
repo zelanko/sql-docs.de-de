@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Server erhält ein Recordset (RDS-Tutorial) | Microsoft-Dokumentation'
+title: 'Schritt 3: Server erhält ein Recordset (RDS-Tutorial) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316772"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Schritt 3: Server ruft ein Recordset ab (RDS-Tutorial)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Schritt 3: Abrufen eines Recordsets durch den Server (RDS-Tutorial)
 Die Server-Anwendung verwendet Connect und der Befehlstext Text zum Abfragen der Datenquelle für die gewünschten Zeilen. ADO dient normalerweise zum Abrufen **Recordset**, obwohl andere Microsoft-Daten, Zugriff auf Schnittstellen wie z. B. OLE DB verwendet werden.  
   
 > [!IMPORTANT]

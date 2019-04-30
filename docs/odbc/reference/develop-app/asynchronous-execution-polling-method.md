@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306299"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
 Vor der ODBC 3.8 und der Windows 7-SDK waren asynchrone Vorgänge nur auf Anweisung Funktionen zulässig. Weitere Informationen finden Sie unter den **Anweisung-Vorgänge asynchron ausführen**weiter unten in diesem Thema.  

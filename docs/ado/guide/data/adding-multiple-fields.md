@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294429"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Hinzufügen von mehreren Feldern und Werten
 In einigen Fällen ist es möglicherweise sehr viel effizienter, die in ein Array von Feldern und die entsprechenden Werte zu übergeben, um die **AddNew** Methode anstelle der Einstellung **Wert** mehrere Male für jedes neue Feld. Wenn *FieldList* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen. Folgender Code übergibt ein Array von Feldern und ein Array von Werten, die **AddNew** Methode.

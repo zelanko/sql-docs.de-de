@@ -1,5 +1,5 @@
 ---
-title: Item (Tupel) (MDX) | Microsoft Docs
+title: Item (Tupel) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273080"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tupel) (MDX)
 
@@ -52,14 +52,14 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
   
 -   Wenn mehr als ein Zeichenfolgenausdruck angegeben wird, die **Element** Funktion gibt die durch die angegebenen Koordinaten definierte Tupel zurück. Die Anzahl der Zeichenfolgen muss der Anzahl der Achsen entsprechen, und jede Zeichenfolge muss eine eindeutige Hierarchie identifizieren. Beispiel: "[2005].Q3", "[Store05]".  
   
--   Wenn eine ganze Zahl angegeben wird, die **Element** -Funktion das Tupel zurück, die in der vom angegebenen nullbasierten Position *Index*.  
+-   Wenn eine ganze Zahl angegeben wird, die **Element** -Funktion das Tupel zurück, der die nullbasierte Position gemäß wird *Index*.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ([1996],Sales) zurückgegeben:  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- Im folgenden Beispiel wird ein Ebenenausdruck verwendet und Internet Sales Amount für alle Bundesstaaten in Australien sowie deren prozentualer Anteil an der Summe von Internet Sales Amount für Australien zurückgegeben. In diesem Beispiel verwendet die Item-Funktion, um das erste (und nur Tupel) aus dem Satz zurückgegebenes Extrahieren der **Vorgänger** Funktion.  
+ Im folgenden Beispiel wird ein Ebenenausdruck verwendet und Internet Sales Amount für alle Bundesstaaten in Australien sowie deren prozentualer Anteil an der Summe von Internet Sales Amount für Australien zurückgegeben. Dieses Beispiel verwendet die Item-Funktion, um das erste (und nur Tupel) aus dem Satz von zurückgegebenen Extrahieren der **Vorgänger** Funktion.  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   

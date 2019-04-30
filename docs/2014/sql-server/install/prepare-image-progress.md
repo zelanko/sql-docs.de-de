@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a15bb67033b3524d511e3308b1a4243345dc5e88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276568"
 ---
 # <a name="prepare-image-progress"></a>Status der Imagevorbereitung
   Auf der Seite **Status der Imagevorbereitung** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten können Sie den Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Imagevorbereitungssetups überwachen. Nach dem Abschluss dieses Schritts wird auf dieser Seite der Status der während dieses Prozesses vorbereiteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen angezeigt.  

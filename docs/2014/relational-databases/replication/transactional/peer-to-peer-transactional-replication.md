@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274350"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-zu-Peer-Transaktionsreplikation
   Peer-zu-Peer-Replikation bietet eine skalierbare Lösung mit hoher Verfügbarkeit, da Kopien der Daten auf mehreren Serverinstanzen verwaltet werden, die auch als *Knoten*bezeichnet werden. Auf der Grundlage der Transaktionsreplikation aufbauend, gibt die Peer-zu-Peer-Replikation transaktionskonsistente Änderungen fast in Echtzeit weiter. Dies macht Anwendungen möglich, die skalierbare Lesevorgänge voraussetzen, weil die Leseanforderungen von Clients über mehrere Knoten verteilt werden können. Da die Knoten die Daten fast in Echtzeit übernehmen, bietet die Peer-zu-Peer-Replikation Datenredundanz, die die Verfügbarkeit der Daten erhöht.  
@@ -72,7 +72,7 @@ ms.locfileid: "54127191"
   
  Jeder Standort verfügt über eine Datenbank und einen Anwendungsserver, mit deren Hilfe die Supportmitarbeiter Informationen zu den Kundenanrufen eingeben und aktualisieren können. Die Topologie wird anhand der Uhrzeit partitioniert. Updates finden nur auf dem Knoten statt, der zum gegebenen Zeitpunkt für die Geschäftstätigkeit geöffnet ist. Die Updates werden dann an die anderen teilnehmenden Datenbanken geleitet. Diese Topologie bietet folgende Vorteile:  
   
--   Unabhängigkeit ohne Isolation: Jede Niederlassung kann einfügen, aktualisieren oder Löschen von Daten unabhängig jedoch können auch Niederlassungen die Daten, da es auf allen anderen teilnehmenden Datenbanken repliziert werden.  
+-   Unabhängigkeit ohne Isolation: Jede Niederlassung kann Daten unabhängig von den anderen Niederlassungen einfügen, aktualisieren oder löschen. Jedoch können alle Niederlassungen die Daten nutzen, da sie auf allen anderen teilnehmenden Datenbanken repliziert werden.  
   
 -   Höhere Verfügbarkeit bei Ausfällen oder Wartungserfordernissen an einer oder mehreren der teilnehmenden Datenbanken.  
   

@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298729"
 ---
-# <a name="legal-notice-db2tosql"></a>Rechtliche Hinweise (DB2toSQL)
+# <a name="legal-notice-db2tosql"></a>Legal Notice (DB2toSQL)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
   
 Die in dieser Dokumentation enthaltenen Beispiele dienen in erster Linie der Veranschaulichung eines Konzepts oder der sinnvollen Verwendung einer bestimmten Anweisung oder Klausel. Die meisten Beispiele enthalten nicht den gesamten Code, der normalerweise in einem vollständigen Produktionssystem vorhanden wäre, da die Datenüberprüfung und Fehlerbehandlung teilweise entfernt wurde, um das Beispiel eines bestimmten Konzepts oder einer Anweisung hervorzuheben. Für diese Beispiele oder den enthaltenen Quellcode ist kein technischer Support verfügbar.  

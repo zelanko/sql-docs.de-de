@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08dea52e952986f37be30bb6fc40a295ecfdc898
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268184"
 ---
 # <a name="rds-properties"></a>RDS-Eigenschaften
 > [!IMPORTANT]
@@ -33,7 +33,7 @@ ms.locfileid: "51604237"
 |[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Gibt die Spalte auf dem die Filterkriterien ausgewertet werden soll.|  
 |[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Gibt an, die Evaluation-Operator, der im Filterwert verwendet.|  
 |[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Gibt den Wert zum Filtern von Datensätzen.|  
-|[Ereignishandler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität der **RDSServer.DataFactory**, und alle Parameter ein, die die *Handler*.|  
+|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität der **RDSServer.DataFactory**, und alle Parameter ein, die die *Handler*.|  
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein auftritt Timeout.|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Gibt den Status einer **DataControl** Objekt, wie es Ruft die Daten in die **Recordset** Objekt.|  
 |[Recordset und Sourcerecordse (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Gibt an, die **Recordset** Objekt aus der ein benutzerdefiniertes Geschäftsobjekt zurückgegeben.|  

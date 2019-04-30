@@ -14,27 +14,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240257"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Ebene einer  
+ ODBC-API-Übereinstimmung: Ebene 1  
   
  Gibt die aktuelle Einstellung der Option-Anweisung ein.  
   
-|*fOption*|Rückgabewert|  
+|*FOption*|Rückgabewert|  
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|32-Bit-Ganzzahl-Wert, der das Lesezeichen für die Nummer des aktuellen Datensatzes ist|  
 |SQL_ROW_NUMBER|Legen Sie die 32-Bit-Ganzzahl, die die Position des die aktuelle Zeile in das Ergebnis angeben|  
-|SQL_TRANSLATE_DLL|Fehler: "vom Treiber nicht unterstützt"|  
+|SQL_TRANSLATE_DLL|Fehler: "Vom Treiber nicht unterstützt"|  
   
  Der Visual FoxPro-ODBC-Treiber verfügt über keine Übersetzung DLLs.  
   

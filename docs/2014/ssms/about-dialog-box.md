@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226225"
 ---
 # <a name="about-dialog-box"></a>Info (Dialogfeld)
   Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  

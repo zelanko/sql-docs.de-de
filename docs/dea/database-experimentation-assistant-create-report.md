@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294529"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Erstellen von Analyseberichten im Datenbank-experimentieren-Assistenten
 

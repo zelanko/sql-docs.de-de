@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302367"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Übergeben von Parametern an einen benannten Befehl
 Genauso wie das Ergebnis des Befehls als, sich übergeben wird ein *out* Variablen des benannten Befehls, der Parameter wurde für ein parametrisierter Befehl kann als übergebenen *in* Variablen auf den benannten Befehl.  

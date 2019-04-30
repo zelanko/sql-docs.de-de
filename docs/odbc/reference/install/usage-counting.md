@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273389"
 ---
 # <a name="usage-counting"></a>Zählen der Verwendung
 > [!NOTE]  
@@ -54,15 +54,15 @@ ms.locfileid: "47664628"
 >   
 >  CurrentVersion  
 >   
->  "SharedDlls"  
+>  SharedDlls  
   
  Es legt die Daten für diese Werte auf 1 fest und kopiert die Datei in das System. Wenn die Komponente erneut installiert wird, wird der Setup-Programm oder die Installationsprogramm-DLL die Verwendungszähler erhöht. Wenn die Komponente entfernt wird, zählt der Setup-Programm oder Installer DLL verringert die Nutzung an. Fällt Verwendungsanzahl auf 0, der Setup-Programm oder die Installationsprogramm-DLL entfernt den Wert für die Datei und, wenn die Komponente einen Treiber oder Übersetzer, ist die Datei gelöscht. Treiber-Manager-Dateien sollten nicht gelöscht werden.  
   
  Das Format von der Anzahl der Wert für die Nutzung ist in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|*vollständigen Pfad*|REG_DWORD-WERT|*count*|  
+|*full-path*|REG_DWORD|*count*|  
   
  Beispielsweise nehmen wir an, dass ein Treiber für Informix die Infrmx32.dll und Infrmx32.hlp-Dateien verwendet, und nehmen Sie an, dass diese Treiber zweimal installiert wurde. Die Werte unter dem Unterschlüssel "SharedDlls" für den Treiber für Informix würde wie folgt lauten:  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283180"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Optionen (Designer – Pläne Seite)
   Bestimmen Sie mithilfe des Dialogfelds **Optionen** das Standardverhalten des Designers, wenn einer Entwurfsoberfläche neue Formen hinzugefügt werden. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Designer**, und wählen Sie **Wartungspläne**.  

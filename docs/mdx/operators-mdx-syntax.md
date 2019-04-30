@@ -1,5 +1,5 @@
 ---
-title: Operatoren (MDX-Syntax) | Microsoft Docs
+title: Operatoren (MDX Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277602"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
 
@@ -33,7 +33,7 @@ ms.locfileid: "34742749"
   
 |Art der auszuführenden Operation|Verwenden Sie|  
 |---------------------------------------|---------|  
-|Weist einen Wert zu einer Variablen oder zuordnen eine Resultsetspalte zu einem Alias.|[Assignment Operators (Zuweisungsoperatoren)](../mdx/assignment-operators.md)|  
+|Weist einer Variablen einen Wert oder eine Resultsetspalte mit einem Alias zugeordnet.|[Assignment Operators (Zuweisungsoperatoren)](../mdx/assignment-operators.md)|  
 |Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
 |Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
 |Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
@@ -47,7 +47,7 @@ ms.locfileid: "34742749"
  Wenn mehrere Operatoren verwendet werden, spielt die Reihenfolge eine Rolle, in der MDX die Operatoren auswertet. Darüber hinaus kann es für das Verwenden von Operatoren erforderlich sein, dass ein Datentyp in einen anderen Datentyp konvertiert wird, bevor die Operatoren ausgewertet werden können.  
   
 ## <a name="evaluating-complex-expressions"></a>Auswerten von komplexen Ausdrücken  
- Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In solchen komplexen Ausdrücken wertet MDX die Operatoren in Abhängigkeit von der Definition der Operatorenrangfolge von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
+ Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In solchen komplexen Ausdrücken wertet MDX die Operatoren in der Reihenfolge, basierend auf der Definition der Operatorenrangfolge von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
   
 ### <a name="understanding-operator-precedence"></a>Grundlegendes zur Rangfolge von Operatoren  
  Die folgende Liste zeigt die Operatorenrangfolge (vom höchsten bis zum niedrigsten Operator). Operatoren, die in derselben Zeile stehen, sind in der Rangfolge gleichwertig und werden von links nach rechts ausgewertet, es sei denn, durch Klammern wird eine andere Reihenfolge erzwungen:  
@@ -85,7 +85,7 @@ ms.locfileid: "34742749"
   
  Wenn das Ergebnis ein Zeichen- oder ein Unicode-Wert ist, wird die Sortierung des Ergebnisses bestimmt, indem die Regeln für die Operatoren mit den Regeln für die Sortierungsrangfolge kombiniert werden. Weitere Informationen zu Sortierungen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
- Es gibt auch Regeln, die die Genauigkeit, Dezimalstellen und Länge des Ergebnisses basierend auf der Genauigkeit, Dezimalstellen und Länge der einfachen Ausdrücke festlegen.  
+ Außerdem sind Regeln, die bestimmen, die Genauigkeit, Dezimalstellen und Länge des Ergebnisses basierend auf der Genauigkeit, Dezimalstellen und Länge der einfachen Ausdrücke vorhanden.  
   
 ## <a name="converting-data-types"></a>Konvertieren von Datentypen  
  MDX konvertiert den Datentyp eines Objekts implizit in einen anderen Datentyp, wenn das Objekt in einem Ausdruck verwendet wird, der einen anderen Typ erfordert. In der folgenden Tabelle werden die Konvertierungsregeln für jedes Objekt aufgelistet.  
@@ -95,8 +95,8 @@ ms.locfileid: "34742749"
 |Ebene|Legen Sie|\<Ebene > .members|  
 |Hierarchy|Member|\<Hierarchie > .defaultmember|  
 |Member|Tupel|(\<Member >)|  
-|Tupel|Member|\<Tupel > .item(0)|  
-|Tupel|Skalarwert|\<Tupel > .value|  
+|Tupel|Member|\<tuple>.item(0)|  
+|Tupel|skalare|\<tuple>.value|  
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

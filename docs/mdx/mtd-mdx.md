@@ -1,5 +1,5 @@
 ---
-title: MTd (MDX) | Microsoft Docs
+title: MTd (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 74c8748ae02df8747be5670f09ec11c7dfa8e882
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278084"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 
@@ -33,9 +33,9 @@ Mtd( [ Member_Expression ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Elementausdruck nicht angegeben ist, wird die Standardeinstellung ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Monate* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
+ Wenn ein Elementausdruck nicht angegeben ist, wird der Standardwert ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Monate* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
   
- Die **Mtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) -Funktion, wenn die Typeigenschaft der Attributhierarchie, eine Ebene auf dem basiert, um festgelegt ist *Monate*. Somit ist `Mtd(Member_Expression)` äquivalent zu `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
+ Die **Mtd** -Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) funktionieren, wenn die Typeigenschaft der Attributhierarchie, die eine Ebene auf dem basiert, um festgelegt ist *Monate*. Somit ist `Mtd(Member_Expression)` äquivalent zu `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Summe der Monat bis Datum Frachtkosten für Internetverkäufe für den Monat Juli 2002 bis einschließlich 20. Juli zurückgegeben.  
@@ -51,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Summe &#40;MDX&#41;](../mdx/sum-mdx.md)   
+ [Sum &#40;MDX&#41;](../mdx/sum-mdx.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

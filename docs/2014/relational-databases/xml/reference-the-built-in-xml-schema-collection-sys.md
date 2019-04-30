@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240779"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
   Jede Datenbank, die Sie erstellen, besitzt eine vordefinierte **sys** -XML-Schemaauflistung im relationalen **sys** -Schema. Es reserviert diese vordefinierten Schemas, und der Zugriff darauf kann aus einer beliebigen, von einem Benutzer erstellten XML-Schemaauflistung erfolgen. Die in diesen vordefinierten Schemas verwendeten Präfixe sind in XQuery von Bedeutung. Nur **xml** ist ein reserviertes Präfix.  

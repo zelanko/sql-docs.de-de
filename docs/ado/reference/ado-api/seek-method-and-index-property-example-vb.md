@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315680"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek-Methode und Index-Eigenschaft – Beispiel (VB)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [Seek](../../../ado/reference/ado-api/seek-method.md) Methode und [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft in Verbindung mit einer angegebenen ***Mitarbeiter-ID***, um suchen der Name des Mitarbeiters in der ***Mitarbeiter*** Tabelle der Datenbank Nwind.mdb.  
@@ -118,5 +118,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)

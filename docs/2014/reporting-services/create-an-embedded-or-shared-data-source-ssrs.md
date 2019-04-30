@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266180"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Erstellen einer eingebettete oder freigegebenen Datenquelle (SSRS)
   Eine Berichtsdatenquelle gibt einen Namen und Verbindungsinformationen an. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird in einer Berichtsdefinition definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird als separates Element definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

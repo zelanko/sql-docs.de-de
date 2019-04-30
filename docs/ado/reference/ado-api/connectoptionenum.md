@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9df3fd695e9bf281133dabf436e5e8b5de7e0b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309160"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Gibt an, ob die [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sollte nach dem Herstellen der Verbindung (synchron) oder vor dem zurückgeben (asynchron).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncConnect**|16|Öffnet die Verbindung asynchron aus. Die [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) Ereignis kann verwendet werden, um zu bestimmen, wenn die Verbindung verfügbar ist.|  
 |**adConnectUnspecified**|-1|Standard. Öffnet die Verbindung synchron aus.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

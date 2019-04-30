@@ -1,5 +1,5 @@
 ---
-title: ^ (Potenz) (MDX) | Microsoft Docs
+title: ^ (Potenz) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20b197f66a4af496d8235d3b38eb2fa82c1921db
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278316"
 ---
 # <a name="-power-mdx"></a>^ (Potenz) (MDX)
 
@@ -29,7 +29,7 @@ Numeric_Expression ^ Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  

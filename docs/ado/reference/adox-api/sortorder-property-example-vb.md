@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281568"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, die [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) , wurde angefügt die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung von eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code Fügt einen aufsteigenden Index der Spalte "Country" in der **Mitarbeiter** Tabelle, zeigt die Datensätze. Und klicken Sie dann der Code einen absteigenden Index der Spalte "Country" in fügt die **Mitarbeiter** Tabelle aus, und die Einträge erneut angezeigt. Der Unterschied zwischen aufsteigender und absteigender Indizes wird angezeigt.  

@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272866"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver
   Der letzte Schritt zum Aktualisieren der Berichtsdefinition besteht darin, die Definition wieder auf dem Berichtsserver zu veröffentlichen.  
@@ -77,7 +77,7 @@ ms.locfileid: "56033621"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion werden Sie kompilieren und Ausführen der `SampleRDLSchema` Anwendung. Finden Sie unter [Lektion 6: Führen Sie die RDL-Schema-Anwendung &#40;VB-C-&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ In der nächsten Lektion werden Sie kompilieren und Ausführen der `SampleRDLSchema` Anwendung. Siehe [Lektion 6: Führen Sie die RDL-Schema-Anwendung &#40;VB-C-&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

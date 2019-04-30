@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288520"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)
 ODBC ermöglicht die asynchrone Ausführung der Verbindungs- und Vorgänge der Anweisung. Ein Thread der Anwendung kann eine ODBC-Funktion aufrufen, im asynchronen Modus aus, und die Funktion zurückgeben kann, bevor der Vorgang abgeschlossen ist, ermöglicht dem Thread der Anwendung für andere Aufgaben ist. In der Windows 7-SDK für asynchrone-Anweisung oder Verbindungsvorgängen sendet bestimmt eine Anwendung an, dass der asynchrone Vorgang abgeschlossen ist, verwenden der Abrufmethode war. Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab Windows 8 SDK, können Sie feststellen, dass ein asynchroner Vorgang abgeschlossen ist, verwenden die Benachrichtigungsmethode ist.  

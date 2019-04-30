@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 26410a933c7432189f664c2b04d2b41e3e31c9c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298993"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Herstellen einer Verbindung mit SQLServer (DB2eToSQL)
 Zum Migrieren von DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 oder Azure SQL-Datenbank, die Sie die mit jedem dieser Ziel-Instanzen von verbinden müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Verbindung herstellen, erhält der SSMA Metadaten zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zeigt die Metadaten der Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer. SSMA speichert Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie verbunden sind, jedoch werden keine Kennwörter gespeichert.  
@@ -82,10 +82,10 @@ Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, 
 ||||||  
 |-|-|-|-|-|  
 |**Projekt-Typ und VERSION des ZIELSERVERS**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL-Datenbank|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Benutzerkontensteuerung||  
-|Azure SQL-Datenbank||||Benutzerkontensteuerung|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Ja||  
+|Azure SQL-Datenbank||||Ja|  
   
 > [!IMPORTANT]  
 > Konvertierung der Datenbankobjekte erfolgt gemäß den Projekttyp, aber nicht gemäß der Version von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie verbunden sind. Im Fall von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 oder Azure SQL-Datenbank.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261630"
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
   Sie können die [abonnieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die **abonnieren** Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
@@ -48,8 +48,8 @@ ms.locfileid: "50145746"
 |ObjectReference|Zeichenfolge|Die XML-Darstellung des Objektverweises für das in ObjectName festgelegte Objekt.|  
 |NestLevel|Integer|Die Ebene der Transaktion, für die das Ereignis aufgetreten ist.|  
 |NumSegments|Lange ganze Zahl|Die Anzahl der Datensegmente, die von dem Befehl, für den das Ereignis aufgetreten ist, betroffen ist, oder auf die zugegriffen wurde.|  
-|Schweregrad|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> <br /><br /> 0: Erfolg<br /><br /> <br /><br /> 1: Informationen<br /><br /> <br /><br /> 2: Warnung<br /><br /> <br /><br /> 3: Fehler|  
-|Success|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
+|Schweregrad|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> <br /><br /> 0: Erfolgreich<br /><br /> <br /><br /> 1: Information<br /><br /> <br /><br /> 2: Warnung<br /><br /> <br /><br /> 3: Fehler|  
+|Erfolgreich|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
 |Fehler|Lange ganze Zahl|Die Fehlernummer des Ereignisses (falls zutreffend).|  
 |ConnectionID|Zeichenfolge|Der Bezeichner der Verbindung, für die das Ereignis aufgetreten ist.|  
 |DatabaseName|Zeichenfolge|Der Name der Datenbank, für die das Ereignis aufgetreten ist.|  

@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit leeren Werten | Microsoft Docs
+title: Arbeiten mit leeren Werten | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251430"
 ---
 # <a name="working-with-empty-values"></a>Arbeiten mit leeren Werten
 
@@ -46,10 +46,10 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Die folgenden Informationen gelten für leere Werte:  
   
--   Die [IsEmpty](../mdx/isempty-mdx.md) -Funktion gibt **"true"** nur, wenn die Zelle, die durch das in der Funktion angegebenen Tupel identifiziert leer ist. Die Funktion hingegen gibt **"false"**.  
+-   Die ["isEmpty"](../mdx/isempty-mdx.md) -Funktion zurückgegeben **"true"** Wenn und nur wenn die Zelle, die durch das in der Funktion angegebenen Tupel identifiziert leer ist. Die Funktion hingegen gibt **"false"**.  
   
     > [!NOTE]  
-    >  Die **IsEmpty** -Funktion kann nicht feststellen, ob ein Elementausdruck einen null-Wert zurückgibt. Um zu bestimmen, ob ein null-Element aus einem Ausdruck zurückgegeben wird, verwenden die [IS](../mdx/is-mdx.md)Operator.  
+    >  Die **"isEmpty"** Funktion kann nicht bestimmt werden, ob ein Elementausdruck einen null-Wert zurückgibt. Um zu bestimmen, ob ein null-Element aus einem Ausdruck zurückgegeben wird, verwenden die [IS](../mdx/is-mdx.md)Operator.  
   
 -   Ist der leere Zellwert ein Operand für einen der numerischen Operatoren (+, -, *, /), wird der leere Zellwert als 0 behandelt, wenn der andere Operand ein nicht leerer Wert ist. Sind beide Operanden leer, gibt der numerische Operator den leeren Zellwert zurück.  
   
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>Umgehen mit leeren Werten in MDX-Anweisungen und Cubes  
  In MDX-Anweisungen (Multidimensional Expressions) können Sie nach leeren Werten suchen und dann bestimmte Berechnungen für Zellen ausführen, die gültige (also nicht leere) Daten enthalten. Das Entfernen von leeren Werten aus Berechnungen kann wichtig sein, da bestimmte Berechnungen (z. B. eine Durchschnittsberechnung) verfälscht werden können, wenn leere Zellwerte eingeschlossen werden.  
   
- Leere Werte, die in den Daten der zugrundeliegenden Faktentabelle gespeichert sind, werden bei der Verarbeitung des Cube standardmäßig in 0 konvertiert. Sie können die **Null-Verarbeitung** Option für ein Measure, um zu steuern, ob null Fakten in 0 konvertiert werden, einen leeren Wert oder sogar löst einen Fehler bei der Verarbeitung konvertierten. Wenn Sie nicht möchten, dass die Abfrageergebnisse leere Zellenwerte enthalten, erstellen Sie Abfragen, berechnete Elemente oder MDX-Skriptanweisungen, die leere Werte entweder ausschließen oder durch einen anderen Wert ersetzen.  
+ Leere Werte, die in den Daten der zugrundeliegenden Faktentabelle gespeichert sind, werden bei der Verarbeitung des Cube standardmäßig in 0 konvertiert. Sie können die **Null-Verarbeitung** Option für ein Measure aus, um zu steuern, ob null Fakten in 0 (null) konvertiert werden, einen leeren Wert oder sogar löst einen Fehler bei der Verarbeitung konvertierten. Wenn Sie nicht möchten, dass die Abfrageergebnisse leere Zellenwerte enthalten, erstellen Sie Abfragen, berechnete Elemente oder MDX-Skriptanweisungen, die leere Werte entweder ausschließen oder durch einen anderen Wert ersetzen.  
   
  Um leere Zeilen oder Spalten aus einer Abfrage zu entfernen, können Sie vor der Achsmengendefinition die NON EMPTY-Anweisung verwenden. Die folgende Beispielabfrage gibt nur die Produktkategorie „Bikes“ zurück, da dies die einzige Kategorie ist, die im Kalenderjahr 2001 verkauft wurde.  
   

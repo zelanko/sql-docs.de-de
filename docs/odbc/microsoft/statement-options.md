@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270014"
 ---
 # <a name="statement-options"></a>Anweisungsoptionen
 > [!IMPORTANT]  
@@ -37,5 +37,5 @@ ms.locfileid: "47829478"
 |SQL_KEYSET_SIZE|Kann nur auf 0 festgelegt werden.|  
 |SQL_MAX_ROWS|Legen Sie die maximale Anzahl von Zeilen aus einem Resultset zurückgegeben.|  
 |SQL_ROW_NUMBER|Gibt eine 32-Bit-Ganzzahl, die die Position der aktuellen Zeile im Resultset angeben. Erhalten Sie nur; kann nicht festgelegt.|  
-|SQL_ROWSET_SIZE SETZEN|4.294.967.296 Zeilen darf nicht überschreiten; Allerdings müssen Sie genügend virtuellen Arbeitsspeicher auf dem Computer zur Verarbeitung Ihrer Anforderung verfügen.|  
+|SQL_ROWSET_SIZE|4.294.967.296 Zeilen darf nicht überschreiten; Allerdings müssen Sie genügend virtuellen Arbeitsspeicher auf dem Computer zur Verarbeitung Ihrer Anforderung verfügen.|  
 |SQL_USE_BOOKMARKS|Unterstützt das Festlegen von SQL_USE_BOOKMARKS zu SQL_UB_ON und macht Lesezeichen mit fester Länge.|

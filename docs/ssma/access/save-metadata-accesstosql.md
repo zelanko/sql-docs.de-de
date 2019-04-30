@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299241"
 ---
 # <a name="save-metadata-accesstosql"></a>Speichern von Metadaten (AccessToSQL)
 Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  

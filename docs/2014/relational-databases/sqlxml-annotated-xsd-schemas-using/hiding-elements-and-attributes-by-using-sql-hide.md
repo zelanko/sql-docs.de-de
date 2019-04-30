@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228473"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ausblenden von Elementen und Attributen mit sql:hide
   Wenn eine XPath-Abfrage mit einem XSD-Schema ausgeführt wird, verfügt das resultierende XML-Dokument über Elemente und Attribute, die im Schema angegeben sind. Sie können mit der `sql:hide`-Anmerkung angeben, dass Elemente und Attribute im Schema ausgeblendet werden sollen. Dies ist hilfreich, wenn das Auswahlkriterium der Abfrage bestimmte Elemente oder Attribute im Schema erfordert, diese jedoch nicht im generierten XML-Dokument zurückgegeben werden sollen.  
@@ -42,7 +42,7 @@ ms.locfileid: "52793612"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Angeben von sql:hide für ein Attribut  
  Das XSD-Schema in diesem Beispiel besteht aus einem  **\<Person.Contact >** -Element mit **ContactID**, **FirstName**, und **"LastName"** Attribute.  
   
- Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird aus diesem Grund wird der Tabelle mit dem gleichen Namen (standardzuordnung). Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und Spalten mit den gleichen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema die `sql:hide` -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben wird.  
+ Die **\<Person.Contact >** -Element komplexen Typs ist, und wird aus diesem Grund wird der Tabelle mit dem gleichen Namen (standardzuordnung). Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und Spalten mit den gleichen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema die `sql:hide` -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben wird.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

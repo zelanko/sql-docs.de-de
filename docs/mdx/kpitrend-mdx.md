@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d1a211e473cf2eed96603d91b581a52e9062d7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272739"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
 
@@ -36,7 +36,7 @@ KPITrend(KPI_Name)
  Der Trendwert ist im Allgemeinen ein normalisierter Wert zwischen -1 und 1.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel gibt die KPI-Wert des KPI-Ziels, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
+ Das folgende Beispiel gibt die KPI-Wert, KPI-Ziel, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
   
 ```  
 SELECT  

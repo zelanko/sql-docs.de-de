@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313853"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management-Lernprogramme
   Dieser Abschnitt enthält Lernprogramme zum Verwalten von Informationen in einem Unternehmen, indem in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enthaltene Enterprise Information Management (EIM)-Technologien verwendet werden. Enterprise Integration Management (EIM) stellt ein Portfolio von Lösungen zur Verfügung, die es Organisationen ermöglichen, der Glaubwürdigkeit und Konsistenz ihrer Daten zu vertrauen, sodass sie wichtige Geschäftsentscheidungen treffen können. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] bietet die folgenden Technologien, die Ihnen helfen, EIM-Lösungen in Ihrem Unternehmen zu implementieren.  

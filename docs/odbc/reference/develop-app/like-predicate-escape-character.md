@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312920"
 ---
 # <a name="like-predicate-escape-character"></a>Escapezeichen des LIKE-Prädikats
-In einem **wie** Prädikat, das Prozentzeichen (%)-entspricht null oder mehr beliebige Zeichen und der Unterstrich (_) entspricht einem einzelnen Zeichen. Eine tatsächliche Prozentzeichen übereinstimmen oder Unterstrich einem **wie** -Prädikats muss ein Escapezeichen vor dem Prozentzeichen oder Unterstrich stammen. Die Escape-Sequenz, die definiert die **wie** Prädikat Escape-Zeichen ist:  
+In einem **wie** Prädikat, das Prozentzeichen (%) entspricht null oder mehr beliebige Zeichen und den Unterstrich (_) entspricht einem einzelnen Zeichen. Eine tatsächliche Prozentzeichen übereinstimmen oder Unterstrich einem **wie** -Prädikats muss ein Escapezeichen vor dem Prozentzeichen oder Unterstrich stammen. Die Escape-Sequenz, die definiert die **wie** Prädikat Escape-Zeichen ist:  
   
  **{Escapezeichen '** *Escapezeichen* **'}**  
   

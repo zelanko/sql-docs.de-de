@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309097"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX-Datendefinition – CREATE MEASURE
 
@@ -31,7 +31,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Tabellenname*  
+ *Table_Name*  
  Ein gültiges Zeichenfolgenliteral, das den Namen der Tabelle bereitstellt, in dem das Measure erstellt wird.  
   
  *Measure_Name*  

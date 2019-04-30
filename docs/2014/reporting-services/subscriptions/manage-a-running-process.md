@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237798"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  

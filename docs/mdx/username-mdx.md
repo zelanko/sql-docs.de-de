@@ -1,5 +1,5 @@
 ---
-title: UserName (MDX) | Microsoft Docs
+title: UserName (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8c08855d70d6a880607cc4310e6adcabbf7d9ad
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298033"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
 
@@ -31,7 +31,7 @@ UserName [ ( ) ]
 ## <a name="remarks"></a>Hinweise  
  Der zurückgegebene Wert ist eine Zeichenfolge folgenden Formats:  
   
- *Domänenname\Benutzername*  
+ *domain-name\user-name*  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Benutzername des Benutzers zurückgegeben, der die Abfrage ausführt.  

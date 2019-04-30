@@ -1,5 +1,5 @@
 ---
-title: Crossjoin (MDX) | Microsoft Docs
+title: Crossjoin (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b68dafa89f8285f532fc6e92e80f9741be239f65
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248250"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -40,11 +40,11 @@ Set_Expression1 * Set_Expression2 [* ...n]
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Crossjoin** Funktion gibt das Kreuzprodukt von zwei oder mehr angegebenen Mengen. Die Reihenfolge der Tupel in der sich ergebenden Menge hängt von der Reihenfolge der zu verknüpfenden Mengen und von der Reihenfolge ihrer Elemente ab. Angenommen, wenn die erste Menge besteht aus {X1, X2,..., x*n*}, und die zweite Gruppe besteht aus {y1, y2,..., y*n*}, ist das Kreuzprodukt dieser Sätze:  
+ Die **Crossjoin** Funktionsergebnis ist das Kreuzprodukt von zwei oder mehr angegebenen Mengen. Die Reihenfolge der Tupel in der sich ergebenden Menge hängt von der Reihenfolge der zu verknüpfenden Mengen und von der Reihenfolge ihrer Elemente ab. Z. B. wenn die erste Menge besteht aus {X1, X2,..., x*n*}, und die zweite Gruppe besteht aus {y1, y2,..., y*n*}, ist das Kreuzprodukt dieser Sätze:  
   
  {(X1, y1), (X1, y2),..., (X1, y*n*), (X2, y1), (X2, y2),...,  
   
- (X2, y*n*),..., (X*n*, y1), (X*n*, y2),..., (y2...xn, y*n*)}  
+ (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
 >  Wenn die Mengen im Cross Join aus Tupeln unterschiedlicher Attributhierarchien der gleichen Dimension bestehen, gibt die Funktion nur die Tupel zurück, die tatsächlich vorhanden sind. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  

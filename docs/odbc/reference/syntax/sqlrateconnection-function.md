@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262499"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
+ Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLRateConnection** bestimmt, ob ein Treiber eine vorhandene Verbindung im Verbindungspool wiederverwendet werden kann.  
@@ -48,7 +48,7 @@ SQLRETURN  SQLRateConnection(
  *fRequiredTransactionEnlistment*  
  [Eingabe] True gibt an, Wiederverwendung der vorhandenen Verbindungs *hCandidateConnection* für die neue verbindungsanforderung (*hRequest*) erfordert eine zusätzliche Eintragung.  
   
- *Transaktions*  
+ *transId*  
  [Eingabe] Wenn *fRequiredTransactionEnlistment* ist "true", *Transaktions* stellt dar, die DTC-Transaktion, die die Anforderung eingetragen wird. Wenn *fRequiredTransactionEnlistment* ist "false", *Transaktions* ignoriert werden.  
   
  *pRating*  

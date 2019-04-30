@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e544c3f373f5e85254d40915e6b6f241a6b70379
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225887"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange-Ereignis (RDS)
 Die **"onreadystatechange"** -Ereignis wird aufgerufen, wenn der Wert des der [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) eigenschaftenänderungen.  

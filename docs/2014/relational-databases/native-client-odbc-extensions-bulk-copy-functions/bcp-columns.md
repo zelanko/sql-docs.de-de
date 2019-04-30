@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225522"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   Legt die Gesamtanzahl der Spalten fest, die in der Benutzerdatei gefunden wurden und mit einem Massenkopiervorgang in oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden sollen. [Bcp_setbulkmode](bcp-setbulkmode.md) anstelle von Bcp_columns verwendet werden können und [Bcp_colfmt](bcp-colfmt.md).  
@@ -43,7 +43,7 @@ nColumns
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *nColumns*  

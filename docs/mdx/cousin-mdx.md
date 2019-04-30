@@ -1,5 +1,5 @@
 ---
-title: Cousin (MDX) | Microsoft Docs
+title: Cousin (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad604900ac31cbcfb7e9a68fba4241c5f539b491
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284980"
 ---
 # <a name="cousin-mdx"></a>Cousin (MDX)
 

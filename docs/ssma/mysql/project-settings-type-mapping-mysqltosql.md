@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231817"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Typzuordnung) (MySqlToSql)
 Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt.  
@@ -26,7 +26,7 @@ Zuordnung eines Typs ist in den Projekteinstellungen und Standardeinstellungen f
   
 -   Verwenden Sie das Dialogfeld Projekt-Standardeinstellungen, um das Festlegen von Konfigurationsoptionen für alle Projekte. Wählen Sie auf die Zuordnung eines Typs Einstellungen, klicken Sie im Menü Extras, Projekteinstellungen Default, select Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden, **Migration Zielversion** Dropdown-Liste, und klicken Sie dann auf Die Zuordnung im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ##### <a name="source-type"></a>Quelltyp  
 Es ist der MySQL-Datentyp, der den Typ des Daten zugeordnet werden.  
@@ -53,7 +53,7 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |-|-|  
 |**MySQL-Datentyp**|**SQL Server-Datentyp**|  
 |BIGINT|BIGINT|  
-|Bigint [*... 255]|BIGINT|  
+|bigint[*..255]|BIGINT|  
 |BINARY|Binär [1]|  
 |Binär [0.. 1]|Binär [1]|  
 |Binär [2..255]|Binär [*]|  
@@ -67,21 +67,21 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |Bit [57..64]|Binär [8]|  
 |Bit [9..16]|Binär [2]|  
 |Blob|varbinary(max)|  
-|BLOB [0.. 1]|Varbinary [1]|  
+|blob[0..1]|varbinary[1]|  
 |BLOB [2..8000]|Varbinary [*]|  
 |blob[8001..*]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|NCHAR [1]|  
+|char|nchar[1]|  
 |Char-byte|Binär [1]|  
 |Char, Byte [0.. 1]|Binär [1]|  
 |Byte [2..255] char|Binär [*]|  
-|Char [0.. 1]|NCHAR [1]|  
-|Char [2..255]|NCHAR [*]|  
-|character|NCHAR [1]|  
-|Zeichen, die unterschiedliche [0.. 1]|Nvarchar [1]|  
+|Char [0.. 1]|nchar[1]|  
+|char[2..255]|NCHAR [*]|  
+|character|nchar[1]|  
+|Zeichen, die unterschiedliche [0.. 1]|nvarchar[1]|  
 |Zeichen, die unterschiedliche [2..255]|NVARCHAR|  
-|Zeichen [0.. 1]|NCHAR [1]|  
+|Zeichen [0.. 1]|nchar[1]|  
 |Zeichen [2..255]|NCHAR [*]|  
 |date|date|  
 |DATETIME|datetime2 [0]|  
@@ -91,68 +91,68 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |Decimal|Decimal|  
 |Dezimal [*... 65]|Dezimal [*] [0]|  
 |Dezimal [*... 65] [\*... 30]|Dezimal [*] [\*]|  
-|double|"float" [53]|  
-|mit doppelter Genauigkeit|"float" [53]|  
+|double|float[53]|  
+|mit doppelter Genauigkeit|float[53]|  
 |Genauigkeit [*... 255] [\*... 30]|numeric[*][\*]|  
 |Doppelte [*... 255] [\*... 30]|numeric[*][\*]|  
 |behoben|NUMERIC|  
 |feste [*... 65] [\*... 30]|numeric[*][\*]|  
-|FLOAT|"float" [24]|  
+|FLOAT|float[24]|  
 |"float" [*... 255] [\*... 30]|numeric[*][\*]|  
-|"float" [*... 53]|"float" [53]|  
+|"float" [*... 53]|float[53]|  
 |ssNoversion|ssNoversion|  
 |Int [*... 255]|ssNoversion|  
 |integer|ssNoversion|  
 |ganze Zahl [*... 255]|ssNoversion|  
 |longblob|varbinary(max)|  
-|LONGTEXT|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|ssNoversion|  
-|Mediumint [*... 255]|ssNoversion|  
+|mediumint[*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
-|National char|NCHAR [1]|  
-|National Char [0.. 1]|NCHAR [1]|  
+|National char|nchar[1]|  
+|National Char [0.. 1]|nchar[1]|  
 |National Char [2..255]|NCHAR [*]|  
-|nationale Zeichensätze|NCHAR [1]|  
-|nationale Zeichensätze variieren.|Nvarchar [1]|  
-|nationale Zeichensätze, die unterschiedliche [0.. 1]|Nvarchar [1]|  
+|nationale Zeichensätze|nchar[1]|  
+|nationale Zeichensätze variieren.|nvarchar[1]|  
+|nationale Zeichensätze, die unterschiedliche [0.. 1]|nvarchar[1]|  
 |nationale Zeichensätze, die unterschiedliche [2..4000]|Nvarchar [*]|  
 |nationale Zeichensätze zu unterschiedlichen [4001.. *]|nvarchar(max)|  
-|nationale Zeichensätze [0.. 1]|NCHAR [1]|  
+|nationale Zeichensätze [0.. 1]|nchar[1]|  
 |nationale Zeichensätze [2..255]|NCHAR [*]|  
-|National varchar|Nvarchar [1]|  
-|National Varchar [0.. 1]|Nvarchar [1]|  
+|National varchar|nvarchar[1]|  
+|National Varchar [0.. 1]|nvarchar[1]|  
 |National Varchar [2..4000]|Nvarchar [*]|  
 |National Varchar [4001.. *]|nvarchar(max)|  
-|NCHAR|NCHAR [1]|  
-|Nchar, varchar|Nvarchar [1]|  
-|Nchar, Varchar [0.. 1]|Nvarchar [1]|  
+|NCHAR|nchar[1]|  
+|Nchar, varchar|nvarchar[1]|  
+|Nchar, Varchar [0.. 1]|nvarchar[1]|  
 |Nchar, Varchar [2..4000]|Nvarchar [*]|  
 |Nchar, Varchar [4001.. *]|nvarchar(max)|  
-|NCHAR [0.. 1]|NCHAR [1]|  
-|NCHAR [2..255]|NCHAR [*]|  
+|NCHAR [0.. 1]|nchar[1]|  
+|nchar[2..255]|NCHAR [*]|  
 |NUMERIC|NUMERIC|  
 |numerische [*... 65]|numerische [*] [0]|  
 |numerische [*... 65] [\*... 30]|numeric[*][\*]|  
-|NVARCHAR|Nvarchar [1]|  
-|Nvarchar [0.. 1]|Nvarchar [1]|  
+|NVARCHAR|nvarchar[1]|  
+|nvarchar[0..1]|nvarchar[1]|  
 |Nvarchar [2..4000]|Nvarchar [*]|  
-|Nvarchar [4001.. *]|nvarchar(max)|  
-|REAL|"float" [53]|  
+|nvarchar[4001..*]|nvarchar(max)|  
+|REAL|float[53]|  
 |echte [*... 255] [\*... 30]|numeric[*][\*]|  
 |serielle|BIGINT|  
 |SMALLINT|SMALLINT|  
-|Smallint [*... 255]|SMALLINT|  
+|smallint[*..255]|SMALLINT|  
 |text|nvarchar(max)|  
-|Text [0.. 1]|Nvarchar [1]|  
+|Text [0.. 1]|nvarchar[1]|  
 |Text [2..4000]|Nvarchar [*]|  
-|Text [4001.. *]|nvarchar(max)|  
-|Uhrzeit|Uhrzeit|  
+|text[4001..*]|nvarchar(max)|  
+|time|time|  
 |timestamp|DATETIME|  
-|tinyblob|Varbinary [255]|  
+|tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
-|Tinyint [*... 255]|SMALLINT|  
-|tinytext|Nvarchar [255]|  
+|tinyint[*..255]|SMALLINT|  
+|tinytext|nvarchar[255]|  
 |nicht signierte bigint|BIGINT|  
 |nicht signierte Bigint [*... 255]|BIGINT|  
 |nicht signierte Dez.|Decimal|  
@@ -161,15 +161,15 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |Dezimalzahl ohne Vorzeichen|Decimal|  
 |Dezimalzahl ohne Vorzeichen [*... 65]|Dezimal [*] [0]|  
 |Dezimalzahl ohne Vorzeichen [*... 65] [\*... 30]|Dezimal [*] [\*]|  
-|Double-Wert ohne Vorzeichen|"float" [53]|  
-|ohne Vorzeichen mit doppelter Genauigkeit|"float" [53]|  
+|Double-Wert ohne Vorzeichen|float[53]|  
+|ohne Vorzeichen mit doppelter Genauigkeit|float[53]|  
 |ohne Vorzeichen mit doppelten Genauigkeit [*... 255] [\*... 30]|numeric[*][\*]|  
 |nicht signierte double [*... 255] [\*... 30]|numeric[*][\*]|  
 |nicht signierte festen|NUMERIC|  
 |nicht signierte festen [*... 65] [\*... 30]|numeric[*][\*]|  
-|nicht signierte "float"|"float" [24]|  
+|nicht signierte "float"|float[24]|  
 |nicht signierte "float" [*... 255] [\*... 30]|numeric[*][\*]|  
-|nicht signierte "float" [*... 53]|"float" [53]|  
+|nicht signierte "float" [*... 53]|float[53]|  
 |ganze Zahl ohne Vorzeichen|BIGINT|  
 |ganze Zahl ohne Vorzeichen [*... 255]|BIGINT|  
 |ganze Zahl ohne Vorzeichen|BIGINT|  
@@ -179,19 +179,19 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |ohne Vorzeichen, numerisch|NUMERIC|  
 |nicht signierte numerische [*... 65]|numerische [*] [0]|  
 |nicht signierte numerische [*... 65] [\*... 30]|numeric[*][\*]|  
-|echte ohne Vorzeichen|"float" [53]|  
+|echte ohne Vorzeichen|float[53]|  
 |nicht signierte echten [*... 255 [[\*... 30]|numeric[*][\*]|  
 |nicht signierte smallint|ssNoversion|  
 |nicht signierte Smallint [*... 255]|ssNoversion|  
 |nicht signierte tinyint|TINYINT|  
 |nicht signierte Tinyint [*... 255]|TINYINT|  
-|Varbinary [0.. 1]|Varbinary [1]|  
+|Varbinary [0.. 1]|varbinary[1]|  
 |Varbinary [2..8000]|Varbinary [*]|  
 |Varbinary [8001.. *]|varbinary(max)|  
-|Varchar [0.. 1]|Nvarchar [1]|  
+|varchar[0..1]|nvarchar[1]|  
 |Varchar [2..4000]|Nvarchar [*]|  
-|Varchar [4001.. *]|nvarchar(max)|  
-|Jahr|SMALLINT|  
+|varchar[4001..*]|nvarchar(max)|  
+|year|SMALLINT|  
 |Jahr [2..2]|SMALLINT|  
 |Jahr [4..4]|SMALLINT|  
   

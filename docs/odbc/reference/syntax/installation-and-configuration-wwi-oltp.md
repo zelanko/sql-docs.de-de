@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233438"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
+ Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLSetDriverConnectInfo** dient zum Festlegen der Verbindungszeichenfolge in das Verbindungstoken für die Informationen für einer Anwendung **SQLDriverConnect** aufrufen.  
@@ -47,7 +47,7 @@ SQLRETURN SQLSetDriverConnectInfo(
  [Eingabe] Länge der **InConnectionString*, in Zeichen, wenn die Zeichenfolge Unicode oder Bytes ist, wenn die Zeichenfolge ANSI oder DBCS ist.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Identisch mit [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) Bezug auf alle Fehler eingabeüberprüfung, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  

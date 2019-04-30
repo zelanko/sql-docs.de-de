@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316080"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Description-Eigenschaft (Dialogfeld) (Visual Database Tools)
   Das Dialogfeld **Description-Eigenschaft** stellt einen bearbeitbaren Bereich bereit, in dem Sie eine detaillierte Beschreibung der Datenbankobjekte, wie Tabellen, Spalten und Fremdschlüsseleinschränkungen, eingeben können. Das Dialogfeld kann für Objekte wie Tabellen und Sichten (sofern sie in einem Designer ausgewählt sind) über das Eigenschaftenfenster, für Objekte wie Indizes und CHECK-Einschränkungen über Dialogfelder und für Tabellenspalten über die Registerkarte **Spalteneigenschaften** im Tabellen-Designer aufgerufen werden. Die Beschreibung ist als erweiterte Eigenschaft für das Objekt gespeichert.  

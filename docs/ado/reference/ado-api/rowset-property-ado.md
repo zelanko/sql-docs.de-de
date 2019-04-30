@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315786"
 ---
 # <a name="rowset-property-ado"></a>Rowset-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB **Rowset** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von Put_Rowset ist das Rowset in eine ADO aktiviert **Recordset** Objekt.  
@@ -43,7 +43,7 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  *ppRowset*  
  Zeiger auf eine OLE DB **Rowset** Objekt.  
   
- *pRowset*  
+ *PRowset*  
  OLE DB **Rowset** Objekt.  
   
 ## <a name="return-values"></a>Rückgabewerte  

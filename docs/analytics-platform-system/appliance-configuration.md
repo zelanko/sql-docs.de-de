@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276050"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Appliance Konfigurationen für Analytics Platform System
 Bietet Checklisten für die Aufgaben zum Konfigurieren von Analytics Platform System für Ihre eigene Umgebung erforderlich. Diese Aufgaben sind erforderlich, bevor Sie das Gerät verwenden können.  
@@ -52,7 +52,7 @@ Verwendung **Configuration Manager** die folgenden Konfigurationsaufgaben ausfü
 |Konfigurationstask|Description|  
 |----------------------|---------------|  
 |Mit dem Namen der physischen Komponenten vertraut zu machen|[Physische Komponenten von PDW und Appliance Fabric &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
-|Starten Sie SQL Server PDW-Konfigurations-Manager|[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
+|Launch SQL Server PDW Configuration Manager|[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
 |Das Administratorkennwort für die Domäne ändern|Das Gerät verfügt über einen privaten Windows Active Directory Domain Services, die verwendet wird, um Knoten in der Anwendung zu authentifizieren.<br /><br />Ihrem unabhängigen Hardwarehersteller richten Sie das Gerät mit einem Standardadministratorkennwort für die Domäne ein. Dies muss in ein Kennwort geändert werden, die sicher ist.<br /><br />Die **Configuration Manager** ist die einzige unterstützte Weg, um das Administratorkennwort für die Domäne ändern.<br /><br />Weitere Informationen finden Sie unter [Zurücksetzen des Kennworts &#40;Analytics Platform System&#41;](password-reset.md).|  
 |Ändern des Kennworts für die **sa** Anmeldung|SQL Server PDW ist eine System-administratoranmeldung, die mit dem Namen **sa**. Die **sa** Anmeldung verfügt über alle Berechtigungen. Sie können zu gewähren, verweigern oder widerrufen keine Berechtigung. Sie können auch alle Systemsichten finden Sie unter.<br /><br />Weitere Informationen finden Sie unter [Zurücksetzen des Kennworts &#40;Analytics Platform System&#41;](password-reset.md).|  
 |Festlegen der Zeitzone der appliance|Legen Sie die Uhrzeit (lokal oder andere gewünschte) für alle applianceknoten an.<br /><br />Weitere Informationen finden Sie unter [Zeitzone Anwendungskonfiguration &#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md).|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273622"
 ---
 # <a name="native-error"></a>Native Fehler
 Positive systemeigenen Fehlercodes werden von der Desktop-Datenbanktreiber generiert. Negativen Fehlercodes werden von Microsoft Jet generiert. Weitere Informationen finden Sie unter den *Microsoft Jet-Datenbank-Engine Handbuch für Programmierer*.

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232302"
 ---
 # <a name="create-index-for-paradox"></a>CREATE INDEX für Paradox
 Die Syntax der CREATE INDEX-Anweisung für den ODBC-Paradox-Treiber ist:  

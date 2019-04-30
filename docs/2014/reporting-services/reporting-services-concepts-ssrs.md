@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3ea6c21e13cdf0afa0f6262662ccd4c51f06578
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255475"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  

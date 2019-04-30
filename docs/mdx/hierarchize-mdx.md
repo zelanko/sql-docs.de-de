@@ -1,5 +1,5 @@
 ---
-title: HIERARCHIZE (MDX) | Microsoft Docs
+title: HIERARCHIZE (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224904"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -40,7 +40,7 @@ Hierarchize(Set_Expression [ , POST ] )
 -   Wenn **POST** angegeben wird, die **Hierarchize** -Funktion sortiert die Elemente einer Ebene in der Postorder-Reihenfolge. Untergeordnete Elemente gehen also den ihnen übergeordneten Elementen voran.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Drillup für das Canada-Element durchgeführt. Die **Hierarchize** Funktion wird verwendet, um die angegebenen Elemente der Menge in hierarchischer Reihenfolge organisieren erforderlich die **DrillUpMember** Funktion.  
+ Im folgenden Beispiel wird ein Drillup für das Canada-Element durchgeführt. Die **Hierarchize** Funktion wird verwendet, um die angegebenen Elemente der Menge in hierarchischer Reihenfolge zu organisieren, die erforderlich ist der **DrillUpMember** Funktion.  
   
 ```  
 SELECT DrillUpMember   
@@ -59,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Das folgende Beispiel gibt die Summe der `Measures.[Order Quantity]` Elements, aggregiert über die ersten neun Monate von 2003 in der `Date` Dimension, aus der **Adventure Works** Cube. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, die über die die Aggregatfunktion angewendet wird. Die **Hierarchize** -Funktion ordnet die Elemente der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
+ Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten neun Monate von 2003 in die `Date` -Dimension, aus der **Adventure Works** Cube. Die **PeriodsToDate** -Funktion definiert die Tupel in der Gruppe, in dem die Aggregatfunktion ausgeführt wird. Die **Hierarchize** -Funktion ordnet die Elemente der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

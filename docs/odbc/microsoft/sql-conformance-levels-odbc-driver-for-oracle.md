@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313388"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL-Konformitätsgrad (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -37,10 +37,10 @@ ms.locfileid: "47669368"
     |||||  
     |-|-|-|-|  
     |Abs|Log|round|tan|  
-    |Obergrenze|LOG10|second|truncate|  
+    |Obergrenze|Log10|second|truncate|  
     |Cos|Mod|Anmelden||  
-    |Exponential|PI|sin||  
-    |Floor|Power|"SQRT"||  
+    |Exponential|Pi|sin||  
+    |Floor|Power|sqrt||  
   
 -   Datumsfunktionen:  
   
@@ -48,15 +48,15 @@ ms.locfileid: "47669368"
     |-|-|-|-|  
     |CURDATE|DayOfWeek|MonthName|second|  
     |Curtime|Dayofyear|minute|week|  
-    |DAYNAME|Hour|jetzt|Jahr|  
+    |DAYNAME|Hour|jetzt|year|  
     |DayOfMonth|Month|Quartal||  
   
 -   Zeichenfolgenfunktionen:  
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Left|Richting|UCase|  
-    |Char|Länge|RTrim||  
+    |Ascii|Left|Richting|UCase|  
+    |Char|Länge|rtrim||  
     |Concat|Ltrim|SOUNDEX||  
     |Lcase|Ersetzen|substring||  
   

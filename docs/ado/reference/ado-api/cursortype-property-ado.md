@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb037216c851a869cb19013a37fccd48145f284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308560"
 ---
 # <a name="cursortype-property-ado"></a>CursorType-Eigenschaft (ADO)
 Gibt den Typ des Cursors verwendet eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -41,9 +41,9 @@ Gibt den Typ des Cursors verwendet eine [Recordset](../../../ado/reference/ado-a
 |Für ein Recordset mit diesem CursorType|Unterstützt die Methode muss für alle der folgenden Konstanten "true" zurückgeben.|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|none|  
-|**adOpenKeyset**|**zulässt**, **AdHoldRecords**, **AdMovePrevious**, **AdResync**|  
+|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**zulässt**, **AdHoldRecords**, **AdMovePrevious**, **AdResync**|  
+|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
   
 > [!NOTE]
 >  Obwohl **unterstützt**(**AdUpdateBatch**) gilt möglicherweise für dynamische und Vorwärts-Cursorn für Batch-updates sollten entweder ein Keyset oder static-Cursor verwenden. Festlegen der [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaft **AdLockBatchOptimistic** und die **CursorLocation** Eigenschaft **AdUseClient** So aktivieren Sie den Cursor Dienst für OLE DB, die für Batch-Updates erforderlich ist.  

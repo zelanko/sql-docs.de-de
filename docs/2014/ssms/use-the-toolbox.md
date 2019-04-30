@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280672"
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
   Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  

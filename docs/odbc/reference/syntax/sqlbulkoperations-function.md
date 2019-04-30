@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237850"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ODBC  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLBulkOperations** führt Bulk einfügungen und Bulk-Lesezeichen Vorgänge, einschließlich aktualisieren, löschen und durch Lesezeichen abrufen.  
@@ -55,7 +55,7 @@ SQLRETURN SQLBulkOperations(
  Weitere Informationen finden Sie unter "Kommentare".  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLBulkOperations** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLBulkOperations** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben . Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -66,8 +66,8 @@ SQLRETURN SQLBulkOperations(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten rechts abgeschnitten|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK und Zeichenfolgen- oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp des Typs SQL_C_CHAR oder sql_c_binary angegeben zurückgegeben, die in das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL geführt haben.|  
-|01 S 01|Fehler in Zeile|Die *Vorgang* Argument war SQL_ADD, und beim Ausführen des Vorgangs ist in einer oder mehreren Zeilen ein Fehler aufgetreten, aber mindestens eine Zeile wurde erfolgreich hinzugefügt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (Dieser Fehler wird nur ausgelöst, wenn eine Anwendung mit einer ODBC 2. arbeitet. *x* Treiber.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. (Für numerische C-Datentypen, wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Intervall C-Datentypen, die eine Komponente enthalten, wurde der Bruchteil der Zeit abgeschnitten.)<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S01|Fehler in Zeile|Die *Vorgang* Argument war SQL_ADD, und beim Ausführen des Vorgangs ist in einer oder mehreren Zeilen ein Fehler aufgetreten, aber mindestens eine Zeile wurde erfolgreich hinzugefügt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (Dieser Fehler wird nur ausgelöst, wenn eine Anwendung mit einer ODBC 2. arbeitet. *x* Treiber.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. (Für numerische C-Datentypen, wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Intervall C-Datentypen, die eine Komponente enthalten, wurde der Bruchteil der Zeit abgeschnitten.)<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK und der Datenwert einer Spalte im Resultset konnte nicht auf den angegebenen Datentyp konvertiert werden die *TargetType* Argument im Aufruf von **SQLBindCol**.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE_BY_BOOKMARK oder SQL_ADD und der Datenwert in den Puffern für die Anwendung konnte nicht in den Datentyp einer Spalte im Resultset konvertiert werden.|  
 |07009|Ungültiger Deskriptorindex|Das Argument *Vorgang* SQL_ADD war und eine Spaltennummer, die größer als die Anzahl der Spalten im Resultset eine Spalte gebunden war.|  
 |21S02|Spaltenzahl der abgeleiteten Tabelle stimmt nicht mit der Spaltenliste überein|Das Argument *Vorgang* SQL_UPDATE_BY_BOOKMARK; wurde und keine Spalten aktualisiert wurden, da alle Spalten aufgehoben oder nur-Lese wurden- oder der Wert in die gebundenen Längen-/Indikatorpuffer SQL_COLUMN_IGNORE war.|  
@@ -221,7 +221,7 @@ SQLRETURN SQLBulkOperations(
     > [!NOTE]  
     >  Die Größe des Arrays zeigt das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR sollte gleich SQL_ATTR_ROW_ARRAY_SIZE oder SQL_ATTR_ROW_STATUS_PTR sollte ein null-Zeiger sein.  
   
-6.  Aufrufe **SQLBulkOperations**(*StatementHandle,* SQL_DELETE_BY_BOOKMARK).  
+6.  Calls **SQLBulkOperations**(*StatementHandle,* SQL_DELETE_BY_BOOKMARK).  
   
 7.  Wenn die Anwendung das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR festgelegt wurde, können sie dieses Array aus, um das Ergebnis des Vorgangs finden Sie unter überprüfen.  
   

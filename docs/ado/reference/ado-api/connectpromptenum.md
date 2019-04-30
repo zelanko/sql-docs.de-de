@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309128"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Gibt an, ob ein Dialogfeld angezeigt werden soll, für die fehlenden Parameter aufgefordert, beim Öffnen einer Verbindung mit einer Datenquelle.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Immer aufgefordert.|  
 |**adPromptComplete**|2|Werden Sie aufgefordert, wenn weitere Informationen erforderlich sind.|  
@@ -34,7 +34,7 @@ Gibt an, ob ein Dialogfeld angezeigt werden soll, für die fehlenden Parameter a
 |**adPromptNever**|4|Fordert nie auf.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

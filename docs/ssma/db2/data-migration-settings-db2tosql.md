@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298883"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Data Migration Settings (DB2ToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51681078"
   
 Es befinden sich zwei Schaltflächen, die vorhanden viz.:  
   
--   **Anwenden:** klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
+-   **Gelten:** Klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
   
--   **Abbrechen:** klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
+-   **Abbrechen:** Klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Daten in SQLServer](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  

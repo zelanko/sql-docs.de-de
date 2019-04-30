@@ -1,5 +1,5 @@
 ---
-title: Arithmetische Operatoren | Microsoft Docs
+title: Arithmetische Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284521"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
@@ -39,7 +39,7 @@ ms.locfileid: "34739459"
   
 -   Sind in einem Ausdruck mehrere arithmetische Operatoren vorhanden, führt MDX Multiplikationen und Divisionen vor Subtraktionen und Additionen aus.  
   
--   Wenn alle arithmetische Operatoren in einem Ausdruck dieselbe Ebene des Vorrang haben, ist die Reihenfolge der Ausführung links nach rechts ausgerichtet.  
+-   Wenn alle arithmetische Operatoren in einem Ausdruck dieselbe Ebene der Vorrang haben, bleibt die Reihenfolge der Ausführung nach rechts.  
   
 -   Ausdrücke in Klammern erhalten Vorrang vor allen anderen Operationen.  
   

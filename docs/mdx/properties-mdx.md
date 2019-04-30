@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften (MDX) | Microsoft Docs
+title: Eigenschaften (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278450"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -32,20 +32,20 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
- *Eigenschaftsname*  
+ *Property_name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen einer Elementeigenschaft enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Eigenschaften** Funktion gibt den Wert des angegebenen Elements für die angegebene Elementeigenschaft zurück. Die Member-Eigenschaft werden alle systeminternen Elementeigenschaften, wie z. B. **Namen**, **ID**, **Schlüssel**, oder **Beschriftung**, oder es kann eine benutzerdefinierte Elementeigenschaft sein. Weitere Informationen finden Sie unter [systeminterne Elementeigenschaften &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) und [benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Die **Eigenschaften** Funktion gibt den Wert des angegebenen Elements für die angegebene Elementeigenschaft zurück. Die Elementeigenschaft möglich die systeminternen Elementeigenschaften, wie z. B. **Namen**, **ID**, **Schlüssel**, oder **Beschriftung**, oder es kann ein eine benutzerdefinierte Elementeigenschaft. Weitere Informationen finden Sie unter [integrierte Elementeigenschaften &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) und [benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
- Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **TYPISIERTEN** angegeben ist, wird der Rückgabewert stark typisiert ist.  
+ Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **TYPISIERTE** angegeben ist, wird der Rückgabewert ist stark typisiert.  
   
 -   Bei einer systeminternen Eigenschaft gibt die Funktion den ursprünglichen Typ des Elements zurück.  
   
--   Der Eigenschaftentyp eine benutzerdefinierte, der Typ des Rückgabewerts ist identisch mit dem Typ des Rückgabewerts der der **MemberValue** Funktion.  
+-   Wenn der Eigenschaftentyp Benutzerdefiniert ist, der Typ des Rückgabewerts entspricht der Typ des Rückgabewerts der der **MemberValue** Funktion.  
   
 > [!NOTE]  
->  Properties ('Key') gibt das gleiche Ergebnis wie Key0 zurück, außer für zusammengesetzte Schlüssel. Properties ('Key') gibt für zusammengesetzte Schlüssel den Wert NULL zurück. Verwenden Sie die Taste*x* Syntax für zusammengesetzte Schlüssel, wie im Beispiel veranschaulicht. Properties ('Key0'), Properties('Key1'), Properties('Key2') usw. bilden zusammen den zusammengesetzten Schlüssel.  
+>  Properties ('Key') gibt das gleiche Ergebnis wie Key0 zurück, außer für zusammengesetzte Schlüssel. Properties ('Key') gibt für zusammengesetzte Schlüssel den Wert NULL zurück. Verwenden Sie die Taste*x* -Syntax für zusammengesetzte Schlüssel, wie im Beispiel dargestellt. Properties ('Key0'), Properties('Key1'), Properties('Key2') usw. bilden zusammen den zusammengesetzten Schlüssel.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden sowohl systemeigene als auch benutzerdefinierte Elementeigenschaften zurückgegeben. Dabei wird das TYPED-Argument verwendet, um den stark typisierten Wert für die Day Name-Elementeigenschaft zurückzugeben.  

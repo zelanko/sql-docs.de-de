@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275892"
 ---
 # <a name="error-object"></a>Error-Objekt
 Enthält Details über den Datenzugriff, die auf einem einzigen Vorgang im Zusammenhang mit der Anbieter beziehen.  
@@ -62,4 +62,4 @@ Enthält Details über den Datenzugriff, die auf einem einzigen Vorgang im Zusam
  [Description, HelpContext, HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd0f4faad24b492b1e5f216260861d0dc3c1e0b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301886"
 ---
 # <a name="base-address-of-drivers"></a>Basisadresse der Treiber
 Jede der ODBC-Treiber für die Desktop-Datenbank wurde mit einer Basisadresse des 0x04c0000 verknüpft.

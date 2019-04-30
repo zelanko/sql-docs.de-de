@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Exportieren von Berichten | Microsoft-Dokumentation'
+title: 'Gewusst wie: Exportieren von Berichten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294770"
 ---
-# <a name="how-to-export-reports"></a>Vorgehensweise: Exportieren von Berichten
+# <a name="how-to-export-reports"></a>Gewusst wie: Exportieren von Berichten
   Der Berichts-Viewer von Upgrade Advisor ermöglicht es Ihnen, eine Flatfileversion des Berichts zu exportieren. Dadurch wird es Ihnen möglich, mit den Daten in einer Kalkulationstabelle oder einem Textverarbeitungsdokument zu arbeiten oder sie per E-Mail an andere Personen weiterzuleiten.  
   
 ### <a name="to-export-a-report"></a>So exportieren Sie einen Bericht  
   
-1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie exportieren möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts für Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie exportieren möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts der Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  Um den Bericht zu filtern, wählen Sie einen Wert aus der **filtern, indem** Feld.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48181830"
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Starten des Upgrade Advisors](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

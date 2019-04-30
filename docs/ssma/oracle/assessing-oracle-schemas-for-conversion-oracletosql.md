@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288460"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Bewerten von Oracle-Schemas für die Konvertierung (OracleToSQL)
 Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie sollten bestimmen, wie viel Zeit und Komplexität die Migration werden wird die Migration dauert. SSMA kann ein Bewertungsbericht erstellen, die den Prozentsatz von Objekten, die erfolgreich konvertiert wird. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die dazu führen, dass bei der Konvertierung auftreten.  
@@ -37,7 +37,7 @@ Beim Erstellen dieser Bewertungsbericht konvertiert SSMA der ausgewählten Oracl
   
     SSMA-Fortschritt wird in der Statusleiste am unteren Rand des Fensters angezeigt. Wenn im Ausgabebereich angezeigt wird, werden auch Meldungen im Ausgabebereich angezeigt.  
   
-    Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle: Bewertungsbericht-Fenster wird angezeigt.  
+    Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle: Fenster "Assessment" wird angezeigt.  
   
 ## <a name="using-assessment-reports"></a>Verwenden von Assessment-Berichten  
 Das Fenster Bewertungsbericht enthält drei Bereiche:  

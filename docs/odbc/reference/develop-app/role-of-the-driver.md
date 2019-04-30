@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254193"
 ---
 # <a name="role-of-the-driver"></a>Rolle des Treibers
 Der Treiber überprüft, ob alle Fehler und Warnungen, die vom Treiber-Manager nicht überprüft und ordnet die Statusdatensätze, die es generiert. (Eine ODBC-2. *x* sortiert Treiber nicht Statusdatensätze.) Dies schließt Fehler und Warnungen in das Abschneiden von Daten, die Datenkonvertierung, Syntax und einige Statusübergänge. Der Treiber möglicherweise auch Fehler und Warnungen, die nur teilweise aktiviert der Treiber-Manager überprüfen. Z. B. auch der Treiber-Manager überprüft, ob der Wert des *Vorgang* in **SQLSetPos** ist zulässig, die der Treiber muss überprüfen, ob es unterstützt wird.  

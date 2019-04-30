@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280790"
 ---
 # <a name="odbc-translators-subkey"></a>Unterschlüssel für ODBC-Konvertierungsprogramme
 Die Werte unter dem Unterschlüssel für ODBC-Konvertierungsprogramme Auflisten der installierten Übersetzer. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|*Translator-desc*|REG_SZ|**installiert**|  
+|*translator-desc*|REG_SZ|**installiert**|  
   
  Die *Translator-Desc* Name wird von der Translator-Entwickler definiert.  
   

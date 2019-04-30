@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312017"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Neues Projekt (SSMA) (MySqlToSql)
 Verwenden der **neues Projekt** um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Name**  
   
 Geben Sie den Namen des Projekts ein. SSMA wird die Erweiterung angefügt.  

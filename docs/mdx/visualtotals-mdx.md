@@ -1,5 +1,5 @@
 ---
-title: VisualTotals (MDX) | Microsoft Docs
+title: VisualTotals (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251407"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -36,12 +36,12 @@ VisualTotals(Set_Expression[,Pattern])
  Ein gültiger Zeichenfolgenausdruck für das übergeordnete Element der Menge, der ein Sternchen (*) als Ersatzzeichen für den Namen des übergeordneten Elements enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Der angegebene Mengenausdruck kann eine Menge angeben, die Elemente auf beliebigen Ebenen innerhalb ein und derselben Dimension enthält, im Allgemeinen Elemente, die in einer Vorgänger-Nachfolger-Beziehung zueinander stehen. Die **VisualTotals** Funktion fasst die Werte der untergeordneten Elemente in der angegebenen Menge und ignoriert die untergeordneten Elemente, die nicht in der Gruppe in das Ergebnis eingeschlossen sind. Bei hierarchisch geordneten Mengen werden die Gesamtwerte visuell summiert. Wenn die Reihenfolge der Elemente in der Menge die Hierarchie durchbricht, werden die Ergebnisse nicht als sichtbare Gesamtwerte zurückgegeben. Beispielsweise gibt VisualTotals (USA, WA, CA, Seattle) nicht WA als Seattle zurück. Vielmehr werden die Werte für WA, CA und Seattle zurückgegeben und anschließend zum sichtbaren Gesamtwert für USA summiert, wobei die Umsätze für Seattle doppelt gezählt werden.  
+ Der angegebene Mengenausdruck kann eine Menge angeben, die Elemente auf beliebigen Ebenen innerhalb ein und derselben Dimension enthält, im Allgemeinen Elemente, die in einer Vorgänger-Nachfolger-Beziehung zueinander stehen. Die **VisualTotals** -Funktion fasst die Werte der untergeordneten Elemente in den angegebenen Satz und ignoriert die untergeordneten Elemente, die nicht in der Gruppe in das Ergebnis eingeschlossen sind. Bei hierarchisch geordneten Mengen werden die Gesamtwerte visuell summiert. Wenn die Reihenfolge der Elemente in der Menge die Hierarchie durchbricht, werden die Ergebnisse nicht als sichtbare Gesamtwerte zurückgegeben. Beispielsweise gibt VisualTotals (USA, WA, CA, Seattle) nicht WA als Seattle zurück. Vielmehr werden die Werte für WA, CA und Seattle zurückgegeben und anschließend zum sichtbaren Gesamtwert für USA summiert, wobei die Umsätze für Seattle doppelt gezählt werden.  
   
 > [!NOTE]  
->  Anwenden der **VisualTotals** -Funktion auf Dimensionselemente, die nicht mit einem Measure verknüpft sind oder sich unterhalb der Granularität der Measure-Gruppe befinden führt dazu, dass Werte durch Null ersetzt werden.  
+>  Anwenden der **VisualTotals** -Funktion auf Dimensionselemente, die beziehen sich nicht auf ein Measure oder unterhalb der Granularität der Measure-Gruppe führt dazu, dass die Werte durch Null ersetzt werden.  
   
- *Muster*, ist optional und gibt das Format für die gesamtbetragsbezeichnung an. *Muster* erfordert ein Sternchen (*) als Ersatzzeichen für das übergeordnete Element und den Rest des Texts in der Zeichenfolge in das Ergebnis mit dem übergeordneten Namen verkettet angezeigt wird. Wenn Sie ein Sternchen anzuzeigen, verwenden Sie zwei Sternchen (\*\*).  
+ *Muster*, optional und gibt das Format für die gesamtbetragsbezeichnung an. *Muster* erfordert ein Sternchen (*), wie das Ersatzzeichen für das übergeordnete Element und den Rest des Texts in der Zeichenfolge im Ergebnis mit dem übergeordneten Namen verkettet angezeigt wird. Um ein Sternchen anzuzeigen, verwenden Sie zwei Sternchen (\*\*).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der sichtbare Gesamtwert für das dritte Quartal des Kalenderjahres 2001 basierend auf dem einzigen angegebenen nachfolgenden Wert, dem Monat Juli, zurückgegeben.  

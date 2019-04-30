@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258824"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetCursorName** gibt zurück, der Name des Cursors eine angegebene Anweisung zugeordnet.  
@@ -49,7 +49,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *cursorName*  
+ *CursorName*  
  [Ausgabe] Zeiger auf einen Puffer, in dem der Name des Cursors zurückgegeben.  
   
  Wenn *CursorName* NULL ist, *NameLengthPtr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *CursorName*.  
@@ -61,7 +61,7 @@ SQLRETURN SQLGetCursorName(
  [Ausgabe] Zeiger auf den Speicher für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *CursorName*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, der Name des Cursors in \* *CursorName* auf abgeschnitten *Pufferlänge*abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetCursorName** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetCursorName** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

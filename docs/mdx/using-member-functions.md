@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Elementfunktionen | Microsoft Docs
+title: Member-Funktionen mit | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251596"
 ---
 # <a name="using-member-functions"></a>Verwenden von Elementfunktionen
 
 
   Eine Elementfunktion ist eine Multidimensional Expressions (MDX)-Funktion, die ein Element zurückgibt. Elementfunktionen sind genau wie Tupelfunktionen und Mengenfunktionen wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zu finden sind.  
   
- Von den zahlreichen Elementfunktionen in MDX am wichtigsten ist die **CurrentMember** -Funktion, die verwendet wird, um das aktuelle Element in einer Hierarchie zu ermitteln. Die folgende Abfrage zeigt, wie sie zusammen mit der **übergeordneten**, **Vorgänger**, und **Prevmember** Funktionen:  
+ Von den zahlreichen Elementfunktionen in MDX, am wichtigsten ist die **CurrentMember** -Funktion, die verwendet wird, um das aktuelle Element in einer Hierarchie zu ermitteln. Die folgende Abfrage veranschaulicht, wie sie zusammen mit den **übergeordneten**, **Vorgänger**, und **Prevmember** Funktionen:  
   
  `WITH`  
   

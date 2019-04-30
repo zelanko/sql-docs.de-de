@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272787"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
   Sie können den Berichts-Manager verwenden, um Berichte anzuzeigen, die auf einem Berichtsserver veröffentlicht wurden. Standardmäßig werden alle Berichte in HTML geöffnet. Nachdem ein Bericht geöffnet wurde, können Sie ihn exportieren, um ihn in anderen Anwendungsformaten anzuzeigen. Wenn der Bericht interaktive Funktionen enthält oder wenn es sich um einen Bericht vom Berichts-Generator mit interaktiven Daten handelt, können Sie auf die Links klicken, um zusätzliche Berichte oder Daten anzuzeigen.  

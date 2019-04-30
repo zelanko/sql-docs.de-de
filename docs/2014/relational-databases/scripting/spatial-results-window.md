@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278710"
 ---
 # <a name="spatial-results-window"></a>Fenster "Räumliche Ergebnisse"
   Im Fenster **Räumliche Ergebnisse** werden visuelle Zuordnungstools zum Anzeigen räumlicher Daten bereitgestellt. Zum Anzeigen von Ergebnissen für räumliche Daten müssen die Abfrageergebnisse eine räumliche Spalte mit Geometrie- oder Geografiedaten enthalten.  
@@ -24,7 +24,7 @@ ms.locfileid: "48092870"
 > [!NOTE]  
 >  Das Fenster **Räumliche Ergebnisse** ist nur verfügbar, wenn die Ergebnisse im Fenster **Ergebnisse** in ein Raster zurückgegeben werden. Wenn Sie angeben, dass die Ergebnisse als Text zurückgegeben werden, ist dieses Fenster nicht verfügbar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Räumliche Spalte auswählen**  
  Geben Sie die räumliche Spalte an, die Sie in den Abfrageergebnissen in den räumlichen Spalten anzeigen möchten. Es kann nur jeweils eine Spalte ausgewählt werden.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48092870"
  Diese Option ist nicht verfügbar, wenn in einer Abfrage nur Instanzen zurückgegeben werden.  
   
  **Projektion auswählen**  
- Sie können Geografiedaten in einer von vier Projektionen anzeigen: Equirectangular, Mercator, Robinson oder Bonne.  
+ Geography-Daten in einer von vier Projektionen anzeigen: Equirectangular, Mercator, Robinson oder Bonne.  
   
  Diese Option ist für Geometriedaten nicht verfügbar.  
   

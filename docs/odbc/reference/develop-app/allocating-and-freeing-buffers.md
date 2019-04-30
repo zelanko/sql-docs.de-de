@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288074"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Zuweisen und Freigeben von Puffern
 Alle Puffer werden zugeordnet und von der Anwendung freigegeben. Wenn Sie ein Puffer nicht verzögert wird, müssen sie nur für die Dauer des Aufrufs an eine Funktion vorhanden sein. Z. B. **SQLGetInfo** gibt den Wert mit einer bestimmten Option in den Puffer, der auf die *InfoValuePtr* Argument. Dieser Puffer kann freigegeben werden, sofort nach dem Aufruf von **SQLGetInfo**, wie im folgenden Codebeispiel gezeigt:  

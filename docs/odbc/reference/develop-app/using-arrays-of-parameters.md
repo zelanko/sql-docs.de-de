@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312520"
 ---
 # <a name="using-arrays-of-parameters"></a>Verwenden von Parameterarrays
 Verwenden von Arrays von Parametern, die Anwendung ruft **SQLSetStmtAttr** mit einer *Attribut* Argument verweist SQL_ATTR_PARAMSET_SIZE auf die Anzahl der Sätze von Parametern anzugeben. Ruft **SQLSetStmtAttr** mit einer *Attribut* Argument SQL_ATTR_PARAMS_PROCESSED_PTR an die Adresse einer Variablen, in dem der Treiber kann die Anzahl von Parametersätzen verarbeitet, zurück, Legt fest, einschließlich Fehler. Ruft **SQLSetStmtAttr** mit einer *Attribut* Argument des SQL_ATTR_PARAM_STATUS_PTR, zeigen Sie auf ein Array, in dem Statusinformationen für jede Zeile von Parameterwerten zurückgegeben. Der Treiber speichert diese Adressen in der Struktur, die für die Anweisung verwaltet.  

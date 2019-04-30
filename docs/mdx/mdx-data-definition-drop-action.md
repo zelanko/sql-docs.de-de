@@ -1,5 +1,5 @@
 ---
-title: DROP ACTION-Anweisung (MDX) | Microsoft Docs
+title: DROP ACTION-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285063"
 ---
-# <a name="mdx-data-definition---drop-action"></a>MDX-Datendefinition - DROP-Aktion
+# <a name="mdx-data-definition---drop-action"></a>MDX-Datendefinition – DROP ACTION
 
 
   Löscht eine angegebene Aktion aus einem angegebenen Cube.  
@@ -33,7 +33,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Cube_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Cubenamen bereitstellt.  
   
- *Aktionsname*  
+ *Action_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen der zu löschenden Aktion bereitstellt.  
   
 ## <a name="see-also"></a>Siehe auch  

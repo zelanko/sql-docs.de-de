@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314831"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Gibt an, ob die [Parameter](../../../ado/reference/ado-api/parameter-object.md) stellt einen Eingabeparameter, Ausgabeparameter, sowohl einen Eingabe- und ein Output-Parameter oder den Rückgabewert einer gespeicherten Prozedur.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Standard. Gibt an, dass der Parameter einen Eingabeparameter darstellt.|  
 |**adParamInputOutput**|3|Gibt an, dass der Parameter einen Eingabe- und Parameter darstellt.|  
@@ -35,7 +35,7 @@ Gibt an, ob die [Parameter](../../../ado/reference/ado-api/parameter-object.md) 
 |**adParamUnknown**|0|Gibt an, dass die parameterrichtung unbekannt ist.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

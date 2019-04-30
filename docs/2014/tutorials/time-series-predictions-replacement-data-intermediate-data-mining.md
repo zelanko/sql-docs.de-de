@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312882"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining-Lernprogramm für Fortgeschrittene)
   In dieser Aufgabe erstellen Sie auf Grundlage weltweiter Umsatzdaten ein neues Modell. Sie erstellen dann eine Vorhersageabfrage, mit der Sie das weltweite Umsatzmodell auf eine einzelnen Region anwenden.  

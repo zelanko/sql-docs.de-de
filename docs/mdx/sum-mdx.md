@@ -1,5 +1,5 @@
 ---
-title: SUM (MDX) | Microsoft Docs
+title: SUM (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241378"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
@@ -32,7 +32,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Mengenausdruck (Multidimensional Expressions).  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -67,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird das WITH MEMBER-Schlüsselwort und die **Summe** Funktion, um ein berechnetes Element in der Measures-Dimension definieren, die die Summe des Reseller Sales Amount-Measures für die Elemente Canada und United States der Country-Attributhierarchie in der Geography-Dimension enthält.  
+ Im folgenden Beispiel wird das WITH MEMBER-Schlüsselwort und die **Summe** Funktion, um ein berechnetes Element in der Measures-Dimension zu definieren, die die Summe des Reseller Sales Amount-Measures für die Elemente Canada und United States der enthält die Country-Attributhierarchie in der Geography-Dimension.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -81,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Häufig die **Summe** Funktion wird verwendet, mit der **CURRENTMEMBER** Funktion oder Funktionen, wie etwa **YTD** , die eine Gruppe, die der von CurrentMember einer Hierarchie variiert zurückgeben. Die folgende Abfrage gibt z. B. die Summe der Internet Sales Amount-Measure für alle Datumsangaben ab Beginn des Kalenderjahrs bis zu dem Datum an, das auf der Zeilenachse angezeigt wird:  
+ Häufig die **Summe** Funktion wird verwendet, mit der **CURRENTMEMBER** Funktion oder Funktionen wie **seit Jahresbeginn** , die eine Gruppe, die der von CurrentMember einer Hierarchie variiert zurückgeben. Die folgende Abfrage gibt z. B. die Summe der Internet Sales Amount-Measure für alle Datumsangaben ab Beginn des Kalenderjahrs bis zu dem Datum an, das auf der Zeilenachse angezeigt wird:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   

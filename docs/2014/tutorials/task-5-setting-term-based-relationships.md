@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Festlegung Begriffsbasierter Beziehungen basierend | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Festlegung Begriffsbasierter Beziehungen basierend | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277251"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Aufgabe 5: Festlegung begriffsbasierter Beziehungen
+# <a name="task-5-setting-term-based-relationships"></a>Aufgabe 5: Festlegen begriffsbasierter Beziehungen
   In dieser Aufgabe definieren Sie ein paar begriffsbasierte Beziehungen für Werte für die **Lieferantenname** Domäne. Eine begriffsbasierte Beziehung können Sie eine Korrektur an einem Begriff vornehmen, die Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Z. B. **Inc.** behoben werden können, um **Incorporated**. DQS verwendet diese Beziehungen bei der Wissensermittlung, Bereinigung oder beim Abgleich. Finden Sie unter [erstellen begriffsbasierte Beziehungen](https://msdn.microsoft.com/library/hh510404.aspx) Weitere Details.  
   
 1.  Wählen Sie **Lieferantenname** in die **Domänenliste**.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b15759f9cee25c214ba67c09590f46093d41f22f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280900"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>New GUI Features in SSMA für DB2-Features (DB2ToSQL)
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  

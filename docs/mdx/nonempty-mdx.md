@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) | Microsoft Docs
+title: NonEmpty (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278517"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -45,7 +45,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 >  Nicht leer ist eine Eigenschaft der Zellen, auf die die Tupel verweisen, keine Eigenschaft der Tupel selbst.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt ein einfaches Beispiel **NonEmpty**, alle Kunden, die einen Wert ungleich Null für Internet Sales Amount auf den 1. Juli 2001 hatte zurückgeben:  
+ Die folgende Abfrage zeigt ein einfaches Beispiel **NonEmpty**, es werden alle Kunden, die einen Wert ungleich Null für die Internet Sales Amount auf am 1. Juli 2001 hatte:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- Im folgende Beispiel gibt die Menge von Tupeln, die mit Kunden- und Kaufdaten, mit der **Filter** Funktion und die **NonEmpty** Funktionen, um das letzte Datum gefunden werden, dass jeder Kunde einen Kauf vorgenommen:  
+ Das folgende Beispiel gibt die Menge der Tupel mit Kunden- und Kaufdaten, mit der **Filter** Funktion und die **NonEmpty** Funktionen, um das Datum der letzten finden Sie, dass jeder Kunde einen Kauf vorgenommen:  
   
  `WITH SET MYROWS AS FILTER`  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281059"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt das Proxy für das Zielobjekt für Unternehmen, und gibt einen Zeiger darauf zurück. Die Proxy-Pakete und marshallt Daten an den serverseitigen Stub für die Kommunikation mit das Geschäftsobjekt, das zum Senden von Anforderungen und Daten über das Internet. Für in-Process-Komponentenobjekte keine Proxys verwendet werden, nur ein Zeiger auf das Objekt bereitgestellt wird.  

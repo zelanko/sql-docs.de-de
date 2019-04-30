@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung um Duplikate zu identifizieren | Microsoft-Dokumentation'
+title: 'Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung um Duplikate zu identifizieren | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223388"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung zur Identifizierung von Duplikaten
   In dieser Aufgabe fügen Sie eine Transformation für Fuzzygruppierung zum Datenfluss hinzu. Mit der Transformation für Fuzzygruppierung können Duplikate in den Quelldaten identifiziert werden. Finden Sie unter [Transformation für Fuzzygruppierung](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) Weitere Details.  
   
 1.  Drag & Drop **Fuzzygruppierung** Transformation **Weitere Transformationen** auf die **SSIS-Toolbox** auf die **Datenfluss** Registerkarte  **Kombinieren Sie die richtige und korrigierte Datensätze**.  

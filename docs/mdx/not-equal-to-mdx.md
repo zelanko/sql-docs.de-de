@@ -1,5 +1,5 @@
 ---
-title: '&lt;&gt; (Ungleich) (MDX) | Microsoft Docs'
+title: '&lt;&gt; (Ungleich) (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ac3241e7d6acd8ba883cdd59f9410f4a0fd9187d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277519"
 ---
 # <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (Ungleich) (MDX)
 
@@ -37,7 +37,7 @@ MDX_Expression <> MDX_Expression
   
 -   **"true"** Wenn beide Parameter ungleich Null sind und der erste Parameter nicht gleich dem zweiten Parameter ist.  
   
--   **"false"** Wenn beide Parameter ungleich Null sind und der erste Parameter der zweite Parameter gleich ist.  
+-   **"false"** Wenn beide Parameter ungleich Null sind und der erste Parameter gleich dem zweiten Parameter ist.  
   
 -   NULL, wenn mindestens einer der Parameter zu einem NULL-Wert ausgewertet wird.  
   

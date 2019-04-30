@@ -1,5 +1,5 @@
 ---
-title: 'Beispiele: Verwenden des Automodus | Microsoft-Dokumentation'
+title: 'Beispiele: Verwenden des AUTO-Modus | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287812"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
   Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Beispiel: Angeben von GROUP BY und Aggregatfunktionen  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Beispiel: Angeben von GROUP BY- und Aggregatfunktionen  
  Die folgende Abfrage gibt individuelle Kunden-IDs sowie die Anzahl der Bestellungen zurück, die der Kunde jeweils angefordert hat.  
   
 ```  

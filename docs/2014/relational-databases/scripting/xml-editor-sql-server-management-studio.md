@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281740"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML-Editor (SQL Server Management Studio)
   Stellt eine Anzahl visueller Tools zur Arbeit mit XML-Schemas, ADO.NET-Datasets und XML-Dokumenten bereit. Der XML-Designer unterstützt die vom World Wide Web Consortium (W3C) definierte XSD-Sprache (XML Schema Definition). DTDs (Document Type Definitions) oder andere XML-Schemasprachen, wie XDR (XML-Data Reduced), werden vom Designer nicht unterstützt.  
@@ -35,7 +35,7 @@ ms.locfileid: "48166290"
   
  Für die Arbeit an XML-Dateien, XML-Schemas und Datasets stehen im Designer die folgenden drei Sichten (oder Modi) zur Verfügung:  
   
-|Anzeigen|Description|Unterstützte Dateitypen|  
+|Sicht|Description|Unterstützte Dateitypen|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|*.xsd|  
 |**Daten**|Zum visuellen Ändern von XML-Datendateien in einem strukturierten Datenraster.|*.xml|  
@@ -85,7 +85,7 @@ ms.locfileid: "48166290"
  Es gibt zwei separate Bereiche in der Datensicht: **Datentabellen** und **Daten**. Der Bereich **Datentabellen** stellt eine Liste der in der XML-Datei definierten Beziehungen in der Reihenfolge ihrer Verschachtelung (von außen nach innen) dar. Der Bereich **Daten** ist ein Datenraster, das Daten basierend auf der Auswahl im Bereich Datentabellen anzeigt.  
   
 > [!NOTE]  
->  Neu erstellte XML-Dateien enthalten keine Daten und können daher in der Datensicht nicht angezeigt werden. Es gibt auch einige Instanzen von XML-Dokumenten, bei denen die Datensicht nicht aufgerufen werden kann. Auch wenn das XML-Dokument ordnungsgemäß aufgebaut ist, können strukturierte Daten, die versuchen, in die Datensicht zu wechseln, die folgende Meldung generieren: "Das XML-Dokument ist richtig formatiert, enthält jedoch eine Struktur, die nicht in der Datenansicht angezeigt werden kann."  
+>  Neu erstellte XML-Dateien enthalten keine Daten und können daher in der Datensicht nicht angezeigt werden. Es gibt auch einige Instanzen von XML-Dokumenten, bei denen die Datensicht nicht aufgerufen werden kann. Selbst der XML-Code wohlgeformt, werden würde, wenn sie nicht strukturierte Daten ist möchten, wechseln Sie auf Daten Ansicht die folgende Meldung generiert: "Obwohl dieses Dokument wohlgeformt ist, enthält es-Struktur, die Datenansicht anzeigen kann."  
   
  In der Datensicht können Sie folgende Aktionen ausführen:  
   
