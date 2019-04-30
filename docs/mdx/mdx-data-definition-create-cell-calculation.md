@@ -1,5 +1,5 @@
 ---
-title: Erstellen von CELL CALCULATION-Anweisung (MDX) | Microsoft Docs
+title: Erstellen von CELL CALCULATION-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309143"
 ---
-# <a name="mdx-data-definition---create-cell-calculation"></a>MDX-Datendefinition - CELL CALCULATION erstellen
+# <a name="mdx-data-definition---create-cell-calculation"></a>MDX-Datendefinition – CREATE CELL CALCULATION
 
 
   Erstellt eine Berechnung, die einen MDX-Ausdruck (Multidimensional Expressions) für eine angegebene Tupelmenge in einem Cube auswertet.  
@@ -65,7 +65,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Calculation_Name*  
  Eine gültige Zeichenfolge, die den Namen der Zellenberechnungseigenschaft bereitstellt.  
   
- *"Scalar_expression"*  
+ *Scalar_Expression*  
  Ein gültiger skalarer MDX-Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -75,12 +75,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  Die Backus-Naur-Form (BNF) von `{*(<comment> | <whitespace> | <newline>)}` wird aus Gründen der Abwärtskompatibilität als `{*}` analysiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen berechneter Zellen im Bereich einer Sitzung](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
+ [Erstellen berechnete Zellen im Bereich einer Sitzung](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
  [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [Erstellen von Zellenberechnungen in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
  [Verwenden von Zelleneigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [FORMAT_STRING-Inhalt &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [FORE_COLOR- und BACK_COLOR-Inhalte &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
+ [FORE_COLOR und BACK_COLOR-Inhalte &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
  [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

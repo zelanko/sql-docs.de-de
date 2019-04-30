@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 72505d5c2f00118f3522ac25445822ba17573438
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277051"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled-Eigenschaft (ServerNetworkProtocolIpAddress-Klasse)
   Ruft die boolesche Eigenschaft ab, die angibt, ob eine IP-Adresse aktiviert ist.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261099"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Allgemein (Eigenschaftenseite) (Freigegebene Datenquellen, Berichts-Manager)
   Auf der Seite Allgemeine Eigenschaften können Sie Eigenschaften eines freigegebenen Datenquellenelements anzeigen oder ändern. Die von Ihnen an den Eigenschaften vorgenommenen Änderungen gelten für alle Berichte, die auf dieses Element verweisen, sobald Sie auf die Schaltfläche **Anwenden**klicken.  

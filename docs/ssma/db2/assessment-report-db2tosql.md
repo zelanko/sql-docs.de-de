@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6981a3ae7808f727ed3a2d246f21f3159bbeac6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299012"
 ---
 # <a name="assessment-report-db2tosql"></a>Assessment Report (DB2ToSQL)
 Die Fenster "Assessment Report" zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten für Ihren Migrationsprojekten.  
   
 Der Bewertungsbericht, Objekte gleichzeitig auszuwählen, für die Konvertierung in den Quellen-Metadaten-Explorer, den Zugriff auf Informationen zu diesem mit der rechten Maustaste **Schemas** oder **Synonyme**, und wählen Sie dann **Bericht erstellen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |||  
 |-|-|  

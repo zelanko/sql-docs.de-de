@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312861"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long-Daten, SQLSetPos und SQLBulkOperations
 Wie bei den Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werden können, wenn aktualisieren, die mit Zeilen **SQLBulkOperations** oder **SQLSetPos** oder beim Einfügen von Zeilen mit **SQLBulkOperations**. Die Daten werden gesendet, in Teilen durch mehrere Aufrufe **SQLPutData**. Spalten, die für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Spalten*.  
@@ -46,4 +46,4 @@ Wie bei den Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werd
   
 6.  Aufrufe **SQLParamData** erneut aus, um anzugeben, dass sie alle Daten für die Spalte gesendet hat. Wenn alle Data-at-Execution-Spalten, die für die Daten nicht gesendet wurden vorhanden sind, gibt der Treiber SQL_NEED_DATA sowie den eindeutigen Wert für die nächste Data-at-Execution-Spalte; Gibt zurück, die Anwendung mit Schritt 5 fort. Wenn die Daten für alle Data-at-Execution-Spalten gesendet wurde, werden die Daten für die Zeile an die Datenquelle gesendet. **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO und kann SQLSTATE zurückgeben **SQLBulkOperations** oder **SQLSetPos** zurückgeben können.  
   
- Nach dem **SQLBulkOperations** oder **SQLSetPos** wird SQL_NEED_DATA zurückgegeben. und bevor die Daten vollständig für die letzte Data-at-Execution-Spalte gesendet wurden, wird die Anweisung in einem Zustand der Daten erforderlich ist. In diesem Fall kann die Anwendung nur aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler funktionieren). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Nach dem **SQLBulkOperations** oder **SQLSetPos** wird SQL_NEED_DATA zurückgegeben. und bevor die Daten vollständig für die letzte Data-at-Execution-Spalte gesendet wurden, wird die Anweisung in einem Zustand der Daten erforderlich ist. In diesem Fall kann die Anwendung nur aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler funktionieren). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
