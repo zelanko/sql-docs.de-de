@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240168"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (SybaseToSQL)
 Microsoft bietet Ihnen einen stabilen Satz von Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  

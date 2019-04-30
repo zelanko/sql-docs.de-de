@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226156"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
   Das <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>-Objekt wird dazu verwendet, dem <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>-Objekt eine Berechtigungsgruppe oder eine einzelne Serverberechtigung zuzuweisen. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Bei Ausführung dieses Codebeispiels wird die Berechtigung aufgehoben und bestätigt, dass die Löschung über die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>-Methode vorgenommen wurde.  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258838"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetEnvAttr** die aktuelle Einstellung eines Umgebung-Attributs zurück.  
@@ -65,7 +65,7 @@ SQLRETURN SQLGetEnvAttr(
  [Ausgabe] Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen) zurückgegeben. verfügbar für die zurückzugebenden in  *\*ValuePtr*. Wenn *ValuePtr* ist ein null-Zeiger wird keine Länge zurückgegeben. Wenn Sie den Wert des Attributs ist eine Zeichenfolge und die Anzahl der Bytes, die für die Rückgabe verfügbar ist, größer als oder gleich *Pufferlänge*, die Daten in \* *ValuePtr* auf abgeschnitten  *BufferLength* abzüglich der Länge des ein Null-Terminierungszeichen und Null-terminiert ist vom Treiber.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetEnvAttr** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_ENV und *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetEnvAttr** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

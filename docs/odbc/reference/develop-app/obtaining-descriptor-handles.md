@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 983097de95e41914bb4d577cb071d790a795f96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254678"
 ---
 # <a name="obtaining-descriptor-handles"></a>Abrufen von Deskriptorhandles
 Eine Anwendung erhält das Handle des beliebige explizit zugewiesene Deskriptoren als ausgabeargument des Aufrufs von **SQLAllocHandle**. Das Handle für einen implizit zugewiesene Deskriptor wird abgerufen, durch den Aufruf **SQLGetStmtAttr**.

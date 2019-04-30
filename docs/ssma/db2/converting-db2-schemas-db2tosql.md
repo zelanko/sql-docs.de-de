@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298967"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Konvertieren von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie die DB2-Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten.  
@@ -35,7 +35,7 @@ Die folgende Tabelle zeigt, welche DB2 Objekte konvertiert werden, und das resul
 |-----------|----------------------------|  
 |Datentypen|**SSMA wird jeder Typ, mit Ausnahme der unten aufgeführten Folgendes:**<br /><br />CLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. CLOB_EMPTY())<br /><br />BLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. BLOB_EMPTY())<br /><br />DBLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. DBLOB_EMPTY())|  
 |Benutzerdefinierte Typen|**SSMA ordnet die folgenden benutzerdefinierten:**<br /><br />Gesonderter Typ<br /><br />Strukturierten Typ<br /><br />SQL-PL-Datentypen – Hinweis: Schwache Cursortyp werden nicht unterstützt.|  
-|Spezielle Register|**SSMA wird nur registriert, die unten aufgeführten:**<br /><br />AKTUELLER ZEITSTEMPEL<br /><br />AKTUELLES DATUM<br /><br />AKTUELLE ZEIT<br /><br />AKTUELLE ZEITZONE<br /><br />AKTUELLER BENUTZER<br /><br />SESSION_USER und Benutzer<br /><br />SYSTEM_USER<br /><br />AKTUELLE CLIENT_APPLNAME<br /><br />AKTUELLE CLIENT_WRKSTNNAME<br /><br />AKTUELLE SPERRUNGSTIMEOUT<br /><br />AKTUELLES SCHEMA<br /><br />AKTUELLER SERVER<br /><br />AKTUELLE ISOLATION<br /><br />Andere spezielle registriert werden nicht auf SQLServer semantic zugeordnet.|  
+|Spezielle Register|**SSMA wird nur registriert, die unten aufgeführten:**<br /><br />AKTUELLER ZEITSTEMPEL<br /><br />AKTUELLES DATUM<br /><br />AKTUELLE ZEIT<br /><br />AKTUELLE ZEITZONE<br /><br />AKTUELLER BENUTZER<br /><br />SESSION_USER und Benutzer<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />AKTUELLE SPERRUNGSTIMEOUT<br /><br />AKTUELLES SCHEMA<br /><br />AKTUELLER SERVER<br /><br />AKTUELLE ISOLATION<br /><br />Andere spezielle registriert werden nicht auf SQLServer semantic zugeordnet.|  
 |CREATE TABLE|**SSMA wird CREATE TABLE, mit den folgenden Ausnahmen:**<br /><br />Mehrdimensionale clustering (MDC) Tabellen<br /><br />Bereich gruppierte Tabellen (RCT)<br /><br />Partitionierte Tabellen<br /><br />Getrennte Tabelle<br /><br />DATA CAPTURE-Klausel<br /><br />Option IMPLICITLY AUSGEBLENDET<br /><br />VOLATILE-option|  
 |CREATE VIEW|SSMA ordnet CREATE VIEW mit "Mit lokalen CHECK OPTION" jedoch andere Optionen sind nicht auf SQL Server-Semantik zugeordnet|  
 |CREATE INDEX|**SSMA wird die CREATE INDEX mit den folgenden Ausnahmen:**<br /><br />XML-Index<br /><br />Option BUSINESS_TIME ohne ÜBERSCHNEIDUNGEN<br /><br />PARTITIONIERTE-Klausel<br /><br />Spezifikation nur die option<br /><br />Mithilfe der erweitern-option<br /><br />MINPCTUSED-option<br /><br />SEITENTEILUNG-option|  

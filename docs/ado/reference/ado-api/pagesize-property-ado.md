@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c33b8a757e699a78c699cc87e7fd7dba26006b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240083"
 ---
 # <a name="pagesize-property-ado"></a>PageSize-Eigenschaft (ADO)
 Gibt an, wie viele Datensätze bilden eine Seite in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

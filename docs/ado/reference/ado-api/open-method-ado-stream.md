@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0df165514a10bc667c8bd2cc6d2a8569faa79d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239717"
 ---
 # <a name="open-method-ado-stream"></a>Open-Methode (ADO-Datenstrom)
 Öffnet eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt zum Bearbeiten von binären Vergleich oder einen Datenströme.  
@@ -36,19 +36,19 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Variant** Wert, der angibt, die Quelle der Daten für die **Stream**. *Quelle* darf eine absolute URL-Zeichenfolge, die auf einen vorhandenen Knoten in einer bekannten Baumstruktur, wie z. B. eine E-mail oder Datei verweist. Es sollte eine URL mit dem URL-Schlüsselwort angegeben werden ("URL =*Schema*://*Server*/*Ordner*"). Alternativ *Quelle* möglicherweise enthalten einen Verweis auf ein bereits geöffnetes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, das den Standarddatenstrom zugeordneten öffnet die **Datensatz**. Wenn *Quelle* nicht angegeben ist, eine **Stream** instanziiert und geöffnet, ohne zugrunde liegende Quelle standardmäßig zugeordnet ist. Weitere Informationen zu URL-Schemas und zugeordneten Anbietern, finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Dies ist optional. Ein **Variant** Wert, der angibt, die Quelle der Daten für die **Stream**. *Quelle* darf eine absolute URL-Zeichenfolge, die auf einen vorhandenen Knoten in einer bekannten Baumstruktur, wie z. B. eine E-mail oder Datei verweist. Es sollte eine URL mit dem URL-Schlüsselwort angegeben werden ("URL =*Schema*://*Server*/*Ordner*"). Alternativ *Quelle* möglicherweise enthalten einen Verweis auf ein bereits geöffnetes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, das den Standarddatenstrom zugeordneten öffnet die **Datensatz**. Wenn *Quelle* nicht angegeben ist, eine **Stream** instanziiert und geöffnet, ohne zugrunde liegende Quelle standardmäßig zugeordnet ist. Weitere Informationen zu URL-Schemas und zugeordneten Anbietern, finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den den Zugriffsmodus für die resultierenden **Stream** (z. B. Lese-/Schreibzugriff oder schreibgeschützt). Standardwert ist **AdModeUnknown**. Finden Sie unter den [Modus](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft für Weitere Informationen zu Access-Modi. Wenn *Modus* nicht angegeben ist, wird es von dem Quellobjekt geerbt. Z. B. wenn die Quelle **Datensatz** im schreibgeschützten Modus geöffnet ist die **Stream** wird standardmäßig auch im schreibgeschützten Modus geöffnet werden.  
+ Dies ist optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den den Zugriffsmodus für die resultierenden **Stream** (z. B. Lese-/Schreibzugriff oder schreibgeschützt). Standardwert ist **AdModeUnknown**. Finden Sie unter den [Modus](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft für Weitere Informationen zu Access-Modi. Wenn *Modus* nicht angegeben ist, wird es von dem Quellobjekt geerbt. Z. B. wenn die Quelle **Datensatz** im schreibgeschützten Modus geöffnet ist die **Stream** wird standardmäßig auch im schreibgeschützten Modus geöffnet werden.  
   
  *OpenOptions*  
- Optional. Ein [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) Wert. Standardwert ist **AdOpenStreamUnspecified**.  
+ Dies ist optional. Ein [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) Wert. Standardwert ist **AdOpenStreamUnspecified**.  
   
  *UserName*  
- Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
  *Kennwort*  
- Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn eine **Datensatz** Objekt wird als der Quellparameter übergeben die *"UserID"* und *Kennwort* Parameter werden nicht verwendet werden, da Zugriff auf die **Datensatz** Objekt ist bereits verfügbar. Auf ähnliche Weise die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) von der **Datensatz** Objekt wird zum Übertragen der **Stream** Objekt. Wenn *Quelle* nicht angegeben ist, die **Stream** geöffnet enthält keine Daten und verfügt über eine [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) von 0 (null). Um zu vermeiden, Verlust von Daten, die in diese geschrieben werden **Stream** beim der **Stream** ist geschlossen, Speichern der **Stream** mit der [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) oder [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) Methoden, oder auf einem anderen Speicherort speichern.  

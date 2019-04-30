@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mit Master Data Manager | Microsoft-Dokumentation'
+title: 'Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mit Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262432"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe von Master Data Manager
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe des Master Data Manager
   In dieser Aufgabe erstellen Sie eine abgeleitete Hierarchie mit Master Data Manager. Diese abgeleitete Hierarchie wird abgeleitet von den domänenbasierten attributbeziehungen zwischen dem **Lieferanten** und **Zustand** Entitäten.  
   
 1.  Wechseln Sie zur Hauptseite des **Master Data Manager** durch Klicken auf **SQL Server 2012 Master Data Services** am oberen Rand der Seite.  

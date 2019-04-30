@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239025"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  

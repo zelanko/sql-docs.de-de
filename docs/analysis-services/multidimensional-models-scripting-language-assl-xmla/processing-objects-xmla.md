@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59a581f7e70f3fc1afd7eb7c1eaf4751d32719d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261660"
 ---
 # <a name="processing-objects-xmla"></a>Verarbeiten von Objekten (XMLA)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Verarbeitung ist der Schritt oder Reihe von Schritten, Daten in Informationen für Geschäftsanalysen umgewandelt. Die Verarbeitung ist je nach Objekttyp unterschiedlich, aber immer Teil einer Umwandlung von Daten in Informationen.  
@@ -52,7 +52,7 @@ ms.locfileid: "50145385"
 |*ProcessDefault*|Cube, Datenbank, Dimension, Measuregruppe, Miningmodell, Miningstruktur, Partition|  
 |*ProcessClear*|Cube, Datenbank, Dimension, Measuregruppe, Miningmodell, Miningstruktur, Partition|  
 |*ProcessStructure*|Cube, Miningstruktur|  
-|*' ProcessClearStructureOnly '*|Miningstruktur|  
+|*ProcessClearStructureOnly*|Miningstruktur|  
 |*ProcessScriptCache*|Cube|  
   
  Weitere Informationen zur Verarbeitung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekten finden Sie [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  

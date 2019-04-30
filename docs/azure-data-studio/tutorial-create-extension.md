@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen einer Erweiterung'
+title: 'Tutorial: Erstellen einer Erweiterung'
 titleSuffix: Azure Data Studio
 description: In diesem Tutorial wird veranschaulicht, wie eine Erweiterung zum Hinzufügen von benutzerdefinierten Funktionen in Azure Data Studio erstellt wird.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: kevcunnane
 ms.author: kcunnane
 manager: craigg
 ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309424"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Lernprogramm: Erstellen Sie eine Azure Data Studio-Erweiterung
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Erstellen Sie eine Azure Data Studio-Erweiterung
 
 Dieses Tutorial veranschaulicht, wie eine neue Azure Data Studio-Erweiterung. Die Erweiterung erstellt vertraute tastenbindungen für SSMS in Azure Data Studio.
 

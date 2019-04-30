@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231348"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Hohe Verfügbarkeit für SQL Server-Container
 
@@ -73,14 +73,14 @@ Die folgende Tabelle vergleicht die hohe Verfügbarkeit von SQL Server in Contai
 
 | |Mit einer verfügbarkeitsgruppe | Eigenständige-Containerinstanz<br/> Keine verfügbarkeitsgruppe
 |:------|:------|:------
-|Vom Ausfall eines Knotens wird automatisch wiederhergestellt. | Benutzerkontensteuerung | Benutzerkontensteuerung
-|Automatische Wiederherstellung von Pod-Fehler | Benutzerkontensteuerung | Benutzerkontensteuerung
-|Schnelleres failover |Benutzerkontensteuerung |
-|Automatische Wiederherstellung von SQL Server-Instanz Fehler | Benutzerkontensteuerung | 
-|Automatische Wiederherstellung von Datenbankfehlern für Integrität überprüfen | Benutzerkontensteuerung | 
-|Bereitstellen von schreibgeschützten Replikaten | Benutzerkontensteuerung |
-|Sicherung des sekundären Replikats | Benutzerkontensteuerung | 
-|Als einem StatefulSet ausgeführt wird | Benutzerkontensteuerung | 
+|Vom Ausfall eines Knotens wird automatisch wiederhergestellt. | Ja | Ja
+|Automatische Wiederherstellung von Pod-Fehler | Ja | Ja
+|Schnelleres failover |Ja |
+|Automatische Wiederherstellung von SQL Server-Instanz Fehler | Ja | 
+|Automatische Wiederherstellung von Datenbankfehlern für Integrität überprüfen | Ja | 
+|Bereitstellen von schreibgeschützten Replikaten | Ja |
+|Sicherung des sekundären Replikats | Ja | 
+|Als einem StatefulSet ausgeführt wird | Ja | 
 
 Ein Hauptunterschied ist, dass die Wiederherstellung (oder einem Failover) Zeit schneller mit einer verfügbarkeitsgruppe als mit einer einzelnen Instanz von SQL Server in einem Container. Diese Verbesserung ist, da die SQL Server-verfügbarkeitsgruppe sekundäre Replikate auf anderen Knoten im Cluster beibehält. Bei einem Failover ein sekundäres Replikat ausgewählt und zum primären Replikat heraufgestuft. Anwendungen, die mit dem Dienst verbunden werden an das neue primäre Replikat weitergeleitet.
 

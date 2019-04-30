@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253261"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySqlToSql)
 Die **"Einstellungen"** Registerkarte kann der Benutzer knoteneinstellungen festlegen. Die Registerkarte wird in der folgenden Metabase-Knoten verfügbar sein:  

@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232429"
 ---
 # <a name="use-xml-data-in-applications"></a>Verwenden von XML-Daten in Anwendungen
   In diesem Thema werden die Optionen beschrieben, die Ihnen bei der Arbeit mit dem `xml`-Datentyp in Ihrer Anwendung zur Verfügung stehen. Das Thema enthält Informationen zu Folgendem:  

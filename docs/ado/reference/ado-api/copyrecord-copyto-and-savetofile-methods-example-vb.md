@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309123"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo und SaveToFile Methode – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie zum Erstellen von Kopien einer Datei mit [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekte. In einen Webordner für Internet Publishing wird eine Kopie erstellt. Andere Eigenschaften und Methoden, die dargestellt sind [Stream Typ](../../../ado/reference/ado-api/type-property-ado-stream.md), **öffnen**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), und [Datensatz öffnen](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -131,7 +131,7 @@ End Sub
  [LoadFromFile-Methode (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
  [Open Sie-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Sie-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)   
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der ELEMENT-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ELEMENT-Anweisung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287157"
 ---
 # <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
   Dadurch werden Mitarbeiterinformationen abgerufen und wird elementzentriertes XML generiert, wie nachfolgend zu sehen ist:  

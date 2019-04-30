@@ -1,5 +1,5 @@
 ---
-title: KEINE (MDX) | Microsoft Docs
+title: KEINE (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278497"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -33,10 +33,10 @@ NOT Expression1
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der zurückgibt **"false"** , wenn das Argument ergibt **"true"** ist, andernfalls **"true"**.  
+ Ein boolescher Wert, der zurückgibt **"false"** ergibt das Argument **"true"** ist, andernfalls **"true"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **nicht** -Operator behandelt den Ausdruck als booleschen Wert (null, 0, als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Negation ausführt. Die folgende Tabelle verdeutlicht, wie die **nicht** Operator die logische Negation ausführt.  
+ Die **nicht** -Operator behandelt den Ausdruck als booleschen Wert (null, 0 (null) als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Negation ausführt. In der folgende Tabelle wird veranschaulicht, wie die **nicht** Operator die logische Negation ausführt.  
   
 |*Expression1*|Rückgabewert|  
 |-------------------|------------------|  

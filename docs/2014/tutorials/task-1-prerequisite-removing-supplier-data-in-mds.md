@@ -1,5 +1,5 @@
 ---
-title: Aufgabe 1 (Voraussetzung) Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation
+title: 'Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222527"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung) Entfernen von Lieferantendaten in MDS
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten aus MDS
   In dieser Aufgabe entfernen Sie die Lieferantendaten, die in MDS gespeichert werden. Sie hochgeladen haben, die Daten manuell mit **MDS-Excel-Add-in** in der vorherigen Lektion. Das SSIS-Paket, das Sie in dieser Lektion erstellen, lädt die Daten für Sie automatisch in MDS hoch. Bevor Sie das SSIS-Paket testen, müssen Sie daher die Lieferantendaten aus MDS entfernen, die abgeleitete Hierarchie entfernen, die Entitäten "Supplier" und "State" entfernen und die Entität "Supplier" ohne Daten erstellen.  
   
 1.  Starten Sie **Master Data Manager** durch Navigieren zu **http://localhost/MDS** oder die Website und die angegebene eingabeanwendung beim Konfigurieren von MDS. Weiterhin die **Master Data Manager** öffnen, klicken Sie auf **SQL Server 2012 Master Data Services** oben, um zum Wechseln der **auf der Startseite**.  

@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254180"
 ---
 # <a name="mixed-cursors"></a>Gemischte Cursor
 Ein gemischte Cursor ist eine Kombination eines keysetgesteuerten Cursors und einen dynamischen Cursor. Es wird verwendet, wenn das Resultset zu groß, um den Schlüssel für das gesamte Resultset angemessen zu speichern ist. Gemischte Cursor werden implementiert, erstellen Sie eine Keyset, die kleiner als das gesamte Resultset jedoch größer als das Rowset ist.  
   
- Solange die Anwendung innerhalb des Keysets einen Bildlauf durchführt, ist das Verhalten keysetgesteuerte. Das Verhalten ist dynamisch, wenn die Anwendung außerhalb der Keyset scrollen: der Cursor die angeforderten Zeilen und erstellt eine neue Keyset. Nachdem das neue Keyset erstellt wurde, wird das Verhalten innerhalb der, dass sich keysetgesteuerte keysetgesteuerte wiederhergestellt.  
+ Solange die Anwendung innerhalb des Keysets einen Bildlauf durchführt, ist das Verhalten keysetgesteuerte. Wenn die Anwendung außerhalb der Keyset einen Bildlauf durchführt, ist das Verhalten dynamischer: Der Cursor die angeforderten Zeilen und erstellt eine neue Keyset. Nachdem das neue Keyset erstellt wurde, wird das Verhalten innerhalb der, dass sich keysetgesteuerte keysetgesteuerte wiederhergestellt.  
   
  Nehmen wir beispielsweise an einem Resultset verfügt über 1.000 Zeilen umfassen und verwendet einen gemischte Cursor ein Keysetgröße von 100 mit einer Rowsetgröße von 10. Wenn das erste Rowset abgerufen wird, erstellt den Cursor eine Keyset, die die Schlüssel für die ersten 100 Zeilen bestehen. Anschließend wird die ersten 10 Zeilen als angefordert zurückgegeben.  
   

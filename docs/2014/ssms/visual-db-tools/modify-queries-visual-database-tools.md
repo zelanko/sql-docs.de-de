@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306024"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Ändern von Abfragen (Visual Database Tools)
   Öffnen Sie eine Abfrage, um diese im Abfrage- und Sicht-Designer zu ändern.  

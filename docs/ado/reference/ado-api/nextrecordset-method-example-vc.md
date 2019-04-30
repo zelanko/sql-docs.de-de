@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242710"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset-Methode – Beispiel (VC++)
 Dieses Beispiel verwendet die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) Methode zum Anzeigen der Daten in einem Recordset, die eine zusammengesetzte befehlsanweisung setzt sich aus drei Separate verwendet **wählen** Anweisungen.  

@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Aktivieren Sie die fünf langsamsten Abfragen-Beispiel-widget'
+title: 'Tutorial: Aktivieren Sie die fünf langsamsten Abfragen-Beispiel-widget'
 titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht, wie die fünf langsamsten Abfragen Beispiel-Widget auf die Datenbank-Dashboard.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239643"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Lernprogramm: Hinzufügen der *fünf langsamsten Abfragen* Beispiel Widget aus, das die Datenbank-Dashboard
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen der *fünf langsamsten Abfragen* Beispiel Widget aus, das die Datenbank-Dashboard
 
 Dieses Tutorial veranschaulicht den Prozess des Hinzufügens eines [!INCLUDE[name-sos](../includes/name-sos-short.md)]des integrierte Beispiel-Widgets zum die *Datenbank-Dashboard* fünf langsamsten Abfragen mit einer Datenbank schnell anzeigen. Außerdem erfahren Sie, wie zum Anzeigen der Details der langsamen Abfragen und Abfragepläne mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Features. In diesem Tutorial erfahren Sie, wie Sie:
 

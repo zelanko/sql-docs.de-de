@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242354"
 ---
 # <a name="direct-execution-odbc"></a>Direkte Ausführung – ODBC
 Direkte Ausführung ist die einfachste Möglichkeit zum Ausführen einer Anweisung. Wenn die Anweisung zur Ausführung übermittelt wird, wird die Datenquelle kompiliert sie zu einem Zugriffsplan und führt dann diesen Zugriffsplan.  

@@ -1,5 +1,5 @@
 ---
-title: YTD (MDX) | Microsoft Docs
+title: Seit Jahresbeginn (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 67df625611f2451c3442d5d59b56c76dfc14a74a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295159"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element aus, beginnend mit dem ersten gleichgeordneten Element und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Jahr* in der Zeitdimension.  
+  Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element, mit dem ersten gleichgeordneten Element beginnend und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Jahr* Ebene in der Time-Dimension.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,12 +33,12 @@ Ytd( [ Member_Expression ] )
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Elementausdruck nicht angegeben ist, wird die Standardeinstellung ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Jahre* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
+ Wenn ein Elementausdruck nicht angegeben ist, wird der Standardwert ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Jahre* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
   
- Die **Ytd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, die Typeigenschaft der Attributhierarchie, auf dem die Ebene basiert, auf festgelegt ist *Jahre*. Somit ist `Ytd(Member_Expression)` äquivalent zu `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Beachten Sie, die diese Funktion nicht verwendet werden, wenn die Type-Eigenschaft, um festgelegt ist *FiscalYears*.  
+ Die **seit Jahresbeginn** -Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, in denen die Typeigenschaft der Attributhierarchie, auf dem die Ebene basiert, auf ist *Jahre*. Somit ist `Ytd(Member_Expression)` äquivalent zu `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Beachten Sie, die diese Funktion nicht funktionieren, wenn die Type-Eigenschaft, um festgelegt ist *FiscalYears*.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003 in der `Date` Dimension, aus der **Adventure Works** Cube.  
+ Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -54,7 +54,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **YTD** wird häufig in Kombination verwendet, ohne Parameter angegeben wird, was bedeutet, dass die [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) Funktion wird eine kumulative Summe der Jahr-bis-heute in einem Bericht angezeigt, entsprechend der folgende Abfrage:  
+ **Seit Jahresbeginn** wird häufig in Kombination verwendet, ohne Parameter angegeben wird, was bedeutet, dass die [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) Funktion wird eine kumulative Summe der Jahr-bis-heute in einem Bericht angezeigt, siehe die folgende Abfrage:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   

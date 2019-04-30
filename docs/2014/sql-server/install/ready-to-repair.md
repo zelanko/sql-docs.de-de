@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240178"
 ---
 # <a name="ready-to-repair"></a>Die Reparatur kann jetzt ausgeführt werden
   Die Seite Die Reparatur kann jetzt ausgeführt werden stellt eine Zusammenfassung des Reparaturprozesses durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bereit.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Auf dieser Seite stehen Ihnen die folgenden Optionen zur Verfügung:  
   
 -   Um mit dem Setup fortzufahren, klicken Sie auf **Reparieren**.  

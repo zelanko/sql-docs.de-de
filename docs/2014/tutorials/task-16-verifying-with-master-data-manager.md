@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 16: Überprüfung mit Master Data Manager | Microsoft-Dokumentation'
+title: 'Aufgabe 16: Überprüfung mit Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222547"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>Aufgabe 16: Überprüfung mit Master Data Manager
+# <a name="task-16-verifying-with-master-data-manager"></a>Aufgabe 16: Überprüfung mit dem Master Data Manager
   In dieser Aufgabe prüfen Sie den Status des vom SSIS-Paket gesendeten Batchauftrags und verifizieren, ob die Daten mit Master Data Manager auf den MDS-Server hochgeladen wurden.  
   
 1.  Starten Sie **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). Wenn sie bereits geöffnet ist, klicken Sie auf **Microsoft SQL Server Master Data Services** oben, um zum Wechseln der **auf der Startseite**.  

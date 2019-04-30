@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255806"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ein Transact-SQL-Skript anhand einer vorhandenen Ablaufverfolgungsdatei oder -tabelle erstellt werden kann.  

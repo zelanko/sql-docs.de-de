@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7108760ebdb5e7e3e6367b801b07d4f8140a62d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238736"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
-  Legt die Anzahl von Feldern fest, die an die Spalten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle gebunden werden sollen.  
+  Legt die Anzahl von Feldern fest, die an die Spalten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle gebunden werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +35,7 @@ DBCOUNTITEMnColumns);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Intern wird [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) aufgerufen, um die Standardwerte für Felddaten festzulegen. Diese Standardwerte werden aus den SQL Server-Spalteninformationen abgerufen, die der Anbieter intern abruft, wenn der Tabellenname über [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) angegeben wird.  
+ Intern wird [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) aufgerufen, um die Standardwerte für Felddaten festzulegen. Diese Standardwerte werden aus den SQL Server-Spalteninformationen abgerufen, die der Anbieter intern abruft, wenn der Tabellenname über [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)angegeben wird.  
   
 > [!NOTE]  
 >  Diese Methode kann erst nach dem Aufruf von **BCPInit** mit einem gültigen Dateinamen aufgerufen werden.  
@@ -53,7 +53,7 @@ DBCOUNTITEMnColumns);
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)-Schnittstelle.  
+ Ein anwenderspezifischer Fehler ist aufgetreten. Ausführlichere Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die **BCPInit** -Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen. Tritt auch auf, wenn diese Methode mehr als einmal für einen Massenkopiervorgang aufgerufen wird.  
@@ -62,7 +62,7 @@ DBCOUNTITEMnColumns);
  Fehler aufgrund nicht genügenden Arbeitsspeichers  
   
 ## <a name="see-also"></a>Siehe auch  
- [IBCPSession &#40;OLE-DB&#41;](ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../native-client/features/performing-bulk-copy-operations.md)  
   
   

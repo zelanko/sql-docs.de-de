@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270715"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  

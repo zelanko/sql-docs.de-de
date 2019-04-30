@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231273"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
   Wie im Thema [Erstellen von XML mithilfe von FOR XML](../xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
@@ -149,23 +149,23 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Abrufen von Informationen zu Mitarbeitern](../xml/example-retrieving-employee-information.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive](../xml/example-specifying-the-element-directive.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung](../xml/example-specifying-the-element-directive.md)  
   
--   [Beispiel: Angeben der ELEMENTXSINIL-Direktive](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Beispiel: Angeben der ELEMENTXSINIL-Anweisung](../xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Beispiel: Angeben der ID- und IDREF-Direktive](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREF-Anweisungen](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Beispiel: Angeben der ID- und IDREFS-Direktive](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREFS-Anweisungen](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Beispiel: Angeben der HIDE-Direktive](../xml/example-specifying-the-hide-directive.md)  
+-   [Beispiel: Angeben der HIDE-Anweisung](../xml/example-specifying-the-hide-directive.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Beispiel: Angeben der CDATA-Direktive](../xml/example-specifying-the-cdata-directive.md)  
+-   [Beispiel: Angeben der CDATA-Anweisung](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Beispiel: Angeben der XMLTEXT-Direktive](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Beispiel: Angeben der XMLTEXT-Anweisung](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden des RAW-Modus mit FOR XML](../xml/use-raw-mode-with-for-xml.md)   

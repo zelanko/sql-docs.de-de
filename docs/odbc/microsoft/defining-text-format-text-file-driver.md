@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240380"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definieren des Textformats (Textdateitreiber)
 Wenn der Text-Treiber verwendet wird, können Sie die **-Text-Format definieren** Dialogfeld, um das Format für Spalten in einer ausgewählten Datei zu definieren. Dieses Dialogfeld können Sie das Schema für jede Datentabelle anzugeben. Diese Informationen werden in eine Schema.ini-Datei im Data Source-Verzeichnis geschrieben. Eine separate Datei Schema.ini wird für jeden Text Data Source-Verzeichnis erstellt.  
@@ -36,7 +36,7 @@ Wenn der Text-Treiber verwendet wird, können Sie die **-Text-Format definieren*
 |**Kopfzeile der Spalte Name**|Gibt an, ob die Spalten der ausgewählten Tabelle die erste Zeile als Spaltennamen verwendet werden soll. Entweder **"true"** oder **"false"**. Standardmäßig auf "false" fest, wenn das Format des ausgewählten Elements in der **Tabellen** Liste wurde durch dieses Dialogfeld können Sie nicht zuvor definiert.|  
 |**Spalten**|Listet die Spaltennamen für jede Spalte in der ausgewählten Tabelle. Die Reihenfolge der Spalten gibt die Reihenfolge der Spalten in der Tabelle wieder. Diese Liste ist aktiviert, wenn eine Datei ausgewählt wurde die **Tabellen** Liste.|  
 |**Datentyp**|BIT, BYTE, CHAR, Währung, Datum, "float", ganze Zahl, LONGCHAR, SHORT oder einzelne möglich. Date-Datentypen können in den folgenden Formaten werden: "tt-mmm-Yy", "mm-Dd-Yy", "mmm-JJ", "Yyyy-mm-Dd" oder "Yyyy-mmm-Dd". "mm" gibt die Zahlen für Monate; "mmm" gibt die Buchstaben für Monate an.|  
-|**Trennzeichen**|Gibt an, das benutzerdefinierte Trennzeichen zum Trennen der Spalten verwendet werden. Aktiviert, wenn die **benutzerdefinierte Trennzeichen** Format ausgewählt ist. Das Trennzeichen kann nur ein Zeichen lang sein, und doppelte Anführungszeichen (") kann nicht als Trennzeichen verwendet werden. (Das Trennzeichen kann nicht im Hexadezimal-oder Dezimalformat angegeben werden.)|  
+|**Delimiter**|Gibt an, das benutzerdefinierte Trennzeichen zum Trennen der Spalten verwendet werden. Aktiviert, wenn die **benutzerdefinierte Trennzeichen** Format ausgewählt ist. Das Trennzeichen kann nur ein Zeichen lang sein, und doppelte Anführungszeichen (") kann nicht als Trennzeichen verwendet werden. (Das Trennzeichen kann nicht im Hexadezimal-oder Dezimalformat angegeben werden.)|  
 |**Format**|Mit Trennzeichen oder mit fester Länge. Wenn Trennzeichen, gibt Sie den Typ der verwendeten Trennzeichen: durch Kommas (CSV), Tabstopp oder Sonderzeichen (Benutzerdefiniert). Der Standardwert lautet **CSV-Trennzeichen** , wenn das Format des Elements in ausgewählt der **Tabellen** Liste wurde durch dieses Dialogfeld können Sie nicht zuvor definiert.<br /><br /> Wenn **Format** fester Länge ist und **Kopfzeile der Spalte Name** ist "true", die erste Zeile muss durch Kommas getrennt sein.|  
 |**Schätzung**|Generiert automatisch die Werte der Spalte Daten Typ, Name und die Breite der Spalten in der ausgewählten Tabelle durch das Scannen des Tabelleninhalts gemäß der **Format** Feld-Auswahl. Aktiviert, wenn das Tabellenformat getrennt wird. Alle zuvor definierten Spalten in der **Spalten** Liste gelöscht und mit neuen Einträgen ersetzt werden. Wenn **Kopfzeile der Spalte Name** ist nicht ausgewählt ist, Spaltennamen automatisch generiert werden als "F1", "F2" und So weiter. Kein Standardwert wird angezeigt, der **Datentyp** Feld.<br /><br /> Diese Funktion kann nur für Spalten, die kleiner ist als 64,513 Bytes sind.|  
 |**Ändern**|Ändert die ausgewählte Spalte, die mithilfe der Werte in **Datentyp**, **Namen**, und **Breite**.|  

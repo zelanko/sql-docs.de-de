@@ -1,5 +1,5 @@
 ---
-title: NextMember (MDX) | Microsoft Docs
+title: NextMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535b837d81db10f41f1445a7051678ce4fdd688
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277857"
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 
@@ -33,7 +33,7 @@ Member_Expression.NextMember
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **NextMember** Funktion gibt das nächste Element in der gleichen Ebene befinden, mit dem angegebenen Element zurück.  
+ Die **NextMember** Funktion gibt das nächste Element auf derselben Ebene, mit dem angegebenen Element zurück.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das August 2001-Element als das auf das July 2001-Element folgende Element zurückgegeben.  

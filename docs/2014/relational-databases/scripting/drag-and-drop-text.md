@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b248f61465e3c9f2228608a5640b2b7395fd902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225738"
 ---
 # <a name="drag-and-drop-text"></a>Verschieben von Text mit Drag und Drop
   Sie können Text auswählen und dann mit Drag und Drop an eine andere Position verschieben. Das Verschieben von Text mit Drag und Drop ist für Folgendes möglich:  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315079"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Prüfen des Callcentermodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie nun das explorative Modell erstellt haben, können Sie es verwenden, um die Daten genauer zu untersuchen. Verwenden Sie dazu die folgenden Tools, die in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] bereitgestellt werden.  
@@ -43,7 +43,7 @@ ms.locfileid: "56037761"
     > [!NOTE]  
     >  Die genauen Werte in diesem Bereich variieren ggf. abhängig davon, wie Sie das Modell konfiguriert haben.  
   
-2.  Für **Wert 2**, wählen Sie den Bereich mit den höchsten Werten. So stellt beispielsweise der Bereich mit dem Wert >= 0,12 die höchsten Abbruchraten dar und damit die schlechteste Dienstqualität. Der Wert bedeutet, dass 12% der eingehenden Kundenanrufe während dieser Schicht nicht durchgestellt werden konnten und der Kunde wieder aufgelegt hat.  
+2.  Für **Wert 2**, wählen Sie den Bereich mit den höchsten Werten. Beispielsweise der Bereich mit dem Wert > = 0,12 darstellt, die höchsten Abbruchraten und damit die schlechteste Dienstqualität. Der Wert bedeutet, dass 12% der eingehenden Kundenanrufe während dieser Schicht nicht durchgestellt werden konnten und der Kunde wieder aufgelegt hat.  
   
      Den Inhalt der **Variablen** Bereich werden aktualisiert, um Attribute zu vergleichen, die auf die Ergebniswerte beitragen. Die linke Spalte zeigt die Attribute an, die der besten Dienstqualität zugeordnet sind, und die rechte Spalte die Attribute für die schlechteste Dienstqualität.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037761"
   
  Wenn Sie jedoch die Liste der Faktoren genauer überprüfen, finden Sie einige andere Faktoren, die weniger deutliche Auswirkungen haben und schwieriger zu interpretieren sind. Zum Beispiel scheint die Schicht die Dienstqualität zu beeinflussen, aber das Liftergebnis und die relativen Wahrscheinlichkeiten geben an, dass die Schicht kein Hauptfaktor ist.  
   
-|Attribut|Wert|Begünstigt \< 0,07|Begünstigt >= 0,12|  
+|Attribut|Wert|Begünstigt \< 0,07|Begünstigt > = 0,12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087 - 120.000||Testergebnis:  100<br /><br /> Wahrscheinlichkeit, dass Value1: 4.45 %<br /><br /> Die Wahrscheinlichkeit von Wert 2: 51.94 %<br /><br /> Lift für Value1: 0.19<br /><br /> Lift für Wert2: 1.94|  
 |Average Time Per Issue|44.000 - 70.597|Testergebnis: 92.35<br /><br /> Wahrscheinlichkeit, dass Value1: 60.06 %<br /><br /> Die Wahrscheinlichkeit von Wert 2: 8.30 %<br /><br /> Lift für Value1: 2.61<br /><br /> Lift für Wert2: 0.31||  

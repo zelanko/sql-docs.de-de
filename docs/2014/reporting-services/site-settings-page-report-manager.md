@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223129"
 ---
 # <a name="site-settings-page-report-manager"></a>Siteeinstellungen (Seite) (Berichts-Manager)
   Verwenden Sie die Seite "Siteeinstellungen", um den Anwendungstitel zu ändern, serverweite Standardeinstellungen für die Grenzwerte des Berichtsverlaufs und Timeoutwerte für die Berichtsverarbeitung festzulegen und Rollenzuweisungen auf Systemebene sowie freigegebene Zeitpläne zu verwalten. Sie müssen über Inhalts-Manager- und Systemadministratorberechtigungen verfügen, um diese Seite anzuzeigen.  

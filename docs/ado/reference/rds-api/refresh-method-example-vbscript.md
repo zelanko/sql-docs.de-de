@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316697"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -178,8 +178,8 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ExecuteOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

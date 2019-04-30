@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258929"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDescField** gibt die aktuelle Einstellung oder der Wert, der ein einzelnes Feld einem anwendungsparameterdeskriptor-Datensatz zurück.  
@@ -81,7 +81,7 @@ SQLRETURN SQLGetDescField(
  [Ausgabe] Zeiger auf den Puffer für die Rückgabe der Gesamtanzahl der Bytes, die (mit Ausnahme von der Anzahl der Bytes, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben **ValuePtr*.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA zurückgibt oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
  SQL_NO_DATA zurückgegeben wird, wenn *RecNumber* ist größer als die aktuelle Anzahl der deskriptordatensätze.  
   

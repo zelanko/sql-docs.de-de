@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305800"
 ---
 # <a name="unicode-function-arguments"></a>Unicode-Funktionsargumente
 Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt die ANSI- und Unicode-Versionen aller Funktionen, die Zeiger auf Zeichenfolgen oder SQLPOINTER in ihren Argumenten zu akzeptieren. Die Unicode-Funktionen werden als Funktionen implementiert (mit dem Suffix *W*) und nicht als Makros. ANSI-Funktionen (die aufgerufen werden kann, mit oder ohne Suffix *ein*) sind identisch mit der aktuellen ODBC API-Funktionen.  

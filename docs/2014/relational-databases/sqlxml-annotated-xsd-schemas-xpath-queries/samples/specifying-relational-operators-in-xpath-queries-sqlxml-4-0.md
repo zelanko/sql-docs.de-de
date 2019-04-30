@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268613"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
   In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "52804439"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben wird, dann muss das Zeichen < als Entität codiert werden, weil das Zeichen < in XML-Dokumenten eine besondere Bedeutung hat. Verwenden Sie in einer Vorlage `<`, um das < Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist die < Zeichen muss die Entität codiert werden, da die < Zeichen eine besondere Bedeutung in einem XML-Dokument hat. Verwenden Sie in einer Vorlage `<` an die < Zeichen.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

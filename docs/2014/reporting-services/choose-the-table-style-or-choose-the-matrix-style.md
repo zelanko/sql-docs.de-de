@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266086"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Tabellenformat auswählen/Matrixstil auswählen
   Mithilfe dieser Seiten des Berichts-Assistenten können Sie die Text- und Linienart des Berichts auswählen. Die Liste der Stile basiert auf einer konfigurierbaren Vorlage. Berichts-Designer bietet die folgenden vordefinierten Vorlagen an: Slate-Objekt, Gesamtstruktur, Unternehmen, fett, Ozean und generische.  

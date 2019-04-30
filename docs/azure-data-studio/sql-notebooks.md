@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312787"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwendung von Notebooks in Azure Data Studio
 
@@ -45,9 +45,9 @@ Es gibt mehrere Möglichkeiten, um ein neues Notebook zu starten.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Kernels unterstützt, und fügen Sie zum Kontext
 
-SQL-Kernel wird von der Notebook-Installation in Studio für Azure Data nativ unterstützt. Wenn Sie eine SQL-Entwickler sind und Notebooks verwenden möchten, dann wäre dies der gewählten Kernel. 
+SQL-Kernel wird von der Notebook-Installation in Studio für Azure Data nativ unterstützt. Wenn Sie eine SQL-Entwickler sind und Notebooks verwenden möchten, wäre dies der gewählten Kernel. 
 
-Der SQL-Kernel kann auch verwendet werden, für die Verbindung mit PostgreSQL-Server-Instanzen. Wenn Sie eine PostgreSQL-Entwickler sind und mit Ihrem PostgreSQL-Server herstellen möchten, klicken Sie dann Herunterladen der [ **PostgreSQL Erweiterung** ](postgres-extension.md) im Studio für Azure Data Marketplace-Erweiterung.
+Der SQL-Kernel kann auch verwendet werden, für die Verbindung mit PostgreSQL-Server-Instanzen. Wenn Sie eine PostgreSQL-Entwickler sind und mit Ihrem PostgreSQL-Server herstellen möchten, laden die [ **PostgreSQL Erweiterung** ](postgres-extension.md) im Studio für Azure Data Marketplace-Erweiterung.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -90,7 +90,7 @@ Wenn die Installation erfolgreich war, finden Sie eine Benachrichtigung in der G
 |Spark-Kernel|Schreiben von Scala und R-Code, die mit Spark Compute aus dem Cluster.
 |Python Kernel|Schreiben Sie Python-Code für die lokale Entwicklung.
 
-`Attach to` Liefert den Kontext für den Kernel anfügen. Wenn Sie SQL-Kernel verwenden, dann Sie können `Attach to` eines SQL Server-Instanzen.
+`Attach to` Liefert den Kontext für den Kernel anfügen. Wenn Sie SQL-Kernel verwenden, können Sie `Attach to` eines SQL Server-Instanzen.
 
 Bei Verwendung der Kernel für Python3 der `Attach to` ist `localhost`. Sie können diesen Kernel für Ihre lokalen Python-Entwicklung verwenden.
 
@@ -116,7 +116,7 @@ Klicken außerhalb der Textzelle wird den markdowntext angezeigt.
 
 Notebooks in Azure Data Studio geöffnet sind, standardmäßig **vertrauenswürdige**.
 
-Wenn Sie ein Notebook von einer anderen Quelle öffnen sie in geöffnet **nicht vertrauenswürdige** Modus aus, und klicken Sie dann Sie stellen **vertrauenswürdige**.
+Wenn Sie ein Notebook von einer anderen Quelle öffnen, wird es in geöffnet **nicht vertrauenswürdige** Modus aus, und klicken Sie dann Sie stellen **vertrauenswürdige**.
 
 ### <a name="save"></a>Speichern 
 

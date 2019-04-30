@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231108"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Abrufen und Konfigurieren eines ladenden Servers für Parallel Data Warehouse
 Dieser Artikel beschreibt die zum Abrufen und Konfigurieren eines ladenden Servers als Windows-System nicht zur Appliance gehört zum Senden von Daten lädt, Parallel Data Warehouse (PDW).  
@@ -37,7 +37,7 @@ Das System laden kann als eine oder mehrere beim Laden von Servern entworfen wer
   
 Die Systemanforderungen für einen Server laden hängt der eigenen arbeitsauslastung, fast vollständig. Verwenden der [Laden von Server-Kapazität Planungsarbeitsblatt](loading-server-capacity-planning-worksheet.md) um zu ermitteln, welche kapazitätsanforderungen.  
   
-## <a name="Step2"></a>Schritt 2: Abrufen der Server  
+## <a name="Step2"></a>Schritt 2: Der Server abrufen  
 Nun, da Sie Ihre kapazitätsanforderungen besser verstehen, können Sie planen, die Server und Netzwerkkomponenten, die Sie erwerben oder bereitstellen müssen. Integrieren Sie die folgende Liste von Anforderungen in den purchasing-Plan, und klicken Sie dann den Server zu erwerben oder Bereitstellen eines vorhandenen Servers.  
   
 ### <a name="R"></a>Softwareanforderungen  
@@ -60,7 +60,7 @@ So bereiten Sie für eine Windows Server 2012 oder Windows Server 2012 R2 Infini
   
 3.  Erwerben Sie 2 ein FDR InfiniBand-Kabel für eine Karte mit zwei Ports bzw. 1 ein FDR InfiniBand-Kabel für einen einzelnen Port-Karte. Die Kabel ein FDR InfiniBand werden den Laden von Server mit Appliance InfiniBand-Netzwerk verbunden. Die Länge der Kabel hängt von den Abstand zwischen dem Server geladen und die Einheiten InfiniBand-Switches, gemäß Ihrer Umgebung ab.  
   
-## <a name="Step3"></a>Schritt 3: Verbinden Sie den Server mit den InfiniBand-Netzwerken  
+## <a name="Step3"></a>Schritt 3: Verbinden Sie den Server mit InfiniBand-Netzwerke  
 Verwenden Sie diese Schritte, um den Server Laden mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server nicht das InfiniBand-Netzwerk verwendet wird, überspringen Sie diesen Schritt.  
   
 1.  Rack Server nah an das Gerät, damit Sie das Gerät InfiniBand-Netzwerk hergestellt werden können.  
@@ -85,7 +85,7 @@ Wenn Sie die Verwendung von Integration Services für das laden möchten, müsse
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Schritt 5: Starten Sie laden  
+## <a name="Step5"></a>Schritt 5: Starten laden  
 Sie können nun damit beginnen, Laden von Daten. Weitere Informationen finden Sie in den folgenden Themen:  
   
 1.  [Dwloader laden-Befehlszeilentool](dwloader.md)  
@@ -107,7 +107,7 @@ Um Sicherheitsrisiken mit Ihren Daten zu reduzieren, empfehlen wir Folgendes:
   
 -   Legen Sie einen PDW-Benutzer, die über Berechtigungen zum Laden von Daten verfügt. Abhängig von Ihren sicherheitsanforderungen können Sie einem bestimmten Benutzer pro Datenbank verfügen.  
   
--   Vorgänge auf dem Server laden können kein UNC-Pfad aus dem Daten von außerhalb des internen vertrauenswürdigen Netzwerks akzeptieren. Und ein Angreifer im Netzwerk oder mit der Möglichkeit zum beeinflussen der namensauflösung abfangen oder in der SQL Server PDW gesendete Daten geändert werden kann. Dies stellt ein Risiko der Offenlegung von Manipulationen und Informationen. Manipulationen soll verringert werden, indem Sie ohne Signaturen für die Verbindung. Um dieses Risiko zu verringern, legen Sie die folgende Gruppenrichtlinie-Option in **Sicherheitseinstellungen\Lokale Richtlinien\sicherheitsoptionen** auf dem Server geladen: **Microsoft-Netzwerkclient: Kommunikation digital signieren (immer): Aktiviert**  
+-   Vorgänge auf dem Server laden können kein UNC-Pfad aus dem Daten von außerhalb des internen vertrauenswürdigen Netzwerks akzeptieren. Und ein Angreifer im Netzwerk oder mit der Möglichkeit zum beeinflussen der namensauflösung abfangen oder in der SQL Server PDW gesendete Daten geändert werden kann. Dies stellt ein Risiko der Offenlegung von Manipulationen und Informationen. Manipulationen soll verringert werden, indem Sie ohne Signaturen für die Verbindung. Um dieses Risiko zu verringern, legen Sie die folgende Gruppenrichtlinie-Option in **Sicherheitseinstellungen\Lokale Richtlinien\sicherheitsoptionen** auf dem Server geladen:  **Microsoft-Netzwerkclient: Signieren Sie Kommunikation digital (immer): aktiviert**  
   
 -   Deaktivieren Sie sofortige Dateiinitialisierung auf Windows Server 2012 und höher. Dies ist ein Kompromiss zwischen Leistung und Sicherheit, wie im Abschnitt Leistung. Sie müssen entscheiden, was am besten gemäß Ihren sicherheitsanforderungen ist.  
   

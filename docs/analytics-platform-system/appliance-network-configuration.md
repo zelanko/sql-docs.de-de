@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276111"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Appliance-Netzwerkkonfiguration für Analytics Platform System
 Das Analytics Platform System (APS)-Gerät ist erstellt und mit einem Satz Korrektur der IP-Adressen in der gesamten alle Server und die entsprechenden Geräte aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung des Geräts muss die externen (Ethernet) IP-Adressen neu konfiguriert werden, um den entsprechenden Kunden Data Center-Anforderungen zu erfüllen.  
@@ -24,7 +24,7 @@ Das Analytics Platform System (APS)-Gerät ist erstellt und mit einem Satz Korre
   
 Die **Netzwerkkonfiguration** auf der Seite können Sie die externe Netzwerkeinstellungen für den Knoten für Ihre Analytics Platform System Appliance anzeigen. Diese Seite ist schreibgeschützt.  
   
-![DWConfig, Anwendungsnetzwerk](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Um die Netzwerkkonfiguration auf Ihrem Gerät zu aktualisieren.  
 Ändern Sie die IP-Adressen der Fabric-Domäne und die Workload-Domäne durch Bearbeiten der **AplianceInfo.xml** -Datei, und klicken Sie dann Setup ausführen. Dies ist ein Offlinevorgang. Die PDW-Regionen werden automatisch während der Umstellung der IP-Adresse beendet.  

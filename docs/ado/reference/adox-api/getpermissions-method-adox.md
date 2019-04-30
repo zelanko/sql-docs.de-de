@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313273"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions-Methode (ADOX)
 Gibt zurück, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt oder ein Objektcontainer.  
@@ -33,7 +33,7 @@ Gibt zurück, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -47,7 +47,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Ein **lange** Wert möglich von der [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) Konstanten, der angibt, den Typ des Objekts, für das Berechtigungen zu erhalten.  
   
  *ObjectTypeId*  
- Optional. Ein **Variant** Wert, der angibt, die GUID für eine Anbieterobjekttyp nicht durch OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Dies ist optional. Ein **Variant** Wert, der angibt, die GUID für eine Anbieterobjekttyp nicht durch OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
   

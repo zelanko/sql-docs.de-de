@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241098"
 ---
 # <a name="open-method-ado-recordset"></a>Open-Methode (ADO-Recordset)
 Öffnet einen Cursor auf einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -36,10 +36,10 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Dies ist optional. Ein **Variant** , ausgewertet wird, auf ein gültiges [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, eine SQL-Anweisung, einen Tabellennamen, Aufruf einer gespeicherten Prozedur, eine URL oder den Namen einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt mit einer dauerhaft gespeichert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Optional. Ein **Variant** , ausgewertet wird, auf ein gültiges [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, eine SQL-Anweisung, einen Tabellennamen, Aufruf einer gespeicherten Prozedur, eine URL oder den Namen einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt mit einer dauerhaft gespeichert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Dies ist optional. Entweder ein **Variant** , ausgewertet wird, auf ein gültiges [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Namen der Objektvariablen, oder ein **Zeichenfolge** , enthält ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Parameter.  
+ Optional. Entweder ein **Variant** , ausgewertet wird, auf ein gültiges [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Namen der Objektvariablen, oder ein **Zeichenfolge** , enthält ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Parameter.  
   
  *CursorType*  
  Dies ist optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) Wert, der den Typ des Cursors bestimmt, die der Anbieter, beim Öffnen verwenden soll der **Recordset**. Der Standardwert ist **AdOpenForwardOnly**.  
@@ -48,7 +48,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der bestimmt, welche Art von Sperren (nebenläufigkeit) des Anbieters verwenden soll, beim Öffnen der **Recordset**. Der Standardwert ist **AdLockReadOnly**.  
   
  *Optionen*  
- Dies ist optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *Quelle* Argument, wenn es etwas anders als darstellt eine **Befehl** -Objekt, oder dass die **Recordset** wiederhergestellt werden sollen, aus einer Datei, in denen es bereits gespeichert wurde. Kann sein, eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte, die mit einem bitweisen OR-Operator kombiniert werden können.  
+ Optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *Quelle* Argument, wenn es etwas anders als darstellt eine **Befehl** -Objekt, oder dass die **Recordset** wiederhergestellt werden sollen, aus einer Datei, in denen es bereits gespeichert wurde. Kann sein, eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte, die mit einem bitweisen OR-Operator kombiniert werden können.  
   
 > [!NOTE]
 >  Beim Öffnen einer **Recordset** aus eine **Stream** , enthält eine persistierte **Recordset**mithilfe einer [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Wert **AdAsyncFetchNonBlocking** hat keine Auswirkungen; die Fetch werden synchron und blockiert.  

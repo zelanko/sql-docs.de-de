@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241199"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Ungültige Zeichen und Escaperegeln
   In diesem Thema wird beschrieben, wie ungültige XML-Zeichen von der FOR XML-Klausel behandelt werden, und die Escaperegeln für Zeichen aufgelistet, die in XML-Namen ungültig sind.  

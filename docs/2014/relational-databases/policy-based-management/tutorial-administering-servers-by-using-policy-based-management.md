@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Verwalten von Servern mit richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
+title: 'Tutorial: Verwalten von Servern mit richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63256061"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  

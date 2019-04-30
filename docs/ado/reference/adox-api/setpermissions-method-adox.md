@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281898"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
 Gibt an, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt.  
@@ -50,10 +50,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Ein **lange** Wert, der eine Bitmaske sein kann von einem oder mehreren der der [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) Konstanten, die die festzulegenden Rechte angibt.  
   
  *Erben*  
- Optional. Ein **lange** Wert möglich von der [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten, der angibt, wie Objekte erben diese Berechtigungen. Der Standardwert ist **AdInheritNone**.  
+ Dies ist optional. Ein **lange** Wert möglich von der [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten, der angibt, wie Objekte erben diese Berechtigungen. Der Standardwert ist **AdInheritNone**.  
   
  *ObjectTypeId*  
- Optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Dies ist optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt wird, tritt ein Fehler auf.  

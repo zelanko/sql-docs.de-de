@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4bbde8eb313d432a7a90cfa7f03c54f4c6aeb06f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301379"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>IP-Adresseinschränkung erkannt (Upgrade Advisor)
   Der Upgrade Advisor hat mindestens eine IP-Adresseinschränkung auf der IIS-Website gefunden, die den Berichtsserver bzw. die virtuellen Verzeichnisse des Berichts-Managers hostet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt keine systeminterne Unterstützung für IP-Adresseinschränkungen bereit.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232404"
 ---
 # <a name="use-nested-for-xml-queries"></a>Verwenden von geschachtelten FOR XML-Abfragen
   Die `xml` -Datentyp und die [TYPE-Direktive in FOR XML-Abfragen](type-directive-in-for-xml-queries.md) ermöglichen von FOR XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet werden.  

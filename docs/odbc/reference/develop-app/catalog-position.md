@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237940"
 ---
 # <a name="catalog-position"></a>Katalogposition
 Die Position des ein Katalogname in einem Bezeichner und wie sie vom Rest des Bezeichners getrennt ist, aus der Datenquelle zu Datenquelle variiert. Z. B. in einer Xbase-Datenquelle, der Name des Katalogs ist ein Verzeichnis und in Microsoft® Windows®, werden getrennt aus dem Tabellennamen (d.h. ein Dateiname) ein umgekehrter Schrägstrich (\\). Die folgende Abbildung zeigt dies.  
@@ -29,7 +29,7 @@ Die Position des ein Katalogname in einem Bezeichner und wie sie vom Rest des Be
   
  Der Katalog in einer SQL Server-Datenquelle ist eine Datenbank und wird aus dem Schema und Tabellennamen durch einen Punkt (.) getrennt.  
   
- ![Katalogposition: SQLServer](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
+ ![Katalogposition: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
  In einer Oracle-Datenquelle, der Katalog wird auch die Datenbank jedoch den Namen der Tabelle folgt, und wird getrennt von den Schema- und Tabellennamen die Namen von einem at-Zeichen (@).  
   

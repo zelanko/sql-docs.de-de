@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240336"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Gibt Optionen zum Öffnen einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md). Diese Werte können kombiniert werden, mithilfe von oder.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Gibt an, an den Anbieter, die mit die Feldern verknüpft die **Datensatz** zunächst nicht abgerufen werden müssen, aber beim ersten Versuch Zugriff auf das Feld abgerufen werden können. Das Standardverhalten, das durch das Fehlen des dieses Flag angegeben wird, um alle abzurufen der **Datensatz** Objekt Felder.|  
 |**adDelayFetchStream**|0x4000|Gibt an, an den Anbieter, die der Standarddatenstrom mit verknüpft die **Datensatz** zunächst nicht abgerufen werden müssen. Das Standardverhalten, das durch das Fehlen des dieses Flag angegeben ist, zum Abrufen von des Standard-Streams, der für die **Datensatz** Objekt.|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237707"
 ---
 # <a name="search-page-report-manager"></a>Suchen (Seite) (Berichts-Manager)
   Mithilfe der Seite Suchergebnisse können Sie die Ergebnisse eines Suchvorgangs für einen Bericht, einen verknüpften Bericht, ein Berichtsmodell, eine freigegebene Datenquelle, einen Ordner oder eine Ressource anzeigen. Suchergebnisse sind in alphabetischer Reihenfolge aufgeführt. Sie können die Ergebnisse nach Typ, Name oder Beschreibung sortieren.  

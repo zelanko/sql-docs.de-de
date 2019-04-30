@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259318"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLFreeStmt** beendet die Verarbeitung einer bestimmten Anweisung zugeordneten, schließt alle geöffneten Cursor verknüpft ist, mit der Anweisung, verwirft ausstehende Ergebnisse zu erzielen, oder gibt optional das Anweisungshandle zugeordnete Ressourcen frei.  
@@ -59,7 +59,7 @@ SQLRETURN SQLFreeStmt(
  SQL_RESET_PARAMS: Legt das SQL_DESC_COUNT-Feld der APD auf 0 (null) festlegen, indem alle Parameter-Puffer freigeben **SQLBindParameter** für den angegebenen *StatementHandle*. Wenn dieser Vorgang für einen explizit zugewiesenen Deskriptor ausgeführt wird, die von mehr als eine Anweisung verwendet wird, wirkt sich dieser Vorgang die Bindungen der alle Anweisungen, die den Deskriptor gemeinsam nutzen. Weitere Informationen finden Sie unter [Bindungsparameter](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFreeStmt** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLFreeStmt** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

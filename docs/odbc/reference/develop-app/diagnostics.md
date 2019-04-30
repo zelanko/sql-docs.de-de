@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242299"
 ---
 # <a name="diagnostics"></a>Diagnose
 Funktionen in ODBC werden Diagnoseinformationen auf zwei Arten zurückgeben. Der Rückgabecode gibt an, den Erfolg oder Fehler bei der Funktion an, während der DiagnoseDatensätze detaillierte Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedatensatz - Headerdatensatz - wird zurückgegeben, auch wenn die Funktion erfolgreich ist.  

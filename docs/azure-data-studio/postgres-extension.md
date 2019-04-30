@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL-Erweiterung (Vorschau)
+title: PostgreSQL-Erweiterung (Vorschauversion)
 titleSuffix: Azure Data Studio
 description: PostgreSQL-Erweiterung (Vorschauversion) für Azure Data Studio
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252836"
 ---
-# <a name="postgresql-extension-preview"></a>PostgreSQL-Erweiterung (Vorschau)
+# <a name="postgresql-extension-preview"></a>PostgreSQL-Erweiterung (Vorschauversion)
 
 Die PostgreSQL-Erweiterung (Vorschau) können Sie zum Herstellen einer Verbindung mit und Abfragen für postgres handelt, die mithilfe der Funktionen von Azure Data Studio entwickeln. 
 

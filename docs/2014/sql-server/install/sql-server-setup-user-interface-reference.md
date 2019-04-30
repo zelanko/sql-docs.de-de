@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf1e05808de1735b8a263387143a00044d4a6ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267881"
 ---
 # <a name="sql-server-setup-user-interface-reference"></a>Informationen zur Benutzeroberfläche des SQL Server-Setups
-  In diesem Abschnitt wird beschrieben, die Installationsoptionen, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten.  
+  In diesem Abschnitt werden die Installationsoptionen des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben.  
   
   

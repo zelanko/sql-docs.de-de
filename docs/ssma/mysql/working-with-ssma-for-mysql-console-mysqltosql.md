@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0cb332040b7d5e145639bc55feb41ecf62084478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288326"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Arbeiten mit der SSMA-Konsole für MySQL (MySqlToSql)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
@@ -36,7 +36,7 @@ In diesem Abschnitt behandelten Themen umfassen:
 |[Arbeiten mit den Beispielskriptdateien der Konsole &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden|  
 |[Verwalten von Kennwörtern &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
 |[Generieren von Berichten &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Problembehandlung bei &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
+|[Troubleshooting &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für MySQL-Konsole](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  

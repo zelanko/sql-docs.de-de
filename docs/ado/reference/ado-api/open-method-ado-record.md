@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241086"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO Record)
 Öffnet ein vorhandenes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt oder erstellt ein neues Element, dargestellt durch die **Datensatz**, z. B. eine Datei oder ein Verzeichnis.  
@@ -36,25 +36,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Variant** , kann die URL der Entität, die von diesem dargestellt werden darstellen **Datensatz** Objekt eine **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder eine andere **Datensatz** -Objekt, das eine Zeichenfolge mit einer SQL SELECT-Anweisung oder einen Tabellennamen an.  
+ Dies ist optional. Ein **Variant** , kann die URL der Entität, die von diesem dargestellt werden darstellen **Datensatz** Objekt eine **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder eine andere **Datensatz** -Objekt, das eine Zeichenfolge mit einer SQL SELECT-Anweisung oder einen Tabellennamen an.  
   
  *ActiveConnection*  
- Optional. Ein **Variant** , das darstellt, der die Verbindungszeichenfolge oder Open [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
+ Dies ist optional. Ein **Variant** , das darstellt, der die Verbindungszeichenfolge oder Open [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
   
  *Mode*  
- Optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den den Zugriffsmodus für die resultierenden **Datensatz** Objekt. Standardwert ist **AdModeUnknown**.  
+ Dies ist optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den den Zugriffsmodus für die resultierenden **Datensatz** Objekt. Standardwert ist **AdModeUnknown**.  
   
  *CreateOptions*  
  Optional. Ein [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein Verzeichnis geöffnet werden soll, oder eine neue Datei oder ein Verzeichnis erstellt werden soll. Standardwert ist **AdFailIfNotExists**. Wenn auf den Standardwert festgelegt, die den Zugriffsmodus aus erfolgt die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft. Dieser Parameter wird ignoriert, wenn der *Quelle* -Parameter enthält keine URL.  
   
- *enthalten*  
- Optional. Ein [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) Wert, der angibt, die Optionen zum Öffnen der **Datensatz**. Standardwert ist **AdOpenRecordUnspecified**. Diese Werte können kombiniert werden.  
+ *Optionen*  
+ Dies ist optional. Ein [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) Wert, der angibt, die Optionen zum Öffnen der **Datensatz**. Standardwert ist **AdOpenRecordUnspecified**. Diese Werte können kombiniert werden.  
   
  *UserName*  
  Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf, autorisiert den Zugriff auf *Quelle*.  
   
  *Kennwort*  
- Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf, überprüft *Benutzername*.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf, überprüft *Benutzername*.  
   
 ## <a name="remarks"></a>Hinweise  
  *Quelle* möglicherweise:  

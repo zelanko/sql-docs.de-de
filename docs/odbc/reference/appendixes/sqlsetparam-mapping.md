@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297471"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam-Zuordnung
 **SQLSetParam** weiterhin auf der Basis von zuzuordnenden **SQLBindParameter** wie ODBC 2. *X*. Obwohl sie konzeptionell ist **SQLBindParam**, des Treiber-Managers ordnet nicht **SQLSetParam** zu **SQLBindParam**. Grund hierfür ist, bestimmte vorhandene ODBC 2. *x* Treiber verwendet den Sonderwert *Pufferlänge* (SQL_SETPARAM_VALUE_MAX), die der Treiber-Manager generiert, wenn ordnet **SQLSetParam** auf der Basis von  **SQLBindParameter** um zu bestimmen, wenn sie von 1 aufgerufen wird. *X* ODBC-Anwendung.  

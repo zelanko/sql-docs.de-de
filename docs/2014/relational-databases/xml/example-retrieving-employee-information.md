@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287837"
 ---
 # <a name="example-retrieving-employee-information"></a>Beispiel: Abrufen von Informationen zu Mitarbeitern
   In diesem Beispiel werden die ID und der Name jedes Mitarbeiters abgerufen. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank kann employeeID aus der BusinessEntityID-Spalte in der Employee-Tabelle abgerufen werden. Die Namen der Mitarbeiter werden aus der Person-Tabelle abgerufen. Die BusinessEntityID-Spalte kann zum Join der Tabellen verwendet werden.  

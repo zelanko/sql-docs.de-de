@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261944"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Sicherungs- und Wiederherstellungsvorgänge für Reporting Services
   Dieses Thema bietet eine Übersicht über alle Datendateien, die in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verwendet werden. Zudem wird beschrieben, wann und auf welche Weise Sicherungskopien für die Dateien erstellt werden sollten. Das Entwickeln eines Sicherungs- und Wiederherstellungsplans für die Berichtsserver-Datenbankdateien stellt den wichtigsten Teil einer Wiederherstellungsstrategie dar. Eine umfassendere Wiederherstellungsstrategie würde jedoch Sicherungen der Verschlüsselungsschlüssel, der benutzerdefinierten Assemblys oder Erweiterungen, der Konfigurationsdateien und der Quelldateien für Berichte und Modelle einschließen.  

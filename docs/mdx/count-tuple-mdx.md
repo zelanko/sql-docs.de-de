@@ -1,5 +1,5 @@
 ---
-title: Count (Tupel) (MDX) | Microsoft Docs
+title: Count (Tupel) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3775af63181489b982778d40ddd69ebc12872271
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285034"
 ---
 # <a name="count-tuple-mdx"></a>Count (Tupel) (MDX)
 
@@ -48,7 +48,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Siehe auch  
  [Anzahl &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [Anzahl &#40;Hierarchieebenen&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Anzahl &#40;festgelegt&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

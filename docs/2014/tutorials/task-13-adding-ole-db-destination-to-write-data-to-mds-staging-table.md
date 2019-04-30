@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 13: Hinzufügen von OLE DB-Ziels zum Schreiben von Daten in MDS-Stagingtabelle | Microsoft-Dokumentation'
+title: 'Aufgabe 13: Hinzufügen von OLE DB-Ziels zum Schreiben von Daten in MDS-Stagingtabelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222602"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Zielen zum Schreiben von Daten in die MDS-Stagingtabelle
   Nun, da Sie hinzugefügt haben, **ImportType** und **BatchTag** Werte für alle Datensätze, Sie sind bereit, um sie an MDS für das Staging senden. In dieser Aufgabe verwenden Sie das OLE DB-Ziel zum Schreiben der Daten in **supplier_leaf** Stagingtabelle.  
   
 1.  Ziehen Sie **OLE DB-Ziel** aus **andere Ziele** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte, und legen Sie es unter  **Hinzufügen von MDS erforderliche Spalten**.  

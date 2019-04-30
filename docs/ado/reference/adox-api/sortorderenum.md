@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e192b5ea817654ff382482e2ef466ddbdaf63fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281472"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 Gibt die Sortierreihenfolge für eine indizierte Spalte an.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|Standard. Die Sortierreihenfolge für die Spalte ist Aufsteigend.|  
 |**adSortDescending**|2|Die Sortierreihenfolge für die Spalte ist absteigend.|  

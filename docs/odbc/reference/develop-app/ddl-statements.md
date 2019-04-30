@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9100405c91387faa66b714a94b8259167ae31899
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267662"
 ---
 # <a name="ddl-statements"></a>DDL-Anweisungen
 Anweisungen der Data Definition Language (DDL) variieren erheblich von DBMS-Systeme. ODBC-SQL definiert, Anweisungen für die am häufigsten verwendeten Data Definition-Vorgänge: Erstellen und Löschen von Tabellen, Indizes und Sichten, Ändern von Tabellen; erteilen und Widerrufen von Berechtigungen. Alle anderen DDL-Anweisungen handelt es sich um Daten datenquellenspezifische. Daher können nicht interoperable Anwendungen ausführen können einige Vorgänge ausführen. Im Allgemeinen, dies ist kein Problem, da solche Vorgänge sind tendenziell hoch DBMS-spezifische und sich am besten eignen Links der proprietäre Software für die Verwaltung mit den meisten DBMS, oder das Setup-Programm mit dem Treiber.  

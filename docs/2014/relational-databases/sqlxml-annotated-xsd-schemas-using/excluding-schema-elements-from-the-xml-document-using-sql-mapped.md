@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228467"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Ausschließen von Schemaelementen aus dem resultierenden XML-Dokument mithilfe von 'sql:mapped' (SQLXML 4.0)
   Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema einer Datenbanktabelle/-sicht und -spalte zugeordnet. Wenn Sie ein Element im XDR-Schema erstellen möchten, das keiner Datenbanktabelle (Sicht) oder -spalte zugeordnet und im XML-Dokument nicht angezeigt wird, können Sie die `sql:mapped`-Anmerkung angeben.  

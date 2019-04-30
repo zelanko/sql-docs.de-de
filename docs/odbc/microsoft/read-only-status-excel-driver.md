@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17425e76814a8397b9d2e6167248f35e52ac6cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316737"
 ---
 # <a name="read-only-status-excel-driver"></a>Status „Schreibgeschützt“ (Excel-Treiber)
 Wenn der Microsoft Excel-Treiber verwendet wird, wird Datenquellentabellen werden standardmäßig als schreibgeschützt geöffnet, und können jeweils nur ein einziger Benutzer geöffnet werden. Auch wenn Tabellen schreibgeschützten Status aufweisen, können jedoch Anwendungen einfügungen und Updates für Microsoft Excel-Tabellen ausführen.  

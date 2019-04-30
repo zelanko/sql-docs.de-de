@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253175"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle-Funktion
 **Übereinstimmung mit Standards**  
@@ -52,7 +52,7 @@ SQLRETURN SQLCancelHandle(
  Wenn *behandeln* ist kein gültiges Handle des Typs vom angegebenen *HandleType*, **SQLCancelHandle** SQL_INVALID_HANDLE gibt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLCancelHandle** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von Behandeln von SQL_HANDLE_STMT auf, und eine Anweisung *behandeln* oder *HandleType* SQL_HANDLE_DBC auf, und ein Verbindungshandle *behandeln*.  

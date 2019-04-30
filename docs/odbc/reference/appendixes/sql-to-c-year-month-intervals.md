@@ -1,5 +1,5 @@
 ---
-title: 'SQL zu C: Jahr-Monat-Intervalle | Microsoft-Dokumentation'
+title: 'SQL in C: Jahr-Monat-Intervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259579"
 ---
-# <a name="sql-to-c-year-month-intervals"></a>SQL zu C: Jahr-Monat-Intervalle
+# <a name="sql-to-c-year-month-intervals"></a>SQL in C: Jahr-Monat-Intervalle
 
 Der Bezeichner für die Jahr-Monat-Intervall-ODBC-SQL-Datentypen sind die folgenden:
 

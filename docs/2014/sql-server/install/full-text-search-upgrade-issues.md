@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a97f50030d123181b1b3c0d2a5fda59a0005188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312851"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Probleme beim Upgrade der Volltextsuche
   In den Themen dieses Abschnitts werden Probleme mit der Volltextsuche beschrieben, die das Upgrade beeinträchtigen können. Die Themen beschreiben die Aktionen, die Sie ergreifen können, um die Auswirkungen dieser Änderungen auf Ihre Umgebung zu minimieren.  

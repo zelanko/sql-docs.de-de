@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241290"
 ---
 # <a name="load-xml-data"></a>Laden von XML-Daten
   XML-Daten können auf unterschiedliche Weise in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] übertragen werden. Zum Beispiel:  
@@ -32,7 +32,7 @@ ms.locfileid: "58526432"
 ## <a name="bulk-loading-xml-data"></a>Massenladen von XML-Daten  
  Sie können XML-Daten mit einem Massenladevorgang auf den Server laden, indem Sie die Massenladefunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, z. B. bcp. Mit OPENROWSET können Sie Daten aus Dateien in eine XML-Spalte laden. Das folgende Beispiel veranschaulicht diesen Punkt.  
   
-##### <a name="example-loading-xml-from-files"></a>Beispiel: Laden von XML aus Dateien  
+##### <a name="example-loading-xml-from-files"></a>Beispiel: Laden von XML-Daten aus Dateien  
  Dieses Beispiel zeigt, wie eine Zeile in Tabelle T eingefügt wird. Der Wert der XML-Spalte wird aus der Datei C:\MyFile\xmlfile.xml als CLOB geladen, und die integer-Spalte erhält den Wert 10.  
   
 ```  

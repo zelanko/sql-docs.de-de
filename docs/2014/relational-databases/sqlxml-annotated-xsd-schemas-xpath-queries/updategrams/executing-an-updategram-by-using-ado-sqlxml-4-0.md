@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1575853338483132a5e2060ba7d0985e1211e05c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268567"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ausführen eines Updategrams mit ADO (SQLXML 4.0)
   Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226410"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLColAttribute** Deskriptorinformationen für eine Spalte in einem Resultset zurückgegeben. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, einen Deskriptor abhängige Wert oder ein ganzzahliger Wert zurückgegeben.  
@@ -77,7 +77,7 @@ SQLRETURN SQLColAttribute (
   
 -   Wenn *CharacterAttributePtr* ist ein Zeiger auf ein binärer Puffer, der Anwendung stellen das Ergebnis der SQL_LEN_BINARY_ATTR (*Länge*)-Makro in *Pufferlänge*. Dadurch wird einen negativen Wert im platziert *Pufferlänge*.  
   
--   Wenn *CharacterAttributePtr* ist ein Zeiger auf einen Datentyp mit fester Länge *Pufferlänge* muss eine der folgenden sein: SQL_IS_INTEGER SQL_IS_UNINTEGER, SQL_SMALLINT oder SQLUSMALLINT.  
+-   Wenn *CharacterAttributePtr* ist ein Zeiger auf einen Datentyp mit fester Länge *Pufferlänge* muss eine der folgenden sein: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, or SQLUSMALLINT.  
   
  *StringLengthPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte für Zeichendaten) zurück in zurück zur Verfügung **CharacterAttributePtr*.  
@@ -90,7 +90,7 @@ SQLRETURN SQLColAttribute (
  [Ausgabe] Ein Zeiger auf eine ganze Zahl Puffer für die Rückgabe des Werts in der *FieldIdentifier* Feld der *ColumnNumber* Zeile vom IRD, wenn das Feld einen numerischen Deskriptortyp, z. B. SQL_DESC_COLUMN_LENGTH ist. Andernfalls wird das Feld nicht verwendet. Bitte beachten Sie, dass einige Treiber nur die untere 32-Bit-schreiben können oder 16-Bit, der einen Puffer und eine verlassen Bits höherer Ordnung unverändert. Aus diesem Grund sollten Anwendungen den Wert auf 0 initialisiert, vor dem Aufrufen dieser Funktion.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLColAttribute** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLColAttribute** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -172,7 +172,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE, wenn die Spalte in einer WHERE-Klausel verwendet werden kann. (Dies ist der SQL_UNSEARCHABLE-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_CHAR, wenn die Spalte in einer WHERE-Klausel jedoch nur mit dem LIKE-Prädikat verwendet werden kann. (Dies ist der SQL_LIKE_ONLY-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_BASIC, wenn die Spalte in einer WHERE-Klausel mit allen Vergleichsoperatoren mit Ausnahme von ähnlichen verwendet werden kann. (Dies ist der SQL_EXCEPT_LIKE-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_SEARCHABLE, wenn die Spalte in einer WHERE-Klausel mit jedem Vergleichsoperator verwendet werden kann.<br /><br /> Spalten vom Datentyp SQL_LONGVARCHAR und in der Regel return SQL_PRED_CHAR SQL_LONGVARBINARY.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|Der Name der Tabelle, die die Spalte enthält. Der zurückgegebene Wert ist Implementierung definiert, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Ansicht ist.<br /><br /> Wenn Sie den Namen der Tabelle nicht bestimmt werden kann, wird eine leere Zeichenfolge zurückgegeben.|  
 |SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der angibt, den SQL-Datentyp.<br /><br /> Wenn *ColumnNumber* ist gleich 0 ist, wird SQL_BINARY für Lesezeichen mit variabler Länge zurückgegeben und SQL_INTEGER für Lesezeichen mit fester Länge ist.<br /><br /> Für die Datentypen "DateTime" und das Intervall gibt dieses Feld den Datentyp für die ausführliche zurück: SQL_DATETIME oder SQL_INTERVAL. (Weitere Informationen finden Sie unter [-datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Anhang D: Datentypen.<br /><br /> Diese Informationen werden vom SQL_DESC_TYPE-Datensatzfeld vom IRD zurückgegeben. **Hinweis**:  Die Arbeit mit ODBC 2. *x* Treiber, verwenden Sie stattdessen SQL_DESC_CONCISE_TYPE.|  
-|SQL_DESC_TYPE_NAME VERWENDET WIRD (ODBC 1.0)|*CharacterAttributePtr*|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".<br /><br /> Wenn der Typ unbekannt ist, wird eine leere Zeichenfolge zurückgegeben.|  
+|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".<br /><br /> Wenn der Typ unbekannt ist, wird eine leere Zeichenfolge zurückgegeben.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED oder SQL_UNNAMED. Wenn vom IRD SQL_DESC_NAME-Felds einen Spaltenalias oder einen Spaltennamen enthält, wird die SQL_NAMED zurückgegeben. Wenn Sie keine Spaltennamen oder Spaltenalias vorhanden ist, wird die SQL_UNNAMED zurückgegeben.<br /><br /> Diese Informationen werden vom SQL_DESC_UNNAMED-Datensatzfeld vom IRD zurückgegeben.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, wenn die Spalte (oder nicht numerisch) ohne Vorzeichen ist.<br /><br /> SQL_FALSE, wenn die Spalte signiert ist.|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|Spalte wird von den Werten der definierten Konstanten beschrieben:<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE beschreibt die aktualisierbarkeit der Spalte im Resultset, nicht die Spalte in der Basistabelle. Die aktualisierbarkeit des auf dem die Resultsetspalte basiert Basisspalte kann von den Wert in dieses Feld unterscheiden. Kann auf den Datentyp, Benutzerberechtigungen und die Definition des Resultsets selbst, ob eine Spalte aktualisiert werden basieren. Wenn unklar ist, ob eine Spalte aktualisiert werden kann, sollte die SQL_ATTR_READWRITE_UNKNOWN zurückgegeben werden.|  

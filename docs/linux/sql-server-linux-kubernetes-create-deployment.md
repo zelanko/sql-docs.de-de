@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231145"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Erstellen von Bereitstellungsskripts für SQL Server AlwaysOn-Verfügbarkeitsgruppe
 
@@ -70,10 +70,10 @@ Die folgenden Beispiele veranschaulichen, wie Sie ausführen `deploy-ag.py`.
 python ./deploy-ag.py --help
 ```
 
-* **Nutzung**: `deploy-ag.py [-h] {deploy | failover} ...`
+* **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
 * **Optionale Argumente**:
   * `-h, --help` Zeigen Sie diese hilfemeldung an und beenden
-* **Unterbefehle**:
+* **subcommands**:
   * Aktionen auf k8s Agent {bereitstellen | Failover}
 
   `deploy`
@@ -90,7 +90,7 @@ python ./deploy-ag.py --help
 python ./deploy-ag.py deploy --help
 ```
 
-* **Nutzung**:
+* **usage**:
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -113,7 +113,7 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  Der Name der Verfügbarkeitsgruppe. Standard = ag1
+  Der Name der Verfügbarkeitsgruppe. Default=ag1
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
@@ -129,7 +129,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA-Kennwort. Standardwert = "SAPassword2018"
+  SA-Kennwort. Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -142,7 +142,7 @@ python ./deploy-ag.py deploy --help
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **Nutzung**: 
+* **usage**: 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]
@@ -168,7 +168,7 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  Der Name der Verfügbarkeitsgruppe. Standard = ag1
+  Der Name der Verfügbarkeitsgruppe. Default=ag1
 
   `--namespace NAMESPACE`
 

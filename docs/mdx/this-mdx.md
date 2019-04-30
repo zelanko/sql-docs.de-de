@@ -1,5 +1,5 @@
 ---
-title: Diese (MDX) | Microsoft Docs
+title: Diese (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259027"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -29,7 +29,7 @@ This
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **dies** Funktion Teilcubeausdrucks verwendet werden kann, um den aktuellen Teilcube im aktuellen Gültigkeitsbereich innerhalb des MDX-Berechnungsskripts bereitzustellen. Die **dies** Funktion muss auf der linken Seite einer Zuweisung verwendet werden.  
+ Die **dies** Funktion kann Teilcubeausdrucks verwendet werden, um den aktuellen Teilcube im aktuellen Gültigkeitsbereich innerhalb des MDX-Berechnungsskripts bereitzustellen. Die **dies** Funktion muss auf der linken Seite einer Zuweisung verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Fragment eines MDX-Scripts veranschaulicht die Verwendung des This-Schlüsselworts mit SCOPE-Anweisungen, um Zuweisungen an Teilcubes vorzunehmen:  

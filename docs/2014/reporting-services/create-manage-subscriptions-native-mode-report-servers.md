@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265443"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   In diesem Abschnitt werden Themen zum Verarbeiten, Überwachen und Steuern von Abonnements behandelt. Die Abonnementverwaltung unterscheidet sich für Standardabonnements und datengesteuerte Abonnements. Standardabonnements befinden sich in der Regel im Besitz des Benutzers und werden von diesem verwaltet. Im Gegensatz dazu werden datengesteuerte Abonnements normalerweise von einem Berichtsserveradministrator erstellt und verwaltet.  

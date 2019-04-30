@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232398"
 ---
 # <a name="standard-database-access-architectures"></a>Standardarchitekturen für den Datenbankzugriff
 Betrachten Sie die Datenbank-Access-Komponenten im vorherigen Abschnitt beschrieben, stellt sich heraus, dass zwei davon – Programmieren von Schnittstellen und Protokolle für Data Stream - eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerkprotokollen – ist nicht nur auf zu niedrige Ebene befinden, jedoch sind beide stark abhängig von das Netzwerk und das Betriebssystem. Es gibt auch eine dritte Möglichkeit - Gateways –, die Möglichkeiten für die Standardisierung bereitstellt.  

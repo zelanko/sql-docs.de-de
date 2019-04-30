@@ -1,5 +1,5 @@
 ---
-title: DROP SUBCUBE-Anweisung (MDX) | Microsoft Docs
+title: DROP SUBCUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 437018bc1cc83e1ea8a2a52a8ed9f37aa2a9121e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285009"
 ---
-# <a name="mdx-data-definition---drop-subcube"></a>MDX-Datendefinition - DROP SUBCUBE
+# <a name="mdx-data-definition---drop-subcube"></a>MDX-Datendefinition – DROP SUBCUBE
 
 
   Löscht einen angegebenen Teilcube, wobei die zuvor definierte Cube- oder Teilcubedefinition mit dem angegebenen Namen wiederhergestellt wird.  

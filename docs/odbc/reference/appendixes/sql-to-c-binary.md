@@ -1,5 +1,5 @@
 ---
-title: 'SQL zu C: binär | Microsoft-Dokumentation'
+title: 'SQL in C: Binäre | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270963"
 ---
-# <a name="sql-to-c-binary"></a>SQL zu C: binär
+# <a name="sql-to-c-binary"></a>SQL in C: Binär (Binary)
 Der Bezeichner für die binäre ODBC-SQL-Datentypen sind:  
   
  SQL_BINARY  
@@ -36,9 +36,9 @@ Der Bezeichner für die binäre ODBC-SQL-Datentypen sind:
   
 |C-Typ-ID|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(Bytelänge der Daten) \* 2 < *Pufferlänge*<br /><br /> (Bytelänge der Daten) \* 2 > = *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
-|SQL_C_WCHAR|(Zeichenlänge der Daten) \* 2 < *Pufferlänge*<br /><br /> (Zeichenlänge der Daten) \* 2 > = *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen|–<br /><br /> 01004|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
+|SQL_C_CHAR|(Bytelänge der Daten) \* 2 < *Pufferlänge*<br /><br /> (Bytelänge der Daten) \* 2 > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
+|SQL_C_WCHAR|(Zeichenlänge der Daten) \* 2 < *Pufferlänge*<br /><br /> (Zeichenlänge der Daten) \* 2 > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen|–<br /><br /> 01004|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
   
  Wenn SQL-Binärdaten in C-Zeichendaten konvertiert werden, wird jedes Byte (8 Bit) der Quelldaten als zwei ASCII-Zeichen dargestellt. Diese Zeichen sind die ASCII-Darstellung der Zahl in die hexadezimale Form. Z. B. eine binäre 00000001 "01" konvertiert wird, und eine binäre 11111111 "FF" konvertiert wird.  
   

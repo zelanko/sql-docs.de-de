@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266462"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Projekteinstellungen (Laden von Systemobjekten) (DB2ToSQL)
 Die Seite Laden von Systemobjekten der **Projekteinstellungen** Dialogfeld ermöglicht die Angabe der DB2-Systemobjekte SSMA konvertiert und lädt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: XOR (MDX) | Microsoft Docs
+title: XOR (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251483"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -37,10 +37,10 @@ Expression1 XOR Expression2
  Ein gültiger MDX-Ausdruck, der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der zurückgibt **"true"** Wenn nur ein Argument ergibt **"true"** ist, andernfalls **"false"**.  
+ Ein boolescher Wert, der zurückgibt **"true"** ergibt nur ein Argument **"true"** ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **XOR** -Operator behandelt beide Parameter als boolesche Werte (null, 0, als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Exklusion ausführt. Die folgende Tabelle verdeutlicht, wie die **XOR** -Operator führt die logische Exklusion.  
+ Die **XOR** -Operator behandelt beide Parameter als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Exklusion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **XOR** -Operator führt die logische Exklusion.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  

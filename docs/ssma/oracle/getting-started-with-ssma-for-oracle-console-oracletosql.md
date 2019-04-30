@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308430"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der Oracle-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
@@ -60,7 +60,7 @@ Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums- und Zeitstempel, an den Benutzer|  
-|White|Datei Skriptbefehle, Nachrichtentyp|  
+|Weiß|Datei Skriptbefehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Green|Eingabeaufforderung für Benutzereingaben|  
 |Cyan|Start, Ende und das Ergebnis eines Vorgangs|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248282"
 ---
 # <a name="executing-batches"></a>Ausführen von Batches
 Bevor eine Anwendung einen Batch von Anweisungen ausführt, wird zunächst überprüft, ob diese unterstützt werden. Ruft die Anwendung dazu **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS. Die erste Option gibt, ob Zeile Anzahl generiert und das Ergebnis, generiert Set-Anweisungen unterstützt werden, in explizite Batches und Prozeduren, während die letzten beiden Optionen, die Informationen über die Verfügbarkeit der Zeilenanzahl und das Ergebnis zurück, legt in fest parametrisierte die Ausführung.  

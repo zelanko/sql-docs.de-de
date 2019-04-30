@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266274"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Konfiguration und Verwaltung eines Berichtsservers (SharePoint-Modus von Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ist eine serverbasierte Berichtsplattform. Sie bietet zahlreiche einsatzbereite Tools und Dienste, die Ihnen dabei helfen, Berichte für Ihr Unternehmen zu erstellen, bereitzustellen und zu verwalten. Darüber hinaus ermöglichen Ihnen die Programmierfunktionen eine Erweiterung und individuelle Anpassung Ihrer Funktionen zur Berichterstellung. Sie können die Berichtsumgebung in ein SharePoint-Produkt integrieren, um die Vorteile der Zusammenarbeitsumgebung zu nutzen, die von SharePoint-Websites bereitgestellt wird.  

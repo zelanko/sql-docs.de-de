@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297907"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Herstellen einer Verbindung zu einem registrierten Server (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie eine Verbindung mit einem registrierten Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen. Wenn der Server nicht ausgeführt wird oder nicht im Netzwerk gefunden wird, zeigt Registrierte Server einen Fehler an.  

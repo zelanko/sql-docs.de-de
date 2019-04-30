@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280418"
 ---
 # <a name="driver-manager-connection-pooling"></a>Verbindungspooling des Treiber-Managers
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einen Pool aufgenommen wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne den Prozess für die Verbindung abgeschlossen.  

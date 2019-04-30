@@ -16,69 +16,69 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240956"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elemente, die in SQL-­Anweisungen verwendet werden
 Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten verwendet.  
   
 ## <a name="element"></a>Element  
- *Basis-Table-Identifier* :: = *definiert-Benutzername*  
+ *base-table-identifier* ::= *user-defined-name*  
   
- *Basis-Tabellenname* :: = *Base Tabellenbezeichner*  
+ *base-table-name* ::= *base-table-identifier*  
   
  *Boolean-Faktor-* :: [NOT] = *primären boolescher Wert*  
   
- *boolescher Wert primären* :: = Vergleich *-Prädikat* &#124; ( *Suchbedingung* )  
+ *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
   
  *Boolean-Begriff* :: = *Boolean-Faktor-* [AND *Boolean-Begriff*]  
   
- *Zeichen-Zeichenfolgenliteral* :: = '' {*Zeichen*}... " (*Zeichen* ist ein beliebiges Zeichen im Zeichensatz der Treiber /-Datenquelle. Um ein einzelnes literale Anführungszeichen (") in ein Zeichen-Zeichenfolgenliteral einzuschließen, verwenden Sie zwei literale Anführungszeichen [" "].)  
+ *character-string-literal* ::= ''{*character*}...'' (*Zeichen* ist ein beliebiges Zeichen im Zeichensatz der Treiber /-Datenquelle. Um ein einzelnes literale Anführungszeichen (") in ein Zeichen-Zeichenfolgenliteral einzuschließen, verwenden Sie zwei literale Anführungszeichen [" "].)  
   
- *Spalten-ID* :: = *definiert-Benutzername*  
+ *column-identifier* ::= *user-defined-name*  
   
  *Spaltenname* :: = [*Tabellenname*.] *-Spalten-ID*  
   
- *Vergleichsoperator* :: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
+ *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
  *Vergleichsprädikat* :: = *Ausdruck* Vergleichsoperator Ausdruck  
   
  *Datentyp* :: = *-Zeichenfolgen-Datentyps* (*-Zeichenfolgen-Datentyps* ist einen beliebigen Datentyp aufweisen, die für die Sie die "" DATA_TYPE""-Spalte in der von ' SQLGetTypeInfo ' zurückgegebene Resultset entweder SQL_CHAR ist oder SQL_VARCHAR.)  
   
- *Ziffer* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *Dynamische Parameter* :: =?  
+ *dynamic-parameter* ::= ?  
   
- *Ausdruck* :: = Begriff &#124; Ausdruck {+&#124;-} Begriff  
+ *expression* ::= term &#124; expression {+&#124;-} term  
   
- *Faktor* :: = [*+*&#124;*-*]*primären*  
+ *factor* ::= [*+*&#124;*-*]*primary*  
   
  *INSERT-Wert* :: =  
   
- *Dynamische parameter*  
+ *dynamic-parameter*  
   
- &#124;*literal*  
+ &#124; *literal*  
   
- &AMP;#124;NULL  
+ &#124; NULL  
   
- &AMP;#124;BENUTZER  
+ &#124; USER  
   
- *Buchstaben* :: = *Kleinbuchstaben Fall Buchstaben &#124; Upper-Case-Buchstaben*  
+ *letter* ::= *lower-case-letter &#124; upper-case-letter*  
   
- *Literal* :: = *Zeichen-Zeichenfolgenliteral*  
+ *literal* ::= *character-string-literal*  
   
  *Kleinbuchstaben Fall Buchstaben* :: = eine &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; ich &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
- *Order by-Klausel* :: = ORDER BY *Sortierreihenfolge-Spezifikation* [, *sortierspezifikation*]...  
+ *order-by-clause* ::=    ORDER BY *sort-specification* [, *sort-specification*]...  
   
  *primäre* :: = *Spaltenname*  
   
- &#124;*Dynamic-Parameter*  
+ &#124; *dynamic-parameter*  
   
- &#124;*literal*  
+ &#124; *literal*  
   
  &#124;( *Ausdruck* )  
   
@@ -86,22 +86,22 @@ Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten ve
   
  *SELECT-Liste* :: = \* &#124; *Select-Unterliste* [, *Select-Unterliste*]...  (*Select-Liste* darf keine Parameter enthalten.)  
   
- *Select-Unterliste* :: = *Ausdruck*  
+ *select-sublist* ::= *expression*  
   
  *Sort-Spezifikation* :: = {*unsigned Integer &#124; Spaltenname*} [*ASC &#124; DESC*]  
   
- *Tabellenbezeichner* :: = *definiert-Benutzername*  
+ *table-identifier* ::= *user-defined-name*  
   
- *Tabellenname* :: = *Tabellenbezeichner*  
+ *table-name* ::= *table-identifier*  
   
- *Tabellenverweis* :: = *Tabellenname*  
+ *table-reference* ::= *table-name*  
   
  *Tabelle der Verweisliste* :: = *Tabellenverweis* [,*Tabellenverweis*]...  
   
- *Begriff* :: = *Faktor* &#124; *Begriff* {\*&#124;*/*} *Faktor*  
+ *term* ::= *factor* &#124; *term* {\*&#124;*/*} *factor*  
   
- *nicht signierte Ganzzahl* :: = {*Ziffer*}  
+ *unsigned-integer* ::= {*digit*}  
   
  *Upper-Case-Buchstaben* :: = *ein &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; ich &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *definiert-Benutzername* :: = *Buchstaben*[*Ziffer* &#124; *Buchstaben* &#124; *_*]...
+ *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_*]...

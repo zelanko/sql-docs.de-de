@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315978"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Lesezeichen aus, und gibt Sie eine Angabe über das Verhältnis der jeweiligen Werte zurück.  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Da der Datentyp eines Lesezeichens für jeden Anbieter spezifisch ist, werden als ADO macht eine **Variant**. SQL Server-Lesezeichen sind z. B. vom Typ DBTYPE_R8 (**doppelte**). ADO macht diesen Typ als eine **Variant** mit einen Untertyp des **doppelte**.  
   
- Beim Vergleichen von Lesezeichen versucht ADO Umwandlungen nicht. Die Werte werden einfach an den Anbieter übergeben, in dem der Vergleich auftritt. Wenn die Lesezeichen zum Übergeben der **CompareBookmarks** Methode, die in Variablen für die unterschiedlichen Typen gespeichert sind, können sie die folgenden Typenkonfliktfehler generieren: "Argumente des falschen Typs sind, werden außerhalb des zulässigen Bereichs oder einen Konflikt verursachen miteinander."  
+ Beim Vergleichen von Lesezeichen versucht ADO Umwandlungen nicht. Die Werte werden einfach an den Anbieter übergeben, in dem der Vergleich auftritt. Wenn die Lesezeichen zum Übergeben der **CompareBookmarks** Methode, die in Variablen für die unterschiedlichen Typen gespeichert sind, können sie die folgenden Typenkonfliktfehler generieren: "Argumente des falschen Typs sind, sind außerhalb des zulässigen Bereichs, oder in Konflikt miteinander."  
   
  Ein Lesezeichen, das nicht gültig oder nicht korrekt ist, verursacht einen Fehler.  
   

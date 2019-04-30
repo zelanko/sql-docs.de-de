@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a210cea5407bc56e45c4ea8cc12a578ed488b59c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280692"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Verwenden des Eigenschaftenfensters in Management Studio
   Das Eigenschaftenfenster enthält eine Beschreibung des Zustands eines Elements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], z. B. Verbindungen oder Showplanoperatoren, sowie Informationen zu Datenbankobjekten wie Tabellen, Sichten und Designer.  

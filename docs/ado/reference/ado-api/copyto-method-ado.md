@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308907"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
 Kopiert die angegebene Anzahl von Bytes oder Zeichen (je [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Stream** Objekt.  
@@ -41,8 +41,8 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  Die *DestStream* Parameter möglicherweise keinen Proxy **Stream** Objekt, da dies für den Zugriff auf eine private Schnittstelle erfordert die **Stream** -Objekt, das kann nicht remote auf werden die -Client.  
   
- *"NUMCHARS"*  
- Dies ist optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle kopiert werden **Stream** an das Ziel **Stream**. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ *NumChars*  
+ Optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle kopiert werden **Stream** an das Ziel **Stream**. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode kopiert die angegebene Anzahl von Zeichen oder Bytes, beginnend mit der aktuellen Position, die gemäß der [Position](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**, und klicken Sie dann nur die Zeichen oder Bytes aus der aktuellen Position bis **EOS** beim Übertragungsvorgang kopiert werden. Wenn der Wert des *"NUMCHARS"* ist-1, oder weggelassen wird, werden alle Zeichen oder Bytes, beginnend mit der aktuellen Position kopiert.  

@@ -1,5 +1,5 @@
 ---
-title: LinRegSlope (MDX) | Microsoft Docs
+title: LinRegSlope (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aa1c24076f76c4f61692deac69741d8cf1557462
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241056"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
 
@@ -39,13 +39,13 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt. Die vom Ausdruck zurückgegebene Zahl stellt den Wert für die X-Achse dar.  
   
 ## <a name="remarks"></a>Hinweise  
- Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b das Konstante Glied:  
+ Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionszeile hat die folgende Gleichung, in denen eine die Neigung und b ist das Konstante Glied:  
   
  y = ax+b  
   
- Die **LinRegSlope** Funktion wertet die angegebene Menge für den ersten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion den angegebenen Mengenausdruck für den zweiten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn kein zweiter numerischer Ausdruck angegeben wird, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die X-Achse. Das x-Achsen-Argument nicht angeben wird häufig mit der Time-Dimension verwendet.  
+ Die **LinRegSlope** Funktion wertet die angegebene Menge für den ersten numerischen Ausdruck aus, um die Werte für die y-Achse zu erhalten. Anschließend wertet die Funktion den angegebenen Mengenausdruck für den zweiten numerischen Ausdruck, sofern angegeben, aus, um die Werte für die X-Achse zu erhalten. Wenn kein zweiter numerischer Ausdruck angegeben wird, verwendet die Funktion den aktuellen Kontext der Zellen in der angegebenen Menge als Werte für die X-Achse. Das x-Achsen-Argument nicht angegeben, wird häufig mit der Time-Dimension verwendet.  
   
- Nach dem Erhalt des Satzes von Punkten, die **LinRegSlope** Funktion gibt den Regressionskoeffizienten der Regressionszeile (einer in der vorherigen Formel).  
+ Nach dem Abrufen des Satzes von Punkten, die **LinRegSlope** Funktion gibt den Regressionskoeffizienten der Regressionszeile (eine in der vorherigen Formel).  
   
 > [!NOTE]  
 >  Die **LinRegSlope** Funktion ignoriert leere Zellen oder Zellen, die Text oder logische Werte enthalten. Zellen mit dem Wert Null (0) werden jedoch von der Funktion berücksichtigt.  

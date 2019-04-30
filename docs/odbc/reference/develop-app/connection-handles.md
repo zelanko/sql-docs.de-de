@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280851"
 ---
 # <a name="connection-handles"></a>Verbindungshandles
 Ein *Verbindung* besteht aus einem Treiber und einer Datenquelle. Ein Verbindungshandle identifiziert jede Verbindung. Das Verbindungshandle definiert, nicht nur den zu verwendenden Treiber, sondern welche Datenquelle Sie mit diesen Treiber verwenden. In einem Segment des Codes, die ODBC (des Treiber-Managers oder eines Treibers) implementiert, identifiziert das Verbindungshandle für eine Struktur, die Verbindungsinformationen, z. B. Folgendes enthält:  

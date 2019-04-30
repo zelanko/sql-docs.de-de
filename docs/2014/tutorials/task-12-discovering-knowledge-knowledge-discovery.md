@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 12: Ermitteln von wissen (Wissensermittlung) | Microsoft-Dokumentation'
+title: 'Aufgabe 12: Ermitteln von wissen (Wissensermittlung) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223463"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Ermitteln von Wissen (Wissensermittlung)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Wissensermittlung
   In dieser Aufgabe führen Sie die **Wissensermittlung** auf **Supplier ID** und **Lieferantenname** Domänen. In diesem Szenario importiert der Wissensermittlungsprozess hauptsächlich Werte für diese zwei Domänen.  
   
  In diesem Lernprogramm haben Sie eine Wissensdatenbank von Grund auf neu erstellt. Sie können eine Wissensdatenbank auch durch Ausführen einer Wissensermittlungsaktivität erstellen. Beim Klicken auf **Erstellen einer Wissensdatenbank** in der Hauptseite des DQS-Client gelangen Sie auf eine Seite mit **Domänenverwaltung** -Aktivität für die Aktivität ausgewählt. Sie können ändern, die **Aktivität** zu **Wissensermittlung** , und klicken Sie dann Sie auf der nächsten Seite Domänen, als Teil des wissensermittlungsprozesses erstellen. Finden Sie unter [Durchführen der Wissensermittlung](https://msdn.microsoft.com/library/hh510398.aspx) Weitere Details.  

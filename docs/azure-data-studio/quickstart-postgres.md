@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252961"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Eine Verbindung herzustellen und Abfragen mit PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres herstellen, und klicken Sie dann mithilfe von SQL-Anweisungen zum Erstellen der Datenbank *"tutorialdb"* und diese abzufragen.

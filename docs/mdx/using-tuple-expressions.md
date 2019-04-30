@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tupelausdrücken | Microsoft Docs
+title: Verwenden von Tupelausdrücken | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251504"
 ---
 # <a name="using-tuple-expressions"></a>Verwenden von Tupelausdrücken
 
@@ -37,7 +37,7 @@ ms.locfileid: "34743689"
   
 -   Hat die Hierarchie, auf die implizit verwiesen wird, ein Standardelement, wird dem Tupel das Standardelement hinzugefügt.  
   
--   Wenn die Hierarchie implizit verwiesen wird, kein Standardelement, hat die **(alle)** Mitglied der Standardhierarchie verwendet wird.  
+-   Wenn die Hierarchie implizit verwiesen wird kein Standardelement, wird die **(alle)** Mitglied die Standardhierarchie verwendet wird.  
   
 -   Hat die Hierarchie, auf die implizit verwiesen wird, kein Standardelement, wird das erste Element der obersten Ebene der Hierarchie verwendet.  
   

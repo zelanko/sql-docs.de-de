@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239828"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft auf den Unterschied in Bezug auf Leistung für einen Vorgang ausgeführt wird, mit und ohne einen 30-Record-Cache.  

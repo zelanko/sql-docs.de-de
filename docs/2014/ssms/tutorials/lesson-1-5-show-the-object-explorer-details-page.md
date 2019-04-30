@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282033"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Anzeigen der Seite Details zum Objekt-Explorer
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann für jedes im Objekt-Explorer ausgewählte Objekt einen Bericht anzeigen. Dieser Bericht wird als Seite Details zum Objekt-Explorer bezeichnet und von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erstellt. Er wird im Dokumentfenster geöffnet.  

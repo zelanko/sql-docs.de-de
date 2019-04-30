@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309186"
 ---
 # <a name="adox-objects"></a>ADOX-Objekte
 ## <a name="adox-object-summary"></a>ADOX: Zusammenfassung  
@@ -28,11 +28,11 @@ ms.locfileid: "47772297"
 |------------|-----------------|  
 |[Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)|Enthält Auflistungen, die den Schema-Katalog für die Datenquelle beschreiben.|  
 |[Column](../../../ado/reference/adox-api/column-object-adox.md)|Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.|  
-|[Gruppe](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
+|[Gruppieren](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
 |[Key](../../../ado/reference/adox-api/key-object-adox.md)|Stellt ein primärer, Fremdschlüssel oder eindeutiger Schlüsselfeld aus einer Datenbanktabelle dar.|  
 |[Verfahren](../../../ado/reference/adox-api/procedure-object-adox.md)|Stellt eine gespeicherte Prozedur dar.|  
-|[Tabelle](../../../ado/reference/adox-api/table-object-adox.md)|Stellt eine Datenbanktabelle, einschließlich Spalten, Indizes und Schlüssel dar.|  
+|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Stellt eine Datenbanktabelle, einschließlich Spalten, Indizes und Schlüssel dar.|  
 |[Benutzer](../../../ado/reference/adox-api/user-object-adox.md)|Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Ansicht](../../../ado/reference/adox-api/view-object-adox.md)|Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar.|  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306035"
 ---
 # <a name="transaction-support"></a>Transaktionsunterstützung.
 Das Maß an Unterstützung für Transaktionen wird-Treiber definiert. ODBC soll für eine einzelne Benutzer oder desktop-Datenbank implementiert werden, die nicht erforderlich, mehrere Updates auf ihre Daten zu verwalten. Führen Sie darüber hinaus einige Datenbanken, die Transaktionen unterstützen, nur für die Anweisungen (Data Manipulation Language, DML) von SQL; Es gibt Einschränkungen oder spezielle Transaktionssemantik im Hinblick auf die Verwendung der Windows-Verwaltungsinstrumentation (Data Definition Language, Datendefinitionssprache), wenn eine Transaktion aktiv ist. D. h. möglicherweise Unterstützung von Transaktionen für mehrere gleichzeitige Updates an Tabellen jedoch nicht für die Anzahl und die Definition von Tabellen während einer Transaktion ändern.  

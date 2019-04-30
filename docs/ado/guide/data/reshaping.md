@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280394"
 ---
 # <a name="reshaping"></a>Neustrukturierung
 Ein **Recordset** erstellt von einer Klausel in einer Form Befehl zugewiesen werden kann ein *Alias* Name (in der Regel mit dem AS-Schlüsselwort). Der Alias des eine geformten **Recordset** in einem völlig anderen Befehl verwiesen werden kann. D. h. Sie können wieder verwenden, oder *umformen*, eine zuvor geformten **Recordset** in einem neuen Shape-Befehl. Um dieses Feature zu unterstützen, stellt ADO eine Eigenschaft bereit, mit denen [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224608"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Prüfen des Market Basket-Modells (Mittleres Data Mining Tutorial)
   Nun, dass Sie erstellt haben die `Association` Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Zuordnungsregeln-Viewer in die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Dieses Lernprogramm führt Sie durch die Verwendung des Viewers, um Beziehungen zwischen Elementen zu untersuchen. Der Viewer hilft Ihnen, schnell zu erkennen, welche Produkte häufig zusammen angezeigt werden, und eine allgemeine Vorstellung von den so entstehenden Muster zu erhalten.  
@@ -37,7 +37,7 @@ ms.locfileid: "56035301"
   
  Eine Zeile, die zwei Elemente verbindet, zeigt an, dass diese Elemente wahrscheinlich zusammen in einer Transaktion angezeigt werden. Anders ausgedrückt, kaufen Kunden wahrscheinlich beide Elemente. Der Schieberegler ist mit der Wahrscheinlichkeit der Regel verknüpft. Verschieben Sie den Schieberegler nach oben oder unten, um schwache Zuordnungen herauszufilten, das heißt Regeln mit niedriger Wahrscheinlichkeit.  
   
- Das Abhängigkeitsnetzwerkdiagramm zeigt paarweise Regeln an, die logisch als A->B dargestellt werden können: Wenn Produkt A gekauft wird, wird wahrscheinlich auch Produkt B gekauft. Das Diagramm kann keine Regeln des Typs AB->C anzeigen. Wenn Sie den Schieberegler verschieben, um alle Regeln anzuzeigen, jedoch immer noch keine keine Zeilen im Diagramm angezeigt werden, bedeutet dies, dass es keine paarweisen Regeln gibt, die die Kriterien der Algorithmusparameter erfüllen.  
+ Das abhängigkeitsnetzwerkdiagramm zeigt paarweise Regeln an, die logisch als A-B, d. h., wenn Produkt A gekauft wird, und klicken Sie dann Produkt B wahrscheinlich ist > dargestellt werden können. Das Diagramm kann nicht angezeigt werden, dass c-Regeln des Typs ab-> Wenn Sie den Schieberegler verschieben, um alle Regeln anzuzeigen, jedoch immer noch keine keine Zeilen im Diagramm angezeigt werden, bedeutet dies, dass es keine paarweisen Regeln gibt, die die Kriterien der Algorithmusparameter erfüllen.  
   
  Sie können auch Knoten nach Namen suchen,indem sie die ersten Buchstaben des Attributnamens eingeben. Weitere Informationen finden Sie unter [Dialogfeld "Knoten suchen" &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "56035301"
 ##  <a name="bkmk_Itemsets"></a> Registerkarte "Itemsets"  
  Nun erfahren Sie mehr über die Regeln und die Itemsets, die vom Modell für die Touring Tire- und Touring Tire Tube-Produkte generiert wurden. Die **Itemsets** Registerkarte zeigt drei wichtige Arten von Informationen, die sich auf Itemsets beziehen, die die [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus ermittelt:  
   
--   **Unterstützung:** Die Anzahl von Transaktionen, in denen das Itemset auftritt.  
+-   **Unterstützung:** Die Anzahl der Transaktionen, die in denen das Itemset auftritt.  
   
 -   **Größe:** Die Anzahl der Elemente im Itemset.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "56035301"
   
      "Wichtigkeit" wird bereitgestellt, um Ihnen zu helfen, die Nützlichkeit einer Regel zu bewerten, da die Wahrscheinlichkeit alleine irreführend sein kann. Wenn jede Transaktion z. B. eine Flasche Mineralwasser enthält - wenn vielleicht dem Einkaufswagen jedes Kunden als Teil einer Werbeaktion die Flasche automatisch hinzugefügt wird - würde das Modell eine Regel erstellen, die vorhersagt, dass diese Flasche Mineralwasser eine Wahrscheinlichkeit von 1 hat. In Bezug auf die Wahrscheinlichkeit ist diese Regel sehr genau, enthält jedoch keine nützlichen Informationen.  
   
--   **Regel:** Gibt die Definition der Regel an. Für ein Market Basket-Modell beschreibt eine Regel eine bestimmte Kombination von Elementen.  
+-   **Regel:** Die Definition der Regel. Für ein Market Basket-Modell beschreibt eine Regel eine bestimmte Kombination von Elementen.  
   
  Jede Regel kann verwendet werden, um das Vorhandensein eines Elements in einer Transaktion abhängig vom Vorhandensein anderer Elemente vorherzusagen. Genau wie in der **Itemsets** Registerkarte können Sie die Regeln filtern, sodass nur die interessantesten Regeln angezeigt werden. Wenn Sie mit einem Miningmodell arbeiten, das keine Regeln hat, möchten Sie die Algorithmusparameter möglicherweise ändern, um die Wahrscheinlichkeitsschwelle für Regeln zu senken.  
   

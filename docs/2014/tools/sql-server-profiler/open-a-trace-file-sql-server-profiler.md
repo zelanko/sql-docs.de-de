@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240549"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Öffnen einer Ablaufverfolgungsdatei (SQL Server Profiler)
   In diesem Thema wird beschrieben, auf welche Weise eine Ablaufverfolgungsdatei mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]geöffnet wird.  

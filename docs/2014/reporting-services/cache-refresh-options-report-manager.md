@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266470"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Optionen zur Cacheaktualisierung (Berichts-Manager)
   Verwenden Sie die Seite Optionen zur Cacheaktualisierung, um Zeitpläne zum Vorabladen des Caches mit temporären Datenkopien für einen Bericht oder ein freigegebenes Dataset zu erstellen. Ein Aktualisierungsplan enthält einen Zeitplan und bietet die Möglichkeit, Werte für Parameter anzugeben oder zu überschreiben. Bei einem freigegebenen Dataset können keine Werte für Parameter überschrieben werden, die als schreibgeschützt gekennzeichnet sind. Sie können auf der Seite mit den Aktualisierungsoptionen auch mehrere Aktualisierungspläne erstellen und verwenden.  

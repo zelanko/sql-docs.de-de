@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228110"
 ---
 # <a name="understanding-cursors-and-locks"></a>Grundlegendes zu Cursorn und Sperren
 Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, sodass Sie den besten und effizientesten Cursortyp für die Datenzugriffs-Anforderungen der Anwendung auswählen können. Eine weniger optimalen Cursor-Konfiguration kann Datenzugriff Datenzugriffsvorgänge extrem langsam werden.  

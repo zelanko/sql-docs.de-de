@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc05bae8e67098bb89345b1cf0333abae68397d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313317"
 ---
 # <a name="sqlallocconnect-visual-foxpro-odbc-driver"></a>SQLAllocConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Kernebene  
+ ODBC-API-Übereinstimmung: Kern-Ebene  
   
  Belegt Speicher für ein Verbindungshandle *Hdbc*, in der Umgebung identifizierte *Henv*. Der Treiber-Manager verarbeitet diesen Aufruf und Aufrufe des Treibers **SQLAllocConnect** immer [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, oder [SQLDriverConnect ](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) aufgerufen wird.  
   

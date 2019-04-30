@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258960"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetData** Ruft Daten für eine einzelne Spalte im Resultset oder für einen einzelnen Parameter nach **SQLParamData** SQL_PARAM_DATA_AVAILABLE zurückgibt. Es kann mehrere Male aufgerufen werden zum Abrufen von Daten mit variabler Länge in Teilen.  
@@ -91,7 +91,7 @@ SQLRETURN SQLGetData(
  Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md) und "Kommentare" in diesem Thema.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetData** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetData** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -100,7 +100,7 @@ SQLRETURN SQLGetData(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Nicht alle Daten für die angegebene Spalte *Col_or_Param_Num*, in einem einzigen Aufruf der Funktion abgerufen werden konnte. SQL_NO_TOTAL oder die Länge der Daten in der angegebenen Spalte vor dem aktuellen Aufruf verbleibenden **SQLGetData** wird zurückgegeben, \* *StrLen_or_IndPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Weitere Informationen zur Verwendung von mehreren Aufrufen an **SQLGetData** finden Sie eine einzelne Spalte "Kommentare".|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die Daten, die für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die Daten, die für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset kann nicht konvertiert werden, in den C-Datentyp, der durch das Argument angegebenen *TargetType*.|  
 |07009|Ungültiger Deskriptorindex|Der angegebene Wert für das Argument *Col_or_Param_Num* wurde 0 und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.<br /><br /> Der angegebene Wert für das Argument *Col_or_Param_Num* war größer als die Anzahl der Spalten im Resultset.<br /><br /> Die *Col_or_Param_Num* Wert war nicht gleich auf die Ordnungszahl des Parameters, der verfügbar ist.<br /><br /> (DM) die angegebene Spalte gebunden. Diese Beschreibung wird nicht für Treiber, die die Bitmaske SQL_GD_BOUND SQL_GETDATA_EXTENSIONS Option wird im zurückgeben **SQLGetInfo**.<br /><br /> Die Anzahl der angegebenen Spalte (DM) war kleiner als oder gleich der Anzahl der gebundenen Spalte mit der höchsten. Diese Beschreibung wird nicht für Treiber, die die Bitmaske SQL_GD_ANY_COLUMN SQL_GETDATA_EXTENSIONS Option wird im zurückgeben **SQLGetInfo**.<br /><br /> (DM) die Anwendung wurde bereits aufgerufen. **SQLGetData** der aktuellen Zeile; die Anzahl der im aktuellen Aufruf angegebenen Spalte war kleiner als die Anzahl der in den vorherigen Aufruf angegebenen Spalte und der Treiber gibt nicht den SQL_ zurück GD_ANY_ORDER Bitmaske für die Option SQL_GETDATA_EXTENSIONS in **SQLGetInfo**.<br /><br /> (DM) die *TargetType* Argument war SQL_ARD_TYPE, und die *Col_or_Param_Num* anwendungsparameterdeskriptor-Datensatz in die ARD Fehler bei der konsistenzprüfung.<br /><br /> (DM) die *TargetType* Argument SQL_ARD_TYPE, und der Wert im Feld SQL_DESC_COUNT der ARD war kleiner als der *Col_or_Param_Num* Argument.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  

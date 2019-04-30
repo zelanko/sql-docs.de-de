@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86f52c2ea61b8b62ea9bfe5ffe6b3c7b06977740
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231949"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Erstellen und Ändern von Objekten (XMLA)
   Hauptobjekte können unabhängig erstellt, geändert und gelöscht werden. Zu den Hauptobjekten gehören die folgenden Objekte:  

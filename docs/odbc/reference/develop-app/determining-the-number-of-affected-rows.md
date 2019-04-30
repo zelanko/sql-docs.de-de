@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262101"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Bestimmen der Anzahl der betroffenen Zeilen
 Nachdem eine Anwendung aktualisieren, löschen oder Einfügen von Zeilen, können sie aufrufen **SQLRowCount** um zu bestimmen, wie viele Zeilen betroffen sind. **SQLRowCount** gibt diesen Wert zurück, unabhängig davon, ob die Zeilen wurden aktualisiert, gelöscht oder, indem Sie Ausführung eingefügt einer **UPDATE**, **löschen**, oder **einfügen** -Anweisung durch Ausführen einer positionierte update oder delete-Anweisung oder durch den Aufruf **SQLSetPos**.  

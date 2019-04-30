@@ -1,5 +1,5 @@
 ---
-title: CoalesceEmpty (MDX) | Microsoft Docs
+title: CoalesceEmpty (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306697"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -36,7 +36,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *Numeric_Expression1*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
- *Numeric_Expression2 dar*  
+ *Numeric_Expression2*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen angegebenen numerischen Wert handelt.  
   
  *String_Expression1*  
@@ -50,12 +50,12 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
   
  Wenn ein oder mehrere Zeichenfolgenausdrücke angegeben werden, gibt die Funktion den Zeichenfolgenwert des ersten Zeichenfolgenausdrucks (von links nach rechts) zurück, der in einen nicht leeren Wert aufgelöst werden kann. Kann keiner der angegebenen Zeichenfolgenausdrücke in einen nicht leeren Wert aufgelöst werden, gibt die Funktion den leeren Zellenwert zurück. Der Wert für den zweiten Zeichenfolgenausdruck ist in der Regel der Zeichenfolgenwert, der den vom ersten Zeichenfolgenausdruck zurückgegebenen NULL-Wert ersetzt.  
   
- Die **CoalesceEmpty** -Funktion kann nur Werte desselben Typs akzeptiert. Das heißt, alle angegebenen Wertausdrücke müssen entweder zu numerischen Datentypen oder dem leeren Zellenwert ausgewertet werden, oder alle angegebenen Wertausdrücke müssen zu Zeichenfolgen-Datentypen oder dem leeren Zellenwert ausgewertet werden. Ein einzelner Aufruf dieser Funktion kann nicht sowohl numerische Ausdrücke als auch Zeichenfolgenausdrücke enthalten.  
+ Die **CoalesceEmpty** -Funktion kann nur Werte des gleichen Typs annehmen. Das heißt, alle angegebenen Wertausdrücke müssen entweder zu numerischen Datentypen oder dem leeren Zellenwert ausgewertet werden, oder alle angegebenen Wertausdrücke müssen zu Zeichenfolgen-Datentypen oder dem leeren Zellenwert ausgewertet werden. Ein einzelner Aufruf dieser Funktion kann nicht sowohl numerische Ausdrücke als auch Zeichenfolgenausdrücke enthalten.  
   
  Weitere Informationen zu leeren Zellen finden Sie in der OLE DB-Dokumentation.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Beispielabfrage die **Adventure Works** Cube. In diesem Beispiel wird die Bestellmenge jedes Produkts sowie den Prozentsatz der Bestellmengen nach Kategorie zurückgegeben. Die **CoalesceEmpty** Funktion wird sichergestellt, dass null-Werte als null (0) dargestellt werden, wenn die berechneten Elemente formatiert.  
+ Das folgende Beispiel fragt die **Adventure Works** Cube. In diesem Beispiel wird die Bestellmenge jedes Produkts sowie den Prozentsatz der Bestellmengen nach Kategorie zurückgegeben. Die **CoalesceEmpty** -Funktion stellt sicher, dass null-Werte als null (0) dargestellt werden, wenn die berechneten Elemente formatiert.  
   
 ```  
 WITH   

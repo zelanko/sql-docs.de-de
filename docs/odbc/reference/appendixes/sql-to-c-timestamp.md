@@ -1,5 +1,5 @@
 ---
-title: 'SQL zu C: Zeitstempel | Microsoft-Dokumentation'
+title: 'SQL in C: Zeitstempel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259257"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL zu C: Timestamp
+# <a name="sql-to-c-timestamp"></a>SQL in C: Timestamp
 
 Der Bezeichner für die ODBC-SQL-Datentyp Timestamp lautet wie folgt:
 

@@ -160,11 +160,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225103"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   Der Messgerätdatenbereich ist ein eindimensionaler Datenbereich, der einen einzelnen Wert im Dataset anzeigt. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Mithilfe des Messgerätbereichs können Sie mehrere Messgeräte in einem Messgerätbereich mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233624"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition – CREATE ACTION
 
@@ -104,7 +104,7 @@ FOR
  Jede Aktion ist für einen bestimmten Cube definiert und besitzt einen eindeutigen Namen innerhalb des Cubes. Eine Aktion kann für einen der Bereiche in der folgenden Tabelle gelten.  
   
  Cubebereich  
- Die Aktion ist unabhängig von bestimmten Dimensionen, Elementen oder Zellen. Beispiel: "Launch terminal emulation for AS/400 production system".  
+ Für Aktionen, die unabhängig von bestimmten Dimensionen, Elemente oder Zellen; Zum Beispiel: "Launch terminal Emulation for AS / 400 Production System".  
   
  Dimensionsbereich  
  Die Aktion gilt für eine bestimmte Dimension. Diese Aktionen sind nicht von einer bestimmten Auswahl von Ebenen oder Elementen abhängig.  

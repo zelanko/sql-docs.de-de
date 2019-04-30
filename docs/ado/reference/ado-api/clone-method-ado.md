@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239737"
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
 Erstellt ein Duplikat [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus einem vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt sein.  
@@ -45,7 +45,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Eine Objektvariable, die identifiziert die **Recordset** Objekt, das dupliziert werden.  
   
  *LockType*  
- Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der angibt, entweder die Sperre den ursprünglichen Objekttyp **Recordset**, oder ein schreibgeschütztes **Recordset**. Gültige Werte sind **AdLockUnspecified** oder **AdLockReadOnly**.  
+ Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der angibt, entweder die Sperre den ursprünglichen Objekttyp **Recordset**, oder ein schreibgeschütztes **Recordset**. Gültige Werte sind **AdLockUnspecified** oder **AdLockReadOnly**.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **Klon** dupliziert-Methode zum Erstellen mehrerer **Recordset** Objekte, insbesondere, wenn Sie mehr als einem aktuellen Datensatz in einer bestimmten Gruppe von Datensätzen beibehalten möchten. Mithilfe der **Klon** Methode ist effizienter als das Erstellen und öffnen ein neues **Recordset** Objekt, das die gleiche Definition wie das Original verwendet.  
@@ -70,17 +70,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Ereignis|Ausgelöst in Klonen?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|nein|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|nein|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|nein|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Benutzerkontensteuerung|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|nein|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Benutzerkontensteuerung|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|nein|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Benutzerkontensteuerung|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Benutzerkontensteuerung|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|nein|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|nein|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Nein|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Nein|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Nein|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Ja|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Nein|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Ja|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Nein|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Ja|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Ja|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Nein|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Nein|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259354"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.8  
+ Eingeführt in Version: ODBC 3.8  
   
- Einhaltung von Standards: keine  
+ Einhaltung von Standards: None  
   
  **Zusammenfassung**  
  **SQLCompleteAsync** können verwendet werden, um zu ermitteln, wann eine asynchrone Funktion mithilfe von entweder oder Abruf-benachrichtigungsbasierte Verarbeitung abgeschlossen ist. Weitere Informationen zu asynchronen Vorgängen finden Sie unter [asynchrone Ausführung](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -67,11 +67,11 @@ SQLRETURN SQLCompleteAsync(
   
  **SQLCompleteAsync** gibt einen Code als SQL_SUCCESS an, dass **SQLCompleteAsync** ist nicht richtig aufgerufen. **SQLCompleteAsync** jedem Diagnosedatensatz nicht in diesem Fall gesendet. Mögliche Rückgabecodes sind:  
   
--   SQL_INVALID_HANDLE: Durch das Handle angegeben *HandleType* und *behandeln* ist kein gültiges Handle.  
+-   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* ist kein gültiges Handle.  
   
 -   SQL_ERROR: *AsyncRetCodePtr* NULL ist oder die asynchrone Verarbeitung auf das Handle nicht aktiviert ist.  
   
--   SQL_NO_DATA: Im Modus "Benachrichtigung" ein asynchroner Vorgang wird nicht ausgeführt, oder der Treiber-Manager hat die Anwendung nicht benachrichtigt. Im Modus "Abfrage" ist ein asynchroner Vorgang nicht ausgeführt.  
+-   SQL_NO_DATA: In den Benachrichtigungsmodus ein asynchroner Vorgang wird nicht ausgeführt, oder der Treiber-Manager hat die Anwendung nicht benachrichtigt. Im Modus "Abfrage" ist ein asynchroner Vorgang nicht ausgeführt.  
   
 ## <a name="comments"></a>Kommentare  
  Im Modus für asynchrone Verarbeitung abrufen, die Grundlage *AsyncRetCodePtr* SQL_STILL_EXECUTING möglicherweise beim **SQLCompleteAsync** gibt SQL_SUCCESS zurück. Anwendung sollte bis zum Abruf behalten *AsyncRetCodePtr* ist kein SQL_STILL_EXECUTING. Im Modus für asynchrone Verarbeitung der Benachrichtigung basierend *AsyncRetCodePtr* werden nie SQL_STILL_EXECUTING.  

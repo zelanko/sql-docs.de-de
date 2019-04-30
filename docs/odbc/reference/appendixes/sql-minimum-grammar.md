@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270499"
 ---
 # <a name="sql-minimum-grammar"></a>Minimale SQL-Grammatik
 Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt erläuterten Syntax ist eine Teilmenge der Syntax der Eintrag auf der SQL-92.  
@@ -29,7 +29,7 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
  Treiber, die Arbeit nur mit schreibgeschützten Datenquellen unterstützen möglicherweise nicht die Teile der Grammatik, die in diesem Abschnitt enthalten, mit denen Daten geändert. Eine Anwendung kann bestimmen, wenn eine Datenquelle durch den Aufruf schreibgeschützt und ist **SQLGetInfo** mit dem Typ der SQL_DATA_SOURCE_READ_ONLY-Informationen.  
   
 ## <a name="statement"></a>-Anweisung.  
- *Anweisung CREATE Table* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *Basis-Table-Name*  
   
@@ -38,19 +38,19 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
 > [!IMPORTANT]  
 >  Als eine *Datentyp* in einer *-Anweisung create Table*, Anwendungen müssen einen Datentyp aus der TYPE_NAME-Spalte des Resultsets vom verwenden **SQLGetTypeInfo**.  
   
- *DELETE-Anweisung durchsucht* :: =  
+ *delete-statement-searched* ::=  
   
  DELETE FROM *Tabellenname* [, in denen *Suchbedingung*]  
   
- *Drop-Table-Anweisung* :: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE *Basis-Table-Name*  
   
- *INSERT-Anweisung* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *Tabellenname* [( *Spaltenbezeichner* [, *Spaltenbezeichner*]...)]      Werte (*Wert einfügen*[, *Wert einfügen*]...)  
   
- *SELECT-Anweisung* :: =  
+ *select-statement* ::=  
   
  Wählen Sie [alle &#124; DISTINCT] *Select-Liste*  
   
@@ -58,21 +58,21 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
   
  [, In denen *Suchbedingung*]  
   
- [*Order by-Klausel*]  
+ [*order-by-clause*]  
   
- *Anweisung* :: = *-Anweisung create Table*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*Delete-Anweisung durchsucht*  
+ &#124; *delete-statement-searched*  
   
- &#124;*Drop-Table-Anweisung*  
+ &#124; *drop-table-statement*  
   
- &#124;*Insert-Anweisung*  
+ &#124; *insert-statement*  
   
- &#124;*Select-Anweisung*  
+ &#124; *select-statement*  
   
- &#124;*Update-Anweisung durchsucht*  
+ &#124; *update-statement-searched*  
   
- *Update-Anweisung durchsucht*  
+ *update-statement-searched*  
   
  UPDATE *Tabellenname*  
   

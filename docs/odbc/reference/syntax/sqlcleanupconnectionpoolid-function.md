@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252744"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3,81 Standardkompatibilität: ODBC  
+ Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLCleanupConnectionPoolID** informiert einen Treiber, der Pool-ID Zeitlimit überschritten wurde. Timeout bei ein Pool ID können Timeout auf, wenn alle Verbindungen in einem Pool, der dieser Anwendungspool-ID zugeordnet wurden. Finden Sie unter [Verbindungspooling in der Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) für Weitere Informationen zum Verbindungstimeout.  
@@ -43,7 +43,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  [Eingabe] Der Pool, die die Pool-ID, bei denen Timeout wurde zugeordnet sind.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Der Treiber-Manager verarbeitet keine Diagnoseinformationen Merry **SQLCleanupConnectionPoolID**.  

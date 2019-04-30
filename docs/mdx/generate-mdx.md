@@ -1,5 +1,5 @@
 ---
-title: Generieren von (MDX) | Microsoft Docs
+title: Generieren von (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224883"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -42,13 +42,13 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um den Namen des aktuellen Elements (CurrentMember.Name) jedes Tupels in der angegebenen Menge handelt.  
   
- *Trennzeichen*  
+ *Delimiter*  
  Ein gültiges Trennzeichen, ausgedrückt als Zeichenfolgenausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine zweite Menge angegeben wird, die **generieren** Funktion gibt einen Satz generiert, indem die Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge angewendet *,* und dann wird das resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
+ Wenn Sie ein zweiter Satz angegeben wird, die **generieren** Funktionsergebnis ist eine Gruppe, die durch Anwenden der Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge generiert *,* und dann wird die resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch das Auswerten des angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge generiert *,* und dann die Ergebnisse verkettet. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
+ Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch die Auswertung der im angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge generiert *,* und verkettet Sie dann die Ergebnisse. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -73,7 +73,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Die am häufigsten verwendeten praktische Nutzen von **generieren** ist um einen komplexen Mengenausdruck wie TopCount, über eine Menge von Elementen. Die folgende Beispielabfrage zeigt die obersten 10 Produkte für jedes Kalenderjahr in Zeilen an:  
+ Die am häufigsten verwendeten praktische Verwendung von **generieren** ist um einen komplexen Mengenausdruck wie TopCount auf eine Menge von Elementen. Die folgende Beispielabfrage zeigt die obersten 10 Produkte für jedes Kalenderjahr in Zeilen an:  
   
 ```  
 SELECT   
@@ -125,7 +125,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Diese Form der **generieren** Funktion ist nützlich beim Debuggen von Berechnungen, wie Sie zum Zurückgeben einer Zeichenfolge, die die Namen aller Elemente in einem Satz anzeigen können. Dies ist möglicherweise einfacher, als die strikte MDX-Darstellung einer Gruppe zu lesen, die die [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) -Funktion zurückgegeben wird.  
+>  Diese Form der **generieren** Funktion ist nützlich, beim Debuggen von Berechnungen, wie Sie zum Zurückgeben einer Zeichenfolge, die die Namen aller Elemente in einer Gruppe anzeigen können. Dies ist möglicherweise einfacher zu lesen als die strikte MDX-Darstellung eines Satzes, der die [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) -Funktion zurückgegeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316282"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehlsargument interpretiert werden soll.  
   
  Es ist wichtig, überprüfen Sie die benutzerdefinierte *CommandString* Werte zu vermeiden, dass Benutzer die Möglichkeit zum Einfügen von potenziell gefährliche Befehle für ADO zum Ausführen.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Es gibt keine das Befehlsargument für den Typ.|  
 |**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Textdefinition einen Befehl oder gespeicherte Prozedur aufrufen.|  
@@ -39,7 +39,7 @@ Gibt an, wie ein Befehlsargument interpretiert werden soll.
 |**adCmdTableDirect**|512|Wertet **CommandText** als den Namen einer Tabelle, deren Spalten werden zurückgegeben. Mit verwendet **Recordset.Open** oder **Requery** nur. Verwenden der [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode, die **Recordset** muss geöffnet sein, mit **AdCmdTableDirect**.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Wert **AdAsyncExecute**.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Paket: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Konstante|  
 |--------------|  

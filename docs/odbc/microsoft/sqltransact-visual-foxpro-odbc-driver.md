@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1581cb7ecc694dc9adcbb03d83cf73a6ba41dbed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270043"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Kernebene  
+ ODBC-API-Übereinstimmung: Kern-Ebene  
   
  Fordert einen Commit oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungshandles (*Befehls beschäftigt*s) für alle Verbindungen, die das Umgebungshandle zugeordnet oder eine Verbindung zugeordnet ist *Henv*. **SQLTransact** funktioniert nur für Datenquellen [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md).  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262233"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der ersten Ebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829418"
 |**SQLGetTypeInfo**|Gibt Informationen zu den Datentypen unterstützt, die von einer Datenquelle zurück. Der Treiber zurückgegeben die Informationen in einer SQL-Resultset.|  
 |**SQLParamData**|Zusammen mit **SQLPutData** Parameterdaten während der Ausführung der Anweisung an.|  
 |**SQLPutData**|Ermöglicht einer Anwendung zum Senden von Daten für einen Parameter oder eine Spalte für den Treiber während der Ausführung der Anweisung.|  
-|**SQLSetConnectOption**|Bietet Zugriff auf Optionen, die Aspekte der Verbindung steuern. Diese Funktion wird teilweise unterstützt: der Treiber unterstützt alle Werte für die *fOption* Argument unterstützt jedoch nicht einige *vParam* Werte für die *fOption* Argument [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Weitere Informationen finden Sie unter [Optionen verbinden](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Bietet Zugriff auf Optionen, die Aspekte der Verbindung steuern. Diese Funktion wird teilweise unterstützt: Der Treiber unterstützt alle Werte für die *fOption* Argument unterstützt jedoch nicht einige *vParam* Werte für die *fOption* Argument [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Weitere Informationen finden Sie unter [Optionen verbinden](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Legt fest, die im Zusammenhang mit der ein Anweisungshandle *Befehls beschäftigt*. Weitere Informationen finden Sie unter [Anweisungsoptionen](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Ruft ab, die optimale Gruppe von Spalten, die eine Zeile in der Tabelle eindeutig identifiziert.|  
 |**SQLStatistics**|Ruft eine Liste der Statistiken zu einer einzelnen Tabelle und die Indizes oder die Tag-Namen, die in der Tabelle zugeordnet. Der Treiber gibt zurück, die Informationen als Resultset.|  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312090"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lektion 4: Erstellen von Zeitreihenvorhersagen mit DMX
   In dieser Lektion und der folgenden Lektion, verwenden Sie Data Mining Extensions (DMX) erstellen Sie verschiedene Arten von Vorhersagen auf Grundlage der zeitreihenmodelle, die Sie in erstellt [Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  

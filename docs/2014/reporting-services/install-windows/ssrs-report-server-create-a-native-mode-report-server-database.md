@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae7a7ed873a86096f1f203cc20b2bfecd379db6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225762"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
   Der einheitliche Modus für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für den Zentralspeicher. Die Datenbank ist erforderlich und wird zum Speichern von veröffentlichten Berichten, Modellen, freigegebenen Datenquellen, Sitzungsdaten, Ressourcen und Servermetadaten verwendet.  

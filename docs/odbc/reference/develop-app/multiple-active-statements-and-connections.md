@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2a1edbf9947aff01ef6d4688959352986cf672d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254220"
 ---
 # <a name="multiple-active-statements-and-connections"></a>Mehrere aktive Anweisungen und Verbindungen
 Begrenzen die Anzahl der Anweisungen und Verbindungen, die gleichzeitig aktiv sein können, Treibern und DBMS-Systeme. Diese Zahlen können so klein wie eine sein. Weitere Informationen finden Sie unter den SQL_MAX_CONCURRENT_ACTIVITIES und SQL_MAX_DRIVER_CONNECTIONS Optionen in der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung, und [-Anweisung behandelt](../../../odbc/reference/develop-app/statement-handles.md) und [ Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md).

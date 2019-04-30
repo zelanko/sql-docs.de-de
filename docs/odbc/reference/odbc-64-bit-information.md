@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273415"
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003, müssen Microsoft-Betriebssystemen die 64-Bit-ODBC-Bibliotheken unterstützt. Die ODBC-Header und Bibliotheken, die zuerst im Lieferumfang von MDAC 2.7 SDK enthalten Änderungen, um Programmierern, leicht Schreiben von Code für den neuen 64-Bit-Plattformen zu ermöglichen. Sicherstellen, dass Ihr Code, die ODBC verwendet-definierten Typen, die unten aufgeführten, können Sie sowohl für 64-Bit und 32-Bit-Plattformen basierend auf demselben Quellcode kompilieren der **_WIN64** oder **WIN32** Makros.  
@@ -317,7 +317,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_FETCH_BOOKMARK_PTR  
   
- SQL_ATTR_ROWS_FETCHED_PTR FEST  
+ SQL_ATTR_ROWS_FETCHED_PTR  
   
  SQL_ATTR_IMP_PARAM_DESC  
   
@@ -373,7 +373,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_MAX_ROWS  
   
- SQL_ROWSET_SIZE SETZEN  
+ SQL_ROWSET_SIZE  
   
  **SQLSetConnectAttr**  
   
@@ -479,7 +479,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_STATUS_PTR  
   
- SQL_ATTR_ROWS_FETCHED_PTR FEST  
+ SQL_ATTR_ROWS_FETCHED_PTR  
   
  SQL_ATTR_SIMULATE_CURSOR  
   
@@ -495,7 +495,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_MAX_ROWS  
   
- SQL_ROWSET_SIZE SETZEN  
+ SQL_ROWSET_SIZE  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md)

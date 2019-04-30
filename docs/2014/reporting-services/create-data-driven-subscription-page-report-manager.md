@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265953"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Datengesteuertes Abonnement erstellen (Seite) (Berichts-Manager)
   Mithilfe der Seiten Erstellen eines datengesteuerten Abonnements können Sie ein Abonnement erstellen oder ändern, das bei jeder Ausführung eine Abonnentendatenbank nach Abonnementinformationen abfragt. Datengesteuerte Abonnements verwenden die Abfrageergebnisse, um die Empfänger des Abonnements, Übermittlungseinstellungen und Berichtsparameterwerte zu bestimmen. Zur Laufzeit führt der Berichtsserver eine Abfrage aus, um die für das Abonnement verwendeten Einstellungen abzurufen. Sie können die Seiten Erstellen eines datengesteuerten Abonnements verwenden, um die Abfrage zu definieren und den Abonnementeinstellungen Abfragewerte zuzuweisen. Die von Ihnen für ein datengesteuertes Abonnement angegebenen Werte und Optionen werden ähnlich wie bei einem Assistenten auf mehrere Seiten verteilt. Insgesamt handelt es sich um sieben Seiten.  

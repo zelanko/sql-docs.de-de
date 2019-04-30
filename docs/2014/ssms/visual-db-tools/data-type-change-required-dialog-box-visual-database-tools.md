@@ -1,8 +1,9 @@
 ---
 title: Datentypänderung erforderlich (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270570"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Datentypänderung erforderlich (Dialogfeld) (Visual Database Tools)
-  Dieses Dialogfeld wird angezeigt, wenn Sie Datentyp, Länge, Dezimalstellen, Genauigkeit oder Sortierreihenfolge einer in eine Beziehung eingebundenen Spalte ändern.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dieses Dialogfeld wird angezeigt, wenn Sie Datentyp, Länge, Dezimalstellen, Genauigkeit oder Sortierreihenfolge einer in eine Beziehung eingebundenen Spalte ändern.  
   
 ## <a name="options"></a>Optionen  
- **ja**  
- Ändern Sie die Eigenschaft für den Datentyp der verknüpften in der Liste aufgeführten Spalten, sodass vorhandene Beziehungen beibehalten werden.  
+**ja**  
+Ändern Sie die Eigenschaft für den Datentyp der verknüpften in der Liste aufgeführten Spalten, sodass vorhandene Beziehungen beibehalten werden.  
   
- **Nein**  
- Brechen Sie den Änderungsvorgang ab, und stellen Sie den ursprünglichen Datentyp für die Spalte wieder her, den Sie soeben geändert haben.  
-  
+**Nein**  
+Brechen Sie den Änderungsvorgang ab, und stellen Sie den ursprünglichen Datentyp für die Spalte wieder her, den Sie soeben geändert haben.  
   

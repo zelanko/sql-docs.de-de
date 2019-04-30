@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233351"
 ---
 # <a name="sqltables-function"></a>SQLTables-Funktion
 **Übereinstimmung mit Standards**  
@@ -54,7 +54,7 @@ SQLRETURN SQLTables(
  *StatementHandle*  
  [Eingabe] Anweisungshandle für die abgerufenen Ergebnisse.  
   
- *Katalogname*  
+ *CatalogName*  
  [Eingabe] Name des Katalogs. Die *CatalogName* Argument akzeptiert Suchmuster ist umgebungsattributs SQL_ODBC_VERSION SQL_OV_ODBC3 fest; Suchmuster werden nicht akzeptiert, wenn SQL_OV_ODBC2 festgelegt ist. Wenn Sie ein Treiber unterstützt die Kataloge für einige Tabellen jedoch nicht für andere, z. B. wenn ein Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge abruft ("") gibt an, die Tabellen, denen keine Kataloge.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *CatalogName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *CatalogName* Wertargument Muster ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -78,7 +78,7 @@ SQLRETURN SQLTables(
  *NameLength3*  
  [Eingabe] Länge in Zeichen des **TableName*.  
   
- *Für TableType*  
+ *TableType*  
  [Eingabe] Liste der Tabelle übereinstimmen.  
   
  Beachten Sie, dass das Anweisungsattribut SQL_ATTR_METADATA_ID keine Auswirkungen auf die *TableType* Argument. *TableType* ist ein Argument des Wert-Liste, unabhängig von der Einstellung der SQL_ATTR_METADATA_ID.  
@@ -87,7 +87,7 @@ SQLRETURN SQLTables(
  [Eingabe] Länge in Zeichen des **TableType*.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLTables** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLTables** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -154,7 +154,7 @@ SQLRETURN SQLTables(
 |Spaltenname|Spaltennummer|Datentyp|Kommentare|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Name des Katalogs; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge.|  
-|NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Tabellenname.|  
 |TABLE_TYPE (ODBC 1.0)|4|Varchar|Tabellentypnamen; eine der folgenden: "TABLE", "VIEW", "SYSTEM-TABLE", "Globale temporäre", "Lokale temporäre", "ALIAS", "Synonyms" oder einen Datentypnamen datenquellenspezifische.<br /><br /> Die Bedeutung der "ALIAS" und "SYNONYM" sind treiberspezifisch.|  
 |HINWEISE (ODBC 1.0)|5|Varchar|Eine Beschreibung der Tabelle.|  

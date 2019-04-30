@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242679"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
   Eine *Rollenzuweisung* ist eine Sicherheitsrichtlinie, die bestimmt, ob ein Benutzer oder eine Gruppe auf einen bestimmten Berichtsserver zugreifen und einen Vorgang ausführen kann. Eine Rollenzuweisung besteht aus einem einzelnen Benutzer- oder Gruppenkontonamen und mindestens einer Rollendefinition.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259267"
 ---
 # <a name="escape-sequences"></a>Escapesequenzen
 ODBC definiert Escapesequenzen, die mit der standard-Grammatik für Datum, Uhrzeit, Zeitstempel und Datetime-Intervall-Literale, Aufrufe von Skalarfunktionen, **wie** Escape-Zeichen, äußere Joins und Prozeduraufrufe-Prädikat. Interoperable Anwendungen ausführen können, sollten diese Sequenzen an, wann immer möglich verwenden.  

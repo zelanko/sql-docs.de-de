@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259234"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLExecute** führt eine vorbereitete Anweisung, die die aktuellen Werte der Variablen Marker Parameter verwenden, wenn einem Parametermarker in der Anweisung vorhanden sind.  
@@ -47,7 +47,7 @@ SQLRETURN SQLExecute(
  [Eingabe] Anweisungshandle.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE oder SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLExecute** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLExecute** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -61,7 +61,7 @@ SQLRETURN SQLExecute(
 |01006|Berechtigung nicht aufgehoben.|Die vorbereitete Anweisung zugeordneten der *StatementHandle* wurde eine **widerrufen** -Anweisung und der Benutzer keine die angegebene Berechtigung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01007|Berechtigung wurde nicht erteilt|Der vorbereiteten Anweisung zugeordneten der *StatementHandle* wurde eine **GRANT** -Anweisung und der Benutzer konnte nicht gewährt werden die angegebene Berechtigung.|  
 |01S02|Optionswert geändert|Ein Attribut für die angegebene Anweisung ist ungültig aufgrund der Implementierung Arbeitsbedingungen, also ein ähnlichen Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** aufgerufen werden, um zu bestimmen, welche vorübergehend ersetzten Werts ist.) Der Ersatzwert ist gültig für die *StatementHandle* bis der Cursor geschlossen wird, an diesem Punkt das Anweisungsattribut setzt auf seinen ursprünglichen Wert. Die Anweisungsattribute, die geändert werden können, sind: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT und SQL_ATTR_SIMULATE_CURSOR. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 07|Teilbereiche wurden abgeschnitten|Die Daten zurückgegeben, für die Eingabe/Ausgabe oder Output-Parameter wurde abgeschnitten, damit die Nachkommastellen eines numerischen Datentyps wurde abgeschnitten oder der Bruchteile den Teil der Zeitkomponente eines Datentyps Zeit, Timestamp- oder Intervall wurde abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S07|Teilbereiche wurden abgeschnitten|Die Daten zurückgegeben, für die Eingabe/Ausgabe oder Output-Parameter wurde abgeschnitten, damit die Nachkommastellen eines numerischen Datentyps wurde abgeschnitten oder der Bruchteile den Teil der Zeitkomponente eines Datentyps Zeit, Timestamp- oder Intervall wurde abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07002|Falsches COUNT-Feld|Die Anzahl von Parametern, die im angegebenen **SQLBindParameter** war kleiner als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen \* *StatementText*.<br /><br /> **SQLBindParameter** aufgerufen wurde, wobei *ParameterValuePtr* legen Sie auf ein null-Zeiger *StrLen_or_IndPtr* nicht auf SQL_NULL_DATA oder SQL_DATA_AT_EXEC, festgelegt und *InputOutputType*  nicht auf SQL_PARAM_OUTPUT, festgelegt werden, sodass die Anzahl von Parametern in angegeben **SQLBindParameter** war größer als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen **StatementText* .|  
 |07006|Attributverletzung eingeschränkter Daten|Der Wert von identifiziert die *ValueType* -Argument in **SQLBindParameter** für der gebundene Parameter nicht in der identifizierte Datentyp konvertiert werden kann die *ParameterType*-Argument in **SQLBindParameter**.<br /><br /> Der Wert zurückgegeben, für einen Parameter gebunden wird, wie SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT nicht in der identifizierte Datentyp konvertiert werden konnte die *ValueType* -Argument in **SQLBindParameter**.<br /><br /> (Wenn die Datenwerte für eine oder mehrere Zeilen nicht konvertiert werden konnte, aber eine oder mehrere Zeilen wurden erfolgreich zurückgegeben, diese Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07007|Verletzung aufgrund eines eingeschränkten Parameterwerts.|Der Parametertyp SQL_PARAM_INPUT_OUTPUT_STREAM wird nur für einen Parameter verwendet, die Daten sendet und empfängt in Teilen. Ein gebundener Eingabepuffer ist für diesen Parameter nicht zulässig.<br /><br /> Dieser Fehler tritt auf, wenn der Parametertyp SQL_PARAM_INPUT_OUTPUT ist und wenn die \* *StrLen_or_IndPtr* im angegebenen **SQLBindParameter** entspricht nicht auf SQL_NULL_DATA, SQL_DEFAULT_ PARAM, SQL_LEN_DATA_AT_EXEC(len) oder SQL_DATA_AT_EXEC.|  

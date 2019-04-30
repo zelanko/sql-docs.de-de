@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252679"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Weitere Möglichkeiten zum Anzeigen des Codefensters
   Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf verschiedene Weisen anzeigt.  

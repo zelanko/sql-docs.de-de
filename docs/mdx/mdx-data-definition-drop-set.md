@@ -1,5 +1,5 @@
 ---
-title: DROP SET-Anweisung (MDX) | Microsoft Docs
+title: DROP SET-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284967"
 ---
-# <a name="mdx-data-definition---drop-set"></a>MDX-Datendefinition - DROP SET
+# <a name="mdx-data-definition---drop-set"></a>MDX-Datendefinition – DROP SET
 
 
   Entfernt eine benannte Menge.  
@@ -37,7 +37,7 @@ DROP [SESSION] SET
  *Cube_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des Cubes bereitstellt.  
   
- *Gruppenname*  
+ *Set_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen der zu löschenden benannten Menge bereitstellt.  
   
 ## <a name="remarks"></a>Hinweise  

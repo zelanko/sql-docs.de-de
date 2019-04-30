@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der CDATA-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der CDATA-Anweisung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287773"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Beispiel: Angeben der CDATA-Anweisung
   Wird die Direktive auf **CDATA**festgelegt, werden die enthaltenen Daten nicht entitätscodiert, sondern in den CDATA-Abschnitt eingefügt. Die **CDATA** -Attribute müssen namenlos sein.  

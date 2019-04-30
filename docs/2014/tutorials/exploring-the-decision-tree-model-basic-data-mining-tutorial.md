@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224596"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Untersuchen des Entscheidungsstrukturmodells (Lernprogramm zu Data Mining-Grundlagen)
   Durch den [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus wird anhand der übrigen Spalten im Trainingssatz vorhergesagt, welche Spalten die Entscheidung über den Kauf eines Fahrrads beeinflussen.  

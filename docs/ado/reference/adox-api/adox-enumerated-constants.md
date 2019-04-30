@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308301"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX-Enumerationskonstanten
 Zur Unterstützung des Debugprozesses, Listen die Konstanten auf ADOX aufgezählt einen Wert für jede Konstante. Allerdings wird dieser Wert ist nur eine Empfehlung und kann von einer Version von ADOX zu einer anderen wechseln. Ihr Code sollte nur auf den Namen, die nicht der tatsächliche Wert, der Enumerationskonstanten abhängen.  

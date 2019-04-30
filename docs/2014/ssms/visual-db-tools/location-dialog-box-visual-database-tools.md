@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306217"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Speicherorte (Dialogfeld) (Visual Database Tools)
   Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314228"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Dateien für die Verwendung mit den Desktop-Datenbanktreibern
 Der ODBC-Desktop-Datenbanktreiber werden mit der Microsoft Jet-Datenbank-Engine, die installierbaren ISAM-Dateien und Microsoft ODBC-Dateien verwendet. Nicht alle für die neuverteilung des Produkts erforderlich sind, und sind nicht alle Kernkomponenten.  
@@ -28,5 +28,5 @@ Der ODBC-Desktop-Datenbanktreiber werden mit der Microsoft Jet-Datenbank-Engine,
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Dateien, die von jeder Desktop-Datenbanktreiber verwendet werden.|ODBC-Treiber-Dateien|  
-|Microsoft Jet-Dateien ein, die jeder Desktop-Datenbanktreiber|Microsoft Jet-Dateien|  
+|Microsoft Jet-Dateien ein, die jeder Desktop-Datenbanktreiber|Microsoft Jet Files|  
 |IISAM Treiberdateien, die den Datenzugriff zwischen Microsoft Jet und andere DBMS bereitstellen|Installierbare ISAM-Treiber-Dateien|

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306686"
 ---
 # <a name="report-f1-help"></a>Hilfe (F1) zu Berichten
   Die Themen in diesem Abschnitt enthalten Informationen zu den Optionen, die Sie im Dialogfeld **Berichtseigenschaften** für einen Bericht festlegen können. Zum Öffnen des Dialogfelds **Berichtseigenschaften** klicken Sie mit der rechten Maustaste auf den Hintergrund des Berichts-Designers, und klicken Sie dann auf **Berichtseigenschaften**.  

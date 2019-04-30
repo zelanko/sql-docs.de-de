@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308753"
 ---
 # <a name="count-property-example-vb"></a>Count-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit dem zwei Auflistungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl von Objekten in jeder Auflistung und wird der obere Grenzwert für Schleifen an, die diese dateiauflistungen aufzulisten. Eine weitere Möglichkeit, diese Auflistungen aufgezählt werden, ohne die **Anzahl** Eigenschaft wäre `For Each...Next` Anweisungen.  

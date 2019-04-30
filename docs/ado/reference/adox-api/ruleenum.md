@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281891"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Gibt die Regel, um beim Ausführen einer [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird gelöscht.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|CASCADE; kaskadierende Änderungen.|  
 |**adRINone**|0|Standard. Es wird keine Aktion ausgeführt.|  

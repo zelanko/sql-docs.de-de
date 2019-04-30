@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242329"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError-Funktion
 **Übereinstimmung mit Standards**  
@@ -66,7 +66,7 @@ RETCODE SQLInstallerError(
  [Ausgabe] Zeiger auf die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben *LpszErrorMsg*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbErrorMsgMax*, der Text der Fehlermeldung im *LpszErrorMsg* auf abgeschnitten *CbErrorMsgMax* minus der NULL-Terminierungszeichen Bytes. Die *PcbErrorMsg* Argument kann ein null-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt oder SQL_ERROR zurück.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, or SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLInstallerError** veröffentlichen Fehlerwerte nicht für sich selbst. **SQLInstallerError** gibt SQL_NO_DATA zurück, wenn sie keine Fehlerinformationen abrufen kann (in diesem Fall *PfErrorCode* ist nicht definiert). Wenn **SQLInstallerError** Fehlerwerte kann nicht zugegriffen werden, die aus irgendeinem Grund, die normalerweise SQL_ERROR, zurückgibt **SQLInstallerError** gibt SQL_ERROR zurück, aber alle Fehlerwerte wird nicht gesendet. Wenn Sie nicht, dass die Länge der warnungszeichenfolge wissen (*LpszErrorMsg*), Sie können festlegen, *LpszErrorMsg* auf NULL, und rufen **SQLInstallerError**. **SQLInstallerError** wird zurückzugeben: die Länge der warnungszeichenfolge im *CbErrorMsgMax*. Wenn der Puffer für die Fehlermeldung zu kurz ist **SQLInstallerError** gibt SQL_SUCCESS_WITH_INFO zurück, und die korrekte *PfErrorCode* Wert für **SQLInstallerError**.  

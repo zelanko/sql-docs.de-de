@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261694"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Behandeln von Fehlern und Warnungen (XMLA)
   Eine Fehlerbehandlung ist notwendig, wenn ein XMLA-Aufruf (XML for Analysis) der Methoden [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) oder [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) nicht ausgeführt wird, erfolgreich ausgeführt wird, aber Fehler oder Warnungen generiert oder erfolgreich ausgeführt wird, aber fehlerhafte Ergebnisse zurückgibt.  
@@ -28,7 +28,7 @@ ms.locfileid: "50144925"
 ##  <a name="handling_soap_faults"></a> Behandlung von SOAP-Fehler  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt einen SOAP-Fehler zurück, wenn die folgenden Situationen auftreten:  
   
--   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz nicht überprüft werden.  
+-   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz nicht überprüft werden.  
   
 -   Eine Kommunikations- oder anderer Fehler ist in Bezug auf die SOAP-Nachricht, die die XMLA-Methode enthält, aufgetreten.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "50144925"
   
 |Spaltenname|Typ|Description|Null zulässig<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|nein|  
-|**WarningCode**|**UnsignedInt**|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|Benutzerkontensteuerung|  
-|**Beschreibung**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Benutzerkontensteuerung|  
-|**Quelle**|**String**|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Benutzerkontensteuerung|  
-|**HelpFile**|**String**|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Benutzerkontensteuerung|  
+|**ErrorCode**|**UnsignedInt**|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|Nein|  
+|**WarningCode**|**UnsignedInt**|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|Ja|  
+|**Beschreibung**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Ja|  
+|**Quelle**|**String**|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Ja|  
+|**HelpFile**|**String**|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Ja|  
   
  <sup>1</sup> angibt, ob die Daten erforderlich sind und zurückgegeben werden müssen, oder gibt an, ob die Daten optional sind und eine null-Zeichenfolge ist zulässig, wenn die Spalte nicht anwendbar ist.  
   

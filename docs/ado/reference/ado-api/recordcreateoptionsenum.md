@@ -1,5 +1,5 @@
 ---
-title: RecordCreateOptionsEnum | Microsoft-Dokumentation
+title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239975"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Gibt an, ob ein vorhandenes **Datensatz** muss geöffnet sein oder ein neues **Datensatz** erstellt, die für die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Die Werte können mit einer AND-Operator kombiniert werden.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Erstellt ein neues **Datensatz** unter dem Knoten anhand des *Quelle* Parameter, anstatt Sie zu öffnen, eine vorhandene **Datensatz**. Wenn die Quelle zu einem vorhandenen Knoten, verweist dann ein Laufzeitfehler tritt auf, es sei denn, **AdCreateCollection** mit kombiniert **AdOpenIfExists** oder **AdCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Erstellt ein neues **Datensatz** des Typs [AdSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  

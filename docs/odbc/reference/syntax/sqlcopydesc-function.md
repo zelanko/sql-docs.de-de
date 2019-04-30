@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259283"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLCopyDesc** kopiert Informationen der Sicherheitsbeschreibung aus einen Deskriptorhandle an einen anderen.  
@@ -51,7 +51,7 @@ SQLRETURN SQLCopyDesc(
  [Eingabe] Ziel-Deskriptorhandle. Die *TargetDescHandle* -Argument kann es sich um ein Handle für einen Anwendungsdienst-Deskriptor oder einem IPD. *TargetDescHandle* kann nicht auf ein Handle für ein IRD festgelegt werden oder **SQLCopyDesc** SQLSTATE HY016 (ein Implementierungszeilendeskriptor kann nicht geändert werden) zurück.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLCopyDesc** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DESC und *behandeln* von *TargetDescHandle*. Wenn ein ungültiger *SourceDescHandle* übergeben wurde in den Aufruf SQL_INVALID_HANDLE zurückgegeben werden, aber keine SQLSTATE zurückgegeben werden. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLCopyDesc** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299155"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Verbinden mit DB2 (DB2ToSQL)
 Verwenden der **Herstellen einer Verbindung mit DB2** im Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.  

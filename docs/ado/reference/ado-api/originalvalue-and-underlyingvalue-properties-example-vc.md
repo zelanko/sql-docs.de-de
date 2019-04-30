@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239944"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue und UnderlyingValue – Beispiel (VC++)
 In diesem Beispiel wird veranschaulicht, die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, indem eine Meldung angezeigt, wenn ein Datensatz Daten liegenden hat sich geändert, während eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
@@ -196,31 +196,31 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Daten wurden geändert.**  
-**ID des Titels: PS1372**  
+**Titel-ID: PS1372**  
 **Aktueller Wert: Self_help**   
 **Ursprünglicher: Psychologie**   
 **Zugrunde liegende Wert: Soziologie**   
 **Daten wurden geändert.**  
-**ID des Titels: PS2091**  
+**Titel-ID: PS2091**  
 **Aktueller Wert: Self_help**   
 **Ursprünglicher: Psychologie**   
 **Zugrunde liegende Wert: Soziologie**   
 **Daten wurden geändert.**  
-**ID des Titels: PS2106**  
+**Titel-ID: PS2106**  
 **Aktueller Wert: Self_help**   
 **Ursprünglicher: Psychologie**   
 **Zugrunde liegende Wert: Soziologie**   
 **Daten wurden geändert.**  
-**ID des Titels: PS3333**  
+**Titel-ID: PS3333**  
 **Aktueller Wert: Self_help**   
 **Ursprünglicher: Psychologie**   
 **Zugrunde liegende Wert: Soziologie**   
 **Daten wurden geändert.**  
-**ID des Titels: PS7777**  
+**Titel-ID: PS7777**  
 **Aktueller Wert: Self_help**   
 **Ursprünglicher: Psychologie**   
 **Zugrunde liegende Wert: Soziologie**    
 ## <a name="see-also"></a>Siehe auch  
- [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)

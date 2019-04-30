@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254164"
 ---
 # <a name="multiple-results"></a>Mehrere Ergebnisse
 Ein *Ergebnis* etwas von der Datenquelle nach dem Aufruf zurückgegeben eine Anweisung ausgeführt wird. ODBC verfügt über zwei Arten von Ergebnissen: Resultsets und Zeilen-. *Zeilen-* sind die Anzahl der von einem Update betroffenen Zeilen gelöscht, oder insert-Anweisung. Batches, die in beschriebenen [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md), mehrere Ergebnisse generieren können.  
@@ -31,8 +31,8 @@ Ein *Ergebnis* etwas von der Datenquelle nach dem Aufruf zurückgegeben eine Anw
   
 |Batchtyp|Zeilenanzahl|Resultsets|  
 |----------------|----------------|-----------------|  
-|Explizite batch|SQL_BATCH_ROW_COUNT [a]|--[b].|  
-|Prozedur|SQL_BATCH_ROW_COUNT [a]|--[b].|  
+|Explizite batch|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|Prozedur|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Arrays von Parametern|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] Zeile, die Anweisungen in einem Batch Count generiert möglicherweise unterstützt werden, aber die Rückgabe von der Zeilenanzahl wird nicht unterstützt. Die Option SQL_BATCH_SUPPORT in **SQLGetInfo** gibt an, ob Zeile Count – Generieren von Anweisungen in Batches zugelassen sind; die SQL_BATCH_ROW_COUNTS-Option gibt an, ob diese Zeilenanzahl für die Anwendung zurückgegeben werden.  

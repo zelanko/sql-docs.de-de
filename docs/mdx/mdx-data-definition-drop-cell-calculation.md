@@ -1,5 +1,5 @@
 ---
-title: DROP CELL CALCULATION-Anweisung (MDX) | Microsoft Docs
+title: DROP CELL CALCULATION-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509717221a51ac790b92969ff052d0a8a5d0143d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248261"
 ---
-# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX-Datendefinition - DROP CELL CALCULATION
+# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX-Datendefinition – DROP CELL CALCULATION
 
 
   Entfernt die angegebene Zellenberechnung.  
@@ -36,7 +36,7 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  Ein gültiger Zeichenfolgenausdruck, der den Namen der zu löschenden Zellenberechnung bereitstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CELL CALCULATION-Anweisung erstellen &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
  [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

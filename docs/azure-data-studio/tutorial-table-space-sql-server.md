@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Aktivieren Sie das Tabelle Speicherplatz Nutzung Beispiel Insight-widget'
+title: 'Tutorial: Aktivieren Sie das Tabelle Speicherplatz Nutzung Beispiel Insight-widget'
 titleSuffix: Azure Data Studio
 description: In diesem Tutorial veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget auf dem Studio für Azure Data-Datenbank-Dashboard.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239502"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Aktivieren der Tabelle Speicherplatz Nutzung Beispiel Insight Widgets mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Aktivieren der Tabelle Speicherplatz Nutzung Beispiel Insight Widgets mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dieses Tutorial veranschaulicht, wie ein Insight-Widget auf die Datenbank-Dashboard, eine Ansicht auf einen Blick zur speicherplatznutzung von für alle Tabellen in einer Datenbank bereitstellen. In diesem Tutorial erfahren Sie, wie Sie:
 

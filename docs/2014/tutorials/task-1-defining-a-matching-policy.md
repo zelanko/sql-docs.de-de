@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 1: Definieren einer Abgleichsrichtlinie | Microsoft-Dokumentation'
+title: 'Aufgabe 1: Definieren einer Abgleichsrichtlinie | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222789"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichsrichtlinie
-  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente auf: **Lieferanten-ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  
+# <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichrichtlinie
+  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente: **Lieferanten-ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  
   
 1.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **nach rechts weisenden Pfeil** neben **Lieferanten** Knowledge base an, und wählen **Abgleichsrichtlinie**.  
   

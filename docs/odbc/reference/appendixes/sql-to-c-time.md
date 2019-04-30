@@ -1,5 +1,5 @@
 ---
-title: 'SQL zu C: Zeit | Microsoft-Dokumentation'
+title: 'SQL in C: Zeit | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259595"
 ---
-# <a name="sql-to-c-time"></a>SQL zu C: Uhrzeit
+# <a name="sql-to-c-time"></a>SQL in C: Uhrzeit
 Der Bezeichner für die Zeit, die ODBC-SQL-Datentyp ist:  
   
  SQL_TYPE_TIME  
@@ -31,10 +31,10 @@ Der Bezeichner für die Zeit, die ODBC-SQL-Datentyp ist:
   
 |C-Typ-ID|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> *9* <= *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 9|data<br /><br /> [A] abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> *9* <= *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 9|data<br /><br /> [A] abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|data<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|Keine [b]|data|6 [d]|–|  
+|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> *9* <= *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 9|Daten<br /><br /> [A] abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> *9* <= *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 9|Daten<br /><br /> [A] abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|Keine [b]|Daten|6 [d]|–|  
 |SQL_C_TYPE_TIMESTAMP|Keine [b]|Daten [c]|16 [d]|–|  
   
  [a] die Sekundenbruchteile der Zeit werden abgeschnitten.  

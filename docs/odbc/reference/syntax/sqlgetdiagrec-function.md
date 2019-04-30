@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259324"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDiagRec** gibt die aktuellen Werte aus mehreren Feldern, der ein Diagnosedatensatz, die Fehler, Warnung und Statusinformationen enthält. Im Gegensatz zu **SQLGetDiagField**, womit eine diagnosefeld pro Aufruf **SQLGetDiagRec** gibt verschiedene, häufig verwendete Felder des ein Diagnosedatensatz, einschließlich SQLSTATE, der systemeigene Fehlercode, und der diagnosemeldung Text.  
@@ -53,15 +53,15 @@ SQLRETURN SQLGetDiagRec(
  *HandleType*  
  [Eingabe] Ein Handle-Typbezeichner, der den Typ des Handles wird beschrieben, für die Diagnose erforderlich sind. Dies muss eine der folgenden Ressourcen sein:  
   
--   SQL_HANDLE_DBC AUF  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
 -   SQL_HANDLE_DESC  
   
--   SQL_HANDLE_ENV AUF  
+-   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT AUF  
+-   SQL_HANDLE_STMT  
   
  SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur von der Treiber-Manager und Treiber verwendet. Anwendungen sollten nicht mit dieser Handletyp verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -89,7 +89,7 @@ SQLRETURN SQLGetDiagRec(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme von der Anzahl von Zeichen, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben  *\*MessageText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als *Pufferlänge*, den Text der diagnosemeldung in  *\*MessageText* auf abgeschnitten *Pufferlänge* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagRec** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
@@ -100,7 +100,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR: Eine der folgenden aufgetreten ist:  
   
     -   *RecNumber* war negativ oder 0.  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   Wenn Sie asynchrone Benachrichtigung verwenden zu können, war der asynchrone Vorgang auf den Ziehpunkt nicht abgeschlossen werden.  
   
--   SQL_NO_DATA ZURÜCKGIBT: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
+-   SQL_NO_DATA: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
   
 ## <a name="comments"></a>Kommentare  
  Ruft eine Anwendung in der Regel **SQLGetDiagRec** Wenn ein vorherigen Aufruf von einer ODBC-Funktion SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben hat. Aber da eine ODBC-Funktion keine oder mehrere DiagnoseDatensätze jedes Mal buchen können sie aufgerufen wird, kann eine Anwendung aufrufen **SQLGetDiagRec** nach jedem Aufruf der ODBC-Funktion. Kann eine Anwendung aufrufen **SQLGetDiagRec** mehrere Male auf, um einige oder alle Datensätze in der Struktur diagnostische Daten zurückzugeben. ODBC erzwingt keine Begrenzung der Anzahl der DiagnoseDatensätze, die zu jedem Zeitpunkt gespeichert werden können.  

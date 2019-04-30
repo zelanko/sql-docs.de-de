@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8feeb496948b34abd3bd4205e52854211cde5d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261285"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS)
   Auf der Registerkarte **Ausfüllen** können Sie Farboptionen für den Hintergrund einer oder mehrerer Zellen in einem Datenbereich oder einem Textfeld angeben.  

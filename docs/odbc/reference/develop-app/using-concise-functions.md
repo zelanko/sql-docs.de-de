@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312479"
 ---
 # <a name="using-concise-functions"></a>Verwenden präziser Funktionen
 Einige ODBC-Funktionen erhalten die impliziten Zugriff auf die Deskriptoren. Anwendungsentwickler vielleicht finden Sie diese besser geeignet als die Aufrufen **SQLSetDescField** oder **SQLGetDescField**. Diese Funktionen aufgerufen werden *präzise* funktioniert, da sie eine Reihe von Funktionen, einschließlich festlegen oder Abrufen von deskriptorfelder ausführen. Einige präzisen Funktionen können eine Anwendung festgelegt oder abgerufen werden mehrere verwandte Descriptor-Felder in einem einzigen Funktionsaufruf.  

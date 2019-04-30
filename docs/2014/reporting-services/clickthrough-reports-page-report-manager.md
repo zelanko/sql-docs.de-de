@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266141"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Berichte mit Durchklicken (Seite) (Berichts-Manager)
   Ein Bericht mit Durchklicken zeigt eine Tabelle verknüpfter Daten an, wenn Sie auf die interaktiven Daten klicken, die in Ihrem Bericht enthalten sind. Diese Berichte werden vom Berichtsserver anhand der Informationen generiert, die in dem Modell enthalten sind, den Sie zum Erstellen des Berichts verwendet haben. Wenn Sie die Berichte mit Durchklicken, die der Berichtsserver generiert, nicht verwenden möchten, können Sie benutzerdefinierte Berichte erstellen und auf einem Berichtsserver veröffentlichen. Ordnen Sie dann diese Berichte den interaktiven Datenpunkten zu, die im Modell definiert sind. Die benutzerdefinierten Berichte müssen im Berichts-Generator aus dem gleichen Modell erstellt und dann auf einem Berichtsserver veröffentlicht werden. Verwenden Sie die Seite Berichte mit Durchklicken im Berichts-Manager, um die benutzerdefinierte Berichte Elementen im Modell zuzuordnen.  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313066"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   
@@ -34,22 +34,22 @@ ms.locfileid: "47628608"
   
 |*Funktion*|Supported|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|nein|  
-|SQL_API_SQLCOLUMNPRIVELEGES|nein|  
-|SQL_API_SQLDATASOURCES|Benutzerkontensteuerung|  
-|SQL_API_SQLDESCRIBEPARAM|nein|  
-|SQL_API_SQLDRIVERS|Benutzerkontensteuerung|  
-|SQL_API_SQLEXTENDEDFETCH|Benutzerkontensteuerung|  
-|SQL_API_SQLFOREIGNKEYS|nein|  
-|SQL_API_SQLMORERESULTS|Benutzerkontensteuerung|  
-|SQL_API_SQLNATIVESQL|nein|  
-|SQL_API_SQLNUMPARAMS|Benutzerkontensteuerung|  
-|SQL_API_SQLPARAMOPTIONS|Benutzerkontensteuerung|  
-|SQL_API_SQLPRIMARYKEYS|Benutzerkontensteuerung|  
-|SQL_API_SQLPROCEDURECOLUMNS|nein|  
-|SQL_API_SQLPROCEDURES|nein|  
-|SQL_API_SQLSETPOS|Benutzerkontensteuerung|  
-|SQL_API_SQLSETSCROLLOPTIONS|Benutzerkontensteuerung|  
-|SQL_API_SQLTABLEPRIVILEGES|nein|  
+|SQL_API_SQLBROWSECONNECT|Nein|  
+|SQL_API_SQLCOLUMNPRIVELEGES|Nein|  
+|SQL_API_SQLDATASOURCES|Ja|  
+|SQL_API_SQLDESCRIBEPARAM|Nein|  
+|SQL_API_SQLDRIVERS|Ja|  
+|SQL_API_SQLEXTENDEDFETCH|Ja|  
+|SQL_API_SQLFOREIGNKEYS|Nein|  
+|SQL_API_SQLMORERESULTS|Ja|  
+|SQL_API_SQLNATIVESQL|Nein|  
+|SQL_API_SQLNUMPARAMS|Ja|  
+|SQL_API_SQLPARAMOPTIONS|Ja|  
+|SQL_API_SQLPRIMARYKEYS|Ja|  
+|SQL_API_SQLPROCEDURECOLUMNS|Nein|  
+|SQL_API_SQLPROCEDURES|Nein|  
+|SQL_API_SQLSETPOS|Ja|  
+|SQL_API_SQLSETSCROLLOPTIONS|Ja|  
+|SQL_API_SQLTABLEPRIVILEGES|Nein|  
   
  Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in die *ODBC Programmer's Reference*.

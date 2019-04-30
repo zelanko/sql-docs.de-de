@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285687"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
   Nachdem Sie entschieden, dass Sie mit den Ergebnissen zufrieden sind und die Genauigkeit Ihrer Miningmodelle getestet haben, können Sie Sie vorhersagen erzeugen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** Registerkarte im Data Mining Designer.  

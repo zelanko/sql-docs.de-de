@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223322"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>Zusammenfassung: Verwalten von Daten in einer hierarchischen Tabelle
-  Die `hierarchyid` -Datentyp können Sie auf einfache Weise Tabellen erstellen, die hierarchische Daten widerspiegeln, Tiefe und breitensuchindizes effizient zugreifen in der Tabelle. Mit hierarchischen Methoden fragen Sie Daten ab und bearbeiten sie.  
+  Mit dem `hierarchyid`-Datentyp können Sie auf einfache Weise Tabellen erstellen, die hierarchische Daten widerspiegeln, auf die Sie mithilfe von Tiefensuch- und Breitensuchindizes effizient zugreifen können. Mit hierarchischen Methoden fragen Sie Daten ab und bearbeiten sie.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Zum Anfang des Lernprogramms zurückkehren  
  [Tutorial: Verwenden des hierarchyid-Datentyps](tutorial-using-the-hierarchyid-data-type.md)  

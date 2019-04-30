@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277433"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Verbinden mit einer Instanz mit dem Objekt-Explorer
   Um Objekte mittels Objekt-Explorer zu verwalten, müssen Sie zuerst den Objekt-Explorer mit der Instanz verbinden, die die Objekte enthält. Sie können den Objekt-Explorer gleichzeitig mit mehreren Instanzen verbinden.  

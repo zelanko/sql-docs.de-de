@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231292"
 ---
 # <a name="add-reference-dialog-box"></a>Verweis hinzufügen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Verweis hinzufügen** , um Verweise auf eine benutzerdefinierte Assembly oder [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente zum Bericht hinzuzufügen. Nach dem Hinzufügen eines Assemblyverweises können Sie Ausdrücke oder eingebetteten benutzerdefinierten Code schreiben, der vollqualifizierte Verweise auf Klassen oder Methoden in der Assembly oder Komponente enthält. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) und [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

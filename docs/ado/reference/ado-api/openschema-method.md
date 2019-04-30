@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239995"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft Informationen über das Datenbankschema vom Anbieter ab.  
@@ -42,7 +42,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Alle [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) -Wert, der den Typ des, die die auszuführende Schemaabfrage darstellt.  
   
  *Kriterien*  
- Optional. Ein Array von Abfrage-Einschränkungen für die einzelnen *QueryType* option gemäß [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Dies ist optional. Ein Array von Abfrage-Einschränkungen für die einzelnen *QueryType* option gemäß [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Die GUID für eine Anbieter-Schema-Abfrage, die nicht vom OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *QueryType* nastaven NA hodnotu **AdSchemaProviderSpecific**ist, andernfalls wird er nicht verwendet.  
@@ -65,7 +65,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  In Spalten, die eine vier-Byte-Ganzzahl ohne Vorzeichen (DBTYPE UI4) in Visual Basic die **Recordset** zurückgegeben, die von der **OpenSchema** Methode für die **Verbindung** Objekt kann nicht verglichen Sie mit anderen Variablen werden. Weitere Informationen zu OLE DB-Datentypen, finden Sie unter [Datentypen in OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) und [Anhang A: Datentypen](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in der Microsoft OLE DB Programmer's Reference.  
   
 > [!NOTE]
->  **Visual C/C++-Benutzer** clientseitigen Cursorn nicht verwendet werden soll, Abrufen von "ORDINAL_POSITION" eines Spalte-Schemas in ADO gibt eine Variante des Typs VT_R8 in MDAC 2.7, MDAC 2.8 und Windows Data Access Components (Windows DAC) 6.0, während mit MDAC zurück 2.6 ist VT_I4. Programme für MDAC 2.6 geschrieben, die nur für eine Variante aussehen zurückgegebene des Typs VT_I4 erhalten würde, eine 0 (null) für jede Ordnungszahl, wenn unter MDAC 2.7, MDAC 2.8 und Windows DAC 6.0 ohne Änderungen ausgeführt. Diese Änderung wurde vorgenommen, da der Datentyp, den OLE DB gibt DBTYPE_UI4 ist, und in den Typ mit Vorzeichen VT_I4 ist nicht genügend Platz für alle möglichen Werte ungekürzt möglicherweise auftreten, und wodurch ein Verlust von Daten enthalten.  
+>  **Visual C# /C++ Benutzer** clientseitigen Cursorn nicht verwendet werden, Abrufen von "ORDINAL_POSITION" eines Spalte-Schemas in ADO eine Variante des Typs VT_R8 in MDAC 2.7, MDAC 2.8 und Windows Data Access Components (Windows DAC) 6.0, bei dem verwendeten Typ zurückgibt MDAC 2.6 ist VT_I4. Programme für MDAC 2.6 geschrieben, die nur für eine Variante aussehen zurückgegebene des Typs VT_I4 erhalten würde, eine 0 (null) für jede Ordnungszahl, wenn unter MDAC 2.7, MDAC 2.8 und Windows DAC 6.0 ohne Änderungen ausgeführt. Diese Änderung wurde vorgenommen, da der Datentyp, den OLE DB gibt DBTYPE_UI4 ist, und in den Typ mit Vorzeichen VT_I4 ist nicht genügend Platz für alle möglichen Werte ungekürzt möglicherweise auftreten, und wodurch ein Verlust von Daten enthalten.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open Sie-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open Sie-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

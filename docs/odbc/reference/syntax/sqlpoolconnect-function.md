@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262262"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: Einhaltung von ODBC 3.8-Standards: ODBC  
+ Eingeführt in Version: ODBC 3.8 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLPoolConnect** wird verwendet, um eine neue Verbindung erstellen, wenn keine Verbindung im Pool wiederverwendet werden kann.  
@@ -57,7 +57,7 @@ SQLRETURN  SQLPoolConnect(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *WszOutConnectString*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *CchConnectStringBuffer*, wird die Verbindungszeichenfolge zumeist im abgeschlossen \* *WszOutConnectString* auf abgeschnitten*CchConnectStringBuffer* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or, SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Ähnlich wie [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) für alle Überprüfungsfehler, Eingabe, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  

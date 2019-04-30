@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 211f51b076789209d14e79d3f357ff632f58e61f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238056"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: vollständige  
+ Support: Vollständig  
   
- ODBC-API-Übereinstimmung: Auf Ebene 2  
+ ODBC-API-Übereinstimmung: Ebene 2  
   
  Enthält Beschreibungen der Treiber und Treiber-Attribut-Schlüsselwörter.  
   

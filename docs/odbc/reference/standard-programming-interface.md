@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232060"
 ---
 # <a name="standard-programming-interface"></a>Standardprogrammierschnittstelle
 Die Programmierschnittstelle ist vielleicht die am häufigsten offensichtlicher Kandidat für die Standardisierung. In der Tat, wenn ODBC entwickelt wird, ANSI und ISO bereits bereitgestellt Standards für embedded SQL und SQL Module. Obwohl keine Standards für eine Datenbank-CLI vorhanden war, wurde die Zugriffsgruppe für den SQL - ein Branchenkonsortium von Datenbankanbieter - angibt, ob eine erstellt in Betracht ziehen; ODBC-Komponenten, die höher ist die Grundlage für ihre Arbeit.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232292"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (SQL-Befehl)
 Erstellt eine Tabelle mit den angegebenen Feldern.  
@@ -47,15 +47,15 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Erstellen der Tabelle &#124; DBF *TableName1*  
+ CREATE TABLE &#124; DBF *TableName1*  
  Gibt den Namen der Tabelle zu erstellen. Die Tabelle und die DBF-Optionen sind identisch.  
   
- Namen *LongTableName*  
+ NAME *LongTableName*  
  Gibt einen langen Namen für die Tabelle an. Ein lange Tabellennamen kann angegeben werden, nur, wenn eine Datenbank geöffnet ist, da lange Tabellennamen in Datenbanken gespeichert werden.  
   
  Lange Namen können bis zu 128 Zeichen enthalten und können anstelle von kurzen Dateinamen in der Datenbank verwendet werden.  
   
- KOSTENLOS  
+ FREE  
  Gibt an, dass die Tabelle wird eine geöffnete Datenbank nicht hinzugefügt werden. FREE ist nicht erforderlich, wenn eine Datenbank nicht geöffnet ist.  
   
  *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
@@ -76,7 +76,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  Überprüfen Sie *lExpression1*  
  Gibt eine Überprüfungsregel für das Feld. *lExpression1* kann eine benutzerdefinierte Funktion sein. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zugelassen wird.  
   
- Fehler *cMessageText1*  
+ ERROR *cMessageText1*  
  Gibt die Fehlermeldung, die Visual FoxPro angezeigt, wenn die Feldregel Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Durchsuchen-Fenster oder eine Editor-Fenster geändert werden.  
   
  Standard *eExpression1*  
@@ -115,7 +115,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Da eine Tabelle nur ein primären Index verfügen kann, können nicht Sie diese Klausel einschließen, wenn Sie bereits einen primären Index für ein Feld erstellt haben. Visual FoxPro generiert einen Fehler auf, wenn Sie mehr als eine PRIMARY KEY-Klausel im Artikel CREATE TABLE.  
   
- EINDEUTIGE *eExpression3*TAG *TagName3*  
+ UNIQUE *eExpression3*TAG *TagName3*  
  Erstellt einen Index Kandidat. *eExpression3* gibt jede Feld oder eine Kombination der Felder in der Tabelle. Wenn Sie einen primären Index mit einem der PRIMARY KEY-Optionen erstellt haben, können nicht Sie allerdings das Feld enthalten, das für den primären Index angegeben wurde. TAG *TagName3* gibt einen Tagnamen für die Candidate-Indexname, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  Eine Tabelle kann mehrere Kandidaten Indizes aufweisen.  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC-syntax|Visual FoxPro-syntax|  
 |-----------------|--------------------------|  
-|CREATE TABLE *Basis-Table-Name*<br /><br /> (*Spaltenbezeichner Datentyp*<br /><br /> [NICHT-NULL]<br /><br /> [,*Spaltenbezeichner Datentyp*<br /><br /> [NOT NULL]...)|Erstellen der Tabelle *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *Feldtyp*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NICHT NULL])|  
+|CREATE TABLE *Basis-Table-Name*<br /><br /> (*Spaltenbezeichner Datentyp*<br /><br /> [NICHT-NULL]<br /><br /> [,*Spaltenbezeichner Datentyp*<br /><br /> [NOT NULL]...)|Erstellen der Tabelle *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NICHT NULL])|  
   
  Wenn Sie eine Tabelle mit dem Treiber erstellen, schließt der Treiber in der Tabelle direkt nach dem Erstellen der Tabelle von anderen Benutzern erlauben. Dies unterscheidet sich von Visual FoxPro, die in der Tabelle ausschließlich bei der Erstellung offen. Allerdings liegt an der Datenquelle, die mit einer CREATE TABLE-Anweisung eine gespeicherte Prozedur ausgeführt wird, in der Tabelle geöffnet bleibt.  
   

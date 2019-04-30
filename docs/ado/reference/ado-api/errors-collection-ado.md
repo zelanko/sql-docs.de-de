@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253191"
 ---
 # <a name="errors-collection-ado"></a>Errors-Collection (ADO)
 Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) Objekte, die in Reaktion auf einen einzelnen Anbieter bezogene Fehler erstellt.  
@@ -48,4 +48,4 @@ Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) Objek
   
 ## <a name="see-also"></a>Siehe auch  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   
- [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

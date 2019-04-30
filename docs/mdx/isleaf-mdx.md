@@ -1,5 +1,5 @@
 ---
-title: IsLeaf (MDX) | Microsoft Docs
+title: IsLeaf (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224546"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
 
@@ -33,7 +33,7 @@ IsLeaf(Member_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **IsLeaf** -Funktion gibt **"true"** , wenn das angegebene Element ein Blattelement ist. Die Funktion hingegen gibt **"false"**.  
+ Die **IsLeaf** -Funktion zurückgegeben **"true"** , wenn das angegebene Element ein Blattelement ist. Die Funktion hingegen gibt **"false"**.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird TRUE zurückgegeben, wenn [Date].[Fiscal].CurrentMember ein Blattelement ist:  

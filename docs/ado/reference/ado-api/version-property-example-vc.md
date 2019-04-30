@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226118"
 ---
 # <a name="version-property-example-vc"></a>Version-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, um die aktuelle Version von ADO anzuzeigen. Er verwendet auch verschiedene Eigenschaften angezeigt:  

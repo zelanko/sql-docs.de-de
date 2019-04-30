@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232704"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
   Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabe von XML-Daten mithilfe des `xml`-Datentyps. Dieses Thema enthält Informationen, wie SQLXML 4.0 Instanzen von `xml`-Datentyp erkennt und unterstützt.  
