@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011561"
 ---
 # <a name="restore-a-database-master-key"></a>Wiederherstellen eines Datenbank-Hauptschlüssels
   In diesem Thema wird beschrieben, wie der Datenbank-Hauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]wiederhergestellt wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "48056986"
   
 -   [So stellen Sie den Datenbank-Hauptschlüssel mithilfe von Transact-SQL wieder her](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   

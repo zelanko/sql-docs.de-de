@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140448"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API für erweiterte gespeicherte Prozeduren)
     
@@ -53,7 +53,7 @@ msglen
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *srvproc*   
+ *srvproc*  
  Ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist. Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
  *Msgnum*  
@@ -83,7 +83,7 @@ msglen
 -   Beim Versenden der Fehlermeldung über das Netzwerk tritt ein Fehler auf.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Siehe auch  
  [srv_sendmsg (API für die erweiterte gespeicherte Prozedur)](srv-sendmsg-extended-stored-procedure-api.md)  

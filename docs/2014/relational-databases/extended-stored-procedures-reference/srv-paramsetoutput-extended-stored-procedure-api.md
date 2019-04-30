@@ -1,17 +1,17 @@
 ---
 title: srv_paramsetoutput (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/04/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_paramsetoutput
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 26dd8add089f27c3ea9db22204548196bc887faf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127134"
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API für erweiterte gespeicherte Prozeduren)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
@@ -54,11 +55,10 @@ cbLen
 BOOL  
 fNull   
 );  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *srvproc*   
+ *srvproc*  
  Ein Handle für eine Clientverbindung.  
   
  *n*  
@@ -81,6 +81,6 @@ fNull
 -   Das *cbLen* -Argument ist ungültig.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+ **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729296"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Überprüfen von Cube- und Dimensionseigenschaften
   Nachdem Sie einen Cube definiert haben, können Sie die Ergebnisse mit dem Cube-Designer überprüfen. In der folgenden Aufgabe überprüfen Sie die Struktur des Cubs im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt.  
@@ -35,7 +35,7 @@ ms.locfileid: "48196270"
   
 4.  Erweitern Sie im **Dimensionen** -Bereich der Registerkarte **Cubestruktur** die **Customer**-Dimension, und klicken Sie dann auf **Customer bearbeiten** , um die Dimension im Dimensions-Designer zu öffnen.  
   
-     Der Dimensions-Designer enthält folgende Registerkarten: **Dimensionsstruktur**, **Attributbeziehungen**, **Übersetzungen**und **Browser**. Die Registerkarte **Dimensionsstruktur** enthält drei Bereiche: **Attribute**, **Hierarchien**und **Datenquellensicht**. Die Attribute, die die Dimension enthält, werden im Bereich **Attribute** angezeigt. Weitere Informationen finden Sie unter [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md), [benutzerdefinierter Hierarchien](multidimensional-models/user-defined-hierarchies-create.md).  
+     Dimensions-Designer enthält folgende Registerkarten: **Dimensionsstruktur**, **Attributbeziehungen**, **Übersetzungen**, und **Browser**. Beachten Sie, dass die **Dimensionsstruktur** Registerkarte enthält drei Bereiche: **Attribute**, **Hierarchien**, und **Datenquellensicht**. Die Attribute, die die Dimension enthält, werden im Bereich **Attribute** angezeigt. Weitere Informationen finden Sie unter [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md), [benutzerdefinierter Hierarchien](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Um zum Cube-Designer zu wechseln, klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten, und klicken Sie anschließend auf **Designer anzeigen**.  
   

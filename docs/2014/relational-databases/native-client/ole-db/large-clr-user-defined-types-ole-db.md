@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199253"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
   In diesem Abschnitt werden Änderungen an OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "52398133"
   
 |SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|Wert|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR-UDT|DBTYPE_UDT|BYTE[](Bytearray)\)|132 (oledb.h)|  
+|CLR-UDT|DBTYPE_UDT|BYTE[](Bytearray\)|132 (oledb.h)|  
   
  UDT-Werte werden als Bytearrays dargestellt. Konvertierungen zu und von hexadezimalen Zeichenfolgen werden unterstützt. Literalwerte werden mit dem Präfix 0x als hexadezimale Zeichenfolgen dargestellt. Eine Hexadezimalzeichenfolge ist die Textdarstellung der Binärdaten zur Basis 16. Ein Beispiel dafür ist eine Konvertierung vom Servertyp `varbinary(10)` in DBTYPE_STR, die zu einer hexadezimalen Darstellung von 20 Zeichen führt, wobei jedes Zeichenpaar ein einzelnes Byte repräsentiert.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52398133"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Die folgenden Informationen werden in der DBPARAMINFO-Struktur durch **prgParamInfo** zurückgegeben:  
   
-|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*DwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|"DBTYPE_UDT"|*n*|nicht definiert|nicht definiert|Löschen|  
 |DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|"DBTYPE_UDT"|~0|nicht definiert|nicht definiert|Menge|  
@@ -59,7 +59,7 @@ ms.locfileid: "52398133"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Die in der DBPARAMBINDINFO-Struktur bereitgestellten Informationen müssen Folgendem entsprechen:  
   
-|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*DwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|*n*|wird ignoriert.|wird ignoriert.|Muss festgelegt werden, wenn der Parameter mit DBTYPE_IUNKNOWN übergeben werden soll.|  
 |DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|wird ignoriert.|wird ignoriert.|wird ignoriert.|  

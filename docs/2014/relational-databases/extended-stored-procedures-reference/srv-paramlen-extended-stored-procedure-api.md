@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127197"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (API für erweiterte gespeicherte Prozeduren)
     
@@ -49,7 +49,7 @@ n
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *srvproc*   
+ *srvproc*  
  Ist ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist (in diesem Fall das Handle, das den Aufruf der remote gespeicherten Prozedur erhalten hat). Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
  *n*  
@@ -62,14 +62,14 @@ n
   
 |Neue Datentypen|Länge der Eingabedaten|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **0 (NULL):** 1<br /><br /> **> = 255:** Nicht zutreffend<br /><br /> **< 255:** Nicht zutreffend|  
-|`BIGVARCHAR`|**NULL:** 0<br /><br /> **0 (NULL):** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
-|`BIGCHAR`|**NULL:** 0<br /><br /> **0 (NULL):** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGBINARY`|**NULL:** 0<br /><br /> **0 (NULL):** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGVARBINARY`|**NULL:** 0<br /><br /> **0 (NULL):** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
-|`NCHAR`|**NULL:** 0<br /><br /> **0 (NULL):** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`NVARCHAR`|**NULL:** 0<br /><br /> **0 (NULL):** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
-|`NTEXT`|**NULL:** –1<br /><br /> **ZERO:** –1<br /><br /> **>=255:** –1<br /><br /> **< 255:** -1|  
+|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** Nicht zutreffend<br /><br /> **<255:** Nicht zutreffend|  
+|`BIGVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
+|`BIGCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGBINARY`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGVARBINARY`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
+|`NCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`NVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** tatsächlicher *len*-Wert|  
+|`NTEXT`|**NULL:** –1<br /><br /> **ZERO:** –1<br /><br /> **>=255:** –1<br /><br /> **<255:** -1|  
   
  \* tatsächlicher *len*-Wert = Länge von Mehrbyte-Zeichenfolgen (cch)  
   
@@ -79,7 +79,7 @@ n
  Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC-Handler wird trotzdem aufgerufen, doch es sind scheinbar keine Parameter vorhanden, und **srv_rpcparams** gibt 0 zurück.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Siehe auch  
  [srv_paraminfo (API für erweiterte gespeicherte Prozeduren)](srv-paraminfo-extended-stored-procedure-api.md)   
