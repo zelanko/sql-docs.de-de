@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249951"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools
   In dieser Aufgabe erstellen Sie ein SSIS-Projekt mit **SQL Server Data Tools** , Bereinigung und Abgleich von Lieferantendaten zu automatisieren.  
   
 1.  Starten Sie **SQL Server Data Tools**. Klicken Sie auf Start, zeigen Sie auf **Programme**, erweitern Sie **Microsoft SQL Server 2012**, und klicken Sie auf **SQL Server Data Tools**.  
