@@ -2,17 +2,17 @@
 title: Bekannte Probleme für die Sprache R und Python-Integration – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650701"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906166"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -406,6 +406,29 @@ Die `rxDTree` -Funktion unterstützt derzeit keine formelinternen Transformation
 
 Geordnete Faktoren werden in allen RevoScaleR-Analysefunktionen außer `rxDTree`genauso wie Faktoren behandelt.
 
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20. Data.Table als ein "outputdataset" in R
+
+Mithilfe von `data.table` als ein `OutputDataSet` in R wird nicht unterstützt in 13 für SQL Server 2017 kumulativen Update (CU13) und früheren Versionen. Möglicherweise die folgende Meldung angezeigt:
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` als ein `OutputDataSet` in R wird in SQL Server 2017 Kumulatives Update 14 (CU14) und höher unterstützt.
+
 ## <a name="python-script-execution-issues"></a>Probleme bei der Ausführung von Python-Skript
 
 Dieser Abschnitt enthält bekannte Probleme, die spezifisch für die Ausführung von Python in SQL Server als auch Probleme im Zusammenhang mit der Python-Pakete, die von Microsoft veröffentlichten werden einschließlich [Revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) und [Microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -465,8 +488,19 @@ Ab SQL Server 2017 CU2 können möglicherweise die folgende Meldung angezeigt, a
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: Telemetry_state ist Bevor Sie globale Deklaration verwendet*
 
-
 Dieses Problem wurde in SQL Server 2017 kumulative Update 3 (CU3) behoben wurden. 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. Numerisch, Dezimal und Money-Datentypen, die nicht unterstützt
+
+Ab SQL Server 2017 Kumulatives Update 12 (CU12), numerische "," Decimal "und" Money-Datentypen in der WITH RESULT SETS werden nicht unterstützt bei Verwendung von Python mit `sp_execute_external_script`. Wird möglicherweise folgenden Meldungen angezeigt:
+
+> *[Code: 39004, SQL-Status: S1000] ein "Python"-Skriptfehler ist aufgetreten, während der Ausführung von "Sp_execute_external_script" mit HRESULT 0 x 80004004.*
+
+> *[Code: 39019, SQL-Status: S1000] ein externer Skriptfehler ist aufgetreten:*
+> 
+> *SqlSatelliteCall-Fehler: Nicht unterstützter Typ im Ausgabeschema. Unterstützte Typen: bit Smallint "," Int "," Datetime "," Smallmoney, echte und "float". Char, Varchar werden teilweise unterstützt.*
+
+Dies wurde in SQL Server 2017 Kumulatives Update 14 (CU14) behoben wurden.
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise und Microsoft R Open
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147075"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357311"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Übersetzungen in mehrdimensionalen Modellen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147075"
 4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Feld, und wählen Sie **Daten durchsuchen**aus. Für jedes Element werden Übersetzungen in Englisch, Spanisch und Französisch angezeigt.  
   
  Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die **FormatString** -Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
-  
- [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) im Analysis Services-Lernprogramm führt Sie durch die Schritte zum Erstellen und Testen von Übersetzungen.  
   
 ## <a name="defining-translations"></a>Definieren von Übersetzungen  
   
@@ -109,7 +107,7 @@ ms.locfileid: "50147075"
     |Angegebener Sprachbezeichner|Alternativer Sprachbezeichner|  
     |-----------------------------------|-----------------------------------|  
     |3076 - Chinesisch (Hongkong S.A.R., Volksrepublik China)|1028 - Chinesisch (Taiwan)|  
-    |5124 - Chinesisch (Macau SAR)|1028 - Chinesisch (Taiwan)|  
+    |5124 - Chinesisch (Macau, SAR)|1028 - Chinesisch (Taiwan)|  
     |1028 - Chinesisch (Taiwan)|Standardsprache|  
     |4100 - Chinesisch (Singapur)|2052 - Chinesisch (Volksrepublik China)|  
     |2074 - Kroatisch|Standardsprache|  

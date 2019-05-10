@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 5: Erstellen von berechneten Spalten | Microsoft-Dokumentation'
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776069"
 ---
 # <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten
 
@@ -27,7 +27,7 @@ Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die 
 
 Diese Lektion ist auch, wo Sie zuerst Data Analysis Expressions (DAX) verwenden. DAX ist eine spezielle Sprache zum Erstellen von extrem anpassbarer formelausdrücken für tabellarische Modelle. In diesem Tutorial verwenden Sie DAX zum Erstellen von berechneten Spalten, Measures und rollenfiltern. Weitere Informationen finden Sie unter [DAX in tabellarischen Modellen](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md). 
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
@@ -47,7 +47,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
     Eine neue Spalte mit dem Namen **Calculated Column 1** wird links von der Spalte **Calendar Quarter** eingefügt.  
   
-4.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende DAX-Formel ein: Mit der AutoVervollständigen-Funktion können Sie die vollqualifizierten Namen von Spalten und Tabellen auf einfache Weise eingeben und die verfügbaren Funktionen auflisten.  
+4.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende DAX-Formel ein: Automatische Vervollständigung hilft Ihnen, geben Sie den vollqualifizierten Namen von Spalten und Tabellen und listet die Funktionen, die verfügbar sind.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ Die DayOfWeek berechnete Spalte einen sortierbaren Namen für den Tag der Woche.
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Erstellen einer berechneten ProductSubcategoryName-Spalte in der DimProduct-Tabelle  
   
   
-1.  In der **DimProduct** Tabelle einen Bildlauf zum rechten Rand der Tabelle. Beachten Sie, dass die ganz rechts stehende Spalte **Spalte hinzufügen** heißt (in Kursivschrift). Klicken Sie auf die Spaltenüberschrift.  
+1.  In der **DimProduct** Tabelle einen Bildlauf zum rechten Rand der Tabelle. Beachten Sie, den Namen der Spalte ganz rechts ***Add Column***, klicken Sie auf die Spaltenüberschrift.  
   
 2.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
     

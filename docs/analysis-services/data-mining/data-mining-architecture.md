@@ -1,5 +1,5 @@
 ---
-title: Datamining-Architektur | Microsoft Docs
+title: Datamining-Architektur | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019997"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450054"
 ---
 # <a name="data-mining-architecture"></a>Data Mining-Architektur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,23 +28,23 @@ ms.locfileid: "34019997"
   
  [Datenbankspeicherort](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Weitere Informationen darüber, wie Sie Data Mining in Ihrer Business Intelligence-Lösung implementieren, finden Sie im Abschnitt zu Lösungshandbüchern der MSDN-Bibliothek.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Logische Architektur & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Physische Architektur & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
- [Datamining-Dienste und Datenquellen](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
+ [Data Mining-Dienste und Datenquellen](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [Verwaltung von Datamining-Lösungen und-Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [Sicherheit (Übersicht) & #40; Datamining & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [Sicherheitsübersicht &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modellprogrammierung](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Datamining-Programmierung](../../analysis-services/data-mining-programming.md)  
+ [Data Mining-Programmierung](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

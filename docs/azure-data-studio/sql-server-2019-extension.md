@@ -3,7 +3,7 @@ title: SQL Server-2019-Erweiterung (Vorschau)
 titleSuffix: Azure Data Studio
 description: 2019-Vorschau von SQL Server-Erweiterung für Azure Data Studio
 ms.custom: seodec18
-ms.date: 04/19/2019
+ms.date: 05/09/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 045152d472029c1ff3fe50230b20b69a851d9dcb
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472190"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450100"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
-Die SQL Server-2019-Erweiterung (Vorschau) bietet vorschauunterstützung für die neuen Features und Tools, die Unterstützung des Protokollversands [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dies schließt die Unterstützung für die Vorschauversion [big Data-Cluster für SQL Server-2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [notebookfeatures](../big-data-cluster/notebooks-guidance.md), und eine PolyBase [Create External Table-Assistenten](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+Die SQL Server-2019-Erweiterung (Vorschau) bietet vorschauunterstützung für die neuen Features und Tools, die Unterstützung des Protokollversands [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dies schließt die Unterstützung für die Vorschauversion [big Data-Cluster für SQL Server-2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [notebookfeatures](../big-data-cluster/notebooks-guidance.md), und eine PolyBase [Create External Table-Assistenten](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installieren der Erweiterung für SQL Server-2019 (Vorschau)
 
@@ -30,9 +30,9 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 April 2019 |0.12.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 April 2019 |0.12.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 April 2019 |0.12.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092118)|8 Mai 2019 |0.13.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092117)|8 Mai 2019 |0.13.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092116)|8 Mai 2019 |0.13.0
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 

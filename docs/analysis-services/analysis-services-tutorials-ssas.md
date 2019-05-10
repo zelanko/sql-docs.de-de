@@ -1,6 +1,6 @@
 ---
 title: Analysis Services-Tutorials | Microsoft-Dokumentation
-ms.date: 05/08/2018
+ms.date: 05/07/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b92410b6c078d83158b64db69716e23204745db
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 64a5fbd4cf2bff4d4fb7338c565bb9bc46a5a22d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034978"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449997"
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services-Tutorials
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,17 +22,17 @@ ms.locfileid: "38034978"
 [Tabellarische Modellierung (Kompatibilitätsgrad 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 Gilt für Azure Analysis Services und SQL Server 2017 Analysis Services und höher. Dieses Lernprogramm enthält Lektionen zum Erstellen eines einfachen tabellarischen Modells mit Analysis Services für das fiktive Unternehmen Adventure Works, mithilfe von SQL Server Data Tools (SSDT). 
 
-[Tabellarische Modellierung (Kompatibilitätsgrad 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[Tabellarische Modellierung (Kompatibilitätsgrad 1200)](tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)  
 Gilt für Azure Analysis Services und SQL Server 2016 Analysis Services und höher. Dieses Lernprogramm enthält Lektionen zum Erstellen eines einfachen tabellarischen Modells mit Analysis Services für das fiktive Unternehmen Adventure Works, mithilfe von SQL Server Data Tools (SSDT).  
   
-[Multidimensional modeling (Mehrdimensionale Modellierung)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Multidimensional modeling (Mehrdimensionale Modellierung)](multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
 Gilt für SQL Server 2012 Analysis Services und höher. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt. Dieses Lernprogramm enthält Lektionen zum Erlernen von wesentlichen Fähigkeiten und Konzepte von mehrdimensionalen Modellierung in SSDT. Wenn Sie fertig sind, müssen Sie eine Cubedatenbank basierend auf Adventure Works-Daten, die Sie aus Excel, Reporting Services oder eine andere Clientanwendung die Verbindung mit Analysis Services zugreifen können.  
   
-[Data Mining](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[Data Mining](../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
 Gilt für SQL Server 2012 Analysis Services und höher. Mehrdimensionale Modelle mit Data Mining werden für Azure Analysis Services nicht unterstützt. Diese Sammlung von Tutorials beschreibt das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen.  
   
   
-## <a name="samples"></a>Beispiele 
+## <a name="samples"></a>Proben 
 ### <a name="project-and-completed-model-database-samples"></a>Projekt- und Datenbankbeispiele des fertigen Modells
 Beispiel-Data-Modellierungsprojekten und modelldatenbanken vollständige Beispiel finden Sie unter [Adventure Works für Analysis Services auf GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services).
 
