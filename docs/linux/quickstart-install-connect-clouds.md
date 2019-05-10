@@ -11,17 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 54373ea101820a29e04501ea6848a4a85a2c893a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 28d95ab15da9d5eccce7c8b9fc4be4741b12305a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775582"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Schnellstart: Führen Sie SQL Server in der cloud
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Schnellstart installieren Sie SQL Server unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) oder Ubuntu in der Cloud Ihrer Wahl. Wechseln Sie zu [Bereitstellen eines virtuellen SQL Server-virtuellen Computers im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) zum Ausführen von SQL Server unter Linux in Azure.
+In diesem Schnellstart installieren Sie SQL Server unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) oder Ubuntu in der Cloud Ihrer Wahl. Wechseln Sie zu [Bereitstellen eines virtuellen SQL Server-virtuellen Computers im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json) zum Ausführen von SQL Server unter Linux in Azure.
 
 > [!NOTE]
 > Wenn Sie eine kostenpflichtige Edition von SQL Server ausführen, müssen Sie Ihre vorhandenen Lizenzen (BYOL) einbinden.

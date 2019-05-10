@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685407"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877621"
 ---
 # <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685407"
 
 In dieser Lektion erstellen Sie Key Performance Indicators (KPIs). KPIs werden verwendet, um die Leistung eines Werts definiert durch eine *Base* Measure für ein *Ziel* ebenfalls durch ein Measure oder einen absoluten Wert definiert. In Clientanwendungen zur Berichtserstellung erhalten Geschäftsleute mit KPIs einen schnellen und einfachen Einblick in den insgesamten Geschäftserfolg bzw. können Trends leichter identifizieren. Weitere Informationen finden Sie unter [KPIs](../tabular-models/kpis-ssas-tabular.md)
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
@@ -40,7 +40,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
 3.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende Formel ein: 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     Dieses Measure fungiert als Basiskennzahl für den KPI.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c291ad016664cf8ac7dcbe2deb9cc04680a707c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765022"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485076"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -60,7 +60,7 @@ ms.locfileid: "52765022"
   
 -   Das Protokollformat ist CSV. In der folgenden Tabelle wird das Protokollformat beschrieben.  
   
-    |Element|und Beschreibung|  
+    |Element|Description|  
     |-------------|-----------------|  
     |Uhrzeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  

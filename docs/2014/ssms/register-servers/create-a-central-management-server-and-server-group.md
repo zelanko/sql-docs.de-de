@@ -14,7 +14,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52792752"
@@ -61,7 +61,7 @@ ms.locfileid: "52792752"
   
 4.  Geben Sie im Feld **Registrierter Server**einen Servernamen und ggf. eine Beschreibung ein.  
   
-5.  Prüfen oder ändern Sie auf der Registerkarte **Verbindungseigenschaften** die Netzwerk- und Verbindungseigenschaften. Weitere Informationen finden Sie unter [Verbinden mit SQL Server-Datenbank-Engine &amp;#40;Eigenschaftenseite Verbindung&amp;#41;](../f1-help/connect-to-server-connection-properties-page-database-engine.md).  
+5.  Prüfen oder ändern Sie auf der Registerkarte **Verbindungseigenschaften** die Netzwerk- und Verbindungseigenschaften. Weitere Informationen finden Sie unter [Verbinden mit SQL Server-Datenbank-Engine &#40;Eigenschaftenseite Verbindung&#41;](../f1-help/connect-to-server-connection-properties-page-database-engine.md).  
   
 6.  Klicken Sie auf **Testen**, um die Verbindung zu testen.  
   

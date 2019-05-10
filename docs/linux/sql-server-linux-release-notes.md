@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 21ee0544a91199648f2d96a631c567dd9788bc2f
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: e13ee9f8046eb53db8e59ee33b3039757bbc4aa4
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671406"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776181"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 
@@ -539,7 +539,7 @@ Informationen zum Einstieg finden Sie in der folgenden Schnellstarts:
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)
-- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
 
 Antworten auf häufig gestellte Fragen finden Sie unter den [SQL Server unter Linux – häufig gestellte Fragen](sql-server-linux-faq.md).

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_types catalog view
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea20d8e326d006e1a405adffcf73fae6ca1e4473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ce5530e160fe6473ff84fca0978b5fc467fe688
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715955"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945864"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47715955"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**||Erbt Spalten von [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<geerbte Spalten >**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Typ ist ein abstrakter Typ. Alle Instanzen eines Elements dieses Typs müssen **xsi:type** verwenden, um auf einen abgeleiteten Typ hinzuweisen, der nicht abstrakt ist.<br /><br /> 0 = Typ ist nicht abstrakt. (Standard)|  
 |**allows_mixed_content**|**bit**|1 = Gemischter Inhalt ist zulässig<br /><br /> 0 = Gemischter Inhalt ist nicht zulässig (Standard)|  
 |**is_extension_blocked**|**bit**|1 = ersetzen durch eine Erweiterung des Typs wird in Fällen blockiert, wenn das zugehörige Attribut in der **ComplexType** Definition oder der **BlockDefault** Attribut der übergeordneten \<Schema > elementinformationselement wird auf "Extension" oder "#all" festgelegt.<br /><br /> 0 = Ersetzen durch Erweiterung ist nicht blockiert.|  
