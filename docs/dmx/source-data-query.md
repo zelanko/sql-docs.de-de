@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38063960"
@@ -24,7 +24,7 @@ ms.locfileid: "38063960"
 ## <a name="query-types"></a>Abfragetypen  
  Die drei häufigsten Arten zum Angeben von Quelldaten sind:  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
  Während **OPENQUERY** ähnelt der Funktion, um **OPENROWSET**, **OPENQUERY** hat die folgenden Vorteile:  
@@ -33,10 +33,10 @@ ms.locfileid: "38063960"
   
 -   Der Administrator kann besser steuern, wie auf die Daten auf dem Server zugegriffen wird. Beispielsweise kann der Administrator festlegen, welche Anbieter in den Server geladen werden und auf welche externen Daten zugegriffen werden kann.  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
- [FORM &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [FORM &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  Diese Anweisung fragt mehrere Datenquellen ab, um eine geschachtelte Tabelle zu erstellen. Mithilfe von **Form**, können Sie Daten aus mehreren Quellen in einer hierarchischen Tabelle kombinieren. Auf diese Weise können Sie die Möglichkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nutzen, Tabellen zu schachteln, indem eine Tabelle in eine andere Tabelle eingebettet wird.  
   
  Zur Angabe der Quelldaten haben Sie folgende Möglichkeiten:  

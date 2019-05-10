@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1817e93c23ebe34b47d0deff65b871b725433075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 79adb6a32992aa9a60b01a00b065c0e2c4c11440
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009531"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487550"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe
 
@@ -58,7 +58,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  Wenn auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Wissensdatenbanken mit dem gleichen Namen wie den zu importierenden vorhanden sind, wird an die Namen der importierten Wissensdatenbanken ein Unterstrich (_) angefügt, gefolgt von einem ganzzahligen Wert, beginnend mit 1. Wenn die Domäne „Firmenname“ z. B. doppelt vorkommt, ist der importierte Domänenname „Firmenname_1“.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Exportieren einer Wissensdatenbank in eine DQS-Datei](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   

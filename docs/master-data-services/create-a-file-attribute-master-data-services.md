@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aec5467169b75e22e599c30dbacddaf31acbd58c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fe7a8c24d30193ee7748a75325b907d2a045937a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747873"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477112"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52747873"
 
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Dateiattribut, um Attributwerte mit Dateien aufzufüllen.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -39,12 +39,12 @@ ms.locfileid: "52747873"
 ## <a name="attribute-information"></a>Attributinformationen  
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Spalte|und Beschreibung|  
+|Spalte|Description|  
 |------------|-----------------|  
 |Status|Der Attributstatus.<br /><br /> Wenn Sie auf „Speichern“ klicken, wird das Bild ![Symbol für den Aktualisierungsstatus](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Fehlerstatussymbol](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls ist der Status „OK“, und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
 |Name|Der Attributname.|  
 |Anzeigename|Der Anzeigename des Attributs.|  
-|und Beschreibung|Die Attributbeschreibung.|  
+|Description|Die Attributbeschreibung.|  
 |Pixelbreite anzeigen|Die Breite des Attributs.|  
 |Typ und Eigenschaften|Die Typ- und Datentypinformationen des Attributs.|  
 |Änderungsnachverfolgung aktivieren|Gibt an, ob das Attribut für die Änderungsnachverfolgung aktiviert ist, und zeigt die Gruppennummer in Klammern.|  
@@ -91,7 +91,7 @@ ms.locfileid: "52747873"
   
 12. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Ändern eines Attributnamens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

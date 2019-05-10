@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 782a0e87c481aacbe6dc145b79aec41aba26039f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 359010e0fd86d350cc081b7f07b2b12fe7d6ef5a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764948"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479039"
 ---
 # <a name="master-data-services-overview"></a>Übersicht über Master Data Services
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist das Modell der Container auf der höchsten Ebene in der Struktur Ihrer Masterdataen. Ein Modell wird zum Verwalten von Gruppen ähnlicher Daten erstellt, z. B. von Onlineproduktdaten. Ein Modell enthält eine oder mehrere Entitäten, und Entitäten enthalten Elemente, die ihrerseits die Datensätze darstellen.  

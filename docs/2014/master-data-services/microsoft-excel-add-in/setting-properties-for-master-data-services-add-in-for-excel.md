@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5743f528e7b356611258da598edfa7b205971f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763887"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479068"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Festlegen von Eigenschaften für das Master Data Services-Add-In für Microsoft Excel
   Die Einstellungen des Master Data Services-Add-Ins für Excel bestimmen, wie Daten aus MDS in das Excel-Add-In geladen werden und wie Daten aus dem Excel-Add-In in MDS veröffentlicht werden.  

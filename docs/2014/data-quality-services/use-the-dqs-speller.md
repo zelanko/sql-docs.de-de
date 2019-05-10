@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792060"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484101"
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Engines integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  

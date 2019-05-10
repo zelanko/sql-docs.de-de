@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783462"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484389"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52783462"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]konfigurieren Sie Geschäftsregeln für das Senden von Benachrichtigungen, wenn Sie Benutzer über Änderungen von Attributwerten in Kenntnis setzen möchten.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf die Funktionsbereiche **Systemverwaltung** und **Benutzer- und Gruppenberechtigungen** verfügen. Wenn Sie nicht über die Berechtigung für den Funktionsbereich **Benutzer- und Gruppenberechtigungen** verfügen, können Sie die Liste der Benutzer und Gruppen nicht anzeigen, an die Benachrichtigungen gesendet werden sollen.  
@@ -63,7 +63,7 @@ ms.locfileid: "52783462"
   
 10. Klicken Sie im Bestätigungsdialogfeld auf **OK**. Der Wert in der Spalte **Geschäftsregelstatus** wurde in **Aktiv** geändert. Die Spalte **Benachrichtigung** zeigt den ausgewählten Benutzer oder die Gruppe, an die die Benachrichtigung gesendet werden soll.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   Führen Sie zum Anwenden von Geschäftsregeln auf Daten eine der folgenden Prozeduren aus:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52783462"
   
     -   [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

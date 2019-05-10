@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b39b71f65dfe9c41c3e2ea7282729691e78a5986
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62627982"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484525"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "62627982"
 
 SNAC oder SQL Server Native Client ist ein Begriff, der synonym verwendet wurde, ODBC- und OLE DB-Treiber für SQL Server zu verweisen.
 
-**HINWEIS:**  Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Neue OLE DB-Anbieters wird aufgerufen, die [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert.
+> [!IMPORTANT] 
+> Die SQL Server Native Client (SQLNCLI) bleibt als veraltet markierte, und es wird nicht empfohlen, für das Entwickeln neuer Anwendungen nicht verwendet. Verwenden Sie stattdessen die neuen [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen aktualisiert.
 
-
-**Weitere Informationen und das SNAC oder ODBC-Treiber herunterladen zu können, besuchen Sie [SNAC-Lebenszyklus erklärt](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
-
-Weitere Informationen zum ODBC-Treiber für SQL Server finden Sie unter [Microsoft ODBC-Treiber für SQL Server unter Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  Siehe auch [Einführung in die neuen Microsoft ODBC-Treiber für SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), und [ODBC-Treiber 13.1 für SQL Server-Version](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
+> [!NOTE]
+> Weitere Informationen und das SNAC oder ODBC-Treiber herunterladen, finden Sie unter den [SNAC-Lebenszyklus erklärt der Blogbeitrag](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+> Weitere Informationen zum ODBC-Treiber für SQL Server finden Sie unter [Microsoft ODBC-Treiber für SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
  Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Funktionen mit veröffentlicht [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], die letzte verfügbare Version von SQL Server native Client:
 

@@ -1,5 +1,5 @@
 ---
-title: Sp_OAGetErrorInfo (Transact-SQL) | Microsoft-Dokumentation
+title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589124"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450065"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_OAGetErrorInfo [ objecttoken ]
  _Beschreibung_ **Ausgabe**  
  Ist die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- _HelpFile_ **Ausgabe**  
+ _helpfile_ **OUTPUT**  
  Die Hilfedatei des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- _HilfeID_ **Ausgabe**  
+ _helpid_ **OUTPUT**  
  Die Kontext-ID für die Hilfedatei. Wenn angegeben, muss es sich um eine lokale **Int** Variable.  
   
 > [!NOTE]  
@@ -72,11 +72,11 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Spaltennamen|Datentyp|Description|  
 |------------------|---------------|-----------------|  
-|**Fehler**|**Binary(4)**|Binärdarstellung der Fehlernummer|  
-|**Quelle**|**nvarchar(NN)**|Fehlerquelle|  
-|**Beschreibung**|**nvarchar(NN)**|Beschreibung des Fehlers|  
-|**HelpFile**|**nvarchar(NN)**|Hilfedatei für die Quelle|  
-|**HilfeID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
+|**Fehler**|**binary(4)**|Binärdarstellung der Fehlernummer|  
+|**Quelle**|**nvarchar(nn)**|Fehlerquelle|  
+|**Beschreibung**|**nvarchar(nn)**|Beschreibung des Fehlers|  
+|**Helpfile**|**nvarchar(nn)**|Hilfedatei für die Quelle|  
+|**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
 ## <a name="remarks"></a>Hinweise  
  Jeder Aufruf eines OLE-Automatisierungsobjekts gespeicherten Prozedur (mit Ausnahme von **Sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück; daher **Sp_OAGetErrorInfo** erhält Fehlerinformationen nur für die letzte OLE Automation Aufruf der gespeicherten Prozedur. Beachten Sie, dass **Sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt es kann mehrmals aufgerufen werden, dieselben Fehlerinformationen abzurufen.  
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Ausführen des Servers fehlgeschlagen (0 x 80080005)**|Das angegebene OLE-Objekt ist als lokaler OLE-Server (EXE-Datei) registriert, aber die EXE-Datei konnte nicht gefunden oder nicht ausgeführt werden.|  
 |**Das angegebene Modul wurde nicht gefunden (0x8007007e)**|Das angegebene OLE-Objekt ist als In-Process-OLE-Server (DLL-Datei) registriert, aber die DLL-Datei konnte nicht gefunden oder nicht geladen werden.|  
 |**Typenkonflikt (0 x 80020005)**|Der Datentyp einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen, die zum Speichern eines zurückgegebenen Eigenschaftswertes oder eines Rückgabewertes einer Methode verwendet wird, entspricht nicht dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentyp des Rückgabewertes der Eigenschaft oder Methode. Oder der Rückgabewert einer Eigenschaft oder einer Methode wurde angefordert, gibt jedoch keinen Wert zurück.|  
-|**Der Datentyp oder Wert des 'context'-Parameters von sp_OACreate ist ungültig. (0x8004275B)**|Der Wert des Kontextparameters sollte sein: 1, 4 oder 5.|  
+|**Der Datentyp oder Wert des 'Context'-Parameters von Sp_OACreate ist ungültig. (0x8004275B)**|Der Wert des Kontextparameters sollte sein: 1, 4 oder 5.|  
   
  Weitere Informationen zum Verarbeiten von HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden OLE-Automatisierungsfehlerinformationen angezeigt.  

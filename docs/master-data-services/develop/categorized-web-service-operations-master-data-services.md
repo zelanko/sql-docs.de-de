@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6a65e16bd82c6f44df7b8a2d4172a75d5b4ef9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 077e9268c7a68e7b6e5b96cdbf7aca6f22daf860
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668418"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485252"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Kategorisierte Webdienstvorgänge (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Webdienst enthält einen vollständigen Satz an Vorgängen, mit dem Sie Code zum Steuern aller Funktionen schreiben können, die von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] über die zugehörige Benutzeroberfläche ausgeführt werden. Die Webdienstvorgänge werden von der <xref:Microsoft.MasterDataServices.IService>-Schnittstelle definiert und als Methoden in der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse implementiert. Dieses Thema gruppiert die Webdienstvorgänge in konzeptionelle Kategorien, sodass Sie einen besseren Einblick in die Verwendung der Webdienst-API erhalten.  
+  Der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdienst enthält einen vollständigen Satz an Vorgängen, mit dem Sie Code zum Steuern aller Funktionen schreiben können, die von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] über die zugehörige Benutzeroberfläche ausgeführt werden. Die Webdienstvorgänge werden von der <xref:Microsoft.MasterDataServices.IService>-Schnittstelle definiert und als Methoden in der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse implementiert. Dieses Thema gruppiert die Webdienstvorgänge in konzeptionelle Kategorien, sodass Sie einen besseren Einblick in die Verwendung der Webdienst-API erhalten.  
   
 ## <a name="model-operations"></a>Modellvorgänge  
  Anhand dieser Vorgänge werden Modelle erstellt, aktualisiert und gelöscht und Aktionen für sämtliche Inhalte eines Modells wie Entitäten, Hierarchien und Versionen ausgeführt. Weitere Informationen finden Sie unter [Modelle &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47668418"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Datenimportvorgänge  
- Anhand dieser Vorgänge werden Daten in eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank importiert. Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Anhand dieser Vorgänge werden Daten in eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank importiert. Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -141,7 +141,7 @@ ms.locfileid: "47668418"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Datenexportvorgänge  
- Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  
@@ -151,7 +151,7 @@ ms.locfileid: "47668418"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Sicherheitsvorgänge  
- Diese Vorgänge werden verwendet, um die Sicherheitseinstellungen zu ändern, die den Zugriff auf die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank steuern. Weitere Informationen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
+ Diese Vorgänge werden verwendet, um die Sicherheitseinstellungen zu ändern, die den Zugriff auf die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank steuern. Weitere Informationen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
   
 ||  
 |-|  

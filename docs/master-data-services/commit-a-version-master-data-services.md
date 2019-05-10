@@ -11,15 +11,15 @@ helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dddedd419ca8d4a6bcdb25f67788926fbac36a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766793"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484294"
 ---
 # <a name="commit-a-version-master-data-services"></a>Durchführen eines Commits für eine Version (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52766793"
 
   Führen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einen Commit für eine Version eines Modells durch, um Änderungen an den Elementen des Modells und den Attributen zu verhindern. Versionen mit ausgeführtem Commit können nicht entsperrt werden.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
@@ -52,7 +52,7 @@ ms.locfileid: "52766793"
   
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52766793"
   
 -   [Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

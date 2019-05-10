@@ -15,17 +15,18 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678668"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095886"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server – Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, kann es sich um ADO auf Microsoft SQL Server zugreifen.
 
-**HINWEIS:**  Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Neue OLE DB-Anbieters wird aufgerufen, die [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert.
+> [!IMPORTANT]
+> Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) bleibt als veraltet markierte, und es wird nicht empfohlen, für das Entwickeln neuer Anwendungen nicht verwendet. Verwenden Sie stattdessen die neuen [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) wird die mit den neuesten Serverfunktionen aktualisiert.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
  Legen Sie zum Verbinden mit diesem Anbieter die *Anbieter* Argument für die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:

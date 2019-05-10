@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530372"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450111"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OAMethod objecttoken , methodname
   
  Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Returnvalue*, Rückgabewert in der lokalen Variablen die Methode zurückgegeben, oder geben Sie keine *Returnvalue*, gibt die Methode der Wert an den Client als einspaltiges, einzeiliges Resultset zurückgeben.  
   
- Wenn der Methodenrückgabewert ein OLE-Objekt *Returnvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
+ Wenn der Methodenrückgabewert ein OLE-Objekt *Returnvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variablen gespeichert, und dieses Objekttoken kann mit anderen gespeicherten OLE-Automatisierungsprozeduren verwendet werden.  
   
  Wenn die Methode ein Array, der Wert zurück, wenn *Returnvalue* angegeben ist, wird er auf NULL festgelegt.  
   
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  Sie können auch **Sp_OAMethod** , einen Eigenschaftswert abzurufen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
   
 ## <a name="examples"></a>Beispiele  
   
