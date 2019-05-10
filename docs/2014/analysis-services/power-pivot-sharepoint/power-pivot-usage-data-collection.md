@@ -40,7 +40,7 @@ ms.locfileid: "62748914"
   
  **Hinweis**: Überprüfen Sie Nutzung, die die Datensammlung aktiviert ist. Wechseln Sie dazu in der SharePoint-Zentraladministration zu **Überwachung** . Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Komponenten und Prozesse bei der Sammlung von Verwendungsdaten. ](../media/gmni-usagedata.gif "Komponenten und Prozesse der verwendungsdatensammlung.")  
+ ![Komponenten und Prozesse bei der Sammlung von Verwendungsdaten](../media/gmni-usagedata.gif "Komponenten und Prozesse der verwendungsdatensammlung.")  
   
 |Phase|Description|  
 |-----------|-----------------|  

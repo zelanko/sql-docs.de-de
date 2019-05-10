@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9b308459c406555c81a89203fea5de768356a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 243847e8ac2a1f3cb06a121b9ec42f556accc0e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759902"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478591"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Löschen einer Attributgruppe (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759902"
   
 -   **Hinweis** Wenn Attributgruppen vorhanden sind, werden Attribute, die keiner Attributgruppe angehören, in **Explorer**nicht angezeigt. Wenn keine Attributgruppen vorhanden sind, werden alle Attribute angezeigt.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
@@ -54,7 +54,7 @@ ms.locfileid: "52759902"
   
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

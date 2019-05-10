@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 7: DQS-Bereinigung Transformation dem Datenfluss hinzufügen | Microsoft-Dokumentation'
+title: 'Aufgabe 7: DQS-Bereinigung Transformation dem Datenfluss hinzufügen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866369"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488945"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen von DQS-Bereinigung transformieren zum Datenfluss
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
   In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Finden Sie unter **[DQS-Bereinigungstransformation](https://msdn.microsoft.com/library/ee677619.aspx)** für Weitere Informationen zur Transformation.  
   
 1.  Mit der rechten Maustaste **DQS-Bereinigung** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Cleanse Supplier Data**, und drücken Sie die **EINGABETASTE**.  

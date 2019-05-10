@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "37968182"
@@ -23,11 +23,11 @@ ms.locfileid: "37968182"
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[LÖSCHEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
-|[FÜGEN SIE IN &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
-|[WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
+|[LÖSCHEN SIE &#40;DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
+|[FÜGEN SIE IN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
+|[WÄHLEN SIE &#40;DMX&#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
 |[&#60;quelldatenabfrage&#62;](../dmx/source-data-query.md)|Fragt Datenquellen für beide **INSERT INTO** und **wählen** Anweisungen.|  
-|[UPDATE &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
+|[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   

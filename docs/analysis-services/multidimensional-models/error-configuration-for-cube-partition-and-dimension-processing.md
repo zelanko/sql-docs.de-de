@@ -1,5 +1,5 @@
 ---
-title: Fehlerkonfiguration für die Dimensionsverarbeitung von Cubes, Partition und | Microsoft Docs
+title: Fehlerkonfiguration für Cubes, Partitionen und Dimensionsverarbeitung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025547"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357351"
 ---
-# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Fehlerkonfiguration für die Dimensionsverarbeitung von Cubes, Partition und
+# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Fehlerkonfiguration für Cubes, Partitionen und Dimensionsverarbeitung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Anhand von Fehlerkonfigurationseigenschaften für Cube-, Partitions- oder Dimensionsobjekte wird bestimmt, wie der Server während der Verarbeitung auf Datenintegritätsfehler reagiert. Diese Fehler werden normalerweise durch doppelte Schlüssel, fehlende Schlüssel und NULL-Werte in einer Schlüsselspalte ausgelöst. Dabei wird der Datensatz, der den Fehler verursacht hat, der Datenbank nicht hinzugefügt. Mithilfe von Eigenschaften können Sie die nächsten auszuführenden Schritte festlegen. Standardmäßig wird die Verarbeitung beendet. Manchmal ist es während der Cubeentwicklung jedoch erwünscht, dass die Verarbeitung bei Fehlern fortgesetzt wird, z. B. um das Cubeverhalten mit importierten und sogar unvollständigen Daten zu testen.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34025547"
   
  **Reaktion des Servers auf bestimmte Fehler**  
   
-|Eigenschaft|Standardwert|Andere Werte|  
+|Eigenschaft|Standard|Andere Werte|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Tritt auf, wenn die Fehlerkonfiguration initialisiert wird.|Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.<br /><br /> Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.|  
 |**KeyNotFound**<br /><br /> Tritt auf, wenn ein Fremdschlüssel in einer Faktentabelle keinen übereinstimmenden Primärschlüssel in einer verknüpften Dimensionstabelle aufweist (beispielsweise, wenn eine Faktentabelle für Umsatzwerte einen Datensatz mit einer Produkt-ID enthält, die in der Produktdimensionstabelle nicht vorhanden ist). Dieser Fehler kann bei der Verarbeitung von Partitionen oder von Schneeflockendimensionen auftreten.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.|Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.<br /><br /> Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt. Datensätze, durch die dieser Fehler ausgelöst wird, werden standardmäßig in das unbekannte Element konvertiert, Sie können die **KeyErrorAction** -Eigenschaft jedoch auch so ändern, dass die Datensätze stattdessen verworfen werden.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34025547"
   
 -   Legen Sie **NullProcessing** = **Error** fest, um Datensätze mit NULL-Werten auszuschließen. Dadurch wird der **NullKeyNotAllowed** -Fehler erzeugt, der protokolliert und auf den Grenzwert für Schlüsselfehler angerechnet wird. Sie können die Fehlerkonfigurationseigenschaft für **NULL-Schlüssel nicht zulässig** auf **IgnoreError** festlegen, damit die Verarbeitung fortgesetzt werden kann.  
   
- NULL-Werte können für Nichtschlüsselfelder insofern problematisch sein, als MDX-Abfragen unterschiedliche Werte zurückgeben können. Das ist abhängig davon, ob NULL als 0 oder leerer Wert interpretiert wird. Aus diesem Grund bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Optionen für die Verarbeitung von NULL-Werten, mit denen Sie das gewünschte Konvertierungsverhalten vordefinieren können. Einzelheiten dazu finden Sie unter [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) -Befehl und im <xref:Microsoft.AnalysisServices.NullProcessing> .  
+ NULL-Werte können für Nichtschlüsselfelder insofern problematisch sein, als MDX-Abfragen unterschiedliche Werte zurückgeben können. Das ist abhängig davon, ob NULL als 0 oder leerer Wert interpretiert wird. Aus diesem Grund bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Optionen für die Verarbeitung von NULL-Werten, mit denen Sie das gewünschte Konvertierungsverhalten vordefinieren können.  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>Festlegen der NullProcessing-Eigenschaft für ein Dimensionsattribut  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025547"
 ##  <a name="bkmk_next"></a> Nächster Schritt  
  Entscheiden Sie, ob Fehler zu einer Beendigung der Verarbeitung führen oder ignoriert werden. Beachten Sie, dass nur der Fehler ignoriert wird. Der Datensatz, der den Fehler verursacht hat, wird nicht ignoriert und entweder verworfen oder in ein unbekanntes Element konvertiert. Datensätze, die gegen die Regeln der Datenintegrität verstoßen, werden der Datenbank niemals hinzugefügt. Die Verarbeitung wird standardmäßig beim ersten Fehler beendet. Sie können diese Einstellung jedoch ändern, indem Sie die Fehlergrenze heraufsetzen. Bei der Cubeentwicklung kann es von Nutzen sein, die Regeln für die Fehlerkonfiguration zu lockern und die Verarbeitung fortzusetzen, um Testdaten zu sammeln.  
   
- Entscheiden Sie, ob das Standardverhalten für die Verarbeitung von NULL-Werten geändert werden soll. NULL-Werte in einer Zeichenfolgenspalte werden standardmäßig als leere Werte verarbeitet, während NULL-Werte in einer numerischen Spalte als Nullen (0) verarbeitet werden. Anweisungen dazu, wie Sie die Verarbeitung von NULL-Werten für ein Attribut festlegen, finden Sie unter [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Entscheiden Sie, ob das Standardverhalten für die Verarbeitung von NULL-Werten geändert werden soll. NULL-Werte in einer Zeichenfolgenspalte werden standardmäßig als leere Werte verarbeitet, während NULL-Werte in einer numerischen Spalte als Nullen (0) verarbeitet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Protokolleigenschaften](../../analysis-services/server-properties/log-properties.md)   
- [Definieren von the Unknown Member and Null-Verarbeitung von Eigenschaften](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

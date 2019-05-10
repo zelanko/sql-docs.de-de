@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776087"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Ergänzende Lektion: dynamische Sicherheit
 
@@ -29,7 +29,7 @@ Um dynamische Sicherheit zu implementieren, verwenden Sie zwei DAX-Funktionen: [
   
 Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
@@ -150,10 +150,9 @@ In dieser Aufgabe erstellen Sie eine Benutzerrolle an. Diese Rolle umfasst einen
 9. Für die **"dimsalesterritory"** Tabelle, und geben Sie die folgende Formel:  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     In dieser Formel gibt die LOOKUPVALUE-Funktion alle Werte für die DimEmployeeSecurity [SalesTerritoryId]-Spalte, wobei der "employeesecurity [LoginId]" ist identisch mit dem aktuell angemeldeten Windows-Benutzernamen und "employeesecurity [SalesTerritoryId]" zurück, mit die identisch mit "mit" DimSalesTerritory [SalesTerritoryId].  
