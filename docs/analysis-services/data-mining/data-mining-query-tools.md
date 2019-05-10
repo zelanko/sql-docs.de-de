@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147945"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449950"
 ---
 # <a name="data-mining-query-tools"></a>Data Mining-Abfragetools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147945"
 |Transformation für Data Mining-Abfragen|Führt unter Verwendung von Daten, die von einer Datenflussquelle bereitgestellt wurden, eine Vorhersageabfrage innerhalb eines Datenflusses aus.<br /><br /> Der Task-Editor stellt den Generator für Vorhersageabfragen und ein Textfeld für die manuelle Bearbeitung der DMX-Abfrage zur Verfügung.<br /><br /> Die Transformation kann nur zum Erstellen von Abfragen verwendet werden, die Daten im Datenfluss verwenden, d. h. Abfragen, die die PREDICTION JOIN-Syntax verwenden. Diese Komponente kann nicht zum Ausführen von Inhaltsabfragen oder anderen Arten von DMX-Anweisungen verwendet werden.|  
   
 ##  <a name="bkmk_API"></a> Anwendungsprogrammierschnittstelle  
- Sie können benutzerdefinierte Anwendungen, durch die Abfragen für Data Mining-Modelle ausgeführt werden, unter Verwendung verschiedener Programmiersprachen in Verbindung mit Serverprotokollen wie OLE DB oder dem ADOMD-Client von Analysis Services erstellen. Weitere Informationen finden Sie unter [Data Mining-Programmierung](../../analysis-services/data-mining-programming.md).  
+ Sie können benutzerdefinierte Anwendungen, durch die Abfragen für Data Mining-Modelle ausgeführt werden, unter Verwendung verschiedener Programmiersprachen in Verbindung mit Serverprotokollen wie OLE DB oder dem ADOMD-Client von Analysis Services erstellen. Weitere Informationen finden Sie unter [Data Mining-Programmierung](../../analysis-services/data-mining/data-mining-programming.md).  
   
  XMLA bildet jedoch das zugrunde liegende Nachrichtenformat für alle Interaktionen mit einem Analysis Services-Server. Abfragen innerhalb einer XMLA-Nachricht werden unterschiedlich dargestellt, je nachdem, ob Sie eine Vorhersageabfrage auf Grundlage von DMX, eine Inhaltsabfrage oder eine Abfrage senden, von der Modellmetadaten mithilfe der Data Mining-Schemarowsets abgerufen werden.  
   

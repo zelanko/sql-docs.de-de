@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644805"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099956"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  Wenn *account_name* und **members** angegeben werden, wird eine Liste der Gruppenmitglieder der nächsten Ebene zurückgegeben. Ist *account_name* der Name einer lokalen Gruppe, kann die Liste lokale Benutzer, Domänenbenutzer und Gruppen enthalten. Wenn *account_name* ein Domänenkonto ist, besteht die Liste aus Domänenbenutzern. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine Verbindung mit dem Domänencontroller herstellen, um Informationen zu Gruppenmitgliedschaften abzurufen. Falls der Server keine Verbindung mit dem Domänencontroller herstellen kann, werden keine Informationen zurückgegeben.  
   
- **xp_logininfo** gibt nur Informationen von globalen Active Directory-Gruppen zurück und nicht für universelle Gruppen.  
+ **Xp_logininfo** gibt nur Informationen von globalen Active Directory-Gruppen, nicht für universelle Gruppen zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitgliedschaft in der festen Serverrolle **sysadmin** bzw. Mitgliedschaft in der festen Datenbankrolle **public** in der **master** -Datenbank mit erteilter EXECUTE-Berechtigung erforderlich.  

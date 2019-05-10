@@ -1,6 +1,6 @@
 ---
-title: Analysis Services-tabellarische Modellierung (Kompatibilitätsgrad 1200) | Microsoft-Dokumentation
-ms.date: 05/07/2019
+title: Analysis Services-Internetverkäufe Tutorial (Kompatibilitätsstufe 1200) | Microsoft-Dokumentation
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403352"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503622"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>Tabellarische Modellierung (Kompatibilitätsgrad 1200)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Adventure Works Internet Sales-Tutorial (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dieses Lernprogramm enthält Lektionen zum Erstellen Sie eines tabellarischen Analysis Services-Modells mit den [Kompatibilitätsgrad 1200](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) mit [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), und Ihr Modell in einer Analysis Services bereitstellen. lokal oder in Azure.  
@@ -98,7 +98,7 @@ Dieses Lernprogramm enthält auch zusätzliche Lektionen. Die Themen in diesem A
 |[Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 Minuten| 
 
   
-## <a name="next-step"></a>Nächster Schritt  
+## <a name="next-steps"></a>Nächste Schritte  
 Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
   
   

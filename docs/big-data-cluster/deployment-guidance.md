@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472039"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099485"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -133,12 +133,12 @@ Es ist auch möglich, eine eigene Bereitstellungskonfigurationsdatei anzupassen.
 
 ## <a id="env"></a> Umgebungsvariablen
 
-Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für die Bereitstellung gespeichert werden.
+Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für die Bereitstellung gespeichert werden. Beachten Sie, dass Docker-Einstellungen, mit Ausnahme von Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
 
 | Umgebungsvariable | Description |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | Die private Registrierung, in dem die Bilder verwendet, um die Bereitstellung des Clusters gespeichert sind. |
-| **DOCKER_REPOSITORY** | Das private Repository in der oben genannten Registrierung, in dem Bilder gespeichert sind. |
+| **DOCKER_REGISTRY** | Die private Registrierung, in dem die Bilder verwendet, um die Bereitstellung des Clusters gespeichert sind. Verwendung *Private-repo.microsoft.com* für die Ducration der geschlossene öffentliche Vorschauversion.|
+| **DOCKER_REPOSITORY** | Das private Repository in der oben genannten Registrierung, in dem Bilder gespeichert sind. Verwendung *Mssql-Private-Preview* für die Dauer der geschlossene öffentliche Vorschauversion.|
 | **DOCKER_USERNAME** | Der Benutzername für die containerimages zugreifen, falls sie in einem privaten Repository gespeichert sind. |
 | **DOCKER_PASSWORD** | Das Kennwort für den Zugriff auf das obige privaten Repository. |
 | **DOCKER_IMAGE_TAG** | Die Bezeichnung, die Bilder zu kennzeichnen. Standardmäßig **neueste**, aber es wird empfohlen, unter Verwendung des Tags, die für die Version zu Versionsprobleme mit Inkompatibilität vermieden. |
@@ -152,12 +152,12 @@ Diese Umgebungsvariablen festgelegt werden müssen, vor dem Aufruf **Mssqlctl Cl
 Das folgende Beispiel zeigt, wie Sie die Umgebungsvariablen für Linux (Bash) und Windows (PowerShell) festgelegt wird:
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -166,10 +166,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

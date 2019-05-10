@@ -2,26 +2,26 @@
 title: Führen Sie Notebooks in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: In diesem Artikel wird erläutert, wie zum Ausführen von Jupyter-Notebooks in Azure Data Studio, die mit einer SQL Server-2019 big Data-Cluster verbunden wird.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859971"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462049"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie der Notebook-Umgebung in Azure Data Studio starten und zum Starten, erstellen Ihre eigenen Notebooks. Außerdem wird veranschaulicht, Notebooks verwenden unterschiedlicher Kernel zu schreiben.
+In diesem Artikel wird beschrieben, wie zum Starten der Notebook-Umgebung in der neuesten Version von [ **Studio für Azure Data** ](../azure-data-studio/download.md) und zum Starten, erstellen Ihre eigenen Notebooks. Außerdem wird veranschaulicht, Notebooks verwenden unterschiedlicher Kernel zu schreiben.
 
 ## <a name="connect-to-sql-server"></a>Verbindung mit SQL Server herstellen
 
@@ -48,7 +48,7 @@ Es gibt mehrere Möglichkeiten, um ein neues Notebook zu starten.
 
 SQL-Kernel wird von der Notebook-Installation in Studio für Azure Data nativ unterstützt. Wenn Sie eine SQL-Entwickler sind und Notebooks verwenden möchten, wäre dies der gewählten Kernel. 
 
-Der SQL-Kernel kann auch verwendet werden, für die Verbindung mit PostgreSQL-Server-Instanzen. Wenn Sie eine PostgreSQL-Entwickler sind und mit Ihrem PostgreSQL-Server herstellen möchten, laden die [ **PostgreSQL Erweiterung** ](../azure-data-studio/postgres-extension.md) im Studio für Azure Data Marketplace-Erweiterung.
+Der SQL-Kernel kann auch verwendet werden, für die Verbindung mit PostgreSQL-Server-Instanzen. Wenn Sie eine PostgreSQL-Entwickler sind, und die Notebooks auf Ihrem PostgreSQL-Server eine Verbindung herstellen möchten, klicken Sie dann Herunterladen der [ **PostgreSQL Erweiterung** ](../azure-data-studio/postgres-extension.md) im Studio für Azure Data Marketplace-Erweiterung und dann Starten Sie **neues Notizbuch** , eine Notebook-Instanz für die Verbindung mit der PostgreSQL-Server öffnen.
 
 ![Verbindung mit PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ SQL-Kernel, um die Verbindung mit PostgreSQL-Server-Instanz
 Abfrageergebnisse
 
 ![Abfrageergebnisse](media/notebooks-guidance/pgsql-cell-results.png)
+
+Wenn Sie möchten, zum Hinzufügen von Text in Zellen zu Ihrer vorhandenen angefügten Notebook an den SQL-Kernel, klicken Sie auf die **+ Text** Befehl in der Symbolleiste.
+
+![Notebook-Symbolleiste](media/notebooks-guidance/notebook-toolbar.png)
+
+Zelle ändert Bearbeitungsmodus, und geben Sie nun Markdown und Sie sehen die Vorschau zur gleichen Zeit
+
+![Markdown-Zelle](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Klicken außerhalb der Textzelle wird den markdowntext angezeigt.
+
+![Markdowntext](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Konfigurieren von Python-Notebooks
 
@@ -119,9 +132,27 @@ Notebooks in Azure Data Studio geöffnet sind, standardmäßig **vertrauenswürd
 
 Wenn Sie ein Notebook von einer anderen Quelle öffnen, wird es in geöffnet **nicht vertrauenswürdige** Modus aus, und klicken Sie dann Sie stellen **vertrauenswürdige**.
 
+### <a name="run-cells"></a>Führen Sie Zellen
+Wenn Sie verwenden möchten, führen Sie alle Zellen im Notebook, und klicken auf die **führen Sie Zellen** Schaltfläche auf der Symbolleiste.
+
+![Markdowntext](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Ergebnisse löschen
+
+Wenn Sie die Ergebnisse aller ausgeführten Zellen im Notebook löschen möchten, klicken Sie auf die **Ergebnisse löschen** Schaltfläche auf der Symbolleiste.
+
+![Markdowntext](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Speichern
 
-Sie können das Notebook durch Speichern **STRG + S** oder durch Klicken auf die **Datei speichern**, **Datei speichern unter...**  und **Datei Alles speichern** Befehle über das Menü Datei und **Datei: Speichern Sie** Befehle in der befehlspalette den Befehl eingegeben wurden.
+Um das Notebook führen Sie einen der folgenden zu speichern.
+
+- Wählen Sie STRG + S
+- Klicken Sie auf **Datei** > **speichern**
+- Klicken Sie auf **Datei** > **speichern unter...**
+- Klicken Sie auf **Datei** > **alle speichern** 
+- Geben Sie in der befehlspalette **Datei: Speichern** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark kernel
 

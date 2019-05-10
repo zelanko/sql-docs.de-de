@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143074"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489104"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
   In dieser Aufgabe konvertieren Sie die **Zustand** Attribut der **Lieferanten** Entität als ein **domänenbasiertes Attribut**. Nach dem Konfigurieren der State-Attribut, um einen domänenbasierten werden, und veröffentlichen es in MDS, eine neue Entität mit dem Namen **Zustand** auf MDS-Server mit allen Werten in der Spalte erstellt werden und die **Zustand** Attribut der **Lieferanten** Entität gefüllt mit Werten aus der **Zustand** Entität. Jetzt die **Lieferanten** Modell sollten zwei Entitäten haben: **Lieferanten** und **Zustand** , in denen die **Zustand** Attribut der **Lieferanten** Entität ist ein domänenbasiertes Attribut, von denen abhängt **Zustand** Entität.  
