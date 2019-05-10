@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215819"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489605"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -94,7 +94,7 @@ Wie in Abbildung 1 im vorherigen Abschnitt gezeigt, enthält die in diesem Artik
 
 WSFC ist ein Feature, das die Hochverfügbarkeit von Anwendungen und Diensten verbessert. Es besteht aus einer Gruppe unabhängiger Windows Server-Instanzen, auf denen der Microsoft-Failoverclusterdienst ausgeführt wird. Die Windows Server-Instanzen (oder Knoten, wie sie manchmal genannt werden) sind miteinander verbunden, sodass sie kommunizieren können und so die Fehlererkennung möglich machen. Der WSFC stellt die Fehlererkennung und Failoverfunktionen bereit. Wenn ein Knoten oder Dienst im Cluster einen Fehler ausgibt, wird der Fehler erkannt, und ein anderer Knoten stellt automatisch oder manuell die auf dem fehlgeschlagenen Knoten gehosteten Dienste bereit. So erfahren Benutzer nur eine minimale Unterbrechung des Diensts, und die Verfügbarkeit des Diensts wird verbessert.  
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 Das Windows Server-Betriebssystem wird auf allen Instanzen installiert, und alle Updates werden gepatcht.
 
@@ -213,7 +213,7 @@ Verfügbarkeitsgruppen verbessern die hohe Verfügbarkeit auf Datenbankebene. Di
 Failoverclusterinstanzen verbessern die Hochverfügbarkeit auf Instanzebene. Der SQL Server-Dienst sowie die damit verbundenen Dienste sind als Ressourcen im WSFC registriert. Die Failoverclusterinstanz-Lösung erfordert zudem symmetrischen freigegebenen Festplattenspeicher, z.B. SAN- oder SMB-Dateifreigaben, die für alle Knoten im WFC-Cluster verfügbar sein müssen.
 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 -   Installieren Sie SQL Server auf allen Knoten. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -317,9 +317,9 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
 8.  Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
-    A.  Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
+    a.  Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
 
-    B.  Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
+    b.  Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
 
     c.  Geben Sie den Standard-SQL-Port „1433“ im Textfeld **Port** ein.
 
@@ -394,7 +394,7 @@ Die in diesem Artikel vorgestellte Lösung erfordert nur, dass die Datenbank des
 
     Weitere Informationen zu Master Data Services, finden Sie unter [Master Data Services](https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds).
 
-## <a name="conclusion"></a>Fazit
+## <a name="conclusion"></a>Schlussbemerkung
 
 In diesem Whitepaper wird erläutert, wie die Master Data Services-Back-End-Datenbank basierend auf der SQL Server Always On-Verfügbarkeitsgruppe konfiguriert wird. Diese Konfiguration bietet hohe Verfügbarkeit und Notfallwiederherstellung für die Master Data Services-Back-End-Datenbank. Um diese Konfiguration zu implementieren, müssen Sie den Windows Server-Failovercluster, die SQL Server Always On-Verfügbarkeitsgruppe und Master Data Services installieren und konfigurieren.
 

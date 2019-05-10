@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Festlegen von Domänenregeln | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Festlegen von Domänenregeln | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753231"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489075"
 ---
-# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
+# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
   In dieser Aufgabe erstellen Sie eine Regel für die **Contact Email** Domäne zu überprüfen, ob die e-Mail-Adresse endet **@adventure-works.com**. Finden Sie unter [Erstellen einer Domänenregel](https://msdn.microsoft.com/library/hh510397.aspx) Weitere Informationen auf der Seite.  
   
 1.  Klicken Sie auf **Contact Email** in die **Domänenliste**.  

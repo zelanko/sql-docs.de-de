@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Hinzufügen eines Datenflusstasks | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Hinzufügen eines Datenflusstasks | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753002"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489143"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
+# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
   In dieser Aufgabe fügen Sie der Ablaufsteuerung des SSIS-Pakets einen Datenflusstask hinzu.  
   
 1.  Drag & drop **Data Flow Task** aus **SSIS-Toolbox** auf die **Ablaufsteuerung** Registerkarte im SSIS-Designer. Wenn Sie nicht sehen die **SSIS-Toolbox**, klicken Sie auf eine beliebige Stelle der **Control Flow** auf **SSIS** auf der Menüleiste, und klicken Sie auf **SSIS-Toolbox**.  

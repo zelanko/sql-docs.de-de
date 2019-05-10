@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt | Microsoft-Dokumentation'
+title: 'Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866776"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489094"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt
   In dieser Aufgabe importieren Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen. Finden Sie unter [Importieren von Bereinigungsprojektwerten in eine Domäne](https://msdn.microsoft.com/library/hh479581.aspx) Weitere Informationen. Sie exportieren auch die Wissensdatenbank in eine DQS-Datei vor dem Veröffentlichen der aktualisierten **Lieferanten** Knowledge Base.  
   
 1.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **nach rechts weisenden Pfeil** neben **Lieferanten** unter **zuletzt verwendete Wissensdatenbank** , und klicken Sie auf **Domänenverwaltung**.  

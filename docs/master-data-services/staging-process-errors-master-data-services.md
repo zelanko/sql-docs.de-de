@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766132"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488020"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Fehler des Stagingprozesses (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "52766132"
 |210047|Das Element kann kein gleichgeordnetes Element von "Nicht verwendet" sein.|Dieser Fehler tritt auf, wenn **RelationshipType** = **2** (gleichgeordnet) und entweder **ParentCode** oder **ChildCode** **Unused**sind. Elemente können nur untergeordnete Elemente des Knotens "Nicht verwendet" sein.|Beziehung|  
 |210048|**ParentCode** und **ChildCode** können nicht identisch sein.|Der **ParentCode** -Wert ist identisch mit dem **ChildCode** -Wert. Diese Werte müssen unterschiedlich sein.|Beziehung|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen von Fehlern, die während des Stagings auftreten &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

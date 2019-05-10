@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8b4906adc21ca31f7dc474457ce0ed1a1e875aa5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2b17e400d71df77fb52d20c157c8394c61673b2c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752002"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488193"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Serverkonfiguration (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52752002"
   
 ## <a name="server-configuration"></a>Serverkonfiguration  
   
-|Steuerelementname|und Beschreibung|  
+|Steuerelementname|Description|  
 |------------------|-----------------|  
 |**Internetinformationsdienste (IIS)**|Zeigt die Version der Internetinformationsdienste (IIS) an, die auf dem lokalen Computer installiert ist. IIS, Version 7.0 oder höher, ist erforderlich, um den Konfigurations-Manager für Master Data Services zu verwenden.|  
 |**Die MDS-Produktversion**|Zeigt die Produktversion von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]an.|  

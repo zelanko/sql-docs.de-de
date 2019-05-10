@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut erstellt wird, mithilfe von Master Data Manager | Microsoft-Dokumentation'
+title: 'Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut erstellt wird, mithilfe von Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866160"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488953"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wurde
   In dieser Aufgabe überprüfen Sie mit **Master Data Manager**, ob die Entität **Bundesland** in **MDS** erstellt wird und ob das Attribut **Bundesland** der Entität **Lieferant** ein domänenbasiertes Attribut ist, das von der Entität **Bundesland** abhängig ist.  
   
 1.  Wechseln Sie zur **Master Data Manger**-Webanwendung.  
