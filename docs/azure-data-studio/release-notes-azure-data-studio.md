@@ -2,21 +2,21 @@
 title: Versionshinweise
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.openlocfilehash: d6be7d1f443884ffd37be472ec86fa417de44fcf
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143709"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105862"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
