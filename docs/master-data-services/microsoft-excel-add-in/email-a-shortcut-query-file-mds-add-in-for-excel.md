@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419301"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488077"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Senden einer Shortcutabfragedatei (MDS-Add-In für Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52419301"
 
   Senden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] eine Shortcutabfragedatei per E-Mail an jemanden, wenn Sie sicherstellen möchten, dass diese Person mit den gleichen Daten wie Sie arbeitet. Sie sollten Abfragen freigeben, statt das Arbeitsblatt zu speichern und zu senden.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Outlook 2010 oder höher muss installiert sein.  
@@ -37,11 +37,11 @@ ms.locfileid: "52419301"
   
 2.  Klicken Sie in der Gruppe **Speichern und senden** auf **Abfrage senden**. Eine E-Mail wird geöffnet, und die Shortcutabfragedatei wird angefügt.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   Um die Shortcutabfragedatei zu öffnen, muss beim Empfänger der E-Mail MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] installiert sein. Der Empfänger kann auf die Datei doppelklicken, um sie zu öffnen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

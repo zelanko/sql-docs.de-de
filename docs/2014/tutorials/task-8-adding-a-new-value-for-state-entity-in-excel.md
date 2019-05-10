@@ -1,5 +1,5 @@
 ---
-title: "Aufgabe 8: Hinzufügen eines neuen Werts für die Entität ' State ' in Excel | Microsoft-Dokumentation"
+title: "Aufgabe 8: Hinzufügen eines neuen Werts für die Entität ' State ' in Excel | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866504"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489708"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität ' State ' in Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität „State“ in Excel
   In dieser Aufgabe fügen Sie einen Wert für die Entität "State" in Excel hinzu und veröffentlichen die Änderung auf dem MDS-Server.  
   
 1.  Hinzufügen einer **Arbeitsblatt** in Excel, indem Sie auf die neue Registerkarte am unteren Rand.  

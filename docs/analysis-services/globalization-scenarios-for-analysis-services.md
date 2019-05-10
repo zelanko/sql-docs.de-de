@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659695"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357405"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Globalisierungsszenarien für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659695"
 |**Funktion**|**Tabellarisch**|**Multidimensional**|  
 |[Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Vom Betriebssystem geerbt.|Geerbt, jedoch mit der Möglichkeit, Sprache und Sortierung für die wichtigsten Objekte in der Modellhierarchie zu überschreiben.|  
 |Umfang der Übersetzungsunterstützung|Beschriftungen und Beschreibungen.|Übersetzungen können für Objektnamen, Beschriftungen, Bezeichner und Beschreibungen erstellt werden und können zudem in jeder Unicode-Sprache und jedem Unicode-Skript vorliegen. Dies gilt auch, wenn die Tools und die Umgebung in einer anderen Sprache sind. Beispiel: In einer Entwicklungsumgebung, die die englische Sprache und eine lateinische Sortierung im gesamten Stapel verwendet, können Sie in Ihr Modell ein Objekt einschließen, das kyrillische Zeichen im Namen verwendet.|  
-|Implementieren der Übersetzungsunterstützung|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Übersetzungsdateien generieren, die Sie ausfüllen und dann zurück in das Modell importieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in Tabellenmodellen &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] die Übersetzungen für die Beschriftung, Beschreibung und Kontotypen für Cubes und Measures, Dimensionen und Attribute definieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in mehrdimensionalen Modellen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Eine Lektion zur Verwendung dieses Features finden Sie im [Lektion 9: Definieren von Perspektiven und Übersetzungen](../analysis-services/lesson-9-defining-perspectives-and-translations.md) von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.|  
+|Implementieren der Übersetzungsunterstützung|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Übersetzungsdateien generieren, die Sie ausfüllen und dann zurück in das Modell importieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in Tabellenmodellen &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Erstellen Sie die Übersetzungen, indem Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] die Übersetzungen für die Beschriftung, Beschreibung und Kontotypen für Cubes und Measures, Dimensionen und Attribute definieren.<br /><br /> Einzelheiten finden Sie unter [Übersetzungen in mehrdimensionalen Modellen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). |  
 |Währungsumrechnung|Nicht verfügbar.|Die Währungsumrechnung erfolgt über spezielle MDX-Skripts, die Measures mit Währungsdaten konvertieren. Sie können den Business Intelligence-Assistenten in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] verwenden, um ein MDX-Skript zu generieren, das eine Kombination aus Daten und Metadaten aus Dimensionen, Attributen und Measuregruppen verwendet, um Measures mit Währungsdaten zu konvertieren. Siehe [Währungsumrechnungen &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Siehe auch  

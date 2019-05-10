@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 1: Erstellen eine Wissensdatenbank und Domänen | Microsoft-Dokumentation'
+title: 'Aufgabe 1: Erstellen eine Wissensdatenbank und Domänen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822189"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481244"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen eine Wissensdatenbank und Domänen
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen von Wissensdatenbanken und Domänen
   In dieser Aufgabe erstellen Sie die **Lieferanten** Wissensdatenbank und Domänen, die für die Bereinigung und Abgleich von Daten verwendet wird, um Duplikate zu entfernen.  
   
 1.  Starten Sie **Data Quality-Client**. Klicken Sie auf **starten**, zeigen Sie auf **Programme**, klicken Sie auf **Microsoft SQL Server 2012**, klicken Sie auf **Data Quality Services**, und klicken Sie dann auf  **Data Quality-Client**.  
