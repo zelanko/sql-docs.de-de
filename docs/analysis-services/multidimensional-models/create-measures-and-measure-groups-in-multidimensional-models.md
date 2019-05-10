@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 357b7d9e6ec63de52c5a7128b60330ce53943251
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241968"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357370"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59241968"
   
 |||  
 |-|-|  
-|Cube-Assistent|Führen Sie den Cube-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aus, um einen Cube zu erstellen.<br /><br /> Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und wählen Sie **Neuer Cube** aus. Hilfe zu diesen Schritten finden Sie unter [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> Wenn Sie einen Cube anhand von Tabellen aus einem vorhandenen Data Warehouse erstellen, materialisieren sich Definitionen für die Measures und Measuregruppen als Teil des Erstellungsprozesses des Cube. Im Assistenten können Sie auswählen, welche Fakten und Faktentabellen als Grundlage für das Measure und Measuregruppenobjekte im Cube verwendet werden sollen.|  
+|Cube-Assistent|Führen Sie den Cube-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aus, um einen Cube zu erstellen.<br /><br /> Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und wählen Sie **Neuer Cube** aus. Hilfe zu diesen Schritten finden Sie unter [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> Wenn Sie einen Cube anhand von Tabellen aus einem vorhandenen Data Warehouse erstellen, materialisieren sich Definitionen für die Measures und Measuregruppen als Teil des Erstellungsprozesses des Cube. Im Assistenten können Sie auswählen, welche Fakten und Faktentabellen als Grundlage für das Measure und Measuregruppenobjekte im Cube verwendet werden sollen.|  
 |Dialogfeld "Neues Measure"|Vorausgesetzt, dass der Cube bereits in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]vorhanden ist, doppelklicken Sie auf den Cubenamen im Projektmappen-Explorer, um ihn im Cube-Designer zu öffnen. Klicken Sie im Bereich der Measures mit der rechten Maustaste auf den obersten Knoten, um eine neue Measuregruppe oder neue Measures zu erstellen, indem Sie eine Quelltabelle, eine Spalte und einen Aggregationstyp angeben. Bei diesem Ansatz müssen Sie die Aggregationsmethode aus einer festen Liste mit vorgefertigten Funktionen auswählen. Unter [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) finden Sie eine Erläuterung der häufiger verwendeten Aggregationen.|  
 |berechnetes Element|Berechnete Elemente fügen einem Cube in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Flexibilität und Analysefunktionen hinzu, da Sie steuern können, wann und wie sie erstellt werden. Manchmal benötigen Sie ein Measure nur vorübergehend für die Dauer einer Benutzersitzung oder in Management Studio als Teil einer Untersuchung.<br /><br /> Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]die Registerkarte Berechnungen, um ein neues berechnetes Element zu erstellen.<br /><br /> Wählen Sie diesen Ansatz, um ein Measure auf Grundlage eines MDX-Ausdrucks zu erstellen. Finden Sie unter folgenden Themen Weitere Informationen: [Erstellen von Measures in MDX](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [Berechnungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Berechnungen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) und [MDX-Skripts Grundlagen &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX oder XMLA|In SQL Server Management Studio können Sie MDX oder XMLA ausführen, um eine Datenbank zu ändern und ein neues berechnetes Measure einzubeziehen. Dieser Ansatz eignet sich für Ad-hoc-Tests von Daten, nachdem die Projektmappe auf einem Server bereitgestellt wurde. Siehe [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  
