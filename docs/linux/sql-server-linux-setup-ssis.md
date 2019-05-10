@@ -1,7 +1,7 @@
 ---
 title: Installieren von SQL Server Integration Services unter Linux | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt, wie Sie SQL Server Integration Services (SSIS) unter Linux zu installieren.
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 46833459abec325c8df0baed27a1831d5ad9c347
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634138"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486363"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
 

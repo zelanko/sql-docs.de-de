@@ -1,7 +1,7 @@
 ---
 title: Einschränkungen und bekannte Probleme für SSIS unter Linux | Microsoft-Dokumentation
 description: In diesem Artikel wird beschrieben, Einschränkungen und bekannte Probleme für SQL Server Integration Services (SSIS) auf Linux-Computern
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: cb186426441092ddfcb350d6c8ad6c5e65a972d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a2918e2461fec5cdbf0261679c28cfb1693300
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839988"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487768"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannte Probleme für SSIS unter Linux
 
@@ -55,7 +55,7 @@ Die folgenden integrierten Integration Services-Komponenten werden unter Linux u
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>Ablaufsteuerungstasks, die mit Einschränkungen unterstützt
 
-| Task | Einschränkungen |
+| Aufgabe | Einschränkungen |
 |------------|---|
 | Task Prozess ausführen | Nur unterstützt in-Process-Modus. |
 | Task "Dateisystem" | Die *verschieben Directory* und *Festlegen von Dateiattributen* Aktionen werden nicht unterstützt. |

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e05fe2b5001ce54681c8600f943f4fdb361ede5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 99e2008d7e49605b749ea4d2a768e217fafa2d68
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749282"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478231"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Löschen von Berechtigungen für Modellobjekte (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52749282"
 
   Löschen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Modellobjektberechtigungen, um erfolgte Zuweisungen zu entfernen.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
@@ -57,7 +57,7 @@ ms.locfileid: "52749282"
   
 9. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503740"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357526"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Vorgehensweise: Erstellen von MDX-Abfragen in R mit olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
 
 In den folgenden Beispielen basieren auf dem AdventureWorks Data Marts und Cubes-Projekt, da dieses Projekt ist allgemein verfügbar in mehreren Versionen, einschließlich der Sicherungsdateien, die mit Analysis Services problemlos wiederhergestellt werden können. Wenn Sie nicht über einen vorhandenen Cube verfügen, erhalten Sie einen Beispielcube mithilfe einer der folgenden Optionen:
 
-+ Erstellen Sie den Cube, der verwendet wird, in diesen Beispielen im Analysis Services Tutorial bis zur Lektion 4: [Erstellen eines OLAP-Cubes](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Erstellen Sie den Cube, der verwendet wird, in diesen Beispielen im Analysis Services Tutorial bis zur Lektion 4: [Erstellen eines OLAP-Cubes](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Einen vorhandenen Cube als Sicherung herunterladen und in einer Instanz von Analysis Services wiederhergestellt werden kann. Diese Website bietet beispielsweise einen vollständig verarbeiteten Cube im ZIP-Format: [AdventureWorks mehrdimensionale Modelle SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrahieren Sie die Datei, und klicken Sie dann in Ihrer SSAS-Instanz wiederherstellen. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), oder [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

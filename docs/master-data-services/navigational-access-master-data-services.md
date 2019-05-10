@@ -11,15 +11,15 @@ helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 670377e2a2a40c14fcdde2cc8f5691c867d705ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 942fe720fb4ba0e1dc65f2b6f918b3e5c1f985a8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813092"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488050"
 ---
 # <a name="navigational-access-master-data-services"></a>Navigationszugriff (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52813092"
   
  Wenn Sie Auflistungen Berechtigungen zuweisen, können Sie den Namen, Code, die Beschreibung und Besitzer-ID lesen oder aktualisieren. Sie können auch den Modellnamen lesen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

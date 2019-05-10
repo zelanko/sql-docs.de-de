@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028082"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488299"
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
 
@@ -46,15 +46,15 @@ ms.locfileid: "56028082"
   
     1.  **Öffnen:** Klicken Sie auf diese Option, um die Wissensdatenbank in der Aktivität zu öffnen, die im Bereich **Aktivität auswählen** ausgewählt ist.  
   
-    2.  **Entsperren:** Sie können die Wissensdatenbank entsperren, wenn Sie die Wissensdatenbank im Rahmen der Domänenverwaltungs-, Wissensermittlungs- und Abgleichsrichtlinienaktivitäten bearbeitet und die Wissensdatenbank geschlossen haben. Wenn Sie die Wissensdatenbank entsperren, kann sie von einer anderen Person geöffnet und bearbeitet werden. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet. Weitere Informationen finden Sie unter [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    2.  **Entsperren:** Sie können die Wissensdatenbank entsperren, wenn Sie die Benutzer sind, die auf die Wissensdatenbank im Rahmen der domänenverwaltungs-, wissensermittlungs- und abgleichsrichtlinienaktivitäten arbeitete und geschlossen haben. Wenn Sie die Wissensdatenbank entsperren, kann sie von einer anderen Person geöffnet und bearbeitet werden. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet. Weitere Informationen finden Sie unter [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Arbeit verwerfen:** Klicken Sie auf diese Option, wenn die Wissensdatenbank bearbeitet wird, wie durch einen Eintrag im Feld „Status“ in der Tabelle angezeigt wird. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet oder wenn die Wissensdatenbank gesperrt ist. Weitere Informationen finden Sie unter [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    3.  **Arbeit verwerfen:** Klicken Sie auf die Wissensdatenbank in einem Zustand bearbeitet, wie durch einen Eintrag im Feld "Status" in der Tabelle angezeigt. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet oder wenn die Wissensdatenbank gesperrt ist. Weitere Informationen finden Sie unter [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Umbenennen:** Klicken Sie auf diese Option, um das Wissensdatenbankfeld der Tabelle für die Wissensdatenbank, auf die Sie mit der rechten Maustaste geklickt haben, bearbeiten zu können. Ändern Sie den Namen, und klicken Sie dann auf diese Wissensdatenbank und eine andere Wissensdatenbank in dem Feld, um die Namensänderung zu bestätigen.  
+    4.  **Umbenennen:** Klicken Sie auf diese Option, um das Feld "Wissensdatenbank" der Tabelle für die Wissensdatenbank machen, die Sie mit auf der rechten Maustaste. Ändern Sie den Namen, und klicken Sie dann auf diese Wissensdatenbank und eine andere Wissensdatenbank in dem Feld, um die Namensänderung zu bestätigen.  
   
-    5.  **Löschen:** Klicken Sie auf diese Option, um die Wissensdatenbank aus der DQS_MAIN-Datenbank auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] zu entfernen.  
+    5.  **Löschen:** Klicken Sie auf, um die Wissensdatenbank aus der DQS_MAIN-Datenbank zu entfernen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-    6.  **Eigenschaften:** Klicken Sie auf diese Option, um die Eigenschaften für die Datenbank im schreibgeschützten Modus anzuzeigen.  
+    6.  **Eigenschaften:** Klicken Sie zum Anzeigen von Eigenschaften für die Datenbank in einem schreibgeschützten Modus angezeigt.  
   
         1.  **Quell-Wissensdatenbank**: Wissensdatenbank, auf der diese Datenbank basiert. Diese Eingabe ist optional.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "56028082"
   
         3.  **Ist gesperrt:** Der Wert ist **True**, wenn die Wissensdatenbank gesperrt wurde, und **False**, wenn sie nicht gesperrt wurde.  
   
-        4.  **Enthält nicht veröffentlichten Inhalt:** Der Wert ist „True“, wenn die Wissensdatenbank Inhalt enthält, der nicht durch eine Veröffentlichung gespeichert wurde, und „False“, wenn dies nicht der Fall ist.  
+        4.  **Enthält nicht veröffentlichten Inhalt:** True, wenn die Wissensdatenbank Inhalt enthält, die nicht von der Veröffentlichung, und False, wenn nicht gespeichert wurde  
   
         5.  **Gesperrt von**: Name des Benutzers, der die Wissensdatenbank geschlossen und dabei gesperrt hat.  
   

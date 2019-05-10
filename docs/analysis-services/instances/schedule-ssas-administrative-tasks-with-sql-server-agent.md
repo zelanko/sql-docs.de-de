@@ -1,5 +1,5 @@
 ---
-title: Planen von administrativen Tasks in SSAS mit SQL Server-Agent | Microsoft Docs
+title: Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019117"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357513"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "34019117"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Der SQL Server-Agent-Dienst muss installiert sein.  
   
- Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. Das Standardkonto für SQL Server-Agent ist NT Service\SQLAgent$\<Instanzname >. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. Das Standardkonto für den SQL Server-Agent ist NT Service\SQLAgent$\<Instanzname >. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung](../../analysis-services/install-sample-data-and-projects.md).  
+ Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung](../multidimensional-tutorial/install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Beispiel 1: Verarbeiten einer Dimension in einem geplanten Task  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Beispiel 1: Verarbeiten einer Dimension in einen geplanten task  
  In diesem Beispiel wird veranschaulicht, wie Sie einen Auftrag erstellen und planen, um eine Dimension zu verarbeiten.  
   
- Ein geplanter [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task ist ein in einem SQL Server-Agent-Auftrag eingebettetes XMLA-Skript. Dieser Auftrag ist geplant, d. h. er wird zu den festgelegten Zeiten und mit der festgelegten Häufigkeit ausgeführt. SQL Server-Agent ist Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], daher benötigen Sie zum Erstellen und Planen von administrativen Tasks sowohl das Datenbankmodul als auch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Ein geplanter [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task ist ein in einem SQL Server-Agent-Auftrag eingebettetes XMLA-Skript. Dieser Auftrag ist geplant, d. h. er wird zu den festgelegten Zeiten und mit der festgelegten Häufigkeit ausgeführt. SQL Server-Agent ist Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], daher benötigen Sie zum Erstellen und Planen von administrativen Tasks sowohl die Datenbank-Engine als auch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ###  <a name="bkmk_CreateScript"></a> Erstellen eines Skripts zum Verarbeiten einer Dimension in einem SQL Server-Agent-Auftrag  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34019117"
   
 ###  <a name="bkmk_ProcessJob"></a> Erstellen und Planen des Dimensionsverarbeitungsauftrags  
   
-1.  Stellen Sie eine Verbindung mit einer Instanz des Datenbankmoduls her, und öffnen Sie dann den Objekt-Explorer.  
+1.  Stellen Sie eine Verbindung mit einer Instanz der Datenbank-Engine her, und öffnen Sie dann den Objekt-Explorer.  
   
 2.  Erweitern Sie **SQL Server-Agent**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019117"
   
 15. Klicken Sie nach Abschluss des Auftrags auf **Schließen**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Beispiel 2: Batchverarbeitung einer Dimension und einer Partition in einem geplanten Task  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Beispiel 2: Batchverarbeitung einer Dimension und einer Partition in einem geplanten task  
  Die Prozeduren in diesem Beispiel veranschaulichen, wie Sie einen Auftrag erstellen und planen, der eine Batchverarbeitung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankdimension ausführt und zur gleichen Zeit eine Cubepartition verarbeitet, deren Aggregation von der Dimension abhängt. Weitere Informationen zur Batchverarbeitung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Erstellen eines Skripts zur Batchverarbeitung einer Dimension und einer Partition in einem SQL Server-Agent-Auftrag  

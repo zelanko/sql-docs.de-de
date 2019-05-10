@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072447"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356501"
 ---
 # <a name="dax-in-tabular-models"></a>DAX in tabellarischen Modellen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  In den ersten vier Fällen kennzeichnet DAX die gesamte Spalte mit der ungültigen Formel. Im letzten Fall blendet DAX die Spalte ab, um anzugeben, dass sich die Spalte in einem nicht verarbeiteten Zustand befindet.  
   
 ##  <a name="bkmk_addional_resources"></a> Zusätzliche Ressourcen  
- [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) stellt Schritt-für-Schritt-Anleitungen zum Erstellen eines tabellarischen Modells bereit, das viele Berechnungen in berechneten Spalten, Measures und Zeilenfiltern enthält. Für die meisten Formeln ist eine Beschreibung ihrer Funktion verfügbar.  
+ [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md) stellt Schritt-für-Schritt-Anleitungen zum Erstellen eines tabellarischen Modells bereit, das viele Berechnungen in berechneten Spalten, Measures und Zeilenfiltern enthält. Für die meisten Formeln ist eine Beschreibung ihrer Funktion verfügbar.  
   
  Die [Analysis Services-Teamblog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) bietet die neuesten Informationen, Tipps, Neuigkeiten und Ankündigungen. 
   

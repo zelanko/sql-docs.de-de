@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f001d290237bfb111b321800d79ff3c42921e5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924502"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479501"
 ---
 # <a name="edit-a-model-deployment-package"></a>Bearbeiten eines Modellbereitstellungspakets
   In diesem Thema wird beschrieben, wie ausgewählte Teile eines Modells statt eines ganzen Modells in MDS bereitgestellt werden. Hierzu bearbeiten Sie mit dem Modellpaketeditor ein MDS-Modellpaket.  

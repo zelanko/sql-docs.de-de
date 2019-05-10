@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 1: Erstellen ein Data Quality-Projekt | Microsoft-Dokumentation'
+title: 'Aufgabe 1: Erstellen ein Data Quality-Projekt | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62735802"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484906"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen ein Data Quality-Projekt
+# <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen eines Data Quality-Projekts
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt zur Bereinigung der Lieferantendaten in einer Excel-Datei anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.  
   
 1.  In der **Data Quality-Projekt** auf der Hauptseite, klicken Sie dann auf **neuen Data Quality-Projekt**.  

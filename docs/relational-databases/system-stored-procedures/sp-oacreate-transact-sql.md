@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589578"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450017"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *ProgID*  
+ *progid*  
  Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"**_OLEComponent_**.** _Objekt_**"**  
   
  *OLEComponent* ist der Komponentenname des OLE-Automatisierungsservers, und *Objekt* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
@@ -52,8 +52,8 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} der CLSID des SQL-DMO **SQLServer** Objekt.  
   
- _Objecttoken_ **Ausgabe**  
- Ist das zurückgegebene Objekttoken, und muss eine lokale Variable des Datentyps **Int**. Dieses Objekttoken identifiziert das erstellte OLE-Objekt und wird beim Aufruf von anderen gespeicherten Prozeduren der OLE-Automatisierung benötigt.  
+ _objecttoken_ **OUTPUT**  
+ Ist das zurückgegebene Objekttoken, und muss eine lokale Variable des Datentyps **Int**. Dieses Objekttoken identifiziert das erstellte OLE-Objekt und in Aufrufen an die anderen OLE-Automatisierung gespeicherten Prozeduren verwendet wird.  
   
  *context*  
  Gibt den Ausführungskontext an, in dem das neu erstellte OLE-Objekt ausgeführt wird. Wenn context angegeben wird, ist einer der folgenden Werte möglich:  
@@ -84,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  Das erstellte OLE-Objekt wird automatisch am Ende des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatches zerstört.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
   
 ## <a name="examples"></a>Beispiele  
   

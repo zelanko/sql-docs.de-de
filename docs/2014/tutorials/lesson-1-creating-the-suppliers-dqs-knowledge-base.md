@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62676043"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485583"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank „Suppliers“
   In dieser Lektion erstellen Sie eine DQS-Wissensdatenbank namens **Lieferanten** mit dem Wissen (Metadaten) über Lieferantendaten. Sie verwenden die Wissensdatenbank, um die Bereinigungs- und Abgleichsaktivitäten für Eingabelieferantendaten auszuführen. Die Bereinigungsaktivität identifiziert falsche/ungültige Daten, korrigiert falsche Daten, schlägt Korrekturen vor/macht Vorschläge, standardisiert die Daten und wertet die Daten durch weitere Informationen auf. Die Abgleichsaktivität vergleicht Daten und identifiziert ähnliche (aber leicht abweichende) Datensätze in den Daten, wodurch Sie Datenduplikate entfernen können.  
   
  Sie können sowohl interaktive als auch computerunterstützte Prozesse verwenden, um eine Wissensdatenbank zu erstellen, aufzubauen und zu verwalten. Wissen in einer Wissensdatenbank wird in Domänen verwaltet, die jeweils für ein Datenfeld in den Daten spezifisch sind, die Sie bereinigen und/oder abgleichen möchten.  
