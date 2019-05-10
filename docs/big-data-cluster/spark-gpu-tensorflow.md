@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 564d1afd9ca8839eae4a16b234111c3f42a5bb44
-ms.sourcegitcommit: 22716798e963ebc335fa540b0c04569baa9db7ea
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64417136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774952"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Bereitstellen eines big Data-Clusters mit GPU-Unterstützung, und führen Sie TensorFlow
 
@@ -23,7 +23,7 @@ ms.locfileid: "64417136"
 
 In diesem Artikel wird veranschaulicht, wie einen big Data-Cluster in Azure Kubernetes Service (AKS) bereitstellen, die GPU-fähiger knotenpools für rechenintensive Workloads unterstützt wird. Anschließend führen Sie die Beispiel-Notebooks in Azure Data Studio, die bildklassifizierung mit TensorFlow für GPU ausgeführt wird.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Big Data-Tools](deploy-big-data-tools.md):
   - **mssqlctl**
@@ -53,11 +53,11 @@ Die folgenden Schritte können, dass der Azure-Befehlszeilenschnittstelle um ein
 1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen `gpucluster` in die `sqlbigdatagroupgpu` Ressourcengruppe aus.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > Dieser Cluster verwendet die **VM Standard_NC6** [-GPU-optimierte VM-Größe](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), d. h. einen speziellen virtuellen Computer mit einer oder mehreren NVIDIA-GPUs verfügbar. Weitere Informationen finden Sie unter [Verwenden von GPUs für rechenintensive Workloads in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > Dieser Cluster verwendet die **Standard_NC6s_v3** [-GPU-optimierte VM-Größe](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), d. h. einen speziellen virtuellen Computer mit einer oder mehreren NVIDIA-GPUs verfügbar. Weitere Informationen finden Sie unter [Verwenden von GPUs für rechenintensive Workloads in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. Um "kubectl" für die Verbindung mit Ihrem Kubernetes-Cluster zu konfigurieren, führen Sie die [az Aks Get-Credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) Befehl.
 
@@ -152,7 +152,7 @@ Sie können auch Ihre Bereitstellung weiter anpassen, durch eine benutzerdefinie
 
 Die folgenden zwei beispielnotebooks veranschaulichen Training zwei Modellen zur bildklassifizierung auf einem einzelnen Knoten des Spark-Clusters mit TensorFlow für GPU.
 
-| Notebook-download | Beschreibung |
+| Notebook-download | Description |
 |---|---|
 | [**tf-cuda8.ipynb**](https://aka.ms/AA4jdgd) | Wird verwendet, die CUDA 8 und CUDNN 6 TensorFlow 1.4.0.  |
 | [**tf-cuda9.ipynb**](https://aka.ms/AA4ixzr) | Wird verwendet, die CUDA 9 und CUDNN 7 TensorFlow 1.12.0. |

@@ -10,17 +10,32 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 04/19/2019
-ms.openlocfilehash: d6be7d1f443884ffd37be472ec86fa417de44fcf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
-ms.translationtype: HT
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105862"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450030"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="may-2019"></a>Mai 2019
+
+8 Mai 2019 &nbsp;  /  &nbsp; Version: 1.7.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Veröffentlichung der Schemavergleich-Erweiterung | Schemavergleich ist ein bekanntes Feature in SQL Server Data Tools (SSDT) und der primäre Anwendungsfall ist, um zu vergleichen und Visualisieren die Unterschiede zwischen Datenbanken und DACPAC-Dateien und zum Ausführen von Aktionen auf, damit sie identisch sind. |
+| Aufgabenansicht in Fenster "Ausgabe" verschoben | Benutzer können nun den Status der lang ausgeführten Aufgaben z.B. Sicherung, Wiederherstellung und Schemavergleich in der Aufgabenansicht im Fenster "Ausgabe" anzeigen.
+| Hinzugefügte Seite "Willkommen" | &bull; &nbsp; Links zu häufig verwendete Aktionen wie die neue Abfrage, die neue Datei, neues Notebook <br/>&bull; &nbsp; Links zu Dokumentationen und Github |
+| SQL-Notebook-Verbesserungen | &bull; &nbsp; Markdown-Rendering-Verbesserungen, z. B. eine bessere Unterstützung für Anmerkungen zu dieser Version und Tabellen <br/>&bull; &nbsp; Verbesserungen der benutzerfreundlichkeit auf der Symbolleiste <br/>&bull; &nbsp; Markdownlinks nicht mehr vertrauenswürdigen Notebooks Cmd/STRG + klicken und direkt geklickt werden kann <br/>&bull; &nbsp; Verbesserungen an der Bereinigung der Jupyter-Prozesse nach dem Schließen von Notebooks, und verringert Fehler, wenn Sie mehrere Notizbücher gleichzeitig zu starten <br/>&bull; &nbsp; Verbesserungen bei der SQL-Notebook-Verbindungen, um sicherzustellen, dass Fehler treten nicht, wenn 2 Notebooks für dieselbe Datenbank ausgeführt wird. <br/>&bull; &nbsp; Verbesserungen bei der automatischen Bildlauf der aktuell ausgeführten Zelle beim Klicken auf die Schaltfläche Ausführen Zellen, über die Symbolleiste notebook <br/>&bull; &nbsp; Allgemeine Verbesserungen für Stabilität und Leistung |
+| Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>April 2019
 

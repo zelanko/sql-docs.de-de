@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663738"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488234"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
 
@@ -24,12 +24,12 @@ ms.locfileid: "47663738"
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren neue Entitäten erstellen, um Daten zu speichern. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 -   Sie müssen über ein vorhandenes Modell verfügen, in dem die Entität erstellt werden kann. Weitere Informationen finden Sie unter [Erstellen eines Modells &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -69,17 +69,17 @@ ms.locfileid: "47663738"
   
 10. Wählen Sie in der Liste **Code** die Spalte aus, die eindeutige Bezeichner enthält, oder lassen Sie die Codes automatisch generieren.  
   
-11. Optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
+11. Dies ist optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
   
 12. Klicken Sie auf **OK**. Nachdem die Entität erfolgreich erstellt wurde, wird eine neue Kopfzeile angezeigt, die Zellen werden hervorgehoben, und der Blattname wird an den Entitätsnamen angepasst.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
 -   Um Fehler anzuzeigen, die in der Gruppe **Veröffentlichen und Überprüfen** aufgetreten sind, klicken Sie auf **Status anzeigen**. Die Spalten ValidationStatus und InputStatus werden angezeigt. Weitere Informationen finden Sie unter [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Bestätigen Sie, dass die Attribute mit dem gewünschten Datentyp erstellt wurden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

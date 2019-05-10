@@ -1,7 +1,7 @@
 ---
 title: dm_pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e0dac258c03bafb0769e5abb1697be67b1289f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691326"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105517"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "62691326"
 |database_id|**int**|Der Bezeichner der Datenbank, die durch explizite Kontext (z. B. Verwendung DB_X) verwendet.|Finden Sie unter-ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Befehl|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung durch den Benutzer gesendet.|Alle gültigen Abfrage oder einen Anforderung-Text. Abfragen, die länger als 4.000 Byte sind, werden abgeschnitten.|  
 |resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung. Finden Sie im Zusammenhang **Concurrency_slots_used** in [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Weitere Informationen zu Ressourcenklassen, finden Sie unter [ressourcenverwaltung Ressourcenklassen und workloadverwaltung](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>"Smallrc"</br>MediumRC</br>LargeRC</br>XLargeRC|
-|Wichtigkeit (Workload-Klassifizierung ist für die Vorschau für SQL Data Warehouse Gen2 verfügbar. Die Klassifizierung für die Workloadverwaltung und Workloadpriorität (Vorschauversion) ist für Builds mit einem Veröffentlichungsdatum ab dem 09. April 2019 verfügbar.  Builds mit einem früheren Veröffentlichungsdatum sollten nicht für das Testen der Workloadverwaltung verwendet werden.  Um festzustellen, ob der Build workloadverwaltung fähig ist, führen Sie select @@version beim Verbinden mit Ihrer SQL Data Warehouse-Instanz.)|**nvarchar(32)**|Die Bedeutung die Anforderung festlegen eingereicht wurde. Anforderungen mit einer niedrigeren Wichtigkeit werden in der Warteschlange unterbrochenen Zustand verbleiben, wenn höhere Wichtigkeit-Anforderungen gesendet werden.  Anforderungen und einer höheren Priorität werden vor niedriger Wichtigkeit Anforderungen ausgeführt werden, die zuvor gesendet wurden.  Weitere Informationen zu Wichtigkeit, finden Sie unter [Workload Wichtigkeit](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
+|importance|**nvarchar(32)**|Die Bedeutung die Anforderung festlegen eingereicht wurde. Anforderungen mit einer niedrigeren Wichtigkeit werden in der Warteschlange unterbrochenen Zustand verbleiben, wenn höhere Wichtigkeit-Anforderungen gesendet werden.  Anforderungen und einer höheren Priorität werden vor niedriger Wichtigkeit Anforderungen ausgeführt werden, die zuvor gesendet wurden.  Weitere Informationen zu Wichtigkeit, finden Sie unter [Workload Wichtigkeit](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
   
  Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "Metadaten" in der [Kapazitätsgrenzen](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) Thema.   
   

@@ -1,7 +1,7 @@
 ---
 title: Sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,19 +12,16 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 3b023654728375aee76bfb0c4434a8413dc81e7d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 43d8921f2135dbc1a343e8f3a604cc81f79b9faa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582563"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089548"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>Sys.workload_management_workload_classifiers (Transact-SQL) (Vorschau)
+# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-
-> [!Note]
-> Workload-Klassifizierung ist für die Vorschau für SQL Data Warehouse Gen2 verfügbar. Workload-Management-Klassifizierung und Wichtigkeit-Vorschau ist für Builds mit Veröffentlichungsdatum am 9. April 2019 oder höher.  Benutzer sollten vor diesem Datum liegen mithilfe von Builds für das Workload Management testen.  Um festzustellen, ob der Build workloadverwaltung fähig ist, führen Sie select @@version beim Verbinden mit Ihrer SQL Data Warehouse-Instanz.
 
  Gibt die Details für die arbeitsauslastung Klassifizierer.  
   

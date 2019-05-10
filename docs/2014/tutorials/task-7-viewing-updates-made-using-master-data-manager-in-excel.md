@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 7: Anzeigen von Updates vorgenommen, mit der Master Data Manager in Excel | Microsoft-Dokumentation'
+title: 'Aufgabe 7: Anzeigen von Updates vorgenommen, mit der Master Data Manager in Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866162"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489684"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Aufgabe 7: Anzeigen von Updates vorgenommen, mit der Master Data Manager in Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Aufgabe 7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden
   In dieser Aufgabe überprüfen Sie, ob die aktualisierten Daten aus MDS in Excel angezeigt werden.  
   
 1.  Wechseln Sie nun in der Excel-Fenster, **Cleansed and Matched Suppliers.xls** Arbeitsblatt öffnen.  

@@ -18,12 +18,12 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac4989b43ca507fb1d24a36b6957bb774c69a90e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634498"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450039"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAStop
  Eine einzige Ausführungsumgebung wird von allen Clients, die die gespeicherten Prozeduren der OLE-Automatisierung verwenden, gemeinsam genutzt. Wenn **sp_OAStop** durch einen Client aufgerufen wird, wird die freigegebene Ausführungsumgebung für alle Clients beendet. Nach dem Beenden der Ausführungsumgebung wird diese durch Aufrufen von **sp_OACreate** neu gestartet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die freigegebene Ausführungsumgebung der OLE-Automatisierung beendet.  

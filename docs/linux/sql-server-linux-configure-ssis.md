@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von SSIS unter Linux mit Ssis-Conf | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt das Konfigurieren von SQL Server Integration Services (SSIS) unter Linux mit dem Ssis-Conf-Hilfsprogramm.
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22fed22e4d2c8d2a903f72c9a28763efd491ee0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412507"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488364"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf
 
@@ -27,7 +27,7 @@ Sie können auch die `ssis-conf` Hilfsprogramm so konfigurieren Sie die folgende
 
 | Befehl | Description |
 |-------------|---------------------------------------------------------------------|
-| Set-edition | Legen Sie die Edition von SQL Server                                       |
+| set-edition | Legen Sie die Edition von SQL Server                                       |
 | Telemetrie   | Aktivieren oder Deaktivieren von SQL Server Integration Services-telemetriedienst |
 | Setup       | Initialisieren und Einrichten von Microsoft SQL Server Integration Services      |
 |||
