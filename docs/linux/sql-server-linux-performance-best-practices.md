@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106276"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux
 
@@ -40,7 +40,7 @@ Es wird empfohlen, um die folgenden Konfigurationsaufgaben ausführen, nach der 
 
 ### <a name="advanced-configuration"></a>Erweiterte Konfiguration
 
-Die folgenden Empfehlungen sind optionale-Konfigurationseinstellungen, die Sie festlegen können, ob nach der Installation von SQL Server unter Linux ausführen. Diese Optionen basieren auf den Anforderungen Ihrer Workload und die Konfiguration von Ihrem Linux-Betriebssystem.
+Die folgenden Empfehlungen sind optionale Einstellungen, die Sie auswählen können, nach der Installation von SQL Server unter Linux ausführen. Diese Optionen basieren auf den Anforderungen Ihrer Workload und die Konfiguration von Ihrem Linux-Betriebssystem.
 
 - **Legen Sie ein Arbeitsspeicherlimit mit Mssql-conf**
 
@@ -74,7 +74,7 @@ Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
 | Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | Datenträger-Read-Aheads | 4096 | Finden Sie unter den **Blockdev** Befehl |
-| Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter den **Sysctl** Befehl |
+| Sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter den **Sysctl** Befehl |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung automatisch Numa Lastenausgleich für NUMA-Systemen mit mehreren Knoten
 

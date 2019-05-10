@@ -16,7 +16,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52807582"
@@ -28,7 +28,7 @@ ms.locfileid: "52807582"
 >  Benutzer, die erstmals mit Datenbanken arbeiten, empfinden die Verwendung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anstelle des Schreibens von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen gewöhnlich als einfacher.  
   
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
- Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile** aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](/sql/t-sql/functions/datepart-transact-sql). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql).  
+ Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile** aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](/sql/t-sql/functions/datepart-transact-sql). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql).  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  In diesem Lernprogramm wird Ihnen gezeigt, wie eine Datenbank erstellt wird, eine Tabelle in der Datenbank erstellt wird, Daten in die Tabelle eingefügt werden, die Daten aktualisiert, gelesen und gelöscht werden und die Tabelle anschließend gelöscht wird. Sie erstellen Sichten und gespeicherte Prozeduren und konfigurieren einen Benutzer für die Datenbank und die Daten.  
