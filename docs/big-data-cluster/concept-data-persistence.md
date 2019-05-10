@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472196"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776160"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -49,19 +49,19 @@ Um persistenten Speicher während der Bereitstellung zu verwenden, legen Sie die
 > [!WARNING]
 > Ausgeführt wird, ohne den beständigen Speicher benötigen, kann in einer testumgebung arbeiten, aber in einem nicht funktionierenden Cluster resultieren. Bei Pod neu gestartet wird verloren Metadaten und/oder Clusterdaten dauerhaft. Wir empfehlen nicht in dieser Konfiguration ausgeführt. 
 
-Dieser Abschnitt enthält weitere Beispiele zum Konfigurieren der speichereinstellungen für die SQL Server-big Data-Clusterbereitstellung.
+[Konfigurieren des Speichers](#config-samples) Abschnitt enthält weitere Beispiele zum Konfigurieren der speichereinstellungen für die SQL Server-big Data-Clusterbereitstellung.
 
 ## <a name="aks-storage-classes"></a>AKS-Speicherklassen
 
 Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **Standard** und **verwaltete Premium-** zusammen mit der dynamischen Bereitstellung für sie. Sie können geben einen der beiden oder erstellen eigene Speicherklasse für die Bereitstellung von big Data-Cluster mit permanenten Speicher mit Lesezugriff aktiviert. Standardmäßig wird bei der integrierten in der Clusterkonfigurationsdatei für Aks *Aks-Dev-test.json* im Lieferumfang von beständigen Speicher benötigen Konfigurationen, die verwendet **verwaltete Premium-** Speicherklasse.
 
 > [!WARNING]
-> Persistente Volumes mit erstellt **Standard** Speicherklasse haben eine Richtlinie bei der Rückgewinnung *löschen*. Daher zur Zeit die Sie löschen die SQL Server-big Data-Cluster, erhalten persistentes Volume Ansprüche auch gelöscht, und klicken Sie dann persistenten Volumes. **verwaltete Premium-** verfügt über eine Richtlinie bei der Rückgewinnung von *beibehalten*. Sie finden weitere Informationen zu Storage-Klassen in AKS und ihre Konfigurationen im [dies](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) Artikel.
+> Persistente Volumes mit den integrierten Speicherklassen erstellt **Standard** und **verwaltete Premium-** verfügen über eine Richtlinie bei der Rückgewinnung von *löschen*. Daher zur Zeit die Sie löschen die SQL Server-big Data-Cluster, erhalten persistentes Volume Ansprüche auch gelöscht, und klicken Sie dann persistenten Volumes. Sie können benutzerdefinierte Speicherklassen mit erstellen **Azure-Datenträger** Privioner mit eine *beibehalten* Richtlinie freizugeben, siehe [dies](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) Artikel.
 
 
 ## <a name="minikube-storage-class"></a>Minikube-Speicherklasse
 
-Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Die integrierten Konfigurationsdatei für Minikube *Minikube-Dev-test.json* verfügt über die speichereinstellungen für die Konfiguration in der Spezifikation der Steuerelement-Ebene. Die gleichen Einstellungen werden auf alle Daten des Pools angewendet werden. Sie können auch eine Kopie dieser Datei anpassen und es für Ihre big Data-Cluster-Bereitstellung auf Minikube. Sie können manuell bearbeiten Sie die benutzerdefinierte Datei, und ändern Sie die Größe der persistenten Volumes Ansprüche für bestimmte Pools, um die arbeitsauslastungen zu berücksichtigen, dass Sie ausführen möchten. Finden Sie unter diesem Abschnitt finden Sie Beispiele zur Vorgehensweise finden Sie Änderungen mithilfe von *Mssqlctl* Befehle.
+Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Die integrierten Konfigurationsdatei für Minikube *Minikube-Dev-test.json* verfügt über die speichereinstellungen für die Konfiguration in der Spezifikation der Steuerelement-Ebene. Die gleichen Einstellungen werden auf alle Daten des Pools angewendet werden. Sie können auch eine Kopie dieser Datei anpassen und es für Ihre big Data-Cluster-Bereitstellung auf Minikube. Sie können manuell bearbeiten Sie die benutzerdefinierte Datei, und ändern Sie die Größe der persistenten Volumes Ansprüche für bestimmte Pools, um die arbeitsauslastungen zu berücksichtigen, dass Sie ausführen möchten. Alternativ finden Sie unter [Konfigurieren des Speichers](#config-samples) im Abschnitt Beispiele dazu, wie Sie bearbeitet, mithilfe von *Mssqlctl* Befehle.
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm Speicherklassen
 
@@ -97,7 +97,7 @@ Das folgende Beispiel aktualisiert die Größe des persistenten Volumes Ansprüc
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>Konfigurieren von Speicherklasse
+### <a id="config-samples"></a> Konfigurieren von Speicherklasse
 
 Folgende Beispiel zeigt, wie die Speicherklasse für die Steuerungsebene geändert wird:
 

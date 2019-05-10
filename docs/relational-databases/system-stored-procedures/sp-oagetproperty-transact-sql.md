@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690008"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449718"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *PropertyValue* **Ausgabe**  
  Der zurückgegebene Eigenschaftswert. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
- Wenn die Eigenschaft ein OLE-Objekt zurückgibt *Propertyvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
+ Wenn die Eigenschaft ein OLE-Objekt zurückgibt *Propertyvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variablen gespeichert, und dieses Objekttoken kann mit anderen gespeicherten OLE-Automatisierungsprozeduren verwendet werden.  
   
  Wenn die Eigenschaft auf einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Propertyvalue*, Wert in der lokalen Variablen, die die Eigenschaft zurückgibt, oder geben Sie nicht *Propertyvalue*, gibt die der Eigenschaftswert als ein einspaltiges, einzeiliges Resultset an den Client.  
   
@@ -96,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  Sie können auch **Sp_OAMethod** , einen Eigenschaftswert abzurufen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63455087"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775511"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Installationsanleitung für SQL Server unter Linux
 
@@ -82,7 +82,7 @@ Sie können SQL Server 2017 unter Linux über die Befehlszeile installieren. Sch
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 ## <a id="sqlvnext"></a> Installieren von SQL Server-2019 preview
 
