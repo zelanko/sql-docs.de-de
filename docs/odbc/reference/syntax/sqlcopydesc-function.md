@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259283"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537726"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
 **Übereinstimmung mit Standards**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259283"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>Codebeispiel  
  Im folgenden Beispiel werden Deskriptor Vorgänge verwendet, die Felder der Tabelle PartsSource in die Tabelle PartsCopy zu kopieren. Den Inhalt der Tabelle PartsSource werden abgerufen, in der Rowset-Puffer im *hstmt0*. Diese Werte werden als Parameter eine INSERT-Anweisung verwendet, auf *hstmt1* zum Auffüllen der Spalten der Tabelle PartsCopy. Die Felder des IRD von dazu *hstmt0* in die Felder des IPD der kopiert werden *hstmt1*, und die Felder der ARD von *hstmt0* werden in die Felder der APD von kopiert*hstmt1*. Verwendung **SQLSetDescField** , legen Sie IPDs-SQL_DESC_PARAMETER_TYPE-Attribut auf SQL_PARAM_INPUT, wenn Sie IRD-Feldern von einer Anweisung mit der Output-Parameter in IPD-Feldern kopieren, die Eingabeparameter werden müssen.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

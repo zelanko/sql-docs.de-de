@@ -20,12 +20,12 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8b432e8d40952574f1264e07a0b09e91a1e334b3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259503"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537603"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
 **Übereinstimmung mit Standards**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259503"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 BOOL SQLCreateDataSource(  
      HWND    hwnd,  

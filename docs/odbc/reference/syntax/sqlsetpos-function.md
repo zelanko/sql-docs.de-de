@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982394"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536319"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Übereinstimmung mit Standards**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982394"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Codebeispiel  
  Im folgenden Beispiel kann eine Anwendung einen Benutzer, die ORDERS-Tabelle durchsuchen und Aktualisieren des Auftragsstatus. Der Cursor wird mit einer Rowsetgröße von 20 keysetgesteuerte und Steuerung für optimistische Parallelität Vergleichen von Zeilenversionen verwendet. Nachdem jedes Rowset abgerufen wird, wird die Anwendung gibt es, und ermöglicht dem Benutzer, wählen Sie aus, und aktualisieren Sie den Status einer Bestellung. Die Anwendung verwendet **SQLSetPos** zur Positionierung des Cursors auf die ausgewählte Zeile und führt ein positioniertes Update der Zeile. (Die Fehlerbehandlung wird aus Gründen der Übersichtlichkeit weggelassen.)  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   
