@@ -62,7 +62,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-isnull-with-avg"></a>A. Verwenden von ISNULL mit AVG  
- Im folgenden Beispiel wird das Durchschnittsgewicht aller Produkte gesucht. Alle NULL-Einträge in der `50`-Spalte der `Weight`-Tabelle werden durch den Wert `Product` ersetzt.  
+ Im folgenden Beispiel wird das Durchschnittsgewicht aller Produkte gesucht. Alle NULL-Einträge in der `Weight`-Spalte der `Product`-Tabelle werden durch den Wert `50` ersetzt.  
   
 ```  
 USE AdventureWorks2012;  
