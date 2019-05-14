@@ -2,18 +2,18 @@
 title: Planen von Berichtsentwurf und -bereitstellung | Reporting Services | Microsoft-Dokumentation
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814233"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503695"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
@@ -51,8 +51,12 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
 -   **Report-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
   
 -   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf einen Berichtsserver im einheitlichen Modus hoch.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint:** Laden Sie einen Bericht auf eine SharePoint-Website hoch, die mit einem Berichtsserver im SharePoint-Modus konfiguriert wurde.  
+
+::: moniker-end
   
 -   **Programmgesteuert:** Veröffentlichen Sie einen Bericht programmgesteuert mithilfe der SOAP-API-Schnittstellen auf einem Berichtsserver. Weitere Informationen finden Sie unter [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -66,7 +70,13 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
  Wenn Sie eine Berichtsdefinition auf den Berichtsserver hochladen oder ein Upgrade eines Berichtsservers ausführen, auf dem Berichte vorhanden sind, wird auf dem Berichtsserver die Berichtsdefinition im ursprünglichen Format beibehalten. **Bei der ersten Verwendung**aktualisiert der Berichtsserver den Bericht in der Berichtsserver-Datenbank auf ein binäres Format, das für nachfolgende Sichten beibehalten wird. Die Berichtsdefinition (.rdl) selbst wird nicht aktualisiert.  
   
- Sie können vom Berichtsserver eine schreibgeschützte Kopie der Berichtsdefinitionsdatei (.rdl) extrahieren. Navigieren Sie auf einem Berichtsserver im einheitlichen Modus zum [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], wählen Sie den Bericht aus, und klicken auf **Herunterladen**. Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek, wählen Sie den Bericht aus, und klicken Sie auf **Kopie herunterladen**.  
+ Sie können vom Berichtsserver eine schreibgeschützte Kopie der Berichtsdefinitionsdatei (.rdl) extrahieren. Navigieren Sie auf einem Berichtsserver im einheitlichen Modus zum [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], wählen Sie den Bericht aus, und klicken auf **Herunterladen**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek, wählen Sie den Bericht aus, und klicken Sie auf **Kopie herunterladen**.  
+
+::: moniker-end
   
  Um die Berichtsdefinition zu aktualisieren, müssen Sie den Bericht in einer Berichterstellungsumgebung wie SQL Server Data Tools oder Berichts-Generator öffnen und speichern.  
   
@@ -107,7 +117,7 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
 -   [Hinzufügen und Konfigurieren der ReportViewer-Steuerelemente](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)   
  [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
