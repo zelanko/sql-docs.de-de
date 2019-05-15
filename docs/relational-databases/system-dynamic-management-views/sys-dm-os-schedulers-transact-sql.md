@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939698"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626770"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,6 +62,10 @@ ms.locfileid: "62939698"
 |memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
 |task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Macht das von SQLOS verwendete Zeitplanungsmodul-Quantum verfügbar.|  
+| total_cpu_usage_ms |**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher <br><br> Gesamt-CPU von diesem Zeitplanungsmodul genutzt werden, wie vom nicht präemptiven Worker gemeldet. Lässt keine NULL-Werte zu.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Gibt an, auf basierenden Einschränkung [Servicelevel-Zielpunkt](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), ist immer 0 für nicht-Azure-Versionen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lässt NULL-Werte zu.|
+|total_scheduler_delay_ms|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher <br><br> Die Zeit zwischen einem Worker für das Auslagern und eine andere einfügen. Kann von preemptive Workern verzögern, die Planung der nächsten nicht präemptiven Arbeitskraft oder aufgrund des Betriebssystems scheduling von Threads von anderen Prozessen verursacht werden. Lässt keine NULL-Werte zu.|
+|ideal_workers_limit|**int**|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher <br><br> Wie viele Worker im Zeitplanungsmodul im Idealfall werden soll. Wenn der aktuellen Workerthreads den Grenzwert aufgrund von unausgeglichenen Aufgabe laden, überschreiten sobald sie sich im Leerlauf sind, werden sie entfernt. Lässt keine NULL-Werte zu.|
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen

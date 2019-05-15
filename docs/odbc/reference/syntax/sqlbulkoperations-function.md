@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237850"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538037"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Übereinstimmung mit Standards**  
@@ -36,7 +36,7 @@ ms.locfileid: "63237850"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +261,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>Codebeispiel  
  Im folgende Beispiel ruft 10 Zeilen gleichzeitig aus der Customers-Tabelle ab. Sie werden dann aufgefordert, den Benutzer für eine Aktion. Zur Reduzierung des Netzwerkverkehrs, der Beispiel-Puffer updates, Löschvorgängen und und fügt lokal in den gebundenen Arrays, sondern auf Offsets hinter die Rowsetdaten. Wenn der Benutzer auswählt, die zum Senden von Updates, löschungen und fügt in der Datenquelle ein, der Code legt die Bindung, die Abweichung entsprechend fest und ruft **SQLBulkOperations**. Der Benutzer kann nicht mehr als 10-Updates, löschungen oder einfügungen Puffer ist aus Gründen der Einfachheit.  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

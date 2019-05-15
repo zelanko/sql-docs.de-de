@@ -2,17 +2,18 @@
 title: Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS) | Microsoft-Dokumentation
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 39602493f5c64550f197fd2bee5f955820bd3453
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814033"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503641"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migration vom einheitlichen vom SharePoint-Modus (SSRS)
 
@@ -42,12 +43,12 @@ ms.locfileid: "51814033"
   
 |Objekt|Skripterstellung möglich|Kommentare|  
 |------------|---------------------|--------------|  
-|Berichte|Benutzerkontensteuerung|Nach der Migration geben Sie die Kennwörter für Datenquellen erneut ein.|  
-|Datenquellen|Benutzerkontensteuerung|Nach der Migration verknüpfen Sie Berichte erneut mit Datenquellen.|  
-|Modelle|Benutzerkontensteuerung||  
-|Datasets|Benutzerkontensteuerung||  
+|Berichte|Ja|Nach der Migration geben Sie die Kennwörter für Datenquellen erneut ein.|  
+|Datenquellen|Ja|Nach der Migration verknüpfen Sie Berichte erneut mit Datenquellen.|  
+|Modelle|Ja||  
+|Datasets|Ja||  
 |Berichtsteile||Nach der Migration überprüfen oder aktualisieren Sie den Pfad zu den Berichtsteilen.|  
-|Zeitpläne|Benutzerkontensteuerung|Weitere Informationen finden Sie unter dem Thema zur ListSchedules-Methode [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Zeitpläne|Ja|Weitere Informationen finden Sie unter dem Thema zur ListSchedules-Methode [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |Abonnements|ja|Informationen finden Sie im Thema zur ListSubscriptions-Methode unter [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) und im Thema zur <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> -Methode.|  
 |Momentaufnahmen|||
 

@@ -1,19 +1,19 @@
 ---
 title: Erstellen einer Berichtsserver-Datenbank, SSRS-Konfigurations-Manager | Microsoft-Dokumentation
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184986"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502652"
 ---
 # <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank 
 
@@ -25,7 +25,12 @@ Im einheitlichen Modus von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ss
 
 Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb**benannt. Zusammen werden die beiden Datenbanken als die **Berichtsserver-Datenbank** oder der **Berichtsserver-Katalog** bezeichnet.
 
-Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
+Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
+
+Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/
 - **Automatisch**. Verwenden Sie den Setup-Assistenten für SQL Server, wenn Sie die Standardkonfigurationsoption für eine Installation auswählen. Im SQL Server-Installations-Assistenten ist diese Option die Option **Installieren und konfigurieren** auf der Seite **Berichtsserver-Installationsoptionen**. Wenn Sie die Option **Nur installieren** auswählen, müssen Sie die Datenbank mit dem SQL Server-Konfigurations-Manager für Reporting Services erstellen.  
   
 - **Manuell**. Verwenden Sie den SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager. Erstellen Sie die Berichtsserver-Datenbank manuell, wenn Sie zum Hosten der Datenbank eine Remote-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint-Modus 
 Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den SharePoint-Modus, **Nur installieren**. Diese Option installiert alle SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dateien und den gemeinsamen SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst. Der nächste Schritt besteht darin, mindestens eine SSRS-Dienstanwendung auf eine der folgenden Arten zu erstellen:  
@@ -53,6 +60,8 @@ Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den 
 - Navigieren Sie zur Zentraladministration in SharePoint Server, um eine SSRS-Dienstanwendung zu erstellen. Weitere Informationen finden Sie im Abschnitt **Erstellen einer Dienstanwendung** von [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 - Verwenden Sie SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-PowerShell-Cmdlets, um eine Dienstanwendung und die Berichtsserver-Datenbanken zu erstellen. Weitere Informationen finden Sie im Beispiel für die Erstellung von Dienstanwendungen im Thema [PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>Anforderungen hinsichtlich der Datenbankserverversion
 

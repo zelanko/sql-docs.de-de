@@ -13,16 +13,16 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cdf2add41c7aec5a4044ea05271cfa723a8da2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607108"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946110"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47607108"
   
  Verwenden Sie die in der folgenden Tabelle gezeigten Präfixlängen, wenn Sie einen Massenexport von Daten vornehmen und diese in systemeigenen Datentypen oder im Zeichenformat speichern.  
   
-|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
+|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  
@@ -70,7 +70,7 @@ ms.locfileid: "47607108"
 |**numeric**|1|1|1|1|  
 |**float**|0|1|0|1|  
 |**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
+|**ssNoversion**|0|1|0|1|  
 |**bigint**|0|1|0|1|  
 |**smallint**|0|1|0|1|  
 |**tinyint**|0|1|0|1|  
@@ -93,7 +93,7 @@ ms.locfileid: "47607108"
 > [!NOTE]  
 >  Verwenden Sie die weiter oben in diesem Thema unter **Präfixlängen für den Massenexport**bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von [bcp](#PrefixLengthsExport)erstellt wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
