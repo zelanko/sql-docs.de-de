@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508863"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098127"
 ---
 # <a name="table-properties-visual-database-tools"></a>Tabelleneigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ Zeigt die Spalte an, die von Microsoft SQL Server als ROWGUID-Spalte der Tabelle
 **Text/Image-Dateigruppe**  
 Stellt eine Dropdownliste bereit, in der die Dateigruppe für Spalten mit dem Datentyp text oder image ausgewählt werden kann. Wenn die Tabelle mit einem Partitionsschema gespeichert wird, lassen Sie dieses Feld leer.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Entwerfen von Tabellen (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

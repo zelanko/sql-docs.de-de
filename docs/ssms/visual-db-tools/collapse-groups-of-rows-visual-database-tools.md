@@ -12,15 +12,15 @@ helpviewer_keywords:
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8a40eefb6b60b21387c90b84e7bffdc423b7d798
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a19a820f8ec84778e52025ec56f2fc8b6b344ae8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503946"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089391"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Reduzieren von Zeilengruppen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ Sie können ein Abfrageergebnis erstellen, in dem jede Ergebniszeile einer kompl
   
     Ausführliche Informationen zum Anwenden von Auswahlkriterien auf Zeilengruppen finden Sie unter [Angeben von Bedingungen für Gruppen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md) und [Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 234a31d2b3bc59a447b14691b45c1a2a323598b2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b78502e3bc0701af0dd662455382ce7ad2432813
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696792"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102769"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Verwalten von Objekten mittels Objekt-Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ Wenn der Objekt-Explorer mit einem Server verbunden ist, können Sie mit den Ver
 ### <a name="start-powershell"></a>Starten von PowerShell  
 Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter PowerShell-Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Objekt-Explorers](../../ssms/object/object-explorer.md)  
 [Öffnen und Konfigurieren des Objekt-Explorers](../../ssms/object/open-and-configure-object-explorer.md)  
 [Verbinden mit einer Instanz mit dem Objekt-Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
