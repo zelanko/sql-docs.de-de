@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84745411a3a44ea75d20c6c9f304fb7fe87d4d85
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524821"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098352"
 ---
 # <a name="query-properties-visual-database-tools"></a>Abfrageeigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn im Abfrage- u
 > [!NOTE]  
 > Die Eigenschaften in diesem Thema sind nicht alphabetisch, sondern nach Kategorie sortiert.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Kategorie Identität**  
 Erweitern Sie das Element, um die **Name** -Eigenschaft anzuzeigen.  
   
@@ -84,7 +84,7 @@ Geben Sie an, dass die Abfrage nur die ersten *n* Prozent der Zeilen im Resultse
 **WITH TIES**  
 Geben Sie an, dass die Sicht eine WITH TIES-Klausel enthält. Diese Klausel ist hilfreich, wenn eine Sicht sowohl eine ORDER BY-Klausel als auch eine TOP-Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der ORDER BY-Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder höher.)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Abfragen mit Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -2,21 +2,21 @@
 title: Bildgerät-Informationseinstellungen | Microsoft-Dokumentation
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738728"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503082"
 ---
 # <a name="image-device-information-settings"></a>Geräteinformationseinstellungen für Bilder
   In der folgenden Tabelle sind die Geräteinformationseinstellungen zum Rendern in das Bildformat aufgeführt.  
@@ -39,10 +39,10 @@ ms.locfileid: "47738728"
 |**PrintDpiY**|Die vertikale Auflösung des Ausgabebilds. Der Standardwert lautet **300**. Gilt für das**EMF**-Ausgabeformat (Enhanced MetaFile).|  
 |**StartPage**|Die erste Seite des zu rendernden Berichts. Der Wert **0** gibt an, dass alle Seiten des Berichts gerendert werden. Der Standardwert ist **1**.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

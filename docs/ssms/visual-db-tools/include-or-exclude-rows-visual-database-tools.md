@@ -19,15 +19,15 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5d14822bd344179f2673588baa21439966d9ee2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfb60ac381570489fe5fdb5d8ac0b6ec75e15cd0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819278"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096806"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Einschließen oder Ausschließen von Zeilen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ Es folgen einige Beispiele für Abfragen mit verschiedenen Operatoren und Zeilen
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Erstellen von Abfragen mit Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
