@@ -1,7 +1,7 @@
 ---
-title: Durchführen verteilter Transaktionen | Microsoft-Dokumentation
+title: Erstellen Sie eine verteilte Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,26 +18,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac43d86c49f20a7e76958d2af8c1767518ddbc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631968"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620545"
 ---
-# <a name="performing-transactions---distributed-transactions"></a>Ausführen von Transaktionen – verteilte Transaktionen
+# <a name="create-a-distributed-transaction"></a>Erstellen einer verteilten Transaktions
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+<!--
+The following includes .md file is Empty, as of long before 2019/May/13.
+/includes/snac-deprecated.md
+-->
+
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Microsoft Distributed Transaction Coordinator (MS DTC) ermöglicht es Anwendungen, Transaktionen über zwei oder mehr Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu erweitern. Außerdem können Anwendungen an von Transaktions-Managern verwalteten Transaktionen teilnehmen, die den Standard Open Group DTP XA erfüllen.  
-  
- Normalerweise werden alle Transaktionsverwaltungsbefehle durch den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Native Client-ODBC-Treiber an den Server gesendet. Die Anwendung startet eine Transaktion, durch den Aufruf [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) mit der Autocommit-Modus deaktiviert. Die Anwendung führt anschließend die Updates durch, aus denen die Transaktion besteht, und ruft [SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md) entweder mit der SQL_COMMIT-Option oder der SQL_ROLLBACK-Option auf.  
-  
- Bei Verwendung von MS DTC wird MS DTC zum Transaktions-Manager, und **SQLEndTran**wird von der Anwendung nicht mehr verwendet.  
-  
- Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC Driver in einer verteilten Transaktion eingetragen ist und dann in einer zweiten verteilten Transaktion eingetragen wird, wird er von der ursprünglichen verteilten Transaktion übernommen und in die neue Transaktion eingetragen. Weitere Informationen finden Sie in der [DTC-Programmierreferenz](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Transaktionen &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
-  
-  
+Eine verteilte Transaktion kann für verschiedene Microsoft SQL-Systeme auf unterschiedliche Weise erstellt werden.
+
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC-Treiber ruft MSDTC für SQL Server lokal
+
+Der Microsoft Distributed Transaction Coordinator (MSDTC) ermöglicht Anwendungen das Erweitern oder _verteilen_ eine Transaktion für zwei oder mehr Instanzen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die verteilte Transaktion funktioniert auch, wenn die beiden Instanzen auf separaten Computern gehostet werden.
+
+MSDTC ist für Microsoft SQL Server lokal installiert, aber nicht für Cloud-Dienst von Microsoft Azure SQL-Datenbank verfügbar ist.
+
+MSDTC wird aufgerufen, durch den SQL Server Native Client-Treiber für Open Database Connectivity (ODBC), wenn Ihre C++ Programm verwaltet eine verteilte Transaktion. Der Native Client ODBC-Treiber hat einen Transaktions-Manager, der mit der Open Gruppe verteilte Transaktion verarbeitet (DTP) XA-standard kompatibel ist. Diese Kompatibilität ist MSDTC erforderlich. In der Regel werden alle transaktionsverwaltungsbefehle durch diese Native Client ODBC-Treiber gesendet. Die Sequenz lautet wie folgt aus:
+
+1. Ihre C++ Native Client ODBC-Anwendung startet eine Transaktion, durch den Aufruf [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), mit der Autocommit-Modus deaktiviert.
+
+2. Die Anwendung aktualisiert, einige Daten in SQL Server-X auf Computer A.
+
+3. Aktualisiert die Anwendung einige Daten auf dem SQL Server-Y auf Computer B.
+    - Wenn ein Update auf dem SQL Server-Y ein Fehler auftritt, werden alle ohne ausgeführten Commit-Updates auf beiden SQL Server-Instanzen ein Rollback ausgeführt.
+
+4. Schließlich die Anwendung beendet die Transaktion durch Aufrufen von [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), mit der Option SQL_COMMIT oder SQL_ROLLBACK-Option.
+
+_(1)_  MSDTC kann aufgerufen werden, ohne zu ODBC. In diesem Fall wird MSDTC der Transaktions-Manager, und die Anwendung nicht mehr verwendet **SQLEndTran**.
+
+### <a name="only-one-distributed-transaction"></a>Nur eine verteilte Transaktion
+
+Nehmen wir an, die Ihre C++ Native Client ODBC-Anwendung in einer verteilten Transaktion eingetragen ist. Als Nächstes wird die Anwendung in einer zweiten verteilten Transaktion eingetragen. In diesem Fall die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber die ursprüngliche verteilte Transaktion lässt und in die neue verteilte Transaktion eingetragen.
+
+Weitere Informationen finden Sie in der [DTC-Programmierreferenz](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+
+## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#Alternative zur SQL-Datenbank in der cloud
+
+MSDTC wird für Azure SQL-Datenbank oder Azure SQL Data Warehouse nicht unterstützt.
+
+Eine verteilte Transaktion kann jedoch für SQL-Datenbank erstellt werden, indem Sie Ihre C# Programm verwenden, die Klasse .NET [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
+
+### <a name="other-programming-languages"></a>Andere Programmiersprachen
+
+Die folgenden anderen Programmiersprachen gewährleistet keine Unterstützung für verteilte Transaktionen mit dem SQL-Datenbank-Dienst:
+
+- Native C++ , die ODBC-Treiber verwenden
+- Verbindungsserver mithilfe von Transact-SQL
+- JDBC-Treiber
+
+## <a name="see-also"></a>Siehe auch
+
+[Durchführen von Transaktionen (ODBC)](performing-transactions-in-odbc.md)

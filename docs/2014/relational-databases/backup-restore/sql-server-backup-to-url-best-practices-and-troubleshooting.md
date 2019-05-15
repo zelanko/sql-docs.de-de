@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619586"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
   In diesem Thema werden bewährte Methoden und Tipps zur Problembehandlung beschrieben, die sich auf SQL Server-Sicherungs- und Wiederherstellungsvorgänge im Windows Azure-BLOB-Dienst beziehen.  
@@ -125,7 +125,7 @@ ms.locfileid: "62877092"
   
      BACKUP DATABASE wird fehlerbedingt beendet.  
   
--   Backupiorequest::: Schreibfehler auf Sicherungsmedium http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
+-   Backupiorequest::: Schreibfehler auf Sicherungsmedium "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
   
  Wenn Sie die ausführliche Protokollierung mit Ablaufverfolgungsflag 3051 aktivieren, können auch folgende Meldungen in den Protokollen angezeigt werden:  
   
