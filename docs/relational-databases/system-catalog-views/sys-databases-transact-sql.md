@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080370"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560133"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Wenn eine Datenbank nicht `ONLINE`, oder `AUTO_CLOSE` nastaven NA hodnotu `ON` u
 |**is_temporal_retention_enabled**|**bit**|Gibt an, ob der Task ' Verlaufscleanup ' der temporalen Beibehaltung-Richtlinie aktiviert ist.<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Die sortierungseinstellung für den Katalog:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Die sortierungseinstellung für den Katalog:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|Für die interne Verwendung reserviert</br>**Gilt für**: Azure SQL Data Warehouse
+|**is_result_set_caching_on**|**int**|1 = Is_result_set_caching_on befindet sich auf</br>0 = Is_result_set_caching_on deaktiviert ist.</br>**Gilt für**: Azure SQL Datawarehouse Gen2
   
 ## <a name="permissions"></a>Berechtigungen  
  Wenn der Aufrufer `sys.databases` ist nicht der Besitzer der Datenbank und die Datenbank ist nicht `master` oder `tempdb`, mindestens die Berechtigung erforderlich, um die entsprechende Zeile finden Sie unter `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` Berechtigung auf Serverebene oder `CREATE DATABASE` -Berechtigung für die `master` Datenbank. Die Datenbank, mit denen der Aufrufer verbunden ist, immer in angezeigt werden kann `sys.databases`.  

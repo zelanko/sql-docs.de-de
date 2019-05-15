@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting rows
 - Results pane
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3b19d450144eedf2462acb113712b09c5aa88fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63f480358f0f6fffea0e63c4c2ff06a3993eee73
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105791"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Löschen von Zeilen im Ergebnisbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Löschen Sie Zeilen im Ergebnisbereich, wenn Sie Datensätze in der Datenbank l�
 > [!NOTE]  
 > Falls eine der ausgewählten Zeilen nicht aus der Datenbank gelöscht werden kann, wird keine dieser Zeilen gelöscht und eine Meldung ausgegeben, aus der hervorgeht, welche Zeilen nicht gelöscht werden können.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Löschabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

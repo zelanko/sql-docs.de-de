@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e37f7c6aca9ab09b220e72e516d2d90681f80837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5c98d9b70be58dfc6ad2fb1ccf0063699acc74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650786"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097219"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Operatoreigenschaften – Neuer Operator (Seite „Benachrichtigungen“)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47650786"
 
 Mithilfe dieser Seite können Sie Warnungen und Aufträge zum Benachrichtigen des Operators festlegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Warnungen**  
 Zeigt die Warnungen in der Instanz an.  
   
@@ -53,6 +53,6 @@ Benachrichtigt den Operator, indem eine E-Mail-Nachricht an die Pageradresse ges
 **Net send**  
 Benachrichtigt diesen Operator per **net send**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Operatoren](../../ssms/agent/operators.md)  
   

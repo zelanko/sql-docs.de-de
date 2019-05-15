@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099911"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502933"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -75,6 +75,9 @@ ms.locfileid: "50099911"
  Zum Abrufen von Imagedateien verwendet der Berichtsserver das Konto automatisch, ohne dass Sie aktiv werden müssen. Sie müssen auf der Seite „Datenquelleneigenschaften“ der Berichtsdatenquelle oder der freigegebenen Datenquelle eine Option für den **Anmeldeinformationstyp** festlegen, um über das Konto eine Verbindung mit externen Datenquellen von Berichtsdaten herzustellen:  
   
 -   Aktivieren Sie im [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder auf einer SharePoint-Website die Option **Anmeldeinformationen sind nicht erforderlich** .  
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
  Das Konto für die unbeaufsichtigte Berichtsverarbeitung wird hauptsächlich dazu verwendet, die Verbindung mit externen Servern herzustellen, und nicht für die Anmeldung bei Datenbankservern. Möchten Sie die Kontoanmeldeinformationen zur Anmeldung an einer Datenbank verwenden, müssen Sie die Anmeldeinformationen in der Verbindungszeichenfolge angeben. Sie können **Integrated Security=SSPI** angeben, wenn der Datenbankserver die integrierte Sicherheit von Windows unterstützt und das für die unbeaufsichtigte Berichtsverarbeitung verwendete Konto über die Berechtigung zum Lesen der Datenbank verfügt. Andernfalls müssen Sie den Benutzernamen und das Kennwort in die Verbindungszeichenfolge eingeben. Dort wird es als Klartext jedem Benutzer angezeigt, der zur Bearbeitung von Datenquellen-Verbindungseigenschaften berechtigt ist.  
   
@@ -100,7 +103,7 @@ ms.locfileid: "50099911"
   
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

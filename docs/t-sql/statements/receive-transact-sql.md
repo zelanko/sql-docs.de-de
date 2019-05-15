@@ -22,19 +22,19 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5016c697c83ff286fe9d1d66f59dad92f1c534dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700928"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503670"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ruft eine oder mehrere Nachrichten aus einer Warteschlange ab. Je nach den Einstellungen für die Warteschlange wird entweder die Nachricht aus der Warteschlange entfernt oder der Status der Nachricht in der Warteschlange aktualisiert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,11 +57,7 @@ ms.locfileid: "51700928"
 }     [ ,...n ]   
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
-  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -169,11 +165,11 @@ ms.locfileid: "51700928"
 |**conversation_handle**|**uniqueidentifier**|Handle der Konversation, von der diese Nachricht ein Teil ist.|  
 |**message_sequence_number**|**bigint**|Sequenznummer der Nachricht in der Konversation.|  
 |**service_name**|**nvarchar(512)**|Name des Diensts, an den die Konversation gerichtet ist.|  
-|**service_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
+|**service_id**|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
 |**service_contract_name**|**nvarchar(256)**|Name des Vertrags, dem die Konversation entspricht.|  
-|**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
+|**service_contract_id**|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |**message_type_name**|**nvarchar(256)**|Name des Nachrichtentyps, der das Format der Nachricht beschreibt. Nachrichten können entweder vom Typ Anwendungsnachricht oder Brokersystemmeldungen sein.|  
-|**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
+|**message_type_id**|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
 |**validation**|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|Inhalt der Nachricht.|  
   
@@ -332,7 +328,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96adc8b3f44c69a66aca46d6061d6ae2a673f33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73130efac268afb0d80cf144fb3f2bbcbe5efeba
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740028"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099254"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Speichern von Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,6 +36,6 @@ Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderun
   
 3.  Klicken Sie auf **Ja** (oder **OK** wenn dies ein neues Diagramm ist), um die Datenbank zu aktualisieren, sodass diese mit dem Diagramm übereinstimmt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

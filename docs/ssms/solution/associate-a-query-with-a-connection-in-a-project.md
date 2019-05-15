@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a08e42fc309bfc7cb49a5e333cd679021783be0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03a434a9482f8cb426815407b1b85519744c9331
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700948"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104998"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Verknüpfen einer Abfrage mit einer Verbindung in einem Projekt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Wenn eine Abfrage ohne eine Verbindung erstellt wurde oder eine Abfrage aus eine
   
 2.  Geben Sie im Dialogfeld **Verbindung mit Datenbank-Engine herstellen** die Verbindungsinformationen an. Wenn die Verbindungsinformationen mit einer vorhandenen Verbindung übereinstimmen, wird die Abfrage mit dieser Verbindung verknüpft.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Ändern der mit einer Abfrage verknüpften Verbindung](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Anzeigen oder Ändern der Eigenschaften einer Verbindung in einem Projekt](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  

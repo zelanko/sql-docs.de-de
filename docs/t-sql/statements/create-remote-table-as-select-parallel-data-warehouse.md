@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0da82a782dcebeee22e422d5c25b05e17584393c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319201"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503200"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56319201"
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -68,7 +68,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  Name des Remoteservercomputers oder IPv4-Adresse des Remoteservers. IPv6-Adressen werden nicht unterstützt. Sie können eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz im Format **Computer_Name\Instance_Name** oder **IP_address\Instance_Name** angeben. Der Server muss remote sein und kann daher nicht als „(local)“ angegeben werden.  
   
  TCP *port* number  
- Die für die Verbindung verwendete TCP-Portnummer. Sie können eine TCP-Portnummer zwischen 0 und 65535 für eine Instanz von SQL Server angeben, die nicht am Standardport 1433 lauscht. Zum Beispiel: **ServerA,1450** oder **10.192.14.27,1435**  
+ Die für die Verbindung verwendete TCP-Portnummer. Sie können eine TCP-Portnummer zwischen 0 und 65535 für eine Instanz von SQL Server angeben, die nicht am Standardport 1433 lauscht. Beispiel: **ServerA,1450** oder **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Es wird empfohlen, die Verbindung mit dem Remoteserver über die IP-Adresse herzustellen. Je nach Netzwerkkonfiguration sind zur Herstellung einer Verbindung unter Angabe des Computernamens möglicherweise weitere Schritte erforderlich, damit Ihr nicht zur Appliance gehörender DNS-Server zum Auflösen des Namens in den korrekten Server verwendet werden kann. Dieser Schritt ist nicht erforderlich, wenn Sie die Verbindung mit einer IP-Adresse herstellen. Weitere Informationen finden Sie unter "Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die nicht zu Appliances gehören (Analytics Platform System)" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

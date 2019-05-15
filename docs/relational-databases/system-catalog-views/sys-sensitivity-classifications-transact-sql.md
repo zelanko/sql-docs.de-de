@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e75ebba2f48d0e2ec15ea871fe8d70a4b49e7318
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fa7395141a040beb8fdc71aff5a5068bdfd7eb03
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493051"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626778"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -62,10 +62,13 @@ Gibt eine Zeile für jede klassifizierte Element in der Datenbank zurück.
 
 Das folgende Beispiel gibt eine Tabelle mit den Tabellennamen, Spaltennamen, Bezeichnung bezeichnungs-ID, Informationstyp Informations-Typ-ID für jede klassifizierte Spalte in der Datenbank.
 
+> [!NOTE]
+> Bezeichnung ist ein Schlüsselwort für Azure SQL Data Warehouse.
+
 ```sql
 SELECT
     sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    Label, Label_ID, Information_Type, Information_Type_ID
+    [Label], Label_ID, Information_Type, Information_Type_ID
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

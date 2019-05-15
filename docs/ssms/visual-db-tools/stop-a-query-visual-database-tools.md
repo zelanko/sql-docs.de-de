@@ -12,15 +12,15 @@ helpviewer_keywords:
 - stopping queries
 - queries [SQL Server], stopping
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 558ab142fba5cec7a4603aaa65d8a64fa6163d5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7e5769aadb3b74794fcfd66f9836c5f1787c4a2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607672"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105660"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Beenden einer Abfrage (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Wenn Sie bemerken, dass die Abfrage zu viel Zeit in Anspruch nimmt oder nicht di
   
 -   Klicken Sie mit der rechten Maustaste in den [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), zeigen Sie im Kontextmenü auf **Bereich**, und klicken Sie dann auf **Ergebnisse löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Löschen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
 [Ausführen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

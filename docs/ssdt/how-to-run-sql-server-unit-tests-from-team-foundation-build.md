@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226537"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099648"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
@@ -167,7 +167,7 @@ Team Foundation Build erstellt standardmäßig eine Konfigurationsdatei aus der 
   
 9. Doppelklicken Sie im Projektmappen-Explorer auf app.config.  
   
-10. Fügen Sie im Editor für jeden \<SqlUnitTesting_*VSVersion*>-Knoten `AllowConfigurationOverride="true"` hinzu. Zum Beispiel:  
+10. Fügen Sie im Editor für jeden \<SqlUnitTesting_*VSVersion*>-Knoten `AllowConfigurationOverride="true"` hinzu. Beispiel:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db9cda0558f2d43aa8921428f87a08f826a05afe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 51c1bbf529bf38e7efbadfe5e85d87fa49741b7e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099836"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102843"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ Projektmappen und Projekte können in eine [!INCLUDE[msCoName](../../includes/ms
 |Beschreibt, wie Elemente zwischen Projekten in einer Projektmappe verschoben werden.|[Verschieben von Elementen in einer Projektmappe](../../ssms/solution/move-items-in-a-solution.md)|  
 |Beschreibt, wie eine Projektmappe oder die Elemente in der Projektmappe umbenannt werden.|[Umbenennen von Projektmappen und Projektelementen](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/library/ms173879.aspx)  

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5de816958beb6943ed102931e2e700528e0b140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614880"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097549"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
 |[!INCLUDE[ssIS](../../includes/ssis_md.md)]-Paketausführung|Ausführen eines [!INCLUDE[ssIS](../../includes/ssis_md.md)]-Pakets.|  
   
 > [!NOTE]  
-> Da [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte.  
+> Da [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte.  
   
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Pakete ausführen.  
   
@@ -181,6 +181,6 @@ Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../incl
 |Beschreibt den Wartungsplanungs-Assistenten. Hierbei handelt es sich um ein Hilfsprogramm, mit dem Sie Aufträge, Warnungen und Operatoren erstellen können, um die Verwaltung einer SQL Server-Instanz zu automatisieren.|[Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Beschreibt, wie administrative Aufgaben mit dem SQL Server-Agent automatisiert werden.|[Automatisierte Administrationstasks &#40;SQL Server-Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)  
   

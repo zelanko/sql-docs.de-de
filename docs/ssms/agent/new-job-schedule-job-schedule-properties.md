@@ -11,16 +11,16 @@ f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1cc425cb817873d50966bf8c5fcbcc54864414c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744648"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105514"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47744648"
 
 Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Name**  
 Geben Sie einen neuen Namen für den Zeitplan ein.  
   
@@ -102,7 +102,7 @@ Wählen Sie das Datum aus, an dem der Auftrag ausgeführt wird.
 **Zeit**  
 Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Planen eines Auftrags](../../ssms/agent/schedule-a-job.md)  
   

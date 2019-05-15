@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multiuser environments [Visual Database Tools]
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 788dcb0a847b7fe9fb70285da44d793d5a35a886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f05907ccaf2d5fa16613d89e6bcb50a4e86b376
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636143"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098366"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Berechtigungen und Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,6 +26,6 @@ Berechtigungen, die Benutzern den Zugriff auf Datenquellenobjekte ermöglichen, 
   
 Wenn Ihnen die Datenbankberechtigungen nur das Anzeigen und nicht das Bearbeiten der Datenbankstruktur gestatten, können Sie mithilfe von Änderungsskripts eigene Änderungen entwerfen, ohne diese in die Datenbank zu übertragen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Mehrbenutzerumgebungen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

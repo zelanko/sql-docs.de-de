@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215456"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626674"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
 
@@ -27,7 +27,9 @@ Dieses Dokument beschreibt, wie Sie die Problembehandlung für Microsoft SQL Ser
 > Antworten auf häufig gestellte Fragen finden Sie unter den [SQL Server unter Linux – häufig gestellte Fragen](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Problembehandlung bei Verbindungsfehlern
-Wenn beim Herstellen einer Verbindung mit dem Linux-SQL-Server Probleme auftreten, sind einige Punkte zu überprüfen. 
+Wenn beim Herstellen einer Verbindung mit dem Linux-SQL-Server Probleme auftreten, sind einige Punkte zu überprüfen.
+
+- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"**, versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
 
 - Stellen Sie sicher, dass der Servername oder IP-Adresse von Ihrem Clientcomputer erreichbar ist.
 
@@ -193,7 +195,7 @@ Als letzten Ausweg können Sie zum Neuerstellen des Masters und Model-Datenbanke
 
 ## <a name="improve-performance"></a>Verbessern der Leistung
 
-Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwurf, Hardware- und arbeitsauslastungsanforderungen zu beeinflussen. Wenn Sie zur Verbesserung der Leistung möchten, zunächst die bewährten Methoden im Artikel [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md). Anschließend lernen Sie einige der Tools die Berechtigung für die Behandlung von Leistungsproblemen.
+Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwurf, Hardware- und arbeitsauslastungsanforderungen zu beeinflussen. Wenn Sie zur Verbesserung der Leistung möchten, zunächst die bewährten Methoden im Artikel [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md). Anschließend lernen Sie einige der verfügbaren Tools für die Behandlung von Leistungsproblemen.
 
 - [Abfragespeicher](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Dynamische Verwaltungssichten (DMVs) für System](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - removing queries
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1fa78b6b6750ab4ffc4792a3c93d8ab2fe9e13ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fa79c9883a1de60f08fb6362e5aa7a7d9c4d28b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688732"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099990"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Löschen von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Sie können eine Abfrage löschen, indem Sie sie aus dem Projekt entfernen und d
 > [!NOTE]  
 > Wenn Sie die Abfrage aus dem Projekt entfernen möchten, ohne sie zu löschen, klicken Sie auf **Entfernen**. Dann können Sie mit der rechten Maustaste auf den Abfrageordner klicken und **Element hinzufügen** auswählen, um die Abfrage später zu suchen und hinzuzufügen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Löschen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
 [Verwerfen von Änderungen an Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
