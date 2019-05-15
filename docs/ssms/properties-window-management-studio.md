@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b7ee124e79e437554d2ddf1dc52be6424a421d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729088"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104370"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen v
   
 Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
 |Element|und Beschreibung|  
 |-----------|---------------|  
@@ -39,6 +39,6 @@ Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Felder
 |**Eigenschaften**|Zeigt die Eigenschaften für ein Objekt an.|  
 |**Beschreibungsbereich**|Der Beschreibungsbereich befindet sich unten im Eigenschaftenfenster und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   

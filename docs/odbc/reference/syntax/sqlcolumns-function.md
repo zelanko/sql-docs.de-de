@@ -20,12 +20,12 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259348"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537683"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns-Funktion
 **Übereinstimmung mit Standards**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259348"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -182,7 +182,7 @@ SQLRETURN SQLColumns(
 ## <a name="code-example"></a>Codebeispiel  
  Im folgenden Beispiel deklariert eine Anwendung Puffer für das Resultset zurückgegebenes **SQLColumns**. Ruft **SQLColumns** zur Beschreibung der jede Spalte in der EMPLOYEE-Tabelle ein Resultset zurückgegeben. Es ruft dann **SQLBindCol** zum Binden der Spalten im Resultset den Puffern. Schließlich die Anwendung ruft jede Zeile von Daten mit **SQLFetch** und verarbeitet es.  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

@@ -1,21 +1,21 @@
 ---
 title: Nicht mehr unterstützte Funktionen
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552932"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503976"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Nicht mehr unterstützte Funktion in SQL Server Reporting Services (SSRS)
 
@@ -29,14 +29,12 @@ Eine *nicht mehr unterstützte Funktion* ist eine veraltete Funktion, die nicht 
 
 |Funktion|Alternative oder Problemumgehung|
 |-|-|
-|Upload von Berichtsmodellen über das Webportal|Dies kann weiterhin über die SOAP-API erfolgen.|
-|Verwalten von Berichtsmodellen über das Webportal|Dies kann weiterhin über die SOAP-API erfolgen.|
 |Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager|Sie können auch weiterhin [das Webportal mit einem Branding versehen](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Neuigkeiten bei Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Neuigkeiten bei Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
