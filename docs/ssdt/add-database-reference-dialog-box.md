@@ -1,24 +1,20 @@
 ---
 title: Dialogfeld „Datenbankverweis hinzufügen“ | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.adddatabasereference.dialog
-ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.reviewer: ''
+ms.custom: SSDT
+ms.date: 02/09/2017
+ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400604"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097427"
 ---
 # <a name="add-database-reference-dialog-box"></a>Datenbankverweis hinzufügen (Dialogfeld)
 In diesem Thema werden die Verfahren beschrieben, die Sie im Dialogfeld **Datenbankverweis hinzufügen** ausführen können.  
@@ -117,6 +113,6 @@ Wenn Sie dieses Projekt veröffentlichen, können Sie zusammengesetzte Projekte 
   
 3.  Stellen Sie im Dialogfeld **Erweiterte Veröffentlichungseinstellungen** sicher, dass **Zusammengesetzte Objekte einschließen** in der Liste **Erweiterte Bereitstellungsoptionen** aktiviert ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)  
   

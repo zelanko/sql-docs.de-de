@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710641"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503045"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus
 
@@ -27,6 +27,9 @@ Der einheitliche Modus von Reporting Services unterstützt ein Bereitstellungsmo
 Für Power BI-Berichtsserver müssen Sie die Clientaffinität (auch als „beständige Sitzungen“ bekannt) im Lastenausgleichsmodul für jede horizontal hochskalierte Umgebung konfigurieren, um die ordnungsgemäße Ausführung zu gewährleisten.  
   
 Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-Modus die SharePoint-Produktinfrastruktur für die horizontale Skalierung. Der SharePoint-Modus für horizontales Skalieren wird durch das Hinzufügen weiterer Berichtsserver im SharePoint-Modus zur SharePoint-Farm ausgeführt. Informationen zur horizontalen Skalierung im SharePoint-Modus finden Sie unter [Add an Additional Report Server to a Farm (SSRS Scale-out) (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS))](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
  
   Eine *Bereitstellung für horizontales Skalieren* wird in den folgenden Szenarien verwendet:  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e21d05f42eaf41d932c82c7f24f63df9d42c8a9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4911b633fb6dcb2b40dc6d22828c0af53b0d2bda
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699488"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088766"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Hinzufügen abgeleiteter Tabellen zu Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Abgeleitete Tabellen stellen Resultsets dar, die als Tabellenquellen in einer Ab
   
     Es wird eine neue Tabelle namens „derivedtbl_*N* “ hinzugefügt, und die SELECT-Anweisung der abgeleiteten Tabelle wird der FROM-Klausel der Abfrage hinzugefügt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Erstellen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Öffnen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  

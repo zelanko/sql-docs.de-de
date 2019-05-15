@@ -13,15 +13,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fad7d0d5106af21db50b10835d862ffbaef5a875
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b256b82ab6229d93612a2c9c5ae35978e17155e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713528"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088890"
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Die Elemente in der Toolbox sind in Abschnitte unterteilt, die als Registerkarte
 |Ändern der Position eines Elements auf einer erweiterten Toolboxregisterkarte|Ziehen Sie das Element an die neue Stelle, und lassen Sie die Maustaste los.|  
 |Umbenennen eines Toolboxelements|Klicken Sie mit der rechten Maustaste auf das Toolboxelement, und klicken Sie im Kontextmenü auf **Element umbenennen** .|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   

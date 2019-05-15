@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744560"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090257"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Ein allgemeines DNS-Suffix ist für den Workgroupcluster einer domänenunabhäng
 
 Die Erstellung einer domänenunabhängigen Verfügbarkeitsgruppe kann derzeit von SQL Server Management Studio nicht vollständig durchgeführt werden. Während die Erstellung der domänenunabhängigen Verfügbarkeitsgruppe im Grunde dasselbe wie die Erstellung einer normalen Verfügbarkeitsgruppe ist, sind manche Aspekte (wie das Erstellen der Zertifikate) nur mit Transact-SQL möglich. Im folgenden Beispiel wird von der Konfiguration einer Verfügbarkeitsgruppe mit zwei Replikaten ausgegangen: ein primäres und ein sekundäres Replikat. 
 
-1. [Mithilfe der Anweisungen unter diesem Link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/) stellen Sie einen Workgroupcluster bereit, der aus allen Servern besteht, die in der Verfügbarkeitsgruppe vorhanden sein werden. Stellen Sie sicher, dass das allgemeine DNS-Suffix bereits konfiguriert ist, bevor Sie den Workgroupcluster konfigurieren.
+1. [Mithilfe der Anweisungen unter diesem Link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059) stellen Sie einen Workgroupcluster bereit, der aus allen Servern besteht, die in der Verfügbarkeitsgruppe vorhanden sein werden. Stellen Sie sicher, dass das allgemeine DNS-Suffix bereits konfiguriert ist, bevor Sie den Workgroupcluster konfigurieren.
 2. [Aktivieren Sie die Funktion „Always On-Verfügbarkeitsgruppen“](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) auf jeder Instanz, die an einer oder mehreren Verfügbarkeitsgruppen teilnehmen soll. Der Neustart jeder SQL Server-Instanz ist so erforderlich.
 3. Jede Instanz, die das primäre Replikat hostet, erfordert einen Datenbankhauptschlüssel. Wenn nicht bereits ein Hauptschlüssel vorhanden ist, führen Sie den folgenden Befehl aus:
 
@@ -126,7 +126,7 @@ Die Erstellung einer domänenunabhängigen Verfügbarkeitsgruppe kann derzeit vo
    ```
 
 10. Erstellen Sie für jedes Replikat, das möglicherweise ein primäres Replikat ist, einen Anmeldenamen und Benutzer auf allen entsprechenden sekundären Replikaten.
-11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Zum Beispiel:
+11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Beispiel:
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

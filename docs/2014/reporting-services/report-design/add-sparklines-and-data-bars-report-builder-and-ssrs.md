@@ -43,9 +43,9 @@ ms.locfileid: "63185890"
   
      Der Bereich **Diagrammdaten** wird geöffnet.  
   
-6.  Klicken Sie im Bereich **Werte** auf das Pluszeichen ( **) bei** Felder hinzufügen**+** und anschließend auf das Feld, dessen Werte Sie als Diagramm darstellen möchten.  
+6.  Klicken Sie im Bereich **Werte** auf das Pluszeichen ( **) bei** Felder hinzufügen **+** und anschließend auf das Feld, dessen Werte Sie als Diagramm darstellen möchten.  
   
-7.  Klicken Sie im Bereich **Kategoriegruppen** auf das Pluszeichen ( **) bei** Felder hinzufügen**+** und anschließend auf das Feld, nach dessen Werten Sie gruppieren möchten.  
+7.  Klicken Sie im Bereich **Kategoriegruppen** auf das Pluszeichen ( **) bei** Felder hinzufügen **+** und anschließend auf das Feld, nach dessen Werten Sie gruppieren möchten.  
   
      In der Regel fügen Sie bei Sparklines und Datenbalken dem Bereich **Reihengruppe** kein Feld hinzu, da Sie nur eine Reihe für jede Zeile möchten.  
   

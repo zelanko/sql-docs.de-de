@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+ms.openlocfilehash: 7bb60aac75343a65264c2a87f72957dae336dacb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267855"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105744"
 ---
 # <a name="create-and-update-database-tables"></a>Erstellen und Aktualisieren von Datenbanktabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../r
 
 1. Schließen Sie den Designer, und speichern Sie die Änderungen.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Tabellen](../../relational-databases/tables/tables.md)  
 [Tabelleneigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  

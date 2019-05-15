@@ -1,7 +1,7 @@
 ---
 title: Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658074"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503905"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
 
@@ -23,6 +23,9 @@ Die Auswahl des richtigen Business Intelligence-Tools kann schwierig sein. Erhal
 In der folgenden Tabelle werden die verschiedenen Arbeitsauslastungen für Datenanalyse und Berichterstellung den Microsoft BI-Tools zugeordnet, die für diese Arbeitsauslastungen am besten geeignet sind. Um weitere Informationen zu einem Produkt zu erhalten, klicken Sie auf den Produktlink in der Tabelle.  
   
  Wenn Sie für die Suche nach den richtigen Tools eine kurze Übersicht benötigen, informieren Sie sich unter [Einführung in Microsoft Business Intelligence (BI)-Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
 |Arbeitsauslastungen|Benutzer|||BI-Tools|||  
 |---------------|----------|-|-|--------------|-|-|  

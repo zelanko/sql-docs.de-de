@@ -2,8 +2,8 @@
 title: 'Schnellstart: Verbinden und Abfragen von Azure SQL-Datenbank'
 titleSuffix: Azure Data Studio
 description: In dieser schnellstartanleitung veranschaulicht, wie Azure Data Studio eine Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255972"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620355"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Azure SQL-Datenbank
 
@@ -39,7 +39,7 @@ Wenn Sie nicht über eine Azure SQL-Server verfügen, führen Sie eines der folg
 
 Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit Ihrem Azure SQL-Datenbank-Server.
 
-1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Verbindung** Seite sollte zu öffnen. Wenn Sie nicht angezeigt wird der **Verbindung** Seite **Verbindung hinzufügen**, oder die **neue Verbindung** Symbol in der **Server** Randleiste:
+1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Willkommen** Seite sollte zu öffnen. Wenn Sie nicht sehen die **Willkommen** Seite **Hilfe** > **Willkommen**. Wählen Sie **neue Verbindung** zum Öffnen der **Verbindung** Bereich:
    
    ![Symbol "neue Verbindung"](media/quickstart-sql-database/new-connection-icon.png)
 

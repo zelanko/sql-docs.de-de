@@ -11,15 +11,15 @@ helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dadc8b2aadfbf00b67a3ae697336124f53ddcdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 267c0e77160490dbc1118b4f69aab6eb0fabbcb4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612728"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099419"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Hinzufügen von Textanmerkungen zu Diagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ Sie können Hinweise oder Kommentare zu einem Diagramm erstellen, indem Sie Text
 > [!NOTE]  
 > Sie können die Schriftart ändern, indem Sie mit der rechten Maustaste in das Textfeld klicken und anschließend auf **Schriftart für Textanmerkung festlegen**klicken.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -26,19 +26,19 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777468"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503241"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine neue Warteschlange in einer Datenbank. Fügt einer Warteschlange gespeicherte Nachrichten hinzu. Wenn eine Nachricht für einen Dienst eintrifft, platziert [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Nachricht in der dem Dienst zugeordneten Warteschlange.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,16 +60,10 @@ CREATE QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <procedure> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }  
   
 ```  
   
@@ -159,11 +153,11 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|Handle der Konversation, von der diese Nachricht ein Teil ist.|  
 |message_sequence_number|**bigint**|Sequenznummer der Nachricht in der Konversation.|  
 |service_name|**nvarchar(512)**|Name des Diensts, an den die Konversation gerichtet ist.|  
-|service_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
+|service_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
 |service_contract_name|**nvarchar(256)**|Name des Vertrags, dem die Konversation entspricht.|  
-|service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
+|service_contract_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |message_type_name|**nvarchar(256)**|Name des Nachrichtentyps, der die Nachricht beschreibt.|  
-|message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
+|message_type_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
 |validation|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E=Leer<br /><br /> N = Keine<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Inhalt der Nachricht.|  
 |message_id|**uniqueidentifier**|Eindeutiger Bezeichner für die Nachricht.|  
@@ -225,7 +219,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

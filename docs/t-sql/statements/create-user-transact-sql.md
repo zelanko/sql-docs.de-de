@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042170"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488313"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "59042170"
   
 -   Benutzer auf Basis eine Windows-Benutzers ohne Anmeldenamen. `CREATE USER [Contoso\Fritz];`    
 -   Benutzer auf Basis einer Windows-Gruppe ohne Anmeldenamen. `CREATE USER [Contoso\Sales];`  
--   Benutzer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basierend auf einem Azure Active Directory-Benutzer. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   Benutzer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basierend auf einem Azure Active Directory-Benutzer. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
 -   Benutzer einer eigenständigen Datenbank mit Kennwort. (Nicht in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verfügbar.) `CREATE USER Mary WITH PASSWORD = '********';`   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - showing query properties
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d4de1238fb42f9c875c35c6f426a05f19dd92f61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d6abe662e9d79a23be11d2bccc72dc8d0ec8c6e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825348"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099727"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Anzeigen von Abfrageeigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,6 +33,6 @@ Sie können sich im Abfrage- und Sicht-Designer im Eigenschaftenfenster die Eige
   
 Im **Eigenschaftenfenster** werden nun die Eigenschaften für die Abfrage angezeigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
