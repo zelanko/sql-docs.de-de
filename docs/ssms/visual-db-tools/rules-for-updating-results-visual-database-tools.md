@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8815f7e5bf0192222a0dfdf9917a39606642da1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22d2fc216a4772a7c9ba4e0a8f654d002f050252
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716649"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105335"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Regeln zum Aktualisieren von Ergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Wenn die Abfrage auf einer Sicht basiert, kann sie aktualisiert werden. Dieselbe
   
 Die folgende Tabelle gibt eine Übersicht über die einzelnen Fälle, in denen Sie Abfrageergebnisse im Ergebnisbereich aktualisieren bzw. nicht aktualisieren können. Häufig wird durch die verwendete Datenbank bestimmt, ob die Ergebnisse einer Abfrage aktualisiert werden können.  
   
-|Dataseteigenschaften|Können die Ergebnisse aktualisiert werden?|  
+|Abfrage|Können die Ergebnisse aktualisiert werden?|  
 |---------|---------------------------|  
 |Abfrage auf Grundlage einer Tabelle mit Primärschlüssel in der Ausgabeliste|Ja (außer wie im Folgenden aufgeführt).|  
 |Abfrage auf Grundlage einer Tabelle ohne eindeutigen Index und Primärschlüssel|Hängt von der Abfrage und der Datenbank ab. Einige Datenbanken lassen Updates zu, wenn genügend Informationen zur eindeutigen Identifizierung von Datensätzen verfügbar sind.|  
@@ -66,6 +66,6 @@ Außerdem können Sie möglicherweise bestimmte Spalten in den Abfrageergebnisse
   
 -   Timestamp- oder BLOB-Spalten  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
