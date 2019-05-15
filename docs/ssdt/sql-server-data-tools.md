@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ea53ad33b58d7c838017dd2761e74a780214bb0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414667"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101870"
 ---
-# <a name="sql-server-data-tools"></a>SQL Server Datatools
+# <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) ermöglichen durch die Einführung eines universellen deklarativen Modells, das sämtliche Phasen der Datenbankentwicklung in Visual Studio umfasst, eine neue Art der Datenbankentwicklung. Mit den Transact\-SQL-Entwurfsfunktionen von SSDT können Sie Datenbanken erstellen, debuggen, verwalten und umgestalten. Dies gilt unabhängig davon, ob Sie mit einem Datenbankprojekt oder direkt mit einer verbundenen lokalen oder nicht lokalen Datenbankinstanz arbeiten.  
   
 Entwickler haben Zugriff auf vertraute Visual Studio-Tools für die Datenbankentwicklung. Die Tools umfassen: Codenavigation, IntelliSense, Sprachunterstützung entsprechend den verfügbaren Funktionen für C# und Visual Basic, plattformspezifische Überprüfung, Debugging und deklaratives Bearbeiten im Transact\-SQL-Editor. SSDT bietet außerdem einen visuellen Tabellen-Designer zum Erstellen und Bearbeiten von Tabellen in Datenbankprojekten oder verbundene Datenbankinstanzen. Während Sie in einer teambasierten Umgebung an den Datenbankprojekten arbeiten, können Sie die Versionskontrolle für alle Dateien nutzen. Sie können das Projekt auf allen unterstützten SQL-Plattformen veröffentlichen, einschließlich SQL-Datenbank und SQL Server. Die Plattformüberprüfungsfunktion von SSDT stellt sicher, dass die Skripts ordnungsgemäß auf dem von Ihnen festgelegten Ziel ausgeführt werden.  
