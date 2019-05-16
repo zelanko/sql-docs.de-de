@@ -1,6 +1,6 @@
 ---
 title: Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft-Dokumentation
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472314"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709125"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Die *Kompatibilitätsgrad* bezieht sich auf releasespezifische Verhalten in der Analysis Services-Engine. Beispielsweise verfügen DirectQuery und tabellarische Objektmetadaten verschiedene Implementierungen abhängig von den Kompatibilitätsgrad. Im Allgemeinen sollten Sie die neuesten Kompatibilitätsgrad, die von Ihren Servern unterstützt auswählen.
 
-  **Der aktuelle Kompatibilitätsgrad ist 1400** 
+  **Die neueste unterstützte Kompatibilitätsgrad ist 1400** 
   
 Wichtige Features in den Kompatibilitätsgrad 1400 sind:
 
@@ -38,8 +38,9 @@ Wichtige Features in den Kompatibilitätsgrad 1400 sind:
 |||  
 |-|-|- 
 |**Kompatibilitätsgrad**|**Serverversion**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SqlServer 2017 SQLServer 2016| 
+|1470|SQL Server-2019 (CTP 2.3 und höher) | 
+|1400|Azure Analysis Services, SqlServer 2019, SqlServer 2017 |  
+|1200|Azure Analysis Services, SqlServer 2019, SqlServer 2017 SQLServer 2016| 
 |1103|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1|  
 |1100|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1, SqlServer 2012| 
 

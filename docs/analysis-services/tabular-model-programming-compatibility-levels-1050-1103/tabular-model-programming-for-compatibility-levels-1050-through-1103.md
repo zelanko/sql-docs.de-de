@@ -1,6 +1,6 @@
 ---
 title: Analysis Services tabellarisch modellprogrammierung für Kompatibilitätsgrad 1050-1103 | Microsoft-Dokumentation
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe2ce43ffb5d2c5be0afb39931f231d2f0d24e14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddc25ab4d4358c8000c5a7bfe9a9de9dd5e87ed6
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025291"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709140"
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1050 bis 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Tabellarische Modelle verwenden relationale Konstrukte, um die von Analyse- und Berichtsanwendungen verwendeten Analysis Services-Daten zu modellieren. Diese Modelle werden auf einer Analysis Service-Instanz ausgeführt, die für den Tabellenmodus konfiguriert ist, und zwar mithilfe einer Engine für Datenanalyse im Arbeitsspeicher für einen Speicher und schnelle Tabellenscans, mit denen Daten nach Bedarf aggregiert und berechnet werden.  
   
  Wenn die Anforderungen der benutzerdefinierten BI-Lösung am besten von einer tabellarischen Modelldatenbank erfüllt werden, können Sie eine beliebige der Analysis Services-Clientbibliotheken und -Programmierschnittstellen verwenden, um die Anwendung auf einer Analysis Services-Instanz in tabellarische Modelle zu integrieren. Sie können entweder eingebettete MDX oder DAX im Code verwenden, um tabellarische Modelldaten abzufragen und zu berechnen.  
