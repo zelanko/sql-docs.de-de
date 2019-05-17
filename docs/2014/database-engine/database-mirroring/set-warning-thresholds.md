@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754138"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805160"
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
   Mithilfe dieses Dialogfelds können Sie einen oder mehrere Warnungsschwellenwerte für die in der Navigationsstruktur des Dialogfelds **Datenbankspiegelungs-Monitor** ausgewählte Datenbank aktivieren und konfigurieren.  
@@ -30,7 +30,7 @@ ms.locfileid: "62754138"
   
 ## <a name="options"></a>Optionen  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
- Name einer Partnerserverinstanz in der Form *SYSTEM***\\***INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
+ Name einer Partnerserverinstanz in der Form _SYSTEM_**\\**_INSTANZNAME_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   
