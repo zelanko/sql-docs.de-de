@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS-Supportrichtlinie
               href: ../ssms/support-policy.md
-        - name: 'Tutorials: SQL Server Management Studio'
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: Herstellen einer Verbindung mit und Abfragen von SQL Server über SSMS
@@ -9274,6 +9274,10 @@
                           items:
                             - name: Vom Assistenten zum Generieren von Skripts unterstützte Objekte
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: Problembehandlung
+          items:
+            - name: Erhalten eines vollständigen Speicherabbilds
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: References
           items:
             - name: Die SQL Server Management Studio-Umgebung
