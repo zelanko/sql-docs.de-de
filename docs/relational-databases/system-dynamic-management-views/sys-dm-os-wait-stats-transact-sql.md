@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_os_wait_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690784"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805171"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |RBIO_WAIT_VLF |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Tritt auf, wenn es sich bei großen Datenbank Compute-Knoten verzögerte Log-Verbrauch auf der Seite Server eingeschränkt wird. <br /> **Gilt für**: Azure SQL-Datenbank hochgradig skalierbaren.|
+|RBIO_RG_DESTAGE |Tritt auf, wenn es sich bei großen Datenbank Compute-Knoten verzögerte Log-Verbrauch durch die langfristige Protokollspeicher eingeschränkt wird. <br /> **Gilt für**: Azure SQL-Datenbank hochgradig skalierbaren.|
+|RBIO_RG_REPLICA |Tritt auf, wenn ein Hyperskalierbares, Datenbank-Compute-Knoten aufgrund von gedrosselt wird, Log-Nutzung des Clusterdatenträgers lesbares sekundäres Replikat verzögert. <br /> **Gilt für**: Azure SQL-Datenbank hochgradig skalierbaren.|
+|RBIO_RG_LOCALDESTAGE |Tritt auf, wenn es sich bei großen Datenbank Compute-Knoten aufgrund verzögerter Log Nutzung vom Log-Dienst gedrosselt wird. <br /> **Gilt für**: Azure SQL-Datenbank hochgradig skalierbaren.|
 |RECOVER_CHANGEDB |Tritt während der Synchronisierung des Datenbankstatus in einer Datenbank im betriebsbereiten Standbymodus auf.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
