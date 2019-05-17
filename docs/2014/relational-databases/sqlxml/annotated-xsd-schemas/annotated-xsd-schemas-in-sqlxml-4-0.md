@@ -46,14 +46,14 @@ ms.locfileid: "63131194"
 ## <a name="other-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu XSD (XML Schema Definition Language), XPath (XML Path Language) und XSLT (Extensible Stylesheet Language Transformations) finden Sie auf den folgenden Websites:  
   
--   XML Schema Part 0: Einführung, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Einführung, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML-Schemateil 1: Strukturen, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Strukturen, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2: Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML-Pfad ()-Programmiersprache (XPath)http://www.w3.org/TR/xpath)  
+-   XML-Pfad ()-Programmiersprache (XPath) http://www.w3.org/TR/xpath)  
   
--   XSL-Transformationen (XSLT),)http://www.w3.org/TR/xslt)  
+-   XSL-Transformationen (XSLT), http://www.w3.org/TR/xslt)  
   
   
