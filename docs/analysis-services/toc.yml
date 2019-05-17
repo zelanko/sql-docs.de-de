@@ -33,7 +33,7 @@
   items:
     - name: Analysis Services-Lernprogramme – Übersicht
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: Tabellenmodellierung
+    - name: Tabellarische Modelle
       items:
         - name: Internet Sales-Tutorial (1400)
           items:
@@ -105,9 +105,10 @@
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
             - name: 'Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte'
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: Mehrdimensionale Modellierung
-      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
+    - name: Mehrdimensionale Modelle
       items:
+        - name: Adventure Works-Tutorial
+          href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
         - name: Tutorialszenario
           href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
         - name: Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung
@@ -219,7 +220,7 @@
         - name: Installieren von Analysis Services im PowerPivot-Modus
           href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
           items:
-            - name: Überprüfen einer Power Pivot für SharePoint-Installation
+            - name: Überprüfen einer „Power Pivot für SharePoint“-Installation
               href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
             - name: Beispiel für eine PowerPivot für SharePoint 2016-Konfiguration mit Mindestberechtigungen
               href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
