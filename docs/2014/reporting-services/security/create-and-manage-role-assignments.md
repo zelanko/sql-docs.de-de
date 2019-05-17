@@ -42,7 +42,7 @@ ms.locfileid: "63242679"
   
  Sie müssen Mitglied der lokalen Gruppe Administratoren auf dem Berichtsserver-Computer sein, um eine Rollenzuweisung erstellen zu können. Sie können diese Aufgabe delegieren, indem Sie andere Benutzer der Rolle **Inhalts-Manager** zuweisen.  
   
- Weitere Informationen finden Sie unter [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Erstellen einer Rollenzuweisung auf Systemebene  
  Öffnen Sie im Berichts-Manager die Seite Siteeinstellungen, um Rollenzuweisungen auf Systemebene zu definieren und zu verwalten.  

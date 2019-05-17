@@ -301,7 +301,7 @@ GO
   
 -   Es gelten Einschränkungen für das Aktualisieren des Primärschlüssels von Tabellen, die mit einer speicheroptimierten Tabelle auf einem Abonnenten repliziert werden. Weitere Informationen finden Sie unter [Replizieren von Änderungen mit einem Primärschlüssel](#PrimaryKey).  
   
--   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
+-   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Von In-Memory OLTP nicht unterstützte T-SQL-Konstrukte](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Ändern einer Schemadatei  
   
