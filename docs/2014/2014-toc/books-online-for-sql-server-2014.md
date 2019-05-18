@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470420"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836209"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Onlinedokumentation für SQLServer 2014
 
   Willkommen bei der [!INCLUDE[msCoName](../includes/msconame-md.md)]®-Onlinedokumentation für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Die Onlinedokumentation enthält die Taskbeschreibungen und die Referenzdokumentation, die die Ausführung von Datenverwaltungs- und Business Intelligence-Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschreiben.  
-  
+
+SQL Server 2016 und höher werden dokumentiert [hier](https://docs.microsoft.com/sql/sql-server/index). SQL Server 2012 und älteren Versionen sind dokumentiert [hier](#previous-versions-gm2014). <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **Probieren Sie es aus:**  
  ![Azure Virtual Machine (klein)](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2014 Service Pack 1 (SP1) bereits installiert ist. Weitere Informationen zu SQL Server 2014 (SP1), finden Sie unter [SQL Server 2014 Service Pack 1-Versionsinformationen](https://support.microsoft.com/en-us/kb/3058865). 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470420"
 -   [Data Platform Developer Center](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML-Entwicklercenter](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQLServer 2005, 2008, 2012, 2016 und höher
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Siehe auch  
 
  [Hilfe zu SQL Server-Konfigurations-Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
