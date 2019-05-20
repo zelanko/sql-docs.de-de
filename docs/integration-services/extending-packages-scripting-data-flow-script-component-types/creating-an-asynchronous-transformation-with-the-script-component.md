@@ -17,14 +17,18 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d24b53d8f94f2478198aa8678d309703d0af274e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 71370adeca366b2002244c7f0aabfbca639579c7
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282962"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805204"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben kann die Fertigstellung ihrer Verarbeitung abwarten, bis die Transformation alle Eingabezeilen empfangen hat. Die Transformation kann bestimmte Zeilen auch ausgeben, bevor sie alle Eingabezeilen empfangen hat. In diesem Thema wird eine asynchrone Transformation erläutert. Wenn die Verarbeitung eine synchrone Transformation erfordert, finden Sie weitere Informationen unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Eine Übersicht der Skriptkomponenten finden Sie unter [Extending the Data Flow with the Script Component (Erweitern des Datenflusses mit der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
@@ -60,7 +64,7 @@ ms.locfileid: "58282962"
   
 -   Sie haben die Möglichkeit, eine oder mehrere zusätzliche Ausgaben zu erstellen, beispielsweise eine Ausgabe für das Ergebnis einer Aggregation. Verwenden Sie die Schaltflächen **Ausgabe hinzufügen** und **Ausgabe entfernen**, um die Ausgaben der asynchronen Transformationskomponente zu verwalten. Legen Sie die **SynchronousInputID**-Eigenschaft jeder Ausgabe auf 0 fest, um anzugeben, dass die Ausgabe nicht nur Daten von einer Upstreamkomponente weitergibt oder diese direkt in den vorhandenen Zeilen und Spalten transformiert. Durch dies Einstellung werden die Ausgaben asynchron zur Eingabe.  
   
--   Sie können der Eingabe und den Ausgaben einen beschreibenden Namen geben. In der Skriptkomponente werden diese Namen verwendet, um die typisierten Accessoreigenschaften zu erzeugen, mit denen Sie auf die Eingabe und Ausgaben in Ihrem Skript verweisen.  
+-   Sie können der Eingabe und den Ausgaben einen beschreibenden Namen geben. In der Skriptkomponente werden diese Namen verwendet, um die typisierten Accessoreigenschaften zu erzeugen, mit denen Sie auf die Eingabe und die Ausgaben in Ihrem Skript verweisen.  
   
 -   Häufig werden durch eine asynchrone Transformation dem Datenfluss Spalten hinzugefügt. Wenn die **SynchronousInputID**-Eigenschaft einer Ausgabe 0 beträgt, wird dadurch angegeben, dass die Ausgabe nicht nur Daten von einer Upstreamkomponente weitergibt oder diese direkt in den vorhandenen Zeilen und Spalten transformiert, und Sie müssen in der Ausgabe explizit Ausgabespalten hinzufügen und diese konfigurieren. Ausgabespalten haben nicht dieselben Namen wie die Eingabespalten, denen sie zugeordnet sind.  
   

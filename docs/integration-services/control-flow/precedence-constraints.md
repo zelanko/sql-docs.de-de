@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283059"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727564"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Rangfolgeneinschränkungen verknüpfen ausführbare Dateien, Container und Tasks in Paketen in einer Ablaufsteuerung und geben Bedingungen an, die bestimmen, ob ausführbare Dateien ausgeführt werden. Bei einer ausführbaren Datei kann es sich um einen For-Schleifencontainer, einen Foreach-Schleifencontainer, einen Task oder einen Ereignishandler handeln. Ereignishandler verwenden Rangfolgeneinschränkungen zum Verlinken der ausführbaren Dateien zu einer Ablaufsteuerung.  
   
  Eine Rangfolgeneinschränkung verlinkt zwei ausführbare Dateien: die ausführbare Datei der Rangfolge und die eingeschränkte ausführbare Datei. Die ausführbare Datei der Rangfolge wird vor der eingeschränkten ausführbaren Datei ausgeführt, und das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann bestimmen, ob die eingeschränkte ausführbare Datei ausgeführt wird. Im folgenden Diagramm werden zwei ausführbare Dateien dargestellt, die durch eine Rangfolgeneinschränkung verlinkt sind.  
@@ -143,7 +147,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
-3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** . Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf Rangfolgeneinschränkung, und klicken Sie auf **Eigenschaften**. Ändern Sie im Fenster Eigenschaften die Eigenschaftswerte.  
+3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** . Klicken Sie in der Entwurfsoberfläche der Registerkarte Ablaufsteuerung mit der rechten Maustaste auf Rangfolgeneinschränkung, und klicken Sie auf **Eigenschaften**. Ändern Sie im Fenster Eigenschaften die Eigenschaftswerte.  
   
 4.  Legen Sie im Fenster **Eigenschaften** die folgenden Lese-/Schreibeigenschaften der Rangfolgeneinschränkung fest:  
   

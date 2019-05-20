@@ -109,7 +109,7 @@ ADD SIGNATURE TO TestCreditRatingSP
 GO  
 ```  
   
- Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](stored-procedures/stored-procedures-database-engine.md).  
+ Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md).  
   
  Weitere Informationen zum Signieren von gespeicherten Prozeduren finden Sie unter [ADD SIGNATURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/add-signature-transact-sql).  
   

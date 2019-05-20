@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984101"
@@ -153,7 +153,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Gibt eine Liste mit Namen, Datentypen und Enumerationswerten von Enumeratoren zurück, die vom XMLA-Anbieter für eine bestimmte Datenquelle unterstützt werden.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Beschreibt die Instanzen auf dem Server.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Stellt Informationen über die aktiven Aufträge bereit, die auf dem Server ausgeführt werden. Ein Auftrag ist ein Teil eines Befehls, der für den Befehl einen bestimmten Task ausführt.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Gibt Informationen zu Schlüsselwörtern, die vom XMLA-Server reserviert sind.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|Gibt Informationen zu Schlüsselwörtern, die vom XMLA-Server reserviert sind.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Gibt Informationen zu Literalen, die vom Server unterstützt.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Gibt Informationen zum Inhalt einer Sicherungsdatei zurück. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Stellt Informationen über die aktuellen Sperren auf dem Server bereit.|  

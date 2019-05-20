@@ -44,7 +44,7 @@ ms.locfileid: "62922231"
   Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
   
 > [!IMPORTANT]  
->  Sichern Sie **msdb** häufig, um das Risiko des Verlusts der aktuellen Änderungen am Sicherungs- und Wiederherstellungsverlauf zu minimieren. Informationen darüber, welche der Systemdatenbanken Sie sichern müssen, finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken & #40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md).  
+>  Sichern Sie **msdb** häufig, um das Risiko des Verlusts der aktuellen Änderungen am Sicherungs- und Wiederherstellungsverlauf zu minimieren. Informationen darüber, welche der Systemdatenbanken Sie sichern müssen, finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md).  
   
  **In diesem Thema:**  
   

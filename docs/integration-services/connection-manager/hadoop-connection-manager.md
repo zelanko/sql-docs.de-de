@@ -13,14 +13,18 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281434"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728224"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Hadoop-Verbindungs-Manager ermöglicht die Verbindung eines SSIS-Pakets (SQL Server Integration Services) mit einem Hadoop-Cluster mithilfe der Werte, die Sie für die Eigenschaften angeben.  
   
 ## <a name="configure-the-hadoop-connection-manager"></a>Konfigurieren des Hadoop-Verbindungs-Managers  
