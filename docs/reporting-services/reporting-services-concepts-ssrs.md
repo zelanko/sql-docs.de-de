@@ -2,18 +2,18 @@
 title: Konzepte von Reporting Services (SSRS) | Microsoft-Dokumentation
 ms.date: 10/25/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814303"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570856"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -113,7 +113,7 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
  Berichtsparameter sind ein Teil einer Berichtsdefinition. Sie können einem paginierten und mobilen Reporting Services-Bericht Parameter hinzufügen, um ähnliche Berichte zu verknüpfen, die Berichtsdarstellung zu steuern, Berichtsdaten zu filtern oder den Bereich eines Berichts auf bestimmte Benutzer oder Orte einzugrenzen. Wenn ein paginierter Bericht auf einem systemeigenen Berichtsserver oder einer SharePoint-Website veröffentlicht wird, werden Berichtsparameter als separates Berichtsserverelement gespeichert. Parameter können unabhängig von der Berichtsdefinition verwaltet werden. Um mehrere Sätze mit Parametern für den gleichen Bericht zu erstellen, erstellen Sie *verknüpfte Berichte*.  
   
 ### <a name="report-items"></a>Berichtselemente 
- Ein Berichtselement ist ein internes, aber grundlegendes Konzept in einer Definition eines paginierten Reporting Services-Berichts. Eigenschaften eines Berichtselements gelten für Datenbereiche, Karten, Textfelder, Bilder und andere Entwurfselemente, die Sie einem Bericht hinzufügen. Das Verstehen der Eigenschaften eines Berichtselements kann Ihnen dabei helfen, angepasste Berichtsinhalte und -darstellungen zu entwerfen. Alle Berichtselemente haben z. B. eine "Hidden"-Eigenschaft, um die Sichtbarkeit zu steuern.  
+ Ein Berichtselement ist ein internes, aber grundlegendes Konzept in einer Definition eines paginierten Reporting Services-Berichts. Eigenschaften eines Berichtselements gelten für Datenbereiche, Karten, Textfelder, Bilder und andere Entwurfselemente, die Sie einem Bericht hinzufügen. Das Verstehen der Eigenschaften eines Berichtselements kann Ihnen dabei helfen, angepasste Berichtsinhalte und -darstellungen zu entwerfen. Alle Berichtselemente haben z. B. eine "Hidden"-Eigenschaft, um die Sichtbarkeit zu steuern.  
   
 ### <a name="data-regions-and-maps"></a>Datenbereiche und Karten 
  Ein Datenbereich ist ein Layoutelement, das Daten aus einem einzelnen Dataset in einem paginierten Reporting Services-Bericht anzeigt. Datenbereichstypen sind beispielsweise Tablix, Diagramm, Leiste und Indikator. "Karte" ist ein besonderer Typ des Datenbereichs, da er Daten aus zwei Datasets anzeigen kann: ein Dataset mit räumlichen Daten und eins mit analytischen Daten.  
@@ -208,7 +208,7 @@ Diagramm für die Berichtsverarbeitung
  Ein exportierter Bericht ist ein vollständig ausgelagerter und in einem bestimmten Dateiformat gespeicherter Bericht. Exportformate hängen von installierten Renderingerweiterungen ab und können angepasst werden. Standardmäßig schließen Exportformate Excel, Word, XML, PDF, TIFF und CSV ein. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)kennen.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Funktionen und -Tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

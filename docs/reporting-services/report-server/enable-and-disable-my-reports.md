@@ -2,7 +2,7 @@
 title: Aktivieren und Deaktivieren von „Meine Berichte“ | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d294c717f0d30b612a68dcc3bce3053ac55d1d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824638"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577777"
 ---
 # <a name="enable-and-disable-my-reports"></a>Aktivieren und Deaktivieren von "Meine Berichte"
   Die Funktion Meine Berichte ordnet persönlichen Speicherbereich in der Berichtsserver-Datenbank zu, damit Benutzer ihre eigenen Berichte in einem privaten Ordner speichern können. Als Berichtsserveradministrator können Sie diese Funktion aktivieren bzw. deaktivieren oder dessen Funktionsweise ändern, indem Sie die Sicherheitseinstellungen bearbeiten, die steuern, welche Funktionen die Benutzer mit diesem Arbeitsbereich ausführen können.  
@@ -48,7 +48,7 @@ ms.locfileid: "47824638"
   
  Beachten Sie, dass beim Aktivieren von Meine Berichte der Berichtsserver einen Ordner Meine Berichte für jeden Benutzer mit einem Domänenkonto erstellt, der auf den Link Meine Berichte klickt, selbst wenn der Benutzer keinen solchen Ordner wünscht oder benötigt. Es gibt keine systematische Methode, um zu ermitteln, welche Ordner verwendet werden. Sie müssen manuell prüfen, ob die Ordner einen Inhalt aufweisen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern von Meine Berichte](../../reporting-services/security/secure-my-reports.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

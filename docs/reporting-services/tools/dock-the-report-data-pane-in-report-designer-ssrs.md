@@ -2,20 +2,20 @@
 title: Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS) | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 230f7bbfcab1587f4934a5548d99cf11f3c94d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678888"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577855"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
   Im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts-Designer wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Berichtsdatenbereich eine hierarchische Sicht von Datenobjekten angezeigt, die Sie in einem Bericht in Verbindung mit Datenquellen, Datasets, Feldern, Parametern und Bildern verwenden können. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "47678888"
   
      Um zwischen den letzten beiden Anzeigezuständen umzuschalten, doppelklicken Sie auf die Titelleiste des Berichtsdatenbereichs.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsdatenbereich](../../reporting-services/report-data/report-data-pane.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

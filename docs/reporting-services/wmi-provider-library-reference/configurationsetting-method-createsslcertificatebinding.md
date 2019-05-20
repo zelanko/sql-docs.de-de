@@ -2,20 +2,20 @@
 title: 'CreateSSLCertificateBinding-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570755"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting Method – CreateSSLCertificateBinding (ConfigurationSetting-Methode: CreateSSLCertificateBinding)
   Erstellt eine SSL-Zertifikatsbindung  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
