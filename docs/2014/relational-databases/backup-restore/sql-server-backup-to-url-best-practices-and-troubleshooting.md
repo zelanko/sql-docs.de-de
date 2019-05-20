@@ -119,7 +119,7 @@ ms.locfileid: "65619586"
   
 -   Schreiben Sie auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Fehler: URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
   
--   Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
+-   Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
   
      Meldung 3013, Ebene 16, Status 1, Zeile 2  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619586"
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
- In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (407)*  **Proxyauthentifizierung erforderlich**.  
+ In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (407)*  **Proxyauthentifizierung erforderlich**.  
   
  Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Konfigurationsdatei, durch die beim URL-Sicherungsprozess die Standardproxyeinstellungen verwendet werden können:  
   
