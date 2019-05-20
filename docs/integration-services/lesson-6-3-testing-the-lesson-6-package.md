@@ -11,14 +11,18 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bf96ba0d5c6fb244f9979054be8228ce4a38d34
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 001ba5fc56393cbbcdbc8b5379abc8390dc05e0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272093"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721244"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lektion 6.3: Testen des Pakets aus Lektion 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Zur Laufzeit erhält Ihr Paket den Wert für die Eigenschaft **Verzeichnis** vom **VarFolderName**-Parameter.  
   
 Um zu überprüfen, ob die **Directory**-Eigenschaft vom Paket aktualisiert wird, führen Sie das Paket aus. Da Sie drei Beispieldatendateien in das neue Verzeichnis kopiert haben, wird der Datenfluss dreimal ausgeführt.

@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275234"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725657"
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie können Eigenschaftsausdrücke für Pakete, Tasks, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Ereignishandler, Verbindungs-Manager auf Paket- und Projektebene sowie für Protokollanbieter erstellen.  
   
  Um Eigenschaftsausdrücke zu erstellen oder zu ändern, können Sie entweder den **Eigenschaftsausdrucks-Editor** oder den **Ausdrucks-Generator**verwenden. Der **Eigenschaftsausdrucks-Editor** kann entweder über die benutzerdefinierten Editoren, die für Tasks und Container verfügbar sind, oder über das Fenster **Eigenschaften** aufgerufen werden. Auf den**Ausdrucks-Generator** kann über den **Eigenschaftsausdrucks-Editor**zugegriffen werden. Sie können zwar sowohl im **Eigenschaftsausdrucks-Editor** als auch im **Ausdrucks-Generator**Ausdrücke schreiben, der **Ausdrucks-Generator** bietet jedoch außerdem eine Reihe grafischer Tools, mit denen komplexe Ausdrücke problemlos erstellt werden können.  

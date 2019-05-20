@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 96a93c846fa2d958343d0fd3913e5710bd79e628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019511"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720859"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Lernprogramm: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Tutorial wird gezeigt, wie ein SSIS-Projekt für den SSIS-Katalog in einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen

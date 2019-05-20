@@ -21,14 +21,18 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bc51d3b3a1f7265d73e43526da6b70e70f35978
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7219499b05a3e0229d685fdf518eea41a734daba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270460"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724690"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Ausführungsplan und Pufferzuordnung
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Vor der Ausführung überprüft der Datenflusstask seine Komponenten und erstellt einen Ausführungsplan für jede Komponentensequenz. Dieser Abschnitt enthält Einzelheiten zum Ausführungsplan, zur Anzeige des Plans und zur Zuweisung von Eingabe- und Ausgabepuffern anhand des Plans.  
   
 ## <a name="understanding-the-execution-plan"></a>Grundlegendes zum Ausführungsplan  

@@ -11,14 +11,18 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 498c21f148a82e8e03b97e3fe3877986b43269ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86752adeb2770d2c89b616ac2ba42f2aeb2215d8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279264"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714809"
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt nur die Berechtigungen an, die dem Benutzer explizit zugewiesen wurden.  
@@ -27,10 +31,10 @@ ms.locfileid: "58279264"
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Der Typ des sicherungsfähigen Objekts. Typen sicherungsfähiger Objekte lauten Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`).|  
 |object_id|**bigint**|Der eindeutige Bezeichner (ID) oder der Primärschlüssel des sicherungsfähigen Objekts.|  
-|principal_id|**int**|Die ID des Datenbankprinzipals.|  
+|principal_id|**ssNoversion**|Die ID des Datenbankprinzipals.|  
 |permission_type|**smallint**|Art der Berechtigung.|  
 |is_deny|**bit**|Gibt an, ob die Berechtigung verweigert oder gewährt wurde. Wenn der Wert `1`ist, wurde die Berechtigung verweigert. Wenn der Wert `0`ist, wurde die Berechtigung nicht verweigert.|  
-|grantor_id|**int**|Die ID des Prinzipals, der die Berechtigung gewährt hat.|  
+|grantor_id|**ssNoversion**|Die ID des Prinzipals, der die Berechtigung gewährt hat.|  
   
 ## <a name="remarks"></a>Remarks  
  In dieser Sicht werden die in der folgenden Tabelle aufgeführten Berechtigungstypen angezeigt:  

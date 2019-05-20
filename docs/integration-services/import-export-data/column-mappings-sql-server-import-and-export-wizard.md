@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222094"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723951"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie die zu kopierenden vorhandenen Tabellen und Ansichten ausgewählt oder die von Ihnen angegebene Abfrage überprüft und danach auf **Zuordnungen bearbeiten**geklickt haben, wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent das Dialogfeld **Spaltenzuordnungen** angezeigt. Auf dieser Seite können Sie die Zielspalten für die aus den Quellspalten zu kopierenden Daten angeben und konfigurieren. Häufig müssen Sie auf dieser Seite nichts ändern.
   
 Wenn Sie nicht alle Spalten der ausgewählten Tabelle kopieren möchten, können Sie auf dieser Seite die Spalten ausschließen, die Sie nicht benötigen. Wählen Sie in der Spalte **Ziel** der Liste **Zuordnungen** **Ignorieren** für die Spalten aus, die Sie nicht kopieren möchten.

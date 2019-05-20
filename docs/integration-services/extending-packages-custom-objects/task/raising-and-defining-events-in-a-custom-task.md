@@ -25,14 +25,18 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fa79702aadcca09c43d1ca6d9fbeef0988d8f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281934"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724431"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Runtime-Engine bietet eine Auflistung von Ereignissen, die Statusinformationen zu dem Fortschritt eines Tasks liefern, während der Task überprüft und ausgeführt wird. Diese Ereignisse werden durch die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle definiert. Sie wird Tasks als Parameter für die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>-Methode und die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>-Methode bereitgestellt.  
   
  Es gibt eine weitere Gruppe von Ereignissen, die in der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle definiert sind und von Seiten des Tasks von <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> ausgelöst werden. Der <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> löst Ereignisse aus, die vor und nach der Validierung und Ausführung auftreten, wohingegen der Task die Ereignisse auslöst, die während der Ausführung und Validierung auftreten.  

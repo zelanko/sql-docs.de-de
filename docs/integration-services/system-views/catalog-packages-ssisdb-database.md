@@ -14,14 +14,18 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 608e3fd8ebf7de4e2f84357c8b7a1874c33e1230
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279617"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714510"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Details für alle Pakete an, die im **SSISDB** -Katalog angezeigt werden.  
@@ -32,10 +36,10 @@ ms.locfileid: "58279617"
 |NAME|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
 |package_guid|**uniqueidentifier**|Der global eindeutige Bezeichner (Globally Unique Identifier, GUID) für das Paket.|  
 |description|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
-|package_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Paket entwickelt wurde.|  
-|version_major|**int**|Die Hauptversion des Pakets.|  
-|version_minor|**int**|Die Nebenversion des Pakets.|  
-|version_build|**int**|Die Buildversion des Pakets.|  
+|package_format_version|**ssNoversion**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Paket entwickelt wurde.|  
+|version_major|**ssNoversion**|Die Hauptversion des Pakets.|  
+|version_minor|**ssNoversion**|Die Nebenversion des Pakets.|  
+|version_build|**ssNoversion**|Die Buildversion des Pakets.|  
 |version_comments|**nvarchar(1024)**|Optionale Kommentare zur Paketversion.|  
 |version_guid|**uniqueidentifier**|Die GUID, die die Paketversion eindeutig identifiziert.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  

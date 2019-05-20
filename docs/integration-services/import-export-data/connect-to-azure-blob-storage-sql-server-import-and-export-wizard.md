@@ -10,14 +10,18 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf57a0b6dd76e95d0fada08aa2f5049341884a72
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221904"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723854"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Verbinden mit Azure Blob Storage (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Azure Blob Storage**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
 
 > [!NOTE]

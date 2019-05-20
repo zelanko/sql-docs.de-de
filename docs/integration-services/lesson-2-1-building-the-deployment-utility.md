@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280894"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722431"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lektion 2-1: Erstellen des Bereitstellungshilfsprogramms
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In dieser Aufgabe konfigurieren und erstellen Sie ein Bereitstellungsprogramm für das Deployment Tutorial-Projekt.  
   
 Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschaften des Deployment Tutorial-Projekts ändern. Sie können diese Eigenschaften im Dialogfeld **Deployment Tutorial-Eigenschaftenseiten** konfigurieren. In diesem Dialogfeld müssen Sie die Fähigkeit aktivieren, Konfigurationen während der Bereitstellung zu aktualisieren, und angeben, dass beim Erstellungsvorgang ein Bereitstellungshilfsprogramm generiert werden soll. Nach dem Festlegen der Eigenschaften erstellen Sie das Projekt.  
