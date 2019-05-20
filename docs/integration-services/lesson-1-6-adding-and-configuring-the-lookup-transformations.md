@@ -10,14 +10,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221958"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723180"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lektion 1.6: Hinzufügen und Konfigurieren von Suchtransformationen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei definieren Sie die Suchtransformationen, die zum Abrufen der Werte für **CurrencyKey** und **DateKey** erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Tutorial stellt die Suchtransformation mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Quelldaten des Verweis-DataSets enthält.  
   

@@ -13,14 +13,18 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c48817f8f24cdb9ab0055c3d46e1e9124bcdc9c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a62d94a101a2c62ae21950f6ad25e8f44ad333ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728603"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Abrufen und Verstehen der Änderungsdaten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der erste Task darin, die Abfrage auszuführen, bei der die Änderungsdaten abgerufen werden. Sie führen diese Abfrage innerhalb einer Quellkomponente in einem Datenflusstask aus. Sie können dann Downstream-Transformationen und -Ziele verwenden, um die Änderungsdaten auf Ihr Ziel anzuwenden.  
   
 > [!NOTE]  

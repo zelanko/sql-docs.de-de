@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Kopieren des Pakets aus Lektion 1 | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Pakets aus Lektion 1 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db25f19e7815a0fc801801ac6ad619dbdfd66d43
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280424"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722718"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>Lektion 2.1: Kopieren des Pakets aus Lektion 1
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In dieser Übung erfahren Sie, wie Sie eine Kopie des Pakets **Lesson 1.dtsx** erstellen. Wenn Sie Lektion 1 nicht abgeschlossen haben, können Sie das fertige Paket verwenden, das in diesem Tutorial enthalten ist. Sie verwenden die neue Kopie für den weiteren Verlauf von Lektion 2.  
   

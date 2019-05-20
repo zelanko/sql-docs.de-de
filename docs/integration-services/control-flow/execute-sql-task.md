@@ -21,14 +21,18 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273906"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727719"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
   
 -   Abschneiden einer Tabelle oder Sicht, um das Einfügen von Daten vorzubereiten.  
@@ -331,7 +335,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
     |Parametertyp**Output** |Date-Datumstyp|  
     |-------------------------------|--------------------|  
     |DBDATE|**Datum**|  
-    |DBTIME2|**Uhrzeit**|  
+    |DBTIME2|**time**|  
     |DBTIMESTAMP|**datetime**, **datetime2**|  
     |DBTIMESTAMPOFFSET|**datetimeoffset**|  
   
@@ -347,7 +351,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
     |Parametertyp**Output** |Date-Datumstyp|  
     |-------------------------------|--------------------|  
     |SQL_DATE|**Datum**|  
-    |SQL_SS_TIME2|**Uhrzeit**|  
+    |SQL_SS_TIME2|**time**|  
     |SQL_TYPE_TIMESTAMP<br /><br /> -oder-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   

@@ -13,14 +13,18 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 555e0c387debf92a578b71f87c8f5304a8ba1550
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed7cf9232930e867c2761bd60aaaf8ecc9e8c261
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273393"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724023"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Hadoop- und HDFS-Unterstützung in Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 2016 Integration Services (SSIS) umfasst die folgenden Komponenten, die lokale Unterstützung für Hadoop und HDFS bereitstellen.  
   
  Weitere Informationen über die Integration Services-Komponenten, die HDInsight und anderen Funktionen von Microsoft Azure unterstützen, finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

@@ -15,14 +15,18 @@ ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b0379003ace2c693ab6c6734bc9dd4331872406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5a276c1f387e8ebe4b9a2414fcc1d61e6c24a60e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290796"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718972"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Paketentwickler und Administratoren sollten die Beschränkungen hinsichtlich des Ausführungsorts eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets beachten.  
   
 -   **Ein Paket wird auf dem gleichen Computer ausgeführt wie das Programm, das es startet**. Auch wenn ein Progamm ein Paket lädt, das auf einem anderen Server remote gespeichert ist, wird das Paket auf dem lokalen Computer ausgeführt.  

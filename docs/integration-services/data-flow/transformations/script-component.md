@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280644"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725911"
 ---
 # <a name="script-component"></a>Skriptkomponente
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Skriptkomponente hostet Skripts und ermöglicht einem Paket benutzerdefinierten Skriptcode einzuschließen und benutzerdefinierten Skriptcode auszuführen. Die Skriptkomponente kann in Paketen für folgende Zwecke verwendet werden:  
   
 -   Anwenden mehrerer Transformationen auf Daten, statt mehrere Transformationen im Datenfluss zu verwenden. Beispielsweise können mit einem Skript die Werte in zwei Spalten hinzugefügt und dann der Mittelwert der Summe berechnet werden.  

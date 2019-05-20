@@ -12,14 +12,18 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05b5e0867d9bbe5ab4ea5e583db40a21aaafe76c
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8feee241eb883cc889dc1888c95a9bbe3c58babb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221974"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723746"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschließen des Assistenten** auf **Fertig stellen** geklickt haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Vorgang wird ausgeführt**an. Auf dieser Seite sehen Sie den Status und das Ergebnis des Vorgangs, den Sie auf den vorherigen Seiten konfiguriert haben. Sie müssen auf dieser Seite keine Aktionen durchführen.
 
 ## <a name="screen-shot---operation-in-progress"></a>Screenshot: Vorgang wird ausgeführt 

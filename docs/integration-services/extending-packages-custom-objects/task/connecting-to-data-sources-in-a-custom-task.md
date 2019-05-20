@@ -22,14 +22,18 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65dad92f0d005e24e6cc7f5a1846c5c29cbd7d1c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b460d01adfdc4a2282311c16b7c7a9acddb6542
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289976"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724450"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Herstellen einer Verbindung mit Datenquellen in einem benutzerdefinierten Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tasks stellen eine Verbindung mit externen Datenquellen her, um Daten mit einem Verbindungs-Manager abzurufen oder zu speichern. Zur Entwurfszeit stellt ein Verbindungs-Manager eine logische Verbindung dar und beschreibt Schlüsselinformationen wie den Servernamen und Authentifizierungseigenschaften. Zur Laufzeit rufen Tasks die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode des Verbindung-Managers auf, um die physische Verbindung mit der Datenquelle herzustellen.  
   
  Da ein Paket zahlreiche Tasks enthalten kann, von denen möglicherweise jede eine Verbindung mit einer anderen Datenquelle herstellt, verfolgt das Paket alle Verbindungs-Manager in einer Auflistung, nämlich in der <xref:Microsoft.SqlServer.Dts.Runtime.Connections>-Auflistung. Tasks suchen mithilfe der Auflistung in ihrem Paket nach dem Verbindungs-Manager, den sie bei der Überprüfung und Ausführung verwenden. Die <xref:Microsoft.SqlServer.Dts.Runtime.Connections>-Auflistung ist der erste Parameter der Methoden <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> und <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  

@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277659"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724882"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
   
  Ein Ausdruck kann einem Paket, einem Task, einer Foreach-Schleife, einer For-Schleife, einer Sequenz, einem Foreach-Enumerator, einem Ereignishandler, einer Paket- oder Projektebene, einem Verbindungs-Manager oder einem Protokollanbieter hinzugefügt werden. Jede beliebige Eigenschaft dieser Objekte vom Typ Lesen/Schreiben kann einen Eigenschaftsausdruck implementieren. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt auch die Verwendung von Eigenschaftsausdrücken in einigen benutzerdefinierten Eigenschaften von Datenflusskomponenten. Variablen und Rangfolgeneinschränkungen unterstützen keine Eigenschaftsausdrücke. Sie enthalten jedoch spezielle Eigenschaften, in denen Sie Ausdrücke verwenden können.  

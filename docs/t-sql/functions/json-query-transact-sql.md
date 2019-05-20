@@ -18,15 +18,17 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 6c9c5d1a9b1e61bfd6cb93ea57ad6eafabbe9636
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: ba0fdffbc354e87419da9d349841d63c38ab794b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038461"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577430"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  Extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge.  
   
@@ -40,7 +42,8 @@ ms.locfileid: "56038461"
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a>Argumente
+
  *expression*  
  Ein Ausdruck. In der Regel der Name einer Variablen oder einer Spalte, die JSON-Text enthält.  
   
@@ -57,14 +60,15 @@ Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *pat
 
 **JSON_QUERY** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
   
-## <a name="return-value"></a>Rückgabewert  
+## <a name="return-value"></a>Rückgabewert
+
  Gibt ein JSON-Fragment vom Typ nvarchar(max) zurück. Die Sortierung des zurückgegebenen Werts ist identisch mit der Sortierung des Eingabeausdrucks.  
   
  Wenn der Wert kein Objekt oder Array ist:  
   
--   Im Lax-Modus gibt **JSON_QUERY** NULL zurück.  
+- Im Lax-Modus gibt **JSON_QUERY** NULL zurück.  
   
--   Im Strict-Modus gibt **JSON_QUERY** einen Fehler zurück.  
+- Im Strict-Modus gibt **JSON_QUERY** einen Fehler zurück.  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -107,7 +111,8 @@ Wenn Sie verschiedene Ergebnisse mit FOR JSON zurückgeben und Sie Daten einschl
 
 ## <a name="examples"></a>Beispiele  
   
-### <a name="example-1"></a>Beispiel 1  
+### <a name="example-1"></a>Beispiel 1
+
  Im folgenden Beispiel wird gezeigt, wie ein JSON-Fragment einer `CustomFields`-Spalte in den Abfrageergebnissen zurückgegeben wird.  
   
 ```sql  
@@ -116,7 +121,8 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### <a name="example-2"></a>Beispiel 2  
+### <a name="example-2"></a>Beispiel 2
+
 Im folgende Beispiel wird gezeigt, wie JSON-Fragmente in die Ausgabe der FOR JSON-Klausel eingeschlossen werden.  
   
 ```sql  
@@ -127,6 +133,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch
+
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

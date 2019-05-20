@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283034"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727923"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der CDC-Steuerungstask wird verwendet, um den Lebenszyklus von Change Data Capture-Paketen (CDC) zu steuern. Er behandelt die CDC-Paketsynchronisierung mit dem Paket des erstmaligen Ladens, also die Verwaltung der Bereiche von Protokollfolgenummern (LSNs), die bei einer Ausführung eines CDC-Pakets verarbeitet werden. Außerdem wird der CDC-Steuerungstask für Fehlerszenarien und für die Wiederherstellung verwendet.  
   
  Der CDC-Steuerungstask verwaltet den Status des CDC-Pakets in einer SSIS-Paketvariablen und kann diesen auch in einer Datenbanktabelle dauerhaft speichern, damit der Status über Paketaktivierungen hinweg und zwischen mehreren Paketen beibehalten werden kann, die zusammen einen allgemeinen CDC-Prozess durchführen (ein Task kann z. B. für das erstmalige Laden und ein anderer Task für Trickle-Feed-Updates zuständig sein).  

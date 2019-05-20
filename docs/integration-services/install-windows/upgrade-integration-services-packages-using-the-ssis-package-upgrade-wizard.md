@@ -14,14 +14,18 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7aad7ade17e7131b2c1d25ccb7c7bfa8c5d2a4fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2bfae0cb69e712c0d0ac3a8afb8e7da362f9703e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274992"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723678"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie können Pakete, die in früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt wurden, auf das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Format aktualisieren, das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zu diesem Zweck den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistenten bereit. Da Sie den Assistenten so konfigurieren können, dass er die ursprünglichen Pakete sichert, können Sie die ursprünglichen Pakete weiter verwenden, falls Probleme beim Upgrade auftreten.  
   
  Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistent ist installiert, wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist.  

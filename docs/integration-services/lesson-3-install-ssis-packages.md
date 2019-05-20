@@ -11,14 +11,18 @@ ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5153c586d113d902f454d71a55f16019bc5a455a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2b79666ea6ebc28a68777f1c87cd79ef5c8f1ade
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276491"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721864"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Lektion 3: Installieren von SSIS-Paketen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In [Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md) haben Sie ein Bereitstellungsprogramm und das Bereitstellungspaket erstellt, das die Elemente enthält, die für die Installation der Pakete auf einem anderen Computer erforderlich sind. Sie haben außerdem die Dateiliste im Bereitstellungspaket überprüft und den Inhalt der Manifestdatei untersucht, die beim Erstellen des Bereitstellungshilfsprogramms erstellt wurde.  
   
 In dieser Lektion kopieren Sie das Bereitstellungspaket auf den Zielcomputer und führen anschließend den Paketinstallations-Assistenten aus, um die Pakete, Paketabhängigkeiten und Hilfsdateien auf diesem Computer zu installieren. Die Pakete werden in der **msdb**-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installiert, während die anderen Elemente im Dateisystem installiert werden. Nach Abschluss der Paketinstallation testen Sie die Bereitstellung, indem Sie die Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen.  

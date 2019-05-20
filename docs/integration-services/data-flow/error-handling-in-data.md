@@ -23,14 +23,18 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a60ec842c22f5c11972b9765f230a00c672ca0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28f2c5ecd2e25e9e3bbdd59cd8ea79b58b756cb7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277188"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726907"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn eine Datenflusskomponente eine Transformation auf Spaltendaten anwendet, Daten aus Quellen extrahiert oder Daten in Ziele lädt, können Fehler auftreten. Fehler treten häufig aufgrund unerwarteter Datenwerte auf. Beispielsweise tritt bei einer Datenkonvertierung ein Fehler auf, weil eine Spalte eine Zeichenfolge anstelle einer Zahl enthält. Beim Einfügen in eine Datenbankspalte kann ein Fehler auftreten, weil die Daten einen date-Datentyp und die Spalte einen numeric-Datentyp aufweist. Ein Ausdruck kann nicht ausgewertet werden, weil ein Spaltenwert Null ist, wodurch sich eine ungültige mathematische Operation ergibt.  
   
  Fehler können in der Regel einer der folgenden Kategorien zugeordnet werden:  

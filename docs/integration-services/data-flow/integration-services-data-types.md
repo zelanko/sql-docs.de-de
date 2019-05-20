@@ -19,14 +19,18 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274420"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726882"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
   
  Einige Datenflusskomponenten konvertieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen in verwaltete Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
@@ -61,7 +65,7 @@ ms.locfileid: "58274420"
 |DT_UI4|Eine ganze Zahl ohne Vorzeichen und einer Länge von 4 Bytes.|  
 |DT_UI8|Eine ganze Zahl ohne Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_WSTR|Eine NULL-terminierte Unicode-Zeichenfolge mit einer maximalen Länge von 4000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
-|DT_IMAGE|Ein Binärwert mit einer maximalen Länge von 2^31-1 (2.147.483.647) Bytes. zugreifen.|  
+|DT_IMAGE|Ein Binärwert mit einer maximalen Länge von 2^31-1 (2.147.483.647) Bytes. erforderlich.|  
 |DT_NTEXT|Eine Unicode-Zeichenfolge mit einer maximalen Länge von 2^30-1 (1.073.741.823) Zeichen.|  
 |DT_TEXT|Eine [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge mit einer maximalen Länge von 2^31-1 (2.147.483.647) Zeichen.|  
   
@@ -226,7 +230,7 @@ ms.locfileid: "58274420"
 |DT_CY|smallmoney, money|smallmoney, money|Währung||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||timestamp|Uhrzeit|Uhrzeit|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  

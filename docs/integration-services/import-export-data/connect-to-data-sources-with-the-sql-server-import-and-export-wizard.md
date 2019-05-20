@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221890"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723863"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Verbinden mit Datenquellen mit dem SQL Server-Import/Export-Assistenten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Artikel wird erläutert, wie Sie Verbindungen mit vielen häufig verwendeten Datenquellen herstellen können, wenn Sie den SQL Server-Import/Export-Assistenten ausführen. Sie müssen auf den Seiten **Datenquelle auswählen** und **Ziel auswählen** des Assistenten Verbindungsinformationen für Ihre Datenquellen angeben.
 
 In diesem Artikel wird nur dargestellt, wie Sie über die Seiten **Datenquelle auswählen** und **Ziel auswählen** **Verbindungen mit Datenquellen** herstellen können. Wenn Sie andere Themen interessieren, gehen Sie auf die Seite [Related tasks and content (Verwandte Aufgaben und Inhalte)](#related).

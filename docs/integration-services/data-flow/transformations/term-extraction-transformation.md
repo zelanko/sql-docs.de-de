@@ -29,14 +29,18 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282574"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725813"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
   
  Mit der Transformation für Ausdrucksextrahierung können Sie den Inhalt eines Datasets ermitteln. Beispielsweise kann Text in E-Mail-Nachrichten nützliches Feedback zu Produkten enthalten. Sie könnten also mit der Transformation für Ausdrucksextrahierung die betreffenden Themen in den Nachrichten extrahieren und auf diese Weise das Feedback analysieren.  

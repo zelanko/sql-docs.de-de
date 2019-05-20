@@ -11,14 +11,18 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277669"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723330"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lektion 1-4: Hinzufügen eines Datenflusstasks zum Paket
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nachdem Sie die Verbindungs-Manager für die Quell- und die Zieldaten erstellt haben, fügen Sie einen Datenflusstasks zu Ihrem Paket hinzu. Im Datenflusstask ist die Datenfluss-Engine definiert, über die Daten zwischen Quellen und Zielen verschoben werden, und der Task bietet die Funktionalität für das Transformieren, das Cleanup und das Ändern von Daten beim Verschieben. Im Datenflusstask wird der Hauptteil eines ETL-Prozesses (Extract, Transform, Load - Extrahieren, Transformieren, Laden) durchgeführt.  
   

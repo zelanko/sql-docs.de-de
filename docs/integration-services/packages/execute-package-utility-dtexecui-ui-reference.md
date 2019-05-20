@@ -24,14 +24,18 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272575"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719903"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das **Paketausführungshilfsprogramm** , um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingeben von **dtexecui** an der Eingabeaufforderung geöffnet werden kann, stellt eine Alternative zum Ausführen von Paketen mithilfe des Eingabeaufforderungstools **DTExec** dar.  
   
  Pakete werden im selben Prozess ausgeführt wie das **dtexecui.exe** -Hilfsprogramm. Da es sich bei diesem Hilfsprogramm um ein 32-Bit-Tool handelt, werden Pakete, die mithilfe von **dtexecui.exe** in einer 64-Bit-Umgebung ausgeführt werden, in Windows unter Win32 (WOW) ausgeführt. Beim Entwickeln und Testen von Befehlen mithilfe des Paketausführungshilfsprogramms (dtexecui.exe) auf einem 64-Bit-Computer sollten Sie die Befehle mithilfe der 64-Bit-Version von **dtexec.exe** im 64-Bit-Modus testen, bevor Sie die Befehle auf einem Produktionsserver bereitstellen oder deren Ausführung planen.  

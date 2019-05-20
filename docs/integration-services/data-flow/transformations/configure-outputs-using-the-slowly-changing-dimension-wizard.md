@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274310"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726215"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Assistent für langsam veränderliche Dimensionen dient als Editor für die Transformation für langsam veränderliche Dimensionen. Das Erstellen und Konfigurieren des Datenflusses für langsam veränderliche Dimensionen kann eine komplexe Aufgabe sein. Der Assistent für langsam veränderliche Dimensionen bietet die einfachste Methode zum Erstellen des Datenflusses für die Ausgaben der Transformation für langsam veränderliche Dimensionen und führt durch die Schritte zum Zuordnen von Spalten, Auswählen von Geschäftsschlüsselspalten, Festlegen von Spaltenänderungsattributen und Konfigurieren der Unterstützung für abgeleitete Dimensionselemente.  
   
  Sie müssen mindestens eine Geschäftsschlüsselspalte in der Dimensionstabelle auswählen und einer Eingabespalte zuordnen. Der Wert des Geschäftsschlüssels verlinkt einen Datensatz in der Quelle mit einem Datensatz in der Dimensionstabelle. Die Transformation verwendet diese Zuordnung, um den Datensatz in der Dimensionstabelle zu finden und um zu ermitteln, ob ein Datensatz neu ist oder geändert wird. Der Geschäftsschlüssel ist im Allgemeinen der Primärschlüssel in der Quelle, es kann sich jedoch auch um einen alternativen Schlüssel handeln, wenn dieser einen Datensatz eindeutig identifiziert und sein Wert unverändert bleibt. Bei dem Geschäftsschlüssel kann es sich auch um einen zusammengesetzten Schlüssel aus mehreren Spalten handeln. Der Primärschlüssel in der Dimensionstabelle ist im Allgemeinen ein Ersatzschlüssel und damit ein numerischer Wert, der automatisch durch eine Identitätsspalte oder durch eine benutzerdefinierte Lösung wie ein Skript generiert wird.  

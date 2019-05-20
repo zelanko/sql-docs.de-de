@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb42182c362f0ad71689098dc361ef470c36a00
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272634"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723447"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In dieser Aufgabe erstellen Sie den Arbeitsordner (C:\DeploymentTutorial) und die neuen Systemumgebungsvariablen (`DataTransfer` und `LoadXMLData`), die in späteren Lernprogrammaufgaben verwendet werden.  
   
 Der Arbeitsordner befindet sich im Stamm von Laufwerk C. Bei Bedarf können Sie ein anderes Laufwerk bzw. einen anderen Speicherort verwenden. Sie müssen sich diesen Speicherort jedoch notieren und immer dann verwenden, wenn im Lernprogramm auf den Speicherort des Arbeitsordners DeploymentTutorial verwiesen wird.  

@@ -22,14 +22,18 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2076e445d90945d02ab41ac2ec2cb6165ba08f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5335e93d133787f1ee2f855d3a2eb9ad1faa2824
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290106"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724791"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Transformationskomponenten mit synchronen Ausgaben empfangen Zeilen von Upstreamkomponenten und lesen oder modifizieren die Werte in den Spalten der betreffenden Zeilen bei der Weitergabe dieser Zeilen an Downstreamkomponenten. Sie können auch zusätzliche Ausgabespalten definieren, die sich aus den von den Upstreamkomponenten erhaltenen Spalten ableiten. Es werden dem Datenfluss jedoch keine zusätzlichen Zeilen hinzugefügt. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Diese Komponentenart ist für Aufgaben geeignet, bei denen die Daten nach der Bereitstellung für die Komponente inline modifiziert werden und die Komponente nicht alle Zeilen erkennen muss, um Daten verarbeiten zu können. Es ist die am einfachsten zu entwickelnde Komponente, da Transformationen mit synchronen Ausgaben normalerweise keine Verbindung zu externen Datenquellen herstellen, keine externen Metadatenspalten verwalten oder Ausgabepuffern Zeilen hinzufügen.  

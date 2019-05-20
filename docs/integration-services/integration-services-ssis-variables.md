@@ -19,14 +19,18 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281874"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723528"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
   
  Variablen in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen können für folgende Zwecke verwendet werden:  

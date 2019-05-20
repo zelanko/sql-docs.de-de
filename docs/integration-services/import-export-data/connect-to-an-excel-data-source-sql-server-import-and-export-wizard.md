@@ -10,14 +10,18 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221814"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723895"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Excel-Datenquelle (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft Excel**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
 
 Der folgende Screenshot zeigt eine Beispielverbindung mit einer Microsoft Excel-Arbeitsmappe.
@@ -35,7 +39,7 @@ Sie müssen möglicherweise zusätzliche Dateien herunterladen und installieren,
 > Die Verbindungsoptionen für diesen Datenanbieter bleiben stets unverändert – egal, ob Excel die Quelle oder das Ziel ist. Das bedeutet, dass die angezeigten Optionen auf den Seiten **Datenquelle auswählen** und **Ziel auswählen** des Assistenten gleich sind.
 
 **Excel-Dateipfad**  
- Geben Sie den Pfad und den Dateinamen für die Excel-Datei an. Zum Beispiel:
+ Geben Sie den Pfad und den Dateinamen für die Excel-Datei an. Beispiel:
 -   Für eine Datei auf dem lokalen Computer können Sie beispielsweise **C:\\MeineDaten.xlsx** festlegen.
 -   Für eine Datei auf einer Netzwerkfreigabe können Sie beispielsweise **\\\\Verkauf\\Datenbank\\Northwind.xlsx** festlegen.
 

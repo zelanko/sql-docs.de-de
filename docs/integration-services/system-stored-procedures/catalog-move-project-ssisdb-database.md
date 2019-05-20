@@ -11,14 +11,18 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63473b201dd56dd94c628a14070522560c231bb8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280784"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716020"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Verschiebt ein Projekt von einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog in einen anderen.  

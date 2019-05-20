@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277379"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717875"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
   
  Das Fenster **Eigenschaften** stellt eine kategorisierte und alphabetische Liste der Eigenschaften bereit. Klicken Sie auf das Nach Kategorien-Symbol, um das Fenster **Eigenschaften** nach der Kategorie anzuordnen.  
@@ -50,7 +54,7 @@ ms.locfileid: "58277379"
   
 -   [Sonstiges](#Misc)  
   
--   [Sicherheit](#Security)  
+-   [Security](#Security)  
   
 -   [Transaktionen](#Transactions)  
   

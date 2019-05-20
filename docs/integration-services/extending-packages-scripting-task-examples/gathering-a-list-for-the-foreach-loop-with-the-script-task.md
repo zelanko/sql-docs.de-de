@@ -16,14 +16,18 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f83b8d77e5fea47e3f88f8545fa043c16ce29132
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270781"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724351"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Erfassen einer Liste für die ForEach-Schleife mit dem Skripttask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Foreach-Enumerator für Daten aus Variable führt die Elemente in einer Liste auf, die ihm in einer Variablen übergeben wird, und führt für alle Elemente dieselben Aufgaben aus. Sie können benutzerdefinierten Code in einem Skripttask verwenden, um eine Liste für diesen Zweck zu erstellen. Weitere Informationen zum Enumerator finden Sie unter [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) (Foreach-Schleifencontainer).  
   
 > [!NOTE]  

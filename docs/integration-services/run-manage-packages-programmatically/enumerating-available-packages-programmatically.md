@@ -15,14 +15,18 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad1532d5f3cca914ad169eb9dec95a16960a7344
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb810b333d2e9f353070bcc12ca84fbf3eb9566
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271609"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719375"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerating Available Packages Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <a name="top"></a> Wenn Sie programmgesteuert mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen arbeiten, möchten Sie vielleicht bestimmen, ob ein einzelnes Paket oder ein einzelner Ordner vorhanden ist, oder die gespeicherten Pakete auflisten, die zum Laden und Ausführen verfügbar sind. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt eine Reihe von Methoden bereit, die diese Anforderungen erfüllen.    
     
 ##  <a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    

@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274831"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721214"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lektion 5.3: Ändern des Directory-Eigenschaftskonfigurationswerts
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Im Rahmen dieser Aufgabe ändern Sie die in der Datei **SSISTutorial.dtsConfig** gespeicherte Konfigurationseinstellung für die **Value**-Eigenschaft der Variablen `User::varFolderName` auf Paketebene. Die Variable aktualisiert die **Directory**-Eigenschaft des Foreach-Schleifencontainers. Der geänderte Wert zeigt nun auf den Ordner **New Sample Data**, den Sie in der vorherigen Aufgabe erstellt haben. Nachdem Sie die Konfigurationseinstellung geändert und das Paket ausgeführt haben, wird die **Directory**-Eigenschaft über die Variable in der Konfigurationsdatei aktualisiert. Bisher war der Wert der **Directory**-Eigenschaft Teil des Pakets.  
   

@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281814"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726973"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In diesem Verfahren wird beschrieben, wie Sie eine Paketvariable definieren, in der der CDC-Status gespeichert wird.  
   
  Die CDC-Statusvariable wird geladen, initialisiert und vom CDC-Steuerungstask aktualisiert. Anschließend wird sie von der CDC-Quelldatenflusskomponente verwendet, um den aktuellen Verarbeitungsbereich für Änderungsdatensätze zu bestimmen. Die CDC-Statusvariable kann für beliebige Containerelemente definiert werden, die vom CDC-Steuerungstask und der CDC-Quelle gemeinsam verwendet werden. Dies ist auf Paketebene möglich, aber auch in anderen Containern, z. B. einem Schleifencontainer.  

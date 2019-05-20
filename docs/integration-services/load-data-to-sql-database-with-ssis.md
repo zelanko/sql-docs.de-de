@@ -11,14 +11,18 @@ ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671266"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720561"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in SQL Server oder [Azure SQL-Datenbank](/azure/sql-database/) zu verlagern. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
 

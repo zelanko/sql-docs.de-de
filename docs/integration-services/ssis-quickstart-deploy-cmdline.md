@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 583e6f8f5213ae8fb7f803f872813551f7fb07fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b313dcc83da401cfb371e708e36456645a11296e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290206"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717651"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung mit ISDeploymentWizard.exe
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Schnellstart wird gezeigt, wie Sie ein SSIS-Projekt über die Eingabeaufforderung bereitstellen, indem Sie den Bereitstellungs-Assistenten für Integration Services, `ISDeploymentWizard.exe`, ausführen.
 
 Weitere Informationen zum Bereitstellungs-Assistenten für Integration Services finden Sie unter [Bereitstellungs-Assistent für Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).

@@ -14,14 +14,18 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90c7ee4cff732acbd068dc50ff9f009c26dc41c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c07444ff1dd425671fbc17176fc3aa94e0705bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281294"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725596"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Bitweises NOT) (SSIS-Ausdruck)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Führt eine bitweise Negation einer ganzen Zahl aus. Dieser Operator kann auf integer-Datentypen mit und ohne Vorzeichen angewendet werden.  
   
 ## <a name="syntax"></a>Syntax  

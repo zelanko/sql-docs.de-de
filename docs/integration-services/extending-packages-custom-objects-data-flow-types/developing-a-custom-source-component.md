@@ -22,14 +22,18 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8e895537a518e7d18f16309acda34cb02aef44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275759"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724823"
 ---
 # <a name="developing-a-custom-source-component"></a>Entwickeln einer benutzerdefinierten Quellkomponente
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht es Entwicklern, in Quellkomponenten zu schreiben, die Verbindungen mit benutzerdefinierten Datenquellen herstellen und anderen Komponenten im Datenflusstask Daten aus diesen Quellen zur Verfügung stellen. Die Möglichkeit, benutzerdefinierte Quellen zu erstellen, ist hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die Sie über keine der bestehenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellen zugreifen können.  
   
  Quellkomponenten verfügen über eine oder mehrere Ausgaben und keine Eingabe. Zur Entwurfszeit dienen Quellkomponenten zur Erstellung und Konfiguration von Verbindungen, zum Lesen von Spaltenmetadaten aus der externen Datenquelle und zur Konfiguration der Ausgabespalten der Quelle basierend auf der externen Datenquelle. Während der Ausführung stellen sie eine Verbindung mit der externen Datenquelle her und fügen einem Ausgabepuffer Zeilen hinzu. Der Datenflusstask stellt dann Downstreamkomponenten diesen Puffer mit Datenzeilen bereit.  

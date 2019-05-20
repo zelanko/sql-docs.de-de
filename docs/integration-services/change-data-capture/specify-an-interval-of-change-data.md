@@ -13,14 +13,18 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a249a9a155b64ff641197724e55129a6f2fc403
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278009"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728584"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind **datetime** -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert.  
   
 > [!NOTE]  

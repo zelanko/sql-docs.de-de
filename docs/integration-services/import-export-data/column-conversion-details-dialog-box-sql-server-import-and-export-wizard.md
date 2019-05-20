@@ -12,14 +12,18 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221914"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723929"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie auf der Seite **Datentypzuordnung überprüfen** auf die Zeile für eine einzelne Spalte doppelklicken, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import-/Export-Assistent das Dialogfeld **Spaltenkonvertierungsdetails** . Auf dieser Seite können Sie die ausführlicheren Konvertierungsinformationen für eine einzelne Spalte überprüfen. Diese Informationen umfassen die folgenden Elemente.
 -   Den Datentyp der Spalte in Quelle und Ziel.
 -   Die Datentypkonvertierung, die der Assistent ausführt, falls eine Konvertierung erforderlich ist.

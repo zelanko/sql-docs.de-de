@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Kopieren des Bereitstellungspakets | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Bereitstellungspakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279464"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722386"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lektion 3-1: Kopieren des Bereitstellungspakets
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Schritt kopieren Sie das Bereitstellungspaket auf den Zielcomputer.  
   
 Die einfachste Methode zum Kopieren des Bereitstellungspakets auf den Zielcomputer besteht darin, zuerst eine öffentliche Freigabe auf dem Zielcomputer zu erstellen, diese einem Laufwerk zuzuordnen und dann das Bereitstellungspaket auf die Freigabe zu kopieren. Wenn Sie nicht wissen, wie Sie öffentliche Ordner erstellen und konfigurieren oder Laufwerke zuordnen, dann finden Sie weitere Informationen in der Windows-Dokumentation.  

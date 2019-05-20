@@ -13,14 +13,18 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1c1df83eff1f9800e9a17a9241b902b2522cebb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271031"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725722"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketvariablen des Datentyps **Object** gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
   
  Sie können das Recordsetziel in vielen verschiedenen Szenarios verwenden. Im Folgenden finden Sie einige Beispiele:  

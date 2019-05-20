@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273292"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725997"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
   
  Das Verweisdataset kann eine Cachedatei, eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Abfrage sein. Die Transformation für Suche stellt entweder mithilfe eines OLE DB-Verbindungs-Managers oder eines Cacheverbindungs-Managers eine Verbindung mit dem Verweisdataset her. Weitere Informationen finden Sie unter [OLE DB-Verbindungs-Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) und [Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  

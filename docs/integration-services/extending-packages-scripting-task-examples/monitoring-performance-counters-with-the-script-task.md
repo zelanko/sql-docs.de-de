@@ -20,14 +20,18 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c6951b59ac5a78a63990e071fa83fe791e550d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c397dee795409a69e9371e6066b85cb24817869c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279955"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724338"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Überwachen von Leistungsindikatoren mit dem Skripttask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Administratoren müssen möglicherweise die Leistung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen überwachen, die komplexe Transformationen mit großen Datenmengen durchführen. Der **System.Diagnostics**-Namespace von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] umfasst Klassen zur Verwendung vorhandener sowie zur Erstellung eigener Leistungsindikatoren.  
   
  Leistungsindikatoren speichern Leistungsdaten von Anwendungen, anhand derer Sie die Leistung von Software über einen bestimmten Zeitraum analysieren können. Leistungsindikatoren können mit dem Tool **Systemmonitor** lokal oder remote überwacht werden. Für die spätere Verzweigung der Ablaufsteuerung im Paket können Sie die Werte der Leistungsindikatoren in Variablen speichern.  

@@ -11,14 +11,18 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9ebfb17a69abbaf8482999d3435bbdea11e0822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 54fb96d23fb02be01068ce5c2206913a0e6716f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289896"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721053"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell in SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In SQL Server 2012 wurde ein neues Bereitstellungsmodell eingeführt, mit dem Sie Projekte auf dem Integration Services-Server bereitstellen können. Der Integration Services-Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie Laufzeitwerte für Pakete zu konfigurieren.  
   

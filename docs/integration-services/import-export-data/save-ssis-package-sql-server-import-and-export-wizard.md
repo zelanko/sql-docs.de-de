@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279884"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723763"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie auf der Seite **Paket speichern und ausführen** angegeben haben, dass Ihre Einstellungen als SSIS-Paket (SQL Server Integration Services) gespeichert werden sollen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent **SSIS-Paket speichern** an. Auf dieser Seite geben Sie zusätzliche Optionen für das Speichern des vom Assistenten erstellten Pakets an.  
 
 Die auf der Seite **SSIS-Paket speichern** angezeigten Optionen hängen von Ihrer Auswahl auf der Seite **Paket speichern und ausführen** ab, ob das Paket in SQL Server oder im Dateisystem gespeichert werden soll. Weitere Informationen zur Seite **Paket speichern und ausführen** finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).

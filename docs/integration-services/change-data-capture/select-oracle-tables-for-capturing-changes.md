@@ -13,14 +13,18 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09a47653441bf4ac0ac7491a80aa9a92baa6f27b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273295"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728543"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie dieses Dialogfeld, um die Tabellen auszuwählen, die in der CDC-Instanz enthalten sind. Die ausgewählten Tabellen werden im Assistenten für neue Instanzen der Liste auf der Seite **Select Tables and Columns** hinzugefügt. In diesem Dialogfeld können Sie die folgenden Schritte ausführen.  
   
  Standardmäßig sind in diesem Dialogfeld in der Tabellenliste keine Tabellen enthalten. Sie können das Kontrollkästchen oberhalb der Kontrollkästchenspalte aktivieren, um alle Tabellen auszuwählen, oder Sie können nach bestimmten Tabellen suchen.  

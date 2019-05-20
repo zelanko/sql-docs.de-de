@@ -16,14 +16,18 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272196"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727693"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Task Dateisystem führt Operationen für Dateien und Verzeichnisse im Dateisystem aus. Beispielsweise kann ein Paket mit dem Task Dateisystem Verzeichnisse und Dateien erstellen, verschieben oder löschen. Darüber hinaus können Sie mit dem Task Dateisystem Attribute für Dateien und Verzeichnisse festlegen. Beispielsweise können mit dem Task Dateisystem Dateien als ausgeblendet oder schreibgeschützt festgelegt werden.  
   
  Für alle Operationen mit dem Task Dateisystem wird eine Quelle verwendet, wobei es sich um eine Datei oder ein Verzeichnis handeln kann. Beispiele für Quellen sind die Datei, die von dem Task kopiert wird, oder das Verzeichnis, das von dem Task gelöscht wird. Die Quelle kann mithilfe eines Dateiverbindungs-Managers angegeben werden, der auf das Verzeichnis oder die Datei verweist, oder durch Eingabe des Namens einer Variablen, die den Quellpfad enthält. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  

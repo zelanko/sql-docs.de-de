@@ -11,14 +11,18 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f41ef937dd3045be524eeb71274ce3f46f85653
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a4743cd96f3075915bb2ed1071f781e1787cf9b6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282676"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728506"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
   
  Die CDC-Datenbank wird mit der Oracle CDC Designer Console erstellt und konfiguriert und enthält die folgenden Elemente:  

@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271661"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728633"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Ergänzendes Oracle-Protokollierungsskript
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In diesem Dialogfeld wird das ergänzende Oracle-Protokollierungsskript angezeigt.  
   
  Wenn Sie eine CDC-Instanz für die Verwendung vorbereiten, erstellt der CDC Designer ein Oracle SQL-Skript, mit dem die ergänzende Protokollierung für die aufzuzeichnenden Tabellen eingerichtet wird. Das ergänzende Protokollierungsskript weist Oracle an, dass beim Aktualisieren einer bestimmten Tabelle die Änderungsdatensätze, die in das Transaktionsprotokoll geschrieben werden, die Daten aller wichtigen Spalten enthalten sollen, nicht nur die Spalten, die sich geändert haben.  

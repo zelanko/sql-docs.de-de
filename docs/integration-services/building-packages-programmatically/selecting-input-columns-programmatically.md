@@ -22,14 +22,18 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f7ec94a084105f4f9d1fc455814fd46a7ecab46
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: c841f1df93ffda6b453fe67301fb36d10c972782
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671236"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729207"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Programmgesteuertes Auswählen von Eingabespalten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie Komponenten programmgesteuert verbunden haben, wählen Sie die Spalten von Upstreamkomponenten aus, die Sie transformieren oder an Downstreamkomponenten übergeben werden. Wenn Sie keine Eingabespalten für Ihre Komponente auswählen, empfängt die Komponente keine Zeilen von dem Datenflusstask.  
   
 ## <a name="selecting-columns"></a>Auswählen von Spalten  

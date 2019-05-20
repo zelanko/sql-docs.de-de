@@ -11,14 +11,18 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af38a6ad6134d3fa53d10d9f6abf2cbbf18fc08d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 383d45c66c59055761c0fd1f9f112e24f41bad29
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270659"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801411"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Anzeigen der Liste der auf dem Integration Services-Server gespeicherten Pakete
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie können die Liste der Pakete mit einer von zwei Methoden anzeigen, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem Server gespeichert sind.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff  

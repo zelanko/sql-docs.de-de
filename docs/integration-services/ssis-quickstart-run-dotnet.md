@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eccdb5f36d0340097bfb6eb280eb06cf2c04ec5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280524"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717596"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ausführen eines SSIS-Pakets mit C#-Code in einer .NET-App
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Schnellstart wird dargestellt, wie C#-Code geschrieben wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket auszuführen.
 
 Sie können Visual Studio, Visual Studio Code oder ein anderes Tool Ihrer Wahl verwenden, um eine C#-App zu erstellen.

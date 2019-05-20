@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290706"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728008"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
   
  Damit die Daten schnell kopiert werden, können für Daten keine Transformationen ausgeführt werden, während sie von der Quelldatei in die Tabelle oder Sicht verschoben werden.  

@@ -14,14 +14,18 @@ ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca1daff22a0405e1bf2be4a31218133aaf03239
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d72d8fba0d9fbe68b14ebc06cbb8d171ef08ddd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278970"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724547"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten ForEach-Enumerator
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschrieben haben, um benutzerdefinierte Funktionen bereitzustellen, möchten Sie vielleicht eine benutzerdefinierte Benutzeroberfläche für den Foreach-Enumerator erstellen. Wenn Sie keine individuelle Benutzeroberfläche erstellen, können die Benutzer den neuen benutzerdefinierten ForEach-Enumerator nur über das Eigenschaftenfenster konfigurieren.  
   
  Erstellen Sie in einem benutzerdefinierten Benutzeroberflächenprojekt oder einer entsprechenden Assembly eine Klasse, die den <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI> implementiert. Diese Klasse wird von „System.Windows.Forms.UserControl“ abgeleitet, das typischerweise zur Erstellung eines zusammengesetzten Steuerelements als Host für andere Windows Forms-Steuerelemente verwendet wird. Das von Ihnen erstellte Steuerelement wird im Bereich **Enumeratorkonfiguration** der Registerkarte **Auflistung** des **Foreach-Schleifen-Editors** angezeigt.  

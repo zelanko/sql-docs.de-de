@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing fonts
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d4ca0eb6c74164171bbdd949616c08475cff6ab
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0be5634ad5e9a85fde147de7de83f2926582ae52
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643413"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820979"
 ---
 # <a name="change-font-color-size-and-style"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51643413"
   
  Die Einstellungen für Textfarbe und Schriftart gelten global für alle Textelementtypen, also Kommentare, Zeichenfolgen usw.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Drucken von Code und Ergebnissen](../../relational-databases/scripting/print-code-and-results.md)   
  [Farbcodierung im Abfrage-Editor](../../relational-databases/scripting/color-coding-in-query-editors.md)  
   

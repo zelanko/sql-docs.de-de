@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277909"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722068"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lektion 3.2: Hinzufügen und Konfigurieren der Protokollierung
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Paket „Lesson 3.dtsx“. Anschließend konfigurieren Sie einen Protokollanbieter für Textdateien, um die Ereignisse „PipelineExecutionPlan“ und „PipelineExecuteTrees“ zu protokollieren. Der Protokollanbieter für Textdateien erstellt Protokolle, die auf einfache Weise angezeigt werden können und portabel sind. Die Einfachheit dieser Protokolldateien ist während der grundlegenden Testphase eines Pakets nützlich. Sie können die Protokolleinträge auch im Fenster **Protokollereignisse** des [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designers anzeigen.  
   

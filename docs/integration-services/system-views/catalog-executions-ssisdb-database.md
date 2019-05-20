@@ -14,14 +14,18 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edb9df4406312c8711c895489a09b647ebd126c9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275222"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714846"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Instanzen der Paketausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführungsinstanz wie die Ausführung des übergeordneten Pakets.  
@@ -42,19 +46,19 @@ ms.locfileid: "58275222"
 |use32bitruntime|**bit**|Gibt an, ob die 32-Bit-Laufzeit verwendet wird, um das Paket unter einem 64-Bit-Betriebssystem auszuführen. Wenn der Wert `1` ist, erfolgt die Ausführung mit der 32-Bit-Runtime. Wenn der Wert `0` ist, erfolgt die Ausführung mit der 64-Bit-Laufzeit.|  
 |object_type|**smallint**|Der Typ des Objekts. Das Objekt kann ein Projekt (`20`) oder ein Paket (`30`) sein.|  
 |object_id|**bigint**|Die ID des von dem Vorgang betroffenen Objekts.|  
-|status|**int**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
+|status|**ssNoversion**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
 |start_time|**datetimeoffset**|Der Zeitpunkt, zu dem die Instanz der Ausführung gestartet wurde.|  
 |end_time|**datetimeoffsset**|Der Zeitpunkt, zu dem die Instanz der Ausführung beendet wurde.|  
 |caller_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, wenn für die Anmeldung Windows-Authentifizierung verwendet wurde.|  
 |caller_name|**nvarchar(128)**|Der Name des Kontos, das den Vorgang ausgeführt hat.|  
-|process_id|**int**|Ggf. die Prozess-ID des externen Prozesses.|  
+|process_id|**ssNoversion**|Ggf. die Prozess-ID des externen Prozesses.|  
 |stopped_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der die Instanz der Ausführung beendet hat.|  
 |stopped_by_name|**nvarchar(128)**|Der Name des Benutzers, der die Instanz der Ausführung beendet hat.|  
 |total_physical_memory_kb|**bigint**|Der gesamte physische Speicher (in Megabyte) auf dem Server, wenn die Ausführung gestartet wird.|  
 |available_physical_memory_kb|**bigint**|Der verfügbare physische Speicher (in Megabyte) auf dem Server, wenn die Ausführung gestartet wird.|  
 |total_page_file_kb|**bigint**|Der gesamte Arbeitsspeicher für Seiten (in Megabyte) auf dem Server, wenn die Ausführung gestartet wird.|  
 |available_page_file_kb|**bigint**|Der verfügbare Arbeitsspeicher für Seiten (in Megabyte) auf dem Server, wenn die Ausführung gestartet wird.|  
-|cpu_count|**int**|Die Anzahl der logischen CPUs auf dem Server, wenn die Ausführung gestartet wird.|  
+|cpu_count|**ssNoversion**|Die Anzahl der logischen CPUs auf dem Server, wenn die Ausführung gestartet wird.|  
 |server_name|**nvarchar(128)**|Die Informationen zu Windows Server und zu Instanzen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
 |dump_id|**uniqueidentifier**|Die ID eines Ausführungsdumps.|  

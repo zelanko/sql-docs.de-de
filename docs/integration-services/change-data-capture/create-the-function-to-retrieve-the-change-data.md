@@ -13,14 +13,18 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280334"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728977"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
   
 > [!NOTE]  
@@ -211,7 +215,7 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
-|**__$operation**|**int**|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
+|**__$operation**|**ssNoversion**|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spaltenordnungszahlen der Änderungstabelle basiert, die geänderte Spalten identifiziert. Sie könnten diesen Wert überprüfen, wenn Sie bestimmen müssten, welche Spalten sich geändert haben.|  
 |**\<erfasste Quelltabellenspalten>**|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   

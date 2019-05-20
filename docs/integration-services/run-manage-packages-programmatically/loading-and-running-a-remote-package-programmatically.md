@@ -15,14 +15,18 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2b44c9abc97032e1f3c11b20e25cbffbd5bff7f9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274667"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719439"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Um Remotepakete auf einem lokalen Computer auszuführen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht installiert ist, starten Sie die Pakete, sodass sie auf dem Remotecomputer ausgeführt werden, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist. Hierzu muss auf dem lokalen Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, ein Webdienst oder eine Remotekomponente zum Starten der Pakete auf dem Remotecomputer verwendet werden. Wenn Sie versuchen, die Remotepakete direkt auf dem lokalen Computer zu starten, werden die Pakete geladen, und es wird versucht, die Pakete auf dem lokalen Computer auszuführen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht auf dem lokalen Computer installiert ist, werden die Pakete nicht ausgeführt.  
   
 > [!NOTE]  
@@ -330,7 +334,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>Testen des Webdiensts  
- Im folgenden Beispiel für eine Konsolenanwendung wird der Webdienst zum Ausführen eines Pakets verwendet. Die LaunchPackage<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Methode des Webdiensts gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Wert, sodass Clientcomputers keinen Verweis auf -Assemblys benötigen. Mit dem Beispiel wird zum Melden der Ausführungsergebnisse eine private Enumeration erstellt, deren Werte die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werte spiegeln.  
+ Im folgenden Beispiel für eine Konsolenanwendung wird der Webdienst zum Ausführen eines Pakets verwendet. Die LaunchPackage-Methode des Webdiensts gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Wert, sodass Clientcomputers keinen Verweis auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Assemblys benötigen. Mit dem Beispiel wird zum Melden der Ausführungsergebnisse eine private Enumeration erstellt, deren Werte die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werte spiegeln.  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>So erstellen Sie eine Konsolenanwendung zum Testen des Webdiensts  
   
@@ -342,7 +346,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 4.  Fügen Sie den Beispielcode für die Hauptroutine und die private Enumeration in den Code ein. (Im Beispiel ist der gesamte Inhalt des Codefensters dargestellt.)  
   
-5.  Bearbeiten Sie die Codezeile, die die LaunchPackage-Methode aufruft, um eine Reihe gültiger Werte für die Eingabeargumente bereitzustellen, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx`sourceType` auf dem Server im Verzeichnis C:\My Packages`sourceLocation` gespeichert ist, übergeben Sie "file" als Wert von `packageName`, "C:\My Packages" als Wert von  und "package1" (ohne Erweiterung) als Wert von .  
+5.  Bearbeiten Sie die Codezeile, die die LaunchPackage-Methode aufruft, um eine Reihe gültiger Werte für die Eingabeargumente bereitzustellen, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx auf dem Server im Verzeichnis C:\My Packages gespeichert ist, übergeben Sie "file" als Wert von `sourceType`, "C:\My Packages" als Wert von `sourceLocation` und "package1" (ohne Erweiterung) als Wert von `packageName`.  
   
 ```vb  
 Module LaunchSSISPackageTest  

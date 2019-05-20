@@ -18,17 +18,18 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: ed749535770a9cf0e0c4e9664b6f7c5be6e06cb4
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774886"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577447"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.  
+ Extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.  
   
  Informationen zum Extrahieren eines Objekts oder eines Arrays aus einer JSON-Zeichenfolge anstelle eines Skalarwerts finden Sie unter [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). Informationen zu den Unterschieden zwischen **JSON_VALUE** und **JSON_QUERY** finden Sie unter [Vergleichen von JSON_VALUE und JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
@@ -40,27 +41,29 @@ ms.locfileid: "64774886"
 JSON_VALUE ( expression , path )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a>Argumente
+
  *expression*  
  Ein Ausdruck. In der Regel der Name einer Variablen oder einer Spalte, die JSON-Text enthält.  
- 
+
  Wenn **JSON_VALUE** feststellt, dass JSON im *Ausdruck* ungültig ist, bevor der von *path* identifizierte Wert gefunden wird, gibt die Funktion einen Fehler zurück. Wenn **JSON_VALUE** den von *path* identifizierten Wert nicht findet, wird der gesamte Text durchsucht und ein Fehler zurückgegeben, wenn JSON-Text gefunden wird, der an einer beliebigen Stelle von *expression* ungültig ist.
   
  *path*  
  Ein JSON-Pfad, der die zu extrahierende Eigenschaft angibt. Weitere Informationen finden Sie unter [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
- 
+
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert von *path* bereitstellen.
   
  **JSON_VALUE** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
   
-## <a name="return-value"></a>Rückgabewert  
+## <a name="return-value"></a>Rückgabewert
+
  Gibt einen einzelnen Textwert vom Typ nvarchar(4000) zurück. Die Sortierung des zurückgegebenen Werts ist identisch mit der Sortierung des Eingabeausdrucks.  
   
  Wenn der Wert 4000 Zeichen überschreitet:  
   
--   Im Lax-Modus gibt **JSON_VALUE** NULL zurück.  
+- Im Lax-Modus gibt **JSON_VALUE** NULL zurück.  
   
--   Im strict-Modus gibt **JSON_VALUE** einen Fehler zurück.  
+- Im strict-Modus gibt **JSON_VALUE** einen Fehler zurück.  
   
  Wenn Sie Skalarwerte zurückgeben müssen, die 4000 Zeichen überschreiten, verwenden Sie **OPENJSON** statt **JSON_VALUE**. Weitere Informationen finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
@@ -101,7 +104,7 @@ SET @jsonInfo=N'{
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="example-1"></a>Beispiel 1  
+### <a name="example-1"></a>Beispiel 1
  Im folgenden Beispiel werden die Werte der JSON-Eigenschaften `town` und `state` in Abfrageergebnissen verwendet. Da **JSON_VALUE** die Sortierung der Quelle beibehält, hängt die Sortierreihenfolge der Ergebnisse von der Sortierung der `jsonInfo`-Spalte ab. 
 
 > [!NOTE]
@@ -115,7 +118,7 @@ WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
 ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
-### <a name="example-2"></a>Beispiel 2  
+### <a name="example-2"></a>Beispiel 2
  Im folgenden Beispiel wird der Wert der JSON-Eigenschaft `town` in eine lokale Variable extrahiert.  
   
 ```sql  
@@ -128,7 +131,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
-### <a name="example-3"></a>Beispiel 3  
+### <a name="example-3"></a>Beispiel 3
  Im folgenden Beispiel werden berechnete Spalten erstellt, die auf den Werten der JSON-Eigenschaften basieren.  
   
 ```sql  
@@ -142,8 +145,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

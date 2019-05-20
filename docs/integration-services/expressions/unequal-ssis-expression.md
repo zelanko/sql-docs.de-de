@@ -14,14 +14,18 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd00eff761b25182d39d7ac3e7630272429ebe16
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271388"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724836"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Ungleich) (SSIS-Ausdruck)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke mit kompatiblen Datentypen ungleich sind. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
   
  Für manche Datentypen muss jedoch der Ausdruck eine explizite Umwandlung einschließen, damit der Ausdruck erfolgreich ausgewertet werden kann. Weitere Informationen zu zulässigen Datentypumwandlungen finden Sie unter [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  

@@ -24,14 +24,18 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290356"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724667"
 ---
 # <a name="implementing-external-metadata"></a>Implementieren externer Metadaten
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn die Verbindung einer Komponente mit einer Datenquelle getrennt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>-Schnittstelle die Spalten in den Eingabe- und Ausgabespaltenauflistungen anhand der Spalten der externen Datenquelle überprüfen. Mit dieser Schnittstelle können Sie eine Momentaufnahme der Spalten der externen Datenquelle verwalten und diese Spalten den Eingabe- und Ausgabespaltenauflistungen der Komponente zuordnen.  
   
  Die Implementierung externer Metadatenspalten erhöht den Verwaltungsaufwand und die Komplexität bei der Komponentenentwicklung, da Sie eine weitere Spaltenauflistung verwalten und überprüfen müssen. Diese Entwicklungsarbeit kann sich aber lohnen, da Sie teure Roundtrips zum Server zu Überprüfungszwecken vermeiden können.  

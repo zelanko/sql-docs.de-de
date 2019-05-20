@@ -19,14 +19,18 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6552d4efaa0f32d428bb9516313d7a8ef47220a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270908"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718954"
 ---
 # <a name="save-packages"></a>Speichern von Paketen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen Sie Pakete mithilfe des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers und speichern diese als XML-Dateien (DTSX-Dateien) im Dateisystem. Sie können auch Kopien der Paket-XML-Datei in der msdb-Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder im Paketspeicher speichern. Der Paketspeicher stellt die Ordner im Dateisystempfad dar, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwaltet werden.  
   
  Wenn Sie ein Paket im Dateisystem speichern, können Sie es später mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nach [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bzw. in den Paketspeicher importieren. Weitere Informationen finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md).  

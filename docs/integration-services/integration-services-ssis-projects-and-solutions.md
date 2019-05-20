@@ -19,14 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 39401de76578ede9bb9ec1d30bc16f1fb933ce57
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272860"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723562"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Umgebung installieren, um [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  

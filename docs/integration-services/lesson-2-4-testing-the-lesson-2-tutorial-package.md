@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272210"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722457"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lektion 2.4: Testen des Tutorialpakets aus Lektion 2
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Mit dem jetzt konfigurierten Foreach-Schleifencontainer und Verbindungs-Manager für Flatfiles kann das Paket aus Lektion 2 nun die Sammlung von 14 Flatfiles im Ordner „Sample Data“ (Beispieldaten) durchlaufen. Jedes Mal, wenn ein Dateiname gefunden wird, der mit den angegebenen Dateinamenskriterien übereinstimmt, wird die benutzerdefinierte Variable vom Foreach-Schleifencontainer mit dem Dateinamen aufgefüllt. Diese Variable aktualisiert im Gegenzug die Eigenschaft „ConnectionString“ des Verbindungs-Managers für Flatfiles und stellt eine Verbindung mit der neuen Flatfile her. Vom Foreach-Schleifencontainer wird dann der unveränderte Datenflusstask gegen die Daten in der neuen Flatfile ausgeführt, bevor eine Verbindung zur nächsten Datei im Ordner hergestellt wird.  
   

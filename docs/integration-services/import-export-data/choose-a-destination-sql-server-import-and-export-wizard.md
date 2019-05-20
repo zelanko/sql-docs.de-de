@@ -12,14 +12,18 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3df75759684eb094113096b636288e9e1db6f6b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3ebfc24eef8919ffa43824447ae32773d106158f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221887"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723973"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Nachdem Sie Informationen zur Quelle Ihrer Daten bereitgestellt haben und darüber, wie Sie eine Verbindung mit ihnen herstellen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Ziel auswählen**an. Auf dieser Seite geben Sie Informationen zum Ziel für Ihre Daten an und dazu, wie Sie eine Verbindung damit herstellen.
   
 Weitere Informationen zu Datenzielen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und Ziele kann ich verwenden?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources). 

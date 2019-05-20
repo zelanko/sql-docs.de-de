@@ -11,14 +11,18 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 062efbe700a4c20090f51e6e80196b4a103cfffe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 513145a1c1968e6ca5dbdc2b8cee0566552e500e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280964"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726722"
 ---
 # <a name="look-up-process-chain"></a>Prozesskette suchen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **Prozesskette suchen** , um eine Prozesskette suchen, die im SAP NetWeaver BW-System definiert ist. Wenn die Liste der verfügbaren Prozessketten angezeigt wird, wählen Sie die gewünschte Kette aus. Daraufhin werden die zugehörigen Optionen von der Quelle mit den erforderlichen Werten aufgefüllt.  
   
  Die SAP BW-Quelle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW verwendet das Dialogfeld **Prozesskette suchen** . Weitere Informationen zur SAP BW-Quelle finden Sie unter [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  

@@ -24,14 +24,18 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53a05f64b2d6051c30cfde9972f5347418a76361
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d852aef3321878ba01c535c9e0d8f696dc7d4e0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279344"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724602"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Verwenden von Fehlerausgaben in einer Datenflusskomponente
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Spezielle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>-Objekte, die als Fehlerausgaben bezeichnet werden, können zu Komponenten hinzugefügt werden, sodass die Komponente Zeilen, die bei der Ausführung nicht verarbeitet werden können, umleiten kann. Die Probleme, die bei einer Komponente auftreten können, lassen sich meist in Fehler oder abgeschnittene Daten einteilen und sind komponentenspezifisch. Komponenten, die Fehlerausgaben bereitstellen, bieten den Benutzern der Komponente die Flexibilität, Fehlerbedingungen durch Herausfiltern von Fehlerzeilen aus dem Resultset, durch Behandeln der Komponente als fehlerhaft, wenn ein Problem auftritt, oder durch Ignorieren von Fehlern und Fortsetzen des Vorgangs zu behandeln.  
   
  Um Fehlerausgaben in einer Komponente zu implementieren oder zu unterstützen müssen Sie zunächst die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A>-Eigenschaft der Komponente auf **true** festlegen. Dann müssen Sie eine Ausgabe zu der Komponente hinzufügen, bei der die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>-Eigenschaft auf **true** festgelegt ist. Zuletzt muss die Komponente Code enthalten, der Zeilen an die Fehlerausgabe umleitet, wenn Fehler auftreten oder Daten abgeschnitten werden. In diesem Thema werden diese drei Schritte beschrieben und die Unterschiede zwischen synchronen und asynchronen Fehlerausgaben erklärt.  

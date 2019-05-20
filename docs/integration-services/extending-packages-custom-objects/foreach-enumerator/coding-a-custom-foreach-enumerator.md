@@ -13,14 +13,18 @@ ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a722f26549369f7508c9eb96e93da2b982dee4b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d2a25f729007767176b6393715196d96008937b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271595"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724581"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codieren eines benutzerdefinierten Foreach-Enumerators
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
   
  Ein funktionierendes Beispiel eines benutzerdefinierten Enumerators finden Sie unter [Developing a User Interface for a Custom ForEach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md) (Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten ForEach-Enumerator).  

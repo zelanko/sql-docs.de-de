@@ -18,14 +18,18 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 078d028bb1f997e6a198c91b8019519f81460ae6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bd648817edb921df46c73f341d02b9e389fa522
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270638"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724311"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Abfragen des Active Directory mit dem Skripttask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Anwendungen für die Verarbeitung von Unternehmensdaten, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, müssen Daten häufig je nach Stellung, Berufsbezeichnung und anderen im Active Directory gespeicherten Eigenschaften der Mitarbeiter unterschiedlich verarbeiten. Active Directory ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Verzeichnisdienst, der einen zentralen Speicher für Metadaten nicht nur über Benutzer, sondern auch über andere Werte des Unternehmens, wie etwa über Computer und Drucker, bereitstellt. Der **System.DirectoryServices**-Namespace in Microsoft .NET Framework stellt Klassen für die Verwendung mit Active Directory bereit, sodass Sie den Datenverarbeitungsworkflow anhand der darin gespeicherten Informationen weiterleiten können.  
   
 > [!NOTE]  
@@ -44,7 +48,7 @@ ms.locfileid: "58270638"
   
 4.  Fügen Sie im Skriptprojekt dem **System.DirectoryServices**-Namespace einen Verweis hinzu.  
   
-5.  zugreifen. Verwenden Sie in Ihrem Code eine **Imports**-Anweisung zum Importieren des **DirectoryServices**-Namespace.  
+5.  erforderlich. Verwenden Sie in Ihrem Code eine **Imports**-Anweisung zum Importieren des **DirectoryServices**-Namespace.  
   
 > [!NOTE]  
 >  Damit dieses Skript ausgeführt werden kann, muss im Netzwerk des Unternehmens Active Directory verwendet werden. Zudem müssen die in diesem Beispiel verwendeten Mitarbeiterinformationen im Unternehmen gespeichert werden.  

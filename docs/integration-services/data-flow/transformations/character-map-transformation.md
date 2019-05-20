@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272997"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726242"
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation zum Zuordnen der Zeichen wendet Zeichenfolgenfunktionen, wie z. B. die Konvertierung von Klein- in Großbuchstaben, auf Zeichendaten an. Diese Transformation betrifft nur Spaltendaten mit einem Zeichenfolgen-Datentyp.  
   
  Die Transformation zum Zuordnen der Zeichen kann Spaltendaten direkt konvertieren oder der Transformationsausgabe eine Spalte hinzufügen und die konvertierten Daten in die neue Spalte einfügen. Sie können auf eine Eingabespalte verschiedene Zuordnungsvorgänge anwenden und die Ergebnisse verschiedenen Spalten hinzufügen. Konvertieren Sie z. B. eine Spalte in Groß- und Kleinbuchstaben, und fügen Sie die Ergebnisse zwei unterschiedlichen Spalten hinzu.  

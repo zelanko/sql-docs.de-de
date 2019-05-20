@@ -13,14 +13,18 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d612cb08431c5618d5d3e6e7c0574d79bf43000e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290596"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728200"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein Cacheverbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
 > [!NOTE]  

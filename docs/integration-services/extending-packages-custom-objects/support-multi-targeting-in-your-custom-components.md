@@ -11,14 +11,18 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273551"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724500"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Sie können nun den SSIS-Designer in SQL Server Data Tools (SSDT) verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, SQL Server 2014 oder SQL Server 2012 ausgerichtet sind. SSDT für Visual Studio 2015 können Sie unter [Download Latest SQL Server Data Tools (Herunterladen der aktuellen Version von SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) herunterladen. 
 
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
@@ -34,7 +38,7 @@ Die fünf benutzerdefinierten SSIS-Erweiterungen unterstützen alle die Festlegu
 -   Protokollanbieter
 -   Datenflusskomponenten
 
-Für verwaltete Erweiterungen lädt der SSIS-Designer die Erweiterungsversion für die angegebene Zielversion herunter. Zum Beispiel:
+Für verwaltete Erweiterungen lädt der SSIS-Designer die Erweiterungsversion für die angegebene Zielversion herunter. Beispiel:
 -   Wenn die Zielversion SQL Server 2012 ist, lädt der Designer die SQL Server 2012-Version der Erweiterung herunter.
 -   Wenn die Zielversion SQL Server 2016 ist, lädt der Designer die SQL Server 2016-Version der Erweiterung herunter.
 

@@ -11,14 +11,18 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f52d5b011e2932ceeadc7f81a564dd52ad503917
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e55427c2249a93d2a97bbc13b7385dd56fac5d01
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275002"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723501"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lektion 1.3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Nach dem Hinzufügen eines Verbindungs-Managers für Flatfiles zum Herstellen einer Verbindung mit der Datenquelle müssen Sie den OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung mit dem Ziel hinzufügen. Ein OLE DB-Verbindungs-Manager ermöglicht einem Paket das Extrahieren von Daten aus einer oder das Laden von Daten in eine OLE DB-kompatible(n) Datenquelle. Mithilfe einer OLE DB-Verbindungs-Manager-Instanz können Sie den Server, die Authentifizierungsmethode und die Standarddatenbank für die Verbindung angeben.  
   

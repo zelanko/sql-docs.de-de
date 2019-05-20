@@ -19,14 +19,18 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274079"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727819"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
   
  Ein Datenfluss besteht aus mindestens einer Datenflusskomponente, normalerweise jedoch aus verbundenen Datenflusskomponenten. Dabei handelt es sich um Quellen zum Extrahieren von Daten, Transformationen zum Ändern, Routen oder Zusammenfassen von Daten sowie Ziele zum Laden von Daten.  

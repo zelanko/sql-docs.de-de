@@ -14,14 +14,18 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74a8e5a027d07aebb7d203ee478fc2968fd0a12f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3692261ca636f85b7e0ebb03812eb31bdd2164b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271832"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714408"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Details aller Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an.  
@@ -34,12 +38,12 @@ ms.locfileid: "58271832"
 |object_type|**smallint**|Der Typ des von dem Vorgang betroffenen Objekts. Bei dem Objekt kann es sich um einen Ordner (`10`), ein Projekt (`20`), ein Paket (`30`), eine Umgebung (`40`) oder eine Instanz der Ausführung (`50`) handeln.|  
 |object_id|**bigint**|Die ID des von dem Vorgang betroffenen Objekts.|  
 |object_name|**nvarchar(260)**|Der Name des Objekts.|  
-|status|**int**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
+|status|**ssNoversion**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
 |start_time|**datetimeoffset**|Der Zeitpunkt, zu dem der Vorgang begonnen wurde.|  
 |end_time|**datetimeoffsset**|Der Zeitpunkt, zu dem der Vorgang beendet wurde.|  
 |caller_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, wenn für die Anmeldung Windows-Authentifizierung verwendet wurde.|  
 |caller_name|**nvarchar(128)**|Der Name des Kontos, das den Vorgang ausgeführt hat.|  
-|process_id|**int**|Ggf. die Prozess-ID des externen Prozesses.|  
+|process_id|**ssNoversion**|Ggf. die Prozess-ID des externen Prozesses.|  
 |stopped_by_sid|**varbinary(85)**|Die SID des Benutzers, der den Vorgang beendet hat.|  
 |stopped_by_name|**nvarchar(128)**|Der Name des Benutzers, der den Vorgang beendet hat.|  
 |server_name|**nvarchar(128)**|Die Informationen zu Windows Server und zu Instanzen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

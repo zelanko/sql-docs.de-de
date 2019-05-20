@@ -11,14 +11,18 @@ ms.assetid: ''
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d73eff658ecfa8f5f145f29c8522a0723d93ff8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b555dfd5c92212e6a8a24568964c96af35eb8c0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275710"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729474"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Microsoft Connectors für Oracle und Teradata von Attunity für Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Sie können Connectors von Attunity für Integration Services herunterladen, die die Leistung verbessern, wenn Daten in oder aus Oracle oder Teradata in ein SSIS-Paket geladen werden.
 

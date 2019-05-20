@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282434"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723041"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Schritt fügen Sie jedem Paket eine Konfiguration hinzu. Konfigurationen aktualisieren die Werte von Paketeigenschaften und Paketobjekten zur Laufzeit.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Vielzahl von Konfigurationstypen bereit. Sie können Konfigurationen in Umgebungsvariablen, Registrierungseinträgen, benutzerdefinierten Variablen, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen und XML-Dateien speichern. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt die Verwendung von indirekten Konfigurationen und bietet damit zusätzliche Flexibilität. Das bedeutet, dass Sie eine Umgebungsvariable verwenden, um den Speicherort der Konfiguration anzugeben, die wiederum die eigentlichen Werte angibt. Bei den Paketen im Deployment Tutorial-Projekt wird eine Kombination aus XML-Konfigurationsdateien und indirekten Konfigurationen verwendet. Eine XML-Konfigurationsdatei kann Konfigurationen für mehrere Eigenschaften enthalten, und gegebenenfalls können mehrere Pakete darauf verweisen. In diesem Lernprogramm verwenden Sie eine separate Konfigurationsdatei für jedes Paket.  

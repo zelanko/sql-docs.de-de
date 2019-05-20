@@ -17,14 +17,18 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf9107bb5a6e514e84fb17ae143491c9c3637991
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 385fd9fe4224c754af7546ffe2737316aaaf62fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272930"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719266"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel zu dieser Lösung liegt im **Microsoft.SqlServer.Dts.DtsClient**-Namespace, der spezielle Implementierungen der Schnittstellen **IDbConnection**, **IDbCommand** und **IDbDataParameter** aus dem **System.Data**-Namespace enthält. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  
 
 > [!IMPORTANT]
@@ -49,7 +53,7 @@ ms.locfileid: "58272930"
   
 4.  Erstellen Sie ein Objekt vom Typ **DtsClient.DtsCommand**, das die zuvor erstellte **DtsConnection** verwendet und die **CommandText**-Eigenschaft auf den Namen des DataReader-Ziels in dem Paket festlegt. Rufen Sie dann die **ExecuteReader**-Methode des Befehlsobjekts auf, um die Paketergebnisse in ein neues DataReader-Ziel zu laden.  
   
-5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von **DtsDataParameter**-Objekten im **DtsCommand**-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen im Paket im **DtsClient**-Namespace definieren, bevor Sie diese mit dem **DtsDataParameter**-Objekt aus einer Clientanwendung verwenden können. (Möglicherweise müssen Sie im Fenster **Variablen** auf **Variablenspalten auswählen** auf der Symbolleiste klicken, um die Spalte **Namespace** anzuzeigen.) Verzichten Sie im Clientcode auf den DtsClient-Namespaceverweis aus dem Variablennamen, wenn Sie der **Parameter**-Auflistung des **DtsCommand** einen **DtsDataParameter** hinzufügen. Zum Beispiel:  
+5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von **DtsDataParameter**-Objekten im **DtsCommand**-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen im Paket im **DtsClient**-Namespace definieren, bevor Sie diese mit dem **DtsDataParameter**-Objekt aus einer Clientanwendung verwenden können. (Möglicherweise müssen Sie im Fenster **Variablen** auf **Variablenspalten auswählen** auf der Symbolleiste klicken, um die Spalte **Namespace** anzuzeigen.) Verzichten Sie im Clientcode auf den DtsClient-Namespaceverweis aus dem Variablennamen, wenn Sie der **Parameter**-Auflistung des **DtsCommand** einen **DtsDataParameter** hinzufügen. Beispiel:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

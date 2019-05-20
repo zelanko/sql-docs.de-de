@@ -25,14 +25,18 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66baf6b01ecdafd87b0c748d8802dad19da928f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c03218101637767dbaf6e5abe2132eb3c0f332da
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290718"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717924"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
   
  Mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer können die folgenden Aufgaben ausgeführt werden:  

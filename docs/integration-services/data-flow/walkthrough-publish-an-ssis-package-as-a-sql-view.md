@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281864"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725761"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
@@ -30,7 +34,7 @@ ms.locfileid: "58281864"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Schritt 1: Erstellen und Bereitstellen des SSIS-Projekts im SSIS-Katalog  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Schritt 1: Erstellen und Bereitstellen des SSIS-Projekts im SSIS-Katalog  
  In diesem Schritt erstellen Sie ein SSIS-Paket, das Daten aus einer von SSIS unterstützten Datenquelle extrahiert (in diesem Beispiel verwenden wir eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank) und die Daten mithilfe einer Datenstreamingziel-Komponente ausgibt. Dann erstellen Sie das SSIS-Projekt und stellen es im SSIS-Katalog bereit.  
   
 1.  Starten Sie **SQL Server Data Tools**. Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf **Microsoft SQL Server**, und klicken Sie auf **SQL Server Data Tools**.  

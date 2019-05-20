@@ -19,14 +19,18 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a97fe11d254d16fa6242513a9542b30f5efd3cf4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c821414a3e514e6c426c634a6de735da0fb4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271104"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727410"
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Task "Datenbanken übertragen" verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Im Gegensatz zu den anderen Tasks, die lediglich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte durch Kopieren verschieben, kann der Task "Datenbanken übertragen" eine Datenbank entweder kopieren oder verschieben. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.  
   
 ## <a name="offline-and-online-modes"></a>Offline- und Onlinemodi  

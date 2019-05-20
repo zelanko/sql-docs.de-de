@@ -10,14 +10,18 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebdf33cf262d000af9b1604299e95883f8ab0d12
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 4d6da9ab263164b58b88105e27c4a92abe158979
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221984"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723911"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer SQL Server-Datenquelle (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft SQL Server**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Es gibt mehrere Datenanbieter, die Sie verwenden können, um eine Verbindung mit SQL Server herzustellen.
 
 > [!TIP]

@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277069"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720820"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lektion 6.4: Bereitstellen des Pakets aus Lektion 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in einer SQL Server-Instanz hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den neuen Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.   
 Diese Aufgabe umfasst folgende Schritte:  

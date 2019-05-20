@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282303"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726533"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
   
  Zusätzlich zur Option, Rohdatendateien in eine Datei schreiben zu können, können Sie auch das Rohdatendatei-Ziel verwenden, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Mithilfe der Rohdatendatei-Quelle werden Rohdaten abgerufen, die zuvor vom Ziel geschrieben wurden. Sie können die Rohdatendatei-Quelle zudem auf die Nur-Metadaten-Datei verweisen.  

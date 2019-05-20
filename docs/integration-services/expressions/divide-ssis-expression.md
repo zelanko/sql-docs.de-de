@@ -14,14 +14,18 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27a5fa59f2f7ba7b3ceac4eebb9547ebd8d32b6f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0ab03e6965d80c3f77276df4218b6a8fdd66f2a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274771"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725457"
 ---
 # <a name="divide-ssis-expression"></a>(Division) (SSIS-Ausdruck)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dividiert den ersten numerischen Ausdruck durch den zweiten numerischen Ausdruck.  
   
 ## <a name="syntax"></a>Syntax  

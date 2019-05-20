@@ -11,14 +11,18 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd51e064196d2c3c0de0a0da7d10b1a5e1c0b23b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 077ea12b10278be8a38a50f82b6b7e6873be5dab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290506"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727088"
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **InfoSource für Masterdaten erstellen** , um eine neue InfoSource für Masterdaten im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoSource für Masterdaten erstellen** im **Ziel-Editor für SAP BW** auf der Seite **Verbindungs-Manager**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

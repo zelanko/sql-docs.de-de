@@ -13,14 +13,18 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015fad5db2b0c6a8c40118ff6886839693573bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c68ab7fd6392d8740c03ab891a587859dec2c000
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274792"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726433"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Quellen-Editor für SAP BW (Seite Spalten)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Auf der Seite **Spalten** im **Quellen-Editor für SAP BW** können Sie jeder externen Spalte (Quellspalte) eine Ausgabespalte zuordnen.  
   
  Weitere Informationen zur SAP BW-Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW finden Sie unter [SAP BW-Quelle](../../integration-services/data-flow/sap-bw-source.md).  

@@ -19,14 +19,18 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 513ba314cf3168a03b4d559d01c6e17d62f5e13d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8bc233f7b23d08b9fd697eeddfae683420be33c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282810"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726017"
 ---
 # <a name="pivot-transformation"></a>Transformation für Pivot
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für Pivot macht aus einem normalisierten Dataset eine weniger normalisierte, aber kompaktere Version, indem die Eingabedaten nach einem Spaltenwert pivotiert werden. Beispielsweise weist ein normalisiertes **Orders** -Dataset, das den Kundennamen, das Produkt und die gekaufte Menge auflistet, in der Regel mehrere Zeilen für jeden Kunden auf, der mehrere Produkte gekauft hat. Dabei zeigt jede Zeile für den betreffenden Kunden Bestelldetails für ein anderes Produkt an. Durch Pivotieren des Datasets nach der Produktspalte kann mit der Transformation für Pivot ein Dataset mit einer einzigen Zeile pro Kunde ausgegeben werden. In dieser Zeile werden alle Einkäufe des Kunden aufgelistet, wobei die Produktnamen als Spaltennamen und die Menge als Wert in der Produktspalte angezeigt werden. Da nicht jeder Kunde jedes Produkt kauft, können viele Spalten NULL-Werte enthalten.  
   
  Wenn ein Dataset pivotiert wird, übernehmen Eingabespalten unterschiedliche Rollen am Pivotvorgang. Für die Beteiligung einer Spalte gibt es folgende Möglichkeiten:  
