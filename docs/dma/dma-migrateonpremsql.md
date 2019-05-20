@@ -2,7 +2,7 @@
 title: Upgrade auf lokalen SQL Server mit SQL Server oder SQL Server auf Azure-VMs, die über den Data Migration Assistant | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit einer lokalen SQL Server auf eine neuere Version von SQL Server oder SQL Server auf virtuellen Azure-Computer aktualisieren
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706968"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875178"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Ein Upgrade auf einen lokalen SQL Server auf SQL Server oder SQL Server auf Azure-VMs mit den Data Migration Assistant
 
 Im Data Migration Assistant bietet nahtlose Bewertungen von einer lokalen SQL Server und -Upgrades auf höhere Versionen von SQL Server oder Migration zu SQL Server auf virtuellen Azure-Computern oder Azure SQL-Datenbank.
 
-Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lokalen SQL Server auf neuere Version von SQL Server oder SQL Server auf virtuellen Azure-Computern mithilfe von Data Migration Assistant.   
+Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lokalen SQL Server auf höhere Versionen von SQL Server oder SQL Server auf virtuellen Azure-Computern mithilfe von Data Migration Assistant.
 
 ## <a name="create-a-new-migration-project"></a>Erstellen eines neuen Migrationsprojekts
 
