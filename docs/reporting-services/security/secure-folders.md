@@ -2,7 +2,7 @@
 title: Sichere Ordner | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f3d1969f1e055b239dee317dbcd8d0b4cd73a4d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570557"
 ---
 # <a name="secure-folders"></a>Sichere Ordner
   Die Ordnersicherheit ist die Grundlage für das Sichern des gesamten Inhalts auf einem Berichtsserver. Da die Sicherheit in der Ordnerstruktur weitervererbt wird, können Sie für große oder kleine Abschnitte der Ordnerhierarchie eine bestimmte Zugriffsart zulassen.  
@@ -40,7 +40,7 @@ ms.locfileid: "47634108"
 |Datenquellen verwalten|Hinzufügen von neuen freigegebenen Datenquellenelementen zu einem Ordner und Ändern von vorhandenen freigegebenen Datenquellen.|  
 |Die Sicherheit für einzelne Elemente festlegen|Erstellen und Ändern von Rollenzuweisungen, die den Zugriff auf den Ordner steuern. Diese Aufgabe muss zusammen mit Ordner anzeigen oder Ordner verwalten verwendet werden. Andernfalls hat sie keine Auswirkung, weil der Benutzer das Element nicht auswählen kann.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md)   
  [Sichern freigegebener Datenquellenelemente](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

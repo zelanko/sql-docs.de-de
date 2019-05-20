@@ -2,7 +2,7 @@
 title: Zwischenspeichern von Berichten (SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 18b41757ada0d21136e5768eade88ecf8b2a7d40
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029759"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580444"
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
   Ein Berichtsserver kann eine Kopie eines verarbeiteten Berichts zwischenspeichern und diese anzeigen, wenn ein Benutzer den Bericht öffnet. Für den Benutzer ist der einzige Hinweis darauf, dass es sich bei dem Bericht um eine zwischengespeicherte Kopie handelt, das Datum und die Uhrzeit des Berichts. Wenn der Bericht kein aktuelles Datum oder keine aktuelle Uhrzeit aufweist und es sich um keine Momentaufnahme handelt, wurde der Bericht aus dem Cache abgerufen.  
@@ -67,7 +67,7 @@ ms.locfileid: "50029759"
   
  Falls ein Bericht aus irgendeinem Grund nicht aus einer zwischengespeicherten Instanz generiert werden kann (z. B., wenn die von einem Benutzer angegebenen Parameterwerte von den Werten abweichen, mit denen der zwischengespeicherte Bericht erstellt wird), führt der Berichtsserver den Bericht erneut aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   

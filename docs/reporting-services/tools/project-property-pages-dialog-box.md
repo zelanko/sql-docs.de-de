@@ -2,7 +2,7 @@
 title: Eigenschaftenseiten für das Projekt (Dialogfeld) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712181"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578240"
 ---
 # <a name="project-property-pages-dialog-box"></a>Projekt (Eigenschaftenseiten, Dialogfeld)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52712181"
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Configuration**  
  Wählen Sie die zu bearbeitende Konfiguration aus. Anfangs sind folgende Konfigurationen verfügbar: **Debuggen**, **DebugLocal**und **Release**. Die aktive Konfiguration wird zuerst angezeigt, z.B. **Aktiv (Debuggen)**.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "52712181"
   
  Verwenden Sie die URL des virtuellen Verzeichnisses des Berichtsservers, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im einheitlichen Modus ausgeführt wird. Beispiel: `http:\\<server>\reportserver`. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers. Standardmäßig wird der Berichtsserver in dem virtuellen Verzeichnis "reportserver" installiert.  
   
- Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet. Zum Beispiel: 
+ Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet. Beispiel: 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`installiert haben.  
++ `http:\\<servername>\<site>\<subsite>`.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

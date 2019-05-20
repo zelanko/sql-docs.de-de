@@ -2,18 +2,18 @@
 title: Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec55fc1c24424635c6dd504395c3a4a056fc50d1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293779"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580287"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht umfasst die Messgerätskala den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  

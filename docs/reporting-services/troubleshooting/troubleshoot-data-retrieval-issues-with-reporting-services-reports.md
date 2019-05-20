@@ -2,18 +2,18 @@
 title: Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten | Microsoft-Dokumentation
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905145"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574426"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
 Der erste Schritt bei der Berichtsverarbeitung ist das Abrufen der Berichtsdaten für jedes Dataset durch Ausführen der Datasetabfrage. Wenn Sie einen Bericht lokal in der Vorschau anzeigen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Computer verwendet werden. Wenn Sie einen Bericht auf dem Berichtsserver ausführen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Berichtsserver verwendet werden. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Abrufen von Berichtsdaten helfen.   
@@ -59,7 +59,7 @@ Gehen Sie zum Auffüllen der Datasetfeldauflistung wie folgt vor:
 * Führen Sie die Abfrage im Abfragebereich des Dialogfelds **Dataseteigenschaften** aus. Weitere Informationen finden Sie im Artikel über [Berichtsdatasets (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Fügen Sie manuell Felder hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

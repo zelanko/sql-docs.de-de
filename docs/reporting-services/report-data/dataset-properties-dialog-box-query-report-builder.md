@@ -2,7 +2,7 @@
 title: Dataseteigenschaften (Dialogfeld), Abfrage (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: reference
 f1_keywords:
@@ -10,20 +10,20 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.query.f1
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6e0d987c9976759a870bb58578c9f39593bfb87
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a447f804474cc845b58c87832e965223d6cd873d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021764"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573120"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Dataseteigenschaften (Dialogfeld), Abfrage (Berichts-Generator)
  
 Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Abfrage** aus, um ein freigegebenes Dataset von einem Berichtsserver auszuwählen oder ein eingebettetes Dataset zu erstellen. Für ein eingebettetes Dataset müssen Sie eine Datenquelle auswählen und eine Abfrage erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen Namen für das Dataset ein. Der Name darf nicht mit dem Namen eines Datenbereichs oder einer Gruppe im Bericht identisch sein.  
   
@@ -63,7 +63,7 @@ Diese Option wird angezeigt, wenn Sie die Befehlstypoption Gespeicherte Prozedur
  **Felder aktualisieren**  
  Führen Sie diesen Abfragebefehl aus, um die Liste der Felder auf der Seite **Dataseteigenschaften (Dialogfeld), Felder** zu aktualisieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
 [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  

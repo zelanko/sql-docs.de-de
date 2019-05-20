@@ -1,19 +1,21 @@
 ---
 title: Verwalten von Abonnementbesitzern und Ausführen von PowerShell-Abonnement | Microsoft-Dokumentation
-author: markingmyname
-ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
-ms.date: 04/17/2019
-ms.openlocfilehash: 4a273cbe7b9309cc2ba1c0beff35bad11cd650a3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 4beecb52ef0f65b29f3508d8123480e219d30abd
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774615"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580609"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Verwalten von Abonnementbesitzern und Ausführen von PowerShell-Abonnement
 
@@ -21,8 +23,9 @@ ms.locfileid: "59774615"
 
 Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements programmgesteuert von einem Benutzer auf einen anderen übertragen. Dieses Thema enthält mehrere Windows PowerShell-Skripts, die Sie verwenden können, um den Besitz von Abonnements zu ändern oder einfach aufzulisten. Jedes Beispiel enthält Beispielsyntax sowohl für den einheitlichen als auch den SharePoint-Modus. Wenn Sie den Abonnementbesitzer ändern, wird das Abonnement dann im Sicherheitskontext des neuen Besitzers ausgeführt, und das User!UserID-Feld des Berichts zeigt den Wert für den neuen Besitzer an. Weitere Informationen zum Objektmodell des PowerShell-Beispielaufrufs finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
-##  <a name="bkmk_top"></a> In diesem Thema:  
+![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+
+##  <a name="bkmk_top"></a> In diesem Thema:
   
 - [Gewusst wie: Verwenden der Skripts](#bkmk_how_to)  
   
@@ -194,7 +197,7 @@ powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current ow
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
-#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)  
+#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)
   
 Param(  
     [string]$currentOwner,  
@@ -382,12 +385,12 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ```  
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
-[ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
 
-[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)

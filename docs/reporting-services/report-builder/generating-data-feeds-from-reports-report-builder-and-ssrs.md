@@ -2,18 +2,18 @@
 title: Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cfb8ec1aeb1d9c4333ef5c2bdded97f47d15b2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298338"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580736"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)
 
@@ -54,7 +54,7 @@ ms.locfileid: "56298338"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Das aus diesem Bericht generierte Atom-Dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen Peerspalten: „Territory“ und „Year“. Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
+ Das aus diesem Bericht generierte Atom-Dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen gleichrangigen Spalten "Territory" und "Year". Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   

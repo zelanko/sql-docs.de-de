@@ -2,7 +2,7 @@
 title: Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d55a57a1730abafa2f389c252be7c25681dbe89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f346427ee41f8049caa050aa49eda393dd304566
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664638"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575481"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen
   Sie können benutzerdefinierte Datenverarbeitungserweiterungen von Drittanbietern auf einem Berichtsserver erstellen oder verwenden, um die Datenverarbeitungsfunktionen für unterstützte Datenquellen zu erweitern oder um weitere Typen von Datenquellen zu unterstützen, die in einer standardmäßigen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation nicht verfügbar sind. Verbindungen werden abhängig von der Implementierung unterschiedlich behandelt. Die folgenden Implementierungen sind für Datenverarbeitungserweiterungen verfügbar:  
@@ -74,7 +74,7 @@ ms.locfileid: "47664638"
 |Datenbank-Anmeldeinformationen|Sie können Verbindungen mit benutzerdefinierten Datenverarbeitungserweiterungen, die **IDbConnectionExtension**verwenden, mit der Datenbankauthentifizierung konfigurieren.|  
 |Keine Anmeldeinformationen|Falls das Konto für die unbeaufsichtigte Ausführung angegeben ist, werden die verwendeten Anmeldeinformationen durch die Verbindungszeichenfolge bestimmt.<br /><br /> Falls das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist, kann keine Verbindung vom Berichtsserver hergestellt werden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

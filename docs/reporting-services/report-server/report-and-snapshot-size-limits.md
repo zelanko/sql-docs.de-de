@@ -2,7 +2,7 @@
 title: Größenbeschränkungen für Berichte und Momentaufnahmen | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2803e8d4ed2e0246c27dae775e864e81e10d91eb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658134"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581444"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Größenbeschränkungen für Berichte und Momentaufnahmen
   Mithilfe der Informationen in diesem Thema können Administratoren, die eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwalten, mehr zu Größenbeschränkungen für einen Bericht erfahren, der auf einem Berichtsserver veröffentlicht, zur Laufzeit gerendert und in einem Dateisystem gespeichert wird. In diesem Thema erhalten Sie zudem eine praktische Anleitung zum Ermitteln der Größe einer Berichtsserver-Datenbank und eine Beschreibung zur Auswirkung der Größe von Momentaufnahmen auf die Serverleistung.  

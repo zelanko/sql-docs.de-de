@@ -2,7 +2,7 @@
 title: Rollen und Berechtigungen (Reporting Services) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f1e2b1e0eca33de05136079dda306f59ce218bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763238"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570671"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Rollen und Berechtigungen (Reporting Services)
   Reporting Services stellt ein Authentifizierungssubsystem und ein rollenbasiertes Autorisierungsmodell bereit. Authentifizierungs- und Autorisierungsmodelle sind je nachdem, ob der Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus ausgeführt wird, unterschiedlich. Ist der Berichtsserver Bestandteil einer umfangreicheren SharePoint-Bereitstellung, wird mit SharePoint-Berechtigungen festgelegt, wer Zugriff auf den Berichtsserver hat.  
@@ -41,7 +41,7 @@ ms.locfileid: "47763238"
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  Erläutert, wie mit SharePoint-Gruppen, Berechtigungsebenen und Berechtigungen der Zugriff auf einen Berichtsserver gesteuert werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

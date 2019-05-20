@@ -2,7 +2,7 @@
 title: Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a53bc057873f8c6905c37f281793c7d00c54a547
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293408"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582032"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter
   Nachdem Sie einen Berichtsparameter erstellt haben, können Sie eine Liste mit Standardwerten bereitstellen. Wenn alle Parameter über einen gültigen Standardwert verfügen, wird der Bericht beim ersten Anzeigen bzw. bei der ersten Vorschau automatisch ausgeführt.  
@@ -63,7 +63,7 @@ ms.locfileid: "56293408"
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   

@@ -2,19 +2,19 @@
 title: Datenwarnmeldungen | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d7a3a2d1320e2f33a9246c538d30c63bd0cc890e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031969"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571558"
 ---
 # <a name="data-alert-messages"></a>Datenwarnmeldungen
 
@@ -66,7 +66,7 @@ Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwar
   
 -   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  

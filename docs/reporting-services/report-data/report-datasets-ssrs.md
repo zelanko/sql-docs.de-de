@@ -2,18 +2,18 @@
 title: Berichts-Datasets (SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029149"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571374"
 ---
 # <a name="report-datasets-ssrs"></a>Berichtsdatasets (SSRS)
   Um einem Bericht Daten hinzuzufügen, erstellen Sie Datasets. Jedes Dataset stellt das Resultset der Ausführung eines Abfragebefehls für eine Datenquelle dar. Die Spalten im Resultset sind die Feldauflistung. Die Zeilen im Resultset sind die Daten. Ein Dataset enthält nicht die tatsächlichen Daten. Es enthält die Informationen, die benötigt werden, um einen bestimmten Satz von Daten aus einer Datenquelle abzurufen.  
@@ -129,7 +129,7 @@ ms.locfileid: "50029149"
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   

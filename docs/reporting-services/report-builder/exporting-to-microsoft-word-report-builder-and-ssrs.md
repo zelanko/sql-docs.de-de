@@ -2,20 +2,20 @@
 title: Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296598"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581227"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296598"
   
  Dies liegt daran, dass der Word-Renderer den Bericht für Felder analysiert, die mit der Paginierung zusammenhängen, wie **PageNumber** und **TotalPages** , und nur einfache Verweise verarbeitet und keine Funktionsaufrufe. In diesem Fall wird vom Ausdruck die **ToString** -Funktion aufgerufen. Die folgenden beiden Ausdrücke sind gleichwertig und werden beide ordnungsgemäß gerendert, wenn Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den veröffentlichten Bericht aber auch in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder einer SharePoint-Bibliothek rendern. Der Word-Renderer analysiert jedoch nur den zweiten Ausdruck erfolgreich und rendert die richtigen Seitenzahlen.  
   
--   **Komplexer Ausdruck:**  Der Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Komplexer Ausdruck:**  Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Ausdruck mit Textausführungen:** Text, **Average Sales** und der Ausdruck `=Avg(Fields!YTDPurchase.Value, "Sales)` und Text, **Page Number** und der Ausdruck `=Globals!PageNumber`  
+-   **Ausdruck mit Textausführungen:** Text **Average Sales**und Ausdruck  `=Avg(Fields!YTDPurchase.Value, "Sales)`und Text **Page Number**und Ausdruck `=Globals!PageNumber`  
   
  Um dieses Problem zu umgehen, verwenden Sie mehrere Textausführungen statt eines komplexen Ausdrucks, wenn Sie Ausdrücke in Fuß- und Kopfzeilen verwenden. Die folgenden beiden Ausdrücke sind äquivalent. Der Erste ist ein komplexer Ausdruck, der Zweite verwendet Textausführungen. Der Word-Renderer analysiert nur den zweiten Ausdruck erfolgreich.  
   

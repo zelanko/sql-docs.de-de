@@ -2,7 +2,7 @@
 title: Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286118"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581781"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Berichts- und Gruppenvariablen (Berichts-Generator)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  
@@ -55,7 +55,7 @@ ms.locfileid: "56286118"
 ## <a name="group-variables"></a>Gruppenvariablen  
  Verwenden Sie eine Gruppenvariable, um einen komplexen Ausdruck im Bereich einer Gruppe einmal zu berechnen. Eine Gruppenvariable ist nur im Bereich der Gruppe und der untergeordneten Gruppen gültig.  
   
- Angenommen, ein Datenbereich zeigt Bestandsdaten für Posten an, die verschiedenen Steuerkategorien angehören, und Sie möchten für jede Kategorie einen anderen Steuersatz anwenden. In diesem Fall gruppieren Sie die Daten in Kategorien und definieren für die übergeordnete Gruppe eine *Tax* -Variable. Anschließend definieren Sie eine Gruppenvariable für *ItemTax* für jede Steuerkategorie und weisen jeder der Kategorieuntergruppen die richtige Gruppenvariable zu. Zum Beispiel:  
+ Angenommen, ein Datenbereich zeigt Bestandsdaten für Posten an, die verschiedenen Steuerkategorien angehören, und Sie möchten für jede Kategorie einen anderen Steuersatz anwenden. In diesem Fall gruppieren Sie die Daten in Kategorien und definieren für die übergeordnete Gruppe eine *Tax* -Variable. Anschließend definieren Sie eine Gruppenvariable für *ItemTax* für jede Steuerkategorie und weisen jeder der Kategorieuntergruppen die richtige Gruppenvariable zu. Beispiel:  
   
 -   Definieren Sie für die übergeordnete Gruppe auf Grundlage von `[Category]`die Variable *Tax* mit einem Wert `[Tax]`. Angenommen, die Kategoriewerte lauten Nahrungsmittel und Kleidung.  
   

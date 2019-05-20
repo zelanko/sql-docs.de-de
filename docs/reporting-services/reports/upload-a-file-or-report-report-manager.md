@@ -2,7 +2,7 @@
 title: Hochladen einer Datei oder eines Berichts auf den Berichtsserver | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660198"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573311"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Hochladen einer Datei oder eines Berichts auf den Berichtsserver
 Das Webportal des Berichtsservers umfasst ein Uploadfeature, sodass Sie Berichte und andere Dateien zu einem Berichtsserver hinzufügen können, ohne diese Elemente von einer Clientanwendung zu veröffentlichen. Dateien, die Sie über das Dateisystem hochladen, werden als Elemente auf dem Berichtsserver gespeichert. Die Speicherung erfolgt je nach Dateityp:  
@@ -40,7 +40,7 @@ Das Webportal des Berichtsservers umfasst ein Uploadfeature, sodass Sie Berichte
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter   
+## <a name="see-also"></a>Weitere Informationen   
 [Erstellen, Ändern und Löschen von freigegebenen Datenquellen](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
 [Hochladen von Dateien in einen Ordner](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   

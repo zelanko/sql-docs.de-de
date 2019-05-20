@@ -2,20 +2,20 @@
 title: Neue Systemrolle (Management Studio) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9b9689be21565aa603433f20b1b445cb5f806c94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823218"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582183"
 ---
 # <a name="new-system-role-management-studio"></a>Neue Systemrolle (Management Studio)
   Verwenden Sie diese Seite, um eine Rollendefinition auf Systemebene zu erstellen. Eine Systemrollendefinition gibt eine Gruppe von Aufgaben auf Systemebene an, die für den gesamten Berichtsserver gültig sind.  
@@ -23,7 +23,7 @@ ms.locfileid: "47823218"
 > [!NOTE]  
 >  Rollendefinitionen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, ist diese Seite nicht verfügbar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Geben Sie den Namen der Rollendefinition ein. Ein Rollendefinitionsname muss innerhalb des Berichtsserver-Namespaces eindeutig sein. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47823218"
  **Taskbeschreibung**  
  Zeigt eine Beschreibung des Tasks an, in der die durch den Task unterstützten Vorgänge bzw. Berechtigungen aufgeführt sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
   

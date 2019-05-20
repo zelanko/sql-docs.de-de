@@ -2,18 +2,18 @@
 title: Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services | Microsoft-Dokumentation
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1e44d8dde3f93a946a25cc8fe269a26f70a7432a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814313"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574115"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services
 Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Thema werden außerdem Informationen zu "Unerwartete Fehler"-Meldungen bereitgestellt. Weitere Informationen zum Konfigurieren von Datenquellen und Konfigurieren von Verbindungsinformationen des Berichtsservers finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) und [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -109,7 +109,7 @@ Es gibt zwei Lösungen für dieses Problem:
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Die Verbindung mit den Verzeichnissen /reports und /reportserver ist nicht möglich, wenn die Berichtsserverdatenbanken auf einem virtuellen SQL Server erstellt werden, der auf einem MSCS-Cluster (Microsoft-Clusterdienste) ausgeführt wird.  
 Wenn Sie die Berichtsserverdatenbanken **ReportServer** und **ReportServerTempDB**auf einem virtuellen SQL Server erstellen, der in einem MSCS-Cluster ausgeführt wird, wird der Remotename im Format `<domain>\<computer_name>$` möglicherweise nicht als Anmeldung auf dem SQL Server registriert. Wenn Sie das Berichtsserver-Dienstkonto als ein Konto konfiguriert haben, das diesen Remotenamen für Verbindungen erfordert, können Benutzer keine Verbindung mit den Verzeichnissen „/reports“ und „/reportserver“ in Reporting Services herstellen. Zum Beispiel erfordert das integrierte Windows-Konto NetworkService diesen Remotenamen. Um dieses Problem zu vermeiden, verwenden Sie ein explizites Domänenkonto oder eine SQL Server-Anmeldung, um eine Verbindung mit den Berichtsserverdatenbanken herzustellen.  
     
-  ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+  ## <a name="see-also"></a>Weitere Informationen  
 [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  

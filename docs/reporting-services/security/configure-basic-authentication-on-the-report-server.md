@@ -2,21 +2,21 @@
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42f19fbe37a953ab22f1c9ac3de3cc2c4c8bb0da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684438"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573295"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -82,11 +82,11 @@ ms.locfileid: "47684438"
   
 |Element|Required|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Benutzerkontensteuerung<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in **nicht** [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]unterstützt.|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in **nicht** [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwendungsdomänen für Berichtsserveranwendungen](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
  [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   

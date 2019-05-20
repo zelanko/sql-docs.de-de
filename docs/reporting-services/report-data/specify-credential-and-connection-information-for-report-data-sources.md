@@ -2,7 +2,7 @@
 title: Angeben der Anmelde- und Verbindungsinformationen für Berichtsdatenquellen | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031599"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575351"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
   Ein Berichtsserver verwendet Anmeldeinformationen zum Herstellen einer Verbindung zu externen Datenquellen, die Inhalt für Berichte oder Empfängerinformationen für ein datengesteuertes Abonnement bereitstellen. Sie können Anmeldeinformationen angeben, die die Windows-Authentifizierung, Datenbankauthentifizierung, keine Authentifizierung oder benutzerdefinierte Authentifizierung verwenden. Beim Senden einer Verbindungsanforderung über das Netzwerk nimmt der Berichtsserver entweder die Identität eines Benutzerkontos oder des Kontos für die unbeaufsichtigte Ausführung an. Weitere Informationen zum Sicherheitskontext, in dem eine Verbindungsanforderung gestellt wird, finden Sie unter [Datenquellenkonfiguration und Netzwerkverbindungen](#DataSourceConfigurationConnections) weiter unten in diesem Thema.  
@@ -72,7 +72,7 @@ ms.locfileid: "50031599"
 ## <a name="ways-to-specify-credentials-for-connecting-to-remote-data-sources"></a>Möglichkeiten zum Festlegen von Anmeldeinformationen zur Verbindungsherstellung mit Remotedatenquellen  
  Die Datenquellen, die Inhalt für Berichte liefern, werden normalerweise auf Remoteservern gehostet. Um Daten für einen Bericht abzurufen, muss ein Berichtsserver mithilfe von Anmeldeinformationen, die Sie vorher bereitstellen oder die zur Laufzeit eingegeben werden, eine Verbindung mit diesem Server herstellen. Beim Konfigurieren einer Datenquelle stehen Ihnen zum Angeben der Anmeldeinformationen folgende Möglichkeiten zur Verfügung:  
   
--   Aufforderung zur Eingabe der Anmeldeinformationen durch den Benutzer  
+-   Aufforderung zur Eingabe der Anmeldeinformationen.  
   
 -   Anmeldeinformationen speichern  
   
@@ -159,7 +159,7 @@ ms.locfileid: "50031599"
 ## <a name="setting-credentials-programmatically"></a>Programmgesteuertes Festlegen von Anmeldeinformationen  
  Sie können Anmeldeinformationen im Code festlegen, um den Zugriff auf Berichte und den Berichtsserver zu steuern. Weitere Informationen finden Sie unter [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   

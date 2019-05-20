@@ -2,18 +2,18 @@
 title: Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 255332399739b84a3f52446d97e6cf553c5c198b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286078"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581529"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite
 Erfahren Sie etwas über die Eigenschaften in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht für einen Tabelle-, Matrix- oder Listendatenbereich, mit denen Sie seine Anzeige im Bericht ändern können.  

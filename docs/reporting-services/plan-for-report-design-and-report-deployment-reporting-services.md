@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503695"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581246"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.

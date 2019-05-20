@@ -2,20 +2,20 @@
 title: Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 093652067f436c83ae46d3cb3053cc93747579db
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020384"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571183"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -217,7 +217,7 @@ ms.locfileid: "50020384"
 ##  <a name="Options"></a> Festlegen von Datasetoptionen  
  Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

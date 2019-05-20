@@ -2,7 +2,7 @@
 title: Verwalten von Berichtsdatenquellen | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f04b7e05737db7eadb28f8c8f5266c6e984e0094
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5df5e6b333f91ca69472c6d91bbf72a1ca7c819d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028939"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572638"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]rufen Berichte, Berichtsmodelle und datengesteuerte Abonnements Daten von externen Datenquellen ab. Zum Herstellen einer Verbindung mit einer externen Datenquelle verwendet ein Berichtsserver Verbindungsinformationen für die Datenquelle, die im Bericht, Modell oder Abonnement definiert werden oder auf die dort verwiesen wird. Verbindungseigenschaften der Datenquellen werden bei Erstellung des Berichts oder Modells definiert. Sie können jedoch unabhängig verwaltet werden, nachdem der Bericht oder das Modell auf einem Berichtsserver veröffentlicht wurde.  
@@ -73,7 +73,7 @@ ms.locfileid: "50028939"
 > [!NOTE]  
 >  Das Verwalten von Datenquellenverbindungen mit Berichtsdatenquellen ist nicht identisch mit dem Verwalten der Berichtsserververbindung mit der Berichtsserver-Datenbank. Weitere Informationen zur Verbindung eines Berichtsservers mit seinem internen Datenspeicher finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Binden eines Berichts oder Modells an eine freigegebene Datenquelle &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

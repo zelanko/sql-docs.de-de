@@ -2,17 +2,17 @@
 title: Exportieren von Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580820"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportieren von Berichten (Berichts-Generator und SSRS)
 
@@ -100,11 +100,11 @@ ms.locfileid: "56289028"
   
 -   **Renderererweiterungen mit bedingtem Seitenumbruch:** Renderingerweiterungen mit bedingtem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, z.B. auf einer Webseite oder in den **ReportViewer** -Steuerelementen.  
   
-     Die folgenden Renderingerweiterungen für bedingten Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word- und Webarchiv (MHTML).  
+     Die folgenden Renderingerweiterungen mit bedingtem Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word und Webarchiv (MHTML).  
   
 -   **Renderingerweiterungen mit festem Seitenumbruch:** Renderererweiterungen mit festem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert.  
   
-     Die folgenden Renderingerweiterungen für harten Seitenumbruch werden unterstützt: TIFF und PDF.  
+     Die folgenden Renderingerweiterungen mit festem Seitenumbruch werden unterstützt: TIFF und PDF  
   
 ##  <a name="ExportFormats"></a> Formate, die Sie beim Anzeigen von Berichten exportieren können  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Renderingerweiterungen bereit, die Berichte in anderen Formaten rendern. Sie sollten den Berichtsentwurf für das gewählte Dateiformat optimieren.  In der folgenden Tabelle sind die Formate aufgeführt, die Sie über die Benutzeroberfläche exportieren können.  Es gibt zusätzliche Formate, die Sie mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements oder beim Exportieren per URL-Zugriff verwenden können.  Gehen Sie zum Abschnitt [Weitere Methoden zum Exportieren von Berichten](#OtherWaysExportingReports)in diesem Thema.  
@@ -116,7 +116,7 @@ ms.locfileid: "56289028"
 |CSV|data|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Bedingter Seitenumbruch|Wird beim Überprüfen von Berichten als „Excel“ in den Exportmenüs angezeigt. Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument (.xlsx), das mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Fester Seitenumbruch|Die PowerPoint-Renderingerweiterung rendert einen Bericht als PowerPoint-Dokument (.pptx), das mit PowerPoint 2013 kompatibel ist.|  
-|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] unterstützten Formaten erstellen: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Webarchiv|Bedingter Seitenumbruch|Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.<br /><br /> Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die im Berichts-Generator in der Vorschau angezeigt und in einem Browser angezeigt werden. Dies gilt auch bei der Ausführung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal.<br /><br /> Weitere Informationen finden Sie unter [Rendern in das HTML-Format](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Bedingter Seitenumbruch|Beim Anzeigen von Berichten als „Word“ im Exportmenü angezeigt. Die Word-Renderingerweiterung rendert einen Bericht als Word-Dokument (.docx), das mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Daten|Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.<br/><br/> Weitere Informationen finden Sie unter [Exportieren nach XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

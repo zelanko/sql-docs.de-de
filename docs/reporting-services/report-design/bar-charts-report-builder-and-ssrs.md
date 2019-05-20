@@ -2,18 +2,18 @@
 title: Balkendiagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 389cd439b1d7e32082e4ba8e561826d193346944
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294368"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581836"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
   Ein Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an. Das einfache Balkendiagramm ist eng mit dem Säulendiagramm und dem Bereichsbalkendiagramm verbunden. Das Säulendiagramm zeigt Reihen als Sätze vertikaler Balken an, während das Bereichsbalkendiagramm Reihen als Sätze horizontaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt.  

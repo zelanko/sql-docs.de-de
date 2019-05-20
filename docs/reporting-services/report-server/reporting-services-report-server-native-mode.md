@@ -2,7 +2,7 @@
 title: Reporting Services-Berichtsserver (einheitlicher Modus) | Microsoft-Dokumentation
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 43917e9d51aecb545421e9462526fc435bf19d37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 47ac37f217cb49cd676cc822618e5395c029256f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713148"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581360"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
   Ein für den einheitlichen Modus konfigurierter Berichtsserver läuft als Anwendungsserver, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten bereitstellt.  
@@ -104,8 +104,8 @@ ms.locfileid: "47713148"
   
  Sie können eine Bildressource in einem Bericht verwenden, indem Sie die Bilddatei dem Projekt hinzufügen und es mit dem Bericht veröffentlichen. Nach dem Veröffentlichen des Bilds können Sie den Bildverweis im Bericht aktualisieren, sodass er auf die Ressource auf dem Berichtsserver verweist, und dann nur den Bericht erneut veröffentlichen, um die Änderungen zu speichern. Sie können anschließend das Bild unabhängig vom Bericht aktualisieren, indem Sie die Ressource erneut veröffentlichen. Der Bericht verwendet die aktuelle Version des Bilds, die auf dem Berichtsserver verfügbar ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Troubleshoot a Reporting Services Installation (Problembehandlung für eine Reporting Services-Installation)](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

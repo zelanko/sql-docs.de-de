@@ -2,7 +2,7 @@
 title: Sichern freigegebener Datenquellenelemente | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09ec5980236f5bd7f48431ff58a7ff9ae3ddb66c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603498"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570579"
 ---
 # <a name="secure-shared-data-source-items"></a>Sichern freigegebener Datenquellenelemente
   Sie können ein freigegebenes Datenquellenelement sichern, um den Zugriff darauf zu aktivieren bzw. zu deaktivieren.  
@@ -37,11 +37,11 @@ ms.locfileid: "47603498"
 |Datenquellen verwalten|Anzeigen von Eigenschaften, die den Namen, eine Beschreibung und Verbindungsinformationen angeben. Mit dieser Aufgabe wird auch ein freigegebenes Datenquellenelement in der Ordnerhierarchie angezeigt. Wenn Sie diese Aufgabe auswählen, können Sie die Aufgabe "Datenquellen anzeigen" auslassen.|  
 |Die Sicherheit für einzelne Elemente festlegen|Erstellen und Ändern von Rollenzuweisungen, die den Zugriff auf die freigegebene Datenquelle steuern. Diese Aufgabe muss zusammen mit Datenquellen anzeigen oder Datenquellen verwalten verwendet werden. Andernfalls zeigt sie keine Wirkung, weil der Benutzer das Element nicht auswählen kann.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Sichere Ordner](../../reporting-services/security/secure-folders.md)   
  [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

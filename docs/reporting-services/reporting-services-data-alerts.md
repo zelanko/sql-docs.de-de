@@ -2,19 +2,19 @@
 title: Reporting Services-Datenwarnungen | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539930"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580071"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -315,7 +315,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
 -   [Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

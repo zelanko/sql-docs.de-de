@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fbc368b7e2dc781e0ca63f82c142d276472a7f1e
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503933"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581259"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über den URL-Zugriff
   In diesem Thema wird beschrieben, wie Sie in einer Berichtsserver-Datenbank oder auf einer SharePoint-Website unter Verwendung von *rs:Befehl*=*Wert*auf Katalogelemente mit unterschiedlichen Typen zugreifen. Es ist nicht erforderlich, diese Parameterzeichenfolge tatsächlich hinzuzufügen. Wenn Sie sie weglassen, wertet der Berichtsserver den Elementtyp aus und wählt den entsprechenden Parameterwert automatisch aus. Durch die Verwendung der *rs:Command*=*Value* -Zeichenfolge in der URL verbessert sich jedoch die Leistung des Berichtsservers.  
@@ -33,7 +33,7 @@ ms.locfileid: "65503933"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
- - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  Es ist wichtig, dass die URL die `_vti_bin` -Proxysyntax zur Weiterleitung der Anforderung über SharePoint sowie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -HTTP-Proxy enthält. Durch den Proxy wird der HTTP-Anforderung Kontext hinzugefügt. Dieser ist erforderlich, damit der Bericht auf Berichtsservern im SharePoint-Modus ordnungsgemäß ausgeführt wird.  
@@ -47,7 +47,7 @@ ms.locfileid: "65503933"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
 
 ::: moniker-end
   
@@ -58,7 +58,7 @@ ms.locfileid: "65503933"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  Die XML-Struktur kann Ähnlichkeit mit folgendem Beispiel haben:  
 
@@ -85,7 +85,7 @@ ms.locfileid: "65503933"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`  
 
 ::: moniker-end
   

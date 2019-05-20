@@ -210,7 +210,7 @@ GO
  Wenn ein Band versehentlich offen geblieben ist, ist die schnellste Möglichkeit, das Band freigeben, mithilfe des folgenden Befehls: RESTORE REWINDONLY FROM TAPE **=** _Backup_device_name_. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Verwenden des Windows Azure-BLOB-Speicherdiensts  
- SQL Server-Sicherungen können in den Windows Azure-BLOB-Speicherdienst geschrieben werden.  Weitere Informationen zum Verwenden des Windows Azure-BLOB-Speicherdiensts für Sicherungen finden Sie unter [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ SQL Server-Sicherungen können in den Windows Azure-BLOB-Speicherdienst geschrieben werden.  Weitere Informationen zum Verwenden des Windows Azure-BLOB-Speicherdiensts für Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Storage-Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ##  <a name="LogicalBackupDevice"></a> Verwenden eines logischen Sicherungsmediums  
  Ein *logisches Sicherungsmedium* ist ein optionaler, benutzerdefinierter Name, der auf ein bestimmtes, physisches Sicherungsmedium (Datenträgerdatei oder Bandlaufwerk) verweist. Ein logisches Sicherungsmedium gibt Ihnen beim Verweisen auf das entsprechende physische Sicherungsmedium die Möglichkeit zur Dereferenzierung.  

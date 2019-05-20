@@ -2,21 +2,21 @@
 title: Reporting Services-Funktionen und -Tasks (SSRS) | Microsoft-Dokumentation
 ms.date: 12/18/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2dcdb2dff46534f52cd8fb115edd8d29072c98a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623379"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580056"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services-Funktionen und -Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Gründungsinhalt wird nach Berichten und Berichtsfunktionen, Berichtsserverfunktionen und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Produktfunktionen organisiert.  
@@ -48,7 +48,7 @@ ms.locfileid: "47623379"
   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Neues bei Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
   

@@ -2,7 +2,7 @@
 title: Rollendefinitionen | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444225"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570587"
 ---
 # <a name="role-definitions"></a>Rollendefinitionen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine *Rollendefinition* eine benannte Auflistung von Aufgaben, die die auf einem Berichtsserver verfügbaren Vorgänge definieren. Rollendefinitionen stellen die Regeln bereit, mit denen der Berichtsserver die Sicherheit erzwingt. Wenn ein Benutzer versucht, eine Aufgabe auszuführen, z. B. das Veröffentlichen eines Berichts in einem Ordner, überprüft der Berichtsserver die Rollenzuweisung des Benutzers, um zu bestimmen, ob die Aufgabe in der Rollendefinition enthalten ist. Falls die Aufgabe in der Rollendefinition enthalten ist, wird die Anforderung gesendet.  

@@ -2,7 +2,7 @@
 title: Sichern von „Meine Berichte“ | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7d80ec6d5087735602b05326e874263c083657a6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211469"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570699"
 ---
 # <a name="secure-my-reports"></a>Sichern von Meine Berichte
   Die Funktion Meine Berichte stellt einen vom Benutzer verwalteten Arbeitsbereich zum Verwenden von Berichten bereit. Damit der Ordner Meine Berichte seinen Zweck erfüllt, sind im Vergleich zu anderen Ordnern, die zur allgemeinen Verwendung dienen, für den Ordner Meine Berichte weniger stark einschränkende Berechtigungen erforderlich. Benutzer, die nur über die Berechtigung zum Anzeigen und Ausführen von Berichten in anderen Ordnern verfügen, benötigen möglicherweise erweiterte Berechtigungen, um den Ordner "Meine Berichte" und die in ihrem Besitz befindlichen Inhalt zu verwalten. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält zu diesem Zweck eine spezielle Rollenzuweisung und Rollendefinition.  

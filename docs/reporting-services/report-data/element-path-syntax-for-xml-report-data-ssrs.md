@@ -2,21 +2,21 @@
 title: Syntax für Elementpfade für XML-Berichtsdaten (SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420195"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573169"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML- **ElementPath** der XML- **Query** leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Wenn der Elementpfad leer ist, wird für die Abfrage der Standardelementpfad verwendet: der erste Pfad zur Blattknotenauflistung. Im ersten Beispiel entspricht das Leerlassen des Elementpfades dem Angeben des Elementpfades /Customers/Customer/Orders/Order. Alle Knotenwerte und -attribute entlang dieses Pfades werden im Resultset zurückgegeben, und die Knotennamen und -attribute werden als Datasetfelder angezeigt.  
   
- **Beispiel 1**: *Empty*  
+ **Beispiel 1**: *Leer*  
   
 |Order|Qty|im Elementknoten &lt;Customer ID="1"|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

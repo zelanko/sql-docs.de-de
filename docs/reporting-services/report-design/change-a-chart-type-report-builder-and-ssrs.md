@@ -2,18 +2,18 @@
 title: Ändern eines Diagrammtyps (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73fe1f786148046e699509eb3000a63f20ce8f0e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b035a1efda99ac47063cb16c3b6ff57b40035da
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290348"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581758"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Ändern eines Diagrammtyps (Berichts-Generator und SSRS)
 Wenn Sie ein Diagramm in einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einfügen, wird zuerst das Dialogfeld **Diagrammtyp auswählen** angezeigt. Wenn Sie dieses Dialogfeld abbrechen, wird standardmäßig der Säulendiagrammtyp hinzugefügt.  

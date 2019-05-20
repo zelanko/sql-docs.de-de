@@ -2,7 +2,7 @@
 title: 'ReencryptSecureInformation-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ReencryptSecureInformation method
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: edb03a1a96661c1948f192dd6cf5343168bf7625
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84265b1a72d93a2d8de8332e0309093a9a506ea0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620378"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571440"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting Method – ReencryptSecureInformation (ConfigurationSetting-Methode: ReencryptSecureInformation)
   Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen im Katalog erneut mit diesem neuen Schlüssel  
@@ -57,7 +57,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

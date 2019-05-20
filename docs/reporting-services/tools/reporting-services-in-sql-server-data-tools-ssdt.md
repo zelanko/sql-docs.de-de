@@ -2,20 +2,20 @@
 title: Reporting Services in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292328"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581345"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
 
@@ -237,7 +237,7 @@ ms.locfileid: "56292328"
   
 
 ##  <a name="bkmk_SourceControl"></a> Quellcodeverwaltung  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld **Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
  Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Dieser Ordner befindet sich standardmäßig an folgendem Speicherort: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  

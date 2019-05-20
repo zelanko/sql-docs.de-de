@@ -2,18 +2,18 @@
 title: Rendern von Datenbereichen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9d13a488db8030d8880a1493506177a6e24095f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 368b17a6ffe7355569a9d60509a9a2db61931fee
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289738"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576441"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendern von Datenbereichen (Berichts-Generator und SSRS)
   Zusätzlich zu den allgemeinen Renderingverhaltensweisen, die auf alle Berichtselemente zutreffen, befolgen Datenbereiche zusätzliche Verhaltensweisen zu Paginierung und Rendering. Datenbereichspezifische Renderingregeln geben unter anderem an, wie Datenbereiche wachsen, wie bestimmte Zellen, wie die Eckzelle oder die Kopfzeilenzellen, gerendert werden und wie ein Datenbereich mit Lesefolge von rechts nach links gerendert wird. In diesem Thema wird erläutert, wie die verschiedenen Teile eines Datenbereichs gerendert werden.  

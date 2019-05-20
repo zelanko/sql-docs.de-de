@@ -2,20 +2,20 @@
 title: Neue Benutzerrolle (Management Studio) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0b48eb4eb0be094ec56ad0588a9c738e3694048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721428"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582180"
 ---
 # <a name="new-user-role-management-studio"></a>Neue Benutzerrolle (Management Studio)
   Verwenden Sie diese Seite, um eine Rollendefinition auf Elementebene zu erstellen. Eine Rollendefinition auf Elementebene ist eine benannte Auflistung von Tasks, die Benutzer in Bezug auf Ordner, Berichte, Modelle, Ressourcen und freigegebene Datenquellen ausführen können. Ein Beispiel für eine Rollendefinition auf Elementebene ist die vordefinierte Rolle Browser, die Aktionen identifiziert, die der Endbenutzer eines Berichts zum Navigieren in Ordnern und zum Anzeigen von Berichten verwenden kann.  
@@ -25,7 +25,7 @@ ms.locfileid: "47721428"
 > [!NOTE]  
 >  Rollendefinitionen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, ist diese Seite nicht verfügbar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Geben Sie den Namen der Rollendefinition ein. Ein Rollendefinitionsname muss innerhalb des Berichtsserver-Namespaces eindeutig sein. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47721428"
  **Taskbeschreibung**  
  Zeigt eine Beschreibung des Tasks an, in der die durch den Task unterstützten Vorgänge bzw. Berechtigungen aufgeführt sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
   

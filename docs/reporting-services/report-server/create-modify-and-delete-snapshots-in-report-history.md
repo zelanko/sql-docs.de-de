@@ -2,21 +2,21 @@
 title: Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580480"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf
   Der Berichtsverlauf ist eine Auflistung von Berichtsmomentaufnahmen. Zum Verwalten des Berichtsverlaufs können Sie Momentaufnahmen hinzufügen und löschen oder Eigenschaften zur Speicherung des Berichtsverlaufs ändern. Der Berichtsverlauf kann manuell oder nach einem Zeitplan erstellt werden.  
@@ -57,7 +57,7 @@ ms.locfileid: "50029619"
   
  Der Berichtsverlauf wird beim Löschen eines Berichts ebenfalls gelöscht. Wenn Sie z. B. einen monatlichen Umsatzbericht löschen, weil Sie ihn durch eine neuere Version ersetzen, werden alle zugehörigen Berichtsverläufe ebenfalls gelöscht. Beim Verschieben eines Berichts werden auch alle Berichtsverläufe verschoben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Berichtsverlaufs &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   

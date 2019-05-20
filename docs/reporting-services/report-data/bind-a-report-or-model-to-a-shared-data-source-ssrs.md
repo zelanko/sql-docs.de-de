@@ -2,21 +2,21 @@
 title: Binden eines Berichts an eine freigegebene Datenquelle (SSRS) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507461"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573259"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Binden eines Berichts an eine freigegebene Datenquelle (SSRS)
   In einigen Situationen, z.B., wenn Sie einen Bericht von einem Testserver auf einen Produktionsserver verschieben, sollten Sie die Datei auf dem lokalen Computer speichern und anschließend auf einen anderen Berichtsserver hochladen. Wenn Sie den Bericht auf den neuen Server hochladen, müssen Sie ihn erneut an eine freigegebene, auf dem neuen Berichtsserver gespeicherte Datenquelle binden. Wenn Sie den Bericht nicht erneut binden, kann er nicht ordnungsgemäß verwendet werden, wenn über den neuen Berichtsserver auf ihn zugegriffen wird.  
@@ -60,7 +60,7 @@ ms.locfileid: "52507461"
   
 10. Klicken Sie auf **Schließen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

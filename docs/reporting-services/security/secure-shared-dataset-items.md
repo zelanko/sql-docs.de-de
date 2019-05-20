@@ -2,18 +2,18 @@
 title: Sichern von freigegebenen Datasetelementen | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 830955375dec473f7587ef33c1e7f6927df530b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725558"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570674"
 ---
 # <a name="secure-shared-dataset-items"></a>Sichern von freigegebenen Datasetelementen
   Auf einem Berichtsserver können freigegebene Datasetelemente von mehreren Berichten verwendet werden. Sie können freigegebene Datasets sichern, um die Zugriffsebene der Benutzer zu steuern. Standardmäßig können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, freigegebene Datasets anzeigen, Eigenschaften ändern, das Zwischenspeichern aktivieren, Cacheaktualisierungspläne erstellen und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf ein freigegebenes Dataset zulassen.  
@@ -46,7 +46,7 @@ ms.locfileid: "47725558"
   
  Weitere Informationen finden Sie unter [Aufgaben auf Elementebene](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) und [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)   
  [Sichere Ordner](../../reporting-services/security/secure-folders.md)   
  [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md)   

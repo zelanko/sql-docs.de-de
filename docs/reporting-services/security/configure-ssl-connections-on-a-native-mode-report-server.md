@@ -2,20 +2,20 @@
 title: Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5f4bdbcba792c60db8bbeeb1e08f944fe20b30e0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579738"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
@@ -84,7 +84,7 @@ ms.locfileid: "51813603"
   
  Wenn Sie SSL-Bindungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mithilfe des Konfigurations-Managers für Reporting Services entfernen, funktioniert SSL möglicherweise nicht mehr für Websites auf einem Server, auf dem Internetinformationsdienste (IIS) ausgeführt werden, bzw. auf einem anderen HTTP.SYS-Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird der folgende Registrierungsschlüssel entfernt. Zusammen mit diesem Registrierungsschlüssel wird auch die SSL-Bindung für IIS entfernt. Ohne diese Bindung wird SSL nicht für das HTTPS-Protokoll bereitgestellt. Um dieses Problem zu diagnostizieren, verwenden Sie den IIS-Manager oder das Befehlszeilen-Hilfsprogramm HTTPCFG.exe. Zur Lösung des Problems stellen Sie die SSL-Bindung für die Websites mithilfe des IIS-Managers wieder her. Um das Problem in Zukunft zu vermeiden, entfernen Sie die SSL-Bindungen mit dem IIS-Manager und stellen die Bindung dann mithilfe des IIS-Managers für die gewünschten Websites wieder her. Weitere Informationen finden Sie im Knowledge Base-Artikel [SSL funktioniert nach dem Entfernen einer SSL-Bindung nicht mehr (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

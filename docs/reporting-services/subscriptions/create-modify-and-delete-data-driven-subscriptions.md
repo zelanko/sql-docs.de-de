@@ -2,7 +2,7 @@
 title: Erstellen, Ändern und Löschen von datengesteuerten Abonnements | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dc07797030f18527178c2041ccfd8c8732d8d47c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030389"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578249"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Erstellen, Ändern und Löschen von datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
@@ -98,7 +98,7 @@ ms.locfileid: "50030389"
 ##  <a name="bkmk_run_subscription"></a> Ausführen eines Abonnements  
  Sie müssen Bedingungen für die Abonnementverarbeitung angeben. Sie können einen Zeitplan angeben oder mit den Updates einer Momentaufnahme zur Berichtsausführung die Verarbeitung des Abonnements auslösen. Das Verarbeiten von datengesteuerten Abonnements ist mit der Verarbeitung von Standardabonnements identisch.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   

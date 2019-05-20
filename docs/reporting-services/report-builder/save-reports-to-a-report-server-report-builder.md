@@ -2,18 +2,18 @@
 title: Speichern von Berichten auf einem Berichtsserver (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8a751d0c7d6438eece89d66805bcb0c7fb2c96be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298268"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580663"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Speichern von Berichten auf einem Berichtsserver (Berichts-Generator)
   Im Berichts-Generator können Sie eine Berichtsdefinition auf einem Berichtsserver speichern (auch bekannt als Bericht veröffentlichen). Wenn der Bericht auf einem Berichtsserver gespeichert wird, können andere Benutzer den Bericht anzeigen. Bei jeder Ausführung des veröffentlichten Berichts rufen Sie die aktuellen Daten ab. Exportieren Sie den Bericht in ein anderes Dateiformat, und speichern Sie es, um eine statische Kopie eines gerenderten Berichts zu speichern, oder speichern Sie Versionen von gerenderten Berichten mit der Funktion zum Berichtsverlauf.  

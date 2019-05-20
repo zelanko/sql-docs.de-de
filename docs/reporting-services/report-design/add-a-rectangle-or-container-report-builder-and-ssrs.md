@@ -2,21 +2,21 @@
 title: Hinzufügen eines Rechtecks oder Containers (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql13.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 962605150fc0426f099d51b3292571072af1dd0b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2079eeb5cb871b5006ac4b2c45b60e9c8a3a3c97
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298558"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574774"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Hinzufügen eines Rechtecks oder Containers (Berichts-Generator und SSRS)
   Fügen Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ein Rechteck hinzu, wenn Sie durch ein grafisches Element Bereiche des Berichts trennen oder hervorheben oder einen Hintergrund für ein oder mehrere Berichtselemente bereitstellen möchten. Rechtecke werden auch als Container verwendet, mit denen das Rendering von Datenbereichen in einem Bericht gesteuert werden kann. Sie können die Darstellung eines Rechtecks anpassen, indem Sie die Rechteckeigenschaften bearbeiten, z. B. den Hintergrund und die Rahmenfarben. Weitere Informationen zum Verwenden eines Rechtecks als Container finden Sie unter [Rechtecke und Linien (Berichts-Generator und SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) und [Anzeigen derselben Daten in einer Matrix und einem Diagramm (Berichts-Generator)](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

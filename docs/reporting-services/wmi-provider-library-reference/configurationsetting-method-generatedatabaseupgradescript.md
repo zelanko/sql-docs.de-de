@@ -2,7 +2,7 @@
 title: 'GenerateDatabaseUpgradeScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GenerateDatabaseUpgradeScript method
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32099377d1a40e6a579020b9673d39932953076b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0ffd8985175c7ad2d8acacc95d85bd15ccba1e34
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681508"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579960"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>ConfigurationSetting-Methode: GenerateDatabaseUpgradeScript
   Generiert ein Skript, das verwendet werden kann, um ein Upgrade der Berichtsserver-Datenbank auf das [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Schema durchzuführen.  
@@ -61,7 +61,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -2,19 +2,19 @@
 title: Erteilen von Berechtigungen für Benutzer und Warnungsadministratoren | Microsoft-Dokumentation
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3c871fc80ebc172213fe843ea7cdf18002054ce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580488"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren
 
@@ -51,7 +51,7 @@ Weitere Informationen zu SharePoint-Berechtigungen finden Sie im Thema zu [Benut
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  

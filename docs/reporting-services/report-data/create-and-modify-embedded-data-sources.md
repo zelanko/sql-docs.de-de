@@ -2,18 +2,18 @@
 title: Erstellen und Ändern eingebetteter Datenquellen | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45db20b8f7f6fb4feca35b806f5fb694982cc8a1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a701249370f0455c62a169c5401f3f101fd49a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021344"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573229"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Erstellen und Verwenden eingebetteter Datenquellen
   Eine eingebettete Datenquelle wird in einer Berichtsdefinition definiert und nur von diesem Bericht verwendet.  
@@ -75,7 +75,7 @@ ms.locfileid: "50021344"
   
      Die Datenquelle wird im Berichtsdatenbereich angezeigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   

@@ -2,19 +2,19 @@
 title: Erstellen einer Datenwarnung im Datenwarnungs-Designer | Microsoft-Dokumentation
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331510"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571578"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
 
@@ -69,7 +69,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
   
      Abhängig vom Datentyp der ausgewählten Spalte sind andere Vergleichsoperatoren aufgeführt. Wenn die Spalte einen Datumsdatentyp aufweist, wird ein Kalendersymbol neben dem Schwellenwert für die Regel angezeigt. Sie können Daten eingeben, indem Sie auf ein Datum im Kalender klicken oder das Datum eingeben.  
   
-     Der Datenwarnungs-Designer bietet zwei Vergleichsmodi: **Werteingabemodus** und **Feldauswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
+     Der Datenwarnungs-Designer stellt zwei Vergleichsmodi bereit: **Werteingabemodus** und **Feldauswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
   
 9. Um eine OR-Klausel hinzuzufügen, klicken Sie auf den Pfeil nach unten und anschließend auf **Werteingabemodus**.  
   

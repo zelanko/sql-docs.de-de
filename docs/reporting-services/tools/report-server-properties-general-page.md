@@ -2,20 +2,20 @@
 title: Servereigenschaften (Seite „Allgemein“) | Microsoft-Dokumentation
 ms.date: 06/08/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712031"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576170"
 ---
 # <a name="report-server-properties-general-page"></a>Eigenschaften des Berichtsservers (Seite „Allgemein“)
   Verwenden Sie diese Seite, um den im Berichts-Manager verwendeten Titel anzuzeigen oder zu ändern, um den Ordner Meine Berichte zu aktivieren oder zu deaktivieren, um eine Rollendefinition für die Sicherheit des Ordners Meine Berichte auszuwählen und um das Client-Drucksteuerelement zu aktivieren oder zu deaktivieren.  
@@ -27,7 +27,7 @@ ms.locfileid: "52712031"
   
  Der Servermodus bestimmt, welche Servereigenschaften Sie festlegen können. Wenn Sie einen Berichtsserver verwalten, der so konfiguriert ist, dass er im integrierten SharePoint-Modus ausgeführt wird, können Sie „Meine Berichte“ nicht aktivieren und auch den Titel für das Webportal nicht festlegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen Namen ein, der ganz oben im Webportal angezeigt wird. Der Standardwert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Der von Ihnen angegebene Name wird nur im Berichts-Manager angezeigt.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52712031"
  Geben Sie eine für die Sicherheit des Ordners Meine Berichte zu verwendende Rollendefinition an. Die Rollendefinition identifiziert die Aufgaben, die im jeweiligen Ordner Meine Berichte unterstützt werden.  
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Aktivieren und Deaktivieren von "Meine Berichte"](../../reporting-services/report-server/enable-and-disable-my-reports.md)   

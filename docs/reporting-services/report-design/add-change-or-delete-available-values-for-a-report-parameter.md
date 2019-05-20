@@ -2,7 +2,7 @@
 title: Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f5f9b418aadd50e109ef0e4763a83b28948f391f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298538"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582047"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter
   Nachdem Sie einen Berichtsparameter erstellt haben, können Sie eine Liste mit verfügbaren Werten angeben, die dem Benutzer angezeigt werden soll. Eine Liste verfügbarer Werte schränkt die Auswahl, die ein Benutzer treffen kann, auf die gültigen Werte für den Parameter ein.  
@@ -79,7 +79,7 @@ ms.locfileid: "56298538"
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Tutorial: Hinzufügen eines Parameters zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

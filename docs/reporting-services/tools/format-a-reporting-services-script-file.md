@@ -2,21 +2,21 @@
 title: Formatieren einer Reporting Services-Skriptdatei | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9b3606fe93d988d878f98d21124fbb5820cd0ee2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031489"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577799"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatieren einer Reporting Services-Skriptdatei
   Bei einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skript handelt es sich um eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET-Codedatei, die für einen auf WSDL (Web Service Description Language) basierenden Proxy geschrieben wird und die Reporting Services-SOAP-API definiert. Eine Skriptdatei wird als Unicode- oder UTF-8-Textdatei mit der Erweiterung RSS gespeichert.  
@@ -50,7 +50,7 @@ End Sub
   
  Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Hilfsprogramm RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  

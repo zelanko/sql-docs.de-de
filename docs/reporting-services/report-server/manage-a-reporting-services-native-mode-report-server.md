@@ -2,7 +2,7 @@
 title: Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus | Microsoft-Dokumentation
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812703"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581095"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus
   In diesem Abschnitt finden Sie Verfahren zum Konfigurieren einer Berichtsserverinstanz im einheitlichen Modus mithilfe des Reporting Services-Konfigurations-Managers.  
@@ -63,7 +63,7 @@ ms.locfileid: "51812703"
  [Aktivieren von Remotefehlern &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  
  Erläutert, wie Servereigenschaften auf einem Berichtsserver festgelegt werden, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   

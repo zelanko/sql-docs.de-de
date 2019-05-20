@@ -2,18 +2,18 @@
 title: 'Reporting Services-Problembehandlung: Probleme beim Rendern von Berichten | Microsoft-Dokumentation'
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13a32ba9923a1655b6b8f44d6be2ad4617127edf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646608"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574686"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services-Problembehandlung, Probleme beim Rendern von Berichten
 Nach dem Kombinieren der Berichtsdaten und der Layoutinformationen wird der kompilierte Bericht an einen Berichtsrenderer gesendet. Wenn Sie z. B. lokal eine Vorschau eines Berichts anzeigen, verwenden Sie den HTML-Renderer zum Anzeigen des kompilierten Berichts. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Rendern von Berichten helfen.   
@@ -62,7 +62,7 @@ Wenn die Datenquelle für einen Microsoft SharePoint-Listenverbindungstyp konfig
   
 **Dieses Problem betrifft:** Browser, die so konfiguriert wurden, dass Anmeldeinformationen angefordert werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  

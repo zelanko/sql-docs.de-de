@@ -2,20 +2,20 @@
 title: Zeitplaneigenschaften (Allgemeine Seite) | Microsoft-Dokumentation
 ms.date: 06/11/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 907e3eaa4852979797395317a2db93276c551965
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712151"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571394"
 ---
 # <a name="schedule-properties-general-page"></a>Zeitplaneigenschaften (Registerkarte Allgemein)
   Auf dieser Seite [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] können Sie einen freigegebenen Zeitplan anzeigen oder ändern. Feigegebene Zeitpläne können anstelle berichts- oder abonnementspezifischer Zeitpläne verwendet werden. Änderungen am Zeitplan werden übernommen, nachdem Sie den Zeitplan gespeichert haben. Die Bearbeitung eines Zeitplans hat keine Auswirkungen auf Aufträge, die gerade ausgeführt werden. Wenn Sie einen Zeitplan bearbeiten, der gerade verwendet wird, wird allen aktuell verarbeiteten Berichten und Abonnements, die durch den Zeitplan ausgelöst wurden, die Fertigstellung ermöglicht.  
@@ -33,7 +33,7 @@ ms.locfileid: "52712151"
 > [!NOTE]  
 >Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar, und diese Seite wird nicht angezeigt, wenn Sie eine Edition ausführen, die nicht über diese Funktion verfügt. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Gibt den Namen des freigegebenen Zeitplans an.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52712151"
  **Einmal**  
  Gibt einen Zeitplan an, der nur einmal an einem bestimmten Datum und zu einer bestimmten Uhrzeit ausgeführt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   

@@ -2,20 +2,20 @@
 title: Servereigenschaften (Seite „Verlauf“)|Microsoft-Dokumentation
 ms.date: 06/10/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 498bc994828c4ed7089a4aa223659f70d1c612b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663894"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571356"
 ---
 # <a name="server-properties-history-page"></a>Servereigenschaften (Seite Verlauf)
   Verwenden Sie diese [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Seite in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] als Standardwert für die Anzahl von Kopien der Berichtsverläufe, die Sie beibehalten möchten. Mithilfe eines Standardwertes werden erste Grenzwerte für den Berichtsverlauf für alle Berichte festgelegt. Sie können diese Werte für die jeweiligen Berichte anpassen.  
@@ -30,7 +30,7 @@ ms.locfileid: "47663894"
  3) Klicken Sie mit der rechten Maustaste auf den Berichtsservernamen, und wählen Sie **Eigenschaften**aus.
  4) Klicken Sie auf **Verlauf** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Beliebig viele Momentaufnahmen im Berichtsverlauf speichern**  
  Alle Berichtsverlaufs-Momentaufnahmen werden beibehalten. Sie müssen die Momentaufnahmen manuell löschen, um die Größe des Berichtsverlaufs zu verringern.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47663894"
   
  Wenn Sie den Berichtsverlauf zu einem späteren Zeitpunkt einschränken und der vorhandene Berichtsverlauf den angegebenen Grenzwert übersteigt, verringert der Berichtsserver den vorhandenen Berichtsverlauf auf den neuen Grenzwert. Die ältesten Berichtsmomentaufnahmen werden zuerst gelöscht. Falls der Berichtsverlauf leer ist oder unter dem Grenzwert liegt, werden neue Berichtsmomentaufnahmen hinzugefügt. Ist der Grenzwert erreicht, wird die älteste Momentaufnahme gelöscht, sobald eine neue Berichtsmomentaufnahme hinzugefügt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  

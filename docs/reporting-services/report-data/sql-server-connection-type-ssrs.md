@@ -2,18 +2,18 @@
 title: SQL Server-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ee7030c869ff39c18fdf1f6efc3e3cee61bffec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3ade6eb0154c66a405bb49470a6773f7bdc80be5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032009"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574916"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit der aktuellen Version und früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken herzustellen und Daten abzurufen.  
@@ -124,7 +124,7 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Berichtsparameter werden mit Standardeigenschaftswerten erstellt, die Sie ggf. ändern müssen. Zum Beispiel:  
+ Berichtsparameter werden mit Standardeigenschaftswerten erstellt, die Sie ggf. ändern müssen. Beispiel:  
   
 -   Standardmäßig ist jeder Berichtsparameter vom Datentyp **Text**. Wenn die zugrunde liegenden Daten von einem anderen Datentyp sind, müssen Sie den Parameterdatentyp ändern.  
   
@@ -169,7 +169,7 @@ WHERE EmployeeID = (@EmpID)
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

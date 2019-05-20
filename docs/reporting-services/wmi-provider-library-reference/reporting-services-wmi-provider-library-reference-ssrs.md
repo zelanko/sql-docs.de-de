@@ -2,7 +2,7 @@
 title: WMI-Anbieterbibliotheksreferenz für Reporting Services (SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -12,14 +12,14 @@ apilocation:
 helpviewer_keywords:
 - WMI provider [Reporting Services], library
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 46a8a773f246e1297d11fd04d08fbebbe3e1df01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af3b51f934b9b0221747116772af7a747813e70f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640854"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571058"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Reporting Services-WMI-Anbieterbibliotheksreferenz (SSRS)
   Der Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unterstützt WMI-Vorgänge, die es Ihnen ermöglichen, Skripts und Code zum Ändern der Einstellungen des Berichtsservers und des Berichts-Managers zu erstellen.  
@@ -35,8 +35,8 @@ ms.locfileid: "47640854"
   
  Weitere Informationen zu WMI-Vorgängen finden Sie in der WMI SDK-Dokumentation, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK geliefert wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [Technische Referenz (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
+ [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

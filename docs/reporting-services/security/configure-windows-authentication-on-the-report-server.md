@@ -2,21 +2,21 @@
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617800"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571143"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -204,7 +204,7 @@ ms.locfileid: "52617800"
   
 -   Weitere Informationen zu Kerberos und Berichtsservern finden Sie unter [Bereitstellung einer Business Intelligence-Lösung mit SharePoint, Reporting Services und PerformancePoint Monitoring Server mit Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

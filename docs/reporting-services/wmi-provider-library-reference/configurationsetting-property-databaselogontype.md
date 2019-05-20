@@ -2,7 +2,7 @@
 title: 'DatabaseLogonType-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d9d20259ec79532db2ccbb04da4f83d66f3e2abd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 078c430e2300a0b80f85357f9f962e8e2dd72838
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608594"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570907"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>ConfigurationSetting-Eigenschaft: DatabaseLogonType
   Gibt an, ob der Berichtsserver für den Zugriff auf die Berichtsserver-Datenbank ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Dienstkonto, ein Windows-Benutzerkonto oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung verwendet. Schreibgeschützt.  
@@ -59,7 +59,7 @@ public int DatabaseLogonType;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -2,20 +2,20 @@
 title: Festlegen von Standardoptionen für den Berichts-Generator | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295978"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577919"
 ---
 # <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  

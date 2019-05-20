@@ -2,18 +2,18 @@
 title: Ändern einer Reporting Services-Konfigurationsdatei („RSreportserver.config“) | Microsoft-Dokumentation
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202139"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581130"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Anwendungseinstellungen in einem Satz von Konfigurationsdateien gespeichert. Beim Setup werden die Konfigurationsdateien für jede Berichtsserverinstanz erstellt, die Sie installieren. In jeder Datei werden Werte entweder während der Installation festgelegt oder aber wenn Sie Tools und Anwendungen zum Konfigurieren eines Servers für einen Vorgang verwenden. In einigen Fällen müssen Sie eine Datei direkt ändern, um erweiterte Einstellungen hinzuzufügen oder zu konfigurieren. Konfigurationseinstellungen werden als XML-Elemente oder -Attribute angegeben. Wenn Sie sich mit XML und Konfigurationsdateien auskennen, können Sie mit einem Text- oder Code-Editor benutzerdefinierbare Einstellungen ändern.  

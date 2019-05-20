@@ -2,22 +2,22 @@
 title: Datenwarnungs-Manager für Warnungsadministratoren | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84d99c48cea1da044e5372713a487f250bb1f40d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021124"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571543"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
 
@@ -75,7 +75,7 @@ SQL Server Reporting Services stellt den Datenwarnungs-Manager zum Verwalten von
   
 -   [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 

@@ -14,14 +14,18 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281314"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723605"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden des Fensters **Project.params** und der Registerkarte **Parameter** finden Sie unter [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Weitere Informationen zum Dialogfeld **Parametrisieren** finden Sie unter [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  

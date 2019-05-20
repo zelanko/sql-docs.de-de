@@ -2,22 +2,22 @@
 title: Verwalten meiner Datenwarnungen im Datenwarnungs-Manager | Microsoft-Dokumentation
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c214f9e721f8df254ed403b3db61fb69d22e208
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031523"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581033"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Verwalten meiner Datenwarnungen im Datenwarnungs-Manager
 
@@ -71,7 +71,7 @@ SharePoint-Benutzer können eine Liste der Datenwarnungen, die sie erstellt habe
   
      Die Warnungsinstanz wird erstellt, und die Datenwarnmeldung wird sofort gesendet – unabhängig von den Zeitplanoptionen, die Sie im Datenwarnungs-Designer angegeben haben. Beispielsweise wird eine Warnung gesendet, die so konfiguriert ist, dass sie wöchentlich und nur im Fall von Ergebnisänderungen zu senden ist.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  

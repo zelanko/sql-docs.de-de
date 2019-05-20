@@ -2,20 +2,20 @@
 title: 'rsServerConfigurationError: Reporting Services-Fehler | Microsoft-Dokumentation'
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a03e276df871e7949ac01b7e0f1698dafcb36bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572132"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError – Reporting Services-Fehler
     
@@ -49,8 +49,8 @@ ms.locfileid: "47793084"
   
 ## <a name="internal-only"></a>Nur intern  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

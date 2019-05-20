@@ -2,18 +2,18 @@
 title: Formatieren von Bereichen auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b332d8470c9a7502a168863a48b08c4d3f24e47
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eebf7f66e968ec2c7c3d0dcca168eb79fbbc3797
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285358"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575592"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Bereichen auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist ein Messbereich eine Zone oder ein Bereich auf der Messgerätskala, die oder der einen wichtigen Unterabschnitt von Werten auf dem Messgerät angibt. Mit einem Messbereich können Sie grafisch angeben, wann der Zeigerwert in eine bestimmte Wertespanne eintritt. Messbereiche sind durch einen Startwert und einen Endwert definiert.  
@@ -28,8 +28,8 @@ ms.locfileid: "56285358"
 ## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät (Berichts-Generator und SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tutorial: Hinzufügen eines KPI zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

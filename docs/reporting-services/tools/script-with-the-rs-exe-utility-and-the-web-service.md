@@ -2,7 +2,7 @@
 title: Skripterstellung mit dem Hilfsprogramm „rs.exe“ und dem Webdienst | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028699"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571419"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  
@@ -32,7 +32,7 @@ ms.locfileid: "50028699"
   
  [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   

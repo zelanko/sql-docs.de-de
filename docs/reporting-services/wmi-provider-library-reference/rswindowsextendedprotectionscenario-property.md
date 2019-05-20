@@ -2,18 +2,18 @@
 title: RSWindowsExtendedProtectionScenario-Eigenschaft | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 78c3a7693ea17899afde6dec1173d79cddec9954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 24b73ad1d226603215507a899b036c2702e09a18
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407707"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571110"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>RSWindowsExtendedProtectionScenario-Eigenschaft
   Gibt einen Zeichenfolgenwert zurück, der das erweiterte Schutzszenario angibt, für das der Berichtsserver konfiguriert ist.  
@@ -38,7 +38,7 @@ public string RSWindowsExtendedProtectionScenario;
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [RSWindowsExtendedProtectionLevel-Eigenschaft &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
  [SetExtendedProtectionSettings-Methode (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)   
  [Erweiterter Schutz für die Authentifizierung mit Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   

@@ -2,7 +2,7 @@
 title: Vorschauansicht | Microsoft-Dokumentation
 ms.date: 05/30/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854278"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582163"
 ---
 # <a name="preview-view"></a>Vorschauansicht
 Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Mithilfe der Symbolleiste können Sie Vorschaufunktionen verwalten.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -82,7 +82,7 @@ Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)
  **(18) Weitersuchen**  
  Wählen Sie diese Option aus, um nach der nächsten Instanz des Suchtexts zu suchen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 + [Previewing Reports (Vorschau von Berichten)](../../reporting-services/reports/previewing-reports.md)
 + [Berichts-Designer (F1-Hilfe)](../../reporting-services/tools/report-designer-f1-help.md)  
   

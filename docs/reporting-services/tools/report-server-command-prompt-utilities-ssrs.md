@@ -2,7 +2,7 @@
 title: Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f9e91b69a5b20238af34877f97330299d8d2f5d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 94c21d86b1a89d8de30d0be558fcab008f49d044
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634958"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576277"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere Befehlszeilen-Hilfsprogramme, die Sie zum Verwalten eines Berichtsservers verwenden können. Diese Hilfsprogramme werden beim Installieren eines Berichtsservers automatisch installiert.  
@@ -34,7 +34,7 @@ ms.locfileid: "47634958"
 > [!NOTE]  
 >  Wenn Sie ein Tool mit einer grafischen Benutzeroberfläche bevorzugen, können Sie anstelle von **rsconfig** und **rskeymgmt**den Reporting Services-Konfigurations-Manager verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  

@@ -2,7 +2,7 @@
 title: Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b0f49608e5245121377ff53a7f2194d3ba09da3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7d4525674b66a7c9258be78947c5489e3f04bfb2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031289"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571235"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)
   Der Berichts-Generator und Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]bieten sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer. In diesen Designern können Sie eine Abfrage erstellen, um die Daten anzugeben, die für ein Berichtsdataset aus relationalen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases - und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -194,7 +194,7 @@ ms.locfileid: "50031289"
 ## <a name="text-based-query-designer"></a>Textbasierter Abfrage-Designer  
  Verwenden Sie zur optimalen Steuerung der Abfrage den textbasierten Abfrage-Designer. Wenn Sie zum textbasierten Abfrage-Designer wechseln möchten, klicken Sie auf der Symbolleiste auf **Als Text bearbeiten**. Nachdem Sie eine Abfrage im textbasierten Abfrage-Designer bearbeitet haben, können Sie den relationalen Abfrage-Designer nicht mehr verwenden. Die Abfrage wird dann immer im textbasierten Abfrage-Designer geöffnet. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

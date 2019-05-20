@@ -2,7 +2,7 @@
 title: Beispiele für Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 04/06/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 026338642a4fe5be4480a1b83b93a809437ecfa3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289608"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579145"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -62,7 +62,7 @@ Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Si
   
 Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Einführung in Ausdrücke](../../reporting-services/tutorial-introducing-expressions.md).  
+Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Funktionen  

@@ -2,18 +2,18 @@
 title: Zwischenspeichern von freigegebenen Datasets (SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582217"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Zwischenspeichern von freigegebenen Datasets (SSRS)
   Abfrageergebnisse für ein freigegebenes Dataset können in einen Cache kopiert werden, um konsistente Daten für mehrere Berichte bereitzustellen und die Antwortzeit für die Datasetabfrage zu verbessern. Freigegebene Datasets können ähnlich wie Berichte so konfiguriert werden, dass sie bei der erstmaligen Verwendung oder nach einem angegebenen Zeitplan zwischengespeichert werden.  
@@ -93,7 +93,7 @@ ms.locfileid: "50021490"
   
  Aktualisierungen an Cacheaktualisierungsplänen für freigegebene Datasets haben keinen Einfluss auf Berichte, die bereits verarbeitet werden. Aktualisierungen an einem Cacheaktualisierungsplan wirken sich nur auf zukünftig gestartete Berichte aus, die auf das freigegebene Dataset verweisen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

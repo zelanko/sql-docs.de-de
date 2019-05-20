@@ -2,7 +2,7 @@
 title: MSReportServer_ConfigurationSetting-Eigenschaften | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e18cb4ff128c41d428c15abf6ff4a0e40f3e898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 634c5065730ea58905f89ac0454cdda53552a126
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608338"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569099"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting-Eigenschaften
   Die „MSReportServer_ConfigurationSetting“-Klasse stellt die Installations- und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Einstellungen werden in der Konfigurationsdatei RSReportServer.config gespeichert.  
@@ -56,7 +56,7 @@ ms.locfileid: "47608338"
 |[WindowsServiceIdentityActual](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md)|Gibt die Identität zurück, unter der der Report Server-Windows-Dienst tatsächlich ausgeführt wird. Schreibgeschützt.|  
 |[WindowsServiceIdentityConfigured](../../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md)|Gibt die Identität zurück, unter der der Report Server-Windows-Dienst entsprechend seiner letzten Konfiguration ausgeführt wird. Schreibgeschützt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
 
   

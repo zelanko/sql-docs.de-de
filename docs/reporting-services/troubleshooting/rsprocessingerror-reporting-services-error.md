@@ -2,20 +2,20 @@
 title: 'rsProcessingError: Reporting Services-Fehler | Microsoft-Dokumentation'
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409592"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573812"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
     
@@ -122,7 +122,7 @@ ms.locfileid: "52409592"
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Standardmäßiger Datasetbereich für ein Textfeld der obersten Ebene  
  Verwenden Sie keinen Standardbereich für ein Textfeld, das der Berichtsentwurfsoberfläche hinzugefügt wurde, wenn der Bericht über mehr als ein Dataset verfügt. Verwenden Sie einen Ausdruck, der den Namen des Datasets als Bereich enthält, und eine Aggregatfunktion. Beispiel: `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

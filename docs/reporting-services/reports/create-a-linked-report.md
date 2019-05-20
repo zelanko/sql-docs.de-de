@@ -2,20 +2,20 @@
 title: Erstellen eines verknüpften Berichts | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: df16c043688de82a549ec506ece457730626dda1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 19a78d5909d62054903a61d18c89d975cde1befe
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029059"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571619"
 ---
 # <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
   Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.  
@@ -40,7 +40,7 @@ ms.locfileid: "50029059"
   
      ![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
  [Neuer verknüpfter Bericht (Seite) &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
  [Speicherort für Elemente auswählen (Seite) (Berichts-Manager)](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   

@@ -2,7 +2,7 @@
 title: Abonnement und Lieferung (Reporting Services) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711962"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578036"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren.  
@@ -178,7 +178,7 @@ ms.locfileid: "52711962"
   
 -   Ein Beispiel-PowerShell-Skript zum Auflisten aller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Abonnements, die für die Verwendung des **Dateifreigabekontos** konfiguriert sind, finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

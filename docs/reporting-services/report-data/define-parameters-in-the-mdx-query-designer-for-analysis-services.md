@@ -2,7 +2,7 @@
 title: Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3fdf267ff11964314ad222e41872304aa70386da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850389"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573652"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services
   Um eine MDX-Abfrage von einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle zu parametrisieren, müssen Sie der Abfrage einen Abfrageparameter hinzufügen. Im MDX-Abfrage-Designer können Sie im Entwurfsmodus und im Abfragemodus einen Abfrageparameter hinzufügen, indem Sie einen Filter angeben. Nachdem Sie die Abfrage mit einem Abfrageparameter definiert haben, erstellt Reporting Services automatisch einen Berichtsparameter und ein Dataset für die Bereitstellung der Liste mit gültigen Werten. Dies ermöglicht einem Benutzer, einen Wert anzugeben, der direkt an die Abfrage übergeben wird.  
@@ -79,8 +79,8 @@ ms.locfileid: "47850389"
   
      Um das Dataset anzuzeigen, das verfügbare Werte für den Berichtsparameter enthält, klicken Sie mit der rechten Maustaste auf einen leeren Bereich im Berichtsdatenbereich, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**. Der Berichtsdatenbereich zeigt alle Datasets im Bericht an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

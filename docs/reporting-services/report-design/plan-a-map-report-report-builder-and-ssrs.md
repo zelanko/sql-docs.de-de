@@ -2,18 +2,18 @@
 title: Planen eines Kartenberichts (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7a744233ace7e6c31bb2d00c5bdd888a4be371f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288048"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576329"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
 Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  
@@ -150,7 +150,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Kartenbericht (Berichts-Generator)](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

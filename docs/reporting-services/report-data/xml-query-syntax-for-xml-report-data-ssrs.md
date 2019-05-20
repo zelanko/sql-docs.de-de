@@ -2,7 +2,7 @@
 title: XML-Abfragesyntax für XML-Berichtsdaten (SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 60488eef28194d8ffdd88dd37897011a9e6422b4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812673"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574859"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML- **Query** oder einen Elementpfad einfügen. Eine XML-**Abfrage** beginnt mit einem **\<Query>**-Tag und enthält Namespaces sowie XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "51812673"
 </Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

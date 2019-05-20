@@ -2,7 +2,7 @@
 title: Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1f8631825cbdc56ba592299b865d5bd12ba3992b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670248"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573210"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)
   Eine freigegebene Datenquelle besteht aus einem Satz von Datenquellen-Verbindungseigenschaften, auf die von mehreren auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführten Berichten, Modellen und datengesteuerten Abonnements verwiesen werden kann.  Freigegebene Datenquellen bieten eine einfache Möglichkeit, Datenquelleneigenschaften zu verwalten, die sich im Laufe der Zeit häufig ändern. Wenn sich ein Benutzerkonto oder Kennwort ändert oder Sie die Datenbank auf einen anderen Server verschieben, können Sie die Verbindungsinformationen zentral aktualisieren.  
@@ -213,7 +213,7 @@ Das Löschen der freigegebenen Datenquelle deaktiviert alle Berichte, Modelle un
   
      Für Berichtsmodelle enthält die Liste der abhängigen Elemente die Berichte, die im Berichts-Generator erstellt wurden. Bei freigegebenen Datenquellen kann die Liste der abhängigen Elemente sowohl Berichte als auch Berichtsmodelle enthalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Konfigurieren von Datenquelleneigenschaften für einen paginierten Bericht](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  

@@ -2,20 +2,20 @@
 title: Berichtsteile im Berichts-Designer (SSRS) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ba88f0735460fe0a3a1bae3cdeddbb6fef6b75e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576786"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Berichtsteile im Berichts-Designer (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "56295868"
   
  Im Allgemeinen weisen Berichtsteile im Berichts-Designer und Berichts-Generator die gleiche Funktionsweise auf. Informationen zu grundlegenden Funktionen finden Sie unter [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator ermöglicht die gemeinsame Erstellung: Ein Benutzer erstellt einen Berichtsteil und veröffentlicht ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer ist die Veröffentlichung unidirektional: Ein Benutzer kann einen Berichtsteil in Berichts-Designer veröffentlichen, und ein anderer Benutzer kann diesen erneut verwenden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
+ Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator unterstützt die gemeinsame Erstellung: Sie erstellen einen Berichtsteil und veröffentlichen ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer sind Veröffentlichungen unidirektional: Ein Berichtsteil kann in Berichts-Designer veröffentlicht und erneut verwendet werden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus der Berichtsteilveröffentlichung  
  ![rs_Komponentenerstellung](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  

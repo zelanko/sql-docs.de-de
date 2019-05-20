@@ -2,7 +2,7 @@
 title: Reporting Services-Tools | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b227ef4d93c5629305c711e46b4278428986ce0b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 676e64250a12d3c31dfcbe20683fd5bab5b7868a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581298"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Satz von grafischen Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
@@ -44,7 +44,7 @@ ms.locfileid: "52712471"
 ## <a name="tools-for-report-server-administration"></a>SQL Server-Tools für Berichtsserververwaltung  
  Zum Verwalten des Berichtsservers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ist ein Satz von grafischen Tools und Skriptingtools verfügbar. Welche Tools Sie verwenden hängt vom Bereitstellungsmodus Ihres Berichtsservers ab.  
   
-### <a name="native-mode"></a>Einheitlicher Modus  
+### <a name="native-mode"></a>im einheitlichen Modus  
  In der folgenden Tabelle sind die verfügbaren Tools zum Verwalten des Berichtsservers, der im einheitlichen Modus bereitgestellt wird, aufgeführt.  
   
 |Tool|und Beschreibung|So erfolgt der Zugriff|  
@@ -73,7 +73,7 @@ ms.locfileid: "52712471"
 |Webportal|**(Nur im einheitlichen Modus)** Verwenden Sie dieses Tool, um über einer HTTP-Verbindung eine einzelne Berichtsserverinstanz von einem Remotestandort zu verwalten. Sie können folgendermaßen vorgehen:<br /><br /> Anzeigen, Suchen, Drucken und Abonnieren von Berichten.<br /><br /> Erstellen, Sichern und Warten der Ordnerhierarchie zum Organisieren von Elementen auf dem Server.<br /><br /> Konfigurieren der rollenbasierten Sicherheit, die den Zugriff auf Elemente und Vorgänge bestimmt.<br /><br /> Konfigurieren von Berichtsausführungseigenschaften, dem Berichtsverlauf und Berichtsparameter.<br /><br /> Erstellen von Berichtsmodellen, die eine Verbindung zu einer Microsoft SQL Server Analysis Services-Datenquelle oder einer relationalen SQL Server-Datenquelle herstellen bzw. Daten daraus abrufen.<br /><br /> Festlegen der Modellelementsicherheit für den Zugriff auf bestimmte Entitäten im Modell bzw. Zuordnen von Entitäten zu vordefinierten Berichten mit Durchklicken, die Sie im Voraus erstellen.<br /><br /> Erstellen freigegebener Zeitpläne und Datenquellen für eine leichtere Verwaltung von Zeitplänen und Datenquellenverbindungen.<br /><br /> Erstellen datengesteuerter Abonnements, die Berichte an eine lange Empfängerliste verteilen.<br /><br /> Erstellen verknüpfter Berichte zur Wiederverwendung und Änderung des Zwecks eines vorhandenen Berichts auf verschiedene Weise.<br /><br /> Starten des Berichts-Generators zum Erstellen von Berichten, die Sie auf dem Berichtsserver speichern und ausführen können. Weitere Informationen finden Sie unter [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).| -Browser  
 |RS-Hilfsprogramm|Dieses Tool ist ein Skripthost, den Sie zum Ausführen von Skriptvorgängen verwenden können. Führen Sie mit diesem Tool [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Skripts aus, die Daten zwischen Berichtsserver-Datenbanken kopieren, Berichte veröffentlichen, Elemente in einer Berichtsserver-Datenbank erstellen usw. Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Konzepte von Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

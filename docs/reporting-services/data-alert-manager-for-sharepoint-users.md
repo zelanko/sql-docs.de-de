@@ -2,22 +2,22 @@
 title: Datenwarnungs-Manager für SharePoint-Benutzer | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813623"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571486"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Datenwarnungs-Manager für SharePoint-Benutzer
 
@@ -82,7 +82,7 @@ Wenn eine SharePoint-Website für Datenwarnungen aktiviert wird, werden zwei Sha
 -   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

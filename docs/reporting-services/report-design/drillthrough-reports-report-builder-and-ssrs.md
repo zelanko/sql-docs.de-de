@@ -2,18 +2,18 @@
 title: Drillthroughberichte (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c44196f8a61208e378936ad9cb40bf75ad28e36f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290278"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579343"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Drillthroughberichte (Berichts-Generator und SSRS)
   Ein Drillthroughbericht ist ein Bericht, der geöffnet werden kann, indem der Benutzer auf einen Link in einem anderen Bericht klickt. Drillthroughberichte enthalten in der Regel Details zu einem Element im ursprünglichen Zusammenfassungsbericht. In dieser Abbildung enthält der Verkaufszusammenfassungsbericht z. B. Verkaufsaufträge und Gesamtbeträge. Wenn ein Benutzer auf eine Auftragsnummer in der Zusammenfassungsliste klickt, wird ein weiterer Bericht mit Details zu der Bestellung geöffnet.  
@@ -25,7 +25,7 @@ ms.locfileid: "56290278"
 > [!NOTE]  
 >  Wenn Sie in Berichts-Generator arbeiten, müssen Sie mit einem Berichtsserver verbunden sein, um den Drillthroughbericht anzuzeigen, der über den Drillthroughlink im Hauptbericht geöffnet wird.  
   
- Kurze Anweisungen zu Drillthroughberichten finden Sie unter [Tutorial: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md) 
+ Einen schnellen Einstieg in Drillthroughberichte finden Sie im [Tutorial: Erstellen von Drillthrough- und Hauptberichten&#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parameter in Drillthroughberichten  
  Üblicherweise enthält ein Drillthroughbericht Parameter, die durch den Zusammenfassungsbericht an ihn übergeben werden. Im Beispiel mit dem Sales-Bericht enthält der zusammenfassende Bericht in einem Textfeld einer Tabellenzelle das Feld [OrderNumber], also Bestellnummer. Der Drillthroughbericht enthält einen Parameter, der als Wert die Bestellnummer verwendet. Wenn Sie den Link zum Drillthroughbericht für das Textfeld für [OrderNumber] festlegen, legen Sie auch den Parameter für den Zielbericht auf [OrderNumber] fest. Wenn der Benutzer im Zusammenfassungsbericht auf eine Auftragsnummer klickt, wird der Zieldetailbericht mit den Informationen für die jeweilige Auftragsnummer angezeigt. Anleitungen zum Anpassen von Drillthroughberichten auf der Basis von Parameterwerten finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) und [InScope-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

@@ -2,18 +2,18 @@
 title: SAP NetWeaver BI-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3187a7ac06aac6be8d8c6189c8e13322c8c0bdf7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 35e4cf42786b3ed699bcc0e469a8f4885eaf8d62
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812267"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571176"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen SAP NetWeaver® Business Intelligence-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter 1.0 für [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -129,7 +129,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

@@ -2,7 +2,7 @@
 title: 'SetDatabaseConnection-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDatabaseConnection method
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f897c935cdd4c267440ccd5393e48dd718461c15
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206009"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572597"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting-Methode: SetDatabaseConnection
   Legt die Berichtsserver-Datenbankverbindung auf eine bestimmte Berichtsserver-Datenbank fest  
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  Die „SetDatabaseConnection“-Methode überprüft nicht, ob der Berichtsserver mithilfe der angegebenen Daten eine Verbindung mit der Berichtsserver-Datenbank herstellen kann.  
   
- Wenn die ConnectionPoolSize-Eigenschaft zum ersten Mal festgelegt wird, werden folgende Prozessoren zugrunde gelegt: ConnectionPoolSize = #Processors * 75.  
+ Wenn die „ConnectionPoolSize“-Eigenschaft zum ersten Mal festgelegt wird, werden folgende Prozessoren zugrunde gelegt: ConnectionPoolSize = Anzahl der Prozessoren x 75.  
   
  Die „SetDatabaseConnection“-Methode erteilt den angegebenen Konten keine Berechtigungen. Sie müssen die [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) -Methode für jedes Konto aufrufen, das Zugriff auf die Berichtsserver-Datenbank erfordert, und dann das resultierende Skript ausführen.  
   

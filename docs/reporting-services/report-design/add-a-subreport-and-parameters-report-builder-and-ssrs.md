@@ -2,21 +2,21 @@
 title: Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 039cbf5c2fca53745f07d65e2de31696817f04fc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287939"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582158"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Unterberichte hinzu, wenn Sie einen Hauptbericht erstellen möchten, der mehrere verwandte Berichte enthält. Ein Unterbericht ist ein Verweis auf einen anderen Bericht. Um die Berichte über Datenwerte zu verbinden (z. B. damit mehrere Berichte Daten für denselben Kunden anzeigen), müssen Sie einen parametrisierten Bericht erstellen (z. B. einen Bericht, der die Details für einen bestimmten Kunden enthält). Wenn Sie dem Hauptbericht einen Unterbericht hinzufügen, können Sie Parameter angeben, die an den Unterbericht übergeben werden sollen.  

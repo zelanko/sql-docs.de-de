@@ -2,7 +2,7 @@
 title: Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100091"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578347"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements erstellen, um Berichte von einer SharePoint-Webanwendung zu übermitteln, die in einem im SharePoint-Modus ausgeführten Berichtsserver integriert ist. Abonnements können Berichte an eine Dokumentbibliothek, einen Dateiordner oder als E-Mail übermitteln. Dieses Thema fasst die Anforderungen und Schritte zum Erstellen eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zusammen.  
@@ -154,7 +154,7 @@ ms.locfileid: "50100091"
   
 3.  Aktivieren Sie das Kontrollkästchen neben dem Abonnement, und klicken Sie auf **Löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   

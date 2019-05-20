@@ -2,7 +2,7 @@
 title: DatabaseLogonAccount-Eigenschaft (WMI MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a67b3406d4ff97172803e1158a285e66743bab43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 603ae515642fa524841c160cafc82c4e8ace3249
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716328"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571656"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting-Eigenschaft – DatabaseLogonAccount
   Gibt das Anmeldekonto an, mit dem der Berichtsserver eine Verbindung mit der Berichtsserver-Datenbank herstellt. Schreibgeschützt.  
@@ -49,7 +49,7 @@ public string DatabaseLogonAccount;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

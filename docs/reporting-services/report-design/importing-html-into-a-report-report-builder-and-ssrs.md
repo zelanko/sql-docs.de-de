@@ -2,20 +2,20 @@
 title: Importieren von HTML in einen Bericht (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: Hier erfahren Sie mehr über das Verwenden eines Textfelds, um aus einem Feld im Dataset abgerufenen HTML-Texte in den Bericht einzufügen.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289478"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580222"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
   Sie können ein Textfeld verwenden, um aus einem Feld im Dataset abgerufenen HTML-Text in den Bericht einzufügen. Der Text kann aus einem einfachen oder komplexen Ausdruck stammen, der zum ordnungsgemäß formatierten HTML evaluiert wird. Formatierter Text kann in allen unterstützten Ausgabeformaten einschließlich PDF gerendert werden.  
@@ -38,9 +38,9 @@ ms.locfileid: "56289478"
   
 -   Header-, Stil- und Blockelemente: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Textformat: \<B>, \<I>, \<U>, \<S>  
+-   Textformatierungen: \<B>, \<I>, \<U>, \<S>  
   
--   Listen: \<OL>, \<UL>, \<LI>  
+-   Listenformatierungen: \<OL>, \<UL>, \<LI>  
   
  Alle anderen HTML-Markuptags werden bei der Berichtsverarbeitung ignoriert. Wenn der Ausdruck im Platzhaltertext kein wohlgeformtes HTML aufweist, wird der Platzhalter als Text ohne Formatierung gerendert. Bei allen HTML-Tags wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   

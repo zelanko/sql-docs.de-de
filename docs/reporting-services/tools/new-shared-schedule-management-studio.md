@@ -2,20 +2,20 @@
 title: Neuer freigegebener Zeitplan (Management Studio) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4190328d238f8f1846675d3dbb6f530b17667c2e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021304"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582200"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Neuer freigegebener Zeitplan (Management Studio)
   Mithilfe dieser Seite können Sie einen freigegebenen Zeitplan zur Ausführung veröffentlichter Berichte und Abonnements erstellen. Feigegebene Zeitpläne können anstelle berichts- oder abonnementspezifischer Zeitpläne verwendet werden. Zentralisierte Zeitplaninformationen und die Möglichkeit, geplante Vorgänge anhalten und fortsetzen zu können, sind zwei Schlüsselfunktionen, die freigegebene Zeitpläne von elementspezifischen Zeitplänen unterscheiden.  
@@ -29,7 +29,7 @@ ms.locfileid: "50021304"
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen Namen für den freigegebenen Zeitplan ein. Dieser Name wird in Dropdownlisten angezeigt, wenn Benutzer einen freigegebenen Zeitplan für Berichte und Abonnements auswählen. Stellen Sie sicher, dass Sie einen aussagekräftigen Namen angeben, der in eine Liste passt und den freigegebenen Zeitplan gut von einem anderen unterscheidet. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "50021304"
  **Einmal**  
  Wählen Sie diese Option aus, um einen Zeitplan zu erstellen, der zu einem bestimmten Termin einmal ausgeführt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   

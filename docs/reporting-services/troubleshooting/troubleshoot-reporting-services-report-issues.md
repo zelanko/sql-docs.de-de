@@ -2,18 +2,18 @@
 title: Problembehandlung bei Problemen mit Berichten in Reporting Services | Microsoft-Dokumentation
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 22511322e7480b5123b05d2888a90a6032f86b74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573879"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Problembehandlung bei Reporting Services-Problemen mit Berichten
 In diesem Thema erhalten Sie Informationen zum Behandeln von Problemen mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Berichtsentwurf, dem Anzeigen der Vorschau eines Berichts, dem Veröffentlichen eines Berichts auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus, dem Anzeigen eines Berichts auf dem Berichtsserver oder dem Exportierten eines Berichts in ein anderes Dateiformat.  
@@ -53,7 +53,7 @@ Um zu steuern, dass [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudioful
 ```  
 Solange der Wert auf 1 festgelegt ist, werden nur zwischengespeicherte Berichtsdaten verwendet. Achten Sie darauf, diesen Abschnitt zu entfernen, wenn das Debuggen des Berichts abgeschlossen ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

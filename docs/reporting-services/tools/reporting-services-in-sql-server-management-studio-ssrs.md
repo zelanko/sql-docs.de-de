@@ -2,20 +2,20 @@
 title: Reporting Services in SQL Server Management Studio (SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f1ec33539e98a391c6de9cd61b5d2634c5f12187
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: de602e47f7c68c06fee042265b3f84d3d6d385f9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031149"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581316"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
   Berichtsserveradministratoren können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für folgende Aufgaben verwenden:  
@@ -40,7 +40,7 @@ ms.locfileid: "50031149"
   
 -   [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Einführung in SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

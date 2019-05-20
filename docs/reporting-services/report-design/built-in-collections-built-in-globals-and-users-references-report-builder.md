@@ -2,18 +2,18 @@
 title: Integrierte globale Variablen und Benutzerverweise (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298438"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581847"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Integrierte Auflistungen – Integrierte globale Variablen und Benutzerverweise (Berichts Generator)
   Die integrierte Feldsammlung, die sowohl die **Globals** -Sammlung als auch die **User** -Sammlung umfasst, stellt globale Werte dar, die von Reporting Services beim Verarbeiten eines Berichts bereitgestellt werden. Die **Globals** -Auflistung enthält Werte wie den Namen des Berichts, die Startzeit der Berichtsverarbeitung und die aktuellen Seitenzahlen für den Berichtskopf oder -fuß. Die **User** -Auflistung stellt die Benutzer-ID und Spracheinstellungen bereit. Diese Werte können in Ausdrücken verwendet werden, um Ergebnisse in einem Bericht zu filtern.  

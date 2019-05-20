@@ -2,7 +2,7 @@
 title: Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft-Dokumentation
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020334"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580412"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtsserverinstanzen lokal oder remote konfigurieren. Zum Konfigurieren einer Remote-Berichtsserverinstanz können Sie das Reporting Services-Konfigurationstool verwenden oder benutzerdefinierten Code schreiben, der für den Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation oder WMI) verwendet wird. Das Reporting Services-Konfigurationstool stellt dem WMI-Anbieter eine grafische Benutzeroberfläche bereit, sodass Sie einen Berichtsserver konfigurieren können, ohne Code schreiben zu müssen. Wenn Sie das Tool starten, können Sie einen Remoteserver angeben, zu dem eine Verbindung hergestellt werden soll.  
@@ -138,7 +138,7 @@ ms.locfileid: "50020334"
   
 13. Aktivieren Sie in der Spalte **Zulassen** die Optionen **Konto aktivieren**, **Remoteaktivierung**und **Sicherheit lesen**, und klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

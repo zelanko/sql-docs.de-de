@@ -2,18 +2,18 @@
 title: Hinzufügen, Verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7c66ae226519d0be9218cb569b27b149db803a13
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 09a8fd213f8bebd171a9e9fa2427345e677523a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285918"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581959"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS)
   Textfelder sind das am häufigsten verwendete Berichtselement in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten. Sie können dem Hauptteil des Berichts ein Textfeld hinzufügen, um Informationen wie beispielsweise Titel, Parameterauswahlen, integrierte Felder und Datumsangaben anzuzeigen.  

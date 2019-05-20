@@ -2,7 +2,7 @@
 title: Verwalten eines aktiven Prozesses | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021954"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579004"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
@@ -116,7 +116,7 @@ ms.locfileid: "50021954"
 ##  <a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
  Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>verwalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Auftragseigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;rsreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

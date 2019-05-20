@@ -2,18 +2,18 @@
 title: Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 14bf75b9dcb5be2a1853751874053c9075781619
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 838214206101337a35245e3a9f6fee461a47933d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285899"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580176"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS)
   In webbasierten Umgebungen können Sie eine Reihe von Funktionen hinzufügen, über die Benutzer mit Berichten interagieren können. Die Benutzer können die Sortierreihenfolge der Werte im Bericht ändern, Elemente im Bericht anzeigen oder ausblenden oder auf Links klicken, die zu anderen Berichten oder Webseiten führen. Sie können auch ein Inhaltsverzeichnis oder eine Dokumentstruktur hinzufügen. Die Berichtsbenutzer können auf Elemente im Inhaltsverzeichnis oder in der Dokumentstruktur klicken, um zu Bereichen in einem Bericht zu springen.  

@@ -2,7 +2,7 @@
 title: Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c49eadcdfb290f46bd523605c789f0f298653ca6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814223"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575493"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
   Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwendet zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken für den Zentralspeicher. Die Namen der Datenbanken lauten standardmäßig ReportServer und ReportServerTempdb. ReportServerTempdb wird mit der primären Berichtsserver-Datenbank erstellt und dient zur Speicherung von temporären Daten, Sitzungsinformationen und zwischengespeicherten Berichten.  
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ## <a name="about-database-versions"></a>Informationen zu Datenbankversionen  
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stehen keine expliziten Informationen zur Datenbankversion zur Verfügung. Da Datenbankversionen jedoch immer mit Produktversionen synchronisiert werden, können Sie anhand der Informationen zur Produktversion erkennen, wenn sich die Datenbankversion geändert hat. Die Informationen zur Produktversion für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden über die Dateiversionsinformationen in den Protokolldateien, in den Headern aller SOAP-Aufrufe und beim Herstellen einer Verbindung mit der Berichtsserver-URL angezeigt (z.B. beim Öffnen eines Browsers und Eingabe von `https://localhost/reportserver`).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

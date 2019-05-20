@@ -2,20 +2,20 @@
 title: Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS) | Microsoft-Dokumentation
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031139"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576799"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie einen neuen paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht hinzufügen, indem Sie den Berichts-Assistenten nutzen oder dem Projekt einen neuen, leeren Bericht hinzufügen. Darüber hinaus können Sie einen vorhandenen Bericht hinzufügen. Nachdem Sie einen Bericht hinzugefügt haben, wird der Name des Berichts im Ordner **Berichte** Ihres Projekts aufgelistet.  
@@ -57,7 +57,7 @@ ms.locfileid: "50031139"
   
      Der Bericht wird dem Projekt im Ordner **Berichte** hinzugefügt. Wenn Sie das Projekt schließen und erneut öffnen, sind die Berichte alphabetisch geordnet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

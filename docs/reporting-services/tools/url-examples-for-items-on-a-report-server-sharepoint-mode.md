@@ -2,18 +2,18 @@
 title: Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812953"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574019"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus)
   Wenn Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek veröffentlichen möchten, können Sie den Inhalt mithilfe der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erstellungstools, wie dem Berichts-Designer, veröffentlichen oder den Inhalt mithilfe von SharePoint-Websiteaktionen hochladen.  
@@ -132,7 +132,7 @@ ms.locfileid: "51812953"
   
  Wenn ein Berichtsserver im integrierten SharePoint-Modus ausgeführt wird, gilt für das Konzept einer Ressource eine engere Definition. Für den Berichtsserver wird das Konzept einer Ressource zum Speichern von Berichten beibehalten, die auf ein externes Bild verweisen. Dies gilt, wenn der Bericht eine Momentaufnahme oder eine Kopie darstellt, der bzw. die für die interne Verwendung beibehalten wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)  

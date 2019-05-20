@@ -2,7 +2,7 @@
 title: Registrieren eines .NET Framework-Standarddatenproviders (SSRS) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 453b31328c732833756a39a56389aa7640346817
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215639"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571250"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
   Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
@@ -67,7 +67,7 @@ ms.locfileid: "53215639"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globalen Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Zum Beispiel:  
+     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globalen Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Beispiel:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -140,7 +140,7 @@ ms.locfileid: "53215639"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globaler Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Zum Beispiel:  
+     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globaler Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Beispiel:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

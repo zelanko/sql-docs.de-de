@@ -2,7 +2,7 @@
 title: Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - windows server 2008
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e997b12f84189ac738c5a93b513d19696beb6c10
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c0c170a76ee14b609ebc98fdc2232b611a11749e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710791"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580427"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
   Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie den Berichtsserver noch nicht installiert oder konfiguriert haben, lesen Sie [Installieren von SQL Server über den Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -179,7 +179,7 @@ ms.locfileid: "52710791"
 ##  <a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

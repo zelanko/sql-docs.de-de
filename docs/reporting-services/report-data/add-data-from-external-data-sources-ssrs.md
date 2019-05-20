@@ -1,19 +1,21 @@
 ---
 title: Hinzufügen von Daten aus externen Datenquellen (SSRS) | Microsoft-Dokumentation
-ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+reviewer: ''
+ms.custom: ''
+ms.date: 03/17/2017
+ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028409"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578225"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Hinzufügen von Daten aus externen Datenquellen (SSRS)
   Daten werden mithilfe einer Datenverbindung aus einer externen Datenquelle abgerufen. Datenverbindungsinformationen werden normalerweise vom Besitzer der externen Datenquelle bereitgestellt, der für das Gewähren der Berechtigungen und Festlegen der erforderlichen Anmeldeinformationstypen zuständig ist. Datenverbindungsinformationen werden als Berichtsdatenquelle gespeichert. Der Datenquellentyp bestimmt, welche Datenerweiterung zum Abrufen der Daten verwendet wird.  
@@ -88,10 +90,9 @@ ms.locfileid: "50028409"
 |[OLE DB-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
 |[ODBC-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
-|[Berichtsmodellverbindung &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)|SMDL-Modell|  
   
-  
-##  <a name="Related"></a> Verwandte Abschnitte  
+##  <a name="Related"></a> Verwandte Abschnitte
+
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
 |Thema|und Beschreibung|  
@@ -104,7 +105,7 @@ ms.locfileid: "50028409"
 |[Übersicht über Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312).|Enthält ausführliche Informationen zu Datenerweiterungen für erfahrene Benutzer.|  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   

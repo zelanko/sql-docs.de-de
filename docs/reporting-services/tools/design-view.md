@@ -2,7 +2,7 @@
 title: Entwurfsansicht | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b419975238a2e6031a8fdc6c2ec67b608dbbcc64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752368"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577881"
 ---
 # <a name="design-view"></a>Entwurfsansicht
 Im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichtsdesigner können Sie mithilfe der Entwurfsansicht Berichtselemente im Bericht anordnen. Die Entwurfsansicht wird auch als Entwurfsoberfläche oder Layoutansicht bezeichnet.  
@@ -53,8 +53,8 @@ Mithilfe der Toolbox können Sie Elemente auswählen, die in einem dieser drei A
 ## <a name="properties-pane"></a>Eigenschaftenbereich  
  Verwenden Sie den Bereich Eigenschaften, um Eigenschaften für das ausgewählte Berichtselement auf der Entwurfsoberfläche oder die ausgewählte Gruppe im Gruppierungsbereich anzuzeigen. Alternativ können Sie mit der rechten Maustaste auf das ausgewählte Berichtselement oder die Gruppe klicken und anschließend auf **Eigenschaften** klicken, um das entsprechende Dialogfeld **Eigenschaften** für das Berichtselement oder die Gruppe zu öffnen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Berichtsentwurfstipps (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Berichtsentwurfstipps &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

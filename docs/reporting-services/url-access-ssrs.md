@@ -2,7 +2,7 @@
 title: URL-Zugriff (SSRS) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813813"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574250"
 ---
 # <a name="url-access-ssrs"></a>URL-Zugriff (SSRS)
   Durch den URL-Zugriff des Berichtsservers in SQL Server Reporting Services (SSRS) können Sie Befehle an den Berichtsserver über eine URL-Anforderung senden. Beispielsweise können Sie das Rendering eines Berichts auf einem Berichtsserver im einheitlichen Modus oder in einer SharePoint-Bibliothek anpassen. Möglicherweise haben Sie den Bericht unter Verwendung bestimmter Berichtsparameterwerte angezeigt oder eine bestimmte Berichtsseite gelesen, die für Sie von Interesse war. Diese Informationen können mithilfe vordefinierter URL-Zugriffsparameter in der URL gekapselt werden. Außerdem kann die Berichtsverarbeitung auf dem Berichtsserver weiter angepasst werden, indem Sie Parameter für Renderingformate oder für das Erscheinungsbild des Berichts-Viewers einbetten. Anschließend können Sie diese URL direkt in eine E-Mail oder Webseite einfügen, damit andere Benutzer im Browser auf die gleiche Weise auf den Bericht zugreifen können.  
@@ -56,32 +56,32 @@ reportpath
   
 ### <a name="syntax-description"></a>Syntaxbeschreibung  
  *rswebserviceurl*  
- Die Webdienst-URL des Berichtsservers. Im einheitlichen Modus ist dies die Webdienst-URL der in Konfigurations-Manager für Reporting Services konfigurierten Berichtsserverinstanz. Weitere Informationen finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Zum Beispiel:  
+ Die Webdienst-URL des Berichtsservers. Im einheitlichen Modus ist dies die Webdienst-URL der in Konfigurations-Manager für Reporting Services konfigurierten Berichtsserverinstanz. Weitere Informationen finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Beispiel:  
   
 ```  
 https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- Im integrierten SharePoint-Modus entspricht sie der URL des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Proxys auf einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website. Zum Beispiel:  
+ Im integrierten SharePoint-Modus entspricht sie der URL des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Proxys auf einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website. Beispiel:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
->  Es ist wichtig, dass die URL die `_vti_bin`-Proxysyntax zur Weiterleitung der Anforderung über SharePoint sowie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-HTTP-Proxy enthält. Durch den Proxy wird der HTTP-Anforderung Kontext hinzugefügt. Dieser ist erforderlich, damit der Bericht auf Berichtsservern im SharePoint-Modus ordnungsgemäß ausgeführt wird.  
+>  Es ist wichtig, dass die URL die `_vti_bin` -Proxysyntax zur Weiterleitung der Anforderung über SharePoint sowie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -HTTP-Proxy enthält. Durch den Proxy wird der HTTP-Anforderung Kontext hinzugefügt. Dieser ist erforderlich, damit der Bericht auf Berichtsservern im SharePoint-Modus ordnungsgemäß ausgeführt wird.  
   
  *pathinfo*  
  Der relative Pfadname des Elements in der Berichtsserver-Datenbank im einheitlichen Modus oder die vollqualifizierte URL des Elements in einem SharePoint-Katalog.  
   
- Der Pfad des Katalogelements. Im einheitlichen Modus ist dies der relative Pfad des Elements in der Berichtsserver-Datenbank, der mit einem Schrägstrich (**/**) beginnt. Zum Beispiel:  
+ Der Pfad des Katalogelements. Im einheitlichen Modus ist dies der relative Pfad des Elements in der Berichtsserver-Datenbank, der mit einem Schrägstrich (**/**) beginnt. Beispiel:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- Im integrierten SharePoint-Modus ist dies die vollqualifizierte URL des Elements in der SharePoint-Bibliothek, einschließlich der Elementerweiterung. Zum Beispiel:  
+ Im integrierten SharePoint-Modus ist dies die vollqualifizierte URL des Elements in der SharePoint-Bibliothek, einschließlich der Elementerweiterung. Beispiel:  
   
 ```  
 https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -116,7 +116,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Öffnen eines Berichts und direktes Navigieren zur Position einer Zeichenfolge|[Suchen eines Berichts mithilfe von URL-Zugriff](../reporting-services/search-a-report-using-url-access.md)|  
 |Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [URL-Zugriffsparameterreferenz](../reporting-services/url-access-parameter-reference.md)   
  [Integrieren von Reporting Services mit URL-Zugriff](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

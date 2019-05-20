@@ -2,21 +2,21 @@
 title: Integrierte Auflistungen in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 734228b716bf03b0043352888a5dfe2438cbd581
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 684f8dd2b74597b96018449492abe3786e0acba0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291578"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581788"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Verwenden integrierter Auflistungen in Ausdrücken (Berichts-Generator)
-  In einem Ausdruck in einem Bericht können Sie Verweise auf die folgenden integrierten Sammlungen aufnehmen: ReportItems, Parameters, Fields, DataSets, DataSources, Variables und integrierte Felder für globale Informationen, wie beispielsweise den Berichtsnamen. Nicht alle Auflistungen werden im Dialogfeld **Ausdruck** angezeigt. Die DataSets-Auflistung und die DataSources-Auflistung sind nur zur Laufzeit für veröffentlichte Berichte auf einem Berichtsserver verfügbar. Die ReportItems-Auflistung umfasst Textfelder in einem Berichtsbereich, z. B. Textfelder auf einer Seite oder in einem Seitenkopf.  
+  Sie können Verweise auf die folgenden integrierten Auflistungen in einen Ausdruck in einem Bericht aufnehmen: Berichtselemente, Parameter, Felder, Datasets, Datenquellen, Variablen und integrierte Felder für globale Informationen wie Berichtsnamen. Nicht alle Auflistungen werden im Dialogfeld **Ausdruck** angezeigt. Die DataSets-Auflistung und die DataSources-Auflistung sind nur zur Laufzeit für veröffentlichte Berichte auf einem Berichtsserver verfügbar. Die ReportItems-Auflistung umfasst Textfelder in einem Berichtsbereich, z. B. Textfelder auf einer Seite oder in einem Seitenkopf.  
   
  Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

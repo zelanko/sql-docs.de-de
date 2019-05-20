@@ -2,7 +2,7 @@
 title: Benutzerdefinierter Code und Assemblyverweise in Ausdrücken im Berichts-Designer (SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030409"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581501"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
@@ -188,7 +188,7 @@ End Function
   
  Da sich der Inhalt der *Fields* - und *ReportItems* -Sammlung zur Laufzeit dynamisch ändern kann, sollten Sie über die Aufrufe in der benutzerdefinierten Assembly hinaus nicht daran festhalten (z.B. in einer Elementvariablen). Die gleiche Empfehlung gilt im Allgemeinen für alle integrierten Auflistungen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

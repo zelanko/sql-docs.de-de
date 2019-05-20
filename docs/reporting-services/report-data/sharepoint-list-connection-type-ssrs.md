@@ -2,18 +2,18 @@
 title: SharePoint-Listenverbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813573"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575354"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
@@ -41,10 +41,10 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Benutzerkontensteuerung|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Ja|Nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Ja|Nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
   
  *Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), SAML (Secure Application Markup Language)-Token, sonstige Identitätsanbieter oder eine Kombination aus mehreren der oben aufgeführten Authentifizierungsanbieter.  
   
@@ -52,10 +52,10 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|nein|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|nein|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Nein|Nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Nein|Nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
   
  *Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), SAML (Secure Application Markup Language)-Token, sonstige Identitätsanbieter oder eine Kombination aus mehreren der oben aufgeführten Authentifizierungsanbieter.  
   
@@ -181,7 +181,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
  [Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Berichtsparameter](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtern, Gruppieren und Sortieren von Daten](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

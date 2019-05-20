@@ -2,18 +2,18 @@
 title: Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cba12c0524f3f6955a720f54322d220209c36b55
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294148"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581917"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
   Sie können statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Seitenköpfen und -füßen hinzufügen. Wenn Sie variable oder berechnete Daten in einem Seitenkopf oder -fuß verwenden möchten, können Sie Ausdrücke und datengebundene Bilder in einem Textfeld platzieren.  

@@ -2,7 +2,7 @@
 title: Suchen der Berichtsdefinitions-Schemaversion (SSRS) | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cb28747cd85c007f968e5be0e980ca112638faec
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67f1311e3f8bde71c52301178bf242d88e62c3a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254145"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576417"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Suchen der Berichtsdefinitions-Schemaversion (SSRS)
 
 In einer Berichtsdefinitionsdatei ist der RDL-Namespace für die Version des Berichtsdefinitionsschemas angegeben, das zur Überprüfung der RDL-Datei verwendet wird. Wenn Sie eine RDL-Datei in einer Berichterstellungsumgebung wie dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder dem Berichts-Generator öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, wird automatisch eine Sicherungsdatei erstellt und der Bericht auf den aktuellen Namespace aktualisiert. Wenn Sie die aktualisierte Berichtsdefinition speichern, haben Sie die konvertierte RDL-Datei gespeichert. Dies ist die einzige Möglichkeit, eine Berichtsdefinition zu aktualisieren. Die Berichtsdefinition selbst wird auf einem Berichtsserver nicht aktualisiert. Der kompilierte Bericht wird auf einem Berichtsserver aktualisiert. Weitere Informationen finden Sie unter [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Gewusst wie: Identifizieren der RDL-Schemaversion eines Berichts  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion eines Berichts  
   
 1.  Öffnen Sie die RDL-Berichtsdatei in einer Anwendung wie dem Editor oder XML Notepad 2007, in der Sie XML anzeigen können.  
   
@@ -36,7 +36,7 @@ In einer Berichtsdefinitionsdatei ist der RDL-Namespace für die Version des Ber
   
      Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Gewusst wie: Identifizieren der RDL-Schemaversion des Berichts-Designers  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion des Berichts-Designers  
   
 1.  Öffnen Sie ein neues Projekt. Die Version des ausgewählten Projekts bestimmt die Version des RDL-Schemas. In SQL Server werden mehrere Schemaversionen unterstützt. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -59,7 +59,7 @@ In einer Berichtsdefinitionsdatei ist der RDL-Namespace für die Version des Ber
   
      Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Gewusst wie: Identifizieren der RDL-Schemaversion auf dem Berichtsserver  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion auf dem Berichtsserver  
   
 -   Geben Sie im Berichts-Manager die URL für den Berichtsserver ein. Die folgende URL gibt z. B. einen Berichtsserver auf dem lokalen Computer an:  
   

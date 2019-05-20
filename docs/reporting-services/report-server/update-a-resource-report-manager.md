@@ -2,21 +2,21 @@
 title: Aktualisieren einer Ressource (Berichts-Manager) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031561"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571467"
 ---
 # <a name="update-a-resource-report-manager"></a>Aktualisieren einer Ressource (Berichts-Manager)
   Sie können eine Ressource aktualisieren, indem Sie sie durch eine neuere Version ersetzen. Ressourcen sind auf einem Berichtsserver gespeicherte Elemente, die den Inhalt aus einer Datei enthalten, die Sie hochladen. Sie können eine vorhandene Ressource ersetzen, indem Sie neue oder andere Dateiinhalte in die vorhandene Ressource importieren. Das Aktualisieren einer Ressource bietet eine Möglichkeit, den Inhalt zu aktualisieren und dabei die vorhandenen Eigenschaften und Sicherheitseinstellungen auf der Ressource beizubehalten.  
@@ -41,7 +41,7 @@ ms.locfileid: "50031561"
   
  Wenn die Ressource, die Sie aktualisieren, ein Bild enthält, das in einem Bericht verwendet wird, müssen Sie den Bericht aktualisieren, um das aktualisierte Bild anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Inhalt &#40;Seite, Berichts-Manager&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Datei hochladen &#40;Seite, Berichts-Manager&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Hochladen von Dateien in einen Ordner](../../reporting-services/report-server/upload-files-to-a-folder.md)   

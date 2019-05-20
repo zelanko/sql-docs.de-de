@@ -2,18 +2,18 @@
 title: Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288948"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574828"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  -Berichten zu Textfeldern, Bildern, Diagrammen und Messgeräten hinzufügen. Links können zu anderen Berichten, zu Lesezeichen in einem Bericht oder zu statischen oder dynamischen URLs führen. 
@@ -26,7 +26,7 @@ Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](..
  
  *  Außerdem können Sie **ein Lesezeichen an einem bestimmten Ort** im selben Bericht hinzufügen. 
   
-Probieren Sie das Hinzufügen von Links mit Beispieldaten hier aus [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Probieren Sie das Hinzufügen von Links mit Beispieldaten im [Tutorial: Format Text (Report VBuilder) (Tutorial: Formatieren von Text (Berichts-Generator))](../../reporting-services/tutorial-format-text-report-builder.md) aus.  
   
 > [!NOTE]  
 >  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  

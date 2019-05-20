@@ -2,7 +2,7 @@
 title: 'DatabaseLogonTimeout-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseLogonTimeout property
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 250d954574f696a4731789c94a1e1c34c60f047e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 85c6268d58cf96eb086399bf41c05526f8c1593a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571260"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting-Eigenschaft: DatabaseLogonTimeout
   Gibt die Anzahl von Sekunden an, die gewartet wird, ehe ein Anmeldeversuch bei der Berichtsserver-Datenbank fehlschlägt. Der Wert **0** gibt einen unbegrenzten Wartezeitraum an. Schreibgeschützt.  
@@ -44,7 +44,7 @@ public Int32 DatabaseLogonTimeout;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

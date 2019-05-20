@@ -2,21 +2,21 @@
 title: CSV-Geräteinformationseinstellungen | Microsoft-Dokumentation
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 320ad1972dcf949200b6fafa5eafc4fda3bd2348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678598"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571609"
 ---
 # <a name="csv-device-information-settings"></a>CSV-Geräteinformationseinstellungen
   Die Geräteinformationseinstellungen für die CSV-Renderingerweiterung ermöglichen das Ändern von Trennzeichen und Qualifizierern sowie das Festlegen der Behandlung von Zeilenumbrüchen. Zudem können die Erweiterung der Datei gesendet sowie die Codierung und der Einschluss von Kopfzeilen in der Ausgabe gesendet werden. Da es sich bei Trennzeichen meist um Sonderzeichen handelt, sollten Sie sie in einem CDATA-Abschnitt codieren, wenn die Einstellungen als XML geschrieben werden.  
@@ -35,10 +35,10 @@ ms.locfileid: "47678598"
 |**SuppressLineBreaks**|Gibt an, ob Zeilenumbrüche aus den in der Ausgabe enthaltenen Daten entfernt werden. Der Standardwert ist **false**. Wenn der Wert **true**ist, können die **FieldDelimiter**-Einstellung, die **RecordDelimiter**-Einstellung und die **Qualifier** -Einstellung kein Leerzeichen sein.|  
 |**UseFormattedValues**|Gibt an, ob formatierte Zeichenfolgen in die CSV-Ausgabe gestellt werden. Der Standardwert ist **true** , wenn **ExcelMode** den Wert **true**hat; ansonsten ist es **false**.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

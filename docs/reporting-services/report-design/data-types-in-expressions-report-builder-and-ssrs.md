@@ -2,18 +2,18 @@
 title: Datentypen in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284589"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580869"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -28,10 +28,10 @@ ms.locfileid: "56284589"
   
 |RDL-Typ|CLR-Typen|  
 |--------------|---------------|  
-|Zeichenfolge|Standard: Zeichenfolge<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Standard: Boolean|  
+|Zeichenfolge|Standard: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Standard: Boolesch|  
 |Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|datetime|Standard: datetime<br /><br /> DateTimeOffset|  
+|datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
 |float|Standard: Double<br /><br /> Single, Decimal|  
 |Binär (Binary)|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
@@ -66,7 +66,7 @@ ms.locfileid: "56284589"
 -   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
- Berichtsparameter müssen einer von fünf Datentypen sein: Boolean, DateTime, Integer, Float oder Text (auch als String bezeichnet). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
+ Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
   
 > [!NOTE]  
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  
@@ -106,7 +106,7 @@ ms.locfileid: "56284589"
   
  Sie können diese Daten mit einer der folgenden Methoden in einen oder mehrere CLR-Werte konvertieren:  
   
--   Verwenden Sie in einem Textfeld einen Ausdruck, um Teile der Zeichenfolge zu extrahieren. Zum Beispiel:  
+-   Verwenden Sie in einem Textfeld einen Ausdruck, um Teile der Zeichenfolge zu extrahieren. Beispiel:  
   
     -   Mit dem folgenden Ausdruck wird der Stundenwert der UTC-Zeitzonenverschiebung extrahiert und in Minuten konvertiert: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

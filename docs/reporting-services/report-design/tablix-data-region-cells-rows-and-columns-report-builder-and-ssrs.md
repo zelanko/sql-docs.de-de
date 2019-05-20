@@ -2,7 +2,7 @@
 title: Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 528341a6537c78e62ae0d689ee59bb59a6ecab9f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288098"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574717"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)
   Sie müssen sich mit dem Verfahren zum Angeben von Zeilen und Spalten für Detaildaten, Gruppendetails, Bezeichnungen und Gesamtwerte vertraut machen, um zu steuern, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht angezeigt werden. In vielen Fällen verwenden Sie die Standardstrukturen einer Tabelle, Matrix oder Liste, um die Daten anzuzeigen. Weitere Informationen finden Sie unter [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizen](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) oder [Listen](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

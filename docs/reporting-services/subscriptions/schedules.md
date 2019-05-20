@@ -2,7 +2,7 @@
 title: Zeitpläne | Microsoft-Dokumentation
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578097"
 ---
 # <a name="schedules"></a>Zeitpläne
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt **freigegebene** und **berichtsspezifische** Zeitpläne bereit, mit denen Sie die Verarbeitung und Verteilung von Berichten steuern können. Der Unterschied zwischen den beiden Typen von Zeitplänen liegt in ihrer Definition, Speicherung und Verwaltung. Die interne Konstruktion der beiden Typen von Zeitplänen ist die gleiche. Alle Zeitpläne geben einen Wiederholungstyp an: monatlich, wöchentlich oder täglich. Innerhalb des Wiederholungstyps legen Sie die Intervalle und den Zeitraum der Häufigkeit eines Ereignisses fest. Die Wiederholungsoption und die Art und Weise, wie diese festgelegt ist, sind dieselbe, unabhängig davon, ob Sie einen freigegebenen oder einen berichtsspezifischen Zeitplan erstellen.
@@ -29,7 +29,7 @@ ms.locfileid: "52711471"
   
 -   Berichtsspezifische Zeitpläne werden erstellt, wenn Sie ein Abonnement definieren oder Eigenschaften zur Berichtsausführung festlegen. Das Eingeben der Zeitplaninformationen gehört zum Definieren eines Abonnements oder zum Festlegen von Eigenschaften. Zum Definieren eines berichtsspezifischen Zeitplans öffnen Sie den Bericht oder das Abonnement, der bzw. das diesen verwendet.  
   
- Ein freigegebener Zeitplan enthält Informationen zum Zeitplan und zu Wiederholungen, die von einer beliebigen Anzahl veröffentlichter Berichte und Abonnements verwendet werden können, die auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver ausgeführt werden. Werden zahlreiche Berichte und Abonnements gleichzeitig ausgeführt, können Sie für diese Aufträge einen freigegebenen Zeitplan erstellen. Soll zu einem späteren Zeitpunkt das Wiederholungsmuster oder das Enddatum geändert werden, können Sie diese Änderung für alle Berichte und Abonnements an einer Stelle vornehmen.  
+ Ein freigegebener Zeitplan enthält Informationen zum Zeitplan und zu Wiederholungen, die von einer beliebigen Anzahl veröffentlichter Berichte und Abonnements verwendet werden können, die auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführt werden. Werden zahlreiche Berichte und Abonnements gleichzeitig ausgeführt, können Sie für diese Aufträge einen freigegebenen Zeitplan erstellen. Soll zu einem späteren Zeitpunkt das Wiederholungsmuster oder das Enddatum geändert werden, können Sie diese Änderung für alle Berichte und Abonnements an einer Stelle vornehmen.  
   
  Freigegebene Zeitpläne sind leichter zu verwalten und ermöglichen Ihnen eine größere Flexibilität in der Verwaltung geplanter Vorgänge. So besteht beispielsweise die Möglichkeit, freigegebene Zeitpläne zu beenden und fortzusetzen. Wenn Sie der Ansicht sind, dass zu viele geplante Vorgänge gleichzeitig ausgeführt werden, können Sie mehrere freigegebene Zeitpläne erstellen, die zu verschiedenen Zeitpunkten ausgeführt werden, und anschließend die Zeitplaninformationen entsprechend der Verarbeitungslast auf dem Berichtsserver anpassen.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52711471"
 |Zweck|Verwendete Aufgabe|Vordefinierte Rollen im einheitlichen Modus|Gruppen im SharePoint-Modus|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Erstellen, Ändern oder Löschen freigegebener Zeitpläne|Freigegebene Zeitpläne verwalten|Systemadministrator|Besitzer|  
-|Auswählen freigegebener Zeitpläne|Freigegebene Zeitpläne anzeigen|Systembenutzer|Element|  
+|Auswählen freigegebener Zeitpläne|Freigegebene Zeitpläne anzeigen|Systembenutzer|Member|  
 |Erstellen, Ändern oder Löschen berichtsspezifischer Zeitpläne in einem benutzerdefinierten Abonnement|Einzelne Abonnements verwalten|Browser, Berichts-Generator, Meine Berichte, Inhalts-Manager|Besucher, Mitglieder|  
 |Erstellen, Ändern oder Löschen berichtsspezifischer Zeitpläne für alle anderen geplanten Vorgänge|Berichtsverlauf verwalten, Alle Abonnements verwalten, Berichte verwalten|Inhalts-Manager|Besitzer|  
   
@@ -130,7 +130,7 @@ ms.locfileid: "52711471"
 ###  <a name="bkmk_stoppingservice"></a> Auswirkungen beim Beenden des Berichtsserverdienstes  
  Wenn Sie den Berichtsserverdienst beenden, fährt der SQL Server-Agent fort, Berichtsverarbeitungsanforderungen der Warteschlange hinzuzufügen. Statusinformationen des SQL Server-Agents zeigen an, dass der Auftrag erfolgreich war. Da der Berichtsserverdienst jedoch beendet war, findet keine Berichtsverarbeitung statt. Die Anforderungen werden in der Warteschlange gesammelt, bis Sie den Berichtsserverdienst neu starten. Sobald Sie den Berichtsserverdienst neu gestartet haben, werden alle Berichtsverarbeitungsanforderungen, die sich in der Warteschlange befinden, nacheinander verarbeitet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

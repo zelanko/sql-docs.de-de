@@ -2,7 +2,7 @@
 title: 'ConnectionPoolSize-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8495eb14d0e40e425d423da82dc3d38c6aaee9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570938"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting-Eigenschaft: ConnectionPoolSize
   Die Größe des Verbindungspools, über den der Berichtsserver mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz kommuniziert, die die Berichtsserver-Datenbank hostet. Schreibgeschützt.  
@@ -44,7 +44,7 @@ public UInt32 ConnectionPoolSize;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

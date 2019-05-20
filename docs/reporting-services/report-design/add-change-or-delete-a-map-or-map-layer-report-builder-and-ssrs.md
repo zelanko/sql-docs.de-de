@@ -2,7 +2,7 @@
 title: Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -23,14 +23,14 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ddcfeaa62662fecef5e1b201bb81c2ce547c011
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293065"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582080"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  
@@ -75,7 +75,7 @@ ms.locfileid: "56293065"
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen**, und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
+2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen** , und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
   
     > [!NOTE]  
     >  Sie können eine Kartenebene auch manuell hinzufügen und konfigurieren. Es empfiehlt sich jedoch, neue Ebenen mit dem Kartenebenen-Assistenten hinzuzufügen. Um den Assistenten über die Symbolleiste des Kartenbereichs zu starten, klicken Sie auf die Schaltfläche für den Ebenen-Assistenten (![RS_SymbolKartenebenenassistent](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  

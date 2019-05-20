@@ -2,21 +2,21 @@
 title: Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2efb0c6c246ba8575838acc6d04609a6db406ce6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400903"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578386"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Dieses Thema stellt Informationen zu Standardabonnements bereit, die von einzelnen Benutzern erstellt und verwaltet werden. Für datengesteuerte Abonnements gelten unterschiedliche Anforderungen und Schritte, die in einem anderen Thema behandelt werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -177,7 +177,7 @@ ms.locfileid: "52400903"
   
  Ein Abonnement wird automatisch gelöscht, wenn der zugrunde liegende Bericht gelöscht wird. Wenn Sie ein Abonnement während der Verarbeitung löschen, wird das Abonnement beendet, falls der Löschvorgang durchgeführt wird, bevor die Übermittlungserweiterung die Abonnementdaten erhält. Andernfalls wird die Verarbeitung des Abonnements fortgesetzt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

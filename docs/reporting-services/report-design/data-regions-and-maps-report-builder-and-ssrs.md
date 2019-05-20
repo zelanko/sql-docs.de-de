@@ -2,20 +2,20 @@
 title: Datenbereiche und Karten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6065e26f36561b446257825f7f953c5eeccc3b25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b9ed0e835bf8d2b926fc21acfd4edda3db9d04f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290898"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580876"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Datenbereiche und Karten (Berichts-Generator und SSRS)
   Ein Datenbereich ist ein Objekt in einem Bericht, der Daten aus einem Berichtsdataset anzeigt. Berichtsdaten können als Zahlen und Text in einer Tabelle, Matrix oder Liste, grafisch in einem Diagramm oder einem Messgerät und vor einem geografischen Hintergrund in einer Karte angezeigt werden. Tabellen, Matrizen und Listen basieren auf dem *Tablix* -Datenbereich, der bei Bedarf erweitert wird, um alle Daten aus dem Dataset anzuzeigen. Ein Tablix-Datenbereich unterstützt mehrere Zeilen- und Spaltengruppen mit statischen und dynamischen Zeilen und Spalten. In einem Diagramm werden mehrere Reihen und Kategoriegruppen in einer Vielzahl von Diagrammformaten angezeigt. In einem Messgerät wird ein einzelner Wert oder ein aggregierter Wert für ein Dataset angezeigt. In einer Karte werden räumliche Daten in Form von Kartenelementen angezeigt, deren Darstellung abhängig von den aggregierten Daten aus einem Dataset variieren kann.  

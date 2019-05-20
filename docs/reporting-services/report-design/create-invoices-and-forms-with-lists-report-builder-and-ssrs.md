@@ -2,23 +2,23 @@
 title: Erstellen von Rechnungen und Formularen mit Listen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42804131c70b9a0077a3492b1c3532fb8de37a98
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298087"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581510"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Erstellen von Rechnungen und Formularen mit Listen(Berichts-Generator und SSRS)
   Ein Listendatenbereich wird mit jeder Gruppe oder Zeile im paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdataset wiederholt. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen. Sie können Listen definieren, die beliebig viele Berichtselemente enthalten. Eine Liste kann geschachtelt sein  
   
- Eine schnelle Einführung in Listen finden Sie unter [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Einen schnellen Einstieg in Matrizen finden Sie unter [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Listen in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "56298087"
 ##  <a name="DisplayingLayout"></a> Anzeigen von Daten in einem Freiformlayout  
  Wenn Sie Daten nicht in einem Raster, sondern in einem Freiformlayout anordnen möchten, können Sie der Entwurfsoberfläche eine Liste hinzufügen. Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zelle. Standardmäßig enthält die Zelle ein Rechteck, das als Container verwendet wird. Verschieben Sie jedes Feld im Container, bis Sie der Entwurf Ihren Wünschen entspricht. Die Ausrichtungslinien, die beim Ziehen von Textfeldern im rechteckigen Container angezeigt werden, erleichtern das vertikale und horizontale Ausrichten der Kanten. Entfernen Sie unerwünschte Abstände, indem Sie die Größe der Zelle anpassen. Weitere Informationen finden Sie unter [Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)](../../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- Die folgende Abbildung zeigt eine Liste mit Informationen zu einer Bestellung, einschließlich dieser Felder: „Date“, „Order“, „Qty“, „Product“ und „LineTotal“ sowie ein Bild.  
+ Die folgende Abbildung zeigt eine Liste mit Informationen zu einer Bestellung, den Feldern "Date", "Order", "Qty", "Product" und "LineTotal" sowie einer Grafik.  
   
  ![Liste in Entwurfsansicht, vier Felder und ein Bild](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "List in design view, 4 fields and an image")  
   

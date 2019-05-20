@@ -2,21 +2,21 @@
 title: Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 936f4d6ecf91169f68542042f060dd6ec379372f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807459"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570618"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
   Wenn von den standardmäßigen Sicherheitseinstellungen nicht die gewünschte Zugriffsebene bereitgestellt wird, können Sie neue Berechtigungen erstellen, die Zugriff auf bestimmte Berichtsserverelemente oder -vorgänge bieten. Benutzerdefinierte Sicherheitseinstellungen können nützlich sein, wenn Sie den Zugriff auf einen bestimmten Bericht einschränken möchten.  
@@ -69,7 +69,7 @@ ms.locfileid: "47807459"
   
 12. Klicken Sie auf **OK**. Wenn ein Benutzer Berechtigungen für ein bestimmtes Modell verwalten kann, kann dieser Benutzer das Modell öffnen, um Berechtigungen in diesem Modell zu bearbeiten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

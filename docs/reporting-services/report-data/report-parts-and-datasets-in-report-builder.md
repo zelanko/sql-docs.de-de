@@ -2,18 +2,18 @@
 title: Berichtsteile und Datasets in Berichts-Generator | Microsoft-Dokumentation
 ms.date: 09/16/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ee8ead2185908724b20fa690cabfe67044d15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611478"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571197"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Berichtsteile und Datasets in Berichts-Generator
   In Berichts-Generator ist die einfachste Methode, um Daten in einen Bericht einzuschließen, das Hinzufügen von Berichtsteilen aus dem Berichtsteilkatalog. Berichtsteile enthalten die Datasets, von denen sie abhängig sind, so genannte *abhängige Datasets*. Abhängige Datasets basieren auf freigegebenen Datenquellen und können entweder eingebettete Datasets oder freigegebene Datasets sein. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -51,9 +51,9 @@ ms.locfileid: "47611478"
 > [!IMPORTANT]  
 >  Um sicher zu sein, dass Sie und andere Personen weiterhin erfolgreich Daten aus einem freigegebenen Dataset verwenden können, müssen Sie die grundlegenden Prinzipien für das Sichern von Berichtselementen verstehen. Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Sicherheit (Berichts-Generator)](../../reporting-services/report-builder/security-report-builder.md)   
+ [Sicherheit &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

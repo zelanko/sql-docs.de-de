@@ -2,18 +2,18 @@
 title: Hinzufügen einer Abschrägung, eines Reliefs und von Texturstilen zu einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53c9e31720d331218e95edaa2081e5219f0bc674
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581658"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Diagrammeffekte: Hinzufügen einer Abschrägung, eines Relief oder von Texturstilen (Berichts-Generator)
   Bei bestimmten Diagrammtypen können Sie einen Zeichnungseffekt angeben, um die visuelle Wirkung des Diagramms zu erhöhen. Diese Zeichnungseffekte werden nur für die Reihen des Diagramms übernommen. Sie haben keine Auswirkungen auf andere Diagrammelemente.  

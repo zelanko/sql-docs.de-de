@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6254eebb4d5f1ed2f33c317ece63b9328a6e4a14
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503664"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580837"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Übergeben von Berichtsparametern innerhalb einer URL
   Sie können Berichtsparameter an einen Bericht übergeben, indem Sie sie in eine Berichts-URL einschließen. Diesen URL-Parametern wird nichts vorangestellt, da sie direkt an die Berichtsverarbeitungs-Engine übergeben werden.  

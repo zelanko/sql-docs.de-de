@@ -2,20 +2,20 @@
 title: 'GetReportServerUrls-Methode (WMI: MSReportServer_Instance) | Microsoft-Dokumentation'
 ms.date: 06/09/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8749f8b10855154efd7e676f5ee57fae2dd042e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620063"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571951"
 ---
 # <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance-Methoden: GetReportServerUrls
   Gibt eine Liste von URLs zurück, über die Benutzer auf den Berichtsserver und den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]zugreifen können.  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

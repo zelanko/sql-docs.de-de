@@ -2,18 +2,18 @@
 title: Entwurfsansicht für freigegebene Datasets (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bea2da3329bce5ffa6adaf4be57109ac7c801dc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287947"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581108"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   In einem Bericht stellt ein Dataset Berichtsdaten dar, die als Ergebnis der Ausführung einer Abfrage für eine externe Datenquelle zurückgegeben werden. Freigegebene Datasets werden auf einem Berichtsserver veröffentlicht und können in mehreren Berichten verwendet werden. Sie können Datasets erstellen, um Sie für andere freizugeben. Im Fenster „Freigegebene Datasetentwurfsansicht“ wählen Sie eine freigegebene Datenquelle aus, geben Eigenschaften für das freigegebene Dataset an und erstellen im Abfrage-Designer eine Abfrage.  
@@ -23,7 +23,7 @@ ms.locfileid: "56287947"
  Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Menüband  
- Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Befehle sind in die folgenden logischen Gruppen unterteilt: Verbindung, Dataset und Abfrage-Designer.  
+ Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Die Befehle sind in den folgenden logischen Gruppen organisiert: Verbindung, Dataset und Abfrage-Designer.  
   
 ### <a name="connection"></a>Verbindung  
  Verwenden Sie die Schaltfläche **Auswählen** in der Gruppe "Verbindung", um eine freigegebene Datenquelle im Bericht auszuwählen, oder navigieren Sie zu einer freigegebenen Datenquelle auf dem Berichtsserver.  

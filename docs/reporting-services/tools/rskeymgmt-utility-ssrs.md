@@ -2,7 +2,7 @@
 title: rskeymgmt-Hilfsprogramm (SSRS) | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545368"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571475"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -172,7 +172,7 @@ rskeymgmt -r <installationID>
   
  Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellung für horizontales Skalieren – Reporting Services im einheitlichen Modus &#40;Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   

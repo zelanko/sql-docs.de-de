@@ -2,20 +2,20 @@
 title: Systemrolleneigenschaften (Management Studio) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 883cf52d51acc280fae37ce918f476e757fd34ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723242"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576023"
 ---
 # <a name="system-role-properties-management-studio"></a>Systemrolleneigenschaften (Management Studio)
   Mithilfe der Seite Systemrollen können Sie die Systemrollendefinitionen anzeigen, die aktuell für den Berichtsserver definiert sind. Eine Systemrollendefinition enthält eine benannte Auflistung von Aufgaben, die in Bezug auf die gesamte Site statt nur für ein einzelnes Element ausgeführt werden. Rollendefinitionen werden Benutzern oder Gruppen zugewiesen, um eine Rollenzuweisung zu erstellen. Die Aufgaben in der Rollendefinition geben die Aktionen an, die der Benutzer oder die Gruppe ausführen kann.  
@@ -25,7 +25,7 @@ ms.locfileid: "47723242"
 > [!NOTE]  
 >  Systemrollenzuweisungen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, ist diese Seite nicht verfügbar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Gibt den Namen der Systemrollendefinition an.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47723242"
  **Beschreibung**  
  Bietet Informationen zu den einzelnen Tasks. Taskbeschreibungen können Sie nicht ändern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Aufgaben auf Systemebene](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   

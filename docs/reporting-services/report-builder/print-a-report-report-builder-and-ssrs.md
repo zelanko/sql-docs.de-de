@@ -2,23 +2,23 @@
 title: Drucken eines Berichts (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292908"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581180"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Drucken eines Berichts (Berichts-Generator und SSRS)
   Nach dem Speichern eines Berichts auf einem Berichtsserver können Sie diesen mit einem Browser, dem Reporting Services-Webportal oder einer beliebigen Anwendung, die Sie zum Anzeigen eines exportierten Berichts verwenden, anzeigen und drucken. Vor dem Speichern eines Berichts können Sie ihn aus der Vorschau drucken.  
   
- Beim Drucken eines Berichts können Sie das zu verwendende Papierformat festlegen. Durch das Papierformat wird die Anzahl der Seiten in einem Bericht festgelegt und welche Berichtsdaten jeweils auf eine Seite passen. Das Papierformat beeinflusst nur Berichte, die mit harten Seitenumbrüchen gerendert werden: PDF, Bild und Drucken. Die Festlegung des Papierformats hat keine Auswirkungen auf andere Renderer. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Beim Drucken eines Berichts können Sie das zu verwendende Papierformat festlegen. Durch das Papierformat wird die Anzahl der Seiten in einem Bericht festgelegt und welche Berichtsdaten jeweils auf eine Seite passen. Das Papierformat beeinflusst nur Berichte, die mit harten Seitenumbrüchen gerendert werden: PDF, Bild und Druck. Die Festlegung des Papierformats hat keine Auswirkungen auf andere Renderer. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
  Auf der Berichts-Viewer-Symbolleiste im Reporting Services-Webportal oder in der Vorschau des Berichts-Generators können Sie einen Bericht in einen Renderer mit harten Seitenumbrüchen exportieren oder auf die Schaltfläche „Drucken“ klicken, um eine Kopie des Berichts zu drucken. Möglicherweise müssen Sie das Papierformat oder andere Seiteneinrichtungseigenschaften festlegen. Verwenden Sie das Dialogfeld **Berichtseigenschaften** , um Seiteneinrichtungseigenschaften zu ändern, z. B. das Papierformat.  
   

@@ -2,7 +2,7 @@
 title: Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298638"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576339"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
   Ein Bericht kann eine Kopf- und Fußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Kopf- und Fußzeilen können statischen Text, Bilder, Linien, Rechtecke, Rahmen, Hintergrundfarbe, Hintergrundbilder und Ausdrücke enthalten. Ausdrücke enthalten Verweise auf Datasetfelder für Berichte mit genau einem Dataset und Aggregatfunktionsaufrufen mit dem Dataset als Bereich.  

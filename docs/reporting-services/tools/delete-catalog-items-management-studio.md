@@ -2,20 +2,20 @@
 title: Löschen von Katalogelementen (Management Studio) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792118"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573937"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Katalogelemente löschen (Management Studio)
   Verwenden Sie diese Seite, um freigegebene Zeitpläne und Rollendefinitionen zu löschen.  
@@ -26,7 +26,7 @@ ms.locfileid: "47792118"
   
  Einen Löschvorgang können Sie nicht rückgängig machen. Wenn Sie ein bereits gelöschtes Element wiederherstellen möchten, müssen Sie dieses entweder erneut erstellen oder eine Sicherungskopie der Berichtsserver-Datenbank wiederherstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Gibt den Namen des Elements an, das Sie gerade löschen.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47792118"
  **Fehler**  
  Zeigt einen Fehlercode an, wenn beim Löschen eines Elements ein Fehler auftritt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Elements &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules (Erstellen, Ändern oder Löschen von Zeitplänen)](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Erstellen, Ändern oder Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

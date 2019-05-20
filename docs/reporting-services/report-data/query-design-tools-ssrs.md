@@ -2,7 +2,7 @@
 title: Abfrageentwurfstools (SSRS) | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0d20ddfbc872429ecf47d001067f1e7f2738c9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021234"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571218"
 ---
 # <a name="query-design-tools-ssrs"></a>Abfrageentwurfstools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine Reihe von Abfrageentwurfstools bereit, mit denen Sie im Berichts-Designer Datasetabfragen erstellen können. Einige Abfrage-Designer stellen alternative Modi bereit, sodass Sie entscheiden können, ob Sie im visuellen Modus oder direkt in der Abfragesprache arbeiten möchten. In diesem Thema werden die einzelnen Tools sowie die von ihnen unterstützten Datenquellen beschrieben. Folgende Tools werden in diesem Thema vorgestellt:  
@@ -109,7 +109,7 @@ ms.locfileid: "50021234"
   
  Weitere Informationen finden Sie unter [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

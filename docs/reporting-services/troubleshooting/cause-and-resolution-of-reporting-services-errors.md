@@ -2,7 +2,7 @@
 title: Ursachen und Lösungen für Reporting Service-Fehler | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b330d2dc764a029f805d5063cf99019574173c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784240"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575573"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Ursachen und Lösungen für Reporting Services-Fehler
   Dieses Thema enthält Informationen zu Ursachen und Lösungen für eine Reihe von Fehlern, die sich auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]beziehen. Die Themen zu Fehlermeldungen in diesem Abschnitt enthalten eine Erklärung der Fehlermeldung, mögliche Ursachen sowie Maßnahmen, die Sie ergreifen können, um das Problem zu beheben.  
@@ -34,7 +34,7 @@ ms.locfileid: "47784240"
 |[rrRenderingError – Reporting Services-Fehler](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Fehler beim Rendern des Berichts. (rrRenderingError) %1.|  
 |[Report Server-Windows-Dienst &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Der Berichtsserver-Windows-Dienst (MSSQLSERVER) kann nicht mit der Berichtsserver-Datenbank verbunden werden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

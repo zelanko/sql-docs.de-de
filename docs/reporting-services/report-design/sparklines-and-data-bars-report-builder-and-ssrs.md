@@ -2,21 +2,21 @@
 title: Sparklines und Datenbalken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 058263f88131261b705b306b766d97bb8f368f5d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4a0444970a0d4c95ab44a565ff33aa49cfc91f60
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580596"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Sparklines und Datenbalken (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln und häufig in den Fließtext eingebunden sind.   
@@ -25,7 +25,7 @@ ms.locfileid: "56294858"
   
  ![RS_Sparkline-Beispiel](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Kurze Anweisungen zu Sparklines finden Sie unter [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) die Videos und [wie: Erstellen einer Sparkline in einer Tabelle](https://go.microsoft.com/fwlink/?LinkId=197092) und Sparklines[, Balkendiagramme und Indikatoren im Berichts-Generator](https://technet.microsoft.com/bi/video/ff877165).  
+ Kurze Anweisungen zu Sparklines finden Sie unter [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) und in den Videos [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) (Erstellen einer Sparkline in einer Tabelle) und [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) (Sparklines, Balkendiagramme und Indikatoren in Berichts-Generator).  
   
 > [!NOTE]  
 >  Sparklines und Datenbalken können mit ihrer übergeordneten Tabelle, Matrix oder Liste getrennt von einem Bericht als Berichtsteil veröffentlicht werden. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -33,15 +33,15 @@ ms.locfileid: "56294858"
 ##  <a name="KindsofSparklines"></a> Typen von Sparklines  
  Sie können fast genauso viele Typen von Sparklines erstellen, wie es reguläre Diagramme gibt. Im Allgemeinen können Sie keine 3D-Sparklines erstellen. Sie können Sparklineversionen der folgenden Volldiagramme erstellen:  
   
--   [Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md) Basisdiagramme, gestapelte Säulendiagramme und gestapelte Säulendiagramme (100%).  
+-   [Säulendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Säulendiagramme (100 %)  
   
--   [Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md) Alles außer 3D-Liniendiagramme.  
+-   [Liniendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): alles außer 3D-Liniendiagrammen  
   
--   [Flächendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md) Alle außer 3D-Flächendiagramme.  
+-   [Flächendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): alles außer 3D-Flächendiagrammen  
   
--   [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md) Und Ringdiagramme, sowohl flach als auch 3D, jedoch keine anderen Formen wie z. B. Trichter- und Pyramidendiagramme.  
+-   [Kreisdiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md): Ringdiagramme, sowohl flach als auch 3D, jedoch keine anderen Formen wie Trichter- und Pyramidendiagramme  
   
--   [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md) Kurs-, Kerzen-, Abweichungsbalken- und Boxplotdiagramme.  
+-   [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): Kurs-, Kerzen-, Abweichungsbalken- und Boxplotdiagramme.  
   
 ##  <a name="DataBars"></a> Datenbalken  
  Datenbalken stellen in der Regel einen einzelnen Datenpunkt dar, obwohl sie wie normale Balkendiagramme auch mehrere Datenpunkte darstellen können. Sie enthalten häufig mehrere Reihen ohne Kategorie oder verfügen über Reihengruppierungen.  
@@ -52,9 +52,9 @@ ms.locfileid: "56294858"
   
  Sie können Datenbalkenversionen der folgenden Volldiagramme erstellen:  
   
--   [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) Basis-, gestapelte Balkendiagramme und gestapelte Balkendiagramme (100%).  
+-   [Balkendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Balkendiagramme (100 %)  
   
--   [Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md) Basis-, gestapelte Säulendiagramme und gestapelte Säulendiagramme (100 %). Säulendiagramme können entweder Sparklines oder Datenbalken sein.  
+-   [Säulendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Säulendiagramme (100 %) Säulendiagramme können entweder Sparklines oder Datenbalken sein.  
   
 ##  <a name="AlignDatainTableMatrix"></a> Ausrichten von Sparklinedaten in einer Tabelle oder einer Matrix  
  Wenn Sie eine Sparkline in eine Tabelle oder eine Matrix einfügen, ist es normalerweise wichtig, dass die Datenpunkte in den einzelnen Sparklines mit den Datenpunkten der anderen Sparklines in dieser Spalte übereinstimmen. Andernfalls ist es schwierig, die Daten in den verschiedenen Zeilen zu vergleichen. Wenn Sie z. B. die Umsatzdaten verschiedener Vertriebsmitarbeiter im Unternehmen nach Monat vergleichen, müssen die Monate übereinstimmen. Wenn ein Mitarbeiter im Monat April abwesend war, gib es für diesen Mitarbeiter für diesen Monat keine Daten. Für diesen Monat sollte daher eine Lücke angezeigt werden, und die Daten für die folgenden Monate sollten an den Daten der anderen Mitarbeiter ausgerichtet sein. Sie erreichen dies durch die Ausrichtung der horizontalen Achse. Weitere Informationen finden Sie im Abschnitt über Sparklines unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS)](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
@@ -102,6 +102,6 @@ ms.locfileid: "56294858"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

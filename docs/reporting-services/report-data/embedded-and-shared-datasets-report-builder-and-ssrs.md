@@ -2,18 +2,18 @@
 title: Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e019ee45eaffdd3a95bde64d284caa61e24788f3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a802faa9ba493e835e53f104e885b848d5a730cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028799"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573149"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)
   In einem Bericht stellt ein Dataset Berichtsdaten dar, die als Ergebnis der Ausführung einer Abfrage für eine externe Datenquelle zurückgegeben werden. Das Dataset hängt von der Datenverbindung ab, die Informationen zur externen Datenquelle enthält. Die Daten selbst sind nicht in der Berichtsdefinition enthalten. Das Dataset enthält einen Abfragebefehl, eine Feldauflistung, Parameter, Filter und Datenoptionen, mit denen die Groß- und Kleinschreibung berücksichtigt und eine Sortierung vorgenommen werden kann. Die folgenden beiden Datasettypen stehen zur Verfügung:  
@@ -56,7 +56,7 @@ ms.locfileid: "50028799"
   
  Um ein eingebettetes Dataset zu erstellen oder zu bearbeiten, verwenden Sie den Berichtsdatenbereich. Nachdem Sie ein Dataset erstellt haben, können Sie die Eigenschaften im Dialogfeld **Dataseteigenschaften** konfigurieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   

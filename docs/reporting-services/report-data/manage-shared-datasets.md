@@ -2,18 +2,18 @@
 title: Verwalten von freigegebenen Datasets | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4da49802b5f1d6aa6dbaa082c3d9a10e6273f3b8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814213"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572070"
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden mit freigegebenen Datasets Daten aus freigegebenen Datenquellen abgerufen, die mit externen Datenquellen verbunden werden. Ein freigegebenes Dataset bietet die Möglichkeit, eine Abfrage freizugeben und so konsistente Daten für mehrere Berichte bereitzustellen. Die Datasetabfrage kann Datasetparameter enthalten. Sie können ein freigegebenes Dataset so konfigurieren, dass Abfrageergebnisse für bestimmte Parameterkombinationen bei der erstmaligen Verwendung oder nach einem angegebenen Zeitplan zwischengespeichert werden. Sie können das Zwischenspeichern freigegebener Datasets mit dem Zwischenspeichern von Berichten sowie mit Berichtsdatenfeeds kombinieren, um den Zugriff auf eine Datenquelle einfacher zu verwalten.  
@@ -90,7 +90,7 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Ändern der Eigenschaften freigegebener Datasetelemente|Berichts-Manager|[Allgemeine Eigenschaften (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |Angeben zusätzlicher Eigenschaften für freigegebene Datasets für die Instanz eines freigegebenen Datasets in einem Bericht.|Berichts-Generator, Berichts-Designer|[Dataseteigenschaften (Dialogfeld), Abfrage](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |Binden an eine andere freigegebene Datenquelle für ein freigegebenes Dataset.|Berichts-Manager|[Seite zur Datenquellenauswahl &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Überprüfen der Standardwerte für Datasetparameter.|Öffnen im Berichts-Generator oder Verwenden von URL-Zugriffssyntax.|Zum Beispiel:<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Überprüfen der Standardwerte für Datasetparameter.|Öffnen im Berichts-Generator oder Verwenden von URL-Zugriffssyntax.|Beispiel:<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Aktivieren der Zwischenspeicherung|Berichts-Manager|[Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Zwischenspeichern (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |Erstellen oder Bearbeiten eines Cacheaktualisierungsplans|Berichts-Manager|[Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |Anzeigen des Definitionsschemas des freigegebenen Datasets.|Berichts-Manager|`https://<reportserver>/shareddatasetdefinition.xsd`|  
@@ -117,7 +117,7 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Für freigegebene Datasets gelten die gleichen Regeln zum Angeben von Parameterwerten wie für Abonnements.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

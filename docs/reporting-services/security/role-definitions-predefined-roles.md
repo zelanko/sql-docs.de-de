@@ -2,7 +2,7 @@
 title: Vordefinierte Rollen | Microsoft-Dokumentation
 ms.date: 10/22/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5622d8245dee2440eb6d4cdfa5c5ee27c772bd0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e211010da8482a9a2707c2799812c813e2820832
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570640"
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen: vordefinierte Rollen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -207,11 +207,11 @@ ms.locfileid: "47839028"
   
  Mithilfe der **Systembenutzer** -Rolle kann die Standardsicherheit ergänzt werden. Sie können die Rolle in neuen Rollenzuweisungen verwenden, die den Berichtsserverzugriff auf Berichtsbenutzer erweitern. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Tasks and Permissions (Aufgaben und Berechtigungen)](../../reporting-services/security/tasks-and-permissions.md)  
+ [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)  
   
   

@@ -2,21 +2,21 @@
 title: Dateifreigabeübermittlung in Reporting Services | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889991"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576000"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine Dateifreigabe-Übermittlungserweiterung, mit deren Hilfe ein Bericht an einen Ordner übermittelt werden kann. Diese Erweiterung ist standardmäßig verfügbar und erfordert keine zusätzliche Konfiguration. Damit die Dateiübermittlung erfolgreich ist, müssen Sie Schreibberechtigungen für den freigegebenen Ordner erteilen. Das Konto, das Schreibberechtigungen erfordert, kann entweder mit Anmeldeinformationen im Abonnement oder mit einem **Dateifreigabekonto** für den Berichtsserver konfiguriert sein. Weitere Informationen zum Datenfreigabekonto finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Außerdem müssen Benutzer, die auf die Berichte zugreifen wollen, über Leseberechtigungen für den freigegebenen Ordner verfügen.  

@@ -2,21 +2,21 @@
 title: Festlegen von Parametern für einen veröffentlichten Bericht - Integrierter SharePoint-Modus | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 76801b634d9f8de77e8ee4d7817c4f1ccc595e2e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298588"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576668"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Festlegen von Parametern für einen veröffentlichten Bericht – Integrierter SharePoint-Modus
   Bei einem parametrisierten Bericht handelt es sich um einen Bericht, der bei seiner Ausführung Eingabewerte akzeptiert, mit denen die Daten gefiltert werden. Parameter werden beim Erstellen des Berichts definiert. Abhängig von der Definition eines Berichtsparameters in der Berichtsdefinition kann er einen einzelnen Wert, mehrere Werte oder dynamische Werte akzeptieren, die als Reaktion auf eine vorherige Auswahl geändert werden (wenn Sie z. B. eine Produktkategorie auswählen, könnte die nächste Auswahl ein bestimmtes Produkt aus dieser Kategorie sein). Ein Parameter kann einen Standardwert aufweisen, der zur automatischen Ausführung einer gefilterten Version des Berichts verwendet werden kann oder möglicherweise durch einen anderen Wert ersetzt werden kann.  

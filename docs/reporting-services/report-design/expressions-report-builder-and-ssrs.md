@@ -2,18 +2,18 @@
 title: Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.date: 09/06/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775543"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579120"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden sehr häufig in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichten mit Seitenzahlen verwendet, um Daten abzurufen, zu berechnen, anzuzeigen, zu gruppieren, zu sortieren, zu filtern, zu parametrisieren oder zu formatieren. 

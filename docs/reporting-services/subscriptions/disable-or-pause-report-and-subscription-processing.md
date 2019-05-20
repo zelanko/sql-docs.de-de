@@ -2,7 +2,7 @@
 title: Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung | Microsoft-Dokumentation
 ms.date: 09/29/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405897"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581062"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung
   Es gibt verschiedene Methoden zum Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Die in diesem Thema beschriebenen Ansätze reichen vom Deaktivieren eines Abonnements bis hin zum Unterbrechen der Datenquellenverbindung. Nicht alle Ansätze sind in beiden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servermodi möglich. In den folgenden Tabellen werden die Methoden und unterstützten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servermodi zusammengefasst:  
@@ -162,7 +162,7 @@ ForEach ($subscription in $subscriptions)
   
  Eine entfernte Übermittlungserweiterung ist im Berichts-Manager oder auf einer SharePoint-Website nicht mehr verfügbar. Das Entfernen einer Übermittlungserweiterung kann inaktive Abonnements zur Folge haben. Stellen Sie vor dem Entfernen einer Erweiterung sicher, dass Sie die Abonnements löschen oder sie so konfigurieren, dass sie eine andere Übermittlungserweiterung verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Konfigurieren des Berichts-Managers &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
