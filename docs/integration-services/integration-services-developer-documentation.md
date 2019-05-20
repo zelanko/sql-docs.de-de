@@ -19,14 +19,18 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 181ea0007d2a61ba3705d3d318bda3b0da62fe77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280744"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723664"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services-Entwicklerdokumentation
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst ein völlig neu konzipiertes Objektmodell mit vielen verbesserten Funktionen, um das Erweitern und Programmieren von Paketen einfacher, flexibler und leistungsstärker zu gestalten. Entwickler haben die Möglichkeit, fast jeden Aspekt von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen zu erweitern und zu programmieren.  
   
  Als [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Entwickler gibt es zwei grundlegende Ansätze, die Sie bei der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Programmierung verfolgen können:  

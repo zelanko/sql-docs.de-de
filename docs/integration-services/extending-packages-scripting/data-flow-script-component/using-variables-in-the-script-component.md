@@ -13,14 +13,18 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278059"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724171"
 ---
 # <a name="using-variables-in-the-script-component"></a>Verwenden von Variablen in der Skriptkomponente
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Variablen speichern Werte, die von einem Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  Sie können vorhandene Variablen für schreibgeschützten oder Lese-/Schreibzugriff mittels eines benutzerdefinierten Skripts zur Verfügung stellen, indem Sie kommagetrennte Listen von Variablen in die Felder **ReadOnlyVariables** und **ReadWriteVariables** auf der Seite **Skript** des **Transformations-Editors für Skripterstellung** eingeben. Beachten Sie, dass bei Variablennamen nach Groß-/Kleinschreibung unterschieden wird. Mithilfe der **Value**-Eigenschaft erhalten Sie Lese- und Schreibzugriff auf einzelne Variablen. Die Skriptkomponente führt erforderliche Sperrungen im Hintergrund aus, da das Skript die Variablen zur Laufzeit verarbeitet.  

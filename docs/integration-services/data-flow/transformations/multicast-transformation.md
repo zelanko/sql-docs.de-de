@@ -19,14 +19,18 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ec8eb1970bc1c6ab3933c4cd2b43e810e31b91e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d81de36b6d0e8df65e1b744b284d9c96dec5d9d0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281454"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725954"
 ---
 # <a name="multicast-transformation"></a>Transformation für Multicast
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Multicasttransformation verteilt ihre Eingabe an mindestens eine Ausgabe. Diese Transformation ist mit der Transformation für bedingtes Teilen vergleichbar. Beide Transformationen leiten eine Ausgabe an mehrere Ausgaben weiter. Der Unterschied zwischen den beiden Transformationen besteht darin, dass die Multicasttransformation jede Zeile an jede Ausgabe weiterleitet, während die Transformation für bedingtes Teilen eine Zeile an eine einzelne Ausgabe weiterleitet. Weitere Informationen finden Sie unter [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
  Zum Konfigurieren der Multicasttransformation fügen Sie Ausgaben hinzu.  

@@ -18,14 +18,18 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d1cdd5291f7a2501852f395186f1e4b4642dafb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcc54a1f10345d342b536e049f8288f57708055c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282834"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726192"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für Data Mining-Abfragen führt Vorhersageabfragen für Data Mining-Modelle aus. Diese Transformation enthält einen Abfrage-Generator zum Erstellen von DMX-Abfragen (Data Mining Extensions). Mit dem Abfrage-Generator können Sie mithilfe der DMX-Sprache benutzerdefinierte Anweisungen erstellen, um Transformationseingabedaten mit einem vorhandenen Miningmodell zu vergleichen. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../../dmx/data-mining-extensions-dmx-reference.md).  
   
  Eine Transformation kann mehrere Vorhersageabfragen ausführen, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Data Mining-Abfragetools](../../../analysis-services/data-mining/data-mining-query-tools.md).  

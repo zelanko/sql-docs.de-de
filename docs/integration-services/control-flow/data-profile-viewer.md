@@ -16,14 +16,18 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab05ec317c7c2b653dd965f1420e4097f84e3a51
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272369"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727809"
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das Anzeigen und Analysieren der Datenprofile ist der nächste Schritt bei der Datenprofilerstellung. Sie können diese Profile anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben. Weitere Informationen zum Verwenden und Einrichten und Ausführen der Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 > [!IMPORTANT]  

@@ -13,14 +13,18 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87dd03cb63da117f3d754cdc9692310e9633e70d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290736"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727631"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop-Dateisystemtask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Hadoop-Dateisystemtask ermöglicht einem SSIS-Paket das Kopieren von Dateien aus einem, in ein oder innerhalb eines Hadoop-Clusters.  
   
  Zum Hinzufügen eines Hadoop-Dateisystemtasks ziehen Sie diesen auf den Designer. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Hadoop-Dialogfeld **Editor für den Task „Dateisystem“** zu öffnen.  

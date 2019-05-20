@@ -17,14 +17,18 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f5b93a38b461cb56348902beef37ef696d3f0723
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290346"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725302"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  
   
  Ausdrücke basieren auf einer Ausdruckssprache und der Ausdrucksauswertung. Die Ausdrucksauswertung analysiert Ausdrücke und ermittelt, ob sich Ausdrücke an die Regeln der Ausdruckssprache halten. Weitere Informationen zur Ausdruckssyntax und zu unterstützten Literalen und Bezeichnern finden Sie in den folgenden Themen.  

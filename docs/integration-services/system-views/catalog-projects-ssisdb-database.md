@@ -11,14 +11,18 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2449f23a910e3b7db39a7190077d8a636d51bd3e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273226"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714429"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Details für alle Projekte an, die im **SSISDB** -Katalog angezeigt werden.  
@@ -29,7 +33,7 @@ ms.locfileid: "58273226"
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in dem sich das Projekt befindet.|  
 |NAME|**sysname**|Der Name des Projekts.|  
 |description|**nvarchar(1024)**|Die optionale Beschreibung des Projekts.|  
-|project_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Projekt entwickelt wurde.|  
+|project_format_version|**ssNoversion**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Projekt entwickelt wurde.|  
 |deployed_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der das Projekt installiert hat.|  
 |deployed_by_sid|**nvarchar(128)**|Der Name des Benutzers, der das Projekt installiert hat.|  
 |last_deployed_time|**datetimeoffset(7)**|Datum und Uhrzeit der Bereitstellung oder erneuten Bereitstellung des Projekts.|  

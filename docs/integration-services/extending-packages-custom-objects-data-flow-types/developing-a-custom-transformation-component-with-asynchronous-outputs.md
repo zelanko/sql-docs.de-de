@@ -24,14 +24,18 @@ ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bffb4abd200c1a67c6115f3c890192d5ee375e75
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57728316aa1a2f194fd48e681475828d4ba4a918
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273533"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724811"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie eine Komponente mit asynchronen Ausgaben dann, wenn eine Transformation keine Zeilen ausgeben kann, solange die Komponente nicht alle ihre Eingabezeilen empfangen hat, oder wenn die Transformation nicht genau eine Ausgabezeile für jede als Eingabe empfangene Zeile erstellt. Die Transformation für das Aggregieren kann z. B. erst dann eine Summe über mehrere Zeilen errechnen, wenn sie alle Zeilen gelesen hat. Dagegen können Sie jederzeit eine Komponente mit synchronen Ausgaben verwenden, wenn Sie jede Datenzeile beim Durchlaufen verändern. Sie können die Daten für jede vorhandene Zeile verändern, oder Sie können eine oder mehrere neue Spalten erstellen, wovon jede einen Wert für jede einzelne der Eingabzeilen aufweist. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Transformationskomponenten mit asynchronen Ausgaben sind eindeutig, da sie gleichzeitig als Ziel- und als Quellkomponenten fungieren. Diese Art der Komponente empfängt Zeilen von Upstreamkomponenten und fügt Zeilen hinzu, die von Downstreamkomponenten verwendet werden. Keine andere Datenflusskomponente führt beide dieser Vorgänge aus.  

@@ -13,14 +13,18 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c285b74765fea81374c8cfbb861851c35323fd68
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f61800efa790132d3d3cf28285fd7648348e5d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271775"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724767"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Erstellen eines benutzerdefinierten Verbindungs-Managers
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die durchzuführenden Schritte zum Erstellen eines benutzerdefinierten Verbindungs-Managers ähneln denen jedes anderen benutzerdefinierten Objekts für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Erstellen Sie eine neue Klasse, die von der Basisklasse erbt. Bei einem Verbindungs-Manager ist die Basisklasse <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>.  

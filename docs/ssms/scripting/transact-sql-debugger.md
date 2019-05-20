@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df887adf4109cc65af73c870ffa7f5f7bc73048b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e6999b61169c368a92f4d8f3d9776db6a60694a
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643101"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821627"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51643101"
 |Beschreibt die Verwendung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, um Code in Einzelschritten auszuführen.|[Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Beschreibt die Verwendung des Debuggers, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Daten, z. B. Parameter und Variablen, und Systeminformationen anzuzeigen.|[Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

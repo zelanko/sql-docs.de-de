@@ -26,14 +26,18 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d627540315f63e63d4f6220540222cf3f98073a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 396e9b59f41ae31b7ae2a6f091dd540fa41afdcc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281594"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725734"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  
   
  Die Verwendung von Befehlsdateien, oder die Umleitung wird vom Eingabeaufforderungs-Hilfsprogramm **dtutil** nicht unterstützt.  

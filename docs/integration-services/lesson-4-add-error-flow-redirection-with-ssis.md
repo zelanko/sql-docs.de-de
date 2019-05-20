@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275631"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721770"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Um mögliche Fehler im Transformationsprozess zu behandeln, können Sie mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf der Grundlage von Komponenten oder Spalten entscheiden, wie Daten zu handhaben sind, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die ganze fehlerverursachende Zeile umleiten oder die Komponente als fehlerhaft behandeln. Standardmäßig sind Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Die fehlerhafte Komponente verursacht wiederum einen Paketausführungsfehler, wodurch die Verarbeitung beendet wird.  
   

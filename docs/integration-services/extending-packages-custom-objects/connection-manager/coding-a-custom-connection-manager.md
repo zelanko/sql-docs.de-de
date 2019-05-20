@@ -13,14 +13,18 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282414"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724760"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codieren eines benutzerdefinierten Verbindungs-Managers
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
   
  Beispiele für benutzerdefinierte Verbindungs-Manager finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Die in diesem Thema dargestellten Codebeispiele stammen aus dem SQL Server Custom Connection Manager-Beispiel.  

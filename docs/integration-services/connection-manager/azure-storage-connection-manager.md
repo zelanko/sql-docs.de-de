@@ -14,14 +14,18 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a46945b7c7725d680fb303a451327dc2733642aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 509e51243f7de4e6871bedf18c7ce7aa84d3e8c6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277829"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728333"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der **Azure Storage-Verbindungs-Manager** ermöglicht es, eine Verbindung zwischen einem SSIS-Paket und einem Azure Storage-Konto mithilfe der Werte zu erstellen, die Sie für die folgenden Eigenschaften angeben: „Speicherkontoname“ und „Kontoschlüssel“.  
    
  Der **Azure Storage-Verbindungs-Manager** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 

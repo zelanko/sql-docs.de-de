@@ -21,14 +21,18 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271050"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726800"
 ---
 # <a name="flat-file-source"></a>Flatfilequelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Flatfilequelle liest Daten aus einer Textdatei. Die Textdatei kann in einem Format mit Trennzeichen, fester Breite oder einem gemischten Format vorliegen.  
   
 -   Beim Format mit Trennzeichen werden Spalten und Zeilen mithilfe von Spalten- und Zeilentrennzeichen definiert.  

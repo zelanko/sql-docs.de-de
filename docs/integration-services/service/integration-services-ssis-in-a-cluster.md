@@ -11,14 +11,18 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66b5b6c36b167507397a0a5b33e16dea6b6a8dd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283194"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717897"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in einem Cluster
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist Clustering nicht zu empfehlen, da es sich beim [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst nicht um einen Cluster- oder clusterfähigen Dienst handelt, der auch keine Failoverunterstützung zwischen Clusterknoten bietet. In einer Clusterumgebung sollte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deshalb auf jedem Knoten im Cluster als eigenständiger Dienst installiert und gestartet werden.  
   
  Auch wenn der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst kein Clusterdienst ist, können Sie den Dienst manuell so konfigurieren, dass er das Clusterressource ausgeführt wird, wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] separat auf den einzelnen Clusterknoten installiert haben.  

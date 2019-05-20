@@ -19,14 +19,18 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95ffb58c54bd2cf23a4eddb11890d55f83e5bc22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 69bf16c82c3a7ee13f75de4f954f35bb11979c08
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273681"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729339"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Programmgesteuertes Verbinden von Datenflusskomponenten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie dem Datenflusstask Komponenten hinzugefügt haben, verbinden Sie diese, um eine Ausführungsstruktur zu erstellen. Diese spiegelt den Datenfluss von den Quellen über Transformationen bis hin zu den Zielen wider. Sie verwenden <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>-Objekte, um die Komponenten im Datenfluss zu verbinden.  
   
 ## <a name="creating-a-path"></a>Erstellen eines Pfads  

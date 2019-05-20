@@ -11,14 +11,18 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274552"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726832"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrahieren von Daten mithilfe der ODBC-Quelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In diesem Verfahren wird beschrieben, wie Sie Daten mithilfe einer ODBC-Quelle extrahieren. Um eine ODBC-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
   
 ### <a name="to-extract-data-using-an-odbc-source"></a>So extrahieren Sie Daten mithilfe einer ODBC-Quelle  

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b1b073f9695dd6bf30a6c3d2ae75e26015fad40
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 40dbcb56406719b88324f4c0a53278f720a2cc8f
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643480"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820774"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "51643480"
  **Windows**  
  Öffnet entweder das Fenster **Breakpoint** oder das **Direktfenster** .  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

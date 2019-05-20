@@ -16,14 +16,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290616"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726670"
 ---
 # <a name="odata-source"></a>OData-Quelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen.
 
 ## <a name="supported-protocols-and-data-formats"></a>Unterstützte Protokolle und Datenformate
@@ -102,7 +106,7 @@ Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `ht
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Zum Beispiel: Employees  
+ Geben Sie einen Ressourcenpfad ein. Beispiel: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Quellen-Editor für OData (Seite 'Spalten')
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData**, um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  

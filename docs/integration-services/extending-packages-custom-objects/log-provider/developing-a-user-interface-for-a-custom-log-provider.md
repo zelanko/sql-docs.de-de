@@ -14,14 +14,18 @@ ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8e09f31efe4f92b26bd600dbf6ab55c956faada
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea7010ed5c9a0399023c455fff2fc324297a0d0f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282964"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724522"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Viele [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Protokollanbieter verfügen über eine benutzerdefinierte Benutzeroberfläche, die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> implementiert und das Textfeld **Konfiguration** im Dialogfeld **SSIS-Protokolle konfigurieren** durch eine gefilterte Dropdownliste der verfügbaren Verbindungs-Manager ersetzt. Individuelle Benutzeroberflächen für benutzerdefinierte Protokollanbieter werden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] jedoch nicht implementiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

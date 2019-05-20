@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270462"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727448"
 ---
 # <a name="select-variables-page"></a>Variablen auswählen (Seite)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mithilfe des Dialogfelds **Variablen auswählen** können Sie bei der Konfiguration eines Skripttasks oder einer Skriptkomponente eine oder mehrere Variablen für die Eigenschaften **ReadOnlyVariables** und **ReadWriteVariables** auswählen.  
   
  Um das Dialogfeld **Variablen auswählen** zu öffnen, suchen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Skript** unter **Benutzerdefinierte Eigenschaften** entweder nach der **ReadOnlyVariables**-Eigenschaft oder nach der **ReadWriteVariables**-Eigenschaft, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die dieser Eigenschaft zugeordnet ist.  

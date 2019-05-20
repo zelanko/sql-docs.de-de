@@ -13,14 +13,18 @@ ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76135d7b32f0d75bb23abb065d133c467dc51e5a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d8ba67f262a735efbb8419a43cadd213e1845693
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280699"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728871"
 ---
-# <a name="finish"></a>Fertig stellen
+# <a name="finish"></a>Fertig stellen 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Auf der Seite **Fertig stellen** wird der Prozess des Assistenten zusammengefasst. Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen und alle Tabellen zu generieren, die Sie im Assistenten zum Erstellen von CDC-Instanzen definiert haben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

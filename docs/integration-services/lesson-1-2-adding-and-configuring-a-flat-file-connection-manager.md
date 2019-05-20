@@ -11,14 +11,18 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79540566b777ecaea55f75223404eac2292cf875
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289716"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723431"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lektion 1.2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
   

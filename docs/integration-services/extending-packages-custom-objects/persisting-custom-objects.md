@@ -13,14 +13,18 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281060"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724470"
 ---
 # <a name="persisting-custom-objects"></a>Beibehalten von benutzerdefinierten Objekten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie müssen keine benutzerdefinierte Persistenz für die von Ihnen erstellten benutzerdefinierten Objekte einfügen, solange ihre Eigenschaften nur einfache Datentypen wie **integer** und **string** verwenden. Die Standardimplementierung der Persistenz speichert die Metadaten Ihres Objekts zusammen mit den Werten aller Eigenschaften.  
   
  Falls Ihr Objekt jedoch Eigenschaften hat, die komplexe Datentypen verwenden, oder wenn Sie benutzerdefinierte Verarbeitung beim Laden und Speichern von Eigenschaftswerten durchführen möchten, können Sie die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle und ihre Methoden <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> und <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> implementieren. In diesen Methoden laden Sie aus der XML-Definition des Pakets (oder speichern darin) ein XML-Fragment, das die Eigenschaften des Objekts und ihre aktuellen Werte enthält. Das Format dieses XML-Fragments wird nicht definiert; es muss nur wohlgeformtes XML sein.  

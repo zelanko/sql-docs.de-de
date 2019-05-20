@@ -17,14 +17,18 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c147c5fc44f8dcb96679ecc83d3b88fd474830a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 27993a5f420588b7bb542f6875488c1624d26e71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289856"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727583"
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Bei Containern handelt es sich um Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , die für Pakete, Dienste sowie Tasks eine Struktur bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  
   
  Container werden von Paketen für folgende Zwecke verwendet:  

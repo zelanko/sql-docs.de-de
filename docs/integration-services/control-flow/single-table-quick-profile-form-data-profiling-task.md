@@ -15,14 +15,18 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74bfa46a09968549ef8b11dd21230f8da2e7714f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d04e4be41f72d244ec5cd0c7d2a04e468f871181
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274122"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727430"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Schnellprofilformular für eine einzelne Tabelle (Datenprofilerstellungs-Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das **Schnellprofilformular für eine einzelne Tabelle** , um den Datenprofilerstellungs-Task schnell mithilfe der Standardeinstellungen so zu konfigurieren, dass er ein Profil für eine einzelne Tabelle oder Sicht erstellt.  
   
  Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Weitere Informationen zum Verwenden des Datenprofil-Viewers zum Analysieren der Ausgabe des Datenprofilerstellungs-Tasks finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  

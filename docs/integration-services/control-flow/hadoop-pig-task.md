@@ -13,14 +13,18 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271720"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727600"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig-Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mithilfe eines Hadoop Pig-Tasks können Sie ein Pig-Skript in einem Hadoop-Cluster ausführen.  
   
  Zum Hinzufügen eines Hadoop Pig-Tasks ziehen Sie diesen auf den Designer. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Hadoop-Dialogfeld **Editor für den Pig-Task** zu öffnen.  

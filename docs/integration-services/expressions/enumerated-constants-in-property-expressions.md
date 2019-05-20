@@ -18,14 +18,18 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 640127ea0755c12a0e5746e0810017af504028d6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279132"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725483"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Eigenschaftsausdrücke Werte aus einer Liste von Enumeratorelementen enthalten, müssen die Ausdrücke den numerischen Wert des Enumeratorelements anstelle des Anzeigenamens des Elements verwenden. Wenn z. B. ein Ausdruck die **LoggingMode** -Eigenschaft festlegt, müssen Sie den numerischen Wert 2 anstelle des Anzeigenamens Disabled verwenden.  
   
  In diesem Thema werden nur die entsprechenden numerischen Werte für Anzeigenamen von Enumeratoren aufgelistet, deren Elemente häufig in Eigenschaftsausdrücken verwendet werden. Das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält viele zusätzliche Enumeratoren, die Sie beim Programmieren des Objektmodells verwenden können, um Pakete programmgesteuert zu erstellen oder um benutzerdefinierte Paketelemente, wie z. B. Tasks und Datenflusskomponenten, zu programmieren.  

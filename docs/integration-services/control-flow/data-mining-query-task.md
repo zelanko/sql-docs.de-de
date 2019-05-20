@@ -19,14 +19,18 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f759c8ee2b21d22e49bcc402baf16b1fe1534f87
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281964"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727833"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Tasks bereit, die andere Business Intelligence-Vorgänge ausführen, z.B. das Ausführen von DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und das Verarbeiten analytischer Objekte.  

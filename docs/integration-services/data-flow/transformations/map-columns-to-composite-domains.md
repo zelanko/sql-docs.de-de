@@ -11,14 +11,18 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e799ce450bfca9301218fe1b2c29aaf9a49562d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d2342216a550b285454417be36da9e7f15b661af
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270794"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725956"
 ---
 # <a name="map-columns-to-composite-domains"></a>Zuordnen von Spalten zu Verbunddomänen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Eine Verbunddomäne besteht aus mindestens zwei einzelnen Domänen. Sie können der Domäne mehrere Spalten oder eine einzelne Spalte mit durch Trennzeichen getrennten Werten zuordnen.  
   
  Bei Verwendung mehrerer Spalten müssen Sie jeder einzelnen Domäne in der Verbunddomäne eine Spalte zuordnen, um die Verbunddomänenregeln auf die Datenbereinigung anzuwenden. Sie wählen die einzelnen, in der Verbunddomäne enthaltenen Domänen im Data Quality-Client aus. Weitere Informationen finden Sie unter [Erstellen einer Verbunddomäne](../../../data-quality-services/create-a-composite-domain.md).  

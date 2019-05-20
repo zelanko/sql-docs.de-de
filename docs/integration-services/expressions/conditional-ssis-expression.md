@@ -14,14 +14,18 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7b89ac833f428a098671cbf5eceaab0b338e2e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272099"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725542"
 ---
 # <a name="--conditional-ssis-expression"></a>? decodiert werden: (Bedingt) (SSIS-Ausdruck)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Gibt einen von zwei Ausdrücken basierend auf der Auswertung eines booleschen Ausdrucks zurück. Falls der boolesche Ausdruck zu TRUE ausgewertet wird, wird der erste Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis. Falls der boolesche Ausdruck zu FALSE ausgewertet wird, wird der zweite Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis.  
   
 ## <a name="syntax"></a>Syntax  

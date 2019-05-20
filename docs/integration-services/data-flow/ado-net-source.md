@@ -22,14 +22,18 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 327585d0cdf0644a7beaddc83aba3d7451c812bd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1906329a1add4d7484011816a210ef85fa2ec5a6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290576"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727242"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
   
  Sie können mithilfe der ADO.NET-Quelle eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie unter [Azure SQL-Datenbanken – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  

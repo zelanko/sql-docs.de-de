@@ -13,14 +13,18 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c40acf6b85fd8a8a2078ea8c085ac54512361ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276849"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726774"
 ---
 # <a name="hdfs-file-source"></a>HDFS-Dateiquelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit der HDFS-Dateiquelle (HDFS File Source) kann ein SSIS-Paket Daten aus einer HDFS-Datei lesen. Die unterstützten Dateiformate sind Text und AVRO. (ORC-Quellen werden nicht unterstützt.)  
   
  Um die HDFS-Dateiquelle zu konfigurieren, ziehen Sie sie in den Datenfluss-Designer. Doppelklicken Sie darauf, um den Editor zu öffnen.  

@@ -13,14 +13,18 @@ ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91f76644545af1c53ac72d293907da7fb2be17f4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91086f31ef9461b1fd1f71bac7fff7a4491b90f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273858"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728833"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Generieren und Ausführen des ergänzenden Protokollierungsskripts
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie die Seite Set up Tables for Capturing Changes, um ein Skript für die Oracle-Quelldatenbank auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
   
  **So führen Sie die ergänzenden Protokollierungsskripts aus**  

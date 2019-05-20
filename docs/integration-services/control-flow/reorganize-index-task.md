@@ -17,14 +17,18 @@ ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48868a8bdcbe5ed1ead3d3e1bf2478a5a598488a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e32c34f8fde97d780d7c5cc743e3b78c9805271e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283184"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727512"
 ---
 # <a name="reorganize-index-task"></a>Index neu organisieren (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit dem Task Index neu organisieren werden Indizes in Tabellen und Sichten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken neu organisiert. Weitere Informationen zum Verwalten von Indizes finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  Mithilfe des Tasks Index neu organisieren kann ein Paket Indizes in einer einzelnen Datenbank oder mehreren Datenbanken neu organisieren. Falls mit dem Task nur die Indizes in einer einzelnen Datenbank neu organisiert werden, können Sie die Sichten oder Tabellen auswählen, deren Indizes neu organisiert werden. Der Task Index neu organisieren schließt außerdem eine Option zum Komprimieren von großen Objekten ein. Große Objekte (LOB; Large Object) sind Daten mit dem Datentyp **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  

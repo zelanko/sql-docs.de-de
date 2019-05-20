@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe0248f455cc95c14486373af6f9374edaebc97
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 94002a79d53c008249836541fc84f7e9ff06a6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356443"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720734"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Zugreifen auf Datenspeicher und Dateifreigaben mit Windows-Authentifizierung in SSIS-Paketen in Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Sie können die Windows-Authentifizierung verwenden, um auf Datenspeicher wie SQL Server-Instanzen, Dateifreigaben, Azure-Dateien usw. in SSIS-Paketen zuzugreifen, die in Ihrer Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF) ausgeführt werden. Ihre Datenspeicher können sich lokal befinden, auf Azure Virtual Machines (VMs) gehostet werden oder als verwaltete Dienste in Azure ausgeführt werden. Wenn sie lokal sind, müssen Sie Ihre Azure-SSIS IR mit einem virtuellen Netzwerk (VNet) verbinden, das mit Ihrem lokalen Netzwerk verbunden ist, siehe [Verknüpfen der Azure-SSIS-IR mit einem virtuellen Netzwerk](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Es gibt vier Methoden für den Zugriff auf Datenspeicher mit Windows-Authentifizierung in SSIS-Paketen, die in Ihrer Azure-SSIS IR ausgeführt werden:
 
 | Verbindungsmethode | Effektiver Geltungsbereich | Schritt zum Einrichten | Zugriffsmethode in Paketen | Anzahl der Anmeldeinformationssätze und verbundenen Ressourcen | Typ der verbundenen Ressourcen | 

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c572e5b4812d0348728da55fbdf0de8d4e699db8
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c653130f1b2d3cfee447a3c7dec5790d14c9641f
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643221"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821703"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL-Debugger – Dialogfeld „Schnellüberwachung“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51643221"
   
     -   Ausdrücke, die durch Anwenden von Operatoren auf eine oder mehrere Variablen, Parameter oder Systemfunktionen erstellt werden, z.B. "@IntegerCounter + 1" oder "FirstName + LastName"  
   
-    -   Transact-SQL-Anweisungen, die einen einzelnen Wert zurückgeben, z. B.: "SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1"  
+    -   Transact-SQL-Anweisungen, die einen einzelnen Wert zurückgeben, z. B.: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Klicken Sie auf **Neu auswerten**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51643221"
   
 -   Klicken mit der rechten Maustaste auf den Ausdruck, und wählen Sie anschließend **Wert bearbeiten**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Ausdruckliste**  
  Zeigt den aktuell ausgewählten Ausdruck an. Die Dropdownliste enthält einen Satz von Ausdrücken, deren Anzeige Sie auswählen können. In der Liste sind jene Ausdrücke aufgeführt, die im Bereich des Stapelrahmens verfügbar sind, der im Fenster **Aufrufliste** aktuell ausgewählt ist. Um einen anderen Ausdruck anzuzeigen, geben Sie entweder den Ausdruck ein, oder wählen Sie ihn aus der Liste aus. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt die folgenden Ausdrücke: Variablen, Parameter und die Systemfunktionen, deren Namen mit @@ beginnen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51643221"
  **Typ**  
  Zeigt den Datentyp des Ausdrucks an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Überwachung (Fenster)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

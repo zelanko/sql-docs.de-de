@@ -23,14 +23,18 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271942"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725900"
 ---
 # <a name="row-sampling-transformation"></a>Transformation für Zeilenstichproben
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit der Transformation für Zeilenstichproben wird eine nach dem Zufallsprinzip ausgewählte Teilmenge eines Eingabedatasets abgerufen. Sie können die genaue Größe der Ausgabestichprobe sowie einen Ausgangswert für den Zufallszahlen-Generator angeben.  
   
  Für zufällige Stichproben gibt es viele Anwendungsmöglichkeiten. Beispielsweise könnte ein Unternehmen, das 50 Mitarbeiter nach dem Zufallsprinzip für einen Lotteriepreis auswählen möchte, die Transformation für Zeilenstichproben für die Mitarbeiterdatenbank ausführen und die genaue Anzahl von Gewinnern generieren.  

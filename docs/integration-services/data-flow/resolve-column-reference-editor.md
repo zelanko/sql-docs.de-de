@@ -14,14 +14,18 @@ ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 917b611d15e0a1bad706c19f67f21ac1c2ff794e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282295"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726469"
 ---
 # <a name="resolve-column-reference-editor"></a>Editor zum Auflösen von Spaltenverweisen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn ein Eingabepfad getrennt wurde, oder nicht zugeordnete Spalten im Pfad vorhanden sind, wird neben dem entsprechenden Datenpfad ein Fehlersymbol angezeigt. Der Editor zum Auflösen von Verweisen ermöglicht, für alle Pfade in der Ausführungsstruktur nicht zugeordnete Ausgabespalten mit nicht zugeordneten Eingabespalten zu verknüpfen, und vereinfacht dadurch die Lösung von Spaltenverweisfehlern. Der Editor zum Auflösen von Verweisen markiert auch die Pfade, um zu kennzeichnen, welche Pfade aufgelöst werden.  
   
 > [!NOTE]  

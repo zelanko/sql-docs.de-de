@@ -11,14 +11,18 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f305c0439c7c7f30343f1dea42b5965716f9e927
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280354"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714784"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
+# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt Informationen für jede in einer Ausführung definierte Datenabzweigung an.  
@@ -30,7 +34,7 @@ ms.locfileid: "58280354"
 |package_path|**nvarchar(max)**|Der Paketpfad für den Datenflusstask, in dem Daten abgerufen werden.|  
 |dataflow_path_id_string|**nvarchar(4000)**|Die Identifikationszeichenfolge des Datenflusspfads.|  
 |dataflow_task_guid|**uniqueidentifier**|Eindeutiger Bezeichner (ID) des Datenflusstasks.|  
-|max_rows|**int**|Die Anzahl an zu erfassenden Zeilen. Wenn dieser Wert nicht angegeben ist, werden alle Zeilen erfasst.|  
+|max_rows|**ssNoversion**|Die Anzahl an zu erfassenden Zeilen. Wenn dieser Wert nicht angegeben ist, werden alle Zeilen erfasst.|  
 |filename|**nvarchar(4000)**|Der Name der Datendumpdatei. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  

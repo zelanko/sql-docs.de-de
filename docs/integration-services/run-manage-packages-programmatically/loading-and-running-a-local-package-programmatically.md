@@ -21,14 +21,18 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04b491ef87eae73feedcb342badf559a213b9cc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c33c81cec98bdafaa4aa31481102d95b5baae004
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274720"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719429"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines lokalen Pakets
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Sie können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete mit einer der unter [Ausführen von Paketen](../packages/run-integration-services-ssis-packages.md) beschriebenen Methoden bei Bedarf oder zu vorbestimmten Zeiten ausführen. Mit nur wenigen Codezeilen können Sie ein Paket jedoch auch mit einer benutzerdefinierten Anwendung wie einer Windows Forms-Anwendung, einer Konsolenanwendung, einem Webformular oder Webdienst von ASP.NET oder einem Windows-Dienst ausführen.  
   
  In diesem Thema wird Folgendes erläutert:  

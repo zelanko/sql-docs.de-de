@@ -11,14 +11,18 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281824"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722995"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lektion 1.7: Hinzufügen und Konfigurieren des OLE DB-Ziels
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Von Ihrem Paket können jetzt Daten aus der Flatfilequelle extrahiert und in ein Format transformiert werden, das mit dem Ziel kompatibel ist. Die nächste Aufgabe besteht darin, die transformierten Daten in das Ziel zu laden. Fügen Sie ein OLE DB-Ziel zum Datenfluss hinzu, um die Daten zu laden. Das OLE DB-Ziel kann eine Datenbanktabelle, eine Ansicht oder einen SQL-Befehl verwenden, um Daten in verschiedene OLE DB-kompatible Datenbanken zu laden.  
   

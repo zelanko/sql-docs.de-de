@@ -15,14 +15,18 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 776a26444181ce722651952c45ea0b6b655a41ba
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0fed13e0b351e53e36d09eb5e2ed2e0e405c18c3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271887"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724619"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Verwenden von Datentypen im Datenfluss
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie eine benutzerdefinierte Datenflusskomponente in Integration Services entwickeln, arbeiten Sie ständig mit Datentypen, kopieren Daten in und aus Datenflusspuffern und transformieren Werte. Mithilfe der Informationen in diesem Thema können Sie die geeigneten [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen und die richtigen Verwendungsmethoden auswählen.  
   
 ## <a name="inserting-data-into-the-data-flow"></a>Einfügen von Daten in den Datenfluss  

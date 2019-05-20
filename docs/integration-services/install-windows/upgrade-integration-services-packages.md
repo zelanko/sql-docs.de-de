@@ -14,14 +14,18 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 02ac3c6522dd97cf0ac2e752894f0c2ba1fc91c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209949"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805384"
 ---
 # <a name="upgrade-integration-services-packages"></a>Aktualisieren von Integration Services-Paketen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] auf die aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren, werden die vorhandenen [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] -Pakete nicht automatisch auf das Paketformat aktualisiert, das von der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Version verwendet wird. Sie müssen eine Upgrademethode auswählen und die Pakete manuell aktualisieren.  
   
  Informationen zum Durchführen eines Upgrades für Pakete beim Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).

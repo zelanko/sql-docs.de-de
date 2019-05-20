@@ -22,14 +22,18 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282364"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727571"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
   
  Mit dem Task Nachrichtenwarteschlange können Sie Vorgänge im gesamten Unternehmen koordinieren. Nachrichten können in eine Warteschlange eingereiht und später übermittelt werden, falls das Ziel nicht verfügbar oder ausgelastet ist. Beispielsweise können mit diesem Task Nachrichten für den Offlinelaptopcomputer von Vertriebsmitarbeitern, die ihre Nachrichten beim Herstellen einer Verbindung mit dem Netzwerk erhalten, einer Warteschlange hinzugefügt werden. Der Task Nachrichtenwarteschlange kann für folgende Zwecke verwendet werden:  

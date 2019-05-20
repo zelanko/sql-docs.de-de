@@ -13,14 +13,18 @@ ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c14c572d68ee24a0f9239e5ef0b2c7b7b11424
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c2e7ef3c3e4a6c61fe3250ec8d9d267503d9ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269982"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727493"
 ---
 # <a name="select-objects-to-transfer"></a>Objekte auswählen (Übertragungsdialogfeld)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie dieses Dialogfeld, um die mithilfe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Übertragungstasks von einer Instanz von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in eine andere zu übertragenden Objekte auszuwählen.  
   
  Um anzugeben, dass alle Objekte übertragen werden sollen, aktivieren Sie das Kontrollkästchen in der Titelzeile des Objektrasters.  

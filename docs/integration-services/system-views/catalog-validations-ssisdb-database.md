@@ -11,14 +11,18 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c57087e46ec596ae002ef00b802b62b97ee65e0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c2bf8fe0f0cefb0557fb17160bcfffab957dda1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280534"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714131"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB-Datenbank)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Details aller Projekt- und Paketüberprüfungen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
@@ -39,10 +43,10 @@ ms.locfileid: "58280534"
 |object_id|**bigint**|Die ID des von dem Vorgang betroffenen Objekts.|  
 |start_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem der Vorgang begonnen wurde.|  
 |end_time|**datetimeoffsset(7)**|Der Zeitpunkt, zu dem der Vorgang beendet wurde.|  
-|status|**int**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
+|status|**ssNoversion**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
 |caller_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, wenn für die Anmeldung Windows-Authentifizierung verwendet wurde.|  
 |caller_name|**nvarchar(128)**|Der Name des Kontos, das den Vorgang ausgeführt hat.|  
-|process_id|**int**|Ggf. die Prozess-ID des externen Prozesses.|  
+|process_id|**ssNoversion**|Ggf. die Prozess-ID des externen Prozesses.|  
 |stopped_by_sid|**varbinary(85)**|Die SID des Benutzers, der den Vorgang beendet hat.|  
 |stopped_by_name|**nvarchar(128)**|Der Name des Benutzers, der den Vorgang beendet hat.|  
 |server_name|**nvarchar(128)**|Die Informationen zu Windows Server und zu Instanzen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

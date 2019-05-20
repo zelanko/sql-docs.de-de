@@ -18,14 +18,18 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ef0312076baa49f264baba5fbd3eaf24bce8a47
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725872"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
   
 > [!IMPORTANT]  

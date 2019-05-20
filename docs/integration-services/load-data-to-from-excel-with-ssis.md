@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fe8e30ec548703a8210680bca10f75304cbc3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282604"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720482"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dieser Artikel beschreibt die Verbindungsinformationen, die Sie angeben müssen, und die zu konfigurierenden Einstellungen, um Daten von Excel zu importieren oder Daten mit SQL Server Integration Services (SSIS) nach Excel zu exportieren.
 
@@ -60,7 +64,7 @@ Laden Sie die neueste Version der Konnektivitätskomponenten für Excel hier her
 
 -   Wenn der Computer bereits über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Versionen der Komponenten installieren. Sie müssen auch sicherstellen, dass das SSIS-Paket im 32-Bit-Modus ausgeführt wird, oder führen Sie die 32-Bit-Version des Import/Export-Assistenten aus.
 
--   Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Zum Beispiel:
+-   Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Beispiel:
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

@@ -14,14 +14,18 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cda25c052e24a8520bd0312993552d7eaf5605f4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86fdc72c811fd82140e9414a3b425a6d8ca6dcb9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289686"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724702"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Nachdem Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschrieben haben, um benutzerdefinierte Funktionen bereitzustellen, möchten Sie vielleicht eine benutzerdefinierte Oberfläche für den Verbindungs-Manager erstellen. Wenn Sie keine individuelle Benutzeroberfläche erstellen, können die Benutzer den Verbindungs-Manager nur über das Eigenschaftenfenster konfigurieren.  
   
  In einem individuellen Benutzeroberflächenprojekt oder einer entsprechenden Assembly gibt es im Allgemeinen zwei Klassen: eine Klasse, die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> implementiert, und das Windows Form, in dem diese angezeigt wird, um Informationen vom Benutzer zu erfassen.  

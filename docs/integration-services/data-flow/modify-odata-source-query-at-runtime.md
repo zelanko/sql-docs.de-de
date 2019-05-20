@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275427"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726688"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Bereitstellen einer OData-Quellabfrage zur Laufzeit
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen *Ausdruck* hinzufügen.  
   
  Die zurückgegebenen Spalten müssen die gleichen Spalten sein, die zur Entwurfszeit zurückgegeben wurden; andernfalls erhalten Sie eine Fehlermeldung, wenn das Paket ausgeführt wird. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt über die Benutzeroberfläche der Quellkomponente zu deaktivieren.  

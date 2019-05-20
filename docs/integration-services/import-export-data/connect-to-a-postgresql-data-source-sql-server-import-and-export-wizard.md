@@ -10,14 +10,18 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f895175a3ee4798643c2841399d2ed2ea9a89c27
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221994"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723979"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer PostgreSQL-Datenquelle (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **PostgreSQL**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. 
 
 > [!IMPORTANT]

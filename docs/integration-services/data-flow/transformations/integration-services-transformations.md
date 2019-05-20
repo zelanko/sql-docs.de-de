@@ -22,14 +22,18 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16df5bb208136b09c76d461fe7f603a06b66e567
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: df6bcf51ca8be47ffa4d6b7a56bc67bd0ce15d1b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289726"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726030"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
   
 ## <a name="business-intelligence-transformations"></a>Business Intelligence-Transformationen  

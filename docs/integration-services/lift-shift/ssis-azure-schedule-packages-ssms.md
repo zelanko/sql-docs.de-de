@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786238"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720724"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen mit SSMS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Sie können SSMS (SQL Server Management Studio) zum Planen von SSIS-Paketen verwenden, die in Azure SQL-Datenbank bereitgestellt sind. Lokale SQL Server-Instanzen und verwaltete SQL-Datenbank-Instanzen verfügen über den SQL Server-Agent bzw. den Agent für verwaltete Instanzen als erstklassigen SSIS-Auftragsplaner. SQL-Datenbank hat dagegen keinen integrierten erstklassigen SSIS-Auftragsplaner. Das in diesem Artikel beschriebene SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden.
 

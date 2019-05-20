@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282384"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724491"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Runtime-Engine ermöglicht das Anhalten der Ausführung von Paketen, Tasks und anderen Arten von Containern mithilfe von Breakpoints. Mit Breakpoints können Sie Überprüfungen durchführen und Fehler beheben, die verhindern, dass die Anwendung oder die Tasks korrekt ausgeführt werden. Die Breakpointarchitektur ermöglicht es dem Client, den Laufzeitwert von Objekten im Paket an definierten Ausführungpunkten auszuwerten, während die Verarbeitung des Tasks angehalten ist.  
   
  Entwickler benutzerdefinierter Tasks können mit dieser Architektur über die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle und ihre übergeordnete Schnittstelle, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>, benutzerdefinierte Breakpointziele erstellen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle definiert die Interaktion zwischen der Runtime-Engine und dem Task zur Erstellung und Verwaltung benutzerdefinierter Breakpointorte oder -ziele. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstelle bietet Methoden und Eigenschaften, die von der Runtime-Engine aufgerufen werden, um den Task anzuhalten oder seine Ausführung fortzusetzen.  

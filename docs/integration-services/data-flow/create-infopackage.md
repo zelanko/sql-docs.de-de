@@ -11,14 +11,18 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eced99b566e94b6b4010b209e942e2518e33df1d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ec8b4ee24e4217492c34319f94976aed44550037
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274838"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727080"
 ---
 # <a name="create-infopackage"></a>InfoPackage erstellen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **InfoPackage erstellen** , um ein neues InfoPackage im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoPackage erstellen** auf der Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

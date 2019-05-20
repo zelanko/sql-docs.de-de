@@ -12,14 +12,18 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 874b949e3ea793d0e891980926239b6e01e73af2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bb77f2da026e085aa14260c06648dd93f8b161c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279854"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723783"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Wenn Sie angegeben haben, dass Sie eine Abfrage zum Auswählen der zu kopierenden Daten bereitstellen möchten, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Quellabfrage angeben**an. Auf dieser Seite schreiben und testen Sie die SQL-Abfrage, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. Sie können außerdem den Text einer gespeicherten Abfrage einfügen oder den Abfragetext aus einer Datei laden.
 
 ## <a name="screen-shot-of-the-source-query-page"></a>Screenshot der Seite „Quellabfrage“  

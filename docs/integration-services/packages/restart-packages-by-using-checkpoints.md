@@ -15,14 +15,18 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0ad7a0d2d994b71527cede05a25935771646ce9b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 054ec6e7520cb7c3b779bb6699dad45038278f75
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289496"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719855"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können fehlerhafte Pakete an dem Punkt neu gestartet werden, an dem der Fehler aufgetreten ist. Sie brauchen also nicht noch einmal vollständig ausgeführt werden. Wenn ein Paket zum Verwenden von Prüfpunkten konfiguriert ist, werden Informationen zur Ausführung des Pakets in eine Prüfpunktdatei geschrieben. Wenn das fehlerhafte Paket erneut ausgeführt wird, wird die Prüfpunktdatei verwendet, um das Paket von dem Punkt aus, an dem der Fehler aufgetreten ist, auszuführen. Wenn das Paket erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht und beim nächsten Ausführen des Pakets neu erstellt.  
   
  Das Verwenden von Prüfpunkten in einem Paket bietet die folgenden Vorteile:  

@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271967"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727326"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
   
 -   Schreiben der von einer Webdienstmethode zurückgegebenen Werte in eine Variable. Beispielsweise können Sie die Tageshöchsttemperatur von einer Webdienstmethode abrufen und dann mit diesem Wert eine Variable aktualisieren, die in einem Ausdruck zum Festlegen eines Spaltenwertes verwendet wird.  

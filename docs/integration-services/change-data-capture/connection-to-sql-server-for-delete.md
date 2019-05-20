@@ -11,14 +11,18 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 687515d64bb4b8fd9f49ac894a944453f33defc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 997f0cf8793b0a809db39abd2b8d484529151950
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277529"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728948"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Verbindung zu SQL Server zum Löschen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn eine Anmeldung ohne Datenbankrolle, die über die Schreibberechtigung für die MSXDBCDC-Datenbank verfügt (z.B. die Rolle **db_owner**), versucht, eine Oracle CDC-Instanz zu löschen, wird das Dialogfeld „Verbindung mit SQL Server herstellen“ angezeigt.  
   
  In diesem Dialogfeld müssen Sie die Anmeldeinformationen für eine Anmeldung eingeben, die über die Schreibberechtigung für die MSXDBCDC-Datenbank verfügt, z.B. die Datenbankrolle **db_owner** zum Löschen der Oracle CDC-Instanz.  

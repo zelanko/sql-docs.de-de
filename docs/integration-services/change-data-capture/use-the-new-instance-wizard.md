@@ -11,14 +11,18 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75735a8f7bbcd442bd67b550b096732abcaf8544
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d77c5c6b1c0402a277eda9da944199b3f11301d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289906"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728462"
 ---
 # <a name="use-the-new-instance-wizard"></a>Verwenden des Assistenten für neue Instanzen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Assistent für neue Instanzen wird verwendet, um für einen CDC-Dienst eine neue Instanz zu erstellen. Sie öffnen den Assistenten zum Erstellen einer Oracle CDC-Instanz über die CDC Designer Console. Im Assistenten für neue Instanzen können Sie die folgenden Schritte ausführen.  
   
 -   [Erstellen der SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  

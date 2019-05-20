@@ -17,14 +17,18 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289396"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727537"
 ---
 # <a name="maintenance-cleanup-task"></a>Wartungscleanup (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit dem Task Wartungscleanup werden Dateien entfernt, die mit Wartungsplänen verbunden sind, einschließlich Datenbanksicherungsdateien und Berichte, die von Wartungsplänen erstellt wurden. Weitere Informationen finden Sie unter [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md) und [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Ein Paket kann mithilfe des Tasks Wartungscleanup die Sicherungsdateien oder Wartungsplanberichte auf dem angegebenen Server entfernen. Der Task Wartungscleanup schließt eine Option zum Entfernen einer bestimmten Datei bzw. einer Gruppe von Dateien eines Ordners ein. Optional können Sie die Erweiterung der zu löschenden Dateien angeben.  

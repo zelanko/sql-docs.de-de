@@ -13,14 +13,18 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276929"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729244"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Alle Prinzipale durchsuchen (Dialogfeld)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wählen Sie über das Dialogfeld **Alle Prinzipale durchsuchen** einen Datenbankprinzipal aus und ändern Sie die Berechtigungen des Prinzipals für das ausgewählte Projekt oder alle in einem ausgewählten Ordner enthaltenen Projekte.  
   
  **Was möchten Sie tun?**  

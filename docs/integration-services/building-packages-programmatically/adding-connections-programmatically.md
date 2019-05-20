@@ -25,14 +25,18 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bcc954457c38f8c9bcd8e038ce3461bb94335eb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274901"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729401"
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, bei denen Verbindungsklassen Methoden wie die **Open**- oder die **Connect**-Methode verfügbar machen, um eine physische Verbindung mit der Datenquelle herzustellen, verwaltet die Runtime-Engine alle Verbindungen für das Paket während der Ausführung.  
   
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Connections>-Klasse ist eine Auflistung der Verbindungs-Manager, die dem Paket hinzugefügt wurden und zur Laufzeit für die Verwendung zur Verfügung stehen. Sie können der Auflistung mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A>-Methode der Auflistung mehrere Verbindungs-Manager hinzufügen und eine Zeichenfolge bereitstellen, die den Typ des Verbindungs-Managers angibt. Die <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A>-Methode gibt die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Instanz zurück, die dem Paket hinzugefügt wurde.  

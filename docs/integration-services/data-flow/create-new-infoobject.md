@@ -11,14 +11,18 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d08b6058a6ef034a197cb259cc7e4d503e69ed8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290766"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727042"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **Neues InfoObject erstellen** , um ein neues InfoObject im SAP NetWeaver BW-System zu erstellen.  
   
  Sie können das Dialogfeld **InfoObject erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

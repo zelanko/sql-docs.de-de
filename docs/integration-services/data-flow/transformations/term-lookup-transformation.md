@@ -24,14 +24,18 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290306"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725793"
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
   
  Bevor die Transformation für Ausdruckssuche eine Suche ausführt, werden Wörter aus dem Text in eine Eingabespalte extrahiert. Hierbei wird die gleiche Methode wie bei der Transformation für Ausdrucksextrahierung verwendet:  

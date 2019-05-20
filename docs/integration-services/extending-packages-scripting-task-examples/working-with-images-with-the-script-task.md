@@ -24,14 +24,18 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270594"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724219"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der **System.Drawing**-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  
   
  [Beispiel 1: Konvertieren von Bildern in das JPEG-Format](#example1)  

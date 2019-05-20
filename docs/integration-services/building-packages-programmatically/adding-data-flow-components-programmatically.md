@@ -18,14 +18,18 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 399a5b83aff03813418f3c32e00dd11f518a1b51
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abbd2298f1bcd2024db50e83a77ce2f82f732e7a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280134"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729390"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Programmgesteuertes Hinzufügen von Datenflusskomponenten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Wenn Sie einen Datenfluss erstellen, beginnen Sie, indem Sie Komponenten hinzufügen. Anschließend werden diese Komponenten konfiguriert und miteinander verbunden, um den Datenfluss zur Laufzeit einzurichten. In diesem Abschnitt wird das Hinzufügen einer Komponente zum Datenflusstask, das Erstellen der Entwurfszeitinstanz der Komponente und das anschließende Konfigurieren der Komponente beschrieben. Informationen zum Verbinden von Komponenten finden Sie unter [Programmgesteuertes Verbinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-component"></a>Hinzufügen einer Komponente  

@@ -17,14 +17,18 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 911aa8f873f43245e92b4524c1633a4e55e82a72
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6977e5934178ae17ce8d4469728af211ec2ec274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277289"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727359"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
   
 ## <a name="objects-to-transfer"></a>Objekte für die Übertragung  

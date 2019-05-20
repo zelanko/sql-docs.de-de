@@ -23,14 +23,18 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4bad04ba6970b578c8dd0faa99f9860bd346408f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5db0f81b46e825201c82e0b99a15604ba1acd154
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272118"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724742"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Komponentenentwickler können für eine Komponente eine benutzerdefinierte Benutzeroberfläche bereitstellen, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird, wenn die Komponente bearbeitet wird. Bei der Implementierung einer benutzerdefinierten Benutzeroberfläche werden Ihnen Benachrichtigungen bereitgestellt, wenn die Komponente zur Datenflusstask hinzugefügt oder aus diesem gelöscht wird und wenn für die Komponente Hilfe angefordert wird.  
   
  Wenn Sie keine individuelle Benutzeroberfläche für Ihre Komponente bereitstellen, können die Benutzer die Komponente und ihre benutzerdefinieren Eigenschaften auch mithilfe des erweiterten Editors konfigurieren. Sie können sicherstellen, dass der erweiterte Editor es Benutzern ermöglicht, mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>- und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>-Eigenschaften von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> benutzerdefinierte Eigenschaftswerte ggf. entsprechend zu bearbeiten. Weitere Informationen finden Sie in [Entwurfszeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md) unter „Erstellen von benutzerdefinierten Eigenschaften“.  

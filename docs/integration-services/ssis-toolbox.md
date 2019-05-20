@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289636"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717277"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Alle auf dem lokalen Computer installierten Komponenten werden automatisch in der **SSIS-Toolbox** angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  
  
  Wenn Sie ein neues SSIS-Projekt erstellen oder ein vorhandenes Projekt öffnen, wird die **SSIS-Toolbox** automatisch angezeigt. Sie können die Toolbox auch öffnen, indem Sie auf die entsprechende Schaltfläche oben rechts auf der Paketentwurfsoberfläche klicken, oder indem Sie auf „ANSICHT -> Andere Fenster -> SSIS-Toolbox“ klicken.

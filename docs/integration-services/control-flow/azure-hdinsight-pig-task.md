@@ -14,14 +14,18 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc61b40b94942c03037f237a0fe23e0b54063af1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b07d792d2b73b6fd400835bbfe656bb02db8e18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272419"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727952"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig-Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Verwenden Sie den **Azure HDInsight Pig-Task** zum Ausführen eines Pig-Skripts auf einem Azure HDInsight-Cluster.
      
 Um einen **Azure HDInsight-Pig-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight-Pig-Task-Editor** anzuzeigen.  

@@ -11,14 +11,18 @@ ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273242"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713750"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generieren von Dumpdateien für die Paketausführung
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Die Informationen in diesen Dateien können Ihnen bei der Behebung von Problemen bei der Paketausführung helfen.  
   
 > **HINWEIS!** Debugdumpdateien können vertrauliche Informationen enthalten. Zum Schutz vertraulicher Informationen können Sie eine Zugriffssteuerungsliste verwenden, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services senden, empfehlen wir, sensible oder vertrauliche Informationen zu entfernen.  

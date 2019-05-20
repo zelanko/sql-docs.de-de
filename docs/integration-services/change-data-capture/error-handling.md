@@ -11,14 +11,18 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c957089cf73ba9992c04d56162b1a0cb9901f29
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280004"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728862"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
   
  Eine CDC-Instanz verwaltet ihren Status in einer Systemtabelle mit dem Namen **cdc.xdbcdc_state**. Diese Tabelle kann jederzeit abgefragt werden, um den Status der CDC-Instanz zu ermitteln. Weitere Informationen zur Tabelle „cdc.xdbcdc_state“ finden Sie unter [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  

@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282664"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726381"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Festlegen der Eigenschaften einer Datenflusskomponente
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die Eigenschaften von Datenflusskomponenten, z. B. Quellen, Ziele und Transformationen, können Sie mithilfe eine der folgenden Funktionen festlegen:  
   
 -   Die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Komponenten-Editoren. Diese Editoren schließen nur die benutzerdefinierten Eigenschaften jeder Datenflusskomponente ein.  
@@ -155,7 +159,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |IsSorted|Boolean|Gibt an, ob die Daten in der Eingabe sortiert werden.|  
 |Name|Zeichenfolge|Der Name der Eingabe.|  
 |SourceLocale|Integer|Die Gebietsschema-ID (Locale ID, LCID) der Eingabedaten.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. zugreifen. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. erforderlich. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
   
  Ziele und einige Transformationen unterstützen keine Fehlerausgaben, und die Eigenschaften ErrorRowDisposition und TruncationRowDisposition dieser Komponenten sind schreibgeschützt.  
   

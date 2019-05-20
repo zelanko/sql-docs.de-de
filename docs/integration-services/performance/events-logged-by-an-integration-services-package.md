@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281534"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719623"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Durch ein Integration Services-Paket protokollierte Ereignisse
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket protokolliert verschiedene Ereignismeldungen in das Windows-Anwendungsereignisprotokoll. Ein Paket protokolliert diese Meldungen, wenn das Paket startet, wenn das Paket anhält und wenn bestimmte Probleme auftreten.  
   
  Dieses Thema enthält Informationen über die allgemeinen Ereignismeldungen, die von einem Paket im Anwendungsereignisprotokoll protokolliert werden. Standardmäßig protokolliert ein Paket einige dieser Meldungen, auch wenn Sie die Protokollfunktion für das Paket nicht aktiviert haben. Andere Meldungen werden hingegen vom Paket nur protokolliert, wenn Sie die Protokollfunktion für das Paket aktiviert haben. Unabhängig davon, ob das Paket diese Meldungen standardmäßig oder aufgrund der aktivierten Protokollfunktion protokolliert, ist die Ereignisquelle für die Meldungen SQLISPackage.  

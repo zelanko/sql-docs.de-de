@@ -19,14 +19,18 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c1b29acddc7dc110d66e59f7829c822f10e23ac5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280554"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727516"
 ---
 # <a name="script-task"></a>Skripttask
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
   
  Der Skripttask kann für folgende Zwecke verwendet werden:  

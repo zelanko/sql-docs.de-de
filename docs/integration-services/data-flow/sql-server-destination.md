@@ -22,14 +22,18 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290586"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726340"
 ---
 # <a name="sql-server-destination"></a>SQL Server-Ziel
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das SQL Server-Ziel stellt eine Verbindung mit einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank her und kopiert Daten per Massenladen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen und -Sichten. Sie können das SQL Server-Ziel nicht in Paketen verwenden, die auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf einem Remoteserver zugreifen. Die Pakete sollten stattdessen ein OLE DB-Ziel verwenden. Weitere Informationen finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

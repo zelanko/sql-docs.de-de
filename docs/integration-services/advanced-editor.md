@@ -17,14 +17,18 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276501"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729424"
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **Erweiterter Editor** , um Eigenschaften für das ausgewählte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekt zu konfigurieren.  
   
  **Erweiterter Editor** ist für die meisten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte verfügbar, die konfigurierbare Eigenschaften aufweisen. Es ist der einzige verfügbare Editor für jene Objekte, die keine benutzerdefinierte Benutzeroberfläche bereitstellen.  

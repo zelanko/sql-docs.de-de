@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283024"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713604"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Den Unterschied zwischen einer synchronen und asynchronen Transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] versteht man am besten, wenn man die Grundzüge einer synchronen Transformation kennt. Wenn eine synchrone Transformation Ihre Anforderungen nicht erfüllt, könnte Ihr Design eine asynchrone Transformation erfordern.  
   
 ## <a name="synchronous-transformations"></a>Synchrone Transformationen  
@@ -42,7 +46,7 @@ ms.locfileid: "58283024"
   
 -   Es gibt keine 1:1-Entsprechung zwischen Eingabezeilen und Ausgabezeilen. Ein Beispiel ist die Transformation für das Aggregieren, bei der die Komponente eine Zeile zur Ausgabe hinzufügen muss, um die berechneten Aggregatwerte aufzunehmen.  
   
- Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur **SynchronousInputID**-Eigenschaft der Ausgaben der Komponente zuweisen. zugreifen. Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
+ Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur **SynchronousInputID**-Eigenschaft der Ausgaben der Komponente zuweisen. erforderlich. Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
   
 > [!NOTE]  
 >  Da eine Quellkomponente auch jede Zeile, die aus der Datenquelle gelesen wird, explizit ihren Ausgabepuffern hinzufügen muss, ähnelt eine Quelle einer Transformation mit asynchronen Ausgaben.  

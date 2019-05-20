@@ -11,14 +11,18 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a69f86f7eccbf7a105fa67e3572ddc46615468f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 270f2831b814144f6e053db32509e27ffef02ba2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271249"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727046"
 ---
 # <a name="create-infosource"></a>InfoSource erstellen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Verwenden Sie das Dialogfeld **InfoSource erstellen** , um eine neue InfoSource zu erstellen. Zum Erstellen der neuen InfoSource verwenden Sie entweder das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** .  
   
  Sie können das Dialogfeld **InfoSource erstellen** über die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW**öffnen. Weitere Informationen zum SAP BW-Ziel finden Sie unter [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

@@ -14,14 +14,18 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7d0dd556e17d50e66a0d74805fd754318f5226ad
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282072"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727188"
 ---
 # <a name="azure-blob-source"></a>Azure-Blob-Quelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die **Azure-Blobquelle** ermöglicht es einem SSIS-Paket, Daten aus einem Azure-Blob zu lesen. Die folgenden Dateiformate werden unterstützt: CSV und AVRO.
   
   Um den Editor für die Azure-Blobquelle aufzurufen, ziehen Sie die **Azure-Blobquelle** auf den Datenfluss-Designer, und doppelklicken Sie darauf, um den Editor zu öffnen.  

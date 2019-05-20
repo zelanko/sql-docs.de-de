@@ -20,14 +20,18 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290626"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725713"
 ---
 # <a name="xml-source"></a>XML-Quelle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Die XML-Quelle liest eine XML-Datendatei und füllt die Spalten in der Quellausgabe mit den Daten.  
   
  Die Daten in XML-Dateien schließen häufig hierarchische Beziehungen ein. Beispielsweise kann eine XML-Datendatei Kataloge und Katalogelemente darstellen. Bevor die Daten in den Datenfluss aufgenommen werden können, muss die Beziehung der Elemente in der XML-Datendatei bestimmt werden, und für jedes Dateielement muss eine Ausgabe generiert werden.  

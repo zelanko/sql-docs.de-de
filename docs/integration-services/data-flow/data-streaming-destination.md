@@ -13,14 +13,18 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242498"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727000"
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das **Datenstreamingziel** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Zielkomponente (SSIS), die es dem **OLE DB-Anbieter für SSIS** ermöglicht, die Ausgabe eines SSIS-Pakets als ein tabellarisches Resultset zu verwenden. Sie können einen Verbindungsserver erstellen, der den OLE DB-Anbieter für SSIS verwendet und anschließend eine SQL-Abfrage auf den Verbindungsserver ausführen, um die Daten anzuzeigen, die vom SSIS-Paket zurückgegeben wurden.  
   
  Im folgenden Beispiel gibt die nachfolgende Abfrage eine Ausgabe aus dem Paket „Package.dtsx“ im Projekt SSISPackagePublishing zurück, das sich im Power BI-Ordner des SSIS-Katalogs befindet. Diese Abfrage verwendet den Verbindungsserver mit dem Namen [Standardverbindungsserver für Integration Services], der wiederum den neuen OLE DB-Anbieter für SSIS verwendet. Die Abfrage umfasst den Ordnernamen, den Projektnamen und den Paketnamen im SSIS-Katalog. Der OLE DB-Anbieter für SSIS führt das Paket aus, das Sie in der Abfrage angegeben haben, und gibt das tabellarische Resultset zurück.  

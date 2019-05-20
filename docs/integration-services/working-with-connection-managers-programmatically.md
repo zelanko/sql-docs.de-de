@@ -13,14 +13,18 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33b91b8545a4316bb8c7b1b3e78ea8e4d60ae1ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 14bce18a08fae02e7a0f8c2eed763d18b95c1a60
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282084"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713634"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Programmgesteuertes Arbeiten mit Verbindungs-Managern
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist die AcquireConnection-Methode der zugehörigen Verbindungs-Manager-Klasse die Methode, die Sie am häufigsten aufrufen, wenn Sie mit Verbindungs-Managern in verwaltetem Code arbeiten. Wenn Sie verwaltete Codes schreiben, müssen Sie zur Verwendung der Funktionalität eines Verbindungs-Managers die AcquireConnection-Methode aufrufen. Sie müssen diese Methode unabhängig davon, ob Sie einen verwalteten Code in einem Skripttask, einer Skriptkomponente, einem benutzerdefinierten Objekt oder einer benutzerdefinierten Anwendung schreiben, aufrufen.  
   
  Um die Methode AcquireConnection erfolgreich aufrufen zu können, müssen folgende Fragen geklärt sein:  

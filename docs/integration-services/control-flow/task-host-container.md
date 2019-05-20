@@ -16,14 +16,18 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca1549c1116f21cd19d0b9aa7fb6669711e7855c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 75a01f8321dcd70b0e3f08c36dfaf04b5e86bd8c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727422"
 ---
 # <a name="task-host-container"></a>Taskhostcontainer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Taskhostcontainer kapselt einen einzelnen Task. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer wird der Taskhost nicht separat konfiguriert. Er wird stattdessen konfiguriert, wenn Sie die Eigenschaften des gekapselten Tasks festlegen. Weitere Informationen zu den Tasks, die die Taskhostcontainer kapseln, finden Sie unter [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
  Dieser Container erweitert die Verwendung von Variablen und Ereignishandlern auf die Taskebene. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md) und [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  

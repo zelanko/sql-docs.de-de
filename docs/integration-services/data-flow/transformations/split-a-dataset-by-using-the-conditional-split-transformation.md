@@ -15,14 +15,18 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0aa607818b9c02bed24f54bcdf12c10aeb03bab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8c84a35ea40187cc2b40ab9e60d75bb0c9b62620
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276574"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725825"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Teilen eines Datasets mithilfe der Transformation für bedingtes Teilen
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für bedingtes Teilen hinzufügen und konfigurieren können.  
   
 ### <a name="to-conditionally-split-a-dataset"></a>So führen Sie eine bedingte Teilung eines Datasets aus  

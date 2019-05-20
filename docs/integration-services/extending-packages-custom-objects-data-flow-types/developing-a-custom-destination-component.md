@@ -21,14 +21,18 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3aa42ecf4fa8af66026301004ca0520a0d08de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cb842aa871516beef2b1484a9f76d93b7371999d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277254"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724859"
 ---
 # <a name="developing-a-custom-destination-component"></a>Entwickeln einer benutzerdefinierten Zielkomponente
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet Entwicklern die Möglichkeit, in benutzerdefinierte Zielkomponenten zu schreiben, die eine Verbindung mit einer beliebigen benutzerdefinierten Datenquelle herstellen und Daten in dieser speichern können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
   
  Zielkomponenten verfügen über eine oder mehrere Eingaben und keine Ausgabe. Zur Entwurfszeit erstellen und konfigurieren sie Verbindungen und lesen Spaltenmetadaten aus der externen Datenquelle. Während der Ausführung stellen sie eine Verbindung zu ihrer externen Datenquelle her und fügen Zeilen, die von den Komponenten upstream im Datenfluss empfangen wurden, zur externen Datenquelle hinzu. Wenn die externe Datenquelle vor der Ausführung der Komponente besteht, dann muss die Zielkomponente außerdem sicherstellen, dass die Datentypen der Spalten, die die Komponente empfängt, zu den Datentypen der Spalten der externen Datenquelle passen.  

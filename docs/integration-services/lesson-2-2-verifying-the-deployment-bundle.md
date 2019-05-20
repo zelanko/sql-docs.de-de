@@ -11,14 +11,18 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c15564e665361caef562aa9add1c28b267a8a512
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4d9db7052463dfbc15df62357d9fffba7def05ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283137"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722509"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lektion 2-2: Überprüfen des Bereitstellungspakets
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In Lektion 1 haben Sie das Deployment Tutorial-Projekt erstellt und dem Projekt Pakete und Hilfsdateien hinzugefügt; in der vorherigen Aufgabe haben Sie ein Bereitstellungsprogramm für das Projekt erstellt.  
   
 In dieser Aufgabe überprüfen Sie den Inhalt des Bereitstellungspakets. Das Bereitstellungspaket ist der Ordner, den Sie auf den Zielcomputer kopieren und zum Installieren der Pakete verwenden. Wenn Sie den Standardwert, bin\Deployment, als Speicherort des Bereitstellungshilfsprogramms verwendet haben, entspricht das Bereitstellungspaket dem Ordner „Bin\Deployment“ im Ordner „Deployment Tutorial“ des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts.  
