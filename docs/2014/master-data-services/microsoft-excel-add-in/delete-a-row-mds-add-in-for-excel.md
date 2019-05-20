@@ -21,7 +21,7 @@ ms.locfileid: "65482680"
   Löschen Sie im [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]eine Zeile mit Daten (ein Element) aus dem MDS-Repository, wenn sie den Benutzern nicht mehr zur Verfügung stehen soll.  
   
 > [!NOTE]  
->  Administratoren können gelöschte Elemente erneut aktivieren. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41](../reactivate-a-member-or-collection-master-data-services.md).  
+>  Administratoren können gelöschte Elemente erneut aktivieren. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
