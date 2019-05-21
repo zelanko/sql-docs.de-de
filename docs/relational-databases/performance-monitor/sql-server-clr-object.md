@@ -27,7 +27,7 @@ ms.locfileid: "53380871"
   
  In der folgenden Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** -Indikatoren beschrieben.  
   
-|CLR-Indikatoren|und Beschreibung|  
+|CLR-Indikatoren|Beschreibung|  
 |------------------|-----------------|  
 |**CLR Execution**|Gesamtausführungszeit in CLR ( Mikrosekunden ).|  
   

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47818599"
@@ -31,13 +31,13 @@ ms.locfileid: "47818599"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|Ruft den Katalognamen für die Tabelle mit der angegebenen Spalte ab.|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Gibt den vollqualifizierten Namen der Java-Klasse zurück, deren Instanzen erstellt werden, wenn die [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse aufgerufen wird, um einen Wert aus der Spalte abzurufen.|  

@@ -45,7 +45,7 @@ SESSIONPROPERTY (option)
  *Option*  
  Die aktuelle Optionseinstellung für diese Sitzung. Für *option* ist einer der folgenden Werte möglich.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |ANSI_NULLS|Gibt an, ob das ISO-Verhalten von gleich (=) und ungleich (<>) bei NULL-Werten Anwendung findet.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|Steuert die Speicherung von Werten in der Spalte, wenn die Werte kürzer als die definierte Spaltengröße sind oder nachfolgende Leerzeichen in Zeichen- und Binärdaten besitzen.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  

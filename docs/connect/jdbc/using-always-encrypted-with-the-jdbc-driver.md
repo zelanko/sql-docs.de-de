@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52510721"
@@ -43,7 +43,7 @@ Der Microsoft JDBC-Treiber für SQL Server kommuniziert mit einem Keystore ein H
 ### <a name="using-built-in-column-master-key-store-providers"></a>Verwenden integrierter Spaltenhauptschlüssel-Speicheranbieter
 Der Microsoft JDBC-Treiber für SQL Server enthält die folgenden integrierten Master Schlüsselspeicheranbieter. Einige dieser Anbieter registriert werden, vor den bestimmten Anbieternamen (verwendet, um den Anbieter zu suchen), und einige zusätzliche Anmeldeinformationen oder explizite Registrierung erforderlich.
 
-| Class                                                 | und Beschreibung                                        | Anbietername (Suche)  | Ist bereits registriert? |
+| Class                                                 | Beschreibung                                        | Anbietername (Suche)  | Ist bereits registriert? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Schlüsselspeicher für Azure Key Vault. | AZURE_KEY_VAULT         | nein                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | Benutzerkontensteuerung                |

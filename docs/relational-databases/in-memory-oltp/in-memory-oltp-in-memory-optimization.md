@@ -53,7 +53,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Dieser Abschnitt enthält die folgenden Themen:  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Tauchen Sie direkt in In-Memory-OLTP ein.|
 |[Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Übersicht über die Aufgaben von In-Memory-OLTP und die Szenarien, die hinsichtlich Leistung davon profitieren.|

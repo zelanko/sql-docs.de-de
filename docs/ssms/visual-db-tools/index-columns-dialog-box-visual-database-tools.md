@@ -24,7 +24,7 @@ ms.locfileid: "65096835"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie dieses Dialogfeld, um die Spalten für einen Index auszuwählen und deren Sortierreihenfolge festzulegen. Für einen Index können eine oder mehrere Spalten verwendet werden, und jede Spalte kann entweder in aufsteigender oder absteigender Reihenfolge sortiert werden. Klicken Sie im Dialogfeld **Indizes/Schlüssel** im Abschnitt **Allgemein** auf die Schaltfläche mit den drei Punkten für die Zeile **Spalten** , um auf dieses Dialogfeld zugreifen zu können.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Spaltenname**  
 Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie **<None>** aus, um diese Spalte aus dem Index zu entfernen.  
   

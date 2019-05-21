@@ -27,7 +27,7 @@ ms.locfileid: "65715260"
 
   Zeigt die Umgebungsdetails für alle Umgebungen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an. Umgebungen enthalten Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|Der eindeutige Bezeichner (ID) der Umgebung.|  
 |NAME|**sysname**|Der Name der Umgebung.|  

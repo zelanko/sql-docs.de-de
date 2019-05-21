@@ -27,7 +27,7 @@ ms.locfileid: "65715327"
 
   Zeigt die Umgebungsverweise für alle Projekte im **SSISDB** -Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|Der eindeutige Bezeichner (ID) des Verweises.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  

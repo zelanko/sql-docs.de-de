@@ -29,7 +29,7 @@ ms.locfileid: "65581589"
 ## <a name="filter-examples"></a>Beispiele für Filter  
  In der folgenden Tabelle werden Beispiele für Filtergleichungen dargestellt, die andere Datentypen und andere Operatoren verwenden. Der Bereich für den Vergleich wird von dem Berichtselement bestimmt, für das ein Filter definiert wird. Beispiel: Bei einem für ein Dataset definierten Filter bezeichnet **Erste % 10** die ersten 10 Prozent der Werte im Dataset. Im Falle eines für eine Gruppe definierten Filters bedeutet **Erste % 10** die ersten 10 Prozent der Werte in der Gruppe.  
   
-|Einfacher Ausdruck|Datentyp|Operator|value|und Beschreibung|  
+|Einfacher Ausdruck|Datentyp|Operator|Wert|Beschreibung|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Schließt Datenwerte ein, die größer als 7 sind.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Schließt die ersten 10 Datenwerte ein.|  
@@ -44,7 +44,7 @@ ms.locfileid: "65581589"
 ## <a name="examples-with-report-parameters"></a>Beispiele für Berichtsparameter  
  In der folgenden Tabelle werden Beispiele für Filterausdrücke bereitgestellt, die einen einwertigen oder mehrwertigen Parameterverweis einschließen.  
   
-|Parametertyp|(Filter-)Ausdruck|Operator|value|Datentyp|  
+|Parametertyp|(Filter-)Ausdruck|Operator|Wert|Datentyp|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |Einzelwert|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |Mehrwertig|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  

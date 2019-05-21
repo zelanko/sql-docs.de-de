@@ -26,14 +26,14 @@ Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten de
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Ausgewählter räumlicher Index**  
 Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
 **Hinzufügen**  
 Erstellt einen neuen räumlichen Index.  
   
-**Delete**  
+**Löschen**  
 Löscht den in der Liste **Ausgewählter räumlicher Index** ausgewählten räumlichen Index.  
   
 **Zellen pro Objekt**  

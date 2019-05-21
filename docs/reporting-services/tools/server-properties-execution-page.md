@@ -22,7 +22,7 @@ ms.locfileid: "65571367"
   
  Öffnen Sie diese Seite, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]starten und eine Verbindung mit einer Berichtsserverinstanz herstellen. Klicken Sie mit der rechten Maustaste auf den Namen des Berichtsservers, und wählen Sie dann **Eigenschaften**aus. Klicken Sie auf **Ausführung** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Kein Timeout für eine Berichtsausführung**  
  Stellt einem Berichtsserver eine uneingeschränkte Zeitspanne für die Berichtsverarbeitung zur Verfügung.  
   

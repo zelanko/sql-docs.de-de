@@ -27,7 +27,7 @@ ms.locfileid: "53379908"
   
  In dieser Tabelle werden die **SQLServer:Plancache**Leistungsindikatoren beschrieben.  
   
-|SQL Server, Plancache-Leistungsindikatoren|und Beschreibung|  
+|SQL Server, Plancache-Leistungsindikatoren|Beschreibung|  
 |------------------------------------|-----------------|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
 |**Basis für Cachetrefferquote**|Nur zur internen Verwendung.| 
@@ -37,7 +37,7 @@ ms.locfileid: "53379908"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Plancache-Instanz|und Beschreibung|  
+|Plancache-Instanz|Beschreibung|  
 |-------------------------|-----------------|  
 |**_Total**|Informationen zu allen Typen von Cacheinstanzen.|  
 |**Sql-Pläne**|Abfragepläne, die von einer Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, einschließlich automatisch parametrisierten Abfragen, oder durch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generiert wurden, die mit **sp_prepare** oder **sp_cursorprepare**vorbereitet wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Pläne für Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen für die spätere Wiederverwendung zwischen, wenn die identische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung später ausgeführt wird. Vom Benutzer parametrisierte Abfragen (selbst wenn sie nicht ausdrücklich vorbereitet sind) werden ebenfalls mit Prepared SQL Plans überwacht.|  

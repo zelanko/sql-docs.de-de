@@ -173,7 +173,7 @@ ms.locfileid: "65727745"
  **Speicherort**  
  Wählen Sie den Speicherort des untergeordneten Pakets aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**SQL Server**|Legt den Speicherort als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.|  
 |**File system**|Legen Sie als Speicherort das Dateisystem fest.|  

@@ -84,7 +84,7 @@ ms.locfileid: "65821767"
  **Linie**  
  Zeigt eine ganze Zahl an, die angibt, in welcher Codezeile der Fehler enthalten ist.  
   
- **Column**  
+ **Spalte**  
  Zeigt eine ganze Zahl an, die die Position des Fehlers in der Codezeile angibt.  
   
  **Projekt**  

@@ -23,7 +23,7 @@ ms.locfileid: "65095424"
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Datentypänderung erforderlich (Dialogfeld) (Visual Database Tools)
   Dieses Dialogfeld wird angezeigt, wenn Sie Datentyp, Länge, Dezimalstellen, Genauigkeit oder Sortierreihenfolge einer in eine Beziehung eingebundenen Spalte ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **ja**  
  Ändern Sie die Eigenschaft für den Datentyp der verknüpften in der Liste aufgeführten Spalten, sodass vorhandene Beziehungen beibehalten werden.  
   

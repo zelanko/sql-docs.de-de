@@ -78,7 +78,7 @@ ms.locfileid: "62834566"
   
  Verwandte Themen: [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf **Löschen**.  
   
 ##  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  

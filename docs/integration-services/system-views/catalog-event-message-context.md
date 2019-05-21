@@ -27,7 +27,7 @@ ms.locfileid: "65715123"
 
   Zeigt Informationen zu den Bedingungen an, die Ausführungsereignismeldungen für Ausführungen auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server zugeordnet sind.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|Eindeutige ID für den Fehlerkontext.|  
 |Event_message_id|BIGINT|Eindeutige ID für die Meldung, auf die sich der Kontext bezieht.|  
@@ -44,7 +44,7 @@ ms.locfileid: "65715123"
   
 ||||  
 |-|-|-|  
-|Wert des Kontexttyps|Typname|und Beschreibung|  
+|Wert des Kontexttyps|Typname|Beschreibung|  
 |10|Task|Status einer Aufgabe beim Auftreten eines Fehlers.|  
 |20|Pipeline|Fehler in einer Pipelinekomponente: Quelle, Ziel oder Transformationskomponente.|  
 |30|Sequenz|Status einer Sequenz.|  

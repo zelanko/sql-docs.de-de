@@ -190,7 +190,7 @@ ms.locfileid: "62771180"
   
 -   [Create](#BKMK_create)  
   
--   [Delete](#BKMK_delete)  
+-   [Löschen](#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  Verwenden Sie `Config` , um eine Oracle CDC Service-Konfiguration über ein Skript zu aktualisieren. Der Befehl kann verwendet werden, um nur bestimmte Teile der CDC-Dienstkonfiguration zu aktualisieren (z. B. nur die Verbindungszeichenfolge ohne Kenntnis des asymmetrischen Schlüsselkennworts). Der Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Config` angegeben.  

@@ -152,7 +152,7 @@ Wenn Sie SQL Server Management Studio verwenden, stellen Sie eine Verbindung mit
 
 Eine Erläuterung der Felder finden Sie im Folgenden:
 
-|Spaltendaten | und Beschreibung|
+|Spaltendaten | Beschreibung|
 |---------|---------|
 |availability_group_id |Die ID der Verfügbarkeitsgruppe.|
 |availability_group_name |Der Name der Verfügbarkeitsgruppe.|
@@ -167,7 +167,7 @@ Eine Erläuterung der Felder finden Sie im Folgenden:
 
 In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis auf der Verfügbarkeitsgruppe „Contoso-ag“ stattgefunden hat, die sich auf dem Replikat „SQLSERVER-1“ befindet. Der Grund dafür ist die Datenbank namens „AutoHaSample2“ mit dem Fehlertyp 2 (Herunterfahren).
 
-|Feld  | value|
+|Feld  | Wert|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

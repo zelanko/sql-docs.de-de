@@ -62,7 +62,7 @@ ms.locfileid: "65726391"
  **Ausführungsmodus**  
  Gibt die Methode zum Extrahieren von Daten aus der Quelle an.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**P - Prozesskette auslösen**|Lösen Sie eine Prozesskette aus. In diesem Fall wird der Extrahierungsprozess vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gestartet.|  
 |**W - Benachrichtigung abwarten**|Warten Sie auf die Benachrichtigung vom SAP NetWeaver BW-System, um mit dem Extrahieren von Daten zu beginnen. In diesem Fall wird der Extrahierungsprozess vom SAP NetWeaver BW-System gestartet.|  

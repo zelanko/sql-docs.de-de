@@ -38,7 +38,7 @@ ms.locfileid: "65724439"
   
  Bei der Entwicklung einer benutzerdefinierten Benutzeroberfläche für einen Task werden zwei wichtige Klassen verwendet. Diese Klassen werden in der folgenden Tabelle beschrieben.  
   
-|Class|und Beschreibung|  
+|Class|Beschreibung|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Ein Attribut, das einen verwalteten Task identifiziert und über seine Eigenschaften Informationen zur Entwurfszeit angibt, um zu kontrollieren, wie der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer das Objekt anzeigt, bzw. wie er mit ihm interagiert.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Eine vom Task verwendete Schnittstelle, um den Task seiner benutzerdefinierten Benutzeroberfläche zuzuordnen.|  
@@ -54,7 +54,7 @@ ms.locfileid: "65724439"
   
  In der folgenden Tabelle werden die Eigenschaften des <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributs beschrieben.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Zeigt den Tasknamen in der Toolbox der Ablaufsteuerung an.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Die Taskbeschreibung (geerbt von <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Diese Eigenschaft wird in QuickInfos angezeigt.|  

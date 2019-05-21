@@ -36,7 +36,7 @@ ms.locfileid: "65821477"
   
  Die folgende Tabelle enthält eine Beschreibung der Platzhalter, die unter **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|und Beschreibung|  
+|expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Ein einzelnes Zeichen|?|Entspricht einem beliebigen einzelnen Zeichen.|  
 |Eine einzelne Ziffer|#|Entspricht einer beliebigen einzelnen Ziffer. Beispiel: 7# entspricht Zahlen, die aus einer 7 bestehen, gefolgt von einer anderen Zahl, wie 71, nicht aber 17.|  

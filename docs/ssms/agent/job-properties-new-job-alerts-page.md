@@ -29,7 +29,7 @@ ms.locfileid: "65095862"
 
 Auf dieser Seite können Sie Warnungen für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und verwalten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Warnungsliste**  
 Führt die Warnungen für diesen Auftrag auf.  
   

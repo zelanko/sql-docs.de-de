@@ -35,7 +35,7 @@ ms.locfileid: "65581691"
   
  In der folgenden Tabelle sind Beispiele für diagrammspezifische Schlüsselwörter aufgelistet, die für die Eigenschaft **Benutzerdefinierter Legendentext** verwendet werden sollen. Weitere Informationen zu Schlüsselwörtern finden Sie unter [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Schlüsselwort|und Beschreibung|Beispiel für den in der Legende angezeigten Text|  
+|Schlüsselwort|Beschreibung|Beispiel für den in der Legende angezeigten Text|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Zeigt den Prozentsatz des Gesamtwerts mit einer Dezimalstelle an.|85.0%|  
 |`#VALY`|Zeigt den tatsächlichen numerischen Wert des Datenfelds an.|17000|  

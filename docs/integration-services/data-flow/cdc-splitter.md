@@ -27,7 +27,7 @@ ms.locfileid: "65727141"
 
   Der CDC-Splitter teilt einen einzelnen Fluss von Änderungszeilen aus einem CDC-Quelldatenfluss in unterschiedliche Datenflüsse für Einfüge-, Update und Löschvorgänge auf. Der Datenfluss wird basierend auf der erforderlichen Spalte `__$operation` und seinen Standardwerten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen geteilt.  
   
-|Wert des Vorgangs|Ausgabe|und Beschreibung|  
+|Wert des Vorgangs|Ausgabe|Beschreibung|  
 |------------------------|------------|-----------------|  
 |1|DELETE|Gelöschte Zeile|  
 |2|Insert|Eingefügte Zeile (nicht verfügbar bei Verwendung des CDC-Modus **Net with merge** )|  

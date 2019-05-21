@@ -72,7 +72,7 @@ ms.locfileid: "65728259"
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "65089637"
 
 Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Dienststatus**  
 Zeigt den aktuellen Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes an.  
   

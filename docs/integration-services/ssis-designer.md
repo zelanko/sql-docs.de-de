@@ -149,14 +149,14 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
 ## <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Ausführbare Datei**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   
  **Ereignishandler**  
  Wählen Sie einen Typ von Ereignishandler aus. Erstellen Sie den Ereignishandler, indem Sie Elemente aus der **Toolbox**ziehen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie einen Ereignishandler aus, und entfernen Sie ihn anschließend aus dem Paket, indem Sie auf **Löschen** klicken.  
   
  **Klicken Sie hier, um einen \<Ereignishandlername\> für die ausführbare Datei \<Name der ausführbaren Datei\> zu erstellen.**  

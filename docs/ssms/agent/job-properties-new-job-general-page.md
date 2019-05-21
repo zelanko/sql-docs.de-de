@@ -29,7 +29,7 @@ ms.locfileid: "65095803"
 
 Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften eines Agentauftrags in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Ändern Sie den Namen des Auftrags.  
   

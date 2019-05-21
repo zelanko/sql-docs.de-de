@@ -35,7 +35,7 @@ ms.locfileid: "65726381"
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Festlegen der Eigenschaften einer Datenflusskomponente mit einem Komponenten-Editor  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65726381"
   
 ## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Festlegen der Eigenschaften einer Datenflusskomponente im Eigenschaftenfenster  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65726381"
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Festlegen der Eigenschaften einer Datenflusskomponente mit dem erweiterten Editor  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -128,11 +128,11 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|Zeichenfolge|Die CLSID der Komponente.|  
 |ContactInfo|Zeichenfolge|Kontaktinformationen für den Entwickler einer Komponente.|  
-|und Beschreibung|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
+|Beschreibung|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
 |im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Identifiziert die Komponente.|  
 |IsDefaultLocale|Boolean|Gibt an, ob die Komponente das Gebietsschema des Datenflusstasks verwendet, zu dem es gehört.|  
@@ -148,9 +148,9 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der Eingaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
-|und Beschreibung|Zeichenfolge|Die Beschreibung der Eingabe.|  
+|Beschreibung|Zeichenfolge|Die Beschreibung der Eingabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |HasSideEffects|Boolean|Gibt an, ob eine Komponente aus dem Ausführungsplan des Datenflusses entfernt werden kann, wenn diese nicht an eine Downstreamkomponente angefügt ist und **RunInOptimizedMode** auf **true**gesetzt ist.|  
@@ -168,10 +168,10 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der Eingabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|und Beschreibung|Zeichenfolge|Beschreibt die Eingabespalte.|  
+|Beschreibung|Zeichenfolge|Beschreibt die Eingabespalte.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
@@ -192,10 +192,10 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der Ausgaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob eine Datenfluss-Engine die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
-|und Beschreibung|Zeichenfolge|Beschreibt die Ausgabe.|  
+|Beschreibung|Zeichenfolge|Beschreibt die Ausgabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |ExclusionGroup|Integer|Ein Wert, der eine Gruppe sich gegenseitig ausschließender Ausgaben identifiziert.|  
@@ -213,10 +213,10 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der Ausgabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|und Beschreibung|Zeichenfolge|Beschreibt die Ausgabespalte.|  
+|Beschreibung|Zeichenfolge|Beschreibt die Ausgabespalte.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**. Der Standardwert lautet **Fehler bei Komponente**.|  
 |ExternalMetadataColumnID|Integer|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
@@ -236,9 +236,9 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Eigenschaften der externen Metadatenspalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
-|und Beschreibung|Zeichenfolge|Beschreibt die externe Spalte.|  
+|Beschreibung|Zeichenfolge|Beschreibt die externe Spalte.|  
 |im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Spalte identifiziert.|  
 |Name|Zeichenfolge|Der Name der externen Spalte.|  
@@ -250,7 +250,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die Datentypeigenschaften von Ausgabespalten und externen Metadatenspalten.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Gibt die Codepage für Zeichenfolgendaten an, bei denen es sich nicht um Unicode handelt.|  
 |DataType|Ganze Zahl (Enumeration)|Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp der Spalte. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
@@ -302,7 +302,7 @@ In diesem Verfahren wird beschrieben, wie ein Ausdruck der Transformation für b
   
  Um einen Ausdruck in einer Transformation zu implementieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle einschließen. 
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   

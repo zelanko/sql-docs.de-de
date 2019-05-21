@@ -22,14 +22,14 @@ ms.locfileid: "65104493"
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
   Verwenden Sie das Dialogfeld **XML-Indizes** , um Indizes für Spalten vom Datentyp XML zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede XML-Spalte kann mehrere XML-Indizes aufweisen, aber der zuerst erstellte Index (der primäre Index) bildet die Basis für alle weiteren Indizes (die sekundären Indizes). Wenn Sie den primären XML-Index löschen, werden auch die sekundären Indizes gelöscht.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Ausgewählter XML-Index**  
  Listet vorhandene XML-Indizes auf. Wird ausgewählt, um die zugehörigen Eigenschaften im rechten Datenblatt anzuzeigen. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
  **Hinzufügen**  
  Erstellen Sie einen neuen XML-Index.  
   
- **Delete**  
+ **Löschen**  
  Löschen Sie den in der Liste **Ausgewählter XML-Index** ausgewählten XML-Index. Beim Löschen des primären XML-Indexes wird eine Meldung ausgegeben, dass dadurch auch alle sekundären Indizes gelöscht werden, und Sie können entweder den Vorgang fortsetzen oder die Aktion abbrechen.  
   
  **Kategorie Allgemein**  

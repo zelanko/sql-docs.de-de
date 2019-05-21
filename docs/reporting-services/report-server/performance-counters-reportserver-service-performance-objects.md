@@ -48,7 +48,7 @@ ms.locfileid: "65581055"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |**Aktive Verbindungen**|Die Anzahl der Verbindungen, die aktuell auf dem Server aktiv sind.|  
 |**Gesamtanzahl der empfangenen Bytes**|Die Anzahl der vom Server empfangenen Bytes. Dieser Leistungsindikator zählt die Rohbytes, die insgesamt vom Berichts-Manager und Berichtsserver empfangen wurden.|  
@@ -81,7 +81,7 @@ ms.locfileid: "65581055"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |**Auslastungsstatus des Arbeitsspeichers**||  
 |**Umfang der Arbeitsspeicherverringerung**||  

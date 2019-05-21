@@ -134,7 +134,7 @@ ms.locfileid: "65727042"
  **InfoObject-Typ**  
  Zeigt den InfoObject-Typ an. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |KYF|Kennzahlen|  

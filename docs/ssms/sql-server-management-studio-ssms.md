@@ -33,7 +33,7 @@ ms.locfileid: "65102631"
 
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
-|und Beschreibung|Komponente|  
+|Beschreibung|Komponente|  
 |---------------|---------|  
 |Die Verwendung des **Objekt-Explorers** zum Anzeigen und Verwalten aller Objekte in mindestens einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Objekt-Explorers](../ssms/object/object-explorer.md)|  
 |So wird der **Vorlagen-Explorer** zum Erstellen und Verwalten von Dateien mit Textbausteinen verwendet, die zum Beschleunigen der Entwicklung von Abfragen und Skripts verwendet werden können.|[Vorlagen-Explorer](../ssms/template/template-explorer.md)|  

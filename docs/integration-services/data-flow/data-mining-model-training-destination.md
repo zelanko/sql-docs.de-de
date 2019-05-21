@@ -57,7 +57,7 @@ ms.locfileid: "65727032"
 ## <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
   Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65727032"
 ## <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** können Sie Eingabespalten Spalten in der Miningstruktur zuordnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
   

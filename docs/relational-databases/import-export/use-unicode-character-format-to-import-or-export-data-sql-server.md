@@ -83,7 +83,7 @@ Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Si
   
 Das Unicode-Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Befehl|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Verwendet das Unicode-Zeichenformat|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  

@@ -25,7 +25,7 @@ ms.locfileid: "53380211"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Transaktionsprotokoll** beschrieben.  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |**Geschriebene Protokollbytes/s**|Die Anzahl von Bytes, die von der In-Memory-OLTP-Engine durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  
 |**Geschriebene Protokolleinträge/s**|Die Anzahl von Datensätzen, die von der In-Memory-OLTP-Engine durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  

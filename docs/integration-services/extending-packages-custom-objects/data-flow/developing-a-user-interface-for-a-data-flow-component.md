@@ -94,7 +94,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Verwenden der Dienste des SSIS-Designers  
  Der **IServiceProvider**-Parameter der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A>-Methode bietet Zugriff auf die folgenden Dienste des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers:  
   
-|Dienst|und Beschreibung|  
+|Dienst|Beschreibung|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Wird verwendet, um zu bestimmen, ob die Komponente als Teil eines Kopier-/Einfüge- oder Ausschneide-/Einfügevorgangs generiert wurde.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Wird verwendet, um auf vorhandene Verbindungen zuzugreifen oder neue Verbindungen im Paket zu erstellen.|  

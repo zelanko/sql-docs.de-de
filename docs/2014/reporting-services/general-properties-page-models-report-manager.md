@@ -49,7 +49,7 @@ ms.locfileid: "63260808"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um das Modell aus der Berichtsserver-Datenbank zu löschen. Mit dem Löschen eines Modells wird weder die abhängige freigegebene Datenquelle gelöscht, die Verbindungsinformationen bereitstellt, noch werden die Berichte gelöscht, die das Modell als Datenquelle verwenden. Berichte, die das Modell verwenden, werden jedoch nicht mehr ausgeführt, nachdem das Modell gelöscht wurde.  
   
  **Verschieben**  

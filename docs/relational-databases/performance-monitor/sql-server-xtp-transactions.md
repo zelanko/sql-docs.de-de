@@ -25,7 +25,7 @@ ms.locfileid: "53380811"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Transaktionen** beschrieben.  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |**Abbruchweitergaben/s**|Die durchschnittliche Anzahl der Transaktionen, für die pro Sekunde aufgrund eines Commitabhängigkeits-Rollbacks ein Rollback durchgeführt wurde.|  
 |**Übernommene Commitabhängigkeiten/s**|Die durchschnittliche Anzahl der Commitabhängigkeiten, die pro Sekunde von Transaktionen übernommen werden.|  

@@ -27,7 +27,7 @@ ms.locfileid: "65715230"
 
   Zeigt die Umgebungsvariablendetails für alle Umgebungen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|Der eindeutige Bezeichner (ID) der Umgebungsvariablen.|  
 |environment_id|**bigint**|Die eindeutige ID der Umgebung, der die Variable zugeordnet ist.|  

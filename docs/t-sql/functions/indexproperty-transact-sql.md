@@ -54,7 +54,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  Wenn nicht anders angegeben, wird NULL zurückgegeben, wenn *property* kein gültiger Eigenschaftsname ist, *object_ID* keine gültige Objekt-ID ist, *object_ID* ein nicht unterstützter Objekttyp für die angegebene Eigenschaft ist oder der Aufrufer nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts verfügt.  
   
-|Eigenschaft|und Beschreibung|value|  
+|Eigenschaft|Beschreibung|Wert|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Schachtelungstiefe des Indexes.|Anzahl von Indexebenen.<br /><br /> NULL = Ungültiger XML-Index oder ungültige Eingabe.|  
 |**IndexFillFactor**|Der beim Erstellen oder letzten Neuerstellen des Indexes verwendete Füllfaktor.|Füllfaktor|  

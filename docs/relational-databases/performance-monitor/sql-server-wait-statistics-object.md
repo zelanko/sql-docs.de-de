@@ -27,7 +27,7 @@ ms.locfileid: "53380631"
   
  In der folgenden Tabelle werden die im Wartestatistik-Objekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|und Beschreibung|  
+|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|Beschreibung|  
 |-----------------------------------------|-----------------|  
 |**Sperrenwartevorgänge**|Statistik für Prozesse, die auf eine Sperre warten|  
 |**Protokollpuffer-Wartevorgänge**|Statistik für Prozesse, die auf die Verfügbarkeit des Protokollpuffers warten|  
@@ -44,7 +44,7 @@ ms.locfileid: "53380631"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Durchschnittliche Zeit für den ausgewählten Wartetyp|  
 |**Kumulierte Wartezeit (ms) pro Sekunde**|Aggregierte Wartezeit für den ausgewählten Typ pro Sekunde|  

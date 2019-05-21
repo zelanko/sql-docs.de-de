@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7880e687e24defababcb94ba2ec4a813609f8eb
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47623898"
@@ -30,7 +30,7 @@ ms.locfileid: "47623898"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getArray (int)](../../../connect/jdbc/reference/getarray-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Array-Objekt ab.|  
 |[getArray (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Array-Objekt ab.|  

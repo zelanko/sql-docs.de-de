@@ -34,7 +34,7 @@ ms.locfileid: "53203739"
 |**Kategorie**|**Kritisch**|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  Diese Richtlinie überprüft den Online- oder Offlinestatus der Verfügbarkeitsgruppe. Die Richtlinie befindet sich in einem fehlerhaften Zustand, und eine Warnung wird ausgelöst, wenn die Clusterressource der Verfügbarkeitsgruppe offline ist oder wenn die Verfügbarkeitsgruppe nicht über ein primäres Replikat verfügt.  
   
  Der Zustand der Richtlinie ist fehlerfrei, wenn die Clusterressource der Verfügbarkeitsgruppe online ist und die Verfügbarkeitsgruppe über ein primäres Replikat verfügt.  

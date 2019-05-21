@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6931edc68458caf16c53b5d0671941ebd181d100
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51290652"
@@ -38,7 +38,7 @@ ms.locfileid: "51290652"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**unsignedInt**, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
@@ -64,7 +64,7 @@ ms.locfileid: "51290652"
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  Im folgenden Codebeispiel wird veranschaulicht, wie 1500 Megabytes als maximaler Speicherplatz festgelegt werden, der von einer Empfehlung zur Optimierung belegt werden kann:  
   
 ## <a name="code"></a>Code  

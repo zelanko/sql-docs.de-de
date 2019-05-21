@@ -20,7 +20,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47724570"
@@ -73,7 +73,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt=] '*Encryption_option*"  
  Gibt an, ob das Kennwort als Klartext oder als Hash des Klartextkennworts weitergegeben wird. Dabei ist zu beachten, dass keine Verschlüsselung stattfindet. Der Begriff "verschlüsseln" wird in diesem Zusammenhang aus Gründen der Abwärtskompatibilität verwendet. Wenn ein Klartextkennwort übergeben wird, geschieht dies in Form eines Hashs. Der Hash wird gespeichert. *Encryption_option* ist **varchar(20)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |NULL|Das Kennwort wird als Klartext übergeben. Dies ist die Standardeinstellung.|  
 |**skip_encryption**|Es wurde bereits ein Hashwert aus dem Kennwort erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern.|  

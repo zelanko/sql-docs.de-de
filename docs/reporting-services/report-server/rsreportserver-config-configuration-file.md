@@ -61,7 +61,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 > [!NOTE]  
 >  „Maximale ganze Zahl“ bezieht sich in diesem Thema auf den INT_MAX-Wert 2147483647.  Weitere Informationen finden Sie unter [Ganzzahlige Grenzen](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
-|Einstellung|und Beschreibung|Mode|  
+|Einstellung|Beschreibung|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Gibt die Verbindungszeichenfolge für die Verbindung zum Datenbankserver an, der die Berichtsserver-Datenbank hostet. Dieser Wert ist verschlüsselt und wird der Konfigurationsdatei beim Erstellen der Berichtsserver-Datenbank hinzugefügt. Für SharePoint werden die Informationen zur Datenbankverbindung aus der SharePoint-Konfigurationsdatenbank verwendet.|N,S|  
 |**ConnectionType**|Gibt den Anmeldeinformationstyp an, der vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet wird. Gültige Werte sind **Standard** und **Identität annehmen**. **Standard** wird angegeben, wenn der Berichtsserver zur Verwendung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder des Dienstkontos konfiguriert ist, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen. **Identität annehmen** wird angegeben, wenn der Berichtsserver ein Windows-Konto verwendet, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen.|N|  
@@ -100,7 +100,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
   
  Die letzte Spalte der Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus (N) oder für einen Berichtsserver im SharePoint-Modus (S) oder für beide gilt.  
   
-|Einstellung|und Beschreibung|Mode|  
+|Einstellung|Beschreibung|Mode|  
 |-------------|-----------------|----------|  
 |**Application**|Enthält Einstellungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen.|N|  
 |**Name**|Gibt die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen an. Gültige Werte sind ReportServerWebService oder ReportManager.|N|  
@@ -129,7 +129,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
   
  Die letzte Spalte der folgenden Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus (N) oder für einen Berichtsserver im SharePoint-Modus (S) oder für beide gilt.  
   
-|Einstellung|und Beschreibung|Mode|  
+|Einstellung|Beschreibung|Mode|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|Gibt einen oder mehrere Authentifizierungstypen an. Gültige Werte sind: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**und **Custom**.<br /><br /> Der**RSWindows** -Typ und **Custom** -Typ schließen sich gegenseitig aus.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**und **RSWindowsBasic** sind kumulativ und können zusammen verwendet werden, wie im Beispiel mit Standardwerten weiter oben in diesem Abschnitt beschrieben.<br /><br /> Die Angabe verschiedener Authentifizierungstypen ist notwendig, wenn Sie Anforderungen von einer Reihe von Clientanwendungen oder Browsern erwarten, die verschiedene Authentifizierungstypen einsetzen.<br /><br /> **RSWindowsNTLM**sollte nicht entfernt werden, da die unterstützten Browsertypen andernfalls auf einen Teilbereich eingeschränkt würden. Weitere Informationen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
 |**RSWindowsNegotiate**|Der Berichtsserver akzeptiert entweder Kerberos- oder NTLM-Sicherheitstoken. Das ist die Standardeinstellung, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird und das Dienstkonto Netzwerkdienst lautet. Diese Standardeinstellung wird nicht angegeben, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird und das Dienstkonto als Domänenbenutzerkonto konfiguriert ist.<br /><br /> Wenn ein Domänenkonto für das Report&nbsp;Server-Dienstkonto, aber kein Dienstprinzipalname für den Berichtsserver konfiguriert wird, verhindert diese Einstellung möglicherweise die Anmeldung von Benutzern auf dem Server.|N|  
@@ -149,7 +149,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
   
  Die letzte Spalte der folgenden Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus (N) oder für einen Berichtsserver im SharePoint-Modus (S) oder für beide gilt.  
   
-|Einstellung|und Beschreibung|Mode|  
+|Einstellung|Beschreibung|Mode|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|Gibt an, ob der Berichtsserver einen Satz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträge behält, der Zeitplänen und Abonnements entspricht, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Benutzern erstellt wurden. Gültige Werte sind **TRUE** (Standardwert) und **FALSE**.<br /><br /> Diese Einstellung ist betroffen, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen mit dem Facet Oberflächenkonfiguration für Reporting Services der richtlinienbasierten Verwaltung aktivieren oder deaktivieren. Weitere Informationen finden Sie unter [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
 |**IsNotificationService**|Gibt an, ob der Berichtsserver Benachrichtigungen und Übermittlungen verarbeitet. Gültige Werte sind **TRUE** (Standardwert) und **FALSE**. Wenn der Wert **False**lautet, werden Abonnements nicht übermittelt.<br /><br /> Diese Einstellung ist betroffen, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen mit dem Facet Oberflächenkonfiguration für Reporting Services der richtlinienbasierten Verwaltung aktivieren oder deaktivieren. Weitere Informationen finden Sie unter [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
@@ -175,7 +175,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
   
  Die letzte Spalte der folgenden Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus (N) oder für einen Berichtsserver im SharePoint-Modus (S) oder für beide gilt.  
   
-|Einstellung|und Beschreibung|Mode|  
+|Einstellung|Beschreibung|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Gibt die URL des Berichtsservers an, zu der das Webportal eine Verbindung herstellt. Ändern Sie diesen Wert nur, wenn Sie das Webportal konfigurieren, um eine Verbindung zu einem Berichtsserver in einer anderen Instanz oder auf einem Remotecomputer herzustellen.|N,S|  
 |**ReportBuilderTrustLevel**|Ändern Sie diesen Wert nicht; er ist nicht konfigurierbar. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und neueren Versionen wird der Berichts-Generator nur in **FullTrust**ausgeführt. Weitere Informationen zum Beenden der Modus mit teilweiser Vertrauenswürdigkeit finden Sie unter [Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
@@ -223,7 +223,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
   
  Alle Übermittlungserweiterungen weisen die Einstellungen **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**und **Configuration**auf. Diese gemeinsamen Einstellungen werden zuerst dokumentiert. Die Beschreibungen der erweiterungsspezifischen Einstellungen folgen in einer zweiten Tabelle.  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Extension Name**|Gibt einen Anzeigenamen und eine Assembly der Übermittlungserweiterung an. Ändern Sie diesen Wert nicht.|  
 |**MaxRetries**|Gibt an, wie oft ein Berichtsserver eine Übermittlung erneut versucht, wenn der erste Versuch fehlschlägt. Der Standardwert ist 3.|  
@@ -233,14 +233,14 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 ####  <a name="bkmk_fileshare_extension"></a> Konfigurationseinstellungen für die Dateifreigabe-Übermittlungerweiterung  
  Bei der Dateifreigabeübermittlung wird ein Bericht gesendet, der im Anwendungsdateiformat in einen freigegebenen Ordner im Netzwerk exportiert wurde. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Diese Einstellungen werden verwendet, um Exportformate auszuschließen, die nicht in der Dateifreigabeübermittlung verwendet werden können. Diese Formate werden in der Regel zur interaktiven Berichterstellung, Vorschau oder zum Vorladen des Berichtscaches verwendet. Sie erzeugen keine Anwendungsdateien, die ganz einfach in einer Desktopanwendung angezeigt werden können.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Konfigurationseinstellungen für Berichtsserver-E-Mail-Erweiterung  
  Berichtsserver-E-Mail verwendet ein SMTP-Netzwerkgerät, um Berichte an E-Mail-Adressen zu senden. Diese Übermittlungserweiterung muss konfiguriert werden, bevor sie verwendet werden kann. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) und [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**SMTPServer**|Gibt einen Zeichenfolgenwert für die Adresse eines SMTP-Remoteservers oder einer Weiterleitung an. Dieser Wert ist für SMTP-Remotedienste erforderlich. Dabei kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Intranet Ihres Unternehmens oder um einen vollqualifizierten Domänennamen handeln.|  
 |**SMTPServerPort**|Gibt eine ganze Zahl für den Port an, den der SMTP-Dienst zum Senden ausgehender E-Mails verwendet. Der Port 25 wird normalerweise zum Senden von E-Mail verwendet.|  
@@ -261,7 +261,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 ####  <a name="bkmk_documentlibrary_extension"></a> Konfiguration der Erweiterung für die Berichtsserver-SharePoint-Dokumentbibliothek  
  Die Berichtsserver-Dokumentbibliothek sendet einen Bericht, der in ein Anwendungsdateiformat exportiert wurde, in eine Dokumentbibliothek. Diese Übermittlungserweiterung kann nur von einem Berichtsserver verwendet werden, der für die Ausführung im integrierten SharePoint-Modus konfiguriert wurde. Weitere Informationen finden Sie unter [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md).  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|Diese Einstellungen werden verwendet, um Exportformate auszuschließen, die nicht mit der Dokumentbibliothek verwendet werden können. HTMLOWC, RGDI und NULL-Übermittlungserweiterungen werden ausgeschlossen. Diese Formate werden in der Regel zur interaktiven Berichterstellung, Vorschau oder zum Vorladen des Berichtscaches verwendet. Sie erzeugen keine Anwendungsdateien, die ganz einfach in einer Desktopanwendung angezeigt werden können.|  
   
@@ -271,7 +271,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 ###  <a name="bkmk_ui"></a> Allgemeine Konfiguration der Erweiterung(en) für die Übermittlungsbenutzeroberfläche  
  Gibt Übermittlungserweiterungen mit einer Benutzeroberflächenkomponente an, die in den Abonnementdefinitionsseiten für die Definition einzelner Abonnements im Webportal angezeigt wird. Wenn Sie eine benutzerdefinierte Übermittlungserweiterung erstellen und bereitstellen, die benutzerdefinierte Optionen aufweist, und Sie das Webportal verwenden möchten, müssen Sie die Übermittlungserweiterung in diesem Abschnitt registrieren. Standardmäßig sind Konfigurationseinstellungen für Berichtsserver-E-Mail und Berichtsserver-Dateifreigabe vorhanden. Übermittlungserweiterungen, die nur in datengesteuerten Abonnements oder in SharePoint-Anwendungsseiten verwendet werden, weisen keine Einstellungen in diesem Abschnitt auf.  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|Diese Einstellung legt fest, welche Übermittlungserweiterung als erster Übermittlungstyp in der Liste auf der Abonnementdefinitionsseite angezeigt wird. Nur eine Übermittlungserweiterung kann diese Einstellung enthalten. Gültige Werte sind **True** oder **False**. Wenn dieser Wert auf **True**festgelegt ist, ist die betreffende Erweiterung die Standardauswahl.|  
 |**Configuration**|Konfigurationsoptionen für eine Übermittlungserweiterung. Für jede Übermittlungserweiterung kann ein Standardrenderingformat festgelegt werden. Gültige Werte sind die Renderingerweiterungsnamen, die im Renderingabschnitt der Konfigurationsdatei rsreportserver.config vermerkt sind.|  
@@ -379,7 +379,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (Datei 'RSReportServer.config')  
  **MapTileServerConfiguration** definiert Konfigurationseinstellungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps Web Services, die einen Kachelhintergrund für ein Kartenberichtselement in einem Bericht bereitstellen, der auf einem Berichtsserver veröffentlicht wird. Alle untergeordneten Elemente sind erforderlich.  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**MaxConnections**|Gibt die maximale Anzahl von Verbindungen mit Bing Maps Web Services an.|  
 |**Timeout**|Gibt das Timeout in Sekunden an, bis zu dem auf eine Antwort von Bing Maps Web Services gewartet wird.|  

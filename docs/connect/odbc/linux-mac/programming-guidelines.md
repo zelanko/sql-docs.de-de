@@ -12,7 +12,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
 ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042369"
@@ -75,7 +75,7 @@ Für ODBC-Treiber 13 und 13.1 müssen die SQLCHAR-Daten die UTF-8-Codierung aufw
 
 Für ODBC-Treiber 17 werden die folgenden Zeichensätze bzw. Codierungen für SQLCHAR-Daten unterstützt:
 
-|Name|und Beschreibung|
+|Name|Beschreibung|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS-Latin-US|

@@ -28,7 +28,7 @@ ms.locfileid: "65581793"
 ##  <a name="Single"></a> Verwenden von einwertigen Parametern in Ausdrücken  
  Die folgende Tabelle enthält Beispiele für die zu verwendende Syntax zum Verweisen auf einwertige Parameter beliebigen Datentyps in einem Ausdruck.  
   
-|Beispiel|und Beschreibung|  
+|Beispiel|Beschreibung|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Parametername>* `.IsMultiValue`|Gibt **False**zurück.<br /><br /> Überprüft, ob ein Parameter mehrwertig ist. Wenn **True**zurückgegeben wird, ist der Parameter mehrwertig und stellt eine Auflistung von Objekten dar. Wenn **FALSE**zurückgegeben wird, ist der Parameter einwertig und stellt ein einzelnes Objekt dar.|  
 |`=Parameters!` *\<Parametername>* `.Count`|Gibt den Ganzzahlwert 1 zurück. Für einwertige Parameter ist der Wert stets 1.|  
@@ -42,7 +42,7 @@ ms.locfileid: "65581793"
 ##  <a name="Multi"></a> Verwenden eines mehrwertigen Parameters in einem Ausdruck  
  Die folgende Tabelle enthält Beispiele für die zu verwendende Syntax zum Verweisen auf mehrwertige Parameter beliebigen Datentyps in einem Ausdruck.  
   
-|Beispiel|und Beschreibung|  
+|Beispiel|Beschreibung|  
 |-------------|-----------------|  
 |`=Parameters!` *\<MehrwertigerParametername>* `.IsMultiValue`|Gibt **True** oder **False**zurück.<br /><br /> Überprüft, ob ein Parameter mehrwertig ist. Wenn **True**zurückgegeben wird, ist der Parameter mehrwertig und stellt eine Auflistung von Objekten dar. Wenn **FALSE**zurückgegeben wird, ist der Parameter einwertig und stellt ein einzelnes Objekt dar.|  
 |`=Parameters!` *\<MehrwertigerParametername>* `.Count`|Gibt eine ganze Zahl zurück.<br /><br /> Bezieht sich auf die Anzahl der Werte. Für einwertige Parameter ist der Wert stets 1. Für mehrwertige Parameter ist der Wert 0 oder höher.|  

@@ -29,7 +29,7 @@ ms.locfileid: "53205589"
   
  **Task „Index neu erstellen“** verwendet die ALTER INDEX-Anweisung. Weitere Informationen zu den auf dieser Seite beschriebenen Optionen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   

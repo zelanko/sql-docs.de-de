@@ -39,7 +39,7 @@ In diesem Thema wird erläutert, die Eigenschaften finden Sie auf die **allgemei
  **Neu**  
  Erstellt eine neue Verteilungsdatenbank  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie im Eigenschaftenraster **Datenbanken** eine vorhandene Verteilungsdatenbank aus, und klicken Sie auf **Löschen** , um die Datenbank zu löschen. Die Verteilungsdatenbank kann nicht gelöscht werden, wenn es die einzige Datenbank dieser Art ist. Jeder Verteiler muss zumindest eine Verteilungsdatenbank besitzen. Zum Löschen aller Verteilungsdatenbanken müssen Sie die Verteilung auf dem Computer deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Veröffentlichung und Verteilung](disable-publishing-and-distribution.md).  
   
  **Profilstandards**  

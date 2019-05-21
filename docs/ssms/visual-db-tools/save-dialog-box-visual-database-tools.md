@@ -28,7 +28,7 @@ Dieses Dialogfeld wird angezeigt, wenn Sie Ihre Arbeit im Tabellen-Designer spei
 > [!NOTE]  
 > Für die im Tabellen-Designer gemachten Änderungen an einer Tabelle wird erst dann ein Commit an die Datenbank ausgeführt, wenn Sie die Tabelle speichern. Nach dem Speichern der Tabelle können keine Änderungen rückgängig gemacht werden. Um alle nicht gespeicherten Änderungen zu verwerfen, schließen Sie alle offenen Tabellen, ohne sie zu speichern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Warnung bei betroffenen Tabellen**  
 Geben Sie an, ob dieses Dialogfeld beim nächsten Speichern ausgewählter Tabellen angezeigt wird. Dieses Kontrollkästchen ist standardmäßig aktiviert. Wenn Sie diese Option deaktivieren, können Sie sie im Dialogfeld **Optionen** erneut aktivieren.  
   

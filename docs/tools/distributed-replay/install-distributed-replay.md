@@ -12,7 +12,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 10762f3d10aa8e90d8bf2d86663a19a9222db42c
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52516009"
@@ -154,7 +154,7 @@ ms.locfileid: "52516009"
   
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|Parameter|und Beschreibung|Unterstützte Werte|  
+|Parameter|Beschreibung|Unterstützte Werte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  

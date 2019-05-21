@@ -27,7 +27,7 @@ ms.locfileid: "65727025"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Ziels des Data Mining-Modelltrainings. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|und Beschreibung|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|Zeichenfolge|Der eindeutige Bezeichner des Verbindungs-Managers.|  
 |ASConnectionString|Zeichenfolge|Die Verbindungszeichenfolge zu einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt.|  

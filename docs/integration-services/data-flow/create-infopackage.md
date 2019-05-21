@@ -40,7 +40,7 @@ ms.locfileid: "65727080"
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **InfoSource**  
  Geben Sie den Namen der InfoSource ein, auf der das neue InfoPackage basieren soll.  
   

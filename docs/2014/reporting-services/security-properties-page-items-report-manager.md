@@ -47,7 +47,7 @@ ms.locfileid: "63025732"
   
  Die folgenden Schaltflächen sind beim Bearbeiten der Elementsicherheit verfügbar.  
   
- **Delete**  
+ **Löschen**  
  Aktivieren Sie das Kontrollkästchen neben der Gruppe oder dem Benutzernamen, den Sie löschen möchten, und klicken Sie auf **Löschen**. Die letzte Rollenzuweisung kann nicht gelöscht werden. Dasselbe gilt für eine integrierte Rollenzuweisung (Beispiel: "VORDEFINIERT\Administratoren"), in der die Sicherheitsbasis für den Berichtsserver definiert ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  

@@ -65,7 +65,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
  Die folgenden Funktionen und Anweisungen sind auch bei Daten vom Typ **text**, **ntext** oder **image** hilfreich.  
   
-|Funktion oder Anweisung|und Beschreibung|  
+|Funktion oder Anweisung|Beschreibung|  
 |---------------------------|-----------------|  
 |PATINDEX **(**'_%pattern%_'**,** _expression_**)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten vom Typ **text** oder **ntext** zurück.|  
 |DATALENGTH **(**_expression_**)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  

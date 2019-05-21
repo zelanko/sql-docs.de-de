@@ -39,7 +39,7 @@ ms.locfileid: "65728862"
   
  In der folgenden Tabelle werden die verschiedenen Statuscodes beschrieben, die von der Oracle CDC-Instanz in ihrer Statustabelle gemeldet werden können.  
   
-|Status|Code für Status Aktiv|Code für Status Fehler|und Beschreibung|Unterstatus|  
+|Status|Code für Status Aktiv|Code für Status Fehler|Beschreibung|Unterstatus|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Die Oracle CDC-Instanz wird nicht ausgeführt. Der Unterstatus ABORTED gibt an, dass die Oracle CDC-Instanz ACTIVE war und dann unerwartet beendet wurde.|Der Unterstatus ABORTED wird von der Hauptinstanz des Oracle CDC Service festgelegt, wenn erkannt wird, dass die Oracle CDC-Instanz während des Status ACTIVE nicht ausgeführt wird.|  
 |Fehler|0|1|Die Oracle CDC-Instanz wird nicht ausgeführt. Der Status ERROR gibt an, dass die CDC-Instanz ACTIVE war und dann ein Fehler aufgetreten ist, der nicht behebbar ist, sodass die Instanz sich selbst deaktiviert hat.|MISCONFIGURED: Ein nicht behebbarer Konfigurationsfehler wurde erkannt.<br /><br /> PASSWORD-REQUIRED: Für den Change Data Capture Designer für Oracle von Attunity ist kein Kennwort festgelegt, oder das konfigurierte Kennwort ist nicht gültig. Der Grund kann eine Änderung des Kennworts für den asymmetrischen Schlüssel des Diensts sein.|  

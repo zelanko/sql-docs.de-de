@@ -37,7 +37,7 @@ ms.locfileid: "65726882"
   
  In der folgenden Tabelle sind die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen aufgeführt. Bei einigen der Datentypen in der Tabelle werden auch die für sie geltende Genauigkeit und die Anzahl der Dezimalstellen genannt. Weitere Informationen zu Genauigkeit und Dezimalstellen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Datentyp|und Beschreibung|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |DT_BOOL|Ein boolescher Wert.|  
 |DT_BYTES|Ein binärer Datenwert. Die Länge ist variabel, und die maximale Länge beträgt 8000 Bytes.|  

@@ -66,7 +66,7 @@ ms.locfileid: "62721220"
  **Bearbeiten**  
  Wählen Sie im Filterbereich einen Zeilenfilter oder einen Joinfilter aus, und klicken Sie auf **Bearbeiten** , um das Dialogfeld **Filter bearbeiten** oder **Join bearbeiten** aufzurufen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie im Filterbereich einen Zeilenfilter oder einen Joinfilter aus, und klicken Sie auf **Löschen** , um den Filter zu löschen.  
   
  **Tabelle suchen**  

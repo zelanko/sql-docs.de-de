@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6832df1d7940f71770b8f691c9b26b911c435d50
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51291596"
@@ -38,7 +38,7 @@ ms.locfileid: "51291596"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, keine maximale Länge.|  
 |**Zulässige Werte**|**OFF**<br /> Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.<br /><br /> **ON**<br /> Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.<br /><br /> **MIXED**<br /> Der Datenbankoptimierungsratgeber versucht, sofern möglich physische Entwurfsstrukturen zu empfehlen, die online erstellt werden können.<br /><br /> Verwenden Sie einen dieser Werte mit diesem Element. Wenn Indizes online erstellt werden, wird das Schlüsselwort **ONLINE = ON** an die Objektdefinition angehängt.|  

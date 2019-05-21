@@ -29,7 +29,7 @@ ms.locfileid: "65097517"
 
 Mithilfe dieser Seite können Sie den Status der Zielserver für diesen Masterserver anzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Zielserver**  
 Zeigt den Namen des Zielservers an.  
   

@@ -39,7 +39,7 @@ ms.locfileid: "63188552"
     >  Die Seite Meine Abonnements ist auch verfügbar, wenn Sie nicht über die Berechtigung zum Erstellen von Abonnements verfügen.  
   
 ## <a name="options"></a>Optionen  
- **Delete**  
+ **Löschen**  
  Aktivieren Sie das Kontrollkästchen neben dem Abonnement, das Sie löschen möchten, und klicken Sie auf **Löschen**.  
   
  **Bearbeiten**  

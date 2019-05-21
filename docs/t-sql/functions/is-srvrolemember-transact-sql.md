@@ -61,7 +61,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0|*login* ist kein Mitglied von *role*.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Anweisung immer 0 (null) zurück.|  
 |1|*login* ist ein Mitglied von *role*.|  

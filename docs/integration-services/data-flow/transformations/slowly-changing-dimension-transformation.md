@@ -69,7 +69,7 @@ ms.locfileid: "65725872"
   
  In der folgenden Tabelle werden die Transformationsausgaben und die Anforderungen der nachfolgenden Datenflüsse beschrieben. Für die Anforderungen wird der Datenfluss beschrieben, den der Assistent für langsam veränderliche Dimensionen erstellt.  
   
-|Ausgabe|und Beschreibung|Datenflussanforderungen|  
+|Ausgabe|Beschreibung|Datenflussanforderungen|  
 |------------|-----------------|----------------------------|  
 |**Ausgabe: Updates von veränderlichen Attributen**|Der Datensatz in der Nachschlagetabelle wird aktualisiert. Diese Ausgabe wird für veränderliche Attributzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung.|  
 |**Ausgabe des festen Attributs**|Die Werte in Zeilen, die nicht geändert werden dürfen, stimmen nicht mit Werten in der Nachschlagetabelle überein. Diese Ausgabe wird für feste Attributzeilen verwendet.|Es wird kein Standarddatenfluss erstellt. Falls für die Transformation konfiguriert ist, dass sie fortgesetzt wird, wenn Änderungen an Spalten fester Attribute gefunden werden, sollten Sie einen Datenfluss zum Aufzeichnen dieser Zeilen erstellen.|  

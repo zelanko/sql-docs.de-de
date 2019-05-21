@@ -59,7 +59,7 @@ ms.locfileid: "65728102"
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Name und Pfad der Datenbankdatei**  
  Geben Sie den Pfad und Dateinamen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65728102"
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **AutoShrink Threshold**  
  Gibt den freien Speicherplatz in Prozent an, der in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank zulässig ist, bevor der Prozess des automatischen Verkleinerns ausgeführt wird.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "65728102"
   
  Die Option Mode kann vier Werte annehmen. Siehe dazu die folgende Tabelle.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Schreibgeschützt**|Gibt an, dass der Zugriff auf die Datenbank schreibgeschützt erfolgen kann.|  
 |**Read Write**|Gibt Lese-/Schreibberechtigungen für die Datenbank an.|  

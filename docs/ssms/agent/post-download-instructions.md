@@ -29,7 +29,7 @@ ms.locfileid: "65088798"
 
 Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Anweisungstyp**  
 Gibt den Typ der bereitzustellenden Downloadanweisung an.  
   

@@ -23,20 +23,20 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62768215"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>ForEach-Elementspalten (Dialogfeld, Referenz zur Benutzeroberfläche)
-  Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Elementenumerators enthalten sind.  
+  Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Element-Enumerators enthalten sind.  
   
 ## <a name="options"></a>Optionen  
- **Column**  
+ **Spalte**  
  Listet die Spalten auf.  
   
  **Datentyp**  
- Wählen Sie den Datentyp aus.  
+ Hier wählen Sie den Datentyp aus.  
   
  **Hinzufügen**  
- Fügen Sie eine neue Spalte hinzu.  
+ Fügt eine neue Spalte hinzu.  
   
  **Entfernen**  
- Wählen Sie eine Spalte aus, und klicken Sie auf **Entfernen**.  
+ Wählen Sie eine Spalte aus, und klicken Sie dann auf **Entfernen**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Foreach-Schleifen-Editor &#40;Datensammlung (Seite)&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   

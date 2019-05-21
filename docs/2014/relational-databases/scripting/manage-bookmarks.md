@@ -70,7 +70,7 @@ ms.locfileid: "63191815"
  **Alle Lesezeichen deaktivieren/aktivieren**  
  Deaktiviert oder aktiviert die Kontrollkästchen für alle Lesezeichen im Fenster **Lesezeichen** . Die Lesezeichen werden nicht entfernt und die mit ihnen gekennzeichneten Codezeilen nicht geändert.  
   
- **Delete**  
+ **Löschen**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
  Kontrollkästchen für Lesezeichen  
@@ -79,7 +79,7 @@ ms.locfileid: "63191815"
 ## <a name="bookmarks-window-shortcut-menu"></a>Lesezeichen-Fenster (Kontextmenü)  
  Wenn Sie auf einen Eintrag im Fenster **Lesezeichen** mit der rechten Maustaste klicken, stehen über das Kontextmenü die folgenden Befehle zur Verfügung.  
   
- **Delete**  
+ **Löschen**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
  **Umbenennen**  

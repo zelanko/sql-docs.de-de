@@ -70,7 +70,7 @@ ms.locfileid: "65723648"
 ## <a name="commonly-used-assemblies"></a>Häufig verwendete Assemblys  
  In der folgenden Tabelle sind die Assemblys, die häufig beim Programmieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mithilfe von [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verwendet werden, aufgelistet.  
   
-|Assembly|und Beschreibung|  
+|Assembly|Beschreibung|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Enthält die verwaltete Runtime-Engine.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Enthält die primäre Interopassembly (PIA) oder den Wrapper für die native Runtime-Engine.|  

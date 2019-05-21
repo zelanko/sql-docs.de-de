@@ -156,7 +156,7 @@ ms.locfileid: "65503670"
 ## <a name="queue-columns"></a>Spalten in der Warteschlange  
  In der folgenden Tabelle werden die Spalten einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Status der Nachricht. Für Nachrichten, die vom RECEIVE-Befehl zurückgegeben werden, ist der Status immer **0**. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**=Bereit **1**=Nachricht empfangen **2**=Noch nicht abgeschlossen **3**=Gesendete Nachricht wurde beibehalten|  
 |**priority**|**tinyint**|Die Prioritätsebene der Konversation, die auf die Nachricht angewendet wird.|  

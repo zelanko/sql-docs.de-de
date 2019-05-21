@@ -27,7 +27,7 @@ ms.locfileid: "54135940"
   
  Nachdem eine Veröffentlichungsmomentaufnahme erstellt wurde, kann der Veröffentlichungskompatibilitätsgrad im Dialogfeld **Veröffentlichungseigenschaften** auf der Seite **Allgemein** gesteigert (restriktiver gemacht) werden. Der Veröffentlichungskompatibilitätsgrad kann nicht gesenkt werden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  Wählen Sie jeden Abonnententypen aus, der von der Veröffentlichung unterstützt werden muss.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

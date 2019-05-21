@@ -84,7 +84,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
 ### <a name="built-in-connection-managers"></a>Integrierte Verbindungs-Manager  
  In der folgenden Tabelle werden die Verbindungs-Manager-Typen aufgeführt, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zur Verfügung gestellt werden.  
   
-|Typ|und Beschreibung|Thema|  
+|Typ|Beschreibung|Thema|  
 |----------|-----------------|-----------|  
 |ADO|Stellt eine Verbindung mit ADO-Objekten (ActiveX Data Objects) her.|[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Stellt eine Verbindung mit einer Datenquelle mithilfe eines .NET-Anbieters her.|[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,7 +112,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
 > [!IMPORTANT]  
 >  Die in der folgenden Tabelle aufgelisteten Verbindungs-Manager funktionieren nur mit [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] und [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Typ|und Beschreibung|Thema|  
+|Typ|Beschreibung|Thema|  
 |----------|-----------------|-----------|  
 |ORACLE|Stellt eine Verbindung mit einem Oracle-\<Versionsinfo\>-Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
@@ -153,7 +153,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
 ###  <a name="package"></a> Hinzufügen eines Verbindungs-Managers zu einem vorhandenen Paket  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -169,7 +169,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
+    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -205,7 +205,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
+    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -237,7 +237,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
   
  Weitere Informationen zu Verbindungs-Managern finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Optionen  
  **Typ des Verbindungs-Managers**  
  Wählen Sie einen Verbindungstyp aus, und klicken Sie anschließend auf **Hinzufügen**, oder doppelklicken Sie auf einen Verbindungstyp, um mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung anzugeben.  
   
@@ -253,7 +253,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
 ## <a name="delete-a-connection-manager"></a>Löschen eines Verbindungs-Managers 
 ###  <a name="DeletePackageLevel"></a> Löschen eines Verbindungs-Managers aus einem Paket  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -290,7 +290,7 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
   
 ### <a name="modify-a-connection-manager-using-the-properties-window"></a>Ändern eines Verbindungs-Managers mithilfe des Eigenschaftenfensters  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -306,7 +306,7 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
   
 ### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Ändern eines Verbindungs-Managers mithilfe des Dialogfelds „Verbindungs-Manager“  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -314,7 +314,7 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
   
 4.  Doppelklicken Sie im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager, um das Dialogfeld **Verbindungs-Manager** zu öffnen. Informationen über bestimmte Verbindungs-Manager-Typen und die für jeden Typ verfügbaren Optionen finden Sie in der folgenden Tabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
+    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

@@ -67,7 +67,7 @@ GO
   
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Volltextkataloge beziehen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche möglicherweise hilfreich. 
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.|
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.|  

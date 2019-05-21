@@ -49,7 +49,7 @@ Die U-SQL-Konfiguration beinhaltet zwei Einstellungen: **SourceType** und dynami
 
 **SourceType:** Gibt die Quelle des U-SQL-Skripts an. Das Skript wird während der SSIS-Paketausführung an ein Data Lake Analytics-Konto übermittelt. Die Optionen für diese Eigenschaft sind:
 
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**DirectInput**|Gibt das U-SQL-Skript durch den Inline-Editor an. Bei Auswahl dieses Werts wird die dynamische Option **USQLStatement** angezeigt.|  
 |**FileConnection**|Legt eine lokale .usql-Datei fest, die das U-SQL-Skript enthält. Bei Auswahl dieser Option wird die dynamische Option **FileConnection** angezeigt.|  
@@ -75,7 +75,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 - **RuntimeVersion:** Gibt die Data Lake Analytics-Runtimeversion des U-SQL-Auftrags an. Die Standardeinstellung lautet „Standard“. In der Regel müssen Sie diese Eigenschaft nicht ändern.
 - **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
 
-  |value|und Beschreibung|
+  |Wert|Beschreibung|
   |-----------|-----------------|
   |Wahr|Das Taskergebnis basiert auf dem Ausführungsergebnis des U-SQL-Auftrags. Auftragsausführung erfolgreich > Aufgabe erfolgreich. Fehler beim Auftrag > Fehler in der Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
   |False|Das Taskergebnis basiert auf dem Übermittlungs- und Vorbereitungsergebnis des U-SQL-Auftrags. Auftragsübermittlung ist erfolgreich und durchläuft die Vorbereitungsphase > Aufgabe ist erfolgreich. Fehler in Auftragsübermittlung oder Fehler in der Vorbereitungsphase des Auftrags > Fehler in Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|

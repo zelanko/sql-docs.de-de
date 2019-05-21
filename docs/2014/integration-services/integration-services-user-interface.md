@@ -80,7 +80,7 @@ ms.locfileid: "62767672"
 |Editor-Typ|Zugriff|  
 |-----------------|------------|  
 |Container. Weitere Informationen finden Sie unter [Integration Services-Container](control-flow/integration-services-containers.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Container.|  
-|Task. Weitere Informationen finden Sie unter [Integration Services Tasks](control-flow/integration-services-tasks.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Task.|  
+|Task. Weitere Informationen finden Sie unter [Integration Services-Tasks](control-flow/integration-services-tasks.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Task.|  
 |Quelle.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf die Quelle.|  
 |Transformation. Weitere Informationen finden Sie unter [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf die Transformation.|  
 |Ziel.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf das Ziel.|  

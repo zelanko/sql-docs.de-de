@@ -27,7 +27,7 @@ ms.locfileid: "53379941"
   
  Die folgende Tabelle enthält die Leistungsindikatoren von **SQLAgent:Auftragsschritte** .  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |**Aktive Schritte**|Dieser Indikator gibt die Anzahl der aktuell ausgeführten Auftragsschritte an.|  
 |**Schritte in Warteschlange**|Dieser Indikator gibt die Anzahl der Auftragsschritte an, die für das Ausführen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereitstehen, deren Ausführung jedoch noch nicht gestartet wurde.|  
@@ -35,7 +35,7 @@ ms.locfileid: "53379941"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|und Beschreibung|  
+|Instanz|Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen für alle Auftragsschritte.|  
 |**ActiveScripting**|Informationen für Auftragsschritte, die das **ActiveScripting** -Subsystem verwenden.|  

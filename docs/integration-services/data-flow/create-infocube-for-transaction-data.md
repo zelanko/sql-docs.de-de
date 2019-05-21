@@ -65,7 +65,7 @@ ms.locfileid: "65727102"
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |UNI|Einheiten|  

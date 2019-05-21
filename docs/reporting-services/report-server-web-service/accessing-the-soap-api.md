@@ -49,7 +49,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  In der folgenden Tabelle werden die einzelnen Elemente in der URL beschrieben.  
   
-|URL-Element|und Beschreibung|  
+|URL-Element|Beschreibung|  
 |-----------------|-----------------|  
 |*server*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
 |*berichtsserver*|Der Name des Ordners, der den XML-Webdienst enthält. Dieser wird während des Setups konfiguriert.|  

@@ -726,7 +726,7 @@
                       href: ../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md
                 - name: Das Always On-Dashboard
                   items:
-                    - name: enthalten
+                    - name: Optionen
                       href: ../database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md
                     - name: Ergebnis der Richtlinienauswertung
                       href: ../database-engine/availability-groups/windows/policy-evaluation-result-always-on.md

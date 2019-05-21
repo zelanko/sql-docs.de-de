@@ -34,7 +34,7 @@ ms.locfileid: "65571130"
   
 3.  Wird ein Auftrag aufgeführt, dann klicken Sie mit der rechten Maustaste auf den Auftrag, und klicken Sie anschließend auf **Eigenschaften**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Auftrags-ID**  
  Dem Auftrag wird während seiner Verarbeitung ein GUID zugewiesen. Dieser Zufallswert wird jedes Mal generiert, wenn ein Bericht oder Abonnement ausgeführt wird.  
   

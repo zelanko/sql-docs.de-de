@@ -27,7 +27,7 @@ Wenn Sie im Datenfluss mit der rechten Maustaste auf **OData-Quelle** und anschl
 
 ## <a name="properties"></a>Eigenschaften 
 
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |-|-|  
 |CollectionName|Der Name der Auflistung, die Sie vom OData-Dienst abrufen. Die Eigenschaft **CollectionName** wird verwendet, wenn **UseResourcePath** FALSE ist.<br /><br /> Diese Eigenschaft ist ausdrucksfähig, sodass Sie den Wert zur Laufzeit festlegen können. Wenn die Metadaten der Auflistung jedoch nicht mit den Metadaten übereinstimmen, die zur Entwurfszeit verwendet wurden, tritt ein Überprüfungsfehler auf, der zum Abbruch der Datenflussausführung führt.|  
 |DefaultStringLength|Dieser Wert gibt die Standardlänge für Zeichenfolgenspalten an, die keine maximale Länge aufweisen.<br /><br /> **Standardwert:** 4000|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e89a14d09ac173acb54f45b74325a0f0e5a01cb
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47716268"
@@ -25,7 +25,7 @@ ms.locfileid: "47716268"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setBinaryStream-Methode &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)|Legt die angegebenen Parameter auf den angegebenen Eingabedatenstrom fest.|  
 |[setBinaryStream-Methode &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream-int.md)|Legt den angegebenen Parameter auf den angegebenen Eingabedatenstrom mit der angegebenen Anzahl von Bytes fest.|  

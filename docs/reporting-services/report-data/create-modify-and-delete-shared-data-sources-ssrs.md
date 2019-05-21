@@ -30,10 +30,10 @@ ms.locfileid: "65573210"
   
  Eine freigegebene Datenquelle setzt sich aus folgenden Komponenten zusammen:  
   
-|Teil|und Beschreibung|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |Name|Ein Name, der das Element innerhalb der Ordnerhierarchie des Berichtsservers identifiziert.|  
-|und Beschreibung|Eine Beschreibung, die mit dem Element im Webportal angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
+|Beschreibung|Eine Beschreibung, die mit dem Element im Webportal angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
 |Verbindungstyp|Die für die Datenquelle verwendete Datenverarbeitungserweiterung. Sie können nur Datenverarbeitungserweiterungen verwenden, die auf dem Berichtsserver bereitgestellt werden. Weitere Informationen zu in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen Datenverarbeitungserweiterungen finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Verbindungszeichenfolge|Die Verbindungszeichenfolge für die Datenbank. Weitere Informationen und Beispiele von Verbindungszeichenfolgen für häufig verwendete Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Anmeldeinformationstyp|Gibt an, wie Anmeldeinformationen für die Verbindung abgerufen werden und ob sie nach dem Herstellen der Verbindung verwendet werden sollen. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  

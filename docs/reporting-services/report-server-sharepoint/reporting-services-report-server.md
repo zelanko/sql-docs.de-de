@@ -97,7 +97,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
  ![Funktionale SSRS Sharepoint-Architektur](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint Functional Architecture")  
   
-||und Beschreibung|  
+||Beschreibung|  
 |-|-----------------|  
 |**(1)**|Webserver oder Web-Front-Ends (WFE). Das Reporting Services-Add-In muss auf jedem Webserver installiert sein, von dem aus Sie die Webanwendungsfunktionen nutzen möchten, beispielsweise Berichte oder Reporting Services-Verwaltungsseiten für Tasks (z.B. das Verwalten von Datenquellen oder Abonnements) anzeigen.|  
 |**(2)**|Mit dem Add-In werden URL- und SOAP-Endpunkte für die Kommunikation der Clients mit den Anwendungsservern über den Reporting Services-Dienstproxy installiert.|  

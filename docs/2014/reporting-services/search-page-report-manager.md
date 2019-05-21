@@ -35,7 +35,7 @@ ms.locfileid: "63237707"
 2.  Geben Sie oben auf der Seite im Feld **Suchen** die Suchkriterien ein. Drücken Sie dann die EINGABETASTE, oder klicken Sie auf den Suchpfeil.  
   
 ## <a name="options"></a>Optionen  
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um ein Element aus einer Berichtsserver-Datenbank zu löschen.  
   
 > [!NOTE]  

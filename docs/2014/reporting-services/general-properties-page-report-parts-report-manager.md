@@ -65,7 +65,7 @@ ms.locfileid: "63260703"
  **Anwenden**  
  Speichern Sie die Änderungen.  
   
- **Delete**  
+ **Löschen**  
  Entfernen Sie den Berichtsteil aus der Berichtsserver-Datenbank. Durch das Löschen eines Berichtsteils vom Server wird nicht verhindert, dass vorhandene Berichte, denen der Berichtsteil hinzugefügt wurde, gerendert werden.  
   
  **Verschieben**  

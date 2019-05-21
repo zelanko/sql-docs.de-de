@@ -23,7 +23,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Unterstützung bei d
 
 ## <a name="our-development-partners"></a>Unsere Entwicklungspartner
 
-| Partner | und Beschreibung | Links |
+| Partner | Beschreibung | Links |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL ist eine intelligente in SQL integrierte Entwicklungsumgebung, die es Datenbankentwicklern und -administratoren ermöglicht, leistungsfähige SQL-Codes auf allen größeren Datenbankplattformen, einschließlich SQL Server, von nur einer Benutzeroberfläche aus zu entwickeln.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. ermöglicht der Entwicklercommunity dank entsprechender Toolsets Flexibilität bei der Auswahl der Programmiersprachen, Frameworks und Dienste. Mit dem Toolkit von Click2Cloud können Entwickler SQL Server unter Linux-Container erstellen und an eine Anwendung anfügen und gleichzeitig weiterhin sichere, mehrinstanzfähige Architekturen bereitstellen. Die Container können unabhängig voneinander auf beliebigen cloudbasierten Containerplattformen bereitgestellt werden.|[Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube] |

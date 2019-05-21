@@ -64,7 +64,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
   
 |||  
 |-|-|  
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |URL|Die URL zum Dienstdokument.|  
 |UserName|Benutzername für die Authentifizierung, falls erforderlich.|  
 |Kennwort|Kennwort für die Authentifizierung, falls erforderlich.|  
@@ -73,7 +73,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
 ## <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
   Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor**, um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Datenquelle zu bearbeiten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Name des Verbindungs-Managers.  
   

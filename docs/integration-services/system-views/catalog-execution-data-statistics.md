@@ -27,7 +27,7 @@ ms.locfileid: "65714725"
 
   In dieser Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten für eine bestimmte Paketausführung an eine Downstreamkomponente sendet. Anhand der Informationen in dieser Sicht kann der Datendurchsatz für eine Komponente berechnet werden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Eindeutiger Bezeichner (ID) der Daten.|  
 |execution_id|**bigint**|Eindeutige ID für die Instanz der Ausführung.|  

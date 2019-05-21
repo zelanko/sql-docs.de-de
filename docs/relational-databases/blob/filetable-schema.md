@@ -24,7 +24,7 @@ ms.locfileid: "65094234"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
-|Name des Dateiattributs|Typ|Größe|Default|und Beschreibung|Barrierefreiheit für das Dateisystem|  
+|Name des Dateiattributs|Typ|Größe|Default|Beschreibung|Barrierefreiheit für das Dateisystem|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variable|Ein **hierarchyid** , der die Position dieses Elements identifiziert.|Die Position dieses Knotens im hierarchischen FileNamespace.<br /><br /> Primärschlüssel für die Tabelle.|Kann durch Festlegen der Windows-Pfadwerte erstellt und geändert werden.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Ein von der **NEWID()** -Funktion zurückgegebener Wert.|Eine eindeutige ID für die FILESTREAM-Daten.|Nicht verfügbar.|  

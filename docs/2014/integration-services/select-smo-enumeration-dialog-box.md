@@ -27,22 +27,22 @@ ms.locfileid: "62889291"
   
 ## <a name="options"></a>Optionen  
  **Aufzählen**  
- Erweitern des Servers und Auswählen eines SMO-Objekts.  
+ Hiermit erweitern Sie den Server und wählen ein SMO-Objekt aus.  
   
  **Objekte**  
- Verwenden des Enumerationstyps Objekte.  
+ Verwenden Sie den Enumerationstyp „Objekte“.  
   
  **Vorauffüllen**  
- Verwenden der Option **Vorauffüllen** mit dem Enumerationstyp „Objekte“.  
+ Verwenden Sie die Option **Vorauffüllen** mit dem Enumerationstyp „Objekte“.  
   
  **Namen**  
- Verwenden des Enumerationstyps Namen.  
+ Hiermit verwenden Sie den Enumerationstyp „Namen“.  
   
  **URNs**  
- Verwenden des Enumerationstyps URNs.  
+ Hiermit verwenden Sie den Enumerationstyp „URNs“.  
   
  **Speicherorte**  
- Verwenden des Enumerationstyps Speicherorte. Diese Option ist nur für Dateien verfügbar.  
+ Hiermit verwenden Sie den Enumerationstyp „Speicherorte“. Diese Option ist nur für Dateien verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  

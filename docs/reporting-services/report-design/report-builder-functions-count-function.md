@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  Beispiel  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  Das folgende Codebeispiel zeigt einen Ausdruck, der die Anzahl von Werten ungleich NULL von `Size` für den Standardbereich oder für einen übergeordneten Gruppenbereich berechnet. Der Ausdruck wird einer Zelle in einer Zeile, die zur untergeordneten Gruppe `GroupbySubcategory`gehört, hinzugefügt. Die übergeordnete Gruppe ist `GroupbyCategory`. Der Ausdruck zeigt die Ergebnisse für `GroupbySubcategory` (Standardbereich) und anschließend für `GroupbyCategory` (übergeordneter Gruppenbereich) an.  
   
 > [!NOTE]  

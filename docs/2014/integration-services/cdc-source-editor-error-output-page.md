@@ -38,7 +38,7 @@ ms.locfileid: "62836029"
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen Spalten (Quellspalten) an, die im Dialogfeld **Quellen-Editor für CDC** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  

@@ -28,7 +28,7 @@ Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn im Abfrage- u
 > [!NOTE]  
 > Die Eigenschaften in diesem Thema sind nicht alphabetisch, sondern nach Kategorie sortiert.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Kategorie Identität**  
 Erweitern Sie das Element, um die **Name** -Eigenschaft anzuzeigen.  
   

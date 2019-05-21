@@ -30,7 +30,7 @@ ms.locfileid: "62635442"
 |Option|Description|  
 |------------|-----------------|  
 |**Neue Aggregation**|Klicken Sie, um eine neue Aggregation zu erstellen.|  
-|**Delete**|Klicken Sie, um eine ausgewählte Aggregation oder einen ausgewählten Aggregationsentwurf zu löschen.|  
+|**Löschen**|Klicken Sie, um eine ausgewählte Aggregation oder einen ausgewählten Aggregationsentwurf zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aggregationen &#40;Cube entwerfen&#41;](aggregations-cube-design.md)  

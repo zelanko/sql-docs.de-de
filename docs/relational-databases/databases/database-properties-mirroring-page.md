@@ -30,7 +30,7 @@ ms.locfileid: "54132530"
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Sicherheit konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um den **Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung**zu starten.  
   

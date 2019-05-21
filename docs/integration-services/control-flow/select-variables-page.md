@@ -32,7 +32,7 @@ ms.locfileid: "65727448"
   
  Um das Dialogfeld **Variablen auswählen** zu öffnen, suchen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Skript** unter **Benutzerdefinierte Eigenschaften** entweder nach der **ReadOnlyVariables**-Eigenschaft oder nach der **ReadWriteVariables**-Eigenschaft, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die dieser Eigenschaft zugeordnet ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  Auswahlfeld  
  Wählt eine bestimmte Variable aus, wählt alle Variablen aus, oder hebt die Auswahl aller Variablen auf.  
   

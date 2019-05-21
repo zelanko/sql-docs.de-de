@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 908b4b6b8f4551fd5b611997dabedc5f1cf1c474
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51292406"
@@ -38,7 +38,7 @@ ms.locfileid: "51292406"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**unsignedInt**, unbegrenzte Länge.|  
 |**Standardwert**|480 Minuten (8 Stunden).|  
@@ -53,7 +53,7 @@ ms.locfileid: "51292406"
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  Im folgenden Codebeispiel wird gezeigt, wie 12 Stunden als maximale Optimierungszeit festgelegt werden:  
   
 ## <a name="code"></a>Code  

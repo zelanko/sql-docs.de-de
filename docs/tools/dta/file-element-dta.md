@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 709f355a78ece0db3e52b713f81f9ca2a95c8fe1
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51291146"
@@ -39,7 +39,7 @@ ms.locfileid: "51291146"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Mit dem **string** -Datentyp geben Sie den Verzeichnispfad zu der Arbeitsauslastungsdatei an. Zum Beispiel:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Beachten Sie, dass der Grenzwert für die Länge vom Server durchgesetzt wird.|  
 |**Standardwert**|Keine.|  

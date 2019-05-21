@@ -58,7 +58,7 @@ ms.locfileid: "65719855"
   
  In der folgenden Tabelle sind die Paketeigenschaften aufgeführt, die Sie zum Implementieren von Prüfpunkten festlegen können.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |CheckpointFileName|Gibt den Namen der Prüfpunktdatei an.|  
 |CheckpointUsage|Gibt an, ob Prüfpunkte verwendet werden.|  
@@ -71,7 +71,7 @@ ms.locfileid: "65719855"
 ### <a name="checkpoint-usage"></a>Syntax von Prüfpunkten  
  Die CheckpointUsage-Eigenschaft kann auf die folgenden Werte festgelegt werden:  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Never**|Gibt an, dass die Prüfpunktdatei nicht verwendet wird und dass das Paket vom Beginn des Paketworkflows aus ausgeführt wird.|  
 |**Always**|Gibt an, dass die Prüfpunktdatei immer verwendet wird und dass das Paket von dem Punkt aus neu gestartet wird, an dem bei der letzten Ausführung ein Fehler aufgetreten ist. Wenn die Prüfpunktdatei nicht gefunden wird, schlägt das Paket fehl.|  

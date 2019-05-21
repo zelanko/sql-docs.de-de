@@ -81,7 +81,7 @@ ms.locfileid: "65726127"
 ## <a name="derived-column-transformation-editor"></a>Transformations-Editor für abgeleitete Spalte
   Mithilfe des Dialogfelds **Transformations-Editor für abgeleitete Spalte** können Sie Ausdrücke erstellen, die neue Spalten oder Ersatzspalten auffüllen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Variablen und Spalten**  
  Erstellen Sie einen Ausdruck, der eine Variable oder eine Eingabespalte verwendet, indem Sie die Variable oder Spalte aus der Liste der verfügbaren Variablen und Spalten in eine vorhandene Tabellenzeile im unteren Bereich oder in eine neue Zeile am Ende der Liste ziehen.  
   

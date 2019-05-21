@@ -27,7 +27,7 @@ ms.locfileid: "47651268"
   
  Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
   
-|value|Bedeutung|  
+|Wert|Bedeutung|  
 |-----------|-------------|  
 |0|SMO-XPs sind nicht verfügbar.|  
 |1|SMO-XPS sind verfügbar. Dies ist die Standardeinstellung.|  

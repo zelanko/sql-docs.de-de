@@ -27,7 +27,7 @@ ms.locfileid: "65728473"
 
   Sie können die CDC Service Configuration Console verwenden, um einen neuen CDC-Dienst zu erstellen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für CDC vorzubereiten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Prepare SQL Server**  
  Aktivieren Sie diese Option im **Aktionsbereich** rechts in der CDC Service Configuration Console.  
   

@@ -37,13 +37,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet markierte Funktionen** beschrieben.
 
-|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|und Beschreibung|  
+|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|Beschreibung|  
 |-------------|-----------------|  
 |**Verwendung**|Funktionsverwendung seit letztem SQL Server-Start.|
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|und Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  

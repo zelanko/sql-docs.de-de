@@ -27,7 +27,7 @@ ms.locfileid: "65714563"
 
 Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Masters an.
 
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Der Name der Scale Out Master-Eigenschaft.|  
 |property_value|**nvarchar(max)**|Der Wert der Scale Out Master-Eigenschaft.|
@@ -35,7 +35,7 @@ Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../include
 ## <a name="remarks"></a>Remarks
 In dieser Sicht wird für jede Scale Out Master-Eigenschaft eine Zeile angezeigt. In dieser Sicht werden folgende Eigenschaften angezeigt:
 
-|Eigenschaftsname|und Beschreibung|  
+|Eigenschaftsname|Beschreibung|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|Die SQL Server-Instanz, die die Protokolldatenbank enthält.|
 |**LAST_ONLINE_TIME**|Zeitpunkt, zu dem der Scale Out Master zuletzt online war.|

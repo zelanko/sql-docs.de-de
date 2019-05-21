@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3fedefd3f5ee935b4a7593b0b285a7cc9dfc26
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47637328"
@@ -30,7 +30,7 @@ ms.locfileid: "47637328"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameterindexes als Blobobjekt in der Programmiersprache Java ab.|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameternamens als Blobobjekt in der Programmiersprache Java ab.|  

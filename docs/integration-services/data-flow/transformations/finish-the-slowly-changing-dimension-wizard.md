@@ -29,7 +29,7 @@ ms.locfileid: "65726108"
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Die folgenden Ausgaben werden konfiguriert**  
  Bestätigen Sie, dass die Liste der Ausgaben für Ihre Zwecke angemessen ist.  
   

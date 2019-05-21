@@ -56,11 +56,11 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|value|  
+    |Parameter|Wert|  
     |---------------|-----------|  
     |Author|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |und Beschreibung|Gibt Mitarbeiterdaten zurück.|  
+    |Beschreibung|Gibt Mitarbeiterdaten zurück.|  
     |Prozedurname|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  

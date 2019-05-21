@@ -61,7 +61,7 @@ ms.locfileid: "65095234"
  **Im Web suchen**  
  Diese Schaltfläche ist nicht verfügbar.  
   
- **Delete**  
+ **Löschen**  
  Löscht die ausgewählten Dateien oder Ordner aus dem Speicher.  
   
  **Neuer Ordner**  
@@ -91,7 +91,7 @@ ms.locfileid: "65095234"
 ## <a name="tools"></a>Tools  
  Wählen Sie ein Tool aus, das auf das ausgewählte Element im Inhaltsbereich angewendet werden soll.  
   
- **Delete**  
+ **Löschen**  
  Löscht die ausgewählte Datei bzw. den ausgewählten Ordner aus dem Speicher.  
   
  **Netzlaufwerk verbinden**  

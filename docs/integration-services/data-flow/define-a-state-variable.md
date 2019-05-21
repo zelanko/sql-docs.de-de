@@ -31,7 +31,7 @@ ms.locfileid: "65726973"
   
  Die folgende Tabelle enthält eine allgemeine Beschreibung der Komponenten von CDC-Statusvariablenwerten.  
   
-|Komponente|und Beschreibung|  
+|Komponente|Beschreibung|  
 |---------------|-----------------|  
 |**\<Statusname>**|Der Name des aktuellen CDC-Status.|  
 |**CS**|Kennzeichnet den aktuellen Startpunkt für den Verarbeitungsbereich (aktueller Start).|  
@@ -50,7 +50,7 @@ ms.locfileid: "65726973"
   
  In der folgenden Tabelle werden die möglichen CDC-Statuswerte beschrieben.  
   
-|Status|und Beschreibung|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den **MarkInitialLoadStart** -Vorgang aufgerufen wurde.|  

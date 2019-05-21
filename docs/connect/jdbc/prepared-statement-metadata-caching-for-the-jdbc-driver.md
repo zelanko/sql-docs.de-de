@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72ef56833f8f6a6ed4cc66a91dcb7a9e4576c7f5
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52395833"
@@ -38,7 +38,7 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wird, vor diesem Treib
 
  **SQLServerConnection**
  
-|Methode „New“|und Beschreibung|  
+|Methode „New“|Beschreibung|  
 |-----------|-----------------|  
 |Int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der derzeit ausstehenden vorbereitete Anweisung unprepare Aktionen.|
 |"void" closeUnreferencedPreparedStatementHandles()|Erzwingt, dass die Unprepare-Anforderungen für alle ausstehenden verworfenen vorbereiteten Anweisungen ausgeführt werden.|
@@ -49,7 +49,7 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wird, vor diesem Treib
 
  **SQLServerDataSource**
  
-|Methode „New“|und Beschreibung|  
+|Methode „New“|Beschreibung|  
 |-----------|-----------------|  
 |"void" setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|Wenn diese Konfiguration auf "false" festgelegt ist, die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufruft und keine Anweisung vorbereiten, nach die zweite Ausführung erfolgt, dass Sp_prepexec aufgerufen, und setup tatsächlich einem vorbereiteten Anweisungshandle ab. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
 |Boolesche getEnablePrepareOnFirstPreparedStatementCall()|Wenn diese Konfiguration gibt "false", die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufruft und eine Anweisung nicht vorbereitet werden, nachdem die zweite Ausführung erfolgt, wird der Sp_prepexec, und setup tatsächlich einem vorbereiteten Anweisungshandle. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
@@ -70,7 +70,7 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerConnection**
  
-|Methode „New“|und Beschreibung|  
+|Methode „New“|Beschreibung|  
 |-----------|-----------------|  
 |"void" setDisableStatementPooling(boolean value)|Legt fest, anweisungspools "true" oder "false".|
 |Boolesche getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|
@@ -81,7 +81,7 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerDataSource**
  
-|Methode „New“|und Beschreibung|  
+|Methode „New“|Beschreibung|  
 |-----------|-----------------|  
 |"void" setDisableStatementPooling(boolean disableStatementPooling)|Der pooling-Anweisung festgelegt werden, auf "true" oder "false"|
 |Boolesche getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|

@@ -29,7 +29,7 @@ ms.locfileid: "52400623"
   
  In dieser Tabelle werden die Schreibweisen im vorigen Diagramm beschrieben:  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0..1|Null oder Eins|  
 |1|Genau eins|  

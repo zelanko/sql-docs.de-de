@@ -44,7 +44,7 @@ ms.locfileid: "65723965"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Zeilen in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Zeilentrennzeichens.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Zeilen mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Zeilen mit einem Wagenrücklauf.|  
@@ -58,7 +58,7 @@ ms.locfileid: "65723965"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Spalten in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Spaltentrennzeichens.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Spalten mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Spalten mit einem Wagenrücklauf.|  

@@ -33,7 +33,7 @@ ms.locfileid: "65726469"
   
  Nachdem alle Spaltenverweise aufgelöst wurden und keine weiteren Datenpfadfehler auftreten, werden neben den Datenpfaden keine Fehlersymbole angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Nicht zugeordnete Ausgabespalten (Quelle)**    
  Spalten vom Upstreampfad, die derzeit nicht zugeordnet sind.  
   

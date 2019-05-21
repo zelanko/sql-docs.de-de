@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be35b223bb61118ea921fb9671ffba4ea4009ec2
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47680048"
@@ -30,7 +30,7 @@ ms.locfileid: "47680048"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateTimestamp (int, java.sql.Timestamp)](../../../connect/jdbc/reference/updatetimestamp-method-int-java-sql-timestamp.md)|Aktualisiert die angegebene Spalte unter Berücksichtigung des Spaltenindexes mit einem Zeitstempelwert.|  
 |[updateTimestamp (java.lang.String, java.sql.Timestamp)](../../../connect/jdbc/reference/updatetimestamp-method-java-lang-string-java-sql-timestamp.md)|Aktualisiert die angegebene Spalte unter Berücksichtigung des Spaltennamens mit einem Zeitstempelwert.|  

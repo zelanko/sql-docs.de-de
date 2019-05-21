@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
 ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/21/2019
 ms.locfileid: "56464766"
@@ -95,7 +95,7 @@ Beispielsweise wird beim Kompilieren einer ODBC-Anwendung mit `msodbcsql11.lib` 
 ## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Komponenten von Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows 
  Der ODBC-Treiber für Windows enthält die folgenden Komponenten:
  
-|Komponente|und Beschreibung|  
+|Komponente|Beschreibung|  
 |---------------|-----------------|  
 |msodbcsql17.dll oder <br> msodbcsql13.dll oder <br> msodbcsql11.dll|Die DLL-Datei (Dynamic-Link Library, DLL), die die gesamte Funktionalität des Treibers enthält Diese Datei wird in % SYSTEMROOT%\System32 installiert.|  
 |msodbcdiag17.dll oder <br> msodbcdiag13.dll oder <br> msodbcdiag11.dll|Die Dynamic Link Library (DLL)-Datei, die vom Treiber (Ablaufverfolgung)-Diagnose-Schnittstelle enthält. Diese Datei wird in % SYSTEMROOT%\System32 installiert.|

@@ -46,7 +46,7 @@ Der Name der Assembly.
 *property_name*  
 Der Name einer Eigenschaft, zu der Informationen abgerufen werden sollen. *property_name* kann einen der folgenden Werte enthalten:
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |---|---|
 |**CultureInfo**|Gebietsschema der Assembly.|  
 |**PublicKey**|Öffentlicher Schlüssel oder öffentlicher Schlüsseltoken der Assembly.|  

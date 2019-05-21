@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84c29250a0af0bfca4d6ced43a5a38126d4efb16
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47776378"
@@ -30,7 +30,7 @@ ms.locfileid: "47776378"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getByte (int)](../../../connect/jdbc/reference/getbyte-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Wert vom Typ **byte** ab.|  
 |[getByte (java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Wert vom Typ **byte** ab.|  

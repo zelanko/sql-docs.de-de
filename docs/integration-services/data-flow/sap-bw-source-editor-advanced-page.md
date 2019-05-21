@@ -43,7 +43,7 @@ ms.locfileid: "65726409"
   
 3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -51,7 +51,7 @@ ms.locfileid: "65726409"
  **Zeichenfolgenkonvertierung**  
  Geben Sie die Regel an, die für die Zeichenfolgenkonvertierung angewendet werden soll.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Automatische Zeichenfolgenkonvertierung**|Konvertieren Sie alle Zeichenfolgen in **nvarchar** , wenn das SAP NetWeaver BW-System ein Unicode-System ist. Konvertieren Sie andernfalls alle Zeichenfolgen in **varchar**.|  
 |**Zeichenfolgen in varchar konvertieren**|Konvertieren Sie alle Zeichenfolgen in **varchar**.|  

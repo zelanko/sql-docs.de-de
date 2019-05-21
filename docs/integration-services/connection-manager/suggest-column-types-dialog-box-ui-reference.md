@@ -29,7 +29,7 @@ ms.locfileid: "65728092"
   
  Weitere Informationen zu den von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]verwendeten Datentypen, finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Anzahl von Zeilen**  
  Geben Sie die Anzahl der Zeilen im vom Algorithmus verwendeten Beispiel an, oder wählen Sie die Anzahl aus.  
   

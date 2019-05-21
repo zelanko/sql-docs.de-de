@@ -51,7 +51,7 @@ FILEPROPERTY ( file_name , property )
  *property*  
  Ein Ausdruck, der den Namen der zurückzugebenden Dateieigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich.  
   
-|value|und Beschreibung|Zurückgegebener Wert|  
+|Wert|Beschreibung|Zurückgegebener Wert|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Dateigruppe ist schreibgeschützt.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsPrimaryFile**|Datei ist die primäre Datei.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  

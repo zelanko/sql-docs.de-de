@@ -28,7 +28,7 @@ ms.locfileid: "65099252"
 > [!NOTE]  
 >  Änderungsskripts, die von Visual Database Tools zur Verfügung gestellt werden, enthalten keine Fehlerbehandlung. Dabei wird angenommmen, dass seit dem Öffnen des Tools keine Datenbankobjekte geändert wurden, und dass deshalb keine änderungsbezogenen Probleme auftreten werden. Vor dem Ausführen des Änderungsskripts sollten Sie die entsprechenden Fehlerbehandlungsanweisungen einschließen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Änderungsskript automatisch nach jedem Speichern erstellen**  
  Ist dieses Kontrollkästchen aktiviert, wird das Dialogfeld **Änderungsskript speichern** jedes Mal angezeigt, wenn Sie Änderungen an einer Tabelle speichern.  
   

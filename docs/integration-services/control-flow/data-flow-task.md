@@ -51,7 +51,7 @@ ms.locfileid: "65727819"
 ## <a name="log-entries"></a>Protokolleinträge  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
 |**OnPipelinePostEndOfRowset**|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der **ProcessInput** -Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
@@ -93,7 +93,7 @@ ms.locfileid: "65727819"
   
  Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : OLE DB Source Output : 1180 : Sort : 1181 : Sort Input : 76", in Spalten analysiert. Die Meldung wurde vom **OnPipelineRowsSent** -Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Spalte|und Beschreibung|value|  
+|Spalte|Beschreibung|Wert|  
 |------------|-----------------|-----------|  
 |**PathID**|Der Wert der **ID** -Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der **Name** -Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  

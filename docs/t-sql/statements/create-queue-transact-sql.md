@@ -144,7 +144,7 @@ CREATE QUEUE <object>
   
  In der folgenden Tabelle werden die Spalten in einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten zurück, die den Status **1** haben. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0** = Empfangene Nachricht wurde beibehalten<br /><br /> **1** = Bereit zu empfangen<br /><br /> **2** = Noch nicht abgeschlossen<br /><br /> **3** = Gesendete Nachricht wurde beibehalten|  
 |priority|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird.|  

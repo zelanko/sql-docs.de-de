@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c1f5576d440cc9c98708882b98c5b6d9ceff42
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47809978"
@@ -61,7 +61,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  Das von der getPrimaryKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|Zeichenfolge|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
 |TABLE_SCHEM|Zeichenfolge|Das Schema der Tabelle.|  

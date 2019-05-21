@@ -28,7 +28,7 @@ ms.locfileid: "47745908"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Exec Prepared SQL (Ereignisklasse)](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausgeführt wurde.|  
 |[Prepare SQL-Ereignisklasse](../../relational-databases/event-classes/prepare-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung zum Verwenden vorbereitet wurde.|  

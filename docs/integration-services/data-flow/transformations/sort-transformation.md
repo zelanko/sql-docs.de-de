@@ -64,7 +64,7 @@ ms.locfileid: "65725838"
 ## <a name="sort-transformation-editor"></a>Transformations-Editor für Sortierung
   Mithilfe des Dialogfelds **Transformations-Editor für Sortierung** können Sie die zu sortierenden Spalten auswählen, die Sortierreihenfolge festlegen und angeben, ob Duplikate entfernt werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Geben Sie mithilfe der Kontrollkästchen die zu sortierenden Spalten an.  
   

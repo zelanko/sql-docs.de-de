@@ -196,7 +196,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -236,7 +236,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   

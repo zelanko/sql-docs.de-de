@@ -66,7 +66,7 @@ IS_OBJECTSIGNED (
 ## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED gibt folgende Werte zurück.  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |NULL|Das Objekt wurde nicht signiert oder ist nicht gültig.|  
 |0|Das Objekt wurde signiert, die Signatur ist jedoch nicht gültig.|  

@@ -18,7 +18,7 @@ ms.locfileid: "65572323"
 # <a name="rgdi-device-information-settings"></a>RGDI-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das HTML-Format aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**Page**|Gibt die Seite des zu rendernden Berichts an. Der Standardwert ist **1**.|  
 |**RGDIVersion**|Diese Einstellung hat keine Auswirkungen.|  

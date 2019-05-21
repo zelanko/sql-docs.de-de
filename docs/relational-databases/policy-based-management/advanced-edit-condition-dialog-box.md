@@ -63,7 +63,7 @@ ms.locfileid: "52535423"
   
 > **WICHTIG!** Für die Funktionen, mit denen Sie richtlinienbasierte Verwaltungsbedingungen erstellen können, wird nicht immer die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax verwendet. Stellen Sie sicher, dass Sie die Beispielsyntax befolgen. Wenn Sie beispielsweise die Funktionen **DateAdd** oder **DatePart** verwenden, müssen Sie das *datepart* -Argument in einfache Anführungszeichen einschließen.  
   
-|Funktion|Signatur|und Beschreibung|Argumente|Rückgabewert|Beispiel|  
+|Funktion|Signatur|Beschreibung|Argumente|Rückgabewert|Beispiel|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *Ausdruck1*, Numeric *Ausdruck2*)|Addition zweier Zahlen.|*Ausdruck1* und *Ausdruck2* : Jeder gültige Ausdruck eines beliebigen Datentyps der numerischen Kategorie, mit Ausnahme des Datentyps **bit** . Kann eine Konstante, Eigenschaft oder Funktion sein, die einen numerischen Typ zurückgibt.|Gibt den Datentyp des Arguments zurück, das in der Rangfolge höher eingestuft ist.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *Ausdruck*)|Erstellt ein Array aus einer Liste von Werten. Kann mit Aggregatfunktionen, wie z. B. Sum() und Count(), verwendet werden.|*Ausdruck* : Ein Ausdruck, der in ein Array konvertiert wird.|Das Array.|`Array(2,3,4,5,6)`|  

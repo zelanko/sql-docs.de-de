@@ -37,7 +37,7 @@ ms.locfileid: "62772160"
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **ADO.NET-Quellen-Editor** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  

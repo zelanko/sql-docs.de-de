@@ -53,7 +53,7 @@ ms.locfileid: "65728080"
   
  Weitere Informationen zum WMI-Verbindungs-Manager finden Sie unter [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
   

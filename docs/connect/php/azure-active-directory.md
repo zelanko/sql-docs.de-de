@@ -13,7 +13,7 @@ ms.author: v-dapugl
 manager: mbarwin
 ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
 ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/26/2019
 ms.locfileid: "56828050"
@@ -25,7 +25,7 @@ ms.locfileid: "56828050"
 
 Um Azure AD verwenden möchten, verwenden die **Authentifizierung** oder **AccessToken** Schlüsselwörter (sie sind sich gegenseitig ausschließende), wie in der folgenden Tabelle dargestellt. Weitere technische Informationen finden Sie unter [mithilfe von Azure Active Directory mit dem ODBC-Treiber](../../connect/odbc/using-azure-active-directory.md).
 
-|Schlüsselwort|Werte|und Beschreibung|
+|Schlüsselwort|Werte|Beschreibung|
 |-|-|-|
 |**AccessToken**|Nicht festgelegt (Standard)|Der Authentifizierungsmodus durch andere Schlüsselwörter bestimmt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
 ||Eine Byte-Zeichenfolge|Azure AD Access Token aus einem OAuth-JSON-Antwort extrahiert. Die Verbindungszeichenfolge darf keine Benutzer-ID, Kennwort oder das Schlüsselwort für die Authentifizierung (erfordert ODBC Driver, Version 17 oder höher unter Linux oder MacOS). |

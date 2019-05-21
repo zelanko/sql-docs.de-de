@@ -29,7 +29,7 @@ ms.locfileid: "65821699"
   
 -   Klicken Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Ausgabe**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Liste der Ausgabebereiche**  
  Zeigt eine Liste der Ausgabebereiche an, die angezeigt werden können. Es können mehrere Informationsbereiche verfügbar sein, je nachdem, welche Tools das Fenster **Ausgabe** nutzen, um Informationen an den Benutzer zu übermitteln.  
   

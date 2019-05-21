@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2d12b70a8a273a2ddc638475d7b0992e7400b6
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47668989"
@@ -30,7 +30,7 @@ ms.locfileid: "47668989"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateShort (int, short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ **short** unter Berücksichtigung des Spaltenindex.|  
 |[updateShort (java.lang.String, short)](../../../connect/jdbc/reference/updateshort-method-java-lang-string-short.md)|Aktualisiert die angegebene Spalte mit einem **kurzen** Wert unter Berücksichtigung des Spaltennamens.|  

@@ -57,7 +57,7 @@ ms.locfileid: "65728305"
 ## <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Excel-Dateipfad**  
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei ein.  
    

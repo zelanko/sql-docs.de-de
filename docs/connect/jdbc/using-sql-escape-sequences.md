@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47841726"
@@ -87,7 +87,7 @@ Die Escapesyntax für Datums-, Zeit- und Timestampliterale lautet wie folgt:
 
 Hierbei ist `literal-type` einer der folgenden Typen:  
   
-| Literaltyp | und Beschreibung | Wertformat               |
+| Literaltyp | Beschreibung | Wertformat               |
 | ------------ | ----------- | -------------------------- |
 | d            | date        | yyyy-mm-dd                 |
 | t            | Uhrzeit        | hh:mm:ss [1]               |

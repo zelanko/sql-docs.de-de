@@ -36,7 +36,7 @@ ms.locfileid: "65574717"
 ### <a name="row-and-column-handles"></a>Zeilen- und Spaltenhandles  
  Wenn Sie einen Tablix-Datenbereich auswählen, geben die Grafiken der Zeilen- und Spaltenhandles den Zweck der jeweiligen Zeile bzw. Spalte an. Handles geben Zeilen und Spalten an, die sich in einer Gruppe oder außerhalb einer Gruppe befinden. In der folgenden Tabelle wird eine Vielzahl angezeigter Handles aufgelistet.  
   
-|Symbol|und Beschreibung|  
+|Symbol|Beschreibung|  
 |----------|-----------------|  
 |![Zeilenziehpunkt mit drei parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
 |![Zeilenziehpunkt mit Detailzeile und einer äußeren Gruppe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Row handle with details row and one outer group")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  

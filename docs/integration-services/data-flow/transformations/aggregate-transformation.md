@@ -37,7 +37,7 @@ ms.locfileid: "65726278"
 ## <a name="operations"></a>Operationen (Operations)  
  Die Transformation für das Aggregieren unterstützt die folgenden Vorgänge.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Group By|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |SUM|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
@@ -142,7 +142,7 @@ ms.locfileid: "65726278"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "65726278"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine Angabe|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
@@ -177,7 +177,7 @@ ms.locfileid: "65726278"
  **Vorgang**  
  Wählen Sie einen Vorgang aus der Liste der verfügbaren Vorgänge aus, indem Sie die folgende Tabelle zurate ziehen.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |**GroupBy**|Unterteilt Datasets in Gruppen. Zum Gruppieren können Spalten aller Datentypen verwendet werden. Weitere Informationen finden Sie unter GROUP BY.|  
 |**Sum**|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter SUM.|  
@@ -193,7 +193,7 @@ ms.locfileid: "65726278"
  **Count Distinct Scale**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine Angabe|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
@@ -211,11 +211,11 @@ ms.locfileid: "65726278"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Schlüsselskala**  
  Gibt optional die ungefähre Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine Angabe|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
@@ -228,7 +228,7 @@ ms.locfileid: "65726278"
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine Angabe|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  

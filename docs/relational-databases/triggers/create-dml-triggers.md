@@ -58,11 +58,11 @@ ms.locfileid: "47624268"
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|value|  
+    |Parameter|Wert|  
     |---------------|-----------|  
     |Author|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |und Beschreibung|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
+    |Beschreibung|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  

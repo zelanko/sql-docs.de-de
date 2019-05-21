@@ -27,7 +27,7 @@ ms.locfileid: "65714682"
 
   Zeigt die Parameter für alle Pakete und Projekte im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|Der eindeutige Bezeichner (ID) des Parameters.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  

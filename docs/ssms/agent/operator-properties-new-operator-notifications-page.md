@@ -29,7 +29,7 @@ ms.locfileid: "65097219"
 
 Mithilfe dieser Seite können Sie Warnungen und Aufträge zum Benachrichtigen des Operators festlegen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Warnungen**  
 Zeigt die Warnungen in der Instanz an.  
   

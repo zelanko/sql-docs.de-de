@@ -25,7 +25,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52542489"
@@ -109,7 +109,7 @@ ms.locfileid: "52542489"
      **Auslassungspunkte (…)**  
      Klicken Sie auf die Auslassungspunkte **(…)** hinter **Wert**, um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
   
-     **Delete**  
+     **Löschen**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  

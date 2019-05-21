@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744450"
@@ -50,7 +50,7 @@ Das PDO::SQLSRV_ATTR_ENCODING-Attribut kann an [PDOStatement::setAttribute](../.
   
 Die verfügbaren Werte, die an PDO::SQLSRV_ATTR_ENCODING übergeben werden können, sind  
   
-|Konstanten zum Treiber PDO_SQLSRV|und Beschreibung|  
+|Konstanten zum Treiber PDO_SQLSRV|Beschreibung|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Die Daten sind ein einfacher, uncodierter und nicht übersetzter Strom aus unbearbeiteten Bytes.<br /><br />Dies gilt nicht für PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Daten stellen 8-Bit-Zeichen gemäß der Codepage des im System eingestellten Windows-Gebietsschemas dar. Alle Multi-Byte-Zeichen oder Zeichen, die nicht in dieser Codepage enthalten sind, werden durch ein aus einem einzelnen Byte bestehendes Fragezeichen (?) ersetzt.|  
@@ -80,7 +80,7 @@ Die folgenden Abschnitte listen die Konstanten auf, die der SQLSRV-Treiber verwe
 ### <a name="err-constants"></a>ERR-Konstanten  
 Die folgende Tabelle enthält die Konstanten, die verwendet werden, um anzugeben, ob [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) Fehler, Warnungen oder beides zurückgibt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Fehler und Warnungen, die beim letzten **sqlsrv** -Funktionsaufruf generiert wurden, werden zurückgegeben. Dies ist der Standardwert.|  
 |SQLSRV_ERR_ERRORS|Fehler und Warnungen aus dem letzten **sqlsrv** -Funktionsaufruf werden zurückgegeben.|  
@@ -89,7 +89,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um anzugeben
 ### <a name="fetch-constants"></a>FETCH-Konstanten  
 Die folgende Tabelle enthält die Konstanten, die verwendet werden, um den Typ des von [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)zurückgegebenen Arrays anzugeben.  
   
-|SQLSRV-Konstante|und Beschreibung|  
+|SQLSRV-Konstante|Beschreibung|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** gibt die nächste Datenzeile als assoziatives Array zurück.|  
 |SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** gibt die nächste Datenzeile als Array zurück, das sowohl numerische als auch assoziative Schlüssel aufweist. Dies ist der Standardwert.|  
@@ -100,7 +100,7 @@ In diesem Abschnitt sind die Konstanten aufgelistet, die verwendet werden, um di
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsystems** Einstellung verwendet werden können:  
   
-|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
+|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|Beschreibung|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Aktiviert die Protokollierung aller Subsysteme.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Aktiviert die Protokollierung der Verbindungsaktivität.|  
@@ -111,7 +111,7 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsy
   
 Die folgende Tabelle listet die Konstanten auf, die als Wert für die **LogSeverity** -Einstellung verwendet werden können:  
   
-|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
+|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|Beschreibung|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden.|  
@@ -121,7 +121,7 @@ Die folgende Tabelle listet die Konstanten auf, die als Wert für die **LogSever
 ### <a name="nullable-constants"></a>NULL-Wert-Konstanten  
 Die folgende Tabelle enthält die Konstanten, die Sie verwenden können, um zu bestimmen, ob eine Spalte NULL-Werte zulässt oder ob diese Information nicht verfügbar ist. Sie können den Wert des **Nullable** -Schlüssels vergleichen, der von [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) zurückgegeben wird, um den Status der NULL-Wert-Behandlung der Spalte zu bestimmen.  
   
-|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
+|SQLSRV-Konstante (entsprechende ganze Zahl in Klammern)|Beschreibung|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|In der Spalte ist NULL zulässig.|  
 |SQLSRV_NULLABLE_NO (1)|NULL-Werte sind in der Spalte nicht zulässig.|  
@@ -130,7 +130,7 @@ Die folgende Tabelle enthält die Konstanten, die Sie verwenden können, um zu b
 ### <a name="param-constants"></a>PARAM-Konstanten  
 Die folgende Liste enthält die Konstanten für die Angabe der Parameterrichtung, wenn Sie [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)aufrufen.  
   
-|SQLSRV-Konstante|und Beschreibung|  
+|SQLSRV-Konstante|Beschreibung|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|Gibt einen Eingabeparameter an.|  
 |SQLSRV_PARAM_INOUT|Gibt einen bidirektionalen Parameter an.|  
@@ -149,7 +149,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die PHP-D
   
 1. **SQLSRV_PHPTYPE_STREAM** und **SQLSRV_PHPTYPE_STRING** akzeptieren einen Parameter, der die Codierung des Streams angibt. Die folgende Tabelle enthält die SQLSRV-Konstanten, die als Parameter akzeptiert werden sowie eine Beschreibung der zugehörigen Codierung.  
   
-|SQLSRV-Konstante|und Beschreibung|  
+|SQLSRV-Konstante|Beschreibung|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Die Daten werden als uncodierter und nicht übersetzter Strom aus unbearbeiteten Bytes vom Server zurückgegeben.|  
 |SQLSRV_ENC_CHAR|Daten werden in 8-Bit-Zeichen gemäß der Codepage des Windows-Gebietsschemas zurückgegeben, das auf dem System installiert ist. Alle Multi-Byte-Zeichen oder Zeichen, die nicht in dieser Codepage enthalten sind, werden durch ein aus einem einzelnen Byte bestehendes Fragezeichen (?) ersetzt.<br /><br />Diese ist die Standardcodierung.|  

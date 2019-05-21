@@ -31,7 +31,7 @@ ms.locfileid: "62769598"
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** im Knoten **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  

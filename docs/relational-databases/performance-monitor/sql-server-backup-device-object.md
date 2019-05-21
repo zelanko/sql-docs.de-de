@@ -28,7 +28,7 @@ ms.locfileid: "53379661"
   
  In dieser Tabelle wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sicherungsmedium** beschrieben.  
   
-|Sicherungsmedium-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Sicherungsmedium-Leistungsindikatoren von SQL Server|Beschreibung|  
 |---------------------------------------|-----------------|  
 |**Mediumsdurchsatz Bytes/Sekunde**|Durchsatz von Lese-/Schreibvorgängen für ein Sicherungsmedium. Dieser Leistungsindikator ist nur vorhanden, während der Sicherungs- oder Wiederherstellungsvorgang ausgeführt wird.|  
   

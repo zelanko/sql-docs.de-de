@@ -65,7 +65,7 @@ ms.locfileid: "65725924"
 ## <a name="percentage-sampling-transformation-editor"></a>Transformations-Editor für Prozentwertstichprobe
   Im Dialogfeld **Transformations-Editor für Prozentwertstichprobe** können Sie einen Teil der Eingabe mithilfe des angegebenen Prozentsatzes von Zeilen als Stichprobe entnehmen. Durch diese Transformation wird die Eingabe in zwei getrennte Ausgaben geteilt.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Prozentsatz der Zeilen**  
  Geben Sie den Prozentsatz der Zeilen in der Eingabe an, die als Stichprobe verwendet werden sollen.  
   

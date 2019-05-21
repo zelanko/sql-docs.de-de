@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdee4bfa9f5cc0e8a35bcac3214bab3415541b2f
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47823178"
@@ -30,7 +30,7 @@ ms.locfileid: "47823178"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getDate (int)](../../../connect/jdbc/reference/getdate-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als java.sql.Date-Objekt in der Programmiersprache Java ab.|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes und Calendar-Objekts als java.sql.Date-Objekt in der Programmiersprache Java ab.|  

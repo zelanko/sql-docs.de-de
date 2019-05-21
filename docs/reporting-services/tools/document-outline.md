@@ -23,7 +23,7 @@ ms.locfileid: "65580330"
 Wenn das Fenster **Dokumentgliederung** nicht angezeigt wird, klicken Sie im Menü **Ansicht**auf **Weitere Fenster**und anschließend auf Dokumentgliederung.
 Oder verwenden Sie STRG+ALT+T.
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Alle erweitern**  
  Klicken Sie, um alle Knoten in der Hierarchie zu erweitern.  
   

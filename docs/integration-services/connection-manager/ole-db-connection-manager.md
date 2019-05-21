@@ -78,7 +78,7 @@ ms.locfileid: "65728174"
   
  Weitere Informationen zum OLE DB-Verbindungs-Manager finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Datenverbindungen**  
  Wählen Sie aus der Liste eine vorhandene OLE DB-Datenverbindung aus.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65728174"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** eine OLE DB-Datenverbindung.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Datenverbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Weitere Informationen    

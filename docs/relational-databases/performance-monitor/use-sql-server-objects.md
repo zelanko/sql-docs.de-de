@@ -72,7 +72,7 @@ ms.locfileid: "54257155"
 ##  <a name="SQLServerAgentPOs"></a> Leistungsobjekte für den SQL Server-Agent  
  In der folgenden Tabelle sind die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent aufgeführt:  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |[SQLAgent:Warnungen](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
 |[SQLAgent:Aufträge](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
@@ -82,7 +82,7 @@ ms.locfileid: "54257155"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker-Leistungsobjekte  
  In der folgenden Tabelle sind die Leistungsobjekte für [!INCLUDE[ssSB](../../includes/sssb-md.md)]aufgeführt.  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |[SQLServer:Broker-Aktivierung](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
 |[SQLServer:Broker-Statistik](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  
@@ -91,7 +91,7 @@ ms.locfileid: "54257155"
 ##  <a name="SQLServerPOs"></a> SQL Server-Leistungsobjekte  
  In der folgenden Tabelle werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte beschrieben.  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |[SQLServer:Zugriffsmethoden](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Durchsucht und misst die Anzahl der Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten (z.B. die Anzahl von Indexsuchläufen oder die Anzahl von Seiten, die Indizes und Daten zugeordnet sind).|  
 |[SQLServer:Sicherungsmedium](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Stellt Informationen über Sicherungsmedien bereit, die von Sicherungs- und Wiederherstellungsvorgängen verwendet werden, z. B. über den Durchsatz des Sicherungsmediums.|  
@@ -131,7 +131,7 @@ ms.locfileid: "54257155"
 ##  <a name="SQLServerReplicationPOs"></a> Leistungsobjekte für die SQL Server-Replikation  
  In der folgenden Tabelle sind die Leistungsobjekte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufgeführt:  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |**SQLServer:Replikations-Agents**<br /><br /> **SQLServer:Replikationsmomentaufnahme**<br /><br /> **SQLServer:Replikationsprotokollleser**<br /><br /> **SQLServer:Replikationsverteilung**<br /><br /> **SQLServer:Replikationsmerge**<br /><br /> Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Stellt Informationen zur Aktivität des Replikations-Agents bereit.|  
   

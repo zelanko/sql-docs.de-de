@@ -29,7 +29,7 @@ Der SQL Server-Objekt-Explorer in Visual Studio bietet eine Ansicht Ihrer Datenb
   
 In den folgenden Themen und Abschnitten wird erläutert, wie SSDT zur Datenbankentwicklung beiträgt. Anhand exemplarischer Vorgehensweisen werden Sie durch die Schritte zur Fertigstellung des Datenbankprojekts geführt. Diese im Stil eines Lernprogramms beschriebenen und nacheinander ausgeführten Aufgaben sind im Kontext von Northwind Traders angesiedelt, einer fiktiven, weltweit tätigen Import- und Exportfirma für Lebensmittel und Feinkost.  
   
-|Themen/Abschnitt|und Beschreibung|  
+|Themen/Abschnitt|Beschreibung|  
 |-------------------|---------------|  
 |[Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)|In den Themen dieses Abschnitts werden die SQL Server Data Tools-Funktionen zum Erstellen, Debuggen und Veröffentlichen von Datenbankprojekten beschrieben.|  
 |[Projektorientierte Datenbankentwicklung mit Befehlszeilentools](../ssdt/project-oriented-database-development-using-command-line-tools.md)|In den Themen dieses Abschnitts werden die Befehlszeilentools beschrieben, die eine Reihe von Szenarien für die projektorientierte Datenbankentwicklung ermöglichen.|  

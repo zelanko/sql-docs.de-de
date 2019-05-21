@@ -54,7 +54,7 @@ ms.locfileid: "65573219"
   
  In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst.  
   
-|und Beschreibung|Eingebettet<br /><br /> Datenquelle|Shared<br /><br /> Datenquelle|  
+|Beschreibung|Eingebettet<br /><br /> Datenquelle|Shared<br /><br /> Datenquelle|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|  

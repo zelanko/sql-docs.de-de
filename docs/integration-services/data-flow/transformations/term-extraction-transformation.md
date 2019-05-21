@@ -190,7 +190,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausdrucksextrahierung)
   Auf der Registerkarte **Ausdrucksextrahierung** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Textspalte mit dem zu extrahierenden Text angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen eine einzelne Textspalte aus, die für die Ausdrucksextrahierung verwendet wird.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "65725813"
  **Tabelle oder Sicht**  
  Wählen Sie die Tabelle oder Sicht aus, die die Ausschlussausdrücke enthält.  
   
- **Column**  
+ **Spalte**  
  Wählen Sie in der Tabelle oder Sicht die Spalte aus, die die Ausschlussausdrücke enthält.  
   
  **Konfigurieren der Fehlerausgabe**  
@@ -228,7 +228,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   

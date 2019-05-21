@@ -49,7 +49,7 @@ In diesem Abschnitt werden Schritte vorgestellt, um eine neue Quelle mithilfe de
 ## <a name="add-new-source-dialog-box"></a>Neue Quelle hinzufügen (Dialogfeld)
 In der folgenden Tabelle sind die Optionen im Dialogfeld **Neue Quelle hinzufügen** aufgeführt.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Quelltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
 |Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **\<Neu>**, um einen neuen Verbindungs-Manager zu erstellen.|  

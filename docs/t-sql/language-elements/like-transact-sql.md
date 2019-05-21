@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Ist die bestimmte Zeichenfolge, nach der in *match_expression* gesucht werden soll, und kann die folgenden gültigen Platzhalterzeichen enthalten. *pattern* darf maximal 8.000 Bytes umfassen.  
   
-|Platzhalter|und Beschreibung|Beispiel|  
+|Platzhalter|Beschreibung|Beispiel|  
 |------------------------|-----------------|-------------|  
 |%|Eine Zeichenfolge aus null oder mehr Zeichen|WHERE title LIKE '%Computer%' findet alle Buchtitel, die das Wort 'Computer' enthalten.|  
 |_ (Unterstrich)|Ein einzelnes Zeichen.|WHERE au_fname LIKE '_ean' findet alle Vornamen mit vier Buchstaben, die auf ean enden (Dean, Sean usw.).|  

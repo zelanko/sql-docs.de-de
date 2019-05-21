@@ -79,7 +79,7 @@ ms.locfileid: "65726800"
   
 -   Einen Verbindungs-Manager für mehrere Flatfiles, wenn es bei der Quelle um mehrere Flatfiles handelt und der Datenflusstask sich in einem Schleifencontainer wie dem For-Schleifencontainer befindet. In jeder Schleife des Containers werden von der Flatfilequelle Daten vom nächsten Dateinamen geladen, der vom Verbindungs-Manager für mehrere Flatfiles bereitgestellt wird. Weitere Informationen finden Sie unter [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Flat file connection manager**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie einen neuen Verbindungs-Manager, indem Sie auf **Neu**klicken.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65726800"
 > [!NOTE]  
 >  Die **FileNameColumnName** -Eigenschaft der Flatfilequelle und die **FastParse** -Eigenschaft ihrer Ausgabespalten sind nicht im **Quellen-Editor für Flatfiles**verfügbar, sie können jedoch mithilfe des Dialogfelds **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Flatfilequelle von [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -111,11 +111,11 @@ ms.locfileid: "65726800"
 ## <a name="flat-file-source-editor-error-output-page"></a>Quellen-Editor für Flatfiles (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** im Dialogfeld **Quellen-Editor für Flatfiles** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.\  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Flatfiles** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  

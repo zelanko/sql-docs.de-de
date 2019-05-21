@@ -27,7 +27,7 @@ ms.locfileid: "65728557"
 
   Verwenden Sie die Seite Select Oracle Tables and Columns, um die Tabellen aus der Oracle-Quelldatenbank auszuwählen, in der die Änderungen aufgezeichnet werden. Diese Seite verfügt über die folgenden Elemente:  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Tabellenliste**  
  Die Tabellenliste enthält drei Spalten:  
   

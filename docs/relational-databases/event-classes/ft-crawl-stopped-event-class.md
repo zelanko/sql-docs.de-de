@@ -26,7 +26,7 @@ ms.locfileid: "47743888"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>Datenspalten der FT:Crawl Stopped-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Die ID der Datenbank, in der die Volltextdurchforstung beendet wurde. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Benutzerkontensteuerung|  
 |**EventClass**|**int**|Ereignistyp = 156.|27|nein|  

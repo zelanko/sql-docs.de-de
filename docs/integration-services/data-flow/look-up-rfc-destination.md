@@ -42,7 +42,7 @@ ms.locfileid: "65726712"
   
      Das Gruppenfeld **RFC-Ziel**wird im **Quellen-Editor für SAP BW** nur angezeigt, wenn der Wert für **Ausführungsmodus** **P - Prozesskette auslösen** oder **W - Benachrichtigung abwarten**lautet.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Ziel**  
  Zeigt den Namen des RFC-Ziels an, das im SAP NetWeaver BW-System definiert ist.  
   

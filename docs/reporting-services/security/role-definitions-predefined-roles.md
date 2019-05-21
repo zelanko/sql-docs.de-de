@@ -37,7 +37,7 @@ ms.locfileid: "65570640"
   
  In der folgenden Tabelle werden die vordefinierten Rollen, ihr Bereich und ihre Verwendung beschrieben.  
   
-|Vordefinierte Rolle|Bereich|und Beschreibung|  
+|Vordefinierte Rolle|Bereich|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |[Inhalts-Manager-Rolle](#bkmk_content)|Element|Schließt alle Aufgaben auf Elementebene ein. Benutzer, die dieser Rolle zugewiesen sind, haben die Vollberechtigung zum Verwalten von Berichtsserverinhalt. In diesem Rahmen können Sie anderen Benutzern Berechtigungen gewähren und die Ordnerstruktur zum Speichern von Berichten und anderen Elementen definieren.|  
 |[Verleger-Rolle](#bkmk_publisher)|Element|Benutzer, die dieser Rolle zugewiesen sind, können einem Berichtsserver Elemente hinzufügen und die Ordner erstellen und verwalten, in denen diese Elemente enthalten sind.|  
@@ -55,7 +55,7 @@ ms.locfileid: "65570640"
 ### <a name="content-manager-tasks"></a>Aufgaben des Inhalts-Managers  
  In der folgenden Tabelle sind die in der **Inhalts-Manager** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
@@ -92,7 +92,7 @@ ms.locfileid: "65570640"
 ### <a name="publisher-tasks"></a>Verlegeraufgaben  
  In der folgenden Tabelle sind die in der **Verleger** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen und in einem Berichtsserverordner veröffentlichen.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
@@ -114,7 +114,7 @@ ms.locfileid: "65570640"
 ### <a name="browser-tasks"></a>Browseraufgaben  
  In der folgenden Tabelle sind die in der **Browser** -Rolle enthaltenen Aufgaben beschrieben.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
 |Ressourcen anzeigen|Ressourcen und Ressourceneigenschaften anzeigen.|  
@@ -133,7 +133,7 @@ ms.locfileid: "65570640"
 ### <a name="report-builder-tasks"></a>Berichts-Generator-Aufgaben  
  In der folgenden Tabelle sind die Aufgaben beschrieben, die die **Berichts-Generator** -Rolle einschließt.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
@@ -155,7 +155,7 @@ ms.locfileid: "65570640"
 ### <a name="my-reports-tasks"></a>Aufgaben in Meine Berichte  
  In der folgenden Tabelle sind die in der **Meine Berichte** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf Berichten basieren, die im Ordner Meine Berichte des Benutzers gespeichert sind.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
@@ -183,7 +183,7 @@ ms.locfileid: "65570640"
 ### <a name="system-administrator-tasks"></a>Systemadministratoraufgaben  
  In der folgenden Tabelle sind die in der **Systemadministrator** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Ausführung der Berichtsdefinition, ohne die Veröffentlichung auf einem Berichtsserver zu starten.|  
 |Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -199,7 +199,7 @@ ms.locfileid: "65570640"
   
 ### <a name="system-user-tasks"></a>Systembenutzeraufgaben  
   
-|Task|und Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Führen Sie einen Bericht aus, ohne ihn auf einem Berichtsserver zu veröffentlichen.|  
 |Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

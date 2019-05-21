@@ -25,7 +25,7 @@ ms.locfileid: "65096733"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ermöglicht das Benennen einer erstellten Tabelle, in die Zeilen kopiert werden. Dieses Dialogfeld wird angezeigt, wenn Sie einen Abfragetyp in eine MAKE TABLE-Abfrage ändern. Um einen Abfragetyp zu ändern, zeigen Sie im Menü **Abfrage-Designer** auf **Typ ändern**, und klicken Sie dann auf **Tabelle erstellen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Tabellenname**  
 Geben Sie den Namen der Tabelle ein, die erstellt werden soll. Der Abfrage- und Sicht-Designer überprüft nicht, ob der Name bereits verwendet wird oder ob Sie über eine Berechtigung zum Erstellen der Tabelle verfügen.  
   

@@ -25,7 +25,7 @@ ms.locfileid: "65727909"
 
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|und Beschreibung|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |Verbindung|ADO.NET-Verbindung|Eine ADO.NET-Verbindung zur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -CDC-Datenbank für Zugriff auf die Änderungstabellen und den CDC-Status, falls diese Daten in derselben Datenbank gespeichert werden.<br /><br /> Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.|  
 |TaskOperation|Ganze Zahl (Enumeration)|Der ausgewählte Vorgang für den CDC-Steuerungstask. Die möglichen Werte sind **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**und **Reset CDC State**.<br /><br /> Wenn Sie beim Arbeiten mit **CDC (also nicht mit Oracle) die Option**MarkCdcStart **,** MarkInitialLoadStart **oder** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, muss im Verbindungs-Manager ein Benutzer mit der Berechtigung  **db_owner** oder **sysadmin**angegeben werden.<br /><br /> Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) und [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

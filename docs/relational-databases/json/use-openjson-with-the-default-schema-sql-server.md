@@ -37,7 +37,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Ergebnisse**  
   
-|Key|value|  
+|Key|Wert|  
 |---------|-----------|  
 |NAME|John|  
 |surname|Doe|  
@@ -53,7 +53,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Ergebnisse**  
   
-|Key|value|  
+|Key|Wert|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -86,7 +86,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Ergebnisse**  
   
-|Key|value|Typ|  
+|Key|Wert|Typ|  
 |---------|-----------|----------|  
 |Typ|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  

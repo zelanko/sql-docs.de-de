@@ -140,7 +140,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|und Beschreibung|  
+|Abschnitt|Beschreibung|  
 |-------------|-----------------|  
 |**Ausführungsinformationen**|Zeigt die Anzahl von Ausführungen an, die in den vergangenen 24 Stunden unterschiedliche Status (fehlerhaft, ausgeführt, erfolgreich, andere) aufgewiesen haben.|  
 |**Paketinformationen**|Zeigt die Gesamtanzahl der Pakete, die in den letzten 24 Stunden ausgeführt wurden.|  
@@ -154,7 +154,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|und Beschreibung|  
+|Abschnitt|Beschreibung|  
 |-------------|-----------------|  
 |Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. der Startzeitraum.|  
 |Ausführungsinformationen|Zeigt die Startzeit, die Endzeit und die Dauer für jede Paketausführung an. Sie können eine Liste der Parameterwerte anzeigen, die bei einer Paketausführung verwendet wurden, z. B. Werte, die mit dem Task "Paket ausführen" an ein untergeordnetes Paket übergeben wurden. Um die Parameterliste anzuzeigen, klicken Sie auf "Übersicht".|  
@@ -168,7 +168,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|und Beschreibung|  
+|Abschnitt|Beschreibung|  
 |-------------|-----------------|  
 |Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. Verbindungen mit einer angegebenen Zeichenfolge und dem Bereich **Uhrzeit des letzten Fehlers** .<br /><br /> Sie legen den Bereich **Uhrzeit des letzten Fehlers** fest, um lediglich Verbindungsfehler anzuzeigen, die während eines Datumsbereichs aufgetreten sind. Der Bereich kann mehrere Tage, Monate oder Jahre umfassen.|  
 |Details|Zeigt die Verbindungszeichenfolge, die Anzahl der Ausführungen, bei denen eine Verbindung nicht hergestellt werden konnte, und das Datum an, wann die Verbindung zuletzt nicht hergestellt werden konnte.|  

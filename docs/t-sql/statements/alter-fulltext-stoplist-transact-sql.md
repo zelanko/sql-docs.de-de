@@ -64,7 +64,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* kann als Zeichenfolge, Integer oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier, LCID) der Sprache wie folgt angegeben werden:  
   
-|Format|und Beschreibung|  
+|Format|Beschreibung|  
 |------------|-----------------|  
 |Zeichenfolge|*language_term* entspricht dem **Alias**-Spaltenwert in der [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) Kompatibilitätssicht. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. **'***language_term***'**.|  
 |Integer|*language_term* ist der LCID der Sprache.|  

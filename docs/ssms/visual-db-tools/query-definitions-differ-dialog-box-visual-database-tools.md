@@ -42,7 +42,7 @@ Das Dialogfeld zeigt eine Meldung mit dem Hinweis an, dass die SQL-Anweisung nic
 > [!NOTE]  
 > Das Dialogfeld **Unterschiedliche Abfragedefinitionen** wird nicht angezeigt, wenn die Bereiche „Diagramm“ und „Kriterien“ ausgeblendet sind.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Schaltfläche Ignorieren**  
 Mit dieser Schaltfläche können Sie die SQL-Anweisung übernehmen, um sie weiter zu bearbeiten oder auszuführen. Wenn Sie die Anweisung übernehmen, werden die Bereiche Diagramm und Kriterien abgeblendet, um anzuzeigen, dass die Anweisung im SQL-Bereich darin nicht dargestellt wird.  
   

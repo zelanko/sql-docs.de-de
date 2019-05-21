@@ -29,7 +29,7 @@ Für die häufig auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Websit
 
 Die folgenden Berichtsserverereignisse werden im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll aufgezeichnet.  
   
-|Ereignis-ID|Typ|Kategorie|Quelle|und Beschreibung|  
+|Ereignis-ID|Typ|Kategorie|Quelle|Beschreibung|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Fehler|Zeitplanung|Berichtsserver|Zum Definieren geplanter Operationen (beispielsweise Berichtsabonnierung und -übermittlung) muss SQL Server-Agent ausgeführt werden.|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Fehler|Start/Herunterfahren|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* kann keine Verbindung mit der Berichtsserver-Datenbank herstellen. Weitere Informationen finden Sie unter [Report Server-Windows-Dienst &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  

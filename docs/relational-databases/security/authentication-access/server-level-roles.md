@@ -47,7 +47,7 @@ ms.locfileid: "59429356"
 ## <a name="fixed-server-level-roles"></a>Feste Rollen auf Serverebene  
  In der folgenden Tabelle werden die festen Rollen auf Serverebene und deren Möglichkeiten angezeigt.  
   
-|Feste Rolle auf Serverebene|und Beschreibung|  
+|Feste Rolle auf Serverebene|Beschreibung|  
 |------------------------------|-----------------|  
 |**sysadmin**|Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen.|  
 |**serveradmin**|Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.|  
@@ -78,7 +78,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Arbeiten mit Rollen auf Serverebene  
  In der folgenden Tabelle werden die Befehle, Sichten und Funktionen erklärt, die Sie beim Arbeiten mit Rollen auf Serverebene verwenden können.  
   
-|Funktion|Typ|und Beschreibung|  
+|Funktion|Typ|Beschreibung|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadaten|Gibt eine Liste von Rollen auf Serverebene zurück.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadaten|Gibt Informationen zu Mitgliedern einer Rolle auf Serverebene zurück.|  

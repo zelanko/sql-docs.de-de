@@ -25,54 +25,54 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62831579"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
-  Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
+  Der Foreach-Schleifencontainer definiert eine sich wiederholende Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach**-Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators aktiviert.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Element eines angegebenen Enumerators.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Enumeratortypen bereit:  
   
 -   Foreach-ADO-Enumerator zum Aufzählen von Zeilen in Tabellen. Beispielsweise können Sie die Zeilen in einem ADO-Recordset abrufen.  
   
-     Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer `Object`-Paketvariablen des Datentyps gespeichert ist. Sie verwenden typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Die für den Foreach-ADO-Enumerator angegebene Variable muss den Datentyp <ui>Object>/ui> haben. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../data-flow/recordset-destination.md).  
+     Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer `Object`-Paketvariablen des Datentyps gespeichert ist. Sie verwenden einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator normalerweise, um die Zeilen eines Recordsets nacheinander zu verarbeiten. Die für den Foreach-ADO-Enumerator angegebene Variable muss vom Object-Datentyp sein. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   Enumerator für Foreach-ADO.NET-Schemarowset zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank aufzählen und eine Liste dafür abrufen.  
+-   Enumerator für Foreach-ADO.NET-Schemarowsets zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] aufzählen und eine Liste dafür abrufen.  
   
--   Foreach-Dateienumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchsuchen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung *.LOG im Windows-Ordner und deren Unterordner lesen.  
+-   Foreach-Datei-Enumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchlaufen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung *.LOG im Windows-Ordner und deren Unterordner lesen.  
   
--   Foreach-Enumerator für Daten aus Variable zum Aufzählen des aufzählbaren Objekts, das eine angegebene Variable enthält. Das aufzählbare Objekt kann z. B. ein Array, ein ADO.NET `DataTable`-Objekt oder ein [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Enumerator sein. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
+-   Foreach-Enumerator für Daten aus Variablen zum Aufzählen des aufzählbaren Objekts, das in einer angegebenen Variable enthalten ist. Das aufzählbare Objekt kann z. B. ein Array, ein ADO.NET `DataTable`-Objekt oder ein [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Enumerator sein. Beispielsweise können Sie die Werte eines Arrays aufzählen, das Servernamen enthält.  
   
--   Foreach Item-Enumerator zum Aufzählen von Elementen, bei denen es sich um Auflistungen handelt. Beispielsweise können Sie die Namen der ausführbaren Dateien und Arbeitsverzeichnisse aufzählen, die ein Task Prozess ausführen verwendet.  
+-   Foreach-Element-Enumerator zum Aufzählen von Elementen, bei denen es sich um Sammlungen handelt. Beispielsweise können Sie die Namen der ausführbaren Dateien und Arbeitsverzeichnisse aufzählen, die ein Task „Prozess ausführen“ verwendet.  
   
--   Foreach-NodeList-Enumerator zum Aufzählen des Resultsets eines XPATH-Ausdrucks (XML Path Language). Beispielsweise kann dieser Ausdruck alle Autoren der Klassik aufzählen und eine Liste dafür abrufen: `/authors/author[@period='classical']`.  
+-   Foreach-NodeList-Enumerator zum Aufzählen des Resultsets eines XPATH-Ausdrucks (XML Path Language). Beispielsweise zählt der folgende Ausdruck alle Autoren der Klassik auf und ruft eine Liste dafür ab: `/authors/author[@period='classical']`.  
   
--   Foreach-SMO-Enumerator zum Aufzählen von SMO-Objekten ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects). Beispielsweise können Sie die Sichten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank aufzählen und eine Liste dafür abrufen.  
+-   Foreach-SMO-Enumerator zum Aufzählen von SMO-Objekten ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects). Beispielsweise können Sie die Sichten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank aufzählen und eine Liste dafür abrufen.  
   
 -   Foreach-Azure-Blob-Enumerator zum Aufzählen von Blobs in einem BLOB-Container in einem Azure-Speicher.  
   
 -   Foreach-ADLS-Datei-Enumerator zum Aufzählen von Dateien in einem ADLS-Verzeichnis.
   
- Das folgende Diagramm zeigt einen Foreach-Schleifencontainer mit einem Task Dateisystem. Die Foreach-Schleife verwendet den Foreach-Dateienumerator, und der Task Dateisystem ist so konfiguriert, dass eine Datei kopiert wird. Falls der vom Enumerator angegebene Ordner vier Dateien enthält, wird die Schleife viermal wiederholt, und die vier Dateien werden kopiert.  
+ Das folgende Diagramm zeigt einen Foreach-Schleifencontainer mit einem Dateisystemtask. Die Foreach-Schleife verwendet den Foreach-Datei-Enumerator, und der Dateisystemtask ist so konfiguriert, dass eine Datei kopiert wird. Falls der vom Enumerator angegebene Ordner vier Dateien enthält, wird die Schleife viermal wiederholt, und die vier Dateien werden kopiert.  
   
- ![Ein Foreach-Schleifencontainer der einen Ordner aufzählt](../media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
+ ![Ein Foreach-Schleifencontainer, der einen Ordner aufzählt](../media/ssis-foreachloop.gif "Ein Foreach-Schleifencontainer, der einen Ordner aufzählt")  
   
- Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um für die Paketobjekteigenschaft den Enumeratorauflistungswert zu aktualisieren. Zunächst ordnen Sie den Auflistungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungswert des Foreach-Dateienumerator zugeordnet, in einer Variablen namens `MyFile` und die Variable wird dann im Eigenschaftsausdruck für die Eigenschaft Subject des Tasks Mail senden verwendet. Beim Ausführen des Pakets wird die „Subject“-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
+ Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um die Paketobjekteigenschaft mit dem Wert aus der Enumeratorsammlung zu aktualisieren. Zunächst ordnen Sie den Sammlungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungswert des Foreach-Dateienumerator zugeordnet, in einer Variablen namens `MyFile` und die Variable wird dann im Eigenschaftsausdruck für die Eigenschaft Subject des Tasks Mail senden verwendet. Beim Ausführen des Pakets wird die Subject-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
   
- Variablen, die dem Enumeratorauflistungswert zugeordnet sind, können ebenfalls in Ausdrücken und Skripts verwendet werden.  
+ Variablen, die dem Enumeratorsammlungswert zugeordnet sind, können auch in Ausdrücken und Skripts verwendet werden.  
   
- Ein Foreach-Schleifencontainer kann mehrere Tasks und Container einschließt, kann aber nur einen Enumeratortyp verwenden. Falls der Foreach-Schleifencontainer mehrere Tasks einschließt, können Sie den Enumeratorauflistungswert mehreren Eigenschaften jedes Tasks zuordnen.  
+ Ein Foreach-Schleifencontainer kann mehrere Tasks und Container umfassen, aber nur einen Enumeratortyp verwenden. Falls der Foreach-Schleifencontainer mehrere Tasks umfasst, können Sie den Enumeratorsammlungswert mehreren Eigenschaften jedes Tasks zuordnen.  
   
- Sie können ein Transaktionsattribut für den Foreach-Schleifencontainer festlegen, um eine Transaktion für eine Teilmenge der Paketablaufsteuerung zu definieren. Auf diese Weise können Sie Transaktionen statt auf der Paketebene auf der Ebene der Foreach-Schleife verwalten. Wenn z. B. ein Foreach-Schleifencontainer eine Ablaufsteuerung wiederholt, die Dimensions- und Faktentabellen in einem Sternschema aktualisiert, können Sie eine Transaktion konfigurieren, um sicherzustellen, dass entweder alle oder überhaupt keine Faktentabellen aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](../integration-services-transactions.md).  
+ Sie können ein Transaktionsattribut für den Foreach-Schleifencontainer festlegen, um eine Transaktion für eine Teilmenge der Paketablaufsteuerung zu definieren. Auf diese Weise können Sie Transaktionen statt auf der Paketebene auf der Ebene der Foreach-Schleife verwalten. Wenn z. B. ein Foreach-Schleifencontainer eine Ablaufsteuerung wiederholt, die Dimensions- und Faktentabellen in einem Sternschema aktualisiert, können Sie eine Transaktion konfigurieren, um sicherzustellen, dass entweder alle oder überhaupt keine Faktentabellen aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](../integration-services-transactions.md).  
   
 ## <a name="enumerator-types"></a>Enumeratortypen  
- Enumeratoren sind konfigurierbar, und je nach Enumerator müssen Sie unterschiedliche Informationen bereitstellen.  
+ Enumeratoren sind konfigurierbar, und je nach Enumerator müssen Sie unterschiedliche Informationen angeben.  
   
- In der folgenden Tabelle sind die Informationen zusammengefasst, die für jeden Enumeratortyp erforderlich sind.  
+ In der folgenden Tabelle sind die Informationen zusammengefasst, die für die einzelnen Enumeratortypen erforderlich sind.  
   
 |Enumerator|Konfigurationsanforderungen|  
 |----------------|--------------------------------|  
-|Foreach-ADO-Enumerator|Geben Sie die ADO-Objektquellvariable und den Enumeratormodus an. Die Variable muss den Datentyp <ui>Object>/ui> haben.|  
+|Foreach-ADO-Enumerator|Geben Sie die ADO-Objektquellvariable und den Enumeratormodus an. Die Variable muss vom Datentyp „Object“ sein.|  
 |Enumerator für Foreach-ADO.NET-Schemarowset|Geben Sie die Verbindung mit einer Datenbank und das aufzuzählende Schema an.|  
-|Foreach-Dateienumerator|Geben Sie einen Ordner sowie die aufzuzählenden Dateien und das Format des Dateinamens der abgerufenen Dateien an. Geben Sie darüber hinaus an, ob Unterordner durchsucht werden sollen.|  
+|Foreach-Datei-Enumerator|Geben Sie einen Ordner sowie die aufzuzählenden Dateien und das Format des Dateinamens der abgerufenen Dateien an. Geben Sie ferner an, ob Unterordner durchlaufen werden sollen.|  
 |Foreach-Enumerator für Daten aus Variable|Geben Sie die Variable an, die die aufzuzählenden Objekte enthält.|  
-|Foreach Item-Enumerator|Definieren Sie die Elemente in der Foreach Item-Auflistung, einschließlich der Spalten und Spaltendatentypen.|  
+|Foreach-Element-Enumerator|Definieren Sie die Elemente in der Foreach-Element-Sammlung, einschließlich der Spalten und Spaltendatentypen.|  
 |Foreach-NodeList-Enumerator|Geben Sie die Quelle des XML-Dokuments an, und konfigurieren Sie den XPath-Vorgang.|  
 |Foreach-SMO-Enumerator|Geben Sie die Verbindung mit einer Datenbank und die aufzuzählenden SMO-Objekte an.|  
 |Foreach-Azure-Blob-Enumerator|Geben Sie den Azure-Blob-Container, der Aufzählen von Blobs enthält.|  
@@ -81,9 +81,9 @@ ms.locfileid: "62831579"
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Eigenschaftsausdrücke in Foreach-Schleifencontainern  
  Pakete können so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden. Diese Konfiguration sollte mit Vorsicht verwendet werden, wenn das Paket einen Foreach-Schleifencontainer enthält, der Eigenschaftsausdrücke implementiert.  
   
- Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der „ConnectionString“-Eigenschaft des Verbindungs-Managers festzulegen, den die „Foreach“-Schleifenenumeratoren verwenden. Der Eigenschaftsausdruck der „ConnectionString“-Eigenschaft wird durch eine Variable festgelegt, die dem Auflistungswert des Enumerators zugeordnet ist und bei jeder Iteration der Schleife aktualisiert wird.  
+ Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der ConnectionString-Eigenschaft des Verbindungs-Managers festzulegen, den die Foreach-Schleifenenumeratoren verwenden. Der ConnectionString-Eigenschaftsausdruck wird durch eine Variable festgelegt, die dem Sammlungswert des Enumerators zugeordnet ist und bei jeder Iteration der Schleife aktualisiert wird.  
   
- Das Paket sollte so konfiguriert sein, dass jeweils nur eine ausführbare Datei ausgeführt wird, um in der Schleife negative Auswirkungen einer unbestimmten Zeitvorgabe der parallelen Taskausführung zu vermeiden. Wenn beispielsweise ein Paket mehrere Tasks gleichzeitig ausführen kann, können bei einem Foreach-Schleifencontainer, der im Ordner vorhandene Dateien aufzählt, die Dateinamen abruft und dann mithilfe eines Tasks "SQL ausführen" die Dateinamen in eine Tabelle einfügt, Schreibkonflikte auftreten, falls zwei Instanzen des Tasks "SQL ausführen" versuchen, zur selben Zeit zu schreiben. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
+ Das Paket sollte so konfiguriert sein, dass jeweils nur eine ausführbare Datei ausgeführt wird, um in der Schleife negative Auswirkungen einer unbestimmten Zeitvorgabe der parallelen Taskausführung zu vermeiden. Wenn beispielsweise ein Paket mehrere Tasks gleichzeitig ausführen kann, können bei einem Foreach-Schleifencontainer, der im Ordner vorhandene Dateien aufzählt, die Dateinamen abruft und dann mithilfe eines Tasks „SQL ausführen“ die Dateinamen in eine Tabelle einfügt, Schreibkonflikte auftreten, falls zwei Instanzen des Tasks „SQL ausführen“ gleichzeitig zu schreiben versuchen. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  

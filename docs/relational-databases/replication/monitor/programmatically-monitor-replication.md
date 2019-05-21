@@ -268,7 +268,7 @@ ms.locfileid: "47841284"
   
     -   *metricID* - ein <xref:System.Int32> -Wert, der die Schwellenwertmetrik für die Überwachung aus der folgenden Tabelle darstellt:  
   
-        |value|und Beschreibung|  
+        |Wert|Beschreibung|  
         |-----------|-----------------|  
         |1|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
         |2|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  

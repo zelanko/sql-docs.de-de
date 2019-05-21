@@ -124,7 +124,7 @@ ms.locfileid: "65727284"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "65727284"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Column**  
+ **Spalte**  
  Wird nicht verwendet.  
   
  **Fehler**  

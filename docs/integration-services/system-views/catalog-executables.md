@@ -29,7 +29,7 @@ ms.locfileid: "65714859"
   
  Eine ausführbare Datei ist ein Task oder ein Container, den Sie der Ablaufsteuerung eines Pakets hinzufügen.  
   
-|Spaltenname|**Data type**|und Beschreibung|  
+|Spaltenname|**Data type**|Beschreibung|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Der eindeutige Bezeichner für die ausführbare Datei.|  
 |execution_id|**bigint**|Der eindeutige Bezeichner für die Instanz der Ausführung.|  

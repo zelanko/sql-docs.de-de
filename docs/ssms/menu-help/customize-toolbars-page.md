@@ -35,7 +35,7 @@ ms.locfileid: "65105011"
  **Rename**  
  Zeigt das Dialogfeld **Symbolleiste umbenennen** an, mit der Sie lediglich benutzerdefinierte Symbolleisten umbenennen können.  
   
- **Delete**  
+ **Löschen**  
  Löscht die in der Liste **Symbolleisten** ausgewählte benutzerdefinierte Symbolleiste.  
   
  **Zurücksetzen**  

@@ -54,7 +54,7 @@ ms.locfileid: "65581392"
 ## <a name="log-file-fields"></a>Protokolldateifelder  
  In der folgenden Tabelle sind die im Protokoll verfügbaren Felder beschrieben. Die Feldliste kann konfiguriert werden; Sie können mit der **HTTPTraceSwitches** -Konfigurationseinstellung angeben, welche Felder einbezogen werden sollen. Die Spalte **Standard** gibt an, ob das Feld automatisch in die Protokolldatei aufgenommen wird, wenn Sie **HTTPTraceSwitches**nicht festlegen.  
   
-|Feld|und Beschreibung|Default|  
+|Feld|Beschreibung|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|Ja|  
 |HTTPTraceSwitches|Dieser Wert ist optional. Wenn Sie diesen Wert angeben, können Sie die in der Protokolldatei verwendeten Felder im durch Trennzeichen getrennten Format konfigurieren.|Nein|  

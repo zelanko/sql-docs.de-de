@@ -65,7 +65,7 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
 
  Die folgende Tabelle enthält Informationen zu Konfigurationseinstellungen. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden.  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
 |**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  

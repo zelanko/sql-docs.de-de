@@ -27,7 +27,7 @@ Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekannt
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Beschreibt Funktionen, die in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vorhanden waren, jedoch in späteren Versionen entfernt wurden.|  
 |[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Beschreibt Funktionen, die in dieser Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aus Gründen der Abwärtskompatibilität beibehalten wurden, die aber in einer zukünftigen Version von SQL Server entfernt werden.|  

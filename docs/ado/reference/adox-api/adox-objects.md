@@ -27,7 +27,7 @@ ms.locfileid: "63309186"
 |Objekt|Description|  
 |------------|-----------------|  
 |[Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)|Enthält Auflistungen, die den Schema-Katalog für die Datenquelle beschreiben.|  
-|[Column](../../../ado/reference/adox-api/column-object-adox.md)|Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.|  
+|[Spalte](../../../ado/reference/adox-api/column-object-adox.md)|Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.|  
 |[Gruppieren](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
 |[Key](../../../ado/reference/adox-api/key-object-adox.md)|Stellt ein primärer, Fremdschlüssel oder eindeutiger Schlüsselfeld aus einer Datenbanktabelle dar.|  

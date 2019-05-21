@@ -35,7 +35,7 @@ ms.locfileid: "62649693"
  **Hinzufügen**  
  Löscht die Textfelder, sodass Sie ein neues Tool angeben können.  
   
- **Delete**  
+ **Löschen**  
  Entfernt das Tool oder den Befehl aus der Liste **Menüinhalt** und aus dem Menü **Extras** .  
   
  **Title**  

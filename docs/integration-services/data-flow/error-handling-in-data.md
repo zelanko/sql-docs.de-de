@@ -63,11 +63,11 @@ Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerb
   
  Weitere Informationen zum Arbeiten mit Fehlerausgaben finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   
- **Column**  
+ **Spalte**  
  Zeigen Sie die Ausgabespalten an, die Sie im Dialogfeld des Transformations-Editors ausgewählt haben.  
   
  **Fehler**  
@@ -99,7 +99,7 @@ Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerb
 ## <a name="select-an-error-handling-option"></a>Auswählen einer Fehlerbehandlungsoption  
  Sie können konfigurieren, wie Quellen, Transformationen und Ziele Fehler und das Abschneiden von Daten behandeln. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Fehler bei Komponente|Bei einem Fehler oder beim Abschneiden von Daten wird der Datenflusstask nicht ausgeführt. Dies ist die Standardoption für einen Fehler und das Abschneiden von Daten.|  
 |Fehler ignorieren|Der Fehler oder das Abschneiden von Daten wird ignoriert, und die Datenzeile wird an die Ausgabe der Transformation oder Quelle weitergeleitet.|  

@@ -37,7 +37,7 @@ ms.locfileid: "62834140"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** eine OLE DB-Datenverbindung.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Datenverbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Siehe auch  

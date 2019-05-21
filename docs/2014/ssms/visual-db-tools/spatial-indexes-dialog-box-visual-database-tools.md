@@ -31,7 +31,7 @@ ms.locfileid: "63049134"
  **Hinzufügen**  
  Erstellt einen neuen räumlichen Index.  
   
- **Delete**  
+ **Löschen**  
  Löscht den in der Liste **Ausgewählter räumlicher Index** ausgewählten räumlichen Index.  
   
  **Zellen pro Objekt**  

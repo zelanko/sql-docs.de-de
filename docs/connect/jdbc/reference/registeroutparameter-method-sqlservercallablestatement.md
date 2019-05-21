@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15e04ab5c533cb4f32e54ec31998682667ff29d5
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47732198"
@@ -30,7 +30,7 @@ ms.locfileid: "47732198"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[registerOutParameter (int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int.md)|Registriert den OUT-Parameter in der angegebenen Ordnungsposition für den angegebenen JDBC-Typ.|  
 |[registerOutParameter (int, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)|Registriert den OUT-Parameter in der angegebenen Ordnungsposition für den angegebenen JDBC-Typ und die Dezimalstellen.|  

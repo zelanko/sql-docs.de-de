@@ -78,7 +78,7 @@ ms.locfileid: "65726863"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Tabelle oder Sicht|Ruft Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datei ab.|  
 |Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -121,7 +121,7 @@ ms.locfileid: "65726863"
 ## <a name="excel-source-editor-columns-page"></a>Quellen-Editor für Excel (Seite Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Quellen-Editor für Excel** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -134,11 +134,11 @@ ms.locfileid: "65726863"
 ## <a name="excel-source-editor-error-output-page"></a>Quellen-Editor für Excel (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für Excel** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für Excel** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  

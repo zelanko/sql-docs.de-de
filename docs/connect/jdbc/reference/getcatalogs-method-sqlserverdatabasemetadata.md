@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7ad65c0563598b06b88d2d3f744ade4f37a8fc8
 ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/21/2019
 ms.locfileid: "58305948"
@@ -49,7 +49,7 @@ public java.sql.ResultSet getCatalogs()
   
  Das von der getCatalogs-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Name des Katalogs einschließlich der Systemdatenbanken in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   

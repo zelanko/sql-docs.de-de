@@ -37,7 +37,7 @@ ms.locfileid: "62756498"
 > [!NOTE]  
 >  Diese Option ist nur in der Formularansicht aktiviert.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und den ausgewählten KPI zu löschen.  
   
 > [!NOTE]  

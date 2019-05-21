@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17a3f03292bee8d832a70ee4c1f7e72a20262417
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47773648"
@@ -30,7 +30,7 @@ ms.locfileid: "47773648"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getPooledConnection ()](../../../connect/jdbc/reference/getpooledconnection-method.md)|Stellt eine physische Datenbankverbindung her, die als Poolverbindung verwendet werden kann.|  
 |[getPooledConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getpooledconnection-method-java-lang-string-java-lang-string.md)|Stellt eine physische Datenbankverbindung her, die auf Grundlage des angegebenen Benutzernamens und Kennworts als Poolverbindung verwendet werden kann.|  

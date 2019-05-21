@@ -52,7 +52,7 @@ ms.locfileid: "63260758"
  **Anwenden**  
  Speichern Sie die Änderungen.  
   
- **Delete**  
+ **Löschen**  
  Entfernen Sie das freigegebene Dataset aus der Berichtsserver-Datenbank. Durch das Löschen eines freigegebenen Datasets werden alle Berichte oder zwischengespeicherten Versionen deaktiviert. Um einen Bericht erneut zu aktivieren, müssen Sie jeden Bericht in einem Berichterstellungstool öffnen und ein Dataset mit dem gleichen Namen und der gleichen Feldauflistung angeben. Alternativ können Sie jeden Datenbereichsverweis für die Verwendung eines anderen Datasets mit der gleichen Feldauflistung aktualisieren.  
   
  **Verschieben**  

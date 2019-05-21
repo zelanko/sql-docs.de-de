@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47730321"
@@ -77,7 +77,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  Das von der getBestRowIdentifier-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |SCOPE|short|Der Bereich der zurückgegebenen Ergebnisse. Mögliche Werte:<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|Zeichenfolge|Name der Spalte.|  

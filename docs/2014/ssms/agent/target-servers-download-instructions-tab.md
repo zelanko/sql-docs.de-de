@@ -47,7 +47,7 @@ ms.locfileid: "63245334"
  **Status für Anweisungsdownload**  
  Zeigt den letzten Status für die ausgewählte Downloadanweisung an.  
   
- **Delete**  
+ **Löschen**  
  Löscht die ausgewählte Downloadanweisung.  
   
  **Löschen**  

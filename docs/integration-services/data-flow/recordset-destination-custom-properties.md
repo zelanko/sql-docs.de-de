@@ -27,7 +27,7 @@ ms.locfileid: "65726490"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Recordsetziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|und Beschreibung|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |VariableName|Zeichenfolge|Der Name der Variablen, die das ADO-Recordset enthält.|  
   

@@ -29,7 +29,7 @@ ms.locfileid: "65096839"
 
 Zeigt eine Liste der Aufträge in einer Auftragskategorie oder allen Auftragskategorien an und ermöglicht Ihnen das Hinzufügen einer neuen Auftragskategorie.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Geben Sie den Namen der neuen Auftragskategorie ein. Wenn dies das Dialogfeld mit den Eigenschaften der Auftragskategorie ist, wird hier die von Ihnen eingesehene Kategorie angezeigt.  
   

@@ -123,7 +123,7 @@ ms.locfileid: "63237813"
      **Bearbeiten**  
      Bearbeiten eines Zeitplans.  
   
-     **Delete**  
+     **Löschen**  
      Löschen eines Zeitplans.  
   
 5.  Zeigen Sie den Status des Volltextindizierungs-Assistenten an, bzw. steuern Sie ihn.  

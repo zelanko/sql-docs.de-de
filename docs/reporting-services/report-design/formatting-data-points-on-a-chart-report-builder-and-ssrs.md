@@ -56,7 +56,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Hinzufügen von Schlüsselwörtern für Datenpunktbezeichnungen, QuickInfos und Legendentext  
  Sie können ein vorhandenes Element im Diagramm mithilfe von diagrammspezifischen Schlüsselwörtern darstellen, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Diese Schlüsselwörter können nur auf Eigenschaften von QuickInfos, benutzerdefiniertem Legendentext und Datenpunktbezeichnungen angewendet werden. In vielen Fällen ist für ein Diagrammschlüsselwort ein entsprechender einfacher Ausdruck verfügbar, das Schlüsselwort kann jedoch schneller und einfacher eingegeben werden. Im Folgenden finden Sie eine Liste von Diagrammschlüsselwörtern.  
   
-|Diagrammschlüsselwort|und Beschreibung|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
+|Diagrammschlüsselwort|Beschreibung|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
 |#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|None|  

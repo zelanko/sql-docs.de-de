@@ -46,7 +46,7 @@ ms.locfileid: "65728722"
   
  Klicken Sie im Bestätigungsdialogfeld auf **OK** , um zu bestätigen, dass Sie die CDC-Instanz zurücksetzen und die in die Änderungstabellen geschriebenen Änderungen löschen möchten.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf **Löschen** , um die CDC-Instanz dauerhaft zu löschen. Diese Option ist nur verfügbar, wenn die CDC-Instanz beendet wurde.  
   
  Klicken Sie im Bestätigungsdialogfeld auf **OK** , um zu bestätigen, dass Sie die CDC-Instanz löschen möchten.  

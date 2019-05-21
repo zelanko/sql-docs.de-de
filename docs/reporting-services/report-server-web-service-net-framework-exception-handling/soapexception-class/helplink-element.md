@@ -25,7 +25,7 @@ ms.locfileid: "53589579"
   
  In der folgenden Tabelle sind die Argumente der **HelpLink** -URL aufgeführt.  
   
-|Argument|value|  
+|Argument|Wert|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Der Fehlercode für den Berichtsserver, z. B. rsReservedItem.|  

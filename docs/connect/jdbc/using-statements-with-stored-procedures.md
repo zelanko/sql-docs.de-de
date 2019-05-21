@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12b5d0940ea161e3650dc5126a10783c1afc3e6
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47812848"
@@ -49,7 +49,7 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie gespeicherte [!INCLUDE[ssNoV
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von gespeicherten Prozeduren ohne Parameter](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die keine Eingabe- oder Ausgabeparameter enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Eingabeparameter enthalten.|  

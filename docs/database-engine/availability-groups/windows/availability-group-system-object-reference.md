@@ -25,7 +25,7 @@ Dieses Thema dient als Referenzseite für die verschiedenen Systemobjekte, die b
 
 ## <a name="system-catalog-views"></a>Systemkatalogsichten
 
-| Systemkatalogsicht | und Beschreibung|
+| Systemkatalogsicht | Beschreibung|
 | :------ | :----------------------------- |
 | [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | Enthält eine Zeile für jede Verfügbarkeitsdatenbank in der SQL Server-Instanz, die für jede Always On-Verfügbarkeitsgruppe im WSFC-Cluster (Windows Server-Failoverclustering) ein Verfügbarkeitsreplikat hostet, unabhängig davon, ob die lokale Kopie der Datenbank bereits mit der Verfügbarkeitsgruppe verknüpft wurde. |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | Gibt eine Zeile für jede IP-Adresse zurück, die einem beliebigen Always On-Verfügbarkeitsgruppenlistener im WSFC-Cluster (Windows Server-Failoverclustering) zugeordnet ist. |
@@ -39,7 +39,7 @@ Dieses Thema dient als Referenzseite für die verschiedenen Systemobjekte, die b
 ## <a name="system-dynamic-management-views"></a>Dynamische Systemverwaltungssichten
 
 
-| Dynamische Systemverwaltungssicht | und Beschreibung|
+| Dynamische Systemverwaltungssicht | Beschreibung|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | Gibt eine Zeile für jede versuchte automatische Seitenreparatur in einer beliebigen Verfügbarkeitsdatenbank auf einem Verfügbarkeitsreplikat zurück, das von der Serverinstanz für eine beliebige Verfügbarkeitsgruppe gehostet wird.  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | Gibt eine Zeile für jede Always On-Verfügbarkeitsgruppe zurück, die ein Verfügbarkeitsreplikat in der lokalen SQL Server-Instanz besitzt. In jede Zeile werden die Statuswerte angezeigt, die den Zustand einer angegebenen Verfügbarkeitsgruppe definieren. |
@@ -59,7 +59,7 @@ Dieses Thema dient als Referenzseite für die verschiedenen Systemobjekte, die b
 ## <a name="system-functions"></a>Systemfunktionen
 
 
-| Systemfunktionen | und Beschreibung|
+| Systemfunktionen | Beschreibung|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | Dient zum Ermitteln, ob das aktuelle Replikat das primäre Replikat ist. |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | Dient zum Ermitteln, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist. |

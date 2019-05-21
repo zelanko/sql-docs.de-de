@@ -43,7 +43,7 @@ ms.locfileid: "65726403"
   
 3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Fehlerausgabe** , um die Seite **Fehlerausgabe** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -51,7 +51,7 @@ ms.locfileid: "65726403"
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen Spalten (Quellspalten) an, die im Dialogfeld **Quellen-Editor für SAP BW** auf der Seite **Spalten** ausgewählt wurden. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Quellen-Editor für SAP BW &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md).  
   
  **Fehler**  

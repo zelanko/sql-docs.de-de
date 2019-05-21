@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7857531732e0aa8b9ee69c2ba51a873b6eb50114
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47841538"
@@ -30,7 +30,7 @@ ms.locfileid: "47841538"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[prepareCall (java.lang.String)](../../../connect/jdbc/reference/preparecall-method-java-lang-string.md)|Erstellt ein SQLServerCallableStatement-Objekt zum Aufrufen von in der Datenbank gespeicherten Prozeduren.|  
 |[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|Erstellt ein SQLServerCallableStatement-Objekt, mit dem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekte mit dem angegebenen Typ und der Parallelität generiert werden.|  

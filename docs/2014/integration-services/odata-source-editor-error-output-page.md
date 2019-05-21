@@ -27,7 +27,7 @@ ms.locfileid: "62890532"
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für OData** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  

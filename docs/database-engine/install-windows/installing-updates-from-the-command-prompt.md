@@ -75,7 +75,7 @@ Der Name des Updatepakets kann variieren und enthält möglicherweise Komponente
 > [!IMPORTANT] 
 > Anmeldeinformationen sollten nach Möglichkeit zur Laufzeit angegeben werden. Wenn Sie Anmeldeinformationen in einer Skriptdatei speichern müssen, sollten Sie die Datei schützen, um nicht autorisierten Zugriff zu verhindern. 
  
-|Schalter|und Beschreibung| 
+|Schalter|Beschreibung| 
 |------------|-----------------| 
 |**/?**|Zeigt Hilfe zur unbeaufsichtigten Installation an der Eingabeaufforderung an.| 
 |**/action=Patch oder /action=RemovePatch**|Gibt die Installationsaktion an: Patch oder RemovePatch.| 

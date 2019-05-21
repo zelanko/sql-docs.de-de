@@ -28,7 +28,7 @@ ms.locfileid: "47763818"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Attention-Ereignisklasse](../../relational-databases/event-classes/attention-event-class.md)|Zeigt an, dass ein **Attention** -Ereignis aufgetreten ist.|  
 |[Background Job Error-Ereignisklasse](../../relational-databases/event-classes/background-job-error-event-class.md)|Zeigt an, dass ein Hintergrundauftrag fehlerbedingt beendet wurde.|  

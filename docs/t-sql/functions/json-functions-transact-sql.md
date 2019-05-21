@@ -27,7 +27,7 @@ ms.locfileid: "65577468"
 
 Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben werden, um JSON-Text zu überprüfen oder zu ändern sowie um einfache oder komplexe Werte zu extrahieren.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Testet, ob eine Zeichenfolge gültiges JSON enthält.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.|  

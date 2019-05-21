@@ -20,7 +20,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e983d3c9a0989a5aae79c074ba7b77b09528af6f
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47662688"
@@ -42,7 +42,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|Die nächste Datenzeile wird als numerisches Array zurückgegeben.|  
 |SQLSRV_FETCH_ASSOC|Die nächste Datenzeile wird als assoziatives Array zurückgegeben. Die Array-Schlüssel sind die Spaltennamen im Resultset.|  

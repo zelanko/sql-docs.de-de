@@ -33,7 +33,7 @@ ms.locfileid: "65725427"
   
  Weitere Informationen zum Schreiben von Ausdrücken und zum Verwenden von Eigenschaftsausdrücken finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) und [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Ausdrücke (...)**  
  Klicken Sie auf die Auslassungspunkte (...), um das Dialogfeld **Eigenschaftsausdrucks-Editor** zu öffnen. Weitere Informationen finden Sie unter [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md).  
   

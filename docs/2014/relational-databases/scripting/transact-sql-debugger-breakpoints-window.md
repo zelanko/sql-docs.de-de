@@ -66,7 +66,7 @@ ms.locfileid: "62718017"
 ## <a name="breakpoints-window-toolbar"></a>Symbolleiste des Fensters 'Breakpoints'  
  Wenn das aktuelle [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster aktive Breakpoints enthält, wird im Fenster **Breakpoints** eine Symbolleiste angezeigt, die zum Verwalten der Breakpoints verwendet werden kann.  
   
- **Delete**  
+ **Löschen**  
  Löscht den ausgewählten Breakpoint.  
   
  **Alle Breakpoints löschen**  

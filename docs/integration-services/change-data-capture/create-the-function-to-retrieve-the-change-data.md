@@ -211,7 +211,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Abrufen weiterer Metadaten mit den Änderungsdaten  
  Obwohl die zuvor gezeigte vom Benutzer erstellte Tabellenwert-Funktion nur die **__$operation**-Spalte verwendet, gibt die **cdc.fn_cdc_get_net_changes_<Aufzeichnungsinstanz>**-Funktion für jede Änderungszeile vier Metadatenspalten zurück. Wenn Sie diese Werte in Ihrem Datenfluss verwenden möchten, können Sie diese als zusätzliche Spalten aus der Tabellenwert-Wrapperfunktion zurückgeben.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  

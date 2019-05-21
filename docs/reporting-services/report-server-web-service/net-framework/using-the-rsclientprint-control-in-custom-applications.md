@@ -63,7 +63,7 @@ ms.locfileid: "51814183"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint-Eigenschaften  
   
-|Eigenschaft|Typ|RW|Default|und Beschreibung|  
+|Eigenschaft|Typ|RW|Default|Beschreibung|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|Berichteinstellung|Ruft den linken Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |MarginRight|Double|RW|Berichteinstellung|Ruft den rechten Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
@@ -100,7 +100,7 @@ ms.locfileid: "51814183"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient-Unterstützung für die Print-Methode  
  Das **RSClientPrint**-Objekt unterstützt die zum Starten des Dialogfelds „Drucken“ verwendete **Print**-Methode. Die **Print**-Methode besitzt die folgenden Argumente.  
   
-|Argument|E/A|Typ|und Beschreibung|  
+|Argument|E/A|Typ|Beschreibung|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|Zeichenfolge|Gibt das virtuelle Verzeichnis des Berichtsservers an (z.B. `https://adventure-works/reportserver`).|  
 |ReportPathParameters|In|Zeichenfolge|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

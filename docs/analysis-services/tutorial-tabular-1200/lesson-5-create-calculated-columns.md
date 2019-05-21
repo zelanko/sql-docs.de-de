@@ -110,7 +110,7 @@ Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie i
   
 1.  Wählen Sie im Modell-Designer die **"factinternetsales"** Tabelle.  
   
-2.  Fügen Sie eine neue Spalte hinzu.  
+2.  Fügt eine neue Spalte hinzu.  
   
 3.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
   

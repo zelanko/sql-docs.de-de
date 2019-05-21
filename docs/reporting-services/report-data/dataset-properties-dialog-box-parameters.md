@@ -26,11 +26,11 @@ ms.locfileid: "65573176"
   
  Wenn die Standardwerte eines Berichtsparameters von einem anderen Berichtsparameter, der mit einem Abfrageparameter verknüpft ist, abhängig sind, ist die Reihenfolge der Berichtsparameter (wie sie im Dialogfeld **Berichtsparametereigenschaften** angezeigt wird) entscheidend. Berichtsparameter weiter unten in der Liste können auf Berichtsparameter weiter oben in der Liste verweisen. Weitere Informationen zu Berichtsparametern finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Hinzufügen**  
  Fügt der Liste einen neuen Parameter hinzu.  
   
- **Delete**  
+ **Löschen**  
  Entfernt den ausgewählten Parameter aus der Liste.  
   
  **Parametername**  

@@ -27,7 +27,7 @@ ms.locfileid: "53380027"
   
  In dieser Tabelle werden die **Exec Statistics** -Leistungsindikatoren von SQL Server beschrieben.  
   
-|Exec Statistics-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Exec Statistics-Leistungsindikatoren von SQL Server|Beschreibung|  
 |-----------------------------------------|-----------------|  
 |**Verteilte Abfrage**|Für die Ausführung von verteilten Abfragen wichtige Statistiken.|  
 |**DTC-Aufrufe**|Für die Ausführung von DTC-Aufrufen wichtige Statistiken.|  
@@ -36,7 +36,7 @@ ms.locfileid: "53380027"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |**Durchschnittliche Ausführungszeit (ms)**|Durchschnittliche Ausführungszeit des ausgewählten Ausführungstyps.|  
 |**Kumulierte Ausführungszeit (ms) pro Sekunde**|Aggregierte Ausführungszeit des ausgewählten Ausführungstyps pro Sekunde.|  

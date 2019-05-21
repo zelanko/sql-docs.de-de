@@ -20,7 +20,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 82621a5c289a3ae7a31affa848bc5b2a77800736
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47788680"
@@ -38,7 +38,7 @@ ms.locfileid: "47788680"
   
  Der OLE DB-Treiber für SQL Server unterstützt **ITransactionLocal:: StartTransaction** Parameter wie folgt.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*isoLevel*[in]|Die innerhalb dieser Transaktion zu verwendende Isolationsstufe. In lokalen Transaktionen unterstützt der OLE DB-Treiber für SQL Server Folgendes:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Hinweis: Unabhängig davon, ob die Versionsverwaltung für die Datenbank aktiviert ist, ist ISOLATIONLEVEL_SNAPSHOT ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] für das Argument *isoLevel* gültig. Jedoch tritt ein Fehler auf, wenn der Benutzer versucht, eine Anweisung auszuführen und die Versionsverwaltung nicht aktiviert und/oder die Datenbank nicht schreibgeschützt ist. Zudem tritt bei einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist, der Fehler XACT_E_ISOLATIONLEVEL auf, wenn ISOLATIONLEVEL_SNAPSHOT als *isoLevel* angegeben wird.|  
 |*isoFlags*[in]|Der OLE DB-Treiber für SQL Server gibt einen Fehler für einen anderen Wert als 0 (null) zurück.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47788680"
   
  Für lokale Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransaction:: Abort** Parameter wie folgt.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*pboidReason*[in]|Wird bei Festlegung ignoriert. Kann daher auch NULL sein.|  
 |*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "FALSE" wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
@@ -55,7 +55,7 @@ ms.locfileid: "47788680"
   
  Für lokale Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransaction:: Commit** Parameter wie folgt.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "FALSE" wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
 |*grfTC*[in]|Asynchrone Rückkehr und die Phase, in einen zurückgibt werden nicht vom OLE DB-Treiber für SQL Server unterstützt. Der OLE DB-Treiber für SQL Server gibt xacttc_sync für jeden Wert xact_e_notsupported zurück.|  

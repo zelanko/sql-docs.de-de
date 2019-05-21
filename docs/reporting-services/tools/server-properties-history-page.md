@@ -30,7 +30,7 @@ ms.locfileid: "65571356"
  3) Klicken Sie mit der rechten Maustaste auf den Berichtsservernamen, und wählen Sie **Eigenschaften**aus.
  4) Klicken Sie auf **Verlauf** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Beliebig viele Momentaufnahmen im Berichtsverlauf speichern**  
  Alle Berichtsverlaufs-Momentaufnahmen werden beibehalten. Sie müssen die Momentaufnahmen manuell löschen, um die Größe des Berichtsverlaufs zu verringern.  
   

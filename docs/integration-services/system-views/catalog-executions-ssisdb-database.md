@@ -30,7 +30,7 @@ ms.locfileid: "65714846"
 
   Zeigt die Instanzen der Paketausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführungsinstanz wie die Ausführung des übergeordneten Pakets.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Der eindeutige Bezeichner (ID) der Ausführungsinstanz.|  
 |folder_name|**sysname(nvarchar(128))**|Der Name des Ordners, der das Projekt enthält.|  

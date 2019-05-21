@@ -27,7 +27,7 @@ ms.locfileid: "65105273"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Auf dieser Registerkarte des Dialogfelds **Toolbox anpassen** wird eine Liste aller Wartungstaskkomponenten angezeigt, die auf Ihrem Computer registriert sind. Außerdem können Sie festlegen, welche Komponenten in der Toolbox angezeigt werden. Sie können das Dialogfeld **Toolbox anpassen** über das Menü **Extras** öffnen. Zum Sortieren der Komponentenliste wählen Sie eine der Spaltenüberschriften.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 Die Registerkarte **Wartungstasks** enthält die folgenden Spalten mit Informationen.  
   
 **Name**  
@@ -41,7 +41,7 @@ Zeigt das Datum an, an dem die Komponente zuletzt geändert wurde.
   
 Klicken Sie auf einen Namen, um die Attribute der Komponente in den Feldern **Sprache** und **Version** zusammen mit dem Symbol anzuzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Sprache**  
 Die Sprache der Komponente.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "62834329"
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   
- **Column**  
+ **Spalte**  
  Zeigen Sie die Ausgabespalten an, die Sie im Dialogfeld des Transformations-Editors ausgewählt haben.  
   
  **Fehler**  

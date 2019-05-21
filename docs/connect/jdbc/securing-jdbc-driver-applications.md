@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42fed21bd2857ea9305b1b8f8771aff80ee9f2ea
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47600408"
@@ -28,7 +28,7 @@ In den Themen in diesem Abschnitt werden einige häufige Sicherheitsrisiken besc
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                            | und Beschreibung                                                                                                                                                           |
+| Thema                                                                            | Beschreibung                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Sichern von Verbindungszeichenfolgen](../../connect/jdbc/securing-connection-strings.md) | Beschreibt Verfahren zum Schützen von Informationen, mit denen eine Verbindung mit einer Datenquelle hergestellt wird.                                                                                    |
 | [Überprüfen der Benutzereingabe](../../connect/jdbc/validating-user-input.md)             | Beschreibt Verfahren zum Überprüfen von Benutzereingaben.                                                                                                                          |

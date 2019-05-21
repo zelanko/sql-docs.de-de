@@ -50,7 +50,7 @@ ms.locfileid: "65725954"
 ## <a name="multicast-transformation-editor"></a>Transformations-Editor für Multicast
   Mithilfe des Dialogfelds **Transformations-Editor für Multicast** können Sie die Eigenschaften für die einzelnen Transformationsausgaben anzeigen und festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Ausgaben**  
  Wählen Sie auf der linken Seite eine Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen.  
   

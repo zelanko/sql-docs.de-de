@@ -88,7 +88,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parameter  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |/?|Zeigt die Befehlszeilenoptionen an.|  
 |/C[opy] *location;destinationPathandPackageName*|Gibt eine Kopieraktion für ein [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket an. Sie müssen zunächst mithilfe der Option **/FI**, **/SQ**oder **DT** den Speicherort des Pakets angeben, um diesen Parameter verwenden zu können. Geben Sie anschließend den Zielspeicherort und den Zielpaketnamen an. Das *destinationPathandPackageName* -Argument gibt an, wohin das [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket kopiert wird. Wenn *SQL* als Ziel- **location**angegeben wird, müssen im Befehl auch die Argumente *DestUser*, *DestPassword* und *DestServer* angegeben werden.<br /><br /> Wenn bei der **Copy** -Aktion ein vorhandenes Paket am Ziel gefunden wird, fordert **dtutil** den Benutzer auf, das Löschen des Pakets zu bestätigen. Die Angabe von **Y** bewirkt, dass das Paket überschrieben wird; mit **N** wird das Programm beendet. Wenn der Befehl das *Quiet* -Argument einschließt, wird keine Aufforderung angezeigt, und vorhandene Pakete werden ggf. überschrieben.|  
@@ -121,7 +121,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil-Exitcodes  
  **dtutil** legt einen Exitcode fest, der Sie informiert, wenn Syntaxfehler erkannt, falsche Argumente verwendet oder ungültige Optionskombinationen angegeben werden. Andernfalls meldet das Hilfsprogramm „Der Vorgang wurde erfolgreich abgeschlossen“. In der folgenden Tabelle sind die Werte aufgeführt, die vom Hilfsprogramm **dtutil** beim Beenden festgelegt werden können.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Das Hilfsprogramm wurde erfolgreich ausgeführt.|  
 |1|Beim Ausführen des Hilfsprogramms ist ein Fehler aufgetreten.|  

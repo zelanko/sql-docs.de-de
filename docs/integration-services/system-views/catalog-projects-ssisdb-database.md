@@ -27,7 +27,7 @@ ms.locfileid: "65714429"
 
   Zeigt die Details für alle Projekte an, die im **SSISDB** -Katalog angezeigt werden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Der eindeutige Bezeichner (ID) des Projekts.|  
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in dem sich das Projekt befindet.|  

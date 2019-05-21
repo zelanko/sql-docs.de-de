@@ -52,7 +52,7 @@ ms.locfileid: "65503073"
   
  In einer standardmäßigen Berichtsserverinstallation sind folgende Exportformate enthalten. Die Liste der für Sie verfügbaren Exportformate kann Unterschiede zu dieser Liste aufweisen.  
   
-|Exportformat|und Beschreibung|  
+|Exportformat|Beschreibung|  
 |-------------------|-----------------|  
 |XML|Zeigt einen Bericht in der XML-Syntax an. Für in XML angezeigte Berichte wird ein neues Browserfenster geöffnet.|  
 |CSV|Zeigt einen Bericht in einem durch Trennzeichen getrennten Format. Der Bericht wird in einer Anwendung geöffnet, die mit dem CSV-Dateityp verknüpft ist.|  

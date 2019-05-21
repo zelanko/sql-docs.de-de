@@ -30,7 +30,7 @@ ms.locfileid: "65581186"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Tastenkombinationen im Berichts-Generator  
   
-|und Beschreibung|Tastenkombination|  
+|Beschreibung|Tastenkombination|  
 |-----------------|---------------------|  
 |Öffnet das Menü Berichts-Generator.|ALT+F|  
 |Erstellt einen Bericht.|STRG+N|  

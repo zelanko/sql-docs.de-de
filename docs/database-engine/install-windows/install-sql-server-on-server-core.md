@@ -90,7 +90,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 ### <a name="feature-parameters"></a>Funktionsparameter  
   
-|Funktionsparameter|und Beschreibung|  
+|Funktionsparameter|Beschreibung|  
 |-----------------------|-----------------|  
 |SQLENGINE|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |-Replikation|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -103,7 +103,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 
  Vergleichen Sie die folgenden Beispiele für die Verwendung von Funktionsparametern:  
   
-|Parameter und Werte|und Beschreibung|  
+|Parameter und Werte|Beschreibung|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  

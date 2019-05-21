@@ -26,7 +26,7 @@ ms.locfileid: "65088826"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Um auf das Dialogfeld **Erweiterte Speicheroptionen** zuzugreifen, klicken Sie im Menü **Datei** auf **Speichern** <query name>**.sql unter** , um das Dialogfeld **Speichern Datei As** zu öffnen, klicken Sie auf den nach unten zeigenden Pfeil auf der Schaltfläche **Speichern** , und klicken Sie dann auf **Speichern with Encoding**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Codierung**  
 Mithilfe dieses Listenfelds können Sie auf die Zieldatei ein neues Sprachcodierungsschema anwenden.  
   

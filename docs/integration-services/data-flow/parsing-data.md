@@ -91,7 +91,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Formate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|Beschreibung|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY-MM|Basisformate und erweiterte Formate mit reduzierter Genauigkeit für eine vierstellige Jahresangabe und eine zweistellige Monatsangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
@@ -122,7 +122,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Zeitformate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|Beschreibung|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Basisformate und erweiterte Formate für eine zweistellige Stundenangabe, eine zweistellige Minutenangabe und eine zweistellige Sekundenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
     |HHMI<br /><br /> HH:MI|Basisformate und erweiterte abgeschnittene Formate für eine zweistellige Stundenangabe und eine zweistellige Minutenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
@@ -131,7 +131,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die eine Zeitzone angeben, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|Beschreibung|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die zur koordinierten Weltzeit (UTC) addiert werden, um die lokale Zeit zu ermitteln.|  
     |-HH:MI<br /><br /> -HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
@@ -149,7 +149,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die einen Dezimalbruch enthalten, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|Beschreibung|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Stundenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 12.750 für 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Minutenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 1220.500 für 12:20:30.|  
