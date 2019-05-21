@@ -64,7 +64,7 @@ Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die fo
   
 Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Befehl|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Bewirkt, dass das Hilfsprogramm „bcp“ Zeichendaten verwendet.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  

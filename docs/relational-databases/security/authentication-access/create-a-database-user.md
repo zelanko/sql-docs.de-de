@@ -138,7 +138,7 @@ ms.locfileid: "52516656"
      **Auslassungspunkte (…)**  
      Klicken Sie auf die Auslassungspunkte **(…)** hinter **Wert**, um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
   
-     **Delete**  
+     **Löschen**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
   
 ##  <a name="TsqlProcedure"></a> Erstellen eines Benutzers mit T-SQL  

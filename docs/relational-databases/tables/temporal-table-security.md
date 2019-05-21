@@ -27,7 +27,7 @@ ms.locfileid: "52526445"
 ## <a name="security-principles"></a>Sicherheitsprinzipien  
  Die folgende Tabelle beschreibt die Sicherheitsprinzipien, die für temporäre Tabellen gelten:  
   
-|Prinzip|und Beschreibung|  
+|Prinzip|Beschreibung|  
 |---------------|-----------------|  
 |Das Aktivieren bzw. Deaktivieren der Systemversionsverwaltung erfordert die höchsten Berechtigungen für betroffene Objekte|Das Aktivieren und Deaktivieren von SYSTEM_VERSIONING erfordert die CONTROL-Berechtigung sowohl für die aktuelle Tabelle als auch für die Verlaufstabelle|  
 |Verlaufsdaten können nicht direkt geändert werden|Wenn SYSTEM_VERSIONING ON ist, können die Benutzer Verlaufsdaten nicht ändern, unabhängig davon, über welche tatsächlichen Berechtigungen sie für die aktuelle Tabelle oder die Verlaufstabelle verfügen. Das umfasst sowohl Daten- als auch Schemaänderungen|  

@@ -36,7 +36,7 @@ ms.locfileid: "62747742"
  **Neu...**  
  Klicken Sie auf diese Option, um mithilfe des Dialogfelds **Verbindungs-Manager** eine neue Datenquelle zu erstellen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie diese Option aus, um eine vorhandene Datenquelle zu löschen.  
   
  **Erstellen Sie eine Datenquelle basierend auf einem anderen Objekt**  

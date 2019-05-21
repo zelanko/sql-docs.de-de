@@ -28,7 +28,7 @@ ms.locfileid: "47791112"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[CursorClose-Ereignisklasse](../../relational-databases/event-classes/cursorclose-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) das Schließen des Cursors bewirken.|  
 |[CursorExecute (Ereignisklasse)](../../relational-databases/event-classes/cursorexecute-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das Ausführen des Cursors bewirken.|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be2a66c779714902ae33ef25dcdf23b8797ee274
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47669438"
@@ -31,7 +31,7 @@ ms.locfileid: "47669438"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Vergleicht diese **DateTimeOffset** Objekt in ein anderes **DateTimeOffset** -Objekt basierend auf ihrer Uhrzeit nach GMT.|  
 |[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Vergleicht diese **DateTimeOffset** Objekt in ein anderes **Objekt**.|  

@@ -28,7 +28,7 @@ Klicken Sie zum Anzeigen dieses Dialogfelds im Menü **Abfrage-Designer** im Dia
   
 Das Dialogfeld stellt eine Liste der Spalten im ausgewählten Tabellenwertobjekt sowie grundlegende Eigenschaften (z. B. Datentypen und Zulässigkeit von NULL-Werten) bereit.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Zeigt den Namen der Spalten im ausgewählten Tabellenwertobjekt an.  
   

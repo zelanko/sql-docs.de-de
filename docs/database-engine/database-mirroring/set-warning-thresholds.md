@@ -67,7 +67,7 @@ ms.locfileid: "47753908"
  **Warnungen**  
  Listet die unterstützten Warnungen auf:  
   
-|Warnung|und Beschreibung|  
+|Warnung|Beschreibung|  
 |-------------|-----------------|  
 |**Warnhinweis anzeigen, wenn das nicht gesendete Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl der Kilobytes (KB) des nicht gesendeten Protokolls in der Sendewarteschlange auf dem Prinzipal an.|  
 |**Warnhinweis anzeigen, wenn das nicht wiederhergestellte Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl an KB der Wiederholungswarteschlange auf der Spiegelserverinstanz an.|  

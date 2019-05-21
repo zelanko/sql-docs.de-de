@@ -40,7 +40,7 @@ ms.locfileid: "62729643"
 |**Neuer KPI**|Wählen Sie einen KPI aus, um den **KPI-Formular-Editor** anzuzeigen und einen neuen KPI zu erstellen. Weitere Informationen zum **finden** Sie unter [ &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nach oben**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach oben zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn der ausgewählte KPI nicht weiter verschoben werden kann.|  
 |**Nach unten**|Wählen Sie diese Option aus, um den ausgewählten KPI im **KPI-Planer** um eine Position nach unten zu verschieben und die Reihenfolge zu bestimmen, in der die KPIs im **KPI-Browser**angezeigt werden.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn der ausgewählte KPI nicht weiter verschoben werden kann.|  
-|**Delete**|Wählen Sie diese Option aus, um den ausgewählten KPI zu löschen.|  
+|**Löschen**|Wählen Sie diese Option aus, um den ausgewählten KPI zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   

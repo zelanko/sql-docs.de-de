@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac7a9e3e71c13869b371247cddccc10044b54584
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47812568"
@@ -30,7 +30,7 @@ ms.locfileid: "47812568"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBinaryStream (int)](../../../connect/jdbc/reference/getbinarystream-method-int.md)|Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Binärdatenstrom nicht interpretierter Bytes ab.|  
 |[getBinaryStream (java.lang.String)](../../../connect/jdbc/reference/getbinarystream-method-java-lang-string.md)|Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Binärstream nicht interpretierter Bytes ab.|  

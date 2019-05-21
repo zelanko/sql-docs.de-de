@@ -29,7 +29,7 @@ ms.locfileid: "65088702"
 
 Mithilfe dieser Seite können Sie die Prinzipale anzeigen oder ändern, die in Auftragsschritten ein Proxykonto des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents verwenden können.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Proxy account principals**  
 Lists the principals that can use this proxy account.  
   

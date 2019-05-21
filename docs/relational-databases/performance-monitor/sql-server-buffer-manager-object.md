@@ -42,7 +42,7 @@ ms.locfileid: "53380841"
 ## <a name="buffer-manager-performance-objects"></a>Leistungsobjekte für den Puffer-Manager  
  In dieser Tabelle werden die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Puffer-Manager** beschrieben.  
   
-|Puffer-Manager-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Puffer-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Hintergrund-Writer-Seiten/Sekunde**|Die Anzahl der Seiten, die zum Durchsetzen der Einstellungen für das Wiederherstellungsintervall geleert wurden.| 
 |**Puffercache-Trefferquote**|Gibt den Prozentsatz der Seiten an, die im Puffercache gefunden wurden, ohne dass ein Lesevorgang vom Datenträger erforderlich war. Die Quote ist die Gesamtzahl von Cachetreffern dividiert durch die Gesamtzahl der Cachesuchvorgänge für die letzten paar Tausend Seitenzugriffe. Nach längerer Zeit verschiebt sich die Quote geringfügig. Da das Lesen vom Cache weniger aufwendig als das Lesen vom Datenträger ist, ist es in Ihrem Interesse, dass diese Quote hoch ist. Im Allgemeinen können Sie die Trefferquote des Puffercaches erhöhen, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mehr Arbeitsspeicher zur Verfügung stellen oder die Pufferpoolerweiterungsfunktion verwenden.|  

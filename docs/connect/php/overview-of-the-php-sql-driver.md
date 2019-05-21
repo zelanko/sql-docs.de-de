@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
 ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/29/2019
 ms.locfileid: "58645482"
@@ -28,7 +28,7 @@ Verwenden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], müssen
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 | ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[zum Herunterladen der Treiber für PHP für SQL Server](download-drivers-php-sql-server.md) | Links zum Herunterladen von Microsoft-Treibern für PHP für SQL Server. |
 |[Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Listet die Features auf, die für die Versionen 4.0, 3.2, 3.1, 3.0 und 2.0 hinzugefügt wurden.|  

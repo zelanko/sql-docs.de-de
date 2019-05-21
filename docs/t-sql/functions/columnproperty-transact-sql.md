@@ -50,7 +50,7 @@ Ein Ausdruck, der den Namen der Spalte oder des Parameters enthält.
 *property*  
 Das *property*-Argument gibt für das *id*-Argument den Informationstyp an, den die `COLUMNPROPERTY`-Funktion zurückgibt. Für das *property*-Argument sind die folgenden Werte möglich:
   
-|value|und Beschreibung|Zurückgegebener Wert|  
+|Wert|Beschreibung|Zurückgegebener Wert|  
 |---|---|---|
 |**AllowsNull**|Lässt NULL-Werte zu.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**ColumnId**|Der Wert der Spalten-ID, der **sys.columns.column_id** entspricht.|Column ID<br /><br /> **Hinweis:** Wenn mehrere Spalten abgefragt werden, können Lücken in der Abfolge von Werten für Spalten-IDs auftreten.|  

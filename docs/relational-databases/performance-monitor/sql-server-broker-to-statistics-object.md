@@ -29,7 +29,7 @@ ms.locfileid: "53379371"
   
  In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|Leistungsindikatoren für "Statistiken für das Broker-TO" in SQL Server|und Beschreibung|  
+|Leistungsindikatoren für "Statistiken für das Broker-TO" in SQL Server|Beschreibung|  
 |----------------------------------------------|-----------------|  
 |**Mittlere Länge der Batchschreibvorgänge**|Die durchschnittliche Anzahl von Übertragungsobjekten, die in einem Batch gespeichert wurden.|  
 |**Mittlere Schreibdauer für Batch (ms)**|Die durchschnittliche Anzahl von Millisekunden, die zur Speicherung eines Batches von Übertragungsobjekten erforderlich waren.|  

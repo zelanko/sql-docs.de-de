@@ -46,14 +46,14 @@ ms.locfileid: "65726503"
     > [!NOTE]  
     >  Wenn Sie auf **Vorschau** klicken, wird auch das Dialogfeld **Vorschau** geöffnet. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Preview](../../integration-services/data-flow/preview.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Zeit**  
  Zeigt die Uhrzeit an, zu der das Ereignis protokolliert wurde.  
   
  **Typ**  
  Zeigt den Typ des protokollierten Ereignisses an. In der folgenden Tabelle sind die möglichen Ereignistypen aufgelistet.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |S|Eine Erfolgsmeldung.|  
 |E|Fehlermeldung|  

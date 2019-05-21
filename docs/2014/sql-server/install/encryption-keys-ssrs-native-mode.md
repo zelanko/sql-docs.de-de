@@ -61,7 +61,7 @@ ms.locfileid: "63223246"
   
  Beachten Sie, dass die erneute Generierung des symmetrischen Schlüssels bei vielen Datenquellen und Abonnements ein langer Prozess sein kann.  
   
- **Delete**  
+ **Löschen**  
  Löscht den symmetrischen Schlüssel und den gesamten verschlüsselten Inhalt, einschließlich Verbindungszeichenfolgen und gespeicherten Anmeldeinformationen. Sie sollten den symmetrischen Schlüssel nur dann löschen, wenn Sie ihn nicht wiederherstellen können.  
   
  Sobald Sie den symmetrischen Schlüssel gelöscht haben, müssen Sie die fehlenden Verbindungszeichenfolgen und gespeicherten Anmeldeinformationen in den Berichten sowie die freigegebenen Datenquellen, die diese Werte nicht mehr enthalten, erneut eingeben. Sie müssen auch alle Abonnements aktualisieren, die Übermittlungserweiterungen verwenden, die verschlüsselte Daten speichern. Dies umfasst die Dateifreigabe-Übermittlungserweiterung sowie alle Drittanbieter-Übermittlungserweiterungen, die einen verschlüsselten Wert verwenden.  

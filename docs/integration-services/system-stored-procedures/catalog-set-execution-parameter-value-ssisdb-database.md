@@ -78,7 +78,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Legen Sie den *object_type*-Parameter auf „50“ fest.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|None<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
 |1|Standard<br /><br /> Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|value|  
+|Parameter|Wert|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|value|  
+|Parameter|Wert|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -107,7 +107,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie die während einer Paketausführung auftretenden Ereignisse festlegen möchten, die Integration Services-Server zum Generieren von Dumpdateien veranlassen, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde. Trennen Sie mehrere Ereigniscodes mithilfe eines Semikolons.  
   
-|Parameter|value|  
+|Parameter|Wert|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  

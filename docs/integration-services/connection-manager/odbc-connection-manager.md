@@ -58,7 +58,7 @@ ms.locfileid: "65728137"
   
  Weitere Informationen zum ODBC-Verbindungs-Manager finden Sie unter [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Datenverbindungen**  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65728137"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** einen ODBC-Verbindungs-Manager. In diesem Dialogfeld können Sie bei Bedarf auch eine neue ODBC-Datenquelle erstellen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Verbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

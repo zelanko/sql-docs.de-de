@@ -12,7 +12,7 @@ ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: 4735ead33dc7c3a6d633e3b23ff1da97eeae4962
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744832"
@@ -31,15 +31,15 @@ Wenn Sie versuchen, eine Verbindung herstellen, ohne ausreichende Informationen 
 
 ![Screenshot des Dialogfelds für SQL Server-Anmeldung](../media/sql-server-login-dialog.png)
 
-## <a name="options"></a>enthalten
-|Option|und Beschreibung|
+## <a name="options"></a>Optionen
+|Option|Beschreibung|
 |---   |---        |
 |Server|Der Name einer Instanz von SQL Server in Ihrem Netzwerk. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen über Servernamen für verschiedene Typen von Netzwerken finden Sie unter [SQL Server-Installation](https://go.microsoft.com/fwlink/?linkid=2067541).|
 |Authentifizierungsmodus|Sie können die folgenden Authentifizierungsoptionen aus der Dropdown-Liste auswählen:<br/><ul><li>`Windows Authentication:` SQL Server mit den Anmeldeinformationen des aktuell angemeldeten Benutzers Windows-Authentifizierung.</li><li>`SQL Server Authentication:` Authentifizierung mit SQL Server mithilfe der Anmelde-ID und Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit Windows den Anmeldeinformationen des aktuell angemeldeten Benutzers.</li><li>`Active Directory - Password:` Active Directory-Authentifizierung mit Anmelde-ID und Kennwort.</li></ul>|
 |Server-SPN|Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstprinzipalnamen (SPN) für den Server angeben.|
 |Login ID|Gibt die Anmelde-ID, die für die Verbindung verwendet. Im Textfeld "Anmelde-ID" ist nur aktiviert, wenn `Authentication Mode` nastaven NA hodnotu `SQL Server Authentication` oder `Active Directory - Password`.|
 |Kennwort|Gibt das Kennwort für die Verbindung verwendet. Das Kennwort-Textfeld ist nur aktiviert, wenn `Authentication Mode` nastaven NA hodnotu `SQL Server Authentication` oder `Active Directory - Password`.|
-|enthalten|Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.|
+|Optionen|Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.|
 |Ändern des Kennworts|Wenn dieses Kontrollkästchen aktiviert, können **neues Kennwort** und **neues Kennwort bestätigen** Textfelder.|
 |Neues Kennwort|Gibt das neue Kennwort an.|
 |Neues Kennwort bestätigen|Gibt das neue Kennwort zur Bestätigung ein zweites Mal an.|

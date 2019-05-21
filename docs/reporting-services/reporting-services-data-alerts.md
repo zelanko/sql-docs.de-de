@@ -131,7 +131,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  In der folgenden Tabelle sind die Konfigurationselemente für Datenwarnungen, ihre Standardwerte, Beschreibungen und Speicherorte aufgeführt.  
   
-|Einstellung|Standardwert|und Beschreibung|Speicherort|  
+|Einstellung|Standardwert|Beschreibung|Speicherort|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Zeit zwischen Starts des Cleanupzyklus in Minuten.|Konfigurationsdatei des Berichtsservers|  
 |AlertingExecutionLogCleanupMinutes|10080|Zeit für die Aufbewahrung von Ausführungsprotokolleinträgen in Minuten.|Konfigurationsdatei des Berichtsservers|  
@@ -145,7 +145,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ### <a name="event-handlers-and-retry"></a>Ereignishandler und Wiederholung  
  Die Ereignishandler sind:  
   
-|Ereignishandler|und Beschreibung|  
+|Ereignishandler|Beschreibung|  
 |-------------------|-----------------|  
 |FireAlert|Klicken Sie im Datenwarnungs-Manager auf **Ausführen**  , um die unmittelbare Verarbeitung einer Warnungsdefinition zu initiieren.|  
 |FireSchedule|Der SQL Server-Agent startet den Auftragszeitplan für eine Warnungsdefinition.|  

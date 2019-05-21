@@ -56,7 +56,7 @@ Geben Sie auf der Registerkarte Einschränkungen überprüfen der Eigenschaftens
   
 Die SQL-Syntax besteht aus folgenden Parametern:  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |-------------|---------------|  
 |Konstante|Ein Literalwert, wie numerische Daten oder Zeichendaten. Zeichendaten müssen in einfache Anführungszeichen (') eingeschlossen werden.|  
 |column_name|Gibt eine Spalte an.|  

@@ -60,7 +60,7 @@ SET DATEFIRST 7 ;
  *number* | **@**_number_var_  
  Eine ganze Zahl, die den ersten Tag der Woche angibt. Dieses Argument einen der folgenden Werte annehmen.  
   
-|value|Der erste Tag der Woche ist:|  
+|Wert|Der erste Tag der Woche ist:|  
 |-----------|------------------------------|  
 |**1**|Montag|  
 |**2**|Dienstag|  

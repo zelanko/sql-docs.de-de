@@ -53,7 +53,7 @@ ms.locfileid: "65581227"
 ##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Word-Renderer schreibt die folgenden Metadaten in die DOCX-Datei.  
   
-|Berichtselementeigenschaften|und Beschreibung|  
+|Berichtselementeigenschaften|Beschreibung|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
 |Autor des Berichts|Author|  

@@ -41,7 +41,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *KeyType*  
  Dies ist optional. Ein **lange** Wert, der den Typ des Schlüssels angibt. Die *Schlüssel* Parameter entspricht der [Typ](../../../ado/reference/adox-api/type-property-key-adox.md) Eigenschaft eine **Schlüssel** Objekt.  
   
- *Column*  
+ *Spalte*  
  Optional. Ein **Zeichenfolge** -Wert, der den Namen der zu indizierenden Spalte angibt. Die *Spalten* Parameter entspricht dem Wert des der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt.  
   
  *RelatedTable*  

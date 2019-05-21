@@ -50,7 +50,7 @@ SET STATISTICS PROFILE { ON | OFF }
   
  Das zusätzliche Resultset enthält neben den SHOWPLAN_ALL-Spalten für die Abfrage die folgenden weiteren Spalten.  
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**Zeilen**|Tatsächliche Anzahl der Zeilen, die jeder Operator erzeugt.|  
 |**Executes**|Häufigkeit, mit der der Operator ausgeführt wurde.|  

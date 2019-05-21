@@ -55,7 +55,7 @@ ms.locfileid: "63270595"
   
 ## <a name="options"></a>Optionen  
   
-|**Column**|**Abfragetyp**|**Beschreibung**|  
+|**Spalte**|**Abfragetyp**|**Beschreibung**|  
 |----------------|--------------------|---------------------|  
 |Spalte|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt entweder einen alternativen Namen für eine Spalte an oder den Namen, den Sie für eine berechnete Spalte verwenden können.|  

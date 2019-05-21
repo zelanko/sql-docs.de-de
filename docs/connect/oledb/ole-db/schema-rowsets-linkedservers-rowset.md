@@ -16,7 +16,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 9fe4ab1b6fd245bdb7ac0bd08acb0564742e1188
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47694945"
@@ -30,7 +30,7 @@ ms.locfileid: "47694945"
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|und Beschreibung|  
+|Spaltenname|Typindikator|Beschreibung|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  

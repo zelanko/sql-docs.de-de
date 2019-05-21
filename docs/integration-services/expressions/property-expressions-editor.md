@@ -29,7 +29,7 @@ ms.locfileid: "65725079"
 
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Eigenschaft**  
  Wählen Sie eine Objekteigenschaft aus der Liste aus.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65725079"
  **Ausdruck (...)**  
  Klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Weitere Informationen finden Sie unter [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Eigenschaft aus, und klicken Sie anschließend auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  

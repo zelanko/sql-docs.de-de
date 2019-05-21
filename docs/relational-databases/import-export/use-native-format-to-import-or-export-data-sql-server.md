@@ -87,7 +87,7 @@ Sie können Daten im nativen Format importieren, unter Verwendung von [BCP](../.
 
 Das native Format wird durch die folgenden Befehlsoptionen unterstützt:  
 
-|Befehl|Option|und Beschreibung|  
+|Befehl|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Veranlasst das Hilfsprogramm „bcp“, die nativen Datentypen der Daten zu verwenden.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  

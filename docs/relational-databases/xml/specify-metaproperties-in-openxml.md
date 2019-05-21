@@ -39,7 +39,7 @@ ms.locfileid: "58511137"
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
   
-|Metaeigenschaftsattribut|und Beschreibung|  
+|Metaeigenschaftsattribut|Beschreibung|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
 |**\@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
@@ -50,7 +50,7 @@ ms.locfileid: "58511137"
   
  In dieser Tabelle werden die zusätzlichen Eigenschaften übergeordneter Metaeigenschaftsattribute dargestellt, die Ihnen das Abrufen von Hierarchieinformationen ermöglichen.  
   
-|Übergeordnetes Metaeigenschaftsattribut|und Beschreibung|  
+|Übergeordnetes Metaeigenschaftsattribut|Beschreibung|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Entspricht **../\@mp:id**|  
 |**\@mp:parentlocalname**|Entspricht **../\@mp:localname**|  

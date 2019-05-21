@@ -49,7 +49,7 @@ Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management
 
 2. **Stellen Sie eine Verbindung mit dem Server her**. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Informationen ein:
 
-   | Einstellung       | Vorgeschlagener Wert | und Beschreibung | 
+   | Einstellung       | Vorgeschlagener Wert | Beschreibung | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. |

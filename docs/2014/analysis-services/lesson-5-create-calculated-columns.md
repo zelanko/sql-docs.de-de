@@ -112,7 +112,7 @@ ms.locfileid: "62728644"
   
 1.  Wählen Sie im Modell-Designer die Tabelle **Internet Sales** aus.  
   
-2.  Fügen Sie eine neue Spalte hinzu.  
+2.  Fügt eine neue Spalte hinzu.  
   
 3.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
   

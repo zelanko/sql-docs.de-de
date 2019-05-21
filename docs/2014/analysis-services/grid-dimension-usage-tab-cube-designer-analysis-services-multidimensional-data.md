@@ -39,7 +39,7 @@ ms.locfileid: "62730777"
 |**Ausschneiden**|Hinweis: Diese Option ist deaktiviert.|  
 |**Kopieren**|Hinweis: Diese Option ist deaktiviert.|  
 |**Einfügen**|Hinweis: Diese Option ist deaktiviert.|  
-|**Delete**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung aus dem Cube zu entfernen.|  
+|**Löschen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung aus dem Cube zu entfernen.|  
 |**Umbenennen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung umzubenennen.|  
 |**Eigenschaften**|Wählen Sie diese Option aus, um das Fenster **Eigenschaften** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung anzuzeigen.|  
   

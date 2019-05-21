@@ -33,7 +33,7 @@ ms.locfileid: "47788158"
   
  In der folgenden Tabelle sind die möglichen Werte für die Option remote admin connections aufgeführt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Nur lokale Verbindungen sind mit der DAC zulässig.|  
 |1|Remoteverbindungen sind mit der DAC zulässig.|  

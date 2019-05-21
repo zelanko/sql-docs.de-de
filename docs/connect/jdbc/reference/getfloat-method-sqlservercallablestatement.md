@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 613ed7984b5b036aae76020c2145b64c08d7a065
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47796048"
@@ -30,7 +30,7 @@ ms.locfileid: "47796048"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als **float**-Wert in der Programmiersprache Java ab.|  
 |[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als **float**-Wert in der Programmiersprache Java ab.|  

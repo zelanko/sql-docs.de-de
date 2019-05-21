@@ -42,7 +42,7 @@ Sie können Daten im nativen Unicode-Format in eine Tabelle importieren, indem S
   
 Das native Unicode-Format wird durch die folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Befehl|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das native Unicode-Format verwendet, welches das native (Datenbank-)Datentypen für alle nicht auf Zeichen basierenden Daten und das Unicode-Zeichendatenformat für alle Zeichendaten (**char**, **nchar**, **varchar**, **nvarchar**, **text**und **ntext**) verwendet.|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Verwendet das native Unicode-Format beim Massenimportieren von Daten|  

@@ -49,7 +49,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Spalte|Datentyp|und Beschreibung|  
+|Spalte|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
 |data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
@@ -59,7 +59,7 @@ Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
 Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Spalte|Datentyp|und Beschreibung|Bereich|  
+|Spalte|Datentyp|Beschreibung|Bereich|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Anzahl von Zeilen.||  
 |reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  

@@ -26,7 +26,7 @@ ms.locfileid: "47636210"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Datenspalten der Broker:Conversation-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Benutzerkontensteuerung|  
@@ -60,7 +60,7 @@ ms.locfileid: "47636210"
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgeführt.  
   
-|im Elementknoten &lt;Customer ID="1"|Unterklasse|und Beschreibung|  
+|im Elementknoten &lt;Customer ID="1"|Unterklasse|Beschreibung|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **SEND Message** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine SEND-Anweisung ausführt.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **END CONVERSATION** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die keine WITH ERROR-Klausel enthält.|  

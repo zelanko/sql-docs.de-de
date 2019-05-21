@@ -28,7 +28,7 @@ ms.locfileid: "47840718"
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Datenspalten der Lock:Deadlock Chain-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|**image**|ID der LOCK-Ressource.|2|Benutzerkontensteuerung|  
 |DatabaseID|**int**|ID der Datenbank, zu der diese Ressource gehört. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Benutzerkontensteuerung|  

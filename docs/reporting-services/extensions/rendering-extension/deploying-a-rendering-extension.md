@@ -26,7 +26,7 @@ ms.locfileid: "47621739"
   
  In der folgenden Tabelle werden die Attribute für das **Extension** -Element für Renderingerweiterungen beschrieben:  
   
-|attribute|und Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |**Name**|Ein eindeutiger Name für die Erweiterung. Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Wenn ein Name doppelt vorhanden ist, gibt der Berichtsserver einen Fehler zurück.|  
 |**Typ**|Eine durch Trennzeichen getrennte Liste, die den vollqualifizierten Namespace und den Namen der Assembly enthält|  

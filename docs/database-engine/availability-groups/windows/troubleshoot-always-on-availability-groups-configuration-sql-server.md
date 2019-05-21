@@ -31,7 +31,7 @@ ms.locfileid: "53590124"
   
  **In diesem Thema:**  
   
-|Abschnitt|und Beschreibung|  
+|Abschnitt|Beschreibung|  
 |-------------|-----------------|  
 |[AlwaysOn-Verfügbarkeitsgruppen ist nicht aktiviert](#IsHadrEnabled)|Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert ist, wird von der Instanz die Verfügbarkeitsgruppenerstellung nicht unterstützt. Es können außerdem keine Verfügbarkeitsreplikate gehostet werden.|  
 |[Konten](#Accounts)|Erläutert die Anforderungen für eine ordnungsgemäße Konfiguration der Konten, unter denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird.|  

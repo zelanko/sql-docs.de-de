@@ -26,7 +26,7 @@ ms.locfileid: "52539683"
   
  Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel*aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten:  
   
-|Spaltenname|und Beschreibung|Typ|Immer verfügbar|  
+|Spaltenname|Beschreibung|Typ|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Benutzerkontensteuerung|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Benutzerkontensteuerung|  

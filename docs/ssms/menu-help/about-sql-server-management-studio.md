@@ -24,7 +24,7 @@ ms.locfileid: "65105817"
 # <a name="about-sql-server-management-studio"></a>Informationen zu SQL Server Management Studio
   Verwenden Sie dieses Dialogfeld, um Informationen zur Installation von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzuzeigen oder zu kopieren. In Evaluation Editions wird die Anzahl der Tage bis zum Ablaufen des Produkts angegeben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Komponentenname**  
  Zeigt ein Raster mit den Namen der installierten Komponenten von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Betriebssystem auf:  
   

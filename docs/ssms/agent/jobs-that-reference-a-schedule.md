@@ -32,7 +32,7 @@ ms.locfileid: "65095760"
 
 Mithilfe dieses Dialogfelds können Sie Informationen zu Aufträgen anzeigen, die auf einen bestimmten Zeitplan verweisen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Zeitplan**  
 Zeigt den Namen des angezeigten Zeitplans an.  
   

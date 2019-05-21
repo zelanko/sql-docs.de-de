@@ -173,7 +173,7 @@ ms.locfileid: "65577418"
 ##  <a name="TestingforScope"></a> Testen für Bereich  
  Die folgende integrierte Funktion testet den aktuellen Kontext eines Berichtselements, um festzustellen, ob dieses Mitglied eines bestimmten Bereichs ist.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.|  
   
@@ -182,7 +182,7 @@ ms.locfileid: "65577418"
 ##  <a name="RetrievingRecursiveLevel"></a> Abrufen von rekursiven Ebenen  
  Die folgende integrierte Funktion ruft die aktuelle Ebene ab, wenn eine rekursive Hierarchie verarbeitet wird. Verwenden Sie das Ergebnis dieser Funktion mit der Eigenschaft **Padding** in einem Textfeld, um für eine rekursive Gruppe die Einzugsebene in einer visuellen Hierarchie zu steuern. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[Ebene](../../reporting-services/report-design/report-builder-functions-level-function.md)|Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.|  
   

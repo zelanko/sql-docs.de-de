@@ -15,7 +15,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
 ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51559618"
@@ -32,7 +32,7 @@ ms.locfileid: "51559618"
   
  Im Tabellenwertparameter-Rowsetobjekt nicht implementierte Eigenschaften werden hier nicht aufgelistet. Eine vollständige Liste von Eigenschaften finden Sie in der OLE DB-Dokumentation in den Windows Data Access Components.  
   
-|Eigenschafts-ID|value|  
+|Eigenschafts-ID|Wert|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

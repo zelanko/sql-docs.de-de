@@ -48,7 +48,7 @@ In diesem Beispiel werden die Ergebnisse der Abfrage, die der Benutzer angegeben
   
  In der folgenden Tabelle werden die Spalten in der Liste **Tabelle** beschrieben.  
   
-|Spalte|und Beschreibung|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |(Quellsymbol)|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /> - Ein **grünes** Häkchen gibt an, dass der Assistent erwartet, dass alle Datentypkonvertierungen für diese Tabelle erfolgreich sind.<br />- Ein **gelbes** Warnsymbol gibt an, dass Sie die einzelnen Konvertierungen überprüfen sollten, die der Assistent ausführt. Um diese Konvertierungen zu prüfen, wählen Sie die Tabelle aus und prüfen dann die Konvertierungen für einzelne Spalten in der Liste **Datentypzuordnung** .<br />- Ein **rotes** Fehlersymbol gibt an, dass der Assistent einige der Konvertierungen für diese Tabelle nicht zuverlässig ausführen kann.|  
 |**Quelle**|Der Name der Quelltabelle.|  
@@ -64,7 +64,7 @@ In diesem Beispiel wird jede Spalte an der Quelle in eine Spalte mit dem gleiche
 
 In der folgenden Tabelle werden die Spalten in der Liste **Datentypzuordnung** beschrieben. 
 
-|Spalte|und Beschreibung|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |(Konvertierungssymbol)|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /> - Ein **grünes** Häkchen gibt an, dass der Assistent erwartet, dass die Datentypkonvertierung für diese Spalte erfolgreich ist.<br />- Ein **gelbes** Warnsymbol gibt an, dass Sie die Konvertierung überprüfen sollten, die der Assistent ausführt. Doppelklicken Sie auf die Spalte, um das Dialogfeld **Spaltenkonvertierungsdetails** anzuzeigen und die Konvertierung zu überprüfen. Weitere Informationen finden Sie im Dialogfeld [Spaltenkonvertierungsdetails](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />- Ein **rotes** Fehlersymbol gibt an, dass der Assistent die Konvertierung nicht zuverlässig ausführen kann.|  
 |**Quellspalte**|Der Name der Quellspalte|  

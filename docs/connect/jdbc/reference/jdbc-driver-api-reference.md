@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47773790"
@@ -72,7 +72,7 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstellenname|und Beschreibung|  
+|Schnittstellenname|Beschreibung|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement-Schnittstelle](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Mit dieser Klasse kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird.|  
 |[ISQLServerConnection-Schnittstelle](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Stellt eine JDBC-Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar.|  
@@ -86,7 +86,7 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
   
 ## <a name="classes"></a>Klassen  
   
-|Klassenname|und Beschreibung|  
+|Klassenname|Beschreibung|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Stellt ein Objekt vom Typ "microsoft.sql.DateTimeOffset" dar.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Stellt ein BLOB (Binary Large Object) dar.|  

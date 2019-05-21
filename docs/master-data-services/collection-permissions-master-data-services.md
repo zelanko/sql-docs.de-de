@@ -35,7 +35,7 @@ ms.locfileid: "65484241"
 |**Lesen**|Der Benutzer kann Elemente der Auflistung und die Elementattribute lesen.|  
 |**Erstellen**|Der Benutzer kann Auflistungselemente erstellen und Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Auflistungselemente, Attribute und Beziehungen aktualisieren.|  
-|**Delete**|Der Benutzer kann Elemente der Auflistung löschen.|  
+|**Löschen**|Der Benutzer kann Elemente der Auflistung löschen.|  
 |**Verweigern**|Jeglicher Zugriff auf die Elemente der Auflistung wird verweigert.|  
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  

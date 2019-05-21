@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec245b4b96116b59345eb2371903c5ff24d1cb56
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47731088"
@@ -30,7 +30,7 @@ ms.locfileid: "47731088"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBinaryStream &#40;int&#41;](../../../connect/jdbc/reference/getbinarystream-int.md)|Ruft unter Berücksichtigung des Parameterindexes den Wert des angegebenen Parameters als Binärdatenstrom mit unterbrechungsfreien Bytes ab.|  
 |[GetBinaryStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|Ruft unter Berücksichtigung des Parameternamens den Wert des angegebenen Parameters als Binärdatenstrom mit unterbrechungsfreien Bytes ab.|  

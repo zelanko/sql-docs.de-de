@@ -73,7 +73,7 @@ ms.locfileid: "55760083"
   
 ### <a name="string-functions"></a>Zeichenfolgenfunktionen  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Gibt die interne Größe des angegebenen Datentyps zurück, ohne „string_exp“ in „string“ zu konvertieren.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung von string_exp2 und string_exp1 darstellt. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn die durch string_exp1 dargestellte Spalte z. B. einen NULL-Wert enthält, wird DB2 NULL zurückgeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen gibt eine Zeichenfolge ungleich NULL zurückgeben.|  
@@ -81,13 +81,13 @@ ms.locfileid: "55760083"
   
 ### <a name="numeric-function"></a>Numerische Funktion  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Gibt numeric_exp abgeschnitten auf integer_exp-Positionen rechts vom Dezimaltrennzeichen zurück. Wenn „integer_exp“ negativ ist, wird „numeric_exp“ auf die Positionen „&#124;integer_exp&#124;“ links vom Dezimaltrennzeichen abgeschnitten.|  
   
 ### <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURDATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  

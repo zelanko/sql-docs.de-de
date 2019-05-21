@@ -32,13 +32,13 @@ ms.locfileid: "53380471"
   
  In dieser Tabelle wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Benutzerdefinierbar** beschrieben.  
   
-|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|Beschreibung|  
 |---------------------------------------|-----------------|  
 |**Dataseteigenschaften**|Das **Benutzerdefinierbar** -Objekt enthält den Abfrageleistungsindikator. Die Benutzer konfigurieren die **User counter** innerhalb des Abfrageobjekts.|  
   
  In dieser Tabelle werden die **Instanzen** des **Abfrage** -Leistungsindikators beschrieben.  
   
-|Instanzen des Abfrageleistungsindikators|und Beschreibung|  
+|Instanzen des Abfrageleistungsindikators|Beschreibung|  
 |-----------------------------|-----------------|  
 |**Benutzerindikator 1**|Definiert mithilfe von **sp_user_counter1**.|  
 |**User counter 2**|Definiert mithilfe von **sp_user_counter2**.|  

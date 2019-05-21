@@ -114,7 +114,7 @@ DBCC CHECKALLOC verwendet eine internen Datenbankmomentaufnahme, um die für die
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen  
 Nach Abschluss des Befehls DBCC CHECKALLOC wird eine Meldung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll verzeichnet. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
   
-|Status|und Beschreibung|  
+|Status|Beschreibung|  
 |---|---|  
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|  
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|  
@@ -134,7 +134,7 @@ Eine Reparatur kann in einer Benutzertransaktion ausgeführt werden. Dies ermög
 ## <a name="result-sets"></a>Resultsets  
 In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Informationen beschrieben.
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |---|---|  
 |FirstIAM|Nur interne Verwendung.|  
 |Root|Nur interne Verwendung.|  
@@ -144,7 +144,7 @@ In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Inform
   
 DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index und jede Partition in jeder Datei. In dieser Zusammenfassung wird die Verteilung der Daten beschrieben.
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |---|---|  
 |Zugeordnete Seiten|Seiten, die für den Index zugeordnet wurden, und nicht verwendete Seiten in zugeordneten Blöcken.|  
 |Verwendete Seiten|Zugeordnete Seiten, die vom Index verwendet werden.|  

@@ -27,7 +27,7 @@ ms.locfileid: "65715200"
 
   Zeigt Informationen zu Meldungen an, die während der Vorgänge protokolliert wurden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|Die eindeutige ID der Ereignismeldung.|  
 |Operation_id|BIGINT|Der Typ des Vorgangs.<br /><br /> Eine Liste von Vorgangstypen finden Sie unter [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
@@ -49,7 +49,7 @@ ms.locfileid: "65715200"
 ## <a name="remarks"></a>Remarks  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
-|**message_source_type**|und Beschreibung|  
+|**message_source_type**|Beschreibung|  
 |-------------------------------|-----------------|  
 |10|Eintrag-APIs, z. B. T-SQL und gespeicherte CLR-Prozeduren|  
 |20|Externer Prozess, der verwendet wurde, um das Paket (ISServerExec.exe) auszuführen|  

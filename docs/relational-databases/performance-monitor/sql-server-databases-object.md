@@ -31,7 +31,7 @@ ms.locfileid: "57973429"
   
  In dieser Tabelle werden die **Datenbanken** -Leistungsindikatoren von SQL Server beschrieben.  
   
-|Datenbanken-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Datenbanken-Leistungsindikatoren von SQL Server|Beschreibung|  
 |-----------------------------------|-----------------|  
 |**Aktive Transaktionen**|Anzahl von aktiven Transaktionen für die Datenbank.|  
 |**Durchschn. Abstand von EOL/LP-Anforderung**|Durchschnittlicher Abstand in Byte vom Ende des Protokolls nach Protokollpoolanforderung für Anforderungen in der letzten VLF.| 

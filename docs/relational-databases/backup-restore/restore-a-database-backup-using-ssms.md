@@ -76,7 +76,7 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
             **Hinzufügen**  
             Abhängig vom Medientyp, den Sie in der Dropdownliste **Sicherungsmedientyp** ausgewählt haben, wird durch das Klicken auf **Hinzufügen** eines der folgenden Dialogfelder geöffnet. (Ist die Liste im Listenfeld **Sicherungsmedien** voll, ist die Schaltfläche **Hinzufügen** nicht verfügbar.)
 
-            |Medientyp|Dialogfeld|und Beschreibung|    
+            |Medientyp|Dialogfeld|Beschreibung|    
             |----------------|----------------|-----------------|    
             |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|    
             |**Sicherungsmedium**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|    

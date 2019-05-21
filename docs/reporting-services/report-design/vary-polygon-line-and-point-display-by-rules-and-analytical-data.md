@@ -119,7 +119,7 @@ ms.locfileid: "65578447"
   
  Die folgenden Tabellen zeigen Beispiele für unterschiedliche Formate an, die Sie verwenden können.  
   
-|Schlüsselwort und Format|und Beschreibung|Beispiel für den in der Legende angezeigten Text|  
+|Schlüsselwort und Format|Beschreibung|Beispiel für den in der Legende angezeigten Text|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Zeigt die Währung des Gesamtwerts ohne Dezimalstellen an.|$400|  
 |`#FROMVALUE {C2}`|Zeigt die Währung des Gesamtwerts mit zwei Dezimalstellen an.|$400.55|  

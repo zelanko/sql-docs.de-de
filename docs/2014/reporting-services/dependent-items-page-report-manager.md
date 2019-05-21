@@ -41,7 +41,7 @@ ms.locfileid: "63165114"
  **Beschreibung**  
  Zeigt die Beschreibung des Berichts oder Modells an.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den Bericht aus der Berichtsserver-Datenbank zu löschen. Aktivieren Sie das Kontrollkästchen neben den zu löschenden Elementen, bevor Sie auf **Löschen**klicken.  
   
  **Verschieben**  

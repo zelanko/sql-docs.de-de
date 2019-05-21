@@ -31,7 +31,7 @@ ms.locfileid: "62794530"
 |**Neue Aktion**|Klicken Sie auf diese Option, um den Bereich des **Aktionsformular-Editors** anzuzeigen und eine neue Aktion zu erstellen.|  
 |**Neue Drillthroughaktion**|Klicken Sie auf diese Option, um den Bereich des **Drillthroughaktionsformular-Editors** anzuzeigen und eine neue Drillthroughaktion zu erstellen.|  
 |**Neue Berichtsaktion**|Klicken Sie auf diese Option, um den Bereich des **Berichtsaktionsformular-Editors** anzuzeigen und eine neue Berichtsaktion zu erstellen.|  
-|**Delete**|Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und die ausgewählte Aktion zu löschen.<br /><br /> Hinweis: Diese Option ist nur aktiviert, wenn der Bereich **Aktionsplaner** ausgewählt ist.|  
+|**Löschen**|Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und die ausgewählte Aktion zu löschen.<br /><br /> Hinweis: Diese Option ist nur aktiviert, wenn der Bereich **Aktionsplaner** ausgewählt ist.|  
 |**Überprüfen Sie Syntax**|Klicken Sie auf diese Option, um die Syntax der im Bereich **Aktionsplaner** ausgewählten Aktion zu überprüfen.|  
   
   

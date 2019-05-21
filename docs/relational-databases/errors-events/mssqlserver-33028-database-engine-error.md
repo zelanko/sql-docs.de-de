@@ -36,7 +36,7 @@ ms.locfileid: "47852638"
 ## <a name="explanation"></a>Erklärung  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte den in der Fehlermeldung aufgelisteten Kryptografieanbieter nicht öffnen. Der Kryptografieanbieter hat den aufgelisteten Fehlercode angegeben. Sie müssen möglicherweise den Kryptografieanbieter für weitere Informationen über den Fehler verständigen.  
   
-|Fehlercode|und Beschreibung|  
+|Fehlercode|Beschreibung|  
 |--------------|---------------|  
 |0|Erfolg. Kein Fehler.|  
 |1|Fehler. Ein unbekannter oder unerwarteter Fehler ist aufgetreten. Es sind keine zusätzlichen Informationen verfügbar.|  

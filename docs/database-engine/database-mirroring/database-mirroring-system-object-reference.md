@@ -22,14 +22,14 @@ ms.locfileid: "59533399"
   
 ## <a name="system-catalog-views"></a>Systemkatalogsichten
 
-| Systemkatalogsicht | und Beschreibung|
+| Systemkatalogsicht | Beschreibung|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | Enthält eine Zeile für jede Zeugenrolle, die ein Server in einer Datenbankspiegelungspartnerschaft spielt. |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>Dynamische Systemverwaltungssichten
 
-| Dynamische Systemverwaltungssicht | und Beschreibung|
+| Dynamische Systemverwaltungssicht | Beschreibung|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | Gibt eine Zeile für jede automatische Seitenreparatur für jede gespiegelte Datenbank der Serverinstanz zurück.  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | Gibt für jede für die Datenbankspiegelung hergestellte Verbindung eine Zeile zurück. |
@@ -37,7 +37,7 @@ ms.locfileid: "59533399"
 
 ## <a name="system-tables"></a>Systemtabellen
 
-| Systemtabelle | und Beschreibung|
+| Systemtabelle | Beschreibung|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | Gibt Informationen zu Wartungsplänen für die Datenbankspiegelung zurück. |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | Gibt Informationen zum Verlauf von Wartungsplänen für die Datenbankspiegelung zurück. |

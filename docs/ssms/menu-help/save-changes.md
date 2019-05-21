@@ -33,7 +33,7 @@ ms.locfileid: "65096087"
   
  Änderungen an bereits zuvor gespeicherten Elementen werden automatisch an ihrem Speicherort im Speicher gespeichert. Wenn ein Element bisher noch nicht gespeichert wurde, wird das Dialogfeld **Datei speichern unter** zur Angabe eines neuen Speicherorts angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Sollen die Änderungen an den folgenden Elementen gespeichert werden?**  
  Die ausgewählten Elemente werden gespeichert. Elemente können ausgewählt und aus der Auswahl entfernt werden.  
   

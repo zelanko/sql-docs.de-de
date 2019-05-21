@@ -26,7 +26,7 @@ Das Leistungsobjekt **SQLServer: Speicherbrokerclerks** enthält Leistungsindika
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Speicherbrokerclerks** beschrieben.
 
-|**SQL Server-Speicherbrokerclerks (Leistungsindikatoren)**|und Beschreibung|  
+|**SQL Server-Speicherbrokerclerks (Leistungsindikatoren)**|Beschreibung|  
 |-------------|-----------------|  
 |**Interner Nutzen**|Der interne Wert des Arbeitsspeichers für eine unzureichende Eintragsanzahl (in ms pro Seite pro ms) multipliziert mit 10 Milliarden und auf eine ganze Zahl gekürzt.|
 |**Größe des Speicherbrokerclerks**|Die Clerkgröße in Seiten.|

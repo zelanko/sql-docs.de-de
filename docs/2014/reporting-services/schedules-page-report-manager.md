@@ -41,7 +41,7 @@ ms.locfileid: "63237833"
  **Neuer Zeitplan**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplanung zu öffnen. Auf dieser Seite können Sie Angaben zur Häufigkeit machen.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um einen freigegebenen Zeitplan zu löschen.  
   
  **Anhalten**  

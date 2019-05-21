@@ -95,7 +95,7 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informationen zum Fehler MSSQLSERVER_30053
   
-|Eigenschaft|value|
+|Eigenschaft|Wert|
 |-|-|
 |Produktname|SQL Server|  
 |Ereignis-ID|30053|  

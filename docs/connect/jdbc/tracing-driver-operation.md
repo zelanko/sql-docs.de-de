@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51605780"
@@ -40,7 +40,7 @@ ms.locfileid: "51605780"
   
  Die verfügbaren Protokolliergrade für öffentliche Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
@@ -54,7 +54,7 @@ ms.locfileid: "51605780"
   
  Die verfügbaren Protokolliergrade für interne Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
@@ -68,7 +68,7 @@ ms.locfileid: "51605780"
 ## <a name="logging-categories"></a>Protokollierungskategorien  
  Wenn Sie ein Logger-Objekt erstellen, müssen Sie an das Objekt die benannte Entität oder Kategorie übergeben, zu der Protokollinformationen ermittelt werden sollen. Der JDBC-Treiber unterstützt die folgenden öffentlichen Protokollierungskategorien, die alle im com.microsoft.sqlserver.jdbc-Treiberpaket definiert sind.  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |Verbindung|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
 |-Anweisung.|Protokolliert Meldungen in der Klasse [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
@@ -78,7 +78,7 @@ ms.locfileid: "51605780"
   
  Ab Version 2.0 des Microsoft JDBC-Treibers stellt der Treiber auch das com.microsoft.sqlserver.jdbc.internals-Paket bereit, das die Protokollierungsunterstützung für die folgenden internen Protokollierungskategorien enthält.  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |AuthenticationJNI|Protokolliert Meldungen in Bezug auf die Windows-integriert Authentifizierungsprobleme (wenn die **AuthenticationScheme** -Verbindungseigenschaft implizit oder explizit festgelegt ist **NativeAuthentication**).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER und FINE festlegen.|  
 |SQLServerConnection|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  

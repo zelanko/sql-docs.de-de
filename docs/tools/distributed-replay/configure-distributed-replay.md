@@ -13,7 +13,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
 ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54125560"
@@ -37,7 +37,7 @@ ms.locfileid: "54125560"
   
  Der in der Controllerkonfigurationsdatei angegebene Protokolliergrad enthält die folgenden Informationen:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Protokolliergrad|`<LoggingLevel>`|Gibt den Protokolliergrad für den Controllerdienst an.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Der Standardwert ist `CRITICAL`.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54125560"
   
  In der Clientkonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Gibt den Computernamen des Controllers an. Der Client versucht, sich durch Herstellen einer Verbindung mit dem Controller bei der Distributed Replay Utility-Umgebung zu registrieren.|Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.|Nein. Standardmäßig versucht der Client, sich bei der Controllerinstanz zu registrieren, die lokal ("`.`") ausgeführt wird, sofern sie vorhanden ist.|  
 |Clientarbeitsverzeichnis|`<WorkingDirectory>`|Der lokale Pfad auf dem Client, unter dem die Dispatchdateien gespeichert werden.<br /><br /> Die Dateien in diesem Verzeichnis werden bei der nächsten Wiedergabe überschrieben.|Ein vollständiger Verzeichnisname, der mit dem Laufwerkbuchstaben beginnt.|Nein. Wenn kein Wert angegeben ist, werden die Dispatchdateien am selben Speicherort wie die Standardclientkonfigurationsdatei gespeichert. Wenn ein Wert angegeben wird und dieser Ordner nicht auf dem Client vorhanden ist, wird der Clientdienst nicht gestartet.|  
@@ -89,7 +89,7 @@ ms.locfileid: "54125560"
   
  Die Vorverarbeitungskonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<PreprocessModifiers>` -Elements in der Vorverarbeitungskonfigurationsdatei sind. Dazu gehören folgende Einstellungen:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Systemsitzungsaktivitäten einschließen|`<IncSystemSession>`|Gibt an, ob Systemsitzungsaktivitäten während der Aufzeichnung in die Wiedergabe eingeschlossen werden.|`Yes` &#124; `No`|Nein. Der Standardwert ist `No`.|  
 |Maximale Leerlaufzeit|`<MaxIdleTime>`|Legt die maximale Leerlaufzeit auf eine absolute Zahl (in Sekunden) fest.|Eine ganze Zahl >= -1.<br /><br /> `-1` gibt an, dass der ursprüngliche Wert in der ursprünglichen Ablaufverfolgungsdatei unverändert bleibt.<br /><br /> `0` gibt an, dass zu einem beliebigen Zeitpunkt Aktivitäten erfolgen.|Nein. Der Standardwert ist `-1`.|  
@@ -121,7 +121,7 @@ ms.locfileid: "54125560"
 ### <a name="replayoptions-element"></a>\<ReplayOptions >-Element  
  Im `<ReplayOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem _target server_-Parameter **-s** für die **replay**-Option des Verwaltungstools angegeben wurde.|  
 |Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Der Standardwert ist `stress`.|  
@@ -136,7 +136,7 @@ ms.locfileid: "54125560"
 ### <a name="outputoptions-element"></a>\<OutputOptions >-Element  
  Im `<OutputOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Zeilenanzahl aufzeichnen|`<RecordRowCount>`|Gibt an, ob die Zeilenanzahl für jedes Resultset aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Der Standardwert ist `Yes`.|  
 |Resultset aufzeichnen|`<RecordResultSet>`|Gibt an, ob der Inhalt aller Resultsets aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Der Standardwert ist `No`.|  

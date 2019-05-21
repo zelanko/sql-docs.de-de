@@ -27,7 +27,7 @@ Das **SQLServer:Catalog Metadata** Leistungsobjekt enthält Leistungsindikatoren
 In der folgenden Tabelle sind die **Catalog Metadata** .
 
 
-|**SQLServer Catalog Metadata-Leistungsindikatoren**|und Beschreibung|  
+|**SQLServer Catalog Metadata-Leistungsindikatoren**|Beschreibung|  
 |-------------|-----------------|  
 |**Anzahl der Cacheeinträge**|Die Anzahl der Einträge im Katalogmetadaten-Cache.|
 |**Anzahl der fixierten Cacheeinträge**|Anzahl der Einträge im Katalogmetadaten-Cache, die fixiert sind.|

@@ -28,7 +28,7 @@ ms.locfileid: "47823958"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Scan:Started (Ereignisklasse)](../../relational-databases/event-classes/scan-started-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan gestartet wurde.|  
 |[Scan:Stopped (Ereignisklasse)](../../relational-databases/event-classes/scan-stopped-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan beendet wurde.|  

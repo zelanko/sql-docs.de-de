@@ -37,7 +37,7 @@ ms.locfileid: "62768786"
  **Ausdruck (...)**  
  Klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Weitere Informationen finden Sie unter [Expression Builder](expression-builder.md).  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Eigenschaft aus, und klicken Sie anschließend auf **Löschen**.  
   
 ## <a name="see-also"></a>Siehe auch  

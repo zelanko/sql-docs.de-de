@@ -33,7 +33,7 @@ ms.locfileid: "65574216"
 > [!NOTE]  
 >  Diese Funktion wird in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services nicht unterstützt. Die Seite wird nicht angezeigt, wenn Sie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ausführen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Name**  
  Zeigt den Berichtsnamen an. Abonnements werden durch ihre Beschreibung identifiziert.  
   

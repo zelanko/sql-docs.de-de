@@ -55,7 +55,7 @@ Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteh
   
 Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
-|Spalte|und Beschreibung|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Der Prozentsatz der logischen Fragmentierung (falsche Reihenfolge der Seiten in einem Index).|  
 |**fragment_count**|Die Anzahl der Fragmente (physisch aufeinanderfolgende Blattseiten) im Index.|  

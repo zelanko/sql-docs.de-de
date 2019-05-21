@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5f2edcd86eedf052792384f8247e2ba26af887
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47676785"
@@ -30,7 +30,7 @@ ms.locfileid: "47676785"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateCharacterStream-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md)|Aktualisiert die angegebene Spalte mit einem Zeichendatenstromwert.|  
 |[updateCharacterStream (int, java.io.Reader, int)](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-int.md)|Aktualisiert die angegebene Spalte mit einem Zeichendatenstromwert mit der angegebenen Anzahl von Zeichen.|  

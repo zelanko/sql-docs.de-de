@@ -41,7 +41,7 @@ ms.locfileid: "47646368"
 ## <a name="how-row-compression-affects-storage"></a>Wie Zeilenkomprimierung den Speicherplatz beeinflusst  
  Die folgende Tabelle beschreibt, wie Zeilenkomprimierung die vorhandenen Typen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]beeinflusst. Die Tabelle schließt nicht die Speicherplatzersparnis ein, die mit Seitenkomprimierung erreicht werden kann.  
   
-|Datentyp|Wird der Speicherplatz beeinflusst?|und Beschreibung|  
+|Datentyp|Wird der Speicherplatz beeinflusst?|Beschreibung|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|nein|1 Byte ist der minimal benötigte Speicherplatz.|  
 |**smallint**|Benutzerkontensteuerung|Wenn 1 Byte für den Wert ausreicht, wird nur 1 Byte verwendet.|  

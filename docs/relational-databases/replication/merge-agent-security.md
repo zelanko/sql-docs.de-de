@@ -32,7 +32,7 @@ ms.locfileid: "54131860"
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Process Account**  
  Geben Sie ein Windows-Konto ein, unter dem der Merge-Agent ausgeführt wird.  
   

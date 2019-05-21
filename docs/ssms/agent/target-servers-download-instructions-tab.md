@@ -29,7 +29,7 @@ ms.locfileid: "65089404"
 
 Mithilfe dieser Seite können Sie die Downloadanweisungen für einen oder mehrere Zielserver anzeigen und aktualisieren.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Zielserver**  
 Wählt den Server aus, für den Anweisungen angezeigt oder geändert werden sollen.  
   
@@ -54,7 +54,7 @@ Zeigt Datum und Uhrzeit (Ortszeit) an, an dem der Zielserver die Anweisung herun
 **Status für Anweisungsdownload**  
 Zeigt den letzten Status für die ausgewählte Downloadanweisung an.  
   
-**Delete**  
+**Löschen**  
 Löscht die ausgewählte Downloadanweisung.  
   
 **Löschen**  

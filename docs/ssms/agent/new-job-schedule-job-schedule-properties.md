@@ -30,7 +30,7 @@ ms.locfileid: "65105514"
 
 Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Geben Sie einen neuen Namen für den Zeitplan ein.  
   

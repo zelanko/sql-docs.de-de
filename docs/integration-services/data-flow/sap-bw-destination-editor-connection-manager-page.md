@@ -40,7 +40,7 @@ ms.locfileid: "65726463"
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -66,7 +66,7 @@ ms.locfileid: "65726463"
  **Typ**  
  Geben Sie das Einzelzeichen ein, durch das der InfoSource-Typ identifiziert wird. In der folgenden Tabelle sind die zulässigen Einzelzeichenwerte aufgeführt.  
   
-|Wert|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**D**|Transaktionsdaten|  
 |**M**|Masterdaten|  

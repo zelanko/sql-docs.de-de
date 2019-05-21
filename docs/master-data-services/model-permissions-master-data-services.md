@@ -35,7 +35,7 @@ ms.locfileid: "65484082"
 |**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
 |**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
-|**Delete**|Der Benutzer kann Elemente löschen.|  
+|**Löschen**|Der Benutzer kann Elemente löschen.|  
 |**Verweigern**|Der Zugriff auf das Modell wird vollständig verweigert.|  
 |**Admin**|Administratorberechtigung für das Modell. Die Administratorberechtigung ist nur auf Modellebene verfügbar.|  
   

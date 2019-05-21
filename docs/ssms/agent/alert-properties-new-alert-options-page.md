@@ -29,7 +29,7 @@ ms.locfileid: "65099433"
 
 Mithilfe dieser Seite können Sie die Optionen für Agentwarnungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
 
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **E-Mail**  
 Schließt Fehlertext des Ereignisses ggf. in E-Mail-Benachrichtigungen ein.  
   

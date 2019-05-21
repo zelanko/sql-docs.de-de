@@ -42,7 +42,7 @@ ms.locfileid: "65570682"
 ## <a name="list-permissions"></a>Listenberechtigungen  
  Mit den Berechtigungen, die Sie für die Bibliothek festlegen, die Berichtsserverelemente enthält, legen Sie fest, wie Benutzer auf diese Elemente zugreifen.  
   
-|Berechtigung|und Beschreibung|V|c|B|Berichtsservervorgang|  
+|Berechtigung|Beschreibung|V|c|B|Berichtsservervorgang|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Listen verwalten|Listen erstellen oder löschen, Spalten einer Liste erstellen oder löschen und öffentliche Sichten einer Liste hinzufügen oder löschen.|X|||Während eines Veröffentlichungsvorgangs von einem Erstellungstool aus einen Ordner in einer SharePoint-Bibliothek erstellen. Diese Berechtigung wird auch zum Verwalten des Berichtsverlaufs benötigt.|  
 |Elemente hinzufügen|Listen Elemente hinzufügen, Dokumentbibliotheken Dokumente hinzufügen und Webdiskussionskommentare hinzufügen.|X|X||SharePoint-Bibliotheken Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen (externe Bilddateien) hinzufügen. Freigegebene Datenquellen erstellen. Berichtsmodelle aus freigegebenen Datenquellen generieren. Den Berichts-Generator starten und einen neuen Bericht erstellen oder ein Modell in den Berichts-Generator laden.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65570682"
 ## <a name="site-permissions"></a>Websiteberechtigungen  
  Websiteberechtigungen steuern den Zugriff auf Berichtsservervorgänge, die nicht direkt mit den in einer spezifischen Bibliothek gespeicherten Elementen verbunden sind. Zu den Beispielen gehören das Erstellen und Verwalten freigegebener Zeitpläne, die von Elementen in einer Vielzahl von Bibliotheken verwendet werden können, und das Konfigurieren des Berichts-Viewer-Webparts, das in einer Website verwendet werden kann.  
   
-|Berechtigung|und Beschreibung|V|c|B|Berichtsservervorgang|  
+|Berechtigung|Beschreibung|V|c|B|Berichtsservervorgang|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Berechtigungen verwalten|Berechtigungsebenen für die Website erstellen und ändern und Benutzern und Gruppen Berechtigungen zuweisen.|X|||Sie können Berechtigungen für alle Berichtsserverelemente und -vorgänge verwalten. Sie können Einstellungen für die Modellelementsicherheit festlegen.|  
 |Website verwalten|Alle Verwaltungsaufgaben für die Website ausführen und Inhalte verwalten.|X|||Freigegebene Zeitpläne erstellen, ändern und löschen.|  

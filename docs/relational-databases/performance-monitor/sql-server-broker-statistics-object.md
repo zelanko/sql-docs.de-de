@@ -25,7 +25,7 @@ ms.locfileid: "53380521"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das SQLServer:Broker-Leistungsobjekt enthält Leistungsindikatoren mit allgemeinen Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet:  
   
-|Broker-Statistik-Leistungsindikatoren in SQL Server|und Beschreibung|  
+|Broker-Statistik-Leistungsindikatoren in SQL Server|Beschreibung|  
 |-------------------------------------------|-----------------|  
 |**Aktivierungsfehler gesamt**|Die Häufigkeit, mit der eine gespeicherte [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Aktivierungsprozedur mit einem Fehler beendet wurde.|  
 |**Broker-Transaktionsrollbacks**|Die Anzahl von Transaktionen, die auf [!INCLUDE[ssSB](../../includes/sssb-md.md)]bezogene DML-Anweisungen enthalten, für die ein Rollback ausgeführt wurde, z. B. SEND und RECEIVE.|  

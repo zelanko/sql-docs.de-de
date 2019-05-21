@@ -40,7 +40,7 @@ ms.locfileid: "65728161"
   
  In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0**|Der Verbindungs-Manager für mehrere Dateien verwendet eine vorhandene Datei.|  
 |**1**|Der Verbindungs-Manager für mehrere Dateien erstellt eine Datei.|  

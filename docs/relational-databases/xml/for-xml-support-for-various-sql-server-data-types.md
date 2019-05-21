@@ -27,7 +27,7 @@ ms.locfileid: "58513147"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[FOR XML-Unterstützung für den xml-Datentyp](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|Beschreibt, wie FOR XML in Verbindung mit dem **XML** -Datentyp funktioniert.|  
 |[FOR XML-Unterstützung für Zeichenfolgen-Datentypen](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|Beschreibt, wie FOR XML in Verbindung mit String-Datentypen wie beispielsweise **varchar** und **nvarchar**funktioniert.|  

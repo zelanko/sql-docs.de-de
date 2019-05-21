@@ -183,7 +183,7 @@ Hinweise zur Tabelle:
   
 -   Die Angabe von AM oder PM (tt) ist nicht erforderlich. Der Standardwert ist AM.
   
-|Datumstyp|Beispiel|und Beschreibung|  
+|Datumstyp|Beispiel|Beschreibung|  
 |---------------|-------------|-----------------|  
 |datetime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 24 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 3 Ziffern für Millisekunden.|  
 |datetime|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 12 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 3 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm. |  

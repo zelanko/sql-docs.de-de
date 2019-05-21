@@ -37,7 +37,7 @@ ms.locfileid: "62836780"
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Column**  
+ **Spalte**  
  Wird nicht verwendet.  
   
  **Fehler**  

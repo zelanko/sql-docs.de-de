@@ -35,7 +35,7 @@ ms.locfileid: "65719583"
   
  In der folgenden Tabelle sind diese Leistungsindikatoren beschrieben.  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
 |Gelesene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in allen Datenquellen gelesen hat.|  
 |Geschriebene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in alle Ziele geschrieben hat.|  

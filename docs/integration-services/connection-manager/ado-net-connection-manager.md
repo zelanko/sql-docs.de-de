@@ -74,7 +74,7 @@ ms.locfileid: "65728420"
   
  Weitere Informationen zum ADO.NET-Verbindungs-Manager finden Sie unter [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Datenverbindungen**  
  Wählen Sie in der Liste eine vorhandene ADO.NET.Datenverbindung aus.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65728420"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** eine ADO.NET-Datenverbindung.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Verbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  

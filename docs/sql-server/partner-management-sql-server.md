@@ -22,7 +22,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Verwaltung Ihrer SQL
 
 ## <a name="our-management-partners"></a>Unsere Verwaltungspartner
 
-| Partner | und Beschreibung | Links |
+| Partner | Beschreibung | Links |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager ist eine umfassende Überwachungslösung, die anzeigt, wer, wann, was und wie an SQL Servern gearbeitet hat, und somit die Einhaltung von rechtlichen Anforderungen und Anforderungen, die die Datensicherheit betreffen, sicherstellt.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 

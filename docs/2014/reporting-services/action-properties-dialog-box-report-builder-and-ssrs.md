@@ -69,7 +69,7 @@ ms.locfileid: "63231182"
  **Hinzufügen**  
  Fügen Sie einen neuen Parameter hinzu, der an den Drillthroughbericht übergeben werden soll.  
   
- **Delete**  
+ **Löschen**  
  Löschen Sie einen Parameter für den Drillthroughbericht.  
   
  **Pfeil nach oben**  

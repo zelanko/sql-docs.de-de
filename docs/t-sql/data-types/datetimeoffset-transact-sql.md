@@ -38,7 +38,7 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
   
 ## <a name="datetimeoffset-description"></a>Beschreibung von datetimeoffset
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |---|---|
 |Syntax|**datetimeoffset** [ (*Sekundenbruchteil-Genauigkeit*) ]|  
 |Verwendung|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
@@ -72,7 +72,7 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Unterstützte Formate der Zeichenfolgenliterale für datetimeoffset
 In der folgenden Tabelle werden die unterstützten ISO 8601-Zeichenfolgenliterale für **datetimeoffset** aufgelistet. Informationen zu alphabetischen, numerischen und unstrukturierten Formaten sowie zu Zeitformaten für die Datums- und Uhrzeitteile von **datetimeoffset** finden Sie unter [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) und [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|und Beschreibung|  
+|ISO 8601|Beschreibung|  
 |---|---|
 |JJJJ-MM-TTThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Diese beiden Formate werden nicht von den Gebietsschemaeinstellungen für Sitzungen SET LANGUAGE und SET DATEFORMAT beeinflusst. Leerzeichen zwischen **datetimeoffset**- und **datetime**-Teilen sind nicht zulässig.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Dieses Format gibt gemäß ISO-Definition an, dass der **datetime**-Teil in koordinierter Weltzeit (Coordinated Universal Time; UTC) ausgedrückt werden soll. Beispiel: 1999-12-12 12:30:30.12345 -07:00 soll als 1999-12-12 19:30:30.12345Z dargestellt werden.|  

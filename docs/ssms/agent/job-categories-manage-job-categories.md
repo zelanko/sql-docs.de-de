@@ -31,7 +31,7 @@ ms.locfileid: "65096851"
 
 Mithilfe des Dialogfelds **Auftragskategorien** können Sie Auftragskategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Name der Auftragskategorie.  
   
@@ -44,7 +44,7 @@ Anzahl der für diese Kategorie definierten Aufträge.
 **Hinzufügen**  
 Öffnet das Dialogfeld **Neue Auftragskategorie** zum Hinzufügen einer neuen Auftragskategorie.  
   
-**Delete**  
+**Löschen**  
 Entfernt die ausgewählte Auftragskategorie. Nur für benutzerdefinierte Auftragskategorien aktiviert.  
   
 **Aktualisieren**  

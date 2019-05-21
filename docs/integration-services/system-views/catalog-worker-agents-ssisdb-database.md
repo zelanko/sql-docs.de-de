@@ -27,12 +27,12 @@ ms.locfileid: "65713703"
 
 Zeigt die Informationen für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out-Worker an.
 
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|Die Worker-Agent-ID für den Scale Out-Worker.|
 |isEnabled|**bit**|Gibt an, ob der Scale Out-Worker aktiviert ist.|
 |DisplayName|**nvarchar(256)**|Der Anzeigename des Scale Out-Workers.|
-|und Beschreibung|**nvarchar(256)**|Die Beschreibung des Scale Out-Workers.|
+|Beschreibung|**nvarchar(256)**|Die Beschreibung des Scale Out-Workers.|
 |MachineName|**nvarchar(256)**|Der Computername für den Scale Out-Worker.|
 |Tags|**nvarchar(max)**|Die Tags des Scale Out-Workers.|
 |UserAccount|**nvarchar(256)**|Das Benutzerkonto, unter dem der Dienst für den Scale Out-Worker ausgeführt wird.|

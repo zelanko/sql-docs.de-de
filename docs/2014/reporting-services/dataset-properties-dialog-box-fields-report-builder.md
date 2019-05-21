@@ -29,7 +29,7 @@ ms.locfileid: "63164714"
  **Hinzufügen**  
  Fügt dem Dataset ein neues Abfragefeld oder berechnetes Feld hinzu.  
   
- **Delete**  
+ **Löschen**  
  Löscht das ausgewählte Feld aus dem Dataset.  
   
  **Name des Felds**  

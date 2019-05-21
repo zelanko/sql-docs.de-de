@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47690318"
@@ -90,7 +90,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *Pager_days*ist **Tinyint**, hat den Standardwert NULL. der Wert muss ein Wert aus **0** über **127**. *Pager_days* wird durch Addition der einzelnen Werte für die erforderlichen Tage berechnet. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  

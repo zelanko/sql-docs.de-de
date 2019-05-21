@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 2ae4bee1e0dd4fea3a5f52e46085da53f75dcab9
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51030387"
@@ -33,7 +33,7 @@ ms.locfileid: "51030387"
 > [!NOTE]  
 >  Die **ISSCommandWithParameters**-Schnittstelle kann bei Einsatz von Dienstkomponenten verwendet werden. Die Dienstkomponenten selbst verwenden diese Schnittstelle jedoch nicht.  
   
-|Methode|und Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[Isscommandwithparameters:: Getparameterproperties &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|Gibt eine **SSPARAMPROPS** -Eigenschaftssatzstruktur im Array für jeden UDT- oder XML-Parameter zurück, der dem Befehl übergeben wurde. Für andere Parametertypen wird hingegen keine Struktur zurückgegeben.|  
 |[Isscommandwithparameters:: SetParameterProperties &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Legt die Parametereigenschaften auf einer Einzelparameterbasis nach Ordnungszahl fest oder legt Massenparametereigenschaften durch Angabe eines Arrays von **SSPARAMPROPS** -Strukturen fest.|  

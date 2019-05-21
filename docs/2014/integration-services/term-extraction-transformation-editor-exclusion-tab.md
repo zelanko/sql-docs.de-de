@@ -40,7 +40,7 @@ ms.locfileid: "62766283"
  **Tabelle oder Sicht**  
  Wählen Sie die Tabelle oder Sicht aus, die die Ausschlussausdrücke enthält.  
   
- **Column**  
+ **Spalte**  
  Wählen Sie in der Tabelle oder Sicht die Spalte aus, die die Ausschlussausdrücke enthält.  
   
  **Konfigurieren der Fehlerausgabe**  

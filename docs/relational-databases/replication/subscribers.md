@@ -27,7 +27,7 @@ ms.locfileid: "53207392"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Geben Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten oder die Nichtabonnenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die ein Abonnent für die ausgewählte Veröffentlichung erhalten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Abonnenten**  
  Aktivieren Sie das Kontrollkästchen im Raster, um die zugehörige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle oder nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stammende Datenquelle als Abonnent für die auf der Seite **Veröffentlichung** ausgewählte Veröffentlichung zu aktivieren. Wenn der Abonnent nicht aufgeführt ist, klicken Sie auf **Abonnent hinzufügen** oder **SQL Server-Abonnenten hinzufügen**.  
   

@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70b1ab2b18ee4de0aff7c396eaf3dfeaf99a80a8
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47814588"
@@ -30,7 +30,7 @@ ms.locfileid: "47814588"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateDouble (int, double)](../../../connect/jdbc/reference/updatedouble-method-int-double.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ **double** unter Berücksichtigung des Spaltenindexes.|  
 |[updateDouble (java.lang.String, double)](../../../connect/jdbc/reference/updatedouble-method-java-lang-string-double.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ **double** unter Berücksichtigung des Spaltennamens.|  

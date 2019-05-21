@@ -28,14 +28,14 @@ Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schl
 > [!NOTE]  
 > Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
 Listet die vorhandenen Primärschlüssel, eindeutigen Schlüssel und Indizes auf. Wenn Sie einen Index oder Schlüssel auswählen, werden dessen Eigenschaften rechts im Datenblatt angezeigt. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
 **Hinzufügen**  
 Erstellen Sie einen neuen Primärschlüssel, eindeutigen Schlüssel oder Index.  
   
-**Delete**  
+**Löschen**  
 Löschen Sie den in der Liste **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** ausgewählten Schlüssel oder Index.  
   
 **Kategorie Allgemein**  

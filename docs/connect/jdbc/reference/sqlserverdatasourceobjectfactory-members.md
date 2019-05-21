@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47701988"
@@ -25,7 +25,7 @@ ms.locfileid: "47701988"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Initialisiert eine neue Instanz der [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)-Klasse.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47701988"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|Ruft eine Instanz des angegebenen Datenquellenobjekts ab.|  
   

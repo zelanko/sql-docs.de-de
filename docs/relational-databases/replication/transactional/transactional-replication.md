@@ -76,7 +76,7 @@ ms.locfileid: "54395374"
 ## <a name="publication-types"></a>Veröffentlichungstypen 
 Die Transaktionsreplikation stellt vier Veröffentlichungstypen bereit:  
   
-|Veröffentlichungstyp|und Beschreibung|  
+|Veröffentlichungstyp|Beschreibung|  
 |----------------------|-----------------|  
 |Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
 |Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Speicherort verfügt über identische Daten auf einem Verleger und einem Abonnenten. <br /> – Zeilen können auf dem Abonnenten aktualisiert werden.<br /> – Diese Topologie eignet sich für Serverumgebungen am besten, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  

@@ -24,7 +24,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51602710"
@@ -78,7 +78,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe  
  Um Abfragebenachrichtigungen mit OLE DB zu unterstützen, fügt der OLE DB-Treiber für SQL Server dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die folgenden neuen Eigenschaften hinzu.  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432.000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|  

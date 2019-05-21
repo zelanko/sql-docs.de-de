@@ -29,7 +29,7 @@ ms.locfileid: "65725882"
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Dimensionsspalten**  
  Wählen Sie eine Dimensionsspalte aus der Liste aus.  
   

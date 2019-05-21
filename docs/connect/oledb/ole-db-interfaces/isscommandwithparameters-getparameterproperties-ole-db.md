@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 91bf864bef7178fe7532b33648cdf307d80fe61c
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51030270"
@@ -64,7 +64,7 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|Member|und Beschreibung|  
+|Member|Beschreibung|  
 |------------|-----------------|  
 |*iOrdinal*|Die Ordnungszahl des übergebenen Parameters|  
 |*cPropertySets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  

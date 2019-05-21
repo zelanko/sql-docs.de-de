@@ -71,7 +71,7 @@ ms.locfileid: "62771727"
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
 ### <a name="options"></a>Optionen  
- **Column**  
+ **Spalte**  
  Geben Sie den Spaltennamen an.  
   
  **Indexposition**  

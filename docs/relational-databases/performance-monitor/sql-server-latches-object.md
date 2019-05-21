@@ -27,7 +27,7 @@ ms.locfileid: "53380531"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Batches** -Leistungsindikatoren beschrieben.  
   
-|Batches-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Batches-Leistungsindikatoren von SQL Server|Beschreibung|  
 |---------------------------------|-----------------|  
 |**Durchschnittliche Wartezeit für Latch (in Millisekunden)**|Durchschnittliche Latchwartezeit (in Millisekunden) für wartende Latchanforderungen.|  
 |**Basis für durchschnittliche Latchwartezeit**|Nur zur internen Verwendung.| 

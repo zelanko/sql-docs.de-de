@@ -26,7 +26,7 @@ Das Leistungsobjekt **SQLServer:FileTable** stellt Leistungsindikatoren für Sta
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **FileTable** beschrieben.
 
-|**SQLServer FileTable (Leistungsindikatoren)**|und Beschreibung|  
+|**SQLServer FileTable (Leistungsindikatoren)**|Beschreibung|  
 |-------------|-----------------|  
 |**Durchschn. Zeit für FileTable-Elementlöschvorgang**|Die durchschnittliche Zeit (in Millisekunden) zum Löschen eines FileTable-Elements.|
 |**Durchschn. FileTable-Aufzählungszeit**|Die durchschnittliche Zeit (in Millisekunden) einer Anforderung zum Aufzählen von FileTable-Elementen.|

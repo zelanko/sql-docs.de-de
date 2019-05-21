@@ -61,7 +61,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>Registerkarte „Komponenteneigenschaften“  
  Auf dieser Registerkarte können die folgenden Elemente bearbeitet werden:  
   
-|Feld|und Beschreibung|  
+|Feld|Beschreibung|  
 |-----------|-----------------|  
 |Name|Name der Datenstreamingziel-Komponente im Paket.|  
 |ValidateExternalMetadata|Gibt an, ob die Komponente zur Entwurfszeit mit externen Datenquellen überprüft wird. Ist diese Option auf „false“ festgelegt, wird die Überprüfung anhand externer Datenquellen bis zur Laufzeit verzögert.|  

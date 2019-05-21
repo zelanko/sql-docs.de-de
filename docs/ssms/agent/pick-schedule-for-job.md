@@ -31,7 +31,7 @@ ms.locfileid: "65088855"
 
 Wählen Sie in diesem Dialogfeld einen vorhandenen Zeitplan für den Auftrag des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents aus.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Verfügbare Zeitpläne**  
 Führt die verfügbaren Zeitpläne für diesen Auftrag auf. Weil ein Auftrag und ein Zeitplan denselben Besitzer haben müssen, enthält diese Liste nur Zeitpläne, die dem Besitzer des Auftrags gehören.  
   

@@ -87,7 +87,7 @@ ms.locfileid: "54419825"
 ## <a name="replication-maintenance-jobs"></a>Aufträge zur Replikationswartung  
  Die Replikation verwendet die folgenden Aufträge zum Ausführen von geplanten und Bedarfswartungen.  
   
-|Cleanupauftrag|und Beschreibung|Standardzeitplan|  
+|Cleanupauftrag|Beschreibung|Standardzeitplan|  
 |------------------|-----------------|----------------------|  
 |Bereinigung des Agent-Verlaufs: Distribution|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
 |Verteilungsbereinigung: Distribution|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. |Wird alle zehn Minuten ausgeführt.|  

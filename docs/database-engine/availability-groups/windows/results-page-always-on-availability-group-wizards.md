@@ -36,7 +36,7 @@ ms.locfileid: "47652290"
  **Ergebnis**  
  Ziegt für jeden ausgeführten Schritt einen der folgenden Linktexte an.  
   
-|Ergebnis|und Beschreibung|  
+|Ergebnis|Beschreibung|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
 |**Success**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  

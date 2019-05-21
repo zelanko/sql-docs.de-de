@@ -26,7 +26,7 @@ ms.locfileid: "47802308"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Datenspalten der Audit Broker Login-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Wird in dieser Ereignisklasse nicht verwendet.|10|Benutzerkontensteuerung|  
 |**ClientProcessID**|**int**|Wird in dieser Ereignisklasse nicht verwendet.|9|Benutzerkontensteuerung|  
@@ -53,7 +53,7 @@ ms.locfileid: "47802308"
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
-|ID|Unterklasse|und Beschreibung|  
+|ID|Unterklasse|Beschreibung|  
 |--------|--------------|-----------------|  
 |1|Login Success|Ein Login Success-Ereignis gibt an, dass der Anmeldeprozess des Brokers erfolgreich abgeschlossen wurde.|  
 |2|Login Protocol Error|Ein Login Protocol Error-Ereignis gibt an, dass der Broker eine wohlgeformte, aber für den aktuellen Status des Anmeldeprozesses ungültige Nachricht empfängt. Die Meldung ging eventuell verloren oder wurde außer der Reihe versendet.|  

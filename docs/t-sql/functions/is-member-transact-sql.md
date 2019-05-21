@@ -64,7 +64,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="remarks"></a>Remarks  
  IS_MEMBER gibt folgende Werte zurück.  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0|Der aktuelle Benutzer ist kein Mitglied von *group* oder *role*.|  
 |1|Der aktuelle Benutzer ist ein Mitglied von *group* oder *role*.|  

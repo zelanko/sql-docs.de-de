@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11dbcc1cf6c25e24dc336aad19f5ab33f3023539
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47697409"
@@ -30,7 +30,7 @@ ms.locfileid: "47697409"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setNull (java.lang.String, int)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int.md)|Legt den angegebenen Parameter unter Berücksichtigung des festzulegenden Parametertyps auf einen NULL-Wert fest.|  
 |[setNull (java.lang.String, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int-java-lang-string.md)|Legt den angegebenen Parameter unter Berücksichtigung des festzulegenden Parametertyps und -namens auf einen NULL-Wert fest.|  

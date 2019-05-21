@@ -33,7 +33,7 @@ ms.locfileid: "65571394"
 > [!NOTE]  
 >Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar, und diese Seite wird nicht angezeigt, wenn Sie eine Edition ausführen, die nicht über diese Funktion verfügt. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Name**  
  Gibt den Namen des freigegebenen Zeitplans an.  
   

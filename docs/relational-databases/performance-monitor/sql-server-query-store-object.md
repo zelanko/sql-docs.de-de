@@ -28,7 +28,7 @@ ms.locfileid: "53380321"
   
  In dieser Tabelle werden die **SQLServer:Abfragespeicher**-Leistungsindikatoren beschrieben.  
   
-|Leistungsindikatoren des SQL Server-Abfragespeichers|und Beschreibung|  
+|Leistungsindikatoren des SQL Server-Abfragespeichers|Beschreibung|  
 |-------------------------------------|-----------------|  
 |**CPU-Verwendung des Abfragespeichers**|Gibt die CPU-Nutzung durch Abfragespeicher an.|  
 |**Logische Lesevorgänge des Abfragespeichers**|Gibt die Anzahl der logischen Lesevorgänge an, die durch den Abfragespeicher vorgenommen werden.|  
@@ -37,7 +37,7 @@ ms.locfileid: "53380321"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Abfragespeicherinstanz|und Beschreibung|  
+|Abfragespeicherinstanz|Beschreibung|  
 |--------------------------|-----------------|  
 |**_Total**|Informationen für den Abfragespeicher für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<Name der Datenbank>|Abfragespeicherinformationen für diese Datenbank.|  

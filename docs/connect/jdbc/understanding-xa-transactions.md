@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
 ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
 ms.locfileid: "55736941"
@@ -31,7 +31,7 @@ ms.locfileid: "55736941"
 
 Für die Implementierung verteilter Transaktionen stehen die folgenden Klassen zur Verfügung:  
   
-| Class                                              | Implementiert                      | und Beschreibung                                       |
+| Class                                              | Implementiert                      | Beschreibung                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | Das Klassenfactory für verteilte Verbindungen.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | Der Ressourcenadapter für den Transaktions-Manager. |

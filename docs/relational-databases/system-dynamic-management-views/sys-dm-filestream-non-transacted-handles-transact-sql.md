@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52411627"
@@ -35,7 +35,7 @@ ms.locfileid: "52411627"
   
  Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-|**Column**|**Typ**|**Beschreibung**|  
+|**Spalte**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
 |database_id|ssNoversion|ID der Datenbank, die dem Handle zugeordnet ist.|  
 |object_id|ssNoversion|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  

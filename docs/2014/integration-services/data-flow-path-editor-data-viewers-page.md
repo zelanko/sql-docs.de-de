@@ -35,7 +35,7 @@ ms.locfileid: "62828488"
  **Hinzufügen**  
  Klicken Sie auf diese Schaltfläche, um mithilfe des Dialogfelds **Daten-Viewer konfigurieren** einen Daten-Viewer hinzuzufügen.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Daten-Viewer zu löschen.  
   
  **Konfigurieren**  

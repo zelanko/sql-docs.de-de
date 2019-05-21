@@ -43,7 +43,7 @@ ms.locfileid: "65582080"
   
  In der folgenden Tabelle werden die Symbole für den Bereich **Karte** angezeigt:  
   
-|Symbol|und Beschreibung|Verwendung|  
+|Symbol|Beschreibung|Verwendung|  
 |------------|-----------------|-----------------|  
 |![RS_Symbol_Kartenebenenassistent](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Kartenebenen-Assistent|Um mit einem Assistenten eine Ebene hinzuzufügen, klicken Sie auf **Assistent für neue Ebenen**.|  
 |![RS_SymbolKarteEbeneHinzufügen](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ebene hinzufügen|Um manuell eine Ebene hinzuzufügen, klicken Sie auf **Ebene hinzufügen**, und klicken Sie dann auf den Typ der Kartenebene, die Sie hinzufügen möchten.|  

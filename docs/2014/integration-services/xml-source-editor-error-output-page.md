@@ -31,7 +31,7 @@ ms.locfileid: "62766003"
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  

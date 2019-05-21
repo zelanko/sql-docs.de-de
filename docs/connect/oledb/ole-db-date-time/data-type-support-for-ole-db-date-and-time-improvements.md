@@ -16,7 +16,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: e3c40921343f7b762c6e844ecb2eb45581da28c7
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47597399"
@@ -31,7 +31,7 @@ ms.locfileid: "47597399"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
  OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|value|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|Wert|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  

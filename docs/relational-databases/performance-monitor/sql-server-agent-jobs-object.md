@@ -27,7 +27,7 @@ ms.locfileid: "53380961"
   
  Die nachfolgende Tabelle enthält die **SQLAgent:Jobs** -Leistungsindikatoren.  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |**Aktive Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der gerade ausgeführten Aufträge.|  
 |**Fehlerhafte Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der Aufträge, die mit einem Fehler beendet wurden.|  
@@ -38,7 +38,7 @@ ms.locfileid: "53380961"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|und Beschreibung|  
+|Instanz|Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen zu allen Aufträgen.|  
 |**Warnungen**|Informationen zu durch Warnungen gestarteten Aufträgen.|  

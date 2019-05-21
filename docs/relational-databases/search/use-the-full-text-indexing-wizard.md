@@ -98,7 +98,7 @@ ms.locfileid: "57973849"
      Geben Sie die Dateigruppe an, für die der Volltextindex erstellt werden soll.  
   
      e. Wählen Sie einen Wert:  
-      |value|und Beschreibung|  
+      |Wert|Beschreibung|  
       |-----------|-----------------|
       |**<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
       |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|
@@ -112,7 +112,7 @@ ms.locfileid: "57973849"
   
      Folgende Werte sind möglich:  
   
-   |value|und Beschreibung|  
+   |Wert|Beschreibung|  
     |-----------|-----------------|  
     |**<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
     |**<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
@@ -131,7 +131,7 @@ ms.locfileid: "57973849"
      **Bearbeiten**  
      Bearbeiten eines Zeitplans.  
   
-     **Delete**  
+     **Löschen**  
      Löschen eines Zeitplans.  
   
 5.  Zeigen Sie den Status des Volltextindizierungs-Assistenten an, bzw. steuern Sie ihn.  

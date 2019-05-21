@@ -70,7 +70,7 @@ ms.locfileid: "65723562"
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
-|Ordner|und Beschreibung|  
+|Ordner|Beschreibung|  
 |------------|-----------------|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  
 |Sonstiges|Enthält Dateien, die sich von Paketdateien unterscheiden.|  

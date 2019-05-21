@@ -29,7 +29,7 @@ ms.locfileid: "65574019"
   
  Die folgenden Elemente der Webhierarchie können zum Zugreifen auf und Sichern von Berichtsserverinhalten verwendet werden. Andere Objekte wie Listen und Seiten werden für den Zugriff auf Berichtsserverinhalte nicht verwendet und daher in der folgenden Tabelle nicht beschrieben.  
   
-|Objekt|und Beschreibung|  
+|Objekt|Beschreibung|  
 |------------|-----------------|  
 |SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. `http:*//servername*`) und kann mehrere Websites enthalten.|  
 |Website|Bei einer Website handelt es sich entweder um eine übergeordnete Website für eine Webanwendung oder um eine Unterwebsite.|  

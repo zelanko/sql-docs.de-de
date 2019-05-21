@@ -62,7 +62,7 @@ Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angez
   
  ![Seite „Tabellen auswählen“ des Assistenten für die Stretch-Datenbank](../../sql-server/stretch-database/media/stretch-wizard-2.png "Seite „Tabellen auswählen“ des Assistenten für die Stretch-Datenbank")  
   
-|Spalte|und Beschreibung|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |(kein Titel)|Aktivieren Sie das Kontrollkästchen in dieser Spalte, um die ausgewählte Tabelle für Stretch zu aktivieren.|  
 |**Name**|Gibt den Namen der Tabelle in der Datenbank an.|  

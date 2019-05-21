@@ -24,7 +24,7 @@ ms.locfileid: "65098394"
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Benachrichtigung nach dem Speichervorgang (Dialogfeld) (Visual Database Tools)
   Dieses Dialogfeld wird angezeigt, wenn beim Versuch, eine Tabelle zu speichern, Fehler auftreten. In diesem Dialogfeld werden die erfolgreich in der Datenbank gespeicherten Objekte, die nicht gespeicherten Objekte und die aufgetretenen Fehler aufgeführt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Textdatei speichern**  
  Zeigen Sie das Dialogfeld **Speichern unter** an, in dem Sie aufgefordert werden, einen Speicherort zum Speichern einer Textdatei anzugeben, in der die Fehlerinformationen aufgelistet werden. In dieser Datei werden sowohl die erfolgreich gespeicherten Datenbankänderungen als auch die Änderungen aufgezeichnet, die aufgrund von Fehlern nicht gespeichert werden konnten.  
   

@@ -24,7 +24,7 @@ ms.locfileid: "56028701"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieser Seite können Sie die Eigenschaften für die ausgewählte Datenbank anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Letzte Datenbanksicherung**  
  Zeigt das Datum an, an dem die Datenbank zuletzt gesichert wurde.  
   

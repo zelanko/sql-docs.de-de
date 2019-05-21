@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51600510"
@@ -48,7 +48,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT wirkt sich auf das Verhalten von PDO::exec aus. W
   
 Sie können die folgenden Optionen für $*fetch_style* angeben.  
   
-|style|und Beschreibung|  
+|style|Beschreibung|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Abfragen von Daten in der angegebenen Spalte. Die erste Spalte in der Tabelle ist die Spalte „0“.|  
 |PDO::FETCH_CLASS, '*Klassenname*', array( *Argumentliste* )|Erstellt eine Instanz einer Klasse und weist Eigenschaften in der Klasse Spaltennamen zu. Wenn der Konstruktor der Klasse einen oder mehrere Parameter akzeptiert, können Sie auch eine *arglist*übergeben.|  

@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
 ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/11/2019
 ms.locfileid: "59506507"
@@ -91,7 +91,7 @@ Die Datei colors.json für Reporting Services ist in zwei Hauptkategorien untert
   
 Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.  
   
-|Abschnitt|und Beschreibung|  
+|Abschnitt|Beschreibung|  
 |---|---|  
 |primary|Schaltflächen- und Hoverfarben.|  
 |Secondary|Titelleiste, Suchleiste, linkes Menü (sofern angezeigt) und die Textfarbe für diese Elemente|  

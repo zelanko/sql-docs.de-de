@@ -27,7 +27,7 @@ ms.locfileid: "65571306"
  3) Klicken Sie mit der rechten Maustaste auf den Berichtsservernamen, und wählen Sie **Eigenschaften**aus.
  4) Klicken Sie auf **Sicherheit** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>enthalten
+## <a name="options"></a>Optionen
 
 ### <a name="enable-windows-integrated-security-for-report-data-sources"></a>Aktivieren der integrierten Sicherheit von Windows für Berichtsdatenquellen
 

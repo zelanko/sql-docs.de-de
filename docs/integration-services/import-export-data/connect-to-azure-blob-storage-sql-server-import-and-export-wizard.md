@@ -54,7 +54,7 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  **Lokales Entwicklerkonto verwenden**  
  Geben Sie an, ob der Speicheremulator auf dem lokalen Computer verwendet werden soll.  
   
- **Blob-Containername**  
+ **Blobcontainername**  
  Treffen Sie eine Auswahl aus der Liste der im angegebenen Speicherkonto verfügbaren Speichercontainer.  
   
  **Blob-Dateiformat**  

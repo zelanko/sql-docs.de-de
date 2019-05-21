@@ -27,7 +27,7 @@ Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im 
   
 Dieses Dialogfeld wird angezeigt, wenn Sie mit der rechten Maustaste auf eine Tabelle klicken und anschließend im Kontextmenü die Option **Benutzerdefinierte Sicht ändern** auswählen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Verfügbare Spalten**  
 Führt alle in der ausgewählten Datenbanktabelle vorhandenen Spalten auf. Die hier aufgeführten Spalten sind von den Eigenschaften der Datenbanktabelle und dem Datenbanktyp abhängig. Markieren Sie die gewünschte Spalte, und verschieben Sie diese mithilfe der Pfeilschaltflächen in das Feld **Ausgewählte Spalten** .  
   

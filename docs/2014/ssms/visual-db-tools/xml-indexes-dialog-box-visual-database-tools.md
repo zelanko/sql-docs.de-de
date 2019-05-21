@@ -29,7 +29,7 @@ ms.locfileid: "63228354"
  **Hinzufügen**  
  Erstellen Sie einen neuen XML-Index.  
   
- **Delete**  
+ **Löschen**  
  Löschen Sie den in der Liste **Ausgewählter XML-Index** ausgewählten XML-Index. Beim Löschen des primären XML-Indexes wird eine Meldung ausgegeben, dass dadurch auch alle sekundären Indizes gelöscht werden, und Sie können entweder den Vorgang fortsetzen oder die Aktion abbrechen.  
   
  **Kategorie Allgemein**  

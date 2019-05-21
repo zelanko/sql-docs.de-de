@@ -37,7 +37,7 @@ ms.locfileid: "62767112"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** einen ODBC-Verbindungs-Manager. In diesem Dialogfeld können Sie bei Bedarf auch eine neue ODBC-Datenquelle erstellen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Verbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Siehe auch  

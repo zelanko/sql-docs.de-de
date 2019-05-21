@@ -22,7 +22,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
 ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54128510"
@@ -167,7 +167,7 @@ tablediff
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0**|Success|  
 |**1**|Schwerwiegender Fehler|  

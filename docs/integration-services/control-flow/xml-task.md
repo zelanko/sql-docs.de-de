@@ -59,7 +59,7 @@ ms.locfileid: "65727305"
 ## <a name="predefined-xml-operations"></a>Vordefinierte XML-Vorgänge  
  Der XML-Task schließt vordefinierte Vorgänge zum Verwenden von XML-Dokumenten ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
 |Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
@@ -73,7 +73,7 @@ ms.locfileid: "65727305"
   
  Der Diff-Vorgang enthält Optionen, mit denen der XML-Vergleich angepasst wird. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf **true**festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  
@@ -116,7 +116,7 @@ ms.locfileid: "65727305"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
@@ -150,7 +150,7 @@ ms.locfileid: "65727305"
  **OperationType**  
  Wählen Sie den Vorgangstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Überprüfen**|Überprüft das XML-Dokument mithilfe eines DTD-(Document Type Definition-) bzw. XSD-(XML Schema Definition-)Schemas. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **Validate**angezeigt.|  
 |**XSLT**|Führt XSL-Transformationen in XML-Dokumenten aus. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **XSLT**angezeigt.|  
@@ -160,13 +160,13 @@ ms.locfileid: "65727305"
 |**Patch**|Erstellt auf der Grundlage der Ausgabe des Vergleichsvorgangs ein neues Dokument. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **Patch**angezeigt.|  
   
  **SourceType**  
- Wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **Quelle**  
  Wenn **Quelle** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann mithilfe des Dialogfelds **Dokumentquellen-Editor** den XML-Code bereit.  
@@ -198,15 +198,15 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **ValidationType**  
  Wählen Sie den Überprüfungstyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**DTD**|Verwenden Sie eine Dokumenttypdefinition (DTD).|  
 |**XSD**|Verwenden Sie eine XML-Schemadefinition (XSD). Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **ValidationType**angezeigt.|  
@@ -223,11 +223,11 @@ ms.locfileid: "65727305"
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
@@ -261,19 +261,19 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
@@ -307,19 +307,19 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
@@ -338,7 +338,7 @@ ms.locfileid: "65727305"
  **XPathOperation**  
  Wählen Sie den XPath-Ergebnistyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Evaluation**|Gibt die Ergebnisse einer XPath-Funktion zurück.|  
 |**Node list**|Gibt die ausgewählten Knoten als XML-Fragment zurück.|  
@@ -348,13 +348,13 @@ ms.locfileid: "65727305"
  Geben Sie Optionen für den Merge-Vorgang an.  
   
  **XPathStringSourceType**  
- Wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
+ Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **XPathStringSource**  
  Wenn **XPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann mithilfe des Dialogfelds **Dokumentquellen-Editor** den XML-Code bereit.  
@@ -387,19 +387,19 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperandType**  
  Wählen Sie den Zieltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Dokumentquellen-Editor** den XML-Code bereit.  
@@ -418,7 +418,7 @@ ms.locfileid: "65727305"
  **DiffAlgorithm**  
  Wählen Sie den Vergleichsalgorithmus aus, der beim Vergleich von Dokumenten verwendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Automatisch**|Wenn Sie diese Option auswählen, wird vom XML-Task bestimmt, ob der schnelle oder der genaue Algorithmus verwendet wird.|  
 |**Fast**|Wenn diese Option ausgewählt ist, wird ein schneller, aber weniger genauer Vergleichsalgorithmus verwendet.|  
@@ -427,7 +427,7 @@ ms.locfileid: "65727305"
  **Diff Options**  
  Legen Sie die Vergleichsoptionen fest, die auf den Vergleichsvorgang angewendet werden sollen. Die Optionen sind in der folgenden Tabelle aufgeführt.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Geben Sie an, ob XML-Deklaration verglichen werden soll.|  
 |**IgnoreDTD**|Geben Sie an, ob die Dokumenttypdefinition (DTD) ignoriert werden soll.|  
@@ -462,19 +462,19 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Dokumentquellen-Editor** den XML-Code bereit.  
@@ -508,19 +508,19 @@ ms.locfileid: "65727305"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
-|**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
-|**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
+|**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
+|**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
+|**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
  Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Dokumentquellen-Editor** den XML-Code bereit.  

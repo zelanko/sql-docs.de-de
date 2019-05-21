@@ -37,7 +37,7 @@ ms.locfileid: "63025763"
 3.  Wählen Sie die Registerkarte **Sicherheit** .  
   
 ## <a name="options"></a>Optionen  
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um eine vorhandene Rollenzuweisung zu löschen. Ehe Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben dem zu entfernenden Gruppen- oder Benutzernamen. Sie können keine Rollenzuweisung löschen, wenn sie die letzte und einzige Zuweisung ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  

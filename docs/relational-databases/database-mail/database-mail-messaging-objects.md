@@ -34,7 +34,7 @@ ms.locfileid: "51560367"
   
  Diese Objekte sind die Schnittstelle für Datenbank-E-Mail innerhalb der Mailhost-Datenbank. Andere Objekte werden installiert, um die Funktionalität zu implementieren, die von den oben aufgeführten Objekten bereitgestellt wird. Diese Objekte sind jedoch für die interne Verwendung reserviert.  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Ansicht**|Listet alle an Datenbank-E-Mail übergebenen Nachrichten auf.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Ansicht**|Listet Meldungen über das Verhalten von [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)auf.|  

@@ -108,7 +108,7 @@ bcp -r '0x0A'
   
  Der Befehl **bcp** verfügt über folgende Schalter.  
   
-|Schalter|und Beschreibung|  
+|Schalter|Beschreibung|  
 |------------|-----------------|  
 |**-c**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |**-t** `,`|Gibt ein Komma (,) als Feldabschlusszeichen an.|  
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Abschlusszeichen können für einzelne Felder in einer Formatdatei oder für die gesamten Datendatei angegeben werden, indem die in der folgenden Tabelle aufgeführten Qualifizierer verwendet werden:  
   
-    |Qualifizierer|und Beschreibung|  
+    |Qualifizierer|Beschreibung|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***Feldabschlusszeichen***'**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
     |ROWTERMINATOR **='***Zeilenabschlusszeichen***'**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  

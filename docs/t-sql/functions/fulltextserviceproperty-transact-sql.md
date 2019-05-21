@@ -49,7 +49,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 > [!NOTE]
 >  Die folgenden Eigenschaften werden in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt: **ConnectTimeout**, **DataTimeout** und **ResourceUsage**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |**ResourceUsage**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
 |**connecttimeout**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  

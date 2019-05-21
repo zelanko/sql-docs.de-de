@@ -31,7 +31,7 @@ ms.locfileid: "62794155"
 |**Standardsicht**|Klicken Sie, um die **Standardsicht** des Aggregations-Designers anzuzeigen, in der Sie Aggregationsentwürfe mit dem **Aggregationsentwurfs-Assistenten** oder dem **Verwendungsbasierte Optimierung-Assistenten**erstellen und ändern können.|  
 |**Erweiterte Sicht**|Klicken Sie, um die **Erweiterte Sicht** des Aggregations-Designers anzuzeigen, in der Sie Aggregationsentwürfe und einzelne Aggregationen manuell erstellen und ändern können. Diese Sicht sollte nur von fortgeschrittenen Benutzern verwendet werden.<br /><br /> Hinweis: Die **Aggregationsentwurfs-Assistent** und **Verwendungsbasierte Optimierung-Assistenten** sind in dieser Sicht nicht verfügbar.|  
 |**Neuer Aggregationsentwurf**|Klicken Sie, um das Dialogfeld **Neuer Aggregationsentwurf** anzuzeigen. Sie können einen leeren Aggregationsentwurf oder eine Kopie eines vorhandenen Aggregationsentwurfs erstellen.<br /><br /> Hinweis: Diese Option ist nur in der erweiterten Sicht des Aggregations-Designers angezeigt.|  
-|**Delete**|Klicken Sie, um einen ausgewählten Aggregationsentwurf zu löschen.  In der erweiterten Sicht des Aggregations-Designers kann diese Option auch verwendet werden, um eine Aggregation aus einem Aggregationsentwurf zu löschen.|  
+|**Löschen**|Klicken Sie, um einen ausgewählten Aggregationsentwurf zu löschen.  In der erweiterten Sicht des Aggregations-Designers kann diese Option auch verwendet werden, um eine Aggregation aus einem Aggregationsentwurf zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aggregationen &#40;Cube entwerfen&#41;](aggregations-cube-design.md)  

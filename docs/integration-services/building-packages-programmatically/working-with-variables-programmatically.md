@@ -167,7 +167,7 @@ End Module
   
  Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der für Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen finden Sie unter [System Variables](../../integration-services/system-variables.md) (Systemvariablen).  
   
-## <a name="value"></a>value  
+## <a name="value"></a>Wert  
  Der Wert einer benutzerdefinierten Variablen kann ein Literal oder ein Ausdruck sein:  
   
 -   Wenn die Variable einen Literalwert enthalten soll, legen Sie den Wert seiner <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>-Eigenschaft fest.  

@@ -202,7 +202,7 @@ Weitere Informationen zu Active Directory finden Sie unter [Beziehung zwischen A
 ##  <a name="AppendixC"></a> C. Erläuterungen zu Fehlercodes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
  **Anbieterfehlercodes:**  
   
-Fehlercode  |Symbol  |und Beschreibung    
+Fehlercode  |Symbol  |Beschreibung    
 ---------|---------|---------  
 0 | scp_err_Success | Der Vorgang war erfolgreich.    
 1 | scp_err_Failure | Beim Vorgang ist ein Fehler aufgetreten.    

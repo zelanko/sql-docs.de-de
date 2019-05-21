@@ -82,7 +82,7 @@ Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserve
 ##  <a name="bkmk_defaultURLreservations"></a> Standard-URL-Reservierungen  
  URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichnis:  
   
-|Teil|und Beschreibung|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|  
 |Hostname|Der Standardhostname ist ein Platzhalter (+). Er gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der den Computer erreicht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver`.|  

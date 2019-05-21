@@ -43,7 +43,7 @@ Der Objekt-Explorer stellt eine hierarchische Benutzeroberfläche zum Anzeigen u
   
 ## <a name="object-explorer-tasks"></a>Objekt-Explorer-Tasks  
   
-|und Beschreibung|Thema|  
+|Beschreibung|Thema|  
 |---------------|---------|  
 |Beschreibt, wie der Objekt-Explorer geöffnet wird und die Optionen konfiguriert werden, die das Verhalten des Explorers festlegen.|[Öffnen und Konfigurieren des Objekt-Explorers](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Beschreibt, wie der Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellt.|[Verbinden mit einer Instanz mit dem Objekt-Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

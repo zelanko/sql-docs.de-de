@@ -50,7 +50,7 @@ ms.locfileid: "62747814"
 |**Neuer Skriptbefehl**|Wählen Sie diese Option aus, um **Skript-Editor** anzuzeigen und einen neuen Skriptbefehl zu erstellen. Weitere Informationen zum **Skript-Editor**finden Sie unter [Skript-Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nach oben**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach oben zu verschieben.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn die ausgewählte Berechnung nicht weiter verschoben werden kann.|  
 |**Nach unten**|Wählen Sie diese Option aus, um die ausgewählte Berechnung um eine Position nach unten zu verschieben.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn die ausgewählte Berechnung nicht weiter verschoben werden kann.|  
-|**Delete**|Wählen Sie diese Option aus, um die ausgewählte Berechnung zu löschen.|  
+|**Löschen**|Wählen Sie diese Option aus, um die ausgewählte Berechnung zu löschen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   

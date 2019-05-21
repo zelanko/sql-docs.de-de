@@ -28,7 +28,7 @@ ms.locfileid: "62834507"
   
 ### <a name="to-configure-logging-for-a-container"></a>So konfigurieren Sie die Protokollierung für einen Container  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollierung**.  
   

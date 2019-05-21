@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 078267668e22ed24361fb2bf6787e27a0b342a61
 ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/05/2019
 ms.locfileid: "55737041"
@@ -47,7 +47,7 @@ Synonyme sind zulässig und werden in der gleichen Reihenfolge wie doppelte Eige
 
 Die folgende Tabelle enthält eine Liste aller zurzeit verfügbaren Verbindungszeichenfolgeeigenschaften für den JDBC-Treiber.
 
-| Eigenschaft<br/>Typ<br/>Default | und Beschreibung |
+| Eigenschaft<br/>Typ<br/>Default | Beschreibung |
 | :------------------------------ | :---------- |
 | accessToken<br/><br/>Zeichenfolge<br/><br/>NULL | Verwenden Sie diese Eigenschaft bei der Herstellung einer Verbindung mit einer SQL-Datenbank mithilfe eines Zugriffstokens. **AccessToken** kann nicht mithilfe der Verbindungs-URL festgelegt werden. |
 | applicationIntent<br/><br/>Zeichenfolge<br/><br/>ReadWrite | Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. <br/><br/>Mögliche Werte sind **ReadOnly** und **ReadWrite**. <br/><br/>Weitere Informationen finden Sie unter [JDBC Driver-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md). |

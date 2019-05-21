@@ -27,7 +27,7 @@ Argumente sind Variablen, für die die SQL Server Management Studio-Umgebung Wer
   
 In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.  
   
-|Name|Argument|und Beschreibung|  
+|Name|Argument|Beschreibung|  
 |--------|------------|---------------|  
 |**Elementpfad**|$(ItemPath)|Der vollständige Dateiname der aktuellen Quelle (definiert als Laufwerk + Pfad + Dateiname); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
 |**Elementverzeichnis**|$(ItemDir)|Das Verzeichnis der aktuellen Quelle (definiert als Laufwerk + Pfad); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  

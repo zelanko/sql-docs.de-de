@@ -27,7 +27,7 @@ ms.locfileid: "53380991"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Leistungsindikatoren von** beschrieben.  
   
-|Allgemeine Statistik-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Allgemeine Statistik-Leistungsindikatoren von SQL Server|Beschreibung|  
 |--------------------------------------------|-----------------|  
 |**Aktive temporäre Tabellen**|Anzahl der verwendeten temporären Tabellen/Tabellenvariablen|  
 |**Connection Resets/Sek**|Gesamtzahl von Anmeldungen vom Verbindungspool aus.|  

@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47611998"
@@ -46,7 +46,7 @@ public java.sql.ResultSet getSchemas()
   
  Durch die GetSchemas-Methode zurückgegebene Resultset enthält die folgenden Informationen an:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Der Name des Schemas.|  
 |TABLE_CATALOG|**String**|Der Katalogname für das Schema.|  

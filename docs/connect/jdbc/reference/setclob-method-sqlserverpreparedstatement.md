@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97f4890c1bc4ab58a7ddc2866fcb8d5b5ea6d8e6
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47624858"
@@ -25,7 +25,7 @@ ms.locfileid: "47624858"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setClob-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Legt den angegebenen Parameter auf ein java.sql.Clob-Objekt.|  
 |[setClob-Methode &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Legt den angegebenen Parameter auf das angegebene java.sql.Clob-Objekt fest.|  

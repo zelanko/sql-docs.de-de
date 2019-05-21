@@ -35,7 +35,7 @@ ms.locfileid: "51604190"
  **Default connection options**  
  Gibt die Standardverbindungsoptionen an, die in der folgenden Tabelle beschrieben werden.  
   
-|Konfigurationsoption|und Beschreibung|  
+|Konfigurationsoption|Beschreibung|  
 |--------------------------|-----------------|  
 |**Verzögerte Einschränkungsüberprüfung deaktivieren**|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
 |**Implizite Transaktionen**|Steuert den impliziten Start einer Transaktion, wenn eine Anweisung ausgeführt wird.|  

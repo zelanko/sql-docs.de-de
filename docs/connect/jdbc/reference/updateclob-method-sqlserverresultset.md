@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53dd68bc36a7d08140b5a831e5fa534c1f4212c3
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47751218"
@@ -30,7 +30,7 @@ ms.locfileid: "47751218"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateClob (int, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-int-java-sql-clob.md)|Aktualisiert die angegebene Spalte unter Berücksichtigung des Spaltenindex mit einem java.sql.Clob-Wert.|  
 |[updateClob-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Reader-Objekts.|  

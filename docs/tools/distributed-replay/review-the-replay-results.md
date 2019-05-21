@@ -13,7 +13,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51291756"
@@ -58,7 +58,7 @@ ms.locfileid: "51291756"
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
   
-|Name der Datenspalte|Datentyp|und Beschreibung|Column ID|  
+|Name der Datenspalte|Datentyp|Beschreibung|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Der Name der Ereignisklasse.|1|  
 |EventSequence|**bigint**|Für Anbieterfehler sowie interne Fehler und Warnungen ist dies die Sequenz der Ereignisaufzeichnung, die dem Fehler bzw. der Warnung entspricht.<br /><br /> Für alle anderen Ereignisklassen ist dies die Sequenz des Ereignisses in den ursprünglichen Ablaufverfolgungsdaten.|2|  

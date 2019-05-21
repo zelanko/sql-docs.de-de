@@ -12,7 +12,7 @@ ms.author: v-daveng
 manager: kenvh
 ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
 ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/29/2019
 ms.locfileid: "58618277"
@@ -84,7 +84,7 @@ Führen Sie den JDBC-Treiber im FIPS-kompatiblen Modus konfigurieren Sie Verbind
 
 #### <a name="properties"></a>Eigenschaften 
 
-|Eigenschaft|Typ|Default|und Beschreibung|Hinweise|
+|Eigenschaft|Typ|Default|Beschreibung|Hinweise|
 |---|---|---|---|---|
 |encrypt|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Für FIPS aktivierte JVM Verschlüsseln von Eigenschaft sollte **"true"**||
 |TrustServerCertificate|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Für FIPS, muss der Benutzer-Zertifikatskette zu überprüfen, damit der Benutzer verwenden sollten **"false"** Wert für diese Eigenschaft. ||

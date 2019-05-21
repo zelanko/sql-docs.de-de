@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47622438"
@@ -61,7 +61,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Jede Funktionsbeschreibung umfasst die folgenden Spalten:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Der Name der Datenbank, in der die Funktion gespeichert ist.|  
 |FUNCTION_SCHEM|**String**|Der Name des Schemas, in dem die Funktion gespeichert ist.|  

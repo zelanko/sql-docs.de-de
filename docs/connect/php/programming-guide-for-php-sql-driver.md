@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47776498"
@@ -25,7 +25,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)|Beschreibt die Optionen und Verfahren zum Verbinden mit dem SQL Server.|  
 |[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)|Vergleicht die Funktionen, die zum Ausführen einer Abfrage verwendet werden, indem verschiedene Anwendungsfälle für jede einzelne Funktion untersucht werden. Im Besonderen vergleicht dieses Dokument die Ausführung einer einzelnen Abfrage mit der mehrmaligen Ausführung einer vorbereiteten Abfrage.|  

@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
 ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53328470"
@@ -83,7 +83,7 @@ ms.locfileid: "53328470"
  **Linie**  
  Zeigt eine ganze Zahl an, die angibt, in welcher Codezeile der Fehler enthalten ist.  
   
- **Column**  
+ **Spalte**  
  Zeigt eine ganze Zahl an, die die Position des Fehlers in der Codezeile angibt.  
   
  **Projekt**  

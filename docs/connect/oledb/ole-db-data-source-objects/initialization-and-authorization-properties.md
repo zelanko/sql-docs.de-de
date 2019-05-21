@@ -19,7 +19,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744520"
@@ -31,7 +31,7 @@ ms.locfileid: "56744520"
 
   Der OLE DB-Treiber für SQL Server interpretiert OLE DB-Eigenschaften für Initialisierung und Autorisierungseigenschaften wie folgt aus:  
   
-|Eigenschafts-ID|und Beschreibung|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|Der OLE DB-Treiber für SQL Server werden-Authentifizierung nicht zwischengespeichert werden.<br /><br /> Der OLE DB-Treiber für SQL Server gibt DB_S_ERRORSOCCURRED zurück, bei dem Versuch, den Eigenschaftswert festzulegen. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|Der OLE DB-Treiber für SQL Server verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sicherheitsmechanismen, um Kennwörter zu verbergen.<br /><br /> Der OLE DB-Treiber für SQL Server gibt DB_S_ERRORSOCCURRED zurück, bei dem Versuch, den Eigenschaftswert festzulegen. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
@@ -57,7 +57,7 @@ ms.locfileid: "56744520"
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDBINIT definiert der OLE DB-Treiber für SQL Server diese zusätzlichen Initialisierungseigenschaften.  
   
-|Eigenschafts-ID|und Beschreibung|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|Typ: VT_BSTR<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Das Zugriffstoken zur Authentifizierung beim Azure Active Directory verwendet. <br/><br/>**Hinweis:** ist ein Fehler, wenn diese Eigenschaft angeben sowie `UID`, `PWD`, `Trusted_Connection`, oder `Authentication` Verbindungszeichenfolgen-Schlüsselwörter oder die zugehörigen Eigenschaften/Schlüsselwörter.|
 |SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|Typ: VT_BSTR<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Gibt an, die SQL- oder Active Directory-Authentifizierung verwendet wird. Gültige Werte sind:<br/><ul><li>`(not set)`: Authentifizierungsmodus durch andere Schlüsselwörter bestimmt.</li><li>`(empty string)`: Hebt die Festlegung einer zuvor festgelegten Authentifizierungsmodus.</li><li>`ActiveDirectoryPassword:` Active Directory-Authentifizierung mit Anmelde-ID und Kennwort.</li><li>`ActiveDirectoryIntegrated:` Integrierte Active Directory, die mit den Anmeldeinformationen des aktuell angemeldeten Benutzers Windows-Authentifizierung.</li><br/>**Hinweis:** hat **empfohlen** , Anwendungen, die mit `Integrated Security` (oder `Trusted_Connection`) Schlüsselwörter für die Benutzerauthentifizierung oder die entsprechenden Eigenschaften legen Sie den Wert für die `Authentication` Schlüsselwort (oder den zugehörigen entsprechende Eigenschaft), `ActiveDirectoryIntegrated` , Verschlüsselung und Überprüfungsverhalten zu aktivieren.<br/><br/><li>`SqlPassword:` Authentifizierung mit Anmelde-ID und Kennwort.</li><br/>**Hinweis:** hat **empfohlen** , Anwendungen, die mit `SQL Server` Authentifizierung legen Sie den Wert von der `Authentication` -Schlüsselwort (oder der entsprechenden Eigenschaft), um `SqlPassword` zum Aktivieren der neuen Verschlüsselung und Zertifikat Validierungsverhalten.</ul>|

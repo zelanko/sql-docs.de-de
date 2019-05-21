@@ -33,7 +33,7 @@ ms.locfileid: "63015416"
  **Hinzufügen**  
  Erstellen Sie einen neuen Primärschlüssel, eindeutigen Schlüssel oder Index.  
   
- **Delete**  
+ **Löschen**  
  Löschen Sie den in der Liste **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** ausgewählten Schlüssel oder Index.  
   
  **Kategorie Allgemein**  

@@ -27,7 +27,7 @@ ms.locfileid: "53380331"
   
  In dieser Tabelle werden die Leistungsindikatoren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL-Fehler** beschrieben.  
   
-|Leistungsindikatoren von SQL-Fehler bei SQL Server|und Beschreibung|  
+|Leistungsindikatoren von SQL-Fehler bei SQL Server|Beschreibung|  
 |------------------------------------|-----------------|  
 |**Fehler/Sekunde**|Anzahl der Fehler/Sekunde.|  
   

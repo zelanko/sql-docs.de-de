@@ -61,7 +61,7 @@ TEXTPTR ( column )
   
  Diese Funktionen und Anweisungen sind auch bei Daten vom Typ **text**, **ntext** oder **image** hilfreich.  
   
-|Funktion oder Anweisung|und Beschreibung|  
+|Funktion oder Anweisung|Beschreibung|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
 |DATALENGTH<b>(</b>_expression_**)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  

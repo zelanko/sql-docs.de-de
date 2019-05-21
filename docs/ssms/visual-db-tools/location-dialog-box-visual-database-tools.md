@@ -51,7 +51,7 @@ ms.locfileid: "65096648"
  **Eine Ebene nach oben**  
  Navigiert zum nächst höheren Ordner in der Hierarchie.  
   
- **Delete**  
+ **Löschen**  
  Löscht die ausgewählten Dateien oder Ordner aus dem Speicher.  
   
  **Neuen Ordner erstellen**  

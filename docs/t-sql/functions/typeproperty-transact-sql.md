@@ -48,7 +48,7 @@ TYPEPROPERTY (type , property)
  *property*  
  Der Informationstyp, der für den Datentyp zurückgegeben werden soll. Für*property* sind die folgenden Werte möglich.  
   
-|Eigenschaft|und Beschreibung|Zurückgegebener Wert|  
+|Eigenschaft|Beschreibung|Zurückgegebener Wert|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Datentyp lässt NULL-Werte zu.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Datentyp nicht gefunden.|  
 |**OwnerID**|Besitzer des Typs.<br /><br /> Hinweis: Der Schemabesitzer ist nicht notwendigerweise auch der Typbesitzer.|Nicht NULL = Die Datenbankbenutzer-ID des Typbesitzers.<br /><br /> NULL = Nicht unterstützter Typ oder ungültige Typ-ID.|  

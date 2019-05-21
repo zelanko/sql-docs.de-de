@@ -27,7 +27,7 @@ ms.locfileid: "65714789"
 
   Zeigt die von einer Datenflusskomponente in jeder Ausführungsphase benötigte Zeit an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|Eindeutiger Bezeichner (ID) der Phase.|  
 |execution_id|**bigint**|Eindeutige ID für die Instanz der Ausführung.|  

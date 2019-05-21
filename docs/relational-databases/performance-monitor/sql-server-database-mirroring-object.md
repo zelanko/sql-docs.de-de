@@ -27,7 +27,7 @@ ms.locfileid: "53380421"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das **SQLServer:Datenbankspiegelung** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |**Empfangene Bytes/Sekunde**|Anzahl von empfangenen Byte pro Sekunde.|  
 |**Gesendete Byte/Sekunde**|Anzahl von gesendeten Byte pro Sekunde.|  

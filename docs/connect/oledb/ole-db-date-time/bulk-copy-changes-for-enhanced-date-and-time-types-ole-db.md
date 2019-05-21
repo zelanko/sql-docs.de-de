@@ -15,7 +15,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52416249"
@@ -84,7 +84,7 @@ ms.locfileid: "52416249"
 ## <a name="bcp-types-in-msoledbsqlh"></a>BCP-Typen in msoledbsql.h  
  Die folgenden Typen werden in msoledbsql.h definiert. Diese Typen werden übergeben, mit der *eUserDataType* Parameter der ibcpsession:: BCPColFmt, in der OLE DB.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie in msoledbsql.h für die Verwendung mit ibcpsession:: BCPColFmt|value|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie in msoledbsql.h für die Verwendung mit ibcpsession:: BCPColFmt|Wert|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  

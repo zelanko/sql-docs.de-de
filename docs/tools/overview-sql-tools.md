@@ -14,7 +14,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
 ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52190990"
@@ -31,7 +31,7 @@ Stehen viele Datenbanktools zur Verfügung, damit dieser Artikel Beschreibungen 
 
 Im folgenden sind die wichtigsten grafische Benutzeroberfläche (GUI) Tools:
 
-| Tool | und Beschreibung | Ausgeführt wird |
+| Tool | Beschreibung | Ausgeführt wird |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken aus, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Management-Funktionen, einschließlich einer erweiterten Transact-SQL-Editor und anpassbare Einblicke in den Betriebszustand der Datenbanken bereit. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, MacOS und Linux ausgeführt wird**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. | **SSMS wird unter Windows ausgeführt**.|
@@ -43,7 +43,7 @@ Im folgenden sind die wichtigsten grafische Benutzeroberfläche (GUI) Tools:
 
 Im folgenden sind die wichtigsten Befehlszeilentools:
 
-| Tool | und Beschreibung | Ausgeführt wird |
+| Tool | Beschreibung | Ausgeführt wird |
 |:--|:--|:--|
 |[**mssql-cli (Vorschauversion)**](mssql-cli.md)|**MSSQL-Cli** ist ein interaktives Befehlszeilentools-Tool zum Abfragen von SQL Server. | Windows, MacOS und Linux|
 | [**sqlpackage**](sqlpackage.md) |**"Sqlpackage"** ist ein Befehlszeilenprogramm, das mehrere Aufgaben der Datenbankentwicklung automatisiert. MacOS und Linux-Versionen von "Sqlpackage" befinden sich derzeit in der Vorschauphase. | Windows, MacOS und Linux|
@@ -67,7 +67,7 @@ Im folgenden sind die wichtigsten Befehlszeilentools:
 
 ## <a name="additional-tools"></a>Zusätzliche tools
 
-| Tool | und Beschreibung |
+| Tool | Beschreibung |
 |:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, SQL Server-Dienste konfigurieren, und konfigurieren die Netzwerkkonnektivität. Configuration Manager ausgeführt wird, auf Windows|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Verwenden Sie SQL Server Migration Assistant zur Automatisierung der Datenbankmigration von Microsoft Access, DB2, MySQL, Oracle und Sybase zu SQL Server.|

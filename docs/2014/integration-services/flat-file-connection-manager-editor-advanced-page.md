@@ -60,7 +60,7 @@ ms.locfileid: "62768346"
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
 |**Einfügen nach**|Fügt nach der ausgewählten Spalte eine neue Spalte ein.|  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen**klicken.  
   
  **Typen vorschlagen**  

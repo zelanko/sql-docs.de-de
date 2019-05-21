@@ -11,7 +11,7 @@ ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
 ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/21/2019
 ms.locfileid: "58305918"
@@ -23,7 +23,7 @@ ms.locfileid: "58305918"
 
 Verbindungsresilienz wird implementiert, mit zwei Verbindungsschlüsselwörter, die Verbindungszeichenfolgen hinzugefügt werden können: **ConnectRetryCount** und **ConnectRetryInterval**.
 
-|Schlüsselwort|Werte|Default|und Beschreibung|
+|Schlüsselwort|Werte|Default|Beschreibung|
 |-|-|-|-|
 |**ConnectRetryCount**| Ganze Zahl zwischen 0 und 255 (inklusiv)|1|Die maximale Anzahl von versuchen, eine unterbrochene Verbindung, bevor aufgegeben wird wiederherzustellen. Standardmäßig wird eine einzelne versucht, eine Verbindung, wenn in einem wiederherzustellen. Ein Wert von 0 bedeutet, dass keine erneute Verbindung versucht wird.|
 |**ConnectRetryInterval**| Ganze Zahl zwischen 1 und 60 (inklusiv)|1| Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, sofort nach der Erkennung einer fehlerhaften Verbindungs erneut eine Verbindung herzustellen, und klicken Sie dann wartet **ConnectRetryInterval** Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** ist gleich 0.

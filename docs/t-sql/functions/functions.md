@@ -53,7 +53,7 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
 
 ### <a name="categories-of-scalar-functions"></a>Kategorien von skalaren Funktionen
   
-|Funktionskategorie|und Beschreibung|  
+|Funktionskategorie|Beschreibung|  
 |-----------------------|-----------------|  
 |[Konfigurationsfunktionen](configuration-functions-transact-sql.md)|Geben Informationen zur aktuellen Konfiguration zurück.|  
 |[Konvertierungsfunktionen](conversion-functions-transact-sql.md)|Unterstützen die Umwandlung und Konvertierung von Datentypen.|  

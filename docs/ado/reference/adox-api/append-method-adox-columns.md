@@ -35,7 +35,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Column*  
+ *Spalte*  
  Die **Spalte** anzufügende Objekt oder den Namen der Spalte zu erstellen und anfügen.  
   
  *Typ*  

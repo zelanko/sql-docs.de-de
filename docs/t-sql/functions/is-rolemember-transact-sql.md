@@ -52,7 +52,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0|*database_principal* ist kein Element von *role*.|  
 |1|*database_principal* ist ein Element von *role*.|  

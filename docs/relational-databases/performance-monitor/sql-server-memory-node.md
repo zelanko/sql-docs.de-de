@@ -25,7 +25,7 @@ ms.locfileid: "53380006"
 ## <a name="memory-node-counters"></a>Leistungsindikatoren für Speicherknoten  
  In dieser Tabelle sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Speicherknoten** beschrieben.  
   
-|Speicher-Manager-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Speicher-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Datenbankknotenspeicher (KB)**|Gibt den Arbeitsspeicher an, die der Server derzeit in diesem Knoten für Datenbankseiten verwendet.|  
 |**Freier Knotenspeicher (KB)**|Gibt den Arbeitsspeicher an, den der Server nicht in diesem Knoten verwendet.|  

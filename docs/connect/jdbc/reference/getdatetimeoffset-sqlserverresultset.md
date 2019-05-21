@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67d1f492ab25fec963042bea2195e209fcd988ab
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47631418"
@@ -25,7 +25,7 @@ ms.locfileid: "47631418"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getDateTimeOffset-Methode (int)](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte unter Berücksichtigung des Parameterindexes als [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md) in Java ab.|  
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte unter Berücksichtigung des Parameterindexes als [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md) in Java ab.|  

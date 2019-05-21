@@ -33,7 +33,7 @@ ms.locfileid: "63164981"
  **Hinzufügen**  
  Fügt der Liste einen neuen Parameter hinzu.  
   
- **Delete**  
+ **Löschen**  
  Entfernt den ausgewählten Parameter aus der Liste.  
   
  **Pfeil nach oben**  

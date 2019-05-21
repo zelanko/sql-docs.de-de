@@ -51,7 +51,7 @@ ms.locfileid: "65726548"
     > [!NOTE]  
     >  Durch Klicken auf die Schaltfläche **Vorschau** öffnen Sie auch das Dialogfeld **Anforderungsprotokoll** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Request Log](../../integration-services/data-flow/request-log.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  Im Dialogfeld **Vorschau** werden die Zeilen angezeigt, die vom SAP NetWeaver BW-System angefordert werden. Die angezeigten Spalten entsprechen den in den Quelldaten definierten Spalten.  
   
  Das Dialogfeld verfügt über keinen weiteren Optionen.  

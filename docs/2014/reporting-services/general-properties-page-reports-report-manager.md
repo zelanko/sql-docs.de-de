@@ -47,7 +47,7 @@ ms.locfileid: "63260817"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den Bericht aus der Berichtsserver-Datenbank zu löschen. Durch das Löschen eines Berichts werden der gesamte Berichtsverlauf und alle berichtsspezifischen Zeitpläne und Abonnements gelöscht. Falls der Bericht mit verknüpften Berichten verbunden ist, werden die verknüpften Berichte ungültig.  
   
  **Verschieben**  

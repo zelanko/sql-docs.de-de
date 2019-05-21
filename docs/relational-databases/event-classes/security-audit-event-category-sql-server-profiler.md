@@ -28,7 +28,7 @@ ms.locfileid: "47820138"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Audit Add DB User (Ereignisklasse)](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Gibt an, dass eine Anmeldung hinzugefügt oder entfernt wurde, wie ein Datenbankbenutzer zu einer Datenbank.|  
 |[Audit Add Login to Server Role (Ereignisklasse)](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Gibt an, dass eine Annmeldung von einer festen Serverrolle hinzugefügt oder entfernt wurde.|  

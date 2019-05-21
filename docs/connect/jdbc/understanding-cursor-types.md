@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52396334"
@@ -41,7 +41,7 @@ ms.locfileid: "52396334"
 ## <a name="remarks"></a>Remarks  
  Der JDBC-Treiber unterstützt die folgenden Cursortypen:  
   
-|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|und Beschreibung|  
+|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|Beschreibung|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|Volle|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Dies ist das Standardverhalten und entspricht einem TYPE_SS_DIRECT_FORWARD_ONLY-Cursor. Der Treiber liest das gesamte Resultset während der Ausführung der Anweisung aus dem Server in einen Speicher.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|adaptive|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Das Verhalten entspricht dem Verhalten eines TYPE_SS_DIRECT_FORWARD_ONLY-Cursors. Der Treiber liest Zeilen vom Server, wenn die Anwendung sie anfordert, und minimiert so die Speicherauslastung auf Clientseite.|  

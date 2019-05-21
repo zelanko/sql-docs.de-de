@@ -28,7 +28,7 @@ ms.locfileid: "51701220"
  
 ## <a name="current-tutorials"></a>Aktuelle Tutorials  
   
-|Technologie|und Beschreibung|  
+|Technologie|Beschreibung|  
 |--------------|---------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  

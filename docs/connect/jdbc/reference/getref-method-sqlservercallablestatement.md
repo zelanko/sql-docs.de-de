@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc45aedc48220f2b16155db23dff9dcdb59760a3
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47598348"
@@ -30,7 +30,7 @@ ms.locfileid: "47598348"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getRef (int)](../../../connect/jdbc/reference/getref-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Ref-Objekt in der Programmiersprache Java ab.|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Ref-Objekt in der Programmiersprache Java ab.|  

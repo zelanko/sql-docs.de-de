@@ -31,7 +31,7 @@ ms.locfileid: "63306620"
  **Hinzufügen**  
  Klicken Sie auf diese Option, um eine Assembly hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), zum Öffnen der **öffnen** Dialogfeld und die für die berichtsverarbeitung und ausdrucksauswertung erforderlichen Assemblys auszuwählen.  
   
- **Delete**  
+ **Löschen**  
  Um einen Assemblyverweis aus der Liste zu entfernen, wählen Sie den Assemblynamen aus, und klicken Sie auf die Schaltfläche **Entfernen** .  
   
  **Klassen hinzufügen oder entfernen**  
@@ -40,7 +40,7 @@ ms.locfileid: "63306620"
  **Hinzufügen**  
  Klicken Sie auf diese Schaltfläche, um einen Klassenverweis hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), zum Öffnen der **öffnen** Dialogfeld und die für die berichtsverarbeitung und ausdrucksauswertung erforderlichen Klassen auszuwählen.  
   
- **Delete**  
+ **Löschen**  
  Um die Klasseninstanz zu löschen, wählen Sie sie aus, und klicken Sie auf die Schaltfläche **Entfernen** .  
   
  **Nach oben**  

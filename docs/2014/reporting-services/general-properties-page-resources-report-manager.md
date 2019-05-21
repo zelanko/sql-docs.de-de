@@ -50,7 +50,7 @@ ms.locfileid: "63260669"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um die Ressource aus der Berichtsserver-Datenbank zu löschen.  
   
  **Verschieben**  

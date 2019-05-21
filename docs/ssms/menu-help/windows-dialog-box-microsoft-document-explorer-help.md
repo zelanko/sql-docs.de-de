@@ -24,7 +24,7 @@ ms.locfileid: "65101990"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Mithilfe dieses Dialogfelds können Sie Dokumente, die in Editoren und Designern geöffnet sind, anzeigen, schließen und anordnen. Sie können dieses Dialogfeld anzeigen, indem Sie im Menü **Fenster** auf **Fenster** klicken.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Zeigt die Namen von Dokument- und Toolfenstern an. Das zu diesem Zeitpunkt aktive Element ist dabei ausgewählt.  
   

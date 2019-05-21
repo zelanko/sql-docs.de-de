@@ -56,7 +56,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     Die Beschreibung für jedes Element des Arrays finden Sie in der folgenden Tabelle:  
   
-    |Element|und Beschreibung|  
+    |Element|Beschreibung|  
     |-----------|---------------|  
     |*$value*|Ein Literalwert, eine PHP-Variable oder eine PHP-Variable als Verweis.|  
     |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  

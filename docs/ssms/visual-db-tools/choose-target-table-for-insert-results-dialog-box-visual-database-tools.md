@@ -25,7 +25,7 @@ ms.locfileid: "65089378"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Hiermit können Sie die Tabelle angeben, zu der Datenzeilen als Ergebnis einer INSERT RESULTS-Abfrage hinzugefügt werden. Dieses Dialogfeld wird beim Starten einer INSERT RESULTS-Abfrage angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Wählen Sie ein Ziel aus**  
 Wählen Sie in der Liste den Namen der Tabelle aus, der Zeilen hinzugefügt werden sollen. Sie können nur eine einzige Tabelle für die INSERT RESULTS-Abfrage angeben.  
   

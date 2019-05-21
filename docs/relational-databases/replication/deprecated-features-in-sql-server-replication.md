@@ -26,7 +26,7 @@ ms.locfileid: "47758338"
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Veraltete Elemente in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Die Replikation wird unterstützt, wenn jeder Endpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb zweier Hauptversionen der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]liegt. Daher wird die Replikation zwischen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]nicht unterstützt.|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Die Replikation wird unterstützt, wenn jeder Endpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb zweier Hauptversionen der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]liegt. Daher wird die Replikation zwischen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssEW](../../includes/ssew-md.md)]nicht unterstützt.|  

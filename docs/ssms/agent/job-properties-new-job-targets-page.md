@@ -29,7 +29,7 @@ ms.locfileid: "65095826"
 
 Mit dieser Seite können Sie die Zielserver für den Auftrag verwalten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Ziel: Lokaler Server**  
 Führt den Auftrag auf dem lokalen Server aus. Wenn keine Zielserver eingetragen sind, ist dies die einzige verfügbare Option.  
   

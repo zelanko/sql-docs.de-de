@@ -80,7 +80,7 @@ ms.locfileid: "65580758"
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|value|  
+|Name|Wert|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  

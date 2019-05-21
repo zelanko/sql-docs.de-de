@@ -30,7 +30,7 @@ ms.locfileid: "52530414"
   
  ![SQL Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
   
-||und Beschreibung|  
+||Beschreibung|  
 |------|-----------------|  
 |**1**|Die Instanz der SQL Server-Datenbank-Engine, die die Reporting Services-Dienstanwendungsdatenbanken hostet.|  
 |**2**|Die Instanz des SQL Server-Agents für die Instanz der SQL-Datenbank-Engine|  

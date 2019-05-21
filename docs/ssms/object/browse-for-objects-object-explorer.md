@@ -23,7 +23,7 @@ ms.locfileid: "65090014"
 # <a name="browse-for-objects-object-explorer"></a>Nach Objekten suchen (Objekt-Explorer)
   Zeigt eine Liste der Objekte des ausgewählten Typs an. Wählen Sie ein oder mehrere Objekte aus dieser Liste aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Im Feld **Nach Objekten suchen** werden für die Aktion relevante Elemente und ausschließlich die Elemente angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Kontrollkästchen**  
  Aktivieren Sie es, um das Objekt einzuschließen.  
   

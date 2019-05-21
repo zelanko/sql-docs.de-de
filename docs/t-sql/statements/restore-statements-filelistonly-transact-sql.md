@@ -84,7 +84,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Ein Client kann mit RESTORE FILELISTONLY eine Liste der in einem Sicherungssatz enthaltenen Dateien abrufen. Diese Informationen werden als Resultset zurückgegeben, das eine Zeile für jede Datei enthält.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  

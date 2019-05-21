@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47654348"
@@ -29,7 +29,7 @@ ms.locfileid: "47654348"
 ## <a name="remarks"></a>Remarks  
  Der JDBC-Treiber unterstützt die folgenden Parallelitätstypen:  
   
-|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|und Beschreibung|  
+|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|Beschreibung|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|Read Only|nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
 |CONCUR_UPDATABLE|Optimistic Read Write|nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich geprüft.|  
@@ -40,7 +40,7 @@ ms.locfileid: "47654348"
 ## <a name="result-sets-that-are-not-updateable"></a>Nicht aktualisierbare Resultsets  
  Ein aktualisierbares Resultset ist ein Resultset, in dem Zeilen eingefügt, aktualisiert und gelöscht werden können. In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen aktualisierbaren Cursor erstellen. Die generierte Ausnahme lautet "Das Resultset kann nicht aktualisiert werden".  
   
-|Ursache|und Beschreibung|Remedy|  
+|Ursache|Beschreibung|Remedy|  
 |-----------|-----------------|------------|  
 |Anweisung wurde nicht mit JDBC 2.0-Syntax (oder neuer) erstellt|In JDBC 2.0 wurden neue Methoden eingeführt, um Anweisungen zu erstellen. Bei der Verwendung von JDBC 1.0-Syntax ist das Resultset standardmäßig schreibgeschützt.|Geben Sie den Resultsettyp und die Parallelität beim Erstellen der Anweisung an.|  
 |Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt einen statischen Momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  

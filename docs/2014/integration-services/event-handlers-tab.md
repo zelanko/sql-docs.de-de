@@ -30,7 +30,7 @@ ms.locfileid: "62769756"
  **Ereignishandler**  
  Wählen Sie einen Typ von Ereignishandler aus. Erstellen Sie den Ereignishandler, indem Sie Elemente aus der **Toolbox**ziehen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie einen Ereignishandler aus, und entfernen Sie ihn anschließend aus dem Paket, indem Sie auf **Löschen** klicken.  
   
  **Klicken Sie hier, um das Erstellen einer \<Ereignishandlernamen > für die ausführbare Datei \<Name der ausführbaren Datei >**  

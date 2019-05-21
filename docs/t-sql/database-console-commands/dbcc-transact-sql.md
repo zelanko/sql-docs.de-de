@@ -97,7 +97,7 @@ Die **sys.dm_exec_requests**-Katalogsicht enthält Informationen zum Fortschritt
   
 Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase des DBCC-Befehls ab. Manchmal wird der Status mit der Granularität einer Datenbankseite angezeigt, in anderen Phasen wird er mit der Granularität einer einzelnen Datenbank oder Zuordnungsreparatur gemeldet. In der folgenden Tabelle werden die einzelnen Ausführungsphasen beschrieben sowie die Granularität, mit der der Status der Befehlsausführung gemeldet wird.
   
-|Ausführungsphase|und Beschreibung|Granularität der Statusmeldungen|  
+|Ausführungsphase|Beschreibung|Granularität der Statusmeldungen|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Während dieser Phase wird die logische und physische Konsistenz der Objekte in der Datenbank geprüft.|Der Status wird auf Datenbankseitenebene angezeigt.<br /><br /> Der Wert der Statusmeldung wird nach jeweils 1000 geprüften Datenbankseiten aktualisiert.|  
 |DBCC TABLE REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Objektfehler vorliegen, die behoben werden müssen.|Der Status wird auf der Ebene einzelner Reparaturvorgänge angezeigt.<br /><br /> Der Zähler wird für jeden abgeschlossenen Reparaturvorgang aktualisiert.|  

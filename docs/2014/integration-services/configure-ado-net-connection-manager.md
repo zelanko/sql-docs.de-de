@@ -37,7 +37,7 @@ ms.locfileid: "62834487"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager** eine ADO.NET-Datenverbindung.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Verbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Siehe auch  

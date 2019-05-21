@@ -67,7 +67,7 @@ Erfahren Sie anhand unserer Schnellstarts, Tutorials und Artikel, wie Sie die ex
 
 ## <a name="reference"></a>Verweis
 
-| Paket | Sprache | und Beschreibung | 
+| Paket | Sprache | Beschreibung | 
 |---------|----------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Verteilte und Parallelverarbeitung für R-Aufgaben: Datentransformation, -exploration und -visualisierung, statistische Analysen und Predictive Analytics |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Für R angepasste Funktionen, die auf den KI-Algorithmen von Microsoft basieren |

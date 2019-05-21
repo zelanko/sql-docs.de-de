@@ -29,7 +29,7 @@ ms.locfileid: "53209369"
   
  Die nachstehende Tabelle enthält die möglichen Ergebniswerte für das Auflösen einer unsicheren Transaktion.  
   
-|Ergebniswert|und Beschreibung|  
+|Ergebniswert|Beschreibung|  
 |-------------------|-----------------|  
 |0|Keine Annahme. Die Wiederherstellung erzeugt einen Fehler, falls der MS DTC keine unsicheren Transaktionen auflösen kann.|  
 |1|Commit annehmen. Alle unsicheren MS DTC-Transaktionen werden als übermittelt angesehen.|  

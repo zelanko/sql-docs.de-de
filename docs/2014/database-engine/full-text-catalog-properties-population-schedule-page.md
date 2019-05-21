@@ -43,7 +43,7 @@ ms.locfileid: "62778822"
  **Bearbeiten**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Auffüllungszeitplan zu bearbeiten.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Auffüllungszeitplan zu entfernen.  
   
 ## <a name="see-also"></a>Siehe auch  

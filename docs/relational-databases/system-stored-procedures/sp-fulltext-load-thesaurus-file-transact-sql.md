@@ -22,7 +22,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d076bfde2e4dc4a71af558a08f197d20144ce9db
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47840970"
@@ -48,7 +48,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  **@loadOnlyIfNotLoaded** = *Aktion*  
  Gibt an, ob die Thesaurusdatei in die internen Thesaurustabellen geladen wird, auch wenn sie bereits geladen wurde. *Aktion* ist einer der:  
   
-|value|Definition|  
+|Wert|Definition|  
 |-----------|----------------|  
 |**0**|Die Thesaurusdatei wird geladen, auch wenn sie bereits geladen wurde. Dies ist das Standardverhalten des **Sp_fulltext_load_thesaurus_file**.|  
 |1|Die Thesaurusdatei wird nur geladen, wenn Sie noch nicht geladen wurde.|  

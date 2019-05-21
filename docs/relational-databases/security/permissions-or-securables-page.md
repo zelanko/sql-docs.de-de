@@ -70,7 +70,7 @@ ms.locfileid: "47668488"
  **Berechtigungen**  
  Der Name der Berechtigung.  
   
- **Column**  
+ **Spalte**  
  Die Namen der Spalten, auf die sich die Berechtigung auswirkt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

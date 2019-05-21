@@ -35,7 +35,7 @@ ms.locfileid: "63309817"
 |[Fügen Sie (Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)|Fügt ein neues **Ansicht** -Objekt an die **Ansichten** Auflistung.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Ändert das Kennwort für ein Benutzerkonto an.|  
 |[Erstellen](../../../ado/reference/adox-api/create-method-adox.md)|Erstellt einen neuen Katalog an.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
+|[Löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Gibt den Besitzer eines Objekts in einem Katalog zurück.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Gibt die Berechtigungen für eine Gruppe oder Benutzer für ein Objekt zurück.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Gibt den Besitzer eines Objekts in einem Katalog an.|  

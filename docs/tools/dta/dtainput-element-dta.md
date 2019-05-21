@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d77f9a70ade63a2e8fdf1d063932b315d9f4656e
 ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51291046"
@@ -38,7 +38,7 @@ ms.locfileid: "51291046"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmale|und Beschreibung|  
+|Merkmale|Beschreibung|  
 |---------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

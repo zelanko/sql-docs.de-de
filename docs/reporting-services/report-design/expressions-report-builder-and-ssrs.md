@@ -75,7 +75,7 @@ Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Fel
   
  In der folgenden Tabelle sind die Verweistypen aufgeführt, die Sie in einen Ausdruck aufnehmen können:  
   
-|Verweise|und Beschreibung|Beispiel|  
+|Verweise|Beschreibung|Beispiel|  
 |----------------|-----------------|-------------|  
 |[Konstanten](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|Beschreibt die Konstanten, auf die Sie für Eigenschaften, die konstante Werte erfordern, z. B. Schriftfarben, interaktiv zugreifen können.|`="Blue"`|  
 |[Operatoren](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Beschreibt die Operatoren, mit denen Sie Verweise in einem Ausdruck kombinieren können. Der **&** -Operator wird z. B. zum Verketten von Zeichenfolgen verwendet.|`="The report ran at: " & Globals!ExecutionTime & "."`|  

@@ -157,7 +157,7 @@ Ein Verweis auf Cursornamen ist nur von anderen [!INCLUDE[tsql](../../includes/t
   
 Nach der Deklaration eines Cursors können die Eigenschaften des Cursors mithilfe der folgenden gespeicherten Systemprozeduren bestimmt werden:  
   
-|Gespeicherte Systemprozeduren|und Beschreibung|  
+|Gespeicherte Systemprozeduren|Beschreibung|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Gibt eine Liste der in der Verbindung aktuell sichtbaren Cursor und ihrer Attribute zurück.|  
 |**sp_describe_cursor**|Beschreibt die Attribute eines Cursors, z. B. ob es sich um einen Vorwärtscursor oder einen Scrollcursor handelt.|  

@@ -90,7 +90,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Statistik|und Beschreibung|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
@@ -111,7 +111,7 @@ Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit 
   
 Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tabelle beschriebenen Spalten sowie die folgenden Spalten zurück.
   
-|Statistik|und Beschreibung|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Objektnamen**|Der Name der verarbeiteten Tabelle oder Sicht.|  
 |**ObjectID**|ID des Objektnamens.|  

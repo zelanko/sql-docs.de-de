@@ -30,7 +30,7 @@ Das Leistungsobjekt **SQL Server XTP-Datenbanken** spezifische In-Memory-OLTP-Da
 
 Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatoren.
 
-|Leistungsindikator|und Beschreibung| 
+|Leistungsindikator|Beschreibung| 
 |-------------|-----------------|  
 |**Durchschnittliches Transaktionssegment – großer Datenumfang**|Mittlere Größe von Transaktionssegmenten bei großer Datennutzlast. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**Durchschnittliche Transaktionssegmentgröße**|Mittlere Größe von Transaktionssegmenten der Nutzlast. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|

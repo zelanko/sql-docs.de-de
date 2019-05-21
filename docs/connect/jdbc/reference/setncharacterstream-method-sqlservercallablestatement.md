@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c70efc5220c5d09098d60eab19ae736fa2d87c44
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47617078"
@@ -25,7 +25,7 @@ ms.locfileid: "47617078"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setNCharacterStream-Methode &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|Legt den angegebenen Parameter auf das angegebene Readerobjekt fest.|  
 |[setNCharacterStream-Methode &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|Legt den angegebenen Parameter auf das angegebene Readerobjekt fest, dessen Längeder angegebenen Zeichenanzahl entspricht.|  

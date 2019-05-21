@@ -90,7 +90,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um die freigegebene Datenquelle zu löschen. Das Löschen einer freigegebenen Datenquelle deaktiviert alle Berichte, Modelle und datengesteuerten Abonnements, die sie verwenden. Um Berichte, Modelle und Abonnements erneut zu aktivieren, müssen Sie alle einzeln öffnen und die entsprechenden Datenquelleneigenschaften so aktualisieren, dass sie eine andere freigegebene Datenquelle verwenden. Für Berichte und Abonnements können Sie Verbindungsinformationen für die Datenquelle als Eigenschaftenwerte der Datenquelle angeben.  
   
  **Verschieben**  

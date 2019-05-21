@@ -71,8 +71,8 @@ ms.locfileid: "62898838"
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Direct input**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
-|**File connection**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
+|**Direkteingabe**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
+|**Dateiverbindung**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die die Transact-SQL-Anweisung definiert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
   
  **QueryIsStoredProcedure**  

@@ -83,7 +83,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Ist ein Code, der den Abstand und die Ausrichtung des ersetzten Werts bestimmt.  
   
-|Code|Präfix oder Ausrichtung|und Beschreibung|  
+|Code|Präfix oder Ausrichtung|Beschreibung|  
 |----------|-----------------------------|-----------------|  
 |- (Minus)|Linksbündig|Der Argumentwert wird innerhalb der angegebenen Feldbreite linksbündig ausgegeben.|  
 |+ (Plus)|Zeichenpräfix|Dem Argumentwert wird ein Plus- (+) oder Minuszeichen (-) vorangestellt, wenn der Wert einen Datentyp mit Vorzeichen aufweist.|  
@@ -158,7 +158,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Option*  
  Ist eine benutzerdefinierte Option für den Fehler und kann einer der Werte in der folgenden Tabelle sein.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |LOG|Protokolliert den Fehler in dem Fehler- und dem Anwendungsprotokoll für die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Im Fehlerprotokoll protokollierte Fehler sind derzeit auf maximal 440 Bytes beschränkt. Nur Mitglieder der festen Serverrolle „sysadmin“ oder Benutzer mit ALTER TRACE-Berechtigungen können WITH LOG angeben.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

@@ -23,14 +23,14 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62766666"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Schemaeinschränkungen (Dialogfeld)
-  Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fest, die für den Enumerator für das Foreach-ADO.NET-Schemarowset gelten.  
+  Im Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fest, die für den Enumerator für das Foreach-ADO.NET-Schemarowset gelten.  
   
 ## <a name="options"></a>Optionen  
  **Einschränkungen**  
  Wählen Sie die Einschränkungen aus, die für das Schema gelten.  
   
  **Variable**  
- Verwendet eine Variable, um die Einschränkungen zu definieren. Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf **Neue Variable…** , um eine neue Variable zu erstellen.  
+ Verwendet eine Variable, um die Einschränkungen zu definieren. Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf **Neue Variable…**, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   

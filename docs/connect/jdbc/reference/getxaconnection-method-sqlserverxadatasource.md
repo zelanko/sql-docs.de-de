@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d6e052d5bba35e85f011d79c77f2bd4805fc0a7
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47612108"
@@ -30,7 +30,7 @@ ms.locfileid: "47612108"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getXAConnection ()](../../../connect/jdbc/reference/getxaconnection-method.md)|Stellt eine physische Datenbankverbindung her, die in einer verteilten Transaktion verwendet werden kann.|  
 |[getXAConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getxaconnection-method-java-lang-string-java-lang-string.md)|Stellt eine physikalische Datenbankverbindung anhand des angegebenen Benutzernamens und -kennworts her.|  

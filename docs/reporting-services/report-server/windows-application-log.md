@@ -37,7 +37,7 @@ ms.locfileid: "65580925"
   
  In der folgenden Tabelle werden die Ereignistypen beschrieben, die der Berichtsserver in das Anwendungsereignisprotokoll schreibt.  
   
-|Ereignistyp|und Beschreibung|  
+|Ereignistyp|Beschreibung|  
 |----------------|-----------------|  
 |Information|Ein Ereignis, das einen erfolgreichen Vorgang beschreibt (z. B. das Starten des Berichtsserverdienstes).|  
 |Warnung|Ein Ereignis, das auf ein potenzielles Problem hinweist (z. B. unzureichenden Speicherplatz).|  

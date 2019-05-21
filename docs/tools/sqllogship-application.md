@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
 ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/08/2019
 ms.locfileid: "54100755"
@@ -55,7 +55,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
-|level|und Beschreibung|  
+|level|Beschreibung|  
 |-----------|-----------------|  
 |0|Keine Ausgabe von Ablaufverfolgungs- oder Debugmeldungen|  
 |1|Ausgabe von Fehlerbehandlungsmeldungen|  

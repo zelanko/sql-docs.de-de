@@ -39,7 +39,7 @@ ms.locfileid: "65724070"
   
  Um ein Ereignis auszulösen, ruft der Skripttask eine der Methoden auf, die von der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>-Eigenschaft verfügbar gemacht werden. In der folgenden Tabelle werden die Methoden aufgelistet, die von der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>-Eigenschaft verfügbar gemacht werden.  
   
-|Ereignis|und Beschreibung|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>|Löst ein benutzerdefiniertes Ereignis im Paket aus.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>|Informiert das Paket über eine Fehlerbedingung.|  

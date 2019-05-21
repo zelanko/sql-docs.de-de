@@ -26,7 +26,7 @@ Das Leistungsobjekt **SQLServer:LogPool FreePool** bietet Leistungsindikatoren f
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **LogPool FreePool** beschrieben.
 
-|**SQLServer LogPool FreePool (Leistungsindikatoren)**|und Beschreibung|  
+|**SQLServer LogPool FreePool (Leistungsindikatoren)**|Beschreibung|  
 |-------------|-----------------|  
 |**Auffüllungen freier Puffer/Sek.**|Die Anzahl der Puffer, die pro Sekunde zum Auffüllen zugeordnet werden.|
 |**Länge der Freiliste**|Die Länge der Freiliste.|

@@ -38,7 +38,7 @@ ms.locfileid: "52505196"
   
  Es gibt folgende Spalten:  
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**Serverinstanz**|Name der Serverinstanz, deren Status in der Zeile **Status** angezeigt wird.|  
 |**Aktuelle Rolle**|Aktuelle Rolle der Serverinstanz: **Prinzipal** oder **Spiegel**.|  

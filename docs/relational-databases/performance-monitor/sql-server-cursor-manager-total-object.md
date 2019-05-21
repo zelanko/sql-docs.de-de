@@ -27,7 +27,7 @@ ms.locfileid: "53380971"
   
  Diese Tabelle beschreibt die Leistungsindikatoren **Cursor-Manager gesamt** von SQL Server.  
   
-|Cursor-Manager gesamt (Leistungsindikatoren)|und Beschreibung|  
+|Cursor-Manager gesamt (Leistungsindikatoren)|Beschreibung|  
 |-----------------------------------|-----------------|  
 |**Anzahl asynchroner Auffüllungsvorgänge**|Anzahl der Cursor, die asynchron aufgefüllt werden.|  
 |**Cursorkonvertierungsrate**|Anzahl der Cursorkonvertierungen pro Sekunde.|  

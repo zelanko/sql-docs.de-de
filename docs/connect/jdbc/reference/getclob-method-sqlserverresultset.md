@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9e1aa955fa8c1b2063ecb214d618b70e57a87c7
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47692748"
@@ -30,7 +30,7 @@ ms.locfileid: "47692748"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int-sqlserverresultset.md)|Ruft den Wert des angegebenen Spalteindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als CLOB-Objekt in der Programmiersprache Java ab.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string-sqlserverresultset.md)|Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als CLOB-Objekt in der Programmiersprache Java ab.|  

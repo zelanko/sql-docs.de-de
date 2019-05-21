@@ -96,7 +96,7 @@ ms.locfileid: "52523527"
   
      Diese Cmdlets akzeptieren die folgenden Optionen:  
   
-    |Option|und Beschreibung|  
+    |Option|Beschreibung|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Führt in den AlwaysOn-Richtlinienkategorien gefundene Benutzerrichtlinien aus.|  
     |**InputObject**|Eine Auflistung von Objekten, die abhängig vom verwendeten Cmdlet den Status von Verfügbarkeitsgruppen, Verfügbarkeitsreplikaten oder Verfügbarkeitsdatenbanken darstellen. Das Cmdlet berechnet die Integrität der angegebenen Objekte.|  

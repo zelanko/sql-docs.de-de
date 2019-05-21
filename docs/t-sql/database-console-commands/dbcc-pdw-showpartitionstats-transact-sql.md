@@ -44,7 +44,7 @@ Erfordert die **VIEW SERVER STATE**-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 In diesem Set sind die Ergebnisse des DBCC-Befehls PDW_SHOWPARTITIONSTATS dargestellt.
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|Partitionsnummer.|  
 |used_page_count|BIGINT|Gesamtanzahl der für die Daten verwendeten Seiten.|  

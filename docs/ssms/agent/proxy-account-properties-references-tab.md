@@ -29,7 +29,7 @@ ms.locfileid: "65088816"
 
 Diese schreibgeschützte Seite führt die Auftragsschritte auf, die auf ein Proxykonto des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents verweisen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Auftragsname**  
 Namen der Aufträge, die dieses Proxykonto verwenden.  
   

@@ -43,7 +43,7 @@ ms.locfileid: "63140461"
  **Neu**  
  Klicken Sie hier, um ein neues Profil zu erstellen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie ein benutzerdefiniertes Profil aus, und klicken Sie auf **Löschen** , um dieses Profil zu löschen. Vordefinierte Profile können nicht gelöscht werden.  
   
  **Vorhandene Agents ändern**  

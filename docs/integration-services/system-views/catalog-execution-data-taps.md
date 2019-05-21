@@ -27,7 +27,7 @@ ms.locfileid: "65714784"
 
   Zeigt Informationen für jede in einer Ausführung definierte Datenabzweigung an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|Eindeutiger Bezeichner (ID) der Datenabzweigung.|  
 |execution_id|**bigint**|Der eindeutige Bezeichner (ID) für die Instanz der Ausführung.|  

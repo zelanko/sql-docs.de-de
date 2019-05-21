@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02f767440858a0d32e3977d512485387bfcedd7b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47841498"
@@ -27,7 +27,7 @@ ms.locfileid: "47841498"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Behandlung von Fehlern](../../connect/jdbc/handling-errors.md)|Beschreibt das Behandeln von Fehlern, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden.|  
 |[Abrufen der Treiberversion](../../connect/jdbc/getting-the-driver-version.md)|Beschreibt, wie die installierte Version des JDBC-Treibers bestimmt wird.|  

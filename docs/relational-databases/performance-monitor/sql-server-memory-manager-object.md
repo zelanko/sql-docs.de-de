@@ -32,7 +32,7 @@ ms.locfileid: "53379711"
 ## <a name="memory-manager-counters"></a>Speicher-Manager-Leistungsindikatoren  
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Speicher-Manager** beschrieben.  
   
-|Speicher-Manager-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Speicher-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Verbindungsspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für die Aufrechterhaltung von Verbindungen verwendet.|  
 |**Datenbankcachespeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server derzeit für den Datenbankseitencache verwendet.|  

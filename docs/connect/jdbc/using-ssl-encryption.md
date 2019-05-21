@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47771524"
@@ -37,7 +37,7 @@ In den Themen in diesem Abschnitt werden die Unterstützung der SSL-Verschlüsse
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-| Thema                                                                                                        | und Beschreibung                                                                                                                                           |
+| Thema                                                                                                        | Beschreibung                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md)                                 | Beschreibt die Unterstützung der SSL-Verschlüsselung in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].                                              |
 | [Herstellen von Verbindungen mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Beschreibt das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe der neuen SSL-spezifischen Verbindungseigenschaften. |

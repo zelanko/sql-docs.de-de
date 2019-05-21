@@ -32,7 +32,7 @@ ms.locfileid: "65725104"
   
  In der folgenden Tabelle sind Themen zu Operatoren in diesem Abschnitt aufgeführt.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md)|Konvertiert einen Ausdruck in einen anderen Datentyp.|  
 |[&#40;&#41; &#40;Klammern&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|Identifiziert die Auswertungsreihenfolge von Ausdrücken.|  

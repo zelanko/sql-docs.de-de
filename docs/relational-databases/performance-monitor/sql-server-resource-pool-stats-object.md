@@ -27,7 +27,7 @@ ms.locfileid: "53380441"
   
  Jeder aktive Ressourcenpool erstellt eine Instanz des Leistungsobjekts SQLServer:Statistiken für Ressourcenpools, wobei der Name der Instanz dem Namen des Ressourcenpools in der Ressourcenkontrolle entspricht. In der folgenden Tabelle sind die für diese Instanz unterstützten Leistungsindikatoren beschrieben.  
   
-|Indikatorname|und Beschreibung|  
+|Indikatorname|Beschreibung|  
 |------------------|-----------------|  
 |**Menge aktiver Arbeitsspeicherzuweisungen (KB)**|Der aktuell zugewiesene Gesamtspeichers in Kilobyte (KB). Diese Information ist auch in [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)verfügbar.| 
 |**Anzahl aktiver Arbeitsspeicherzuweisungen**|Die aktuelle Gesamtanzahl von Arbeitsspeicherzuweisungen. Diese Information ist auch in [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)verfügbar.|  

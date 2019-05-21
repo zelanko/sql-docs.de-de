@@ -24,7 +24,7 @@ ms.locfileid: "65104332"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Wählen Sie Objekttypen aus**  
 Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "65096797"
 
 Auf dieser Seite können Sie Operatoren löschen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Zu löschendes Objekt**  
 Zeigt den zu löschenden Operator an.  
   

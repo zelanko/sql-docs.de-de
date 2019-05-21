@@ -37,7 +37,7 @@ ms.locfileid: "65713614"
 > [!NOTE]
 >  Die Werte der Eigenschaften **Name** und **Namespace** müssen mit einem Buchstaben beginnen, wie in Unicode-Standard 2.0 definiert ist, oder mit einem Unterstrich (_). Bei den nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einem Unterstrich (\_) handeln.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Variable hinzufügen**  
  Fügt eine benutzerdefinierte Variable hinzu.  
   

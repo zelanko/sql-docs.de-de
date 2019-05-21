@@ -27,7 +27,7 @@ ms.locfileid: "54133340"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Im Dialogfeld **Abonnements überprüfen** können Sie angeben, dass Abonnements für eine Transaktionsveröffentlichung überprüft werden sollen, sobald der Verteilungs-Agent für die einzelnen Abonnements das nächste Mal ausgeführt wird. Die Ergebnisse der Überprüfung werden im Replikationsmonitor angezeigt. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Alle SQL Server-Abonnements überprüfen**  
  Wählen Sie diese Option aus, um Daten für alle SQL Server-Abonnements für diese Veröffentlichung zu überprüfen.  
   

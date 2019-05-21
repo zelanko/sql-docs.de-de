@@ -59,7 +59,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *property*  
  Der Name der Eigenschaft, für die Informationen zurückgegeben werden. *property* ist eine Zeichenfolge und kann einen der folgenden Werte aufweisen.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**ColumnId**|Die Spalten-ID an der *key_ID*-Position des Index.|  
 |**IsDescending**|Die Reihenfolge, in der die Indexspalte gespeichert wird.<br /><br /> 1 = Absteigend 0 = Aufsteigend|  

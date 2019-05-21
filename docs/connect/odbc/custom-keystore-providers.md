@@ -13,7 +13,7 @@ manager: craigg
 author: MightyPen
 ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
 ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55047214"
@@ -81,7 +81,7 @@ typedef struct CEKeystoreProvider {
 } CEKEYSTOREPROVIDER;
 ```
 
-|Feldname|und Beschreibung|
+|Feldname|Beschreibung|
 |:--|:--|
 |`Name`|Der Name des Keystore-Anbieters. Sie müssen nicht identisch mit anderen Keystore-Anbieter, zuvor geladen wird, vom Treiber oder in dieser Bibliothek vorhanden sein. Null-terminiert, Breite-Zeichen * Zeichenfolge.|
 |`Init`|Die Initialisierungsfunktion. Wenn Sie keine Initialisierungsfunktion nicht erforderlich ist, kann dieses Feld null sein.|
@@ -98,7 +98,7 @@ int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
 Platzhaltername für eine Anbieter definierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal ein, nachdem ein Anbieter geladen wurde, aber vor dem ersten Zeit, die sie zum Ausführen von ECEK-Entschlüsselung oder Read()/Write() benötigt anfordert. Verwenden Sie diese Funktion Initialisierungen, die es benötigt. 
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -110,7 +110,7 @@ int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len)
 
 Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, die zum Lesen von Daten von einem (zuvor geschriebenen-in) Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung, die Anwendung zum Lesen beliebiger Daten vom Anbieter anfordert. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -123,7 +123,7 @@ int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len)
 ```
 Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, zum Schreiben von Daten an einen Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung anfordert, die Anwendung, der beliebige Daten an den Anbieter zu schreiben. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -136,7 +136,7 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Platzhaltername für eine Funktion der Anbieter definierte ECEK-Entschlüsselung. Der Treiber ruft diese Funktion zum Entschlüsseln einer ECEK durch einen CMK, die diesem Anbieter zugeordnet sind, in einen CEK verschlüsselt.
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -153,7 +153,7 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Platzhaltername für eine Funktion der Anbieter definierte CEK-Verschlüsselung. Der Treiber nicht mit dieser Funktion wird noch seine Funktionalität über die ODBC-Schnittstelle verfügbar zu machen, aber sie wird von schlüsselverwaltungstools ermöglichen den programmgesteuerten Zugriff auf die Erstellung von ECEK bereitgestellt.
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -184,7 +184,7 @@ Die **OnError** Parameter verweist auf eine fehlerberichterstattungs-Funktion, m
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
-|Argument|und Beschreibung|
+|Argument|Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Kontext, der auf den Fehler zu melden.|
 |`msg`|[Eingabe] Der zu meldende Fehlermeldung. NULL-terminierte Breitzeichen-Zeichenfolge. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
@@ -224,7 +224,7 @@ void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
 
-|Feld|und Beschreibung|
+|Feld|Beschreibung|
 |:--|:--|
 |`envCtx`|Umgebungskontext.|
 |`dbcCtx`|Der Verbindungskontext.|

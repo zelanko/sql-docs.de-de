@@ -30,7 +30,7 @@ ms.locfileid: "62769956"
   
 ### <a name="to-enable-logging-in-a-package"></a>So aktivieren Sie die Protokollierung in einem Paket  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollierung**.  
   

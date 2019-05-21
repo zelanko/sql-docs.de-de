@@ -28,7 +28,7 @@ ms.locfileid: "47838279"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[ExistingConnection (Ereignisklasse)](../../relational-databases/event-classes/existingconnection-event-class.md)|Zeigt die Eigenschaften von Benutzerverbindungen an, die beim Starten der Ablaufverfolgung vorhanden waren.|  
   

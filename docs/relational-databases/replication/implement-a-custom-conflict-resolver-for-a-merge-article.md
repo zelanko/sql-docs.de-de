@@ -46,7 +46,7 @@ ms.locfileid: "54128250"
   
 1.  Erstellen Sie auf dem Verleger entweder in der Veröffentlichungs- oder der **msdb** -Datenbank eine neue gespeicherte Systemprozedur, welche die folgenden erforderlichen Parameter implementiert:  
   
-    |Parameter|Datentyp|und Beschreibung|  
+    |Parameter|Datentyp|Beschreibung|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|**sysname**|Name des Besitzers der Tabelle, für die ein Konflikt gelöst wird. Dies ist der Besitzer der Tabelle der Veröffentlichungsdatenbank.|  
     |**@tablename**|**sysname**|Name der Tabelle, für die ein Konflikt gelöst wird.|  

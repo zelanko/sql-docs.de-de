@@ -34,7 +34,7 @@ ms.locfileid: "65571402"
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Ordner**  
  Gibt den Pfad des Berichts an.  
   

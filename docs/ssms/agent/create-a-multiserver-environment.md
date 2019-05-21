@@ -56,7 +56,7 @@ Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:
 ## <a name="related-tasks"></a>Related Tasks  
 In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|und Beschreibung|Thema|  
+|Beschreibung|Thema|  
 |---------------|---------|  
 |Beschreibt, wie ein Masterserver erstellt wird.|[Einrichten eines Masterservers](../../ssms/agent/make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](../../ssms/agent/make-a-target-server.md)|  

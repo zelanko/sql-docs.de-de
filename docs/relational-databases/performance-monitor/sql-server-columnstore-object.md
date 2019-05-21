@@ -25,7 +25,7 @@ ms.locfileid: "53380511"
   
  Die folgende Tabelle beschreibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
-|Columnstore-Leistungsindikatoren|und Beschreibung|  
+|Columnstore-Leistungsindikatoren|Beschreibung|  
 |--------------------------|-----------------|  
 |**Geschlossene Delta-Zeilengruppen**|Die Anzahl von geschlossenen Delta-Zeilengruppen.|  
 |**Komprimierte Delta-Zeilengruppen**|Die Anzahl von komprimierten Delta-Zeilengruppen.|  

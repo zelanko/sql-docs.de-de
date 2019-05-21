@@ -25,7 +25,7 @@ ms.locfileid: "65089436"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
 Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Komponentenname**  
 Listet die Namen der einzelnen installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Elemente auf.  
   

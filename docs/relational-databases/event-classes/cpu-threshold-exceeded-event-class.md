@@ -29,7 +29,7 @@ ms.locfileid: "47737248"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Datenspalten der CPU Threshold Exceeded-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|CPU-Verwendung in Millisekunden|18|Benutzerkontensteuerung|  
 |EventClass|**int**|214|27|nein|  

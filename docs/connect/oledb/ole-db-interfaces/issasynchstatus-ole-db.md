@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: b3da83d81f62fa001638ca9830512c94cce76da7
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51030146"
@@ -30,7 +30,7 @@ ms.locfileid: "51030146"
 
   Die **ISSAsynchStatus**-Schnittstelle unterstützt asynchrone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Vorgänge. Hierbei handelt es sich um eine optionale Schnittstelle, die von der OLE DB-Schnittstelle **IDBAsynchStatus**erbt. Neben den von **IDBAsynchStatus** geerbten Methoden **Abort** und **GetStatus**stellt **ISSAsynchStatus** eine neue Methode bereit, die verwendet wird, um zu warten, bis ein asynchroner Vorgang abgeschlossen ist oder ein Timeout auftritt.  
   
-|Methode|und Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[Issasynchstatus:: Abort &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md)|Bricht einen asynchron ausgeführten Vorgang ab.|  
 |[Issasynchstatus:: GetStatus &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|Gibt den Status eines asynchron ausgeführten Vorgangs zurück.|  

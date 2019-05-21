@@ -43,7 +43,7 @@ ms.locfileid: "65725394"
   
  Die Ausdruckssprache stellt die folgenden mathematischen Funktionen bereit.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/abs-ssis-expression.md)|Gibt den absoluten, positiven Wert eines numerischen Ausdrucks zurück.|  
 |[EXP &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/exp-ssis-expression.md)|Gibt den Exponenten für die Basis e des angegebenen Ausdrucks zurück.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden Zeichenfolgenfunktionen bereit.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|Gibt den Unicode-Codewert des äußeren linken Zeichens eines Zeichenausdrucks zurück.|  
 |[FINDSTRING &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|Gibt den einsbasierten Index für das angegebene Auftreten einer Zeichenfolge innerhalb eines Ausdrucks zurück.|  
@@ -79,7 +79,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden Datums- und Zeitfunktionen bereit.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|Gibt einen neuen DT_DBTIMESTAMP-Wert zurück, indem ein Datums- oder Zeitintervall einem angegebenen Datum hinzugefügt wird.|  
 |[DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|Gibt die Anzahl von Datums- und Zeiteinheiten zurück, die zwischen zwei angegebenen Daten überschritten wurden.|  
@@ -92,7 +92,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden NULL-Funktionen bereit.  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|Gibt abhängig davon, ob ein Ausdruck NULL ist, ein boolesches Ergebnis zurück.|  
 |[NULL &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/null-ssis-expression.md)|Gibt einen NULL-Wert eines angeforderten Datentyps zurück.|  

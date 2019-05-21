@@ -32,7 +32,7 @@ ms.locfileid: "64946185"
   
  Die Tabelle **myTeam** enthält die folgenden Spalten.  
   
-|Spalte|Datentyp|NULL-Zulässigkeit|und Beschreibung|  
+|Spalte|Datentyp|NULL-Zulässigkeit|Beschreibung|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Nicht NULL|Primärschlüssel für die Zeilen. Mitarbeiter-ID eines Mitglieds meines Teams.|  
 |**Name**|**nvarchar(50)**|Nicht NULL|Name eines Mitglieds meines Teams.|  

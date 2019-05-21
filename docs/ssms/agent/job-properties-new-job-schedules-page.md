@@ -29,7 +29,7 @@ ms.locfileid: "65095817"
 
 Mithilfe dieser Seite können Sie Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und verwalten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Zeitplanliste**  
 Führt die Zeitpläne für diesen Auftrag auf.  
   

@@ -74,7 +74,7 @@ Die folgenden Begriffe beschreiben die Schlüsselkonzepte der SQL-Ablaufverfolgu
 ## <a name="use-data-columns-to-describe-returned-events"></a>Verwenden von Datenspalten zum Beschreiben zurückgegebener Ereignisse  
 Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe, um Ereignisse zu beschreiben, die beim Ausführen der Ablaufverfolgung zurückgegeben werden. In der folgenden Tabelle werden die Datenspalten von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beschrieben, die mit den von der SQL-Ablaufverfolgung verwendeten Datenspalten identisch sind. Außerdem wird auf die Spalten verwiesen, die standardmäßig ausgewählt sind.  
   
-|Datenspalte|Spaltennummer|und Beschreibung|  
+|Datenspalte|Spaltennummer|Beschreibung|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName**|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
 |**BigintData1**|52|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  

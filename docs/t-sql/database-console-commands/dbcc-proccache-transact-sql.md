@@ -59,7 +59,7 @@ Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeic
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben.
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**num proc buffs**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
 |**num proc buffs used**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  

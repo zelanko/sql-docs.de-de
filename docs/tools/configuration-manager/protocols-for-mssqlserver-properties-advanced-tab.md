@@ -14,7 +14,7 @@ monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: bc5ee796addb8c77170de2e3166aefb74d046ad1
 ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55044616"
@@ -34,7 +34,7 @@ Weitere Informationen zum Konfigurieren anderer [!INCLUDE[ssNoVersion](../../inc
 
 **Erweiterter Schutz** wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]vollständig unterstützt. Für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientanbieter wird **Erweiterter Schutz** derzeit nicht unterstützt.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Optionen
 
 ### <a name="extended-protection"></a>wird von
 

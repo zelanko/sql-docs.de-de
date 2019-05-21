@@ -77,7 +77,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Das Resultset von RESTORE LABELONLY besteht aus einer Zeile mit diesen Informationen.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  

@@ -27,7 +27,7 @@ ms.locfileid: "65714871"
 
   Zeigt die Eigenschaftenüberschreibungswerte an, die während der Ausführung des Pakets festgelegt wurden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|Eindeutige ID für den Eigenschaftenüberschreibungswert.|  
 |execution_id|**bigint**|Eindeutige ID für die Instanz der Ausführung.|  

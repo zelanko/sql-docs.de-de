@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
 ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56676138"
@@ -28,7 +28,7 @@ Wenn Sie ein Resultset mit erstellen [Sqlsrv_query](../../connect/php/sqlsrv-que
   
 Sie können ein Resultset mit einem bildlauffähigen Cursor, der Sie auf eine beliebige Zeile im Resultset, in beliebiger Reihenfolge zugreifen kann, erstellen. Die folgende Tabelle enthält die Werte, die übergeben werden können die **Scrollable** Option im Sqlsrv_query oder Sqlsrv_prepare.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Können Sie eine Zeile verschieben, zu einem Zeitpunkt, ab der ersten Zeile des Resultsets, bis das Ende des Resultsets erreicht.<br /><br />Dies ist der Standardcursortyp.<br /><br />[zu Sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt die Fehlermeldung für Resultsets, die für diesen Cursortyp erstellt.<br /><br />**Vorwärts** ist die verkürzte Form der SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Können Sie auf Zeilen in beliebiger Reihenfolge zuzugreifen, aber nicht wider, Änderungen in der Datenbank.<br /><br />**statische** ist die verkürzte Form der SQLSRV_CURSOR_STATIC.|  
@@ -43,7 +43,7 @@ Nachdem Sie ein Resultset erstellen, können Sie [Sqlsrv_fetch](../../connect/ph
   
 Die folgende Tabelle beschreibt die Werte Sie, in angeben können der *Zeile* Parameter.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Gibt die nächste Zeile an. Dies ist der Standardwert, wenn Sie keinen angeben der *Zeile* Parameter für einen Satz scrollfähigen Resultsets.|  
 |SQLSRV_SCROLL_PRIOR|Gibt die Zeile vor der aktuellen Zeile.|  

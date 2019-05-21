@@ -85,7 +85,7 @@ Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server
   
 Um Zwischenknoten wegzulassen, verwenden Sie Punkte, um diese Positionen anzuzeigen. In der folgenden Tabelle sind die gültigen Formate für Objektnamen aufgeführt.  
   
-|Objektverweisformat|und Beschreibung|  
+|Objektverweisformat|Beschreibung|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|Vierteiliger Name.|  
 |_server_._database_.._object_|Der Schemaname wird weggelassen.|  

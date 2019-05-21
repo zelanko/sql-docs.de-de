@@ -53,7 +53,7 @@ Der Scale Out-Masterdienst ist ein Windows-Dienst, über den die Kommunikation m
 Konfigurieren Sie den Scale Out-Masterdienst mithilfe der `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`-Datei. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
 
-|Konfiguration  |und Beschreibung  |Standardwert  |
+|Konfiguration  |Beschreibung  |Standardwert  |
 |---------|---------|---------|
 |PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Worker für horizontales Hochskalieren verwendet wird|8391|
 |SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Worker für horizontales Hochskalieren geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation von Worker für horizontales Hochskalieren angegeben wurde|

@@ -33,7 +33,7 @@ ms.locfileid: "63164705"
  **Hinzufügen**  
  Fügt eine neue Filterklausel zur Liste hinzu.  
   
- **Delete**  
+ **Löschen**  
  Löscht die ausgewählte Filterklausel aus der Liste.  
   
  **Pfeil nach oben**  

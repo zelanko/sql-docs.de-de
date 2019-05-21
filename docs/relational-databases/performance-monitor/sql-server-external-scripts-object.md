@@ -30,7 +30,7 @@ ms.locfileid: "53380026"
   
  Diese Tabelle beschreibt die Leistungsindikatoren für **externe Skripts** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Leistungsindikatoren für externe SQL Server-Skripts|und Beschreibung|  
+|Leistungsindikatoren für externe SQL Server-Skripts|Beschreibung|  
 |------------------------------------------|-----------------|  
 |**Execution Errors**|Die Anzahl von Fehlern beim Ausführen externer Skripts.|  
 |**Implied Auth. Anmeldungen**|Die Anzahl von Anmeldungen über Satellitenprozesse, die über die implizite Authentifizierung authentifiziert wurden.|  

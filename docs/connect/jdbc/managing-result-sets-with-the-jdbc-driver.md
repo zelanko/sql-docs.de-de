@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49bb2f1743675f1ad381b9a5849cc395a5355d42
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47837718"
@@ -33,7 +33,7 @@ ms.locfileid: "47837718"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Grundlegendes zu Cursortypen](../../connect/jdbc/understanding-cursor-types.md)|Beschreibt die verschiedenen Cursortypen, die von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt werden.|  
 |[Grundlegendes zur Parallelitätssteuerung](../../connect/jdbc/understanding-concurrency-control.md)|Beschreibt, wie der JDBC-Treiber die Parallelitätssteuerung unterstützt.|  

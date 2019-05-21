@@ -27,7 +27,7 @@ ms.locfileid: "62878290"
   
 ### <a name="to-set-the-properties-of-a-task-or-container-by-using-the-properties-window"></a>So legen Sie die Eigenschaften eines Tasks oder Containers mithilfe des Eigenschaftenfensters fest  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62878290"
   
 ### <a name="to-set-the-properties-of-a-task-or-container-by-using-a-task-or-container-editor"></a>So legen Sie die Eigenschaften eines Tasks oder Containers mithilfe eines Task- oder Container-Editors fest  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   

@@ -37,7 +37,7 @@ ms.locfileid: "62937017"
  **Hinzufügen**  
  Öffnet das Dialogfeld **Neue Auftragskategorie** zum Hinzufügen einer neuen Auftragskategorie.  
   
- **Delete**  
+ **Löschen**  
  Entfernt die ausgewählte Auftragskategorie. Nur für benutzerdefinierte Auftragskategorien aktiviert.  
   
  **Aktualisieren**  

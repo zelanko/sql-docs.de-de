@@ -189,7 +189,7 @@ ms.locfileid: "54127660"
  **Kontoname**  
  Wählen Sie hier den Kontonamen aus, der angezeigt, aktualisiert oder gelöscht werden soll.  
   
- **Delete**  
+ **Löschen**  
  Löscht das ausgewählte Konto. Sie müssen dieses Konto aus zugeordneten Profilen entfernen oder diese Profile löschen, bevor Sie das ausgewählte Konto löschen.  
   
  **Beschreibung**  
@@ -269,7 +269,7 @@ ms.locfileid: "54127660"
  **Profilname**  
  Wählen Sie den Namen des zu verwaltenden Profils aus.  
   
- **Delete**  
+ **Löschen**  
  Löscht das ausgewählte Profil. Sie werden aufgefordert, **Ja** auszuwählen, um das ausgewählte Profil zu löschen und nicht gesendete Nachrichten abzubrechen, oder **Nein** auszuwählen, um das ausgewählte Profil nur zu löschen, wenn keine ungesendeten Nachrichten vorhanden sind.  
   
  **Beschreibung**  

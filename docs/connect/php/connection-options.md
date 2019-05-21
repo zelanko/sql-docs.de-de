@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e13ec1359e2072c92ffa06e218228730f323222
 ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56676279"
@@ -25,7 +25,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 
 ## <a name="table-of-connection-options"></a>Optionen für die Verbindung
 
-|Key|value|und Beschreibung|Default|  
+|Key|Wert|Beschreibung|Default|  
 |-------|---------|---------------|-----------|  
 |AccessToken|Zeichenfolge|Die Bytezeichenfolge des Azure AD Access Tokens aus einer OAuth-JSON-Antwort extrahiert.<br /><br />Die Verbindungszeichenfolge muss es sich nicht um eine Benutzer-ID, Kennwort oder das authentifizierungsschlüsselwort enthalten. Weitere Informationen finden Sie unter [verbinden mithilfe von Azure Active Directory-Authentifizierung](../../connect/php/azure-active-directory.md)|Nicht festgelegt.|
 |APP|Zeichenfolge|Gibt den Namen der Anwendung an, der in der Ablaufverfolgung verwendet wird.|Nicht festgelegt.|  

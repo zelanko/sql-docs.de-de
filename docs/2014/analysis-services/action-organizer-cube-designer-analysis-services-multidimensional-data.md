@@ -41,7 +41,7 @@ ms.locfileid: "62512231"
  **Neue Berichtsaktion**  
  Klicken Sie auf diese Option, um den Bereich des **Berichtsaktionsformular-Editors** anzuzeigen und eine neue Berichtsaktion zu erstellen.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und die ausgewählte Aktion zu löschen.  
   
 > [!NOTE]  

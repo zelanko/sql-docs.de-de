@@ -217,7 +217,7 @@ GO
 
 Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisches Seeding beziehen: 
 
-| Name | und Beschreibung|
+| Name | Beschreibung|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Seedinganforderungsnachricht.
 |hadr_physical_seeding_backup_state_change |    Statusänderung auf der Sicherungsseite für das physische Seeding.

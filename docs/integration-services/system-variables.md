@@ -36,7 +36,7 @@ ms.locfileid: "65715464"
 ## <a name="system-variables-for-packages"></a>Systemvariablen für Pakete  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Pakete bereitstellt.  
   
-|Systemvariable|Datentyp|und Beschreibung|  
+|Systemvariable|Datentyp|Beschreibung|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Das Handle für ein Windows-Ereignisobjekt, das der Task signalisieren kann, um anzugeben, dass das Ausführen des Tasks beendet werden soll.|  
 |**ContainerStartTime**|datetime|Die Startzeit für den Container.|  
@@ -64,14 +64,14 @@ ms.locfileid: "65715464"
 ## <a name="system-variables-for-containers"></a>Systemvariablen für Container  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für For-Schleifencontainer, Foreach-Schleifencontainer und Sequenzcontainer bereitstellt.  
   
-|Systemvariable|Datentyp|und Beschreibung|Container|  
+|Systemvariable|Datentyp|Beschreibung|Container|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|Das Gebietsschema, das vom Container verwendet wird.|For-Schleifencontainer<br /><br /> Foreach-Schleifencontainer<br /><br /> Sequenzcontainer|  
   
 ## <a name="system-variables-for-tasks"></a>Systemvariablen für Tasks  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Tasks bereitstellt.  
   
-|Systemvariable|Datentyp|und Beschreibung|  
+|Systemvariable|Datentyp|Beschreibung|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|Zeichenfolge|Der Name des Tasks.|  
 |**LocaleId**|Int32|Das Gebietsschema, das vom Task verwendet wird.|  
@@ -82,7 +82,7 @@ ms.locfileid: "65715464"
 ## <a name="system-variables-for-event-handlers"></a>Systemvariablen für Ereignishandler  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Ereignishandler bereitstellt. Nicht alle Variablen sind für alle Ereignishandler verfügbar.  
   
-|Systemvariable|Datentyp|und Beschreibung|Ereignishandler|  
+|Systemvariable|Datentyp|Beschreibung|Ereignishandler|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Abbrechen**|Boolean|Gibt an, ob das Ausführen des Ereignishandlers bei einem Fehler, einer Warnung oder beim Abbruch einer Abfrage beendet wird.|OnError-Ereignishandler<br /><br /> OnWarning-Ereignishandler<br /><br /> OnQueryCancel-Ereignishandler|  
 |**ErrorCode**|Int32|Der Fehlerbezeichner.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  

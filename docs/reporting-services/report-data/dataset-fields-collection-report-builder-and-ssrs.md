@@ -89,7 +89,7 @@ ms.locfileid: "65573156"
   
      Die Datentypen, die der Berichtsprozessor für die neuen Datums- und Uhrzeittypen verwendet, die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführt werden, sind in der folgenden Tabelle aufgeführt:  
   
-    |SQL-Datentyp|CLR-Datentyp|und Beschreibung|  
+    |SQL-Datentyp|CLR-Datentyp|Beschreibung|  
     |-------------------|-------------------|-----------------|  
     |**Datum**|**DateTime**|Nur Datum|  
     |**Time**|**TimeSpan**|Nur Uhrzeit|  

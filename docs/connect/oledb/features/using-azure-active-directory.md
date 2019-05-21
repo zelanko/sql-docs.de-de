@@ -11,7 +11,7 @@ author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744824"
@@ -45,7 +45,7 @@ Ab Version 18.2.1 können Sie Microsoft OLE DB-Treiber für SQL Server OLE DB-An
 ## <a name="connection-string-keywords-and-properties"></a>Schlüsselwörter für Verbindungszeichenfolgen und Eigenschaften
 Die folgenden Schlüsselwörter für Verbindungszeichenfolgen wurden eingeführt, um die Azure Active Directory-Authentifizierung unterstützen:
 
-|Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|und Beschreibung|
+|Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|Beschreibung|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Gibt ein Zugriffstoken für den Azure Active Directory zu authentifizieren. |
 |Authentifizierung|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|

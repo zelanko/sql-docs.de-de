@@ -208,7 +208,7 @@ ms.locfileid: "65580777"
 |-------------------------------|-----------------|  
 |Erstellt|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
 |Author|Autor des Berichts|  
-|und Beschreibung|Berichtsbeschreibung|  
+|Beschreibung|Berichtsbeschreibung|  
 |LastSaved|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
   
 ##  <a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  

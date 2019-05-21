@@ -25,7 +25,7 @@ ms.locfileid: "65579418"
 ## <a name="securable-items"></a>Sicherbare Elemente  
  Für die Website oder Bibliothek definierte Berechtigungen können verwendet werden, um Zugriff auf Berichtsserverelemente zu gewähren. Wenn Sie jedoch einzelne Elemente sichern möchten, können Sie Berechtigungen für die folgenden Inhaltstypen festlegen:  
   
-|Dateityp|und Beschreibung|  
+|Dateityp|Beschreibung|  
 |---------------|-----------------|  
 |RDL|Eine Berichtsdefinitionsdatei, die das Berichtslayout und die zum Abrufen von Daten verwendeten Befehle definiert. Eine Berichtsdefinition verwendet Datenquellen-Verbindungsinformationen, um beim Verarbeiten des Berichts Daten abzurufen. Wenn es sich bei der Berichtsdefinition um einen im Berichts-Generator erstellten Ad-hoc-Bericht handelt, wird dem Bericht eine Berichtsmodelldatei (SMDL) zugeordnet, in der der Gültigkeitsbereich für das Durchsuchen der Daten im gerenderten Bericht festgelegt wird.|  
 |SMDL|Eine Berichtsmodelldatei, in der Datenstrukturen und ihre Beziehungen beschrieben werden. Sie wird zum Erstellen und Ausführen von Berichten des Berichts-Generators verwendet.|  

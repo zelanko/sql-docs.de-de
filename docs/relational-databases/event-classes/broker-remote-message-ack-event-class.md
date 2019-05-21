@@ -26,7 +26,7 @@ ms.locfileid: "47748788"
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Datenspalten der Broker:Remote Message Ack-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |**BigintData1**|**bigint**|Enthält die Sequenznummer der Nachricht, die die Bestätigung enthält.|52|nein|  

@@ -25,7 +25,7 @@ ms.locfileid: "65102897"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Im Dialogfeld **Argumente** werden neue oder vorhandene Argumente für ein Tool angegeben. Dieses Dialogfeld wird angezeigt, wenn Sie ein externes Tool starten, für das die Option **Zur Argumenteingabe auffordern** im Dialogfeld **Externe Tools** ausgewählt ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Argumente**  
 Listet die aktuellen Variablen auf, die für das Tool im Dialogfeld **Externe Tools** angegeben sind. Eine vollständige Liste vordefinierter Argumente und ihrer Definitionen finden Sie unter [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). Sie können auch ein benutzerdefiniertes Argument eingeben.  
   

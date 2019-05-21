@@ -37,7 +37,7 @@ Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewähl
   
 Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Objektname**  
 Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.  
   

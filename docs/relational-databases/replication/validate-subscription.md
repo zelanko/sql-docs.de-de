@@ -28,7 +28,7 @@ ms.locfileid: "54135130"
   
  Wenn Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf eine Veröffentlichung klicken und dann auf **Alle Abonnements überprüfen**klicken, können Sie auch alle Abonnements einer Mergeveröffentlichung überprüfen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Datum der letzten versuchten Überprüfung**  
  Das Datum der letzten Merge-Agent-Sitzung, bei der Abonnements überprüft wurden. Der Erfolg der Überprüfung ist dabei nicht entscheidend.  
   

@@ -20,7 +20,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: ed200e47d1ce7e579dde3059da1d17b85c6677f6
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744530"
@@ -76,7 +76,7 @@ ms.locfileid: "56744530"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die mit DBPROP_INIT_PROVIDERSTRING verwendet werden können.  
   
-|Schlüsselwort|Initialisierungseigenschaft|und Beschreibung|  
+|Schlüsselwort|Initialisierungseigenschaft|Beschreibung|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|Synonym für "Address".|  
 |**Adresse**|SSPROP_INIT_NETWORKADDRESS|Die Netzwerkadresse des Servers, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. **Address** ist normalerweise der Netzwerkname des Servers, kann jedoch auch ein anderer Name sein, beispielsweise der einer Pipe, einer IP-Adresse oder eines TCP/IP-Ports und einer Socketadresse.<br /><br /> Wenn Sie eine IP-Adresse angeben, stellen Sie im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager sicher, dass die Protokolle für TCP/IP oder Named Pipes aktiviert sind.<br /><br /> Der Wert des **Adresse** hat Vorrang vor den übergebenen Wert **Server** in Verbindungszeichenfolgen, die bei Verwendung von OLE DB-Treiber für SQL Server. Zudem ist zu beachten, dass mit der Angabe `Address=;` eine Verbindung mit dem im **Server**-Schlüsselwort angegebenen Server hergestellt wird. Die Angaben `Address= ;, Address=.;`, `Address=localhost;` und `Address=(local);` führen dagegen zu einer Verbindungsherstellung mit dem lokalen Server.<br /><br /> Die vollständige Syntax für das **Address**-Schlüsselwort ist folgendermaßen:<br /><br /> [_Protokoll_**:**]_Address_[**,**_port &#124;\pipe\pipename_]<br /><br /> _Protokoll_ kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes). Weitere Informationen zu Protokollen finden Sie unter [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md).<br /><br /> Wenn weder _Protokoll_ noch die **Netzwerk** -Schlüsselwort angegeben ist, OLE DB-Treiber für SQL Server verwendet die Protokollreihenfolge im angegebenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Konfigurations-Manager.<br /><br /> *port* gibt den Port auf dem angegebenen Server an, zu dem eine Verbindung hergestellt werden soll. In der Standardeinstellung verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Port 1433.|   
@@ -136,7 +136,7 @@ ms.locfileid: "56744530"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die mit **IDataInitialize::GetDataSource** verwendet werden können:  
   
-|Schlüsselwort|Initialisierungseigenschaft|und Beschreibung|  
+|Schlüsselwort|Initialisierungseigenschaft|Beschreibung|  
 |-------------|-----------------------------|-----------------|  
 |**Access Token**<a href="#table2_1"><sup id="table2_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|Das Zugriffstoken zur Authentifizierung beim Azure Active Directory verwendet wird. <br/><br/>**Hinweis:** dieses Schlüsselwort angegeben ist und auch `UID`, `PWD`, `Trusted_Connection`, oder `Authentication` Verbindungszeichenfolgen-Schlüsselwörter oder die zugehörigen Eigenschaften/Schlüsselwörter.|
 |**ApplicationName**|SSPROP_INIT_APPNAME|Die Zeichenfolge, die die Anwendung identifiziert.|  
@@ -193,7 +193,7 @@ ms.locfileid: "56744530"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die in einer ADO-Verbindungszeichenfolge verwendet werden können.  
   
-|Schlüsselwort|Initialisierungseigenschaft|und Beschreibung|  
+|Schlüsselwort|Initialisierungseigenschaft|Beschreibung|  
 |-------------|-----------------------------|-----------------|  
 |**Access Token**<a href="#table3_1"><sup id="table3_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|Das Zugriffstoken zur Authentifizierung beim Azure Active Directory verwendet wird.<br/><br/>**Hinweis:** dieses Schlüsselwort angegeben ist und auch `UID`, `PWD`, `Trusted_Connection`, oder `Authentication` Verbindungszeichenfolgen-Schlüsselwörter oder die zugehörigen Eigenschaften/Schlüsselwörter.|
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind **ReadOnly** und **ReadWrite**.<br /><br /> Der Standardwert ist **"ReadWrite"**. Weitere Informationen zu OLE DB-Treiber für SQL Server Unterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [OLE DB-Treiber für SQL Server-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  

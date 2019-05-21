@@ -170,7 +170,7 @@ Wenn zwei Ersetzungssätze mit ähnlichen Mustern für die Übereinstimmung verw
   
 Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen `<diacritics_sensitive>`-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-|Einstellung für diakritische Zeichen|value|XML|  
+|Einstellung für diakritische Zeichen|Wert|XML|  
 |------------------------|-----------|---------|  
 |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

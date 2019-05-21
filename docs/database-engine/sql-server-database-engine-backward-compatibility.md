@@ -27,7 +27,7 @@ ms.locfileid: "56801264"
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   In den Themen zur Abwärtskompatibilität werden Änderungen beschrieben, die in den verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu einem abweichenden Verhalten führen.
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)|Als veraltet markierte [!INCLUDE[ssDE](../includes/ssde-md.md)]-Funktionen in Version 2017.| 
 |[Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Als veraltet markierte [!INCLUDE[ssDE](../includes/ssde-md.md)]-Funktionen in Version 2016.|  

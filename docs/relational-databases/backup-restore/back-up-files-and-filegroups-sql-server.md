@@ -138,7 +138,7 @@ ms.locfileid: "59241928"
   
      [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
   
-    |Option|und Beschreibung|  
+    |Option|Beschreibung|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird.|  
     |FILE _=_*logischer_Dateiname*|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  

@@ -207,7 +207,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|Ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|Ja|Ja|Ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|Ja|Ja|Ja|

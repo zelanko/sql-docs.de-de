@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51601210"
@@ -26,7 +26,7 @@ Der Name der API für den SQLSRV-Treiber in der [!INCLUDE[ssDriverPHP](../../inc
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 Der SQLSRV-Treiber enthält die folgenden Funktionen:  
   
-|Funktion|und Beschreibung|  
+|Funktion|Beschreibung|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|beginnt eine Transaktion,|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Verwirft eine Aussage; bricht ausstehende Ergebnisse der Aussage ab|  

@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
 ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042249"
@@ -99,7 +99,7 @@ Es ist ein Fehler, `-T` mit den Optionen `-U` oder `-P` zu verwenden.
 
 Die Syntax, die SPNs in den Attributen für Verbindungszeichenfolgen und Verbindungen verwenden, lautet wie folgt:  
 
-|Syntax|und Beschreibung|  
+|Syntax|Beschreibung|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer. *fqdn* ist ein vollqualifizierter Domänenname.|  
   

@@ -34,7 +34,7 @@ ms.locfileid: "47653288"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Datenspalten der Database Suspect Data Page-Ereignisklasse  
   
-|Name der Datenspalte|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Name der Datenspalte|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID der Datenbank, für die das fehlerverdächtige Seitenereignis ausgelöst wurde. Dieser Wert ist identisch mit dem der Spalte **database_id** der **suspect_pages** -Tabelle.|3|Benutzerkontensteuerung|  
 |**EventClass**|**int**|Der Typ des Ereignisses ist 213.|27|nein|  

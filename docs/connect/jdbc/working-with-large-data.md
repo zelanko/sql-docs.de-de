@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193139b324122fc4fb7f429d082e533c4f7741d3
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47642218"
@@ -32,7 +32,7 @@ Der **adaptive**-Wert ist der Standardpuffermodus, und der JDBC-Treiber puffert 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                                                      | und Beschreibung                                                              |
+| Thema                                                                                                                      | Beschreibung                                                              |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [Beispiel zum Lesen umfangreicher Daten](../../connect/jdbc/reading-large-data-sample.md)                                               | Beschreibt die Verwendung einer SQL-Anweisung zum Abrufen von Daten mit umfangreichen Werten.       |
 | [Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Beschreibt das Abrufen eines umfangreichen CallableStatement OUT-Parameterwerts. |

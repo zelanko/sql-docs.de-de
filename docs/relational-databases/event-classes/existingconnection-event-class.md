@@ -26,7 +26,7 @@ ms.locfileid: "47688018"
   
 ## <a name="existing-connection-event-class-data-columns"></a>Datenspalten in der Existing Connection-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |BinaryData|**image**|Binäre Sicherung von Optionsflags wie z. B. Einstellungen auf Sitzungsebene, einschließlich ANSI-Nullen, ANSI-Zeichenauffüllung, Schließen des Cursors nach dem Commit, NULL-Verkettung und Bezeichner in Anführungszeichen.|2|Benutzerkontensteuerung|  

@@ -81,7 +81,7 @@ ms.locfileid: "65725982"
 > [!IMPORTANT]  
 >  Die Transformation für Zusammenführen erfordert als Eingabe sortierte Daten. Weitere Informationen zu dieser wichtigen Anforderung finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   

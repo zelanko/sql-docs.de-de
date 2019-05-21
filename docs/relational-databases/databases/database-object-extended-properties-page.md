@@ -38,7 +38,7 @@ ms.locfileid: "52522253"
  **Durchsuchen (Schaltfläche)**  
  Klicken Sie auf die Schaltfläche zum Durchsuchen (…) neben **Wert**, um das **Dialogfeld mit dem Wert der erweiterten Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an.  
   
- **Delete**  
+ **Löschen**  
  Entfernt die ausgewählte erweiterte Eigenschaft.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

@@ -31,7 +31,7 @@ ms.locfileid: "62756478"
 |**Neues berechnetes Element**|Klicken Sie auf diese Option, um den **Formular-Editor für berechnete Elemente** anzuzeigen und ein neues berechnetes Element zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  
 |**Neue benannte Menge**|Klicken Sie auf diese Option, um den **Formular-Editor für benannte Mengen** anzuzeigen und eine neue benannte Menge zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  
 |**Neuer Skriptbefehl**|Klicken Sie auf diese Option, um den **Skript-Editor** anzuzeigen und einen neuen Skriptbefehl zu erstellen. Diese Option ist nur in der Formularansicht aktiviert.|  
-|**Delete**|Löscht die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht oder das ausgewählte Skript in der Skriptansicht.|  
+|**Löschen**|Löscht die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht oder das ausgewählte Skript in der Skriptansicht.|  
 |**Nach oben**|Verschiebt die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht um eine Position nach oben.|  
 |**Nach unten**|Verschiebt die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht um eine Position nach unten.|  
 |**Formularansicht**|Wählen Sie diese Option aus, um die Registerkarte **Berechnungen** in der Formularansicht zu verwenden.|  

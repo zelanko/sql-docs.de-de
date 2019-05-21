@@ -31,7 +31,7 @@ ms.locfileid: "62769566"
  **Eingabe/Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an. Klicken Sie auf den Namen, um die Sicht zu erweitern und Spalten einzuschließen.  
   
- **Column**  
+ **Spalte**  
  Zeigen Sie die Ausgabespalten an, die Sie auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** ausgewählt haben.  
   
  **Fehler**  

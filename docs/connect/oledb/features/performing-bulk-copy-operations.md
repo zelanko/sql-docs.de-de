@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 1b83702dafcd2085acc49f679f844ed1cd9d4416
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51601010"
@@ -102,7 +102,7 @@ ms.locfileid: "51601010"
   
  Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhaltensweisen des Massenkopierrowsets eines OLE DB-Treibers für SQL Server. Die Eigenschaften werden im *rgProperties*-Element eines *rgPropertySets* **IOpenRowset**-Parameterelements angegeben.  
   
-|Eigenschafts-ID|und Beschreibung|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|Spalte: No<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Verwaltet vom Consumer angegebene Identitätswerte.<br /><br /> VARIANT_FALSE: Werte für eine Identitätsspalte in der Tabelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generiert. Jeder Wert, der für die Spalte gebunden wird, wird von der OLE DB-Treiber für SQL Server ignoriert.<br /><br /> VARIANT_TRUE: Der Consumer bindet einen Accessor, der einen Wert für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätsspalte bereitstellt. Die IDENTITY-Eigenschaft ist nicht für Spalten verfügbar, die NULL-Werte akzeptieren, daher stellt der Consumer für jeden **IRowsetFastLoad::Insert**-Aufruf einen eindeutigen Wert bereit.|  
 |SSPROP_FASTLOADKEEPNULLS|Spalte: No<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Behält NULL-Werte für Spalten mit einer DEFAULT-Einschränkung bei. Betrifft nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten, die NULL-Werte akzeptieren und eine DEFAULT-Einschränkung aufweisen.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt den Standardwert für die Spalte ein, wenn der Consumer des OLE DB-Treibers für SQL Server eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt einen NULL-Wert für den Spaltenwert ein, wenn der Consumer des OLE DB-Treibers für SQL Server eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.|  

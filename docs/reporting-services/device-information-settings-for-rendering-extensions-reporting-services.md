@@ -20,7 +20,7 @@ ms.locfileid: "65503993"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[ATOM-Geräteinformationseinstellungen](../reporting-services/atom-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Atom-kompatiblen Renderingausgabe zugeordnet sind.|  
 |[CSV-Geräteinformationseinstellungen](../reporting-services/csv-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der CSV-Renderingausgabe zugeordnet sind.|  

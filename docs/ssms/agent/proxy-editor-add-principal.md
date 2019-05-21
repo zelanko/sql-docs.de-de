@@ -29,7 +29,7 @@ ms.locfileid: "65099921"
 
 Mithilfe dieser Seite können Sie Serverprinzipalen Zugriff auf ein Proxykonto für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent gewähren.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Prinzipaltyp**  
 Type of principal to display.  
   

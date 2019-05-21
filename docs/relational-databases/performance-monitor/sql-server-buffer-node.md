@@ -28,7 +28,7 @@ ms.locfileid: "53380081"
 ## <a name="buffer-node-performance-objects"></a>Leistungsobjekte für "Buffer Node"  
  In dieser Tabelle werden die Leistungsobjekte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** beschrieben.  
   
-|Buffer Node-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Buffer Node-Leistungsindikatoren von SQL Server|Beschreibung|  
 |-------------------------------------|-----------------|  
 |**Datenbankseiten**|Gibt die Anzahl der Seiten im Pufferpool auf diesem Knoten mit Datenbankinhalt an.|  
 |**Lebenserwartung von Seiten**|Gibt die Mindestanzahl von Sekunden an, für die eine Seite ohne Verweise im Pufferpool auf diesem Knoten verbleibt.|  

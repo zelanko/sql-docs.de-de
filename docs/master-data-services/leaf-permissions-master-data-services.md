@@ -43,7 +43,7 @@ ms.locfileid: "65488185"
 |**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
-|**Delete**|Der Benutzer kann Blattelemente löschen.|  
+|**Löschen**|Der Benutzer kann Blattelemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
@@ -56,7 +56,7 @@ ms.locfileid: "65488185"
 |**Lesen**|Der Benutzer kann Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
 |**Update**|Der Benutzer kann Attribute aktualisieren.|  
-|**Delete**|Keine Auswirkung.|  
+|**Löschen**|Keine Auswirkung.|  
 |**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Sie können den Zugriff auf Attribute Name und Code können nicht explizit verweigert.|  
   
 ### <a name="example"></a>Beispiel  

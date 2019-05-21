@@ -44,7 +44,7 @@ ms.locfileid: "63266470"
 6.  Um eine Kopie eines Cacheplans zu erstellen und dann anzupassen, klicken Sie auf **Neu aus vorhandenem**.  
   
 ## <a name="cache-refresh-options"></a>Optionen zur Cacheaktualisierung  
- **Delete**  
+ **Löschen**  
  Löscht alle derzeit ausgewählten Aktualisierungspläne.  
   
  **Neu aus vorhandenem**  

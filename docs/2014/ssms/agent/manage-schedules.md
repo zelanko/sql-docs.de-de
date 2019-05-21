@@ -41,7 +41,7 @@ ms.locfileid: "63255071"
  **Neu**  
  Klicken Sie auf diese Schaltfläche, um einen neuen Zeitplan zu erstellen.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Zeitplan zu löschen.  
   
  **Eigenschaften**  

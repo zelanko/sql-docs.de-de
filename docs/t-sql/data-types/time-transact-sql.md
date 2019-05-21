@@ -40,7 +40,7 @@ ms.locfileid: "56079456"
   
 ## <a name="time-description"></a>Beschreibung des time-Datentyps  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |Syntax|**time** [ (*Sekundenbruchteil-Genauigkeit*) ]|  
 |Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
@@ -72,7 +72,7 @@ ms.locfileid: "56079456"
 ## <a name="supported-string-literal-formats-for-time"></a>Unterstützte Formate der Zeichenfolgenliterale für time  
  In der folgenden Tabelle werden die gültigen Formate der Zeichenfolgenliterale für den **time**-Datentyp aufgeführt.  
   
-|SQL Server|und Beschreibung|  
+|SQL Server|Beschreibung|  
 |----------------|-----------------|  
 |hh:mm[:ss][:Sekundenbruchteile][AM][PM]<br /><br /> hh:mm[:ss][.Sekundenbruchteile][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|Der Stundenwert von 0 stellt die Stunde nach Mitternacht (AM) dar, unabhängig davon, ob AM angegeben ist. Wenn für die Stunde der Wert 0 festgelegt ist, kann PM nicht angegeben werden.<br /><br /> Stundenwerte von 01 bis 11 stellen die Stunden vor 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen die Stunden vor 12 Uhr mittags dar, wenn AM angegeben wurde. Sie stellen die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde.<br /><br /> Der Stundenwert 12 stellt die Stunde, beginnend mit 12 Uhr mittags, dar, wenn weder AM noch PM angegeben wurde. Wurde AM angegeben, stellt der Wert die Stunde dar, die um Mitternacht beginnt. Wurde PM angegeben, stellt der Wert die Stunde dar, die um 12 Uhr mittags beginnt. Beispiel: 12:01 ist eine Minute nach 12 Uhr mittags, genauso wie 12:01 PM, während 12:01 AM eine Minute nach Mitternacht ist. Die Angabe 12:01 AM ist identisch mit der Angabe 00:01 oder 00:01 AM.<br /><br /> Stundenwerte von 13 bis 23 stellen die Stunden nach 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen darüber hinaus die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde. AM kann nicht angegeben werden, wenn der Stundenwert zwischen 13 und 23 liegt.<br /><br /> Ein Stundenwert von 24 ist ungültig. Um Mitternacht darzustellen, verwenden Sie 12:00 AM oder 00:00.<br /><br /> Vor Millisekundenangaben kann entweder ein Doppelpunkt (:) oder ein Punkt (.) stehen. Wenn ein Doppelpunkt verwendet wird, bedeutet das, dass die folgende Zahl Tausendstelsekunden darstellt. Wenn ein Punkt verwendet wird, bedeutet das, dass eine einzelne folgende Ziffer Zehntelsekunden, zwei Folgeziffern Hundertstelsekunden und drei Folgeziffern Tausendstelsekunden darstellen. Beispielsweise zeigt 12:30:20:1 zwanzig Sekunden und eine Tausendstelsekunde nach 12:30 an, während 12:30:20.1 zwanzig Sekunden und eine Zehntelsekunde nach 12:30 anzeigt.|  
   
@@ -245,7 +245,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. Einfügen von gültigen Zeitzeichenfolgenliteralen in eine time(7)-Spalte  
  In der folgenden Tabelle werden neben den unterschiedlichen Zeichenfolgenliteralen, die in eine Spalte des Datentyps **time(7)** eingefügt werden können, auch die Werte aufgelistet, die anschließend in der entsprechenden Spalte gespeichert werden.  
   
-|Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|und Beschreibung|  
+|Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|Beschreibung|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|Wenn vor der Genauigkeit der Sekundenbruchteile ein Doppelpunkt (:) steht, können die Dezimalstellen mit maximal 3 Positionen angegeben werden. Andernfalls wird ein Fehler ausgegeben.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|Wenn AM oder PM angegeben ist, wird die Uhrzeit im 24-Stunden-Format ohne das Literal AM oder PM gespeichert.|  
@@ -260,7 +260,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Einfügen von time-Zeichenfolgenliteralen in die Spalten der einzelnen date-Datentypen und time-Datentypen  
  Die folgende Tabelle zeigt in der ersten Spalte ein time-Zeichenfolgenliteral, das in eine Datenbanktabellen-Spalte des Datentyps date oder time (wird in der zweiten Spalte angezeigt) eingefügt werden soll. Die dritte Spalte zeigt den Wert, der in der Datenbanktabellen-Spalte gespeichert wird.  
   
-|Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|und Beschreibung|  
+|Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|Beschreibung|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
 |'2007-05-07'|**Datum**|NULL|Uhrzeitangaben führen zu einem Fehlschlagen der INSERT-Anweisung.|  

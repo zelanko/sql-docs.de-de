@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2d5ca8ca21765725a240f78d2a405c13fc81830
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47670838"
@@ -33,7 +33,7 @@ Die Schritte zur Verwendung von [!INCLUDE[ssDriverPHP](../../includes/ssdriverph
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Vorgehensweise: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)|Beschreibt, wie parametrisierte Abfragen ausgeführt werden|  
 |[Vorgehensweise: Streamen von Daten](../../connect/php/how-to-send-data-as-a-stream.md)|Beschreibt, wie Datenströme an den Server übermittelt werden|  

@@ -42,7 +42,7 @@ ms.locfileid: "65581847"
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von **RenderFormat**beschrieben.  
   
-|Member|Typ|und Beschreibung|  
+|Member|Typ|Beschreibung|  
 |------------|----------|-----------------|  
 |Name|**String**|Der Name des Renderers laut Registrierung in der RSReportServer-Konfigurationsdatei.<br /><br /> Verfügbar während bestimmter Teile des Berichtsverarbeitungs-/Renderingzyklus.|  
 |IsInteractive|**Boolean**|Gibt an, ob die aktuelle Renderinganforderung ein interaktives Renderingformat verwendet.|  

@@ -104,7 +104,7 @@ Adaptive Joins im Batchmodus funktionieren bei der ersten Ausführung einer Anwe
 ### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
 Der Operator für adaptive Joins verfügt über folgende Planoperatorattribute:
 
-| Planattribut | und Beschreibung |
+| Planattribut | Beschreibung |
 |--- |--- |
 | AdaptiveThresholdRows | Gibt den beim Wechsel von einem Hashjoin zu einem Nested Loop-Join zu verwendenden Schwellenwert an |
 | EstimatedJoinType | Gibt den erwarteten Jointyp an |
@@ -240,7 +240,7 @@ Seitdem das Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden
 
 *LastRequestedMemory* zeigt den zugewiesenen Speicher in KB von der vorherigen Abfrageausführung an. Mit dem Attribut *IsMemoryGrantFeedbackAdjusted* können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
 
-| Wert IsMemoryGrantFeedbackAdjusted | und Beschreibung |
+| Wert IsMemoryGrantFeedbackAdjusted | Beschreibung |
 |---|---|
 | No: First Execution | Das Feedback zur Speicherzuweisung passt den Speicher für die erste Kompilierung und die zugeordnete Ausführung nicht an.  |
 | No: Accurate Grant | Wenn es keinen Überlauf auf dem Datenträger gibt und die Anweisung mindestens 50 % des zugewiesenen Speichers nutzt, wird Feedback zur Speicherzuweisung nicht ausgelöst. |
@@ -317,14 +317,14 @@ Sobald ein verschachtelter Ausführungsplan zwischengespeichert wurde, wird der 
 ### <a name="tracking-interleaved-execution-activity"></a>Nachverfolgen der Aktivität von verschachtelten Ausführungen
 Sie können sich Verwendungsattribute im Ausführungsplan der Abfrage anschauen:
 
-| Ausführungsplanattribut | und Beschreibung |
+| Ausführungsplanattribut | Beschreibung |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Gilt für den Knoten *QueryPlan*. Wenn dieser *true* lautet, gibt dieser an, dass der Plan mögliche Kandidaten für die überlappende Ausführung enthält. |
 | IsInterleavedExecuted | Das Attribut des Elements *RuntimeInformation* befindet sich für den Knoten „TVF“ unter „RelOp“. Wenn es *true* entspricht, wurde der Vorgang im Zuge einer überlappenden Ausführung materialisiert. |
 
 Sie können überlappende Ausführungen auch mit den folgenden XEvents nachverfolgen:
 
-| XEvent | und Beschreibung |
+| XEvent | Beschreibung |
 | ---- | --- |
 | interleaved_exec_status | Dieses Ereignis wird ausgelöst, wenn eine verschachtelte Ausführung durchgeführt wird. |
 | interleaved_exec_stats_update | Dieses Ereignis beschreibt die von der verschachtelten Ausführung aktualisierten Kardinalitätsschätzungen. |

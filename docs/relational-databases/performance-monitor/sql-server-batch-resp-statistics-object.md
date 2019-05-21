@@ -27,7 +27,7 @@ Das Leistungsobjekt **SQLServer:Statistiken zu Batchantworten** stellt Leistungs
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Statistiken zu Batchantworten** beschrieben.
 
 
-|**SQL Server – Statistiken zu Batchantworten (Leistungsindikatoren)**|und Beschreibung|  
+|**SQL Server – Statistiken zu Batchantworten (Leistungsindikatoren)**|Beschreibung|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 0 ms, aber kleiner als 1 ms.|
 |**Batches >=000001ms & \<000002ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 1 ms, aber kleiner als 2 ms.|
@@ -49,7 +49,7 @@ In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Statistik
 
 Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |**CPU-Zeit: Anforderungen**|Die von der CPU für die Anforderung erforderliche Zeit.|  
 |**CPU-Zeit: Gesamt(ms)**|Die von der CPU für den Batch erforderliche Gesamtzeit.|  

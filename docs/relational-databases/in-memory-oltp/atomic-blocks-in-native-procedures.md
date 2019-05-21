@@ -134,14 +134,14 @@ GO
   
  Die folgenden Optionen sind für **BEGIN ATOMIC**erforderlich:  
   
-|Erforderliche Einstellung|und Beschreibung|  
+|Erforderliche Einstellung|Beschreibung|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Unterstützte Werte sind **SNAPSHOT**, **REPEATABLEREAD**und **SERIALIZABLE**.|  
 |**LANGUAGE**|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
-|Optionale Einstellung|und Beschreibung|  
+|Optionale Einstellung|Beschreibung|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE**zugeordnet ist.|  
 |**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE**zugeordnet ist.|  

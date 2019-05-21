@@ -30,7 +30,7 @@ ms.locfileid: "65099345"
 
 Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen anzeigen und ändern.  
 
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Name**  
 Ändern Sie den Namen der Warnung.  
   

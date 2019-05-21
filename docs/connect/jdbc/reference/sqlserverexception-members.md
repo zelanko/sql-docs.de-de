@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba54809cb8f0c1578d67a114e133850b3e5c7292
 ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/07/2019
 ms.locfileid: "57577940"
@@ -25,7 +25,7 @@ ms.locfileid: "57577940"
   
 ## <a name="constructors"></a>Konstruktoren  
 
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initialisiert eine neue Instanz der SQLServerException-Klasse.|  
   

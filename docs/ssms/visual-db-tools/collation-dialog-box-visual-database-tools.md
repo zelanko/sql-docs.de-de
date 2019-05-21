@@ -31,7 +31,7 @@ Das Dialogfeld wird in den folgenden Fällen angezeigt:
   
 -   Wenn Sie in der Registerkarte **Spalteneigenschaften** in das Feld **Sortierreihenfolge** klicken, und dann auf die Schaltfläche mit den Auslassungspunkten (**...**) rechts neben dem Feld klicken.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **SQL-Sortierung**  
 Wählen Sie aus der Dropdownliste eine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definierte Sortierreihenfolge.  
   

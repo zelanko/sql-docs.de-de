@@ -29,7 +29,7 @@ ms.locfileid: "51606304"
 > [!NOTE]  
 >  Damit diese Option wirksam wird, müssen die Windows-Verwaltungseinstellungen für FILESTREAM aktiviert sein. Sie können diese Einstellungen bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager aktivieren.  
   
-|value|Definition|  
+|Wert|Definition|  
 |-----------|----------------|  
 |0|Deaktiviert die FILESTREAM-Unterstützung für diese Instanz.|  
 |1|Aktiviert FILESTREAM für den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff.|  

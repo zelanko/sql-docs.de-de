@@ -29,7 +29,7 @@ ms.locfileid: "65105399"
 
 Ermöglicht Ihnen das Anzeigen und Ändern von Eigenschaften für Auftragszeitpläne des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Verfügbare Zeitpläne**  
 Führt die für diesen Benutzer verfügbaren Zeitpläne auf. Ein Auftrag und ein Zeitplan müssen denselben Besitzer haben. Deshalb enthält die Liste nur Zeitpläne, die dem Besitzer des Auftrags gehören.  
   
@@ -48,7 +48,7 @@ Listet die Auftragsnummern auf, die an den Zeitplan angefügt sind. Wenn Sie auf
 **Neu**  
 Klicken Sie auf diese Schaltfläche, um einen neuen Zeitplan zu erstellen.  
   
-**Delete**  
+**Löschen**  
 Klicken Sie auf diese Schaltfläche, um den ausgewählten Zeitplan zu löschen.  
   
 **Eigenschaften**  

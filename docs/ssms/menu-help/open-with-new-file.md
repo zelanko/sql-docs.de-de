@@ -24,7 +24,7 @@ ms.locfileid: "65105064"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei**klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Wählen Sie das zu öffnende Programm aus**  
 Listet die in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio für den ausgewählten Dateityp zur Verfügung stehenden Editoren auf. Wählen Sie aus der Liste den Editor aus, mit dem Sie das Dokument öffnen möchten, oder klicken Sie auf **Hinzufügen** , um einen neuen Editor zur Liste hinzuzufügen.  
   

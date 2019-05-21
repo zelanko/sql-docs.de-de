@@ -100,7 +100,7 @@ ms.locfileid: "65726623"
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
   
 #### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
@@ -111,7 +111,7 @@ ms.locfileid: "65726623"
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Tabellenname|Ruft Daten aus einer Tabelle oder Sicht in der ODBC-Datenquelle ab. Bei Auswahl dieser Option wählen Sie einen der folgenden Werte in der Liste aus:|  
 ||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus, oder geben Sie einen regulären Ausdruck ein, um die Tabelle zu identifizieren.|  
@@ -136,7 +136,7 @@ ms.locfileid: "65726623"
   
 3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
   
 #### <a name="available-external-columns"></a>Verfügbare externe Spalten  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten aus der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
@@ -161,7 +161,7 @@ ms.locfileid: "65726623"
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
@@ -175,7 +175,7 @@ ms.locfileid: "65726623"
 #### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie die ODBC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-#### <a name="description"></a>und Beschreibung  
+#### <a name="description"></a>Beschreibung  
  Wird nicht verwendet.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  

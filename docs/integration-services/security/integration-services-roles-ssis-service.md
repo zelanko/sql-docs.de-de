@@ -142,7 +142,7 @@ ms.locfileid: "65718051"
   
  Die **ownersid** -Spalte in der **sysssispackages** -Tabelle enthält die eindeutige Sicherheits-ID des Benutzers, der das Paket erstellt hat.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Paketname**  
  Gibt den Namen des Pakets an.  
   

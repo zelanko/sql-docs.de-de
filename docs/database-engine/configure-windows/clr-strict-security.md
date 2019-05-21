@@ -32,7 +32,7 @@ ms.locfileid: "53205258"
 
 Steuert die Interpretation der Berechtigungen `SAFE`, `EXTERNAL ACCESS` und `UNSAFE` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|value |und Beschreibung | 
+|Wert |Beschreibung | 
 |----- |----- | 
 |0 |Deaktiviert: Wird für die Abwärtskompatibilität bereitgestellt. Der Wert `Disabled` wird empfohlen. | 
 |1 |Aktiviert: Dadurch ignoriert [!INCLUDE[ssde-md](../../includes/ssde-md.md)] die `PERMISSION_SET`-Information auf den Assemblys und interpretiert diese immer als `UNSAFE`.  Der Standardwert für [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] lautet `Enabled`. | 

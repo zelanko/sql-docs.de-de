@@ -49,7 +49,7 @@ ms.locfileid: "63265977"
   
  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil, um das Dropdownmenü zu öffnen, über das Sie Eigenschaften des ausgewählten Elements aufrufen und konfigurieren können.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um einen Ordner oder ein anderes Element zu entfernen. Aktivieren Sie das Kontrollkästchen neben den zu löschenden Elementen, bevor Sie auf **Löschen**klicken.  
   
  **Verschieben**  

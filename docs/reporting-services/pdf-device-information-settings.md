@@ -21,7 +21,7 @@ ms.locfileid: "65503677"
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das PDF-Format aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 | **AccessiblePDF** | Gibt an, ob eine barrierefreie PDF-Datei bzw. eine PDF-Datei mit Tags gerendert werden soll. Eine solche Datei ist zwar größer, kann aber von Sprachausgabesoftware und anderen Unterstützungstechnologien besser verarbeitet werden. Der Standardwert ist **false**. (in Power BI-Berichtsserver der Version von März 2018 und in neueren Versionen verfügbar) |
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  

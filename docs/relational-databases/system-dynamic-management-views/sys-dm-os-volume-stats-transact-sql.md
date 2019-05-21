@@ -50,7 +50,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Column**|**Data type**|**Beschreibung**|  
+|**Spalte**|**Data type**|**Beschreibung**|  
 |**database_id**|**int**|Die ID der Datenbank. Lässt keine NULL-Werte zu.|  
 |**file_id**|**int**|Die ID der Datei. Lässt keine NULL-Werte zu.|  
 |**volume_mount_point**|**nvarchar(512)**|Der Einbindungspunkt, der das Stammverzeichnis des Volumes darstellt. Kann eine leere Zeichenfolge zurückgeben.|  

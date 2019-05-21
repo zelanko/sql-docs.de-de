@@ -30,7 +30,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
 ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/18/2019
 ms.locfileid: "57974519"
@@ -746,7 +746,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Die Rückgabewerte −1 bis −99 sind für SQL Server reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
-|Rückgabewerte|und Beschreibung|  
+|Rückgabewerte|Beschreibung|  
 |-------------------|-----------------|  
 |-100|Vor dem Auswählen des Rückgabewerts ist ein Fehler aufgetreten.|  
 |-101|Beim Auswählen eines Rückgabewerts wurden keine Zeilen gefunden.|  

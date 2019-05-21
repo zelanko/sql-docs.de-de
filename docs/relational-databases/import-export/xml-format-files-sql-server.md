@@ -253,7 +253,7 @@ ms.locfileid: "64946354"
   
  Ein Feld wird mithilfe der folgenden Attribute einer Spalte in der Zieltabelle zugeordnet:  
   
-|COLUMN-Attribut|und Beschreibung|Optional /<br /><br /> Required|  
+|COLUMN-Attribut|Beschreibung|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="**_fieldID_**"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> wird \<FIELD ID **="**_fieldID_**"**/> zugeordnet.|Required|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Required|  

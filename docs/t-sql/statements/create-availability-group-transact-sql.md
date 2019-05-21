@@ -484,7 +484,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. Konfigurieren der Sicherung für sekundäre Replikate, flexible Failoverrichtlinien und Verbindungszugriff  
  Im folgenden Beispiel wird eine Verfügbarkeitsgruppe mit dem Namen `MyAg` für die zwei Benutzerdatenbanken `ThisDatabase` und `ThatDatabase` erstellt. In der folgenden Tabelle werden die Werte zusammengefasst, die für die Optionen angegeben wurden, die für die Verfügbarkeitsgruppe als Ganzes festgelegt sind.  
   
-|Gruppenoption|Einstellung|und Beschreibung|  
+|Gruppenoption|Einstellung|Beschreibung|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Diese automatisierte Sicherungseinstellung gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen sollen, außer wenn das primäre Replikat das einzige Replikat online ist (dies ist das Standardverhalten). Damit die AUTOMATED_BACKUP_PREFERENCE-Einstellung in Kraft tritt, müssen Sicherungsaufträge in Verfügbarkeitsdatenbanken so verfasst werden, dass die automatische Sicherungseinstellung berücksichtigt wird.|  
 |FAILURE_CONDITION_LEVEL|3|Diese Einstellung für die Fehlerbedingungsebene gibt an, dass ein automatisches Failover bei kritischen internen SQL Server-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, ernsten Schreibzugriffsverletzungen oder zu vielen Sicherungen.|  
@@ -492,7 +492,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Drei Verfügbarkeitsreplikate müssen von den Standardserverinstanzen auf Computern mit der Bezeichnung `COMPUTER01`, `COMPUTER02` und `COMPUTER03` gehostet werden. In der folgenden Tabelle werden die für die Replikatoptionen jedes Replikats angegebenen Werte zusammengefasst.  
   
-|Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|und Beschreibung|  
+|Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|Beschreibung|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Zwei der Replikate verwenden den Modus mit synchronem Commit. Nach der Synchronisierung unterstützen sie Failover ohne Datenverlust. Das dritte Replikat verwendet den Verfügbarkeitsmodus mit asynchronem Commit.|  

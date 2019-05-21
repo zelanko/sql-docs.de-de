@@ -52,7 +52,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  Gibt die zwischen den XML-Daten und dem relationalen Rowset verwendete Zuordnung an und legt fest, wie die Überlaufspalte gefüllt wird. *flags* ist ein optionaler Eingabeparameter, wobei folgende Werte möglich sind.  
   
-|Bytewert|und Beschreibung|  
+|Bytewert|Beschreibung|  
 |----------------|-----------------|  
 |**0**|**Attributzentrierte** Zuordnung als Standard verwenden.|  
 |**1**|Verwenden der **attributzentrierten** Zuordnung. Kann mit XML_ELEMENTS kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung angewendet. Danach wird die **elementzentrierte** Zuordnung für alle verbleibenden Spalten angewendet.|  
@@ -86,7 +86,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle (**edge**) beschrieben.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement hat den ID-Wert 0. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Das durch diese ID identifizierte übergeordnete Element ist nicht notwendigerweise das übergeordnete Element; dies hängt vielmehr vom Knotentyp (NodeType) des Knotens ab, dessen übergeordnetes Element nicht von dieser ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  

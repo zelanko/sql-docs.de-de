@@ -39,7 +39,7 @@ Dieses Lernprogramm ist in drei Lektionen aufgeteilt:
 
 Im folgenden Diagramm wird der im Tutorial verwendete grundlegende Workflow veranschaulicht:
 
-| Schritt    | und Beschreibung |
+| Schritt    | Beschreibung |
 | --------|------------ |
 | (1)     | Die Abonnementkonfiguration schreibt den Quellbericht, den Zeitplan und die Feldzuordnung in die Datenbank des Abonnenten. |
 | (2)     | Die OrderInfo-Tabelle enthält 4 Bestellnummern, die für das Filtern verwendet werden, – eine pro Datei. Die Tabelle enthält auch die Dateiformate für die generierten Berichte. |

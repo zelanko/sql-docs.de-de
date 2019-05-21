@@ -36,7 +36,7 @@ ms.locfileid: "65104291"
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Reporting Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe wie **Reporting Services**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65104291"
   
  Um auf diese Seite zuzugreifen, klicken Sie auf der Symbolleiste für Registrierte Server auf **Analysis Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe (z.B. **Analysis Services**), zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich „Registrierte Server“ angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "65104291"
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Integration Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Optionen  
  **Servertyp**  
  Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server****SQL Server Compact****Registrierte Server** auf **Integration Services**.  
   

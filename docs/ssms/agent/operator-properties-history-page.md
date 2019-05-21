@@ -29,7 +29,7 @@ ms.locfileid: "65105411"
 
 Mithilfe dieser Seite können Sie Datum, Uhrzeit und Typ der letzten an den Operator gesendeten Benachrichtigungen anzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Durch E-Mail**  
 Die letzten per E-Mail vorgenommenen Benachrichtigungsversuche oder **(Nie durch E-Mail benachrichtigt)** , wenn der Operator noch nie per E-Mail benachrichtigt wurde.  
   

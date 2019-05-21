@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1a05ed88d726cbd5aa64b4d3a59e2d1704f0d75
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47746838"
@@ -30,7 +30,7 @@ ms.locfileid: "47746838"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[supportsConvert ()](../../../connect/jdbc/reference/supportsconvert-method.md)|Ruft ab, ob von dieser Datenbank die CONVERT-Funktion für SQL-Typen unterstützt wird.|  
 |[supportsConvert (int, int)](../../../connect/jdbc/reference/supportsconvert-method-int-int.md)|Ruft ab, ob von dieser Datenbank die CONVERT-Funktion für zwei angegebene SQL-Typen unterstützt wird.|  

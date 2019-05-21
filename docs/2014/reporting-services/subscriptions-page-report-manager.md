@@ -45,7 +45,7 @@ ms.locfileid: "62511365"
 4.  Wählen Sie die Registerkarte **Abonnements** aus.  
   
 ## <a name="options"></a>Optionen  
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um ein Abonnement zu löschen. Bevor Sie Abonnements löschen, aktivieren Sie das Kontrollkästchen neben den zu löschenden Abonnements.  
   
  **Neues Abonnement**  

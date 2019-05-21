@@ -341,7 +341,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen, die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sperren kann.  
   
-|Ressource|und Beschreibung|  
+|Ressource|Beschreibung|  
 |--------------|-----------------|  
 |RID|Ein Zeilenbezeichner, der verwendet wird, um eine einzelne Zeile in einem Heap zu sperren.|  
 |KEY|Eine Zeilensperre in einem Index, die verwendet wird, um Schlüsselbereiche in serialisierbaren Transaktionen zu schützen.|  
@@ -363,7 +363,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen-Sperrmodi, die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet.  
   
-|Sperrmodus|und Beschreibung|  
+|Sperrmodus|Beschreibung|  
 |---------------|-----------------|  
 |Shared (S)|Wird für Lesevorgänge verwendet, die Daten nicht ändern oder aktualisieren, wie z.B. eine `SELECT`-Anweisung.|  
 |Update (U)|Wird für Ressourcen verwendet, die aktualisiert werden können. Verhindert eine gängige Form des Deadlocks, die auftritt, wenn mehrere Sitzungen Ressourcen lesen, sperren und anschließend möglicherweise aktualisieren.|  
@@ -398,7 +398,7 @@ GO
   
 <a name="lock_intent_table"></a> Beabsichtigte Sperren umfassen beabsichtigte freigegebene (Intent Shared, IS), beabsichtigte exklusive (Intent Exclusive, IX) und freigegebene mit beabsichtigten exklusiven (Shared With Intent Exclusive, SIX) Sperren.  
   
-|Sperrmodus|und Beschreibung|  
+|Sperrmodus|Beschreibung|  
 |---------------|-----------------|  
 |Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
 |Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
@@ -462,7 +462,7 @@ GO
 -   Zeile stellt den Sperrmodus dar, der den Indexeintrag schützt.  
 -   Modus stellt den kombinierten Sperrmodus dar, der verwendet wird. Schlüsselbereichssperrmodi setzen sich aus zwei Teilen zusammen. Der erste gibt den Sperrtyp wieder, der zum Sperren des Indexbereichs (Range*T*) verwendet wird, und der zweite gibt den Sperrtyp wieder, der zum Sperren eines bestimmten Schlüssels (*K*) verwendet wird. Die beiden Teile sind durch einen Bindestrich (-) miteinander verbunden, beispielsweise Range*T*-*K*.  
   
-    |Bereich|Zeile|Mode|und Beschreibung|  
+    |Bereich|Zeile|Mode|Beschreibung|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Freigegebene Bereichssperre, freigegebene Ressourcensperre; serialisierbarer Bereichsscan.|  
     |RangeS|U|RangeS-U|Freigegebene Sperre für Bereich und Updatesperre für Ressource; serialisierbarer Updatescan.|  
@@ -1495,7 +1495,7 @@ ALTER DATABASE AdventureWorks2016
   
  In der folgenden Tabelle werden die Statusmöglichkeiten der ALLOW_SNAPSHOT_ISOLATION-Option aufgeführt und beschrieben. Der Zugriff von Benutzern auf Daten in der Datenbank wird durch das Verwenden von ALTER DATABASE mit der ALLOW_SNAPSHOT_ISOLATION-Option nicht blockiert.  
   
-|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|und Beschreibung|  
+|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|Beschreibung|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist nicht aktiviert. Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
 |PENDING_ON|Die Unterstützung von Momentaufnahmeisolationstransaktionen befindet sich in einem Übergangsstatus (von OFF nach ON). Offene Transaktionen müssen abgeschlossen werden.<br /><br /> Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  

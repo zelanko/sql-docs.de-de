@@ -137,7 +137,7 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
   
 ##  <a name="DateandTimeRelatedTopics"></a> Datums- und uhrzeitbezogene Themen 
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Stellt Informationen zur Konvertierung von Datums- und Uhrzeitwerten in und aus Zeichenfolgenliteralen und anderen Datums- und Uhrzeitformaten bereit.|  
 |[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)|Stellt Richtlinien für die sprachübergreifende Portabilität von Datenbanken und Datenbankanwendungen bereit, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verwenden bzw. mehrere Sprachen unterstützen.|  

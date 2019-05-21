@@ -28,7 +28,7 @@ ms.locfileid: "47648268"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[OLE DB Call-Ereignisklasse](../../relational-databases/event-classes/oledb-call-event-class.md)|Gibt an, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Nichtdatenaufruf oder einen Nicht-**QueryInterface** -Aufruf eines OLE DB-Anbieters für verteilte Abfragen und remote gespeicherte Prozeduren ausgeführt hat.|  
 |[OLEDB DataRead (Ereignisklasse)](../../relational-databases/event-classes/oledb-dataread-event-class.md)|Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB-Anbieter für verteilte Abfragen und remote gespeicherte Prozeduren aufgerufen hat.|  

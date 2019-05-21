@@ -49,7 +49,7 @@ Wählen Sie während der Installation auf der Seite **Featureauswahl/Freigegeben
 
 Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB wird mit dem Hilfsprogramm `SqlLocalDB.exe` verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Benutzerinstanzfeatures verwendet werden.
 
-## <a name="description"></a>und Beschreibung
+## <a name="description"></a>Beschreibung
 
 Das LocalDB-Setupprogramm installiert mithilfe von `SqlLocalDB.msi` die notwendigen Dateien auf dem Computer. Nach der Installation ist LocalDB eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert, der normalerweise verborgen ist. Beispiel: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner `C:\Users\<user>\Documents\`.
 

@@ -64,7 +64,7 @@ ms.locfileid: "64946228"
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_|Gibt die Nicht-XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
@@ -94,7 +94,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_|Gibt eine Nicht-XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -193,7 +193,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -233,7 +233,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  

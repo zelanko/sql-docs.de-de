@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ddf27611efbbfab505c85cd31aa36ced28915ca
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47734578"
@@ -25,7 +25,7 @@ ms.locfileid: "47734578"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getNCharacterStream-Methode &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als java.io.Reader-Objekt ab.|  
 |[getNCharacterStream-Methode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als java.io.Reader-Objekt ab.|  

@@ -71,7 +71,7 @@ ms.locfileid: "63261646"
   
 6.  **Verarbeiten**  
   
-7.  **Delete**  
+7.  **Löschen**  
   
 8.  **Verarbeiten**  
   

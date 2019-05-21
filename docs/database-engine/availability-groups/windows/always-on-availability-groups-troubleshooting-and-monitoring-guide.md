@@ -27,7 +27,7 @@ ms.locfileid: "53215619"
 ##  <a name="BKMK_SCENARIOS"></a> Problembehandlungsszenarien  
  Die folgende Tabelle enthält Links zu allgemeinen Problembehandlungsszenarien für Verfügbarkeitsgruppen. Sie werden nach den jeweiligen Szenariotypen kategorisiert, z.B. Konfiguration, Clientkonnektivität, Failover und Leistung.  
   
-|Szenario|Szenariotyp|und Beschreibung|  
+|Szenario|Szenariotyp|Beschreibung|  
 |--------------|-------------------|-----------------|  
 |[Behandlung von Problemen bei der Konfiguration von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Konfiguration|Enthält Informationen, um Sie bei der Behandlung typischer Probleme mit der Konfiguration von Serverinstanzen für Verfügbarkeitsgruppen zu unterstützen. Zu typischen Konfigurationsproblemen zählen Folgende: Verfügbarkeitsgruppen sind deaktiviert, Konten sind falsch konfiguriert, Datenbankspiegelungsendpunkte sind nicht vorhanden, es kann nicht auf Endpunkte zugegriffen werden (SQL Server-Fehler 1418), es ist kein Netzwerkzugriff vorhanden und bei dem Befehl zum Verknüpfen einer Datenbank tritt ein Fehler auf (SQL Server-Fehler 35250).|  
 |[Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;Always On-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Konfiguration|Ein Vorgang zum Hinzufügen einer Datei hat dazu geführt, dass die sekundäre Datenbank angehalten wird und sich im Zustand SYNCHRONISIERUNG WIRD NICHT AUSGEFÜHRT befindet.|  
@@ -41,7 +41,7 @@ ms.locfileid: "53215619"
 ##  <a name="BKMK_TOOLS"></a> Hilfreiche Tools für die Problembehandlung  
  Bei der Konfiguration oder Ausführung von Verfügbarkeitsgruppen können Sie mithilfe verschiedener Tools unterschiedliche Arten von Problemen diagnostizieren. Die folgende Tabelle enthält Links zu nützlichen Informationen über die Tools.  
   
-|Tool|und Beschreibung|  
+|Tool|Beschreibung|  
 |----------|-----------------|  
 |[Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Bietet auf einer benutzerfreundlichen Oberfläche einen prägnanten Überblick über die Integrität der Verfügbarkeitsgruppe.|  
 |[Always On-Richtlinien](always-on-policies.md)|Werden vom Always On-Dashboard verwendet.|  
@@ -61,7 +61,7 @@ ms.locfileid: "53215619"
   
  Die untenstehende Tabelle verweist auf Themen, mit denen Sie die Integrität Ihrer Verfügbarkeitsgruppenlösung überwachen können.  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)|In diesem Thema werden der Datensynchronisierungsprozess für Verfügbarkeitsgruppen, die Flusssteuerungsgates und nützliche Metriken für die Überwachung einer Verfügbarkeitsgruppe sowie der Prozess zum Erfassen der Metriken RTO und RPO beschrieben.|  
 |[Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Dieses Thema enthält Informationen zu Tools für die Überwachung einer Verfügbarkeitsgruppe.|  

@@ -26,7 +26,7 @@ Die Dialogfelder für Eigenschaftenseiten in [!INCLUDE[msCoName](../includes/msc
   
 Die folgende Tabelle enthält die gemeinsamen Elemente von Dialogfeldern für Eigenschaftenseiten in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |-----------|---------------|  
 |**Nach Kategorien**|Listet alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt nach Kategorie sortiert auf. In der Kategorieansicht können Sie eine Kategorie reduzieren, um die Anzahl von angezeigten Eigenschaften zu verringern. Wenn Sie eine Kategorie erweitern oder reduzieren, wird ein Pluszeichen (+) oder Minuszeichen (-) auf der linken Seite des Kategorienamens angezeigt. Kategorien sind in alphabetischer Reihenfolge aufgelistet.|  
 |**Alphabetisch**|Listet alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt alphabetisch sortiert auf.|  

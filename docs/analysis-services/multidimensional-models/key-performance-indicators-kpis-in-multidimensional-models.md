@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50147785"
@@ -38,7 +38,7 @@ ms.locfileid: "50147785"
 |Begriff|Definition|  
 |----------|----------------|  
 |Ziel|Ein numerischer MDX-Ausdruck oder eine Berechnung, der bzw. die den Zielwert des KPI zurückgibt.|  
-|value|Ein numerischer MDX-Ausdruck, der den Ist-Wert des KPI zurückgibt.|  
+|Wert|Ein numerischer MDX-Ausdruck, der den Ist-Wert des KPI zurückgibt.|  
 |Status|Ein MDX-Ausdruck, der den Status des KPI zu einem bestimmten Zeitpunkt darstellt.<br /><br /> Der MDX-Ausdruck "Status" sollte einen normalisierter Wert zwischen -1 und 1 zurückgeben. Werte, die kleiner oder gleich -1 sind, werden als "ungültig" oder "niedrig" interpretiert. Ein Wert von null (0) wird als "akzeptabel" oder "mittelmäßig" interpretiert. Werte, die größer oder gleich 1 sind, werden als "gut" oder "hoch" interpretiert.<br /><br /> Optional kann eine unbegrenzte Anzahl mit Zwischenwerten zurückgegeben werden, die zum Anzeigen einer beliebigen Anzahl zusätzlicher Status verwendet wird, wenn es die Clientanwendung unterstützt.|  
 |Trend|Ein MDX-Ausdruck, der den Wert des KPI im Lauf der Zeit auswertet. Der Trend kann ein beliebiges zeitbasiertes Kriterium sein, das in bestimmten geschäftlichen Zusammenhängen nützlich ist.<br /><br /> Der Trend-MDX-Ausdruck versetzt einen Anwender des Produkts im geschäftlichen Bereich in die Lage, zu ermitteln, ob sich ein KPI im Lauf der Zeit verbessert oder verschlechtert.|  
 |Statusindikator|Ein visuelles Element, das einen schnellen Überblick über den Status eines KPI gibt. Die Anzeige des Elements wird durch den Wert des MDX-Ausdrucks bestimmt, der den Status auswertet.|  

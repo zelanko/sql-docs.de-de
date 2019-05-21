@@ -27,7 +27,7 @@ ms.locfileid: "53380201"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sperren** beschrieben.  
   
-|Sperren-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Sperren-Leistungsindikatoren von SQL Server|Beschreibung|  
 |-------------------------------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Die durchschnittliche Länge der Wartezeit (in Millisekunden) für jede Sperranforderung, die nicht sofort erfüllt werden konnte.|  
 |**Basis für durchschnittliche Wartezeit**|Nur zur internen Verwendung.|
@@ -40,7 +40,7 @@ ms.locfileid: "53380201"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die folgenden Ressourcen sperren.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |**_Total**|Informationen für alle Sperren.|  
 |**AllocUnit**|Eine Sperre für eine Zuweisungseinheit.|  

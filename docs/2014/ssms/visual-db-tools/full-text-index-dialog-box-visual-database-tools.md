@@ -35,7 +35,7 @@ ms.locfileid: "63028413"
  **Hinzufügen**  
  Erstellen Sie einen neuen Volltextindex.  
   
- **Delete**  
+ **Löschen**  
  Löschen Sie den in der Liste **Ausgewählter Volltextindex** ausgewählten Volltextindex.  
   
  **Kategorie Allgemein**  

@@ -78,7 +78,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Eine Eigenschaft, die mit dem Ereignis verknüpft ist.  Eigenschaftsnamen können Teil des Capture-Tags sein oder als Teil der Filterkriterien verwendet werden.  
   
-|Eigenschaftsname|und Beschreibung|  
+|Eigenschaftsname|Beschreibung|  
 |-------------------|-----------------|  
 |UserName|Ein Benutzer(anmelde)name.|  
 |SessionID|Eine Sitzungs-ID.|  

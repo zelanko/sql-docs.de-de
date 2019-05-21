@@ -25,7 +25,7 @@ ms.locfileid: "65576023"
 > [!NOTE]  
 >  Systemrollenzuweisungen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, ist diese Seite nicht verfügbar.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Name**  
  Gibt den Namen der Systemrollendefinition an.  
   

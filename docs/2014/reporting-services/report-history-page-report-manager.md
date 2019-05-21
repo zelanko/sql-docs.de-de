@@ -12,7 +12,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
 ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/22/2019
 ms.locfileid: "59945136"
@@ -43,7 +43,7 @@ Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Di
 3.  Klicken Sie im Dropdownmenü auf **Berichtsverlauf anzeigen**.  
   
 ## <a name="options"></a>Optionen  
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um eine oder mehrere Momentaufnahmen zu löschen. Bevor Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben den zu löschenden Momentaufnahmen.  
   
  **Neue Momentaufnahme**  

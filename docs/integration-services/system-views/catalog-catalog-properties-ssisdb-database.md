@@ -27,7 +27,7 @@ ms.locfileid: "65715495"
 
   Zeigt die Eigenschaften des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalogs an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Der Name der Katalogeigenschaft.|  
 |property_value|**nvarchar(256)**|Der Wert der Katalogeigenschaft.|  
@@ -35,7 +35,7 @@ ms.locfileid: "65715495"
 ## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Katalogeigenschaft angezeigt.
   
-|Eigenschaftsname|und Beschreibung|  
+|Eigenschaftsname|Beschreibung|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Der serverweite Standardausführungsmodus für Pakete, `Server` (0) oder `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Der Typ des Verschlüsselungsalgorithmus, mit dem sensible Daten verschlüsselt werden. Die unterstützten Werte lauten: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192`und `AES_256`. Hinweis: Zum Ändern dieser Eigenschaft muss sich die Katalogdatenbank im Einzelbenutzermodus befinden.|

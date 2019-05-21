@@ -99,7 +99,7 @@ ms.locfileid: "65728506"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_config** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
 |connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
@@ -112,7 +112,7 @@ ms.locfileid: "65728506"
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Default|Min|Max|STATIC-Cursor|und Beschreibung|  
+|Name|Default|Min|Max|STATIC-Cursor|Beschreibung|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte sind:<br /><br /> Wahr<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) -Tabelle.|  
@@ -142,7 +142,7 @@ ms.locfileid: "65728506"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_state** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |status|Der aktuelle Statuscode für die aktuelle Oracle CDC-Instanz. Der Status beschreibt den aktuellen Zustand für die CDC.|  
 |sub_status|Status der zweiten Ebene, der zusätzliche Informationen zum aktuellen Status liefert.|  
@@ -167,7 +167,7 @@ ms.locfileid: "65728506"
   
  In der folgenden Tabelle werden die Spalten der Tabelle cdc.xdbcdc_trace beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |timestamp|Der genaue UTC-Zeitstempel mit der Uhrzeit, zu der der Ablaufverfolgungsdatensatz geschrieben wurde.|  
 |Typ|Enthält einen der folgenden Werte.<br /><br /> Fehler<br /><br /> INFO<br /><br /> Ablaufverfolgung|  
@@ -182,7 +182,7 @@ ms.locfileid: "65728506"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_staged_transactions** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |transaction_id|Der eindeutige Transaktionsbezeichner der bereitgestellten Transaktion.|  
 |seq_num|Die Nummer der Zeile **xcbcdc_staged_transactions** für die aktuelle Transaktion (beginnend mit 0).|  

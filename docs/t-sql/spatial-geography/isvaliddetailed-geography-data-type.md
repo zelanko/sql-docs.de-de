@@ -45,7 +45,7 @@ ms.locfileid: "47698718"
 ## <a name="remarks"></a>Remarks  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |24400|Gültig|  
 |24401|Ungültig, die Ursache ist unbekannt.|  

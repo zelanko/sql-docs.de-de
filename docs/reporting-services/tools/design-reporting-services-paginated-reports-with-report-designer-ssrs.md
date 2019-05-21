@@ -168,7 +168,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
  In der folgenden Tabelle sind die Fehlerebenen aufgeführt.  
   
-|Fehlerebene|und Beschreibung|  
+|Fehlerebene|Beschreibung|  
 |-----------------|-----------------|  
 |0|Äußerst schwerwiegende und unvermeidliche Erstellungsprobleme, die die Vorschau und Bereitstellung von Berichten verhindern.|  
 |1|Schwere Erstellungsprobleme, die das Berichtslayout drastisch ändern.|  

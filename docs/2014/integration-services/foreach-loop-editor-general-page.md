@@ -21,9 +21,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62894078"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach-Schleifen-Editor (Seite Allgemein)
-  Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können Sie Namen und Beschreibung für einen Foreach-Schleifencontainer angeben, der mithilfe eines festgelegten Enumerators den gleichen Workflow für alle Elemente einer Auflistung wiederholt.  
+  Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können Sie Namen und Beschreibung für einen Foreach-Schleifencontainer angeben, der mithilfe eines festgelegten Enumerators den gleichen Workflow für alle Elemente einer Sammlung wiederholt.  
   
- Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](../../2014/integration-services/configure-a-foreach-loop-container.md).  
+ Weitere Informationen zu Foreach-Schleifencontainern und ihrer Konfiguration finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="options"></a>Optionen  
  **Name**  
@@ -33,7 +33,7 @@ ms.locfileid: "62894078"
 >  Objektnamen müssen innerhalb eines Pakets eindeutig sein.  
   
  **Beschreibung**  
- Geben Sie eine Beschreibung des Foreach-Schleifencontainers an.  
+ Geben Sie eine Beschreibung für den Foreach-Schleifencontainer an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

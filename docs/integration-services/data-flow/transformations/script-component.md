@@ -206,7 +206,7 @@ ms.locfileid: "65725911"
  **Eigenschaften**  
  Zeigt die Skripttransformationseigenschaften an und ermöglicht Änderungen. Viele dieser Eigenschaften sind schreibgeschützt. Die folgenden Eigenschaften können Sie ändern:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Beschreibung**|Beschreibt den Zweck der Skripttransformation.|  
 |**LocaleID**|Gibt das Gebietsschema für die Bereitstellung regionsspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  

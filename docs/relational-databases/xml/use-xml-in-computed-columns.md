@@ -87,7 +87,7 @@ FROM T
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Beschreibt, wie die Eigenschaftenhöherstufung mit berechneten Spalten und Eigenschaftentabellen verwendet wird.|  
   

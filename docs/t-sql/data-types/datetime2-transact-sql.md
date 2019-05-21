@@ -37,7 +37,7 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
   
 ## <a name="datetime2-description"></a>datetime2-Beschreibung
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*Genauigkeit in Sekundenbruchteilen*) ]|  
 |Verwendung|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
@@ -67,7 +67,7 @@ In den folgenden Tabellen werden die unterstützten ISO 8601- und ODBC-Formate f
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|Dieses Format wird nicht von den SET LANGUAGE- und SET DATEFORMAT-Gebietsschemaeinstellungen für Sitzungen beeinflusst. Das **T**, die Doppelpunkte (:) und der Punkt (.) werden in das Zeichenfolgenliteral eingeschlossen, z.B. '2007-05-02T19:58:47.1234567'.|  
   
-|ODBC|und Beschreibung|  
+|ODBC|Beschreibung|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.Sekundenbruchteile]' }|ODBC-API-spezifisch:<br /><br /> Für die Anzahl der Stellen rechts vom Dezimaltrennzeichen, die den Sekundenbruchteil darstellen, kann 0 bis 7 (100 Nanosekunden) angegeben werden.|  
   

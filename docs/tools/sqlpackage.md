@@ -11,7 +11,7 @@ ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58527592"
@@ -48,7 +48,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>Hilfe für die Extract-Aktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -72,7 +72,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>Eigenschaften, die spezifisch für die Extract-Aktion
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 "60")|Gibt das Befehlstimeout in Sekunden zum Ausführen von Abfragen in SQL Server zurück.|
 |**/p:**|DacApplicationDescription=(STRING)|Definiert die in den DACPAC-Metadaten zu speichernde Anwendungsbeschreibung.|
@@ -96,7 +96,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 ### <a name="help-for-publish-action"></a>Hilfe für Publish-Aktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Veröffentlichen|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -135,7 +135,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 ### <a name="properties-specific-to-the-publish-action"></a>Eigenschaften, die spezifisch für die Veröffentlichungsaktion
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Gibt zusätzliche Bereitstellungs-Contributorargumente für die Bereitstellungs-Contributors an. Dabei sollte es sich um eine Liste von Werten mit Semikolatrennung handeln.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Gibt zusätzliche Bereitstellungs-Contributors an, die beim Bereitstellen des Dacpacs ausgeführt werden sollen. Dabei sollte es sich um eine Liste der Namen oder IDs der vollqualifizierten Erstellungs-Contributors mit Semikolatrennung handeln.|
@@ -229,7 +229,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 In der folgenden Tabelle wird das Format der Option beschrieben, mit der Sie den Wert einer SQL-Befehlsvariablen (**sqlcmd**) außer Kraft setzen können, die während einer Veröffentlichungsaktion verwendet wird. Die Werte der in der Befehlszeile angegebenen Variablen überschreiben andere Werte, die der Variablen zugewiesen sind (z. B. Werte in einem Veröffentlichungsprofil).  
   
-|Parameter|Default|und Beschreibung|  
+|Parameter|Default|Beschreibung|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||Gibt ein Name-Wert-Paar für eine aktionsspezifische Variable an: {VariableName}={Value}. Die DACPAC-Datei enthält die Liste gültiger SQLCMD-Variablen. Wenn nicht für jede Variable ein Wert angegeben wird, wird ein Fehler ausgegeben.|  
   
@@ -239,7 +239,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
   
 ### <a name="help-for-export-action"></a>Hilfe für den Export-Aktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -263,7 +263,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
 
 ### <a name="properties-specific-to-the-export-action"></a>Eigenschaften, die spezifisch für die Export-Aktion
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 "60")|Gibt das Befehlstimeout in Sekunden zum Ausführen von Abfragen in SQL Server zurück.|
 |**/p:**|Speicher = ({Datei&#124;Arbeitsspeicher} 'Datei')|Gibt den Typ des Hintergrundspeichers an, der während der Extraktion für das Schemamodell verwendet wird.|
@@ -277,7 +277,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
   
 ### <a name="help-for-command-actions"></a>Hilfe zu Befehlsaktionen
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Importieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -300,7 +300,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
 
 Eigenschaften, die spezifisch für den Import-Aktion:
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 "60")|Gibt das Befehlstimeout in Sekunden zum Ausführen von Abfragen in SQL Server zurück.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Definiert die Edition von Azure SQL-Datenbank.|
@@ -316,7 +316,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
   
 ### <a name="help-for-deployreport-action"></a>Hilfe für DeployReport-Aktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -352,7 +352,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>Eigenschaften der DeployReport-Aktion
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Gibt zusätzliche Bereitstellungs-Contributorargumente für die Bereitstellungs-Contributors an. Dabei sollte es sich um eine Liste von Werten mit Semikolatrennung handeln.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Gibt zusätzliche Bereitstellungs-Contributors an, die beim Bereitstellen des Dacpacs ausgeführt werden sollen. Dabei sollte es sich um eine Liste der Namen oder IDs der vollqualifizierten Erstellungs-Contributors mit Semikolatrennung handeln.|
@@ -448,7 +448,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
   
 ### <a name="help-for-driftreport-action"></a>Hilfe für DriftReport-Aktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -475,7 +475,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
   
 ### <a name="help-for-the-script-action"></a>Hilfe für die Skriptaktion
 
-|Parameter|Kurzform|value|und Beschreibung|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Skript|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -513,7 +513,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 
 ### <a name="properties-specific-to-the-script-action"></a>Eigenschaften, die spezifisch für die Skriptaktion
 
-|Eigenschaft|value|und Beschreibung|
+|Eigenschaft|Wert|Beschreibung|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Gibt zusätzliche Bereitstellungs-Contributorargumente für die Bereitstellungs-Contributors an. Dabei sollte es sich um eine Liste von Werten mit Semikolatrennung handeln.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Gibt zusätzliche Bereitstellungs-Contributors an, die beim Bereitstellen des Dacpacs ausgeführt werden sollen. Dabei sollte es sich um eine Liste der Namen oder IDs der vollqualifizierten Erstellungs-Contributors mit Semikolatrennung handeln.

@@ -21,7 +21,7 @@ ms.locfileid: "65502727"
 # <a name="mhtml-device-information-settings"></a>Geräteinformationseinstellungen für MHTML
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das Webarchivformat (MHTML) aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird.|  
 |**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Der Standardwert ist **true**.|  

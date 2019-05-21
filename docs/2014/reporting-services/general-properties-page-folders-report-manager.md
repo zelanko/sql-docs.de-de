@@ -47,7 +47,7 @@ ms.locfileid: "63260887"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den Ordner und seinen Inhalt zu entfernen.  
   
  **Verschieben**  

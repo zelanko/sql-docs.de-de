@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66f30e853c8673fd020dd08239c34b0fd2c3ad77
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47814568"
@@ -25,7 +25,7 @@ ms.locfileid: "47814568"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)-Klasse. Dieser Konstruktor ist nur zur internen Verwendung.|  
   
@@ -34,13 +34,13 @@ ms.locfileid: "47814568"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |java.util.ResourceBundle|parent (parent)|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|Ruft Informationen zu Fehlerstrings ab. Diese Methode dient nur zur internen Verwendung.|  
   

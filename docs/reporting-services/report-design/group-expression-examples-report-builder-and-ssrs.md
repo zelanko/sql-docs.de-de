@@ -31,7 +31,7 @@ ms.locfileid: "65580268"
 ## <a name="examples-of-group-expressions"></a>Beispiele für Gruppenausdrücke  
  In der folgenden Tabelle sind Beispiele für Gruppenausdrücke aufgeführt, die Sie zum Definieren einer Gruppe verwenden können.  
   
-|und Beschreibung|expression|  
+|Beschreibung|expression|  
 |-----------------|----------------|  
 |Gruppieren nach dem `Region` -Feld.|`=Fields!Region.Value`|  
 |Gruppieren Sie nach Nachnamen und Vornamen.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

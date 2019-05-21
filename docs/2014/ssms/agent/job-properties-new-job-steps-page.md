@@ -41,7 +41,7 @@ ms.locfileid: "62695659"
  **Bearbeiten**  
  Ändert den ausgewählten Auftragsschritt.  
   
- **Delete**  
+ **Löschen**  
  Löscht den ausgewählten Auftragsschritt. Wenn Auftragsschritte gelöscht werden, werden auch die entsprechenden Ausgabeprotokolle gelöscht.  
   
 ## <a name="see-also"></a>Siehe auch  

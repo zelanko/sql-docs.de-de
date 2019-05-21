@@ -90,7 +90,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  Die folgende Tabelle zeigt einige Beispiele für Pfadausdrücke.  
   
-|Pfadausdruck|value|  
+|Pfadausdruck|Wert|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  

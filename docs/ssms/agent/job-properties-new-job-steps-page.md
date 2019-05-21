@@ -29,7 +29,7 @@ ms.locfileid: "65095832"
 
 Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und planen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Auftragsschrittliste**  
 Führt die Auftragsschritte für diesen Auftrag auf.  
   
@@ -48,7 +48,7 @@ Erstellt einen neuen Auftragsschritt über dem ausgewählten Auftragsschritt.
 **Bearbeiten**  
 Ändert den ausgewählten Auftragsschritt.  
   
-**Delete**  
+**Löschen**  
 Löscht den ausgewählten Auftragsschritt. Wenn Auftragsschritte gelöscht werden, werden auch die entsprechenden Ausgabeprotokolle gelöscht.  
   
 ## <a name="see-also"></a>Weitere Informationen  

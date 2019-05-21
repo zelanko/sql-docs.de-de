@@ -40,7 +40,7 @@ ms.locfileid: "47595418"
   
  In der folgenden Tabelle werden die Datenbanktabellen im core-Schema beschrieben. Mithilfe dieser Datenbanktabellen kann der Datensammler nachverfolgen, woher die Daten kamen, wer sie eingefügt hat und wann sie in das Data Warehouse hochgeladen wurden.  
   
-|Tabellenname|und Beschreibung|  
+|Tabellenname|Beschreibung|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Speichert Informationen darüber, wie die Leistungsindikatoren in den Berichten des Verwaltungs-Data Warehouse gruppiert und aggregiert werden sollen.|  
 |core.snapshots_internal|Identifiziert jede neue Momentaufnahme. Immer dann, wenn ein neues Uploadpaket beginnt, einen neuen Datenbatch in ein Data Warehouse hochzuladen, wird in diese Tabelle eine neue Zeile eingefügt.|  

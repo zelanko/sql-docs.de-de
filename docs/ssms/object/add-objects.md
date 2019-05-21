@@ -24,7 +24,7 @@ ms.locfileid: "65097209"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Begrenzt die Dialogfelder zur Objektauswahl auf die für Sie relevanten Objektarten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Bestimmte Objekte**  
 Öffnet das Dialogfeld **Objekte auswählen** , sodass Sie die Suche nach bestimmten Objekten noch besser definieren können.  
   

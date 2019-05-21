@@ -29,7 +29,7 @@ ms.locfileid: "65105960"
 
 Verwenden Sie diese Seite zum Anzeigen und Aktualisieren der Einstellungen für die Fehlerprotokolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Fehlerprotokolldatei**  
 Gibt die Datei an, in die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent die Fehlerprotokolle schreibt.  
   

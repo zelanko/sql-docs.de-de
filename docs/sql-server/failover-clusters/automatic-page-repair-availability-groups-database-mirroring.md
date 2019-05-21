@@ -47,7 +47,7 @@ ms.locfileid: "49383565"
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  Bei der automatischen Seitenreparatur bei einer Datenbankspiegelung werden nur Seiten in einer Datendatei repariert, bei denen bei einem Vorgang einer der in der folgenden Tabelle aufgeführten Fehler aufgetreten ist.  
   
-|Fehlernummer|und Beschreibung|Instanzen, die zu einer automatischen Seitenreparatur führen|  
+|Fehlernummer|Beschreibung|Instanzen, die zu einer automatischen Seitenreparatur führen|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Maßnahme wird nur ergriffen, wenn das Betriebssystem eine zyklische Redundanzprüfung (CRC, Redundancy Check) ausgeführt hat, bei der in den Daten ein Fehler gefunden wurde.|ERROR_CRC. Der Wert des Betriebssystems für diesen Fehler ist 23.|  
 |824|Logische Fehler.|Logische Datenfehler, z. B. unterbrochener Schreibvorgang oder fehlerhafte Prüfsumme auf einer Seite.|  

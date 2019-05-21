@@ -84,7 +84,7 @@ ms.locfileid: "62728157"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Delete**  
+ **Löschen**  
  Entfernt die ausgewählten Elemente aus der Hierarchie.  
   
 > [!NOTE]  

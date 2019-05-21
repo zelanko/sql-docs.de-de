@@ -23,7 +23,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   [–2](mssqlserver-neg2-database-engine-error.md) |       |       |   Timeout. Das Timeout ist vor dem Beenden des Vorgangs eingetreten, oder der Server reagiert nicht. (Microsoft SQL Server, Fehler: –2)    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server 2005 kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: SQL-Netzwerkschnittstellen, Fehler: 28 - Server unterstützt das angeforderte Protokoll nicht) (Microsoft SQL Server, Fehler: -1).  |
@@ -579,7 +579,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-1000-to-1999"></a>Fehler 1.000 bis 1.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Nein  |   Zeile %d: Längen- oder Präzisionsangabe %d ist ungültig.   |
 |   1002    |   16  |   Nein  |   Zeile %d: Angegebene Skala %d ist nicht gültig. |
@@ -1011,7 +1011,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-2000-to-2999"></a>Fehler 2.000 bis 2.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Nein  |   Für die Replikation kann keine Prozedur mit einer Gruppennummer erstellt werden, die höher als 1 ist.   |
 |   2003    |   16  |   Nein  |   Für Prozeduren mit einer Gruppennummer sind keine Parameter mit XML- oder CLR-Datentypen zulässig. Der "%.*ls"-Parameter der "%.* ls"-Prozedur weist den "%ls"-Typ auf.   |
@@ -1384,7 +1384,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-3000---3999"></a>Fehler 3.000 bis 3.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Nein  |   BACKUP oder RESTORE kann für eine Datenbankmomentaufnahme nicht ausgeführt werden.   |
 |   3003    |   10  |   Nein  |   Dieser BACKUP WITH DIFFERENTIAL-Vorgang basiert auf mehr als einer Dateisicherung. Alle betreffenden Dateisicherungen müssen vor der Wiederherstellung dieser differenziellen Sicherung wiederhergestellt werden.    |
@@ -1825,7 +1825,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-4000-to-4999"></a>Fehler 4.000 bis 4.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Nein  |   Der Client sendet eine sp_reset_connection, obwohl noch Anforderungen ausstehen. Die Verbindung mit dem Server wird getrennt.  |
 |   4002    |   16  |   Nein  |   Der eingehende Datenstrom des TDS-Protokolls (Tabular Data Stream) ist nicht richtig. Der Datenstrom endete unerwartet. |
@@ -2288,7 +2288,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-5000-to-5999"></a>Fehler 5.000 bis 5.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   Nein  |   Benutzer muss in der master-Datenbank vorhanden sein.    |
 |   5002    |   16  |   Nein  |   Die '%.*ls'-Datenbank ist nicht vorhanden. Überprüfen Sie den Namen in 'sys.databases', und führen Sie den Vorgang erneut aus.  |
@@ -2664,7 +2664,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-6000-to-6999"></a>Fehler 6.000 bis 6.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Nein  |   SHUTDOWN wartet auf den Abschluss von %d Prozess(en). |
 |   6004    |   10  |   Nein  |   Der Benutzer besitzt nicht die Berechtigung zum Ausführen dieser Aktion.   |
@@ -3160,7 +3160,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-7000-to-7999"></a>Fehler 7.000 bis 7.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Nein  |   Der OPENXML-Dokumenthandleparameter muss vom Datentyp 'int' sein. |
 |   7001    |   16  |   Nein  |   Der OPENXML-Flagsparameter muss vom Datentyp 'int' sein.   |
@@ -3604,7 +3604,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-8000-to-8999"></a>Fehler 8.000 bis 8.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Nein  |   Der eingehende Tabular Data Stream (TDS) für das RPC-Protokoll (Remote Procedure Call) ist nicht richtig. Metainformationen sind für den SQL_Variant-Parameter ungültig. |
 |   8002    |   16  |   Nein  |   Der eingehende Tabular Data Stream (TDS) für das RPC-Protokoll (Remote Procedure Call) ist nicht richtig. Parameter %d ("%.*ls"): Für den Datentyp 0x%02X (XML) ist eine ungültige Datenbank oder ein ungültiges Schema angegeben.    |
@@ -4111,7 +4111,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-9000-to-9999"></a>Fehler 9.000 bis 9.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Ja |   Das Protokoll für die '%.*ls'-Datenbank ist nicht verfügbar. Überprüfen Sie das Ereignisprotokoll auf verwandte Fehlermeldungen. Beheben Sie ggf. alle Fehler, und starten Sie die Datenbank neu. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Ja |   Das Transaktionsprotokoll für die '%.*ls'-Datenbank ist voll. Die log_reuse_wait_desc-Spalte in sys.databases enthält Informationen dazu, warum Protokollspeicherplatz nicht erneut verwendet werden kann.    |
@@ -4599,7 +4599,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-10000-to-10999"></a>Fehler 10.000 bis 10.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Nein  |   Unbekannter Anbieterfehler. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Nein  |   Der Anbieter hat einen unerwarteten schwerwiegenden Fehler gemeldet.   |
@@ -4858,7 +4858,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-11000-to-12999"></a>Fehler 11.000 bis 12.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   Nein  |   Unbekannter Statuscode für diese Spalte.    |
 |   11001   |   16  |   Nein  |   Ein Wert ungleich NULL wurde erfolgreich zurückgegeben.   |
@@ -5065,7 +5065,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-13000-to-13999"></a>Fehler 13.000 bis 13.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   Nein  |   Dateiname   |
 |   13002   |   16  |   Nein  |   Überwachung   |
@@ -5366,7 +5366,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-14000-to-14999"></a>Fehler 14,000 bis 14.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   Nein  |   Das Sync-Subsystem mit der Task-ID %ld wurde nicht gefunden.   |
 |   14003   |   16  |   Nein  |   Sie müssen einen Veröffentlichungsnamen angeben. |
@@ -5898,7 +5898,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-15000-to-15999"></a>Fehler 15.000 bis 15.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Nein  |   Das '%ls'-Objekt ist nicht vorhanden oder kein gültiges Objekt für diesen Vorgang.    |
 |   15002   |   16  |   Nein  |   Die '%'-Prozedur kann in einer Transaktion nicht ausgeführt werden. |
@@ -6411,7 +6411,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-16000-to-17999"></a>Fehler 16.000 bis 17.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   Nein  |   %hs: Diese Funktion ist noch nicht implementiert. |
 |   16902   |   16  |   Nein  |   %ls: Der Wert des %ls-Parameters ist ungültig. |
@@ -6666,7 +6666,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-18000-to-18999"></a>Fehler 18.000 bis 18.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Ja |   Ausnahme beim Ausführen der erweiterten gespeicherten Prozedur "%.*ls" in der "%.* ls"-Bibliothek. SQL Server beendet den Prozess %d. Ausnahmetyp: %ls; Ausnahmecode: 0x%lx. |
 |   18052   |   16  |   Nein  |   Fehler: %d, Schweregrad: %d, Status: %d. |
@@ -6887,7 +6887,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-19000-to-20999"></a>Fehler 19.000 bis 20.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Ja |   Die SQL-Ablaufverfolgung mit der ID %d wurde vom Anmeldenamen "%s" gestartet.  |
 |   19031   |   10  |   Ja |   Die SQL-Ablaufverfolgung wurde beendet. Ablaufverfolgungs-ID = '%d'. Anmeldename = '%s'.  |
@@ -7315,7 +7315,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-21000-to-21999"></a>Fehler 21.000 bis 21.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   Nein  |   Eine inaktive Veröffentlichung kann nicht abonniert werden.    |
 |   21001   |   16  |   Nein  |   Ein Verteilungs-Agent für ein Pushabonnement kann auf dem Abonnenten nicht hinzugefügt werden.  |
@@ -8078,7 +8078,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-22000-to-22999"></a>Fehler 22.000 bis 22.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Nein  |   Der für das change_columns-Argument der CHANGE_TRACKING_IS_COLUMN_IN_MASK-Funktion angegebene Wert ist nicht gültig. Bei dem Wert muss es sich um eine von der CHANGETABLE(CHANGES ...)-Funktion zurückgegebene Bitmaske handeln.   |
 |   22102   |   16  |   Nein  |   Die angegebenen Argumente sind nicht gültig für die CHANGES-Option der CHANGETABLE-Funktion.    |
@@ -8333,7 +8333,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-23000-to-25999"></a>Fehler 23.000 bis 25.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Nein  |   Die WinFS-Freigabeberechtigungen sind beschädigt {Fehler: %d}. Versuchen Sie, die Freigabeberechtigungen erneut festzulegen. |
 |   23100   |   16  |   Nein  |   Ungültige(r) Eingabeparameter. |
@@ -8522,7 +8522,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-26000-to-27999"></a>Fehler 26.000 bis 27.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Ja |   Der Server konnte das zum Initiieren einer SSL-Verbindung benötigte Zertifikat nicht laden. Folgender Fehler wurde zurückgegeben: %#x. Überprüfen Sie, ob die Zertifikate gültig sind. |
 |   26011   |   16  |   Ja |   Der Server konnte die Verschlüsselung wegen eines Problems bei einer Sicherheitsbibliothek nicht initialisieren. Möglicherweise fehlt die Sicherheitsbibliothek. Überprüfen Sie, ob 'security.dll' auf dem System vorhanden ist.    |
@@ -8637,7 +8637,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-28000-to-30999"></a>Fehler 28.000 bis 30.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   Nein  |   Der entschlüsselte Sitzungsschlüssel weist eine unerwartete Größe auf.   |
 |   28001   |   16  |   Nein  |   Eine beschädigte Nachricht wurde empfangen. Sie enthält ungültige Flags. Folgende Nachricht ist betroffen: Konversations-ID '%.*ls', Initiator: %d und Nachrichtensequenznummer: %I64d. |
@@ -8815,7 +8815,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-31000-to-41400"></a>Fehler 31.000 bis 41.400
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| Schweregrad | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Nein  |   Die Sitzung '%s' ist bereits vorhanden. Verwenden Sie einen anderen Sitzungsnamen.  |
 |   31002   |   16  |   Nein  |   Dieser Vorgang kann nur vom Sitzungsbesitzer ausgeführt werden.   |

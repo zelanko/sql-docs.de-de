@@ -12,7 +12,7 @@ ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: e198f561fd4f6bcec390ef8632c1cdc96f2810d6
 ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744818"
@@ -29,7 +29,7 @@ Verwenden Sie die Registerkarte "Verbindung" zum Herstellen einer Verbindung mit
 
 Diese Registerkarte „Verbindung“ ist anbieterspezifisch und zeigt nur die Verbindungseigenschaften an, die für den Microsoft OLE DB-Treiber für SQL Server erforderlich sind.
 
-|Option|und Beschreibung|
+|Option|Beschreibung|
 |---   |---        |
 |Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.|Wählen Sie den Namen eines Servers aus der Dropdownliste, oder geben Sie den Speicherort des Servers ein, auf dem sich die gewünschte Datenbank befindet. Das Auswählen der Datenbank auf dem Server ist eine separate Aktion. Aktualisieren Sie die Liste, indem Sie auf „Aktualisieren“ klicken.
 |Geben Sie Informationen zum Anmelden an den server|Sie können die folgenden Authentifizierungsoptionen aus der Dropdown-Liste auswählen: <ul><li>`Windows Authentication:` SQL Server mit den Anmeldeinformationen des aktuell angemeldeten Benutzers Windows-Authentifizierung.</li><li>`SQL Server Authentication:` Authentifizierung mit SQL Server mithilfe der Anmelde-ID und Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit Windows den Anmeldeinformationen des aktuell angemeldeten Benutzers.</li><li>`Active Directory - Password:` Active Directory-Authentifizierung mit Anmelde-ID und Kennwort.</li></ul>|
@@ -50,7 +50,7 @@ Verwenden Sie die Registerkarte "Erweitert", anzeigen und Festlegen von zusätzl
 
 ![Screenshot des OLE DB Data Link-Seiten – Registerkarte "Erweitert"](../media/data-link-pages-advanced-tab.png)
 
-|Option|und Beschreibung|
+|Option|Beschreibung|
 |---   |---        |
 | Connect timeout | Gibt die Zeitspanne (in Sekunden) an, die zum Abschluss der Initialisierung der Microsoft OLE DB-Treiber für SQL Server wartet. Wenn es bei der Initialisierung zu einem Timeout kommt, wird ein Fehler zurückgegeben, und die Verbindung wird nicht hergestellt.|
 

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6a7ed91da704fa81b0c8f101f8da5cd71ff48f9
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47857198"
@@ -25,7 +25,7 @@ ms.locfileid: "47857198"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[SQL Server-Standarddatentypen](../../connect/php/default-sql-server-data-types.md)|Bietet Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standarddatentypen beim Übermitteln von Daten an den Server.|  
 |[PHP-Standarddatentypen](../../connect/php/default-php-data-types.md)|Bietet Informationen zu den PHP-Standarddatentypen beim Abrufen von Daten vom Server.|  

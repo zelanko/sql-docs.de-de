@@ -38,7 +38,7 @@ Eine oder mehrere Anweisungen haben bewirkt, dass der Abfragebatch mindestens 50
   
 In der folgenden Tabelle werden die Ursachen für die Neukompilierung aufgelistet.  
   
-|Ursachencode|und Beschreibung|  
+|Ursachencode|Beschreibung|  
 |---------------|---------------|  
 |1|Schema geändert|  
 |2|Statistiken geändert|  

@@ -64,7 +64,7 @@ ms.locfileid: "65726734"
  **Typ**  
  Zeigt den Typ des InfoPackage an. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Trans.|Transaktionsdaten.|  
 |Attr.|Attributdaten.|  

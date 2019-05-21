@@ -31,7 +31,7 @@ ms.locfileid: "65104462"
 
 Mithilfe dieser Seite können Sie den Verlauf von Agentwarnungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
 
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 **Datum der letzten Warnung**  
 Zeigt das Datum, an dem das angegebenen Ereignis zuletzt auftrat, bzw. **(Nie aufgetreten)** an, wenn das Ereignis seit Erstellung des Alarms nicht aufgetreten ist.  
   

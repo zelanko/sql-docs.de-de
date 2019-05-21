@@ -101,7 +101,7 @@ ms.locfileid: "63022452"
  **Bearbeiten**  
  Wählen Sie im Filterbereich einen Zeilenfilter oder einen Joinfilter aus, und klicken Sie auf **Bearbeiten** , um das Dialogfeld **Filter bearbeiten** oder **Join bearbeiten** aufzurufen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie im Filterbereich einen Zeilenfilter oder einen Joinfilter aus, und klicken Sie auf **Löschen** , um den Filter zu löschen.  
   
  **Tabelle suchen**  
@@ -192,7 +192,7 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
  **Bearbeiten**  
  Wählen Sie im Raster eine vorhandene Partition aus, und klicken Sie auf **Bearbeiten** , um die Partition zu bearbeiten.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie im Raster eine vorhandene Partition aus, und klicken Sie auf **Löschen** , um die Partition zu löschen.  
   
  **Die ausgewählten Momentaufnahmen jetzt generieren**  

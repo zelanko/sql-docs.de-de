@@ -26,7 +26,7 @@ ms.locfileid: "47855939"
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|**Data type**|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|**Data type**|Beschreibung|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |BinaryData|**image**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|2|Benutzerkontensteuerung|  

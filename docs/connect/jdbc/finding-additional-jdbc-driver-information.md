@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 149491bc8ce0df9556d6d5703ab917bf71a814ee
 ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/19/2019
 ms.locfileid: "54405760"
@@ -26,7 +26,7 @@ ms.locfileid: "54405760"
   
 ## <a name="remarks"></a>Remarks  
   
-|Ressource|und Beschreibung|  
+|Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[JDBC-Treiber für SQL Server-GitHub-Repository](https://github.com/microsoft/mssql-jdbc)|Dieses Repository enthält den Quellcode für den JDBC-Treiber für SQL Server. Verwenden Sie diese Website, um die direkte Interaktion mit den Mitgliedern des JDBC-Treiber-Teams. Hier melden Sie Probleme, Feedback geben und direkt an den Treiber beitragen.|
 |[Developer Center für Datenzugriff und -speicherung](https://go.microsoft.com/fwlink?linkid=4173)|Diese Website enthält Dokumentation, technische Artikel, Beispielcode und andere Ressourcen für alle Datenzugriffstechnologien bei [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  

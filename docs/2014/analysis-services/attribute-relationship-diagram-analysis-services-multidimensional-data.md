@@ -86,7 +86,7 @@ ms.locfileid: "62650601"
  **Beziehungstyp**  
  Legt den Beziehungstyp entweder auf **Flexibel** oder **Fest**fest. In einer flexiblen Beziehung ändern sich die Beziehungen zwischen Elementen. In einer festen Beziehung ändern sich die Beziehungen zwischen Elementen nicht.  
   
- **Delete**  
+ **Löschen**  
  Löscht die Attributbeziehung.  
   
  **Eigenschaften**  

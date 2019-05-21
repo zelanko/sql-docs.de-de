@@ -28,7 +28,7 @@ ms.locfileid: "47761508"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted (Ereignisklasse)](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|Gibt an, dass beim Volltextdurchforsten eine Ausnahme aufgetreten ist.|  
 |[FT:Crawl Started (Ereignisklasse)](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|Gibt an, dass ein Volltextdurchforsten gestartet wurde.|  

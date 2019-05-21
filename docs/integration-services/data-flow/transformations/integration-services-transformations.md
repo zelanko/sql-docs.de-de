@@ -39,7 +39,7 @@ ms.locfileid: "65726030"
 ## <a name="business-intelligence-transformations"></a>Business Intelligence-Transformationen  
  Die folgenden Transformationen führen Business Intelligence-Vorgänge aus, wie z. B. das Bereinigen von Daten, Text Mining und das Ausführen von Data Mining-Vorhersageabfragen.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Diese Transformation konfiguriert das Aktualisieren einer langsam veränderlichen Dimension.|  
 |[Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Diese Transformation standardisiert Werte in Spaltendaten.|  
@@ -52,7 +52,7 @@ ms.locfileid: "65726030"
 ## <a name="row-transformations"></a>Zeilentransformationen  
  Mit den folgenden Transformationen werden Spaltenwerte aktualisiert und neue Spalten erstellt. Die Transformation wird auf jede Zeile in der Transformationseingabe angewendet.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation zum Zuordnen der Zeichen](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Diese Transformation wendet Zeichenfolgenfunktionen auf Zeichendaten an.|  
 |[Transformation für das Kopieren von Spalten](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Diese Transformation fügt der Transformationsausgabe Kopien von Eingabespalten hinzu.|  
@@ -66,7 +66,7 @@ ms.locfileid: "65726030"
 ## <a name="rowset-transformations"></a>Rowsettransformationen  
  Mit den folgenden Transformationen werden neue Rowsets erstellt. Rowsets schließen Aggregatwerte und sortierte Werte, Stichprobenrowsets oder pivotierte bzw. nicht pivotierte Rowsets ein.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für das Aggregieren](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Diese Transformation führt Aggregationen aus, wie z. B. AVERAGE, SUM und COUNT.|  
 |[Transformation zum Sortieren](../../../integration-services/data-flow/transformations/sort-transformation.md)|Diese Transformation sortiert Daten.|  
@@ -78,7 +78,7 @@ ms.locfileid: "65726030"
 ## <a name="split-and-join-transformations"></a>Transformationen für Teilen und Verknüpfen  
  Mit den folgenden Transformationen werden Zeilen an verschiedene Ausgaben verteilt, Kopien der Transformationseingaben erstellt, mehrere Eingaben zu einer einzigen Ausgabe verknüpft sowie Suchvorgänge ausgeführt.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für bedingtes Teilen](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Diese Transformation routet Datenzeilen an andere Ausgaben.|  
 |[Transformation für Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Diese Transformation verteilt Datasets an mehrere Ausgaben.|  
@@ -92,7 +92,7 @@ ms.locfileid: "65726030"
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Überwachungstransformation](../../../integration-services/data-flow/transformations/audit-transformation.md)|Diese Transformation stellt dem Datenfluss in einem Paket Informationen zur Umgebung zur Verfügung.|  
 |[Transformation für Zeilenanzahl](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Diese Transformation zählt die Zeilen in einem Datenfluss und speichert die endgültige Anzahl in einer Variablen.|  

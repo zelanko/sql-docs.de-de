@@ -30,7 +30,7 @@ ms.locfileid: "62745840"
 |**Entwerfen von Aggregationen**|Klicken Sie, um den **Aggregationsentwurfs-Assistenten**anzuzeigen.|  
 |**Verwendungsbasierte Optimierung**|Klicken Sie, um den **Verwendungsbasierte Optimierung-Assistenten** anzuzeigen.|  
 |**Aggregationsentwurf zuweisen**|Klicken Sie, um das Dialogfeld **Aggregationsentwurf zuweisen** anzuzeigen.|  
-|**Delete**|Klicken Sie, um den ausgewählten Aggregationsentwurf zu löschen.|  
+|**Löschen**|Klicken Sie, um den ausgewählten Aggregationsentwurf zu löschen.|  
 |**Eigenschaften**|Klicken Sie, um die Eigenschaften der Aggregation anzuzeigen.|  
   
 ## <a name="see-also"></a>Siehe auch  

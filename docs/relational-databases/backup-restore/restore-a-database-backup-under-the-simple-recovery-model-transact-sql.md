@@ -70,7 +70,7 @@ ms.locfileid: "47707660"
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>und Beschreibung  
+### <a name="description"></a>Beschreibung  
  In diesem Beispiel wird die vollständige Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank von Band wiederhergestellt:  
   
 ### <a name="example"></a>Beispiel  

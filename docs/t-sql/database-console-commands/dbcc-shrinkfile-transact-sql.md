@@ -97,7 +97,7 @@ Alle Informationsmeldungen werden unterdrückt.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle sind die Resultsetspalten beschrieben.
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|Beschreibung|  
 |---|---|
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Die Datei-ID der Datei, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  

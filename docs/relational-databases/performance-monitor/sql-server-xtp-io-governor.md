@@ -25,7 +25,7 @@ Das Leistungsobjekt „SQL Server XTP IO Governor“ enthält Leistungsindikator
 
 In dieser Tabelle werden die Leistungsindikatoren für **SQL Server XTP IO Governor** beschrieben.
 
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |**Nicht genügend Guthabenwartezeiten/Sekunde**|Anzahl von Wartevorgängen aufgrund unzureichenden Guthabens in den Ratenobjekten (pro Sekunde).|
 |**E/A ausgestellt/Sekunde**|Anzahl der durch Leerungsthreads ausgegeben E/A pro Sekunde.|

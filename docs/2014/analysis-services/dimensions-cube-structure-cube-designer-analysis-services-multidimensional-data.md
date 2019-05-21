@@ -55,7 +55,7 @@ ms.locfileid: "62731696"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn eine Dimension ausgewählt ist.  
   
- **Delete**  
+ **Löschen**  
  Klicken Sie auf diese Option, um die ausgewählte Cubedimension für den Cube zu entfernen.  
   
 > [!NOTE]  

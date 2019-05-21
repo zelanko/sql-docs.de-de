@@ -22,7 +22,7 @@ Verwenden Sie diese Seite, um Systemeigenschaften auf dem Berichtsserver festzul
 
 Öffnen Sie diese Seite, indem Sie SQL Server Management Studio starten und eine Verbindung mit einer Berichtsserverinstanz herstellen. Klicken Sie mit der rechten Maustaste auf den Namen des Berichtsservers, und klicken Sie anschließend auf **Eigenschaften**. Klicken Sie auf **Erweitert**, um diese Seite zu öffnen.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Optionen
 
 **EnableMyReports**  
 Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert **true** gibt an, dass die Funktion aktiviert ist.  
@@ -68,7 +68,7 @@ Legt den Zeitraum fest, innerhalb dessen eine externe Bilddatei abgerufen werden
 **SnapshotCompression**  
 Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL**. Die folgenden Werte sind gültig:
 
-|Werte|und Beschreibung|
+|Werte|Beschreibung|
 |---------|---------|
 |**location**|Momentaufnahmen werden komprimiert, wenn sie in der Berichtsserver-Datenbank gespeichert werden. Diese Komprimierung entspricht dem aktuellen Verhalten.|
 |**None**|Momentaufnahmen werden nicht komprimiert.|
@@ -105,7 +105,7 @@ Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung a
 **EnableIntegratedSecurity**  
 Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Verbindungen unterstützt wird. Der Standardwert ist **True**. Die folgenden Werte sind gültig:
 
-|Werte|und Beschreibung|
+|Werte|Beschreibung|
 |---------|---------|
 |**Wahr**|Die integrierte Sicherheit von Windows ist aktiviert.|
 |**False**|Die integrierte Sicherheit von Windows ist nicht aktiviert. Berichtsdatenquellen, die für die Verwendung der integrierten Sicherheit von Windows konfiguriert sind, werden nicht ausgeführt.|

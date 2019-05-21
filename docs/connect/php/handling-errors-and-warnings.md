@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51599461"
@@ -27,7 +27,7 @@ Die Themen in diesem Abschnitt bieten Informationen zur Fehlerbehandlung und War
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Demonstriert, wie Konfigurationseinstellungen für die Behandlung von Fehlern und Warnungen geändert werden können.|  
 |[Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Demonstriert, wie man mit Fehlern und Warnungen getrennt umgehen sollte.|  

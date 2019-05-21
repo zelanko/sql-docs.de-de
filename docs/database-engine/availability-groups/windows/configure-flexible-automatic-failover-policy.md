@@ -115,7 +115,7 @@ ms.locfileid: "54126580"
   
     -   Um die Failover-Bedingungsebene festzulegen, verwenden Sie den **FailureConditionLevel** _level_-Parameter, wobei *level* für einen der folgenden Werte steht:  
   
-        |value|Ebene|Automatisches Failover wird initiiert, wenn...|  
+        |Wert|Ebene|Automatisches Failover wird initiiert, wenn...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|1 (eins)|der Server ausfällt. Der SQL Server-Dienst wird aufgrund eines Failovers oder Neustarts beendet.|  
         |**OnServerUnresponsive**|2 (zwei)|der Server nicht reagiert. Der Wert der Bedingungsebene wird unterschritten, der SQL Server-Dienst ist mit dem Cluster verbunden, und der Schwellenwert für das Timeout der Integritätsprüfung wird überschritten, oder das aktuelle primäre Replikat weist einen fehlerhaften Status auf.|  

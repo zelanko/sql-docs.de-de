@@ -36,7 +36,7 @@ Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die fo
 ## <a name="remarks"></a>Remarks  
 Die Befehle **Bearbeiten** und **Ändern** führen möglicherweise zu Ergebnissen, die sich vom Befehl **Skript für <object> erstellen als** für die gleiche Optionseinstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Der Befehl **Skript für <object> erstellen als** ist zum Generieren eines Skripts vorgesehen, sodass es später zum Erstellen von Objekten verwendet werden kann.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
 Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstellungen in der Liste rechts neben den einzelnen Optionen treffen.  
   
 ### <a name="general-scripting-options"></a>Allgemeine Skripterstellungsoptionen  

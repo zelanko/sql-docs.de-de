@@ -106,7 +106,7 @@ Es ist nicht möglich, constraint_name oder constraint_id angeben, um nur tempor
 ## <a name="result-sets"></a>Resultsets  
 DBCC CHECKCONSTRAINTS gibt ein Rowset mit folgenden Spalten zurück.
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Tabellenname|**varchar**|Der Name der Tabelle.|  
 |Constraint Name|**varchar**|Name der verletzten Einschränkung.|  

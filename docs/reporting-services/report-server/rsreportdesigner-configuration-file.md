@@ -52,7 +52,7 @@ ms.locfileid: "65581339"
   
 ## <a name="configuration-settings"></a>Konfigurationseinstellungen  
   
-|Einstellung|und Beschreibung|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Der Sicherheitsgrad der Webdienstverbindung. Gültige Werte sind 0 bis 3, wobei 0 die geringste Sicherheit bietet. Weitere Informationen finden Sie unter [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |**InstanceName**|Ein Bezeichner für den Vorschauserver. Ändern Sie diesen Wert nicht.|  

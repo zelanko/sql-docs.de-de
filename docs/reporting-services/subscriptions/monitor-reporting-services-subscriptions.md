@@ -43,7 +43,7 @@ ms.locfileid: "65578212"
   
  Die folgende Tabelle enthält die möglichen Werte für die Spalte **Status** .  
   
-|Status|und Beschreibung|  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
 |Inaktiv|Wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter unten unter "Verwalten inaktiver Abonnements".|  

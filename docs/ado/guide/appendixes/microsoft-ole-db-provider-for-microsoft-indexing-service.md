@@ -102,7 +102,7 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|

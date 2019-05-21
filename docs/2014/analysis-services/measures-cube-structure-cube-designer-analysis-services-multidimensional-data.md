@@ -69,7 +69,7 @@ ms.locfileid: "62727976"
  **Umbenennen**  
  Wählen Sie diese Option aus, um die ausgewählte Measuregruppe oder das ausgewählte Measure umzubenennen.  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie diese Option aus, um das Dialogfeld **Objekte löschen** anzuzeigen und die im Bereich **Measures** ausgewählten Objekte zu löschen.  
   
  **Nach oben**  

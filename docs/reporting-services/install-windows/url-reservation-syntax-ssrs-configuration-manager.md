@@ -28,7 +28,7 @@ ms.locfileid: "47724698"
   
  In der folgenden Tabelle werden die einzelnen Eigenschaften sowie die jeweils gültigen Werte beschrieben.  
   
-|Eigenschaft|Gültige Werte|und Beschreibung|  
+|Eigenschaft|Gültige Werte|Beschreibung|  
 |--------------|------------------|-----------------|  
 |Schema|http oder https|Präfixe für Nicht-SSL- und SSL-Verbindungen.|  
 |Hostname|(+) Starker Platzhalter, entspricht dem Wert **(Alle zugewiesenen)** für die IP-Adresse.<br /><br /> (\*) Schwacher Platzhalter, entspricht einer IP-Adresse von **(Alle nicht zugewiesenen)**.<br /><br /> Vollqualifizierter Domänenname<br /><br /> Computername<br /><br /> IP-Adresse (IPV4)<br /><br /> IP-Adresse (IPV6)|Identifiziert den Server auf dem Netzwerk.<br /><br /> (+) Starker Platzhalter ist der Standard. HTTP.SYS akzeptiert alle Anforderungen auf allen Netzwerkadaptern für eine bestimmte Kombination aus Port und virtuellem Verzeichnis. Der Berichtsserver akzeptiert jede Anforderung auf dem Port.<br /><br /> (\*) Schwacher Platzhalter. HTTP.SYS akzeptiert alle Anforderungen, die nicht von anderen URL-Reservierungen auf allen Netzwerkadaptern für eine bestimmte Kombination aus Port und virtuellem Verzeichnis verarbeitet werden.<br /><br /> Der Computername ist der NETBIOS-Name des Computers im Netzwerk.<br /><br /> Der vollqualifizierte Domänenname umfasst die Domänenadresse und den Servernamen, wie bei einem Domänencontroller oder öffentlichen DNS-Server registriert.<br /><br /> Die IP-Adresse (IPV4) ist die IP-Adresse eines Netzwerkadapters auf dem Computer im IPV4-Format: *nnn.nnn.nnn.nnn*.<br /><br /> Die IP-Adresse (IPV6) ist die IP-Adresse eines Netzwerkadapters auf dem Computer im IPV6-Format: \<Header>:\<Header>:*nnn.nnn.nnn.nnn*.|  

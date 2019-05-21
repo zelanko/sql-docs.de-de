@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
 ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/07/2019
 ms.locfileid: "57572803"
@@ -50,10 +50,10 @@ Dies zeigt Ihnen den Bildschirm **Neue KPI** an.
   
 Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen Dataset verwenden. Wenn Sie eine neue KPI erstellen, wird diese mit zufälligen manuellen Daten aufgefüllt.  
   
-| Feld | und Beschreibung |
+| Feld | Beschreibung |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Wertformat | Wird verwendet, um das Format des angezeigten Werts zu ändern. |
-| value | Der für die KPI anzuzeigender Wert. |
+| Wert | Der für die KPI anzuzeigender Wert. |
 | Ziel | Wird als Vergleich mit einem numerischen Wert verwendet und als prozentuale Differenz angezeigt. |
 | Status | Zum Bestimmen der KPI-Kachelfarbe verwendete und durch Komma getrennte numerische Werte. Gültige Werte sind 1 (Grün), 0 (gelb) und-1 (Rot). |
 | Trendsatz | Für Diagrammvisualisierungen verwendete durch Komma getrennte numerische Werte. Dies kann auch für eine Spalte eines Dataset mit Werten festgelegt werden, die den Trend darstellen. |

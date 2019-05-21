@@ -28,7 +28,7 @@ ms.locfileid: "47679858"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Datenspalten der Audit Database Mirroring Login-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Wird in dieser Ereignisklasse nicht verwendet.|10|Benutzerkontensteuerung|  
 |**ClientProcessID**|**int**|Wird in dieser Ereignisklasse nicht verwendet.|9|Benutzerkontensteuerung|  
@@ -55,7 +55,7 @@ ms.locfileid: "47679858"
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
-|ID|Unterklasse|und Beschreibung|  
+|ID|Unterklasse|Beschreibung|  
 |--------|--------------|-----------------|  
 |1|Login Success|Ein Login Success-Ereignis meldet, dass der letzte Datenbankspiegelungs-Anmeldeprozess erfolgreich abgeschlossen wurde.|  
 |2|Login Protocol Error|Ein Login Protocol Error-Ereignis meldet, dass die Datenbankspiegelungs-Anmeldung eine Meldung erhält, die zwar wohlgeformt, jedoch für den aktuellen Status des Anmeldeprozesses ungültig ist. Die Meldung ging eventuell verloren oder wurde außer der Reihe versendet.|  

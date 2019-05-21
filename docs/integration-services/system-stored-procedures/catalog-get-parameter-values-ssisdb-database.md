@@ -56,7 +56,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Resultsets  
  Gibt eine Tabelle zurück, die das folgende Format aufweist:  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Der Typ des Parameters. Für einen Projektparameter ist der Wert `20` , und für einen Paketparameter ist der Wert `30` .|  
 |parameter_data_type|**nvarchar(128)**|Der Datentyp des Parameters.|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1737004c5ded0f577e549a6009807cb74096bc32
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47706088"
@@ -25,7 +25,7 @@ ms.locfileid: "47706088"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateNString-Methode &#40;int, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Verwendung des angegebenen Spaltenindexes.|  
 |[updateNString-Methode &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Verwendung der angegebenen Spaltenbezeichnung.|  

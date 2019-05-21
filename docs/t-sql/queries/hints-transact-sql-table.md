@@ -193,7 +193,7 @@ Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad 
   
 Der FORCESEEK-Hinweis kann folgendermaßen angegeben werden:  
   
-|Syntax|Beispiel|und Beschreibung|  
+|Syntax|Beispiel|Beschreibung|  
 |------------|-------------|-----------------|  
 |Ohne Index oder INDEX-Hinweis|`FROM dbo.MyTable WITH (FORCESEEK)`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über einen beliebigen relevanten Index.|  
 |Mit einem INDEX-Hinweis kombiniert|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index.|  

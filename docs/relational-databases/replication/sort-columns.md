@@ -28,7 +28,7 @@ ms.locfileid: "54134910"
   
 2.  Wählen Sie in der zweiten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Verbindungstyp** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Status**  
  Der Name der Spalte, nach Sie sortieren möchten. Sie können nach einer oder mehreren Spalten sortieren. Nach den Spalten **Aktuelle Durchschnittsleistung** oder **Die derzeit schlechteste Leistung** auf der Registerkarte **Veröffentlichungen** können Sie aufgrund der Art und Weise, in der die Werte in diesen Spalten berechnet werden, nicht sortieren.  
   

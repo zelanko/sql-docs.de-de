@@ -30,7 +30,7 @@ ms.locfileid: "65714510"
 
   Zeigt die Details für alle Pakete an, die im **SSISDB** -Katalog angezeigt werden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Der eindeutige Bezeichner (ID) des Pakets.|  
 |NAME|**nvarchar(256)**|Der eindeutige Name des Pakets.|  

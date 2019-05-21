@@ -53,7 +53,7 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 > [!NOTE]  
 >  Wenn die Datenbank noch nicht gestartet wurde, wird für Aufrufe von `DATABASEPROPERTYEX` NULL zurückgegeben, wenn `DATABASEPROPERTYEX` diese Werte durch direkten Datenbankzugriff abruft, statt sie aus den Metadaten abzurufen. Eine Datenbank, für die AUTO_CLOSE auf ON festgelegt ist, ist als „nicht gestartet“ definiert.  
   
-|Eigenschaft|und Beschreibung|Zurückgegebener Wert|  
+|Eigenschaft|Beschreibung|Zurückgegebener Wert|  
 |---|---|---|
 |Sortierung|Standardsortierungsname der Datenbank|Sortierungsname<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ComparisonStyle|Die Windows-Vergleichsart der Sortierung. Verwenden Sie die folgenden Stilwerte, um eine Bitmap für den schlussendlichen ComparisonStyle-Wert zu erstellen:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> <br /><br /> Der Standardwert 196.609 ist beispielsweise das Ergebnis der Kombination der Optionen Groß-/Kleinschreibung ignorieren, Kana ignorieren und Breite ignorieren.|Gibt die Vergleichsart zurück.<br /><br /> Gibt für alle binären Sortierungen 0 zurück.<br /><br /> Basisdatentyp: **int**|  

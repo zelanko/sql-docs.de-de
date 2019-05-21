@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 287a05727bf62de813afec4ad285ef47f3b65943
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47801638"
@@ -63,7 +63,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Jede Zeile im Resultset enthält die folgenden Spalten für eine Parameterbeschreibung, eine Spaltenbeschreibung oder einen Rückgabetyp:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Der Name der Datenbank, in der die Funktion gespeichert ist.|  
 |FUNCTION_SCHEM|**String**|Das Schema für die Funktion.|  

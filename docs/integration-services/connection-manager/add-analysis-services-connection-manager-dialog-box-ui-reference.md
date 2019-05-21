@@ -31,7 +31,7 @@ ms.locfileid: "65728413"
   
  Weitere Informationen zum Analysis Services-Verbindungs-Manager finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Optionen  
  **Verbindung mit einem Computer mit Analysis Services herstellen**  
  Verwenden Sie die Standardverbindung mit einem Server, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder erstellen Sie eine neue Verbindung, indem Sie auf **Bearbeiten**klicken.  
   

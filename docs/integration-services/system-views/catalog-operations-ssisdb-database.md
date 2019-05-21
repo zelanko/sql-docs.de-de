@@ -30,7 +30,7 @@ ms.locfileid: "65714408"
 
   Zeigt die Details aller Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|Der eindeutige Bezeichner (ID) des Vorgangs.|  
 |operation_type|**smallint**|Der Typ des Vorgangs.|  

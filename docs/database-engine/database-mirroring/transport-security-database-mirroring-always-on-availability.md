@@ -72,7 +72,7 @@ ms.locfileid: "53589214"
   
  Sie können auch die Verschlüsselungsalgorithmen steuern, die von einem Endpunkt verwendet werden können, indem Sie einen der folgenden Werte für die ALGORITHM-Option in einer CREATE ENDPOINT- oder ALTER ENDPOINT-Anweisung angeben:  
   
-|ALGORITHM-Wert|und Beschreibung|  
+|ALGORITHM-Wert|Beschreibung|  
 |---------------------|-----------------|  
 |RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardeinstellung.<br /><br /> <strong>\*\* Warnung \*\*</strong> Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  

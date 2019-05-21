@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4da7607e34a30cec37ed045c053f5b64cdafadfc
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47757108"
@@ -30,7 +30,7 @@ ms.locfileid: "47757108"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getLong (int)](../../../connect/jdbc/reference/getlong-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als **long**-Wert in der Programmiersprache Java ab.|  
 |[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als **long**-Wert in der Programmiersprache Java ab.|  

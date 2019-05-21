@@ -27,7 +27,7 @@ ms.locfileid: "53379241"
   
  Die folgende Tabelle listet die **SQLAgent:Statistik** -Indikatoren auf.  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |**SQL Server-Neustarts**|Die Anzahl der erfolgreichen Neustarts von Microsoft SQL Server durch den SQL Server-Agent seit dem letzten Start des SQL Server-Agents.|  
   

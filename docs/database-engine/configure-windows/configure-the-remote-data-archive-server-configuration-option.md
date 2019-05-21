@@ -25,7 +25,7 @@ ms.locfileid: "56017992"
   
  Die Option **Remotedatenarchiv** kann die folgenden Werte enthalten.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Datenbanken und Tabellen auf dem Server können nicht für Stretch aktiviert werden.|  
 |1|Datenbanken und Tabellen auf dem Server können für Stretch aktiviert werden.|  

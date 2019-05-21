@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04f19f08deda9cd42affa0a5ced28255c1bb521b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47742928"
@@ -36,7 +36,7 @@ public int compareTo(DateTimeOffset other)
 ## <a name="return-value"></a>Rückgabewert  
  In der folgenden Tabelle wird der Rückgabewert für diese Methode beschrieben:  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0|Beide **DateTimeOffset** Objekte den gleichen Zeitpunkt darstellen.|  
 |Negative Zahl|Dies **DateTimeOffset** Objekt einen Zeitpunkt darstellt, die vor dem *andere*.|  
