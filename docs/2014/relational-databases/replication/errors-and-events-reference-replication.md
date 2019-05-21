@@ -28,11 +28,11 @@ ms.locfileid: "62721319"
   
 |Fehler|MessageBox|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
-|[MSSQL_ENG002627](mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
+|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%.*ls“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
+|[MSSQL_ENG002627](mssql-eng002627.md)|Verletzung der %ls-Einschränkung ' %. * ls'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|Die %1!s!-Datenbank wurde wiederhergestellt; beim Wiederherstellen/Entfernen der Replikation wurde jedoch ein Fehler erkannt. Die Datenbank ist offline. Weitere Informationen finden Sie im Thema 'MSSQL_ENG003165' in der SQL Server-Onlinedokumentation.|  
-|[MSSQL_ENG003724](mssql-eng003724.md)|Das %1!s! von '%3!s!' (%2!s!) ist nicht möglich, da das Objekt für die Replikation verwendet wird.|  
-|[MSSQL_ENG004929](mssql-eng004929.md)|Das %1!s!-Objekt '%2!s!' kann nicht geändert werden, da es für die Replikation veröffentlicht wird.|  
+|[MSSQL_ENG003724](mssql-eng003724.md)|Kann nicht %s_msg %s_msg ' %. * ls, da sie für die Replikation verwendet wird.|  
+|[MSSQL_ENG004929](mssql-eng004929.md)|Die % s_msg-Objekt kann nicht geändert werden kann ' %. * ls, da es für die Replikation veröffentlicht wird.|  
 |MSSQL_ENG007395. Siehe [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Für den OLE DB-Anbieter '%1!s!' für den Verbindungsserver '%2!s!' konnte keine geschachtelte Transaktion gestartet werden. Eine geschachtelte Transaktion war erforderlich, da die Option XACT_ABORT auf OFF festgelegt war.|  
 |[MSSQL_ENG014005](mssql-eng014005.md)|Die Veröffentlichung konnte nicht gelöscht werden. Es besteht ein Abonnement für sie.|  
 |[MSSQL_ENG014010](mssql-eng014010.md)|Der Server '%1!s!' ist nicht als Abonnementserver definiert.|  
@@ -51,7 +51,7 @@ ms.locfileid: "62721319"
 |[MSSQL_ENG014163](mssql-eng014163.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014164](mssql-eng014164.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014165](mssql-eng014165.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
-|[MSSQL_ENG018456](mssql-eng018456.md)|Fehler bei der Anmeldung für den Benutzer „%.*ls'.%.\*ls“|  
+|[MSSQL_ENG018456](mssql-eng018456.md)|Fehler bei der Anmeldung für Benutzer ' %. * ls'.%. \*ls|  
 |[MSSQL_ENG018752](mssql-eng018752.md)|Nur jeweils ein Protokolllese-Agent oder eine protokollbezogene Prozedur (sp_repldone, sp_replcmds oder sp_replshowcmds) kann eine Verbindung mit einer Datenbank herstellen. Falls Sie eine protokollbezogene Prozedur ausgeführt haben, löschen Sie vor dem Starten des Protokolllese-Agents oder dem Ausführen einer weiteren protokollbezogenen Prozedur die Verbindung, über die sie ausgeführt wurde, oder führen Sie 'sp_replflush' über diese Verbindung aus.|  
 |[MSSQL_ENG020554](mssql-eng020554.md)|Vom Replikations-Agent wurde in %ld Minuten keine Statusmeldung protokolliert. Möglicherweise reagiert der Agent nicht mehr, oder das System ist stark ausgelastet. Überprüfen Sie, ob Datensätze an das Ziel repliziert werden und ob die Verbindungen mit dem Abonnenten, Verleger und Verteiler noch aktiv sind.|  
 |[MSSQL_ENG020557](mssql-eng020557.md)|Der Agent wird heruntergefahren. Weitere Informationen finden Sie im Auftragsverlauf des SQL Server-Agents für den Auftrag '%s'.|  
