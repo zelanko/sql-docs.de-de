@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_index_keywords (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790028"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944274"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Db_id ("*Database_name*")  
+ db_id('*database_name*')  
  Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die **Sys. dm_fts_index_keywords** verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
- Object_id ("*Table_name*")  
+ object_id('*table_name*')  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Schlüsselwort**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts in den Volltextindex gespeichert.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
+|**keyword**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts in den Volltextindex gespeichert.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
 |**display_term**|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom Hexadezimalformat abgeleitet.<br /><br /> Hinweis: Die **Display_term** -Wert für OxFF ist "END OF FILE".|  
 |**column_id**|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |**document_count**|**int**|Die Anzahl der Dokumente bzw. Zeilen, die den aktuellen Begriff enthalten.|  

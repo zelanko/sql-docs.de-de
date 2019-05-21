@@ -3,7 +3,6 @@ title: Sys. dm_fts_parser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535298"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944235"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|Schlüsselwort (keyword)|**varbinary(128)**|Die hexadezimale Darstellung eines gegebenen Schlüsselworts, das von einer Wörtertrennung zurückgegeben wurde. Diese Darstellung wird zum Speichern des Schlüsselworts im Volltextindex verwendet. Dieser Wert ist nicht lesbar, aber es ist hilfreich für bezüglich eines bestimmten Stichworts zur Ausgabe von anderen dynamischen Verwaltungssichten zurückgegeben, die den Inhalt von einem Volltextindex, z. B. zurückgeben [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) und [ dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Hinweis**: OxFF stellt das Sonderzeichen dar, mit dem das Ende einer Datei oder eines Datasets angegeben wird.|  
+|Schlüsselwort (keyword)|**varbinary(128)**|Die hexadezimale Darstellung eines gegebenen Schlüsselworts, das von einer Wörtertrennung zurückgegeben wurde. Diese Darstellung wird zum Speichern des Schlüsselworts im Volltextindex verwendet. Dieser Wert ist nicht lesbar, aber es ist hilfreich für bezüglich eines bestimmten Stichworts zur Ausgabe von anderen dynamischen Verwaltungssichten zurückgegeben, die den Inhalt von einem Volltextindex, z. B. zurückgeben [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) und [ dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Hinweis**: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
 |group_id|**int**|Enthält einen ganzzahligen Wert, mit dem die logische Gruppe unterschieden werden kann, aus der ein gegebener Begriff generiert wurde. Beispiel: Mit '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' werden die folgenden group_id-Werte auf Englisch ausgegeben:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Enthält einen ganzzahligen Wert, der zur Unterscheidung der Fälle dient, in denen alternative Formen für zusammengesetzte Wörter (z. B. "full-text") von der Wörtertrennung ausgegeben werden. Wenn zusammengesetzte Wörter vorhanden sind (z. B. 'multi-millon'), gibt die Wörtertrennung u. U. alternative Formen aus. Diese alternativen Formen (Ausdrücke) müssen in einigen Fällen unterschieden werden.<br /><br /> Beispiel: Mit '`multi-million`' werden die folgenden phrase_id-Werte auf Englisch ausgegeben:<br /><br /> 1 für `multi`<br />1 für `million`<br />2 für `multimillion`|  
 |occurrence|**int**|Gibt die Reihenfolge der einzelnen Begriffe im Analyseergebnis an. Beispiel: Für den Ausdruck "`SQL Server query processor`" enthält die Spalte occurrence die folgenden Vorkommenwerte auf Englisch:<br /><br /> 1 für `SQL`<br />2 für `Server`<br />3 für `query`<br />4 für `processor`|  

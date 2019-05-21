@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560133"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949104"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Wenn eine Datenbank nicht `ONLINE`, oder `AUTO_CLOSE` nastaven NA hodnotu `ON` u
 |**is_temporal_retention_enabled**|**bit**|Gibt an, ob der Task ' Verlaufscleanup ' der temporalen Beibehaltung-Richtlinie aktiviert ist.<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Die sortierungseinstellung für den Katalog:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Die sortierungseinstellung für den Katalog:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = Is_result_set_caching_on befindet sich auf</br>0 = Is_result_set_caching_on deaktiviert ist.</br>**Gilt für**: Azure SQL Datawarehouse Gen2
+|**is_result_set_caching_on**|**int**|1 = Is_result_set_caching_on befindet sich auf</br>0 = Is_result_set_caching_on deaktiviert ist.</br>**Gilt für**: Azure SQL Data Warehouse Gen2. Während dieses Features wird zurückgesetzt wird in allen Regionen, und überprüfen Sie die Version, die mit Ihrer Instanz und die neueste Version bereitgestellt [Anmerkungen zur Version von Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) für die Verfügbarkeit von Features.|
   
 ## <a name="permissions"></a>Berechtigungen  
  Wenn der Aufrufer `sys.databases` ist nicht der Besitzer der Datenbank und die Datenbank ist nicht `master` oder `tempdb`, mindestens die Berechtigung erforderlich, um die entsprechende Zeile finden Sie unter `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` Berechtigung auf Serverebene oder `CREATE DATABASE` -Berechtigung für die `master` Datenbank. Die Datenbank, mit denen der Aufrufer verbunden ist, immer in angezeigt werden kann `sys.databases`.  

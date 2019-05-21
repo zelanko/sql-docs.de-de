@@ -1,5 +1,5 @@
 ---
-title: dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7470367bd827faf4c2468ee7187a05c766256dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c557029b0b479fbb780fdd93ae05faa4c26735
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716228"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944337"
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Positionsinformationen Schlüsselwort in den indizierten Dokumenten zurück.  
@@ -42,10 +42,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Db_id ("*Database_name*")  
+ db_id('*database_name*')  
  Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die die dm_fts_index_keywords_position_by_document verwendet, um die angegebene Datenbank zu suchen.  
   
- Object_id ("*Table_name*")  
+ object_id('*table_name*')  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  

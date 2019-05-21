@@ -1,5 +1,5 @@
 ---
-title: dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a09a67894f01aff4e964907f95cfcef55d2044e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed8d04f571deb231f3dbea4d840ee69e3ea1b140
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779918"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944343"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Db_id ("*Database_name*")  
+ db_id('*database_name*')  
  Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die die dm_fts_index_keywords_by_property verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
- Object_id ("*Table_name*")  
+ object_id('*table_name*')  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
@@ -135,7 +135,7 @@ GO
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [Verbessern der Leistung von Volltextindizes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
  [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
