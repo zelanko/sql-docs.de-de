@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6882083b270825623253d4635afd3077a5a2d75
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47810558"
@@ -25,7 +25,7 @@ ms.locfileid: "47810558"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[position-Methode &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Ruft die Zeichenposition, an dem das angegebene **NClob** Objekt *Searchstr* angezeigt wird, in diesem **NClob** Objekt.|  
 |[Position-Methode &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Ruft die Zeichenposition, an dem der angegebenen Teilzeichenfolge *Searchstr* wird in der **NCLOB** Wert, der von diesem dargestellt **NClob** Objekt.|  

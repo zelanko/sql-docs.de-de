@@ -26,7 +26,7 @@ ms.locfileid: "47857368"
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Datenspalten der Audit Broker Conversation-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |**BigintData1**|**bigint**|Die Nachrichtensequenznummer der Nachricht.|52|nein|  
@@ -52,7 +52,7 @@ ms.locfileid: "47857368"
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
-|ID|Unterklasse|und Beschreibung|  
+|ID|Unterklasse|Beschreibung|  
 |--------|--------------|-----------------|  
 |1|Kein Sicherheitsheader|Während einer sicheren Konversation hat Service Broker eine Nachricht empfangen, die keinen Sitzungsschlüssel enthielt. Nachdem eine sichere Konversation eingerichtet wurde, verlangt das Dialogprotokoll, dass alle Nachrichten in der Konversation einen Sitzungsschlüssel enthalten.|  
 |2|Kein Zertifikat|Service Broker konnte kein verwendbares Zertifikat für einen der Teilnehmer der Konversation ermitteln. Um eine Konversation zu sichern, muss die Datenbank ein Zertifikat für den Sender und den Empfänger der Konversation enthalten.|  

@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca0e9735935aa0ff4eff38fd076822e7bc01021
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47700086"
@@ -46,7 +46,7 @@ public java.sql.ResultSet getTableTypes()
   
  Das von der getTableTypes-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_TYPE|**String**|Der Tabellentyp.|  
   

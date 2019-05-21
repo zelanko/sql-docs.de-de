@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47597138"
@@ -27,7 +27,7 @@ ms.locfileid: "47597138"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Herunterladen des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links zum Herunterladen des Microsoft JDBC-Treibers für SQL Server|  
 |[Release Notes for the JDBC Driver (Versionshinweise für den JDBC-Treiber)](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Beschreibt die neuen Funktionen in der aktuellen Version des Microsoft JDBC-Treibers|  

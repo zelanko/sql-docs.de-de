@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a14252410144e1bb2edd432c5df1d495c6f2cd
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47655638"
@@ -27,7 +27,7 @@ Die Themen in diesem Abschnitt beschreiben, wie direktionale Parameter beim Aufr
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Veranschaulicht, wie die Parameterrichtung beim Aufrufen einer gespeicherten Prozedur angegeben wird.|  
 |[Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Veranschaulicht, wie eine gespeicherte Prozedur mit einem Ausgabeparameter aufgerufen wird und wie dessen Wert abgerufen wird.|  

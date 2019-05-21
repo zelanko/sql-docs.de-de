@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fe7808a324d803cffa0e2b8e8eb91665d59b60a
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47728288"
@@ -30,7 +30,7 @@ ms.locfileid: "47728288"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameterindexes als CLOB-Objekt in der Programmiersprache Java ab.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameternamens als CLOB-Objekt in der Programmiersprache Java ab.|  

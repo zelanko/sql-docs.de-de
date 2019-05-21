@@ -42,7 +42,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
 ## <a name="remarks"></a>Remarks  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |24400|Gültig|  
 |24401|Ungültig, die Ursache ist unbekannt.|  

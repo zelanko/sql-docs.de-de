@@ -28,7 +28,7 @@ ms.locfileid: "47776648"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Mount Tape (Ereignisklasse)](../../relational-databases/event-classes/mount-tape-event-class.md)|Gibt an, dass eine Anforderung zum Bandeinlegen empfangen wurde.|  
 |[Server Memory Change-Ereignisklasse](../../relational-databases/event-classes/server-memory-change-event-class.md)|Gibt an, dass sich die Speicherverwendung durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert hat.|  

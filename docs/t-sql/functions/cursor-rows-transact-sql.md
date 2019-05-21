@@ -46,7 +46,7 @@ Diese Funktion gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktu
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |---|---|
 |-*m*|Der Cursor wird asynchron aufgefüllt. Der zurückgegebene Wert (-*m*) entspricht der aktuellen Anzahl der Zeilen im Keyset.|  
 |-1|Der Cursor ist dynamisch. Da dynamische Cursor alle Änderungen widerspiegeln, ändert sich die Anzahl der Zeilen, die den Cursor kennzeichnen, ständig. Für den Cursor werden nicht unbedingt alle kennzeichnenden Zeilen abgerufen.|  

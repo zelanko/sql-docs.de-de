@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47682718"
@@ -46,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  

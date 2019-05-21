@@ -45,7 +45,7 @@ Diese Funktion gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die f
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |&nbsp;0|Die FETCH-Anweisung war erfolgreich.|  
 |-1|Die FETCH-Anweisung ist fehlgeschlagen, oder die Zeile war außerhalb des Resultsets.|  

@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2dd9e131a2c8b07945fdd4bf3d5afd2c5ebc4f
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47596969"
@@ -42,7 +42,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array mit den folgenden Schlüsseln:  
   
-|Key|und Beschreibung|  
+|Key|Beschreibung|  
 |-------|---------------|  
 |CurrentDatabase|Die Datenbank, die derzeit das Ziel darstellt.|  
 |SQLServerVersion|Die Version von SQL Server.|  

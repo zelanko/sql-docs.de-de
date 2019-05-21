@@ -29,7 +29,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|NULL|2|Benutzerkontensteuerung|  
@@ -48,7 +48,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|Benutzerkontensteuerung|  
@@ -72,7 +72,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|Benutzerkontensteuerung|  
@@ -95,7 +95,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|NULL|2|Benutzerkontensteuerung|  
@@ -115,7 +115,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|NULL|2|Benutzerkontensteuerung|  
@@ -135,7 +135,7 @@ ms.locfileid: "47640290"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Benutzerkontensteuerung|  
 |BinaryData|**image**|NULL|2|Benutzerkontensteuerung|  

@@ -32,7 +32,7 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 #### <a name="parameters"></a>Parameter  
  Die Parameter werden in der folgenden Tabelle erläutert.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |----------------|-----------------|  
 |MigrationType|Der Typ des Migrationsszenarios, den das Cmdlet überprüft. Derzeit ist der einzige Wert die Standard-OLTP. Optional.|  
 |Server|Der Name der SQL Server-Zielinstanz. In der Windows PowerShell-Umgebung obligatorisch, wenn der Parameter -InputObject fehlt. Optional in SQLPS.|  

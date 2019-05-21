@@ -21,7 +21,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 058c7755468551ff94da7e7b8eb9d1993d92a07a
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47621958"
@@ -39,7 +39,7 @@ ms.locfileid: "47621958"
   
  Für verteilte Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransactionJoin::JoinTransaction**-Parameter wie folgt.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
 |*IsoLevel*|Wird von der OLE DB-Treiber für SQLServer ignoriert. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  

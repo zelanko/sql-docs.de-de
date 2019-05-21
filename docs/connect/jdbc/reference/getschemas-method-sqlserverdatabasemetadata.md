@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cada512a2694ffc3ade17d9bdbc03cca52d2e32
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47811728"
@@ -25,7 +25,7 @@ ms.locfileid: "47811728"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getSchemas-Methode &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|Ruft die Schemanamen ab, die in der aktuellen Datenbank verfügbar sind.|  
 |[GetSchemas-Methode &#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Ruft die in der aktuellen Datenbank verfügbaren Schemanamen unter Verwendung des angegebenen Katalognamens und des Schemanamens ab.|  

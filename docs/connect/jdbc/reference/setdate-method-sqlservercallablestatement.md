@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de95ddcae48de01a32fafbf3a4548d84dacbcc6f
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47730735"
@@ -30,7 +30,7 @@ ms.locfileid: "47730735"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date.md)|Legt den angegebenen Parameter auf den angegebenen Datumswert fest.|  
 |[setDate (java.lang.String, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-java-lang-string-java-sql-date-java-util-calendar.md)|Legt den angegebenen Parameter auf die angegebenen Datums- und Kalenderwerte fest.|  

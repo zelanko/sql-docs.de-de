@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2efb7a32cd9a5fddd3de17aef724eb4555cce79c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47749602"
@@ -25,7 +25,7 @@ ms.locfileid: "47749602"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|Initialisiert eine neue Instanz der [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)-Klasse.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47749602"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|Überprüft die angegebene URL auf Gültigkeit.|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Stellt eine Verbindung mit der Datenbank her.|  

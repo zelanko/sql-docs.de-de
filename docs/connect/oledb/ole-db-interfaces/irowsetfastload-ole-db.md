@@ -16,7 +16,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 722437a9d9c093dd91562aae2a9bf0b1bb5cb5b4
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47611099"
@@ -32,7 +32,7 @@ ms.locfileid: "47611099"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Methode|und Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[IRowsetFastLoad:: Commit &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)|Markiert das Ende eines Batches eingefügter Zeilen und schreibt die Zeilen in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle.|  
 |[IRowsetFastLoad:: InsertRow &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Fügt dem Rowset für das Massenkopieren eine Zeile hinzu.|  

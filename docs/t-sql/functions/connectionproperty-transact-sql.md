@@ -42,7 +42,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 Die Eigenschaft der Verbindung. *property* kann einen der folgenden Werte aufweisen:
   
-|value|Datentyp|und Beschreibung|  
+|Wert|Datentyp|Beschreibung|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Dieser Wert lässt keine NULL-Werte zu. Mögliche Rückgabewerte:<br /><br /> **HTTP**<br /> **Named Pipe**<br /> **Session**<br /> **Shared Memory**<br /> **SSL**<br /> **TCP**<br /><br /> - und<br /><br /> **VIA**<br /><br /> Hinweis: Es wird stets **Session** zurückgegeben, wenn für eine Verbindung sowohl „mehrere aktive Resultsets“ (MARS) als auch Verbindungs-Pooling aktiviert ist.|  
 |protocol_type|**nvarchar(40)**|Gibt den Nutzlast-Protokolltyp zurück. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  

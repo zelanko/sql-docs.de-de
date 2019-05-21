@@ -13,7 +13,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 1e00183ef3558cbad211fabeb063a81f25d5f29f
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47702228"
@@ -29,7 +29,7 @@ ms.locfileid: "47702228"
 ## <a name="provider-initialization-string-keywords"></a>Schlüsselwörter für Anbieter-Initialisierungszeichenfolgen  
  Die folgenden Schlüsselwörter für Anbieter-Initialisierungszeichenfolgen unterstützen SPNs in OLE DB-Anwendungen. In der folgenden Tabelle werden die Werte aus der Schlüsselwortspalte für die Anbieterzeichenfolge IDBInitialize::Initialize verwendet. Beim Herstellen einer Verbindung mit ADO oder IDataInitialize::GetDataSource werden die Werte aus der Beschreibungsspalte in Initialisierungszeichenfolgen verwendet.  
   
-|Schlüsselwort|und Beschreibung|value|  
+|Schlüsselwort|Beschreibung|Wert|  
 |-------------|-----------------|-----------|  
 |ServerSPN|Server-SPN|Der SPN für den Server. Der Standardwert ist, dass eine leere Zeichenfolge, die OLE DB-Treiber für SQL Server, der Standardwert verwendet wird, vom Anbieter SPN erstellte.|  
 |FailoverPartnerSPN|Failoverpartner-SPN|Der SPN für den Failoverpartner. Der Standardwert ist, dass eine leere Zeichenfolge, die OLE DB-Treiber für SQL Server, der Standardwert verwendet wird, vom Anbieter SPN erstellte.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47702228"
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB-API-Unterstützung für SPNs  
  In der folgenden Tabelle werden die OLE DB-Memberfunktionen beschrieben, die SPNs in Clientverbindungen unterstützen:  
   
-|Memberfunktion|und Beschreibung|  
+|Memberfunktion|Beschreibung|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString* kann die neuen Schlüsselwörter **ServerSPN** und **FailoverPartnerSPN**enthalten.|  
 |IDataInitialize::GetInitializationString|Wenn SSPROP_INIT_SERVERSPN und SSPROP_INIT_FAILOVERPARTNERSPN Nichtstandardwerte aufweisen, werden sie durch *ppwszInitString* als Schlüsselwortwerte für **ServerSPN** und **FailoverPartnerSPN**in die Initialisierungszeichenfolge aufgenommen. Andernfalls sind diese Schlüsselwörter nicht in der Initialisierungszeichenfolge enthalten.|  

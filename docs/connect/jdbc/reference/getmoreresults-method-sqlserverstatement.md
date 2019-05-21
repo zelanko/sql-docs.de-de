@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 828c421cedc013378ad00a9b2133e27a4b2bcfee
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47818638"
@@ -30,7 +30,7 @@ ms.locfileid: "47818638"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|Wechselt zum nächsten Ergebnis dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts.|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|Wechselt zum nächsten Schritt des [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts und behandelt alle derzeit geöffneten Resultsetobjekte gemäß den Anweisungen, die durch den angegebenen Modus vorgegeben werden.|  

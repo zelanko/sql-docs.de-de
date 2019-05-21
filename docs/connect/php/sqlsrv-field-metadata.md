@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47748508"
@@ -42,7 +42,7 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für jedes Feld im Resultset. Jedes Teilarray hat Schlüssel, wie in der unten stehenden Tabelle beschrieben. Falls beim Abrufen der Feldmetadaten ein Fehler auftritt, wird **false** zurückgegeben.  
   
-|Key|und Beschreibung|  
+|Key|Beschreibung|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
 |Typ|Numerischer Wert, der einem SQL-Typ entspricht|  

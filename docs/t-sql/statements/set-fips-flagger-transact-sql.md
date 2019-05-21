@@ -48,7 +48,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* muss einer der folgenden Werte sein.  
   
-|value|und Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ENTRY|Überprüfen der Kompatibilität mit der Eingangsstufe (Entry level) des ISO-Standards.|  
 |FULL|Überprüfen der vollständigen Kompatibilität mit dem ISO-Standard.|  

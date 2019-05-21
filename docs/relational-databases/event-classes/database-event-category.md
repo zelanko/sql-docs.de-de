@@ -28,7 +28,7 @@ ms.locfileid: "47642938"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Data File Auto Grow-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Data File Auto Shrink-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|Zeigt an, dass die Datendatei verkleinert wurde.|  

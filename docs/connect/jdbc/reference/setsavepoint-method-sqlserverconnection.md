@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a48cb8f5be851c4a9ece32d085329a467a969884
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47835388"
@@ -30,7 +30,7 @@ ms.locfileid: "47835388"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setSavepoint ()](../../../connect/jdbc/reference/setsavepoint-method.md)|Erstellt in der aktuellen Transaktion einen unbenannten Sicherungspunkt und gibt das neue [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)-Objekt zurück, das für den Sicherungspunkt steht.|  
 |[setSavepoint (java.lang.String)](../../../connect/jdbc/reference/setsavepoint-method-java-lang-string.md)|Erstellt in der aktuellen Transaktion einen Sicherungspunkt mit dem angegebenen Namen und gibt das neue [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)-Objekt zurück, das für den Sicherungspunkt steht.|  

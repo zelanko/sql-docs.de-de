@@ -26,7 +26,7 @@ ms.locfileid: "47796354"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die **Fortschrittsbericht** -Ereigniskategorie enthält die **Progress Report: Online Index Operation** -Ereignisklasse.  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation-Ereignisklasse](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Zeigt den Fortschritt einer online ausgeführten Indexerstellung an.|  
   

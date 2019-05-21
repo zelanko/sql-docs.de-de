@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1679a3d36fb24371760efb5ebbe2f985898bce
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47795519"
@@ -25,7 +25,7 @@ ms.locfileid: "47795519"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[GetNClob-Methode &#40;Int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte in der aktuellen Zeile des [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als **NClob**-Objekt in der Programmiersprache Java ab.|  
 |[GetNClob-Methode &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte in der aktuellen Zeile des [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als **NClob**-Objekt in der Programmiersprache Java ab.|  

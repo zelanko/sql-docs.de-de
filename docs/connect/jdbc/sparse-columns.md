@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb2d80b8906a43ab2e2ea056d3d3d4e9d2813555
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47733738"
@@ -36,7 +36,7 @@ Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisiert
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>und Beschreibung
+### <a name="description"></a>Beschreibung
 
 Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.
 

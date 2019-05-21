@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47710445"
@@ -44,7 +44,7 @@ Ein assoziatives Array mit Schlüsseln, die in der folgenden Tabelle beschrieben
   
 **Für PHP für SQL Server-Versionen 3.2 und 3.1**:  
   
-|Key|und Beschreibung|  
+|Key|Beschreibung|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 für SQL Server)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  
@@ -53,7 +53,7 @@ Ein assoziatives Array mit Schlüsseln, die in der folgenden Tabelle beschrieben
   
 **Für PHP für SQL Server-Versionen 3.0 und 2.0**:  
   
-|Key|und Beschreibung|  
+|Key|Beschreibung|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  

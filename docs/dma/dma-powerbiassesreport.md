@@ -84,7 +84,7 @@ Die Drilldown-Sequenz wird festgelegt, wie in der folgenden Abbildung dargestell
 
 ![Visualisierungen, Balkendiagramm-Achse](../dma/media/VisualizationsAxis.png)
 
-In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern, und klicken Sie dann einen Drilldown für die bestimmte Kategorie Probleme. Im folgenden Beispiel wird die HR-Datenbank für die Instanz ausgewählt **SQL01** , alle Objekte anzuzeigen, die Migrationen (wichtige Änderungen) verhindern.
+In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern, und klicken Sie dann einen Drilldown für die bestimmte Kategorie Probleme. Im folgenden Beispiel wird die HR-Datenbank für die Instanz ausgewählt **SQL01** alle Objekte anzuzeigen, die Migrationen (wichtige Änderungen) verhindern.
 
 ![Grundlegende Änderungen für die HR-Datenbank](../dma/media/BreakingChanges.png)
 
@@ -118,7 +118,7 @@ Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Daten
 
 ![Azure-Features Parität Bericht](../dma/media/AzureFeaturesParityReport.png)
 
-Mithilfe dieses Berichts, markieren Sie die *Ebene Instanzfunktionen* , werden von Azure SQL-Datenbank V12 nicht unterstützt.
+Mithilfe dieses Berichts, markieren Sie die *Ebene Instanzfunktionen* werden von Azure SQL-Datenbank V12 nicht unterstützt.
 
 Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die unterstützt werden. Im folgenden Beispiel wird dieses Feature ausgewählt: **Immer auf der Verfügbarkeit Konfiguration wird nicht unterstützt in Azure SQL-Datenbank**.  
 

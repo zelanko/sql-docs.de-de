@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a377ef7b3795801a036f5787155a610671dd715c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47849488"
@@ -30,7 +30,7 @@ ms.locfileid: "47849488"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateAsciiStream-Methode &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem ASCII-Datenstromwert.|  
 |[updateAsciiStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream-int.md)|Aktualisiert den angegebenen Spaltenindex mit einem für den Spaltenindex spezifischen ASCII-Datenstromwert.|  

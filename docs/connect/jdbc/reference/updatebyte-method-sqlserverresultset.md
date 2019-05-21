@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29f5c2b41598fa1afbce0fe41913837696ed4c31
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47627878"
@@ -30,7 +30,7 @@ ms.locfileid: "47627878"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ **byte** unter Berücksichtigung des Spaltenindexes.|  
 |[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ **byte** unter Berücksichtigung des Spaltennamens.|  

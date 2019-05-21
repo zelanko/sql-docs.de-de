@@ -31,7 +31,7 @@ Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, 
   
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anbieter implementiert eine Teilmenge der Anbieter-Cmdlets, die in der folgenden Tabelle aufgeführt sind:  
   
-|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|und Beschreibung|  
+|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|Beschreibung|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Ruft den aktuellen Knoten ab.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  

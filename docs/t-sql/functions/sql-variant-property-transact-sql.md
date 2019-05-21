@@ -47,7 +47,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  *property*  
  Enthält den Namen der **sql_variant**-Eigenschaft, für die Informationen bereitgestellt werden sollen. *property* ist vom Datentyp **varchar(** 128 **)**. Die folgenden Werte sind möglich:  
   
-|value|und Beschreibung|Zurückgegebener Basistyp von sql_variant|  
+|Wert|Beschreibung|Zurückgegebener Basistyp von sql_variant|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, beispielsweise:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **Datum**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **Uhrzeit**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Genauigkeit**|Anzahl der Stellen des numerischen Basisdatentyps:<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) und **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Alle sonstigen Typen = 0|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  

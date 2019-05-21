@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47778748"
@@ -61,7 +61,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  Das von der getProcedures-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene gespeicherte Prozedur befindet.|  
 |PROCEDURE_SCHEM|**String**|Das Schema für die gespeicherte Prozedur.|  

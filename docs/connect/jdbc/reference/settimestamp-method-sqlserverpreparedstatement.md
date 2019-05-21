@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f055c3cf5ac08ff5e8742757bf6f1fe80447d88
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47597588"
@@ -30,7 +30,7 @@ ms.locfileid: "47597588"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setTimestamp (int, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp.md)|Legt den angegebenen Parameter auf den angegebenen Zeitstempelwert fest.|  
 |[setTimestamp (int, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp-java-util-calendar.md)|Legt den angegebenen Parameter auf die angegebenen Zeitstempel- und Kalenderwerte fest.|  

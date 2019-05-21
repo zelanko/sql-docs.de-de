@@ -20,7 +20,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47852018"
@@ -48,7 +48,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Eine ganze Zahl [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um eine der folgenden Werte sein. Die Standardeinstellung ist 0.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Gibt zurück, z. B. den Servernamen ohne Konvertierung: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -61,7 +61,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört zu gruppieren, klicken Sie dann den Wert der *Use_replica_computer_name* hat folgende Auswirkungen auf die Ausgabe der **Pfadnamen** Funktion:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
 |0|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d18f5c550bbf60446ac47961d16c1bbdb7cb2e4a
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47770344"
@@ -27,7 +27,7 @@ ms.locfileid: "47770344"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Grundlegendes zu Transaktionen](../../connect/jdbc/understanding-transactions.md)|Enthält eine Übersicht über die Verwendung von Transaktionen mit dem JDBC-Treiber.|  
 |[Grundlegendes zu XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md)|Enthält eine Übersicht über die Verwendung von XA-Transaktionen mit dem JDBC-Treiber.|  

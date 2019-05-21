@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab29b3a70fb38facb21facfdaa7f61d14f4969e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47700218"
@@ -30,7 +30,7 @@ ms.locfileid: "47700218"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-method-int.md)|Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als ASCII-Zeichendatenstrom ab.|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-method-java-lang-string.md)|Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als ASCII-Zeichendatenstrom ab.|  

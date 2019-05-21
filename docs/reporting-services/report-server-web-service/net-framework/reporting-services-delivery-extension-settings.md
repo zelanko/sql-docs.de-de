@@ -36,7 +36,7 @@ ms.locfileid: "47628488"
 ## <a name="e-mail-delivery-settings"></a>Einstellungen für die E-Mail-Übermittlung  
  In der folgenden Tabelle werden die Einstellungen der E-Mail-Übermittlung für Abonnements aufgeführt, die Berichtsserver-E-Mail verwenden.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**TO**|Die E-Mail-Adresse, die in der **An**-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Erforderlich.|  
 |**CC**|Die E-Mail-Adresse, die in der **CC**-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
@@ -52,7 +52,7 @@ ms.locfileid: "47628488"
 ## <a name="file-share-delivery-settings"></a>Einstellungen der Dateifreigabeübermittlung  
  In der folgenden Tabelle werden die Einstellungen der Dateifreigabeübermittlung für Abonnements aufgelistet.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**FILENAME**|Der Name der Datei, die auf dem Datenträger gespeichert wird.|  
 |**FILEEXTN**|Gibt an, ob eine Dateierweiterung für den gerenderten Bericht enthalten sein soll. Der Wert ist entweder **TRUE** oder **FALSE**.|  

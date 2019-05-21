@@ -33,7 +33,7 @@ ms.locfileid: "47723318"
  **Alle Dateien verschieben in Ordner**  
  Wiederhergestellte Dateien werden verschoben.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Datendateiordner**|Geben Sie den Namen des Datendateiordners ein, in den die wiederhergestellten Datendateien verschoben werden sollen, oder navigieren Sie zu diesem.|  
 |**Protokolldateiordner**|Geben Sie den Ordner mit den Protokolldateien ein, in den die wiederhergestellte Protokolldatei verschoben werden soll, oder navigieren Sie zu diesem.|  

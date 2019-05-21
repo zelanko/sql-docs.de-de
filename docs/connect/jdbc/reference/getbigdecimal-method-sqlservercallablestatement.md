@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad30b6d99037946d0395d6604a02f103cb7897f9
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47725158"
@@ -30,7 +30,7 @@ ms.locfileid: "47725158"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als java.math.BigDecimal-Objekt mit vollständiger Genauigkeit ab.|  
 |[getBigDecimal (int, int)](../../../connect/jdbc/reference/getbigdecimal-method-int-int.md)|(Veraltet) Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes und der Dezimalstellen als java.math.BigDecimal-Objekt ab.|  

@@ -16,7 +16,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 96603d7dcb6215513d67d4db5d29f8a762d57ea8
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47764923"
@@ -39,7 +39,7 @@ ms.locfileid: "47764923"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Methode|und Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[Ibcpsession:: BCPColFmt &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)|Erstellt eine Bindung zwischen Programmvariablen und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten.|  
 |[Ibcpsession:: BCPColumns &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)|Legt die Anzahl von Feldern fest, die an die Spalten einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle gebunden werden sollen.|  

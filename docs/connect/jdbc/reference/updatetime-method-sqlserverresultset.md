@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3db06d00c03561fe05f5ea10b11f5eee4e8986e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47746818"
@@ -30,7 +30,7 @@ ms.locfileid: "47746818"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateTime (int, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ "time" unter Berücksichtigung des Spaltenindexes.|  
 |[updateTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ "time" unter Berücksichtigung des Spaltennamens.|  

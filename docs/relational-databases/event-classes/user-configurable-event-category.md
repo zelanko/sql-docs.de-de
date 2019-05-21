@@ -28,7 +28,7 @@ ms.locfileid: "47629404"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Benutzerkonfigurierbar-Ereignisklasse](../../relational-databases/event-classes/user-configurable-event-class.md)|Zum Überwachen von benutzerdefinierten Ereignissen, die nicht mithilfe der vom System in anderen Ereigniskategorien bereitgestellten Ereignisse überwacht werden können.|  
   

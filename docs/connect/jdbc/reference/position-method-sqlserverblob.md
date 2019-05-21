@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fd40b98f66122cafa13ddf060f8800c9e2a65b7
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47657758"
@@ -30,7 +30,7 @@ ms.locfileid: "47657758"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[position (java.sql.Blob, long)](../../../connect/jdbc/reference/position-method-java-sql-blob-long.md)|Gibt die Position eines angegebenen Musters im BLOB auf der Grundlage des angegebenen Musters und des Startindexes zurück.|  
 |[Position (Byte&#91;&#93;, long)](../../../connect/jdbc/reference/position-method-byte-long.md)|Gibt die Position eines angegebenen Musters im BLOB auf der Grundlage des angegebenen **Bytearray**-Musters und des Startindexes zurück.|  

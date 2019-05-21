@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3768df508157803e2f6fefe1450eefc75d0d5548
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47690388"
@@ -30,7 +30,7 @@ ms.locfileid: "47690388"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getString (int)](../../../connect/jdbc/reference/getstring-method-int-sqlserverresultset.md)|Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als **String-Objekt** in der Programmiersprache Java ab.|  
 |[getString (java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string-sqlserverresultset.md)|Ruft den Wert des angegebenen Spaltenamens in der aktuellen Zeile des [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als **String**-Objekt in der Programmiersprache Java ab.|  

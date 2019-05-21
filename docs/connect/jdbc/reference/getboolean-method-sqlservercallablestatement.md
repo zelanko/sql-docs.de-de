@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c12d4538d593988a01ae24e0e3b9ce769694930e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47773042"
@@ -30,7 +30,7 @@ ms.locfileid: "47773042"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Wert vom Typ **boolean** ab.|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Wert vom Typ **boolean** ab.|  

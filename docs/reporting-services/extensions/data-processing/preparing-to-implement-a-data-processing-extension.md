@@ -62,7 +62,7 @@ ms.locfileid: "47702818"
 ## <a name="available-extension-interfaces"></a>Verfügbare Erweiterungsschnittstellen  
  In der folgenden Tabelle werden die verfügbaren Schnittstellen beschrieben. Außerdem wird angegeben, ob die Implementierung erforderlich oder optional ist.  
   
-|Schnittstelle|und Beschreibung|Implementierung|  
+|Schnittstelle|Beschreibung|Implementierung|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Stellt eine eindeutige Sitzung mit einer Datenquelle dar. Bei Client-/Server-Datenbanksystemen kann die Sitzung einer Netzwerkverbindung zum Server entsprechen.|Required|  
 |IDbConnectionExtension|Stellt zusätzliche Verbindungseigenschaften dar, die von den [!INCLUDE[ssRS](../../../includes/ssrs.md)]-Datenverarbeitungserweiterungen für die Sicherheit und Authentifizierung implementiert werden können.|Optional|  

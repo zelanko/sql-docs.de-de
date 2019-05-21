@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3af1ad7bcbe5d87349e5e8e00bee677e7c2ec7d
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47840628"
@@ -30,7 +30,7 @@ ms.locfileid: "47840628"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateDate (int, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-int-java-sql-date.md)|Aktualisiert die angegebene Spalte mit einem Wert vom Typ "date" unter Berücksichtigung des Spaltenindexes.|  
 |[updateDate (java.lang.String, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-java-lang-string-java-sql-date.md)|Aktualisiert die angegebene Spalte mit einem Datumswert unter Verwendung des angegebenen Spaltennamens.|  

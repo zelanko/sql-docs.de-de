@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63c5c2b49e0ac600f5bccd27f241b9f1a2186d65
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47694039"
@@ -30,7 +30,7 @@ ms.locfileid: "47694039"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|Fügt dem Befehlsbatch für dieses [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt einen Parametersatz hinzu.|  
 |[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|Fügt den angegebenen SQL-Befehl der aktuellen Liste mit Befehlen für dieses [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt hinzu.|  

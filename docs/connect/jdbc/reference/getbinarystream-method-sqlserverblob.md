@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba87da9a621655befe608c4ef82d8fa4cde1754b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47734548"
@@ -25,7 +25,7 @@ ms.locfileid: "47734548"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getBinaryStream-Methode &#40;&#41;](../../../connect/jdbc/reference/getbinarystream-method.md)|Gibt einen Eingabedatenstrom zum Lesen von Daten aus dem BLOB zurück.|  
 |[GetBinaryStream-Methode &#40;long "," long&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|Gibt unter Verwendung der angegebenen Startposition und Länge ein Eingabedatenstrom-Objekt mit einem BLOB-Teilwert zurück.|  

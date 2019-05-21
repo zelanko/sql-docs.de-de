@@ -29,7 +29,7 @@ ms.locfileid: "47618238"
   
 ## <a name="object-type-column-values"></a>Werte der ObjectType-Spalte  
   
-|value|Definition|  
+|Wert|Definition|  
 |-----------|----------------|  
 |8259|CHECK-Einschränkung|  
 |8260|Standard (Einschränkung oder eigenständig)|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9f12184ee5446febb9863796ea05b1536dd89201
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47615389"
@@ -25,7 +25,7 @@ ms.locfileid: "47615389"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setClientInfo-Methode &#40;java.util.Properties&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|Legt den Wert der Eigenschaften für Clientinformationen der Verbindung fest.|  
 |[setClientInfo-Methode &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|Legt den Wert der angegebenen Eigenschaft für Clientinformationen fest.|  

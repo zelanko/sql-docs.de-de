@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 043e0c931b07f8069b9a1b7e06124f7cfc484bf5
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47768440"
@@ -30,7 +30,7 @@ ms.locfileid: "47768440"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateBigDecimal (int, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-int-java-math-bigdecimal.md)|Aktualisiert die angegebene Spalte mit einem BigDecimal-Objekt unter Verwendung des angegebenen Spaltenindexes.|  
 |[updateBigDecimal (java.lang.String, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-java-lang-string-java-math-bigdecimal.md)|Aktualisiert die angegebene Spalte mit einem BigDecimal-Objekt unter Verwendung des angegebenen Spaltennamens.|  

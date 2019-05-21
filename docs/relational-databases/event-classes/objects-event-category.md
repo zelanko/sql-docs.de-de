@@ -28,7 +28,7 @@ ms.locfileid: "47701838"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Auto Stats-Ereignisklasse](../../relational-databases/event-classes/auto-stats-event-class.md)|Gibt an, dass eine automatische Aktualisierung der Index- und Spaltenstatistiken aufgetreten ist.|  
 |[Object:Altered-Ereignisklasse](../../relational-databases/event-classes/object-altered-event-class.md)|Gibt an, dass ein Objekt geändert wurde, z. B. durch die ALTER DATABASE-Anweisung oder die ALTER TABLE-Anweisung.|  

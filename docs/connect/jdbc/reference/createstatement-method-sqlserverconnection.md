@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8ed57e3c1ea14cad57fbe41d33ce57a4c12b39e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47598548"
@@ -30,7 +30,7 @@ ms.locfileid: "47598548"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[createStatement ()](../../../connect/jdbc/reference/createstatement-method.md)|Erstellt ein SQLServerStatement-Objekt zum Senden von SQL-Anweisungen an die Datenbank.|  
 |[createStatement (int, int)](../../../connect/jdbc/reference/createstatement-method-int-int.md)|Erstellt ein SQLServerStatement-Objekt, von dem SQLServerResultSet-Objekte mit dem angegebenen Typ und der angegebenen Parallelität generiert werden.|  

@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f467bfe19eb01f0771e747c0c6da1d2527174ef5
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47613388"
@@ -25,7 +25,7 @@ ms.locfileid: "47613388"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getCharacterStream-Methode &#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Gibt die CLOB-Daten als java.io.Reader-Objekt oder als Zeichendatenstrom zurück.|  
 |[getCharacterStream-Methode &#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Gibt die CLOB-Daten als java.io.Reader-Objekt oder als Zeichendatenstrom mit der angegebenen Position und Länge zurück.|  

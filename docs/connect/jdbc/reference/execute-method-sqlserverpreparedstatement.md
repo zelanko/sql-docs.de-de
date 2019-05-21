@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c6d6c3fe6b7e4b859ed26ecd171a9b1a9e02899
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47812278"
@@ -30,7 +30,7 @@ ms.locfileid: "47812278"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[execute ()](../../../connect/jdbc/reference/execute-method.md)|Führt die SQL-Anweisung in diesem [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt aus. Hierbei kann es sich um eine beliebige Art von SQL-Anweisung handeln.|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|Führt die angegebene SQL-Anweisung aus. Hierbei können mehrere Ergebnisse zurückgegeben werden.|  

@@ -26,7 +26,7 @@ ms.locfileid: "47635078"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Datenspalten der Server Memory Change-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Benutzerkontensteuerung|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Benutzerkontensteuerung|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|Ereignistyp = 81.|27|nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|nein|  

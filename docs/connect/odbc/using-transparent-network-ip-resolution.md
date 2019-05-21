@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47610742"
@@ -47,7 +47,7 @@ Schlüsselwort|Werte|Default
 
 Die `SQL_COPT_SS_TNIR` vorverbindungsattribut ermöglicht einer Anwendung aus, um diese Einstellung programmgesteuert zu steuern:
 
-Verbindungsattribut|   Instanzgröße bzw.-Typ|  Default| value| und Beschreibung
+Verbindungsattribut|   Instanzgröße bzw.-Typ|  Default| Wert| Beschreibung
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` oder `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Aktiviert oder deaktiviert die TNIR.
 
