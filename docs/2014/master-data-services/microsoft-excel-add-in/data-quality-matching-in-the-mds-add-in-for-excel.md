@@ -25,9 +25,9 @@ ms.locfileid: "65478905"
 ## <a name="workflow-for-data-quality-matching"></a>Workflow für Data Quality-Abgleich  
  Verwenden Sie beim Nutzen von DQS in Verbindung mit MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]den folgenden Workflow:  
   
-1.  Rufen Sie eine Liste mit von MDS verwalteten Daten ab, und kombinieren Sie diese mit einer Liste, die nicht unter MDS verwaltet wird. Weitere Informationen finden Sie unter [Combine Data &#40;MDS Add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md).  
+1.  Rufen Sie eine Liste mit von MDS verwalteten Daten ab, und kombinieren Sie diese mit einer Liste, die nicht unter MDS verwaltet wird. Weitere Informationen finden Sie unter [Kombinieren von Daten &#40;MDS-Add-In für Excel&#41;](combine-data-mds-add-in-for-excel.md).  
   
-2.  Vergleichen Sie die Daten mithilfe der DQS-Erkenntnisse in der kombinierten Liste. Weitere Informationen finden Sie unter [Match Similar Data &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
+2.  Vergleichen Sie die Daten mithilfe der DQS-Erkenntnisse in der kombinierten Liste. Weitere Informationen finden Sie unter [Abgleichen ähnlicher Daten &#40;MDS-Add-In für Excel&#41;](match-similar-data-mds-add-in-for-excel.md).  
   
 3.  Zeigen Sie die Detailspalten an, um weitere Details zu den mit DQS ermittelten Ähnlichkeiten anzuzeigen.  
   
