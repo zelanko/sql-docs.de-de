@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947621"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980045"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ OUTPUT
  *hdoc*  
  Das Handle für das gerade erstellte Dokument. *Hdoc* ist eine ganze Zahl.  
   
- [ *Xmltext* ]  
+ [ *xmltext* ]  
  Das ursprüngliche XML-Dokument. Der MSXML-Parser analysiert dieses XML-Dokument. *XmlText* ist ein Textparameter: **Char**, **Nchar**, **Varchar**, **Nvarchar**, **Text**, **Ntext** oder **Xml**. Der Standardwert ist NULL; in diesem Fall wird eine interne Darstellung eines leeren XML-Dokuments erstellt.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ OUTPUT
  Der Standardwert ist  **\<root Xmlns:mp = "Urn: Schemas-Microsoft-com: xml-Metaprop" >**. *Xpath_namespaces* enthält die Namespace-URIs für die Präfixe der XPath-Ausdrücken in OPENXML ein wohlgeformtes XML-Dokument verwendet. *Xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace zu verweisen **Urn: Schemas-Microsoft-com: xml-Metaprop**; Dies stellt Metadaten für die analysierte XML-Elemente. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix **mp** ist noch gültig für **Urn: Schemas-Microsoft-com: xml-Metaprop** selbst wenn *Xpath_namespaces* keine derartige Deklaration enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder >0 (Fehler)  
+ 0 (Erfolg) oder > 0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[Gespeicherte XML-Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[Gespeicherte Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>["sp_xml_removedocument" (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

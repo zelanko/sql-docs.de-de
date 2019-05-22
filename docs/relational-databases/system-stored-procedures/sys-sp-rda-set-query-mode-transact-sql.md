@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740548"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982882"
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sp_rda_set_query_mode (Transact-SQL)
+# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gibt an, ob Abfragen an der aktuellen aktivierter Funktion Stretch-Datenbank und die Tabellen sowohl lokale als auch Daten (Standard) oder nur lokale Daten zurückgeben.  
@@ -53,7 +53,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
  Ist ein optionaler Bitwert, den Sie auf 1 festlegen können, wenn Sie Abfragemodus ohne Überprüfung ändern möchten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder >0 (Fehler)  
+ 0 (Erfolg) oder > 0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
  Benötigen Sie Db_owner-Berechtigungen.  

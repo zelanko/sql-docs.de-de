@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11336658a557d9a2ceced08425a12963dd15782e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685228"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982953"
 ---
-# <a name="syssprdasetrpoduration-transact-sql"></a>Sys. sp_rda_set_rpo_duration (Transact-SQL)
+# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Legt die Anzahl der Stunden der migrierten Daten, die von SQL Server beibehalten in einer Stagingtabelle aus, um sicherzustellen, eine vollständige Wiederherstellung von Azure-Remotedatenbank, wenn ein Punkt in der Time-Wiederherstellung erforderlich ist.    
@@ -42,7 +42,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>Argumente    
- [ @duration_hrs =] *Duration_hrs*    
+ [ @duration_hrs = ] *duration_hrs*    
  Die Anzahl der Stunden (ein nicht-Null-Integer-Wert) der migrierten Daten, die Sie für die aktuelle Datenbank für Stretch-aktivierten SQL Server beibehalten möchten. Der Standardwert und der minimale Wert beträgt 8 Stunden.    
  
  > [!NOTE]
@@ -55,7 +55,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
  Rufen Sie den aktuellen Wert mit [sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Siehe auch    
- [sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
+ [sys.sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542250"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980058"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542250"
 |**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3 – Client initiierter Abbruch der Ausführung<br /><br /> 4 - Ausnahme hat die Ausführung abgebrochen.|  
 |**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Type-Feld Ausführung:<br /><br /> 0 – reguläre<br /><br /> 3: abgebrochen<br /><br /> 4 - Ausnahme|  
-|**first_execution_time**|**datetimeoffset**|Zeitpunkt der ersten Ausführung für den Abfrageplan in aggregationsintervalls.|  
-|**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung der Abfrage innerhalb des aggregationsintervalls zu planen.|  
+|**first_execution_time**|**datetimeoffset**|Zeitpunkt der ersten Ausführung für den Abfrageplan in aggregationsintervalls. Dies bezieht sich auf die Endzeit der Ausführung der Abfrage.|  
+|**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung der Abfrage innerhalb des aggregationsintervalls zu planen. Dies bezieht sich auf die Endzeit der Ausführung der Abfrage.|  
 |**count_executions**|**bigint**|Die Gesamtzahl der Ausführungen für den Abfrageplan in aggregationsintervalls.|  
 |**avg_duration**|**float**|Die durchschnittliche Dauer für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).|  
 |**last_duration**|**bigint**|Planen Sie die letzte Dauer für die Abfrage innerhalb der aggregationsintervall (in Mikrosekunden gemeldet).|  

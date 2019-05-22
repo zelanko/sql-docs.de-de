@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29bd622dd82a223b235249b611c1bee5d98a5715
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54bdac5237ff190f3620bb29dabbf684868c0b75
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717098"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982932"
 ---
-# <a name="syssprdareconcilebatch-transact-sql"></a>sp_rda_reconcile_batch (Transact-SQL)
+# <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gleicht die Batch-ID, die in der Stretch-aktivierten SQL Server-Tabelle gespeichert werden, mit der Batch-ID im Azure-Remotetabelle gespeichert.  
@@ -44,7 +44,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \@Objname = '*\@Objname*"  
+ \@objname = '*\@objname*'  
  Der Name des Stretch-aktivierten SQL Server-Tabelle.  
   
 ## <a name="permissions"></a>Berechtigungen  

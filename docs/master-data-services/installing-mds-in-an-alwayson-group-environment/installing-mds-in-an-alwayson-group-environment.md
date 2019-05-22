@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489605"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982116"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -302,8 +302,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
     Abbildung 17
 
-    Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in der Abbildung
-17.
+    Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in Abbildung 17.
 
     **Synchroner Commit:** Dadurch wird sichergestellt, dass beim Ausführen eines Commit für eine Transaktion auf dem primären Replikat einer Datenbank ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
 

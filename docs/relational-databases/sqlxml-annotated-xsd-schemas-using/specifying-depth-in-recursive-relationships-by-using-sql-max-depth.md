@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030721"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980753"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Verwenden der **Sql:max-Tiefe** -Anmerkung im Schema, um die Rekursionstiefe einer rekursiven Beziehung anzugeben, die im Schema beschrieben wird. Der Wert des der **Sql:max-Tiefe** Anmerkung ist eine positive ganze Zahl (1 bis 50), der die Anzahl der Rekursionen angibt:  Der Wert 1 beendet die Rekursion bei dem Element, für die die **Sql:max-Tiefe** -Anmerkung; Wert 2 wird die Rekursion bei der nächsten Ebene unter dem Element beendet **Sql:max-Tiefe** angegeben ist ; Und so weiter.  
   
 > [!NOTE]  
->  In der zugrunde liegenden Implementierung wird eine Xpath-Abfrage, die mit einem Zuordnungsschema angegeben wird, in eine SELECT ... FOR XML EXPLICIT-Abfrage umgewandelt. Bei dieser Abfrage ist es erforderlich, eine endliche Rekursionstiefe anzugeben. Je höher der Wert, den Sie, für die angeben **Sql:max-Tiefe**, desto größer der FOR XML EXPLICIT Abfragen, die generiert wird. Dies könnte den Abrufvorgang verlangsamen.  
+>  In der zugrunde liegenden Implementierung wird eine XPath-Abfrage, die für ein Zuordnungsschema angegeben ist in einer SELECT-Anweisung konvertiert... FÜR XML EXPLICIT-Abfrage. Bei dieser Abfrage ist es erforderlich, eine endliche Rekursionstiefe anzugeben. Je höher der Wert, den Sie, für die angeben **Sql:max-Tiefe**, desto größer der FOR XML EXPLICIT Abfragen, die generiert wird. Dies könnte den Abrufvorgang verlangsamen.  
   
 > [!NOTE]  
 >  Bei Updategrams und beim XML-Massenladen wird die -Anmerkung ignoriert. Dies bedeutet, rekursive Updates oder Einfügungen werden unabhängig von dem Wert ausgeführt, der für  angegeben wird.  

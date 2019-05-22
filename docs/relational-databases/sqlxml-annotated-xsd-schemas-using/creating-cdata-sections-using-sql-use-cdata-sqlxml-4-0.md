@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9b7cac79155e89217a64fbbc309082322853f80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b7f6ff5e7f16012d33f805227e6dda997cfc60d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041591"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981063"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Erstellen von CDATA-Abschnitten mit sql:use-cdata (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In XML werden Textblöcke, die Zeichen enthalten, die andernfalls als Markup erkannt würden, mit CDATA-Abschnitten in Escapezeichen umgewandelt.  
   
- Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markupzeichen behandelt werden. Zum Beispiel werden spitze Klammern (< und >), das Symbol "kleiner als oder gleich" (<=) und das kaufmännische Und-Zeichen (&) als Markupzeichen behandelt. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
+ In einer Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die von der XML-Parser als Markupzeichen behandelt werden, zum Beispiel werden spitze Klammern (< und >), das kleiner-als-oder-gleich-Symbol (< =), und das kaufmännische und-Zeichen sind (&) als behandelt Markupzeichen. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
   
  Die **SQL: use-Cdata** -Anmerkung verwendet, um anzugeben, dass die Daten von zurückgegeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem CDATA-Abschnitt umschlossen werden (d. h. er gibt an, ob der Wert aus einer Spalte, die anhand des **SQL: field** sollten in einem CDATA-Abschnitt eingeschlossen werden). Die **SQL: use-Cdata** -Anmerkung kann angegeben werden, nur für Elemente, die einer Datenbankspalte zugeordnet.  
   
