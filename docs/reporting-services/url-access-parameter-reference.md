@@ -1,22 +1,22 @@
 ---
 title: Referenz für URL-Zugriffsparameter | Microsoft-Dokumentation
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515122"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620596"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "52515122"
 -   [Befehle des Berichts-Viewer-Webparts (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Befehle des HTML-Viewers (rc:)  
- HTML-Viewer-Befehle werden verwendet, um den HTML-Viewer (z.B. vom Berichts-Manager) auszuwählen, und sind mit dem Präfix *rc:* versehen:  
+ - HTML-Viewer-Befehle werden verwendet, um den HTML-Viewer auszuwählen, und sind mit dem Präfix *rc:* versehen:
   
 -   *Symbolleiste* :  
                   Zeigt die Symbolleiste an oder blendet sie aus. Wenn der Wert dieses Parameters **FALSE**ist, werden alle verbleibenden Optionen ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen. Der Standardwert dieses Parameters ist **true**.  
@@ -370,7 +370,7 @@ ms.locfileid: "52515122"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md)  
   

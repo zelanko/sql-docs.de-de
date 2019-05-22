@@ -25,15 +25,16 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: bc660aeb0ca4e7b56cae69a8eb294c6681b1765c
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590285"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620331"
 ---
 # <a name="set-statements-transact-sql"></a>SET-Anweisungen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
 Die Programmiersprache [!INCLUDE[tsql](../../includes/tsql-md.md)] bietet eine Reihe von SET-Anweisungen, mit denen die Verarbeitung bestimmter Informationen durch die aktuelle Sitzung geändert werden kann. Die SET-Anweisungen sind in die in der folgenden Tabelle gezeigten Kategorien unterteilt.  
   
@@ -44,14 +45,14 @@ Informationen zum Festlegen von lokalen Variablen mit der SET-Anweisung finden S
 |Datums- und Zeitanweisungen|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |Sperranweisungen|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  
 |Verschiedene Anweisungen|[SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)<br /><br /> [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)<br /><br /> [SET FIPS_FLAGGER](../../t-sql/statements/set-fips-flagger-transact-sql.md)<br /><br /> [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md)<br /><br /> [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)<br /><br /> [SET OFFSETS](../../t-sql/statements/set-offsets-transact-sql.md)<br /><br /> [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)|  
-|Abfrageausführungsanweisungen|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /><br /> Hinweis: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|Abfrageausführungsanweisungen|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /> Hinweis: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [SET RESULT SET CACHING](../../t-sql/statements/set-result-set-caching-transact-sql.md?view=azure-sqldw-latest) (Vorschau)<br /> Hinweis:  Diese Funktion gilt nur für Azure SQL Data Warehouse.<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
 |Anweisungen für ISO-Einstellungen|[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_OFF](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)<br /><br /> [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)<br /><br /> [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)<br /><br /> [SET ANSI_WARNINGS](../../t-sql/statements/set-ansi-warnings-transact-sql.md)|  
 |Statistikanweisungen|[SET FORCEPLAN](../../t-sql/statements/set-forceplan-transact-sql.md)<br /><br /> [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md)<br /><br /> [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md)<br /><br /> [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)<br /><br /> [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md)<br /><br /> [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)<br /><br /> [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)<br /><br /> [SET STATISTICS TIME](../../t-sql/statements/set-statistics-time-transact-sql.md)|  
-|Transaktionsanweisungen|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)|  
+|Transaktionsanweisungen|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)| 
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>Überlegungen beim Verwenden von SET-Anweisungen  
   
-- Alle SET-Anweisungen werden zur Ausführungs- oder Laufzeit ausgeführt, mit Ausnahme der folgenden Anweisungen, die zur Analysezeit ausgeführt werden: 
+- Alle SET-Anweisungen werden zur Ausführungs- oder Laufzeit ausgeführt, mit Ausnahme der folgenden Anweisungen, die zur Analysezeit ausgeführt werden:
 
   - SET FIPS_FLAGGER
   - SET OFFSETS
@@ -69,7 +70,7 @@ Informationen zum Festlegen von lokalen Variablen mit der SET-Anweisung finden S
 - Wenn eine SET-Anweisung die Einstellungen ON und OFF verwendet, können Sie eine der Einstellungen für mehrere SET-Optionen angeben.
   
     > [!NOTE]  
-    >  Dies gilt nicht für die statistikbezogenen SET-Optionen.  
+    >  Dies gilt nicht für die statistikbezogenen SET-Optionen.
   
      Beispielsweise legt `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` sowohl für QUOTED_IDENTIFIER als auch für ANSI_NULLS die Einstellung ON fest.  
   
@@ -89,6 +90,7 @@ Informationen zum Festlegen von lokalen Variablen mit der SET-Anweisung finden S
   
 - Beim Erstellen und Bearbeiten von Indizes für berechnete Spalten oder indizierten Sichten müssen Sie die folgenden SET-Optionen auf ON festlegen: ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING und ANSI_WARNINGS. Die Option NUMERIC_ROUNDABORT muss auf OFF festgelegt sein.  
   
-  Wenn Sie keine dieser Optionen auf die erforderlichen Werte festlegen, schlagen die Aktionen INSERT, UPDATE, DELETE, DBCC CHECKDB und DBCC CHECKTABLE für die indizierten Sichten oder Tabellen mit Indizes für berechnete Spalten fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, wobei alle Optionen aufgelistet werden, die nicht ordnungsgemäß festgelegt sind. Außerdem verarbeitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die SELECT-Anweisungen in diesen Tabellen oder indizierten Sichten so, als seien die Indizes auf den berechneten Spalten oder Sichten nicht vorhanden.  
-  
-  
+  Wenn Sie keine dieser Optionen auf die erforderlichen Werte festlegen, schlagen die Aktionen INSERT, UPDATE, DELETE, DBCC CHECKDB und DBCC CHECKTABLE für die indizierten Sichten oder Tabellen mit Indizes für berechnete Spalten fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, wobei alle Optionen aufgelistet werden, die nicht ordnungsgemäß festgelegt sind. Außerdem verarbeitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die SELECT-Anweisungen in diesen Tabellen oder indizierten Sichten so, als seien die Indizes auf den berechneten Spalten oder Sichten nicht vorhanden. 
+
+- Wenn RESULT_SET_CACHING auf ON festgelegt ist, aktiviert dies die Funktion für Ergebniszwischenspeicherung für die aktuelle Clientsitzung.   Result_set_caching kann für eine Sitzung nicht aktiviert werden (ON), wenn es auf Datenbankebene deaktiviert (OFF) ist.    Wenn RESULT_SET_CACHING auf OFF festgelegt ist, ist die Funktion für Ergebniszwischenspeicherung für die aktuelle Clientsitzung deaktiviert. Um diese Einstellung zu ändern, ist die Mitgliedschaft in der Rolle „public“ (Öffentlich) erforderlich.
+Betrifft: Azure SQL Data Warehouse Gen2

@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281664"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722570"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe zweier Transformationen zum Suchen transformiert und anschließend in eine Kopie der **FactCurrencyRate**-Faktentabelle in die Beispieldatenbank **AdventureWorksDW2012** geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
   

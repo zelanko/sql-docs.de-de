@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412067"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581306"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  Das Ergebnis ist ein Columnstore-Index mit einem nicht gruppierten Index, der eine Primärschlüsseleinschränkung für beide Indizes erzwingt.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  
@@ -127,7 +127,7 @@ END TRAN
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Momentaufnahme-Isolation und Momentaufnahmen mit der Isolationsstufe READ  
  Verwenden Sie die Momentaufnahmeisolation (snapshot-isolation; SI), um die Transaktionskonsistenz zu gewährleisten und die Read Committed-Momentaufnahmeisolation (read-committed snapshot isolations; RCSI), um Konsistenz auf Anweisungsebene für Abfragen auf Columnstore-Indizes zu gewährleisten. Dadurch können Abfragen ohne Blockierung von Datenschreibern ausgeführt werden. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen. Weitere Informationen finden Sie unter [Momentaufnahmeisolation in SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) auf MSDN.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Columnstore Indexes Design Guidance (Leitfaden zum Entwerfen von Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Columnstore Indexes Data Loading Guidance (Leitfaden zum Laden von Daten in Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

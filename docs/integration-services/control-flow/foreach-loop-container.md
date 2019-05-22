@@ -31,14 +31,18 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271316"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727709"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Enumeratortypen bereit:  
@@ -416,7 +420,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Verbindung**  
  Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- Verwandte Themen: , . [ADONET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ Verwandte Themen: [ADONET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Aufzählen**  
  Geben Sie das aufzuzählende SMO-Objekt an.  
@@ -458,7 +462,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Azure Storage-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist.  
   
- Verwandte Themen: , . [Azure Storage-Verbindungs-Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ Verwandte Themen: [Azure Storage-Verbindungs-Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob-Containername**  
  Geben Sie den Namen des Blob-Containers an, der die aufzuzählenden Blob-Dateien enthält.

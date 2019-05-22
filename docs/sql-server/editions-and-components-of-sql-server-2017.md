@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788097"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560112"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Always On-Verfügbarkeitsgruppen<sup>3</sup>|Ja|Nein|Nein|Nein|Nein|
 |Basis-Verfügbarkeitsgruppen<sup>4</sup>|Nein|Ja|Nein|Nein|Nein|
 |Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|Nein|
-|Online-Indizierung|Ja|Nein|Nein|Nein|Nein|
+|Onlineindex erstellen und neu erstellen|Ja|Nein|Nein|Nein|Nein|
 |Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein|Nein|Nein|Nein|
 |Onlineschemaänderung|Ja|Nein|Nein|Nein|Nein|
 |Schnelle Wiederherstellung|Ja|Nein|Nein|Nein|Nein|

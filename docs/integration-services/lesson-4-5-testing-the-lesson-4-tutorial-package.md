@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280954"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721512"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lektion 4.5: Testen des Tutorialpakets aus Lektion 4
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Die beschädigte Datei **Currency_BAD.txt** kann in der Transformation „Currency Key Lookup“ keine Übereinstimmung generieren. Da die Fehlerausgabe der Transformation „Currency Key Lookup“ so konfiguriert wurde, dass fehlerhafte Zeilen zum neuen Ziel für fehlerhafte Dateien umgeleitet werden, erzeugt die Komponente keinen Fehler, und das Paket wird erfolgreich ausgeführt. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schreibt alle fehlgeschlagenen Zeilen in die Datei **ErrorOutput.txt**.  
   
@@ -46,7 +50,7 @@ Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Dat
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Anzeigen des Inhalts der Datei „ErrorOutput.txt“  
   
-Öffnen Sie in Editor oder einem anderen Text-Editor die Datei **ErrorOutput.txt**. Die standardmäßige Spaltenreihenfolge ist: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn und ErrorDescription.  
+Öffnen Sie in Editor oder einem anderen Text-Editor die Datei **ErrorOutput.txt**. Die standardmäßige Spaltenreihenfolge ist: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
  
 Beachten Sie, dass alle in der Datei enthaltenen Zeilen den nicht übereinstimmenden CurrencyID-Wert BAD, den ErrorCode-Wert –1071607778, den ErrorColumn-Wert 0 und den ErrorDescription-Wert "Row yielded no match during lookup" (Es wurde für die Zeile bei der Suche keine Übereinstimmung gefunden.) enthalten. Der ErrorColumn-Wert ist 0, weil der Fehler nicht spaltenspezifisch ist, sondern vielmehr der Suchvorgang fehlgeschlagen ist.
   

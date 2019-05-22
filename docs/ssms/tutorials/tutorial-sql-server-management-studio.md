@@ -1,7 +1,7 @@
 ---
 title: 'Lernprogramm: SQL Server Management Studio | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800974"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620512"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Dieses Tutorial zu SQL Server Management Studio (SSMS) bietet eine Einführung in die integrierte Umgebung zum Verwalten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Tutorial, wie Sie die von Ihren Anwendungen, z.B. Datenbanken, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
+Tutorials zu SQL Server Management Studio (SSMS) bieten eine Einführung in die integrierte Umgebung zum Verwalten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] präsentiert eine grafische Benutzeroberfläche zum Konfigurieren, Überwachen und Verwalten von Azure SQL-Datenbank, der verwalteten Azure SQL-Datenbankinstanz, Azure SQL Data Warehouse und Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Darüber hinaus vermittelt Ihnen das Tutorial, wie Sie die von Ihren Anwendungen, z.B. Datenbanken, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 
@@ -41,9 +41,9 @@ Die folgenden Tutorials helfen Ihnen dabei, die Darstellung von Informationen in
   
 Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. In diesen Tutorials machen Sie sich mit den unterschiedlichen Features vertraut, die in SSMS verfügbar sind.  Außerdem erfahren Sie, wie Sie die Komponenten von SSMS verwalten und Features finden, die Sie regelmäßig verwenden.  
 
-Folgende Themen werden behandelt: 
+Folgende Themen werden behandelt:
 
-  
+
 - [Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio](connect-query-sql-server.md)
 
     In diesem Tutorial erfahren Sie, wie Sie eine Verbindung mit einer SQL Server-Instanz herstellen. Außerdem lernen Sie einige grundlegende T-SQL-Befehle (Transact-SQL) kennen, mit denen Sie eine neue Datenbank erstellen und anschließend abfragen. 

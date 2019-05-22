@@ -11,14 +11,18 @@ ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830fee8fa07901f104891b27348aa99959057406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5094f1fc42715dfed74aee022d8ebe2bd36d8b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282424"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726606"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der ODBC-Quelle beschrieben. Alle Eigenschaften können über SSIS-Eigenschaftsausdrücke festgelegt werden.  
   
 |Eigenschaftenname|Datentyp|und Beschreibung|  

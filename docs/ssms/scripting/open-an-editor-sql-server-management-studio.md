@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 60bcbca88f2d75e062a45fc21103ece8631f9503
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508732"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821353"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52508732"
 ### <a name="permissions"></a>Berechtigungen  
  Vorgänge, die Sie in einem Code-Editor ausführen, unterliegen den dem für die Anmeldung verwendeten Authentifizierungskonto erteilten Berechtigungen. Wenn Sie beispielsweise mit der Windows-Authentifizierung ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors öffnen, können Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ausführen, die auf Objekte verweisen, für die dem Windows-Anmeldekonto keine Zugriffsberechtigungen erteilt wurden.  
   
-## <a name="how-to-open-editors"></a>Vorgehensweise: Öffnen von Editoren  
+## <a name="how-to-open-editors"></a>Gewusst wie: Editor öffnen  
  In diesem Abschnitt wird erläutert, wie die verschiedenen Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden.  
   
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  

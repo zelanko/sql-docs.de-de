@@ -2,7 +2,7 @@
 title: Ändern von Zeitzonen und Systemuhreinstellungen auf einem Berichtsserver | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973479"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578367"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Ändern von Zeitzonen und Zeiteinstellungen auf einem Berichtsserver
   Ein Berichtsserver verwendet immer die lokale Zeit des Computers, auf dem dieser installiert ist. Es ist nicht möglich, die Verwendung einer anderen Zeitzone zu konfigurieren. Falls eine Clientanwendung auf einen Berichtsserver in einer anderen Zeitzone verweist, wird die Zeitzone des Berichtsservers zum Ausführen einer geplanten Operation verwendet. Im Berichts-Manager und auf den SharePoint-Verwaltungsseiten wird die Zeitzone auf jeder Zeitplanungsseite angezeigt, damit Sie genau wissen, wann ein geplanter Vorgang ausgeführt wird. Auf der Seite zum Erstellen benutzerdefinierter Zeitpläne kann beispielsweise „Uhrzeiten werden dargestellt in (UTC-08:00) Pazifische Zeit (USA und Kanada)“ angegeben sein.
-Der Berichtsserver erstellt einen SQL Server-Agent-Auftrag, der zum Auslösen des Zeitplans verwendet wird. Wenn der Berichtsserver und SQL Server-Agent auf separaten Servern befinden, müssen die Zeitzone auf allen Servern identisch sein.
+Der Berichtsserver erstellt einen SQL Server-Agent-Auftrag, der zum Auslösen des Zeitplans verwendet wird. Wenn sich der Berichtsserver und der SQL Server-Agent auf separaten Servern befinden, muss die Zeitzone auf allen Servern identisch sein.
   
 ## <a name="changing-the-time-zone-native-mode"></a>Ändern der Zeitzone (einheitlicher Modus)  
  Falls Sie die Zeitzone auf einem Computer ändern, der einen Berichtsserver hostet, müssen Sie den Berichtsserverdienst neu starten, damit die Änderung der Zeitzone wirksam wird.  

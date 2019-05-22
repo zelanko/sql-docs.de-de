@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283204"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729173"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
  
 > [!NOTE]
@@ -172,7 +176,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 |Eigenschaftsname (Dialogfeld**Katalogeigenschaften** )|Eigenschaftsname (Datenbanksicht)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_ALGORITHM|  
-|Protokolle regelmäßig bereinigen|OPERATION_CLEANUP_ENABLED|  
+|Protokolle regelmäßig bereinigen|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Beibehaltungsdauer (Tage)|RETENTION_WINDOW|  
 |Alte Versionen regelmäßig entfernen|VERSION_CLEANUP_ENABLED|  
 |Maximale Anzahl der Versionen pro Projekt|MAX_PROJECT_VERSIONS|  

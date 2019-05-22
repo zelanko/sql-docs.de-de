@@ -1,6 +1,6 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server-Machine Learning und -Programmiererweiterungen – Dokumentation
+- name: SQL Server Machine Learning Services-Dokumentation
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: 'Machine Learning-Erweiterungen (R, Python)'
   items:
@@ -12,18 +12,6 @@
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: Eigenständiger Server
       href: ../advanced-analytics/r/r-server-standalone.md
-- name: Java-Erweiterung
-  items:
-    - name: Ausführen von Java-Code in SQL
-      href: ../advanced-analytics/java/extension-java.md
-    - name: Aufrufen von Java aus SQL
-      href: ../advanced-analytics/java/howto-call-java-from-sql.md
-    - name: Java-Beispiel
-      href: ../advanced-analytics/java/java-first-sample.md
-    - name: SDK für Java
-      href: ../advanced-analytics/java/java-sdk.md
-    - name: Java- und SQL-Datentypen
-      href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: Installieren
   items:
     - name: Unterschiede in SQL Server 2019

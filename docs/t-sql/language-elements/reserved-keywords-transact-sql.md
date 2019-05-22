@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853569"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626678"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
   
- Die folgende Tabelle enthält für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und SQL Data Warehouse reservierte Schlüsselwörter.  
+ Die folgende Tabelle enthält für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Azure SQL Data Warehouse reservierte Schlüsselwörter.  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853569"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-Die folgende Tabelle enthält die für **SQL Data Warehouse** exklusiv reservierten Schlüsselwörter.
+Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv reservierten Schlüsselwörter.
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  Darüber hinaus definiert der ISO-Standard eine Liste mit reservierten Schlüsselwörtern. Sie sollten keine dieser in ISO reservierten Schlüsselwörter für Objektnamen und -bezeichner verwenden. Die Liste der reservierten ODBC-Schlüsselwörter, die in der folgenden Tabelle aufgeführt werden, stimmt mit der Liste der reservierten ISO-Schlüsselwörter überein.  
   
@@ -259,7 +259,7 @@ Die folgende Tabelle enthält die für **SQL Data Warehouse** exklusiv reservier
 |DATE|ONLY|UNDER|  
 |DAY|OPERATION|UNKNOWN|  
 |DEC|ORDINALITY|UNNEST|  
-|DECIMAL|OUT|USAGE|  
+|DEZIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
 |DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
@@ -285,7 +285,7 @@ Die folgende Tabelle enthält die für **SQL Data Warehouse** exklusiv reservier
 |FIRST|RECURSIVE|XMLFOREST|  
 |GLEITKOMMAZAHL|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
-|KOSTENLOS|REGR_AVGX|XMLPARSE|  
+|FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
 |FUSION|REGR_COUNT|XMLQUERY|  
 |GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  
@@ -295,7 +295,7 @@ Die folgende Tabelle enthält die für **SQL Data Warehouse** exklusiv reservier
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   

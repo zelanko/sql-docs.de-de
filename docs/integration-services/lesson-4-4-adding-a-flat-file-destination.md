@@ -11,14 +11,18 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55c040385615c0bd7db750f7eb31a0f2eb7aa73b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273836"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721448"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lektion 4.4: Hinzufügen eines Flatfileziels
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Die Fehlerausgabe der Lookup Currency Key-Transformation leitet alle Datenzeilen, für die beim Suchvorgang keine Übereinstimmung gefunden wurde, zum Skripttransformationsvorgang um. Um mehr Informationen zu den aufgetretenen Fehlern bereitzustellen, führt die Skripttransformation ein Skript aus, mit dem die Beschreibung jedes Fehlers abgerufen wird.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out (SSIS) | Microsoft-Dokumentation'
 description: Dieser Artikel umfasst eine exemplarische Vorgehensweise zum Einrichten und Konfigurieren von SSIS Scale Out.
 ms.custom: performance
 ms.date: 12/13/2017
@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620568"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718489"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von Scale Out für Integration Services (SSIS)
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out (SSIS; horizontales Hochskalieren)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Richten Sie (SSIS-) Scale Out für [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] ein, indem Sie die folgenden Aufgaben ausführen. 
 
 > [!TIP]
@@ -73,7 +77,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Installieren des Scale Out-Masters über die Eingabeaufforderung
 
-Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) angegeben sind. Führen Sie die folgenden Schritte aus, um die Parameter für den Scale Out-Master festzulegen:
+Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)angegeben sind. Führen Sie die folgenden Schritte aus, um die Parameter für den Scale Out-Master festzulegen:
  
 1.  Fügen Sie dem Parameter `/FEATURES` `IS_Master` hinzu
 
@@ -128,7 +132,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Installieren des Scale Out-Workers über die Eingabeaufforderung
 
-Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) angegeben sind. Führen Sie die folgenden Schritte aus, um die Parameter für den Scale Out-Worker festzulegen:
+Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)angegeben sind. Führen Sie die folgenden Schritte aus, um die Parameter für den Scale Out-Worker festzulegen:
 
 1.  Fügen Sie „IS_Worker“ zum Parameter `/FEATURES` hinzu.
 

@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206326"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718277"
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out umfasst die Kommunikation zwischen der SSISDB-Katalogdatenbank `SSISDB`, dem Scale Out-Masterdienst und dem Scale Out-Workerdienst. Gelegentlich wird diese Kommunikation u.a. aufgrund von Konfigurationsfehlern und fehlenden Zugriffsberechtigungen unterbrochen. Dieser Artikel soll Sie bei der Behandlung von Problemen mit der Scale Out-Konfiguration unterstützen.
 
@@ -154,7 +158,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Symptome
 
-*"System.ServiceModel.CommunicationException: An error occurred while making the HTTP request to https://[Machine Name]:[Port]/ClusterManagement/. This could be due to the fact that the server certificate is not configured properly with HTTP.SYS in the HTTPS case. This could also be caused by a mismatch of the security binding between the client and the server."* („System.ServiceModel.CommunicationException: Fehler beim Erstellen der HTTP-Anforderung für https://[Computername]:[Port]/ClusterManagement/. Dies könnte daran liegen, dass das Serverzertifikat nicht richtig mit „HTTP.SYS“ im HTTPS-Fall konfiguriert wurde. Eine andere mögliche Ursache kann eine fehlende Übereinstimmung bei der Sicherheitsbindung zwischen Client und Server sein.“*
+*"System.ServiceModel.CommunicationException: An error occurred while making the HTTP request to https://[Machine Name]:[Port]/ClusterManagement/. Dies könnte daran liegen, dass das Serverzertifikat nicht richtig mit „HTTP.SYS“ im HTTPS-Fall konfiguriert wurde. Eine andere mögliche Ursache kann eine fehlende Übereinstimmung bei der Sicherheitsbindung zwischen Client und Server sein.“*
 
 ### <a name="solution"></a>Lösung
 1.  Überprüfen Sie mithilfe des folgenden Befehls, ob das Scale Out-Masterzertifikat korrekt an den Port im Masterendpunkt auf dem Masterknoten gebunden ist:

@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270698"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727128"
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>Konfigurieren von Transformationen für Zeichenfolgenvergleiche  
@@ -64,7 +68,7 @@ ms.locfileid: "58270698"
  Sie können auch ein Gebietsschema für einen Verbindungs-Manager für Flatfiles und einen Verbindungs-Manager für mehrere Flatfiles angeben.  
   
 ## <a name="setting-comparison-options"></a>Festlegen von Vergleichsoptionen  
- Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Dadurch werden diakritische Zeichen wie z. B. Akzente ignoriert, sodass "a" und "á" für Vergleichszwecke identisch sind.  
+ Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Dadurch werden diakritische Zeichen wie z. B. Akzente ignoriert, sodass „a“ und „Ã¡“ für Vergleichszwecke identisch sind.  
   
  In der folgenden Tabelle werden die Vergleichsoptionen und eine Sortiermethode beschrieben.  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270698"
 |Groß-/Kleinschreibung ignorieren|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |Kanatyp ignorieren|Gibt an, ob beim Vergleichen zwischen den beiden Typen japanischer Kanazeichen unterschieden wird: Hiragana und Katakana. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich den Kanatyp.|  
 |Zeichenbreite ignorieren|Gibt an, ob beim Vergleichen zwischen einem Single-Byte-Zeichen und demselben Zeichen als Double-Byte-Zeichen unterschieden wird. Wenn diese Option festgelegt ist, werden die Single-Byte- und die Double-Byte-Darstellung desselben Zeichens als identisch behandelt.|  
-|Zeichen ohne Zwischenraum ignorieren|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
+|Zeichen ohne Zwischenraum ignorieren|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann „å“ mit „a“ identisch.|  
 |Symbole ignorieren|Gibt an, ob beim Vergleichen zwischen Buchstaben und Symbolen wie z. B. Leerzeichen, Satzzeichen, Währungssymbolen und mathematischen Symbolen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich Symbole. Beispielsweise ist " New York" dann identisch mit "New York", und "*ABC" ist identisch mit "ABC"'.|  
 |Interpunktion als Symbole sortieren|Gibt an, ob beim Vergleichen alle Interpunktionssymbole außer dem Bindestrich und dem Apostroph vor den alphanumerischen Zeichen sortiert werden. Falls diese Option festgelegt ist, wird z. B. ".ABC" vor "ABC" sortiert.|  
   

@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aae0735f4dec61ebafa991afb579c32ee560260
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767748"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720278"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Wenn Sie auf einem Azure-Server ein SSIS-Projekt (SQL Server Integration Services) in der SSIS-Katalog (SSISDB) bereitstellen, fügt der Assistent für die Paketbereitstellung hinter der Seite **Überprüfen** einen zusätzlichen Überprüfungsschritt hinzu. In diesem Überprüfungsschritt werden die im Projekt enthaltenen Pakete auf bekannte Probleme hin überprüft, die möglicherweise eine erwartungsgemäße Ausführung in der Azure SSIS Integration Runtime verhindern. Anschließend zeigt der Assistent alle zutreffenden Warnungen auf der Seite **Überprüfen** an.
 
@@ -40,23 +44,23 @@ Der Assistent führt die folgenden Überprüfungen für die in der Liste aufgef�
 
 | Verbindungs-Manager | Windows-Authentifizierung | Dateipfad | UNC-Pfad | Hostname | Anbieter oder Treiber |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| ADO                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
-| File               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| FTP                |          |           |     | ✓         |                   |
-| MSOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| ODBC               | ✓        |           |     | ✓         | ✓                 |
-| OLEDB              | ✓        |           |     | ✓         | ✓                 |
-| SMOServer          | ✓        |           |     | ✓         |                   |
-| SMTP               | ✓        |           |     | ✓         |                   |
-| SQLMOBILE          |          | ✓         | ✓   |           |                   |
-| WMI                | ✓        |           |     |           |                   |
+| ADO                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| Excel              |          | âœ“         | âœ“   |           |                   |
+| File               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| FTP                |          |           |     | âœ“         |                   |
+| MSOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| ODBC               | âœ“        |           |     | âœ“         | âœ“                 |
+| OLEDB              | âœ“        |           |     | âœ“         | âœ“                 |
+| SMOServer          | âœ“        |           |     | âœ“         |                   |
+| SMTP               | âœ“        |           |     | âœ“         |                   |
+| SQLMOBILE          |          | âœ“         | âœ“   |           |                   |
+| WMI                | âœ“        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>Überprüfen von Quellen und Zielen

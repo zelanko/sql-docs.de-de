@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280854"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729063"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer für Oracle von Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Designer Console wird verwendet, um Oracle CDC-Instanzen zu entwickeln und zu warten. Die CDC Designer Console ist ein Microsoft Management Console-Snap-In, das die folgenden Elemente enthält:  
   
 -   New Instance Wizard: Mit diesem Assistenten wird eine neue Oracle CDC-Instanz erstellt. Weitere Informationen zur Verwendung des Assistenten für neue Instanzen finden Sie unter [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
@@ -29,7 +33,7 @@ ms.locfileid: "58280854"
   
 -   CDC Instance Properties Editor: Dieses Dialogfeld wird verwendet, um vorhandene Instanzen des Oracle CDC Service zu bearbeiten. Informationen zum Bearbeiten der CDC-Instanzeigenschaften finden Sie unter [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Microsoft® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL Server® 2016 sind Teil des SQL Server 2016 Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
+ MicrosoftÂ® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL ServerÂ® 2016 sind Teil des SQL Server 2016 Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
   
 ## <a name="in-this-documentation"></a>In dieser Dokumentation  
   

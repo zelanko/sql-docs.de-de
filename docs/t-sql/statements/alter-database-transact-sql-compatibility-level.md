@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583373"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626688"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -237,9 +237,9 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 120 eingeführte Verhal
 |Wenn die Datenbankkapselung auf PARTIAL festgelegt ist, kann die Überprüfung des `$action`-Felds in der `OUTPUT`-Klausel einer `MERGE`-Anweisung einen Sortierungsfehler zurückgeben.|Die von der `$action`-Klausel einer `MERGE`-Anweisung zurückgegebene Sortierung der Werte entspricht der Datenbanksortierung anstelle der Serversortierung. Es wird kein Sortierungskonfliktfehler zurückgegeben.|
 |Durch eine `SELECT INTO`-Anweisung wird immer ein Singlethread-Einfügevorgang erstellt.|Durch eine `SELECT INTO`-Anweisung kann ein paralleler Einfügevorgang erstellt werden. Beim Einfügen großer Zeilenanzahlen kann die Leistung durch den parallelen Vorgang verbessert werden.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Unterschiede zwischen niedrigeren Kompatibilitätsgraden und Kompatibilitätsgraden 110 und 120
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Unterschiede zwischen niedrigeren Kompatibilitätsgraden und Kompatibilitätsgraden 100 und 110
 
-In diesem Abschnitt werden neue mit Kompatibilitätsgrad 110 eingeführte Verhaltensweisen beschrieben. Dieser Abschnitt bezieht sich auch auf Kompatibilitätsgrad 120.
+In diesem Abschnitt werden neue mit Kompatibilitätsgrad 110 eingeführte Verhaltensweisen beschrieben. Dieser Abschnitt bezieht sich auch auf höhere Kompatibilitätsgrade als 110.
 
 |Kompatibilitätsgradeinstellung 100 oder niedriger|Kompatibilitätsgradeinstellung 110 oder höher|
 |--------------------------------------------------|--------------------------------------------------|

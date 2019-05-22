@@ -2,21 +2,21 @@
 title: Berichtsserversichten „ExecutionLog“ und „0ExecutionLog3“ | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414098"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619690"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
   Das Berichtsserver-Ausführungsprotokoll von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder in einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      Der Wert wird in Millisekunden angegeben. Diese Daten können bei der Diagnose von Leistungsproblemen verwendet werden. Die zum Abrufen von Bildern von einem externen Webserver benötigte Zeit verlangsamt möglicherweise die gesamte Berichtsausführung.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Verbindungen**  
-  
-     Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      Eine Struktur mit mehreren Ebenen  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
 |Spalte|und Beschreibung|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
-|ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel würde ein Bericht mit dem Namen „Test“, der der Stammordner im Berichts-Manager ist, den ReportPath „/test“ aufweisen.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ im Berichts-Manager gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
+|ReportPath|Die Pfadstruktur zum Bericht. Ein Bericht, der im Stammordner als „Test“ gespeichert ist, besitzt den ReportPath „/test“.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
 |UserName|Benutzer-ID.|  
 |ExecutionID||  
 |RequestType|Anforderungstyp (Benutzer oder System).|  
@@ -371,7 +367,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

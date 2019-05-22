@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658294"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713320"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658294"
   
 -   Sie können Wartungsvorgänge für eine oder mehrere Partitionen schneller ausführen. Die Vorgänge sind effizienter, da sie auf nur diese Datenteilmengen abzielen, statt auf die ganze Tabelle. Sie können z. B. wählen, Daten in einer oder mehreren Partitionen zu komprimieren oder eine oder mehrere Partitionen eines Indexes neu zu erstellen.  
   
--   Die Abfrageleistung lässt sich, abhängig von den am häufigsten ausgeführten Abfragetypen sowie der Hardwarekonfiguration, möglicherweise verbessern. So kann der Abfrageoptimierer zum Beispiel Gleichheitsjoin-Abfragen zwischen zwei oder mehr partitionierten Tabellen schneller verarbeiten, wenn die Partitionierungsspalten in den Tabellen identisch sind, da die Partitionen selbst verbunden sein können.  
+-   Die Abfrageleistung lässt sich, abhängig von den am häufigsten ausgeführten Abfragetypen sowie der Hardwarekonfiguration, möglicherweise verbessern. So kann der Abfrageoptimierer zum Beispiel Gleichheitsjoin-Abfragen zwischen zwei oder mehreren partitionierten Tabellen schneller verarbeiten, wenn die Partitionierungsspalten mit den Spalten identisch sind, über die die Tabellen verknüpft werden. Weitere Informationen finden Sie weiter unten unter [Abfragen](#queries).
   
 Beim Sortieren von Daten nach E-A-Operationen geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst nach Partitionen vor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] greift jeweils auf ein Laufwerk zu, wodurch sich die Leistung möglicherweise verringert. Um die Leistung beim Sortieren von Daten zu verbessern, verteilen Sie die Datendateien der Partitionen über mehrere Datenträger, d. h. durch das Einrichten eines RAID (Redundant Array of Independent Disks). Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl die Daten dabei weiterhin nach Partitionen sortiert werden, auf alle Laufwerke der einzelnen Partitionen gleichzeitig zugreifen.  
   

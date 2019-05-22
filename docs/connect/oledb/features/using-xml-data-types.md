@@ -33,7 +33,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52391457"

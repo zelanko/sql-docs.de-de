@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280024"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723085"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lektion 1.5: Hinzufügen und Konfigurieren der Flatfilequelle
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In dieser Aufgabe fügen Sie Ihrem Paket eine Flatfilequelle hinzu und konfigurieren diese. Eine Flatfilequelle ist eine Datenflusskomponente, die vom Verbindungs-Manager für Flatfiles definierte Metadaten verwendet. Diese Metadaten geben das Format und die Struktur der Daten an, die durch einen Transformationsprozess aus der Flatfile extrahiert werden können. Die Flatfilequelle kann zum Extrahieren von Daten aus einer einzigen Flatfile konfiguriert werden, indem die Formatdefinition des Verbindungs-Managers für Flatfiles verwendet wird.  
   
 Für diese Aufgabe konfigurieren Sie die Flatfilequelle zum Verwenden von der Verbindungs-Manager-Instanz **Sample Flat File Source Data** (Beispieldaten aus der Flatfilequelle), die Sie vorher erstellt haben.  

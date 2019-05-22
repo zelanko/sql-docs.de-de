@@ -1,5 +1,5 @@
 ---
-title: Ssbdiagnose-Hilfsprogramm (Service Broker) | Microsoft-Dokumentation
+title: ssbdiagnose-Hilfsprogramm (Service Broker) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590544"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821095"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
-  
+  Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.
+
+> [!NOTE]
+> Das Hilfsprogramm „ssbdiagnose“ ist nicht mehr in der neuesten Version von SQL Server Management Studio 18.0 (SSMS) enthalten. Wenn Sie die neueste Version von „ssbdiagnose“ installieren möchten, installieren Sie [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
+> In einem zukünftigen Release entfällt die Anforderung, ein vorheriges SSMS-Release zu installieren, um die neueste Version von „ssbdiagnose“ zu erhalten. SSMS 18.x wird parallel zur Version 17.x ausgeführt. Beide Versionen können also auf demselben Computer installiert werden.
+
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -162,7 +166,7 @@ WHERE database_id = DB_ID();
   
  **OFF**: Es wird keine Dialogsicherheit konfiguriert. Es wurden keine Zertifikate bereitgestellt, keine Remotedienstbindung erstellt, und in der GRANT SEND-Anweisung für den Initiatordienst wurde die **public** -Rolle angegeben.  
   
- **ANONYMOUS**: Anonyme Dialogsicherheit wird konfiguriert. Ein Zertifikat wurde bereitgestellt, die Remotedienstbindung wurde in der ANONYMOUS-Klausel angegeben, und in der GRANT SEND-Anweisung für den Zieldienst wurde die **public** -Rolle angegeben.  
+ **ANONYMOUS**: Die anonyme Dialogsicherheit wird konfiguriert. Ein Zertifikat wurde bereitgestellt, die Remotedienstbindung wurde in der ANONYMOUS-Klausel angegeben, und in der GRANT SEND-Anweisung für den Zieldienst wurde die **public** -Rolle angegeben.  
   
  **RUNTIME**  
  Fordert einen Bericht über Probleme an, die Laufzeitfehler in einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversation verursachen. Wenn weder **-NEW** noch **-ID** angegeben ist, überwacht **ssbdiagnose** alle Konversationen in allen in den Verbindungsoptionen angegebenen Datenbanken. Wenn **-NEW** oder **-ID** angegeben ist, erstellt **ssbdiagnose** eine Liste der in den Parametern angegebenen IDs.  

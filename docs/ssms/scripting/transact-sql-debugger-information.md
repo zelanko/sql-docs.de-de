@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643312"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821833"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51643312"
 -   Klicken Sie auf der Symbolleiste **Debuggen** auf **Breakpoints**, und wählen Sie dann das gewünschte Fenster aus.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL-Ausdrücke  
- Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4**.  
+ Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind:  **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4**.  
   
  Das Fenster **Lokal** zeigt Informationen über die lokalen Variablen im aktuellen Bereich des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers an. Der Satz von Ausdrücken, die im Fenster **Lokal** aufgeführt sind, ändert sich, wenn der Debugger die verschiedenen Teile des Codes durchläuft.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "51643312"
   
  Im Debugmodus sind die Registerkarten **Ergebnisse** und **Meldungen** nach wie vor im Abfrage-Editor aktiv. Auf der Registerkarte **Ergebnisse** werden weiterhin die Resultsets aus den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angezeigt, die während einer Debuggingsitzung ausgeführt werden. Auf der Registerkarte **Meldungen** werden weiterhin Systemmeldungen angezeigt, wie z. B. „ *xx* Zeilen betroffen“, und die Ausgabe von PRINT- und RAISERROR-Anweisungen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Lokal (Fenster)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Überwachung (Fenster)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Dialogfeld 'Schnellüberwachung'](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

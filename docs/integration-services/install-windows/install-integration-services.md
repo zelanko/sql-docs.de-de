@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271197"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723670"
 ---
 # <a name="install-integration-services"></a>Installieren von Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt ein einzelnes Setupprogramm bereit, mit dem eine oder alle Komponenten installiert werden können, einschließlich [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Verwenden Sie das Setup, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mit oder ohne andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten auf einem einzelnen Computer installieren.    
     
@@ -119,6 +123,6 @@ Für eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes
 
 -   **Weitere optionale Komponenten**. Sie können optional weitere Drittanbieterkomponenten aus dem SQL Server-Feature Pack herunterladen.
 
-    -   Microsoft® Connector for SAP BW für Microsoft SQL Server®. Sie können diese Komponenten hier herunterladen: [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   MicrosoftÂ® Connector for SAP BW für Microsoft SQL ServerÂ®. Sie können diese Komponenten hier herunterladen: [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Connector Version 5.0 für Oracle von Attunity und Microsoft Connector Version 5.0 für Teradata von Attunity. Sie können diese Komponenten hier herunterladen: [Microsoft Connectors v5.0 für Oracle und Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

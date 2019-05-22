@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542240"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779253"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  Wenn das Problem weiterhin besteht, bedeutet dies, dass die beschädigten Abfragespeicherdaten auf dem Datenträger beibehalten werden.
  
- Der Abfragedatenspeicher konnte durch die Ausführung der gespeicherten Prozedur **sp_query_store_consistency_check** innerhalb der betroffenen Datenbank wiederhergestellt werden.
+ Für SQL 2017 und höher kann der Abfragespeicher durch die Ausführung der gespeicherten Prozedur **sp_query_store_consistency_check** innerhalb der betroffenen Datenbank wiederhergestellt werden. Für 2016 müssen Sie die Daten aus dem Abfragespeicher wie unten dargestellt löschen.
  
  Falls dieser Schritt nicht erfolgreich war, versuchen Sie, den Abfragespeicher zu löschen, bevor Sie den Lese-/Schreibmodus anfordern.  
   
@@ -339,7 +339,7 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
   
 -  Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet werden kann. Dies bedeutet, dass Abfragespeicherdaten, die erfasst, aber noch nicht dauerhaft auf einem Datenträger gespeichert wurden, verloren gehen. 
   
--  Ablaufverfolgungsflag 7752 aktiviert asynchrones Laden von Abfragespeicher. Dadurch kann eine Datenbank online geschaltet und können Abfragen ausgeführt werden, bevor der Abfragespeicher vollständig wiederhergestellt wurde. Beim Standardverhalten erfolgt synchrones Laden von Abfragespeicher. Das Standardverhalten verhindert, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde, verhindert aber auch, dass irgendwelche Abfragen in der Datensammlung ignoriert werden.
+-  Ablaufverfolgungsflag 7752 aktiviert asynchrones Laden von Abfragespeicher. Dadurch kann eine Datenbank online geschaltet und können Abfragen ausgeführt werden, bevor der Abfragespeicher vollständig wiederhergestellt wurde. Beim Standardverhalten erfolgt ein synchrones Laden des Abfragespeichers. Das Standardverhalten verhindert, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde, verhindert aber auch, dass irgendwelche Abfragen in der Datensammlung ignoriert werden.
 
 > [!IMPORTANT]
 > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](https://support.microsoft.com/help/4340759) ein. 
