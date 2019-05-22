@@ -237,7 +237,7 @@ ms.locfileid: "65581345"
   
 
 ##  <a name="bkmk_SourceControl"></a> Quellcodeverwaltung  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld **Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
  Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Dieser Ordner befindet sich standardmäßig an folgendem Speicherort: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  
@@ -279,7 +279,7 @@ ms.locfileid: "65581345"
   
 -   Steuern von Fenstern und Modi in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  
   
-    |und Beschreibung|Tastenkombination|  
+    |Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Erstellen des ausgewählten Projekts|CTRL+UMSCHALT+B|  
     |Anzeigen des Eigenschaftenfensters|F4|  
@@ -289,7 +289,7 @@ ms.locfileid: "65581345"
   
 -   Steuern von Elementen auf der Berichtsentwurfsoberfläche:  
   
-    |und Beschreibung|Tastenkombination|  
+    |Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Fokus von einem Berichtselement zum nächsten Berichtselement verschieben|TAB|  
     |Ausgewähltes Berichtselement verschieben|Pfeiltasten|  

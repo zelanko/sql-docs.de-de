@@ -14,7 +14,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47642808"
@@ -38,7 +38,7 @@ ms.locfileid: "47642808"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Geerbt von SQLServerPreparedStatement.) Fügt einen Satz von Parametern für den Batch von Befehlen für dieses CallableStatement-Objekt.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung ab, die derzeit von diesem CallableStatement-Objekt ausgeführt wird.|  

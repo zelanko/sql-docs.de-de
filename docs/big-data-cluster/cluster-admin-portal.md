@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472136"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994099"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Wie Sie das Cluster-Verwaltungsportal verwenden, um eine SQL Server-big Data-Cluster zu überwachen
 
@@ -38,7 +38,7 @@ Führen Sie die [schnellstartanleitung aus, um Ihre big Data-Cluster bereitstell
 Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `mgmtproxy-svc-external` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
 
 > [!NOTE]
-> Für CTP-Version 2.5 besteht eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
+> Für CTP 3.0 ist eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
 
 ## <a name="overview"></a>Übersicht
 

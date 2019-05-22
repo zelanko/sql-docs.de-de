@@ -3,17 +3,17 @@ title: 'Installieren Sie SQL Server Machine Learning Services (Datenbankintern) 
 description: R in SQL Server oder Python auf SQL Server-Installationsschritte für SQL Server 2017 Machine Learning Services auf Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/03/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097302"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994217"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning-Dienste auf Windows
 
@@ -25,11 +25,11 @@ In diesem Artikel wird erläutert, wie zum Installieren der Machine Learning-Kom
 
 ## <a name="bkmk_prereqs"> </a> Checkliste für die vor der Installation
 
-+ SQL Server 2017 (oder höher)-Setup ist erforderlich, wenn Sie Machine Learning-Dienste mit R, Python oder Java-sprachunterstützung installieren möchten. Wenn Sie SQL Server 2016-Installationsmedium installiert haben, können Sie installieren [SQL Server 2016 R Services (Datenbankintern)](sql-r-services-windows-install.md) zum Abrufen von R-sprachunterstützung.
++ SQL Server 2017 (oder höher)-Setup ist erforderlich, wenn Sie Machine Learning-Dienste mit R oder Python-sprachunterstützung installieren möchten. Wenn Sie SQL Server 2016-Installationsmedium installiert haben, können Sie installieren [SQL Server 2016 R Services (Datenbankintern)](sql-r-services-windows-install.md) zum Abrufen von R-sprachunterstützung.
 
 + Eine Instanz der Datenbank-Engine ist erforderlich. Sie können nicht nur R oder Python-Funktionen, nicht installieren, obwohl Sie inkrementell zu einer vorhandenen Instanz hinzufügen können.
 
-+ Für die Geschäftskontinuität [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) für Machine Learning Services unterstützt werden. Sie müssen Machine Learning Services installieren und Konfigurieren von Paketen, auf den einzelnen Knoten.
++ Für die Geschäftskontinuität [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) für Machine Learning Services unterstützt werden. Sie müssen Machine Learning Services installieren und Konfigurieren von Paketen, auf den einzelnen Knoten.
 
 + Installieren von Machine Learning Services ist *nicht unterstützt* auf einem Failovercluster in SQL Server 2017. Allerdings es *wird unterstützt* mit SQL Server-2019. 
  
@@ -53,7 +53,7 @@ In diesem Artikel wird erläutert, wie zum Installieren der Machine Learning-Kom
 
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.
 
-1. Starten Sie den Setup-Assistenten für SQL Server 2017. Sie können herunterladen 
+1. Starten Sie den Setup-Assistenten für SQL Server 2017. 
   
 2. Auf der **Installation** Registerkarte **eigenständige neue SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.
 
@@ -126,13 +126,13 @@ Dieser Schritt erfordert einen Neustart des Servers. Wenn Sie sind im Begriff, d
     > [!TIP]
     > Sie können die herunterladen und installieren die entsprechende Version von dieser Seite: [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
     > 
-    > Sie können auch versuchen, sich die Preview-Version von [Studio für Azure Data](../../azure-data-studio/what-is.md), administrative Aufgaben und Abfragen für SQL Server unterstützt.
+    > Sie können auch [Studio für Azure Data](../../azure-data-studio/what-is.md), administrative Aufgaben und Abfragen für SQL Server unterstützt.
   
 2. Verbinden mit der Instanz, in denen Sie Machine Learning-Dienste installiert haben, klicken Sie auf **neue Abfrage** , öffnen ein Abfragefenster, und führen den folgenden Befehl aus:
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     Der Wert für die Eigenschaft `external scripts enabled` sollte an diesem Punkt **0** betragen. Der Grund ist die Funktion standardmäßig deaktiviert ist. Die Funktion muss explizit von einem Administrator aktiviert werden, bevor Sie R- oder Python-Skripts ausführen können.
     

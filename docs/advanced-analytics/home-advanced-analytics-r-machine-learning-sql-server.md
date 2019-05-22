@@ -1,51 +1,37 @@
 ---
-title: Dokumentation zu R- und Python-Machine Learning und -Programmiererweiterungen – SQL Server-Machine Learning
+title: R und Python Machine learning-Dokumentation – SQL Server Machine Learning Services
 description: R und Python in SQL Server, mit integrierter Data Science-Modellierung und Algorithmen für maschinelles Lernen für umfangreiche Analysen von Unternehmensdaten
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93d9ad5fd6415b6d8c1b6208857e81d60de2bd0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126855"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994130"
 ---
-# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+# <a name="sql-server-machine-learning-services"></a>SQL Server-Machine Learning-Dienste
+
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning Services (R- und Python)-Dokumentation
+
+Erfahren Sie anhand unserer Schnellstarts, Tutorials und Artikel, wie Sie die externen Bibliotheken von R und Python sowie die Sprachen selbst für residente, relationale Daten verwenden können. Die R- und Python-Bibliotheken in [SQL Server-Machine Learning](what-is-sql-server-machine-learning.md) umfassen Basisverteilungen, Data Science-Modelle, Algorithmen für maschinelles Lernen und Funktionen zum Durchführen von umfangreichen leistungsstarken Analysen, ohne dass Daten über das Netzwerk übertragen werden müssen.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-
-## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server-Machine Learning und -Programmiererweiterungen – Dokumentation
-
-Erfahren Sie anhand unserer Schnellstarts, Tutorials und Artikel, wie Sie die externen Bibliotheken von R und Python sowie die Sprachen selbst für residente, relationale Daten verwenden können. Die R- und Python-Bibliotheken in [SQL Server-Machine Learning](what-is-sql-server-machine-learning.md) umfassen Basisverteilungen, Data Science-Modelle, Algorithmen für maschinelles Lernen und Funktionen zum Durchführen von umfangreichen leistungsstarken Analysen, ohne dass Daten über das Netzwerk übertragen werden müssen.
-
-In SQL Server 2019 verwendet die Java-Codeausführung das gleiche Erweiterungsframework wie R und Python, allerdings beinhaltet sie keine Bibliotheken für Funktionen für Data Science und maschinelles Lernen. Weitere Informationen zu neuen Features finden Sie unter [Neuerungen in SQL Server-Machine Learning Services](what-s-new-in-sql-server-machine-learning-services.md).
-
-|   |   |
-|---|:--|
-| ![R-Logo](media/index/logo_r.png) | Open Source-R wurde um [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) und KI-Algorithmen von Microsoft in [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) erweitert. Diese Bibliotheken ermöglichen Ihnen Vorhersagen und Vorhersagemodelle, statistische Analysen, Visualisierungen und umfangreiche Datenbearbeitung.<br/>Die Integration von R wurde mit [SQL Server 2016](install/sql-r-services-windows-install.md) eingeführt und ist auch in [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) verfügbar. |
-| ![Python-Logo](media/index/logo_python.png) | Python-Entwickler können die Microsoft-Bibliotheken [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) für Predictive Analytics und umfangreiches maschinelles Lernen verwenden. Mit Anaconda und Python 3.5 kompatible Bibliotheken entsprechen der Baselineverteilung.<br/>Die Integration von Python wurde mit [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) eingeführt. |
-| ![Java-Logo](media/index/logo_java.png) | Java-Entwickler können die [Java-Spracherweiterung](java/extension-java.md) verwenden, um Code in gespeicherte Prozeduren oder ein Binärformat einzubetten, zugänglich über Transact-SQL.<br/>Die Integration von Java wurde mit [SQL Server 2019 (Vorschau) ](install/sql-machine-learning-services-ver15.md) eingeführt. |
-| &nbsp; | &nbsp; |
+> [!NOTE]
+> Die Dokumentation in Java finden Sie in der [Dokumentation zu SQL Server-Spracherweiterungen](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
-## <a name="sql-server-machine-learning-r-and-python-documentation"></a>R und Python in SQL Server-Machine Learning – Dokumentation
-
-Erfahren Sie anhand unserer Schnellstarts, Tutorials und Artikel, wie Sie die externen Bibliotheken von R und Python sowie die Sprachen selbst für residente, relationale Daten verwenden können. Die R- und Python-Bibliotheken in [SQL Server-Machine Learning](what-is-sql-server-machine-learning.md) umfassen Basisverteilungen, Data Science-Modelle, Algorithmen für maschinelles Lernen und Funktionen zum Durchführen von umfangreichen leistungsstarken Analysen, ohne dass Daten über das Netzwerk übertragen werden müssen.
 
 |   |   |
 |---|:--|
 | ![R-Logo](media/index/logo_r.png) | Open Source-R wurde um [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) und KI-Algorithmen von Microsoft in [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) erweitert. Diese Bibliotheken ermöglichen Ihnen Vorhersagen und Vorhersagemodelle, statistische Analysen, Visualisierungen und umfangreiche Datenbearbeitung.<br/>Die Integration von R wurde mit [SQL Server 2016](install/sql-r-services-windows-install.md) eingeführt und ist auch in [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) verfügbar. |
 | ![Python-Logo](media/index/logo_python.png) | Python-Entwickler können die Microsoft-Bibliotheken [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) für Predictive Analytics und umfangreiches maschinelles Lernen verwenden. Mit Anaconda und Python 3.5 kompatible Bibliotheken entsprechen der Baselineverteilung.<br/>Die Integration von Python wurde mit [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) eingeführt. |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 ## <a name="5-minute-quickstarts"></a>5-minütige Schnellstarts
 

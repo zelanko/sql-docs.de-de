@@ -24,7 +24,7 @@ ms.locfileid: "65582232"
 ### <a name="arithmetic"></a>Arithmetik  
  Arithmetische Operatoren führen mathematische Vorgänge für zwei numerische Begriffe in einem Ausdruck aus.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |^|Erhebt eine Zahl zur Potenz einer anderen Zahl.|  
 |*|Multipliziert zwei Zahlen.|  
@@ -37,7 +37,7 @@ ms.locfileid: "65582232"
 ### <a name="comparison"></a>Vergleich  
  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |<|Kleiner als.|  
 |\<=|Kleiner oder gleich.|  
@@ -51,7 +51,7 @@ ms.locfileid: "65582232"
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
  Mit der Zeichenfolgenverkettung wird die zweite Zeichenfolge in einem Ausdruck an die erste Zeichenfolge angefügt. Verwenden Sie für andere Zeichenfolgenoperationen integrierte Funktionen.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |&|Verkettet zwei Zeichenfolgen.|  
 |+|Verkettet zwei Zeichenfolgen.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65582232"
 ### <a name="logical-and-bitwise"></a>Logisch und bitweise  
  Logische und bitweise Operatoren führen logische Manipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |And|Führt eine logische Konjunktion zweier boolescher Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke aus.|  
 |Not|Führt eine logische Negation eines booleschen Ausdrucks oder eine bitweise Negation eines numerischen Ausdrucks aus.|  
@@ -71,7 +71,7 @@ ms.locfileid: "65582232"
 ### <a name="bit-shift"></a>Bitverschiebung  
  Bitweise Operatoren führen Bitmanipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|und Beschreibung|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  

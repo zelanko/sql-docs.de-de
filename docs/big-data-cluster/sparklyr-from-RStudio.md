@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620326"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994178"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Verwenden Sie Sparklyr in SQL Server-big Data-cluster
 
@@ -49,7 +49,7 @@ Sie können die Sparklyr verwenden, für die big Data-Cluster mithilfe von Livy 
 Erstellen Sie ein R-Skript, und verbinden Sie, die mit Spark wie im folgenden Beispiel, in RStudio:
 
 > [!TIP]
-> Für die `<USERNAME>` und `<PASSWORD>` Werte, verwenden Sie den Benutzernamen (z. B. Stamm) und das Kennwort, die Sie, während der Bereitstellung der big Data-Cluster festlegen. Für die `<IP>` und `<PORT>` Werte finden Sie in der Dokumentation für die [HDFS/Spark-Gateway](connect-to-big-data-cluster.md#hdfs).
+> Für die `<USERNAME>` und `<PASSWORD>` Werte, verwenden Sie den Benutzernamen (z. B. Stamm) und das Kennwort, die Sie, während der Bereitstellung der big Data-Cluster festlegen. Für die `<IP>` und `<PORT>` Werte finden Sie in der Dokumentation auf [Herstellen einer Verbindung mit einem big Data-Cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)

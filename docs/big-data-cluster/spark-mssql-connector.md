@@ -5,22 +5,22 @@ description: Erfahren Sie, wie Sie mit der MSSQL-Spark-Connector in Spark zum Le
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759217"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994188"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Das Lesen und Schreiben in SQL Server aus Spark mithilfe von der MSSQL-Spark-Connector
 
 Ein Schlüssel big Data-Verwendungsmuster ist umfangreiche Data-Verarbeitung in Spark durch Schreiben von Daten in SQL Server für den Zugriff auf LOB-Anwendungen befolgt. Diese Verwendungsmuster profitieren von einer Connector nutzt die wichtige Optimierungen für SQL und bietet einen Mechanismus für die effiziente schreiben.
 
-CTP2.5 Big Data-Cluster bietet einen neuen MSSQL-Spark-Connector, der Bulk Schreiben von APIs für eine leistungsfähige Spark SQL Schreiben von SQL Server verwendet. Dieser Artikel enthält ein Beispiel zum Lesen und Schreiben in SQL Server aus Spark mithilfe der MSSQL-Spark-Connector. In diesem Beispiel werden Daten aus HDFS in einem big Data-Cluster Spark verarbeitet werden soll, und klicken Sie dann auf die Instanz der SQL Server master im Cluster mithilfe des neuen MSSQL-Spark-Connectors geschrieben gelesen.
+Big Data-Cluster enthält einen neuen MSSQL-Spark-Connector, der Bulk Schreiben von APIs für eine leistungsfähige Spark SQL Schreiben von SQL Server verwendet. Dieser Artikel enthält ein Beispiel zum Lesen und Schreiben in SQL Server aus Spark mithilfe der MSSQL-Spark-Connector. In diesem Beispiel werden Daten aus HDFS in einem big Data-Cluster Spark verarbeitet werden soll, und klicken Sie dann auf die Instanz der SQL Server master im Cluster mithilfe des neuen MSSQL-Spark-Connectors geschrieben gelesen.
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL-Spark-Connector-Schnittstelle
 

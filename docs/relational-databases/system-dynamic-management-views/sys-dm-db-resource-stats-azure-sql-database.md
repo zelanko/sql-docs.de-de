@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325503"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993886"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325503"
 |max_session_percent|**Decimal (5,2)**|Maximaler gleichzeitiger Sitzungen in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
 |dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. Bei Datenbanken mit dem virtuellen Kernen basierende Modell ist diese Spalte NULL.|
 |cpu_limit|**Decimal (5,2)**|Anzahl von virtuellen Kernen für diese Datenbank während dieses Intervalls. Für Datenbanken, die mit dem DTU-basierte Modell ist diese Spalte NULL.|
+|avg_instance_cpu_percent|**Decimal (5,2)**|Durchschnittliche Datenbank CPU-Auslastung in Prozent.|
+|avg_instance_memory_percent|**Decimal (5,2)**|Die durchschnittliche arbeitsspeichernutzung als Prozentwert der Datenbank.|
+|avg_login_rate_percent|**Decimal (5,2)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
+|replica_role|**int**|Stellt das aktuelle Replikat Funktion bei 0 als primäres, 1 als sekundäre Datenbank aus, und 2 als Weiterleitung (Geo-Sekundärdatenbank primär). Es wird "1" bei einer Verbindung mit beabsichtigter Schreibschutz auf alle lesbare sekundäre Datenbanken angezeigt. Wenn eine geosekundäre Datenbank-Verbindung ohne Angabe von Beabsichtigter Schreibschutz sollte "2" (Herstellen einer Verbindung mit der Weiterleitung) angezeigt werden.|
 |||
   
 > [!TIP]  

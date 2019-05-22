@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945154"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994146"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Führen Sie ein Beispiel-Notebook auf eine SQL Server-big Data-cluster
 
@@ -52,7 +52,7 @@ Gehen Sie folgendermaßen vor, um die Beispiel-Notebook-Datei laden **Spark-sql.
 
 Die folgenden Schritte zeigen, wie die Notebook-Datei in Azure Data Studio zu öffnen:
 
-1. Verbinden Sie in Azure Data Studio mit dem HDFS/Spark-Gateway von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](connect-to-big-data-cluster.md#hdfs).
+1. Verbinden Sie in Azure Data Studio mit der Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem big Data-Cluster](connect-to-big-data-cluster.md).
 
 1. Doppelklicken Sie auf das HDFS/Spark-Gateway-Verbindung in der **Server** Fenster. Wählen Sie dann **Notizbuch öffnen**.
 

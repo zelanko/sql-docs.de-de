@@ -1,7 +1,7 @@
 ---
 title: Master Data Services – Installation und Konfiguration | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488225"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994119"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -128,8 +128,19 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 2.  Klicken Sie auf **Datenbank erstellen**und anschließend im **Datenbank erstellen (Assistent)** auf **Weiter**.  
   
-3.  Wählen Sie auf der Seite **Datenbankserver** den **Authentifizierungstyp** , und klicken Sie anschließend auf **Verbindung testen** , um zu bestätigen, dass Sie eine Verbindung mit der Datenbank mithilfe der Anmeldeinformationen für den von Ihnen ausgewählten Authentifizierungstyp herstellen können. Klicken Sie auf **Weiter**.
-  
+3.  Auf der **Datenbankserver** Seite, geben Sie die SQL Server-Instanz. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] bietet Unterstützung für verwaltete SQL Server-Instanz. Legen Sie den Wert der **SQL Server-Instanz** an den Host der Azure SQL-Datenbank verwaltete Instanz. Beispiel: `xxxxxx.xxxxxx.database.windows.net`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
+
+4. Wählen Sie die **Authentifizierungstyp** , und klicken Sie dann auf **Testverbindung** zu bestätigen, dass Sie eine Verbindung herstellen können, mit der Datenbank, die mit den Anmeldeinformationen für den Authentifizierungstyp, die Sie ausgewählt haben. Klicken Sie auf **Weiter**.
+
+    >Für [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], verwalteten Instanz mit Azure SQL-Datenbank herstellen, verwenden Sie eine der folgenden Authentifizierungstypen:
+    >
+    >- Integrierte Azure Active Directory-Authentifizierung: **Aktueller Benutzer – integrierte Active Directory**
+    >- SQL Server-Authentifizierung: **SQL Server-Dienstkonto**.
+    >
+    >In verwalteten Azure SQL-Datenbank-Instanz, muss der Benutzer ein Mitglied der `sysadmin` -Serverrolle sein.
+
     > [!NOTE]  
     >  Wenn Sie als Authentifizierungstyp **Aktueller Benutzer – Integrierte Sicherheit** auswählen, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das am Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 
 

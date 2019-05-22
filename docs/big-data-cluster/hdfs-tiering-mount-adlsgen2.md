@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317129"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993970"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
@@ -100,22 +100,22 @@ Sie können auch bereitstellen, mithilfe von Zugriffsschlüsseln, die Sie für I
 
 Nun, da Sie eine Datei mit Zugriffstasten oder mithilfe von OAuth vorbereitet haben, können Sie die Einbindung beginnen. Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake im lokalen HDFS-Speicher, der Ihre big Data-Cluster bereit.
 
-1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Mgmtproxy-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-**.
+1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Melden Sie sich mit **Mssqlctl** verwenden die externe IP-Adresse den verwaltungsendpunkt für den Proxy mit Ihrem Benutzernamen und Kennwort:
+1. Melden Sie sich mit **Mssqlctl** verwenden die externe IP-Adresse des Endpunkts Controller mit Ihrem Benutzernamen und Kennwort:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl Speicher bereitstellen erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
+1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl Cluster Speicher-Pool einbinden erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Wenn erfolgreich bereitgestellt wurde, sollten Sie möglicherweise die HDFS-Date
 Um den Status aller Bereitstellungen in Ihrer big Data-Cluster aufzulisten, verwenden Sie den folgenden Befehl aus:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Um den Status einer Bereitstellung in einem bestimmten Pfad in HDFS aufzulisten, verwenden Sie den folgenden Befehl aus:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Löschen Sie die Bereitstellung
 
-Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl Speicher bereitstellen löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
+Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl Cluster Speicher-Pool einbinden löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

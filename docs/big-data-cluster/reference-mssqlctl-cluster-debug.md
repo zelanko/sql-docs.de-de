@@ -5,16 +5,16 @@ description: Der Referenzartikel für die Mssqlctl Cluster Debug-Befehle.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774859"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993653"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Debuggen des mssqlctl-Clusters
 
@@ -28,7 +28,7 @@ Der folgende Artikel bietet Referenz für die **Cluster Debug** Befehle in der *
 [Mssqlctl Cluster Debug-Protokolle kopieren](#mssqlctl-cluster-debug-copy-logs) | Kopieren Sie Protokolle.
 [Mssqlctl Cluster debugdumpdateien](#mssqlctl-cluster-debug-dump) | Dump der Trigger-Protokollierung.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>Mssqlctl Cluster Debug-Protokolle kopieren
-Kopieren Sie die Debugprotokolle aus dem Cluster.
+Kopieren Sie die Debugprotokolle aus dem Cluster - Kube-Konfigurationsdatei muss auf Ihrem System.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://j
 #### `--verbose`
 Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
 ## <a name="mssqlctl-cluster-debug-dump"></a>Mssqlctl Cluster debugdumpdateien
-Protokollierung Dump auslösen, und es aus dem Container kopieren.
+Protokollierung Dump auslösen, und kopieren sie Sie aus Container - Kube-Konfigurationsdatei muss auf Ihrem System.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

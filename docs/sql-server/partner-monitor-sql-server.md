@@ -28,7 +28,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer S
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft-Überwachungspartner
 
-| Partner | und Beschreibung | Links |
+| Partner | Beschreibung | Links |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL-Diagnose-Manager ist eine leistungsstarke Lösung zur Leistungsüberwachung und Diagnose, die Administratoren proaktiv warnt, wenn Probleme bei der Integrität, Leistung oder Verfügbarkeit in SQL Server-Umgebungen auftreten – und das alles in einer zentralen Konsole.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight auf SQL Server Enterprise: Garantierte Höchstleistung rund um die Uhr mit nicht übereinstimmender Überwachung, Diagnose und der Optimierung der SQL Server-Umgebungen. Spotlight bietet Ihnen Zugriff auf die benötigten Details für die optimale Eignung Ihrer SQL Server-Datenbanken. Erhalten Sie intuitive Übersichten über Integrität und Leistung, automatische Warnungen und Aktionen sowie Unterstützung für mobile Geräte.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |

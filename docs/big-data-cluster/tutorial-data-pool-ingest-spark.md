@@ -5,17 +5,17 @@ description: In diesem Tutorial wird veranschaulicht, wie Daten in den Datenpool
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 34e82a55042bc140d196d728414d386645751820
-ms.sourcegitcommit: 22716798e963ebc335fa540b0c04569baa9db7ea
-ms.translationtype: HT
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64417023"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994167"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
 
@@ -56,7 +56,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Erstellen einer externen Tabelle, die mit dem Namen **Web_clickstreams_spark_results** im Datenpool.
@@ -74,13 +74,13 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In der CTP-Version 2.5 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In CTP 3.0 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="start-a-spark-streaming-job"></a>Starten eines Streamingauftrags
 
 Der nächste Schritt ist die Erstellung ein Streamingauftrags, die Web-Clickstream-Daten aus dem Speicherpool (HDFS) lädt in der externen Tabelle, die Sie in den Datenpool erstellt haben.
 
-1. In Azure Data Studio, eine Verbindung mit der **HDFS/Spark-Gateway** von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](connect-to-big-data-cluster.md#hdfs).
+1. Verbinden Sie in Azure Data Studio mit der Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem big Data-Cluster](connect-to-big-data-cluster.md).
 
 1. Doppelklicken Sie auf das HDFS/Spark-Gateway-Verbindung in der **Server** Fenster. Wählen Sie dann **neue Spark-Auftrag**.
 

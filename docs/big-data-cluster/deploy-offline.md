@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie eine offline-Bereitstellung von einer SQL Ser
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759147"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994020"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Führen Sie eine offline-Bereitstellung von einer SQL Server-big Data-cluster
 
@@ -42,7 +42,7 @@ Die folgenden Schritte beschreiben, wie Sie zum Abrufen von containerimages aus 
    > [!TIP]
    > Diese Befehle verwenden Sie PowerShell als Beispiel, jedoch können Sie sie ausführen, Cmd, Bash oder jeder Befehlsshell, Docker ausführen können. Unter Linux hinzufügen `sudo` für jeden Befehl.
 
-1. Laden Sie die big Data-Cluster containerimages, indem Sie den folgenden Befehl wiederholen. Ersetzen Sie dies `<SOURCE_IMAGE_NAME>` mit jedem [ImageName](#images). Ersetzen Sie dies `<SOURCE_DOCKER_TAG>` mit dem Tag für die big Data-cluster Version, z. B. **ctp2.5**.  
+1. Laden Sie die big Data-Cluster containerimages, indem Sie den folgenden Befehl wiederholen. Ersetzen Sie dies `<SOURCE_IMAGE_NAME>` mit jedem [ImageName](#images). Ersetzen Sie dies `<SOURCE_DOCKER_TAG>` mit dem Tag für die big Data-cluster Version, z. B. **CTP 3.0**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ So installieren Sie **"kubectl"** auf einem Offlinecomputer, verwenden Sie die f
 
 1. Kopieren Sie den Ordner, auf den Zielcomputer.
 
-## <a name="deploy-with-from-repository"></a>Bereitstellen mit von einem repository
+## <a name="deploy-from-private-repository"></a>Bereitstellen von einem privaten repository
 
-Um über das private Repository bereitzustellen, verwenden Sie die Schritte in der [Bereitstellungshandbuch](deployment-guidance.md), aber die folgenden Umgebungsvariablen Ihrer private Docker-Repository entsprechend anpassen.
+Um über das private Repository bereitzustellen, verwenden Sie die Schritte in der [Bereitstellungshandbuch](deployment-guidance.md), aber verwenden Sie eine benutzerdefinierte Bereitstellungskonfigurationsdatei, die Ihre privaten Docker-Repository-Informationen angibt. Die folgenden **Mssqlctl** Befehle veranschaulichen das Ändern der Docker-Einstellungen in einer benutzerdefinierten Bereitstellungskonfigurationsdatei mit dem Namen **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+Die Bereitstellung für Docker-Benutzername und Kennwort aufgefordert, oder Sie können angeben, in der **DOCKER_USERNAME** und **DOCKER_PASSWORD** Umgebungsvariablen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

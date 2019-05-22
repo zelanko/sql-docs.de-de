@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65099485"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993986"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -137,11 +137,8 @@ Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwen
 
 | Umgebungsvariable | Description |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | Die private Registrierung, in dem die Bilder verwendet, um die Bereitstellung des Clusters gespeichert sind. Verwendung *Private-repo.microsoft.com* für die Ducration der geschlossene öffentliche Vorschauversion.|
-| **DOCKER_REPOSITORY** | Das private Repository in der oben genannten Registrierung, in dem Bilder gespeichert sind. Verwendung *Mssql-Private-Preview* für die Dauer der geschlossene öffentliche Vorschauversion.|
 | **DOCKER_USERNAME** | Der Benutzername für die containerimages zugreifen, falls sie in einem privaten Repository gespeichert sind. |
 | **DOCKER_PASSWORD** | Das Kennwort für den Zugriff auf das obige privaten Repository. |
-| **DOCKER_IMAGE_TAG** | Die Bezeichnung, die Bilder zu kennzeichnen. Standardmäßig **neueste**, aber es wird empfohlen, unter Verwendung des Tags, die für die Version zu Versionsprobleme mit Inkompatibilität vermieden. |
 | **CONTROLLER_USERNAME** | Der Benutzername für die Clusterverwaltung. |
 | **CONTROLLER_PASSWORD** | Das Kennwort für die Clusterverwaltung. |
 | **KNOX_PASSWORD** | Das Kennwort für Knox-Benutzer. |
@@ -156,11 +153,8 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
-export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
@@ -168,11 +162,8 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
-SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 Sie müssen beim Festlegen der Umgebungsvariablen, ausführen `mssqlctl cluster create` um die Bereitstellung auszulösen. Dieses Beispiel verwendet die oben erstellte Cluster-Konfigurationsdatei:
@@ -186,7 +177,6 @@ Beachten Sie die folgenden Richtlinien:
 - Zu diesem Zeitpunkt Anmeldeinformationen für die private Docker-Registrierung werden bereitgestellt werden, um Sie beim selektieren Ihre [Early Adoption Program Registrierung](https://aka.ms/eapsignup). Early Adoption Program-Registrierung ist erforderlich, um SQL Server-big Data-Cluster zu testen.
 - Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Sie können festlegen, die **MSSQL_SA_PASSWORD** , was auch immer Sie zufrieden sind, aber stellen Sie sicher, dass das Kennwort ist komplex und verwenden Sie nicht die `!`, `&` oder `'` Zeichen. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
 - Die **SA** Anmeldename ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihrer SQL Server-Containers, der **MSSQL_SA_PASSWORD** Umgebungsvariable, die Sie angegeben ist mit sichtbaren $MSSQL_SA_PASSWORD im Container ausgeben. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](../linux/quickstart-install-connect-docker.md#sapassword).
-- Die **DOCKER_IMAGE_TAG** in diesem Beispiel steuert, welche Sie Version installieren. In diesem Beispiel ist es der Version CTP-Version 2.5.
 
 ## <a id="unattended"></a> Unbeaufsichtigte Installation
 
@@ -227,37 +217,44 @@ Beachten Sie die URL von der **Portal Endpunkt** in der vorherigen Ausgabe für 
 
 Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie die IP-Adressen der externen Endpunkte für die big Data-Cluster mit den folgenden Schritten erhalten.
 
-1. Kopieren Sie in der bereitstellungsausgabe der **Portal Endpunkt** und entfernen Sie die `/portal/` am Ende. Dies ist die URL des Management-Proxy (z. B. `https://<ip-address>:30777`).
-
-   > [!TIP]
-   > Wenn Sie nicht über die bereitstellungsausgabe verfügen, erhalten Sie die IP-Adresse für den Management-Proxy anhand der EXTERNEN IP-Ausgabe des folgenden **"kubectl"** Befehl:
-   >
-   > ```bash
-   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-   > ```
-
-1. Melden Sie sich bei der big Data-Cluster mit **Mssqlctl Anmeldung**. Legen Sie die **– Endpunkt** Parameter, um den Management-Proxy.
+1. Nach der Bereitstellung finden Sie die IP-Adresse des Endpunkts Controller anhand der EXTERNEN IP-Ausgabe des folgenden **"kubectl"** Befehl:
 
    ```bash
-   mssqlctl login --endpoint https://<ip-address>:30777
+   kubectl get svc controller-svc-external -n <your-cluster-name>
+   ```
+
+1. Melden Sie sich bei der big Data-Cluster mit **Mssqlctl Anmeldung**. Legen Sie die **--controllerendpunkt** Parameter, um die externe IP-Adresse des Endpunkts Controller.
+
+   ```bash
+   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Geben Sie Benutzername und Kennwort, die Sie für den Controller (CONTROLLER_USERNAME und CONTROLLER_PASSWORD) konfiguriert, während der Bereitstellung.
 
-1. Führen Sie **Mssqlctl Endpunkte Clusterliste** um eine Liste mit einer Beschreibung der einzelnen Endpunkten und ihre entsprechenden Werte für IP-Adresse und den Port abzurufen. Folgendes zeigt z. B. die Ausgabe für den Endpunkt-Verwaltungsportal:
+1. Führen Sie **Mssqlctl Endpunkt Clusterliste** um eine Liste mit einer Beschreibung der einzelnen Endpunkten und ihre entsprechenden Werte für IP-Adresse und den Port abzurufen. 
 
-   ```output
-   {
-     "description": "Management Portal",
-     "endpoint": "https://<ip-address>:30777/portal",
-     "ip": "<ip-address>",
-     "name": "portal",
-     "port": 30777,
-     "protocol": "https"
-   },
+   ```bash
+   mssqlctl cluster endpoint list
    ```
 
-1. Alle clusterendpunkte werden ebenfalls beschrieben, der **Dienstendpunkte** Registerkarte im Verwaltungsportal-Cluster. Sie können das Portal mit dem Verwaltungsportal-Endpunkt im vorherigen Schritt zugreifen (z. B. `https://<ip-address>:30777/portal`). Die Anmeldeinformationen für den Zugriff auf das Verwaltungsportal sind die Werte für Controller-Benutzername und Kennwort, das Sie während der Bereitstellung angegeben. Sie können auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden.
+   Die folgende Liste enthält Beispiel für die Ausgabe dieses Befehls:
+
+   ```output
+   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
+   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
+   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
+   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
+   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
+   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
+   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
+   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
+   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
+   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
+   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
+   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
+   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
+   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   ```
 
 ### <a name="minikube"></a>Minikube
 

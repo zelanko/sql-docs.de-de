@@ -3,17 +3,17 @@ title: 'Installieren Sie neuer R-Sprache-Pakete: SQL Server Machine Learning Ser
 description: Fügen Sie neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506925"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994209"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installieren Sie neuer R-Pakete unter SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,6 @@ Dateisystemzugriff ist in der Regel beschränkt, auf dem Server und auch wenn Si
 Installieren neuer Pakete, berücksichtigen Sie, ob die neuen Funktionen von einem bestimmten Paket in einer SQL Server-Umgebung geeignet sind. In einer SQL Server-Umgebung mit verstärkter Sicherheit empfiehlt es sich um Folgendes zu vermeiden:
 
 + Pakete, die Zugriff auf das Netzwerk erfordern.
-+ Pakete, die Java oder andere Frameworks, die in der Regel nicht in einer SQL Server-Umgebung verwendet werden müssen
 + Pakete, die mit erhöhten Rechten Dateisystemzugriff erfordern
 + Paket wird für die Webentwicklung oder andere Aufgaben, die durch die Ausführung in SQL Server profitieren nicht verwendet.
 
@@ -51,7 +50,7 @@ Im Allgemeinen blockieren Servern, die für die Produktion hosten internetverbin
 
 Identifizieren alle Abhängigkeiten kompliziert. Für R, empfehlen wir die Verwendung von [MiniCRAN zum Erstellen eines lokalen Repositorys](create-a-local-package-repository-using-minicran.md) übertragen und dann das vollständig definierte Repository an eine isolierte Instanz von SQL Server.
 
-Wahlweise können Sie diese Schritte manuell ausführen:
+Alternativ können Sie diese Schritte manuell ausführen:
 
 1. Identifizieren Sie alle paketabhängigkeiten an. 
 2. Überprüfen Sie, ob alle erforderlichen Pakete bereits auf dem Server installiert sind. Wenn das Paket installiert ist, stellen Sie sicher, dass die Version korrekt ist.
