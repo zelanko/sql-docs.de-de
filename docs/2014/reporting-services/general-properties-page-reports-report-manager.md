@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109103"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Berichte können Sie eine Berichtsdefinition umbenennen, löschen, verschieben oder ersetzen. Zudem ist mit dieser Seite das Erstellen eines verknüpften Berichts möglich. Details zum Benutzer, der den Bericht erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  

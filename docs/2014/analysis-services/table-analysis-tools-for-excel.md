@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067970"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Tabellenanalysetools für Excel
   Die Datamining-Tools in der **analysieren** Symbolleiste sind die einfachste Möglichkeit, erste Schritte mit Datamining. Jedes Tool analysiert automatisch die Verteilung und den Typ der Daten und legt die Parameter fest, um die Gültigkeit der Ergebnisse sicherzustellen. Sie müssen keine Algorithmen auswählen oder komplexe Parameter konfigurieren.  

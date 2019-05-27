@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157617"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175033"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse
 **Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Tabellenzeilen in einem in einer vorhandenen Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle hinzufügen (*append-Modus* oder *Fastappend-Modus*), neue Zeilen angefügt, und Aktualisieren von vorhandenen Zeilen (*Upsert-Modus*), oder löschen Sie alle vorhandene Zeilen vor dem Laden, und klicken Sie dann alle Zeilen in eine leere Tabelle einfügen (*laden Modus*).  
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ Beispiele:
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 Gibt an, die SQL Server-PDW-Appliance, die die geladenen Daten erhält.  
   
 *Infiniband-Verbindungen*, *Target_appliance* als < Appliance-Name > angegeben wird – SQLCTL01. Verbindung mit dem Namen für diese Konfiguration finden Sie unter [InfiniBand-Netzwerkadapter konfigurieren](configure-infiniband-network-adapters.md).  
@@ -156,10 +157,10 @@ Wenn nicht angegeben, wird standardmäßig Dwloader auf den Wert, der bei der In
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 Der dreiteilige Name für die Zieltabelle.  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 Der Speicherort des einen oder mehrere Quelldateien zu laden. Jede Quelldatei muss eine Textdatei oder einer Textdatei, die mit Gzip komprimiert wird. Nur eine Quelldatei kann in jede Gzip-Datei komprimiert werden.  
   
 So formatieren Sie eine Quelldatei:  
@@ -174,7 +175,7 @@ So geben Sie den Quellspeicherort für die Daten an:
   
 -   Der Quellspeicherort für die Daten kann es sich um einen Netzwerkpfad oder einen lokalen Pfad zu einem Verzeichnis auf dem Server geladen sein.  
   
--   Um alle Dateien in einem Verzeichnis anzugeben, geben Sie in den Verzeichnispfad an, gefolgt von den * Platzhalterzeichen.  Das Ladeprogramm lädt nicht Dateien in sämtlichen Unterverzeichnissen, die den Quellspeicherort für die Daten werden... Das Ladeprogramm-Fehler, wenn ein Verzeichnis in einer Gzip-Datei vorhanden ist.  
+-   Um alle Dateien in einem Verzeichnis anzugeben, geben Sie in den Verzeichnispfad an, gefolgt von den * Platzhalterzeichen.  Das Ladeprogramm lädt Dateien nicht über alle Unterverzeichnisse, die in den Quellspeicherort für die Daten sind. Das Ladeprogramm-Fehler, wenn ein Verzeichnis in einer Gzip-Datei vorhanden ist.  
   
 -   Um einige der Dateien in einem Verzeichnis anzugeben, verwenden Sie eine Kombination von Zeichen und die * Platzhalter.  
   
@@ -219,7 +220,7 @@ Für ASCII-Dateien werden NULL-Werte dargestellt, durch Trennzeichen nacheinande
 Gibt einen Typ zeichencodierung für die Daten aus der Datendatei geladen werden. Stehen, ASCII (Standard) "," UTF8 "," UTF16 "oder" UTF16BE, wobei UTF16-Format little-endian und UTF16BE ist big-Endian. Diese Optionen, die Groß-/Kleinschreibung beachtet werden.  
   
 **-t** *field_delimiter*  
-Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feldtrennzeichen ist eine oder mehrere dieser ASCII-Escape-Zeichen oder ASCII-hex-Werten...  
+Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feldtrennzeichen ist eine oder mehrere dieser ASCII-Escape-Zeichen oder ASCII-hex-Werten.  
   
 |Name|Escapezeichen|Hexadezimale Zeichen|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 Beispiele für die Eingabedatei für 04 März 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*Custom_date_format* ist einem benutzerdefinierten Datumsformat entsprechen (z. B. MM/TT/JJJJ) und nur für Abwärtskompatibilität enthalten. Dwloader führt nicht Enfoce das benutzerdefinierte Datumsformat aus. Wenn Sie stattdessen ein benutzerdefiniertes Datumsformat angeben **Dwloader** konvertiert sie in die entsprechende Einstellung der Ymd Ydm, Mdy, MYD-, Dym oder Dmy.  
+*Custom_date_format* ist einem benutzerdefinierten Datumsformat entsprechen (z. B. MM/TT/JJJJ) und nur für Abwärtskompatibilität enthalten. Dwloader erzwingt keine das benutzerdefinierte Datumsformat. Wenn Sie stattdessen ein benutzerdefiniertes Datumsformat angeben **Dwloader** konvertiert sie in die entsprechende Einstellung der Ymd Ydm, Mdy, MYD-, Dym oder Dmy.  
   
-Wenn Sie den -D MM/TT/JJJJ angeben, erwartet Dwloader z. B. alle Geben Sie zunächst mit Monat bestellt werden Datum und Tag und anschließend im Jahr (Mdy). 2 Monate für Zeichen, 2 Ziffern Tage und 4 Ziffern Jahre laut das benutzerdefinierte Datumsformat erzwungen nicht. Hier sind einige Beispiele für die Datumsangaben in der Eingabedatei formatiert werden können, wenn das Datum das Format ' -D MM/TT/JJJJ ist: 01/02/2013, Jan.02.2013, 1/2/2013  
+Wenn Sie den -D MM/TT/JJJJ angeben, erwartet Dwloader z. B. alle Geben Sie zunächst mit Monat bestellt werden Datum und Tag und anschließend im Jahr (Mdy). Es werden keine Zeichen von 2 Monaten, 2-Digit Tage und 4 Ziffern laut das benutzerdefinierte Datumsformat erzwungen. Hier sind einige Beispiele für die Datumsangaben in der Eingabedatei formatiert werden können, wenn das Datum das Format ' -D MM/TT/JJJJ ist: 01/02/2013, Jan.02.2013, 1/2/2013  
   
 Eine umfassendere Formatierungsinformationen, finden Sie unter [Datentyp Konvertierungsregeln für Dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -481,7 +482,10 @@ Es wird empfohlen, **-m** nur, wenn in eine leere Tabelle, geladen, sodass Sie o
 Stellen Sie sicher, dass die zielappliance ein gültiges SQL Server-PDW-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle verfügt. Verwenden Sie diese, um sicherzustellen, Ihre Daten wird nicht von einem Angreifer übernommen und an einen nicht autorisierten Speicherort gesendet. Das Zertifikat muss bereits auf dem Gerät installiert werden. Die einzige unterstützte Methode zum Installieren des Zertifikats ist für die applianceadministrator ihn mithilfe des Konfigurations-Manager installieren. Bitten Sie Ihren applianceadministrator, wenn Sie nicht sicher sind, gibt an, ob das Gerät ein vertrauenswürdiges Zertifikat installiert wurde.  
   
 **-se**  
-Überspringen Sie das leere Dateien werden geladen. Dies lässt auch leere Gzip Dekomprimieren von Dateien.  
+Überspringen Sie das leere Dateien werden geladen. Dies lässt auch leere Gzip Dekomprimieren von Dateien.
+
+**-l**  
+Verfügbar mit CU7.4 Update gibt die maximale Länge (in Bytes), die geladen werden kann. Gültige Werte sind ganze Zahlen zwischen 32768 und 33554432. Verwenden Sie nur bei Bedarf, um große Zeilen (mehr als 32 KB) zu laden, wie sich dies auf dem Client und Server mehr Arbeitsspeicher zuweist.
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 0 (Erfolg) oder andere ganzzahlige Wert (Fehler)  
@@ -542,7 +546,7 @@ Die leere Zeichenfolge sollte nicht als Trennzeichen verwendet werden. Wenn eine
 -   **"Upsert"** -Upsert-Vorgang Daten in eine Stagingtabelle geladen und führt dann einen Merge-Vorgang aus der Stagingtabelle in die endgültige Tabelle. "Upsert" ist keine exklusive Sperren für die endgültige Tabelle erforderlich. Leistung kann abweichen, wenn "Upsert" verwenden. Testen Sie das Verhalten in Ihrer Umgebung.  
   
 ### <a name="locking-behavior"></a>Sperrverhalten  
-**Eine Append-Modus-sperren**  
+**Fügen Sie im Modus sperren**  
   
 Fügen Sie kann in mehreren im Transaktionsmodus ausgeführt wird (mit dem -m-Argument) ausgeführt werden aber nicht sicher Transaktion. Fügen Sie aus diesem Grund sollte als ein Transaktionsvorgang (ohne das -m-Argument) verwendet werden. Leider ist während des letzten INSERT-SELECT-Vorgangs im Transaktionsmodus derzeit ungefähr sechs Mal langsamer als die Multi-Transaktionsmodus.  
   
@@ -600,7 +604,7 @@ Das folgende Beispiel ist Teil eines Batchskripts, die Daten in lädt **Adventur
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Der folgende Codeausschnitt verwendet Dwloader zum Laden von Daten in die Tabellen DimAccount und DimCurrency. Dieses Skript wird eine Ethernet-Adresse verwendet. Wenn es InfiniBand verwendet hat, wäre Server *< Appliancename >*`-SQLCTL01`.  
+Der folgende Codeausschnitt verwendet Dwloader zum Laden von Daten in die Tabellen DimAccount und DimCurrency. Dieses Skript wird eine Ethernet-Adresse verwendet. Wenn es InfiniBand verwendet hat, wäre Server *< Appliancename >* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  

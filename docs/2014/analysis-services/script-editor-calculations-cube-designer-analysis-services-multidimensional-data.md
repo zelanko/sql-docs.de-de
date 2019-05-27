@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.freeform.f1
@@ -13,12 +12,12 @@ ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069964"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Skript-Editor (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Skript-Editor** auf der Registerkarte **Berechnungen** im Cube-Designer können Sie den Ausdruck für einen Skriptbefehl (in der Formularansicht) oder das gesamte Cubeskript (in der Skriptansicht) ändern.  
@@ -27,7 +26,7 @@ ms.locfileid: "62747824"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Ausdruck**|Geben Sie die MDX-Ausdrücke (Multidimensional Expressions) und -Anweisungen für den Skriptbefehl, der im Bereich **Metadaten** ausgewählt ist (in der Formularansicht), oder das gesamte Cubeskript (in der Skriptansicht) ein.<br /><br /> Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.|  
+|**expression**|Geben Sie die MDX-Ausdrücke (Multidimensional Expressions) und -Anweisungen für den Skriptbefehl, der im Bereich **Metadaten** ausgewählt ist (in der Formularansicht), oder das gesamte Cubeskript (in der Skriptansicht) ein.<br /><br /> Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   

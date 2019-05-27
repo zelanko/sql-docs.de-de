@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994161"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014950"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL
 
@@ -85,7 +85,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
 
 Die folgenden Schritte aus erfassungs-Beispiel-Web-Websites Clickstream-Daten in den Datenpool mit der externen Tabelle, die in den vorherigen Schritten erstellt haben.
 
-1. Definieren Sie Variablen für die Abfrage, die Sie zum Einfügen von Daten in den Datenpool für verwenden möchten. Für CTP 2.3 oder früher die **Modell... Sp_data_pool_table_insert_data** gespeicherte Prozedur ist erforderlich. Für CTP 2.4 und höher können Sie eine `INSERT INTO` Anweisung, um die Ergebnisse der Abfrage in den Datenpool für einzufügen (die **Web_clickstream_clicks_data_pool** externe Tabelle).
+1. Verwenden einer `INSERT INTO` Anweisung, um die Ergebnisse der Abfrage in den Datenpool für einzufügen (die **Web_clickstream_clicks_data_pool** externe Tabelle).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

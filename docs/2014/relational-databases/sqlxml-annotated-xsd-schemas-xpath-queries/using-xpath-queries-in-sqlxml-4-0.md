@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131295"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014573"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Verwenden von XPath-Abfragen in SQLXML 4.0
   Da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Anmerkungen versehene XSD-Schemas unterstützt, können Sie XML-Sichten der in einer Datenbank gespeicherten relationalen Daten erstellen. Mit einer Teilmenge der Xpath-Sprache können Sie die von dem mit Anmerkungen versehenen XSD-Schema erstellten XML-Sichten abfragen.  

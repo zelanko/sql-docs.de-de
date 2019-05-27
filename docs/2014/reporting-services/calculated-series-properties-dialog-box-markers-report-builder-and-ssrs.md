@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10153"
@@ -14,12 +13,12 @@ ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266357"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109892"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Marker (Berichts-Generator und SSRS)
   Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Bereich, Balken, Spalte, Polar-, Zeile und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  

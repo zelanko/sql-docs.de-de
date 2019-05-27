@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743366"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071892"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (PowerPivot für SharePoint)
   Dieses Thema enthält Referenzdokumentation zu den von PowerPivot-Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
@@ -42,7 +41,7 @@ ms.locfileid: "62743366"
 ##  <a name="LoadingData"></a> Data Load Timeout  
  PowerPivot-Daten werden durch Analysis Services-Serverinstanzen in die Farm abgerufen und geladen. Je nachdem, wie und wann zuletzt auf die Daten zugegriffen wurde, werden sie entweder aus einer Inhaltsbibliothek oder aus einem lokalen Dateicache geladen. Daten werden immer dann in den Arbeitsspeicher geladen, wenn eine Abfrage- oder Verarbeitungsanforderung empfangen wird. Um die Gesamtverfügbarkeit des Servers zu maximieren, können Sie einen Timeoutwert festlegen, der den Server anweist, eine Anforderung zum Laden von Daten zu beenden, wenn sie nicht innerhalb der vorgesehenen Zeit abgeschlossen werden kann.  
   
-|Name|Standard|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Data Load Timeout|1800 (in Sekunden)|1 bis 3600|Gibt an, wie lange eine PowerPivot-Dienstanwendung auf eine Antwort von einer bestimmten Analysis Services-Serverinstanz wartet.<br /><br /> Standardmäßig wartet die Dienstanwendung 30 Minuten auf eine Datennutzlast von der Engine-Dienstinstanz, an die sie eine bestimmte Anforderung weitergeleitet hat.<br /><br /> Wenn die PowerPivot-Datenquelle nicht innerhalb dieses Zeitraums geladen werden kann, wird der Thread beendet und ein neuer gestartet.|  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62743366"
   
  Jeder Typ von Verbindungspool verfügt über Obergrenzen, die Sie für die Verbindungsverwaltung festlegen können, um sicherzustellen, dass der Systemspeicher optimal genutzt wird.  
   
-|Name|Standard|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Verbindungspool-Timeout|1800 (in Sekunden)|1 bis 3600.|Diese Einstellung gilt für Datenverbindungspools.<br /><br /> Sie gibt an, wie lange eine Verbindung im Leerlauf im Verbindungspool verbleiben kann, bevor sie entfernt wird.<br /><br /> Die Dienstanwendung entfernt eine Verbindung standardmäßig, wenn sie länger als fünf Minuten inaktiv ist.|  
 |Maximale Größe für den Benutzerverbindungspool|1000|-1, 0 oder 1 bis 10000.<br /><br /> -1 gibt eine unbegrenzte Anzahl von Verbindungen im Leerlauf an.<br /><br /> 0 bedeutet, dass keine Verbindungen im Leerlauf beibehalten werden. Es muss jedes Mal eine neue Verbindung mit einer PowerPivot-Datenquelle erstellt werden.|Diese Einstellung gilt für die Anzahl von Verbindungen im Leerlauf in allen für eine bestimmte PowerPivot-Dienstanwendungsinstanz erstellten Datenverbindungspools.<br /><br /> Für eindeutige Kombinationen aus SharePoint-Benutzer, PowerPivot-Daten und Dienstinstanz werden individuelle Verbindungspools erstellt. Wenn zahlreiche Benutzer auf unterschiedliche PowerPivot-Datenquellen zugreifen, könnte die Serverleistung durch einen größeren Verbindungspool verbessert werden.<br /><br /> Wenn sich mehr als 100 Verbindungen mit einer PowerPivot-Dienstinstanz im Leerlauf befinden, werden neue im Leerlauf befindliche Verbindungen getrennt und nicht an den Pool zurückgegeben.|  
@@ -66,14 +65,14 @@ ms.locfileid: "62743366"
 ##  <a name="AllocationScheme"></a> Lastenausgleich  
  Zu den Funktionen des PowerPivot-Diensts gehört die Bestimmung der verfügbaren PowerPivot-Dienstinstanz, in der Analysis Services-Daten geladen werden. Die `AllocationMethod`-Einstellung gibt die Kriterien an, nach denen eine Dienstinstanz ausgewählt wird.  
   
-|Name|Standard|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Zuordnungsmethode|RoundRobin|Roundrobin<br /><br /> Zustandsbasiert|Ein Schema zum Zuordnen von Ladeanforderungen unter mindestens zwei Analysis Services-Serverinstanzen.<br /><br /> Standardmäßig verteilt der PowerPivot-Dienst die Anforderungen auf Grundlage des Serverzustands. Bei Zustandsbasiert werden Anforderungen dem Server zugeordnet, dem unter Berücksichtigung des verfügbaren Arbeitsspeichers und der CPU-Auslastung die meisten Systemressourcen zur Verfügung stehen.<br /><br /> Bei Roundrobin werden die Anforderungen in sequenzieller Reihenfolge auf die verfügbaren Servern verteilt, unabhängig von der aktuellen Serverauslastung oder vom Serverzustand.|  
   
 ##  <a name="DataRefresh"></a> Datenaktualisierung  
  Geben Sie den Zeitraum an, der einem normalen bzw. typischen Geschäftstag in Ihrer Organisation entspricht. Diese Konfigurationseinstellungen bestimmen den Zeitpunkt, zu dem Datenaktualisierungsvorgänge nach den Geschäftsstunden verarbeitet werden. Die Verarbeitung nach den Geschäftsstunden kann am Ende des Geschäftstags initiiert werden. Die Verarbeitung nach den Geschäftsstunden ist eine Zeitplanoption für Dokumentbesitzer, die eine PowerPivot-Datenquelle mit Transaktionsdaten aktualisieren möchten, die während normaler Geschäftszeiten generiert wurden.  
   
-|Name|Standard|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
@@ -84,7 +83,7 @@ ms.locfileid: "62743366"
 ##  <a name="UsageData"></a> Sammlung von Verwendungsdaten  
  Verwendungsberichte, die im PowerPivot-Management-Dashboard angezeigt werden, können wichtige Informationen darüber enthalten, wie PowerPivot-aktivierte Arbeitsmappen verwendet werden. Die folgenden Konfigurationseinstellungen steuern Aspekte bei der Sammlung von Verwendungsdaten für PowerPivot-Serverereignisse, die anschließend in Verwendungs- oder Aktivitätsberichten präsentiert werden.  
   
-|Name|Standard|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Abfrage eines Berichtsintervalls|300 (in Sekunden)|1 bis n Sekunden, wobei n eine beliebige gültige ganze Zahl darstellt.|Um sicherzustellen dass die Datenübertragungskapazität der Farm bei der Sammlung von Verwendungsdaten nicht zu stark beansprucht wird, wird für jede Verbindung eine Abfragestatistik erstellt und als einzelnes Ereignis gemeldet. Das Abfrageberichtsintervall bestimmt, wie oft ein Ereignis gemeldet wird. Standardmäßig wird eine Abfragestatistik alle 5 Minuten ausgegeben.<br /><br /> Da Verbindungen sofort nach dem Senden einer Anforderung geschlossen werden, generiert das System selbst dann eine sehr große Anzahl von Verbindungen, wenn nur ein Benutzer auf eine einzelne PowerPivot-Datenquelle zugreift. Aus diesem Grund werden für jede Kombination aus Benutzer und PowerPivot-Datenquelle Verbindungspools erstellt, damit eine einmal erstellte Verbindung vom gleichen Benutzer für dieselben Daten wiederverwendet werden kann. Die PowerPivot-Dienstanwendung generiert in regelmäßigen, durch diese Konfigurationseinstellung angegeben Abständen einen Verwendungsdatenbericht für jede Verbindung im Verbindungspool.<br /><br /> Wenn Sie das Intervall für die Berichterstellung vergrößern, werden weniger Ereignisse protokolliert. Falls Sie den Wert jedoch zu hoch ansetzen, riskieren Sie den Verlust von Ereignisdaten, wenn der Server neu gestartet oder eine Verbindung geschlossen wird.<br /><br /> Wenn Sie den Wert herabsetzen, werden mehr Ereignisse in kürzeren Abständen protokolliert und dem Datensammlungssystem in der SharePoint-Verwendungsdatenbank zusätzliche PowerPivot-Verwendungsdaten zugeführt.<br /><br /> Im Allgemeinen sollten Sie diese Konfigurationseinstellung nicht ändern, sofern nicht ein bestimmtes Problem behoben werden muss (beispielsweise, wenn die Verwendungsdatenbank aufgrund von PowerPivot-Verwendungsdaten zu schnell anwächst).|  
 |Verwendungsdatenverlauf|365 (in Tagen)|0 oder 1 bis n Tage, wobei n eine beliebige gültige ganze Zahl darstellt.<br /><br /> 0 bedeutet, dass der Verlauf immer beibehalten und nie gelöscht wird.|Verwendungsdaten werden standardmäßig ein Jahr in der Datenbank der PowerPivot-Dienstanwendung beibehalten. Datensätze von über einem Jahr werden aus der Datenbank gelöscht.<br /><br /> Eine Überprüfung der abgelaufenen Verlaufdaten findet täglich statt, wenn der Microsoft Share Point Foundation Usage Data Processing-Auftrag läuft. Der Zeitgeberauftrag liest diese Einstellung und löst in der Datenbank der PowerPivot-Dienstanwendung einen Befehl zum Löschen abgelaufener Vergangenheitsdaten aus.|  

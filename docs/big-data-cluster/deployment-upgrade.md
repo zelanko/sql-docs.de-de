@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
-ms.translationtype: HT
+ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993978"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015188"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Das upgrade von SQL Server-big Data-Cluster
 
@@ -45,10 +45,10 @@ Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Versi
    pip3 uninstall mssqlctl
    ```
 
-   Führen Sie für CTP 2.3 oder höher verwenden, den folgenden Befehl aus. Ersetzen Sie dies `ctp-2.4` im Befehl mit der Version der **Mssqlctl** , die Sie deinstallieren:
+   Führen Sie für CTP 2.3 oder höher verwenden, den folgenden Befehl aus. Ersetzen Sie dies `ctp-2.5` im Befehl mit der Version der **Mssqlctl** , die Sie deinstallieren:
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. Installieren Sie die neueste Version des **Mssqlctl**. Die folgenden Befehle installieren **Mssqlctl** für CTP 3.0:
@@ -56,13 +56,13 @@ Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Versi
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

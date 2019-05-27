@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
@@ -13,12 +12,12 @@ ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072130"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Partitions-Assistent (F1-Hilfe) (Analysis Services – Mehrdimensionale Daten)
   Mit dem Partitions-Assistent können Sie Partitionen für eine Measuregruppe in einem Cube definieren. Standardmäßig wird für jede Measuregruppe in einem Cube eine Partition definiert. Große Partitionen können sich jedoch auf die Zugriffs- und Verarbeitungsleistung auswirken. Wenn Sie mehrere Partitionen erstellen, die jeweils einen Teil der Daten für eine Measuregruppe enthalten, können Sie die Zugriffs- und Verarbeitungsleistung für die Measuregruppe verbessern.  

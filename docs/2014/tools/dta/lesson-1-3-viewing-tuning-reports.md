@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173640"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110145"
 ---
 # <a name="viewing-tuning-reports"></a>Anzeigen von Optimierungsberichten
   In der vorigen Übung dieser Lektion haben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts angezeigt, mit denen Datenbankobjekte in den Empfehlungen des Datenbankoptimierungsratgebers erstellt oder gelöscht werden, die als Ergebnis der Optimierungssitzung „MySession“ generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)angelegt.  
@@ -47,6 +46,6 @@ ms.locfileid: "48173640"
  Sie haben jetzt die Registerkarte **Berichte** der Benutzeroberfläche des Datenbankoptimierungsratgebers für die Optimierungssitzung MySession kennen gelernt. Die gleichen Schritte können Sie ausführen, um die Berichte zu prüfen, die für die Optimierungssitzung EvaluateMySession erstellt wurden. Doppelklicken Sie dazu im Bereich **Sitzungsmonitor** auf **EvaluateMySession** .  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lesson 3: Using the dta Command Prompt Utility (Lektion 3: Verwenden des Befehlszeilenprogramms dta)](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lektion 3: Verwenden des Dta Command Prompt Utility](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
