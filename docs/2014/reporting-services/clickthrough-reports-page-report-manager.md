@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
@@ -13,12 +12,12 @@ ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109799"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Berichte mit Durchklicken (Seite) (Berichts-Manager)
   Ein Bericht mit Durchklicken zeigt eine Tabelle verknüpfter Daten an, wenn Sie auf die interaktiven Daten klicken, die in Ihrem Bericht enthalten sind. Diese Berichte werden vom Berichtsserver anhand der Informationen generiert, die in dem Modell enthalten sind, den Sie zum Erstellen des Berichts verwendet haben. Wenn Sie die Berichte mit Durchklicken, die der Berichtsserver generiert, nicht verwenden möchten, können Sie benutzerdefinierte Berichte erstellen und auf einem Berichtsserver veröffentlichen. Ordnen Sie dann diese Berichte den interaktiven Datenpunkten zu, die im Modell definiert sind. Die benutzerdefinierten Berichte müssen im Berichts-Generator aus dem gleichen Modell erstellt und dann auf einem Berichtsserver veröffentlicht werden. Verwenden Sie die Seite Berichte mit Durchklicken im Berichts-Manager, um die benutzerdefinierte Berichte Elementen im Modell zuzuordnen.  

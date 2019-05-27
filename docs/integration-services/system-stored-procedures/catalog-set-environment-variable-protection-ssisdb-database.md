@@ -11,12 +11,12 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ca421c3d1cdd2be5cbfbc57a867339c2ce2a228
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 015c0f51b728ba3f601722d1d44c1e3b2f173973
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65715914"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198177"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (SSISDB-Datenbank)
 
@@ -33,18 +33,18 @@ ms.locfileid: "65715914"
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
+ Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)** .  
   
  [ @sensitive = ] *sensitive*  
  Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als Nur-Text gespeichert. Der *sensitive* -Parameter ist **bit**.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266071"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109857"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)
   Jedes Mal, wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob die veröffentlichten Instanzen der Berichtsteile in diesem Bericht auf dem Berichtsserver oder auf der in den Berichtsserver integrierten SharePoint-Website aktualisiert wurden. Er überprüft auch Änderungen in den abhängigen Elementen des Berichtsteils, z. B. im Dataset und den Parametern. Wenn Berichtsteile oder ihre Abhängigkeiten auf der Website oder dem Server aktualisiert wurden, zeigt eine Informationsleiste im Bericht die Anzahl der aktualisierten Teile an. Sie können die Updates anzeigen und akzeptieren oder ablehnen oder die Informationsleiste schließen.  

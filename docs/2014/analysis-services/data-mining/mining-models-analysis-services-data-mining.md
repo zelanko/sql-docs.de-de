@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -18,12 +17,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 087322555ade5738ae3b4831488b6aa6e62b44a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083452"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
   Ein *Miningmodell* wird erstellt, indem ein Algorithmus auf Daten angewendet wird. Dabei handelt es sich jedoch um mehr als einen Algorithmus oder einen Metadatencontainer, vielmehr um einen Satz von Daten, Statistiken und Muster, die auf neue Daten angewendet werden können, um Vorhersagen zu generieren und Rückschlüsse auf Beziehungen zu ziehen.  

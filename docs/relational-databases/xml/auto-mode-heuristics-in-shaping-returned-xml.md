@@ -1,7 +1,7 @@
 ---
 title: AUTO-Modus-Heuristik beim Ermitteln der Form des zurückgegebenen XML-Codes | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,25 +13,28 @@ ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed0035473bf90e2457aa0384b06da5569e2964db
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512977"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175374"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>AUTO-Modus-Heuristik beim Ermitteln der Form des zurückgegebenen XML-Codes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Der AUTO-Modus ermittelt die Form des zurückgegebenen XML-Codes auf der Grundlage der Abfrage. Um zu ermitteln, wie die Elemente geschachtelt werden sollen, vergleicht die AUTO-Modus-Heuristik die Spaltenwerte in benachbarten Zeilen. Dabei werden Spalten aller Datentypen, mit Ausnahme von **ntext**, **text**, **image**und **xml**miteinander verglichen. Spalten des Datentyps **(n)varchar(max)** und **varbinary(max)** werden verglichen.  
+
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Der AUTO-Modus ermittelt die Form des zurückgegebenen XML-Codes auf der Grundlage der Abfrage. Um zu ermitteln, wie die Elemente geschachtelt werden sollen, vergleicht die AUTO-Modus-Heuristik die Spaltenwerte in benachbarten Zeilen. Dabei werden Spalten aller Datentypen, mit Ausnahme von **ntext**, **text**, **image**und **xml**miteinander verglichen. Spalten des Datentyps **(n)varchar(max)** und **varbinary(max)** werden verglichen.  
   
  Das folgende Beispiel veranschaulicht die Heuristik des AUTO-Modus beim Ermitteln der Form des resultierenden XML-Codes:  
   
-```  
+```sql
 SELECT T1.Id, T2.Id, T1.Name  
 FROM   T1, T2  
 WHERE ...  
-FOR XML AUTO  
-ORDER BY T1.Id  
+ORDER BY T1.Id
+FOR XML AUTO;
 ```  
   
  Um zu ermitteln, wo ein neues <`T1`>-Element beginnt, werden alle Spaltenwerte von Tabelle T1 (außer **ntext**, **text**, **image** und **xml**) verglichen, wenn der Schlüssel für die Tabelle T1 nicht angegeben wurde. Nehmen wir als Nächstes an, dass die **Name**-Spalte den Typ **nvarchar(40)** aufweist und dass die SELECT-Anweisung das folgende Rowset zurückgibt:  
@@ -48,7 +51,7 @@ T1.Id  T1.Name  T2.Id
   
  Der folgende XML-Code wird zurückgegeben:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew">  
     <T2 Id="2" />  
     <T2 Id="3" />  
@@ -60,7 +63,7 @@ T1.Id  T1.Name  T2.Id
   
  Nehmen wir jetzt an, dass die Name-Spalte den **text** -Datentyp aufweist. Die Heuristik des AUTO-Modus führt keinen Vergleich der Werte für diesen Datentyp durch. Stattdessen wird angenommen, dass sich die Werte voneinander unterscheiden. Dadurch wird der folgende XML-Code generiert:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew" >  
   <T2 Id="2" />  
 </T1>  

@@ -1,5 +1,5 @@
 ---
-title: Installieren von SQL Server-Machine Language-Erweiterungen (Java) unter Linux | Microsoft-Dokumentation
+title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux | Microsoft-Dokumentation
 description: Erfahren Sie, wie zum Installieren von SQL Server-Spracherweiterungen (Java) auf Red Hat, Ubuntu und SUSE.
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995078"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186805"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) auf Linux-Betriebssysteme, die ab dieser Preview-Version von SQL Server-2019 ausgeführt wird. Führen Sie die Schritte in diesem Artikel zum Installieren der Erweiterung der Java-Sprache aus. 
-
 Es sind Spracherweiterungen ein Add-on für die Datenbank-Engine. Zwar Sie können [installieren Sie die Datenbank-Engine und Spracherweiterungen gleichzeitig](#install-all), es ist eine bewährte Methode zum Installieren und konfigurieren die SQL Server-Datenbank-Engine zuerst, damit Sie Probleme beheben können, bevor Sie weitere Komponenten hinzufügen. 
 
-Speicherort des Pakets für die Java-Erweiterungen sind in den SQL Server Linux-Quell-Repositorys. Wenn Sie bereits über Quellcode-Repositorys für die Datenbank-Engine-Installation konfiguriert, können Sie Ausführen der **Mssql-Server-Erweiterbarkeit – Java** Paket Befehle zur Installation über die gleichen Repository-Registrierung.
+Führen Sie die Schritte in diesem Artikel zum Installieren der Erweiterung der Java-Sprache aus.
+
+Speicherort des Pakets für die Java-Erweiterungen ist in den SQL Server Linux-Quell-Repositorys. Wenn Sie bereits über Quellcode-Repositorys für die Datenbank-Engine-Installation konfiguriert, können Sie Ausführen der **Mssql-Server-Erweiterbarkeit – Java** Paket Befehle zur Installation über die gleichen Repository-Registrierung.
 
 Spracherweiterungen wird auch auf Linux-Container unterstützt. Wir bieten keine vorab erstellten Container mit Erweiterungen der Sprache, aber erstellen Sie einen aus der SQL Server-Containern unter Verwendung von [eine Beispielvorlage auf GitHub verfügbar](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Neustart der `mssql-launchpadd` -Dienst erneut.
 
+7. Für jede Datenbank in-spracherweiterungen verwenden möchten, müssen Sie die externe Sprache mit registrieren [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## <a name="verify-installation"></a>Überprüfen der Installation
 
 Integration der Java-Funktion enthält keine Bibliotheken, Sie können jedoch ausführen `grep -r JRE_HOME /etc` , bestätigen die JAVA_HOME-Umgebungsvariable erstellen.
@@ -195,7 +197,7 @@ Gespeicherte Prozedur, die Aufrufen von Java Überprüfen der Installation, zum 
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>Vollständige Installation von SQL Server und Spracherweiterungen
 
-Sie können installieren und konfigurieren die Datenbank-Engine und Machine Learning-Dienste in einer Prozedur, durch Anfügen von Java-Pakete und die Parameter für einen Befehl, der die Datenbank-Engine installiert.
+Sie können installieren und konfigurieren die Datenbank-Engine und Spracherweiterungen in eine Prozedur durch Anfügen von Java-Pakete und die Parameter für einen Befehl, der die Datenbank-Engine installiert.
 
 1. Geben Sie eine Befehlszeile, die den Datenbank-Engine sowie die Sprachfeatures für die Erweiterung enthält.
 
@@ -235,7 +237,7 @@ Führen Sie die [Offline-Installation](sql-server-linux-setup.md#offline) Anweis
 
 #### <a name="download-site"></a>Downloadsite
 
-Sie können Pakete aus [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Alle Pakete für Java werden gemeinsam mit Datenbank-Engine-Paket gespeichert. 
+Sie können Pakete aus [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Alle Pakete für Java werden zusammen mit der Datenbank-Engine-Paket. 
 
 #### <a name="redhat7-paths"></a>RedHat/7-Pfade
 

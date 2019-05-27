@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731666"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081650"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch)
   In diesem Abschnitt wird eine exemplarische Vorgehensweise des Entwurfs- und Bereitstellungsprozesses für DirectQuery-Modelle erläutert. Sie können DirectQuery konfigurieren, um ausschließlich relationale Daten (nur DirectQuery) zu verwenden, oder Sie können das Modell konfigurieren, um zwischen der Verwendung ausschließlich zwischengespeicherter Daten oder ausschließlich relationaler Daten zu wechseln (hybrider Modus). In diesem Abschnitt wird der Implementierungsprozess für beide Modi erläutert. Außerdem werden mögliche Unterschiede bei den Abfrageergebnissen in Abhängigkeit vom Modus und der Sicherheitskonfiguration beschrieben.  
@@ -69,7 +68,7 @@ ms.locfileid: "62731666"
   
 |||  
 |-|-|  
-|**Nur DirectQuery**|Dies ist optional. Bei einem ausschließlichen DirectQuery-Modell besteht keine Notwendigkeit einer Partition.<br /><br /> Wenn Sie jedoch während der Entwurfsphase Partitionen im Modell erstellen, müssen Sie beachten, dass nur eine Partition als Datenquelle verwendet werden kann. Standardmäßig wird die erste Partition, die Sie erstellen, als DirectQuery-Partition verwendet.<br /><br /> Um zu gewährleisten, dass alle vom Modell benötigten Daten über die DirectQuery-Partition verfügbar sind, wählen Sie eine DirectQuery-Partition und bearbeiten Sie die SQL-Anweisung, um das gesamte Dataset abzurufen.|  
+|**Nur DirectQuery**|Optional. Bei einem ausschließlichen DirectQuery-Modell besteht keine Notwendigkeit einer Partition.<br /><br /> Wenn Sie jedoch während der Entwurfsphase Partitionen im Modell erstellen, müssen Sie beachten, dass nur eine Partition als Datenquelle verwendet werden kann. Standardmäßig wird die erste Partition, die Sie erstellen, als DirectQuery-Partition verwendet.<br /><br /> Um zu gewährleisten, dass alle vom Modell benötigten Daten über die DirectQuery-Partition verfügbar sind, wählen Sie eine DirectQuery-Partition und bearbeiten Sie die SQL-Anweisung, um das gesamte Dataset abzurufen.|  
 |**Hybridmodus**|Wenn eine Tabelle im Modell mehrere Partitionen aufweist, müssen Sie eine einzelne Partition als *DirectQuery-Partition*auswählen. Wenn Sie standardmäßig keine Partition zuweisen, wird die erste erstellte Partition als DirectQuery-Partition verwendet.<br /><br /> Legen Sie Verarbeitungsoptionen für alle Partitionen mit Ausnahme von DirectQuery fest. In der Regel wird die DirectQuery-Partition nie verarbeitet, da die Daten von der relationalen Quelle aus übergeben werden.<br /><br /> Weitere Informationen finden Sie unter [Partitionen und DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).|  
   
  **Schritt 6. Identitätswechselinformationen**  

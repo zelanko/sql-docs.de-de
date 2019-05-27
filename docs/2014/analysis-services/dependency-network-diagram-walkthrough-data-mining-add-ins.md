@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
@@ -19,12 +18,12 @@ ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732176"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081967"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Abhängigkeitsnetzwerkdiagramm (Data Mining-Add-Ins)
   Mehrere verschiedene Data Mining-Modelltypen verwenden ein Netzwerkdiagramm, um Beziehungen in den Daten zu untersuchen. Sie können diese Modelle importieren, in Visio mithilfe der **Abhängigkeitsnetzwerk** strukturieren und anpassen und erweitern das Layout anschließend weiter. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit abhängigkeitsnetzwerkdiagrammen:  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0155cc073fb8a1379879605945855ee2c2fba051
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d5f1b4816be53f05dd964f8be0ee9ce52fd11cbb
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979208"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943783"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ DATALENGTH ( expression )
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) mit beliebigem Datentyp.
   
 ## <a name="return-types"></a>Rückgabetypen
-**bigint**, wenn *expression* den Datentyp **nvarchar(max)**, **varbinary(max)** oder **varchar(max)** hat; andernfalls **int**.
+**bigint**, wenn *expression* den Datentyp **nvarchar(max)** , **varbinary(max)** oder **varchar(max)** hat; andernfalls **int**.
   
 ## <a name="remarks"></a>Remarks  
 `DATALENGTH` ist insbesondere nützlich bei Verwendung mit den Datentypen

@@ -1,7 +1,7 @@
 ---
 title: Spalten mit Namen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,16 +13,18 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb286cf87f2e0534a1e7df9d988e001fec8a5ee2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510017"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175698"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
+
+Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
   
 -   Der Spaltenname beginnt mit einem At-Zeichen (\@).  
   
@@ -37,20 +39,17 @@ ms.locfileid: "58510017"
 ## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
  Wenn der Spaltenname mit einem At-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des `row`-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden `row`-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -58,13 +57,12 @@ go
   
  Beachten Sie, dass Attribute allen anderen Knotentypen, wie z. B. Elementknoten und Textknoten, auf derselben Ebene vorangestellt sein müssen. Die folgende Abfrage gibt einen Fehler zurück:  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@)  
@@ -72,14 +70,14 @@ go
   
  Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem `row`-Element das untergeordnete `result`-Element hinzugefügt.  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -87,22 +85,22 @@ for xml PATH
   
  Die folgende Abfrage gibt den Spaltennamen ManuWorkCenterInformation für den XML-Code an, der von der für die Instructions-Spalte vom **xml** -Typ angegebenen XQuery zurückgegeben wurde. Folglich wird dem `row`-Element das untergeordnete `ManuWorkCenterInformation`-Element hinzugefügt.  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -119,20 +117,20 @@ go
   
  Die folgende Abfrage gibt beispielsweise die ID und den Namen eines Mitarbeiters als komplexes Element EmpName zurück, welches zwei Vornamen und einen Nachnamen enthält (FirstName, MiddleName, LastName).  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  Die Spaltennamen werden als Pfad für die Konstruktion des XML-Codes im PATH-Modus verwendet. Der Name der Spalte, die die ID-Werte der Mitarbeiter enthält, beginnt mit „\@“. Folglich wird dem `row`-Element ein **EmpID**-Attribut hinzugefügt. Alle anderen Spalten enthalten einen eine Hierarchie aufzeigenden Schrägstrich (/) im Spaltennamen. Im resultierenden XML-Code befindet sich das untergeordnete `EmpName`-Element unter dem `row`-Element, und das untergeordnete `EmpName`-Element verfügt über die untergeordneten Elemente `First`, `Middle` und `Last`.  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -143,21 +141,21 @@ FOR XML PATH
   
  Der zweite Vorname des Mitarbeiters ist ein NULL-Wert, welcher standardmäßig der Abwesenheit eines Elements oder Attributs zugeordnet ist. Wenn Sie jedoch möchten, dass für NULL-Werte Elemente generiert werden, können Sie die ELEMENTS-Direktive mit XSINIL angeben, wie in der folgenden Abfrage gezeigt.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -171,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Die folgende Abfrage ruft außer der ID und dem Namen die Adresse eines Mitarbeiters ab. Entsprechend dem Pfad in den Spaltennamen für Adressspalten wird dem `row`-Element ein untergeordnetes `Address`-Element hinzugefügt, und die Adressdetails werden als untergeordnete Elemente des `Address`-Elements hinzugefügt.  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -179,16 +177,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -207,7 +207,7 @@ FOR XML PATH
 ## <a name="one-column-has-a-different-name"></a>Eine Spalte hat einen unterschiedlichen Namen  
  Wenn eine Spalte in einer Reihe von Spalten einen anderen Namen aufweist, wird die Gruppierung unterbrochen, wie in der folgenden, geänderten Abfrage gezeigt. Die Abfrage unterbricht die Gruppierung von FirstName, MiddleName und LastName, die in der vorherigen Abfrage angegeben waren, durch Hinzufügen der Adressspalten zwischen der FirstName- und der MiddleName-Spalte.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -215,18 +215,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  Daher erstellt die Abfrage zwei `EmpName`-Elemente. Das erste `EmpName`-Element verfügt über das untergeordnete `FirstName`-Element, und das zweite `EmpName`-Element verfügt über die untergeordneten Elemente `MiddleName` und `LastName`.  
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

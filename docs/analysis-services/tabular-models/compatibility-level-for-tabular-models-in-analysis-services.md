@@ -1,6 +1,6 @@
 ---
 title: Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft-Dokumentation
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175125"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ Wichtige Features in den Kompatibilitätsgrad 1400 sind:
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Überprüfen des unterstützten Kompatibilitätsgrads für einen Server in SSMS  
  Klicken Sie in SSMS mit der rechten Maustaste auf den Servernamen > **Eigenschaften** > **Unterstützter Kompatibilitätsgrad**.  
-  
- Diese Eigenschaft gibt den höchsten Kompatibilitätsgrad einer Datenbank, die auf dem Server ausgeführt wird. Der unterstützte Kompatibilitätsgrad ist schreibgeschützt und kann nicht geändert werden.  
+
+ Diese Eigenschaft gibt den höchsten Kompatibilitätsgrad einer Datenbank, die auf dem Server ausgeführt wird. Der unterstützte Kompatibilitätsgrad ist schreibgeschützt und kann nicht geändert werden.
+ 
+> [!NOTE]  
+>  In SSMS wird beim Verbinden mit einer SQL Server Analysis Services-Server, Azure Analysis Services-Server oder Power BI Premium-Arbeitsbereich die Eigenschaft unterstützter Kompatibilitätsgrad 1200 angezeigt. Dies ist ein bekanntes Problem und wird in einem zukünftigen SSMS aufgelöst aktualisieren. Wenn aufgelöst, wird diese Eigenschaft die höchsten unterstützte Kompatibilitätsgrad angezeigt. 
   
 ## <a name="see-also"></a>Siehe auch  
  [Kompatibilitätsgrad einer mehrdimensionalen Datenbank](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

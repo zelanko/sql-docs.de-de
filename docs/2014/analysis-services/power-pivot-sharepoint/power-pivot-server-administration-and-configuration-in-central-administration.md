@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749018"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071106"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
   Die PowerPivot-Serververwaltung und -konfiguration wird mithilfe der SharePoint-Zentraladministration von SharePoint Service-Anwendungsadministratoren ausgeführt.  
@@ -50,10 +49,10 @@ ms.locfileid: "62749018"
   
 |Link|Typ|Taskbeschreibung|  
 |----------|----------|----------------------|  
-|[Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Erforderlich|Bei diesem Schritt werden die Projektmappendateien installiert, über die der Farm und den Websitesammlungen Programmdateien und Anwendungsseiten hinzugefügt werden.|  
-|[Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md)|Erforderlich|Mit diesem Schritt wird der PowerPivot-Systemdienst bereitgestellt.|  
-|[Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](activate-power-pivot-integration-for-site-collections-in-ca.md)|Erforderlich|Mit diesem Schritt werden PowerPivot-Funktionen auf Websitesammlungsebene aktiviert.|  
-|[Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Erforderlich|Mit diesem Schritt wird der OLE DB-Anbieter für Analysis Services als vertrauenswürdiger Anbieter in Excel Services hinzugefügt.|  
+|[Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Required|Bei diesem Schritt werden die Projektmappendateien installiert, über die der Farm und den Websitesammlungen Programmdateien und Anwendungsseiten hinzugefügt werden.|  
+|[Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md)|Required|Mit diesem Schritt wird der PowerPivot-Systemdienst bereitgestellt.|  
+|[Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|Mit diesem Schritt werden PowerPivot-Funktionen auf Websitesammlungsebene aktiviert.|  
+|[Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|Mit diesem Schritt wird der OLE DB-Anbieter für Analysis Services als vertrauenswürdiger Anbieter in Excel Services hinzugefügt.|  
 |[PowerPivot-Datenaktualisierung mit SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Empfohlen|Eine Datenaktualisierung ist optional, wird aber empfohlen. Dies ermöglicht es Ihnen, unbeaufsichtigte Updates der PowerPivot-Daten in veröffentlichten Excel-Arbeitsmappen zu planen.|  
 |[Konfigurieren des unbeaufsichtigten PowerPivot unbeaufsichtigte Datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Empfohlen|Mit diesem Schritt wird ein zweckgebundenes Konto bereitgestellt. Dieses kann dazu verwendet werden, um Datenaktualisierungsaufträge auf dem Server auszuführen.|  
 |[Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Optional|Die Verwendung der Datensammlung wird standardmäßig konfiguriert. Sie können die Standardeinstellungen mithilfe dieser Schritte ändern.|  

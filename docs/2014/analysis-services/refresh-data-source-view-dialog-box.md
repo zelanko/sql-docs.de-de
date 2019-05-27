@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748484"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070510"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Datenquellensicht aktualisieren (Dialogfeld)
   Mithilfe des Dialogfelds **Datenquellensicht aktualisieren** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Änderungen annehmen oder abbrechen, die im Zuge der Aktualisierung der Datenquellensicht aufgetreten sind. Das Dialogfeld zeigt die Änderungen an, die an der Datenquellensicht im Zuge der Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. Klicken Sie auf **OK** , um die Änderungen anzunehmen und die Datenquellensicht zu aktualisieren, oder auf **Abbrechen** , um die Änderungen zu ignorieren und die Datenquellensicht unverändert zu lassen. Sie können das Dialogfeld **Datenquellensicht aktualisieren** folgendermaßen anzeigen:  

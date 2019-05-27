@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749416"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071588"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration
   In Excel Services können Sie angeben, welche Speicherorte gültige Repositorys für Arbeitsmappen sind, die Sie auf einem SharePoint-Server öffnen. Diese Speicherorte werden als 'vertrauenswürdige Speicherorte' bezeichnet, und Sie können unterschiedliche Konfigurationseinstellungen für jeden vertrauenswürdigen Speicherort verwenden, den Sie erstellen. Bei einer Bereitstellung von PowerPivot für SharePoint sollten Sie erwägen, einen vertrauenswürdigen Speicherort für Sites zu erstellen, die PowerPivot-Arbeitsmappen enthalten, sodass Sie die Einstellungen anwenden können, die optimal für den PowerPivot-Datenzugriff geeignet sind, aber gleichzeitig die Standardeinstellungen für den Rest der Farm beibehalten können.  

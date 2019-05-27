@@ -13,12 +13,12 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba689d2135ce7ff2db2ad484f55ec0eb2035aafd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2d2accfbc2c2ca34150ffe0db503dc7f4bf35b72
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510867"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175404"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Beispiel: Angeben der ELEMENTXSINIL-Direktive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "58510867"
   
  Die folgende Abfrage konstruiert eine XML-Ausgabe, die die Adressen der Mitarbeiter enthält. Für die Spalten `AddressLine2` und `City` ist in den Spaltennamen die `ELEMENTXSINIL` -Direktive angegeben. So werden für NULL-Werte in der `AddressLine2` - und `City` -Spalte des Rowsets Elemente generiert.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT 1    as Tag,  
@@ -60,24 +60,19 @@ FOR XML EXPLICIT;
 ```  
   
  Dies ist das Teilergebnis:  
-  
- `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
-  
- `EmpID="1" AddressID="249">`  
-  
- `<Address AddressID="249">`  
-  
- `<AddressLine1>4350 Minute Dr.</AddressLine1>`  
-  
- `<AddressLine2 xsi:nil="true" />`  
-  
- `<City>Minneapolis</City>`  
-  
- `</Address>`  
-  
- `</Employee>`  
-  
- `...`  
+
+```xml
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          EmpID="1"
+          AddressID="249">
+  <Address AddressID="249">
+    <AddressLine1>4350 Minute Dr.</AddressLine1>
+    <AddressLine2 xsi:nil="true" />
+    <City>Minneapolis</City>
+  </Address>
+</Employee>
+...
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  

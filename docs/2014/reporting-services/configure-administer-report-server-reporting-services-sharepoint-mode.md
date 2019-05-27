@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94d8b8fcf578a01de96be0b0e36c20629d6d5c72
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266274"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109774"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Konfiguration und Verwaltung eines Berichtsservers (SharePoint-Modus von Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ist eine serverbasierte Berichtsplattform. Sie bietet zahlreiche einsatzbereite Tools und Dienste, die Ihnen dabei helfen, Berichte für Ihr Unternehmen zu erstellen, bereitzustellen und zu verwalten. Darüber hinaus ermöglichen Ihnen die Programmierfunktionen eine Erweiterung und individuelle Anpassung Ihrer Funktionen zur Berichterstellung. Sie können die Berichtsumgebung in ein SharePoint-Produkt integrieren, um die Vorteile der Zusammenarbeitsumgebung zu nutzen, die von SharePoint-Websites bereitgestellt wird.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
@@ -16,12 +15,12 @@ ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701682"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077279"
 ---
 # <a name="define-custom-member-formulas"></a>Definieren von benutzerdefinierten Elementformeln
   Sie können einen MDX-Ausdruck (Multidimensional Expressions), eine so genannte benutzerdefinierte Elementformel, erstellen, um die Werte für die Mitglieder eines angegebenen Attributs bereitzustellen. Eine Spalte in einer Tabelle einer Datenquellensicht stellt für jedes Mitglied in einem Attribut den Ausdruck bereit, der zur Bereitstellung des Wertes für dieses Element verwendet wird.  

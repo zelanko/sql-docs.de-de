@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 12: Erstellen von Rollen | Microsoft-Dokumentation'
+title: 'Lektion 12: Erstellen von Rollen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729613"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079268"
 ---
-# <a name="lesson-12-create-roles"></a>Lektion 12: Erstellen von Rollen
+# <a name="lesson-12-create-roles"></a>Lektion 12: Erstellen von Rollen
   In dieser Lektion erstellen Sie Rollen. Rollen stellen Modelldatenbankobjekt- und Datensicherheit bereit, indem sie den Zugriff auf die Windows-Benutzer einschränken, die Rollenmitglieder sind. Jede Rolle wird mit einer einzigen Berechtigung definiert: Keine, lesen, lesen und verarbeiten, Prozess oder Administrator. Rollen können in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]während der Modellerstellung im Dialogfeld Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Rollen verwalten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  

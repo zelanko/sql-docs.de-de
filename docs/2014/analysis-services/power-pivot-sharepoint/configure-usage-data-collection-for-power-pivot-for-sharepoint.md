@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749469"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071741"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden.  

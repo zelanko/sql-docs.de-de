@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -16,12 +15,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733475"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082739"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
   Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  

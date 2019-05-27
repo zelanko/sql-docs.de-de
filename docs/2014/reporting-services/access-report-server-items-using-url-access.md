@@ -1,11 +1,10 @@
 ---
-title: Zugreifen auf Berichtsserverelemente über URL-Zugriff | Microsoft-Dokumentation
+title: Zugreifen auf Berichtsserverelemente über den URL-Zugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
@@ -14,45 +13,45 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a345cd609c4cfd79f9e93a2b63e71bbddde36ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233568"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110099"
 ---
-# <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über URL-Zugriff
-  Diesem Thema wird beschrieben, wie auf Katalogelemente mit unterschiedlichen Typen in einen Bericht zugreifen Serverdaten basieren oder in einer SharePoint-Website unter Verwendung *Rs: Command*=*Wert*.  
+# <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über den URL-Zugriff
+  In diesem Thema wird beschrieben, wie Sie in einer Berichtsserver-Datenbank oder auf einer SharePoint-Website unter Verwendung von *rs:Befehl*=*Wert*auf Katalogelemente mit unterschiedlichen Typen zugreifen.  
   
- Es ist nicht notwendig, diese Parameterzeichenfolge hinzuzufügen. Wenn Sie weggelassen wird, wird der Berichtsserver den Elementtyp ergibt und wählt den entsprechenden Parameterwert automatisch. Verwenden Sie jedoch die *Rs: Command*=*Wert* -Zeichenfolge in der URL verbessert die Leistung des Berichtsservers.  
+ Es ist nicht erforderlich, diese Parameterzeichenfolge hinzuzufügen. Wenn Sie sie weglassen, wertet der Berichtsserver den Elementtyp aus und wählt den entsprechenden Parameterwert automatisch aus. Durch die Verwendung der *rs:Command*=*Value* -Zeichenfolge in der URL verbessert sich jedoch die Leistung des Berichtsservers.  
   
- Beachten Sie die `_vti_bin` proxysyntax in den folgenden Beispielen. Weitere Informationen zum Verwenden der proxysyntax finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Beachten Sie in den Beispielen unten die `_vti_bin` -Proxysyntax. Weitere Informationen zum Verwenden der Proxysyntax finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Zugreifen auf einen Bericht  
- Verwenden Sie zum Anzeigen eines Berichts im Browser die *Rs: Command*=*Rendern* Parameter. Zum Beispiel:  
+ Verwenden Sie den *rs:Command*=*Render* -Parameter, um einen Bericht im Browser anzuzeigen. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
->  Es ist wichtig, dass die URL der `_vti_bin` proxysyntax zur Weiterleitung der Anforderung über SharePoint und die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP-Proxy. Der Proxy hinzugefügt. der HTTP-Anforderung Kontext, der erforderlich ist, um die ordnungsgemäße Ausführung des Berichts für Berichtsserver im SharePoint-Modus zu gewährleisten.  
+>  Es ist wichtig, dass die URL die `_vti_bin` -Proxysyntax zur Weiterleitung der Anforderung über SharePoint sowie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -HTTP-Proxy enthält. Durch den Proxy wird der HTTP-Anforderung Kontext hinzugefügt. Dieser ist erforderlich, damit der Bericht auf Berichtsservern im SharePoint-Modus ordnungsgemäß ausgeführt wird.  
   
 ## <a name="access-a-resource"></a>Zugreifen auf eine Ressource  
- Um eine Ressource zuzugreifen, verwenden die *Rs: Command*=*GetResourceContents* Parameter. Wenn die Ressource mit dem Browser, z. B. ein Bild, kompatibel ist, wird es im Browser geöffnet. Andernfalls werden Sie aufgefordert, zum Öffnen oder speichern die Datei oder Ressource, auf dem Datenträger.  
+ Verwenden Sie den *rs:Command*=*GetResourceContents* -Parameter, um auf eine Ressource zuzugreifen. Wenn die Ressource, z.B. ein Bild, mit dem Browser kompatibel ist, wird sie im Browser geöffnet. Andernfalls werden Sie aufgefordert, die Datei oder Ressource zu öffnen oder auf dem Datenträger zu speichern.  
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
-## <a name="access-a-data-source"></a>Zugriff auf eine Datenquelle  
- Um eine Datenquelle zuzugreifen, verwenden die *Rs: Command*=*GetDataSourceContents* Parameter. Wenn Ihr Browser XML unterstützt, wird die Datenquellendefinition angezeigt, wenn Sie ein authentifizierter Benutzer mit sind `Read Contents` -Berechtigung für die Datenquelle. Zum Beispiel:  
+## <a name="access-a-data-source"></a>Zugreifen auf eine Datenquelle  
+ Verwenden Sie den Parameter *rs:Command*=*GetDataSourceContents* , um auf eine Datenquelle zuzugreifen. Wenn Ihr Browser XML unterstützt, wird die Datenquellendefinition angezeigt, wenn Sie ein für die Datenquelle authentifizierter Benutzer mit der Berechtigung `Read Contents` sind. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- Die XML-Struktur sieht wie im folgenden Beispiel aus:  
+ Die XML-Struktur kann Ähnlichkeit mit folgendem Beispiel haben:  
   
 ```  
 <DataSourceDefinition>  
@@ -66,16 +65,16 @@ ms.locfileid: "63233568"
 </DataSourceDefinition>  
 ```  
   
- Wird zurückgegeben, die Verbindungszeichenfolge auf Grundlage der **SecureConnectionLevel** des Berichtsservers festlegen. Weitere Informationen zu den **SecureConnectionLevel** finden Sie unter [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ Die Verbindungszeichenfolge wird auf Grundlage der **SecureConnectionLevel** -Einstellung des Berichtsservers zurückgegeben. Weitere Informationen zur **SecureConnectionLevel** -Einstellung finden Sie unter [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
-## <a name="access-the-contents-of-a-folder"></a>Zugriff auf den Inhalt eines Ordners  
- Um den Inhalt eines Ordners zuzugreifen, verwenden die *Rs: Command*=*GetChildren* Parameter. Eine generische Ordnernavigation-Seite zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Zum Beispiel:  
+## <a name="access-the-contents-of-a-folder"></a>Zugreifen auf den Inhalt eines Ordners  
+ Verwenden Sie den *rs:Command*=*GetChildren* -Parameter, um auf den Inhalt eines Ordners zuzugreifen. Es wird eine generische Seite zur Ordnernavigation zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
- Die Benutzeroberfläche, die Sie sehen, ähnelt dem verzeichnissuchmodus, die von verwendet [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Die Versionsnummer, einschließlich der Buildnummer des Berichtsservers wird auch unter der Ordnerliste angezeigt.  
+ Die angezeigte Benutzeroberfläche hat Ähnlichkeit mit dem Verzeichnissuchmodus, der von [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Internet Information Server) verwendet wird. Die Versionsnummer, einschließlich der Buildnummer des Berichtsservers, wird ebenfalls unter der Ordnerliste angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   

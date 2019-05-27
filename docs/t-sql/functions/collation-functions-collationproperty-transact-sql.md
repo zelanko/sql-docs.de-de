@@ -16,16 +16,16 @@ helpviewer_keywords:
 - collations [SQL Server], properties
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 06d2a9417d001e18b9bb8a5f34ce90575510e649
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572793"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944010"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Sortierungsfunktionen: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ Der Name der Sortierung. Das Argument *collation_name* weist den Datentyp **nvar
 *property*  
 Die Eigenschaft der Sortierung. Das Argument *property* weist den Datentyp **varchar(128)** auf und kann einen der folgenden Werte besitzen:
   
-|Eigenschaftenname|Beschreibung|  
+|Eigenschaftenname|und Beschreibung|  
 |---|---|
 |**CodePage**|Nicht-Unicode-Codepage der Sortierung. Dies ist der Zeichensatz, der für **varchar**-Daten verwendet wird. Informationen zum Übersetzen dieser Werte und zu ihren Zeichenzuordnungen finden Sie unter [Appendix G DBCS/Unicode Mapping Tables (Anhang G: Tabellen zur DBCS-/Unicode-Zuordnung)](https://msdn.microsoft.com/library/cc194886.aspx) und [Appendix H Code Pages (Anhang H: Codepages)](https://msdn.microsoft.com/library/cc195051.aspx).<br /><br />Basisdatentyp: **int**|  
 |**LCID**|Windows-Gebietsschemabezeichner (Locale Identifier, LCID) der Sortierung. Dies ist die Kultur, die für die Sortierung und die Vergleichsregeln verwendet wird. Informationen zum Übersetzen dieser Werte erhalten Sie unter [LCID Structure (LCID-Struktur)](https://msdn.microsoft.com/library/cc233968.aspx). Sie müssen jedoch zunächst eine Konvertierung in **varbinary** vornehmen.<br /><br />Basisdatentyp: **int**|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4107bfb27ad756d47a80257289cb05c62f1f99e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36471a1e20a150e39dedc866130d3373448573bf
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844034"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944494"
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47844034"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,13 +59,13 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *property*  
  Der Name der Eigenschaft, für die Informationen zurückgegeben werden. *property* ist eine Zeichenfolge und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**ColumnId**|Die Spalten-ID an der *key_ID*-Position des Index.|  
 |**IsDescending**|Die Reihenfolge, in der die Indexspalte gespeichert wird.<br /><br /> 1 = Absteigend 0 = Aufsteigend|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  
@@ -95,7 +95,7 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
