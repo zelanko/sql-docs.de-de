@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserverdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3015f589f40dfc8bafc30da3a30316004f086a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087220"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Mit einer Microsoft SQL Server-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer Microsoft SQL Server-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -63,7 +62,7 @@ ms.locfileid: "62680181"
  **Datenbankname**  
  Wählen Sie aus der Liste der Datenbanken eine Datenbank aus.  
   
- **Erweitert:**  
+ **Erweitert**  
  Legen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest. Weitere Informationen finden Sie unter [Festlegen von erweiterten Eigenschaften &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Verbindung testen**  

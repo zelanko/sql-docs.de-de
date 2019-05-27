@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
@@ -14,12 +13,12 @@ ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461872"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108321"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Farbregeln der Karte (Dialogfeld), Allgemein
   Wählen Sie **Allgemein** im **Dialogfeld für Farbregeleigenschaften** aus, um Farboptionen für Kartenelemente in dieser Ebene zu definieren. Kartenelemente sind Polygone, Linien und Punkte. Farbregeln können angewendet werden, wenn Sie auf der Grundlage räumlicher Daten und analytischer Daten in einem Datasetfeld oder in einem räumlichen Datenquellenfeld eine Beziehung zwischen Kartenelementen erstellt haben.  

@@ -17,23 +17,23 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830098"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944469"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den benannten Index- oder Statistikeigenschaftswert für eine angegebene Tabellenidentifikationsnummer (Tabellen-ID), den angegebenen Index- oder Statistiknamen und den angegebenen Eigenschaftsnamen zurück. Gibt für XML-Indizes NULL zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,15 +46,15 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Ein Ausdruck, der die Objekt-ID der Tabelle oder indizierten Sicht enthält, für die Indexeigenschafteninformationen bereitgestellt werden sollen. *object_id* ist vom Datentyp **int**.  
   
  *index_or_statistics_name*  
- Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *index_or_statistics_name* entspricht **nvarchar(128)**.  
+ Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *index_or_statistics_name* entspricht **nvarchar(128)** .  
   
  *property*  
- Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich:  
+ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *property* ist vom Datentyp **varchar(128)** . Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Wenn nicht anders angegeben, wird NULL zurückgegeben, wenn *property* kein gültiger Eigenschaftsname ist, *object_ID* keine gültige Objekt-ID ist, *object_ID* ein nicht unterstützter Objekttyp für die angegebene Eigenschaft ist oder der Aufrufer nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts verfügt.  
   
-|Eigenschaft|Beschreibung|Wert|  
+|Eigenschaft|und Beschreibung|value|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Schachtelungstiefe des Indexes.|Anzahl von Indexebenen.<br /><br /> NULL = Ungültiger XML-Index oder ungültige Eingabe.|  
 |**IndexFillFactor**|Der beim Erstellen oder letzten Neuerstellen des Indexes verwendete Füllfaktor.|Füllfaktor|  
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  
@@ -119,7 +119,7 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Statistiken](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

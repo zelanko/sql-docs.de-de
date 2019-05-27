@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
@@ -13,12 +12,12 @@ ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086333"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert die hochentwickelten Datamining-Lösungen zu erstellen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  

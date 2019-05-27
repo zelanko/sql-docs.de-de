@@ -16,23 +16,23 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636439"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944185"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt das Unicode-Zeichen mit dem angegebenen ganzzahligen Code gemäß der Definition durch den Unicode-Standard zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,9 +47,9 @@ NCHAR ( integer_expression )
  Wenn die Sortierung der Datenbank das Flag für zusätzliche Zeichen unterstützt, entspricht dies einer positiven ganzen Zahl zwischen 0 und 1.114.111 (0 bis 0x10xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **nchar(1)**, wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
+ **nchar(1)** , wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
   
- **nvarchar(2)**, wenn die Standarddatenbanksortierung ergänzende Zeichen unterstützt.  
+ **nvarchar(2)** , wenn die Standarddatenbanksortierung ergänzende Zeichen unterstützt.  
   
  Wenn der Parameter *integer_expression* im Bereich 0 bis 0xFFFF liegt, wird nur ein Zeichen zurückgegeben. Bei höheren Werten gibt NCHAR das entsprechende Ersatzzeichenpaar zurück. Erstellen Sie kein Ersatzzeichenpaar mit `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Verwenden Sie stattdessen eine Datenbanksortierung, die ergänzende Zeichen unterstützt, und geben Sie dann den Unicode-Codepunkt für das Ersatzzeichenpaar an. Im folgenden Beispiel werden sowohl die alte Methode zur Erstellung eines Ersatzzeichenpaares sowie die bevorzugte Methode zur Angabe des Unicode-Codepunkts erläutert.  
   
@@ -213,7 +213,7 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

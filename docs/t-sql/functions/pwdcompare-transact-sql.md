@@ -17,22 +17,22 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782368"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943274"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Führt Hashing für ein Kennwort aus und vergleicht den Hash mit dem Hash eines vorhandenen Kennworts. PWDCOMPARE kann verwendet werden, um nach leeren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldekennwörtern oder allgemeinen unsicheren Kennwörtern zu suchen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,10 +45,10 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Argumente  
  **'** *clear_text_password* **'**  
- Das unverschlüsselte Kennwort. *clear_text_password* ist vom Datentyp **sysname** (**nvarchar(128)**).  
+ Das unverschlüsselte Kennwort. *clear_text_password* ist vom Datentyp **sysname** (**nvarchar(128)** ).  
   
  *password_hash*  
- Der Verschlüsselungshash eines Kennworts. *password_hash* ist vom Datentyp **varbinary(128)**.  
+ Der Verschlüsselungshash eines Kennworts. *password_hash* ist vom Datentyp **varbinary(128)** .  
   
  *version*  
  Veralteter Parameter, der auf 1 festgelegt werden kann, wenn *password_hash* einen Wert einer Anmeldung von einer Version vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] darstellt, der in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher migriert, aber nie in das [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-System konvertiert wurde. *version* ist vom Datentyp **int**  
@@ -57,7 +57,7 @@ PWDCOMPARE ( 'clear_text_password'
 >  Dieser Parameter wird für die Abwärtskompatibilität bereitgestellt, wird jedoch ignoriert, da Kennworthash-BLOBs nun eigene Versionsbeschreibungen enthalten. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
  Gibt 1 zurück, wenn der Hash von *clear_text_password* mit dem Parameter *password_hash* übereinstimmt und gibt 0 (null) zurück, wenn dies nicht der Fall ist.  
   
@@ -89,7 +89,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

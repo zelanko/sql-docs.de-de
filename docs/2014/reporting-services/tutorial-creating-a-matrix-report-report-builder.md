@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098920"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Erstellen eines Matrixberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Matrixbericht erstellen. Die Matrix besitzt geschachtelte Zeilen- und Spaltengruppen und eine angrenzende Spaltengruppe. Sie erhalten auch Informationen zum Formatieren von Spalten und zum Drehen von Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  

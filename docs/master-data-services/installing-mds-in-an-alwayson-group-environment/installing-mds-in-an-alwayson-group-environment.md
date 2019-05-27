@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982116"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015103"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -304,15 +304,15 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
     Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in Abbildung 17.
 
-    **Synchroner Commit:** Dadurch wird sichergestellt, dass beim Ausführen eines Commit für eine Transaktion auf dem primären Replikat einer Datenbank ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
+**Synchroner Commit:** Dadurch wird sichergestellt, dass beim Ausführen eines Commit für eine Transaktion auf dem primären Replikat einer Datenbank ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
 
-    Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Knoten im selben Rechenzentrum befinden. Wenn sie sich in unterschiedlichen Rechenzentren befinden, kann ein synchroner Commit die Leistung der Datenbank verlangsamen.
+Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Knoten im selben Rechenzentrum befinden. Wenn sie sich in unterschiedlichen Rechenzentren befinden, kann ein synchroner Commit die Leistung der Datenbank verlangsamen.
 
-    Wenn dieses Kontrollkästchen nicht aktiviert ist, wird ein asynchroner Commit verwendet.
+Wenn dieses Kontrollkästchen nicht aktiviert ist, wird ein asynchroner Commit verwendet.
 
-    **Automatisches Failover:** Wenn das primäre Replikat ausgefallen ist, wird für die Verfügbarkeitsgruppe automatisch ein Failover auf das sekundäre Replikat ausgeführt, wenn das automatische Failover ausgewählt ist. Dies kann nur auf den Replikaten mit synchronen Commits aktiviert werden.
+**Automatisches Failover:** Wenn das primäre Replikat ausgefallen ist, wird für die Verfügbarkeitsgruppe automatisch ein Failover auf das sekundäre Replikat ausgeführt, wenn das automatische Failover ausgewählt ist. Dies kann nur auf den Replikaten mit synchronen Commits aktiviert werden.
 
-    **Lesbares sekundäres Replikat:** Benutzer können standardmäßig keine Verbindung mit sekundären Replikaten herstellen. Dadurch können Benutzer eine Verbindung mit dem sekundären Replikat mit schreibgeschütztem Zugriff herstellen.
+**Lesbares sekundäres Replikat:** Benutzer können standardmäßig keine Verbindung mit sekundären Replikaten herstellen. Dadurch können Benutzer eine Verbindung mit dem sekundären Replikat mit schreibgeschütztem Zugriff herstellen.
 
 8.  Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 

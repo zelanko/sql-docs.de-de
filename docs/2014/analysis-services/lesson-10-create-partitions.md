@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 11: Erstellen von Partitionen | Microsoft-Dokumentation'
+title: 'Lektion 11: Erstellen von Partitionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729491"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079201"
 ---
-# <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
+# <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
   In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle im Modell über eine Partition, die Spalten und Zeilen der Tabelle enthält. Der Internet Sales-Tabelle möchten wir die Daten nach Jahr unterteilen; eine Partition für jedes der fünf Jahren der Tabelle.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Geschätzte Zeit zum Abschließen dieser Lektion: **15 Minuten**  
