@@ -36,10 +36,10 @@ ms.locfileid: "66063201"
   
 |Sicht|Description|Unterstützte Dateitypen|  
 |----------|-----------------|--------------------------|  
-|**Schema**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|*.xsd|  
-|**Daten**|Zum visuellen Ändern von XML-Datendateien in einem strukturierten Datenraster.|*.xml|  
+|**Schema**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|.xsd|  
+|**Daten**|Zum visuellen Ändern von XML-Datendateien in einem strukturierten Datenraster.|.xml|  
 |**XML**|Zum Bearbeiten von XML. Der Quellen-Editor stellt Funktionen wie Farbcodierung und IntelliSense bereit, einschließlich Wort vervollständigen und Member auflisten.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**Showplan**|Zeigt mithilfe der Option SET SHOWPLAN_XML ON erstellte XML-Abfragepläne an.|*.showplan|  
+|**Showplan**|Zeigt mithilfe der Option SET SHOWPLAN_XML ON erstellte XML-Abfragepläne an.|.showplan|  
   
 ## <a name="schema-view"></a>Schemasicht  
  Die Schemasicht bietet eine visuelle Darstellung der Elemente, Attribute, Typen usw., aus denen XML-Schemas und ADO.NET-Datasets bestehen.  
