@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -16,12 +15,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660091"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064681"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
   Wenn Sie öffnen ein Clusteringmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, der clustering-Viewer in etwa wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  

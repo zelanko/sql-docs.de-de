@@ -18,22 +18,22 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b22a70494e76f559edd461b566c81224503d8c2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad753fbdd529cbe9bc53906479aa134029fcc45e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707966"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947869"
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktuell im letzten für die Verbindung geöffneten Cursor befinden. Zur Verbesserung der Leistung kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] große statische und keysetgesteuerte Cursor asynchron auffüllen. `@@CURSOR_ROWS` kann aufgerufen werden, um zu bestimmen, dass die Anzahl der einen Cursor kennzeichnenden Zeilen zum Zeitpunkt des @@CURSOR_ROWS-Aufrufs abgerufen wird.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ Diese Funktion gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktu
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|und Beschreibung|  
 |---|---|
 |-*m*|Der Cursor wird asynchron aufgefüllt. Der zurückgegebene Wert (-*m*) entspricht der aktuellen Anzahl der Zeilen im Keyset.|  
 |-1|Der Cursor ist dynamisch. Da dynamische Cursor alle Änderungen widerspiegeln, ändert sich die Anzahl der Zeilen, die den Cursor kennzeichnen, ständig. Für den Cursor werden nicht unbedingt alle kennzeichnenden Zeilen abgerufen.|  

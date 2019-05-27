@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b15b19bfc7f04c96bb955207c6631706380063fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767572"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057872"
 ---
 # <a name="lesson-3-installing-packages"></a>Lektion 3: Installieren von Paketen
   In [Lektion 2: Erstellen des Bereitstellungspakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), ein Bereitstellungsprogramm und das Bereitstellungspaket erstellt, enthält die Elemente müssen Sie die Pakete auf einem anderen Computer installieren. Sie haben außerdem die Dateiliste im Bereitstellungspaket überprüft und den Inhalt der Manifestdatei untersucht, die beim Erstellen des Bereitstellungshilfsprogramms erstellt wurde.  

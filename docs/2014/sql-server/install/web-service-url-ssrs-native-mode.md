@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
@@ -15,12 +14,12 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090991"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Webdienst-URL (einheitlicher SSRS-Modus)
   Auf der Seite der Webdienst-URL können Sie die URL, mit der auf den Berichtsserver zugegriffen wird, konfigurieren bzw. ändern. Eine *URL-Reservierung* wird auf Grundlage des URL erstellt, den Sie angeben. Die URL-Reservierung definiert die Syntax und die Regeln für alle URLs, mit denen danach auf den Report Server-Webdienst zugegriffen werden kann. Die URL-Reservierung umfasst Präfix, Host, Port und das virtuelle Verzeichnis für den Report Server-Webdienst. Je nachdem, wie Sie den Host angeben, können mehrere URLs für eine einzelne Reservierung möglich sein. Der Standardwert für den Host ist ein Platzhalter. Mit einem Platzhalter können Sie in einer URL jeden beliebigen Hostnamen angeben, der in den Computer aufgelöst wird, auf dem der Berichtsserver gehostet wird. Weitere Informationen zu URL-Konfiguration und-Reservierung finden Sie unter [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) und [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "63131180"
  **URLs**  
  Zeigt die für die aktuelle Berichtsserver-Instanz definierten URLs an.  
   
- **Erweitert:**  
+ **Erweitert**  
  Klicken Sie, um zusätzliche URLs für die aktuelle Anwendungsinstanz zu erstellen.  
   
 > [!NOTE]

@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801274"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943869"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,7 +55,7 @@ Der Rückgabetyp hängt vom Typ der Argumente ab. In der folgenden Tabelle wird 
 |Eingabetyp|Ausgabetyp und -länge|  
 |---|---|
 |1. Jedes Argument vom Typ<br><br />SQL-CLR<br><br />SQL-CLR-UDT<br><br />oder<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. Andernfalls jedes Argument vom Typ<br><br />**varbinary(max)**<br><br />oder<br><br />**varchar(max)**|**varchar(max)**, sofern keiner der Parameter vom Typ **nvarchar** mit beliebiger Länge ist. In diesem Fall gibt `CONCAT` ein Ergebnis vom Typ **nvarchar(max)** zurück.|  
+|2. Andernfalls jedes Argument vom Typ<br><br />**varbinary(max)**<br><br />oder<br><br />**varchar(max)**|**varchar(max)** , sofern keiner der Parameter vom Typ **nvarchar** mit beliebiger Länge ist. In diesem Fall gibt `CONCAT` ein Ergebnis vom Typ **nvarchar(max)** zurück.|  
 |3. Andernfalls jedes Argument vom Typ **nvarchar** mit höchstens 4000 Zeichen<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
 |4. In allen anderen Fällen|**varchar**(<=8000, **varchar** mit höchstens 8000 Zeichen), sofern keiner der Parameter vom Typ „nvarchar“ mit beliebiger Länge ist. In diesem Fall gibt `CONCAT` ein Ergebnis vom Typ **nvarchar(max)** zurück.|  
   

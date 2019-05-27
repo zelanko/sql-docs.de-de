@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
@@ -13,12 +12,12 @@ ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4911084929f3ff69657a6d5e51c557f35929b45b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059545"
 ---
 # <a name="destination-database-files"></a>Zieldatenbankdateien
   Verwenden Sie das Dialogfeld **Zieldatenbankdateien** , um die Namen und Speicherorte der Datenbankdateien auf dem Zielserver anzuzeigen oder um für den Task "Datenbanken übertragen" eine Dateifreigabe auf dem Netzwerk anzugeben. Weitere Informationen zu diesem Task finden Sie unter [Datenbanken übertragen (Task)](control-flow/transfer-database-task.md).  

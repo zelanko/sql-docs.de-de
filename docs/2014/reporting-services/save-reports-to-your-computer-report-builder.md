@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190217"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102308"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Speichern von Berichten auf dem Computer (Berichts-Generator)
   Im Berichts-Generator können Sie Berichtsdefinitionen auf dem Computer speichern. Wenn diese jedoch auf dem Computer gespeichert werden, können andere Benutzer die Berichte nicht anzeigen. Berichte, die auf freigegebene Datenquellen verweisen oder Berichtselemente wie Bilder und Unterberichte extern speichern, können möglicherweise nicht ausgeführt werden. Es empfiehlt sich, Berichte auf einem Berichtsserver oder einer SharePoint-Website zu speichern.  

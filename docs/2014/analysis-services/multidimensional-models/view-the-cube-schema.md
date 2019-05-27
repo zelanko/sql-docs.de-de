@@ -1,23 +1,23 @@
 ---
 title: Anzeigen des Cubeschemas | Microsoft-Dokumentation
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740690"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072505"
 ---
 # <a name="view-the-cube-schema"></a>Anzeigen des Cubeschemas
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Im **Cube-Designer** auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
   
  Auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird ein Diagramm der Datenquellensicht angezeigt, die die Grundlage für den Cube bildet. Dieses Diagramm stellt eine Teilmenge des Hauptdiagramms der Datenquellensicht dar. Im Bereich **Datenquellensicht** können Tabellen ein- und ausgeblendet und beliebige vorhandene Diagramme angezeigt werden. Änderungen am zugrunde liegenden Schema (z. B. durch Hinzufügen neuer Beziehungen oder benannter Abfragen) sind jedoch nicht möglich. Um Änderungen am Schema vorzunehmen, verwenden Sie den Datenquellensicht-Designer.  

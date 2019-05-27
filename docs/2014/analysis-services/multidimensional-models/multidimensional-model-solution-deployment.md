@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
@@ -15,12 +14,12 @@ ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073551"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Mehrdimensionale Modelllösungsbereitstellung
   Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden sind hier nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, synchronisieren Sie die Assistenten, Sichern und wiederherstellen.  

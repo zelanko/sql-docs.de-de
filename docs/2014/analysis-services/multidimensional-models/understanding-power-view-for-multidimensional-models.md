@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 70ccd24e72671255ea0c929b19110794e1c0412a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072669"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -218,7 +217,7 @@ ms.locfileid: "62741099"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Erforderlich|Description|  
+|Name|Required|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  

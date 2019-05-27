@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: HT
+ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328470"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063443"
 ---
 # <a name="error-list-window-management-studio"></a>Fenster 'Fehlerliste' (Management Studio)
   In der Fehlerliste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **von** werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  

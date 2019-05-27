@@ -16,22 +16,22 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836828"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943080"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ist eine Funktion, die die Ebene der Gruppierung berechnet. GROUPING_ID kann in der SELECT-\<Auswahlliste>, der HAVING- oder der ORDER BY-Klausel nur verwendet werden, wenn GROUP BY angegeben wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,13 +45,13 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  Stellt ein *column_expression*-Element in einer [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)-Klausel dar.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  GROUPING_ID \<column_expression> muss genau mit dem Ausdruck in der GROUP BY-Liste übereinstimmen. Wenn Sie beispielsweise nach DATEPART gruppieren (yyyy, \<*column name*>), verwenden Sie GROUPING_ID (DATEPART (yyyy, \<*column name*>)). Wenn Sie nach \<*column name*> gruppieren, verwenden Sie GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Vergleichen von GROUPING_ID () mit GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) fügt das Ergebnis der Rückgabe von GROUPING (\<column_expression>) für jede Spalte in seiner Spaltenliste in jeder Ausgabezeile als Zeichenfolge aus Einsen und Nullen ein. GROUPING_ID interpretiert diese Zeichenfolge als Basis-2-Nummer und gibt die entsprechende ganze Zahl zurück. Betrachten Sie beispielsweise die folgende Anweisung: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Die folgende Tabelle zeigt die Ein- und Ausgabewerte für GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) fügt das Ergebnis der Rückgabe von GROUPING (\<column_expression>) für jede Spalte in seiner Spaltenliste in jeder Ausgabezeile als Zeichenfolge aus Einsen und Nullen ein. GROUPING_ID interpretiert diese Zeichenfolge als Basis-2-Nummer und gibt die entsprechende ganze Zahl zurück. Betrachten Sie beispielsweise die folgende Anweisung: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Die folgende Tabelle zeigt die Ein- und Ausgabewerte für GROUPING_ID ().  
   
 |Aggregierte Spalten|GROUPING_ID (a, b, c) Eingabe = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () Ausgabe|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -416,7 +416,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|NULL|2|144.513,3741|011|6|Day|  
 |NULL|NULL|NULL|9.364.513,6416|111|7|Grand Total|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   

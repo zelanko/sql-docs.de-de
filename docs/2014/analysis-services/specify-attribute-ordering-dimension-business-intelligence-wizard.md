@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58b35c6bf321dec4f6e190eed14b4aa00acbec8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c15fdcc6d36383f8a1561259e7a876ebea7ba800
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746332"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068492"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Attributreihenfolge angeben (Dimension) (Business Intelligence-Assistent)
   Auf der Seite **Attributreihenfolge angeben** können Sie eine Dimension auswählen, für die der Business Intelligence-Assistent ein Sortierungsattribut und Sortierungskriterien definieren wird, die zum Sortieren der Elemente in allen in dieser Dimension enthaltenen Attribute verwendet werden.  

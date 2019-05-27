@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070469"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datenbankassembly registrieren' (Analysis Services – mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Serverassembly registrieren** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften eines Assemblyverweises in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank festlegen. Sie können das Dialogfeld **Serverassembly registrieren** anzeigen, indem Sie in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekt-Explorer **mit der rechten Maustaste auf den Ordner Assemblys einer** -Instanz oder -Datenbank klicken und **Neue Assembly**auswählen.  

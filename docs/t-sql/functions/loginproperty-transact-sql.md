@@ -30,22 +30,22 @@ helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4135760bb80daa7ffebe01b173fdc8e1c4fd1059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949133"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu Richtlinieneinstellungen für die Anmeldung zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Ein Ausdruck, der die Eigenschafteninformationen enthält, die für die Anmeldung zurückgegeben werden sollen. Für*propertyname* sind die folgenden Werte möglich.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Gibt die Anzahl aufeinanderfolgender Anmeldeversuche mit einem falschen Kennwort zurück.|  
 |**BadPasswordTime**|Gibt die Zeit des letzten Anmeldeversuchs mit einem falschen Kennwort zurück.|  
@@ -136,7 +136,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

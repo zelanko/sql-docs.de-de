@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733510"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083615"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von logistischen Regressionsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Logistic Regression-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "62733510"
  ATTRIBUTE_NAME  
  Die Namen des Attributs, das diesem Knoten entspricht.  
   
-|Node|Content|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -90,7 +89,7 @@ ms.locfileid: "62733510"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
-|Node|Content|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Gibt die Anzahl der untergeordneten Knoten an; enthält mindestens 1 Netzwerk, 1 erforderlichen Knoten für Randstatistik und 1 erforderliche Eingabeebene. Beispiel: Bei einem Wert von 5 sind 3 Subnetzwerke vorhanden.|  
 |Randstatistik|Immer 0.|  
@@ -108,7 +107,7 @@ ms.locfileid: "62733510"
  NODE_DESCRIPTION  
  Eine benutzerfreundliche Beschreibung des Knotens.  
   
-|Node|Content|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62733510"
  NODE_RULE  
  Eine XML-Beschreibung der Regel, die in den Knoten eingebettet ist.  
   
-|Node|Content|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -152,7 +151,7 @@ ms.locfileid: "62733510"
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Content|  
+ |Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  

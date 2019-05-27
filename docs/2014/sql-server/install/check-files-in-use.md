@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650555"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096528"
 ---
 # <a name="check-files-in-use"></a>Verwendete Dateien überprüfen
   Verwenden Sie zum Vermeiden eines Neustarts von Windows nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates die Seite Verwendete Dateien überprüfen zum Identifizieren von Vorgängen, die vom Setupprogramm für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update benötigte Dateien blockieren.  

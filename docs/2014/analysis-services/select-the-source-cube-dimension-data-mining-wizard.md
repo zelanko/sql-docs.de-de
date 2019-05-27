@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069229"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Quellcubedimension auswählen (Data Mining-Assistent)
   Mithilfe der Seite **Quellcubedimension auswählen** wählen Sie die Dimension des Cubes aus, die die zu analysierenden Fälle enthält. Wenn Sie beispielsweise ein Modell zur Analyse des Kaufverhaltens von Kunden auf der Grundlage von demografischen Daten erstellen, wählen Sie die Customer-Dimension aus, die in der Regel einen eindeutigen Datensatz für jeden Kunden und verschiedene Attribute mit demografischen Daten enthält, wie z. B. Geschlecht, Wohnsitz oder Einkommen. Zu einem späteren Zeitpunkt können Sie im Assistenten eine Tabelle hinzuzufügen, die sich auf diese Falltabelle bezieht. Sie können beispielsweise eine geschachtelte Tabelle hinzufügen, die anzeigt, welche Produkte der Kunde gekauft hat.  
