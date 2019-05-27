@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10435"
@@ -15,12 +14,12 @@ ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5ba45fa4070a025101d9bf2c06bc69f8aa5d8b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697807"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107554"
 ---
 # <a name="report-data-pane-report-builder"></a>Berichtsdatenbereich (Berichts-Generator)
   Verwenden Sie den Bereich **Berichtsdaten** , um die aktuell definierten Parameter, Datenquellen, Datasets, Feldauflistungen und Bilder in Ihrem Bericht anzuzeigen. Die Berichtsdaten zeigen eine hierarchische Ansicht der Elemente an, die Daten im Bericht darstellen. Die Knoten der obersten Ebene stellen integrierte Felder, Parameter, Bilder und Datenquellenverweise dar. Erweitern Sie jeden Knoten, um die Datenelemente anzuzeigen. Wenn Sie z. B. einen Datenquellenknoten erweitern, werden die für diese Datenquelle definierten Datasets angezeigt. Wenn Sie ein Dataset erweitern, wird seine Feldauflistung angezeigt. Ziehen Sie Elemente in die Berichtsoberfläche oder den Gruppierungsbereich, um Daten mit den gewählten Berichtselementen auf der Berichtsseite zu verknüpfen. Weitere Informationen finden Sie unter [Berichtsentwurfsansicht (Berichts-Generator)](report-builder/report-design-view-report-builder.md).  

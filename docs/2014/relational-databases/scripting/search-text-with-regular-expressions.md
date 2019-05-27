@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.regularexpressionbuilder
@@ -17,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63136184"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063771"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
   Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058697"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Ziel-Editor für Flatfiles (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für Flatfiles** können Sie die Flatfile-Verbindung für das Ziel auswählen und angeben, ob die vorhandene Zieldatei überschrieben werden soll oder ob die Daten an die vorhandene Datei angehängt werden sollen. Das Flatfileziel schreibt Daten in eine Textdatei. Als Format für diese Textdatei können Trennzeichen, feste Breite, feste Breite mit Zeilentrennzeichen oder rechter Flatterrand gewählt werden.  

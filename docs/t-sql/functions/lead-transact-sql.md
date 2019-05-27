@@ -16,16 +16,16 @@ helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: a39292725feff65dd98b25fba95d80bd68313805
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572833"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946923"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +51,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *default*  
  Der Wert, der zurückgegeben wird, wenn sich *offset* außerhalb des Partitionsbereichs befindet. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *partition_by_clause* angegeben wird, wird hierdurch die Reihenfolge der Daten in jeder Partition bestimmt. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  

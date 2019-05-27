@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.columnchart.f1
@@ -15,12 +14,12 @@ ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834375"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060732"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Daten-Viewer konfigurieren (Registerkarte Säulendiagramm)
   Verwenden Sie die Registerkarte **Säulendiagramm** des Dialogfelds **Daten-Viewer konfigurieren** , um anzugeben, dass eine Spalte als Säule in einem Diagramm angezeigt werden soll. Die Anzahl der Säulen zeigt die Anzahl diskreter Datenwerte in der Spalte an, und die Höhe der Säule zeigt die Anzahl der Instanzen für jeden Wert an. Das Diagramm spiegelt jeweils nur den Inhalt eines Puffers wider.  

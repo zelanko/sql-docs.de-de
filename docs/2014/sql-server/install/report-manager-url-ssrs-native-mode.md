@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
@@ -13,12 +12,12 @@ ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f5e472f0cb8cb1a2fc8ed9d85b73622617a3a70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2679abba1e452ec65b43ca16cc90fc7cb244436
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282052"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092791"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>Berichts-Manager-URL (einheitlicher SSRS-Modus)
   Auf der Seite der Berichts-Manager-URL können Sie die URL, mit der auf den Berichts-Manager zugegriffen wird, konfigurieren bzw. ändern. Standardmäßig übernimmt die URL des Berichts-Manager das Präfix, die IP-Adresse und den Port der URL des Report Server-Webdiensts. Dies ist darauf zurückzuführen, dass der Berichts-Manager Front-End-Zugriff auf den Webdienst bietet, der innerhalb desselben Berichtsserver-Diensts ausgeführt wird. Wenn Sie die Dienstanwendungen isolieren und den Berichts-Manager für den Zugriff auf einen Report Server-Webdienst auf einem anderen Computer verwenden, müssen Sie die Datei RSReportServer.config ändern, damit der Berichts-Manager auf eine andere Instanz verweist. Weitere Informationen zum Konfigurieren einer Berichts-Manager-Verbindung mit einem Remoteberichtsserver finden Sie unter [Konfigurations-Manager für Reporting Services &#40;im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "63282052"
  **URLs**  
  Zeigt die für die aktuelle Berichts-Manager-Instanz definierte URL an.  
   
- **Erweitert:**  
+ **Erweitert**  
  Zeigt eine zusätzliche URL für die aktuelle Berichts-Manager-Instanz an.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107850"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus einem Bericht (Berichts-Generator und SSRS)
   Sie können Atom-kompatible Datenfeeds aus Berichten generieren und dann in Anwendungen wie dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Client verwenden, der in der Lage ist, Datenfeeds zu nutzen.  

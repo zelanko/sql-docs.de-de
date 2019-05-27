@@ -18,18 +18,20 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803125"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943717"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Die Abschnitte in diesem Thema enthalten sämtliche Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Datums- und Uhrzeitdatentypen:](#DateandTimeDataTypes)  
@@ -48,8 +50,8 @@ In der folgenden Tabelle werden die Datums- und Uhrzeitdatentypen von [!INCLUDE[
   
 |Datentyp|Format|Bereich|Genauigkeit|Speichergröße (Bytes)|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Zeitzonenoffset|  
 |---|---|---|---|---|---|---|
-|[Uhrzeit](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 bis 23:59:59.9999999|100 Nanosekunden|3 bis 5|Ja|Nein|  
-|[Datum](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 bis 9999-12-31|1 Tag|3|Nein|Nein|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 bis 23:59:59.9999999|100 Nanosekunden|3 bis 5|Ja|Nein|  
+|[Datum](../../t-sql/data-types/date-transact-sql.md)|JJJJ-MM-TT|0001-01-01 bis 9999-12-31|1 Tag|3|Nein|Nein|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 bis 2079-06-06|1 Minute|4|Nein|Nein|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 bis 9999-12-31|0,00333 Sekunden|8|Nein|Nein|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999|100 Nanosekunden|6 bis 8|Ja|Nein|  
@@ -86,10 +88,10 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Gibt eine Zeichenfolge zurück, die den angegebenen *datepart*-Wert des angegebenen „date“-Werts darstellt.|**nvarchar**|Nicht deterministisch|   
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Gibt eine ganze Zahl zurück, die den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.|**int**|Nicht deterministisch|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Gibt eine ganze Zahl zurück, die den Tagesteil des angegebenen *date*-Werts darstellt.|**int**|Deterministisch|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Gibt eine ganze Zahl zurück, die den Monatsteil des angegebenen *date*-Werts zurückgibt.|**int**|Deterministisch|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Gibt eine ganze Zahl zurück, die den Jahresteil des angegebenen *date*-Werts darstellt.|**int**|Deterministisch|  
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Gibt eine ganze Zahl zurück, die den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.|**ssNoversion**|Nicht deterministisch|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Gibt eine ganze Zahl zurück, die den Tagesteil des angegebenen *date*-Werts darstellt.|**ssNoversion**|Deterministisch|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Gibt eine ganze Zahl zurück, die den Monatsteil des angegebenen *date*-Werts zurückgibt.|**ssNoversion**|Deterministisch|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Gibt eine ganze Zahl zurück, die den Jahresteil des angegebenen *date*-Werts darstellt.|**ssNoversion**|Deterministisch|  
   
 ###  <a name="fromParts"></a> Funktionen, die Systemdatums- und Systemzeitwerte aus ihren Teilen zurückgeben
   
@@ -106,7 +108,7 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
   
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**int**|Deterministisch|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**ssNoversion**|Deterministisch|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**bigint**|Deterministisch|  
   
 ###  <a name="ModifyDateandTimeValues"></a> Funktionen, die Datums- und Uhrzeitwerte ändern
@@ -123,21 +125,21 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Gibt den für die Sitzung aktuellen Wert von SET DATEFIRST zurück.|**tinyint**|Nicht deterministisch|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.|Nicht verfügbar|Nicht verfügbar|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|Legt die Reihenfolge der Datumsbestandteile (Tag, Monat, Jahr) für die Eingabe von **datetime**- oder **smalldatetime**-Daten fest.|Nicht verfügbar|Nicht verfügbar|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.|Nicht verfügbar|Nicht verfügbar|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|Legt die Reihenfolge der Datumsbestandteile (Tag, Monat, Jahr) für die Eingabe von **datetime**- oder **smalldatetime**-Daten fest.|Nicht verfügbar|Nicht verfügbar|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Gibt den Namen der derzeit verwendeten Sprache zurück. @@LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung kann sich jedoch auf die Ausgabe von Datumsfunktionen auswirken.|Nicht verfügbar|Nicht verfügbar|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_Sprache_**'** &#124; **@***language_var* }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_Sprache_**'** ]|Gibt Informationen den Datumsformaten aller unterstützten Sprachen zurück. **sp_helplanguage** ist keine gespeicherte Prozedur für Datum oder Uhrzeit. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _Sprache_ **'** &#124; * *@***language_var* }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _Sprache_ **'** ]|Gibt Informationen den Datumsformaten aller unterstützten Sprachen zurück. **sp_helplanguage** ist keine gespeicherte Prozedur für Datum oder Uhrzeit. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Funktionen, die Datums- und Uhrzeitwerte überprüfen
   
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Bestimmt, ob ein **datetime**- oder **smalldatetime**-Eingabeausdruck ein gültiger Datums- oder Uhrzeitwert ist.|**int**|ISDATE ist nur deterministisch bei Verwendung mit der CONVERT-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Bestimmt, ob ein **datetime**- oder **smalldatetime**-Eingabeausdruck ein gültiger Datums- oder Uhrzeitwert ist.|**ssNoversion**|ISDATE ist nur deterministisch bei Verwendung mit der CONVERT-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> Datums- und uhrzeitbezogene Themen 
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Stellt Informationen zur Konvertierung von Datums- und Uhrzeitwerten in und aus Zeichenfolgenliteralen und anderen Datums- und Uhrzeitformaten bereit.|  
 |[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)|Stellt Richtlinien für die sprachübergreifende Portabilität von Datenbanken und Datenbankanwendungen bereit, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verwenden bzw. mehrere Sprachen unterstützen.|  

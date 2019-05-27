@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
@@ -18,12 +17,12 @@ ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294770"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094903"
 ---
 # <a name="how-to-export-reports"></a>Gewusst wie: Exportieren von Berichten
   Der Berichts-Viewer von Upgrade Advisor ermöglicht es Ihnen, eine Flatfileversion des Berichts zu exportieren. Dadurch wird es Ihnen möglich, mit den Daten in einer Kalkulationstabelle oder einem Textverarbeitungsdokument zu arbeiten oder sie per E-Mail an andere Personen weiterzuleiten.  

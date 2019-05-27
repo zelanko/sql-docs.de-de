@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -22,12 +21,12 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767122"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056885"
 ---
 # <a name="package-configurations"></a>Paketkonfigurationen
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Paketkonfigurationen bereit, die Sie zum Aktualisieren der Werte von Eigenschaften zur Laufzeit verwenden können.  

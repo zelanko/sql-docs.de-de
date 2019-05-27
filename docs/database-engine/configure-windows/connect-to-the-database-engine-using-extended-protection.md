@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von „Erweiterter Schutz“ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774545"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015010"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774545"
      Die Variable **Akzeptierte NTLM-SPNs** wird benötigt, wenn ein Server durch mehr als einen SPN identifiziert wird. Wenn ein Client versucht, mithilfe eines gültigen, dem Server nicht bekannten SPNs eine Verbindung mit dem Server herzustellen, verursacht die Dienstbindung einen Fehler. Um dieses Problem zu vermeiden, können Benutzer mithilfe von **Akzeptierte NTLM-SPNs**mehrere SPNs für den Server angeben. **Akzeptierte NTLM-SPNs** umfasst eine Reihe durch Semikolons getrennter SPNs. Beispiel: Um die Verwendung der SPNs **MSSQLSvc/ HostName1.Contoso.com** und **MSSQLSvc/ HostName2.Contoso.com**zuzulassen, geben Sie im Feld **Akzeptierte NTLM-SPNs** die Zeichenfolge **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** ein. Die maximale Länge der Variablen beträgt 2.048 Zeichen. **Akzeptierte NTLM-SPNs** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Erweitert“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Aktivieren von "Erweiterter Schutz" für die Datenbank-Engine  
- Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/kb/968389).  
+ Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Für einige frühere **-Versionen wird** Erweiterter Schutz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in zukünftigen Updates verfügbar sein. Nachdem Sie **Erweiterter Schutz** auf dem Servercomputer aktiviert haben, führen Sie die folgenden Schritte aus, um **Erweiterter Schutz**zu aktivieren:  
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server** , und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<_Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
+2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<_Instanzname *>* , und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Legen Sie sowohl für die Kanalbindung als auch für die Dienstbindung auf der Registerkarte **Erweitert** die geeignete Einstellung für die Funktion **Erweiterter Schutz** fest.  
   

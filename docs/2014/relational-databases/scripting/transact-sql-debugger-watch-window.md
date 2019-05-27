@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -13,15 +12,15 @@ ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 081b149bc4f7927d17ac18895bc901f133545e9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063370"
 ---
 # <a name="watch-window"></a>Überwachung (Fenster)
-  Im Fenster **Überwachung** werden Informationen über die Ausdrücke angezeigt, die Sie ausgewählt haben. Es kann bis zu vier Überwachungsfenster verfügbar sein: **Überwachen 1**, **2, 3 sehen Sie sich ansehen**, und **Überwachen 4**. Die Ausdrücke werden innerhalb des Bereichs des aktuellen Aufruflistenrahmens ausgewertet, der im Fenster **Aufrufliste** ausgewählt ist. Sie müssen sich im Debugmodus befinden, um Variablen und Ausdrücke zu beobachten.  
+  Im Fenster **Überwachung** werden Informationen über die Ausdrücke angezeigt, die Sie ausgewählt haben. Es können bis zu vier Überwachungsfenster verfügbar sein: **Überwachen 1**, **Überwachen 2, Überwachen 3** und **Überwachen 4**. Die Ausdrücke werden innerhalb des Bereichs des aktuellen Aufruflistenrahmens ausgewertet, der im Fenster **Aufrufliste** ausgewählt ist. Sie müssen sich im Debugmodus befinden, um Variablen und Ausdrücke zu beobachten.  
   
 ## <a name="task-list"></a>Aufgabenliste  
  **So greifen Sie auf die Überwachungsfenster zu**  
@@ -44,7 +43,7 @@ ms.locfileid: "53328750"
   
 -   Ausdrücke, die durch Anwenden von Operatoren auf eine oder mehrere Variablen, Parameter oder Systemfunktionen erstellt werden, z.B. "@IntegerCounter + 1" oder "FirstName + LastName"  
   
--   Transact-SQL-Anweisungen, die einen einzelnen Wert, z. B. zurückgeben: SELECT CharacterCol FROM MyTable, in denen PrimaryKey = 1.  
+-   Transact-SQL-Anweisungen, die einen einzelnen Wert zurückgeben, z. B.: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
  **Wert**  
  Zeigt den Wert an, der zurückgegeben wird, nachdem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger den in **Name**angegebenen Ausdruck ausgewertet hat.  

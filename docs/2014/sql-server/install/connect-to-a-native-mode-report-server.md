@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
@@ -15,12 +14,12 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95062797cdfe8f2ab4bc2f3b8b8bb2735d2d0dcf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395823"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096061"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Herstellen einer Verbindung mit einem Berichtsserver im einheitlichen Modus
   Verwenden Sie dieses Dialogfeld, um eine Verbindung mit einer lokalen oder Remote-Berichtsserverinstanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder einer späteren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Version herzustellen. Dieses Tool kann nicht verwendet werden, um eine Verbindung mit früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservern herzustellen. Sie können nur jeweils eine Verbindung zu einer Instanz herstellen.  
@@ -43,7 +42,7 @@ ms.locfileid: "52395823"
  **Servername**  
  Geben Sie den Netzwerknamen des Computers ein, auf dem [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder eine spätere Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert ist. Geben Sie nur den Computernamen ein, kein Präfix oder Schrägstriche.  
   
- **Suchen**  
+ **Find**  
  Suchen Sie den unter **Servername**angegebenen Computer.  
   
  **Berichtsserver-Instanz**  

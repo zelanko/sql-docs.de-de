@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728740"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078627"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
   Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimension auf einer Tabelle, die direkt mit der Faktentabelle für eine Measuregruppe durch eine Primärschlüssel/Fremdschlüssel-Beziehung verknüpft war. In den Aufgaben in diesem Thema verknüpfen Sie die **Geography** -Dimension mit der Faktentabelle für Händlerverkäufe über die **Reseller** -Dimension, die als *Referenzdimension*bezeichnet wird. Dadurch können Benutzer Händlerverkäufe nach Geografie dimensionieren. Weitere Informationen finden Sie unter [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

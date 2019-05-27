@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eec122493d7af91bc5aa5483fbdb1de842705c90
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695814"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107290"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte feldeigenschaftswerte in den Bericht einschließen, indem Sie das Schreiben von Ausdrücken, die sie angeben, durch den Namen in der integrierten `Fields` Auflistung.  

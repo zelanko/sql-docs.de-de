@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655844"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064335"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Verändertes Verhalten von Analysis Services-Funktionen in SQL Server 2014
   In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für mehrdimensionale, tabellarische, Datamining- und [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] -Bereitstellungen beschrieben. Verhaltensänderungen beeinflussen die Funktion und Interaktion von Funktionen in der aktuellen Version im Vergleich zu früheren Versionen von SQL Server.  

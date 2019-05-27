@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41fbe4cefb6a759befd8b96ded8487ff54b0a1c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743286"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090648"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lektion 9: Wiederherstellen einer Datenbank aus dem Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie eine Datenbanksicherungsdatei vom Windows Azure-Speicher in einer Datenbank wiederherstellen, die sich entweder in einer lokalen Umgebung oder auf einem virtuellen Computer in Windows Azure befindet. Für diese Lektion müssen Sie Lektion 4, 5, 6, 7 und 8 nicht abschließen.  

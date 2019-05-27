@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107639"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Speichern von Berichten auf einem Berichtsserver (Berichts-Generator)
   Im Berichts-Generator können Sie eine Berichtsdefinition auf einem Berichtsserver speichern (auch bekannt als Bericht veröffentlichen). Wenn der Bericht auf einem Berichtsserver gespeichert wird, können andere Benutzer den Bericht anzeigen. Bei jeder Ausführung des veröffentlichten Berichts rufen Sie die aktuellen Daten ab. Exportieren Sie den Bericht in ein anderes Dateiformat, und speichern Sie es, um eine statische Kopie eines gerenderten Berichts zu speichern, oder speichern Sie Versionen von gerenderten Berichten mit der Funktion zum Berichtsverlauf.  

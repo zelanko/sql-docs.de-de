@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095703"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Bereitstellungsprüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010
   Diese Prüfliste führt Sie durch die Schritte zum Hinzufügen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zu einer dreistufigen SharePoint 2010-Farm, die Sie von Grund auf werden erstellen. Eine dreistufige Farm enthält Datenbank-, Anwendungs- und Webebenen. Hinzufügen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für diese Topologie erfordert, dass Sie SQL Server-Setup zum Installieren ausführen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf der Anwendungsebene. Wenn Sie die Bereitstellung-Lösung für die web-werden PowerPivot-Programmdateien der Webebene, sondern nur als Task nach der Installation hinzugefügt. Es gibt Bereitstellungsschritte, jedoch keinen separaten Installationsschritt auf der Webebene oder Datenebene, die Sie ausführen müssen. Der einzige Installationsschritt, die Sie ausführen müssen, wird installiert [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf den Anwendungsservern.  

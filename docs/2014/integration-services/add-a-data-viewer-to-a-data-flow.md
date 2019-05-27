@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837392"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062087"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Hinzufügen eines Daten-Viewers zu einem Datenfluss
   In diesem Thema wird beschrieben, wie ein Daten-Viewer in einem Datenfluss hinzugefügt und konfiguriert wird. Ein Daten-Viewer zeigt Daten an, die sich zwischen zwei Datenflusskomponenten bewegen. Ein Daten-Viewer kann z. B. die Daten anzeigen, die von einer Datenquelle extrahiert werden, bevor die Daten von einer Transformation im Datenfluss geändert werden.  

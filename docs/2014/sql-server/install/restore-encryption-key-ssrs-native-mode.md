@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092516"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Wiederherstellen von Verschlüsselungsschlüsseln (einheitlicher SSRS-Modus)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet einen Verschlüsselungsschlüssel, um sensible Daten zu sichern, die in der Berichtsserver-Datenbank gespeichert werden. Um einen ununterbrochenen Zugriff auf verschlüsselte Daten sicherzustellen, ist es wichtig, eine Sicherung des Verschlüsselungsschlüssels vorzunehmen für den Fall, dass Sie diesen später aufgrund von Änderungen im Dienstkonto oder im Rahmen einer geplanten Migration wiederherstellen müssen. Dieses Thema bietet eine Übersicht darüber, wie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Managers Schlüssel wiederhergestellt werden können.  

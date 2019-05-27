@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
@@ -13,12 +12,12 @@ ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 724ac86a4566bac4647e8e7358608c0f5e4ccd85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650711"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063050"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Registerkarte "Attributmerkmale" (Miningmodell-Viewer)
   Im Bereich **Attributmerkmale** können Sie die Beziehungen zwischen Ergebnissen und Eingabeattributen in einem Naive Bayes-Modell untersuchen. Sie können den Wert des Zielattributs auswählen und dann eine Liste der Eingabeattribute anzeigen, die die stärksten Auswirkungen auf die Ergebnisse besitzen.  

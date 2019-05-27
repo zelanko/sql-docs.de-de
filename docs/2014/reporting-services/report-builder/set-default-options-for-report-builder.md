@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10427"
@@ -13,12 +12,12 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107618"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator)
   Klicken Sie auf die **Berichts-Generator** Schaltfläche, und klicken Sie dann auf **Optionen** Festlegen von Optionen für die Anzeige der zuletzt verwendeten Dateien und Verbindungen. Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  

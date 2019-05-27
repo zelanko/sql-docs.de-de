@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
@@ -13,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748562"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070463"
 ---
 # <a name="relational-query-designer-ssas"></a>Relationaler Abfrage-Designer (SSAS)
   Mithilfe des relationalen Abfrage-Designers können Sie Abfragen erstellen, die angeben, welche Daten aus den relationalen Datenbanken von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse Ihrer Abfrage.  Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  

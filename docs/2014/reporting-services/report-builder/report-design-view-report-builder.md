@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -22,12 +21,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156457"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107688"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Berichts-Generator-Fenster ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Darüber ist das Menüband angeordnet. Die Bereiche "Berichtsdaten", "Gruppierung" und "Eigenschaften" und der BerichtsteilKatalog befinden sich links, unter und rechts neben der Entwurfsoberfläche. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Auf dem Menüband sind herkömmliche Menüelemente in Kategorien angeordnet, die einfach zu finden und zu verwenden sind. In den Bereichen können Sie die Berichtsressourcen hinzufügen, auswählen und anordnen und Berichtselementeigenschaften ändern.  

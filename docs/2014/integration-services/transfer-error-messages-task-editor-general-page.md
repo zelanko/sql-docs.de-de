@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62927206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055076"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Fehlermeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben. Der Task „Fehlermeldungen übertragen“ überträgt eine oder mehrere benutzerdefinierte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Fehlermeldungen zwischen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen. Weitere Informationen zu diesem Task finden Sie unter [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

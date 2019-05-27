@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025701"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095561"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Bereitstellungsprüfliste: Horizontale Skalierung durch Hinzufügen von PowerPivot-Server zu einer SharePoint 2010-farm
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Bereitstellungsprüfliste: Horizontales Skalieren durch Hinzufügen von PowerPivot-Servern zu einer SharePoint 2010-Farm
   Wenn Sie viele Anforderungen für die PowerPivot-Abfrageverarbeitung in einer SharePoint-Farm erwarten, können Sie eine zusätzliche PowerPivot for SharePoint-Instanz hinzufügen, um die Unterstützung zusätzlicher Abfrage- und Datenverarbeitung nahtlos zu ermöglichen.  
   
  Nachdem Sie eine neue Instanz installiert haben, verfügen Sie über zusätzliche Kapazitäten, PowerPivot-Daten abzufragen oder PowerPivot-Datenaktualisierungsaufträge zu verarbeiten. Optional haben Sie die Möglichkeit, jeden Server so zu konfigurieren, dass er einen bestimmten Anforderungstyp bearbeitet: Abfrage oder Datenaktualisierung.  

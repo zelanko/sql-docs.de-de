@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -29,15 +28,15 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135144"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090200"
 ---
 # <a name="search-and-replace"></a>Suchen und Ersetzen
-  Es gibt mehrere verschiedene Möglichkeiten, Text zu suchen und zu ersetzen. Auf der **bearbeiten** Menü **suchen und Ersetzen** bietet vier Auswahlmöglichkeiten: **Schnellsuche**, **Schnellersetzung**, **in Dateien suchen**, oder **in Dateien ersetzen**. Durch jede dieser Optionen wird eine entsprechende Version des Dialogfelds **Suchen und Ersetzen** geöffnet. Mit Tastenkombinationen zur inkrementellen Suche können Sie auch einen Suchvorgang ohne Dialogfeld ausführen. Mit diesen Techniken können Sie den Bereich für den Such- und Ersetzungsvorgang steuern und die Methode zum Überprüfen von Suchübereinstimmungen und Ersetzungen auswählen.  
+  Es gibt mehrere verschiedene Möglichkeiten, Text zu suchen und zu ersetzen. Im Menü **Bearbeiten** finden Sie unter **Suchen und Ersetzen** vier Auswahlmöglichkeiten: **Schnellsuche**, **Schnellersetzung**, **In Dateien suchen**oder **In Dateien ersetzen**. Durch jede dieser Optionen wird eine entsprechende Version des Dialogfelds **Suchen und Ersetzen** geöffnet. Mit Tastenkombinationen zur inkrementellen Suche können Sie auch einen Suchvorgang ohne Dialogfeld ausführen. Mit diesen Techniken können Sie den Bereich für den Such- und Ersetzungsvorgang steuern und die Methode zum Überprüfen von Suchübereinstimmungen und Ersetzungen auswählen.  
   
  Beim Suchen und Ersetzen von Text müssen Sie die folgenden Punkte beachten:  
   
