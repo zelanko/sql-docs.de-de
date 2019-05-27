@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134397"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186794"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Verbindung mit applianceknoten in Analytics Platform System
 Dieser Artikel beschreibt die verschiedenen Möglichkeiten für die Verbindung für jeden Knoten in der Analytics Platform System Appliance.  
@@ -26,6 +26,9 @@ Bitten Sie vor der Verwendung von Hadoop mit SQL Server PDW Ihre applianceadmini
 Der Knoten der Appliance erfolgt direkt nur unter bestimmten Verwendungsszenarios und nach bestimmten Benutzertypen. Die folgende Tabelle enthält jeder Knoten der Appliance und die Szenarien, die unter denen Benutzer direkt auf diesen Knoten die Verbindung herstellen.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Datenbank oder Tabelle auf das Steuerelement oder Compute-Knoten ohne explizite Zustimmung des Produktteams oder APS Kunden Support-Team ändert möglicherweise Ihre APS-Appliance nicht mehr unterstützt wird gerendert.
   
 |||  
 |-|-|  

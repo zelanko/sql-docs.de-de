@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -24,12 +23,12 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109938"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2014
   In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Ein verändertes Programmverhalten beeinflusst die Funktionsweise und das Interagieren von Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

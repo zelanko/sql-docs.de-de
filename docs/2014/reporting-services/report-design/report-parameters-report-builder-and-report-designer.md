@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -18,12 +17,12 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c62b34985ccd967ec21e88e01c146851b9c18df9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932616"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105064"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
   In diesem Thema werden die allgemeinen Verwendungen von SSRS-Berichtsparametern und die einstellbaren Eigenschaften beschrieben. Zudem erhalten Sie viele weitere Informationen zu Parametern. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen.  

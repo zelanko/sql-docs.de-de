@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63227023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110202"
 ---
 # <a name="setting-tool-options-and-layout"></a>Festlegen von Optionen und Layout
   Sie können Optionen festlegen, über die konfiguriert wird, welche grafische Benutzeroberfläche der Datenbankoptimierungsratgeber beim Starten anzeigt, welche Schriftart verwendet wird sowie weitere Funktionen, die Sie jeweils optimal unterstützen. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  

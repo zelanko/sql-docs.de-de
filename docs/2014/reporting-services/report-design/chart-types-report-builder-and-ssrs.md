@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10423"
@@ -13,12 +12,12 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185649"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106264"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
   Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Eine Beschreibung der Vorbereitung der Daten in Abhängigkeit vom ausgewählten Diagrammtyp finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  

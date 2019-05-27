@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 461e6d8a2e71b0d2e56bea083597d6c9bd17ccea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b5061d6840052f74c8c7c15db7f2482e9e31d2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816990"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935902"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
 ## <a name="remarks"></a>Remarks  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|und Beschreibung|  
 |------------------|-----------------|  
 |24400|Gültig|  
 |24401|Ungültig, die Ursache ist unbekannt.|  
@@ -63,7 +63,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
 |24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()**-Methoden verhalten.  
+ Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()** -Methoden verhalten.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
@@ -71,7 +71,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
