@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3399c6e8c73916e613197aec2ee0499098a8fa86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193108"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095388"
 ---
 # <a name="feature-rules-upgrade"></a>Funktionsregeln (Upgrade)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup überprüft die Computerkonfiguration, bevor der Setupvorgang abgeschlossen wird. Beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchsucht das System den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird. Außerdem wird nach Bedingungen gesucht, die ein erfolgreiches Durchführen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups verhindern. Bevor Setup den Upgrade-Assistenten startet, wird der Status jedes Elements abgerufen. SCC vergleicht dann das Ergebnis mit den erforderlichen Bedingungen und gibt Anweisungen zum Entfernen der Blockierungsprobleme.  
+  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup überprüft die Computerkonfiguration, bevor der Setupvorgang abgeschlossen wird. Beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchsucht das System den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird. Außerdem wird nach Bedingungen gesucht, die ein erfolgreiches Durchführen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups verhindern. Bevor Setup den Upgrade-Assistenten startet, wird der Status jedes Elements abgerufen. SCC vergleicht dann das Ergebnis mit den erforderlichen Bedingungen und gibt Anweisungen zum Entfernen der Blockierungsprobleme.  
   
  Die Systemkonfigurationsprüfung generiert einen Bericht, der eine kurze Beschreibung für jede ausgeführte Regel sowie den Ausführungsstatus enthält. Der Bericht der systemkonfigurationsprüfung befindet sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   

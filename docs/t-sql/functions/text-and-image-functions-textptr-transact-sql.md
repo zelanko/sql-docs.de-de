@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 890819799317034e4f89b372a0af742afa3422e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699775"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948495"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen: TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51699775"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es steht keine alternative Funktionalität zur Verfügung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,12 +61,12 @@ TEXTPTR ( column )
   
  Diese Funktionen und Anweisungen sind auch bei Daten vom Typ **text**, **ntext** oder **image** hilfreich.  
   
-|Funktion oder Anweisung|Beschreibung|  
+|Funktion oder Anweisung|und Beschreibung|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
-|DATALENGTH<b>(</b>_expression_**)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
+|DATALENGTH<b>(</b>_expression_ **)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
 |SET TEXTSIZE|Gibt das Limit der **text**-, **ntext**- oder **image**-Daten, die von einer SELECT-Anweisung zurückgegeben werden sollen, in Byte zurück.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -186,7 +186,7 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
