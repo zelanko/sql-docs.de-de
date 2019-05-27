@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
@@ -15,12 +14,12 @@ ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62704007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086382"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur
   Nach dem Hinzufügen des ersten Modells zu einer Miningstruktur können Sie noch weitere Miningmodelle hinzufügen. Jedes dieser Modelle muss Spalten enthalten, die in der Struktur vorhanden sind; Sie können jedoch die Verwendung für jedes Miningmodell unterschiedlich definieren. Weitere Informationen zum Definieren der Spalten von Miningmodellen finden Sie unter [Miningmodellspalten](mining-model-columns.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndb2db.f1
@@ -13,12 +12,12 @@ ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae414d3108e694bf565a6411e1835892f3df4a98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087376"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Mit einer DB2-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer DB2-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -55,7 +54,7 @@ ms.locfileid: "62680321"
  **Standardschema**  
  Geben Sie den Namen des Standardschemas für die ausgewählte Datenbank an.  
   
- **Erweitert:**  
+ **Erweitert**  
  Stellen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** ein.  
   
  **Verbindung testen**  

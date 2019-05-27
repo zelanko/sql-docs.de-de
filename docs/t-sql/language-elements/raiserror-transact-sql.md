@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802426"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980435"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Ist ein Code, der den Abstand und die Ausrichtung des ersetzten Werts bestimmt.  
   
-|Code|Präfix oder Ausrichtung|Beschreibung|  
+|Code|Präfix oder Ausrichtung|und Beschreibung|  
 |----------|-----------------------------|-----------------|  
 |- (Minus)|Linksbündig|Der Argumentwert wird innerhalb der angegebenen Feldbreite linksbündig ausgegeben.|  
 |+ (Plus)|Zeichenpräfix|Dem Argumentwert wird ein Plus- (+) oder Minuszeichen (-) vorangestellt, wenn der Wert einen Datentyp mit Vorzeichen aufweist.|  
@@ -158,7 +158,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Option*  
  Ist eine benutzerdefinierte Option für den Fehler und kann einer der Werte in der folgenden Tabelle sein.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |LOG|Protokolliert den Fehler in dem Fehler- und dem Anwendungsprotokoll für die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Im Fehlerprotokoll protokollierte Fehler sind derzeit auf maximal 440 Bytes beschränkt. Nur Mitglieder der festen Serverrolle „sysadmin“ oder Benutzer mit ALTER TRACE-Berechtigungen können WITH LOG angeben.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

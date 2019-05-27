@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac916f4ae4c62eff9207ec0891e3f45d5e46bd97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 895d4a86ed359e0737641e83ea17e77a6c70cb4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076405"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Erstellen eines Power View-Berichts mit einer mehrdimensionalen Datenquelle
   Die Erstellung eines Power View-Berichts auf Grundlage eines mehrdimensionalen Modells unterscheidet sich nicht von der Erstellung eines Berichts auf Grundlage einer PowerPivot-Arbeitsmappe oder eines tabellarischen Analysis Services-Modells. Power View-Berichte werden aus einer Berichtsdatenquellen-Verbindungsdatei (RSDS-Datei) heraus in einer SharePoint-Bibliothek erstellt. Weitere Informationen zum Erstellen einer RSDS-Datei finden Sie unter [Create a Report Data Source](create-a-report-data-source.md).  

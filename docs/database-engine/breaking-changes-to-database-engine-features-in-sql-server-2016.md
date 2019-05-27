@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872040"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983152"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,13 @@ ms.locfileid: "58872040"
   
 -   Die Spalte *TimeStamp* von `sys.fn_virtualfilestats` wurde aus einem **int**- zu einem **bigint**-Datentyp erweitert.  
 
--   Die MD2-, MD4-, MD5-, SHA- und SHA1-Algorithmen sind bei einem niedrigeren Kompatibilitätsgrad als 130 nicht verfügbar. Die Verwendung der Hashalgorithmen MD2, MD4, MD5, SHA oder SHA1 **wird nicht empfohlen**, kann aber erreicht werden, indem der Datenbankkompatibilitätsgrad auf einen niedrigeren Wert als 130 festgelegt wird.  
-
 -   Unter dem Datenbankkompatibilitätsgrad 130 ergibt sich bei einer impliziten Konvertierung aus dem Datentyp **datetime** in den Datentyp **datetime2** eine verbesserte Genauigkeit, indem die Bruchteile von Millisekunden berücksichtigt werden, wodurch sich unterschiedliche konvertierte Werte ergeben. Verwenden Sie explizite Umwandlung in den Datentyp „datetime2“, wenn ein Vergleich so gestaltet ist, dass zwischen den Datentypen „datetime“ und „datetime2“ verglichen wird. Weitere Informationen finden Sie im folgenden [Microsoft-Supportartikel](https://support.microsoft.com/help/4010261).
 
 -   Bei einem niedrigeren Datenbankkompatibilitätsgrad als 130 weisen Vorgänge, die implizite Konvertierungen zwischen bestimmten numerischen und „datetime“-Datentypen durchführen, eine verbesserte Genauigkeit auf und können zu unterschiedlichen konvertierten Werten führen. Dies schließt die Verwendung von Funktionen ein, die Berechnungen wie z. B. `DATEDIFF` und `ROUND` erfordern. Weitere Informationen finden Sie im folgenden [Microsoft-Supportartikel](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Vorgängerversionen  
 
-Informationen zu Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in einigen Vorgängerversionen finden Sie unter „Breaking Changes bei Funktionen der Datenbank-Engine in SQL Server 2014“.
+Informationen zu Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in einigen Vorgängerversionen finden Sie unter [Breaking Changes bei Funktionen der Datenbank-Engine in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Archivierte Dokumentationen von sehr alten Versionen von SQL Server
 

@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120197"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982791"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120197"
 -   Synchronisierungsmodus und -status    
 -   Zeit zum Wiederherstellen des Protokolls  
   
-##  <a name="before-you-begin"></a>Vorbereitungen  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Verfügbarkeitsreplikat oder ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet.  
   
-### <a name="security"></a>Security  
-  
-#### <a name="permissions"></a>Berechtigungen  
+ 
+### <a name="permissions"></a>Berechtigungen  
  Erfordert CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>So starten Sie das Always On-Dashboard  
@@ -56,7 +54,7 @@ ms.locfileid: "49120197"
   
 2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** , klicken Sie mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , und klicken Sie dann auf **Dashboard anzeigen**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Ändern von Optionen im Always On-Dashboard  
+##  <a name="change-always-on-dashboard-options"></a>Ändern von Optionen im Always On-Dashboard  
  Sie können das [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Dialogfeld **Optionen** verwenden, um das Verhalten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On-Dashboards für das automatische Aktualisieren und Aktivieren einer automatisch definierten Always On-Richtlinie zu konfigurieren.  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
@@ -216,8 +214,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
     -   Gibt bei einer sekundären Datenbank an, dass die Protokollsynchronisierung für die Datenbank aufgrund eines Verbindungsproblems nicht gestartet wurde oder beim Start oder einem Rollenwechsel verschiedene Übergangsstatuswerte durchläuft.  
   
 -   **Wird synchronisiert**:
--   
-     Auf einem primären Replikat:   
+- Auf einem primären Replikat:   
     - Gibt für eine primären Datenbank an, dass diese Datenbank bereit ist, eine Scananforderung einer sekundären Datenbank zu akzeptieren.  
     - Gibt auf einem sekundären Replikat an, dass derzeit eine aktive Datenverschiebung für diese sekundäre Datenbank stattfindet. 
   
@@ -340,7 +337,7 @@ Weitere Informationen finden Sie unter [Latenzberichte für Always On-Verfügbar
   
 -   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   

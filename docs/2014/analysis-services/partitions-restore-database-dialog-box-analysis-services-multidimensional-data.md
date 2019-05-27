@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
@@ -13,12 +12,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072106"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** können Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Speicherort zum Wiederherstellen der lokalen Partitionen angeben. Darüber hinaus können Sie angeben, ob Remotepartitionen wiederhergestellt werden sollen und welche Remotesicherungsdateien beim Wiederherstellen der Remotepartitionen verwendet werden sollen.  

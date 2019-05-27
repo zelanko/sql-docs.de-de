@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801634"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982539"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF <column_name> [, <... n>] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ Gibt an, dass positionierte Updates oder Löschungen durch den Cursor nicht erfo
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen anderen Typ, wenn die Klauseln in *select_statement* in Konflikt mit der Funktionalität des angeforderten Cursortyps stehen. Weitere Informationen finden Sie unter Implizite Cursorkonvertierungen.  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn `OF <column_name> [, <... n>]` angegeben wird, können Änderungen nur in den aufgelisteten Spalten vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden, sofern nicht die Parallelitätsoption `READ_ONLY` angegeben wurde.  
   
 ## <a name="remarks"></a>Remarks  
@@ -157,7 +157,7 @@ Ein Verweis auf Cursornamen ist nur von anderen [!INCLUDE[tsql](../../includes/t
   
 Nach der Deklaration eines Cursors können die Eigenschaften des Cursors mithilfe der folgenden gespeicherten Systemprozeduren bestimmt werden:  
   
-|Gespeicherte Systemprozeduren|Beschreibung|  
+|Gespeicherte Systemprozeduren|und Beschreibung|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Gibt eine Liste der in der Verbindung aktuell sichtbaren Cursor und ihrer Attribute zurück.|  
 |**sp_describe_cursor**|Beschreibt die Attribute eines Cursors, z. B. ob es sich um einen Vorwärtscursor oder einen Scrollcursor handelt.|  

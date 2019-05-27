@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680558"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087418"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Konfigurieren des unbeaufsichtigten PowerPivot für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)-Konto
   Das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot ist ein ausgewiesenes Konto zum Ausführen von PowerPivot-Datenaktualisierungsaufträgen in einer SharePoint-Farm. Durch die Konfiguration, die Sie aktivieren die **verwenden, das vom Administrator konfigurierte Konto für die datenaktualisierung** -Option in einem zeitplanseite datenaktualisierung (siehe unten). Arbeitsmappenautoren, die eine Datenaktualisierung planen, können diese Option auswählen, wenn sie das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot für die Ausführung eines Datenaktualisierungsauftrags bereitstellen möchten. Weitere Informationen dazu, wie Sie die Optionen für Anmeldeinformationen in einen Zeitplan zur datenaktualisierung anzeigen, finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  

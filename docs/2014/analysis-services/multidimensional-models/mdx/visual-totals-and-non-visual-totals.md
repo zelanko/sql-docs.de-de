@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073731"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte
   Als sichtbare Gesamtwerte werden Gesamtbeträge am Ende einer Spalte oder Zeile bezeichnet, in denen alle in der Spalte bzw. Zeile sichtbaren Elemente zusammengezählt wurden. Dies ist bei der Anzeige der meisten Tabellen das Standardverhalten. In bestimmten Fällen sollen jedoch möglicherweise nur bestimmte Spalten in einer Tabelle, jedoch die Gesamtbeträge für die komplette Zeile angezeigt werden, einschließlich der nicht sichtbaren Spalten. Diese werden als `Non Visual Totals` bezeichnet, da der Gesamtbetrag sowohl die sichtbaren als auch die nicht sichtbaren Werte beinhaltet.  

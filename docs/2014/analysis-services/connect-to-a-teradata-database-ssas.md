@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connterradb.f1
@@ -13,12 +12,12 @@ ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6254610e6d42c33e1a46c48080db27f208f5bbf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087188"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Mit einer Teradata-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer Teradata-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -46,7 +45,7 @@ ms.locfileid: "62680271"
  **Kennwort speichern**  
  Geben Sie an, ob das Kennwort, das Sie im Feld **Kennwort** eingegeben haben, gespeichert werden soll.  
   
- **Erweitert:**  
+ **Erweitert**  
  Legen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest. Weitere Informationen finden Sie unter [Festlegen von erweiterten Eigenschaften &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Verbindung testen**  

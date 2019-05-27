@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086833"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Abrufabfrage erstellen' (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Abrufabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Abrufabfrage zu erstellen. Eine Abrufabfrage ist normalerweise eine SINGLETON-Abfrage, die einen Wert zurückgibt, mit dessen Hilfe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bestimmen kann, ob an Tabellen oder anderen relationalen Objekten Änderungen vorgenommen wurden. Klicken Sie zum Anzeigen des Dialogfelds **Abrufabfrage erstellen** in der Spalte **Abrufabfrage** des Rasters für die Option **Geplantes Abrufen** auf der Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** auf die Schaltfläche mit den Auslassungspunkten (**...**). Weitere Informationen zur Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** finden Sie unter [Benachrichtigungen &#40;Dialogfeld „Speicheroptionen“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

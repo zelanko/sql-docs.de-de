@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078421"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen
   In den vorhergehenden Lektionen in diesem Lernprogramm haben Sie gelernt, dass zu einem Cube hinzugefügte Datenbankdimensionen als Basis für Cubedimensionen verwendet werden können. In dieser Lektion lernen Sie, verschiedene Typen von Beziehungen zwischen Cubedimensionen und Measuregruppen zu definieren und die Eigenschaften dieser Beziehungen anzugeben.  

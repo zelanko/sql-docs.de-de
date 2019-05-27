@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733165"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083285"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
@@ -47,7 +46,7 @@ ms.locfileid: "62733165"
 ###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt einige grundlegende Metadaten über ein Modell zurück, das mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurde. In einem neuronalen Netzwerkmodell enthält der übergeordnete Knoten des Modells nur den Namen des Modells, den Namen der Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten. Der Knoten für Randstatistik (NODE_TYPE = 24) stellt sowohl diese grundlegenden Metadaten als auch einige abgeleitete statistische Daten über die in dem Modell verwendeten Eingabespalten zur Verfügung.  
   
- Die folgende Beispielabfrage basiert auf dem Miningmodell mit dem Namen [](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), das Sie im Data Mining-Lernprogramm für Fortgeschrittene `Call Center Default NN`erstellen. Das Modell verwendet Daten von einem Callcenter, um mögliche Korrelationen zwischen Personalbesetzung, Anzahl der Anrufe, Bestellungen und Problemen zu untersuchen. Mit der DMX-Anweisung werden Daten vom Knoten für Randstatistik des neuronalen Netzwerkmodells abgerufen. Die Abfrage umfasst das FLATTENED-Schlüsselwort, da die statistischen Eingabeattributwerte, die von Interesse sind, in einer geschachtelten Tabelle, NODE_DISTRIBUTION, gespeichert sind. Wenn der Abfrageanbieter hierarchische Rowsets unterstützt, muss das FLATTENED-Schlüsselwort nicht verwendet werden.  
+ Die folgende Beispielabfrage basiert auf dem Miningmodell mit dem Namen ,das Sie im [Data Mining-Lernprogramm für Fortgeschrittene](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md) `Call Center Default NN`erstellen. Das Modell verwendet Daten von einem Callcenter, um mögliche Korrelationen zwischen Personalbesetzung, Anzahl der Anrufe, Bestellungen und Problemen zu untersuchen. Mit der DMX-Anweisung werden Daten vom Knoten für Randstatistik des neuronalen Netzwerkmodells abgerufen. Die Abfrage umfasst das FLATTENED-Schlüsselwort, da die statistischen Eingabeattributwerte, die von Interesse sind, in einer geschachtelten Tabelle, NODE_DISTRIBUTION, gespeichert sind. Wenn der Abfrageanbieter hierarchische Rowsets unterstützt, muss das FLATTENED-Schlüsselwort nicht verwendet werden.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28ac0283148f328d75bb341ce7841f5e5da42ee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732330"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082329"
 ---
 # <a name="data-sources-ssas-tabular"></a>Datenquellen (SSAS – tabellarisch)
   Über Datenquellen werden die Daten bereitgestellt, die in eine Projektmappe für tabellarische Modelle aufgenommen werden sollen. Sie können Daten aus einer Vielzahl von relationalen Datenbanken in das Modell aufnehmen, z. B. relationale Datenbanken, Datenfeeds, mehrdimensionale Datenquellen wie ein Analysis Services-Cube und Textdateien wie eine Microsoft Excel-Arbeitsmappe. Dieser Abschnitt enthält Informationen über die Arten von Datenquellen, aus denen Sie importieren können, und die verschiedenen für den Import unterstützten Datentypen, sowie Aufgaben, in denen das Importieren von Daten aus diesen Quellen beschrieben wird.  

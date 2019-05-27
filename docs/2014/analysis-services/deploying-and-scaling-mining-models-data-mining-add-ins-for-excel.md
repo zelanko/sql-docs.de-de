@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - manage
@@ -13,12 +12,12 @@ ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081929"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Bereitstellen und Skalieren von Miningmodellen (Data Mining-Add-Ins für Excel)
   Die Tools in der **Modellverwendung** und **Management** Gruppe zum Verwalten und Durchsuchen vorhandener Miningmodelle bereitgestellt werden. Mithilfe der Tools können alle auf einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gespeicherten Modelle angezeigt werden, nicht nur die mit den Add-Ins erstellten Modelle.  

@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 13: Analysieren in Excel | Microsoft-Dokumentation'
+title: 'Lektion 13: Analysieren in Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729446"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079191"
 ---
-# <a name="lesson-13-analyze-in-excel"></a>Lektion 13: In Excel analysieren
+# <a name="lesson-13-analyze-in-excel"></a>Lektion 13: In Excel analysieren
   In dieser Lektion verwenden Sie die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , um Microsoft Excel zu öffnen, automatisch eine Datenquellenverbindung mit der Datenbank für Modellarbeitsbereiche herzustellen und dem Arbeitsblatt automatisch eine PivotTable hinzuzufügen. Die Funktion In Excel analysieren stellt eine schnelle und einfache Methode dar, um die Wirksamkeit Ihres Modellentwurfs vor der Modellbereitstellung zu testen. Sie führen in dieser Lektion keine Datenanalyse aus. Der Zweck dieser Lektion ist es, Sie, den Modellautor, mit den Tools vertraut zu machen, die Sie zum Testen des Modellentwurfs verwenden können. Die Funktion In Excel analysieren ist für Modellentwickler vorgesehen, während Endbenutzer zum Herstellen einer Verbindung mit bereitgestellten Modelldaten und zum Durchsuchen dieser Daten Clientberichtsanwendungen, z. B. Excel oder [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], verwenden.  
   
  Um diese Lektion abzuschließen, muss Excel auf dem gleichen Computer wie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] installiert sein. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](tabular-models/analyze-in-excel-ssas-tabular.md).  

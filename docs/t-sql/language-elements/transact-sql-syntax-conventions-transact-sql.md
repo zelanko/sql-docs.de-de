@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154715"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981450"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ In der folgenden Tabelle werden die Konventionen aufgeführt und beschrieben, di
 |&#124; (Senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die Klammern nicht mit ein.|  
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht mit ein.|  
-|[**,**..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[ **,** ..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
 |[..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht erforderlich, jedoch in einer zukünftigen Version.|  
 |\<label> ::=|Der Name eines Syntaxblockes. Verwenden Sie diese Konvention zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die Sie an mehreren Stellen innerhalb einer Anweisung verwenden können. Jede Stelle, an der der Syntaxblock verwendet werden könnte, wird durch die in spitze Klammern eingeschlossene Bezeichnung angezeigt: \<label>.<br /><br /> Ein Set ist eine Collection von Ausdrücken, z.B. \<Gruppierungssatz>. Eine Liste ist eine Collection von Sets, z.B. \<Liste zusammengesetzter Elemente>.|  
@@ -85,7 +85,7 @@ Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server
   
 Um Zwischenknoten wegzulassen, verwenden Sie Punkte, um diese Positionen anzuzeigen. In der folgenden Tabelle sind die gültigen Formate für Objektnamen aufgeführt.  
   
-|Objektverweisformat|Beschreibung|  
+|Objektverweisformat|und Beschreibung|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|Vierteiliger Name.|  
 |_server_._database_.._object_|Der Schemaname wird weggelassen.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -16,12 +15,12 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699764"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074267"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Arbeiten mit der RollupChildren-Funktion (MDX)
   Die MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [für Suchen und ersetzen] Skriptfunktion Rollup der untergeordneten Elemente eines Elements, das einen anderer unäroperator auf jedes untergeordnete Element angewendet und gibt den Wert des Rollups wird als eine Zahl zurück. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  

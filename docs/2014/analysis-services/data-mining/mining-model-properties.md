@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
@@ -17,12 +16,12 @@ ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733330"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083513"
 ---
 # <a name="mining-model-properties"></a>Miningmodelleigenschaften
   Miningmodelle verfügen über die folgenden Arten von Eigenschaften:  
@@ -57,7 +56,7 @@ ms.locfileid: "62733330"
 |**Name**|Legt den Namen der Miningmodellspalte fest. Sie können einen neuen Namen eingeben, um einen Alias für die Miningmodellspalte anzugeben.|  
 |**ModelingFlags**|Legt algorithmusspezifische Flags für die Spalte fest.|  
 |**SourceColumnID**|Gibt den Namen der Miningstrukturspalte an, auf der die Modellspalte basiert.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
-|**Usage**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
+|**Verwendung**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellspalten](mining-model-columns.md)   

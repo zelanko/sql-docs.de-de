@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -17,12 +16,12 @@ ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076913"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension
   Durch das Hinzufügen einer benutzerdefinierten Aggregationserweiterung zu einem Cube oder einer Dimension werden die Standardaggregationen entfernt, die einem Dimensionselement mit einem anderen unären Operator zugeordnet sind. Die Erweiterung legt eine Spalte für unären Operator in der Dimensionstabelle fest, die das Rollup für Elemente in einer Über-/Unterordnungshierarchie definiert. Der unäre Operator bezieht sich auf das übergeordnete Attribut in einer Über-/Unterordnungshierarchie.  
