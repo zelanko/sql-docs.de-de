@@ -18,22 +18,22 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07f040e9a44507c698a5a5066036038a1c103312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cdcb4ff647328e4c217831a416ca512a4e957f0b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541154"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944026"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die definierte Länge einer Spalte in Bytes zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ Gibt NULL zurück bei einem Fehler oder wenn ein Aufrufer nicht über die korrek
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. COL_LENGTH, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
-Für **varchar**-Spalten, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)**), gibt COL_LENGTH den Wert –1 zurück.
+Für **varchar**-Spalten, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)** ), gibt COL_LENGTH den Wert –1 zurück.
   
 ## <a name="examples"></a>Beispiele  
 Dieses Beispiel zeigt die Rückgabewerte für eine Spalte vom Typ `varchar(40)` und eine Spalte vom Typ `nvarchar(40)`:

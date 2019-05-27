@@ -22,22 +22,22 @@ helpviewer_keywords:
 - IDs [SQL Server], modules
 - module object identifiers [SQL Server]
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 32a67fb7c0d98322f67fe9bb72c2104bf82bc886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa443bae7a8268cb8d19f35ded23ecb6fa251668
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668768"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943336"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Objektbezeichner (ID) des aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Moduls zurück. Bei einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Modul kann es sich um eine gespeicherte Prozedur, eine benutzerdefinierte Funktion oder einen Trigger handeln. @@PROCID kann nicht in CLR-Modulen oder im In-Process-Datenzugriffsanbieter angegeben werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47668768"
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `@@PROCID` als Eingabeparameter in der `OBJECT_NAME`-Funktion verwendet, um den Namen der gespeicherten Prozedur in der `RAISERROR`-Meldung zurückzugeben.  
@@ -73,7 +73,7 @@ GO
 EXECUTE dbo.usp_FindName 'P%', 'A%';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131333"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014457"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Einführung in XSD-Schemas mit Anmerkungen (SQLXML 4.0)
   Sie können mit der XML-Schemadefinitionssprache (XSD) XML-Sichten von relationalen Daten erstellen. Diese Sichten können dann mit XPath (XML Path)-Abfragen abgefragt werden. Dieser Vorgang gleicht prinzipiell dem Erstellen von Sichten mit CREATE VIEW-Anweisungen und dem Definieren von SQL-Abfragen für diese Sichten.  
@@ -118,15 +118,15 @@ ms.locfileid: "63131333"
 ## <a name="other-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu XSD (XML Schema Definition Language), XPath (XML Path Language) und XSLT (Extensible Stylesheet Language Transformations) finden Sie auf den folgenden Websites:  
   
--   XML Schema Part 0: Einführung, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Einführung, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML-Schemateil 1: Strukturen, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Strukturen, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2: Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML-Pfad ()-Programmiersprache (XPath)http://www.w3.org/TR/xpath)  
+-   XML-Pfad ()-Programmiersprache (XPath) http://www.w3.org/TR/xpath)  
   
--   XSL-Transformationen (XSLT),)http://www.w3.org/TR/xslt)  
+-   XSL-Transformationen (XSLT), http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überlegungen zur Sicherheit von Schemas versehen &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

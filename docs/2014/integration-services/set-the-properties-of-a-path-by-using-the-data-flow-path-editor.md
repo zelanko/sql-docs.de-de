@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cbb4037e44e4e4c906617baf9c40e77019f7e9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055733"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors
   Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaften festlegen möchten, muss der Datenfluss mindestens zwei verbundene Datenflusskomponenten enthalten. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Komponente im Datenfluss](data-flow/add-or-delete-a-component-in-a-data-flow.md) und [Verbinden von Komponenten in einem Datenfluss](data-flow/connect-components-in-a-data-flow.md).  

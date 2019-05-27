@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -48,12 +47,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062601"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Algorithmusparameter (SQL Server Data Mining-Add-Ins)
   Wenn Sie Data Mining mithilfe der Tabellenanalysetools für Excel durchführen, ist das Konfigurieren des Data Mining-Algorithmus oder der Data Mining-Parameter nicht erforderlich, da die Tools die Daten automatisch analysieren und die optimalen Parameter festlegen. Wenn Sie jedoch das Modell ändern oder ein ganz neues Miningmodell erstellen möchten, können Sie mit dem Data Mining-Client verschiedene Anpassungen vornehmen.  

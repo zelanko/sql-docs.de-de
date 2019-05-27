@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
@@ -13,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757373"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067233"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery-Modus (SSAS – tabellarisch)
   Analysis Services können Sie die Daten abrufen und Erstellen von Berichten aus einem tabellarischen Modell durch das Abrufen von Daten und Aggregate direkt aus einem relationalen Datenbanksystem mithilfe *DirectQuery-Modus*. In diesem Thema werden die Unterschiede zwischen standardmäßigen Tabellenmodellen erläutert, die sich nur in Arbeitsspeicher- und Tabellenmodellen befinden, die eine relationale Datenquelle abfragen können. Zudem wird erklärt, wie Sie Modelle für die Verwendung im DirectQuery-Modus entwerfen und bereitstellen können.  

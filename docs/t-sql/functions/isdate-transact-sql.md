@@ -28,16 +28,16 @@ helpviewer_keywords:
 - time [SQL Server], validate
 - ISDATE function [SQL Server]
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 277d865ddabacf6bd6f9cd2797b06848f6978f94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682214"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947208"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47682214"
   
  Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Beachten Sie, dass der Bereich für Datums-/Uhrzeitdaten zwischen 1753-01-01 und 9999-12-31 liegt, während der Bereich für Datumsdaten zwischen 0001-01-01 und 9999-12-31 liegt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ ISDATE ( expression )
  Entspricht einer Zeichenfolge oder einem [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der in eine Zeichenfolge konvertiert werden kann. Der Ausdruck muss weniger als 4000 Zeichen umfassen. Datums- und Uhrzeitdatentypen, mit Ausnahme von datetime und smalldatetime, sind nicht als Argument für ISDATE zugelassen.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  ISDATE ist nur deterministisch bei Verwendung mit der [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.  
@@ -153,7 +153,7 @@ ELSE
     SELECT 'INVALID';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

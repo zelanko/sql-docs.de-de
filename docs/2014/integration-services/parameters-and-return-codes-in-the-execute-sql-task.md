@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056786"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parameter und Rückgabecodes im Task 'SQL ausführen'
   SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig `input`-Parameter, `output`-Parameter und Rückgabecodes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt der Task „SQL ausführen“ die Parametertypen `Input`, `Output` und `ReturnValue`. Sie können den `Input`-Typ für Eingabeparameter, den `Output`-Typ für Ausgabeparameter und den `ReturnValue`-Typ für Rückgabecodes verwenden.  

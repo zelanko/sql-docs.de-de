@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
@@ -14,12 +13,12 @@ ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62758488"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068031"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Speichereinstellungen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Speichereinstellungen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie das proaktive Zwischenspeichern, den Speicher und Benachrichtigungseinstellungen für Dimensionen, Cubes, Measuregruppen und Partitionen festlegen. Das Dialogfeld **Speichereinstellungen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  
@@ -45,7 +44,7 @@ ms.locfileid: "62758488"
 ||**Geplante MOLAP**<br /><br /> Wählen Sie diese Einstellung aus, um die folgenden Einstellungen für die Speicherung und das proaktive Zwischenspeichern zu verwenden:|MOLAP-Speichermodus<br /><br /> Aktiviert die proaktive Zwischenspeicherung.<br /><br /> Aktualisiert den Zwischenspeicher in regelmäßigen Abständen mit einem Neuerstellungsintervall von einem Tag.|  
 ||**MOLAP**<br /><br /> Wählen Sie diese Einstellung aus, um die folgenden Einstellungen für die Speicherung und das proaktive Zwischenspeichern zu verwenden:|MOLAP-Speichermodus|  
 |**Benutzerdefinierte Einstellung**|Wählen Sie diese Option aus, um die Einstellungen für Speichermodus, proaktives Zwischenspeichern und Benachrichtigungsoptionen explizit festzulegen.||  
-|**Optionen**|Klicken Sie hier, um das Dialogfeld **Speicheroptionen** anzuzeigen und Speichermodus, proaktives Zwischenspeichern und Benachrichtigungsoptionen explizit festzulegen. Weitere Informationen zum Dialogfeld **Speicheroptionen** finden Sie unter [Speicheroptionen &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
+|**Options**|Klicken Sie hier, um das Dialogfeld **Speicheroptionen** anzuzeigen und Speichermodus, proaktives Zwischenspeichern und Benachrichtigungsoptionen explizit festzulegen. Weitere Informationen zum Dialogfeld **Speicheroptionen** finden Sie unter [Speicheroptionen &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

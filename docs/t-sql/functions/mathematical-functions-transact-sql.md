@@ -14,15 +14,15 @@ helpviewer_keywords:
 - mathematical functions [SQL Server]
 - functions [SQL Server], mathematical
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0da60eeb02d2bbe5a4ac34a6b6ae3f0e48d0daf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a317cdb9e88696a26edb1355ea035dfe2cfb048
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676113"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949097"
 ---
 # <a name="mathematical-functions-transact-sql"></a>Mathematische Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47676113"
   
  Alle mathematischen Funktionen, ausgenommen RAND, sind deterministisch. Sie geben somit bei jedem Aufrufen mit bestimmten Eingabewerten immer die gleichen Ergebnisse zurück. RAND ist nur deterministisch, wenn ein Startwert (seed) angegeben wird. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
   [Arithmetic Operators &#40;Transact-SQL&#41; (Arithmetische Operatoren (Transact-SQL))](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   

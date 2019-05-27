@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62667586"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063628"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
   Die Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fensters kann farblich codiert sein, um so anzuzeigen, mit welcher Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] jedes Fenster verbunden ist.  
   
 1.  **Vorbereitungen:**  [Statusleistenfarben](#StatusBarColors)  
   
-2.  **Um eine serverstatusfarbe einzurichten:**  [Objekt-Explorer](#SetOEServerColor), [registrierter Server](#SetRegServerColor)  
+2.  **So legen Sie eine Serverstatusfarbe fest in:**  [Objekt-Explorer](#SetOEServerColor), [Registrierte Server](#SetRegServerColor)  
   
-3.  **Um eine Statusfarbe zu verwenden:**  [Abfrage-Editor mithilfe einer Serverfarbe öffnen](#OpenServerColor), [einen Abfrage-Editor, die Angabe einer Statusfarbe öffnen](#OpenSpecColor)  
+3.  **So verwenden Sie eine Statusfarbe**  [Abfrage-Editor unter Verwendung einer Serverfarbe öffnen](#OpenServerColor), [Abfrage-Editor unter Angabe einer Statusfarbe öffnen](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Statusleistenfarben  
  Sie können einem bestimmten Serverknoten in entweder **Objekt-Explorer** oder **Registrierte Server**eine Statusleistenfarbe zuordnen. Die Farben können nur für Serverknoten angegeben werden, die mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind, nicht aber für Serverknoten für andere SQL Server-Technologien. Ebenso können Sie eine benutzerdefinierte Statusleistenfarbe angeben, wann immer Sie ein neues [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbinden. Sie können dann entweder mit der für den Serverknoten definierten Statusfarbe ein Abfrage-Editor-Fenster öffnen oder eine eindeutige Farbe für dieses Editorfenster angeben.  
