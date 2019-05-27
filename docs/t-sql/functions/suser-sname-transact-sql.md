@@ -23,23 +23,23 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5333687cfd9a8e7c59d8a1c695af2e8015ce2a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658328"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948199"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den einer Sicherheits-ID (SID) zugeordneten Anmeldenamen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Entspricht der optionalen Anmeldesicherheits-ID. *server_user_sid* ist **varbinary(85)**. *server_user_sid* kann der Sicherheits-ID einer beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eines [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Benutzers bzw. einer -Gruppe entsprechen. Wenn *server_user_sid* nicht angegeben ist, werden Informationen zum aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
+ Entspricht der optionalen Anmeldesicherheits-ID. *server_user_sid* ist **varbinary(85)** . *server_user_sid* kann der Sicherheits-ID einer beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eines [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Benutzers bzw. einer -Gruppe entsprechen. Wenn *server_user_sid* nicht angegeben ist, werden Informationen zum aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
@@ -146,9 +146,9 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

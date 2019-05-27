@@ -1,11 +1,10 @@
 ---
-title: 'Vorgehensweise: Installieren des Upgrade Advisors | Microsoft-Dokumentation'
+title: 'Gewusst wie: Installieren des Upgrade Advisors | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -16,14 +15,14 @@ ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d5be9a4514f002ebd8c9b7ffb05c6f614e2129
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094920"
 ---
-# <a name="how-to-install-upgrade-advisor"></a>Vorgehensweise: Installieren des Upgrade Advisors
+# <a name="how-to-install-upgrade-advisor"></a>Gewusst wie: Installieren des Upgrade Advisors
   Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann. Der Computer muss zudem die Voraussetzungen für den Upgrade Advisor erfüllen. Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
   
  Weitere Informationen finden Sie unter [Installation von Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md).  

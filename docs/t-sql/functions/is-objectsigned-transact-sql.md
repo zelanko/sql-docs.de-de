@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e1c26b6e934a929fc04316c4640825ab2f1ec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804588"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942906"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt an, ob ein Objekt von einem angegebenen Zertifikat oder asymmetrischen Schlüssel signiert wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,15 +58,15 @@ IS_OBJECTSIGNED (
  *@class* ist vom Typ **sysname**.  
   
  *@thumbprint*  
- Der SHA-Fingerabdruck des Objekts. *@thumbprint* ist vom Datentyp **varbinary(32)**.  
+ Der SHA-Fingerabdruck des Objekts. *@thumbprint* ist vom Datentyp **varbinary(32)** .  
   
 ## <a name="returned-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED gibt folgende Werte zurück.  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|und Beschreibung|  
 |------------------|-----------------|  
 |NULL|Das Objekt wurde nicht signiert oder ist nicht gültig.|  
 |0|Das Objekt wurde signiert, die Signatur ist jedoch nicht gültig.|  
@@ -101,7 +101,7 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

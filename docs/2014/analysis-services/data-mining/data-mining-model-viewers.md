@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying data mining models
@@ -19,12 +18,12 @@ ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085047"
 ---
 # <a name="data-mining-model-viewers"></a>Data Mining-Modell-Viewer
   Nachdem Sie ein Data Mining-Modell in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]trainiert haben, können Sie das Modell nach interessanten Trends durchsuchen. Da die Ergebnisse der Miningmodelle komplex sind und es schwierig sein kann, sie im Rohzustand zu verstehen, ist eine visuelle Untersuchung der Daten häufig der einfachste Weg, die Regeln und Beziehungen zu verstehen, die Algorithmen in den Daten entdecken.  

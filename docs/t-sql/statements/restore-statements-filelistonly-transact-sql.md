@@ -19,16 +19,16 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1a7e8edbe841ddf4ef53f8a6d93dbedc7ca34c36
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: b9480fc29339d0cd33d063c24f19c083804d1ae0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242151"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948367"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -84,7 +84,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Ein Client kann mit RESTORE FILELISTONLY eine Liste der in einem Sicherungssatz enthaltenen Dateien abrufen. Diese Informationen werden als Resultset zurückgegeben, das eine Zeile für jede Datei enthält.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  
@@ -99,8 +99,8 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|Protokollfolgenummer, bei der die Dateigruppe mit der Datei von Lesen/Schreiben zu Schreibgeschützt geändert wurde (letzte Änderung).|  
 |ReadWriteLSN|**numeric(25,0)** NULL|Protokollfolgenummer, bei der die Dateigruppe mit der Datei von Nur Lesen zu Schreibgeschützt geändert wurde (letzte Änderung).|  
 |BackupSizeInBytes|**bigint**|Größe der Sicherung dieser Datei in Bytes.|  
-|SourceBlockSize|**int**|Blockgröße des physischen Geräts mit der Datei in Bytes (nicht des Sicherungsmediums).|  
-|FileGroupID|**int**|ID der Dateigruppe.|  
+|SourceBlockSize|**ssNoversion**|Blockgröße des physischen Geräts mit der Datei in Bytes (nicht des Sicherungsmediums).|  
+|FileGroupID|**ssNoversion**|ID der Dateigruppe.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|Bei differenziellen Sicherungen sind Änderungen mit Protokollfolgenummern größer als oder gleich **DifferentialBaseLSN** in der differenziellen Sicherung eingeschlossen.<br /><br /> Bei anderen Sicherungstypen ist der Wert NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|Bei differenziellen Sicherungen der eindeutige Bezeichner der differenziellen Basis.<br /><br /> Bei anderen Sicherungstypen ist der Wert NULL.|  

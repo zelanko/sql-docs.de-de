@@ -27,21 +27,21 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20dc86a49d00a800c2befd85e59027568f36728f
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 0adecabbabfda5081e754e185165f34cdf3a7d0b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265926"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948607"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt einen **datetimeoffset(7)**-Wert zurück, der das Datum und die Uhrzeit des Computers enthält, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Zeitzonenoffset wird einbezogen.  
+  Gibt einen **datetimeoffset(7)** -Wert zurück, der das Datum und die Uhrzeit des Computers enthält, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Zeitzonenoffset wird einbezogen.  
   
  Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.roledesignerdialog.rowfilters.imbi.f1
@@ -13,12 +12,12 @@ ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748182"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070124"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Zeilenfilter (Rollen-Designer) (tabellarisches Modell)
   Verwenden Sie die Seite **Zeilenfilter** in Rollen-Designer, um Zeilenebenenfilter für die zugeordnete Rolle zu definieren. Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden.  

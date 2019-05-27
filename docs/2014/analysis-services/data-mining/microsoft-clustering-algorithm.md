@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da8511361badbdfa1ded7497aaf623fdc35252d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721962"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084010"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus, der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird. Der Algorithmus arbeitet mit iterativen Techniken, um die in einem Dataset enthaltenen Fälle in Clustern zu gruppieren, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774753"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089280"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)
   In diesem Dialogfeld können Sie das allgemeine Bearbeitungsverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , und erweitern Sie anschließend **Text-Editor**. Erweitern Sie als Nächstes **Nur Text** , und klicken Sie dann auf **Allgemein**.  

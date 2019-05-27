@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,14 +12,14 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207649"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094830"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Gewusst wie: Führen Sie den Analyse-Assistenten des Upgrade Advisors
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Gewusst wie: Ausführen des Analyse-Assistenten des Upgrade Advisors
   Der Analyse-Assistent des Upgrade Advisors wird über die Startseite des Upgrade Advisors gestartet. In diesem Thema wird beschrieben, wie Sie den Analyse-Assistenten des Upgrade Advisors ausführen.  
   
 > [!IMPORTANT]
@@ -58,7 +57,7 @@ ms.locfileid: "53207649"
 8.  Wenn die Analyse abgeschlossen ist, klicken Sie auf **Bericht starten** um die erkannten Aktualisierungsprobleme anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [So wird es gemacht: Starten des Upgrade Advisors](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Vorgehensweise: Starten des Upgrade Advisors](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Ausführen von Upgrade Advisor &#40;-Benutzeroberfläche&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.discrimination.f1
@@ -13,12 +12,12 @@ ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680830"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087900"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Registerkarte "Clusterunterscheidung" (Miningmodell-Viewer)
   Verwenden Sie die Registerkarte **Clusterunterscheidung** , um zwei in einem Clusteringmodell vorhandene Cluster zu vergleichen. Sie können sehen, wie unterschiedliche Kombinationen von Attributen und Werten innerhalb der Cluster dargestellt werden.  

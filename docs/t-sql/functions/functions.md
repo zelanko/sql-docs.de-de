@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701318"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946536"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Was sind SQL-Datenbankfunktionen?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,14 +53,14 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
 
 ### <a name="categories-of-scalar-functions"></a>Kategorien von skalaren Funktionen
   
-|Funktionskategorie|Beschreibung|  
+|Funktionskategorie|und Beschreibung|  
 |-----------------------|-----------------|  
 |[Konfigurationsfunktionen](configuration-functions-transact-sql.md)|Geben Informationen zur aktuellen Konfiguration zurück.|  
 |[Konvertierungsfunktionen](conversion-functions-transact-sql.md)|Unterstützen die Umwandlung und Konvertierung von Datentypen.|  
 |[Cursorfunktionen](cursor-functions-transact-sql.md)|Geben Informationen zu Cursorn zurück.|  
 |[Datums- und Uhrzeitdatentypen und Funktionen](date-and-time-data-types-and-functions-transact-sql.md)|Führen Operationen für Datums- und Zeiteingabewerte aus und geben eine Zeichenfolge, einen Zahlen-, Datums- oder Zeitwert zurück.|  
 |[JSON-Funktionen](json-functions-transact-sql.md)|Überprüfen, Abfragen oder Ändern von JSON-Daten|  
-|[Logische Funktionen](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Führen logische Operationen aus.|  
+|[Logische Funktionen](logical-functions-choose-transact-sql.md)|Führen logische Operationen aus.|  
 |[Mathematische Funktionen](mathematical-functions-transact-sql.md)|Führen Berechnungen auf der Grundlage von Eingabewerten aus, die als Parameter für die Funktionen bereitgestellt werden, und geben einen numerischen Wert zurück.|  
 |[Metadatenfunktionen](metadata-functions-transact-sql.md)|Geben Informationen zur Datenbank und zu Datenbankobjekten zurück.|  
 |[Sicherheitsfunktionen](security-functions-transact-sql.md)|Diese Funktionen geben Informationen über Benutzer und Rollen zurück.|  
@@ -79,7 +79,7 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
   
  Funktionen, die als Eingabe mehrere Zeichenfolgen erhalten und als Ausgabe eine Zeichenfolge zurückgeben, verwenden die Regeln zur Sortierungspriorität, um die Sortierung der Ausgabezeichenfolge festzulegen. Weitere Informationen finden Sie unter [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  

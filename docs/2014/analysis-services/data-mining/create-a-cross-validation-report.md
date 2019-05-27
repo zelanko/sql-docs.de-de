@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - validating data mining models
@@ -16,12 +15,12 @@ ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715137"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085528"
 ---
 # <a name="create-a-cross-validation-report"></a>Erstellen von Berichten für Kreuzvalidierung
   In diesem Thema wird die Erstellung eines Kreuzvalidierungsberichts auf der Registerkarte "Genauigkeitsdiagramm" im Data Mining-Designer erläutert. Allgemeine Informationen zum Aussehen eines Kreuzvalidierungsberichts und zu den statistischen Measures, die er enthält, finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  

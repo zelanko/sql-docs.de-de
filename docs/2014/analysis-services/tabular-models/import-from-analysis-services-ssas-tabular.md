@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067048"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importieren aus Analysis Services (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Sie ein neues Projekt für tabellarische Modelle erstellen, indem Sie die Metadaten mithilfe der Projektvorlage Von Server importieren in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aus einem vorhandenen tabellarischen Modell importieren.  

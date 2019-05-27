@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clipboards [data mining]
@@ -15,12 +14,12 @@ ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62d699d068832e1b3e264a9346d03553b9a05d80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085599"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Kopieren einer Sicht eines Miningmodells
   Auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird für jeden Typ von Miningmodell ein separater Viewer verwendet. Einige der Viewer weisen Komponenten auf, aus denen der Inhalt in die Zwischenablage kopiert und von dort in ein Dokument oder eine Bildbearbeitungssoftware eingefügt werden kann. Folgende Komponenten stellen diese Funktionalität zur Verfügung:  

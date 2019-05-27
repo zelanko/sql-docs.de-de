@@ -19,22 +19,22 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7a90afdb2b68e0be7ba79347c1d77d009db8958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa109292950aff8565484673e9fe50af0b1b1a4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948288"
 ---
 # <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die maximale Anzahl gleichzeitiger Benutzerverbindungen an, die für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zulässig sind. Die zurückgegebene Anzahl ist nicht notwendigerweise die aktuell konfigurierte Anzahl.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,10 +48,10 @@ ms.locfileid: "47844798"
 ## <a name="remarks"></a>Remarks  
  Die tatsächliche Anzahl der zulässigen Benutzerverbindungen hängt außerdem von der installierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie den Beschränkungen durch Ihre Anwendungen und Hardware ab.  
   
- Verwenden Sie **sp_configure**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
+ Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure **, um**für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  
+ Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  
   
 ```  
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
@@ -65,7 +65,7 @@ Max Connections
 32767            
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Konfigurationsfunktionen](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

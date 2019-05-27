@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
@@ -13,12 +12,12 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067512"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Erstellen und Verwalten von KPIs (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie ein KPI (Key Performance Indicator) in einem tabellarischen Modell erstellt, bearbeitet oder gelöscht wird. Um einen KPI zu erstellen, wählen Sie ein Measure, der Basiswert des KPIS ergibt. Anschließend wählen Sie im Dialogfeld Key Performance Indicator ein zweites Measure oder einen absoluten Wert aus, das bzw. der einen Zielwert ergibt. Sie können dann Statusschwellenwerte definieren, mit denen die Leistung zwischen dem Basis- und dem Zielmeasure gemessen wird.  

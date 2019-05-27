@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089906"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Tabstopps “)
   Mit diesem Dialogfeld können Sie das Tabulatorverhalten für alle fünf Editoren von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] festlegen. Zum Anzeigen dieser Optionen klicken Sie im Menü **Extras** auf **Optionen** . Wählen Sie den Ordner **Text-Editor** aus, erweitern Sie den Ordner **Alle Sprachen**, und klicken Sie dann auf **Tabstopps**.  

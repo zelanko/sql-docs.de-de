@@ -20,23 +20,23 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7511f03f5d502def18bbb17e1dd93f5c13be8252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddd5d9584f71e8a6b1ae9686203463b1eb77f47e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740788"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944675"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt die Anzahl der in einer Gruppe gefundenen Elemente zurück. `COUNT` arbeitet wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)-Funktion. Diese Funktionen unterscheiden sich nur in den Datentypen ihrer Rückgabewerte. `COUNT` gibt immer einen Wert vom Datentyp **int** zurück. `COUNT_BIG` gibt immer einen Wert vom Datentyp **bigint** zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 Das Argument *partition_by_clause* unterteilt das von der `FROM`-Klausel erzeugte Resultset in Partitionen, auf die die `COUNT`-Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). 
 
 ## <a name="return-types"></a>Rückgabetypen
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
 COUNT(\*) gibt die Anzahl der Elemente in einer Gruppe zurück. Dies schließt NULL-Werte und Duplikate ein.

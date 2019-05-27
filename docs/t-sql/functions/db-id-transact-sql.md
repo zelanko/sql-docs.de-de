@@ -20,23 +20,23 @@ helpviewer_keywords:
 - displaying database ID numbers
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbed32d3dd346589f78b499efdabc85dd7ee0633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a34790fec91c183531ff875f94839f45de1cf9cc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733438"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945645"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt die Datenbank-ID für eine angegebene Datenbank zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ DB_ID ( [ 'database_name' ] )
 Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn *database_name* beim Aufruf von `DB_ID` ausgelassen wird, gibt `DB_ID` die ID der aktuellen Datenbank zurück.
   
 ## <a name="return-types"></a>Rückgabetypen
-**int**
+**ssNoversion**
 
 ## <a name="remarks"></a>Remarks
 `DB_ID` wird möglicherweise nur verwendet, um die Datenbank-ID der aktuellen Datenbank in Azure SQL-Datenbank zurückzugeben. NULL wird zurückgegeben, wenn der angegebene Datenbankname von dem der aktuellen Datenbank abweicht.

@@ -19,22 +19,22 @@ helpviewer_keywords:
 - IDs [SQL Server], filegroups
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2dbf197b5bbf5ea480ed899a9ec06d5793efee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ae36c48417c1ded4fa80491a7f90e77d4af0c1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609428"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945957"
 ---
 # <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Dateigruppen-ID für einen angegebenen Dateigruppennamen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 *filegroup_name* ist ein Ausdruck vom Typ **sysname**, der die Dateigruppe darstellt, deren Dateigruppen-ID `FILEGROUP_ID` zurückgegeben wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
-**int**  
+**ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
 *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
@@ -69,7 +69,7 @@ Filegroup ID
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -16,12 +15,12 @@ ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054599"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Anzeigen und Beenden von auf dem Integration Services-Server ausgeführten Paketen
   In der `SSISDB`-Datenbank wird der Ausführungsverlauf in internen Tabellen gespeichert, die für Benutzer nicht sichtbar sind. Es werden jedoch Informationen verfügbar gemacht, die für öffentliche Sichten benötigt werden, die Sie abfragen können. Außerdem werden gespeicherte Prozeduren bereitgestellt, die Sie aufrufen können, um allgemeine Aufgaben im Zusammenhang mit Paketen auszuführen.  

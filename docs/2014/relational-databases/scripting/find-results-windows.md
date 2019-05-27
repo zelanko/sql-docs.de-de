@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.findresults2
@@ -15,12 +14,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090497"
 ---
 # <a name="find-results-windows"></a>Fenster Suchergebnisse
   In den beiden Fenstern mit der Bezeichnung Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  

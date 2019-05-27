@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
@@ -13,12 +12,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757144"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066838"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch)
   Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  

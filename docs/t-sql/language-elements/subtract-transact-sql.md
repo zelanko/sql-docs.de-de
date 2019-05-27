@@ -19,23 +19,23 @@ helpviewer_keywords:
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbccdecdb504af75e4130d78c92b6e80673dd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612738"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981565"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Subtraktion) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Subtrahiert zwei Zahlen (ein arithmetischer Subtraktionsoperator). Kann auch eine Zahl, in Tagen, von einem Datum subtrahieren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -93,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C. Verwenden der Subtraktion in einer SELECT-Anweisung  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C: Verwenden der Subtraktion in einer SELECT-Anweisung  
  Im folgenden Beispiel wird der Unterschied im Basistarif zwischen dem Mitarbeiter mit dem höchsten Tarif und dem Mitarbeiter mit dem niedrigsten Tarif aus der `dimEmployee`-Tabelle berechnet.  
   
 ```  
@@ -103,7 +103,7 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [-= &#40;Subtraktionszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [Arithmetische Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   

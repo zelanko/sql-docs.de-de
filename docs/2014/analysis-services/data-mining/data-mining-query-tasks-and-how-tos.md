@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
@@ -13,12 +12,12 @@ ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084949"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Data Mining-Abfragetasks und Anweisungen
   Die Möglichkeit zum Erstellen von Abfragen ist wichtig, wenn Sie die Data Mining-Modelle nutzen möchten. Dieser Abschnitt enthält Links zu Beispielen, die die Erstellung von Abfragen für ein Data Mining-Modell mithilfe der Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]veranschaulichen. Weitere Informationen zu Data Mining-Abfragen oder den unterschiedlichen Abfragetypen, die erstellt werden können, finden Sie unter [Data Mining-Abfrage](data-mining-queries.md).  

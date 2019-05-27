@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
@@ -13,12 +12,12 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774967"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089382"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Optionen (Abfrageausführung – SQL Server-ANSI-Seite)
   Diese SET-Optionen nach ANSI (ISO)-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Abfrage des Benutzers bzw. der Ausführung eines Triggers oder einer gespeicherten Prozedur. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard vollständig zu entsprechen. Mithilfe dieser Seite können Sie festlegen, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard angegebenen Einstellungen ausführt. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ausführung** auf **ANSI**.  

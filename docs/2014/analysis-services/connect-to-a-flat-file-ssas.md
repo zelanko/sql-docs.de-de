@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
@@ -13,12 +12,12 @@ ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680307"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087361"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Mit einer Flatfile verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einer Flatfile (.txt), einer durch Tabstopps getrennten Datei (.tab) oder einer durch Trennzeichen getrennten Datei (.csv) herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -50,7 +49,7 @@ ms.locfileid: "62680307"
 |Doppelpunkt (:)|Als Trennzeichen für Spalten dient ein Doppelpunkt (:).|  
 |Senkrechter Strich (&#124;)|Als Trennzeichen für Spalten dient ein senkrechter Strich (&#124;).|  
   
- **Erweitert:**  
+ **Erweitert**  
  Geben Sie die Codierung und die Gebietsschemaoptionen für die Flatfile an.  
   
  **Erste Zeile als Spaltenüberschriften verwenden**  

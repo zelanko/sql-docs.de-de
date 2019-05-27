@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
@@ -25,12 +24,12 @@ ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723025"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085073"
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
   Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  

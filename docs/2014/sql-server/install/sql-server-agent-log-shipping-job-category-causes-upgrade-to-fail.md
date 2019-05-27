@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
@@ -14,12 +13,12 @@ ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61b488250267e497541f15033b347074648d3c9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086150"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092041"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>Fehler beim Upgrade der Auftragskategorie für den SQL Server-Agent-Protokollversand
   Der Upgradevorgang schlägt fehl, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftragskategorie mit dem Namen Protokollversand vorhanden ist.  

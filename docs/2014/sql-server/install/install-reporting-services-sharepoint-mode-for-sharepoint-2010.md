@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 524ad97d02192a19198891c79c07f875a738fc30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094532"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010
   Die Prozeduren in diesem Thema führen Sie durch eine einzelne Serverinstallation eines Reporting Services-Bericht-Servers im SharePoint-Modus. Die Schritte schließen das Ausführen des SQL Server-Installations-Assistenten sowie zusätzlicher Konfigurationsaufgaben mit SharePoint 2010-Zentraladministration ein. Das Thema dient auch der Informationsfindung hinsichtlich einzelner Prozeduren, die für eine vorhandene Installation erforderlich sind, beispielsweise dem Erstellen einer neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung. Weitere Informationen zum Hinzufügen zusätzlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servern in einer vorhandenen Farm finden Sie unter [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;SSRS Scale-Out&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Hinzufügen eines zusätzlichen Reporting Services-Web Front-End für eine Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  

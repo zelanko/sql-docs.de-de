@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147440"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063433"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL-Debuggerinformationen
   Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147440"
 -   Klicken Sie auf der Symbolleiste **Debuggen** auf **Breakpoints**, und wählen Sie dann das gewünschte Fenster aus.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL-Ausdrücke  
- Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4**.  
+ Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster kann die Datenwerte anzuzeigen, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**, und **Überwachen 4**.  
   
  Das Fenster **Lokal** zeigt Informationen über die lokalen Variablen im aktuellen Bereich des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers an. Der Satz von Ausdrücken, die im Fenster **Lokal** aufgeführt sind, ändert sich, wenn der Debugger die verschiedenen Teile des Codes durchläuft.  
   

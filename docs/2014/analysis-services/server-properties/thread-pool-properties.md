@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -18,12 +17,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068834"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
@@ -88,7 +87,7 @@ ms.locfileid: "62746942"
   
  Die Eigenschaften sind in alphabetischer Reihenfolge aufgeführt.  
   
-|Name|Typ|Description|Standard|Anleitung|  
+|Name|Typ|Description|Default|Anleitung|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|Ein Gleitkommawert mit doppelter Genauigkeit, der den Algorithmus zum Festlegen eines Ziels für die Anzahl der Threads bestimmt, die gleichzeitig in eine Warteschlange gestellt werden können.|2.0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Die Parallelität wird verwendet, um Threadpools zu initialisieren, die mithilfe von E/A-Abschlussports in Windows implementiert werden. Einzelheiten finden Sie unter [I/O Completion Ports](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) (E/A-Abschlussports).<br /><br /> Gilt nur für mehrdimensionale Modelle.|  
 |`IOProcess` \ `GroupAffinity`|String|Ein Array von Hexadezimalwerten, die Prozessorgruppen im System entsprechen. Wird verwendet, um die Affinität von Threads im IOProcess-Threadpool zu logischen Prozessoren in den einzelnen Prozessorgruppen festzulegen.|none|Mit dieser Eigenschaft können Sie benutzerdefinierte Affinitäten erstellen. Die Eigenschaft ist standardmäßig leer.<br /><br /> Details finden Sie unter [Festlegen von GroupAffinity, um Threads Prozessoren in einer Prozessorgruppe zuzuordnen](#bkmk_groupaffinity) .<br /><br /> Gilt nur für mehrdimensionale Modelle.|  
