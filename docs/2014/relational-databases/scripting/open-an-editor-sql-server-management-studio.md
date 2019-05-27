@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144771"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090303"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
@@ -30,7 +29,7 @@ ms.locfileid: "63144771"
 ### <a name="permissions"></a>Berechtigungen  
  Vorgänge, die Sie in einem Code-Editor ausführen, unterliegen den dem für die Anmeldung verwendeten Authentifizierungskonto erteilten Berechtigungen. Wenn Sie beispielsweise mit der Windows-Authentifizierung ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors öffnen, können Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ausführen, die auf Objekte verweisen, für die dem Windows-Anmeldekonto keine Zugriffsberechtigungen erteilt wurden.  
   
-## <a name="how-to-open-editors"></a>Gewusst wie: Öffnen von Editoren  
+## <a name="how-to-open-editors"></a>Gewusst wie: Editor öffnen  
  In diesem Abschnitt wird erläutert, wie die verschiedenen Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden.  
   
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  

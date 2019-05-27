@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720859"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010509"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Lernprogramm: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
 
@@ -55,7 +55,7 @@ Beachten Sie diese beiden wichtigen Punkte. Diese Schritte werden in der folgend
 
 2. **Stellen Sie eine Verbindung mit dem Server her**. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Informationen ein:
 
-   | Einstellung       | Vorgeschlagener Wert | Beschreibung | 
+   | Einstellung       | Vorgeschlagener Wert | und Beschreibung | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. Falls Sie den Servernamen benötigen, finden Sie ihn mithilfe der Anweisungen unter [Connect to the SSISDB Catalog database on Azure (Herstellen einer Verbindung mit der SSIS-Katalogdatenbank in Azure)](ssis-azure-connect-to-catalog-database.md). |

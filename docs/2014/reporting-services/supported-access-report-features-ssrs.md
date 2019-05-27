@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -19,12 +18,12 @@ ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100575"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Unterstützte Access-Berichtsfunktionen (SSRS)
   Wenn Sie einen Bericht in den Berichts-Designer importieren, wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Access-bericht während des Importvorgangs in eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Definition Language (RDL)-Datei konvertiert. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zahlreiche Funktionen von Access. Aufgrund der Unterschiede zwischen Access und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden einige Elemente jedoch leicht angewandelt oder nicht unterstützt. In diesem Thema wird beschrieben, auf welche Weise Access-Berichtsfunktionen in RDL konvertiert werden.  

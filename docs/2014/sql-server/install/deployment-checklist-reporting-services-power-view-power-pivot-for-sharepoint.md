@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131211"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095640"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Bereitstellungsprüfliste: Reporting Services, Power View und PowerPivot für SharePoint
   Verwenden Sie die folgende Checkliste, um diese BI-Funktionen in der gleichen SharePoint-Farm zu installieren: PowerPivot für SharePoint, Berichts-Generator und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Diese Prüfliste empfiehlt zwar eine bestimmte Installationsreihenfolge, Sie können diese Funktionen jedoch praktisch in beliebiger Reihenfolge installieren. Die Prüfliste geht davon aus, dass die folgenden Produkte oder Funktionen installiert sind:  

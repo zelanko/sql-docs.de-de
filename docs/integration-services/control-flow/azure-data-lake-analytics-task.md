@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: d8812b5cdaaf2271a0071d798ddd530266ebc8a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728020"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014916"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
 
@@ -49,7 +49,7 @@ Die U-SQL-Konfiguration beinhaltet zwei Einstellungen: **SourceType** und dynami
 
 **SourceType:** Gibt die Quelle des U-SQL-Skripts an. Das Skript wird während der SSIS-Paketausführung an ein Data Lake Analytics-Konto übermittelt. Die Optionen für diese Eigenschaft sind:
 
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**DirectInput**|Gibt das U-SQL-Skript durch den Inline-Editor an. Bei Auswahl dieses Werts wird die dynamische Option **USQLStatement** angezeigt.|  
 |**FileConnection**|Legt eine lokale .usql-Datei fest, die das U-SQL-Skript enthält. Bei Auswahl dieser Option wird die dynamische Option **FileConnection** angezeigt.|  
@@ -60,14 +60,14 @@ Die U-SQL-Konfiguration beinhaltet zwei Einstellungen: **SourceType** und dynami
 |SourceType|Dynamische Optionen|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Geben Sie die zu übermittelnde U-SQL-Abfrage direkt in das Optionsfeld ein, oder wählen Sie die Schaltfläche zum Durchsuchen (...), um die U-SQL-Abfrage im Dialogfeld **U-SQL-Abfrage eingeben** anzugeben.|  
-|**SourceType = FileConnection**|Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder wählen Sie <**Neue Verbindung...**>, um eine neue Dateiverbindung zu erstellen. Weitere Informationen finden Sie in [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Wählen Sie eine vorhandene Variable aus, oder wählen Sie \<**Neue Variable...**>, um eine neue Variable zu erstellen. Weitere Informationen finden Sie in [Integration Services-Variablen&#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Hinzufügen einer Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder wählen Sie <**Neue Verbindung...** >, um eine neue Dateiverbindung zu erstellen. Weitere Informationen finden Sie in [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
+|**SourceType = Variable**|Wählen Sie eine vorhandene Variable aus, oder wählen Sie \<**Neue Variable...** >, um eine neue Variable zu erstellen. Weitere Informationen finden Sie in [Integration Services-Variablen&#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Hinzufügen einer Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Auftragskonfiguration
 In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsübermittlung festgelegt.
 
-- **AzureDataLakeAnalyticsConnection:** Gibt das Data Lake Analytics-Konto für die Übermittlung des U-SQL-Skripts an. Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie zum Erstellen einer neuen Verbindung auf <**Neue Verbindung...**>. Weitere Informationen finden Sie in [Azure Data Lake Analytics-Verbindungs-Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection:** Gibt das Data Lake Analytics-Konto für die Übermittlung des U-SQL-Skripts an. Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie zum Erstellen einer neuen Verbindung auf <**Neue Verbindung...** >. Weitere Informationen finden Sie in [Azure Data Lake Analytics-Verbindungs-Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
 - **JobName:** Gibt den Namen des U-SQL-Auftrags an. 
 - **AnalyticsUnits:** Gibt die Anzahl der Analytics-Einheiten des U-SQL-Auftrags an.
@@ -75,7 +75,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 - **RuntimeVersion:** Gibt die Data Lake Analytics-Runtimeversion des U-SQL-Auftrags an. Die Standardeinstellung lautet „Standard“. In der Regel müssen Sie diese Eigenschaft nicht ändern.
 - **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
 
-  |Wert|Beschreibung|
+  |value|und Beschreibung|
   |-----------|-----------------|
   |Wahr|Das Taskergebnis basiert auf dem Ausführungsergebnis des U-SQL-Auftrags. Auftragsausführung erfolgreich > Aufgabe erfolgreich. Fehler beim Auftrag > Fehler in der Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
   |False|Das Taskergebnis basiert auf dem Übermittlungs- und Vorbereitungsergebnis des U-SQL-Auftrags. Auftragsübermittlung ist erfolgreich und durchläuft die Vorbereitungsphase > Aufgabe ist erfolgreich. Fehler in Auftragsübermittlung oder Fehler in der Vorbereitungsphase des Auftrags > Fehler in Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|

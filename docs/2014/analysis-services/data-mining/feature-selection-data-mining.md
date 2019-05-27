@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722392"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084414"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
   *Funktionsauswahl* ist ein Begriff, die im Datamining häufig verwendet werden, um die Tools und Techniken zum Reduzieren der Eingaben in eine verwaltbare Größe zur Verarbeitung und Analyse zu beschreiben. Funktionsauswahl bewirkt nicht nur *Kardinalitätsreduzierung*, was bedeutet anwendet, die einer willkürlichen oder vordefinierten Grenzwert für die Anzahl der Attribute, die beim Erstellen eines Modells, sondern auch die Auswahl der Attribute, d. h. berücksichtigt werden können dass entweder der Analyst oder das Modellierungstool aktiv ausgewählt oder Attribute, die basierend auf deren Eignung für die Analyse verwirft Sie.  

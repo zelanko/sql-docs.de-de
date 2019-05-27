@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62762028"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096190"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
   Für jede Berichtsserverinstanz ist eine Verbindung mit der Berichtsserver-Datenbank erforderlich, in der die vom Server verwalteten Berichte, Berichtsmodelle, freigegebenen Datenquellen, Ressourcen und Metadaten gespeichert sind. Die Anfangsverbindung kann während einer Berichtsserverinstallation erstellt werden, wenn Sie die Standardkonfiguration installieren. In den meisten Fällen empfiehlt sich, die Verbindung mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools zu konfigurieren, wenn das Setup abgeschlossen ist. Sie können die Verbindung jederzeit bearbeiten, um den Kontotyp zu ändern oder Anmeldeinformationen neu festzulegen. Ausführliche Anweisungen zum Erstellen der Datenbank und Konfigurieren der Verbindung finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

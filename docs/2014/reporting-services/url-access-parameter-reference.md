@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
@@ -14,12 +13,12 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62652396"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098720"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](specify-device-information-settings-in-a-url.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "62652396"
 |*PersistStreams*|Rendert einen Bericht in einem einzelnen permanenten Datenstrom. Dieser Parameter wird vom Bildrenderer verwendet, um den gerenderten Bericht segmentweise zu senden. Nachdem Sie diesen Parameter in einer URL-Zugriffszeichenfolge verwendet haben, verwenden Sie diese URL-Zugriffszeichenfolge mit dem *GetNextStream* -Parameter anstelle des *PersistStreams* -Parameters, um das nächste Segment im permanenten Datenstrom abzurufen. Dieser URL-Befehl gibt abschließend einen 0-Byte-Datenstrom zurück, um das Ende des permanenten Datenstroms anzugeben. Der Standardwert ist `false`.|  
 |*GetNextStream*|Ruft das nächste Datensegment in einem permanenten Datenstrom ab, auf den mit dem *PersistStreams* -Parameter zugegriffen wird. Weitere Informationen finden Sie in der Beschreibung für *PersistStreams*. Der Standardwert ist `false`.|  
 |*SessionID*|Gibt eine feststehende aktive Berichtssitzung zwischen der Clientanwendung und dem Berichtsserver an. Der Wert dieses Parameters wird auf die Sitzungs-ID festgelegt.<br /><br /> Sie können die Sitzungs-ID als Cookie oder als Teil der URL angeben. Wenn der Berichtsserver nicht für die Verwendung von Cookies konfiguriert wurde, führt die erste Anforderung ohne eine bestimmte Sitzungs-ID zu einer Umleitung mit einer Sitzungs-ID. Weitere Informationen finden Sie unter [Identifizieren des Ausführungsstatus](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
-|*ClearSession*|Ein `true`-Wert weist den Berichtsserver an, einen Bericht aus der Berichtssitzung zu löschen. Alle zu einem authentifizierten Benutzer gehörigen Berichtsinstanzen werden aus der Berichtssitzung entfernt. (Eine Berichtsinstanz wird als derselbe Bericht mehrmals mit unterschiedlichen Berichtsparameterwerten ausgeführt definiert.) Der Standardwert ist `false`.|  
+|*ClearSession*|Ein `true`-Wert weist den Berichtsserver an, einen Bericht aus der Berichtssitzung zu löschen. Alle zu einem authentifizierten Benutzer gehörigen Berichtsinstanzen werden aus der Berichtssitzung entfernt. (Eine Berichtsinstanz wird als derselbe Bericht definiert, der mehrmals mit unterschiedlichen Berichtsparameterwerten ausgeführt wurde.) Der Standardwert ist `false`.|  
 |*ResetSession*|Ein `true`-Wert weist den Berichtsserver an, die Berichtssitzung zurückzusetzen, indem die Zuordnung der Berichtssitzung zu allen Berichtsmomentaufnahmen entfernt wird. Der Standardwert ist `false`.|  
 |*ShowHideToggle*|Schaltet das Ein-/Ausblenden eines Abschnitts im Bericht um. Geben Sie eine positive ganze Zahl an, um den Abschnitt anzugeben, der umgeschaltet werden soll.|  
   
