@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
@@ -14,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a2ddaf87aa91e62cc422bf5a4558232f03339121
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812634"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065145"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Cloud-Adapter für SQL Server
   Der Cloud-Adapterdienst wird bei der Bereitstellung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einer Windows Azure-VM erstellt. Der Cloud-Adapterdienst generiert bei der ersten Ausführung ein selbstsigniertes Zertifikat und wird danach unter dem Konto **Lokales System** ausgeführt. Er generiert eine Konfigurationsdatei, die für die eigene Konfiguration verwendet wird. Der Cloud-Adapter erstellt außerdem eine Windows-Firewall-Regel, um eingehende TCP-Verbindungen auf Standardport 11435 zuzulassen.  
@@ -72,7 +71,7 @@ ms.locfileid: "62812634"
   
  **Konfigurationsdateiwerte**:  
   
-|Einstellung|Werte|Standard|Kommentare|  
+|Einstellung|Werte|Default|Kommentare|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Wenn nicht angegeben, wird 11435 verwendet.|  
 |WebServiceCertificate|Fingerabdruck|Empty|Bei einem leeren Wert wird ein neues selbstsigniertes Zertifikat generiert.|  

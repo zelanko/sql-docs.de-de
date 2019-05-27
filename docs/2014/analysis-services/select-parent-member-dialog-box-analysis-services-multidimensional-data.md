@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
@@ -15,12 +14,12 @@ ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069309"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Übergeordnetes Element auswählen' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Übergeordnetes Element auswählen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie ein übergeordnetes Element für ein berechnetes Element auswählen. Sie können das Dialogfeld **Übergeordnetes Element auswählen** anzeigen, indem Sie im Dialogfeld **Berechnungen** des Cube-Designers im Bereich des **Formular-Editors für berechnete Elemente** auf **Ändern** klicken.  

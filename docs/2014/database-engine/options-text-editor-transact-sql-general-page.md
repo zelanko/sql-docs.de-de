@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
@@ -15,12 +14,12 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774164"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089171"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Optionen (Text-Editor – Seite "Transact-SQL-Allgemein")
   Mit den Optionen im Dialogfeld **Allgemein** können Sie das allgemeine Bearbeitungsverhalten des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditors beim Bearbeiten von [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts ändern. Sie können diese Einstellungen anzeigen, indem Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie dann den Unterordner **Transact-SQL**, und klicken Sie auf **Allgemein**.  

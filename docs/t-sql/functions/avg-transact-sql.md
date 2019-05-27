@@ -19,23 +19,23 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed42e4ace43066db77670e94c4ec37457634f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735478"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945881"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Mittelwert der Werte in einer Gruppe zurück. Sie ignoriert NULL-Werte.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ Gibt an, dass AVG nur eine eindeutige Instanz eines Werts verwendet, unabhängig
 *expression*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps. Aggregatfunktionen und Unterabfragen sind nicht zulässig.
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
@@ -62,9 +62,9 @@ Der Rückgabetyp wird durch das ausgewertete Ergebnis von *expression* bestimmt.
   
 |Ausdrucksergebnis|Rückgabetyp|  
 |---|---|
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**tinyint**|**ssNoversion**|  
+|**smallint**|**ssNoversion**|  
+|**ssNoversion**|**ssNoversion**|  
 |**bigint**|**bigint**|  
 |**decimal**-Kategorie (p, s)|**decimal(38, s)** geteilt durch **decimal(10, 0)**|  
 |**money**- und **smallmoney**-Kategorie|**money**|  

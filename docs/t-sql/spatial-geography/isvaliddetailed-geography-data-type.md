@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f6db4d1090d464a7b2783b3494c0b478060faf7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbe4c8cf9f6084282f37353aede357d5086ddc6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698718"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937677"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47698718"
 ## <a name="remarks"></a>Remarks  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|und Beschreibung|  
 |------------------|-----------------|  
 |24400|Gültig|  
 |24401|Ungültig, die Ursache ist unbekannt.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47698718"
 |24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()**-Methoden verhalten.  
+ Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()** -Methoden verhalten.  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
@@ -74,7 +74,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

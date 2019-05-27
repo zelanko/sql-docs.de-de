@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756820"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066151"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie die Funktionen in der **Symbolleiste** im Cube-Designer, um allgemeine Vorgänge auszuführen, während Sie einen Cube oder sein Objekt entwerfen oder durchsuchen oder eine MDX-Abfrage erstellen. Zu den Vorgängen, die der Entwurfszeit und der Abfragesicht gemeinsam sind, gehören das Festlegen des Benutzerkontexts, das Verarbeiten von Objekten und das Festlegen der Standardsprache.  

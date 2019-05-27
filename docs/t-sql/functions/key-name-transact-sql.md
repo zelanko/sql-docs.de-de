@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745448"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949194"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Namen des symmetrischen Schlüssels entweder aus einer GUID eines symmetrischen Schlüssels oder aus verschlüsseltem Text zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="arguments"></a>Argumente  
  *ciphertext*  
- Der mit dem symmetrischen Schlüssel verschlüsselte Text. *cyphertext* ist vom Datentyp **varbinary(8000)**.  
+ Der mit dem symmetrischen Schlüssel verschlüsselte Text. *cyphertext* ist vom Datentyp **varbinary(8000)** .  
   
  *key_guid*  
  Die GUID des symmetrischen Schlüssels. *key_guid* ist vom Datentyp **uniqueidentifier**.  
@@ -50,7 +50,7 @@ KEY_NAME ( ciphertext | key_guid )
  **varchar(128)**  
   
 ## <a name="permissions"></a>Berechtigungen  
- Von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] an ist die Sichtbarkeit von Metadaten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]an ist die Sichtbarkeit von Metadaten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -109,7 +109,7 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  

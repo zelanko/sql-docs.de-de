@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801834"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942894"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ Mit diesen Funktionen wird ein Ausdruck von einem Datentyp in einen anderen konv
 
 **Umwandeln**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Konvertieren**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -152,7 +153,7 @@ Bei der Konvertierung von Zeichendaten in **datetimeoffset** wird unter Verwendu
 ## <a name="float-and-real-styles"></a>float- und real-Formate
 Bei dem **Ausdruck** **float** oder *real* kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|Wert|Ausgabe|  
+|value|Ausgabe|  
 |---|---|
 |**0** (Standardwert)|Maximal 6 Ziffern. Wird ggf. in der wissenschaftlichen Schreibweise verwendet.|  
 |**1**|Immer 8 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
@@ -163,7 +164,7 @@ Bei dem **Ausdruck** **float** oder *real* kann *style* einen der in der folgend
 ## <a name="money-and-smallmoney-styles"></a>money- und smallmoney-Formate
 Bei dem **Ausdruck** **money** oder *smallmoney* kann *style* einer der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|Wert|Ausgabe|  
+|value|Ausgabe|  
 |---|---|
 |**0** (Standardwert)|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 4235.98.|  
 |**1**|Links vom Dezimaltrennzeichen werden Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 3,510.92.|  
@@ -173,7 +174,7 @@ Bei dem **Ausdruck** **money** oder *smallmoney* kann *style* einer der in der f
 ## <a name="xml-styles"></a>xml-Formate
 Wenn **expression** *xml* ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|Wert|Ausgabe|  
+|value|Ausgabe|  
 |---|---|
 |**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Bedeutungslose Leerzeichen erhalten. Mit dieser Formateinstellung wird festgelegt, dass die Standardbehandlung **xml:space** dem Verhalten von **xml:space="preserve"** entspricht.|  
@@ -181,9 +182,9 @@ Wenn **expression** *xml* ist, kann *style* einen der in der folgenden Tabelle a
 |**3**|Bedeutungslose Leerzeichen erhalten und die Verarbeitung begrenzter interner DTD-Teilmengen aktivieren.|  
   
 ## <a name="binary-styles"></a>Binäre Formate
-Wenn **expression** **binary(n)**, **char(n)**, **varbinary(n)** oder *varchar(n)* ist, kann *style* einer der in der folgenden Tabelle aufgelisteten Werte sein. Bei Formatwerten, die nicht in der Tabelle aufgelistet sind, wird ein Fehler zurückgegeben.
+Wenn **expression** **binary(n)** , **char(n)** , **varbinary(n)** oder *varchar(n)* ist, kann *style* einer der in der folgenden Tabelle aufgelisteten Werte sein. Bei Formatwerten, die nicht in der Tabelle aufgelistet sind, wird ein Fehler zurückgegeben.
   
-|Wert|Ausgabe|  
+|value|Ausgabe|  
 |---|---|
 |**0** (Standardwert)|Übersetzt ASCII-Zeichen in binäre Bytes bzw. binäre Bytes in ASCII-Zeichen. Jedes Zeichen bzw. Byte wird 1:1 konvertiert.<br /><br /> Bei einem binären *data_type* werden die Zeichen 0x links neben dem Ergebnis hinzugefügt.|  
 |**1**, **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn der Ausdruck *style* auf 1 festgelegt ist, müssen die 0x die ersten beiden Zeichen sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird der Ausdruck rechts abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type*.<br /><br /> Bei *style* 1 werden links neben dem konvertierten Ergebnis die Zeichen 0x hinzugefügt.|  
@@ -205,7 +206,7 @@ Beim Konvertieren zwischen **datetimeoffset** und den Zeichentypen **char**, **n
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten 
 Datentypen mit hohen Werten weisen das gleiche implizite und explizite Konvertierungsverhalten auf wie ihre Entsprechungen mit kleineren Werten, insbesondere die Datentypen **nvarchar**, **varbinary** und **varchar**. Beachten Sie jedoch folgende Richtlinien:
 -   Die Konvertierung von **image** in **varbinary(max)** und umgekehrt stellt ebenso wie zwischen **text** und **varchar(max)** sowie **ntext** und **nvarchar(max)** eine implizite Konvertierung dar.  
--   Die Konvertierung von Datentypen mit hohen Werten, z.B. **varchar(max)**, in einen entsprechenden kleineren Datentyp, z.B. **varchar**, ist zwar eine implizite Konvertierung, doch kommt es zu einer Abschneidung, wenn die Größe des hohen Werts die angegebene Länge des kleineren Datentyps überschreitet.  
+-   Die Konvertierung von Datentypen mit hohen Werten, z.B. **varchar(max)** , in einen entsprechenden kleineren Datentyp, z.B. **varchar**, ist zwar eine implizite Konvertierung, doch kommt es zu einer Abschneidung, wenn die Größe des hohen Werts die angegebene Länge des kleineren Datentyps überschreitet.  
 -   Die Konvertierung von **nvarchar**, **varbinary** oder **varchar** in einen entsprechenden kleineren Datentyp erfolgt implizit.  
 -   Die Konvertierung vom **sql_variant**-Datentyp in einen Datentyp mit hohen Werten ist eine explizite Konvertierung.  
 -   Datentypen mit hohen Werten können nicht in den **sql_variant**-Datentyp konvertiert werden.  
@@ -221,7 +222,7 @@ Die automatische Datentypkonvertierung wird für die Datentypen **text** und **i
 ## <a name="output-collation"></a>Ausgabesortierung  
 Wenn die CAST- oder die CONVERT-Funktion eine Zeichenfolge ausgeben und eine Zeichenfolgeneingabe empfangen, hat die Ausgabe dieselbe Sortierung und Sortierungsbezeichnung wie die Eingabe. Wenn die Eingabe keine Zeichenfolge ist, hat die Ausgabe die Standardsortierung der Datenbank und die Sortierungsbezeichnung coercible-default (Standard erzwingbar). Weitere Informationen finden Sie unter [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Wenn Sie der Ausgabe eine andere Sortierung zuweisen möchten, wenden Sie die COLLATE-Klausel auf den Ergebnisausdruck der CAST- oder CONVERT-Funktion an. Zum Beispiel:
+Wenn Sie der Ausgabe eine andere Sortierung zuweisen möchten, wenden Sie die COLLATE-Klausel auf den Ergebnisausdruck der CAST- oder CONVERT-Funktion an. Beispiel:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -284,14 +285,14 @@ Beim Konvertieren von Datentypen mit unterschiedlichen Dezimalstellen gibt SQL S
 |Von|Aktion|Verhalten|  
 |---|---|---|
 |**numeric**|**numeric**|Round|  
-|**numeric**|**int**|Abschneiden|  
+|**numeric**|**ssNoversion**|Abschneiden|  
 |**numeric**|**money**|Round|  
-|**money**|**int**|Round|  
+|**money**|**ssNoversion**|Round|  
 |**money**|**numeric**|Round|  
-|**float**|**int**|Abschneiden|  
+|**float**|**ssNoversion**|Abschneiden|  
 |**float**|**numeric**|Round<br /><br /> Die Konvertierung der **float**-Werte, die eine wissenschaftliche Schreibweise für **decimal** oder **numeric** verwenden, ist auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.|  
 |**float**|**datetime**|Round|  
-|**datetime**|**int**|Round|  
+|**datetime**|**ssNoversion**|Round|  
   
 Die Werte 10.6496 und -10.6496 können z.B. während der Konvertierung in **int**- oder **numeric**-Types abgeschnitten oder gerundet werden:
   
@@ -421,7 +422,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Verwenden von CAST zur Generierung besser lesbaren Texts  
-Im folgenden Beispiel wird CAST in der SELECT-Liste verwendet, um die `Name`-Spalte in eine **char(10)**-Spalte zu konvertieren. Die Datenbank AdventureWorksDW wird verwendet.
+Im folgenden Beispiel wird CAST in der SELECT-Liste verwendet, um die `Name`-Spalte in eine **char(10)** -Spalte zu konvertieren. Die Datenbank AdventureWorksDW wird verwendet.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  

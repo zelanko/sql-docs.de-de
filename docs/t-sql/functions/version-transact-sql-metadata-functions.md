@@ -10,16 +10,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d337359e439eb089cd13b3f2ef7a87e0986e4cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7077a0696fa8711ceb45c9d8e5ad505da224b501
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658241"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947319"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>VERSION: Metadatenfunktionen von Transact-SQL
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Im folgenden Beispiel wird die Versionsnummer zurückgegeben.
 SELECT VERSION();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter 
+## <a name="see-also"></a>Weitere Informationen 
 [SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   

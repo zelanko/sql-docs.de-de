@@ -16,16 +16,16 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03097182a06515fd820bef96ea4eb1747eaf329
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802044"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947399"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +56,9 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 |Ausdrucksergebnis|Rückgabetyp|  
 |-----------------------|-----------------|  
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**tinyint**|**ssNoversion**|  
+|**smallint**|**ssNoversion**|  
+|**ssNoversion**|**ssNoversion**|  
 |**bigint**|**bigint**|  
 |**decimal**- und **numeric**-Kategorie (p, s)|**decimal(p, s)**|  
 |**money**- und **smallmoney**-Kategorie|**money**|  
@@ -78,7 +78,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748,58, –1)|750,00|  
 |ROUND(748,58, –2)|700,00|  
 |ROUND(748.58, -3)|Verursacht einen arithmetischen Überlauffehler, da 748.58 standardmäßig zu decimal(5,2) wird und eine Rückgabe von 1000.00 nicht möglich ist.|  
-|Um bis auf 4 Stellen aufzurunden, ändern Sie den Datentyp für die Eingabe. Zum Beispiel:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1.000,00|  
+|Um bis auf 4 Stellen aufzurunden, ändern Sie den Datentyp für die Eingabe. Beispiel:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1.000,00|  
   
 ## <a name="examples"></a>Beispiele  
   

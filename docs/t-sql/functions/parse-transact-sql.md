@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd5affbbd6a7cee83e1b14ae1e0b42952e8f2965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824580"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943510"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt das Ergebnis eines Ausdrucks zurück, der in den angeforderten Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umgewandelt wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Kategorie|Typ|.NET Framework-Typ|Verwendete Formate|  
 |--------------|----------|-------------------------|-----------------|  
-|Numerisch|bigint|Int64|NumberStyles.Number|  
+|Numerisch|BIGINT|Int64|NumberStyles.Number|  
 |Numerisch|ssNoversion|Int32|NumberStyles.Number|  
 |Numerisch|SMALLINT|Int16|NumberStyles.Number|  
 |Numerisch|TINYINT|Byte|NumberStyles.Number|  
@@ -83,10 +83,10 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Numerisch|NUMERIC|Decimal|NumberStyles.Number|  
 |Numerisch|FLOAT|Double|NumberStyles.Float|  
 |Numerisch|REAL|Single|NumberStyles.Float|  
-|Numerisch|smallmoney|Decimal|NumberStyles.Currency|  
+|Numerisch|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Numerisch|money|Decimal|NumberStyles.Currency|  
 |Datum und Uhrzeit|date|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|Uhrzeit|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|DateTime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|smalldatetime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|datetime2|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  

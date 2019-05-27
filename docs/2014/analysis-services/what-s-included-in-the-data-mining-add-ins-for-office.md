@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -13,12 +12,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755917"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065327"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  

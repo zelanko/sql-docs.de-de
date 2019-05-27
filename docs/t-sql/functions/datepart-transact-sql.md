@@ -24,16 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802904"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945715"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,12 +84,12 @@ Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann:
 + **datetimeoffset**
 + **datetime2** 
 + **smalldatetime**
-+ **Uhrzeit**
++ **time**
 
 Bei *date* akzeptiert `DATEPART` einen Spaltenausdruck, einen Ausdruck, ein Zeichenfolgenliteral oder eine benutzerdefinierte Variable. Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) finden Sie weitere Informationen zu zweistelligen Jahreszahlen.
   
 ## <a name="return-type"></a>Rückgabetyp  
- **int**  
+ **ssNoversion**  
   
 ## <a name="return-value"></a>Rückgabewert  
 Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.
@@ -120,7 +120,7 @@ In dieser Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückg
 ## <a name="week-and-weekday-datepart-arguments"></a>datepart-Argumente des Typs week und weekday
 Für das *datepart*-Argument **week** (**wk**, **ww**) oder **weekday** (**dw**) hängt der Rückgabewert `DATEPART` von dem von [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) festgelegten Wert ab.
   
-Der 1. Januar eines Jahres definiert die Anfangszahl für **week**_datepart_. Zum Beispiel:
+Der 1. Januar eines Jahres definiert die Anfangszahl für **week**_datepart_. Beispiel:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 

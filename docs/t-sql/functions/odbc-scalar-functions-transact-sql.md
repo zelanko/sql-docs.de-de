@@ -49,16 +49,16 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f27a13116e1b0e393917c99c30039dce374019b3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760083"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944906"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "55760083"
   
 ### <a name="string-functions"></a>Zeichenfolgenfunktionen  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Gibt die interne Größe des angegebenen Datentyps zurück, ohne „string_exp“ in „string“ zu konvertieren.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung von string_exp2 und string_exp1 darstellt. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn die durch string_exp1 dargestellte Spalte z. B. einen NULL-Wert enthält, wird DB2 NULL zurückgeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen gibt eine Zeichenfolge ungleich NULL zurückgeben.|  
@@ -81,19 +81,19 @@ ms.locfileid: "55760083"
   
 ### <a name="numeric-function"></a>Numerische Funktion  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Gibt numeric_exp abgeschnitten auf integer_exp-Positionen rechts vom Dezimaltrennzeichen zurück. Wenn „integer_exp“ negativ ist, wird „numeric_exp“ auf die Positionen „&#124;integer_exp&#124;“ links vom Dezimaltrennzeichen abgeschnitten.|  
   
 ### <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURDATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück. Das time-precision-Argument bestimmt die Genauigkeit des zurückgegebenen Werts bezüglich der Sekundenangaben.|  
 |CURTIME() (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages aus „date_exp“ enthält. Der Name entspricht beispielsweise „Sunday through Saturday“ oder „Sun. through Sat.“ für eine Datenquelle, die Englisch als Sprache verwendet. Für eine Datenquelle, die Deutsch als Sprache verwendet, entspricht der Name beispielsweise „Sonntag through Samstag“.|
+|DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages aus „date_exp“ enthält. Der Name entspricht beispielsweise „Sunday through Saturday“ oder „Sun. bis Sa. für eine Datenquelle, die Englisch als Sprache verwendet. Für eine Datenquelle, die Deutsch als Sprache verwendet, entspricht der Name beispielsweise „Sonntag through Samstag“.|
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in „date_exp“ als ganze Zahl zurück. Der Rückgabewert liegt im Bereich zwischen 1 und 31.|  
 |DAYOFWEEK( date_exp ) (ODBC 1.0)|Gibt den Tag der Woche basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl zurück. Der Rückgabewert liegt im Bereich zwischen 1 und 7, wobei 1 für den Sonntag steht.|  
 |HOUR( time_exp ) (ODBC 1.0)|Gibt die Stunde basierend auf dem Stundenfeld in „time_exp“ als ganze Zahl im Bereich zwischen 0 und 23 zurück.|  

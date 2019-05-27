@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188552"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108187"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Meine Abonnements (Seite, Berichts-Manager)
   Auf der Seite Meine Abonnements können Sie alle eigenen Abonnements zentral anzeigen. Von dieser Seite aus können Sie auf Ihre Abonnements zugreifen und diese ändern oder löschen. Als eigene Abonnements gelten nur die von Ihnen erstellten Abonnements. Sie können weder auf die Abonnements anderer Benutzer zugreifen noch auf Abonnements, die Sie zwar verwenden, deren Eigentümer Sie aber nicht sind (dies ist z. B. der Fall, wenn Ihr Name zu einem vorhandenen Abonnement hinzugefügt wird, das durch einen anderen Benutzer definiert wurde). Das Erstellen von Abonnements ist auf dieser Seite nicht möglich. Weitere Informationen zum Erstellen von Abonnements finden Sie unter den [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
