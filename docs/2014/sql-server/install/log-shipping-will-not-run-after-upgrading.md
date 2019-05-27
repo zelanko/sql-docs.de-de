@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 6727cb7d-ac01-4972-a730-dbb7cdc29705
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195085"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093982"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Protokollversand wird nach Update nicht ausgeführt
   Der Upgrade Advisor hat festgestellt, dass Sie den Protokollversand verwenden. Der Protokollversand in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ist nicht mit dem Protokollversand in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kompatibel und kann nicht direkt aktualisiert werden. Konfigurieren Sie nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]den Protokollversand mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe gespeicherter Prozeduren neu.  

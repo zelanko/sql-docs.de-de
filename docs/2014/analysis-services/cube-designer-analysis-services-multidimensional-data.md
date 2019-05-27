@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
@@ -13,12 +12,12 @@ ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679626"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086608"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube-Designer (Analysis Services &ndash; Mehrdimensionale Daten)
   Mithilfe von **Cube-Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie verschiedene Eigenschaften eines vorhandenen Cubes bearbeiten, einschließlich der Measuregruppen und Measures, Cubedimensionen und Dimensionsbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Partitionen, Perspektiven und der im Cube enthaltenen Übersetzungen. Außerdem können Sie die im Cube enthaltenen Daten durchsuchen. Das Dialogfeld **Cube-Designer** können Sie wie folgt aufrufen:  

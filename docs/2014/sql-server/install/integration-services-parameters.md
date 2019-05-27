@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, parameters
@@ -13,17 +12,17 @@ ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b2b9fc62d26edbac0244bed07d20931fbb508f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210380"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094234"
 ---
 # <a name="integration-services-parameters"></a>Integration Services-Parameter
   Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], können Sie entscheiden, Analysieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete auf dem Computer oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paketdateien im Dateisystem. Wenn Sie sich dafür entscheiden, Dateien im Dateisystem zu analysieren, müssen Sie einen Pfad zum Ordner angeben, der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete enthält.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SSIS-Pakete auf Server analysieren**  
  Wählen Sie diese Option zum Analysieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete auf dem Computer. Standardmäßig ist diese Option ausgewählt.  
   

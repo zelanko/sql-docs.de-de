@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802197"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982685"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Gibt den Datentyp des _expression_-Ausdrucks zurück, der in der Datentyprangfol
 `COALESCE` gibt `NULL` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
   
 ## <a name="comparing-coalesce-and-case"></a>Vergleich zwischen COALESCE und CASE  
-Der `COALESCE`-Ausdruck ist eine syntaktische Kurzform für den `CASE`-Ausdruck.  Dies bedeutet, dass der Code `COALESCE`(_expression1_,_...n_) vom Abfrageoptimierer in den folgenden `CASE`-Ausdruck umgeschrieben wird:  
+Der `COALESCE`-Ausdruck ist eine syntaktische Kurzform für den `CASE`-Ausdruck.  Dies bedeutet, dass der Code `COALESCE`(_expression1_, _...n_) vom Abfrageoptimierer in den folgenden `CASE`-Ausdruck umgeschrieben wird:  
   
 ```sql  
 CASE  

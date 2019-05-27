@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc051fc23e9efb25ae84b49697398a0b8cc1171a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062139"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Hinzufügen einer Quelle mit dem Quellen-Assistenten
   Dieses Thema gibt Schritte an, um eine neue Quelle mithilfe des Quellen-Assistenten hinzuzufügen, und führt die im Dialogfeld **Neue Quelle hinzufügen** verfügbaren Optionen auf, die angezeigt werden, wenn Sie den Quellen-Assistent per Drag & Drop in den SSIS-Designer ziehen.  

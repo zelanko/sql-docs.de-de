@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101120"
 ---
 # <a name="site-settings-page-report-manager"></a>Siteeinstellungen (Seite) (Berichts-Manager)
   Verwenden Sie die Seite "Siteeinstellungen", um den Anwendungstitel zu ändern, serverweite Standardeinstellungen für die Grenzwerte des Berichtsverlaufs und Timeoutwerte für die Berichtsverarbeitung festzulegen und Rollenzuweisungen auf Systemebene sowie freigegebene Zeitpläne zu verwalten. Sie müssen über Inhalts-Manager- und Systemadministratorberechtigungen verfügen, um diese Seite anzuzeigen.  
@@ -61,7 +60,7 @@ ms.locfileid: "63223129"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen auf dem Berichtsserver zu speichern.  
   
- **Security**  
+ **Sicherheit**  
  Klicken Sie auf diesen Link, um die Seite "Systemrollenzuweisungen" zu öffnen, auf der Sie Benutzern und Gruppenkonten vordefinierte Systemrollen zuweisen können.  
   
  **Zeitpläne**  

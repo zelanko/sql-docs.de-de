@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbb093ae1fdb2534f3de0f627d8041ecee1bb18f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099759"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern
   Dieses Thema enthält und beschreibt ein [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -RSS-Beispielskript, mit dem Inhaltselemente und Einstellungen unter Verwendung des Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]sowohl im einheitlichen als auch im SharePoint-Modus installiert. Das Skript kopiert [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Elemente, beispielsweise Berichte und Abonnements, von einem Server zu einem anderen Server. Das Skript unterstützt Berichtsserver im SharePoint-Modus und im einheitlichen Modus.  
@@ -104,7 +103,7 @@ ms.locfileid: "59962116"
 |Abonnements|Ja|Ja||  
 |Verlaufseinstellungen|Ja|Ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Verarbeitungsoptionen|Ja|Ja||  
-|Optionen zur Cacheaktualisierung|Ja|Ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 Elemente gefunden.<br /><br /> Migrieren von Abonnements speichern in \\\server\public\savedreports as TitleOnly... SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrieren von Verarbeitungsoptionen für die Report TitleOnly.rdl... 0 Elemente gefunden.<br /><br /> Migrieren von Optionen zur cacheaktualisierung für Report TitleOnly.rdl... SUCCESS<br /><br /> Migrieren von cacheaktualisierungsplänen für Report TitleOnly.rdl: 1 Elemente gefunden.<br /><br /> Migrieren von Cache Refresh Plan titleonly_refresh735amM2F... SUCCESS|  
+|Optionen zur Cacheaktualisierung|Ja|Ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 Elemente gefunden.<br /><br /> Migrieren von Abonnements speichern in \\\server\public\savedreports as TitleOnly... SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrieren von Verarbeitungsoptionen für die Report TitleOnly.rdl... 0 items found.<br /><br /> Migrieren von Optionen zur cacheaktualisierung für Report TitleOnly.rdl... SUCCESS<br /><br /> Migrieren von cacheaktualisierungsplänen für Report TitleOnly.rdl: 1 Elemente gefunden.<br /><br /> Migrieren von Cache Refresh Plan titleonly_refresh735amM2F... SUCCESS|  
 |Cacheaktualisierungspläne|Ja|Ja||  
 |Bilder|Ja|Ja||  
 |Berichtsteile|Ja|Ja||  
@@ -241,7 +240,7 @@ ms.locfileid: "59962116"
   
 ##  <a name="bkmk_parameter_description"></a> Parameterbeschreibung  
   
-|Parameter|Description|Erforderlich|  
+|Parameter|Description|Required|  
 |---------------|-----------------|--------------|  
 |**-s** Quell_URL|URL des Quellberichtsservers|Ja|  
 |**-u** Domäne\Kennwort **-p** Kennwort|Anmeldeinformationen für Quellserver.|OPTIONAL, falls nicht vorhanden, werden Standardanmeldeinformationen verwendet.|  

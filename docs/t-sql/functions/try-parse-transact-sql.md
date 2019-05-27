@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9968c95f42d2256054d472b53d5c9039c26c1865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785550"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946882"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt das Ergebnis eines Ausdrucks zurück, das in den angeforderten Datentyp übersetzt wurde. Schlägt die Umwandlung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fehl, wird NULL zurückgegeben. Verwenden Sie TRY_PARSE nur, um eine Zeichenfolge in ein Datum und eine Uhrzeit oder in eine Zahl zu konvertieren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,7 +69,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |Kategorie|Typ|.NET-Typ|Verwendete Formate|  
 |--------------|----------|---------------|-----------------|  
-|Numerisch|bigint|Int64|NumberStyles.Number|  
+|Numerisch|BIGINT|Int64|NumberStyles.Number|  
 |Numerisch|ssNoversion|Int32|NumberStyles.Number|  
 |Numerisch|SMALLINT|Int16|NumberStyles.Number|  
 |Numerisch|TINYINT|Byte|NumberStyles.Number|  
@@ -77,10 +77,10 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Numerisch|NUMERIC|Decimal|NumberStyles.Number|  
 |Numerisch|FLOAT|Double|NumberStyles.Float|  
 |Numerisch|REAL|Single|NumberStyles.Float|  
-|Numerisch|smallmoney|Decimal|NumberStyles.Currency|  
+|Numerisch|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Numerisch|money|Decimal|NumberStyles.Currency|  
 |Datum und Uhrzeit|date|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|Uhrzeit|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|DateTime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|smalldatetime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|datetime2|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -183,7 +183,7 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)   
  [Konvertierungsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
  [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
