@@ -5,18 +5,18 @@ description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803095"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265366"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank unter Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ In dieser schnellstartanleitung installieren Sie SQL Server-2019 Vorschau auf Ub
 ::: moniker-end
 
 > [!TIP]
-> Dieses Lernprogramm erfordert eine Benutzereingabe und eine Internetverbindung besteht. Wenn Sie möchten die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
+> Dieses Lernprogramm erfordert eine Benutzereingabe und eine Internetverbindung besteht. Wenn Sie die Installationsverfahren für die unbeaufsichtigte Installation oder offline-interessiert sind, finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Sie benötigen einen Ubuntu 16.04-Computer mit **mindestens 2 GB** des Arbeitsspeichers.
 
-Um Ubuntu auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server). Sie können auch den virtuellen Ubuntu-Computern in Azure erstellen. Finden Sie unter [erstellen und Verwalten von Linux-VMs mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Wechseln Sie zu Ubuntu 16.04 auf Ihrem eigenen Computer installieren, [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/). Sie können auch den virtuellen Ubuntu-Computern in Azure erstellen. Finden Sie unter [erstellen und Verwalten von Linux-VMs mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > Zu diesem Zeitpunkt die [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als ein Installationsziel wird nicht unterstützt.
@@ -97,7 +97,7 @@ Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Serv
 5. Nachdem die Konfiguration abgeschlossen ist, stellen Sie sicher, dass der Dienst ausgeführt wird:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Wenn Sie eine Remoteverbindung herstellen möchten, müssen Sie möglicherweise auch die SQL Server-TCP-Port (Standardport: 1433) in Ihrer Firewall öffnen.
@@ -143,7 +143,7 @@ Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Serv
 5. Nachdem die Konfiguration abgeschlossen ist, stellen Sie sicher, dass der Dienst ausgeführt wird:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Wenn Sie eine Remoteverbindung herstellen möchten, müssen Sie möglicherweise auch die SQL Server-TCP-Port (Standardport: 1433) in Ihrer Firewall öffnen.

@@ -1,21 +1,22 @@
 ---
-title: Installationsanleitung für SQL Server unter Linux | Microsoft-Dokumentation
+title: Installationsanleitung für SQL Server unter Linux
+titleSuffix: SQL Server
 description: Installieren, aktualisieren und Deinstallieren von SQL Server unter Linux. In diesem Artikel werden online, offline und unbeaufsichtigte Szenarios behandelt.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/07/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 4cccab2331a564737112d9fb3efc42e5a6b81ed8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775511"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265395"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Installationsanleitung für SQL Server unter Linux
 
@@ -40,8 +41,8 @@ SQL Server 2017 wird unter Ubuntu, SUSE Linux Enterprise Server (SLES) und Red H
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 abrufen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2-Download](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
-| **Docker-Engine** | 1.8+ | [Docker abrufen](https://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Docker-Engine** | 1.8+ | [Docker abrufen](https://www.docker.com/get-started)
 
 Microsoft unterstützt auch bereitstellen und Verwalten von SQL Server-Containern mit OpenShift und Kubernetes.
 
@@ -71,9 +72,6 @@ Bei Verwendung von **Network File System (NFS)** Remotefreigaben in der Produkti
 
 Beim Installieren oder Aktualisieren von SQL Server, erhalten Sie die neueste Version von SQL Server aus dem Repository Ihrer konfigurierten Microsoft. Die Schnellstarts verwenden Sie das kumulative Update für SQL Server 2017 **CU** Repository. Sie können aber stattdessen konfigurieren die **GDR** Repository oder **Preview (vNext)** Repository. Weitere Informationen für Repositorys und deren Konfiguration finden Sie unter [Repositorys für SQL Server unter Linux konfigurieren](sql-server-linux-change-repo.md).
 
-> [!IMPORTANT]
-> Wenn Sie eine CTP-Version oder die RC-Version von SQL Server 2017 bereits installiert haben, müssen Sie entfernen das Repository für die Vorschau und registrieren eine allgemeine Verfügbarkeit (GA) eine. Weitere Informationen finden Sie unter [Repositorys für SQL Server unter Linux konfigurieren](sql-server-linux-change-repo.md).
-
 ## <a id="platforms"></a> Installieren von SQLServer 2017
 
 Sie können SQL Server 2017 unter Linux über die Befehlszeile installieren. Schrittweise Anweisungen finden Sie in einem der folgenden schnellstartanleitungen:
@@ -84,11 +82,11 @@ Sie können SQL Server 2017 unter Linux über die Befehlszeile installieren. Sch
 - [Führen unter Docker aus](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
+Sollten Sie nach der Installation zusätzliche konfigurationsänderungen für eine optimale Leistung aus. Weitere Informationen finden Sie unter [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md).
+
 ## <a id="sqlvnext"></a> Installieren von SQL Server-2019 preview
 
 Sie können SQL Server-2019 Vorschau unter Linux mithilfe der gleiche Schnellstart-Link im vorherigen Abschnitt installieren. Allerdings müssen Sie registrieren die **Preview (vNext)** Repository anstelle von der **CU** Repository. Die Schnellstarts enthalten Anweisungen dazu.  
-
-Sollten Sie nach der Installation zusätzliche konfigurationsänderungen für eine optimale Leistung aus. Weitere Informationen finden Sie unter [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Aktualisieren Sie SQLServer
 
@@ -220,6 +218,7 @@ Nach der Installation können Sie auch installieren oder aktivieren Optionaler F
 - [SQL Server-Befehlszeilentools](sql-server-linux-setup-tools.md)
 - [SQL Server-Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server-Volltextsuche](sql-server-linux-setup-full-text-search.md)
+- [Machine Learning-Dienste (R, Python)](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

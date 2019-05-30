@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012058"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265150"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine Formatdatei für ein flexibles System für das Schreiben von Datendateien verwenden, bei denen nur geringfügige oder keine Bearbeitung erforderlich ist, um sie mit anderen Datenformaten oder für das Lesen von Datendateien aus anderen Softwareprogrammen kompatibel zu machen.  
@@ -34,7 +34,7 @@ ms.locfileid: "66012058"
 ## <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Die **format** -Option erfordert außerdem die **-f** -Option, z.B.:  
   
- **bcp** _Tabelle_oder_Ansicht_ **Format** NULL **-f***Formatdateiname*  
+ **bcp** _Tabelle_oder_Ansicht_ **format** nul **-f**_Formatdateiname_  
   
 > [!NOTE]  
 >  Um Nicht-XML-Formatdateien klar zu kennzeichnen, empfiehlt es sich, als Dateierweiterung FMT zu verwenden, beispielsweise "MeineTabelle.fmt".  

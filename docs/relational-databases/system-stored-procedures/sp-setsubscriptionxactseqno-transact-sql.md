@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534652"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270155"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt bei der Problembehandlung die Protokollfolgenummer (LSN, Log Sequence Number) der nächsten vom Verteilungs-Agent auf dem Abonnenten anzuwendenden Transaktion an. Der Agent hat dadurch die Möglichkeit, eine Transaktion, die einen Fehler erzeugt hat, auszulassen. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt. Wird nicht für Nicht-SQL Server-Abonnenten unterstützt.  
+  Bei der Problembehandlung verwendet, um der zuletzt ausgelieferten Transaktion, die mit der protokollfolgenummer (LSN), können den Verteilungs-Agent, um zu beginnen, an die nächste Transaktion Übermittlung anzugeben. Beim Neustart, gibt der Verteilungs-Agent Transaktionen aus dem Cache für die Distribution-Datenbank (Msrepl_commands) größer als dieser Grenzwert (LSN). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt. Wird nicht für Nicht-SQL Server-Abonnenten unterstützt.  
   
 > [!CAUTION]  
 >  Eine falsche Verwendung dieser gespeicherten Prozedur oder die Angabe eines falschen LSN-Werts kann den Verteilungs-Agent dazu veranlassen, Änderungen, die bereits auf den Abonnenten angewendet wurden, rückgängig zu machen oder alle noch verbleibenden Änderungen auszulassen.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>Weitere Informationen
+
+[Blog: Eine Transaktion zu überspringen](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

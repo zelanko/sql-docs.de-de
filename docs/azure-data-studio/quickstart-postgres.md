@@ -23,7 +23,7 @@ Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-so
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [! UMFASSEN[Name-sos](../includes/name-sos-short.md), und den Zugriff auf einen PostgreSQL-Server.
+Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [!INCLUDE[Name-sos](../includes/name-sos-short.md), und den Zugriff auf einen PostgreSQL-Server.
 
 - [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 - [Installieren Sie die PostgreSQL-Erweiterung für Azure Data Studio](postgres-extension.md).
@@ -31,7 +31,7 @@ Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includ
 
 ## <a name="connect-to-postgresql"></a>Verbindung mit PostgreSQL
 
-1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 
 2. Beim ersten Start [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Verbindung** Dialogfeld wird geöffnet. Wenn die **Verbindung** Dialogfeld nicht geöffnet werden, klicken Sie auf die **neue Verbindung** Symbol in der **Server** Seite:
 
@@ -61,7 +61,7 @@ Nach der erfolgreichen verbindungsherstellung Ihren Server wird geöffnet, der *
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 
-Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutorialdb"**:
+Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutorialdb"** :
 
 1. Mit der rechten Maustaste auf Ihrem PostgreSQL-Server in der **Server** Randleiste, und wählen **neue Abfrage**.
 
@@ -81,7 +81,7 @@ Nach Abschluss die Abfrage, mit der rechten Maustaste **Datenbanken** , und wäh
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
- Die folgenden Schritte erstellen Sie eine Tabelle in der **"tutorialdb"**:
+ Die folgenden Schritte erstellen Sie eine Tabelle in der **"tutorialdb"** :
 
 1. Ändern den Verbindungskontext für **"tutorialdb"** mithilfe der Dropdownliste im Abfrage-Editor. 
 

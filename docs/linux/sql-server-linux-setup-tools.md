@@ -1,21 +1,22 @@
 ---
-title: Installieren von SQL Server-Befehlszeilentools unter Linux | Microsoft-Dokumentation
+title: Installieren von SQL Server-Befehlszeilentools unter Linux
+titleSuffix: SQL Server
 description: Dieser Artikel beschreibt, wie Sie die SQL Server-Tools unter Linux zu installieren.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801754"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265400"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren von Sqlcmd und Bcp die SQL Server-Befehlszeilenprogramme unter Linux
 
@@ -203,25 +204,21 @@ Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie das I
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-Die folgende Tabelle enthält den Speicherort für die neuesten Tools-Pakete:
+1. Zunächst suchen und kopieren Sie die **Mssql-Tools** -Paket für Ihre Linux-Distribution:
 
-| Tools-Pakets | Version | Herunterladen |
-|-----|-----|-----|
-| Red Hat-RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES-RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian-Paket tools | 14.0.5.0-1 | [MSSQL-Tools Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian-Paket tools | 14.0.5.0-1 | [MSSQL-Tools Debian-Paket](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+   | Linux-distribution | **MSSQL-Tools** Paketspeicherort |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
 
-Dieser Pakete richten sich nach **Msodbcsql**, und muss zunächst installiert werden. Die **Msodbcsql** Paket besteht eine Abhängigkeit auf **UnixODBC-entwickl** (RPM) oder **Unixodbc-Dev-** (Debian). Den Speicherort der **Msodbcsql** Pakete werden in der folgenden Tabelle aufgeführt:
+1. Außerdem suchen und kopieren Sie die **Msodbcsql** -Paket, das eine Abhängigkeit ist. Die **Msodbcsql** Paket besteht eine Abhängigkeit auf **UnixODBC-entwickl** (Red Hat und SLES) oder **Unixodbc-Dev-** (Ubuntu). Den Speicherort der **Msodbcsql** Pakete werden in der folgenden Tabelle aufgeführt:
 
-| Msodbcsql-Paket | Version | Herunterladen |
-|-----|-----|-----|
-| Red Hat-RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| SLES-RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql Debian-Paket](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-
-Verwenden Sie die folgenden Schritte aus, um diese Pakete manuell zu installieren:
+   | Linux-distribution | Speicherort der ODBC-Pakete |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
 1. **Verschieben Sie die heruntergeladenen Pakete auf Ihren Linux-Computer**. Wenn Sie einen anderen Computer verwendet, um die Pakete herunterzuladen, ist eine Möglichkeit, verschieben Sie die Pakete auf Ihren Linux-Computer mit der **scp** Befehl.
 
@@ -229,17 +226,17 @@ Verwenden Sie die folgenden Schritte aus, um diese Pakete manuell zu installiere
 
     | Platform | Installieren der Paketbefehle |
     |-----|-----|
-    | Red Hat | `sudo yum localinstall msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo yum localinstall mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
+    | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
+    | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
+    | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
 1. **Beheben Sie fehlende Abhängigkeiten**: Möglicherweise müssen Sie Abhängigkeiten an diesem Punkt fehlt. Wenn dies nicht der Fall ist, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie manuell suchen und diese Abhängigkeiten zu installieren.
 
     Für RPM-Pakete können Sie die erforderlichen Abhängigkeiten mit den folgenden Befehlen überprüfen:
 
     ```bash
-    rpm -qpR msodbcsql-13.1.6.0-1.x86_64.rpm
-    rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
+    rpm -qpR msodbcsql-<version>.rpm
+    rpm -qpR mssql-tools-<version>.rpm
     ```
 
     Für Debian-Pakete, wenn Sie Zugriff auf genehmigte Repositorys, die mit diesen Abhängigkeiten, haben die einfachste Lösung ist die Verwendung der **apt-Get** Befehl:
@@ -254,8 +251,8 @@ Verwenden Sie die folgenden Schritte aus, um diese Pakete manuell zu installiere
     Wenn dies nicht für das Debian-Paket funktioniert, können Sie die erforderlichen Abhängigkeiten mit den folgenden Befehlen überprüfen:
 
     ```bash
-    dpkg -I msodbcsql_13.1.6.0-1_amd64.deb | grep "Depends:"
-    dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
+    dpkg -I msodbcsql_<version>_amd64.deb | grep "Depends:"
+    dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
 ## <a name="next-steps"></a>Nächste Schritte

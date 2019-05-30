@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de862ffdc0ca3e1c975fd386ba3da464219ead50
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015029"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354586"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der Kernebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "66015029"
 |**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis:  SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
 |**SQLDisconnect**|Schließt eine Verbindung Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist aus, und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben werden soll, und ist weiterhin verfügbar, mit anderen Komponenten, die mithilfe von die gleichen freigegebenen Umgebung.|  
 |**SQLError**|Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert. In der Regel ruft Sie eine Oracle-Fehlermeldung ab, und andernfalls leer ist.|  
-|**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`. \`My Field1\`,; \`My Table\`.\`My Field2\` FROM \`My Table`\|  
+|**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`. \`My Field1\`,; \`My Table\`.\`My Field2\` FROM \`My Table\`|  
 |**SQLExecute**|Führt eine vorbereitete SQL­Anweisung (eine Anweisung, die bereits vorbereitet, indem **SQLPrepare**). Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind.|  
 |**SQLFetch**|Ruft eine Zeile aus einem Resultset in die Speicherorte, die durch den vorherigen Aufrufen zum angegebenen **SQLBindCol**. Bereitet den Treiber für einen Aufruf von **SQLGetData** für ungebundenen Spalten.|  
 |**SQLFreeConnect**|Gibt ein Verbindungshandle frei und gibt alle für das Handle zugeordneten Arbeitsspeicher frei.|  
@@ -49,7 +49,7 @@ ms.locfileid: "66015029"
 |**SQLFreeStmt**|Beendet die Verarbeitung im Zusammenhang mit einer bestimmten Befehls beschäftigt, schließt alle geöffneten Cursor verknüpft ist, mit der Befehls beschäftigt, ausstehende Ergebnisse verworfen und gibt optional das Anweisungshandle zugeordnete Ressourcen frei.|  
 |**SQLGetCursorName**|Gibt den Namen des Cursors Zusammenhang mit der angegebenen Befehls beschäftigt.|  
 |**SQLNumResultCols**|Gibt die Anzahl der Spalten in ein resultsetcursor zurück.|  
-|**SQLPrepare**|Bereitet eine SQL-Anweisung durch die Planung So optimieren, und führen Sie die Anweisung vor. Die SQL-Anweisung kompiliert wird, für die Ausführung von **SQLExecDirect**.<br /><br /> Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`.\` Mein Feld\` FROM \`Meine Tabelle "<br /><br /> Weitere Informationen zur Verwendung von Resultsets, die Arrays als formale Parameter enthält, finden Sie unter [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md). \|  
+|**SQLPrepare**|Bereitet eine SQL-Anweisung durch die Planung So optimieren, und führen Sie die Anweisung vor. Die SQL-Anweisung kompiliert wird, für die Ausführung von **SQLExecDirect**.<br /><br /> Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`.\` Mein Feld\` FROM \`meiner Tabelle\`<br /><br /> Weitere Informationen zur Verwendung von Resultsets, die Arrays als formale Parameter enthält, finden Sie unter [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
 |**SQLRowCount**|Oracle bietet keine Möglichkeit zum Bestimmen der Anzahl von Zeilen in einem Resultset erst, nachdem Sie die letzte Zeile abrufen, sodass es-1 zurück.|  
 |**SQLSetCursorName**|Ein Handle aktive Anweisung ordnet einen Cursornamen *Befehls beschäftigt*.|  
 |**SQLSetParam**|Ersetzt durch SQLBindParameter in ODBC 2. *x*.|  

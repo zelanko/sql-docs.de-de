@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit Abfragebenachrichtigungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -21,16 +21,16 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670739"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265450"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Abfragebenachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eingeführt. Mit Abfragebenachrichtigungen, die auf der in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  Wenn eine Abonnementanforderung für einen Batch oder eine gespeicherte Prozedur erfolgt, wird für jede Anweisung, die innerhalb des Batches oder der gespeicherten Prozedur ausgeführt wird, eine separate Abonnementanforderung ausgegeben. EXECUTE-Anweisungen registrieren keine Benachrichtigung, sondern senden die Benachrichtigungsanforderung an den ausgeführten Befehl. Wenn es sich um einen Batch handelt, wird der Kontext auf die ausgeführten Anweisungen angewendet, und es gelten die gleichen Regeln wie oben beschrieben.  
   
- Wenn Sie eine Abfrage für eine Benachrichtigung übermitteln, die von dem gleichen Benutzer in dem gleichen Datenbankkontext übermittelt wurde und die die gleiche Vorlage, die gleichen Parameterwerte, die gleiche Benachrichtigungs-ID und den gleichen Übermittlungsort eines vorhandenen aktiven Abonnements verwendet, wird das vorhandene Abonnement verlängert und der neue angegebene Timeout festgelegt. Das bedeutet, dass nur eine einzige Benachrichtigung gesendet wird, wenn für identische Abfragen eine Benachrichtigung angefordert wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
+ Eine Abfrage für die Benachrichtigung, die von demselben Benutzer unter dem gleichen Datenbankkontext übermittelt wurde und die gleiche Vorlage, dieselben Parameterwerte, dieselbe benachrichtigungs-ID und gleichen Übermittlungsort eines vorhandenen aktiven Abonnements verlängert die vorhandene Abonnement, das Zurücksetzen auf die neue angegeben Timeout. Dies bedeutet, dass die Anforderung einer Benachrichtigung für identische Abfragen nur eine Benachrichtigung gesendet wird, wenn ein. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
