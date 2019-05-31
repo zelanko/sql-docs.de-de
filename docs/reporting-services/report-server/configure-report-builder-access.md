@@ -1,19 +1,19 @@
 ---
 title: Konfigurieren des Berichts-Generatorzugriffs | Microsoft-Dokumentation
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f99729717d291b241418b12142a5be8cfa67a03
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774440"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580375"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
 Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  

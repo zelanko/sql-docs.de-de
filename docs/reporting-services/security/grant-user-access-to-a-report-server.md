@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449691"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619617"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 
@@ -53,30 +53,30 @@ ms.locfileid: "65449691"
 
 1. Starten Sie das [Webportal](../web-portal-ssrs-native-mode.md).
 
-2. Klicken Sie auf das *Zahnradsymbol* in der oberen rechten Ecke.
+2. Wählen Sie die **Zahnradsymbol** Symbol oben rechts, und wählen Sie dann **Standorteinstellungen** aus dem Dropdownmenü aus.
 
-3. Wählen Sie **Siteeinstellungen**aus.
+    ![Report Server Web Portal Symbol und eine Dropdownliste zahnradmenü](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Wählen Sie **Sicherheit**.
+3. Wählen Sie **Sicherheit**.
 
-5. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
+4. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
-6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>.
+5. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>.
 
     > [!NOTE]
     > Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
 
-7. Wählen Sie eine Systemrolle aus, und klicken Sie anschließend auf **OK**.
+6. Wählen Sie eine Systemrolle aus, und klicken Sie anschließend auf **OK**.
 
     Rollen sind kumulativ, das heißt, wenn Sie sowohl die Systemadministrator- als auch die Systembenutzerrolle wählen, kann ein Benutzer oder eine Gruppe die Tasks beider Rollen ausführen.
 
-8. Wiederholen Sie den Vorgang, um weiteren Benutzern oder Gruppen Rollen zuzuweisen.
+7. Wiederholen Sie den Vorgang, um weiteren Benutzern oder Gruppen Rollen zuzuweisen.
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>So fügen Sie einem Benutzer oder einer Gruppe eine Elementrolle hinzu
 
 1. Starten Sie das **Webportal**, und suchen Sie das Berichtselement, für das Sie einen Benutzer oder eine Gruppe hinzufügen möchten.
 
-2. Klicken Sie auf die Auslassungspunkte (**...**) eines Elements.
+2. Klicken Sie auf die Auslassungspunkte ( **...** ) eines Elements.
 
 3. Klicken Sie im Dropdownmenü auf **Verwalten**.
 
