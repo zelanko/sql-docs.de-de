@@ -24,7 +24,7 @@ ms.locfileid: "66012839"
 
 
 
-Sie können die Ausführung von SSIS-Paketen planen, die im SSISDB-Katalog eines Azure SQL-Datenbankservers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder indirekt als Teil einer Azure Data Factory-Pipeline planen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
+Sie können die Ausführung von SSIS-Paketen planen, die im SSISDB-Katalog eines Azure SQL-Datenbank-Servers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder indirekt als Teil einer Azure Data Factory-Pipeline planen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Direktes Planen eines Pakets
 
@@ -49,7 +49,7 @@ Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unt
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen zunächst folgende Schritte ausführen, damit Sie elastische Aufträge verwenden können, um SSIS-Pakete zu planen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind:
+Sie müssen zunächst folgende Schritte ausführen, damit Sie elastische Aufträge verwenden können, um SSIS-Pakete zu planen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbank-Server gespeichert sind:
 
 1.  Installieren und Konfigurieren Sie die Komponenten für Aufträge für die elastische Datenbank. Informationen dazu finden Sie unter [Installieren von Aufträgen für die elastische Datenbank – Übersicht](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
@@ -95,7 +95,7 @@ Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Job
 
 ### <a name="prerequisite---create-a-linked-server"></a>Voraussetzung: Erstellen Sie einen Verbindungsserver
 
-Bevor Sie SQL Server-Agent lokal zum Planen der Ausführung von auf einem Azure SQL-Datenbankserver gespeicherten Paket verwenden können, müssen Sie SQL-Datenbankserver als Verbindungsserver zu Ihrem lokalen SQL Server hinzufügen.
+Bevor Sie SQL Server-Agent lokal zum Planen der Ausführung von auf einem Azure SQL-Datenbank-Server gespeicherten Paket verwenden können, müssen Sie SQL-Datenbank-Server als Verbindungsserver zu Ihrem lokalen SQL Server hinzufügen.
 
 1.  **Einrichten des Verbindungsservers**
 

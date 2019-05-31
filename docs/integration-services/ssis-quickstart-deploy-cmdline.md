@@ -29,7 +29,7 @@ Weitere Informationen zum Bereitstellungs-Assistenten für Integration Services 
 
 Die in diesem Artikel beschriebene Überprüfung für die Bereitstellung in Azure SQL-Datenbank erfordert SQL Server Data Tools (SSDT), Version 17.4 oder höher. Informationen zum Abrufen der neuesten Version von SSDT finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Ein Azure SQL-Datenbankserver überwacht Port 1433. Wenn Sie versuchen, eine Verbindung mit einem Azure SQL-Datenbankserver innerhalb einer Unternehmensfirewall herzustellen, muss dieser Port in der Unternehmensfirewall geöffnet sein, damit Sie eine Verbindung herstellen können.
+Ein Azure SQL-Datenbank-Server überwacht Port 1433. Wenn Sie versuchen, eine Verbindung mit einem Azure SQL-Datenbank-Server innerhalb einer Unternehmensfirewall herzustellen, muss dieser Port in der Unternehmensfirewall geöffnet sein, damit Sie eine Verbindung herstellen können.
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
@@ -48,13 +48,13 @@ Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsin
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.
 2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
 3. Überprüfen Sie auf der **Übersichtsseite** Ihrer Datenbank den vollqualifizierten Servernamen. Zeigen Sie auf den Servernamen, damit die Option **Klicken Sie zum Kopieren** angezeigt wird. 
-4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbankserver vergessen, navigieren Sie zur Seite „SQL Datenbankserver“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
+4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbank-Server vergessen, navigieren Sie zur Seite „SQL Datenbank-Server“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 
 ## <a name="wizard_auth"></a> Authentifizierungsmethoden im Bereitstellungs-Assistenten
 
 Wenn Sie mit dem Bereitstellungs-Assistenten eine Bereitstellung auf einem SQL-Server vornehmen, müssen Sie die Windows-Authentifizierung verwenden, nicht die SQL Server-Authentifizierung.
 
-Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbankserver vornehmen, müssen Sie die SQL Server-Authentifizierung oder die Azure Active Directory-Authentifizierung verwenden, nicht die Windows-Authentifizierung.
+Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbank-Server vornehmen, müssen Sie die SQL Server-Authentifizierung oder die Azure Active Directory-Authentifizierung verwenden, nicht die Windows-Authentifizierung.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Starten des Bereitstellungs-Assistenten für Integration Services
 1. Öffnen Sie ein Eingabeaufforderungsfenster.
@@ -72,7 +72,7 @@ Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbankserver vornehmen, müs
     Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.
   
 3.  Wählen Sie auf der Seite **Ziel auswählen** das Ziel für das Projekt aus.
-    -   Geben Sie den vollqualifizierten Servernamen ein. Wenn es sich bei dem Zielserver um einen Azure SQL-Datenbankserver handelt, liegt der Name im Format `<server_name>.database.windows.net` vor.
+    -   Geben Sie den vollqualifizierten Servernamen ein. Wenn es sich bei dem Zielserver um einen Azure SQL-Datenbank-Server handelt, liegt der Name im Format `<server_name>.database.windows.net` vor.
     -   Stellen Sie die Authentifizierungsinformationen bereit, und klicken Sie dann auf **Verbinden**. Weitere Informationen finden Sie in diesem Artikel unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](#wizard_auth).
     -   Klicken Sie dann auf **Durchsuchen**, um den Zielordner in SSISDB auszuwählen.
     -   Klicken Sie dann auf **Weiter**, um die Seite **Überprüfen** zu öffnen. (Die Schaltfläche **Weiter** ist nur nach der Auswahl von **Verbinden** aktiviert.)
@@ -81,11 +81,11 @@ Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbankserver vornehmen, müs
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.
 
-5.  Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbankserver durchführen, wird die Seite **Überprüfen** geöffnet. Diese prüft die im Projekt enthaltenen Pakete auf bekannte Probleme, die möglicherweise eine erwartungsgemäße Ausführung in der Azure SSIS Integration Runtime verhindern. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](lift-shift/ssis-azure-validate-packages.md).
+5.  Wenn Sie eine Bereitstellung auf einem Azure SQL-Datenbank-Server durchführen, wird die Seite **Überprüfen** geöffnet. Diese prüft die im Projekt enthaltenen Pakete auf bekannte Probleme, die möglicherweise eine erwartungsgemäße Ausführung in der Azure-SSIS Integration Runtime verhindern. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](lift-shift/ssis-azure-validate-packages.md).
 
 6.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehler**, um eine Erläuterung zum Fehler anzuzeigen.
-    -   Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern.
+    -   Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern.
     -   Klicken Sie auf **Schließen**, um den Assistenten zu beenden.
 
 ## <a name="next-steps"></a>Nächste Schritte

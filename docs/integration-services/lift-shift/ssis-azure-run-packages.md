@@ -24,7 +24,7 @@ ms.locfileid: "66012326"
 
 
 
-Sie können SSIS-Pakete ausführen, die im SSISDB-Katalog eines Azure SQL-Datenbankservers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder als Teil einer Azure Data Factory-Pipeline ausführen. Eine Übersicht über SSIS in Azure finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
+Sie können SSIS-Pakete ausführen, die im SSISDB-Katalog eines Azure SQL-Datenbank-Servers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder als Teil einer Azure Data Factory-Pipeline ausführen. Eine Übersicht über SSIS in Azure finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Direktes Ausführen eines Pakets
 

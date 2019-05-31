@@ -61,7 +61,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |||||
 |-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_ ** &nbsp;| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -326,7 +326,7 @@ Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersio
 > Beim Anfügen einer Datenbank haben die Optionen **TRUSTWORTHY** und **DB_CHAINING** keine Auswirkung.
 
 FOR ATTACH_REBUILD_LOG     
-Gibt an, dass die Datenbank durch Anfügen eines vorhandenen Satzes von Betriebssystemdateien erstellt wird. Diese Option ist auf Datenbanken mit Lese-/Schreibzugriff beschränkt. Es muss ein *\<filespec>*-Eintrag vorhanden sein, der die primäre Datei angibt. Wenn eines oder mehrere Transaktionsprotokolle fehlen, wird das Protokoll neu erstellt. ATTACH_REBUILD_LOG erstellt automatisch eine neue 1-MB-Protokolldatei. Diese Datei wird am Standard-Protokolldateispeicherort eingefügt. Informationen zu diesem Speicherort finden Sie unter [Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien – SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
+Gibt an, dass die Datenbank durch Anfügen eines vorhandenen Satzes von Betriebssystemdateien erstellt wird. Diese Option ist auf Datenbanken mit Lese-/Schreibzugriff beschränkt. Es muss ein *\<filespec>* -Eintrag vorhanden sein, der die primäre Datei angibt. Wenn eines oder mehrere Transaktionsprotokolle fehlen, wird das Protokoll neu erstellt. ATTACH_REBUILD_LOG erstellt automatisch eine neue 1-MB-Protokolldatei. Diese Datei wird am Standard-Protokolldateispeicherort eingefügt. Informationen zu diesem Speicherort finden Sie unter [Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien – SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
 
 > [!NOTE]
 > Wenn die Protokolldateien verfügbar sind, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] diese Dateien und erstellt nicht die Protokolldateien neu.
@@ -354,10 +354,10 @@ Gibt den logischen Namen für die Datei an. NAME ist erforderlich, wenn FILENAME
 *logical_file_name*     
 Der logische Dateiname, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verweis auf die Datei verwendet wird. *Logical_file_name* muss in der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Der Name kann eine Zeichen- oder Unicode-Konstante oder ein regulärer oder Begrenzungsbezeichner sein.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 Gibt einen Betriebssystem-Dateinamen (physischer Dateiname) an.
 
-**'** *os_file_name* **'**     
+**'** *os_file_name* **'**      
 Der Pfad und der Dateiname, die vom Betriebssystem beim Erstellen der Datei verwendet werden. Die Datei muss sich auf einem der folgenden Geräten bzw. Netzwerken befinden: auf dem lokalen Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, in einem SAN (Storage Area Network) oder in einem Netzwerk auf iSCSI-Basis. Der angegebene Pfad muss bereits vorhanden sein, bevor die CREATE DATABASE-Anweisung ausgeführt wird. Weitere Informationen finden Sie im Abschnitt mit Hinweisen unter "Datenbankdateien und Dateigruppen".
 
 Die Parameter SIZE, MAXSIZE und FILEGROWTH können festgelegt werden, wenn ein UNC-Pfad für die Datei angegeben wird.
@@ -366,7 +366,7 @@ Wenn sich die Datei auf einer Rawpartition befindet, darf *os_file_name* nur den
 
 Datendateien sollten nicht in komprimierten Dateisystemen abgelegt werden, es sei denn, alle Dateien sind schreibgeschützte sekundäre Dateien oder die Datenbank ist schreibgeschützt. Protokolldateien sollten niemals in komprimierten Dateisystemen abgelegt werden.
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 Für eine FILESTREAM-Dateigruppe verweist FILENAME auf einen Pfad, wo FILESTREAM-Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad C:\MyFiles\MyFilestreamData angeben, muss C:\MyFiles vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner MyFilestreamData muss jedoch noch nicht existieren.
 
 Die Dateigruppe und die Datei (`<filespec>`) müssen in derselben Anweisung erstellt werden.
@@ -439,7 +439,7 @@ Gibt an, dass die benannte Dateigruppe die Standarddateigruppe in der Datenbank 
 *database_snapshot_name*    
 Der Name der neuen Datenbankmomentaufnahme. Die Namen von Datenbankmomentaufnahmen müssen innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und den Regeln für Bezeichner entsprechen. *database_snapshot_name* darf maximal 128 Zeichen lang sein.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 Gibt für das Erstellen einer Datenbankmomentaufnahme eine Liste von Dateien in der Quelldatenbank an. Damit die Momentaufnahme funktionsfähig ist, müssen alle Datendateien einzeln angegeben werden. Protokolldateien sind jedoch für Datenbankmomentaufnahmen nicht zulässig. FILESTREAM-Dateigruppen werden von Datenbankmomentaufnahmen nicht unterstützt. Wenn eine FILESTREAM-Datendatei in eine CREATE DATABASE ON-Klausel eingeschlossen wird, schlägt die Anweisung fehl, und ein Fehler wird ausgelöst.
 
 Beschreibungen von NAME und FILENAME sowie deren Werte finden Sie in den Beschreibungen der entsprechenden Werte für \<filespec>.
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_** | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_ ** | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1194,7 +1194,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL-Datenbank<br />verwaltete Instanz \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,14 +1261,14 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
 ## <a name="overview"></a>Übersicht
-In Azure SQL Data Warehouse kann diese Anweisung mit einem Azure SQL-Datenbankserver verwendet werden, um eine SQL Data Warehouse-Datenbank zu erstellen. Mit dieser Anweisung geben Sie den Datenbanknamen, die Sortierung, die maximale Größe, die Edition und das Dienstziel an.
+In Azure SQL Data Warehouse kann diese Anweisung mit einem Azure SQL-Datenbank-Server verwendet werden, um eine SQL Data Warehouse-Datenbank zu erstellen. Mit dieser Anweisung geben Sie den Datenbanknamen, die Sortierung, die maximale Größe, die Edition und das Dienstziel an.
 
 ## <a name="syntax"></a>Syntax
 ```
@@ -1373,7 +1373,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
 
 &nbsp;
 
