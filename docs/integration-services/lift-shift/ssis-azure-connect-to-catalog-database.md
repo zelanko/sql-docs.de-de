@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure | Microsoft-Dokumentation
-description: Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbankserver gehosteten SSIS-Katalog (SSISDB) herzustellen.
+description: Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbank-Server gehosteten SSIS-Katalog (SSISDB) herzustellen.
 ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.locfileid: "66015177"
 
 
 
-Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbankserver gehosteten SSIS-Katalog (SSISDB) herzustellen. Sie benötigen die folgenden Elemente, um eine Verbindung herzustellen:
+Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbank-Server gehosteten SSIS-Katalog (SSISDB) herzustellen. Sie benötigen die folgenden Elemente, um eine Verbindung herzustellen:
 - Vollqualifizierten Servernamen
 - Datenbanknamen
 - Anmeldeinformationen 
